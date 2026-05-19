@@ -1,0 +1,70 @@
+
+    You are an expert evaluator of scientific protocols in the field of optical clearing. Your task is to assess the **completeness** of the provided "Generated Protocol Text" in addressing the "Original Problem Statement".
+
+    **Original Problem Statement:**
+    '''
+    [Insert the original problem statement/question that the protocol is supposed to address here. E.g., "Please design an optical clearing protocol for a 5x5x2 mm mouse brain tissue, focusing on preserving immunofluorescence and completing within 48 hours."]
+    '''
+
+    **Generated Protocol Text:**
+    '''
+    [Insert the full text of the LLM-generated optical clearing protocol here.]
+    '''
+
+    **Evaluation Rubric for Completeness:**
+
+    Carefully review the "Generated Protocol Text" and evaluate it against the following checkpoints. For each checkpoint:
+    1.  Determine its **Status**:
+        *   **"Yes"**: The point is clearly and adequately addressed.
+        *   **"Partial"**: The point is mentioned but lacks crucial details or is unclear.
+        *   **"No"**: The point is not addressed or is missing entirely.
+    2.  Extract **Key Information / Remarks**: If "Yes" or "Partial", briefly list the key information provided by the protocol for this point (e.g., specific reagents, times, concentrations). If "No", state "Missing".
+
+    **Output Format:**
+
+    Provide your evaluation in a structured format. For each checkpoint, list the "Checkpoint", "Status", and "Key Information / Remarks".
+
+    **Example Output Structure (use this format):**
+
+    1.  **Sample Pre-processing & Fixation**
+        *   **1.1 Is sample source/type mentioned?**
+            *   Status: [Yes/No/Partial]
+            *   Key Information / Remarks: [e.g., "Mouse brain tissue mentioned."]
+        *   **1.2 Is fixation method mentioned?**
+            *   Status: [Yes/No/Partial]
+            *   Key Information / Remarks: [e.g., "4% PFA for 24h at 4°C."]
+    2.  **Dehydration (if applicable)**
+        *   **2.1 Is dehydration step mentioned?**
+            *   Status: [Yes/No/Partial]
+            *   Key Information / Remarks: [e.g., "Ethanol series (50%, 70%, 90%, 100%) for 1h each."]
+    3.  **Permeabilization/Delipidation**
+        *   **3.1 Is permeabilization/delipidation step mentioned?**
+            *   Status: [Yes/No/Partial]
+            *   Key Information / Remarks: [e.g., "SDS-based delipidation mentioned."]
+        *   **3.2 Are key reagents mentioned?**
+            *   Status: [Yes/No/Partial]
+            *   Key Information / Remarks: [e.g., "10% SDS in PBS."]
+    4.  **(Optional) Immunolabeling**
+        *   **4.1 If problem requires, is labeling step mentioned?**
+            *   Status: [Yes/No/Partial]
+            *   Key Information / Remarks: [e.g., "Immunolabeling steps are included as requested."]
+        *   **4.2 Are antibody info and key incubation conditions mentioned?**
+            *   Status: [Yes/No/Partial]
+            *   Key Information / Remarks: [e.g., "Primary antibody dilution 1:200, incubated for 3 days at RT. Secondary antibody details provided."]
+    5.  **(Optional) Decolorization**
+        *   **5.1 If tissue applicable, is decolorization step mentioned?**
+            *   Status: [Yes/No/Partial]
+            *   Key Information / Remarks: [e.g., "Missing, but the tissue type (e.g., adult mouse brain) might not strictly require it depending on the clearing method chosen."]
+    6.  **Refractive Index Matching**
+        *   **6.1 Is RI matching step mentioned?**
+            *   Status: [Yes/No/Partial]
+            *   Key Information / Remarks: [e.g., "RI matching step is included."]
+        *   **6.2 Is specific matching solution name mentioned?**
+            *   Status: [Yes/No/Partial]
+            *   Key Information / Remarks: [e.g., "BABB (RI 1.56)."]
+    7.  **Mounting & Imaging Prep**
+        *   **7.1 Is final sample handling and imaging prep mentioned?**
+            *   Status: [Yes/No/Partial]
+            *   Key Information / Remarks: [e.g., "Mounted in custom chamber for light-sheet microscopy."]
+
+    Begin your evaluation now.

@@ -1,0 +1,142 @@
+{
+  "schema_version": "time_tau_v1",
+  "description": "Time sensitivity coefficient τ (hours) per clearing method × sample-size tier. Formula: S_time = 3 * exp(-0.5 * (Δt / τ)²). τ = 0.20 × clearing_time_median_h from time_kb.json (min 0.05 h).",
+  "formula": "S_time = 3 * exp(-0.5 * (Δt / τ)²)",
+  "unit": "hours",
+  "derivation": "τ = 0.2 × clearing_time_median_h  (from time_kb.json, min 0.05 h)",
+  "k_factor": 0.2,
+  "sample_tiers": [
+    "T01_THIN_SLICE_LE500UM",
+    "T02_THICK_SLICE_0P5_3MM",
+    "T03_SMALL_WHOLE_SAMPLE_1_5MM",
+    "T04_WHOLE_MOUSE_BRAIN_5_12MM",
+    "T05_MOUSE_SOFT_ORGAN_5_20MM",
+    "T06_LONG_CNS_OR_TUBULAR_15_80MM",
+    "T07_HARD_TISSUE_BONE_TOOTH_COCHLEA",
+    "T08_WHOLE_BODY_ADULT_MOUSE",
+    "T09_HUMAN_DENSE_CLINICAL_BLOCK",
+    "T10_LIPID_OR_PIGMENT_RICH",
+    "T11_PLANT_WHOLE_SEEDLING",
+    "T12_WHOLE_EYE_OR_RETINA"
+  ],
+  "tau": {
+    "CUBIC": {
+      "T01_THIN_SLICE_LE500UM": 0.1,
+      "T02_THICK_SLICE_0P5_3MM": 14.4,
+      "T03_SMALL_WHOLE_SAMPLE_1_5MM": 14.4,
+      "T04_WHOLE_MOUSE_BRAIN_5_12MM": 50.4,
+      "T05_MOUSE_SOFT_ORGAN_5_20MM": 45.6,
+      "T06_LONG_CNS_OR_TUBULAR_15_80MM": 50.4,
+      "T08_WHOLE_BODY_ADULT_MOUSE": 57.6,
+      "T09_HUMAN_DENSE_CLINICAL_BLOCK": 40.8,
+      "T10_LIPID_OR_PIGMENT_RICH": 50.4
+    },
+    "ScaleS": {
+      "T01_THIN_SLICE_LE500UM": 2.8,
+      "T02_THICK_SLICE_0P5_3MM": 12.0,
+      "T03_SMALL_WHOLE_SAMPLE_1_5MM": 14.4,
+      "T04_WHOLE_MOUSE_BRAIN_5_12MM": 24.0,
+      "T12_WHOLE_EYE_OR_RETINA": 16.8
+    },
+    "MACS": {
+      "T01_THIN_SLICE_LE500UM": 1.2,
+      "T02_THICK_SLICE_0P5_3MM": 2.4,
+      "T03_SMALL_WHOLE_SAMPLE_1_5MM": 7.2,
+      "T04_WHOLE_MOUSE_BRAIN_5_12MM": 12.0,
+      "T05_MOUSE_SOFT_ORGAN_5_20MM": 10.8,
+      "T06_LONG_CNS_OR_TUBULAR_15_80MM": 14.4,
+      "T07_HARD_TISSUE_BONE_TOOTH_COCHLEA": 14.4,
+      "T08_WHOLE_BODY_ADULT_MOUSE": 16.8,
+      "T10_LIPID_OR_PIGMENT_RICH": 14.4
+    },
+    "iDISCO+": {
+      "T02_THICK_SLICE_0P5_3MM": 0.8,
+      "T03_SMALL_WHOLE_SAMPLE_1_5MM": 4.8,
+      "T04_WHOLE_MOUSE_BRAIN_5_12MM": 7.2,
+      "T05_MOUSE_SOFT_ORGAN_5_20MM": 4.8,
+      "T06_LONG_CNS_OR_TUBULAR_15_80MM": 9.6,
+      "T09_HUMAN_DENSE_CLINICAL_BLOCK": 9.6,
+      "T10_LIPID_OR_PIGMENT_RICH": 9.6
+    },
+    "FDISCO": {
+      "T01_THIN_SLICE_LE500UM": 0.8,
+      "T02_THICK_SLICE_0P5_3MM": 1.6,
+      "T03_SMALL_WHOLE_SAMPLE_1_5MM": 4.8,
+      "T04_WHOLE_MOUSE_BRAIN_5_12MM": 14.4,
+      "T05_MOUSE_SOFT_ORGAN_5_20MM": 2.8,
+      "T06_LONG_CNS_OR_TUBULAR_15_80MM": 16.8,
+      "T08_WHOLE_BODY_ADULT_MOUSE": 14.4,
+      "T10_LIPID_OR_PIGMENT_RICH": 9.6
+    },
+    "SOLID": {
+      "T04_WHOLE_MOUSE_BRAIN_5_12MM": 19.2,
+      "T10_LIPID_OR_PIGMENT_RICH": 21.6,
+      "T05_MOUSE_SOFT_ORGAN_5_20MM": 14.4,
+      "T06_LONG_CNS_OR_TUBULAR_15_80MM": 21.6
+    },
+    "SeeDB2": {
+      "T01_THIN_SLICE_LE500UM": 0.8,
+      "T02_THICK_SLICE_0P5_3MM": 7.2,
+      "T03_SMALL_WHOLE_SAMPLE_1_5MM": 9.6
+    },
+    "PEGASOS": {
+      "T04_WHOLE_MOUSE_BRAIN_5_12MM": 28.8,
+      "T05_MOUSE_SOFT_ORGAN_5_20MM": 24.0,
+      "T06_LONG_CNS_OR_TUBULAR_15_80MM": 36.0,
+      "T07_HARD_TISSUE_BONE_TOOTH_COCHLEA": 57.6,
+      "T08_WHOLE_BODY_ADULT_MOUSE": 57.6,
+      "T10_LIPID_OR_PIGMENT_RICH": 36.0
+    },
+    "BoneClear": {
+      "T07_HARD_TISSUE_BONE_TOOTH_COCHLEA": 67.2
+    },
+    "Ce3D": {
+      "T01_THIN_SLICE_LE500UM": 1.6,
+      "T02_THICK_SLICE_0P5_3MM": 2.4,
+      "T03_SMALL_WHOLE_SAMPLE_1_5MM": 2.4,
+      "T04_WHOLE_MOUSE_BRAIN_5_12MM": 7.2,
+      "T05_MOUSE_SOFT_ORGAN_5_20MM": 2.4,
+      "T06_LONG_CNS_OR_TUBULAR_15_80MM": 9.6,
+      "T09_HUMAN_DENSE_CLINICAL_BLOCK": 9.6,
+      "T10_LIPID_OR_PIGMENT_RICH": 9.6
+    },
+    "TDE": {
+      "T01_THIN_SLICE_LE500UM": 0.1,
+      "T02_THICK_SLICE_0P5_3MM": 0.4,
+      "T03_SMALL_WHOLE_SAMPLE_1_5MM": 1.6,
+      "T09_HUMAN_DENSE_CLINICAL_BLOCK": 0.8
+    },
+    "ClearT2": {
+      "T01_THIN_SLICE_LE500UM": 1.0,
+      "T02_THICK_SLICE_0P5_3MM": 6.0,
+      "T03_SMALL_WHOLE_SAMPLE_1_5MM": 8.4,
+      "T09_HUMAN_DENSE_CLINICAL_BLOCK": 3.0,
+      "T12_WHOLE_EYE_OR_RETINA": 6.0
+    },
+    "ClearSee": {
+      "T11_PLANT_WHOLE_SEEDLING": 33.6
+    },
+    "EyeCi": {
+      "T12_WHOLE_EYE_OR_RETINA": 14.4
+    },
+    "FOCM": {
+      "T01_THIN_SLICE_LE500UM": 0.05
+    },
+    "SWITCH": {
+      "T02_THICK_SLICE_0P5_3MM": 24.0,
+      "T04_WHOLE_MOUSE_BRAIN_5_12MM": 48.0,
+      "T05_MOUSE_SOFT_ORGAN_5_20MM": 48.0,
+      "T06_LONG_CNS_OR_TUBULAR_15_80MM": 67.2,
+      "T09_HUMAN_DENSE_CLINICAL_BLOCK": 48.0
+    },
+    "uDISCO": {
+      "T03_SMALL_WHOLE_SAMPLE_1_5MM": 9.6,
+      "T04_WHOLE_MOUSE_BRAIN_5_12MM": 19.2,
+      "T05_MOUSE_SOFT_ORGAN_5_20MM": 19.2,
+      "T06_LONG_CNS_OR_TUBULAR_15_80MM": 26.4,
+      "T07_HARD_TISSUE_BONE_TOOTH_COCHLEA": 36.0,
+      "T08_WHOLE_BODY_ADULT_MOUSE": 33.6,
+      "T10_LIPID_OR_PIGMENT_RICH": 36.0
+    }
+  }
+}

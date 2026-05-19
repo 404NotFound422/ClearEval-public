@@ -1,0 +1,126 @@
+models:
+
+  #- name: llama3-8B
+  #  type: Ollama
+  #  model_name: llama3-8B
+  #  temperature: 0.1
+
+  #- name: gemma
+  #  type: Huggingface
+  #  model_name: google/gemma-2-9b
+  #  temperature: 0.1
+  #  api_token: 
+
+  #- name: magpie
+  #  type: Huggingface
+  #  model_name: Magpie-Align/Llama-3-8B-Magpie-Align-v0.1
+  #  temperature: 0.1
+  #  api_token: 
+  
+  - name: openai_o4-mini
+    type: api
+    model_name: o4-mini
+    temperature: 0.7
+    max_completion_tokens: 4096
+
+  - name: openai_gpt-4o 
+    type: api
+    model_name: chatgpt-4o-latest
+    temperature: 0.0
+  
+  - name: openai_gpt-5.2-fast
+    type: api
+    model_name: gpt-5.2
+    temperature: 0.0
+    enable_thinking: False
+    max_tokens: 8000
+
+  - name: openai_gpt-5.2-thinking
+    type: api
+    model_name: gpt-5.2
+    temperature: 0.0
+    enable_thinking: True
+    max_tokens: 8000
+
+  - name: openai_o3
+    type: api
+    model_name: o3 
+    temperature: 0.7
+
+  - name: openai_qwen3-max
+    type: api
+    model_name: qwen3-max
+    temperature: 0.0
+  
+  - name: openai_qwen3-235b
+    type: api
+    model_name: qwen3-235b-a22b
+    temperature: 0.0
+    enable_thinking : False
+
+  - name: openai_qwen3-32b
+    type: api
+    model_name: qwen3-32b
+    temperature: 0.0
+    enable_thinking : False
+  
+  - name: openai_qwen3-14b
+    type: api
+    model_name: qwen3-14b
+    temperature: 0.0
+    enable_thinking : False
+  
+  - name: openai_qwen3-8b
+    type: api
+    model_name: qwen3-8b
+    temperature: 0.0
+    enable_thinking : False
+  
+  - name: openai_qwen3-1.7b
+    type: api
+    model_name: qwen3-1.7b
+    temperature: 0.0
+    enable_thinking : False
+
+
+  - name: openai_deepseek-reasoner
+    type: api
+    model_name: deepseek-reasoner
+    temperature: 0.0
+    max_tokens: 4096
+
+  - name: openai_deepseek-chat
+    type: api
+    model_name: deepseek-chat
+    temperature: 0.0
+    max_tokens: 4096
+
+
+  - name: glm4.7-thinking
+    type: api
+    model_name: glm-4.7
+    temperature: 0.0
+    enable_thinking: True
+
+  - name: glm4.7-unthinking
+    type: api
+    model_name: glm-4.7
+    temperature: 0.0
+    enable_thinking: False
+
+  - name: gemini-3-pro
+    type: api
+    model_name: gemini-3-pro-preview
+    temperature: 0.0
+
+  - name: gemini-3-flash
+    type: api
+    model_name: gemini-3-flash-preview
+    temperature: 0.0
+
+  - name: openai_claude-sonnet-4.6
+    type: api
+    model_name: claude-sonnet-4-6
+    temperature: 0.0
+
+  

@@ -1,0 +1,31 @@
+
+{
+    "question_id": 1366,
+    "question": "A researcher is investigating the biodistribution of systemically applied mesenchymal stem cells (MSCs) in a mouse model of CNS injury. They are considering using uDISCO for whole-body analysis. Based on the paper's findings with BMSCs in *healthy* mice, where would they LEAST expect to find a significant accumulation of these MSCs if the CNS injury model does not compromise the blood-brain barrier extensively?",
+    "options": ["Lungs", "Liver", "Spleen", "In the intact healthy CNS.", "Bone marrow", "Kidneys", "Intestines", "Site of injection (if intravenous or intraperitoneal)"],
+    "answers": "D",
+    "answer_index": 3,
+    "category": "Task Scenario Questions",
+    "specific": "Application",
+    "cot_prompt": "The question asks where systemically applied MSCs would be LEAST expected to accumulate in a mouse with a largely intact blood-brain barrier (BBB), based on findings in *healthy* mice. Systemically administered cells typically distribute to organs like the lungs (first-pass effect after IV injection), liver, and spleen for clearance or homing. Bone marrow is a natural niche for MSCs. Kidneys and intestines might also show some accumulation. The site of injection will naturally have cells. However, the central nervous system (CNS) is protected by the blood-brain barrier. In healthy individuals or when the BBB is not significantly compromised, large molecules and cells like MSCs do not readily cross into the CNS in significant numbers. Therefore, the intact healthy CNS is the location where one would LEAST expect to find a significant accumulation of these cells. The other organs listed are common sites of MSC accumulation after systemic delivery."
+},
+{
+    "question_id": 1389,
+    "question": "The discussion section highlights an advantage of organic-solvent-based clearing methods related to tissue handling. What specific physical state do specimens typically achieve due to dehydration in these methods?",
+    "options": ["Gel-like and fragile", "Rubbery and expansive", "Specimens become hard because of dehydration.", "Liquid-like and difficult to mount", "Powdery and brittle", "They retain their original soft, hydrated state.", "Compressed into a thin film.", "Encased in a resinous material."],
+    "answers": "C",
+    "answer_index": 2,
+    "category": "Domain Knowledge Evaluation",
+    "specific": "Advantages",
+    "cot_prompt": "The question asks about the physical state of specimens after dehydration in organic-solvent-based clearing methods. Dehydration implies the removal of water. Organic solvents are often used for this process and also for delipidation. When water is removed from biological tissues, they tend to lose their suppleness. Option A (Gel-like and fragile) and B (Rubbery and expansive) are unlikely outcomes of dehydration. Option D (Liquid-like) is the opposite of what would be expected. Option E (Powdery and brittle) might be too extreme for typical tissue clearing. Option F (retain original soft, hydrated state) is incorrect because dehydration occurs. Option G (Compressed into a thin film) is not a general outcome. Option H (Encased in a resinous material) refers to embedding, not just clearing. Dehydration typically makes tissues more rigid. Therefore, specimens becoming hard due to dehydration (Option C) is the most plausible physical state."
+},
+{
+    "question_id": 1384,
+    "question": "For immunostaining of mouse brain sections using the iDISCO protocol detailed in the Online Methods, what general type of serum is used in the blocking solution and antibody dilution buffers? 'then blocked in PBS-0.2% Triton X-100-10% DMSO-6% goat serum at 37°C for 1 d... incubated with primary antibody dilutions in PTWH-5% DMSO-3% goat serum...'",
+    "options": ["Fetal bovine serum (FBS)", "Horse serum", "Human serum", "goat serum", "Donkey serum", "Rabbit serum", "Mouse serum (to avoid cross-reactivity)", "No serum is used in the iDISCO protocol."],
+    "answers": "D",
+    "answer_index": 3,
+    "category": "Named Entity Recognition",
+    "specific": "General",
+    "cot_prompt": "The question asks to identify the type of serum used in the blocking solution and antibody dilution buffers based on the provided text snippet from the iDISCO protocol. The text states: '...then blocked in PBS-0.2% Triton X-100-10% DMSO-6% goat serum at 37°C for 1 d... incubated with primary antibody dilutions in PTWH-5% DMSO-3% goat serum...'. Both the blocking solution and the antibody dilution buffer explicitly mention 'goat serum'. Therefore, the general type of serum used is goat serum."
+}
