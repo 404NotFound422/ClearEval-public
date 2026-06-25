@@ -1,0 +1,672 @@
+% ClearEval -- IEEE BIBM submission (converted from the MICCAI 2026 LNCS manuscript)
+% Two-column IEEE conference format (IEEEtran). Content maps the MICCAI
+% manuscript section-by-section; structure/numbers/claims are preserved.
+% Compile: pdflatex main -> bibtex main -> pdflatex main -> pdflatex main
+
+\documentclass[conference]{IEEEtran}
+\IEEEoverridecommandlockouts
+% The preceding line is only needed to identify funding in the first footnote.
+% If that is unneeded, please comment it out.
+
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage[T1]{fontenc}
+\usepackage{url}
+
+\begin{document}
+
+\title{ClearEval: A Data-driven Benchmark for Evaluating Large Language
+Models in Tissue Optical Clearing}
+
+% ---------------------------------------------------------------------------
+% NOTE: IEEE BIBM uses double-blind review. The author block below is
+% anonymized to mirror the MICCAI submission. For the camera-ready version,
+% delete the anonymized block and uncomment the six-author IEEE template.
+% ---------------------------------------------------------------------------
+\author{\IEEEauthorblockN{Anonymous Author(s)}
+\IEEEauthorblockA{\textit{Affiliation withheld for double-blind review} \\
+email withheld}}
+
+% --- Camera-ready author template (IEEEtran supports up to six authors) ---
+% \author{\IEEEauthorblockN{1\textsuperscript{st} Given Name Surname}
+% \IEEEauthorblockA{\textit{dept. name of organization (of Aff.)} \\
+% \textit{name of organization (of Aff.)}\\
+% City, Country \\
+% email address or ORCID}
+% \and
+% \IEEEauthorblockN{2\textsuperscript{nd} Given Name Surname}
+% \IEEEauthorblockA{\textit{dept. name of organization (of Aff.)} \\
+% \textit{name of organization (of Aff.)}\\
+% City, Country \\
+% email address or ORCID}
+% }
+
+\maketitle
+
+\begin{abstract}
+Tissue Optical Clearing (TOC) enables high-resolution 3D visualization, yet
+complex protocol design risks irreversible specimen damage. While LLMs excel
+at knowledge retrieval, their ability to synthesize viable wet-lab protocols
+remains under-evaluated. We introduce ClearEval, the first expert-curated,
+experimentally-grounded benchmark for TOC protocol design. Moving beyond
+semantic similarity, we evaluate 13 SOTA LLMs via a dual-track pipeline: static
+knowledge is assessed via 2{,}588 multiple-choice questions, while practical
+generation is evaluated on 253 open-ended scenarios through our Completeness,
+Correctness, and Effectiveness (CCE) framework. CCE is a text-reference-free
+metric that scores protocol viability through formulas derived from
+experimental confidence intervals rather than static texts. Results show that
+while models exceed 80\% accuracy in static retrieval, performance drops
+sharply on executable protocols. Failures concentrate in refractive-index
+matching and chemical/fluorophore compatibility, exposing a knowledge-execution
+gap in LLM-generated TOC protocols. Rather than a domain-general claim,
+ClearEval offers a depth-first, experimentally-grounded feasibility
+check---complementary to breadth-oriented protocol benchmarks---and a
+transferable recipe for other wet-lab subdomains. Code and data:
+\url{https://anonymous.4open.science/r/ClearEval} (de-anonymized upon
+acceptance).
+\end{abstract}
+
+\begin{IEEEkeywords}
+Benchmark, Tissue optical clearing, Wet-lab protocols, Large language models
+\end{IEEEkeywords}
+
+\section{Introduction}
+Tissue Optical Clearing (TOC) homogenizes refractive indices to enable
+non-destructive, sub-cellular 3D imaging via light-sheet
+microscopy~\cite{ueda2020tissue,chung2013clarity}, preserving long-range
+connectivity essential for high-fidelity organ
+atlases~\cite{wang2025advances,richardson2025unlocking}. However, TOC protocol
+design is a complex multi-objective optimization problem where parameter
+misjudgments risk irreversible specimen damage, making traditional
+trial-and-error approaches both costly and inefficient.
+
+While LLMs demonstrate proficiency in biomedical question
+answering~\cite{singhal2023medpalm}, existing scientific benchmarks (e.g.,
+MedQA~\cite{jin2021disease}, MMLU~\cite{hendrycks2021mmlu}) and their recent
+extensions~\cite{zhang2025benchmarking,wang2025cardbiomedbench,feng2024mediq}
+predominantly assess static knowledge recall without grounding in experimental
+validation. Furthermore, traditional semantic metrics like
+BLEU~\cite{papineni2002bleu} and general-purpose
+evaluators~\cite{liu2023geval,li2024survey} fail to capture functional
+executability. Linguistically fluent protocols can remain experimentally
+invalid due to incorrect concentrations or processing times---subtle wet-lab
+errors that generic evaluators often overlook, thereby propagating
+hallucinations~\cite{bang2025hallulens,zhang2025survey}. Evaluating scientific
+LLMs thus requires a paradigm shift: from text-based similarity to rigorous
+protocol validation driven by empirical evidence.
+
+To bridge this gap, we introduce \textbf{ClearEval}, a benchmark for wet-lab
+grounded TOC protocol design built on an evaluation pipeline constructed from
+experimental data. Crucially, high knowledge scores can mask execution-level
+failures: a model may recall TOC facts correctly yet propose a refractive-index
+target or reagent combination that would ruin an irreversible specimen. A cheap
+pre-experimental feasibility gate is therefore valuable even when knowledge
+accuracy is high---e.g., GPT-5.2-Fast scores 91.1\% on knowledge yet only 66.4
+on executable effectiveness (Table~\ref{tab:main_results_total}). We propose the
+\textbf{CCE (Completeness, Correctness, Effectiveness) framework}, which
+validates protocol executability against empirical confidence intervals. Our
+main contributions are: (1) a depth-first benchmark that, within a single
+well-characterized subdomain (TOC), grounds protocol evaluation in experimental
+confidence intervals rather than text similarity; (2) a curated dataset of
+2{,}588 domain-specific MCQs and 253 experiment-driven scenarios, with a fully
+documented construction pipeline (Appendix~\ref{app:curation}); and (3) the
+data-driven CCE framework that leverages formulaic, calibrated assessment to
+measure LLM performance gaps in practical planning. We deliberately restrict
+scope to TOC to obtain physics-grounded, parameter-level ground truth that broad
+multi-subfield benchmarks cannot provide; external validity is discussed in
+Sec.~\ref{sec:discussion}.
+
+\section{Related Works}\label{sec:related}
+\noindent\textbf{Scientific LLM evaluation.} Benchmarks for scientific LLMs
+have largely targeted static knowledge
+retrieval~\cite{hendrycks2021mmlu,jin2021disease,singhal2023medpalm} or
+multidimensional reasoning~\cite{ying2025seedbench}. Generic text metrics such
+as BLEU~\cite{papineni2002bleu} and LLM-based evaluators like
+G-Eval~\cite{liu2023geval,li2024survey} reward linguistic fluency and can leave
+experimentally invalid protocols undetected, masking
+hallucinations~\cite{bang2025hallulens,zhang2025survey} about chemical
+compatibility or incubation requirements.
+
+\noindent\textbf{Protocol-design and wet-lab benchmarks.} Breadth-oriented
+benchmarks such as BioProBench~\cite{bioprobench} (tens of thousands of
+protocols across many subfields) and LAB-Bench~\cite{labbench} assess protocol
+understanding largely via text/QA matching over many domains. ClearEval is
+orthogonal: it trades breadth for experiment-derived, parameter-level
+feasibility scoring within one subdomain, providing physics-grounded ground
+truth (refractive index, incubation windows, fluorophore compatibility) that
+QA-style benchmarks do not (Table~\ref{tab:positioning}).
+
+\noindent\textbf{LLM-as-a-judge calibration.} Automated judges exhibit
+documented position, verbosity, and self-preference
+biases~\cite{zheng2023judge}. We therefore restrict LLM judgment to
+Completeness/Correctness, ground Effectiveness in non-LLM physical checks, and
+report per-dimension agreement with expert consensus (Sec.~\ref{sec:calib},
+Appendix~\ref{app:judge}) rather than a single correlation.
+
+\noindent\textbf{Scientific agents.} Autonomous-lab
+systems~\cite{boiko2023coscientist,martinez2025ai} aim to close the loop from
+hypothesis to experiment. ClearEval supplies a pre-experimental feasibility
+gate such agents can apply before committing irreversible reagents, grounded in
+the empirical parameters of Tissue Optical
+Clearing~\cite{ueda2020tissue,chung2013clarity,kumar2024tissue}.
+
+\section{The ClearEval Benchmark}
+The development of ClearEval follows a structured pipeline that transforms
+specialized TOC domain expertise into a computational evaluation framework
+(Fig.~\ref{fig:overview}).
+
+\begin{figure*}[t]
+    \centering
+    \includegraphics[width=\textwidth]{figures/overview.png}
+    \caption{Overview of the dataset construction and benchmarking pipeline.
+    The left panel shows the workflow for formulating domain knowledge into
+    evaluation datasets. The right panel details the evaluation process,
+    scoring knowledge tasks on accuracy ($I_K$) and application tasks on
+    completeness, correctness, and a data-driven effectiveness metric ($f_x$)
+    grounded in experimental confidence intervals to calculate the $I_A$
+    Score.}
+    \label{fig:overview}
+\end{figure*}
+
+\subsection{Knowledge Base and Task Formulation}
+ClearEval formalizes wet-lab constraints into a structured knowledge system,
+encoded in seven curated knowledge bases covering tissue types, molecular
+markers, clearing-method properties, and compatibility, derived from the
+mainstream TOC literature (full inventory and provenance in
+Appendix~\ref{app:curation}). To align user requirements with protocol
+selection, these constraints are mapped into a 6-dimensional vector space
+$\mathcal{V} \in [0,1]^6$ representing key performance indicators such as
+fluorescence preservation, reagent permeability, and biosafety. Within this
+space, 60 core scientific missions across various biological scales were defined
+by experts to serve as seeds for realistic task generation.
+
+\subsection{Dataset Generation Workflow}
+The ClearEval pipeline (Fig.~\ref{fig:overview}, bottom left) instantiates
+expert-authored templates against the knowledge base via controlled-vocabulary
+substitution. For the Knowledge track, 45 expert templates (7 named-entity, 26
+domain-knowledge, 12 task-scenario) are expanded into \textbf{2{,}588 Knowledge
+Tasks (MCQs)}---533 named-entity, 1{,}350 domain-knowledge, and 705
+task-scenario---each in an 8-option format to minimize correct guessing,
+followed by deduplication and option shuffling. For the Application track, the
+60 mission seeds are combined with the knowledge base to generate open-ended
+scenarios, augmented with real wet-lab challenges and quality-filtered to
+\textbf{253 Application Tasks (OEQs)}. The OEQs move beyond static reference
+texts, instead presenting constrained scenarios evaluated through an automated,
+experiment-based scoring pipeline (Fig.~\ref{fig:overview}, right). Templates,
+controlled vocabularies, and filtering criteria are documented in
+Appendix~\ref{app:curation}.
+
+\section{Evaluation Framework}
+To quantify the transition from theoretical recall to functional
+executability, ClearEval employs a hierarchical scoring system
+(Table~\ref{tab:metrics}). The Application Index ($I_A$) shifts the focus from
+semantic similarity to \textbf{empirically grounded verification}, utilizing
+experimental confidence intervals to evaluate the viability of generated
+protocols.
+
+\begin{table}[htbp]
+    \centering
+    \caption{The Hierarchical Metric System of ClearEval. Evaluation scales
+    from static knowledge retrieval to empirically-grounded protocol
+    execution.}
+    \label{tab:metrics}
+    \resizebox{\columnwidth}{!}{
+    \begin{tabular}{l l l l c}
+        \toprule
+        \textbf{Level} & \textbf{Dimension} & \textbf{Sub-Metric} & \textbf{Method} & \textbf{Max} \\
+        \midrule
+        Knowledge ($I_K$) & Static Retrieval & Accuracy & Deterministic & 100\% \\
+        \midrule
+        \multirow{9}{*}{Application ($I_A$)} & \multirow{2}{*}{Completeness} & Step Integrity & LLM-Judge & 40\% \\
+         & & Param Detail & LLM-Judge & 60\% \\
+        \cmidrule{2-5}
+         & \multirow{3}{*}{Correctness} & Sequential Logic & LLM-Judge & 40\% \\
+         & & Consistency & LLM-Judge & 20\% \\
+         & & Physics Plausibility & LLM-Judge & 40\% \\
+        \cmidrule{2-5}
+         & \multirow{4}{*}{Effectiveness} & Method Suitability & Vector Sim. & 30\% \\
+         & & Label Compatibility & Rule-Based & 40\% \\
+         & & Trans. Validity ($S_{trans}$) & Physics Eq. & 15\% \\
+         & & Time Efficiency ($S_{time}$) & Physics Eq. & 15\% \\
+        \midrule
+        \textbf{Overall} & Expert Score & Harmonic Mean & Aggregation & 100\% \\
+        \bottomrule
+    \end{tabular}%
+    }
+\end{table}
+
+\subsection{Knowledge ($I_K$) and Application ($I_A$) Indices}
+The \textbf{Knowledge Index ($I_K$)} represents the macro-averaged MCQ accuracy
+across domain-specific categories. To evaluate protocol design, the
+\textbf{Application Index ($I_A$)} adopts a bottleneck formulation:
+\begin{equation}
+I_A = \min(\text{Completeness}, \text{Correctness}, \text{Effectiveness})
+\end{equation}
+This ``weakest-link'' approach reflects wet-lab realities, where a single
+critical failure in logic or chemical compatibility can render an entire
+experiment invalid.
+
+\subsection{Empirically-Grounded Effectiveness ($E_{score}$)}
+This dimension quantitatively verifies protocol feasibility against expert
+databases and physical constraints, yielding
+$E_{score} = S_{method} + S_{label} + S_{trans} + S_{time}$:
+
+\noindent\textbf{1. Method \& Label Suitability:}
+$S_{method}$ evaluates the cosine similarity between the generated and expert
+constraint vectors:
+\begin{equation}
+S_{method} = 5 \times \text{ReLU}(\cos(\mathbf{v}_{pred}, \mathbf{v}_{ref})).
+\end{equation}
+$S_{label}$ is a \textbf{hard constraint}, scoring 0 if any fluorescence
+quenching risk is detected.
+
+\noindent\textbf{2. Transparency ($S_{trans}$) \& Time Efficiency
+($S_{time}$):}
+To evaluate continuous parameters against \textbf{experimental confidence
+intervals}, we penalize Refractive Index (RI) mismatches and incubation time
+deviations ($\Delta t$) using Gaussian functions:
+\begin{equation}
+S_{trans} = 3 \cdot \exp \left( - \frac{(RI_{pred} - RI_{ref})^2}{2\sigma_{RI}^2} \right), \quad
+S_{time} = 3 \cdot \exp \left( - \frac{\Delta t^2}{2\tau^2} \right)
+\end{equation}
+where $\sigma_{RI}$ and $\tau$ are tolerance parameters derived from
+literature-bounded windows refined by expert review, and $\tau$ is set
+deterministically to $0.2\times$ the median clearing time (Appendix~\ref{app:curation}).
+For $S_{time}$, $\Delta t$ measures the deviation from the physically viable
+time window $[t_{min}, t_{max}]$. The raw $E_{score}$, which aggregates the
+Empirically-Grounded equations to a theoretical maximum of 17 points, is
+subsequently min-max normalized to a $[0, 100]$ scale. This aligns it with the
+Completeness and Correctness dimensions before computing the final $I_A$
+bottleneck.
+
+\subsection{Overall Expert Score}
+To penalize models that memorize facts but fail under practical physical
+constraints, the \textbf{ClearEval Expert Score} is the harmonic mean:
+$\text{Score} = 2 I_K I_A / (I_K + I_A)$. Given the bottleneck formulation of
+$I_A$, a high score demands both broad theoretical recall and strict
+experimental compliance.
+
+\section{Experiments}
+\subsection{Models and Settings}
+We benchmark 13 LLMs across the GPT, Gemini, Claude, DeepSeek/GLM, and Qwen
+families. For all evaluated API models we set temperature to $0.0$ for both
+Knowledge and Application tasks to maximize reproducibility; reasoning variants
+additionally run in their native thinking mode (Table~\ref{tab:modelconfig}).
+Exact provider snapshot strings, context windows, maximum output tokens, and
+API call dates are released in the repository configuration
+(Appendix~\ref{app:repro}).
+
+\begin{table}[htbp]
+    \centering
+    \caption{Decoding configuration for the 13 evaluated models. ``Reasoning''
+    denotes whether the run used the model's native thinking mode. Temperature
+    is $0.0$ throughout; full per-model snapshots and context windows are in the
+    released configuration (Appendix~\ref{app:repro}).}
+    \label{tab:modelconfig}
+    \small
+    \begin{tabular}{l l c c}
+        \toprule
+        \textbf{Model} & \textbf{Provider} & \textbf{Reasoning} & \textbf{Temp.} \\
+        \midrule
+        GPT-5.2-Fast        & OpenAI    & --       & 0.0 \\
+        GPT-5.2-Think       & OpenAI    & \checkmark & 0.0 \\
+        Gemini-3-Flash      & Google    & --       & 0.0 \\
+        Gemini-3-Pro        & Google    & \checkmark & 0.0 \\
+        Claude-4.6-Sonnet   & Anthropic & --       & 0.0 \\
+        GLM-4.7             & Zhipu     & --       & 0.0 \\
+        GLM-4.7-Think       & Zhipu     & \checkmark & 0.0 \\
+        DeepSeek-V3.2       & DeepSeek  & --       & 0.0 \\
+        DeepSeek-V3.2-Think & DeepSeek  & \checkmark & 0.0 \\
+        Qwen3-max           & Alibaba   & --       & 0.0 \\
+        Qwen3-235B-A22B     & Alibaba   & --       & 0.0 \\
+        Qwen3-32B           & Alibaba   & --       & 0.0 \\
+        Qwen3-14B           & Alibaba   & --       & 0.0 \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+\subsection{Main Results: The Knowledge-Execution Gap}
+Table~\ref{tab:main_results_total} reveals a stark capability imbalance between
+static recall and wet-lab execution. This is visually highlighted in
+Fig.~\ref{fig:radar_chart}: the left panel demonstrates that all evaluated
+models exhibit uniformly high and tightly clustered proficiency across
+Knowledge dimensions. In stark contrast, Application Performance (right) is
+highly erratic. While models generally maintain basic procedural completeness,
+their trajectories scatter unpredictably and collapse sharply on Effectiveness
+metrics (e.g., exact RI matching, viable diffusion times), exposing a severe
+knowledge--execution gap.
+
+\begin{table*}[t]
+    \centering
+    \caption{Performance of state-of-the-art models on ClearEval. Evaluation
+    covers Knowledge (MCQ) and Application (OEQ). $I_K$ represents the average
+    of the Knowledge subset, $I_A$ represents the minimum score across the
+    Application subset, and Total is their harmonic mean.}
+    \label{tab:main_results_total}
+    \setlength{\tabcolsep}{4pt}
+    \resizebox{\textwidth}{!}{%
+    \begin{tabular}{l cccc cccc c}
+        \toprule
+        \multirow{2}{*}{\textbf{Models}} & \multicolumn{4}{c}{\textbf{Knowledge (MCQ)}} & \multicolumn{4}{c}{\textbf{Application (OEQ)}} & \multirow{2}{*}{\textbf{Total}} \\
+        \cmidrule(lr){2-5} \cmidrule(lr){6-9}
+        & Tissue & Reagent & Method & $I_K$ & Com. & Cor. & Eff. & $I_A$ & \\
+        \midrule
+        \multicolumn{10}{l}{\textit{Proprietary Models}} \\
+        \midrule
+        GPT-5.2-Fast & \textbf{91.1} & \textbf{88.7} & 93.5 & \textbf{91.1} & \underline{87.1} & \textbf{90.2} & 66.4 & 66.4 & \textbf{76.8} \\
+        GPT-5.2-Think & \underline{90.5} & \underline{87.3} & \underline{93.6} & \underline{90.5} & 80.4 & 88.3 & 64.1 & 64.1 & 75.0 \\
+        Gemini-3-Flash & 78.7 & 81.8 & 91.1 & 83.9 & 84.6 & 83.3 & 66.4 & 66.4 & 74.1 \\
+        Gemini-3-Pro & 88.8 & 77.2 & 86.7 & 84.2 & 81.7 & 84.8 & 66.3 & 66.3 & 74.2 \\
+        Claude-4.6-Sonnet & 87.6 & 82.9 & \textbf{94.9} & 88.5 & \textbf{100.0} & 85.8 & 54.2 & 54.2 & 67.2 \\
+        \midrule
+        \multicolumn{10}{l}{\textit{Open-Weight Models}} \\
+        \midrule
+        GLM-4.7 & 79.3 & 80.2 & 93.5 & 84.3 & 81.9 & \underline{89.6} & \underline{69.0} & \underline{69.0} & 75.9 \\
+        GLM-4.7-Think & 78.7 & 70.5 & 90.7 & 80.0 & 78.8 & 87.1 & \textbf{70.3} & \textbf{70.3} & 74.8 \\
+        DeepSeek-V3.2 & 79.9 & 77.9 & 91.7 & 83.2 & 84.6 & 76.2 & 62.2 & 62.2 & 71.2 \\
+        DeepSeek-V3.2-Think & 85.3 & 83.8 & 93.5 & 87.5 & 75.0 & 71.9 & 62.3 & 62.3 & 72.8 \\
+        Qwen3-max & 79.9 & \underline{87.3} & 93.1 & 86.8 & \underline{87.1} & 81.0 & 68.1 & 68.1 & \underline{76.3} \\
+        Qwen3-235B-A22B & 77.5 & 81.2 & 89.1 & 82.6 & 64.6 & 67.1 & 53.9 & 53.9 & 65.2 \\
+        Qwen3-32B & 73.4 & 78.6 & 89.9 & 80.6 & 56.2 & 46.5 & 55.2 & 46.5 & 59.0 \\
+        Qwen3-14B & 73.4 & 77.8 & 88.4 & 79.9 & 48.8 & 39.0 & 54.3 & 39.0 & 52.4 \\
+        \bottomrule
+    \end{tabular}%
+    }
+\end{table*}
+
+\begin{figure*}[t]
+    \centering
+    \includegraphics[width=\textwidth]{figures/radar_chart.png}
+    \caption{Performance comparison of 13 LLMs on the ClearEval benchmark. The
+    left panel shows Knowledge Performance ($I_K$) across domain-specific
+    attributes (Tissue, Reagent, Method). The right panel details Application
+    Performance ($I_A$), evaluated on completeness, correctness, and an
+    Empirically-Grounded effectiveness metric.}
+    \label{fig:radar_chart}
+\end{figure*}
+
+\subsection{Calibration of the Automated Metrics}\label{sec:calib}
+We validate the automated CCE scores against blinded expert consensus on 240
+protocols (20 scenarios $\times$ 12 models). Because Pearson correlation alone
+ignores absolute bias, we report, per dimension, Pearson $r$, Spearman $\rho$,
+ICC(2,1), quadratic-weighted $\kappa$, and Krippendorff's $\alpha$
+(Table~\ref{tab:calib}; full 14-row sub-dimension breakdown in
+Appendix~\ref{app:judge}). The aggregate CCE dimensions align well with experts
+(ICC $0.75$/$0.65$/$0.81$ for Completeness/Correctness/Effectiveness; Overall
+$r=0.84$). Crucially, agreement is \emph{uneven} across the Effectiveness
+sub-metrics: the empirically-grounded label-compatibility ($S_{label}$, ICC
+$0.86$) and timing ($S_{time}$, ICC $0.82$) checks align strongly with experts,
+and transparency ($S_{trans}$, ICC $0.58$) moderately, whereas the
+cosine-similarity method-suitability score ($S_{method}$, ICC $0.04$, $r=0.11$)
+is near-degenerate---it is therefore reported as a soft preference signal rather
+than a calibrated score. Among the two LLM-judged dimensions, the weakest
+agreement is on chemical correctness ($co\_chem$, ICC $0.32$). We thus restrict
+LLM-as-judge to Completeness and Correctness and rely on the non-LLM physical
+checks for the decisive Effectiveness bottleneck.
+
+\begin{table}[htbp]
+    \centering
+    \caption{Agreement of automated vs.\ blinded expert-consensus scores on 240
+    protocols (20 scenarios $\times$ 12 models). ICC${=}$ICC(2,1);
+    QWK${=}$quadratic-weighted $\kappa$; $\alpha{=}$interval Krippendorff. Full
+    14-row breakdown in Appendix~\ref{app:judge}.}
+    \label{tab:calib}
+    \small
+    \begin{tabular}{l c c c c c}
+        \toprule
+        \textbf{Dimension} & \textbf{Pearson} $r$ & \textbf{Spearman} & \textbf{ICC} & \textbf{QWK} & $\boldsymbol{\alpha}$ \\
+        \midrule
+        Completeness  & 0.77 & 0.79 & 0.75 & 0.70 & 0.75 \\
+        Correctness   & 0.68 & 0.66 & 0.65 & 0.65 & 0.64 \\
+        Effectiveness & 0.83 & 0.81 & 0.81 & 0.80 & 0.80 \\
+        Overall       & 0.84 & 0.84 & 0.79 & 0.79 & 0.78 \\
+        \midrule
+        \multicolumn{6}{l}{\textit{Effectiveness sub-metrics}} \\
+        $S_{method}$ (cosine)  & 0.11 & 0.15 & 0.04 & 0.10 & $-0.04$ \\
+        $S_{label}$ (rule)     & 0.86 & 0.82 & 0.86 & 0.85 & 0.86 \\
+        $S_{trans}$ (physics)  & 0.63 & 0.46 & 0.58 & 0.52 & 0.56 \\
+        $S_{time}$ (physics)   & 0.84 & 0.77 & 0.82 & 0.80 & 0.82 \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=\columnwidth]{figures/alignment.png}
+    \caption{Calibration of automated metrics against expert consensus
+    ($n{=}240$). (a) Per-dimension correlation with expert ratings.
+    (b) Bland--Altman plot showing high absolute agreement.}
+    \label{fig:alignment}
+\end{figure}
+
+\subsection{Fine-Grained Diagnosis: Effectiveness Bottlenecks}
+Decomposing the Effectiveness gap (Fig.~\ref{fig:violin_limits}) shows it is
+dominated by transparency / refractive-index matching ($S_{trans}$, mean
+normalized score $0.28$) and, secondarily, label compatibility ($S_{label}$,
+$0.56$), whereas timing ($S_{time}$, $0.90$) is comparatively well handled. For
+\textbf{Transparency} ($S_{trans}$), models frequently propose refractive-index
+targets mismatched to the chosen clearing method---the most common cause of
+failed transparency. For \textbf{Label Compatibility} ($S_{label}$), while
+models recall high-frequency incompatibilities (e.g., protein quenching by
+organic solvents), they mismanage compatibilities between diverse synthetic dyes
+and specific TOC methods. For \textbf{Time Efficiency} ($S_{time}$), individual
+estimates can be far off---occasionally exceeding 800 hours against a 0--200
+hour ground-truth window---reflecting scale-insensitivity, yet such errors are
+rarer in aggregate, so timing contributes least to the overall Effectiveness
+deficit.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=\columnwidth]{figures/violin_plots.png}
+    \caption{Performance distributions for transparency / refractive-index
+    matching ($S_{trans}$) and label compatibility ($S_{label}$), the two
+    dominant Effectiveness bottlenecks.}
+    \label{fig:violin_limits}
+\end{figure}
+
+\subsection{Inference-Time Baselines}\label{sec:baselines}
+A central question is whether the knowledge--execution gap persists once
+standard inference-time techniques are applied. We evaluate four recipes against
+the greedy default on the full 253-scenario Application set, for a
+representative model from each capability tier: (i) \textbf{few-shot} (3
+in-context exemplars); (ii) \textbf{self-consistency} ($k{=}5$ samples at
+temperature $0.7$, aggregated by method-majority then continuous-field median);
+(iii) \textbf{KB-RAG}, prepending retrieved knowledge-base context (method
+properties and compatibility records, with numeric RI/time targets withheld to
+avoid leaking the answer key); and (iv) \textbf{KB-RAG $+$ self-consistency}.
+Table~\ref{tab:baselines} reports CCE and the bottleneck Application Index
+$I_A$ (with 95\% confidence intervals). We treat KB-RAG as an upper bound on
+grounding benefit; full literature-RAG over an external corpus is left to future
+work. The exact run protocol is given in Appendix~\ref{app:repro}.
+
+\begin{table}[htbp]
+    \centering
+    \caption{Inference-time baselines on the 253-scenario Application set
+    (representative models). $I_A$ is the bottleneck Application Index. Cells are
+    populated from the inference-time run (Sec.~\ref{sec:baselines}); ``--''
+    denotes a value pending that run.}
+    \label{tab:baselines}
+    \small
+    \begin{tabular}{l l cccc}
+        \toprule
+        \textbf{Model} & \textbf{Recipe} & \textbf{Com.} & \textbf{Cor.} & \textbf{Eff.} & $\boldsymbol{I_A}$ \\
+        \midrule
+        \multirow{5}{*}{\shortstack[l]{Repr.\\(per tier)}}
+          & Default (greedy)            & -- & -- & -- & -- \\
+          & Few-shot (3)                & -- & -- & -- & -- \\
+          & Self-Consistency ($k{=}5$)  & -- & -- & -- & -- \\
+          & KB-RAG                      & -- & -- & -- & -- \\
+          & KB-RAG $+$ SC               & -- & -- & -- & -- \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+\section{Discussion and Limitations}\label{sec:discussion}
+Within TOC, ClearEval shows the bottleneck is not declarative retrieval but
+executable parameterization grounded in physical constraints---chiefly
+refractive-index matching and chemical compatibility. Whether this pattern
+generalizes across wet-lab subdomains is an open question our single-subdomain
+design cannot settle.
+
+\noindent\textbf{External validity.} ClearEval covers one subdomain (TOC). Our
+claims are therefore about TOC protocol feasibility, not LLM scientific
+competence in general. Generalizing the methodology requires re-curating
+subdomain-specific physical knowledge bases (refractive indices, incubation
+windows, compatibility matrices), which is non-trivial
+(Appendix~\ref{app:curation}); we offer CCE as a transferable recipe rather than
+a finished multi-domain benchmark.
+
+\noindent\textbf{Complementarity.} Depth-first ClearEval and breadth-first
+benchmarks such as BioProBench~\cite{bioprobench} are complementary: the former
+contributes experiment-derived, parameter-level feasibility scoring within a
+subdomain, the latter broad coverage. Together they give a fuller picture of LLM
+protocol-design ability than either alone.
+
+\noindent\textbf{Toward grounded agents.} For LLMs to become viable in
+specialized wet-lab domains, they must internalize experimental
+constraints---such as reagent diffusion scales---within their reasoning loops;
+ClearEval can serve as a pre-experimental feasibility gate for such agents
+before irreversible reagent commitment.
+
+\noindent\textbf{Limitations.} ClearEval remains a static paradigm. Real-world
+wet labs involve stochastic variables (reagent degradation, tissue
+heterogeneity) that are hard to model in silico; our expert grounding is
+literature-bounded and refined by expert review rather than exhaustively
+re-measured; and the cosine method-suitability sub-score is weakly calibrated
+(Sec.~\ref{sec:calib}). Future work should integrate dynamic hardware feedback
+so agents iteratively optimize protocols from real-time signals.
+
+\section{Conclusion}
+We presented ClearEval, an expert-curated benchmark for TOC protocol design
+that shifts evaluation from semantic similarity to empirically grounded
+functional validation. By leveraging a dual-track pipeline and a data-driven
+CCE framework, ClearEval exposes a significant knowledge-execution gap in
+current LLMs on TOC protocol design. Our results indicate that while models
+excel at knowledge recall, they struggle with the refractive-index and
+chemical-compatibility constraints required for wet-lab execution. We anticipate
+that ClearEval---and the transferable CCE recipe---will facilitate the
+development of reliable scientific agents, starting with tissue-clearing
+workflows.
+
+\appendices
+
+\section{Knowledge-Base Curation and Expert Grounding}\label{app:curation}
+\noindent\textbf{Expert panel and consensus.} The knowledge bases and the CCE
+rubric were curated by a panel of tissue-clearing wet-lab experts together with
+a knowledge-graph specialist. Application protocols were first scored blind
+against the rubric and then reconciled by panel consensus; the released scores
+are per-protocol consensus values.
+
+\noindent\textbf{Knowledge bases.} Grounding is encoded in seven JSON knowledge
+bases: reference refractive index for 18 clearing methods (CUBIC, ScaleS, MACS,
+iDISCO+, FDISCO, SOLID, SeeDB2, PEGASOS, BoneClear, Ce3D, TDE, ClearT2, ClearSee,
+EyeCi, FOCM, SWITCH, uDISCO, FlyClear); per-method RI tolerance $\sigma_{RI}$;
+per-method incubation-time tolerance $\tau$; a timing base of 84 (method,
+sample-tier) rows giving the viable window $[t_{min}, t_{max}]$; a
+marker$\times$method fluorophore-compatibility matrix; a tissue table; and
+tissue-RI references.
+
+\noindent\textbf{Provenance.} Each timing row records a literature source key,
+source URL, evidence locator, confidence level, and review status, giving an
+audit trail from each parameter to its literature basis (Table~\ref{tab:kbprov}).
+RI references cite their originating protocol (e.g., CUBIC RI${=}1.46$, Susaki
+et al., \emph{Nat. Protoc.}). Timing tolerances are derived deterministically as
+$\tau{=}0.2\times$ the median clearing time. Parameters are literature-bounded
+and refined by expert review rather than exhaustively re-measured.
+
+\noindent\textbf{Operationalization.} The Effectiveness terms read directly from
+these bases: $S_{method}$ from tissue/method preference vectors (cosine);
+$S_{label}$ from the fluorophore-compatibility matrix (hard zero on quenching);
+$S_{trans}$ from RI references and $\sigma_{RI}$, gated to zero when a (method,
+tier) pair is unsupported; and $S_{time}$ from $[t_{min},t_{max}]$ and $\tau$.
+
+\begin{table}[htbp]
+    \centering
+    \caption{Schema of the timing knowledge base (84 rows). Every row is
+    traceable to a literature source and a review decision.}
+    \label{tab:kbprov}
+    \small
+    \begin{tabular}{l l}
+        \toprule
+        \textbf{Field} & \textbf{Role / example} \\
+        \midrule
+        method, tier & e.g.\ CUBIC, whole-organ tier \\
+        $[t_{min}, t_{med}, t_{max}]$ & viable incubation window (h) \\
+        source\_key, source\_url & e.g.\ CUBIC\_NATPROT\_2015 \\
+        evidence\_location & locator within the cited source \\
+        confidence & high / medium / low \\
+        review\_status & added / modified / removed \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+\section{Judge Calibration Details}\label{app:judge}
+Table~\ref{tab:calibfull} reports the full per-sub-dimension agreement between
+automated and blinded expert-consensus scores ($n{=}240$). The two LLM-judged
+dimensions use a fixed rubric (\texttt{eval\_oeq\_teacher\_rubric.txt},
+\texttt{eval\_completeness\_checklist.txt}, released in the repository) at
+temperature $0.0$. Because raw per-annotator sheets were not preserved, we report
+expert-consensus-vs-automated agreement rather than human--human inter-annotator
+reliability.
+
+\begin{table}[htbp]
+    \centering
+    \caption{Full per-dimension agreement of automated vs.\ expert-consensus
+    scores ($n{=}240$). ICC${=}$ICC(2,1); QWK${=}$quadratic-weighted $\kappa$;
+    $\alpha{=}$interval Krippendorff.}
+    \label{tab:calibfull}
+    \small
+    \begin{tabular}{l c c c c c}
+        \toprule
+        \textbf{Dimension} & $r$ & $\rho$ & \textbf{ICC} & \textbf{QWK} & $\boldsymbol{\alpha}$ \\
+        \midrule
+        $c\_step$  & 0.71 & 0.72 & 0.70 & 0.54 & 0.70 \\
+        $c\_param$ & 0.71 & 0.71 & 0.68 & 0.60 & 0.67 \\
+        \textbf{Completeness} & 0.77 & 0.79 & 0.75 & 0.70 & 0.75 \\
+        \midrule
+        $co\_order$  & 0.66 & 0.65 & 0.61 & 0.58 & 0.60 \\
+        $co\_method$ & 0.46 & 0.44 & 0.40 & 0.39 & 0.37 \\
+        $co\_param$  & 0.55 & 0.56 & 0.53 & 0.48 & 0.53 \\
+        $co\_chem$   & 0.41 & 0.32 & 0.32 & 0.37 & 0.25 \\
+        \textbf{Correctness} & 0.68 & 0.66 & 0.65 & 0.65 & 0.64 \\
+        \midrule
+        $S_{method}$ & 0.11 & 0.15 & 0.04 & 0.10 & $-0.04$ \\
+        $S_{label}$  & 0.86 & 0.82 & 0.86 & 0.85 & 0.86 \\
+        $S_{trans}$  & 0.63 & 0.46 & 0.58 & 0.52 & 0.56 \\
+        $S_{time}$   & 0.84 & 0.77 & 0.82 & 0.80 & 0.82 \\
+        \textbf{Effectiveness} & 0.83 & 0.81 & 0.81 & 0.80 & 0.80 \\
+        \midrule
+        \textbf{Overall} & 0.84 & 0.84 & 0.79 & 0.79 & 0.78 \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+\section{Reproducibility and Artifact Manifest}\label{app:repro}
+\noindent\textbf{Artifacts.} The repository releases the 253 Application
+scenarios and 2{,}588 MCQs; the seven knowledge bases; all 13 model generations
+and their evaluation results; the generation and judge prompts; and the
+scoring/plotting code, with an English README, a \texttt{requirements.txt}, and
+UTF-8 knowledge-base fields.
+
+\noindent\textbf{Determinism.} All evaluated API models run at temperature
+$0.0$ (Table~\ref{tab:modelconfig}); because hosted models are non-deterministic
+and snapshot aliases drift, we release the raw model responses so results are
+replayable even when regeneration is not bit-identical. Provider snapshot
+strings and API-call dates are recorded in the released configuration.
+
+\noindent\textbf{Inference-time run protocol (Sec.~\ref{sec:baselines}).}
+Few-shot uses 3 exemplars; self-consistency draws $k{=}5$ samples at temperature
+$0.7$ aggregated by method-majority then continuous-field median; KB-RAG
+prepends retrieved compatibility/method records with numeric RI/time targets
+withheld; reported $I_A$ carries 95\% CIs over samples.
+
+% ---- Bibliography ----
+\bibliographystyle{IEEEtran}
+\bibliography{references}
+
+\end{document}
