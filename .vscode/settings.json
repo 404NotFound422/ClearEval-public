@@ -1,0 +1,169 @@
+{
+    // TeX Live 2026 binary paths (adjust year if needed)
+    "latex-workshop.latex.texDirs": [
+        "D:/texlive/2026/texmf-dist/tex/latex"
+    ],
+
+    // Build tools
+    "latex-workshop.latex.tools": [
+        {
+            "name": "latexmk",
+            "command": "D:/texlive/2026/bin/windows/latexmk.exe",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "-pdf",
+                "-outdir=%OUTDIR%",
+                "%DOC%"
+            ],
+            "env": {}
+        },
+        {
+            "name": "latexmk_xelatex",
+            "command": "D:/texlive/2026/bin/windows/latexmk.exe",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "-xelatex",
+                "-outdir=%OUTDIR%",
+                "%DOC%"
+            ],
+            "env": {}
+        },
+        {
+            "name": "latexmk_lualatex",
+            "command": "D:/texlive/2026/bin/windows/latexmk.exe",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "-lualatex",
+                "-outdir=%OUTDIR%",
+                "%DOC%"
+            ],
+            "env": {}
+        },
+        {
+            "name": "pdflatex",
+            "command": "D:/texlive/2026/bin/windows/pdflatex.exe",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "%DOC%"
+            ],
+            "env": {}
+        },
+        {
+            "name": "xelatex",
+            "command": "D:/texlive/2026/bin/windows/xelatex.exe",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "%DOC%"
+            ],
+            "env": {}
+        },
+        {
+            "name": "bibtex",
+            "command": "D:/texlive/2026/bin/windows/bibtex.exe",
+            "args": [
+                "%DOCFILE%"
+            ],
+            "env": {}
+        },
+        {
+            "name": "biber",
+            "command": "D:/texlive/2026/bin/windows/biber.exe",
+            "args": [
+                "%DOCFILE%"
+            ],
+            "env": {}
+        }
+    ],
+
+    // Build recipes (Overleaf uses latexmk by default)
+    "latex-workshop.latex.recipes": [
+        {
+            "name": "latexmk (pdflatex)",
+            "tools": [
+                "latexmk"
+            ]
+        },
+        {
+            "name": "latexmk (xelatex)",
+            "tools": [
+                "latexmk_xelatex"
+            ]
+        },
+        {
+            "name": "latexmk (lualatex)",
+            "tools": [
+                "latexmk_lualatex"
+            ]
+        },
+        {
+            "name": "pdflatex -> bibtex -> pdflatex*2",
+            "tools": [
+                "pdflatex",
+                "bibtex",
+                "pdflatex",
+                "pdflatex"
+            ]
+        }
+    ],
+
+    // Default recipe matches Overleaf default
+    "latex-workshop.latex.recipe.default": "latexmk (pdflatex)",
+
+    // Auto build on save (like Overleaf)
+    "latex-workshop.latex.autoBuild.run": "onSave",
+    "latex-workshop.latex.autoClean.run": "onBuilt",
+
+    // Clean auxiliary files
+    "latex-workshop.latex.clean.fileTypes": [
+        "*.aux",
+        "*.bbl",
+        "*.blg",
+        "*.idx",
+        "*.ind",
+        "*.lof",
+        "*.lot",
+        "*.out",
+        "*.toc",
+        "*.acn",
+        "*.acr",
+        "*.alg",
+        "*.glg",
+        "*.glo",
+        "*.gls",
+        "*.fls",
+        "*.log",
+        "*.fdb_latexmk",
+        "*.snm",
+        "*.synctex(busy)",
+        "*.synctex.gz(busy)",
+        "*.nav",
+        "*.vrb",
+        "*.run.xml",
+        "*.bcf"
+    ],
+
+    // PDF viewer: use VS Code tab (set to "external" for SumatraPDF)
+    "latex-workshop.view.pdf.viewer": "tab",
+    "latex-workshop.view.pdf.internal.synctex.keybinding": "double-click",
+
+    // Forward/inverse search settings
+    "latex-workshop.synctex.afterBuild.enabled": true,
+
+    // ChkTeX linting (optional)
+    "latex-workshop.linting.chktex.enabled": true,
+    "latex-workshop.linting.chktex.exec.path": "D:/texlive/2026/bin/windows/chktex.exe",
+
+    // Formatting
+    "latex-workshop.formatting.latex": "latexindent",
+    "latex-workshop.formatting.latexindent.path": "D:/texlive/2026/bin/windows/latexindent.exe"
+}

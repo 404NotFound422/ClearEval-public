@@ -1,0 +1,102 @@
+\documentclass[11pt,a4paper]{article}
+
+% Encoding and fonts
+\usepackage[UTF8]{ctex} % Remove if writing in English only
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+
+% Page layout
+\usepackage{geometry}
+\geometry{left=2.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm}
+
+% Math
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{mathtools}
+
+% Graphics and tables
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{array}
+\usepackage{float}
+
+% Colors and links
+\usepackage{xcolor}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,
+    urlcolor=cyan,
+    citecolor=blue,
+    pdftitle={Your Paper Title},
+    pdfauthor={Your Name},
+}
+
+% Algorithms and code
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\usepackage{listings}
+
+% Bibliography
+\usepackage[numbers]{natbib}
+
+% Other utilities
+\usepackage{cleveref}
+\usepackage{caption}
+\usepackage{subcaption}
+
+% Theorem environments
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+
+\title{\textbf{Your Paper Title}}
+\author{Your Name}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+Write your abstract here.
+\end{abstract}
+
+\section{Introduction}
+\label{sec:intro}
+
+This is a template for your paper. You can edit this file directly in VS Code with LaTeX Workshop or sync it with Overleaf.
+
+\subsection{Related Work}
+\label{sec:related}
+
+Cite a paper like this: \cite{example2024}.
+
+\section{Method}
+\label{sec:method}
+
+Describe your method here. You can write equations:
+\begin{equation}
+    \label{eq:example}
+    E = mc^2.
+\end{equation}
+
+\section{Experiments}
+\label{sec:experiments}
+
+Add your experimental results here.
+
+\section{Conclusion}
+\label{sec:conclusion}
+
+Conclude your paper here.
+
+% Bibliography
+\bibliographystyle{plainnat}
+\bibliography{references}
+
+\end{document}
