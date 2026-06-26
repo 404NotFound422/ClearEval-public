@@ -67,7 +67,7 @@ MCQ_STATS_FILE = 'results/mcq_stats_20260222.jsonl'
 
 OEQ_DIMENSIONS = [
     'Comp.\n(Step)', 'Comp.\n(Param)', 
-    'Corr.\n(Order)', 'Corr.\n(Method)', 'Corr.\n(Param)', 'Corr.\n(Safety)',
+    'Corr.\n(Order)', 'Corr.\n(Method)', 'Corr.\n(Param)', 'Corr.\n(Chem)',
     'Eff.\n(Trans.)', 'Eff.\n(Time)', 'Eff.\n(Label)', 'Eff.\n(Method)'
 ]
 
@@ -77,9 +77,9 @@ OEQ_MAPPING = {
     'Corr.\n(Order)': 'co_order_norm',
     'Corr.\n(Method)': 'co_method_norm',
     'Corr.\n(Param)': 'co_param_norm',
-    'Corr.\n(Safety)': 'co_chem_norm',
-    'Eff.\n(Trans.)': 's_time_norm',
-    'Eff.\n(Time)': 's_trans_norm',
+    'Corr.\n(Chem)': 'co_chem_norm',
+    'Eff.\n(Trans.)': 's_trans_norm',
+    'Eff.\n(Time)': 's_time_norm',
     'Eff.\n(Label)': 's_label_norm',
     'Eff.\n(Method)': 's_method_norm'
 }
@@ -114,8 +114,7 @@ MODEL_NAME_MAP = {
 
 LEGEND_GRID = [
     ['GPT-5.2-Fast', 'Gemini-3-Flash', 'DeepSeek-Chat', 'Qwen3-Max', 'Qwen3-32B', 'Claude-4.6-sonnet'],
-    ['GPT-5.2-Think', 'Gemini-3-Pro', 'DeepSeek-Think', 'Qwen3-235B', 'Qwen3-14B', 'GLM-4.7'],
-    [None, None, None, None, None, 'GLM-4.7-Think']
+    ['GPT-5.2-Think', 'Gemini-3-Pro', 'DeepSeek-Think', 'Qwen3-235B', 'Qwen3-14B', 'GLM-4.7']
 ]
 
 def clean_model_name(name):
@@ -161,7 +160,7 @@ def plot_combined():
         print("错误: 数据不足，无法绘图。")
         return
 
-    present_models = set(list(oeq_data.keys()) + list(mcq_data.keys()))
+    present_models = set(oeq_data.keys()) & set(mcq_data.keys())  # only models with both MCQ and OEQ (drops glm4.7-thinking)
     
     colors_cycle = plt.cm.tab20.colors
     color_map = {
@@ -191,7 +190,7 @@ def plot_combined():
     # 子图 1: Knowledge Performance (MCQ)
     theta_mcq = radar_factory(len(mcq_labels), frame='polygon')
     ax1 = fig.add_subplot(1, 2, 1, projection='radar')
-    ax1.set_title('Knowledge Performance', pad=80)
+    ax1.set_title('Knowledge Performance', pad=140)
     ax1.set_varlabels(mcq_labels)
     ax1.set_rlim(0, 100)
     ax1.set_rticks([20, 40, 60, 80, 100])
@@ -208,7 +207,7 @@ def plot_combined():
     # 子图 2: Application Performance (OEQ)
     theta_oeq = radar_factory(len(oeq_labels), frame='polygon')
     ax2 = fig.add_subplot(1, 2, 2, projection='radar')
-    ax2.set_title('Application Performance', pad=80)
+    ax2.set_title('Application Performance', pad=140)
     ax2.set_varlabels(oeq_labels)
     ax2.set_rlim(0, 100)
     ax2.set_rticks([20, 40, 60, 80, 100])

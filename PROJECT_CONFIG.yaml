@@ -1,0 +1,158 @@
+---
+# Universal Workflow Configuration
+name: "ClearEval-public"
+extends: "universal-workflow-v1.0"
+
+# =============================================================================
+# TECHNOLOGY STACK
+# =============================================================================
+
+stack:
+  language: python
+  language_version: "3.12"
+  framework: llm-benchmark
+  framework_version: ""
+  description: "Benchmark for evaluating LLMs on tissue optical clearing protocols"
+
+# =============================================================================
+# COMMANDS (These are used in the workflow stages)
+# =============================================================================
+
+commands:
+  # Testing — this project has no pytest suite; use syntax + smoke checks
+  test: "python -m py_compile $(find . -maxdepth 2 -name '*.py' -not -path './Auto-claude-code-research-in-sleep/*')"
+  test_unit: "echo 'No unit test suite configured'"
+  test_integration: "echo 'No integration test suite configured'"
+  test_all: "python -m py_compile $(find . -maxdepth 2 -name '*.py' -not -path './Auto-claude-code-research-in-sleep/*')"
+  test_watch: "echo 'No watch mode configured'"
+
+  # Building
+  build: "echo 'No build step for this research project'"
+  build_dev: "echo 'No build step for dev'"
+
+  # Linting & Quality
+  lint: "ruff check ."
+  lint_fix: "ruff check . --fix"
+  format: "ruff format ."
+  format_check: "ruff format --check ."
+  type_check: "echo 'No type checker configured (project has no pyproject.toml)'"
+
+  # Data / KnowledgeBase validation
+  validate_kb: "python -c \"import json, pathlib; [json.load(open(p)) for p in pathlib.Path('KnowledgeBase').glob('*.json')]\""
+
+  # Security
+  security_scan: "echo 'No security scanner configured'"
+
+  # Regression
+  regression_test: "echo 'No regression test suite configured'"
+
+  # Version Control
+  vcs_diff: "git diff HEAD~1"
+  get_base_sha: "git rev-parse HEAD~1"
+  get_head_sha: "git rev-parse HEAD"
+
+# =============================================================================
+# PATHS (Where workflow artifacts are stored)
+# =============================================================================
+
+paths:
+  # Workflow outputs
+  design_docs: "workflow/designs/"
+  plans: "workflow/plans/"
+
+  # Code locations
+  source: "."
+  entry_points:
+    - "MCQ_async_test.py"
+    - "OEQ_run_grading_new.py"
+    - "compare_teacher_model.py"
+    - "extract_clearing_time.py"
+  tests:
+    root: ""
+    unit: ""
+    integration: ""
+    e2e: ""
+
+  # Documentation
+  docs: "paper/"
+
+  # Data & assets
+  knowledge_base: "KnowledgeBase/"
+  dataset: "dataset/"
+  results: "results/"
+
+  # Scripts
+  scripts: "results/"
+
+# =============================================================================
+# CONSTRAINTS (Quality standards)
+# =============================================================================
+
+constraints:
+  - "All Python entry-point scripts must compile (py_compile)"
+  - "ZERO syntax errors in committed Python files"
+  - "KnowledgeBase JSON files must be valid JSON"
+  - "Prefer minimal, research-code changes; avoid unnecessary refactors"
+  - "Do not commit API keys or secrets"
+
+# =============================================================================
+# STAGE CUSTOMIZATIONS (Optional per-stage overrides)
+# =============================================================================
+
+stage_customizations:
+  # Stage 5: Testing — Which commands to run
+  stage_5:
+    test_sequence:
+      - command: "{test_all}"
+        description: "Compile all top-level Python scripts"
+      - command: "{validate_kb}"
+        description: "Validate KnowledgeBase JSON files"
+      - command: "{lint}"
+        description: "Run ruff linter"
+
+  # Stage 6: Verification - What proves completion
+  stage_6:
+    verification_commands:
+      - command: "{test_all}"
+        expected: "exit code 0"
+      - command: "{validate_kb}"
+        expected: "exit code 0"
+      - command: "{lint}"
+        expected: "0 errors"
+
+# =============================================================================
+# NAMING CONVENTIONS
+# =============================================================================
+
+conventions:
+  branches: "feature/<short-description>"
+  commits: "[TYPE]: Description"
+
+  files:
+    style: "mixed"
+    notes: "Top-level scripts use snake_case (e.g. MCQ_async_test.py, OEQ_run_grading_new.py); model modules use PascalCase (e.g. Base_Models.py, OpenAI_Model.py)"
+    test_prefix: "test_"
+    test_suffix: ""
+
+# =============================================================================
+# SKILL EXTENSIONS (Optional additions to Superpowers skills)
+# =============================================================================
+
+skill_extensions:
+  brainstorming:
+    additional_considerations:
+      - "Does the change affect both MCQ and OEQ tracks?"
+      - "Will knowledge-base JSON files need updates?"
+      - "Does the change alter judge/rubric behavior?"
+
+  writing-plans:
+    required_sections:
+      - "Affected entry-point scripts"
+      - "Data / knowledge-base impact"
+      - "How to verify (compile, lint, sample run)"
+
+  verification_before_completion:
+    additional_checks:
+      - "Re-run py_compile on modified Python files"
+      - "Validate any modified JSON in KnowledgeBase/"
+      - "Check that no API keys were committed"

@@ -7,8 +7,9 @@ from collections import Counter
 from transformers import AutoTokenizer
 
 # --- CONFIGURATION ---
-### --- IMPORTANT: EDIT THIS LINE --- ###
-JSONL_FILE_PATH = r'D:\YWB\TOCModelBenchmark\dataset\MCQ\final\development.jsonl'
+### --- Data path resolves relative to this script (edit if your layout differs) --- ###
+import os
+JSONL_FILE_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'final', 'development.jsonl')
 # We use a standard tokenizer that reflects how many models process text.
 TOKENIZER_MODEL = 'bert-base-uncased'
 

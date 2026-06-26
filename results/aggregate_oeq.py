@@ -13,8 +13,9 @@ import sys
 更新：增加了路径自动搜索逻辑，支持不同运行环境。
 """
 
-# 默认评分结果目录
-DEFAULT_OEQ_DIR = r'dataset/Q+AR/score_results/260223'
+# 默认评分结果目录：使用随仓库发布的全部 253 个场景的机器评分结果，
+# 保证 oeq_stats 可由公开数据复现（主结果表 Table 2 的来源）。
+DEFAULT_OEQ_DIR = r'dataset/Q+AR/result'
 OUTPUT_FILE_NAME = 'oeq_stats_260223.jsonl'
 
 # 归一化满分标准

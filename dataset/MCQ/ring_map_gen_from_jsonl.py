@@ -4,8 +4,10 @@ import json
 import io
 from collections import Counter, defaultdict
 import textwrap
+import os
 
-FILE_PATH = r'H:\博士工作内容\10-课题相关\1-代码\LLM\TOCModelBenchmark\dataset\MCQ\final\development.jsonl'
+# Resolve the data file relative to this script so the repo runs anywhere.
+FILE_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'final', 'development.jsonl')
 
 # --- 1. Define the Classification Schema ---
 classification_schema = {

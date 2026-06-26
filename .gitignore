@@ -1,6 +1,12 @@
 __pycache__/
 dataset/Q+AR/logs
 
+# Unrelated local automation framework — must NOT ship in the public mirror
+Auto-claude-code-research-in-sleep/
+
+# Pipeline scratch
+.aris/
+
 # TeX Live installation temporary files
 .texlive-setup/
 paper/build/
@@ -12,3 +18,5 @@ paper/build/
 *.synctex.gz
 *.fdb_latexmk
 *.fls
+
+workflow/

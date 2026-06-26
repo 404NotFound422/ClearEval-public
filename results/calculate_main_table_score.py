@@ -13,7 +13,7 @@ import json
    - Completeness: c_step 和 c_param 的平均值。
    - Correctness: co_order, co_method, co_param, co_chem 的平均值。
    - Effectiveness: s_method, s_label, s_trans, s_time 的平均值。
-   - I_A = (Completeness + Correctness + Effectiveness) / 3
+   - I_A = min(Completeness, Correctness, Effectiveness)  # 瓶颈/最弱环
 
 3. Total Score:
    - Harmonic Mean: Score = 2 * I_K * I_A / (I_K + I_A)
@@ -95,7 +95,7 @@ def main():
         
         if all(v is not None for v in i_k_vals) and all(v is not None for v in i_a_vals):
             i_k = sum(i_k_vals) / 3
-            i_a = sum(i_a_vals) / 3
+            i_a = min(i_a_vals)  # bottleneck (weakest-link) Application Index, per paper Eq. (1)
             if (i_k + i_a) > 0:
                 total = 2 * i_k * i_a / (i_k + i_a)
                 row.append(f"{total:>6.1f}")
