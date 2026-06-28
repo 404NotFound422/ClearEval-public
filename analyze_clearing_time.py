@@ -3,14 +3,10 @@
 按模型和组织（tissue tier label）统计透明时间并生成图表。
 """
 import json
-import os
 import base64
 from pathlib import Path
-from collections import defaultdict
 
-import numpy as np
 import pandas as pd
-import matplotlib
 import matplotlib.pyplot as plt
 import seaborn as sns
 
