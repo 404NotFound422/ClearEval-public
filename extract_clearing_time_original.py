@@ -121,67 +121,20 @@ def extract_clearing_time(protocol_text):
 
     total_hours = 0.0
     has_valid_step = False
-    in_core_section = False
-
-    # 用于识别子步骤：1.1 / (a) / (1) 等编号，或行首缩进
-    substep_pattern = re.compile(r"^\s*(\d+\.\d+|\(\d+\)|\([a-zA-Z]\))")
-    # 章节标题模式：如 "1 Dehydration"、"**1 Pre-treatment"、"1. Dehydration"、"1. **Pretreatment**"
-    section_header_pattern = re.compile(
-        r"^\s*(?:\*\*)?\d+(?:\.\s*|\s+)(?:\*\*)?\s*[A-Za-z\u4e00-\u9fff\(]",
-        re.UNICODE,
-    )
-    action_words = ["incubation", "incubate", "wash", "rinse", "place", "immerse", "equilibrate"]
-    core_reagents = ["dbb", "dbe", "babb", "eci", "rims", "scale", "cubic", "macs", "solid", "fdisco", "seebd", "甲醇", "乙醇", "meoh", "etoh"]
 
     # 按行分割，同时尝试识别子步骤（如 1.1, 2.1）
     lines = protocol_text.split('\n')
 
-    for raw_line in lines:
-        line = raw_line.strip()
+    for line in lines:
+        line = line.strip()
         if not line:
-            in_core_section = False
             continue
 
-        core = is_core_step(line)
-        if core:
+        if is_core_step(line):
             hours = parse_time_to_hours(line)
             if hours is not None:
                 total_hours += hours
                 has_valid_step = True
-                in_core_section = False
-            elif section_header_pattern.match(line):
-                # 该行是核心章节标题（如 "1 Dehydration"），进入子步骤收集模式
-                in_core_section = True
-            else:
-                in_core_section = False
-            continue
-
-        if in_core_section:
-            # 判断是否为当前章节下的子步骤
-            is_substep = (
-                substep_pattern.match(raw_line)
-                or raw_line.startswith("  ")
-                or raw_line.startswith("\t")
-                or (parse_time_to_hours(line) is not None
-                    and any(w in line.lower() for w in action_words))
-            )
-            if is_substep:
-                text_lower = line.lower()
-                # 排除非透明化子步骤（固定、染色、成像、封片、抗体等）
-                excluded = any(kw.lower() in text_lower for kw in EXCLUDE_KEYWORDS)
-                # 排除不含核心试剂的常规清洗
-                is_plain_wash = (
-                    any(kw in text_lower for kw in EXCLUDE_WASH_KEYWORDS)
-                    and not any(kw in text_lower for kw in core_reagents)
-                )
-                if not excluded and not is_plain_wash:
-                    hours = parse_time_to_hours(line)
-                    if hours is not None:
-                        total_hours += hours
-                        has_valid_step = True
-            else:
-                # 非子步骤行，结束当前核心章节
-                in_core_section = False
 
     return total_hours if has_valid_step else None
 
