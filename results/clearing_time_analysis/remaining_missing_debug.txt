@@ -1,0 +1,287 @@
+
+================================================================================
+Model: openai_gpt-5.2-fast | QID: 20 | Extract result: None
+================================================================================
+FULL PROTOCOL:
+**保留/更换策略（双靶点）与透明方法：**血管/屏障双靶点标记采用 **CD31(PECAM1)+Alexa Fluor 647（血管内皮/血管网络连续性） + Claudin-5+Alexa Fluor 568（紧密连接/BBB 完整性）**；透明方法由 CUBIC 更换为 **SWITCH（水凝胶固定增强+温和去脂，优先保形与结构连续性）**。  
+**理由（简述）：**SWITCH 通过“强交联固定+温和 SDS 去脂”显著提升肿瘤脑组织的力学稳定性与抗溶胀/抗碎裂能力，更利于保留肿瘤边界与血管连续性；同时兼容厚组织免疫标记，适合在同一样本内比较肿瘤核心/边缘/邻近脑实质的血管形态与紧密连接完整性，并进行深层三维成像。
+
+**Protocol Steps：**
+1 SWITCH 预处理与再固定（增强结构保持）
+1.1 样本回温后用 PBS 漂洗 3 次，每次 30 min，轻摇。(Temperature: RT, Time: 1.5 hours)  
+1.2 4% PFA（PBS 配制）再固定。(Temperature: 4 ℃, Time: 12–16 hours)  
+1.3 PBS 漂洗 3 次，每次 30 min。(Temperature: RT, Time: 1.5 hours)
+
+2 SWITCH “OFF”渗透/均一化（降低后续去脂与抗体进入造成的局部损伤）
+2.1 SWITCH-OFF 溶液：PBS + 0.5% (vol/vol) Triton X-100 + 20 mM Glycine（可加入 0.02% NaN3 防腐）。完全浸没组织，轻摇。(Temperature: 4 ℃, Time: 24 hours)  
+2.2 更换新鲜 SWITCH-OFF 溶液继续孵育。(Temperature: 4 ℃, Time: 24 hours)
+
+3 温和去脂（保形优先，避免血管断裂/肿瘤组织崩解）
+3.1 去脂液：200 mM SDS（w/v 约 5.8%）+ 20 mM Boric acid，pH 8.5；完全浸没，轻摇。(Temperature: 37 ℃, Time: 3 days)  
+3.2 更换新鲜去脂液继续去脂。(Temperature: 37 ℃, Time: 2–4 days)  
+3.3 终点判定：组织整体明显变浅、边缘不再出现油脂样浑浊；若仍不均一，按 3.2 以 24 h 为单位延长。(Temperature: 37 ℃, Time: 0–2 days)
+
+4 去 SDS 充分洗脱（避免后续抗体沉积与荧光背景）
+4.1 PBST：PBS + 0.2% (vol/vol) Triton X-100，漂洗。(Temperature: RT, Time: 6 hours)  
+4.2 更换新鲜 PBST 漂洗。(Temperature: RT, Time: 6 hours)  
+4.3 更换新鲜 PBST 漂洗过夜。(Temperature: 4 ℃, Time: 12–16 hours)
+
+5 免疫标记前封闭/渗透（厚组织）
+5.1 封闭液：PBST（0.2% Triton）+ 5% (vol/vol) 正常驴血清（或与二抗宿主匹配血清）+ 0.05% NaN3。(Temperature: 37 ℃, Time: 12–16 hours)
+
+6 一抗孵育（双靶点：血管网络 + BBB 紧密连接）
+6.1 一抗工作液：封闭液中加入 anti-CD31 与 anti-Claudin-5（各 1:200；若抗体较弱可至 1:100），总体积≥样本体积 10×，轻摇。(Temperature: 37 ℃, Time: 3 days)  
+6.2 更换新鲜一抗工作液继续孵育以保证 5 mm 厚度充分进入。(Temperature: 37 ℃, Time: 2 days)
+
+7 一抗洗涤（降低非特异与背景）
+7.1 PBST（0.2% Triton）洗涤。(Temperature: RT, Time: 6 hours)  
+7.2 更换新鲜 PBST 洗涤。(Temperature: RT, Time: 6 hours)  
+7.3 更换新鲜 PBST 洗涤过夜。(Temperature: 4 ℃, Time: 12–16 hours)  
+7.4 PBST 再洗 1 次。(Temperature: RT, Time: 6 hours)
+
+8 二抗孵育（指定荧光团；不引入表外荧光团）
+8.1 二抗工作液：封闭液中加入 donkey anti-（对应 CD31 一抗宿主）Alexa Fluor 647（1:400）与 donkey anti-（对应 Claudin-5 一抗宿主）Alexa Fluor 568（1:400），避光轻摇。(Temperature: 37 ℃, Time: 2 days)  
+8.2 更换新鲜二抗工作液继续孵育，避光。(Temperature: 37 ℃, Time: 1 day)
+
+9 二抗洗涤与核染（可选，用于分区/配准；不影响双靶点主分析）
+9.1 PBST 洗涤，避光。(Temperature: RT, Time: 6 hours)  
+9.2 更换新鲜 PBST 洗涤过夜，避光。(Temperature: 4 ℃, Time: 12–16 hours)  
+9.3 （可选）DAPI 1–2 µg/mL 于 PBST 中孵育。(Temperature: RT, Time: 2 hours)  
+9.4 PBST 漂洗 2 次，每次 1 hour。(Temperature: RT, Time: 2 hours)
+
+10 RI 匹配（成像前折射率匹配；优先低形变）
+10.1 30% (vol/vol) TDE（in PBS）梯度进入。(Temperature: RT, Time: 6 hours)  
+10.2 50% (vol/vol) TDE（in PBS）。(Temperature: RT, Time: 6 hours)  
+10.3 63% (vol/vol) TDE（in PBS，RI≈1.45）终匹配，至组织均一透明；厚样本建议延长。(Temperature: RT, Time: 12–24 hours)
+
+11 保存与成像前处理
+11.1 样本避光保存在 63% TDE（可加 0.02% NaN3）中。(Temperature: 4 ℃, Time: up to 2–4 weeks)  
+11.2 成像前将样本在新鲜 63% TDE 中平衡 2–4 h，去除表面气泡并固定于样品仓。(Temperature: RT, Time: 2–4 hours)
+
+TRACE:
+
+
+================================================================================
+Model: openai_gpt-5.2-fast | QID: 29 | Extract result: None
+================================================================================
+FULL PROTOCOL:
+第1行（双靶点策略+透明方法）：**[GFP(内源稀疏标记锥体神经元) + DAPI(细胞核定位/层次参考)] + SeeDB2（快速水相高 RI 匹配，最大限度保留内源荧光，适合 500 μm 厚切片 1 天内完成）**
+
+1 透明前洗涤/去固定剂  
+1.1 切片置于 PBS（pH 7.4）充分漂洗去残余 PFA（Temperature: RT, Time: 3×10 min）  
+1.2 可选：加入 0.05% Tween-20 的 PBS（PBST）轻摇洗涤以改善后续渗透（Temperature: RT, Time: 2×10 min）
+
+2 核染（第二靶点：DAPI）  
+2.1 DAPI 1–2 µg/mL（PBS 或 PBST 配制）避光孵育（Temperature: RT, Time: 20–30 min）  
+2.2 PBS（或 PBST）洗去游离染料（Temperature: RT, Time: 3×10 min）
+
+3 SeeDB2 梯度折射率匹配（透明化 + RI 匹配；全程避光、轻摇）  
+3.1 20%（wt/vol）SeeDB2 溶液（以 SeeDB2 体系配方配制；水相）浸泡（Temperature: RT, Time: 30 min）  
+3.2 40%（wt/vol）SeeDB2 溶液浸泡（Temperature: RT, Time: 30 min）  
+3.3 60%（wt/vol）SeeDB2 溶液浸泡（Temperature: RT, Time: 45 min）  
+3.4 80%（wt/vol）SeeDB2 溶液浸泡（Temperature: RT, Time: 60 min）  
+3.5 100% SeeDB2（最终 RI 匹配液；按 SeeDB2 体系最终配方）浸泡至切片均一透明（Temperature: RT, Time: 2–3 hours）
+
+4 成像前处理与装片（保持树突棘形态与内源荧光）  
+4.1 将切片转入新鲜 100% SeeDB2 继续平衡以稳定 RI（Temperature: RT, Time: 30–60 min）  
+4.2 成像腔/玻底皿中以 100% SeeDB2 作为浸没与封片介质，使用垫片避免压迫切片（Temperature: RT, Time: 10–20 min）  
+4.3 成像建议：共聚焦/双光子使用与 SeeDB2 匹配的高 RI 介质/物镜设置；优先采集 GFP 通道并降低激发功率以减少漂白（Temperature: RT, Time: 即时）
+
+5 保存（若需短期等待成像）  
+5.1 切片浸没于避光密封的新鲜 100% SeeDB2 中保存（Temperature: 4 ℃, Time: ≤24–48 hours）
+
+TRACE:
+L11: CORE | hours=None | 3 SeeDB2 梯度折射率匹配（透明化 + RI 匹配；全程避光、轻摇）
+L12: SUB  | hours=0.5 | 3.1 20%（wt/vol）SeeDB2 溶液（以 SeeDB2 体系配方配制；水相）浸泡（Temperature: RT, Time: 30 min）
+L13: SUB  | hours=0.5 | 3.2 40%（wt/vol）SeeDB2 溶液浸泡（Temperature: RT, Time: 30 min）
+L14: SUB  | hours=0.75 | 3.3 60%（wt/vol）SeeDB2 溶液浸泡（Temperature: RT, Time: 45 min）
+L15: SUB  | hours=1.0 | 3.4 80%（wt/vol）SeeDB2 溶液浸泡（Temperature: RT, Time: 60 min）
+L16: SUB  | hours=3.0 | 3.5 100% SeeDB2（最终 RI 匹配液；按 SeeDB2 体系最终配方）浸泡至切片均一透明（Temperature: RT, Time: 2–3 hours）
+
+================================================================================
+Model: openai_gpt-5.2-thinking | QID: 29 | Extract result: None
+================================================================================
+FULL PROTOCOL:
+**Chosen dual-target labeling strategy:** [GFP (内源稀疏标记锥体神经元), DAPI]  
+**Chosen clearing method:** TDE  
+**Justification:** 500 μm 厚脑片在 1 天内完成透明与成像前处理，TDE 属于快速水相 RI 匹配法（无需脱脂/脱水），对 GFP 等内源荧光保留较好、步骤少、对树突棘成像所需的局部清晰度提升明显；DAPI 用于提供细胞核/层次参照，便于定位与质量控制。
+
+**Protocol Steps:**
+1 预平衡与缓冲置换（为快速 RI 匹配做准备）  
+1.1 将固定后的 500 μm 脑片置于 PBS（pH 7.4）中轻柔摇晃清洗 3 次，每次 10 min。(Temperature: RT, Time: 30 min)  
+1.2 可选：若切片在含叠氮钠保存液中，先用 PBS 再清洗 2 次，每次 10 min。(Temperature: RT, Time: 20 min)
+
+2 核染（第二靶点：DAPI）  
+2.1 DAPI 工作液 1–2 µg/mL（PBS + 0.2% Triton X-100）孵育。(Temperature: RT, Time: 30 min)  
+2.2 PBS 清洗 3 次，每次 10 min。(Temperature: RT, Time: 30 min)
+
+3 TDE 梯度 RI 匹配（透明化核心步骤；全程避光、轻柔摇晃）  
+3.1 20% (vol/vol) TDE 于 PBS（pH 7.4）中孵育。(Temperature: RT, Time: 20 min)  
+3.2 40% (vol/vol) TDE 于 PBS 中孵育。(Temperature: RT, Time: 20 min)  
+3.3 60% (vol/vol) TDE 于 PBS 中孵育。(Temperature: RT, Time: 30 min)  
+3.4 70% (vol/vol) TDE 于 PBS 中孵育（RI 约 1.46；通常兼顾 GFP 亮度与透明度，适合共聚焦/双光子树突棘成像）。(Temperature: RT, Time: 60 min)  
+3.5 若仍显著散射：再换新鲜 70% TDE 继续孵育。(Temperature: RT, Time: 60 min)
+
+4 成像前处理与装片（减少形变与保证 RI 一致）  
+4.1 将切片转入新鲜 70% TDE 静置脱泡/沉降（可用移液枪轻轻驱赶表面气泡）。(Temperature: RT, Time: 10 min)  
+4.2 在玻片上用 70% TDE 作为封片介质，使用 300–500 μm spacer（或双层胶带）避免压迫切片；盖玻片封片。(Temperature: RT, Time: 10 min)  
+4.3 封片后避光静置使 RI 均一化。(Temperature: RT, Time: 20–30 min)
+
+5 保存（若当天无法立刻成像）  
+5.1 切片浸没于 70% TDE（PBS 配制）密闭避光保存。(Temperature: 4 ℃, Time: ≤24 hours)
+
+TRACE:
+L14: CORE | hours=None | 3 TDE 梯度 RI 匹配（透明化核心步骤；全程避光、轻柔摇晃）
+L15: SUB  | hours=0.3333333333333333 | 3.1 20% (vol/vol) TDE 于 PBS（pH 7.4）中孵育。(Temperature: RT, Time: 20 min)
+L16: SUB  | hours=0.3333333333333333 | 3.2 40% (vol/vol) TDE 于 PBS 中孵育。(Temperature: RT, Time: 20 min)
+L17: SUB  | hours=0.5 | 3.3 60% (vol/vol) TDE 于 PBS 中孵育。(Temperature: RT, Time: 30 min)
+L18: SUB  | hours=1.0 | 3.4 70% (vol/vol) TDE 于 PBS 中孵育（RI 约 1.46；通常兼顾 GFP 亮度与透明度，适合共聚焦/双光子树突棘成像）。(Temperature: RT, Time: 60
+L19: SUB  | hours=1.0 | 3.5 若仍显著散射：再换新鲜 70% TDE 继续孵育。(Temperature: RT, Time: 60 min)
+
+================================================================================
+Model: gemini-3-flash | QID: 29 | Extract result: None
+================================================================================
+FULL PROTOCOL:
+**Chosen Method: SeeDB2
+**Chosen Labeling:** [YFP, DAPI]
+**Justification:** SeeDB2 is an aqueous clearing method specifically optimized for high-resolution imaging of fine neuronal structures like dendritic spines. It uses iohexol to achieve high refractive index (RI) matching (up to 1.52) with minimal tissue shrinkage and excellent preservation of endogenous fluorescence (YFP). For 500 μm thick slices, the SeeDB2 protocol is rapid enough to be completed within 24 hours, providing the necessary clarity and structural integrity for comparing spine density and morphology across experimental groups. DAPI is included as a rapid nuclear counterstain to provide cytoarchitectural context.
+
+**Protocol Steps:**
+1 Tissue Preparation and Staining
+1.1 Wash the fixed 500 μm mouse brain slices in 1× PBS with 0.1% Triton X-100 (PBST) to remove residual fixative.(Temperature: RT, Time: 30 minutes × 3)
+1.2 Incubation with DAPI (5 μg/mL) in 1× PBST for nuclear counterstaining.(Temperature: RT, Time: 1 hour)
+1.3 Wash the slices in 1× PBS to remove excess dye.(Temperature: RT, Time: 15 minutes × 2)
+
+2 Optical Clearing (SeeDB2)
+2.1 Incubation with 25% (vol/vol) SeeDB2 solution (diluted in H2O, RI ≈ 1.37).(Temperature: RT, Time: 1 hour)
+2.2 Incubation with 50% (vol/vol) SeeDB2 solution (diluted in H2O, RI ≈ 1.41).(Temperature: RT, Time: 1 hour)
+2.3 Incubation with 100% SeeDB2 solution (neat SeeDB2S or SeeDB2G, RI ≈ 1.46–1.52 depending on the variant used for matching the objective).(Temperature: RT, Time: 4 hours)
+
+3 Mounting and Imaging
+3.1 Place the cleared slice in a fresh volume of 100% SeeDB2 solution on a glass-bottom dish or a specialized mounting chamber.(Temperature: RT, Time: 30 minutes)
+3.2 Secure the sample with a coverslip, ensuring no air bubbles are trapped, and proceed to high-resolution confocal or multi-photon imaging using an appropriate high-NA immersion objective.(Temperature: RT, Time: Immediate)
+
+TRACE:
+
+
+================================================================================
+Model: openai_claude-sonnet-4.6 | QID: 30 | Extract result: None
+================================================================================
+FULL PROTOCOL:
+**Chosen Method:** ScaleS
+
+**Chosen Labeling:** [EGFP (内源荧光), MAP2 + Alexa Fluor (MAP2抗体 + Alexa Fluor 546/647二抗)]
+
+**Justification:** ScaleS是一种基于山梨醇/尿素的水性透明化方法，专为保留内源荧光蛋白信号（如EGFP/YFP标记的稀疏神经元）而设计，对GFP家族荧光蛋白的保护效果优于有机溶剂类方法（如iDISCO+/uDISCO）。对于500 μm厚脑切片，ScaleS可在约12–24小时内完成透明化，满足"1天内完成"的要求。ScaleS的温和水性环境可保留树突棘等精细结构的荧光信号，同时兼容后续免疫荧光标记。双靶点策略：①内源EGFP信号标记稀疏锥体神经元（含树突棘和细小分支），用于树突棘计数；②MAP2抗体（Alexa Fluor 546或647标记）标记主树突骨架，用于树突长度归一化和分支结构分析。两个通道光谱分离良好，适合共聚焦或双光子高分辨率成像。
+
+---
+
+**Protocol Steps:**
+
+**1 Post-fixation Wash（固定后清洗）**
+
+1.1 将500 μm厚固定脑切片置于1× PBS中洗涤，去除残余固定液。(Temperature: RT, Time: 3 × 10 min)
+
+**2 Permeabilization & Blocking（通透与封闭）**
+
+2.1 将切片置于通透封闭液（0.3% Triton X-100, 5% normal donkey serum, 0.1% sodium azide in 1× PBS）中孵育，以增强抗体渗透并降低非特异性背景。(Temperature: RT, Time: 2 hours)
+
+**3 Primary Antibody Incubation（一抗孵育）**
+
+3.1 将切片置于一抗工作液中孵育：anti-MAP2 rabbit polyclonal antibody（1:500 in 0.1% Triton X-100, 2% normal donkey serum, 0.1% sodium azide in 1× PBS）。(Temperature: 4 ℃, Time: 18 hours)
+
+3.2 用1× PBS + 0.1% Triton X-100洗涤切片，去除未结合一抗。(Temperature: RT, Time: 3 × 15 min)
+
+**4 Secondary Antibody Incubation（二抗孵育）**
+
+4.1 将切片置于二抗工作液中孵育：donkey anti-rabbit Alexa Fluor 647（1:500 in 0.1% Triton X-100, 2% normal donkey serum in 1× PBS）。避光操作。(Temperature: RT, Time: 2 hours)
+
+4.2 用1× PBS + 0.1% Triton X-100洗涤切片，去除未结合二抗。避光操作。(Temperature: RT, Time: 3 × 15 min)
+
+4.3 用1× PBS洗涤切片。(Temperature: RT, Time: 2 × 10 min)
+
+**5 ScaleS Optical Clearing（ScaleS透明化处理）**
+
+5.1 将切片置于ScaleS0溶液（20% (wt/vol) sorbitol, 5% (wt/vol) glycerol, 1 mM methyl-β-cyclodextrin, 1% (wt/vol) DMSO, 0.5% (vol/vol) Triton X-100 in H₂O）中孵育，开始脱脂与折射率预匹配。避光。(Temperature: 37 ℃, Time: 3 hours)
+
+5.2 将切片转移至ScaleS1溶液（20% (wt/vol) sorbitol, 15% (wt/vol) urea, 5% (wt/vol) glycerol, 1 mM methyl-β-cyclodextrin, 1% (wt/vol) DMSO, 0.5% (vol/vol) Triton X-100 in H₂O）中孵育，进一步透明化。避光。(Temperature: 37 ℃, Time: 3 hours)
+
+5.3 将切片转移至ScaleS4(0) 溶液（40% (wt/vol) sorbitol, 10% (wt/vol) glycerol, 4 M urea, 0.2% (vol/vol) Triton X-100 in H₂O，RI ≈ 1.44）中孵育，完成主要透明化步骤。避光。(Temperature: 37 ℃, Time: 4 hours)
+
+**6 Refractive Index Matching（折射率匹配）**
+
+6.1 将透明化切片转移至ScaleSQ0溶液（80% (wt/vol) Nycodenz in 0.02 M phosphate buffer, pH 7.5，RI ≈ 1.46–1.47）中平衡，用于折射率精确匹配，适配共聚焦/双光子物镜（水浸或硅油浸物镜）。避光。(Temperature: RT, Time: 1 hour)
+
+**7 Mounting & Imaging Preparation（封片与成像前处理）**
+
+7.1 取适量ScaleSQ0溶液滴于玻底培养皿（glass-bottom dish）或载玻片上，将切片平铺置于其中，使用匹配厚度的盖玻片间隔条（约500 μm）防止切片被压缩，四周用透明指甲油或封片胶密封。避光操作。(Temperature: RT, Time: 15 min)
+
+7.2 将封片样品在成像前于暗处静置平衡，确保折射率均匀分布。(Temperature: RT, Time: 30 min)
+
+7.3 使用共聚焦显微镜（推荐63×/1.3 NA 甘油浸或硅油浸物镜）进行成像：通道1（488 nm激发）采集EGFP内源荧光（树突棘及细小分支）；通道2（633/647 nm激发）采集Alexa Fluor 647信号（MAP2标记主树突骨架）。Z-stack步长建议0.3–0.5 μm以分辨树突棘。(Temperature: RT, Time: per imaging session)
+
+TRACE:
+L1: CORE | hours=None | **Chosen Method:** ScaleS
+L33: CORE | hours=None | **5 ScaleS Optical Clearing（ScaleS透明化处理）**
+L41: CORE | hours=None | **6 Refractive Index Matching（折射率匹配）**
+
+================================================================================
+Model: glm4.7-thinking | QID: 137 | Extract result: None
+================================================================================
+FULL PROTOCOL:
+**Chosen Method:** Ce3D
+**Chosen Labeling:** [EGFP, mCherry, DAPI]
+**Justification:** Ce3D is specifically optimized for *C. elegans*, providing rapid and high-quality transparency while preserving endogenous EGFP and mCherry fluorescence signals. As an aqueous method, it avoids the fluorescence quenching risks associated with organic solvents (e.g., uDISCO) or the high pH of CUBIC. The protocol is fast (hours), compatible with the small size of adult worms, and yields a refractive index suitable for high-resolution 3D imaging of the nerve ring and neuronal networks. DAPI is included as a nuclear counterstain to facilitate the 3D localization of neuron somata.
+
+**Protocol Steps:**
+1 Wash
+1.1 Incubation with PBS containing 0.1% (vol/vol) Triton X-100 (PBST) to remove residual fixative. (Temperature: RT, Time: 15 minutes)
+2 Nuclear Staining
+2.1 Incubation with DAPI solution (1 µg/mL in PBST) to label nuclei. (Temperature: RT, Time: 30 minutes)
+2.2 Wash with PBST to remove excess DAPI. (Temperature: RT, Time: 10 minutes)
+3 Tissue Clearing
+3.1 Incubation with Ce3D-A solution (80% w/v Glycerol, 0.5% vol/vol Triton X-100 in PBS) with gentle shaking. (Temperature: RT, Time: 2 hours)
+4 Refractive Index Matching
+4.1 Inc
+
+TRACE:
+L13: CORE | hours=None | 4 Refractive Index Matching
+L14: SUB  | hours=None | 4.1 Inc
+
+================================================================================
+Model: openai_deepseek-chat | QID: 32 | Extract result: None
+================================================================================
+FULL PROTOCOL:
+**Chosen Method:** SeeDB2  
+**Chosen Labeling:** [GFP (内源), MAP2+Alexa Fluor 647]  
+**Justification:** SeeDB2是一种基于果糖/山梨醇的水性透明化方法，具有极低的组织形变（<2%体积变化）和出色的内源荧光（如GFP）保留能力，非常适合固定后脑切片。其处理流程简单快速，可在数小时内完成，满足“1天内完成”的要求。选择内源GFP标记稀疏神经元，并使用抗MAP2抗体（标记树突骨架）与Alexa Fluor 647偶联进行免疫标记，可补全神经元形态，实现树突主干、分支及树突棘的高分辨率三维成像。
+
+**Protocol Steps:**  
+1 样本预处理与免疫标记  
+1.1 洗涤：将500 μm厚固定后小鼠脑切片置于PBS中，在摇床上洗涤3次，每次15分钟。(Temperature: RT, Time: 45分钟)  
+1.2 透化与封闭：将切片转移至含0.5% (vol/vol) Triton X-100和5% (vol/vol) 正常驴血清的PBS中。(Temperature: RT, Time: 2小时)  
+1.3 一抗孵育：将切片转移至含小鼠抗MAP2一抗（建议稀释比例1:500）的封闭液中。(Temperature: 4 ℃, Time: 12小时)  
+1.4 洗涤：用含0.1% (vol/vol) Triton X-100的PBS洗涤切片3次，每次30分钟。(Temperature: RT, Time: 90分钟)  
+1.5 二抗孵育：将切片转移至含驴抗小鼠IgG Alexa Fluor 647二抗（建议稀释比例1:500）的封闭液中，避光孵育。(Temperature: RT, Time: 6小时)  
+1.6 最终洗涤：用PBS洗涤切片3次，每次20分钟，避光。(Temperature: RT, Time: 60分钟)  
+
+2 SeeDB2透明化处理  
+2.1 梯度脱水：依次将切片浸入以下果糖水溶液中，在摇床上避光孵育：  
+2.1.1 20% (wt/vol) 果糖水溶液。(Temperature: RT, Time: 1小时)  
+2.1.2 40% (wt/vol) 果糖水溶液。(Temperature: RT, Time: 1小时)  
+2.1.3 60% (wt/vol) 果糖水溶液。(Temperature: RT, Time: 1小时)  
+2.1.4 80% (wt/vol) 果糖水溶液。(Temperature: RT, Time: 1小时)  
+2.2 折射率匹配：将切片转移至SeeDB2溶液（88% (wt/vol) 果糖，0.5% (wt/vol) α-硫代甘油，折射率~1.49）中，避光孵育。(Temperature: RT, Time: 4小时)  
+
+3 保存与成像前处理  
+3.1 成像前准备：将透明化后的切片从SeeDB2溶液中取出，置于成像腔室中，用新鲜SeeDB2溶液浸没。  
+3.2 成像：立即使用共聚焦或光片显微镜进行三维成像。建议使用高数值孔径物镜（如40x或63x油镜，折射率油需匹配~1.49）对GFP（神经元）和Alexa Fluor 647（树突骨架）通道进行成像。
+
+TRACE:
+L14: CORE | hours=None | 2 SeeDB2透明化处理
+L15: SUB  | hours=None | 2.1 梯度脱水：依次将切片浸入以下果糖水溶液中，在摇床上避光孵育：
+L16: SUB  | hours=1.0 | 2.1.1 20% (wt/vol) 果糖水溶液。(Temperature: RT, Time: 1小时)
+L17: SUB  | hours=1.0 | 2.1.2 40% (wt/vol) 果糖水溶液。(Temperature: RT, Time: 1小时)
+L18: SUB  | hours=1.0 | 2.1.3 60% (wt/vol) 果糖水溶液。(Temperature: RT, Time: 1小时)
+L19: SUB  | hours=1.0 | 2.1.4 80% (wt/vol) 果糖水溶液。(Temperature: RT, Time: 1小时)
+L20: SUB  | hours=4.0 | 2.2 折射率匹配：将切片转移至SeeDB2溶液（88% (wt/vol) 果糖，0.5% (wt/vol) α-硫代甘油，折射率~1.49）中，避光孵育。(Temperature: RT, Time

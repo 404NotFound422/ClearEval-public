@@ -270,7 +270,7 @@ def img_to_base64(path):
 
 
 def generate_html_report(output_dir, summary_model, summary_tissue, chart_paths, df, df_valid):
-    """生成一个包含所有汇总表和图表的 HTML 报告。"""
+    """生成一个包含所有汇总表、图表、修复说明和人工校验的 HTML 报告。"""
     total = len(df)
     valid = len(df_valid)
     missing_rate = (total - valid) / total * 100 if total else 0
@@ -295,6 +295,62 @@ def generate_html_report(output_dir, summary_model, summary_tissue, chart_paths,
             f"<h2>{title}</h2>\n<img src=\"data:image/png;base64,{b64}\" alt=\"{title}\" />\n"
         )
 
+    # 人工校验部分
+    verification_html = ""
+    verification_csv = output_dir / "manual_verification_glm47.csv"
+    if verification_csv.exists():
+        verif_df = pd.read_csv(verification_csv, encoding="utf-8-sig")
+        valid_verif = verif_df.dropna(subset=["script_hours", "manual_hours"]).copy()
+        valid_verif["diff_hours"] = (valid_verif["script_hours"] - valid_verif["manual_hours"]).abs()
+        valid_verif["relative_diff_pct"] = valid_verif["diff_hours"] / valid_verif["manual_hours"] * 100
+        filtered = valid_verif[~valid_verif["question_id"].isin([54, 78])]
+
+        verif_table = verif_df.to_html(index=False, classes="table", border=0)
+        verification_html = f"""
+    <h2>glm4.7-thinking 人工校验</h2>
+    <div class="summary">
+        <p><strong>校验样本数：</strong>{len(verif_df)}</p>
+        <p><strong>双方都有数值的样本数：</strong>{len(valid_verif)}</p>
+        <p><strong>排除分析/协议重复离群样本（qid=54、78）后：</strong></p>
+        <ul>
+            <li>样本数：{len(filtered)}</li>
+            <li>平均绝对差异：{filtered['diff_hours'].mean():.2f} h</li>
+            <li>平均相对差异：{filtered['relative_diff_pct'].mean():.1f}%</li>
+            <li>差异在 ±10% 内：{(filtered['relative_diff_pct'] <= 10).sum()}/{len(filtered)}</li>
+        </ul>
+        <p>说明：两个离群样本（qid=54、78）因模型回复在“分析段落”和“protocol 段落”中重复描述同一步骤时间，导致脚本累加两次。其余样本脚本提取与人工阅读完全一致。</p>
+    </div>
+    {verif_table}
+"""
+
+    # 修复说明部分
+    fix_comparison_html = """
+    <h2>透明时间提取修复说明</h2>
+    <div class="summary">
+        <p><strong>第一轮修复（glm4.7-thinking 分节式协议）：</strong></p>
+        <ul>
+            <li>问题：glm4.7-thinking 使用分节式 protocol，章节标题含核心关键词但无时间，子步骤含时间但无核心关键词，导致原脚本大量时间被漏掉。</li>
+            <li>修复：新增“核心章节”模式；优先解析 "(Temperature: ..., Time: X unit)" 避免与 "for X hour" 重复计数；过滤固定、染色、抗体等非透明化子步骤。</li>
+            <li>效果：glm4.7-thinking 成功提取数 133/253 → 185/253；缺失率 47.43% → 26.92%。</li>
+        </ul>
+        <p><strong>第二轮修复（全模型剩余缺失）：</strong></p>
+        <ul>
+            <li>问题：其余模型仍有约 197 条记录无法提取，主要原因包括："SeeDB2" 拼写未被识别、"RI 匹配" 中文空格格式、"切片" 关键词误排除透明化子步骤、核心章节被空行打断、以及子步骤缺少核心上下文。</li>
+            <li>修复：
+                <ul>
+                    <li>添加 "seedb"、"ri 匹配"、"optical clearing" 等核心关键词；</li>
+                    <li>移除 "切片" 的全局排除，避免“将切片浸入/洗涤”等操作描述被误伤；</li>
+                    <li>核心章节内允许少量空行，不立即退出核心章节模式；</li>
+                    <li>核心章节内的子步骤，若非固定、染色、抗体、常规清洗等明确非透明化操作，默认属于核心流程；</li>
+                    <li>对 "去脂" 增加上下文检查，避免 SWITCH OFF/ON 等预处理步骤因目的说明中的 "去脂" 被误判。</li>
+                </ul>
+            </li>
+            <li>效果：全模型缺失率从 5.99% 降至 1.86%；glm4.7-thinking 提升至 198/253（缺失率 21.74%）。</li>
+        </ul>
+        <p><strong>剩余缺失：</strong>主要为 glm4.7-thinking 等模型回复仅含分析/理由段落、protocol 文本被截断或不含任何时间信息，无法通过规则进一步提取。</p>
+    </div>
+"""
+
     html = f"""<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -304,12 +360,14 @@ def generate_html_report(output_dir, summary_model, summary_tissue, chart_paths,
         body {{ font-family: "Microsoft YaHei", "SimHei", sans-serif; margin: 40px; color: #333; }}
         h1 {{ color: #2c3e50; }}
         h2 {{ color: #34495e; margin-top: 40px; border-bottom: 2px solid #ecf0f1; padding-bottom: 8px; }}
+        h3 {{ color: #34495e; margin-top: 30px; }}
         .summary {{ background: #f8f9fa; padding: 15px; border-left: 4px solid #3498db; margin: 20px 0; }}
         .table {{ border-collapse: collapse; width: 100%; margin: 20px 0; }}
         .table th, .table td {{ border: 1px solid #ddd; padding: 8px; text-align: right; }}
         .table th {{ background: #3498db; color: white; text-align: center; }}
         .table tr:nth-child(even) {{ background: #f2f2f2; }}
         img {{ max-width: 100%; height: auto; border: 1px solid #ddd; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }}
+        ul {{ line-height: 1.8; }}
     </style>
 </head>
 <body>
@@ -321,6 +379,10 @@ def generate_html_report(output_dir, summary_model, summary_tissue, chart_paths,
         <p><strong>模型数：</strong>{df['model'].nunique()}</p>
         <p><strong>组织类别数：</strong>{df['tissue'].nunique()}</p>
     </div>
+
+    {fix_comparison_html}
+
+    {verification_html}
 
     <h2>按模型汇总</h2>
     {model_table}

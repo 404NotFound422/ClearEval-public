@@ -17,6 +17,10 @@
 \usepackage{xcolor}
 \usepackage[T1]{fontenc}
 \usepackage{url}
+\usepackage{tabularx}
+\usepackage{booktabs}
+\usepackage{tabularx}
+
 
 \begin{document}
 
@@ -48,312 +52,383 @@ email withheld}}
 \maketitle
 
 \begin{abstract}
-Tissue Optical Clearing (TOC) enables high-resolution 3D visualization, yet its protocol design involves multi-step physical and chemical constraints whose failure can irreversibly damage specimens. While large language models (LLMs) perform well on biomedical knowledge retrieval, their ability to generate experimentally feasible wet-lab protocols remains under-evaluated. We introduce ClearEval, a database-grounded feasibility benchmark for LLM-generated TOC protocols. ClearEval is built on a structured TOC feasibility database that integrates 372 wet-lab experimental records supporting timing intervals, 400+ curated tissue-clearing literature chunks, and expert-reviewed constraints on methods, tissues, refractive indices, fluorescent markers, and compatibility rules. Using this database, ClearEval evaluates 12 state-of-the-art LLMs through a dual-track pipeline: static knowledge is assessed by 2{,}588 multiple-choice questions, while practical protocol generation is evaluated on 253 open-ended scenarios using our Completeness, Correctness, and Effectiveness (CCE) framework. CCE is a text-reference-free metric that scores protocol viability through database-grounded rules and formulas derived from experimental confidence intervals, rather than surface similarity to reference texts. Results show that although models reach 80--91\% accuracy on static knowledge retrieval, their performance drops sharply on executable protocol generation; the strongest model falls from 91\% Knowledge Index to a 64.1 Application Index. The dominant failures arise from executable parameterization---most reliably, matching fluorescent markers to required labeling targets---rather than declarative recall, exposing a knowledge-execution gap in LLM-generated TOC protocols. Rather than making domain-general claims, ClearEval offers a depth-first, experimentally grounded feasibility check that complements breadth-oriented protocol benchmarks and provides a transferable recipe for pre-experimental evaluation in other wet-lab subdomains. Code and data: \url{https://anonymous.4open.science/r/ClearEval} (de-anonymized upon acceptance).
+Tissue Optical Clearing (TOC) enables non-destructive, high-resolution 3D
+imaging, but protocol design requires compatible choices of clearing method,
+labeling strategy, refractive-index condition, and incubation time. While LLMs
+perform well on biomedical knowledge tasks, their ability to generate feasible
+wet-lab protocols remains under-evaluated. We introduce ClearEval, a
+database-grounded feasibility benchmark for LLM-generated TOC protocols.
+ClearEval is built on a structured TOC feasibility database integrating 372
+wet-lab experimental records, 400+ curated tissue-clearing literature chunks,
+and expert-reviewed constraints on methods, tissues, markers, timing, and
+compatibility. It evaluates 12 state-of-the-art LLMs through two tracks: 2{,}588
+multiple-choice questions for static knowledge and 253 open-ended scenarios for
+protocol generation. Generated protocols are scored by our Completeness,
+Correctness, and Effectiveness (CCE) framework, which combines rubric-based
+procedural assessment with database-grounded feasibility rules and formulas.
+Models reach 80--91% accuracy on static knowledge, but performance drops on
+executable protocol generation; the strongest model falls from 91.1% Knowledge
+Index to a 64.1 Application Index. The main failures arise from executable
+parameterization, especially matching fluorescent markers to required labeling
+targets. ClearEval provides a depth-first feasibility benchmark that complements
+breadth-oriented protocol benchmarks and supports pre-experimental evaluation in TOC and related wet-lab subdomains. Code and data:
+\url{https://anonymous.4open.science/r/ClearEval}.
 
 \end{abstract}
 
 \begin{IEEEkeywords}
 Benchmark, Tissue optical clearing, Wet-lab protocols, Large language models
 \end{IEEEkeywords}
-
 \section{Introduction}
 
 Tissue Optical Clearing (TOC) renders biological tissues optically transparent
 by reducing light scattering and refractive-index mismatch, enabling
 non-destructive, high-resolution 3D imaging via light-sheet
-microscopy~\cite{ueda2020tissue,chung2013clarity}. This capability preserves
-long-range anatomical connectivity and supports high-fidelity organ-scale
-atlases~\cite{wang2025advances,richardson2025unlocking}. However, TOC protocol
-design is not a single-answer optimization problem. Given a specific specimen,
-labeling target, imaging goal, and laboratory constraint, experimenters must
-choose a feasible combination of clearing method, fluorescent marker or labeling
-strategy, refractive-index condition, incubation schedule, sample geometry, and
-operational constraints such as biosafety and cost. Multiple combinations may
-be acceptable, but a single incompatibility---for example, a quenched
-fluorophore, an unsuitable method for the tissue scale, or an unrealistic
-incubation time---can invalidate the entire protocol and irreversibly damage
-the specimen.
+microscopy~\cite{ueda2020tissue,chung2013clarity}. However, designing a TOC
+protocol is not a single-answer task. Given a specimen, labeling target,
+imaging goal, and laboratory constraint, experimenters must choose a feasible
+combination of clearing method, labeling strategy, refractive-index condition,
+incubation schedule, sample geometry, and operational constraints. Multiple
+combinations may be acceptable, but one incompatibility---for example, a
+quenched fluorophore, an unsuitable method for the sample scale, or an
+unrealistic incubation time---can invalidate the protocol and irreversibly
+damage the specimen.
 
-While LLMs demonstrate proficiency in biomedical question
-answering~\cite{singhal2023medpalm}, existing scientific benchmarks (e.g.,
-MedQA~\cite{jin2021disease}, MMLU~\cite{hendrycks2021mmlu}) and their recent
-extensions~\cite{zhang2025benchmarking,wang2025cardbiomedbench,feng2024mediq}
-predominantly assess static knowledge recall rather than experimentally
-grounded protocol feasibility. Traditional semantic metrics such as
-BLEU~\cite{papineni2002bleu} and general-purpose
-evaluators~\cite{liu2023geval,li2024survey} are similarly insufficient:
-a linguistically fluent protocol may still be infeasible because of an invalid
-method--label combination, an inappropriate refractive-index target, or an
-unrealistic incubation schedule. Such execution-level errors are subtle
-wet-lab failures that generic evaluators often overlook, thereby propagating
-hallucinations~\cite{bang2025hallulens,zhang2025survey}. Evaluating
-LLM-generated scientific protocols therefore requires a shift from text
-similarity and knowledge recall to database-grounded feasibility validation.
+Existing biomedical LLM benchmarks, including MedQA~\cite{jin2021disease},
+MMLU~\cite{hendrycks2021mmlu}, and recent biomedical
+extensions~\cite{zhang2025benchmarking,wang2025cardbiomedbench,feng2024mediq},
+mainly evaluate knowledge retrieval, question answering, or text-based
+reasoning. These settings measure whether models know biomedical facts, but
+they do not directly test whether a generated wet-lab protocol is feasible
+under experimental constraints. Likewise, semantic metrics such as
+BLEU~\cite{papineni2002bleu} and general-purpose LLM
+evaluators~\cite{liu2023geval,li2024survey} do not explicitly evaluate
+method--label compatibility, refractive-index suitability, or timing
+plausibility. This creates a gap between knowledge evaluation and
+pre-experimental feasibility checking.
 
-To bridge this gap, we introduce \textbf{ClearEval}, a database-grounded
-feasibility benchmark for LLM-generated TOC protocols. ClearEval is built around
-a structured TOC feasibility database that integrates 372 wet-lab experimental
-records supporting timing intervals, 400+ curated tissue-clearing literature
-chunks, and expert-reviewed constraints on clearing methods, tissues,
-refractive-index ranges, fluorescent markers, and compatibility rules. This
-database serves as the foundation for both task construction and protocol
-evaluation: it defines the knowledge tested by the benchmark, the open-ended
-experimental scenarios posed to the models, and the feasibility rules used to
-score generated protocols.
+We introduce \textbf{ClearEval}, a database-grounded feasibility benchmark for
+LLM-generated TOC protocols. ClearEval integrates 372 wet-lab experimental
+records, 400+ curated tissue-clearing literature chunks, and expert-reviewed
+TOC constraints into a structured feasibility database. This database supports
+both task construction and protocol scoring. The benchmark contains 2{,}588
+multiple-choice questions for static knowledge and 253 open-ended scenarios for
+protocol generation. Generated protocols are evaluated by our
+\textbf{CCE (Completeness, Correctness, Effectiveness)} framework, which
+combines rubric-based procedural assessment with database-grounded rules and
+formulas for experimental effectiveness.
 
-ClearEval evaluates 12 state-of-the-art LLMs through a dual-track pipeline.
-The Knowledge track measures static TOC knowledge using 2{,}588
-domain-specific multiple-choice questions. The Application track evaluates
-practical protocol generation on 253 open-ended scenarios using our
-\textbf{CCE (Completeness, Correctness, Effectiveness) framework}. In CCE,
-Completeness and Correctness assess whether the generated protocol contains the
-necessary procedural elements and coherent experimental logic, while
-Effectiveness uses database-grounded rules and formulas derived from
-experimental confidence intervals to score executable feasibility. This design
-makes ClearEval a pre-experimental feasibility gate: it does not merely ask
-whether a model can recall TOC facts, but whether its generated protocol can
-satisfy the physical and chemical constraints required for execution.
+Experiments on 12 state-of-the-art LLMs show that static knowledge performance
+is close to saturation, whereas open-ended feasibility evaluation remains
+discriminative. For example, GPT-5.2-Fast achieves 91.1% on the Knowledge
+Index but only 64.1 on the Application Index
+(Table~\ref{tab:main_results_total}). The radar plots further show that MCQ
+profiles are tightly clustered, while OEQ-based CCE scores expose
+model-specific execution failures. The most reliable failures arise from
+executable parameterization, especially matching fluorescent markers to the
+required labeling targets. Our contributions are: (1) a structured TOC
+feasibility database integrating experimental records, literature evidence, and
+expert constraints; (2) a dual-track benchmark and database-grounded CCE
+evaluator for LLM-generated TOC protocols; and (3) an empirical analysis
+showing that feasibility evaluation reveals execution-level failures hidden by
+static knowledge tasks.
 
-Our results show that high knowledge accuracy can mask execution-level failure.
-For example, GPT-5.2-Fast achieves 91.1% on the Knowledge Index but only 64.1
-on the Application Index (Table~\ref{tab:main_results_total}). Across models,
-MCQ performance is tightly clustered, whereas open-ended protocol feasibility
-varies substantially, indicating that static knowledge tasks are close to
-saturation while application-level evaluation remains discriminative. The most
-reliable failures arise from executable parameterization---especially matching
-fluorescent markers to the required labeling targets---rather than from
-declarative recall alone. These findings expose a knowledge-execution gap in
-LLM-generated TOC protocols.
-
-Our main contributions are threefold: (1) we construct a structured TOC
-feasibility database that integrates wet-lab experimental records, curated
-literature evidence, and expert-reviewed physical and chemical constraints into
-machine-readable evaluation resources. (2) we introduce ClearEval, a
-dual-track benchmark and database-grounded CCE evaluator that jointly assess
-static TOC knowledge and open-ended protocol feasibility without relying on
-reference-text similarity. (3) we provide an empirical analysis of 12
-state-of-the-art LLMs, showing that MCQ-based knowledge evaluation is nearly
-saturated whereas OEQ-based feasibility evaluation exposes model-specific
-execution failures. We deliberately restrict ClearEval to the well-characterized
-TOC subdomain to obtain parameter-level, experimentally grounded validation that
-broad multi-subfield benchmarks cannot provide. Rather than making
-domain-general claims about scientific intelligence, ClearEval offers a
-depth-first feasibility benchmark and a transferable recipe for
-pre-experimental evaluation in other wet-lab subdomains; external validity is
-discussed in Sec.~\ref{sec:discussion}.
 
 
 \section{Related Works}\label{sec:related}
-\noindent\textbf{Scientific LLM evaluation.} Benchmarks for scientific LLMs
-have largely targeted static knowledge
-retrieval~\cite{hendrycks2021mmlu,jin2021disease,singhal2023medpalm} or
-multidimensional reasoning~\cite{ying2025seedbench}. Generic text metrics such
-as BLEU~\cite{papineni2002bleu} and LLM-based evaluators like
-G-Eval~\cite{liu2023geval,li2024survey} reward linguistic fluency and can leave
-experimentally invalid protocols undetected, masking
-hallucinations~\cite{bang2025hallulens,zhang2025survey} about chemical
-compatibility or incubation requirements.
 
-\noindent\textbf{Protocol-design and wet-lab benchmarks.} Breadth-oriented
-benchmarks such as BioProBench~\cite{bioprobench} (tens of thousands of
-protocols across many subfields) and LAB-Bench~\cite{labbench} assess protocol
-understanding largely via text/QA matching over many domains. ClearEval is
-orthogonal: it trades breadth for experiment-derived, parameter-level
-feasibility scoring within one subdomain, providing physics-grounded ground
-truth (refractive index, incubation windows, fluorophore compatibility) that
-QA-style benchmarks do not (Table~\ref{tab:positioning}).
-
-\begin{table}[t]
-    \centering
-    \caption{Positioning of ClearEval relative to representative LLM
-    benchmarks. ClearEval trades breadth for parameter-level, physically
-    grounded feasibility scoring with a calibrated judge.}
-    \label{tab:positioning}
-    \resizebox{\columnwidth}{!}{%
-    \begin{tabular}{l l l c c}
-        \toprule
-        \textbf{Benchmark} & \textbf{Task focus} & \textbf{Grading signal} & \textbf{Phys.\ ground.} & \textbf{Judge cal.} \\
-        \midrule
-        MMLU / MedQA          & Knowledge QA           & Exact match             & $\times$     & $\times$ \\
-        BioProBench           & Protocol understanding & Text / QA match         & $\times$     & $\times$ \\
-        LAB-Bench             & Biology research QA    & MCQ accuracy            & $\times$     & $\times$ \\
-        \textbf{ClearEval (ours)} & Protocol feasibility   & Parameter-level physics & \checkmark & \checkmark \\
-        \bottomrule
-    \end{tabular}%
-    }
-\end{table}
-
-\noindent\textbf{LLM-as-a-judge calibration.} Automated judges exhibit
-documented position, verbosity, and self-preference
-biases~\cite{zheng2023judge}. We therefore restrict LLM judgment to
-Completeness/Correctness, ground Effectiveness in non-LLM physical checks, and
-report per-dimension agreement with expert consensus (Sec.~\ref{sec:calib},
-Appendix~\ref{app:judge}) rather than a single correlation.
-
-\noindent\textbf{Scientific agents.} Autonomous-lab
-systems~\cite{boiko2023coscientist,martinez2025ai} aim to close the loop from
-hypothesis to experiment. ClearEval supplies a pre-experimental feasibility
-gate such agents can apply before committing irreversible reagents, grounded in
-the empirical parameters of Tissue Optical
-Clearing~\cite{ueda2020tissue,chung2013clarity,kumar2024tissue}.
-
-\section{The ClearEval Benchmark}
-The development of ClearEval follows a structured pipeline that transforms
-specialized TOC domain expertise into a computational evaluation framework
-(Fig.~\ref{fig:overview}).
-
-\begin{figure*}[t]
-    \centering
-    \includegraphics[width=0.8\textwidth]{figures/overview.png}
-    \caption{Overview of the dataset construction and benchmarking pipeline.
-    The left panel shows the workflow for formulating domain knowledge into
-    evaluation datasets. The right panel details the evaluation process,
-    scoring knowledge tasks on accuracy ($I_K$) and application tasks on
-    completeness, correctness, and a data-driven effectiveness metric ($f_x$)
-    grounded in experimental confidence intervals to calculate the $I_A$
-    Score.}
-    \label{fig:overview}
-\end{figure*}
-
-\subsection{Knowledge Base and Task Formulation}
-ClearEval formalizes wet-lab constraints into a structured knowledge system,
-encoded in seven curated knowledge bases covering tissue types, molecular
-markers, clearing-method properties, and compatibility, derived from the
-mainstream TOC literature (full inventory and provenance in
-Appendix~\ref{app:curation}). To align user requirements with protocol
-selection, these constraints are mapped into a 6-dimensional vector space
-$\mathcal{V} \in [0,1]^6$ representing key performance indicators such as
-fluorescence preservation, reagent permeability, and biosafety. Within this
-space, 60 core scientific missions across various biological scales were defined
-by experts to serve as seeds for realistic task generation.
-
-\subsection{Dataset Generation Workflow}
-The ClearEval pipeline (Fig.~\ref{fig:overview}, bottom left) instantiates
-expert-authored templates against the knowledge base via controlled-vocabulary
-substitution. For the Knowledge track, 45 expert templates (7 named-entity, 26
-domain-knowledge, 12 task-scenario) are expanded into \textbf{2{,}588 Knowledge
-Tasks (MCQs)}---533 named-entity, 1{,}350 domain-knowledge, and 705
-task-scenario---each in an 8-option format to minimize correct guessing,
-followed by deduplication and option shuffling. For the Application track, the
-60 mission seeds are combined with the knowledge base to generate open-ended
-scenarios, augmented with real wet-lab challenges and quality-filtered to
-\textbf{253 Application Tasks (OEQs)}. The OEQs move beyond static reference
-texts, instead presenting constrained scenarios evaluated through an automated,
-experiment-based scoring pipeline (Fig.~\ref{fig:overview}, right). Templates,
-controlled vocabularies, and filtering criteria are documented in
-Appendix~\ref{app:curation}.
-
-\section{Evaluation Framework}
-To quantify the transition from theoretical recall to functional
-executability, ClearEval employs a hierarchical scoring system
-(Table~\ref{tab:metrics}). The Application Index ($I_A$) shifts the focus from
-semantic similarity to \textbf{empirically grounded verification}, utilizing
-experimental confidence intervals to evaluate the viability of generated
+\noindent\textbf{Scientific and biomedical LLM evaluation.}
+The evaluation of scientific and biomedical LLMs has moved from general
+knowledge tests toward more specialized biomedical and research-oriented tasks.
+Benchmarks such as MMLU~\cite{hendrycks2021mmlu},
+MedQA~\cite{jin2021disease}, Med-PaLM-style
+evaluations~\cite{singhal2023medpalm}, and recent biomedical
+benchmarks~\cite{zhang2025benchmarking,wang2025cardbiomedbench,feng2024mediq}
+measure knowledge retrieval, clinical reasoning, biomedical NLP, and
+interactive question answering. These resources provide standardized evidence
+for biomedical competence, but their outputs are usually closed-form answers,
+short explanations, or task-specific labels rather than executable wet-lab
 protocols.
 
-\begin{table}[htbp]
-    \centering
-    \caption{The Hierarchical Metric System of ClearEval. Evaluation scales
-    from static knowledge retrieval to empirically-grounded protocol
-    execution.}
-    \label{tab:metrics}
-    \resizebox{\columnwidth}{!}{
-    \begin{tabular}{l l l l c}
-        \toprule
-        \textbf{Level} & \textbf{Dimension} & \textbf{Sub-Metric} & \textbf{Method} & \textbf{Max} \\
-        \midrule
-        Knowledge ($I_K$) & Static Retrieval & Accuracy & Deterministic & 100\% \\
-        \midrule
-        \multirow{9}{*}{Application ($I_A$)} & \multirow{2}{*}{Completeness} & Step Integrity & LLM-Judge & 40\% \\
-         & & Param Detail & LLM-Judge & 60\% \\
-        \cmidrule{2-5}
-         & \multirow{3}{*}{Correctness} & Sequential Logic & LLM-Judge & 40\% \\
-         & & Consistency & LLM-Judge & 20\% \\
-         & & Physics Plausibility & LLM-Judge & 40\% \\
-        \cmidrule{2-5}
-         & \multirow{4}{*}{Effectiveness} & Method Suitability & Vector Sim. & 30\% \\
-         & & Label Compatibility & Rule-Based & 40\% \\
-         & & Trans. Validity ($S_{trans}$) & Physics Eq. & 15\% \\
-         & & Time Efficiency ($S_{time}$) & Physics Eq. & 15\% \\
-        \midrule
-        \textbf{Overall} & Expert Score & Harmonic Mean & Aggregation & 100\% \\
-        \bottomrule
-    \end{tabular}%
-    }
+\noindent\textbf{Biological protocol and wet-lab benchmarks.}
+Recent benchmarks have extended LLM evaluation toward biological protocols and
+laboratory workflows. BioProBench~\cite{bioprobench} studies biological
+protocol understanding and reasoning across multiple subfields, including
+protocol QA, step ordering, error correction, generation, and reasoning.
+LAB-Bench~\cite{labbench} evaluates language models on biology research tasks,
+including literature use, protocol planning, and data analysis. BixBench
+~\cite{bixbench} considers multi-step computational-biology agent tasks. These
+benchmarks characterize broad biological or research capabilities. ClearEval
+focuses on a complementary setting: parameter-level feasibility assessment for
+LLM-generated Tissue Optical Clearing protocols, where multiple method--marker
+--time combinations may be acceptable and must be checked against explicit
+experimental constraints.
+
+\noindent\textbf{Automatic evaluation, TOC, and pre-experimental checking.}
+Automatic evaluation methods, including text-overlap metrics such as
+BLEU~\cite{papineni2002bleu} and LLM-based evaluators such as
+G-Eval~\cite{liu2023geval}, enable scalable assessment of generated outputs.
+Recent work has also analyzed systematic effects in LLM-as-a-judge
+methods~\cite{li2024survey,zheng2023judging}. In ClearEval, LLM judgment is
+used for rubric-defined procedural dimensions, while Effectiveness is computed
+from a structured TOC feasibility database. TOC methods such as CLARITY, CUBIC,
+iDISCO, uDISCO, and PEGASOS have enabled high-resolution 3D imaging across
+tissues and organ scales~\cite{chung2013clarity,ueda2020tissue,
+wang2025advances,richardson2025unlocking,mai2024tissue}. This literature
+provides the basis for reasoning about method suitability, refractive-index
+matching, labeling preservation, and clearing time. ClearEval organizes these
+resources into a machine-readable feasibility checker for LLM-generated
+protocols, which may also serve as a pre-experimental component for future
+vertical scientific agents~\cite{boiko2023autonomous,hartung2025ai}.
+
+
+\begin{table}[t]
+\centering
+\caption{Positioning of ClearEval relative to representative LLM benchmarks.}
+\label{tab:positioning}
+\scriptsize
+\setlength{\tabcolsep}{2.5pt} % 縮減列間距以適應單欄
+\renewcommand{\arraystretch}{1.15}
+% 使用 tabularx 確保總寬度剛好等於單欄寬度 (\columnwidth)
+\begin{tabularx}{\columnwidth}{l X X}
+\toprule
+\textbf{Benchmark} & \textbf{Scope \& Output} & \textbf{Main Signal / Feasibility} \\
+\midrule
+MMLU / MedQA~\cite{hendrycks2021mmlu,jin2021disease} & 
+Gen/Biomed QA; Closed answers & 
+Knowledge accuracy; Knowledge level \\
+\midrule
+BioProBench~\cite{bioprobench} & 
+Broad bio-protocols; QA, ordering, generation & 
+Protocol reasoning; Understanding level \\
+\midrule
+LAB / BixBench~\cite{labbench,bixbench} & 
+Bio-research \& comp-bio; Plans, workflows & 
+Task/scenario evaluation; Workflow level \\
+\midrule
+\textbf{ClearEval} & 
+\textbf{TOC protocols; LLM wet-lab protocols} & 
+\textbf{DB-grounded CCE; Parameter wet-lab feasibility} \\
+\bottomrule
+\end{tabularx}
 \end{table}
 
-\subsection{Knowledge ($I_K$) and Application ($I_A$) Indices}
-The \textbf{Knowledge Index ($I_K$)} represents the macro-averaged MCQ accuracy
-across domain-specific categories. To evaluate protocol design, the
-\textbf{Application Index ($I_A$)} adopts a bottleneck formulation:
+
+\section{The ClearEval Benchmark}
+ClearEval is organized around three linked components: a TOC feasibility
+database, a dual-track task suite, and a scoring framework
+(Fig.~\ref{fig:overview}). The feasibility database converts experimental
+records, literature evidence, and expert-reviewed TOC constraints into
+machine-readable resources. The task suite uses these resources to construct
+knowledge questions and open-ended protocol-design scenarios. The scoring
+framework evaluates model outputs with a Knowledge Index ($I_K$) for MCQs and
+an Application Index ($I_A$) for generated protocols.
+
+\begin{figure*}[t]
+\centering
+\includegraphics[width=0.8\textwidth]{figures/overview.png}
+\caption{Overview of ClearEval. A TOC feasibility database is constructed
+from wet-lab experimental records, curated literature chunks, and
+expert-reviewed constraints. The database supports both task construction
+and protocol scoring. The Knowledge track is scored by the Knowledge Index
+($I_K$), while the Application track is scored by the Application Index
+($I_A$), which combines Completeness, Correctness, and Effectiveness.}
+\label{fig:overview}
+\end{figure*}
+
+\subsection{TOC Feasibility Database}
+ClearEval formalizes TOC protocol constraints as a structured feasibility
+database. The database integrates 372 wet-lab experimental records used to
+support clearing-time intervals, 400+ curated tissue-clearing literature
+chunks, and expert-reviewed constraints on tissues, molecular targets,
+fluorescent markers, clearing-method properties, refractive-index conditions,
+sample scales, and compatibility rules. These resources are encoded into seven
+machine-readable knowledge bases, with inventory, provenance, and review
+status documented in Appendix~\ref{app:curation}.
+
+The database is designed to support feasibility assessment rather than
+single-answer protocol matching. For method selection, each clearing method is
+represented along six experimental axes: fluorescence/protein preservation, dye
+permeability, clearing capacity, sample geometry, operational economy, and
+biosafety. These axes provide a shared constraint space for comparing the
+requirements of an experimental scenario with the properties of candidate
+clearing strategies.
+
+\subsection{Task Suite Construction}
+ClearEval contains two task tracks. The Knowledge track evaluates static TOC
+knowledge. Expert-authored templates are instantiated against the feasibility
+database through controlled-vocabulary substitution, producing 2{,}588
+multiple-choice questions: 533 named-entity questions, 1{,}350
+domain-knowledge questions, and 705 task-scenario questions. Each question uses
+an 8-option format, followed by deduplication and option shuffling.
+
+The Application track evaluates open-ended TOC protocol generation. We define
+60 expert-designed scientific missions across biological scales and combine
+them with the feasibility database to construct constrained experimental
+scenarios. These scenarios are further augmented with real wet-lab challenges
+and quality-filtered to 253 open-ended tasks. Because TOC protocol design may
+admit multiple feasible method--marker--time combinations, these tasks are not
+graded by reference-text similarity. They are instead evaluated by the scoring
+framework below.
+
+\subsection{Scoring Framework}
+ClearEval scores model outputs at two levels (Table~\ref{tab:metrics}). The
+Knowledge Index ($I_K$) is the macro-averaged accuracy over MCQ categories. The
+Application Index ($I_A$) evaluates open-ended generated protocols through three
+dimensions: Completeness, Correctness, and Effectiveness:
 \begin{equation}
-I_A = \min(\text{Completeness}, \text{Correctness}, \text{Effectiveness})
+I_A = \min(\text{Completeness}, \text{Correctness}, \text{Effectiveness}).
 \end{equation}
-This ``weakest-link'' approach reflects wet-lab realities, where a single
-critical failure in logic or chemical compatibility can render an entire
-experiment invalid.
+This bottleneck formulation reflects wet-lab practice: a protocol can be
+detailed and fluent, yet still fail if one essential component is missing,
+inconsistent, or experimentally infeasible. Thus, CCE denotes the scoring
+structure of the Application track, whereas ClearEval as a whole combines both
+static knowledge evaluation and application-level feasibility assessment.
 
-\subsection{Empirically-Grounded Effectiveness ($E_{score}$)}
-Unlike Completeness and Correctness, Effectiveness is scored by deterministic,
-non-LLM checks that read directly from the expert knowledge bases
-(Appendix~\ref{app:curation}). From each protocol we extract its clearing
-method, target markers, refractive-index target, and total processing time, then
-compute four sub-metrics whose equal-weighted sum is
-$E_{score}=S_{method}+S_{label}+S_{trans}+S_{time}$ (maxima $5/6/3/3$, total
-$17$).
+\begin{table}[htbp]
+\centering
+\caption{The hierarchical metric system of ClearEval. Evaluation scales from
+static knowledge retrieval to empirically grounded protocol execution.}
+\label{tab:metrics}
+\resizebox{\columnwidth}{!}{
+\begin{tabular}{l l l l c}
+\toprule
+\textbf{Level} & \textbf{Dimension} & \textbf{Sub-Metric} &
+\textbf{Method} & \textbf{Max} \\
+\midrule
+Knowledge ($I_K$) & Static Retrieval & Accuracy &
+Deterministic & 100\% \\
+\midrule
+\multirow{9}{*}{Application ($I_A$)}
+& \multirow{2}{*}{Completeness} & Step Integrity &
+LLM-Judge & 40\% \\
+& & Param Detail & LLM-Judge & 60\% \\
+\cmidrule{2-5}
+& \multirow{3}{*}{Correctness} & Sequential Logic &
+LLM-Judge & 40\% \\
+& & Consistency & LLM-Judge & 20\% \\
+& & Physics Plausibility & LLM-Judge & 40\% \\
+\cmidrule{2-5}
+& \multirow{4}{*}{Effectiveness} & Method Suitability &
+Vector Sim. & 30\% \\
+& & Label Compatibility & Rule-Based & 40\% \\
+& & Trans. Validity ($S_{trans}$) & Physics Eq. & 15\% \\
+& & Time Efficiency ($S_{time}$) & Physics Eq. & 15\% \\
+\midrule
+\textbf{Overall} & Expert Score & Harmonic Mean &
+Aggregation & 100\% \\
+\bottomrule
+\end{tabular}%
+}
+\end{table}
 
-\noindent\textbf{(1) Method suitability ($S_{method}$, max $5$).} Every clearing
-method carries a six-dimensional capability vector $\mathbf{v}_{ref}\in[0,1]^6$
-(fluorescence/protein preservation, dye permeability, optical clearing,
-geometry, operational economy, biosafety); the scenario's requirements are
-parsed into a matching demand vector $\mathbf{v}_{pred}$. $S_{method}$ rewards
-their alignment by cosine similarity, and is $0$ if the proposed method is absent
-from the knowledge base:
+\paragraph{Completeness and Correctness.}
+Completeness measures whether a generated protocol provides the information
+needed to specify a TOC experiment. It includes Step Integrity, which checks
+whether essential stages such as fixation or pre-treatment, labeling, clearing,
+refractive-index matching, and imaging preparation are present when applicable,
+and Parameter Detail, which checks whether key experimental parameters are
+specified, including reagent or method choices, sample scale, incubation time,
+temperature, concentration, labeling conditions, and imaging settings.
+
+Correctness measures whether the specified protocol is internally consistent
+and compatible with basic TOC principles. It includes Sequential Logic, which
+checks whether operations follow a plausible wet-lab order; Consistency, which
+checks for contradictions in sample scale, timing, or method choice; and
+Physics Plausibility, which checks whether the protocol respects constraints
+such as diffusion, tissue scale, refractive-index matching, and preservation of
+the labeling signal.
+
+Completeness and Correctness are evaluated by an LLM judge
+under a fixed rubric, because they require interpretation of free-form
+procedural text.
+
+\paragraph{Effectiveness.}
+Effectiveness evaluates whether the extracted experimental choices satisfy
+TOC-specific feasibility constraints. Unlike Completeness and Correctness, it
+is scored by deterministic, non-LLM checks that read from the TOC feasibility
+database (Appendix~\ref{app:curation}). From each generated protocol, we
+extract the clearing method, labeling target, fluorescent marker or labeling
+strategy, refractive-index condition, and total processing time. These fields
+are scored by four sub-metrics:
 \begin{equation}
-S_{method} = 5 \cdot \max\!\big(0,\ \cos(\mathbf{v}_{pred}, \mathbf{v}_{ref})\big).
+E_{score}
+= S_{method} + S_{label} + S_{trans} + S_{time},
+\end{equation}
+with maxima scores $5$, $6$, $3$, and $3$, respectively.
+
+\noindent\textbf{Method suitability ($S_{method}$, max $5$).}
+Each clearing method has a six-dimensional capability vector
+$\mathbf{v}_{ref}\in[0,1]^6$ over the experimental axes defined above. Each
+scenario is parsed into a demand vector $\mathbf{v}_{pred}$ over the same
+axes. Method suitability is computed as
+\begin{equation}
+S_{method}
+= 5 \cdot \max\big(0,\cos(\mathbf{v}_{pred}, \mathbf{v}_{ref})\big).
 \end{equation}
 
-\noindent\textbf{(2) Label compatibility ($S_{label}$, max $6$).} A hard
-constraint against unusable labeling, taken as the \emph{minimum} of three
-$[0,6]$ rule-based checks---marker--target match, marker--fluorophore
-compatibility, and fluorophore--method compatibility (the last reads the
-quenching matrix). Any single incompatibility, e.g.\ a fluorophore quenched by an
-organic-solvent method, drives the minimum, and hence $S_{label}$, to $0$.
-
-\noindent\textbf{(3) Transparency validity ($S_{trans}$, max $3$).} The
-refractive index the method achieves must match the tissue. We score the gap
-between the tissue's native RI ($RI_{tissue}$) and the RI the method is designed
-for ($RI_{ref}$) with a Gaussian of width $\sigma_{RI}$, the per-(method,
-sample-scale) tolerance:
+\noindent\textbf{Label compatibility ($S_{label}$, max $6$).}
+This metric evaluates whether the proposed labeling strategy is compatible
+with the biological target and the selected clearing method:
 \begin{equation}
-S_{trans} = 3 \cdot \exp\!\left( -\frac{(RI_{tissue}-RI_{ref})^2}{2\,\sigma_{RI}^2} \right).
+S_{label}
+= \min(S_{target}, S_{marker}, S_{method\text{-}marker}).
 \end{equation}
-$S_{trans}$ is gated to $0$ when the method cannot physically handle the
-requested sample scale (no method$\times$tier entry in the timing base).
+$S_{target}$ checks whether the marker matches the required labeling target;
+$S_{marker}$ checks marker--fluorophore compatibility; and
+$S_{method\text{-}marker}$ checks fluorophore compatibility with the selected
+clearing method using the quenching matrix. Each term is scored on $[0,6]$.
+The minimum operator implements a hard feasibility rule: failure of any one
+check makes the labeling strategy unusable.
 
-\noindent\textbf{(4) Time efficiency ($S_{time}$, max $3$).} Let $\Delta t$ be
-the deviation of the proposed total time from the literature-supported window
-$[t_{min}, t_{max}]$ (with $\Delta t{=}0$ inside it); a Gaussian of tolerance
-$\tau$ penalizes out-of-window timing:
+\noindent\textbf{Transparency validity ($S_{trans}$, max $3$).}
+This metric evaluates whether the refractive-index condition associated with
+the selected method is compatible with the tissue and sample scale. The score
+penalizes the gap between the tissue reference RI ($RI_{tissue}$) and the
+method RI ($RI_{ref}$) using a Gaussian tolerance $\sigma_{RI}$:
 \begin{equation}
-S_{time} = 3 \cdot \exp\!\left( -\frac{\Delta t^{2}}{2\,\tau^{2}} \right),
+S_{trans}
+= 3 \cdot
+\exp\left(
+-\frac{(RI_{tissue}-RI_{ref})^2}{2\sigma_{RI}^2}
+\right).
+\end{equation}
+$S_{trans}$ is set to $0$ when the selected method has no supported entry for
+the requested sample scale in the timing database.
+
+\noindent\textbf{Time efficiency ($S_{time}$, max $3$).}
+The proposed total processing time is compared with an evidence-supported
+window $[t_{min},t_{max}]$. These windows are derived from TOC literature,
+372 wet-lab experimental records, and expert review. Let $\Delta t$ denote the
+deviation from this window, with $\Delta t=0$ when the proposed time falls
+inside the interval. Out-of-window timing is penalized by
+\begin{equation}
+S_{time}
+= 3 \cdot
+\exp\left(
+-\frac{\Delta t^2}{2\tau^2}
+\right),
 \end{equation}
 where $\tau$ is set deterministically to $0.2\times$ the median clearing time.
-All windows, RI references, and $\sigma_{RI}/\tau$ tolerances are
-literature-bounded and expert-reviewed (Appendix~\ref{app:curation}). The raw
-$E_{score}$ (max $17$) is finally min--max normalized to $[0,100]$, making it
-comparable with Completeness and Correctness before the $I_A$ bottleneck.
 
-\subsection{Overall Expert Score}
-To penalize models that memorize facts but fail under practical physical
-constraints, the \textbf{ClearEval Expert Score} is the harmonic mean:
-$\text{Score} = 2 I_K I_A / (I_K + I_A)$. Given the bottleneck formulation of
-$I_A$, a high score demands both broad theoretical recall and strict
-experimental compliance.
+All timing windows, RI references, and $\sigma_{RI}/\tau$ tolerances are
+traceable to literature evidence, wet-lab records, and expert review
+(Appendix~\ref{app:curation}). The raw $E_{score}$, with maximum $17$, is
+min--max normalized to $[0,100]$ before being combined with Completeness and
+Correctness in the $I_A$ bottleneck.
+
+\paragraph{Overall Expert Score.}
+The final ClearEval Expert Score combines static knowledge and
+application-level feasibility using the harmonic mean:
+\begin{equation}
+\text{Score} = \frac{2 I_K I_A}{I_K + I_A}.
+\end{equation}
+This aggregation penalizes models that perform well on TOC knowledge questions
+but fail to generate experimentally feasible protocols.
 
 \section{Experiments}
 \subsection{Models and Settings}
-We benchmark 12 LLMs across the GPT, Gemini, Claude, DeepSeek/GLM, and Qwen
+We benchmark 12 LLMs across the GPT, Gemini, Claude, DeepSeek, GLM, and Qwen
 families. For all evaluated API models we set temperature to $0.0$ for both
 Knowledge and Application tasks to maximize reproducibility; reasoning variants
 additionally run in their native thinking mode (Table~\ref{tab:modelconfig}).

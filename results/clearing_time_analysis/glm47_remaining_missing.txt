@@ -1,0 +1,583 @@
+
+================================================================================
+QID: 2 | Length: 788
+--------------------------------------------------------------------------------
+**Chosen Method:** uDISCO
+**Chosen Labeling:** [NeuN (RBFOX3)+Alexa Fluor 647, beta-III Tubulin (TUJ1)+Alexa Fluor 488, DAPI]
+**Justification:** uDISCO is selected for its superior capability to clear whole adult mouse brains rapidly while achieving high transparency (RI ~1.56) and significant tissue shrinkage (~65%). The shrinkage is advantageous for imaging large volumes like a whole brain faster and with higher resolution. The method preserves fluorescence signals well and is compatible with immunolabeling protocols. The chosen markers—NeuN for neuronal somata and beta-III Tubulin for axons and dendrites—combined with DAPI, provide a comprehensive map of neuronal morphology and distribution required by the problem statement.
+
+**Protocol Steps:**
+1 Washing
+1.1 Incubation with
+
+================================================================================
+QID: 17 | Length: 621
+--------------------------------------------------------------------------------
+**Chosen Method:** iDISCO+
+**Chosen Labeling:** [tdTomato, CD31+Alexa Fluor 647]
+**Justification:** iDISCO+ is highly effective for clearing and immunolabeling dense brain tissues of this size (8 mm block). It provides excellent lipid removal and transparency while preserving robust fluorescent proteins like tdTomato (tumor cells) and compatible dyes like Alexa Fluor 647. The protocol's permeabilization steps allow deep antibody penetration, which is critical for visualizing the fine vascular network (CD31) throughout the tumor and invasive front to analyze perivascular invasion.
+
+**Protocol Steps:**
+1 Dehydration
+
+================================================================================
+QID: 34 | Length: 929
+--------------------------------------------------------------------------------
+**Chosen Method:** iDISCO+
+**Chosen Labeling:** [Tuj1 + Alexa Fluor 647, DAPI]
+**Justification:** iDISCO+ is the gold standard for whole-mount immunolabeling and clearing of intact mouse embryos (E12.5). It provides excellent transparency for deep imaging of delicate structures like early neuronal processes while preserving the morphology of mature nerve bundles. The solvent-based clearing (DBE) yields a high refractive index suitable for light-sheet microscopy. Tuj1 (β-III Tubulin) is the optimal marker for visualizing the neuronal cytoskeleton, effectively highlighting both established axon tracts and extending growth cones. Alexa Fluor 647 offers superior tissue penetration and brightness in cleared tissue compared to shorter wavelengths, and DAPI provides essential nuclear context for 3D reconstruction.
+
+**Protocol Steps:**
+1 Dehydration
+1.1 Incubation with 20% (vol/vol) methanol in PBS. (Temperature: RT, Time: 
+
+================================================================================
+QID: 41 | Length: 192
+--------------------------------------------------------------------------------
+**Chosen Method:** BoneClear
+**Chosen Labeling:** [DAPI, Osx+Alexa Fluor 488, Osteocalcin+Alexa Fluor 647]
+**Justification:** The sample is a mineralized hard tissue block (cranial bone). Bone
+
+================================================================================
+QID: 75 | Length: 437
+--------------------------------------------------------------------------------
+**Chosen Method:** iDISCO+
+**Chosen Labeling:** [Alexa Fluor, DAPI, p63, Pan-Cytokeratin]
+**Justification:** iDISCO+ is selected for its superior clearing capability on dense, lipid-rich human tissues and its compatibility with whole-mount immunolabeling, which is essential for visualizing deep glandular structures in 1 mm core biopsies. The solvent-based protocol efficiently reduces autofluorescence, a common issue in human samples.
+
+================================================================================
+QID: 97 | Length: 793
+--------------------------------------------------------------------------------
+**Chosen Method:** iDISCO+
+**Chosen Labeling:** [CK19 + Alexa Fluor 647, CD31 + Alexa Fluor 568, DAPI]
+**Justification:** iDISCO+ is selected because it is specifically optimized for whole-organ immunolabeling and clearing of large, dense tissues like the liver. Its methanol-based dehydration and bleaching steps effectively remove heme and lipids, which is critical for the highly vascularized liver. The method preserves fluorescence well and achieves high transparency (RI ~1.56) suitable for deep imaging of the complex 3D biliary tree. CK19 is the gold standard marker for biliary epithelium, and CD31 provides the necessary vascular reference context.
+
+**Protocol Steps:**
+
+1 Dehydration and Bleaching
+1.1 Incubation with 20% (vol/vol) methanol in distilled water with gentle shaking. (
+
+================================================================================
+QID: 104 | Length: 809
+--------------------------------------------------------------------------------
+**Chosen Method:** iDISCO+
+**Chosen Labeling:** [α-SMA + Alexa Fluor 488, SM22α + Alexa Fluor 647, DAPI]
+**Justification:** iDISCO+ is selected to address the specific failures of the previous PEGASOS attempt. The lung tissue requires aggressive removal of blood and lipids to achieve uniform transparency; iDISCO+ includes a critical decolorization step (H2O2/Methanol) that effectively removes heme pigments, solving the "uneven clearing" issue caused by skipping this step in the previous protocol. Furthermore, its solvent-based delipidation (Dichloromethane) is significantly faster and more effective for lung parenchyma than the aqueous SDS-based methods. The protocol's optimized permeabilization and 37°C immunolabeling conditions ensure deep antibody penetration into the 10mm tissue, overcoming the
+
+================================================================================
+QID: 127 | Length: 523
+--------------------------------------------------------------------------------
+**Chosen Method:** iDISCO+
+**Chosen Labeling:** [Lectin (Alexa Fluor 647), NeuN + Alexa Fluor 488]
+**Justification:** iDISCO+ is selected because it is highly effective for clearing small, dense, and pigmented organs like the eyeball. The protocol includes a critical bleaching step (H2O2/MeOH) to remove melanin from the retinal pigment epithelium, which is essential for optical access to the retina. The solvent-based clearing (DCM/DBE) achieves high transparency and refractive index matching (~1.56), suitable for deep
+
+================================================================================
+QID: 133 | Length: 204
+--------------------------------------------------------------------------------
+**Chosen Method:** iDISCO+
+**Chosen Labeling:** [PGP9.5 + Alexa Fluor 647, DAPI]
+**Justification:** iDISCO+ is selected because it combines robust immunolabeling capabilities with efficient lipid removal,
+
+================================================================================
+QID: 139 | Length: 931
+--------------------------------------------------------------------------------
+**Chosen Method:** Ce3D
+**Chosen Labeling:** [EGFP, mCherry, Hoechst]
+**Justification:** Ce3D is specifically optimized for small invertebrates like *C. elegans*, offering rapid clearing of the cuticle while maintaining excellent tissue morphology. As an aqueous method, it preserves endogenous EGFP and mCherry fluorescence far better than organic solvent-based methods, which is critical for high-resolution 3D mapping of fine neural structures like the nerve ring and ventral nerve cord. The addition of Hoechst provides a nuclear counterstain to assist in registering the spatial organization of neuron somas.
+
+**Protocol Steps:**
+1 Wash
+1.1 Incubation with 1x PBS (Phosphate Buffered Saline) to remove residual fixative, repeat 3 times. (Temperature: RT, Time: 10 min)
+2 Permeabilization
+2.1 Incubation with 0.5% (vol/vol) Triton X-100 in 1x PBS. (Temperature: RT, Time: 4 hours)
+3 Nuclear Staining
+3.1 Incubation with Hoechst
+
+================================================================================
+QID: 147 | Length: 999
+--------------------------------------------------------------------------------
+**Chosen Method:** ClearSee
+**Chosen Labeling:** [GFP, SCRI Renaissance 2200]
+**Justification:** ClearSee is an aqueous clearing method specifically optimized for plant tissues, offering excellent preservation of GFP/YFP fluorescence without the quenching effects often seen in organic solvent-based methods. It allows deep penetration of dyes. SCRI Renaissance 2200 is a fluorescent stain that specifically binds to cellulose and lignin in plant cell walls, providing high contrast to delineate root tissue layers (epidermis, cortex, endodermis, vasculature) necessary for the spatial analysis of transgene expression.
+
+**Protocol Steps:**
+1 Wash
+1.1 Wash with 1x PBS (Phosphate Buffered Saline) to remove residual fixative. (Temperature: RT, Time: 30 min)
+1.2 Repeat wash with fresh 1x PBS. (Temperature: RT, Time: 30 min)
+1.3 Repeat wash with fresh 1x PBS. (Temperature: RT, Time: 30 min)
+2 Clearing and Staining
+2.1 Incubation with ClearSee solution (10% w/v Xylitol, 15% w/v Sodium Deoxycholate
+
+================================================================================
+QID: 148 | Length: 371
+--------------------------------------------------------------------------------
+**Chosen Method:** PEGASOS
+**Chosen Labeling:** [GFP, YFP, SCRI Renaissance 2200]
+**Justification:** PEGASOS is specifically optimized for plant tissues, offering superior chlorophyll removal and transparency compared to aqueous methods like ClearSee, directly addressing the user's issue with residual pigments. The ethanol-based SDS solution (PEGASOS-A) efficiently dec
+
+================================================================================
+QID: 154 | Length: 731
+--------------------------------------------------------------------------------
+**Chosen Method:** iDISCO+
+**Chosen Labeling:** [PGP9.5 + Alexa Fluor 488, TH + Alexa Fluor 555, DAPI]
+**Justification:** iDISCO+ is selected because it is specifically optimized for whole-mount immunolabeling and clearing of large, dense organs (like the 20 mm mouse stomach). It provides excellent antibody penetration deep into the tissue, which is critical for visualizing the full 3D network of gastric innervation. The solvent-based clearing (Methanol/DCM/DBE) efficiently removes lipids from the muscular and connective tissue layers of the stomach, rendering it highly transparent while preserving the fluorescence of Alexa Fluor conjugates. The combination of PGP9.5 (pan-neuronal marker) and TH (tyrosine hydroxylase, for
+
+================================================================================
+QID: 156 | Length: 651
+--------------------------------------------------------------------------------
+**Chosen Method:** iDISCO+
+**Chosen Labeling:** [PGP9.5, Synapsin, Alexa Fluor, DAPI]
+**Justification:** iDISCO+ is selected because it is specifically optimized for whole-organ immunolabeling and deep tissue imaging. The method includes a critical bleaching step (H2O2) to significantly reduce autofluorescence (addressing the high background issue) and uses methanol/detergent treatments to enhance antibody penetration (addressing the weak signal in thick tissue). The solvent-based clearing (DCM/DBE) rapidly renders the dense, lipid-rich stomach tissue transparent while preserving the fluorescence of Alexa Fluor conjugates. The combination of P
+
+================================================================================
+QID: 161 | Length: 558
+--------------------------------------------------------------------------------
+**Chosen Method:** iDISCO+
+**Chosen Labeling:** [C-FoS, Alexa Fluor 647, DAPI]
+**Justification:** iDISCO+ is specifically optimized for whole-brain immunolabeling and clearing, offering excellent antibody penetration required to detect activity-dependent markers like c-Fos in deep nuclei (MTN, LC, PVT, NAcSh). Its methanol-based dehydration effectively reduces autofluorescence, which is critical for imaging the tongue muscle tissue. The method achieves high transparency and refractive index matching suitable for light-sheet microscopy of both the brain
+
+================================================================================
+QID: 162 | Length: 173
+--------------------------------------------------------------------------------
+**Chosen Method:** iDISCO+
+**Chosen Labeling:** [C-FoS, Npas4 (IEGs), DAPI, Alexa Fluor]
+**Justification:** iDISCO+ is selected for its exceptional capability in whole-organ
+
+================================================================================
+QID: 176 | Length: 1087
+--------------------------------------------------------------------------------
+**Chosen Method:** Ce3D
+**Chosen Labeling:** [PGP9.5 + Alexa Fluor 647, β-III Tubulin (TUJ1) + Alexa Fluor 488, DAPI]
+**Justification:** Ce3D is specifically designed for mineralized tissues like bone and teeth, addressing the opacity issue by incorporating a rigorous decalcification step (EDTA) that standard BoneClear or organic solvent methods might lack or mishandle for thick samples. Unlike organic solvent methods (e.g., iDISCO+, uDISCO) which can quench fluorescence and damage antigens, Ce3D uses an aqueous-based clearing solution (containing urea, glycerol, and Triton X-100) that preserves fluorescence and tissue morphology (marrow/meninges) effectively. The protocol includes a high-temperature permeabilization and staining phase to ensure deep antibody penetration, solving the weak signal issue. Since CGRP is not in the allowed marker list, PGP9.5 and TUJ1 are selected as robust pan-neuronal markers to visualize the sensory and general nerve fibers required for the anatomical analysis.
+
+**Protocol Steps:**
+1 Decalcification
+1.1 Incubation with 0.5 M EDTA (pH 7.4-7
+
+================================================================================
+QID: 180 | Length: 783
+--------------------------------------------------------------------------------
+**Chosen Method:** iDISCO+
+**Chosen Labeling:** [TH, NPY, DAPI, Alexa Fluor]
+**Justification:** iDISCO+ is selected because it is a solvent-based clearing method highly effective for dense, mineralized tissues like bone after decalcification, unlike the aqueous SWITCH method. It provides excellent lipid removal (clearing the marrow), deep antibody penetration for TH and NPY, and good fluorescence preservation for Alexa Fluor dyes. The bleaching step reduces bone autofluorescence, crucial for detecting weak neural signals.
+
+**Protocol Steps:**
+1 Decalcification
+1.1 Incubation with 0.5 M EDTA (pH 7.5) at 4°C with shaking. (Temperature: 4 ℃, Time: 3-5 days)
+1.2 Wash with PBS 3 times to remove EDTA. (Temperature: RT, Time: 1 hour per wash)
+
+2 Dehydration
+2.1 Incubation with 20
+
+================================================================================
+QID: 185 | Length: 75
+--------------------------------------------------------------------------------
+**Chosen Method:** iDISCO+
+**Chosen Labeling:** [CD31+Alexa Fluor 647, Lect
+
+================================================================================
+QID: 192 | Length: 672
+--------------------------------------------------------------------------------
+**Chosen Method:** CUBIC
+**Chosen Labeling:** [Pan-Cytokeratin + Alexa Fluor 647, Hoechst]
+**Justification:** CUBIC is an aqueous, hydrophilic clearing method that is highly effective for whole mouse brains while preserving tissue morphology and minimizing the structural damage associated with electrophoretic or harsh organic solvent methods. It provides excellent preservation of red fluorescent proteins (tdTomato/RFP) and is compatible with long-term immunostaining protocols required for deep tissue penetration of antibodies like Pan-Cytokeratin. The isotropic nature of CUBIC ensures low deformation, which is critical for accurate 3D analysis of invasion patterns
+
+================================================================================
+QID: 230 | Length: 332
+--------------------------------------------------------------------------------
+**Chosen Method:** iDISCO+
+**Chosen Labeling:** [GFAP+Alexa Fluor 488, Tuj1+Alexa Fluor 647, DAPI]
+**Justification:** iDISCO+ is selected for its superior capability to clear large, dense tissue blocks like the 40 mm rat spinal cord while maintaining excellent antibody penetration for immunolabeling. The methanol-based dehydration
+
+================================================================================
+QID: 241 | Length: 1090
+--------------------------------------------------------------------------------
+**Chosen Method:** ScaleS
+**Chosen Labeling:** [Nephrin+Alexa Fluor 488, Laminin+Alexa Fluor 647, F-Actin+Phalloidin, DAPI]
+**Justification:** ScaleS is specifically optimized for high-resolution 3D imaging of thick tissues (up to several millimeters) while preserving fine subcellular structures and fluorescence signals. Its aqueous nature minimizes tissue shrinkage and deformation, which is critical for accurately visualizing the delicate architecture of the glomerular filtration barrier and podocyte slit diaphragms. The method effectively reduces autofluorescence and light scattering, ensuring a high signal-to-noise ratio for the targeted proteins (Nephrin, Laminin, F-Actin) within the 500 μm kidney slice.
+
+**Protocol Steps:**
+1 Fixation and Washing
+1.1 Incubation with 4% (wt/vol) Paraformaldehyde in 0.1M Phosphate Buffer (PB). (Temperature: 4 ℃, Time: 12 hours)
+1.2 Wash with 0.1M PB containing 0.1% (vol/vol) Tween-20 (PBT). (Temperature: RT, Time: 3 x 1 hours)
+
+2 Permeabilization and Clearing (ScaleS0)
+2.1 Incubation with ScaleS0 solution (4M Urea, 10% (wt/vol) Glycerol,
+
+================================================================================
+QID: 249 | Length: 749
+--------------------------------------------------------------------------------
+**Chosen Method:** iDISCO+
+**Chosen Labeling:** [Stabilin-2 + Alexa Fluor 488, LYVE-1 + Alexa Fluor 647]
+**Justification:** iDISCO+ is selected because it is the gold standard for whole-organ immunolabeling and clearing, capable of handling the size and density of an adult mouse liver while preserving fluorescence. The solvent-based clearing provides excellent transparency for light-sheet microscopy and allows for tissue shrinkage (which is acceptable per the problem statement) to facilitate faster imaging. The labeling strategy targets Stabilin-2 and LYVE-1, two specific receptors highly expressed in liver sinusoidal endothelial cells (LSECs), ensuring comprehensive visualization of the hepatic microvasculature and sinusoidal network that
+
+================================================================================
+QID: 10 | Length: 16060
+--------------------------------------------------------------------------------
+1.  **Analyze the Problem Statement:**
+    *   **Sample:** Intact mouse CNS (brain to spinal cord end), length ~35-40 mm. Fixed and post-fixed.
+    *   **Goal:** Construct a 3D map of long-range projections from cortex to spinal cord.
+    *   **Specifics:** Trace cortical-derived long-range projection fibers in continuous brain-spinal cord tissue. Show overall axonal skeleton/network. Distinguish specific projection signals from background endogenous axons. Analyze continuity, branching, and terminal distribution.
+    *   **Requirements:** Dual-target fluorescence/labeling strategy compatible with clearing. Suitable for ultra-long CNS samples, long-distance fiber tracing, and deep 3D imaging.
+
+2.  **Select Clearing Method:**
+    *   *Options:* CUBIC, ScaleS, MACS, iDISCO+, FDISCO, SOLID, SeeDB2, PEGASOS, BoneClear, Ce3D, TDE, ClearT2, ClearSee, EyeCi, FOCM, SWITCH, uDISCO, FlyClear.
+    *   *Constraints:* Sample is long (35-40mm), needs high transparency for deep imaging (light-sheet implied), needs to preserve fluorescence for long-distance tracing.
+    *   *Evaluation:*
+        *   *CUBIC:* Good for whole bodies, preserves GFP well, but can be slow for very long samples and might swell tissue.
+        *   *ScaleS:* Good for fluorescence, but clearing might not be sufficient for the full length of the spinal cord + brain quickly.
+        *   *iDISCO+:* Excellent for immunolabeling, good clearing, but methanol dehydration can quench some fluorescent proteins (though GFP survi
+
+================================================================================
+QID: 7 | Length: 13661
+--------------------------------------------------------------------------------
+1.  **Analyze the Problem Statement:**
+    *   **Tissue:** Rat spinal cord injury segment (approx. 15 mm length, 4 mm diameter). This is a relatively thick, dense tissue sample.
+    *   **Condition:** Fixed with 4% PFA and post-fixed.
+    *   **Scientific Goal:** Construct 3D maps of regenerating nerve fiber pathways and mature axonal cytoskeleton. Compare spatial distribution in the injury core, proximal, and distal regions. Determine if fibers approach, bypass, or cross the injury center.
+    *   **Key Requirements:**
+        *   Compatible with dual-target nerve fiber labeling (regenerating vs. mature/retained).
+        *   Suitable for long-distance nerve fiber tracing in thick tissue.
+        *   Preserve structure of the injury segment.
+        *   Deep 3D imaging.
+    *   **Constraints:**
+        *   Choose ONE clearing method from the list: {CUBIC, ScaleS, MACS, iDISCO+, FDISCO, SOLID, SeeDB2, PEGASOS, BoneClear, Ce3D, TDE, ClearT2, ClearSee, EyeCi, FOCM, SWITCH, uDISCO, FlyClear}.
+        *   Choose Dyes/Markers from the provided lists.
+
+2.  **Select Clearing Method:**
+    *   *Tissue Type:* Rat spinal cord (dense, myelinated). Myelin is a major source of scattering.
+    *   *Goal:* Long-distance tracing, 3D imaging of axons.
+    *   *Candidates:*
+        *   *CUBIC:* Good for whole organs, preserves fluorescence well (aqueous), but might be slow for dense myelin removal compared to solvent methods.
+        *   *ScaleS:* Good for fluorescence preservation, but cleari
+
+================================================================================
+QID: 32 | Length: 381
+--------------------------------------------------------------------------------
+**Chosen Method:** ScaleS
+**Chosen Labeling:** [GFP, Phalloidin, DAPI]
+**Justification:** ScaleS is an aqueous clearing method specifically optimized for high-resolution imaging of fine neuronal structures such as dendritic spines. Unlike solvent-based methods (e.g., iDISCO+, uDISCO) or harsh TDE protocols, ScaleS minimizes tissue shrinkage and deformation, preserving the native
+
+================================================================================
+QID: 45 | Length: 1842
+--------------------------------------------------------------------------------
+**Chosen Method:** BoneClear
+**Chosen Labeling:** [TH+Alexa Fluor 647, CD31+Alexa Fluor 488, DAPI]
+**Justification:** BoneClear is specifically optimized for clearing mineralized bone tissue like the femur while preserving fluorescence and antigenicity, making it ideal for visualizing the intricate marrow cavity. The method effectively decalcifies and clears the bone to allow deep imaging of the marrow niche. TH (Tyrosine Hydroxylase) is the specific marker for sympathetic nerve fibers, and CD31 is the standard marker for vascular endothelium. Using Alexa Fluor 488 and 647 provides bright, photostable signals compatible with the solvent-based clearing steps of BoneClear, while DAPI labels nuclei for structural context.
+
+**Protocol Steps:**
+1 Decalcification
+1.1 Incubation with 0.5 M EDTA (pH 7.4) in distilled water, shaking gently. (Temperature: 37 ℃, Time: 7 days)
+1.2 Replace with fresh 0.5 M EDTA (pH 7.4) solution daily to ensure effective decalcification.
+
+2 Permeabilization
+2.1 Incubation with Permeabilization Solution (0.2% Triton X-100, 20% DMSO, 0.3 M Glycine in PBS). (Temperature: 37 ℃, Time: 48 hours)
+
+3 Primary Antibody Labeling
+3.1 Incubation with Primary Antibody Solution (Rabbit anti-TH, Rat anti-CD31 diluted 1:300 in Labeling Buffer: 0.2% Tween-20, 5% DMSO, 3% Donkey Serum in PBS). (Temperature: 37 ℃, Time: 10 days)
+
+4 Wash
+4.1 Wash with 0.2% Tween-20 in PBS (PBST) with gentle shaking. (Temperature: 37 ℃, Time: 24 hours)
+4.2 Replace PBST wash solution 3 times du
+
+================================================================================
+QID: 68 | Length: 540
+--------------------------------------------------------------------------------
+**Chosen Method:** iDISCO+
+**Chosen Labeling:** [CD31 + Alexa Fluor 647, Lectin + Alexa Fluor 568]
+**Justification:** iDISCO+ is selected because its methanol-based dehydration and hydrogen peroxide bleaching steps are highly effective at removing melanin, addressing the specific failure of the previous CUBIC attempt. This method provides excellent lipid removal and deep tissue penetration for large blocks (8–10 mm), while preserving far-red fluorescence (Alexa Fluor 647) which is crucial for imaging deep vascular structures in highly
+
+================================================================================
+QID: 80 | Length: 14157
+--------------------------------------------------------------------------------
+1.  **Analyze the Problem Statement:**
+    *   **Tissue:** Mouse inguinal lymph nodes (small, ~2-3 mm diameter).
+    *   **State:** Fixed and post-fixed (ready for clearing).
+    *   **Scientific Goal:** Visualize High Endothelial Venules (HEV) network, pan-vascular endothelial structures, and lymphocyte distribution. Analyze HEV distribution, branching, and spatial relationship with lymphocyte-rich zones.
+    *   **Specific Targets:**
+        *   HEV Addressin (likely PNAd).
+        *   Pan-vascular endothelial (likely CD31 or CD34).
+        *   Lymphocyte/Tissue structure reference (DAPI/Hoechst for nuclei, or B220 for B-cells/lymphocytes).
+    *   **Previous Issues:** Weak HEV signal after clearing, high non-specific background.
+    *   **Previous Protocol:** Fix 12h -> Methanol dehydration -> DCM 3h -> DBE 1h -> Antibody incubation 2 days (Far-red). This looks like a simplified iDISCO/uDISCO variant but failed on antigen preservation (HEV is sensitive) and antibody penetration (2 days might be short for dense lymph nodes if not permeabilized well).
+    *   **Constraints:**
+        *   Choose ONE clearing method from the list: {CUBIC, ScaleS, MACS, iDISCO+, FDISCO, SOLID, SeeDB2, PEGASOS, BoneClear, Ce3D, TDE, ClearT2, ClearSee, EyeCi, FOCM, SWITCH, uDISCO, FlyClear}.
+        *   Choose Dyes/Markers from the list.
+        *   Must address HEV antigen retention, antibody penetration, pan-vascular co-marking, lymphocyte zone visualization, low background, fluorescence preser
+
+================================================================================
+QID: 112 | Length: 14512
+--------------------------------------------------------------------------------
+1.  **Analyze the Problem Statement:**
+    *   **Tissue:** Mouse intact epididymal white adipose tissue (WAT) pad.
+    *   **Size:** ~15 mm x 10 mm x 5 mm (relatively large, high lipid content).
+    *   **Status:** Fixed and post-fixed (presumably PFA).
+    *   **Scientific Goal:** Distinguish noradrenergic sympathetic fibers vs. peptidergic sympathetic fibers. Quantify fiber density, distribution, branching, perivascular patterns.
+    *   **Previous Issue:** Used PEGASOS but skipped methanol dehydration (due to fluorescence concerns). Result: Tissue remained opaque and floated in RI matching solution (indicating incomplete dehydration/lipid removal or RI mismatch).
+    *   **Constraints:**
+        *   Must choose ONE clearing method from the list: {CUBIC, ScaleS, MACS, iDISCO+, FDISCO, SOLID, SeeDB2, PEGASOS, BoneClear, Ce3D, TDE, ClearT2, ClearSee, EyeCi, FOCM, SWITCH, uDISCO, FlyClear}.
+        *   Must choose Dyes/Markers from the provided lists.
+        *   Target: Noradrenergic (TH) and Peptidergic (NPY or VIP) sympathetic fibers.
+        *   Needs: High lipid removal (WAT is fatty), progressive dehydration, homogeneous RI matching, dual signal detection, low background, deep 3D imaging.
+
+2.  **Select Clearing Method:**
+    *   *Analysis of previous failure:* PEGASOS failed because methanol was skipped. PEGASOS relies on organic solvent dehydration (Methanol/Ethanol) followed by ethyl cinnamate (ECi). Without dehydration, lipids aren't removed, and water remains, causin
+
+================================================================================
+QID: 136 | Length: 783
+--------------------------------------------------------------------------------
+**Chosen Method:** iDISCO+
+**Chosen Labeling:** [PGP9.5 + Alexa Fluor 488, CD31 + Alexa Fluor 647, DAPI]
+**Justification:** iDISCO+ is selected because it utilizes a methanol-based bleaching step (H2O2) which is highly effective at removing melanin pigmentation that obscures IENF signals in human skin. The protocol is optimized for whole-mount immunolabeling, which is necessary to amplify the weak endogenous IENF signal using antibodies against PGP9.5. The organic solvent clearing (DCM/DBE) provides excellent transparency for dense dermal tissue and allows for deep imaging of the vascular network (CD31) and nerve fibers (PGP9.5) with high resolution.
+
+**Protocol Steps:**
+1 Dehydration and Bleaching
+1.1 Incubation with 50% (vol/vol) Methanol in distilled water. (Temperature
+
+================================================================================
+QID: 141 | Length: 1709
+--------------------------------------------------------------------------------
+**Chosen Method:** SeeDB2
+**Chosen Labeling:** [Phalloidin, Myosin VIIa + Alexa Fluor]
+**Justification:** SeeDB2 is selected for its rapid clearing capability and excellent preservation of fine cellular morphology, which is critical for visualizing the delicate F-actin stereocilia bundles on hair cells. As an aqueous-based method, it avoids the harsh solvents and tissue shrinkage associated with methods like iDISCO+ or uDISCO, ensuring accurate spatial analysis of the lateral line system. It is highly compatible with Alexa Fluor dyes and Phalloidin. Myosin VIIa is the specific marker used to confirm hair cell identity, while Phalloidin directly labels the F-actin structure of the stereocilia as requested.
+
+**Protocol Steps:**
+1 Permeabilization and Blocking
+1.1 Incubation with 0.5% (vol/vol) Triton X-100 in PBS for 2 hours with gentle shaking.(Temperature: RT, Time: 2 hours)
+1.2 Incubation with Blocking Buffer (1% (wt/vol) BSA, 5% (vol/vol) Normal Goat Serum, 0.1% (vol/vol) Triton X-100 in PBS) for 2 hours with gentle shaking.(Temperature: RT, Time: 2 hours)
+
+2 Primary Antibody Incubation
+2.1 Incubation with Anti-Myosin VIIa primary antibody diluted in Blocking Buffer (1:200) for 24 hours with gentle shaking.(Temperature: 4 ℃, Time: 24 hours)
+2.2 Wash with 0.1% (vol/vol) Triton X-100 in PBS (PBST) for 30 minutes with gentle shaking, repeat 3 times.(Temperature: RT, Time: 1.5 hours)
+
+3 Secondary Antibody and Phalloidin Staining
+3.1 Incubation with Alexa Fluor 647-conjugated se
+
+================================================================================
+QID: 49 | Length: 16169
+--------------------------------------------------------------------------------
+1.  **Analyze the Problem Statement:**
+    *   **Target:** Mouse cochlea (whole cochlea, spiral structure, ~3mm x 2mm x 2mm).
+    *   **Context:** Deeply embedded in dense otic capsule bone.
+    *   **Goal:** 3D counting of hair cells (inner and outer) across the whole cochlea to assess noise damage patterns (missing areas, gradients).
+    *   **Requirements:** Preserve spiral structure and spatial relationships of sensory epithelium. Clear signal for automated counting and 3D reconstruction.
+    *   **Current State:** Fixed and post-fixed (presumably PFA).
+    *   **Constraints:**
+        *   Choose ONE clearing method from the list: {CUBIC, ScaleS, MACS, iDISCO+, FDISCO, SOLID, SeeDB2, PEGASOS, BoneClear, Ce3D, TDE, ClearT2, ClearSee, EyeCi, FOCM, SWITCH, uDISCO, FlyClear}.
+        *   Choose Dyes/Fluorophores from: {GFP, EGFP, YFP, tdTomato, RFP, mCherry, mRFP, Alexa Fluor, DAPI, Hoechst, TO-PRO-3, Propidium iodide, DiI, DiO, DiD, Phalloidin, alpha-bungarotoxin, Lectin, IB4, SCRI Renaissance 2200}.
+        *   Choose Markers from: {List provided...}.
+        *   *Crucial Constraint:* If small molecule probes can mark the structure, do *not* use antibodies.
+        *   Output format: Specific header, then numbered steps with sub-steps containing reagent, temp, and time.
+
+2.  **Select Labeling Strategy:**
+    *   **Target:** Hair cells (Inner and Outer).
+    *   **Specific Markers:** Myosin VIIa is the classic marker for hair cells. However, the constraint says: "If small mo
+
+================================================================================
+QID: 56 | Length: 14880
+--------------------------------------------------------------------------------
+1.  **Analyze the Problem Statement:**
+    *   **Sample:** Intact mouse molar (approx. 2 mm x 1.5 mm x 1.5 mm).
+    *   **Status:** Fixed and post-fixed (presumably PFA).
+    *   **Goal:** 3D visualization of nerve fibers and soft tissue structure within the pulp chamber.
+    *   **Specific Requirements:**
+        *   Preserve enamel and dentin (no decalcification).
+        *   Preserve pulp chamber morphology.
+        *   Show nerve branching from the apex.
+        *   Preserve soft tissue contours.
+    *   **Current Issue:** Shrinkage and deformation of pulp tissue using BoneClear (specifically after decolorization and BB-PEG).
+    *   **Constraints:**
+        *   Choose ONE clearing method from the list: {CUBIC, ScaleS, MACS, iDISCO+, FDISCO, SOLID, SeeDB2, PEGASOS, BoneClear, Ce3D, TDE, ClearT2, ClearSee, EyeCi, FOCM, SWITCH, uDISCO, FlyClear}.
+        *   Choose Dyes/Markers from the provided lists.
+        *   Prioritize small molecule dyes for structure if possible.
+        *   Do not introduce targets outside the list.
+        *   Output format: Method/Labeling/Justification first, then numbered steps with specific parameters (Reagent, Temp, Time).
+
+2.  **Evaluate Clearing Methods:**
+    *   *BoneClear:* The user tried this and failed due to shrinkage/deformation. BoneClear often involves strong decalcification or harsh organic solvents that might shrink soft tissue if not perfectly controlled, or the specific BB-PEG step caused the issue. The user wants to avoid this
+
+================================================================================
+QID: 197 | Length: 14451
+--------------------------------------------------------------------------------
+1.  **Analyze the Problem Statement:**
+    *   **Sample:** Mouse embryo trunk (E9.5–E10.5), size ~5mm x 3mm x 2mm. Fixed and post-fixed.
+    *   **Goal:** 3D visualization of neural crest cell (NCC) migration paths and differentiation fate.
+    *   **Specific Signals:**
+        *   Endogenous: Wnt1-Cre;tdTomato (NCC lineage).
+        *   Target: Sox10 (neural crest/glial lineage marker).
+    *   **Constraints:**
+        *   Must preserve tdTomato signal.
+        *   Must visualize Sox10 (likely requires immunolabeling).
+        *   Tissue is relatively small (embryonic trunk).
+        *   Need to see migration from dorsal neural tube to periphery (DRG, sympathetic chain, etc.).
+    *   **Available Methods:** CUBIC, ScaleS, MACS, iDISCO+, FDISCO, SOLID, SeeDB2, PEGASOS, BoneClear, Ce3D, TDE, ClearT2, ClearSee, EyeCi, FOCM, SWITCH, uDISCO, FlyClear.
+    *   **Available Dyes/Markers:** tdTomato (endogenous), Sox10 (antibody target), DAPI/Hoechst (nuclei).
+
+2.  **Select Method & Labeling:**
+    *   *Method Selection:*
+        *   The tissue is small (E9.5-E10.5 trunk), so speed isn't the *only* factor, but preserving fluorescence is crucial.
+        *   We need to do immunolabeling for Sox10. This rules out methods that destroy epitopes or are incompatible with antibody penetration (though most modern methods allow it).
+        *   We need to preserve tdTomato. tdTomato is a relatively robust red fluorescent protein, but it can be quenched by organic solvents (like methanol in iD
+
+================================================================================
+QID: 202 | Length: 14788
+--------------------------------------------------------------------------------
+1.  **Analyze the Problem Statement:**
+    *   **Tissue:** Whole mouse placenta (diameter 10-12 mm, thickness 3-4 mm). This is a relatively small, dense organ.
+    *   **State:** Fixed (presumably PFA).
+    *   **Scientific Goal:** Distinguish between "vessels with endothelial structure" (morphology) and "functionally perfused vessels" (lumen labeling).
+    *   **Specific Targets:**
+        *   Endothelial structure (morphology/integrity).
+        *   Functional perfusion (lumen).
+    *   **Comparison:** Overlap, missing perfusion, abnormal branching, rarefaction in labyrinth layer, maternal-fetal exchange interface, and placental edge.
+    *   **Requirements:**
+        *   Compatible fluorescence/labeling strategy.
+        *   Matching tissue clearing method.
+        *   Prioritize direct lumen probes for functional perfusion.
+        *   Endothelial markers for structure.
+        *   Output format: Method/Labeling/Justification + Protocol Steps (numbered, specific parameters).
+
+2.  **Select Clearing Method:**
+    *   *Options:* CUBIC, ScaleS, MACS, iDISCO+, FDISCO, SOLID, SeeDB2, PEGASOS, BoneClear, Ce3D, TDE, ClearT2, ClearSee, EyeCi, FOCM, SWITCH, uDISCO, FlyClear.
+    *   *Constraints:* The tissue is fixed. It needs to be cleared enough to see deep into the labyrinth layer (3-4mm thick). It needs to preserve fluorescence (likely immunolabeling or dyes).
+    *   *Evaluation:*
+        *   *iDISCO+ / uDISCO / FDISCO:* These are solvent-based (dichloromethane/DBE or tetrahyd
+
+================================================================================
+QID: 226 | Length: 838
+--------------------------------------------------------------------------------
+**Chosen Method:** BoneClear
+**Chosen Labeling:** [Phalloidin-Alexa Fluor 488, Myosin VIIa + Alexa Fluor 647, DAPI]
+**Justification:** The sample is a bony structure (cochlea) where mineralization causes significant light scattering and obstruction. BoneClear is specifically designed to decalcify and clear mineralized tissues while preserving fluorescence, which is critical for maintaining the Phalloidin signal (F-actin) and antibody signal (Myosin VIIa). This aqueous-based method avoids the harsh dehydration of solvent-based clearing that could distort delicate stereocilia, allowing for high-resolution visualization of hair cell arrangement and morphology within the intact otic capsule.
+
+**Protocol Steps:**
+1 Decalcification
+1.1 Incubation with 0.5 M EDTA (pH 7.5) for 4 days, changing solution daily. (Temperature: 37 ℃, Time:
+
+================================================================================
+QID: 47 | Length: 87
+--------------------------------------------------------------------------------
+Error: Error code: 429 - {'error': {'code': '1302', 'message': '您的账户已达到速率限制，请您控制请求频率'}}
+
+================================================================================
+QID: 60 | Length: 87
+--------------------------------------------------------------------------------
+Error: Error code: 429 - {'error': {'code': '1302', 'message': '您的账户已达到速率限制，请您控制请求频率'}}
+
+================================================================================
+QID: 63 | Length: 87
+--------------------------------------------------------------------------------
+Error: Error code: 429 - {'error': {'code': '1302', 'message': '您的账户已达到速率限制，请您控制请求频率'}}
+
+================================================================================
+QID: 66 | Length: 552
+--------------------------------------------------------------------------------
+**Chosen Method:** iDISCO+
+**Chosen Labeling:** [Lectin, Alexa Fluor 647, DAPI, CD31]
+**Justification:** The primary challenge is the high melanin content in the melanoma, which causes light absorption and scattering. iDISCO+ is selected because it utilizes a methanol-based dehydration combined with a hydrogen peroxide bleaching step, which is highly effective at decolorizing melanin and significantly improving deep-tissue light penetration and signal-to-noise ratio. This method is also optimized for immunolabeling large intact tissues (8-10 mm),
+
+================================================================================
+QID: 37 | Length: 2101
+--------------------------------------------------------------------------------
+**Chosen Method:** FlyClear
+**Chosen Labeling:** [Bruchpilot (BRP/nc82)+Alexa Fluor 488, Synapsin+Alexa Fluor 568]
+**Justification:** FlyClear is specifically optimized for Drosophila brains, effectively removing the chitinous cuticle and clearing the tissue while preserving endogenous and immunofluorescent signals. The aqueous-based protocol is compatible with standard antibodies. The dual labeling of Bruchpilot (nc82) and Synapsin allows for the precise distinction between the presynaptic active zone and the vesicle cluster, fulfilling the scientific goal of analyzing synaptic density and organization.
+
+**Protocol Steps:**
+1 Permeabilization
+1.1 Incubation with 0.5% Saponin, 0.1% Triton X-100, 0.5% Sodium Deoxycholate in PBS for 12 hours.(Temperature: 37 ℃, Time: 12 hours)
+2 Clearing
+2.1 Incubation with 8% SDS in 0.2M Boric Acid (pH 8.5) for 12 hours.(Temperature: 37 ℃, Time: 12 hours)
+3 Washing
+3.1 Incubation with PBS containing 0.5% Triton X-100 for 2 hours, repeat 3 times with fresh solution.(Temperature: RT, Time: 6 hours)
+4 Blocking
+4.1 Incubation with PBS containing 0.5% Triton X-100 and 5% Normal Goat Serum for 6 hours.(Temperature: RT, Time: 6 hours)
+5 Primary Antibody Incubation
+5.1 Incubation with Primary Antibodies (Mouse anti-nc82 1:50, Rabbit anti-Synapsin 1:100) in PBS containing 0.5% Triton X-100, 0.5% Saponin, and 1% Normal Goat Serum for 48 hours.(Temperature: 37 ℃, Time: 48 hours)
+6 Washing
+6.1 Incubation with PBS containing 0.5% Triton X-100 for 6 hours, 
+
+================================================================================
+QID: 172 | Length: 87
+--------------------------------------------------------------------------------
+Error: Error code: 429 - {'error': {'code': '1302', 'message': '您的账户已达到速率限制，请您控制请求频率'}}
+
+================================================================================
+QID: 188 | Length: 87
+--------------------------------------------------------------------------------
+Error: Error code: 429 - {'error': {'code': '1302', 'message': '您的账户已达到速率限制，请您控制请求频率'}}
+
+================================================================================
+QID: 193 | Length: 87
+--------------------------------------------------------------------------------
+Error: Error code: 429 - {'error': {'code': '1302', 'message': '您的账户已达到速率限制，请您控制请求频率'}}
+
+================================================================================
+QID: 195 | Length: 87
+--------------------------------------------------------------------------------
+Error: Error code: 429 - {'error': {'code': '1302', 'message': '您的账户已达到速率限制，请您控制请求频率'}}
+
+================================================================================
+QID: 199 | Length: 87
+--------------------------------------------------------------------------------
+Error: Error code: 429 - {'error': {'code': '1302', 'message': '您的账户已达到速率限制，请您控制请求频率'}}
+
+================================================================================
+QID: 200 | Length: 87
+--------------------------------------------------------------------------------
+Error: Error code: 429 - {'error': {'code': '1302', 'message': '您的账户已达到速率限制，请您控制请求频率'}}
+
+================================================================================
+QID: 198 | Length: 841
+--------------------------------------------------------------------------------
+**Chosen Method:** CUBIC
+**Chosen Labeling:** [tdTomato (Endogenous), Sox10 + Alexa Fluor 488, DAPI]
+**Justification:** CUBIC is an aqueous-based clearing method that offers superior preservation of endogenous fluorescent proteins like tdTomato compared to organic solvent methods (e.g., iDISCO+), ensuring the lineage tracing signal remains strong. It provides sufficient transparency for E10.5 embryos and is compatible with whole-mount immunostaining for transcription factors like Sox10. The refractive index matching solution (CUBIC-2) renders the tissue transparent and suitable for deep imaging.
+
+**Protocol Steps:**
+1 Permeabilization and Blocking
+1.1 Incubation with PBS containing 0.5% Triton X-100 and 1% BSA (PBS-TB) for 12 hours with gentle shaking. (Temperature: RT, Time: 12 hours)
+2 Primary Antibody Incubation
+2.1 Incubation
+
+================================================================================
+QID: 204 | Length: 87
+--------------------------------------------------------------------------------
+Error: Error code: 429 - {'error': {'code': '1302', 'message': '您的账户已达到速率限制，请您控制请求频率'}}
+
+================================================================================
+QID: 208 | Length: 87
+--------------------------------------------------------------------------------
+Error: Error code: 429 - {'error': {'code': '1302', 'message': '您的账户已达到速率限制，请您控制请求频率'}}
+
+================================================================================
+QID: 221 | Length: 87
+--------------------------------------------------------------------------------
+Error: Error code: 429 - {'error': {'code': '1302', 'message': '您的账户已达到速率限制，请您控制请求频率'}}
+
+================================================================================
+QID: 236 | Length: 87
+--------------------------------------------------------------------------------
+Error: Error code: 429 - {'error': {'code': '1302', 'message': '您的账户已达到速率限制，请您控制请求频率'}}
+
+================================================================================
+QID: 238 | Length: 87
+--------------------------------------------------------------------------------
+Error: Error code: 429 - {'error': {'code': '1302', 'message': '您的账户已达到速率限制，请您控制请求频率'}}
+
+================================================================================
+QID: 245 | Length: 87
+--------------------------------------------------------------------------------
+Error: Error code: 429 - {'error': {'code': '1302', 'message': '您的账户已达到速率限制，请您控制请求频率'}}
+
+================================================================================
+QID: 239 | Length: 305
+--------------------------------------------------------------------------------
+**Chosen Method:** iDISCO+
+**Chosen Labeling:** [CD3+Alexa Fluor 488, CD8+Alexa Fluor 647, DAPI]
+**Justification:** iDISCO+ is selected for its exceptional ability to clear dense, lipid-rich tumor tissues while maintaining high fluorescence retention for Alexa Fluor dyes, which is critical for 3D immunof
+
+================================================================================
+QID: 253 | Length: 87
+--------------------------------------------------------------------------------
+Error: Error code: 429 - {'error': {'code': '1302', 'message': '您的账户已达到速率限制，请您控制请求频率'}}
