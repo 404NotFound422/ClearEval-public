@@ -1,0 +1,2594 @@
+[
+    {
+        "question_id": 1,
+        "evaluation": {
+            "meta_data": {
+                "protocol_id": 1,
+                "sample_info": "我需要对完整成年小鼠全脑进行透明化处理，以构建一次特定行为刺激后被激活神经元的单细胞分辨率三维分布图谱，并分析其在不同脑区中的空间分布模式。我的样本是完整的成年小鼠大脑，尺寸约 10 mm × 8 mm × 6 mm，已完成 4% PFA 灌流固定和后固定。请根据该科学问题自行选择合适的荧光/标记策略，并基于所选标记样本选择匹配的组织透明方法。请仅输出 protocol，第1行写明所选荧光/标记策略和所选组织透明方法，随后仅列出透明处理、RI 匹配和保存/成像前处理步骤的关键试剂、条件和时间。",
+                "target_method": "iDISCO+",
+                "generated_timestamp": "2025-12-15T00:00:00Z"
+            },
+            "scores": {
+                "completeness": {
+                    "c_step": {
+                        "score": 2,
+                        "max_score": 2,
+                        "description": "步骤模块完整性",
+                        "reasoning": "方案包含了iDISCO+完整的逻辑链：梯度脱水、可选的内源性过氧化物酶淬灭、复水、透化封闭、一抗二抗染色和清洗、再次脱水、DCM脱脂、DBE折射率匹配以及密封保存。所有核心模块齐全，并针对全脑样本进行了脱脂处理，衔接无断层。"
+                    },
+                    "c_param": {
+                        "score": 3,
+                        "max_score": 3,
+                        "description": "参数细节完整性",
+                        "reasoning": "所有步骤均给出了具体的试剂浓度（如甲醇梯度20-100%、5% H₂O₂、0.2% Triton X-100、20% DMSO、0.3M甘氨酸、10% NGS等）、温度（RT、4°C、37°C）和精确的时间（1小时、12小时、24小时、7天等），参数详细程度达到正式发表附件标准。"
+                    },
+                    "total_weighted_score": 5.0
+                },
+                "correctness": {
+                    "co_order": {
+                        "score": 3,
+                        "max_score": 3,
+                        "description": "步骤顺序逻辑",
+                        "reasoning": "严格遵循iDISCO+经典‘三明治’流程：固定后先脱水再复水染色，然后再次脱水进入有机溶剂透明化，中间有梯度过渡，没有出现水相与有机相直接接触的错误。顺序逻辑完全正确。"
+                    },
+                    "co_method": {
+                        "score": 2,
+                        "max_score": 2,
+                        "description": "方法-试剂一致性",
+                        "reasoning": "所有透明化试剂均为iDISCO+体系标准成分（甲醇脱水、DCM脱脂、DBE折射率匹配），免疫染色使用Triton/DMSO/NGS等标准缓冲液，未混用其他方法的试剂（如水性CUBIC的尿素等）。"
+                    },
+                    "co_param": {
+                        "score": 2,
+                        "max_score": 2,
+                        "description": "参数范围物理合理性",
+                        "reasoning": "脱脂时间共1.5小时，折射率匹配2+≥12小时，均在成年小鼠全脑（~10mm尺度）的经验合理范围内，符合菲克扩散定律，无违反物理常识的极端参数。"
+                    },
+                    "co_chem": {
+                        "score": 1,
+                        "max_score": 1,
+                        "description": "化学与安全常识",
+                        "reasoning": "方案仅使用iDISCO+的标准化学品（甲醇、DCM、DBE等），未额外引入剧毒、强酸强碱等危险药品，也未出现加热密闭DCM、用PS容器盛装等危险操作。方案本身安全。"
+                    },
+                    "critical_warnings": [],
+                    "total_weighted_score": 8.0
+                },
+                "effectiveness": {
+                    "s_method": {
+                        "score": 1.3681,
+                        "max_score": 2.5,
+                        "description": "透明方法选择适配度",
+                        "reasoning": "Signed need-weighted method-fit [-2.5,+2.5] (F_fp xor P_dye x2; caps signed). Method: iDISCO+"
+                    },
+                    "s_label": {
+                        "score": 3.0,
+                        "max_score": 6,
+                        "description": "标记与方法兼容性",
+                        "reasoning": "target_match=3.0, marker_fluor_compat=6.0, method_fluor_compat=5.1. marker_dict={'Alexa Fluor 647': 'c-Fos', 'Alexa Fluor 488': 'NeuN'}"
+                    },
+                    "s_trans": {
+                        "score": 2.814646787157323,
+                        "max_score": 3,
+                        "description": "方法-组织 RI 域匹配度",
+                        "reasoning": "Method-tissue domain match. RI_tissue(question)=1.46, RI_method_ref(best-suited sample)=1.47, σ_RI=0.028, tier=T04_WHOLE_MOUSE_BRAIN_5_12MM, status=scored"
+                    },
+                    "s_time": {
+                        "score": 1.4944475081781585,
+                        "max_score": 3,
+                        "description": "时间效率评分",
+                        "reasoning": "Time deviation score. Act: 15.5, Ref Range: [12, 48]"
+                    },
+                    "total_weighted_score": 8.677194295335482
+                }
+            }
+        }
+    },
+    {
+        "question_id": 4,
+        "evaluation": {
+            "meta_data": {
+                "protocol_id": 4,
+                "sample_info": "我需要对完整成年小鼠全脑进行透明化处理，用于构建一次特定行为刺激后被激活神经元的单细胞分辨率三维分布图谱，并比较两类具有不同立即早期基因表达特征的活化神经元亚群在全脑不同功能环路中的分布差异。样本为完整成年小鼠大脑，约 10 mm × 8 mm × 6 mm，已完成 4% PFA 灌流固定和后固定，后续计划进行全脑三维成像、脑区配准、细胞计数和空间聚类分析。\n\n我尝试使用简化 CUBIC 透明流程，但透明化失败：组织整体仍然浑浊，脑深部信号弱，边缘和中心区域透明度不均一。现有 protocol 为：1）CUBIC-L 处理 2 天；2）CUBIC-RA 处理 1 天。请判断该流程是否适合完整成年小鼠全脑和双靶点活化神经元标记样本，并在不引入给定标记物列表外靶点或表外荧光团的前提下，重新选择或调整荧光/标记策略与组织透明方法。\n\n请仅输出修正后的 protocol。第 1 行写明应保留或更换的双靶点荧光/标记策略和组织透明方法，随后仅列出透明处理、RI 匹配和保存/成像前处理步骤的关键试剂、条件和时间。",
+                "target_method": "iDISCO+",
+                "generated_timestamp": "2025-12-15T00:00:00Z"
+            },
+            "scores": {
+                "completeness": {
+                    "c_step": {
+                        "score": 2,
+                        "max_score": 2,
+                        "description": "步骤模块完整性",
+                        "reasoning": "方案包含了固定后脱水、脱色、复水、透化、封闭、一抗、二抗、再脱水、脱脂、折射率匹配及成像准备等所有必需模块，无关键缺失。"
+                    },
+                    "c_param": {
+                        "score": 3,
+                        "max_score": 3,
+                        "description": "参数细节完整性",
+                        "reasoning": "各步骤均清晰标注了试剂浓度、温度、时间，如甲醇梯度浓度、37℃抗体孵育7天、DCM脱脂时间等，细节充分，可直接重现。"
+                    },
+                    "total_weighted_score": 5.0
+                },
+                "correctness": {
+                    "co_order": {
+                        "score": 3,
+                        "max_score": 3,
+                        "description": "步骤顺序逻辑",
+                        "reasoning": "完全遵循iDISCO+经典的脱水-脱脂-复水-免疫染色-再脱水-脱脂-透明化顺序，过渡步骤正确，无逻辑矛盾。"
+                    },
+                    "co_method": {
+                        "score": 2,
+                        "max_score": 2,
+                        "description": "方法-试剂一致性",
+                        "reasoning": "使用甲醇脱水、DCM脱脂、BABB折射率匹配，均为iDISCO+标准试剂，未混用其他方法试剂。"
+                    },
+                    "co_param": {
+                        "score": 2,
+                        "max_score": 2,
+                        "description": "参数范围物理合理性",
+                        "reasoning": "成年小鼠全脑脱脂总时间约2.5小时、RI匹配26小时，漂白12小时，总计约40.5小时，符合菲克扩散定律和文献经验。"
+                    },
+                    "co_chem": {
+                        "score": 1,
+                        "max_score": 1,
+                        "description": "化学与安全常识",
+                        "reasoning": "仅使用iDISCO+标准试剂（甲醇、DCM、BABB、H2O2），无额外危险化学品，无可导致危险的操作，默认安全。"
+                    },
+                    "critical_warnings": [],
+                    "total_weighted_score": 8.0
+                },
+                "effectiveness": {
+                    "s_method": {
+                        "score": 1.4688,
+                        "max_score": 2.5,
+                        "description": "透明方法选择适配度",
+                        "reasoning": "Signed need-weighted method-fit [-2.5,+2.5] (F_fp xor P_dye x2; caps signed). Method: iDISCO+"
+                    },
+                    "s_label": {
+                        "score": 5.1,
+                        "max_score": 6,
+                        "description": "标记与方法兼容性",
+                        "reasoning": "target_match=6.0, marker_fluor_compat=6.0, method_fluor_compat=5.1. marker_dict={'Alexa Fluor 488': 'C-Fos', 'Alexa Fluor 647': 'Npas4'}"
+                    },
+                    "s_trans": {
+                        "score": 2.814646787157323,
+                        "max_score": 3,
+                        "description": "方法-组织 RI 域匹配度",
+                        "reasoning": "Method-tissue domain match. RI_tissue(question)=1.46, RI_method_ref(best-suited sample)=1.47, σ_RI=0.028, tier=T04_WHOLE_MOUSE_BRAIN_5_12MM, status=scored"
+                    },
+                    "s_time": {
+                        "score": 3.0,
+                        "max_score": 3,
+                        "description": "时间效率评分",
+                        "reasoning": "Time deviation score. Act: 40.5, Ref Range: [24, 72]"
+                    },
+                    "total_weighted_score": 12.383446787157322
+                }
+            }
+        }
+    },
+    {
+        "question_id": 6,
+        "evaluation": {
+            "_error": "JSON parse failed: Expecting value: line 38 column 21 (char 1188)",
+            "_raw_content_preview": "{\n  \"meta_data\": {\n    \"protocol_id\": \"uuid-001\",\n    \"sample_info\": \"Rat spinal cord segment, 15 mm length, 4 mm diameter, 4% PFA fixed\",\n    \"target_method\": \"uDISCO\"\n  },\n  \"scores\": {\n    \"completeness\": {\n      \"c_step\": {\n        \"score\": 2,\n        \"max_score\": 2,\n        \"description\": \"步骤模块完整性\",\n        \"reasoning\": \"方案包含uDISCO所需的核心步骤：第一次脱水、可选脱色漂白、复水、透化封闭、一抗孵育、清洗、二抗孵育、清洗、第二次脱水、脱脂和折射率匹配。成像前准备明确指示在DBE中长期储存与成像，模块完整。\"\n      },\n      \"c_param\": {\n        \"score\": 3,\n        \"max_score\": 3,\n        \"description\": \"参数细节完整性\",\n        \"reasoning\": \"几乎每个步骤均标注了精确的时间（如1小时、7天）、温度（RT、37°C、4°C）和浓度（如甲醇20–100%、Triton X-100 0.2%、抗体1:500），细节详尽，符合发表水平附录要求。\"\n      },\n      \"total_weighted_score\": 5.0\n    },\n    \"correctness\": {\n      \"co_order\": {\n        \"score\": 3,\n        \"max_score\": 3,\n        \"description\": \"步骤顺序逻辑\",\n        \"reasoning\": \"完全符合uDISCO标准流程：脱水→脱色（可选）→复水→透化/封闭→免疫染色→再脱水→脱脂→RI匹配，无逻辑错误或溶剂直接混用的问题。\"\n      },\n      \"co_method\": {\n        \"score\": 2,\n        \"max_score\": 2,\n        \"description\": \"方法-试剂一致性\",\n        \"reasoning\": \"所有试剂（甲醇、DCM、DBE、Triton X-100、DMSO、血清等）均为uDISCO及其衍生方案的典型试剂，未混用不兼容的其他方法试剂。\"\n      },\n      \"co_param\": {\n        \"score\": 2,\n        \"max_score\":",
+            "_question_id": 6
+        }
+    },
+    {
+        "question_id": 5,
+        "evaluation": {
+            "_error": "Teacher returned empty content",
+            "_raw_content_preview": "",
+            "_question_id": 5
+        }
+    },
+    {
+        "question_id": 3,
+        "evaluation": {
+            "_error": "Teacher returned empty content",
+            "_raw_content_preview": "",
+            "_question_id": 3
+        }
+    },
+    {
+        "question_id": 2,
+        "evaluation": {
+            "_error": "Teacher returned empty content",
+            "_raw_content_preview": "",
+            "_question_id": 2
+        }
+    },
+    {
+        "question_id": 8,
+        "evaluation": {
+            "_error": "JSON parse failed: Unterminated string starting at: line 62 column 18 (char 1948)",
+            "_raw_content_preview": "{\n  \"meta_data\": {\n    \"protocol_id\": \"custom-uDISCO-like-2025\",\n    \"sample_info\": \"Rat spinal cord injury segment, 15 mm length, 4 mm diameter, fixed and post-fixed\",\n    \"target_method\": \"uDISCO\"\n  },\n  \"scores\": {\n    \"completeness\": {\n      \"c_step\": {\n        \"score\": 2,\n        \"max_score\": 2,\n        \"description\": \"步骤模块完整性\",\n        \"reasoning\": \"方案包含了有机溶剂透明法的所有关键模块：预脱水、可选脱色、复水、透化/封闭、免疫标记、后脱水、脱脂、折射率匹配以及密封储存。对于脊髓样本无额外必须步骤缺失。\"\n      },\n      \"c_param\": {\n        \"score\": 3,\n        \"max_score\": 3,\n        \"description\": \"参数细节完整性\",\n        \"reasoning\": \"关键步骤均标注了具体时间（如脱水1小时、脱脂30分钟、抗体孵育72小时等）、温度（RT、37℃、4℃）和浓度梯度（20/40/60/80/100%甲醇、5%H2O2、0.2%Triton X-100）。\"\n      },\n      \"total_weighted_score\": 5.0\n    },\n    \"correctness\": {\n      \"co_order\": {\n        \"score\": 3,\n        \"max_score\": 3,\n        \"description\": \"步骤顺序逻辑\",\n        \"reasoning\": \"顺序完全符合溶剂透明化免疫标记的‘三明治’结构：预脱水→脱色→复水→透化/封闭→一抗→二抗→后脱水→脱脂→RI匹配，逻辑无误。\"\n      },\n      \"co_method\": {\n        \"score\": 1,\n        \"max_score\": 2,\n        \"description\": \"方法-试剂一致性\",\n        \"reasoning\": \"方法声明为uDISCO，但实际使用甲醇脱水、DCM脱脂和DBE作为RI匹配液，属于iDISCO+典型试剂，而非uDISCO的叔丁醇/BABB-D体系，属于混用了兼容但非原protocol的试剂，方法名与试剂不匹配。\"\n      },\n      \"co_param\": {\n        \"score\": 2,\n        \"max_score\": 2,\n        \"description\": \"参数范围物理合理性\",\n        \"reasoning\": \"脱水、脱脂和RI匹配时间符合该尺寸（15×4 mm）脊髓的菲克扩散定律估算值；抗体孵育时间（72 h/48 h）对4 mm直径组织在透化条件下基本合理，无明显物理谬误。\"\n      },\n      \"co_chem\": {\n        \"score\": 1,\n        \"max_score\": 1,\n        \"description\": \"化学与安全常识\",\n        \"reasoning\": \"方案仅使用甲醇、DCM、DBE和稀释的H2O2，均为方法标准试剂，未主动引入额外危险药品或危险操作。\"\n      },\n      \"critical_warnings\": [],\n      \"total_weighted_score\": 7.0\n    }\n  },\n  \"extraction\": {\n    \"marker_dict\": {\n      \"Alexa Fluor 647\": \"β-III Tubulin\",\n      \"Alexa Fluor 568\": \"MAP2\"\n    },\n    \"clearing_total_time_hours\": 17.5,\n    \"method_name\": \"uDISCO\",\n    \"reagent_ri_value\": 1.562,\n    \"sample_ri_value\": 1.46,\n    \"protocol_time_hours\": [12, 24],\n    \"reasoning\": \"提取到Alexa Fluor 647标记β-III Tubulin，Alexa Fluor 568标记",
+            "_question_id": 8
+        }
+    },
+    {
+        "question_id": 9,
+        "evaluation": {
+            "meta_data": {
+                "protocol_id": 9,
+                "sample_info": "我需要对完整小鼠中枢神经系统进行透明化处理，用于追踪从大脑皮层到脊髓末端的长程神经投射路径。样本为完整 CNS，包括大脑、脑干和脊髓全长，总长度约 35–40 mm，已完成固定和后固定。科学目标是在三维空间中连续追踪皮层来源投射纤维从大脑皮层出发，经脑干进入脊髓并延伸至远端脊髓节段的完整路径，同时观察长程神经纤维与周围内源性轴突网络之间的空间关系，以评估投射路径的连续性、走行方向和目标区域分布。\n\n请根据该科学问题自行选择合适的双靶点荧光/标记策略，并基于所选标记样本选择匹配的组织透明方法。请仅输出 protocol，第 1 行写明所选双靶点荧光/标记策略和组织透明方法，随后仅列出透明处理、RI 匹配和保存/成像前处理步骤的关键试剂、条件和时间",
+                "target_method": "uDISCO",
+                "generated_timestamp": "2025-12-15T00:00:00Z"
+            },
+            "scores": {
+                "completeness": {
+                    "c_step": {
+                        "score": 2,
+                        "max_score": 2,
+                        "description": "步骤模块完整性",
+                        "reasoning": "方案涵盖了脱水、漂白、复水、透化/封闭、一抗/二抗标记、再脱水、脱脂、RI匹配和储存等针对完整CNS透明与标记的所有核心模块，未缺失关键功能步骤。"
+                    },
+                    "c_param": {
+                        "score": 3,
+                        "max_score": 3,
+                        "description": "参数细节完整性",
+                        "reasoning": "每一步都给出了具体的时间（小时、天）、温度（RT、4℃、37℃）和浓度（甲醇百分比、抗体稀释度、H₂O₂浓度、DMSO/NGS浓度等），细节完整，类似发表级补充材料。"
+                    },
+                    "total_weighted_score": 5.0
+                },
+                "correctness": {
+                    "co_order": {
+                        "score": 3,
+                        "max_score": 3,
+                        "description": "步骤顺序逻辑",
+                        "reasoning": "流程完全符合uDISCO标准操作程序：脱水漂白→复水→水相透化和抗体标记→再脱水→DCM脱脂→DBE折射率匹配，所有有机相/水相转换均有甲醇梯度过渡，逻辑自洽。"
+                    },
+                    "co_method": {
+                        "score": 2,
+                        "max_score": 2,
+                        "description": "方法-试剂一致性",
+                        "reasoning": "使用的甲醇、DCM、DBE均为uDISCO的典型试剂，未混用其他方法的非兼容试剂。"
+                    },
+                    "co_param": {
+                        "score": 0,
+                        "max_score": 2,
+                        "description": "参数范围物理合理性",
+                        "reasoning": "脱脂步骤仅用100% DCM 30分钟×2（共1小时），对于总长达40 mm的成年小鼠全CNS样本，远低于菲克扩散定律所要求的时间（通常需过夜以上），会导致脱脂不充分，违背物理常识。"
+                    },
+                    "co_chem": {
+                        "score": 1,
+                        "max_score": 1,
+                        "description": "化学与安全常识",
+                        "reasoning": "所有化学品均属uDISCO标准流程所需，无额外主动引入的危险药品或危险操作（如密封加热DCM等），方案本身安全。"
+                    },
+                    "critical_warnings": [
+                        "脱脂时间严重不足：40 mm CNS在100% DCM中仅浸泡1小时，极易导致脱脂不完全、透明度差，实验大概率失败。"
+                    ],
+                    "total_weighted_score": 6.0
+                },
+                "effectiveness": {
+                    "s_method": {
+                        "score": 0.8875,
+                        "max_score": 2.5,
+                        "description": "透明方法选择适配度",
+                        "reasoning": "Signed need-weighted method-fit [-2.5,+2.5] (F_fp xor P_dye x2; caps signed). Method: uDISCO"
+                    },
+                    "s_label": {
+                        "score": 3.0,
+                        "max_score": 6,
+                        "description": "标记与方法兼容性",
+                        "reasoning": "target_match=3.0, marker_fluor_compat=6.0, method_fluor_compat=4.2. marker_dict={'Alexa Fluor 488': 'TUJ1 (β-III Tubulin)', 'Alexa Fluor 647': 'MBP'}"
+                    },
+                    "s_trans": {
+                        "score": 1.8195919791378987,
+                        "max_score": 3,
+                        "description": "方法-组织 RI 域匹配度",
+                        "reasoning": "Method-tissue domain match. RI_tissue(question)=1.46, RI_method_ref(best-suited sample)=1.5, σ_RI=0.04, tier=T06_LONG_CNS_OR_TUBULAR_15_80MM, status=scored"
+                    },
+                    "s_time": {
+                        "score": 0.30376163964745473,
+                        "max_score": 3,
+                        "description": "时间效率评分",
+                        "reasoning": "Time deviation score. Act: 39.5, Ref Range: []"
+                    },
+                    "total_weighted_score": 6.010853618785354
+                }
+            }
+        }
+    },
+    {
+        "question_id": 7,
+        "evaluation": {
+            "_error": "JSON parse failed: Expecting ',' delimiter: line 69 column 44 (char 2398)",
+            "_raw_content_preview": "{\n  \"meta_data\": {\n    \"protocol_id\": \"model_protocol_rat_spinal_cord_uDISCO\",\n    \"sample_info\": \"Rat spinal cord segment, 15 mm length, 4 mm diameter, 4% PFA fixed\",\n    \"target_method\": \"uDISCO\"\n  },\n  \"scores\": {\n    \"completeness\": {\n      \"c_step\": {\n        \"score\": 1,\n        \"max_score\": 2,\n        \"description\": \"步骤模块完整性\",\n        \"reasoning\": \"方案包含了脱水、脱色、复水、透化、免疫染色、标记后脱水、脱脂、折射率匹配等核心模块，但缺失成像前必需的密封步骤。有机溶剂法成像时DBE会挥发和吸水，未提及密封或封片措施，可能导致折射率变化和样品损坏。\"\n      },\n      \"c_param\": {\n        \"score\": 3,\n        \"max_score\": 3,\n        \"description\": \"参数细节完整性\",\n        \"reasoning\": \"每一步均标注了精确的时间（如脱水1 h、漂白12 h、一抗7 d）、温度（RT、4°C、37°C）和浓度（20–100%甲醇、5% H₂O₂、66% DCM等），细节详实，符合发表级别附录要求。\"\n      },\n      \"total_weighted_score\": 4.0\n    },\n    \"correctness\": {\n      \"co_order\": {\n        \"score\": 3,\n        \"max_score\": 3,\n        \"description\": \"步骤顺序逻辑\",\n        \"reasoning\": \"严格遵循iDISCO/uDISCO经典三明治流程：脱水→脱色（可选）→复水→染色→再脱水→脱脂→折射率匹配，顺序完全正确。\"\n      },\n      \"co_method\": {\n        \"score\": 1,\n        \"max_score\": 2,\n        \"description\": \"方法-试剂一致性\",\n        \"reasoning\": \"声称使用uDISCO，但脱水剂为甲醇，而非uDISCO标准的叔丁醇。甲醇是iDISCO系列的典型试剂，虽与DCM/DBE兼容，但与uDISCO原方法不符，属于非原protocol试剂的混用。\"\n      },\n      \"co_param\": {\n        \"score\": 2,\n        \"max_score\": 2,\n        \"description\": \"参数范围物理合理性\",\n        \"reasoning\": \"孵育温度（37°C/4°C）和时间（抗体7天、洗涤3天）对于直径4 mm的脊髓符合扩散经验值；脱脂2小时、DBE 14小时也足以透明化该尺寸组织，参数合理。\"\n      },\n      \"co_chem\": {\n        \"score\": 1,\n        \"max_score\": 1,\n        \"description\": \"化学与安全常识\",\n        \"reasoning\": \"所用甲醇、H₂O₂、DCM、DBE均为uDISCO/iDISCO标准试剂，未引入额外危险化学品，操作中无高温高压或不相容试剂混合，方案安全。\"\n      },\n      \"critical_warnings\": [],\n      \"total_weighted_score\": 7.0\n    }\n  },\n  \"extraction\": {\n    \"marker_dict\": {\n      \"Alexa Fluor 488\": \"β-III Tubulin (TUJ1)\",\n      \"Alexa Fluor 647\": \"MBP\"\n    },\n    \"clearing_total_time_hours\": 16,\n    \"method_name\": \"uDISCO\",\n    \"reagent_ri_value\": 1.562,\n    \"sample_ri_value\": 1.56,\n    \"protocol_time_hours\": [14, 24],\n    \"reasoning\": \"提取到Alexa Fluor 488标记β-III Tubu",
+            "_question_id": 7
+        }
+    },
+    {
+        "question_id": 11,
+        "evaluation": {
+            "_error": "JSON parse failed: Expecting property name enclosed in double quotes: line 47 column 9 (char 1579)",
+            "_raw_content_preview": "{\n  \"meta_data\": {\n    \"protocol_id\": \"model_protocol_001\",\n    \"sample_info\": \"小鼠完整中枢神经系统（大脑皮层至脊髓末端，长度约35–40 mm，已固定）\",\n    \"target_method\": \"uDISCO\"\n  },\n  \"scores\": {\n    \"completeness\": {\n      \"c_step\": {\n        \"score\": 2,\n        \"max_score\": 2,\n        \"description\": \"步骤模块完整性\",\n        \"reasoning\": \"方案包含了uDISCO必需的脱水、脱色（漂白）、复水、渗透封闭、抗体标记、二次脱水、脱脂、折射率匹配和存储准备等所有关键模块，未遗漏任何功能模块。\"\n      },\n      \"c_param\": {\n        \"score\": 3,\n        \"max_score\": 3,\n        \"description\": \"参数细节完整性\",\n        \"reasoning\": \"几乎每一步都详细给出了试剂浓度（如20%–100%甲醇、5% H2O2、0.2% Triton X-100、10% DMSO）、温度（RT、4°C、37°C）、时间（1h、12h、24h、数天）等，细节充分，可直接执行。\"\n      },\n      \"total_weighted_score\": 5.0\n    },\n    \"correctness\": {\n      \"co_order\": {\n        \"score\": 3,\n        \"max_score\": 3,\n        \"description\": \"步骤顺序逻辑\",\n        \"reasoning\": \"完全符合uDISCO的标准流程：预处理脱水→脱色→复水→渗透封闭→抗体标记→二次脱水→DCM脱脂→DBE折射率匹配。经典“三明治”结构，逻辑无缺陷。\"\n      },\n      \"co_method\": {\n        \"score\": 2,\n        \"max_score\": 2,\n        \"description\": \"方法-试剂一致性\",\n        \"reasoning\": \"所用试剂甲醇、DCM、DBE、Triton X-100、DMSO等均属uDISCO标准体系，无混用不相容试剂的情况。\"\n      },\n      \"co_param\": {\n        \"score\": 0,\n        \"max_score\": 2,\n        \"description\": \"参数范围物理合理性\",\n        \"reasoning\": \"对于长度35–40 mm的完整CNS大样本，脱水步骤每步仅1小时严重违背菲克扩散定律，经验上全脑尺寸的脱水每步即需2小时以上，延长到脊髓更长的样本则每步至少应4–6小时。同样，DCM脱脂仅4小时对于此类大样本也不够充分，脱水不足将直接影响后续透明效果。参数设定存在根本性合理缺陷，实验极可能失败。\"\n      },\n      \"co_chem\": {\n        \"score\": 1,\n        \"max_score\": 1,\n        \"description\": \"化学与安全常识\",\n        \"reasoning\": \"所用试剂均为uDISCO标准化学品（甲醇、DCM、DBE、H2O2等），无额外引入危险化学品，也未出现危险操作建议（如使用相溶液剂加热等），方案本身是安全的。\"\n      },",
+            "_question_id": 11
+        }
+    },
+    {
+        "question_id": 12,
+        "evaluation": {
+            "meta_data": {
+                "protocol_id": 12,
+                "sample_info": "我需要对完整小鼠中枢神经系统进行透明化处理，用于追踪从大脑皮层到脊髓末端的长程神经投射路径，并同时观察整体神经纤维网络作为空间参考。样本为完整 CNS，从大脑到脊髓末端，总长度约 35–40 mm，已完成固定和后固定。科学目标是在三维空间中连续追踪目标投射纤维的长距离走行，区分特定投射路径与内源轴突网络，并分析投射纤维在脑干和不同脊髓节段中的连续性、分支和终末分布。\n我尝试使用有机溶剂相关透明化流程处理完整 CNS，但透明化后样本发生严重皱缩，且荧光信号明显减弱。原 protocol 跳过了漂白步骤，并直接从 100% 甲醇进入叔丁醇梯度，导致组织形态保持和荧光兼容性均不理想。请根据上述科学目标，在不引入给定标记物列表之外靶点或表外荧光团的前提下，重新选择或调整荧光/标记策略与组织透明方法，使其适合完整 CNS 超长样本的形态保持、长程投射追踪、轴突网络参考标记和深层三维成像。\n请仅输出修正后的 protocol，第 1 行写明应保留或更换的双靶点荧光/标记策略和组织透明方法，随后仅列出透明处理、RI 匹配和保存/成像前处理步骤的关键试剂、条件和时间。",
+                "target_method": "uDISCO",
+                "generated_timestamp": "2025-12-15T00:00:00Z"
+            },
+            "scores": {
+                "completeness": {
+                    "c_step": {
+                        "score": 2,
+                        "max_score": 2,
+                        "description": "步骤模块完整性",
+                        "reasoning": "方案包含了脱水、漂白、复水、透化封闭、抗体标记、DiI示踪、二次脱水、DCM脱脂、叔丁醇过渡和DBE折射率匹配、成像密封等所有uDISCO核心模块，步骤衔接完整，没有遗漏关键功能模块。"
+                    },
+                    "c_param": {
+                        "score": 3,
+                        "max_score": 3,
+                        "description": "参数细节完整性",
+                        "reasoning": "每个步骤均清晰给出了浓度（甲醇梯度、TriX-100 0.2%、DMSO 10%、抗体稀释度）、温度（RT、4°C、37°C）和时间（小时/天），参数细节达到发表级附录水平。"
+                    },
+                    "total_weighted_score": 5.0
+                },
+                "correctness": {
+                    "co_order": {
+                        "score": 3,
+                        "max_score": 3,
+                        "description": "步骤顺序逻辑",
+                        "reasoning": "流程遵循 iDISCO/uDISCO 类溶剂透明法的标准‘三明治’逻辑：首次脱水漂白→复水→免疫标记及DiI标记→二次梯度脱水→DCM脱脂→叔丁醇过渡→DBE折射率匹配，所有液相转换均有梯度衔接，无直接水相/有机相接触，顺序合理。"
+                    },
+                    "co_method": {
+                        "score": 2,
+                        "max_score": 2,
+                        "description": "方法-试剂一致性",
+                        "reasoning": "使用的甲醇、5% H₂O₂/甲醇漂白、DCM、叔丁醇和DBE均属于uDISCO的标准试剂体系，未混用水性透明液或其他方法不相容化学品。"
+                    },
+                    "co_param": {
+                        "score": 0,
+                        "max_score": 2,
+                        "description": "参数范围物理合理性",
+                        "reasoning": "对于35–40 mm完整小鼠CNS，扩散距离远超常规成年鼠脑，方案给出的脱脂时间仅3×30 min、抗体孵育仅7天、DiI扩散仅14天、脱水各步仅1–2 h等严重低估了菲克扩散所需时间，在实践中将导致组织中心脱脂不完全、染色极浅且不均匀，属于物理上不可行的参数设定。"
+                    },
+                    "co_chem": {
+                        "score": 0,
+                        "max_score": 1,
+                        "description": "化学与安全常识",
+                        "reasoning": "步骤9的DiI孵育液中引入了0.1%叠氮化钠，为剧毒试剂，并非uDISCO透明方法的标准必要成分，构成主动引入的危险化学品，即使方案未写安全提示也需扣分。"
+                    },
+                    "critical_warnings": [
+                        "步骤时间（脱脂、抗体染色、DiI扩散）对超长CNS严重不足，违反扩散定律，实际不可行。",
+                        "叠氮化钠(0.1% NaN₃)属剧毒物质，应避免在非必要步骤中使用。"
+                    ],
+                    "total_weighted_score": 5.0
+                },
+                "effectiveness": {
+                    "s_method": {
+                        "score": -0.8625,
+                        "max_score": 2.5,
+                        "description": "透明方法选择适配度",
+                        "reasoning": "Signed need-weighted method-fit [-2.5,+2.5] (F_fp xor P_dye x2; caps signed). Method: uDISCO"
+                    },
+                    "s_label": {
+                        "score": 1.5,
+                        "max_score": 6,
+                        "description": "标记与方法兼容性",
+                        "reasoning": "target_match=6.0, marker_fluor_compat=6.0, method_fluor_compat=1.5. marker_dict={'Alexa Fluor 647': 'β-III Tubulin (TUJ1)', 'DiI': ''}"
+                    },
+                    "s_trans": {
+                        "score": 1.8195919791378987,
+                        "max_score": 3,
+                        "description": "方法-组织 RI 域匹配度",
+                        "reasoning": "Method-tissue domain match. RI_tissue(question)=1.46, RI_method_ref(best-suited sample)=1.5, σ_RI=0.04, tier=T06_LONG_CNS_OR_TUBULAR_15_80MM, status=scored"
+                    },
+                    "s_time": {
+                        "score": 0.4153120952176352,
+                        "max_score": 3,
+                        "description": "时间效率评分",
+                        "reasoning": "Time deviation score. Act: 43.5, Ref Range: [72, 168]"
+                    },
+                    "total_weighted_score": 2.872404074355534
+                }
+            }
+        }
+    },
+    {
+        "question_id": 10,
+        "evaluation": {
+            "_error": "Teacher returned empty content",
+            "_raw_content_preview": "",
+            "_question_id": 10
+        }
+    },
+    {
+        "question_id": 14,
+        "evaluation": {
+            "_error": "JSON parse failed: Expecting property name enclosed in double quotes: line 64 column 26 (char 2163)",
+            "_raw_content_preview": "{\n  \"meta_data\": {\n    \"protocol_id\": \"UUID_iDISCO_AD_001\",\n    \"sample_info\": \"完整 5XFAD 小鼠大脑，约 10 mm × 8 mm × 6 mm，已完成固定和后固定\",\n    \"target_method\": \"iDISCO+\"\n  },\n  \"scores\": {\n    \"completeness\": {\n      \"c_step\": {\n        \"score\": 2,\n        \"max_score\": 2,\n        \"description\": \"步骤模块完整性\",\n        \"reasoning\": \"方案包含了脱水、脱色、复水、透化/封闭、免疫标记、再脱水、脱脂、折射率匹配及成像准备所有核心模块。针对已固定样本未重复固定步骤，但鉴于样本已完成固定，整体模块完整，符合全脑有机溶剂透明化要求。\"\n      },\n      \"c_param\": {\n        \"score\": 3,\n        \"max_score\": 3,\n        \"description\": \"参数细节完整性\",\n        \"reasoning\": \"几乎所有步骤均清晰标注了时间（1小时、12小时、24小时、7天等）、温度（RT、4°C、37°C）及试剂浓度（20%甲醇、5% H₂O₂、1:500抗体稀释度等），细节达到发表级附录水平。\"\n      },\n      \"total_weighted_score\": 5.0\n    },\n    \"correctness\": {\n      \"co_order\": {\n        \"score\": 3,\n        \"max_score\": 3,\n        \"description\": \"步骤顺序逻辑\",\n        \"reasoning\": \"流程完全符合iDISCO+的经典“三明治”结构：脱水→（漂白）→复水→透化/封闭→一抗→清洗→二抗→清洗→再脱水→脱脂→折射率匹配，顺序严谨，无逻辑错误。\"\n      },\n      \"co_method\": {\n        \"score\": 2,\n        \"max_score\": 2,\n        \"description\": \"方法-试剂一致性\",\n        \"reasoning\": \"所用试剂均为iDISCO+标准有机溶剂体系（甲醇脱水、DCM脱脂、DBE折射率匹配），未混入不相容的水性透明化试剂。\"\n      },\n      \"co_param\": {\n        \"score\": 2,\n        \"max_score\": 2,\n        \"description\": \"参数范围物理合理性\",\n        \"reasoning\": \"脱水/复水每步1小时、透化/封闭各24小时、抗体孵育7天、DCM脱脂共1.5小时、DBE匹配≥24小时，均符合成年小鼠脑的菲克扩散定律和经验值，时间设定合理。\"\n      },\n      \"co_chem\": {\n        \"score\": 1,\n        \"max_score\": 1,\n        \"description\": \"化学与安全常识\",\n        \"reasoning\": \"方案仅使用iDISCO+标准试剂（甲醇、H₂O₂、DCM、DBE、叠氮化钠），未额外引入强酸强碱或危险操作，属于安全方案。叠氮化钠为该方法常规防腐剂，不视为主动引入危险化学品。\"\n      },\n      \"critical_warnings\": [],\n      \"total_weighted_score\": 8.0\n    }\n  },\n  \"extraction\": {\n    \"marker_dict\": {\n      \"Alexa Fluor 488\": \"Aβ (6E10 epitope)\",\n      \"Alexa Fluor 568\": \"Aβ (4G8 epitope)\"\n    },\n    \"clearing_total_time_hours\": 39.5,\n    \"method_name\": \"iDISCO+\",\n    \"reagent_ri_value\": 1.56,\n    \"sample_ri_value\": null,\n    \"protocol_time_hours\": [30, 48],\n    \"reasoning\": \"提取到Alexa Fluor 488标记Aβ（6E10抗体识别Aβ₁₋₁₆），Alexa Fluor 568标记Aβ（4G8抗体识别",
+            "_question_id": 14
+        }
+    },
+    {
+        "question_id": 18,
+        "evaluation": {
+            "_error": "JSON parse failed: Expecting property name enclosed in double quotes: line 41 column 24 (char 1351)",
+            "_raw_content_preview": "{\n  \"meta_data\": {\n    \"protocol_id\": \"eval_20250321_001\",\n    \"sample_info\": \"Mouse brain block containing glioblastoma, 8 mm × 6 mm × 5 mm, pre-fixed and post-fixed\",\n    \"target_method\": \"FDISCO\"\n  },\n  \"scores\": {\n    \"completeness\": {\n      \"c_step\": {\n        \"score\": 1,\n        \"max_score\": 2,\n        \"description\": \"步骤模块完整性\",\n        \"reasoning\": \"方案包含了透化、封闭、免疫标记、梯度脱水、脱脂、折射率匹配和成像准备等核心模块。但缺失有机溶剂透明化前必需的免疫标记后固定（如4% PFA）步骤，这可能导致抗体在后续强烈的脱水/脱脂过程中大量脱落，造成信号丢失，属于关键模块缺失。\"\n      },\n      \"c_param\": {\n        \"score\": 3,\n        \"max_score\": 3,\n        \"description\": \"参数细节完整性\",\n        \"reasoning\": \"所有步骤均明确给出了时间（如72 h、48 h、1 h、2 h）、温度（如RT、4 ℃）和浓度（如0.2% Triton X-100、20%~100%甲醇、66% DCM），参数详细程度接近附录级别。\"\n      },\n      \"correctness_critical_warnings\": [\n        \"免疫标记后缺少4% PFA后固定步骤，会严重削弱抗体在后续有机溶剂中的保留，可能导致实验失败。\"\n      ],\n      \"total_weighted_score\": 4.0\n    },\n    \"correctness\": {\n      \"co_order\": {\n        \"score\": 1,\n        \"max_score\": 3,\n        \"description\": \"步骤顺序逻辑\",\n        \"reasoning\": \"大体顺序符合FDISCO的‘标记→脱水→脱脂→匹配’框架，但缺少免疫标记后、脱水前的后固定步骤，使得从水性免疫环境直接过渡到高浓度有机溶剂，不符合标准SOP，顺序存在明显缺陷。\"\n      },\n      \"co_method\": {\n        \"score\": 2,\n        \"max_score\": 2,\n        \"description\": \"方法-试剂一致性\",\n        \"reasoning\": \"脱水使用甲醇，脱脂使用DCM，折射率匹配使用ECi，均为FDISCO方法的标准试剂，未混用其他不兼容试剂。\"\n      },\n      \"co_param\": {\n        \"score\": 2,\n        \"max_score\": 2,",
+            "_question_id": 18
+        }
+    },
+    {
+        "question_id": 15,
+        "evaluation": {
+            "meta_data": {
+                "protocol_id": 15,
+                "sample_info": "我需要对阿尔茨海默病小鼠模型全脑进行透明化处理，用于建立淀粉样病理负荷的全脑三维定量图谱。样本为完整 5XFAD 小鼠大脑，尺寸约 10 mm × 8 mm × 6 mm，已完成固定和后固定。科学目标是在三维空间中定位和定量淀粉样沉积物，比较不同脑区中的斑块数量、体积、密度和聚集程度，并通过两种相互验证的病理沉积物标记信号提高斑块识别的可靠性，避免将组织自发荧光或非特异颗粒误判为真正病理沉积。\n\n请根据该科学问题自行选择合适的双靶点荧光/标记策略，并匹配适合完整 AD 模型小鼠脑病理沉积物成像的组织透明方法。请仅输出 protocol，第 1 行写明所选双靶点荧光/标记策略和组织透明方法，随后仅列出透明处理、RI 匹配和保存/成像前处理步骤的关键试剂、条件和时间。",
+                "target_method": "iDISCO+",
+                "generated_timestamp": "2025-12-15T00:00:00Z"
+            },
+            "scores": {
+                "completeness": {
+                    "c_step": {
+                        "score": 2,
+                        "max_score": 2,
+                        "description": "步骤模块完整性",
+                        "reasoning": "协议包含了iDISCO+所必需的全部功能模块：脱水、脱色（漂白）、复水、透化、封闭、一抗、洗涤、二抗、洗涤、再次脱水、脱脂、折射率匹配以及成像储存准备。虽然样本已预先固定，无需重复固定步骤，但整体流程完整，无关键模块缺失。"
+                    },
+                    "c_param": {
+                        "score": 3,
+                        "max_score": 3,
+                        "description": "参数细节完整性",
+                        "reasoning": "所有步骤均标注了时间（如1小时、12小时、7天等）、温度（RT、4℃、37℃）和关键试剂浓度（如20%~100%甲醇、0.2% Triton X-100、5% H₂O₂、0.3 M甘氨酸等）。细节丰富，相当于发表论文附录水平。"
+                    },
+                    "total_weighted_score": 5.0
+                },
+                "correctness": {
+                    "co_order": {
+                        "score": 3,
+                        "max_score": 3,
+                        "description": "步骤顺序逻辑",
+                        "reasoning": "流程严格遵循iDISCO+的经典‘三明治’结构：固定（已做）→脱水→脱色→复水→免疫标记→脱水→脱脂→折射率匹配。顺序完全正确，过渡衔接合理。"
+                    },
+                    "co_method": {
+                        "score": 2,
+                        "max_score": 2,
+                        "description": "方法-试剂一致性",
+                        "reasoning": "所有透明化试剂均属于iDISCO+标准体系：甲醇梯度、H₂O₂/甲醇漂白、DCM脱脂、DBE折射率匹配。未混用其他方法的不兼容试剂。"
+                    },
+                    "co_param": {
+                        "score": 2,
+                        "max_score": 2,
+                        "description": "参数范围物理合理性",
+                        "reasoning": "脱脂两次各30分钟、折射率匹配2小时+过夜，对于成年小鼠全脑（10×8×6 mm）是合理的时间，符合菲克扩散定律和经验数据。漂白12小时也符合常规脱色时长。未出现反物理规律的时间或温度设定。"
+                    },
+                    "co_chem": {
+                        "score": 1,
+                        "max_score": 1,
+                        "description": "化学与安全常识",
+                        "reasoning": "方案仅使用了iDISCO+标准流程固有的化学试剂（甲醇、DCM、DBE、H₂O₂等），未额外引入危险化学品或高危操作。因此方案本身安全，未主动引入危险。"
+                    },
+                    "critical_warnings": [
+                        "双一抗均为小鼠单克隆抗体（6E10与4G8），而二抗均为donkey anti-mouse IgG，无法区分两种一抗，导致两个通道信号完全共定位，失去独立验证淀粉样沉积的可靠性。该免疫标记策略存在严重交叉反应，无法实现科学目标提出的两种相互验证的病理标记。"
+                    ],
+                    "total_weighted_score": 8.0
+                },
+                "effectiveness": {
+                    "s_method": {
+                        "score": 1.3681,
+                        "max_score": 2.5,
+                        "description": "透明方法选择适配度",
+                        "reasoning": "Signed need-weighted method-fit [-2.5,+2.5] (F_fp xor P_dye x2; caps signed). Method: iDISCO+"
+                    },
+                    "s_label": {
+                        "score": 5.1,
+                        "max_score": 6,
+                        "description": "标记与方法兼容性",
+                        "reasoning": "target_match=6.0, marker_fluor_compat=6.0, method_fluor_compat=5.1. marker_dict={'Alexa Fluor 488': 'Aβ (6E10)', 'Alexa Fluor 647': 'Aβ (4G8)'}"
+                    },
+                    "s_trans": {
+                        "score": 2.814646787157323,
+                        "max_score": 3,
+                        "description": "方法-组织 RI 域匹配度",
+                        "reasoning": "Method-tissue domain match. RI_tissue(question)=1.46, RI_method_ref(best-suited sample)=1.47, σ_RI=0.028, tier=T04_WHOLE_MOUSE_BRAIN_5_12MM, status=scored"
+                    },
+                    "s_time": {
+                        "score": 3.0,
+                        "max_score": 3,
+                        "description": "时间效率评分",
+                        "reasoning": "Time deviation score. Act: 27.0, Ref Range: [24, 48]"
+                    },
+                    "total_weighted_score": 12.282746787157322
+                }
+            }
+        }
+    },
+    {
+        "question_id": 13,
+        "evaluation": {
+            "_error": "Teacher returned empty content",
+            "_raw_content_preview": "",
+            "_question_id": 13
+        }
+    },
+    {
+        "question_id": 17,
+        "evaluation": {
+            "meta_data": {
+                "protocol_id": 17,
+                "sample_info": "我需要对包含胶质母细胞瘤的小鼠脑组织进行透明化处理，用于观察肿瘤细胞沿血管结构侵袭和扩散的三维空间模式。样本为包含肿瘤区域及邻近正常脑组织的小鼠脑组织块，尺寸约 8 mm × 6 mm × 5 mm，已完成固定和后固定。科学目标是在三维空间中保留肿瘤主体、侵袭前沿和周围血管网络的组织结构，观察肿瘤区域内及肿瘤边缘处血管形态、血管密度、血管分支和肿瘤-血管空间邻近关系，以分析 GBM 是否沿血管周围空间发生浸润性扩散。\n\n请根据该科学问题自行选择合适的双靶点荧光/标记策略，并基于所选标记样本选择匹配的组织透明方法。请仅输出 protocol，第 1 行写明所选双靶点荧光/标记策略和组织透明方法，随后仅列出透明处理、RI 匹配和保存/成像前处理步骤的关键试剂、条件和时间。",
+                "target_method": "FDISCO",
+                "generated_timestamp": "2025-12-15T00:00:00Z"
+            },
+            "scores": {
+                "completeness": {
+                    "c_step": {
+                        "score": 1,
+                        "max_score": 2,
+                        "description": "步骤模块完整性",
+                        "reasoning": "方案缺少染色前的脱脂步骤。有机溶剂法FDISCO的标准流程应先脱水脱脂(去除脂质)后再复水标记，但该方案仅进行了脱水、漂白、复水后直接标记，未包含染色前关键的脱脂模块，可能阻碍抗体渗透。"
+                    },
+                    "c_param": {
+                        "score": 3,
+                        "max_score": 3,
+                        "description": "参数细节完整性",
+                        "reasoning": "关键步骤均详细标注了时间(如1小时、48小时)、温度(RT、4°C)和浓度(如20%/40%/60%/80%/100%甲醇、0.2% Triton X-100、5% NGS、抗体稀释1:200/1:500)，达到了正式论文附录的详细程度。"
+                    },
+                    "total_weighted_score": 4.0
+                },
+                "correctness": {
+                    "co_order": {
+                        "score": 1,
+                        "max_score": 3,
+                        "description": "步骤顺序逻辑",
+                        "reasoning": "流程顺序缺失染色前脱脂步骤，导致‘脱水→复水→标记’跳过脱脂环节，不符合FDISCO固定后脱水脱脂→复水染色→再脱水脱脂的标准SOP，可能降低标记质量和透明度。"
+                    },
+                    "co_method": {
+                        "score": 2,
+                        "max_score": 2,
+                        "description": "方法-试剂一致性",
+                        "reasoning": "所有试剂(甲醇、DCM、ECi)均属于FDISCO标准试剂体系，未混用其他透明方法试剂。"
+                    },
+                    "co_param": {
+                        "score": 2,
+                        "max_score": 2,
+                        "description": "参数范围物理合理性",
+                        "reasoning": "脱脂总时间2小时(DCM/MeOH 1h +纯DCM 30min×2)对于5mm厚脑组织块略显不足，但抗体孵育48小时合理，整体参数尚未明显违反扩散定律。"
+                    },
+                    "co_chem": {
+                        "score": 1,
+                        "max_score": 1,
+                        "description": "化学与安全常识",
+                        "reasoning": "未主动引入该透明方法标准流程以外的危险药品或危险操作，使用的均为常规试剂。"
+                    },
+                    "critical_warnings": [],
+                    "total_weighted_score": 6.0
+                },
+                "effectiveness": {
+                    "s_method": {
+                        "score": 1.0946,
+                        "max_score": 2.5,
+                        "description": "透明方法选择适配度",
+                        "reasoning": "Signed need-weighted method-fit [-2.5,+2.5] (F_fp xor P_dye x2; caps signed). Method: FDISCO"
+                    },
+                    "s_label": {
+                        "score": 4.5,
+                        "max_score": 6,
+                        "description": "标记与方法兼容性",
+                        "reasoning": "target_match=6.0, marker_fluor_compat=6.0, method_fluor_compat=4.5. marker_dict={'Alexa Fluor 647': 'CD31 (PECAM1)', 'Alexa Fluor 488': 'Lectin (凝集素)'}"
+                    },
+                    "s_trans": {
+                        "score": 3.0,
+                        "max_score": 3,
+                        "description": "方法-组织 RI 域匹配度",
+                        "reasoning": "Method-tissue domain match. RI_tissue(question)=1.47, RI_method_ref(best-suited sample)=1.47, σ_RI=0.028, tier=T04_WHOLE_MOUSE_BRAIN_5_12MM, status=scored"
+                    },
+                    "s_time": {
+                        "score": 0.34248528002906065,
+                        "max_score": 3,
+                        "description": "时间效率评分",
+                        "reasoning": "Time deviation score. Act: 18.0, Ref Range: [4, 24]"
+                    },
+                    "total_weighted_score": 8.937085280029061
+                }
+            }
+        }
+    },
+    {
+        "question_id": 16,
+        "evaluation": {
+            "_error": "JSON parse failed: Unterminated string starting at: line 19 column 22 (char 582)",
+            "_raw_content_preview": "{\n  \"meta_data\": {\n    \"protocol_id\": \"mdl_5XFAD_iDISCOp_001\",\n    \"sample_info\": \"Whole 5XFAD mouse brain, 10 mm × 8 mm × 6 mm, fixed and post-fixed\",\n    \"target_method\": \"iDISCO+\"\n  },\n  \"scores\": {\n    \"completeness\": {\n      \"c_step\": {\n        \"score\": 2,\n        \"max_score\": 2,\n        \"description\": \"步骤模块完整性\",\n        \"reasoning\": \"方案针对iDISCO+方法包含了所有核心模块：预处理（透化/脱色）、免疫标记（封闭、一抗、二抗、洗涤）、有机溶剂透明化核心（梯度脱水、DCM脱脂、DBE折射率匹配）以及成像准备（密封存储）。各模块衔接完整，无缺失关键步骤。\"\n      },\n      \"c_param\": {\n        \"score\": 3,\n        \"max_score\": 3,\n        \"description\": \"参数细节完整性\",\n        \"reasoning\": \"方案给出了发表级别的参数细节：所有步骤均标注了明确的温度（RT、4°C、37°C）、时间（小时/天）和关键浓度（甲醇梯度百分比、Triton X-100 0.2%、H2O2 5%、血清5%、抗体稀释度、NaN₃ 0",
+            "_question_id": 16
+        }
+    },
+    {
+        "question_id": 22,
+        "evaluation": {
+            "meta_data": {
+                "protocol_id": 22,
+                "sample_info": "我需要对稀疏荧光报告小鼠脑组织进行透明化处理，用于构建单个或少量报告神经元的三维形态图谱。样本为厚度约 3 mm 的小鼠脑组织块，已完成固定和后固定，内源荧光信号非常微弱，并需要保存约 6 个月后仍可用于复查成像。科学目标是保留稀疏报告神经元的内源荧光信号，并通过兼容的神经元树突或细胞骨架标记补全形态细节，减少透明化和长期保存过程中造成的荧光淬灭、组织变形和树突分支信息丢失。\n\n请根据该科学问题选择兼容的双靶点荧光/标记策略，并选择与这些信号兼容的组织透明方法。所选方案应适合较厚脑组织块的三维成像、微弱荧光保留、树突结构显示和长期保存。请仅输出 protocol，第 1 行写明所选双靶点荧光/标记策略和组织透明方法，随后仅列出透明处理、RI 匹配和保存/成像前处理步骤的关键试剂、条件和时间。",
+                "target_method": "MACS",
+                "generated_timestamp": "2025-12-15T00:00:00Z"
+            },
+            "scores": {
+                "completeness": {
+                    "c_step": {
+                        "score": 2,
+                        "max_score": 2,
+                        "description": "步骤模块完整性",
+                        "reasoning": "方案覆盖了免疫标记（封闭、一抗、清洗、二抗、清洗）、透明化梯度（R0-R1-R2）、折射率匹配（R3）、长期保存及成像前平衡所有必需模块，无缺失。"
+                    },
+                    "c_param": {
+                        "score": 3,
+                        "max_score": 3,
+                        "description": "参数细节完整性",
+                        "reasoning": "几乎所有步骤均标注了确切的时间（如 24 h、12 h）、温度（RT、4 ℃）、浓度（如 5% 血清、0.3% Triton X-100、各步 MXDA 与山梨醇的百分比）和 pH（7.4），达到发表级 Supplementary 的要求。"
+                    },
+                    "total_weighted_score": 5.0
+                },
+                "correctness": {
+                    "co_order": {
+                        "score": 3,
+                        "max_score": 3,
+                        "description": "步骤顺序逻辑",
+                        "reasoning": "完全符合 MACS 的标准操作规程：免疫染色在透明化之前进行，然后梯度增加 MXDA 与山梨醇浓度进行透明化，最后折射率匹配与保存，逻辑自洽。"
+                    },
+                    "co_method": {
+                        "score": 2,
+                        "max_score": 2,
+                        "description": "方法-试剂一致性",
+                        "reasoning": "所用试剂（N-甲基烟酰胺、山梨醇、PBS、Triton X-100 等）均为 MACS 体系的特征组分，未混入其他不相容试剂。"
+                    },
+                    "co_param": {
+                        "score": 2,
+                        "max_score": 2,
+                        "description": "参数范围物理合理性",
+                        "reasoning": "3 mm 脑块的透明化总时长（54 h）及各步时长符合菲克扩散定律与 MACS 经验值；抗体孵育 48+24 小时在 4 ℃ 搅拌下对于毫米级组织合理。"
+                    },
+                    "co_chem": {
+                        "score": 1,
+                        "max_score": 1,
+                        "description": "化学与安全常识",
+                        "reasoning": "方案使用的是 MACS 的标准、温和试剂，无额外引入强酸、强碱、叠氮化钠等危险化学品，也无高温密闭加热有机溶剂等危险操作。"
+                    },
+                    "critical_warnings": [],
+                    "total_weighted_score": 8.0
+                },
+                "effectiveness": {
+                    "s_method": {
+                        "score": 1.0682,
+                        "max_score": 2.5,
+                        "description": "透明方法选择适配度",
+                        "reasoning": "Signed need-weighted method-fit [-2.5,+2.5] (F_fp xor P_dye x2; caps signed). Method: MACS"
+                    },
+                    "s_label": {
+                        "score": 5.1,
+                        "max_score": 6,
+                        "description": "标记与方法兼容性",
+                        "reasoning": "target_match=6.0, marker_fluor_compat=6.0, method_fluor_compat=5.1. marker_dict={'GFP': 'endogenous reporter', 'Alexa Fluor 647': 'MAP2'}"
+                    },
+                    "s_trans": {
+                        "score": 3.0,
+                        "max_score": 3,
+                        "description": "方法-组织 RI 域匹配度",
+                        "reasoning": "Method-tissue domain match. RI_tissue(question)=1.46, RI_method_ref(best-suited sample)=1.46, σ_RI=0.021, tier=T02_THICK_SLICE_0P5_3MM, status=scored"
+                    },
+                    "s_time": {
+                        "score": 3.530732831765017e-34,
+                        "max_score": 3,
+                        "description": "时间效率评分",
+                        "reasoning": "Time deviation score. Act: 54.0, Ref Range: [48, 72]"
+                    },
+                    "total_weighted_score": 9.168199999999999
+                }
+            }
+        }
+    },
+    {
+        "question_id": 21,
+        "evaluation": {
+            "meta_data": {
+                "protocol_id": 21,
+                "sample_info": "我需要对稀疏荧光报告小鼠脑组织进行透明化处理，用于观察少量标记神经元的三维形态，并进行长期保存后再次成像。样本为小鼠脑组织块，厚度约 3 mm，已完成固定和后固定，内源荧光报告信号较弱。科学目标是在透明化和保存过程中尽量保留稀疏报告神经元的微弱内源荧光，同时显示神经元树突结构和局部形态细节，以便在三维空间中分析神经元胞体、树突分支、树突长度和局部投射模式。\n\n请根据该科学问题自行选择合适的双靶点荧光/标记策略，并基于所选标记样本选择匹配的组织透明方法。请仅输出 protocol，第 1 行写明所选双靶点荧光/标记策略和组织透明方法，随后仅列出透明处理、RI 匹配和保存/成像前处理步骤的关键试剂、条件和时间。",
+                "target_method": "MACS",
+                "generated_timestamp": "2025-12-15T00:00:00Z"
+            },
+            "scores": {
+                "completeness": {
+                    "c_step": {
+                        "score": 2,
+                        "max_score": 2,
+                        "description": "步骤模块完整性",
+                        "reasoning": "方案包含了免疫标记、透明化梯度处理、折射率匹配和保存/成像前平衡等所有关键模块，且针对已完成固定的3 mm脑组织块，未遗漏必要的透化和制备步骤。"
+                    },
+                    "c_param": {
+                        "score": 3,
+                        "max_score": 3,
+                        "description": "参数细节完整性",
+                        "reasoning": "所有步骤均明确标注了温度（RT/4°C）、时间（小时/天）和关键试剂浓度（如0.5% Triton X-100, 5% NGS, MACS-R0/R1/R2配方），参数完整度超过80%。"
+                    },
+                    "total_weighted_score": 5.0
+                },
+                "correctness": {
+                    "co_order": {
+                        "score": 3,
+                        "max_score": 3,
+                        "description": "步骤顺序逻辑",
+                        "reasoning": "流程遵循水性透明化方法的标准顺序：透化→封闭→一抗→清洗→二抗→梯度透明化→RIMS保存，无逻辑颠倒，符合MACS方法的标准操作规程。"
+                    },
+                    "co_method": {
+                        "score": 2,
+                        "max_score": 2,
+                        "description": "方法-试剂一致性",
+                        "reasoning": "透明化试剂为MXDA和山梨醇的水溶液，属于MACS方法的专有试剂体系，未混入有机溶剂或不兼容成分。"
+                    },
+                    "co_param": {
+                        "score": 2,
+                        "max_score": 2,
+                        "description": "参数范围物理合理性",
+                        "reasoning": "3 mm脑组织块在MACS的梯度透明化总耗时48 h（另2 h成像前平衡）符合菲克扩散定律，且抗体孵育时间（48 h/24 h）对微弱的稀疏信号也较为合理。"
+                    },
+                    "co_chem": {
+                        "score": 1,
+                        "max_score": 1,
+                        "description": "化学与安全常识",
+                        "reasoning": "使用的试剂（MXDA、山梨醇、Triton X-100等）均为MACS方法标准成分，无毒害性报道，操作均不构成危险，方案未引入危险化学品或危险操作。"
+                    },
+                    "critical_warnings": [],
+                    "total_weighted_score": 8.0
+                },
+                "effectiveness": {
+                    "s_method": {
+                        "score": 0.0,
+                        "max_score": 2.5,
+                        "description": "透明方法选择适配度",
+                        "reasoning": "Signed need-weighted method-fit [-2.5,+2.5] (F_fp xor P_dye x2; caps signed). Method: MACS"
+                    },
+                    "s_label": {
+                        "score": 4.800000000000001,
+                        "max_score": 6,
+                        "description": "标记与方法兼容性",
+                        "reasoning": "target_match=6.0, marker_fluor_compat=6.0, method_fluor_compat=4.8. marker_dict={'GFP': '内源性荧光蛋白', 'Alexa Fluor 488': 'MAP2'}"
+                    },
+                    "s_trans": {
+                        "score": 3.0,
+                        "max_score": 3,
+                        "description": "方法-组织 RI 域匹配度",
+                        "reasoning": "Method-tissue domain match. RI_tissue(question)=1.46, RI_method_ref(best-suited sample)=1.46, σ_RI=0.021, tier=T02_THICK_SLICE_0P5_3MM, status=scored"
+                    },
+                    "s_time": {
+                        "score": 9.82833117280423e-26,
+                        "max_score": 3,
+                        "description": "时间效率评分",
+                        "reasoning": "Time deviation score. Act: 50.0, Ref Range: [24, 72]"
+                    },
+                    "total_weighted_score": 7.800000000000001
+                }
+            }
+        }
+    },
+    {
+        "question_id": 23,
+        "evaluation": {
+            "meta_data": {
+                "protocol_id": 23,
+                "sample_info": "我需要对一批稀疏荧光报告小鼠脑组织进行透明化处理，用于建立可长期保存的神经元三维形态数据集。样本为厚度约 3 mm 的小鼠脑组织块，已完成固定和后固定，内源荧光信号较弱，计划保存约 6 个月后进行重复成像或补充分析。科学目标是在保存前后都能够识别稀疏报告神经元，并同时获得神经元树突骨架或局部神经元结构信息，用于分析树突分支复杂度、局部神经环路投射和单细胞形态完整性。\n\n请根据该科学问题自行选择合适的双靶点荧光/标记策略，并匹配适合弱荧光报告样本和长期保存需求的组织透明方法。请仅输出 protocol，第 1 行写明所选双靶点荧光/标记策略和组织透明方法，随后仅列出透明处理、RI 匹配和保存/成像前处理步骤的关键试剂、条件和时间。",
+                "target_method": "MACS",
+                "generated_timestamp": "2025-12-15T00:00:00Z"
+            },
+            "scores": {
+                "completeness": {
+                    "c_step": {
+                        "score": 2,
+                        "max_score": 2,
+                        "description": "步骤模块完整性",
+                        "reasoning": "方案包含了免疫标记、MACS透明化梯度（R0/R1/R2）以及折射率匹配长期保存等所有必需模块，无关键步骤缺失。"
+                    },
+                    "c_param": {
+                        "score": 3,
+                        "max_score": 3,
+                        "description": "参数细节完整性",
+                        "reasoning": "各步骤均给出了具体时间、温度（RT/4°C）和试剂浓度（如血清5%、Triton 0.3%、MXDA和山梨醇的百分比），参数详细程度可重复。"
+                    },
+                    "total_weighted_score": 5.0
+                },
+                "correctness": {
+                    "co_order": {
+                        "score": 3,
+                        "max_score": 3,
+                        "description": "步骤顺序逻辑",
+                        "reasoning": "流程符合MACS标准操作：先免疫标记后透明化梯度，水性体系无脱水复水需求，顺序合理。"
+                    },
+                    "co_method": {
+                        "score": 2,
+                        "max_score": 2,
+                        "description": "方法-试剂一致性",
+                        "reasoning": "所用试剂MACS-R0/R1/R2（MXDA+山梨醇）属于MACS专属配方，无其他方法试剂混用。"
+                    },
+                    "co_param": {
+                        "score": 2,
+                        "max_score": 2,
+                        "description": "参数范围物理合理性",
+                        "reasoning": "3 mm脑组织块MACS透明化总耗时48小时符合被动扩散规律，各步骤时长与文献经验一致。"
+                    },
+                    "co_chem": {
+                        "score": 1,
+                        "max_score": 1,
+                        "description": "化学与安全常识",
+                        "reasoning": "仅使用MACS标准试剂，无额外危险化学品与危险操作。"
+                    },
+                    "critical_warnings": [],
+                    "total_weighted_score": 8.0
+                },
+                "effectiveness": {
+                    "s_method": {
+                        "score": 1.0682,
+                        "max_score": 2.5,
+                        "description": "透明方法选择适配度",
+                        "reasoning": "Signed need-weighted method-fit [-2.5,+2.5] (F_fp xor P_dye x2; caps signed). Method: MACS"
+                    },
+                    "s_label": {
+                        "score": 5.1,
+                        "max_score": 6,
+                        "description": "标记与方法兼容性",
+                        "reasoning": "target_match=6.0, marker_fluor_compat=6.0, method_fluor_compat=5.1. marker_dict={'GFP': 'sparse reporter neuron', 'Alexa Fluor 647': 'MAP2'}"
+                    },
+                    "s_trans": {
+                        "score": 3.0,
+                        "max_score": 3,
+                        "description": "方法-组织 RI 域匹配度",
+                        "reasoning": "Method-tissue domain match. RI_tissue(question)=1.46, RI_method_ref(best-suited sample)=1.46, σ_RI=0.021, tier=T02_THICK_SLICE_0P5_3MM, status=scored"
+                    },
+                    "s_time": {
+                        "score": 5.786249543891753e-22,
+                        "max_score": 3,
+                        "description": "时间效率评分",
+                        "reasoning": "Time deviation score. Act: 48.0, Ref Range: []"
+                    },
+                    "total_weighted_score": 9.168199999999999
+                }
+            }
+        }
+    },
+    {
+        "question_id": 24,
+        "evaluation": {
+            "meta_data": {
+                "protocol_id": 24,
+                "sample_info": "我需要对稀疏荧光报告小鼠脑组织进行透明化处理，用于长期保存后仍能观察少量报告神经元的三维形态。样本为厚度约 3 mm 的小鼠脑组织块，已完成固定和后固定，内源荧光信号非常微弱，计划保存约 6 个月。科学目标是在透明化、折射率匹配和长期保存过程中尽量保留微弱内源荧光信号，同时通过兼容的神经元树突或细胞骨架标记补全神经元形态细节，用于分析胞体位置、树突分支、树突长度和局部投射模式。\n目前该类样本在透明化和保存后容易出现报告荧光进一步衰减、背景升高或树突细节丢失，导致长期归档后难以复查。请根据上述科学目标，在不引入给定标记物列表之外靶点或表外荧光团的前提下，重新选择或调整荧光/标记策略与组织透明方法，使其适合弱内源荧光保留、树突结构补全、3 mm 厚脑组织块透明化和 6 个月长期保存。\n请仅输出修正后的 protocol，第 1 行写明应保留或更换的双靶点荧光/标记策略和组织透明方法，随后仅列出透明处理、RI 匹配和保存/成像前处理步骤的关键试剂、条件和时间。",
+                "target_method": "MACS",
+                "generated_timestamp": "2025-12-15T00:00:00Z"
+            },
+            "scores": {
+                "completeness": {
+                    "c_step": {
+                        "score": 2,
+                        "max_score": 2,
+                        "description": "步骤模块完整性",
+                        "reasoning": "方案包含了固定后免疫标记、MACS-C透明化、MACS-W洗涤、多步RI匹配和长期保存，所有核心模块完整，无缺失。"
+                    },
+                    "c_param": {
+                        "score": 3,
+                        "max_score": 3,
+                        "description": "参数细节完整性",
+                        "reasoning": "每一步均标注了具体时间（如48h、24h、12h）、温度（RT、4℃、37℃）、浓度（抗体稀释1:500、各MACS试剂组成百分比），参数详细。"
+                    },
+                    "total_weighted_score": 5.0
+                },
+                "correctness": {
+                    "co_order": {
+                        "score": 3,
+                        "max_score": 3,
+                        "description": "步骤顺序逻辑",
+                        "reasoning": "完全符合MACS标准流程：抗体标记→透明化→RI梯度匹配→保存→成像前平衡，顺序正确。"
+                    },
+                    "co_method": {
+                        "score": 2,
+                        "max_score": 2,
+                        "description": "方法-试剂一致性",
+                        "reasoning": "所有透明化及RI匹配试剂均属于MACS特有的N-甲基烟酰胺/尿素/甘油/山梨醇体系，未混用其他方法。"
+                    },
+                    "co_param": {
+                        "score": 2,
+                        "max_score": 2,
+                        "description": "参数范围物理合理性",
+                        "reasoning": "3 mm脑块的MACS-C透明24h（37℃）和RI梯度匹配各12h在扩散经验范围内，无违反菲克定律的极端值。"
+                    },
+                    "co_chem": {
+                        "score": 1,
+                        "max_score": 1,
+                        "description": "化学与安全常识",
+                        "reasoning": "使用的叠氮化钠为MACS方法固有防腐剂，浓度合理（0.1%），未引入额外危险化学品或操作，默认安全。"
+                    },
+                    "critical_warnings": [],
+                    "total_weighted_score": 8.0
+                },
+                "effectiveness": {
+                    "s_method": {
+                        "score": 1.0682,
+                        "max_score": 2.5,
+                        "description": "透明方法选择适配度",
+                        "reasoning": "Signed need-weighted method-fit [-2.5,+2.5] (F_fp xor P_dye x2; caps signed). Method: MACS"
+                    },
+                    "s_label": {
+                        "score": 4.800000000000001,
+                        "max_score": 6,
+                        "description": "标记与方法兼容性",
+                        "reasoning": "target_match=6.0, marker_fluor_compat=6.0, method_fluor_compat=4.8. marker_dict={'GFP': '', 'YFP': '', 'tdTomato': '', 'Alexa Fluor 488': 'MAP2'}"
+                    },
+                    "s_trans": {
+                        "score": 3.0,
+                        "max_score": 3,
+                        "description": "方法-组织 RI 域匹配度",
+                        "reasoning": "Method-tissue domain match. RI_tissue(question)=1.46, RI_method_ref(best-suited sample)=1.46, σ_RI=0.021, tier=T02_THICK_SLICE_0P5_3MM, status=scored"
+                    },
+                    "s_time": {
+                        "score": 1.0952526728650272e-54,
+                        "max_score": 3,
+                        "description": "时间效率评分",
+                        "reasoning": "Time deviation score. Act: 62.0, Ref Range: [24, 72]"
+                    },
+                    "total_weighted_score": 8.868200000000002
+                }
+            }
+        }
+    },
+    {
+        "question_id": 19,
+        "evaluation": {
+            "meta_data": {
+                "protocol_id": 19,
+                "sample_info": "我需要对包含胶质母细胞瘤的小鼠脑组织进行透明化处理，用于分析 GBM 对宿主血管网络的利用、重塑和沿血管侵袭模式。样本为包含肿瘤主体、侵袭前沿及邻近脑组织的小鼠脑组织块，尺寸约 8 mm × 6 mm × 5 mm，已完成固定和后固定。科学目标是在三维空间中比较肿瘤核心、侵袭边缘和周围正常脑组织中的血管结构特征，并评估血管内皮连续性、屏障相关结构完整性与肿瘤浸润路径之间的空间关系，从而判断肿瘤是否沿既有血管网络发生扩散，或是否伴随血管重塑和屏障破坏。\n\n请根据该科学问题自行选择合适的双靶点荧光/标记策略，并匹配适合肿瘤脑组织血管网络和屏障结构成像的组织透明方法。请仅输出 protocol，第 1 行写明所选双靶点荧光/标记策略和组织透明方法，随后仅列出透明处理、RI 匹配和保存/成像前处理步骤的关键试剂、条件和时间。",
+                "target_method": "FDISCO",
+                "generated_timestamp": "2025-12-15T00:00:00Z"
+            },
+            "scores": {
+                "completeness": {
+                    "c_step": {
+                        "score": 2,
+                        "max_score": 2,
+                        "description": "步骤模块完整性",
+                        "reasoning": "方案包含了脱水、可选漂白、复水、透化封闭、一抗/凝集素标记、清洗、二抗/链霉亲和素、脱水、DCM脱脂、ECi折射率匹配、封片/成像准备等所有FDISCO核心步骤，且针对已固定组织省略了固定步骤，缺失非致命步骤。"
+                    },
+                    "c_param": {
+                        "score": 3,
+                        "max_score": 3,
+                        "description": "参数细节完整性",
+                        "reasoning": "所有步骤均详细标注了试剂浓度、温度（RT/4℃/37℃）和具体时间（30分钟至72小时），参数细节达到发表级附录水平。"
+                    },
+                    "total_weighted_score": 5.0
+                },
+                "correctness": {
+                    "co_order": {
+                        "score": 3,
+                        "max_score": 3,
+                        "description": "步骤顺序逻辑",
+                        "reasoning": "完全符合FDISCO的标准SOP：固定后脱水→（漂白）→复水→透化/封闭→一抗→二抗→脱水→DCM脱脂→ECi匹配，顺序无任何错误。"
+                    },
+                    "co_method": {
+                        "score": 2,
+                        "max_score": 2,
+                        "description": "方法-试剂一致性",
+                        "reasoning": "紧扣FDISCO方法，脱脂用DCM，折射率匹配用ECi，未混用其他方法的不兼容试剂。"
+                    },
+                    "co_param": {
+                        "score": 0,
+                        "max_score": 2,
+                        "description": "参数范围物理合理性",
+                        "reasoning": "对于8×6×5 mm的小鼠脑组织块，DCM脱脂总时间仅1小时（2次30分钟）明显违背菲克扩散定律，经验上此类样本需要至少2-4小时甚至过夜才能充分脱脂，导致组织不透明；同时ECi匹配4小时也偏短，可能导致折射率不均。"
+                    },
+                    "co_chem": {
+                        "score": 1,
+                        "max_score": 1,
+                        "description": "化学与安全常识",
+                        "reasoning": "所用试剂均为FDISCO标准化学品（DCM、ECi、H2O2/甲醇漂白），未引入额外危险试剂或危险操作，默认安全。"
+                    },
+                    "critical_warnings": [
+                        "DCM脱脂仅30分钟×2明显不足，可能导致样本中心不透明，须延长至至少2-4小时或过夜；ECi匹配时间也建议延长至过夜以保证成像质量。"
+                    ],
+                    "total_weighted_score": 6.0
+                },
+                "effectiveness": {
+                    "s_method": {
+                        "score": 0.0,
+                        "max_score": 2.5,
+                        "description": "透明方法选择适配度",
+                        "reasoning": "Signed need-weighted method-fit [-2.5,+2.5] (F_fp xor P_dye x2; caps signed). Method: FDISCO"
+                    },
+                    "s_label": {
+                        "score": 4.5,
+                        "max_score": 6,
+                        "description": "标记与方法兼容性",
+                        "reasoning": "target_match=6.0, marker_fluor_compat=6.0, method_fluor_compat=4.5. marker_dict={'Alexa Fluor 647': 'Lectin (pan-endothelial marker)', 'Alexa Fluor 488': 'Claudin-5'}"
+                    },
+                    "s_trans": {
+                        "score": 3.0,
+                        "max_score": 3,
+                        "description": "方法-组织 RI 域匹配度",
+                        "reasoning": "Method-tissue domain match. RI_tissue(question)=1.47, RI_method_ref(best-suited sample)=1.47, σ_RI=0.028, tier=T04_WHOLE_MOUSE_BRAIN_5_12MM, status=scored"
+                    },
+                    "s_time": {
+                        "score": 0.2956397012519834,
+                        "max_score": 3,
+                        "description": "时间效率评分",
+                        "reasoning": "Time deviation score. Act: 17.0, Ref Range: [8, 48]"
+                    },
+                    "total_weighted_score": 7.795639701251983
+                }
+            }
+        }
+    },
+    {
+        "question_id": 26,
+        "evaluation": {
+            "_error": "JSON parse failed: Unterminated string starting at: line 13 column 22 (char 322)",
+            "_raw_content_preview": "{\n  \"meta_data\": {\n    \"protocol_id\": \"uuid_001\",\n    \"sample_info\": \"Human cortical slice, 5 mm, fixed and post-fixed, myelin-rich\",\n    \"target_method\": \"uDISCO\"\n  },\n  \"scores\": {\n    \"completeness\": {\n      \"c_step\": {\n        \"score\": 2,\n        \"max_score\": 2,\n        \"description\": \"步骤模块完整性\",\n        \"reasoning\": \"方案包含了透明前脱水、脱色、复水、免疫",
+            "_question_id": 26
+        }
+    },
+    {
+        "question_id": 20,
+        "evaluation": {
+            "meta_data": {
+                "protocol_id": 20,
+                "sample_info": "我需要对包含胶质母细胞瘤的小鼠脑组织进行透明化处理，用于观察肿瘤沿血管结构侵袭的三维空间模式，并同时评估肿瘤区域内血管形态和血脑屏障相关结构的完整性。样本为包含肿瘤区域及邻近脑组织的小鼠脑组织块，尺寸约 8 mm × 6 mm × 5 mm，已完成固定和后固定。科学目标是在三维空间中保留肿瘤主体、侵袭前沿、邻近脑实质和血管网络结构，比较肿瘤核心、肿瘤边缘和周围脑组织中血管密度、分支、连续性、屏障结构完整性及肿瘤-血管空间邻近关系。\n\n我尝试使用 CUBIC 处理 GBM 脑组织，但透明化后肿瘤组织形态破坏严重，血管网络出现断裂，导致无法可靠分析肿瘤边界、血管连续性和沿血管侵袭路径。原 protocol 为：CUBIC-L 在 37°C 处理 7 天，然后直接放入 CUBIC-R。请根据上述科学目标，在不引入给定标记物列表之外靶点或表外荧光团的前提下，重新选择或调整荧光/标记策略与组织透明方法，使其适合肿瘤脑组织形态保持、血管网络连续性保留、屏障相关结构检测和深层三维成像。\n\n请仅输出修正后的 protocol，第 1 行写明应保留或更换的双靶点荧光/标记策略和组织透明方法，随后仅列出透明处理、RI 匹配和保存/成像前处理步骤的关键试剂、条件和时间。",
+                "target_method": "FDISCO",
+                "generated_timestamp": "2025-12-15T00:00:00Z"
+            },
+            "scores": {
+                "completeness": {
+                    "c_step": {
+                        "score": 2,
+                        "max_score": 2,
+                        "description": "步骤模块完整性",
+                        "reasoning": "方案包含了脱水、可选自发荧光漂白、复水、透化封闭、一抗/凝集素标记、清洗、二抗、清洗、再次脱水、DCM脱脂、ECi折射率匹配以及保存与成像准备等全部核心模块，针对脑组织无遗漏。"
+                    },
+                    "c_param": {
+                        "score": 3,
+                        "max_score": 3,
+                        "description": "参数细节完整性",
+                        "reasoning": "每步均给出了具体时间和温度（如RT 1小时、4℃ 12小时、4℃ 5天等），试剂浓度清晰（甲醇梯度、0.2% Triton X-100、5%血清、一抗1:200、二抗1:500、凝集素50 µg/mL等），细节详尽，完全可重复。"
+                    },
+                    "correctness_critical_warnings": [],
+                    "total_weighted_score": 5.0
+                },
+                "correctness": {
+                    "co_order": {
+                        "score": 3,
+                        "max_score": 3,
+                        "description": "步骤顺序逻辑",
+                        "reasoning": "流程遵循溶剂法‘先脱水-后染色-再脱水-脱脂-匹配’的合理框架，甲醇梯度脱水/复水衔接流畅，无直接水相-有机相接触的风险，逻辑清晰且可执行。"
+                    },
+                    "co_method": {
+                        "score": 2,
+                        "max_score": 2,
+                        "description": "方法-试剂一致性",
+                        "reasoning": "所有试剂（甲醇、DCM、ECi）均为FDISCO及其相关溶剂法体系的标准组分，不存在混用不相容试剂的情形。"
+                    },
+                    "co_param": {
+                        "score": 2,
+                        "max_score": 2,
+                        "description": "参数范围物理合理性",
+                        "reasoning": "对于5 mm厚脑组织块，抗体孵育5天、脱脂DCM各步30分钟、ECi匹配共4小时等时间设定均符合扩散定律与文献经验，无物理荒谬之处。"
+                    },
+                    "co_chem": {
+                        "score": 1,
+                        "max_score": 1,
+                        "description": "化学与安全常识",
+                        "reasoning": "方案使用的甲醇、DCM、H₂O₂、ECi均为该方法固有试剂，未额外引入危险化学品或危险操作（如密闭高温等），不存在主动引入的安全隐患。"
+                    },
+                    "critical_warnings": [],
+                    "total_weighted_score": 8.0
+                },
+                "effectiveness": {
+                    "s_method": {
+                        "score": 0.9447,
+                        "max_score": 2.5,
+                        "description": "透明方法选择适配度",
+                        "reasoning": "Signed need-weighted method-fit [-2.5,+2.5] (F_fp xor P_dye x2; caps signed). Method: FDISCO"
+                    },
+                    "s_label": {
+                        "score": 4.5,
+                        "max_score": 6,
+                        "description": "标记与方法兼容性",
+                        "reasoning": "target_match=6.0, marker_fluor_compat=6.0, method_fluor_compat=4.5. marker_dict={'Alexa Fluor 647': 'Lectin (vascular endothelium)', 'Alexa Fluor 488': 'Claudin-5'}"
+                    },
+                    "s_trans": {
+                        "score": 3.0,
+                        "max_score": 3,
+                        "description": "方法-组织 RI 域匹配度",
+                        "reasoning": "Method-tissue domain match. RI_tissue(question)=1.47, RI_method_ref(best-suited sample)=1.47, σ_RI=0.028, tier=T04_WHOLE_MOUSE_BRAIN_5_12MM, status=scored"
+                    },
+                    "s_time": {
+                        "score": 0.3183934555049531,
+                        "max_score": 3,
+                        "description": "时间效率评分",
+                        "reasoning": "Time deviation score. Act: 17.5, Ref Range: [10, 24]"
+                    },
+                    "total_weighted_score": 8.763093455504954
+                }
+            }
+        }
+    },
+    {
+        "question_id": 29,
+        "evaluation": {
+            "meta_data": {
+                "protocol_id": 29,
+                "sample_info": "我需要对 500 μm 厚的小鼠脑切片进行快速透明化处理，用于评估锥体神经元树突棘密度的变化。样本为固定后的厚脑切片，厚度约 500 μm，实验周期紧张，要求透明化和成像前处理在 1 天内完成。科学目标是在尽量保留稀疏标记神经元内源荧光的同时，获得足够清晰的树突主干和树突棘形态，用于比较不同实验组之间树突棘密度、树突棘分布和局部树突结构完整性。\n\n请根据该科学问题自行选择合适的双靶点荧光/标记策略，并基于所选标记样本选择匹配的组织透明方法。请仅输出 protocol，第 1 行写明所选双靶点荧光/标记策略和组织透明方法，随后仅列出透明处理、RI 匹配和保存/成像前处理步骤的关键试剂、条件和时间。",
+                "target_method": "FOCM",
+                "generated_timestamp": "2025-12-15T00:00:00Z"
+            },
+            "scores": {
+                "completeness": {
+                    "c_step": {
+                        "score": 2,
+                        "max_score": 2,
+                        "description": "步骤模块完整性",
+                        "reasoning": "样本为固定后脑切片，所有必需模块齐备：封闭、一抗、洗涤、二抗、洗涤的免疫染色模块；水性梯度透明化模块（FOCM-A、B、C）；折射率匹配与封片模块。"
+                    },
+                    "c_param": {
+                        "score": 3,
+                        "max_score": 3,
+                        "description": "参数细节完整性",
+                        "reasoning": "各步骤均明确标注浓度（如 25% fructose, 10% α-thioglycerol）、温度（RT 或 4°C）和时间（1h、12h、2h 等），参数细节等同发表级附录。"
+                    },
+                    "total_weighted_score": 5.0
+                },
+                "correctness": {
+                    "co_order": {
+                        "score": 3,
+                        "max_score": 3,
+                        "description": "步骤顺序逻辑",
+                        "reasoning": "先进行免疫染色，再进行水性透明化，符合 FOCM 标准流程；各步骤衔接合理，无逻辑错误。"
+                    },
+                    "co_method": {
+                        "score": 2,
+                        "max_score": 2,
+                        "description": "方法-试剂一致性",
+                        "reasoning": "全部使用果糖和 α-硫代甘油的水性体系，属于 FOCM 方法，未混用有机溶剂或其他方法试剂。"
+                    },
+                    "co_param": {
+                        "score": 2,
+                        "max_score": 2,
+                        "description": "参数范围物理合理性",
+                        "reasoning": "500 μm 切片每步透明化 2 小时、匹配 1 小时，总 7 小时，符合水性试剂在薄切片中的扩散速率，一抗 4°C 12 小时亦为标准做法。"
+                    },
+                    "co_chem": {
+                        "score": 1,
+                        "max_score": 1,
+                        "description": "化学与安全常识",
+                        "reasoning": "所列为 FOCM 标准试剂，未引入额外危险化学品，操作安全。"
+                    },
+                    "critical_warnings": [],
+                    "total_weighted_score": 8.0
+                },
+                "effectiveness": {
+                    "s_method": {
+                        "score": 1.25,
+                        "max_score": 2.5,
+                        "description": "透明方法选择适配度",
+                        "reasoning": "Signed need-weighted method-fit [-2.5,+2.5] (F_fp xor P_dye x2; caps signed). Method: FOCM"
+                    },
+                    "s_label": {
+                        "score": 4.800000000000001,
+                        "max_score": 6,
+                        "description": "标记与方法兼容性",
+                        "reasoning": "target_match=6.0, marker_fluor_compat=6.0, method_fluor_compat=4.8. marker_dict={'GFP': 'sparse pyramidal neurons (endogenous)', 'Alexa Fluor 568': 'MAP2'}"
+                    },
+                    "s_trans": {
+                        "score": 3.0,
+                        "max_score": 3,
+                        "description": "方法-组织 RI 域匹配度",
+                        "reasoning": "Method-tissue domain match. RI_tissue(question)=1.46, RI_method_ref(best-suited sample)=1.46, σ_RI=0.012, tier=T01_THIN_SLICE_LE500UM, status=scored"
+                    },
+                    "s_time": {
+                        "score": 0.0,
+                        "max_score": 3,
+                        "description": "时间效率评分",
+                        "reasoning": "Time deviation score. Act: 7.0, Ref Range: [4, 12]"
+                    },
+                    "total_weighted_score": 9.05
+                }
+            }
+        }
+    },
+    {
+        "question_id": 30,
+        "evaluation": {
+            "meta_data": {
+                "protocol_id": 30,
+                "sample_info": "我需要对 500 μm 厚的小鼠脑切片进行透明化处理，用于快速评估锥体神经元树突棘密度和树突结构变化。样本为固定后的厚脑切片，厚度约 500 μm，要求透明化过程在 1 天内完成。科学目标是保留稀疏标记神经元的内源荧光信号，使树突棘和细小树突分支仍可分辨，同时通过兼容的树突骨架或神经元结构标记补全主树突、分支结构和局部形态信息，以便进行树突棘计数和树突长度归一化分析。\n\n请根据该科学问题选择兼容的双靶点荧光/标记策略，并选择与这些信号兼容的组织透明方法。所选方案应适合薄至中等厚度脑切片的快速透明化、弱内源荧光保留、高分辨率树突棘观察和树突骨架结构显示。请仅输出 protocol，第 1 行写明所选双靶点荧光/标记策略和组织透明方法，随后仅列出透明处理、RI 匹配和保存/成像前处理步骤的关键试剂、条件和时间。",
+                "target_method": "MACS",
+                "generated_timestamp": "2025-12-15T00:00:00Z"
+            },
+            "scores": {
+                "completeness": {
+                    "c_step": {
+                        "score": 2,
+                        "max_score": 2,
+                        "description": "步骤模块完整性",
+                        "reasoning": "方案包含了透化、免疫标记、梯度透明化及折射率匹配等所有关键模块，样本已固定，无需脱色或脱钙，步骤完整。"
+                    },
+                    "c_param": {
+                        "score": 3,
+                        "max_score": 3,
+                        "description": "参数细节完整性",
+                        "reasoning": "每一步均明确标注了时间（精确到小时）、温度（RT或4℃）和试剂浓度（如5% NGS, 0.3% Triton X-100, MXDA体积分数及山梨醇质量体积百分数），细节详尽，堪比已发表文章的补充材料。"
+                    },
+                    "total_weighted_score": 5.0
+                },
+                "correctness": {
+                    "co_order": {
+                        "score": 3,
+                        "max_score": 3,
+                        "description": "步骤顺序逻辑",
+                        "reasoning": "流程为免疫标记（含透化）后再进行梯度MACS透明化，符合MACS方法对薄切片的常规操作顺序，逻辑清晰且无矛盾。"
+                    },
+                    "co_method": {
+                        "score": 2,
+                        "max_score": 2,
+                        "description": "方法-试剂一致性",
+                        "reasoning": "所用试剂（MXDA、山梨醇、PBS）均为MACS方法的标志性成分，未混用其他方法的不兼容试剂。"
+                    },
+                    "co_param": {
+                        "score": 2,
+                        "max_score": 2,
+                        "description": "参数范围物理合理性",
+                        "reasoning": "500 μm脑片每步透明化4小时，总透明化12小时，符合菲克扩散定律，与MACS文献报道的快速透明化时间一致，物理上合理。"
+                    },
+                    "co_chem": {
+                        "score": 1,
+                        "max_score": 1,
+                        "description": "化学与安全常识",
+                        "reasoning": "试剂均为MACS标准配方，无额外引入的强酸、强碱等危险化学品，亦未建议危险操作，默认安全。"
+                    },
+                    "critical_warnings": [],
+                    "total_weighted_score": 8.0
+                },
+                "effectiveness": {
+                    "s_method": {
+                        "score": 0.7717,
+                        "max_score": 2.5,
+                        "description": "透明方法选择适配度",
+                        "reasoning": "Signed need-weighted method-fit [-2.5,+2.5] (F_fp xor P_dye x2; caps signed). Method: MACS"
+                    },
+                    "s_label": {
+                        "score": 4.800000000000001,
+                        "max_score": 6,
+                        "description": "标记与方法兼容性",
+                        "reasoning": "target_match=6.0, marker_fluor_compat=6.0, method_fluor_compat=4.8. marker_dict={'GFP': '神经元（内源）', 'Alexa Fluor 568': 'MAP2'}"
+                    },
+                    "s_trans": {
+                        "score": 3.0,
+                        "max_score": 3,
+                        "description": "方法-组织 RI 域匹配度",
+                        "reasoning": "Method-tissue domain match. RI_tissue(question)=1.46, RI_method_ref(best-suited sample)=1.46, σ_RI=0.017, tier=T01_THIN_SLICE_LE500UM, status=scored"
+                    },
+                    "s_time": {
+                        "score": 3.0,
+                        "max_score": 3,
+                        "description": "时间效率评分",
+                        "reasoning": "Time deviation score. Act: 12.0, Ref Range: [4, 12]"
+                    },
+                    "total_weighted_score": 11.5717
+                }
+            }
+        }
+    },
+    {
+        "question_id": 27,
+        "evaluation": {
+            "meta_data": {
+                "protocol_id": 27,
+                "sample_info": "我需要对厚人脑皮层切片进行透明化处理，用于在致密临床脑组织中获得成熟神经元的三维分布图谱。样本为 3 mm 厚的人脑皮层切片，已完成固定和后固定。科学目标是在整个切片厚度范围内标记成熟神经元相关核/胞体信号，用于神经元定位、细胞计数、皮层层次分析和局部神经元密度比较，并通过两种成熟神经元相关标记提高深层细胞识别可靠性。\n\n实验室新人进行厚人脑皮层神经元染色时出现问题：染色后只有表层约 1 mm 有信号，深层组织完全无标记。实验记录显示：固定用了 24 h；荧光标记试剂在 4°C 孵育 72 h；用 PBS 稀释荧光标记试剂。请根据上述科学目标，在不引入给定标记物列表之外靶点或表外荧光团的前提下，重新选择或调整荧光/标记策略与组织透明方法，使其适合厚人脑皮层组织的充分固定、抗体深层渗透、成熟神经元双信号检测、透明化和三维成像。\n\n请仅输出修正后的 protocol，第 1 行写明应保留或更换的双靶点荧光/标记策略和组织透明方法，随后仅列出透明处理、RI 匹配和保存/成像前处理步骤的关键试剂、条件和时间。",
+                "target_method": "uDISCO",
+                "generated_timestamp": "2025-12-15T00:00:00Z"
+            },
+            "scores": {
+                "completeness": {
+                    "c_step": {
+                        "score": 0,
+                        "max_score": 2,
+                        "description": "步骤模块完整性",
+                        "reasoning": "方案缺失免疫标记前的脱脂步骤。uDISCO用于厚组织免疫标记的标准流程要求在对样本进行抗体孵育之前，先通过有机溶剂（如DCM）脱脂以去除脂质屏障，否则抗体无法深层渗透。当前方案仅在标记后安排了脱脂，缺少这一关键功能模块，将导致深层染色失败。"
+                    },
+                    "c_param": {
+                        "score": 3,
+                        "max_score": 3,
+                        "description": "参数细节完整性",
+                        "reasoning": "各步骤均明确标注了时间、温度和试剂浓度，例如脱水梯度浓度与时间、透化温度与血清浓度、抗体稀释比例与孵育时长等，细节堪比正式发表的方法附录。"
+                    },
+                    "total_weighted_score": 3.0
+                },
+                "correctness": {
+                    "co_order": {
+                        "score": 0,
+                        "max_score": 3,
+                        "description": "步骤顺序逻辑",
+                        "reasoning": "流程顺序存在致命错误。方案在免疫标记前仅进行了甲醇脱水和复水，完全未进行脱脂处理，而直接进行抗体孵育。这与uDISCO标准操作程序（甲醇脱水→DCM脱脂→梯度复水→透化/封闭→抗体标记→再脱水→再脱脂→RI匹配）严重不符，脂质屏障未去除，抗体无法扩散至3 mm厚组织深层，实验必然失败。"
+                    },
+                    "co_method": {
+                        "score": 2,
+                        "max_score": 2,
+                        "description": "方法-试剂一致性",
+                        "reasoning": "所用试剂（甲醇、DCM、DBE）均属于uDISCO方法的标准化学体系，未混用其他体系的不兼容试剂。"
+                    },
+                    "co_param": {
+                        "score": 2,
+                        "max_score": 2,
+                        "description": "参数范围物理合理性",
+                        "reasoning": "抗体孵育时间（7天/5天，37℃）和脱脂/匹配时间（2小时/2小时/12小时等）在假设已脱脂的前提下，对3 mm组织片基本合理，未出现违反扩散定律的极端短时间。"
+                    },
+                    "co_chem": {
+                        "score": 1,
+                        "max_score": 1,
+                        "description": "化学与安全常识",
+                        "reasoning": "所有化学品均为uDISCO标准试剂，无额外危险药品引入；操作中未出现加热DCM等明确危险行为，方案本身无主动引入的安全风险。"
+                    },
+                    "critical_warnings": [
+                        "标记前完全缺少脱脂步骤，抗体将无法渗透至深层组织，导致只能标记表层，无法实现全层标记的科学目标。必须在前半程加入DCM脱脂环节（脱水→脱脂→复水→标记→再脱水→再脱脂→RI匹配）。"
+                    ],
+                    "total_weighted_score": 5.0
+                },
+                "effectiveness": {
+                    "s_method": {
+                        "score": 0.8875,
+                        "max_score": 2.5,
+                        "description": "透明方法选择适配度",
+                        "reasoning": "Signed need-weighted method-fit [-2.5,+2.5] (F_fp xor P_dye x2; caps signed). Method: uDISCO"
+                    },
+                    "s_label": {
+                        "score": 3.0,
+                        "max_score": 6,
+                        "description": "标记与方法兼容性",
+                        "reasoning": "target_match=3.0, marker_fluor_compat=6.0, method_fluor_compat=4.2. marker_dict={'Alexa Fluor 488': 'NeuN', 'Alexa Fluor 647': 'MAP2'}"
+                    },
+                    "s_trans": {
+                        "score": 1.2333368715215602,
+                        "max_score": 3,
+                        "description": "方法-组织 RI 域匹配度",
+                        "reasoning": "Method-tissue domain match. RI_tissue(question)=1.46, RI_method_ref(best-suited sample)=1.5, σ_RI=0.03, tier=T09_HUMAN_DENSE_CLINICAL_BLOCK, status=scored"
+                    },
+                    "s_time": {
+                        "score": 0.0,
+                        "max_score": 3,
+                        "description": "时间效率评分",
+                        "reasoning": "Time deviation score. Act: 32.0, Ref Range: []"
+                    },
+                    "total_weighted_score": 5.12083687152156
+                }
+            }
+        }
+    },
+    {
+        "question_id": 25,
+        "evaluation": {
+            "_error": "JSON parse failed: Unterminated string starting at: line 74 column 21 (char 2571)",
+            "_raw_content_preview": "{\n  \"meta_data\": {\n    \"protocol_id\": \"T09_iDISCO+_human_5mm_cortex\",\n    \"sample_info\": \"5 mm thick human cortical clinical slice, lipid- and myelin-rich, fixed and post-fixed\",\n    \"target_method\": \"iDISCO+\"\n  },\n  \"scores\": {\n    \"completeness\": {\n      \"c_step\": {\n        \"score\": 2,\n        \"max_score\": 2,\n        \"description\": \"步骤模块完整性\",\n        \"reasoning\": \"方案包含iDISCO+免疫标记流程的所有核心模块：固定后脱水、可选的过氧化氢漂白、再水化、透化与封闭、一抗/二抗标记与洗涤、标记后再次脱水、二氯甲烷脱脂及DBE折射率匹配，步骤衔接完整，未缺失关键模块。\"\n      },\n      \"c_param\": {\n        \"score\": 3,\n        \"max_score\": 3,\n        \"description\": \"参数细节完整性\",\n        \"reasoning\": \"几乎每个步骤均明确给出时间（如1小时、24小时、7天）、温度（RT、4°C、37°C）和关键试剂浓度（如20%–100%甲醇、5% H₂O₂、0.2% Triton X-100、20% DMSO、抗体稀释度等），细节详实，可直接执行。\"\n      },\n      \"total_weighted_score\": 5.0\n    },\n    \"correctness\": {\n      \"co_order\": {\n        \"score\": 3,\n        \"max_score\": 3,\n        \"description\": \"步骤顺序逻辑\",\n        \"reasoning\": \"流程严格遵循iDISCO+经典‘三明治’结构：甲醇预处理（脱水–漂白–再水化）→免疫标记→再次脱水→脱脂→折射率匹配，不存在有机/水相直接接触的逻辑错误。\"\n      },\n      \"co_method\": {\n        \"score\": 2,\n        \"max_score\": 2,\n        \"description\": \"方法-试剂一致性\",\n        \"reasoning\": \"全程使用iDISCO+标准试剂体系：甲醇脱水、DCM脱脂、DBE匹配，免疫步骤使用PBST/DMSO/血清等水性缓冲液，未混用不相容的其它透明方法试剂。\"\n      },\n      \"co_param\": {\n        \"score\": 1,\n        \"max_score\": 2,\n        \"description\": \"参数范围物理合理性\",\n        \"reasoning\": \"5 mm厚、高脂质人脑切片脱脂总时间仅约1.75小时（66% DCM 30分钟+100% DCM 两次各30分钟+最终DCM 15分钟），时间偏短，可能无法充分去除髓鞘脂质，存在扩散不充分风险；但尚未达到全脑10分钟的违反常识程度，因此评定为存在偏差。\"\n      },\n      \"co_chem\": {\n        \"score\": 1,\n        \"max_score\": 1,\n        \"description\": \"化学与安全常识\",\n        \"reasoning\": \"所使用的叠氮化钠为免疫染色常规防腐剂，属于iDISCO+体系内惯用试剂，浓度在合理范围内；未引入强酸/强碱等危险额外试剂，也未提出密闭高温加热DCM等危险操作。\"\n      },\n      \"critical_warnings\": [],\n      \"total_weighted_score\": 7.0\n    }\n  },\n  \"extraction\": {\n    \"marker_dict\": {\n      \"Alexa Fluor 488\": \"NeuN\",\n      \"Alexa Fluor 647\": \"MAP2\"\n    },\n    \"clearing_total_time_hours\": 16.75,\n    \"method_name\": \"iDISCO+\",\n    \"reagent_ri_value\": null,\n    \"sample_ri_value\": null,\n    \"prot",
+            "_question_id": 25
+        }
+    },
+    {
+        "question_id": 31,
+        "evaluation": {
+            "meta_data": {
+                "protocol_id": 31,
+                "sample_info": "我需要对 500 μm 厚的小鼠脑切片进行透明化处理，用于在短实验周期内完成锥体神经元树突棘密度筛查。样本为固定后的厚脑切片，厚度约 500 μm，计划在 1 天内完成透明化、RI 匹配和成像前处理。科学目标是在保持组织形态和内源荧光信号的前提下，获得可用于树突棘识别的高分辨率三维图像，并同时保留树突骨架或神经元结构参考信号，用于判定树突走向、选择分析区段、计算单位树突长度上的树突棘数量，并比较不同处理条件下的局部突触结构改变。\n\n请根据该科学问题自行选择合适的双靶点荧光/标记策略，并匹配适合快速处理和树突棘高分辨率成像的组织透明方法。请仅输出 protocol，第 1 行写明所选双靶点荧光/标记策略和组织透明方法，随后仅列出透明处理、RI 匹配和保存/成像前处理步骤的关键试剂、条件和时间。",
+                "target_method": "FOCM",
+                "generated_timestamp": "2025-12-15T00:00:00Z"
+            },
+            "scores": {
+                "completeness": {
+                    "c_step": {
+                        "score": 2,
+                        "max_score": 2,
+                        "description": "步骤模块完整性",
+                        "reasoning": "方案包含了免疫标记（透化、封闭、一抗、二抗、清洗）和透明化核心步骤（FOCM-A/B/C梯度孵育、折射率匹配、封片），所有关键模块齐全，且适用于500μm脑切片，无缺失。"
+                    },
+                    "c_param": {
+                        "score": 3,
+                        "max_score": 3,
+                        "description": "参数细节完整性",
+                        "reasoning": "各步骤均给出了明确的试剂浓度（如5%血清、0.3% Triton、1:500一抗、FOCM各组分百分比）、温度（4°C或RT）、时间（小时级）以及最终RI值（1.45），参数完整，可直接操作。"
+                    },
+                    "total_weighted_score": 5.0
+                },
+                "correctness": {
+                    "co_order": {
+                        "score": 3,
+                        "max_score": 3,
+                        "description": "步骤顺序逻辑",
+                        "reasoning": "顺序完全正确：先进行免疫标记（利用Triton透化并完成抗原抗体反应），再进行FOCM梯度透明化，最后折射率匹配和封片，符合水性透明方法的SOP，无逻辑矛盾。"
+                    },
+                    "co_method": {
+                        "score": 2,
+                        "max_score": 2,
+                        "description": "方法-试剂一致性",
+                        "reasoning": "所有透明化试剂均为FOCM配方所指定的果糖和α-硫代甘油，pH和缓冲液符合要求，未混用任何有机溶剂或其他方法的特有试剂。"
+                    },
+                    "co_param": {
+                        "score": 2,
+                        "max_score": 2,
+                        "description": "参数范围物理合理性",
+                        "reasoning": "针对500μm切片，FOCM-A/B/C各2、2、3小时的孵育时间与菲克扩散定律和经验值相符，折射率匹配1小时亦合理，可在1天内完成透明化，没有夸大或缩短时间。"
+                    },
+                    "co_chem": {
+                        "score": 1,
+                        "max_score": 1,
+                        "description": "化学与安全常识",
+                        "reasoning": "所用试剂（果糖、α-硫代甘油、磷酸缓冲液、Triton X-100、血清、抗体）均为FOCM和免疫标记的标准成分，无额外引入强酸、强碱、剧毒或易爆试剂，没有危险操作。"
+                    },
+                    "critical_warnings": [],
+                    "total_weighted_score": 8.0
+                },
+                "effectiveness": {
+                    "s_method": {
+                        "score": 0.0,
+                        "max_score": 2.5,
+                        "description": "透明方法选择适配度",
+                        "reasoning": "Signed need-weighted method-fit [-2.5,+2.5] (F_fp xor P_dye x2; caps signed). Method: FOCM"
+                    },
+                    "s_label": {
+                        "score": 5.1,
+                        "max_score": 6,
+                        "description": "标记与方法兼容性",
+                        "reasoning": "target_match=6.0, marker_fluor_compat=6.0, method_fluor_compat=5.1. marker_dict={'GFP': 'neurons (Thy1, endogenous)', 'Alexa Fluor 647': 'MAP2'}"
+                    },
+                    "s_trans": {
+                        "score": 3.0,
+                        "max_score": 3,
+                        "description": "方法-组织 RI 域匹配度",
+                        "reasoning": "Method-tissue domain match. RI_tissue(question)=1.46, RI_method_ref(best-suited sample)=1.46, σ_RI=0.012, tier=T01_THIN_SLICE_LE500UM, status=scored"
+                    },
+                    "s_time": {
+                        "score": 0.0,
+                        "max_score": 3,
+                        "description": "时间效率评分",
+                        "reasoning": "Time deviation score. Act: 8.0, Ref Range: [4, 8]"
+                    },
+                    "total_weighted_score": 8.1
+                }
+            }
+        }
+    },
+    {
+        "question_id": 33,
+        "evaluation": {
+            "meta_data": {
+                "protocol_id": 33,
+                "sample_info": "我需要对 E12.5 小鼠胚胎进行透明化处理，用于观察胚胎发育早期颅神经和脊神经的三维投射路径。样本为完整小鼠胚胎，大小约 8–10 mm，已完成固定和后固定。科学目标是在完整胚胎尺度下显示头部、脑干、脊髓及外周区域中神经束和早期神经突起的空间走行，重建颅神经、脊神经和外周神经分支的连续路径，并分析不同发育区域中神经投射的方向性、分支模式和空间覆盖范围。\n\n请根据该科学问题自行选择合适的双靶点荧光/标记策略，并基于所选标记样本选择匹配的组织透明方法。请仅输出 protocol，第 1 行写明所选双靶点荧光/标记策略和组织透明方法，随后仅列出透明处理、RI 匹配和保存/成像前处理步骤的关键试剂、条件和时间。",
+                "target_method": "Ce3D",
+                "generated_timestamp": "2025-12-15T00:00:00Z"
+            },
+            "scores": {
+                "completeness": {
+                    "c_step": {
+                        "score": 2,
+                        "max_score": 2,
+                        "description": "步骤模块完整性",
+                        "reasoning": "方案包含了免疫标记预处理（封闭、一抗、二抗、清洗）、梯度透明化、RI匹配和成像准备等所有针对完整胚胎光透明所需的核心模块，步骤衔接无断层。"
+                    },
+                    "c_param": {
+                        "score": 3,
+                        "max_score": 3,
+                        "description": "参数细节完整性",
+                        "reasoning": "几乎所有步骤均标注了具体时间（小时/天）、温度（RT/4℃/37℃）、试剂浓度（如5% NDS、0.5% Triton、抗体稀释1:500、α-thioglycerol 25-40%等）以及pH（7.5），细节充分，可直接重复。"
+                    },
+                    "total_weighted_score": 5.0
+                },
+                "correctness": {
+                    "co_order": {
+                        "score": 3,
+                        "max_score": 3,
+                        "description": "步骤顺序逻辑",
+                        "reasoning": "流程遵循Ce3D标准操作：固定后样品先进行深层免疫标记，再依次进行递增浓度的透明化液处理，最后进行RI匹配，顺序完全符合该方法的SOP。"
+                    },
+                    "co_method": {
+                        "score": 2,
+                        "max_score": 2,
+                        "description": "方法-试剂一致性",
+                        "reasoning": "所有透明化试剂均属于Ce3D体系（α-硫代甘油、尿素、甘油、碘克沙醇），未混用其他方法的有机溶剂或不相容成分。"
+                    },
+                    "co_param": {
+                        "score": 2,
+                        "max_score": 2,
+                        "description": "参数范围物理合理性",
+                        "reasoning": "梯度透明化总时间约144 h + RI匹配24 h，对于8–10 mm的小鼠胚胎，在37℃下扩散所需时间基本合理，未出现违反菲克扩散定律的极端短时或高温处理。"
+                    },
+                    "co_chem": {
+                        "score": 1,
+                        "max_score": 1,
+                        "description": "化学与安全常识",
+                        "reasoning": "方案仅使用Ce3D方法的标准试剂，未额外引入强酸、强碱、剧毒或易爆等危险化学品，亦无高温高压密闭等危险操作描述。"
+                    },
+                    "critical_warnings": [],
+                    "total_weighted_score": 8.0
+                },
+                "effectiveness": {
+                    "s_method": {
+                        "score": 1.6724,
+                        "max_score": 2.5,
+                        "description": "透明方法选择适配度",
+                        "reasoning": "Signed need-weighted method-fit [-2.5,+2.5] (F_fp xor P_dye x2; caps signed). Method: Ce3D"
+                    },
+                    "s_label": {
+                        "score": 3.0,
+                        "max_score": 6,
+                        "description": "标记与方法兼容性",
+                        "reasoning": "target_match=3.0, marker_fluor_compat=6.0, method_fluor_compat=5.1. marker_dict={'Alexa Fluor 488': 'β-III Tubulin (TUJ1)', 'Alexa Fluor 568': 'Sox10'}"
+                    },
+                    "s_trans": {
+                        "score": 2.7505660671960865,
+                        "max_score": 3,
+                        "description": "方法-组织 RI 域匹配度",
+                        "reasoning": "Method-tissue domain match. RI_tissue(question)=1.48, RI_method_ref(best-suited sample)=1.49, σ_RI=0.024, tier=T03_SMALL_WHOLE_SAMPLE_1_5MM, status=scored"
+                    },
+                    "s_time": {
+                        "score": 0.0,
+                        "max_score": 3,
+                        "description": "时间效率评分",
+                        "reasoning": "Time deviation score. Act: 168.0, Ref Range: []"
+                    },
+                    "total_weighted_score": 7.422966067196086
+                }
+            }
+        }
+    },
+    {
+        "question_id": 32,
+        "evaluation": {
+            "_error": "JSON parse failed: Unterminated string starting at: line 66 column 21 (char 2092)",
+            "_raw_content_preview": "{\n  \"meta_data\": {\n    \"protocol_id\": \"MACS_spine_500um\",\n    \"sample_info\": \"Mouse brain slice, 500 μm, endogenous GFP\",\n    \"target_method\": \"MACS\"\n  },\n  \"scores\": {\n    \"completeness\": {\n      \"c_step\": {\n        \"score\": 2,\n        \"max_score\": 2,\n        \"description\": \"步骤模块完整性\",\n        \"reasoning\": \"方案包含了固定、透化/封闭、一抗二抗免疫标记、梯度透明化（MACS-R0/R1/R2）及成像前折射率匹配等所有必需模块，无缺失。\"\n      },\n      \"c_param\": {\n        \"score\": 3,\n        \"max_score\": 3,\n        \"description\": \"参数细节完整性\",\n        \"reasoning\": \"所有关键步骤均给出了明确的时间（如2 h、12 h、3×30 min）、温度（4℃、RT）和浓度（4% PFA，0.1-0.3% Triton X-100，5% NGS，1:500/1:800抗体，MXDA和山梨醇百分比），细节详实可重复。\"\n      },\n      \"total_weighted_score\": 5.0\n    },\n    \"correctness\": {\n      \"co_order\": {\n        \"score\": 3,\n        \"max_score\": 3,\n        \"description\": \"步骤顺序逻辑\",\n        \"reasoning\": \"流程严格符合MACS标准顺序：PFA后固定 → 清洗 → 封闭/透化 → 一抗 → 洗涤 → 二抗 → 洗涤 → 梯度透明化（R0→R1→R2）→ 折射率匹配平衡，无逻辑混乱或缺失过渡步骤。\"\n      },\n      \"co_method\": {\n        \"score\": 2,\n        \"max_score\": 2,\n        \"description\": \"方法-试剂一致性\",\n        \"reasoning\": \"采用MACS方法仅使用了其标准试剂MXDA和山梨醇的PBS溶液，未混用任何有机溶剂或其他不相容试剂。\"\n      },\n      \"co_param\": {\n        \"score\": 2,\n        \"max_score\": 2,\n        \"description\": \"参数范围物理合理性\",\n        \"reasoning\": \"500 μm脑切片采用每步2 h的梯度透明化共6 h，符合菲克扩散定律和文献经验值，整体可在1天内完成，时间参数合理。\"\n      },\n      \"co_chem\": {\n        \"score\": 1,\n        \"max_score\": 1,\n        \"description\": \"化学与安全常识\",\n        \"reasoning\": \"仅使用MACS标准试剂MXDA和山梨醇，未额外引入强酸、强碱或其他危险化学品，无可导致实际危险的操作。\"\n      },\n      \"critical_warnings\": [],\n      \"total_weighted_score\": 8.0\n    }\n  },\n  \"extraction\": {\n    \"marker_dict\": {\n      \"GFP\": \"endogenous pyramidal neurons\",\n      \"Alexa Fluor 647\": \"MAP2\"\n    },\n    \"clearing_total_time_hours\": 6.5,\n    \"method_name\": \"MACS\",\n    \"reagent_ri_value\": null,\n    \"sample_ri_value\": null,\n    \"protocol_time_hours\": [2, 8],\n    \"reasoning\": \"提取到内源GFP标记锥体神经元，Alexa Fluor 647标记MAP2；透明化核心步骤包括MACS-R0 2 h、R1 2 h、R2 2 h及最终平衡0.5 h，总耗时6.5 h。方法为MACS，方案未提供RI数值故reagent_ri和sample_ri均为null。根据文献，500 μ",
+            "_question_id": 32
+        }
+    },
+    {
+        "question_id": 35,
+        "evaluation": {
+            "meta_data": {
+                "protocol_id": 35,
+                "sample_info": "我需要对 E12.5 小鼠胚胎进行透明化处理，用于构建颅神经、脊神经和外周神经早期投射路径的三维图谱。样本为完整小鼠胚胎，大小约 8–10 mm，已完成固定和后固定。科学目标是在单个完整胚胎中连续追踪神经结构从头部、脑干和脊髓区域向外周组织延伸的路径，比较不同神经束的起始区域、走行方向、分支位置和终末覆盖范围，并通过双重神经结构信号提高早期发育阶段神经突起识别的可靠性。\n\n请根据该科学问题自行选择合适的双靶点荧光/标记策略，并匹配适合完整胚胎神经投射成像的组织透明方法。请仅输出 protocol，第 1 行写明所选双靶点荧光/标记策略和组织透明方法，随后仅列出透明处理、RI 匹配和保存/成像前处理步骤的关键试剂、条件和时间。",
+                "target_method": "Ce3D",
+                "generated_timestamp": "2025-12-15T00:00:00Z"
+            },
+            "scores": {
+                "completeness": {
+                    "c_step": {
+                        "score": 2,
+                        "max_score": 2,
+                        "description": "步骤模块完整性",
+                        "reasoning": "方案已包含免疫标记所需的全套步骤（封闭、一抗、清洗、二抗、清洗）以及Ce3D透明化的梯度处理（A1→A2→B）和折射率匹配，并给出了成像准备，模块完整无缺失。"
+                    },
+                    "c_param": {
+                        "score": 3,
+                        "max_score": 3,
+                        "description": "参数细节完整性",
+                        "reasoning": "所有步骤均提供了明确的时间、温度和试剂浓度（如封闭液成分、抗体稀释度、Ce3D各溶液浓度及孵育时长），细节详尽，达到发表级别。"
+                    },
+                    "total_weighted_score": 5.0
+                },
+                "correctness": {
+                    "co_order": {
+                        "score": 3,
+                        "max_score": 3,
+                        "description": "步骤顺序逻辑",
+                        "reasoning": "流程严格遵循先免疫标记后水性透明化的标准顺序，过渡平滑，无有机相/水相直接混合的错误。"
+                    },
+                    "co_method": {
+                        "score": 2,
+                        "max_score": 2,
+                        "description": "方法-试剂一致性",
+                        "reasoning": "使用的NMN、尿素、蔗糖、去氧胆酸钠及碘克沙醇均为Ce3D方法的标准试剂，未混用不相容的其他体系试剂。"
+                    },
+                    "co_param": {
+                        "score": 2,
+                        "max_score": 2,
+                        "description": "参数范围物理合理性",
+                        "reasoning": "8-10 mm胚胎的透明总时长约108小时，符合水性透明方法的扩散动力学经验值，无违反菲克定律的极端短时间段。"
+                    },
+                    "co_chem": {
+                        "score": 1,
+                        "max_score": 1,
+                        "description": "化学与安全常识",
+                        "reasoning": "所有试剂均为Ce3D常规组分，无额外引入危险化学品或危险操作，方案本身安全。"
+                    },
+                    "critical_warnings": [],
+                    "total_weighted_score": 8.0
+                },
+                "effectiveness": {
+                    "s_method": {
+                        "score": 1.6935,
+                        "max_score": 2.5,
+                        "description": "透明方法选择适配度",
+                        "reasoning": "Signed need-weighted method-fit [-2.5,+2.5] (F_fp xor P_dye x2; caps signed). Method: Ce3D"
+                    },
+                    "s_label": {
+                        "score": 3.0,
+                        "max_score": 6,
+                        "description": "标记与方法兼容性",
+                        "reasoning": "target_match=3.0, marker_fluor_compat=6.0, method_fluor_compat=5.4. marker_dict={'Alexa Fluor 488': 'β-III Tubulin (TUJ1)', 'Alexa Fluor 647': 'Sox10'}"
+                    },
+                    "s_trans": {
+                        "score": 2.7505660671960865,
+                        "max_score": 3,
+                        "description": "方法-组织 RI 域匹配度",
+                        "reasoning": "Method-tissue domain match. RI_tissue(question)=1.48, RI_method_ref(best-suited sample)=1.49, σ_RI=0.024, tier=T03_SMALL_WHOLE_SAMPLE_1_5MM, status=scored"
+                    },
+                    "s_time": {
+                        "score": 2.963132616455967e-266,
+                        "max_score": 3,
+                        "description": "时间效率评分",
+                        "reasoning": "Time deviation score. Act: 108.0, Ref Range: []"
+                    },
+                    "total_weighted_score": 7.444066067196086
+                }
+            }
+        }
+    },
+    {
+        "question_id": 28,
+        "evaluation": {
+            "_error": "Teacher returned empty content",
+            "_raw_content_preview": "",
+            "_question_id": 28
+        }
+    },
+    {
+        "question_id": 36,
+        "evaluation": {
+            "meta_data": {
+                "protocol_id": 36,
+                "sample_info": "我需要对小鼠胚胎进行透明化处理，用于观察胚胎发育过程中颅神经、脊神经和外周神经突起的三维投射路径。样本为 E12.5 小鼠胚胎，大小约 8–10 mm，已完成固定和后固定。科学目标是同时显示较成熟的神经束结构和早期神经元突起，以覆盖不同发育阶段的神经结构，重建神经纤维在头部、躯干和外周区域中的连续走行、分支模式和靶区覆盖范围。\n\n我的胚胎透明化实验失败了：处理后神经纤维标记很弱且背景很高。实验记录显示：荧光二抗孵育只在室温进行 24 h，洗涤步骤每步只有 10 min，并且没有进行漂白或降背景处理。请根据上述科学目标，在不引入给定标记物列表之外靶点或表外荧光团的前提下，重新选择或调整荧光/标记策略与组织透明方法，使其适合完整胚胎神经结构标记、低背景深层成像、神经束连续追踪和早期神经突起可视化。\n\n请仅输出修正后的 protocol，第 1 行写明应保留或更换的双靶点荧光/标记策略和组织透明方法，随后仅列出透明处理、RI 匹配和保存/成像前处理步骤的关键试剂、条件和时间。",
+                "target_method": "Ce3D",
+                "generated_timestamp": "2025-12-15T00:00:00Z"
+            },
+            "scores": {
+                "completeness": {
+                    "c_step": {
+                        "score": 2,
+                        "max_score": 2,
+                        "description": "步骤模块完整性",
+                        "reasoning": "方案包含了封闭、一抗孵育、洗涤、二抗孵育、洗涤、梯度透明和折射率匹配等所有关键模块，适用于已固定后胚胎的Ce3D处理，无缺失步骤。"
+                    },
+                    "c_param": {
+                        "score": 3,
+                        "max_score": 3,
+                        "description": "参数细节完整性",
+                        "reasoning": "所有步骤均标注了具体浓度（如抗体稀释度、Triton百分比、透明剂配方）、温度（RT, 4°C, 37°C）和时间（4h、5天、24h、48h等），细节达到发表级别。"
+                    },
+                    "total_weighted_score": 5.0
+                },
+                "correctness": {
+                    "co_order": {
+                        "score": 3,
+                        "max_score": 3,
+                        "description": "步骤顺序逻辑",
+                        "reasoning": "完全遵循Ce3D标准流程：先进行充分的免疫标记（封闭-一抗-洗涤-二抗-洗涤），再进行透明梯度处理，步骤衔接顺畅，无逻辑矛盾或跳跃。"
+                    },
+                    "co_method": {
+                        "score": 2,
+                        "max_score": 2,
+                        "description": "方法-试剂一致性",
+                        "reasoning": "所使用试剂（N-methylnicotinamide、尿素、蔗糖、碘克沙醇等）均为Ce3D方法的标准配方成分，未混入其他方法的异类试剂。"
+                    },
+                    "co_param": {
+                        "score": 2,
+                        "max_score": 2,
+                        "description": "参数范围物理合理性",
+                        "reasoning": "针对8-10 mm胚胎，抗体孵育各5天、透明阶段共96小时（加匹配2小时）符合菲克扩散定律，时间充裕且不会造成过度处理，参数合理。"
+                    },
+                    "co_chem": {
+                        "score": 1,
+                        "max_score": 1,
+                        "description": "化学与安全常识",
+                        "reasoning": "所用化学品均为常规试剂，无强酸、强碱、剧毒物质或危险操作，方案安全，无任何主动引入的危险。"
+                    },
+                    "critical_warnings": [],
+                    "total_weighted_score": 8.0
+                },
+                "effectiveness": {
+                    "s_method": {
+                        "score": 0.0,
+                        "max_score": 2.5,
+                        "description": "透明方法选择适配度",
+                        "reasoning": "Signed need-weighted method-fit [-2.5,+2.5] (F_fp xor P_dye x2; caps signed). Method: Ce3D"
+                    },
+                    "s_label": {
+                        "score": 0.0,
+                        "max_score": 6,
+                        "description": "标记与方法兼容性",
+                        "reasoning": "target_match=0.0, marker_fluor_compat=6.0, method_fluor_compat=5.4. marker_dict={'Alexa Fluor 488': 'TUJ1 (β-III Tubulin)', 'Alexa Fluor 647': 'PGP9.5'}"
+                    },
+                    "s_trans": {
+                        "score": 2.7505660671960865,
+                        "max_score": 3,
+                        "description": "方法-组织 RI 域匹配度",
+                        "reasoning": "Method-tissue domain match. RI_tissue(question)=1.48, RI_method_ref(best-suited sample)=1.49, σ_RI=0.024, tier=T03_SMALL_WHOLE_SAMPLE_1_5MM, status=scored"
+                    },
+                    "s_time": {
+                        "score": 1.0875410421963506e-206,
+                        "max_score": 3,
+                        "description": "时间效率评分",
+                        "reasoning": "Time deviation score. Act: 98.0, Ref Range: [72, 120]"
+                    },
+                    "total_weighted_score": 2.7505660671960865
+                }
+            }
+        }
+    },
+    {
+        "question_id": 37,
+        "evaluation": {
+            "meta_data": {
+                "protocol_id": 37,
+                "sample_info": "我需要对果蝇全脑进行透明化处理，用于观察神经回路中突触结构的三维分布。样本为包含角质层的果蝇头部或全脑样本，大小约 0.5 mm，已完成固定和后固定。科学目标是在果蝇脑尺度下显示突触前结构的空间分布，并区分突触活性区和突触囊泡相关区域，从而分析不同脑区和神经回路中突触密度、突触分布模式和局部突触功能域的空间组织。\n请根据该科学问题自行选择合适的双靶点荧光/标记策略，并基于所选标记样本选择匹配的组织透明方法。请仅输出 protocol，第 1 行写明所选双靶点荧光/标记策略和组织透明方法，随后仅列出透明处理、RI 匹配和保存/成像前处理步骤的关键试剂、条件和时间。",
+                "target_method": "FlyClear",
+                "generated_timestamp": "2025-12-15T00:00:00Z"
+            },
+            "scores": {
+                "completeness": {
+                    "c_step": {
+                        "score": 2,
+                        "max_score": 2,
+                        "description": "步骤模块完整性",
+                        "reasoning": "方案包含了免疫标记（封闭、一抗二抗、清洗）、梯度透明化（FlyClear溶液A/B/C）和折射率匹配成像准备等所有核心步骤。果蝇头部不含血红素且无需脱钙，封闭/洗涤液中已包含Triton透化，无关键模块缺失。"
+                    },
+                    "c_param": {
+                        "score": 3,
+                        "max_score": 3,
+                        "description": "参数细节完整性",
+                        "reasoning": "所有关键步骤均详细标注了时间（2小时、48小时、12小时等）、温度（RT或4°C）和浓度（果糖、α-硫代甘油、Triton X-100、抗体稀释度等），细节程度相当于论文补充材料，超过80%的参数明确。"
+                    },
+                    "total_weighted_score": 5.0
+                },
+                "correctness": {
+                    "co_order": {
+                        "score": 3,
+                        "max_score": 3,
+                        "description": "步骤顺序逻辑",
+                        "reasoning": "流程严格遵循水性透明化标准操作：免疫标记在前，然后梯度透明化（溶液A→B→C浓度递增），最后折射率匹配。全程为水相环境，无有机溶剂过渡需求，顺序完全正确。"
+                    },
+                    "co_method": {
+                        "score": 2,
+                        "max_score": 2,
+                        "description": "方法-试剂一致性",
+                        "reasoning": "所用试剂（果糖、α-硫代甘油、Tween-20）均为FlyClear方法的特征性水性透明成分，未混入任何有机溶剂或其他方法的试剂，完全一致。"
+                    },
+                    "co_param": {
+                        "score": 2,
+                        "max_score": 2,
+                        "description": "参数范围物理合理性",
+                        "reasoning": "对于0.5 mm的果蝇头部，各步12小时、RI匹配6小时的设置符合菲克扩散定律，且温育温度为室温，不存在因时间过短导致扩散不足或过度加热导致蛋白损伤的问题。"
+                    },
+                    "co_chem": {
+                        "score": 1,
+                        "max_score": 1,
+                        "description": "化学与安全常识",
+                        "reasoning": "方案仅使用FlyClear标准试剂（果糖、α-硫代甘油、PBS、Tween-20），未额外引入强酸、强碱、剧毒或易燃易爆化学品，亦无危险操作描述，化学安全性合格。"
+                    },
+                    "critical_warnings": [],
+                    "total_weighted_score": 8.0
+                },
+                "effectiveness": {
+                    "s_method": {
+                        "score": 0.5234,
+                        "max_score": 2.5,
+                        "description": "透明方法选择适配度",
+                        "reasoning": "Signed need-weighted method-fit [-2.5,+2.5] (F_fp xor P_dye x2; caps signed). Method: FlyClear"
+                    },
+                    "s_label": {
+                        "score": 6.0,
+                        "max_score": 6,
+                        "description": "标记与方法兼容性",
+                        "reasoning": "target_match=6.0, marker_fluor_compat=6.0, method_fluor_compat=6.0. marker_dict={'Alexa Fluor 647': 'Bruchpilot (BRP/nc82)', 'Alexa Fluor 488': 'Synapsin'}"
+                    },
+                    "s_trans": {
+                        "score": 0.0,
+                        "max_score": 3,
+                        "description": "方法-组织 RI 域匹配度",
+                        "reasoning": "Method-tissue domain match. RI_tissue(question)=1.45, RI_method_ref(best-suited sample)=1.45, σ_RI=0.015, tier=T03_SMALL_WHOLE_SAMPLE_1_5MM, status=out_of_method_range"
+                    },
+                    "s_time": {
+                        "score": 0.0,
+                        "max_score": 3,
+                        "description": "时间效率评分",
+                        "reasoning": "Time deviation score. Act: 42.0, Ref Range: [24, 72]"
+                    },
+                    "total_weighted_score": 6.5234
+                }
+            }
+        }
+    },
+    {
+        "question_id": 38,
+        "evaluation": {
+            "meta_data": {
+                "protocol_id": 38,
+                "sample_info": "我需要对果蝇全脑进行透明化处理，用于对神经回路中的突触前不同功能域进行双通道三维成像。样本为包含角质层的果蝇脑或头部样本，大小约 0.5 mm，已完成固定和后固定。科学目标是同时显示突触前活性区和突触囊泡相关区域，以区分同一神经回路内不同突触功能域的空间位置、密度和相互关系，并比较不同脑区中突触结构的组织方式。\n\n请根据该科学问题选择兼容的双靶点荧光/标记策略，并选择与这些信号兼容的组织透明方法。所选方案应适合小型昆虫脑组织、角质层背景处理、突触级结构保留、双通道免疫荧光成像和高分辨率三维分析。请仅输出 protocol，第 1 行写明所选双靶点荧光/标记策略和组织透明方法，随后仅列出透明处理、RI 匹配和保存/成像前处理步骤的关键试剂、条件和时间。",
+                "target_method": "FlyClear",
+                "generated_timestamp": "2025-12-15T00:00:00Z"
+            },
+            "scores": {
+                "completeness": {
+                    "c_step": {
+                        "score": 2,
+                        "max_score": 2,
+                        "description": "步骤模块完整性",
+                        "reasoning": "方案包含了封闭、一抗、洗涤、二抗、透明化梯度处理、折射率匹配及封片等全部必要的免疫标记和透明化模块，未缺失关键步骤。"
+                    },
+                    "c_param": {
+                        "score": 3,
+                        "max_score": 3,
+                        "description": "参数细节完整性",
+                        "reasoning": "所有步骤均详细标注了试剂浓度、孵育时间和温度，细节程度达到发表级补充材料水平。"
+                    },
+                    "total_weighted_score": 5.0
+                },
+                "correctness": {
+                    "co_order": {
+                        "score": 3,
+                        "max_score": 3,
+                        "description": "步骤顺序逻辑",
+                        "reasoning": "采用先免疫标记再水性透明化的顺序，完全符合FlyClear方法的标准操作流程，无逻辑矛盾。"
+                    },
+                    "co_method": {
+                        "score": 2,
+                        "max_score": 2,
+                        "description": "方法-试剂一致性",
+                        "reasoning": "所有透明化试剂均为果糖/α-硫代甘油体系，属于FlyClear标准成分，未混用有机溶剂或其他不兼容试剂。"
+                    },
+                    "co_param": {
+                        "score": 2,
+                        "max_score": 2,
+                        "description": "参数范围物理合理性",
+                        "reasoning": "0.5 mm果蝇脑在37°C下进行梯度透明化（每步24小时）以及抗体孵育时间均符合菲克扩散定律且与已发表数据一致。"
+                    },
+                    "co_chem": {
+                        "score": 1,
+                        "max_score": 1,
+                        "description": "化学与安全常识",
+                        "reasoning": "方案仅使用FlyClear的标准试剂，无额外危险化学品引入，无危险操作建议。"
+                    },
+                    "critical_warnings": [],
+                    "total_weighted_score": 8.0
+                },
+                "effectiveness": {
+                    "s_method": {
+                        "score": 0.4135,
+                        "max_score": 2.5,
+                        "description": "透明方法选择适配度",
+                        "reasoning": "Signed need-weighted method-fit [-2.5,+2.5] (F_fp xor P_dye x2; caps signed). Method: FlyClear"
+                    },
+                    "s_label": {
+                        "score": 6.0,
+                        "max_score": 6,
+                        "description": "标记与方法兼容性",
+                        "reasoning": "target_match=6.0, marker_fluor_compat=6.0, method_fluor_compat=6.0. marker_dict={'Alexa Fluor 488': 'Bruchpilot', 'Alexa Fluor 568': 'Synapsin'}"
+                    },
+                    "s_trans": {
+                        "score": 0.0,
+                        "max_score": 3,
+                        "description": "方法-组织 RI 域匹配度",
+                        "reasoning": "Method-tissue domain match. RI_tissue(question)=1.45, RI_method_ref(best-suited sample)=1.45, σ_RI=0.015, tier=T03_SMALL_WHOLE_SAMPLE_1_5MM, status=out_of_method_range"
+                    },
+                    "s_time": {
+                        "score": 0.0,
+                        "max_score": 3,
+                        "description": "时间效率评分",
+                        "reasoning": "Time deviation score. Act: 74.0, Ref Range: [72, 96]"
+                    },
+                    "total_weighted_score": 6.4135
+                }
+            }
+        }
+    },
+    {
+        "question_id": 34,
+        "evaluation": {
+            "_error": "JSON parse failed: Expecting property name enclosed in double quotes: line 64 column 31 (char 1926)",
+            "_raw_content_preview": "{\n  \"meta_data\": {\n    \"protocol_id\": \"fdisco_embryo_dual_neurotubulin_neurofilament_001\",\n    \"sample_info\": \"E12.5 mouse embryo, 8-10 mm, post-fixed\",\n    \"target_method\": \"FDISCO\"\n  },\n  \"scores\": {\n    \"completeness\": {\n      \"c_step\": {\n        \"score\": 2,\n        \"max_score\": 2,\n        \"description\": \"步骤模块完整性\",\n        \"reasoning\": \"方案包含了抗体标记、梯度脱水、脱色漂白、脱脂及ECi折射率匹配等FDISCO所有核心模块，且考虑了可选的复水再脱水步骤。\"\n      },\n      \"c_param\": {\n        \"score\": 3,\n        \"max_score\": 3,\n        \"description\": \"参数细节完整性\",\n        \"reasoning\": \"所有步骤均标明了浓度（如甲醇20-100%, 5% H2O2）、时间（精确到小时或天）、温度（RT或4°C），细节充分类似期刊附录。\"\n      },\n      \"total_weighted_score\": 5.0,\n      \"comment\": \"完整性优秀，关键参数齐全。\"\n    },\n    \"correctness\": {\n      \"co_order\": {\n        \"score\": 1,\n        \"max_score\": 3,\n        \"description\": \"步骤顺序逻辑\",\n        \"reasoning\": \"总体顺序符合FDISCO的染色→脱水→脱脂→匹配流程，但致命的错误是在免疫荧光标记后引入H2O2/甲醇氧化漂白步骤（步骤3.1），该操作会严重淬灭Alexa Fluor染料，导致信号丢失，应放在染色前或使用非氧化脱色方法。\"\n      },\n      \"co_method\": {\n        \"score\": 2,\n        \"max_score\": 2,\n        \"description\": \"方法-试剂一致性\",\n        \"reasoning\": \"所用试剂（甲醇、DCM、ECi）完全属于FDISCO标准体系，未混用水性透明化试剂。\"\n      },\n      \"co_param\": {\n        \"score\": 2,\n        \"max_score\": 2,\n        \"description\": \"参数范围物理合理性\",\n        \"reasoning\": \"处理时间（脱水各步1h，DCM 1.5h，ECi 4h）对8-10mm胚胎尺寸符合菲克扩散定律，无违反物理常识。\"\n      },\n      \"co_chem\": {\n        \"score\": 1,\n        \"max_score\": 1,\n        \"description\": \"化学与安全常识\",\n        \"reasoning\": \"试剂均为FDISCO标准组分，未引入额外危险化学品或操作。\"\n      },\n      \"critical_warnings\": [\n        \"抗体标记后使用H2O2漂白会严重破坏Alexa Fluor荧光信号，导致实验失败。建议去除或调整至免疫标记前进行。\"\n      ],\n      \"total_weighted_score\": 6.0,\n      \"comment\": \"存在染色后氧化漂白的严重顺序错误，可能导致信号淬灭。\"\n    },\n    \"overall_score\": 85\n  },\n  \"extraction\": {\n    \"marker_dict\": {\n      \"Alexa Fluor 488\": \"β-III Tubulin (TUJ1)\",\n      \"Alexa Fluor 647\": \"Neurofilament\"\n    },\n    \"clearing_total_time_hours\": 18.5,\n    \"method_name\": \"FDISCO\",\n    \"reagent_ri_value\": 1.558,",
+            "_question_id": 34
+        }
+    },
+    {
+        "question_id": 39,
+        "evaluation": {
+            "meta_data": {
+                "protocol_id": 39,
+                "sample_info": "我需要对果蝇全脑进行透明化处理，用于构建神经回路中突触结构和突触功能域的三维图谱。样本为包含角质层的果蝇脑或头部样本，大小约 0.5 mm，已完成固定和后固定。科学目标是在完整果蝇脑中定位突触前结构，比较不同脑区和回路节点中突触密度、突触簇大小、突触分布模式以及活性区和囊泡相关区域之间的空间对应关系，从而为神经回路连接和突触组织分析提供三维结构依据。\n\n请根据该科学问题自行选择合适的双靶点荧光/标记策略，并匹配适合果蝇脑突触结构成像的组织透明方法。请仅输出 protocol，第 1 行写明所选双靶点荧光/标记策略和组织透明方法，随后仅列出透明处理、RI 匹配和保存/成像前处理步骤的关键试剂、条件和时间。",
+                "target_method": "FlyClear",
+                "generated_timestamp": "2025-12-15T00:00:00Z"
+            },
+            "scores": {
+                "completeness": {
+                    "c_step": {
+                        "score": 2,
+                        "max_score": 2,
+                        "description": "步骤模块完整性",
+                        "reasoning": "方案包含了免疫标记所需的封闭、一抗、二抗和清洗步骤，以及FlyClear透明化的梯度孵育和成像准备，所有核心模块齐全，未遗漏关键步骤。"
+                    },
+                    "c_param": {
+                        "score": 3,
+                        "max_score": 3,
+                        "description": "参数细节完整性",
+                        "reasoning": "所有步骤均详细标注了时间（孵育48h、清洗24h、梯度12h等）、温度（4℃、RT）和试剂浓度（抗体稀释度、Triton X-100比例、果糖/α-硫代甘油浓度），达到文献附录级细节。"
+                    },
+                    "total_weighted_score": 5.0
+                },
+                "correctness": {
+                    "co_order": {
+                        "score": 3,
+                        "max_score": 3,
+                        "description": "步骤顺序逻辑",
+                        "reasoning": "完全符合水性透明方法的通用流程：免疫标记后直接进入梯度透明化，没有不合理的水-有机相切换，顺序正确。"
+                    },
+                    "co_method": {
+                        "score": 2,
+                        "max_score": 2,
+                        "description": "方法-试剂一致性",
+                        "reasoning": "所有透明化试剂均为FlyClear特有的果糖/α-硫代甘油高浓度溶液，未混用其他体系的有机溶剂或无关试剂。"
+                    },
+                    "co_param": {
+                        "score": 2,
+                        "max_score": 2,
+                        "description": "参数范围物理合理性",
+                        "reasoning": "针对0.5 mm果蝇头部样本，总透明化时间42小时（梯度+RI匹配）在扩散定律允许范围内，时间充足但不过度，无物理谬误。"
+                    },
+                    "co_chem": {
+                        "score": 1,
+                        "max_score": 1,
+                        "description": "化学与安全常识",
+                        "reasoning": "所用试剂均为FlyClear标准成分（果糖、α-硫代甘油、PB缓冲液），无额外危险化学品引入，无危险操作描述。"
+                    },
+                    "critical_warnings": [],
+                    "total_weighted_score": 8.0
+                },
+                "effectiveness": {
+                    "s_method": {
+                        "score": 0.0,
+                        "max_score": 2.5,
+                        "description": "透明方法选择适配度",
+                        "reasoning": "Signed need-weighted method-fit [-2.5,+2.5] (F_fp xor P_dye x2; caps signed). Method: FlyClear"
+                    },
+                    "s_label": {
+                        "score": 6.0,
+                        "max_score": 6,
+                        "description": "标记与方法兼容性",
+                        "reasoning": "target_match=6.0, marker_fluor_compat=6.0, method_fluor_compat=6.0. marker_dict={'Alexa Fluor 488': 'Bruchpilot (BRP/nc82)', 'Alexa Fluor 568': 'Synapsin'}"
+                    },
+                    "s_trans": {
+                        "score": 0.0,
+                        "max_score": 3,
+                        "description": "方法-组织 RI 域匹配度",
+                        "reasoning": "Method-tissue domain match. RI_tissue(question)=1.45, RI_method_ref(best-suited sample)=1.45, σ_RI=0.015, tier=T03_SMALL_WHOLE_SAMPLE_1_5MM, status=out_of_method_range"
+                    },
+                    "s_time": {
+                        "score": 0.0,
+                        "max_score": 3,
+                        "description": "时间效率评分",
+                        "reasoning": "Time deviation score. Act: 42.0, Ref Range: []"
+                    },
+                    "total_weighted_score": 6.0
+                }
+            }
+        }
+    },
+    {
+        "question_id": 40,
+        "evaluation": {
+            "_error": "JSON parse failed: Unterminated string starting at: line 13 column 22 (char 404)",
+            "_raw_content_preview": "{\n  \"meta_data\": {\n    \"protocol_id\": \"model_protocol_eval_20250321\",\n    \"sample_info\": \"Whole Drosophila brain/head with cuticle, ~0.5 mm, Bouin's fixed, post-fixed, needs cuticle clearing and synaptic imaging\",\n    \"target_method\": \"FlyClear\"\n  },\n  \"scores\": {\n    \"completeness\": {\n      \"c_step\": {\n        \"score\": 2,\n        \"max_score\": 2,\n        \"description\": \"步骤模块完整性\",\n        \"reasoning\": \"方案包含了所有关键模块：从甲醇复水、角质层专用",
+            "_question_id": 40
+        }
+    },
+    {
+        "question_id": 41,
+        "evaluation": {
+            "meta_data": {
+                "protocol_id": 41,
+                "sample_info": "我需要对出生后 P7 小鼠颅骨缝区域进行透明化处理，用于观察颅骨缝处成骨谱系细胞的三维空间分布。样本为包含颅骨缝及邻近颅骨板的硬组织块，大小约 5 mm × 5 mm × 2 mm，已完成固定和后固定。科学目标是在颅骨缝区域中区分成骨谱系不同分化阶段的细胞群体，观察其在骨缝边缘、骨化前沿和邻近骨板中的空间位置、密度变化和排列模式，并用于分析出生后颅骨生长和骨缝闭合过程中的成骨细胞组织结构。\n\n请根据该科学问题自行选择合适的双靶点荧光/标记策略，并基于所选标记样本选择匹配的组织透明方法。请仅输出 protocol，第 1 行写明所选双靶点荧光/标记策略和组织透明方法，随后仅列出透明处理、RI 匹配和保存/成像前处理步骤的关键试剂、条件和时间。",
+                "target_method": "FDISCO",
+                "generated_timestamp": "2025-12-15T00:00:00Z"
+            },
+            "scores": {
+                "completeness": {
+                    "c_step": {
+                        "score": 2,
+                        "max_score": 2,
+                        "description": "步骤模块完整性",
+                        "reasoning": "方案覆盖了骨骼样本透明化的所有必需模块：脱水、脱色（过氧化氢漂白）、透化、免疫标记、梯度再脱水、二氯甲烷脱脂、BABB折射率匹配以及成像前的密封保存，未遗漏关键步骤。"
+                    },
+                    "c_param": {
+                        "score": 3,
+                        "max_score": 3,
+                        "description": "参数细节完整性",
+                        "reasoning": "每个步骤均给出了精确的温度（RT、4°C、37°C）、时间（小时/天）和试剂浓度（如甲醇体积分数、Triton X-100百分比、抗体稀释比、DAPI浓度），细节达到正式实验记录水平。"
+                    },
+                    "total_weighted_score": 5.0
+                },
+                "correctness": {
+                    "co_order": {
+                        "score": 3,
+                        "max_score": 3,
+                        "description": "步骤顺序逻辑",
+                        "reasoning": "完全遵循有机溶剂透明方法的经典流程：脱水→漂白→复水→免疫标记→再脱水→脱脂→折射率匹配，水相与有机相之间均设置了梯度过渡，无直接混溶的致命错误。"
+                    },
+                    "co_method": {
+                        "score": 2,
+                        "max_score": 2,
+                        "description": "方法-试剂一致性",
+                        "reasoning": "所有透明化核心试剂（甲醇、DCM、BABB）均属于有机溶剂体系，无水性方法试剂混用，且免疫标记在水相中进行，符合FDISCO的技术路径。"
+                    },
+                    "co_param": {
+                        "score": 2,
+                        "max_score": 2,
+                        "description": "参数范围物理合理性",
+                        "reasoning": "2mm厚度的骨块，脱水每步1小时、DCM脱脂各30分钟、BABB匹配各2小时均处于合理扩散时间范围；抗体孵育48小时（37°C）也符合深层渗透需求，无违反菲克定律的极端时间。"
+                    },
+                    "co_chem": {
+                        "score": 1,
+                        "max_score": 1,
+                        "description": "化学与安全常识",
+                        "reasoning": "所用试剂（甲醇、5%过氧化氢、DCM、BABB）均为本方法标准化学品，未主动引入强酸/强碱/剧毒物等额外危险；未描述在密闭容器中加热易燃溶剂等危险操作。"
+                    },
+                    "critical_warnings": [],
+                    "total_weighted_score": 8.0
+                },
+                "effectiveness": {
+                    "s_method": {
+                        "score": 1.1167,
+                        "max_score": 2.5,
+                        "description": "透明方法选择适配度",
+                        "reasoning": "Signed need-weighted method-fit [-2.5,+2.5] (F_fp xor P_dye x2; caps signed). Method: FDISCO"
+                    },
+                    "s_label": {
+                        "score": 4.199999999999999,
+                        "max_score": 6,
+                        "description": "标记与方法兼容性",
+                        "reasoning": "target_match=6.0, marker_fluor_compat=6.0, method_fluor_compat=4.2. marker_dict={'Alexa Fluor 488': 'Osx', 'Alexa Fluor 568': 'Osteocalcin', 'DAPI': ''}"
+                    },
+                    "s_trans": {
+                        "score": 0.03332698961472665,
+                        "max_score": 3,
+                        "description": "方法-组织 RI 域匹配度",
+                        "reasoning": "Method-tissue domain match. RI_tissue(question)=1.56, RI_method_ref(best-suited sample)=1.47, σ_RI=0.03, tier=T07_HARD_TISSUE_BONE_TOOTH_COCHLEA, status=scored"
+                    },
+                    "s_time": {
+                        "score": 0.0,
+                        "max_score": 3,
+                        "description": "时间效率评分",
+                        "reasoning": "Time deviation score. Act: 17.0, Ref Range: [10, 24]"
+                    },
+                    "total_weighted_score": 5.350026989614726
+                }
+            }
+        }
+    },
+    {
+        "question_id": 43,
+        "evaluation": {
+            "meta_data": {
+                "protocol_id": 43,
+                "sample_info": "我需要对出生后 P7 小鼠颅骨缝区域进行透明化处理，用于研究骨缝区域成骨谱系细胞与局部组织生长微环境的三维空间关系。样本为包含颅骨缝及邻近颅骨板的硬组织块，大小约 5 mm × 5 mm × 2 mm，已完成固定和后固定。科学目标是区分成骨谱系不同分化阶段的细胞群体，观察早期成骨相关细胞和成熟成骨细胞在骨缝中央、骨化前沿和骨板边缘的分布，并结合颅骨缝区域组织结构分析出生后骨形成、骨缝维持和局部血管生成相关空间模式。\n\n请根据该科学问题自行选择合适的双靶点荧光/标记策略，并匹配适合小鼠颅骨缝硬组织成像的组织透明方法。请仅输出 protocol，第 1 行写明所选双靶点荧光/标记策略和组织透明方法，随后仅列出透明处理、RI 匹配和保存/成像前处理步骤的关键试剂、条件和时间。",
+                "target_method": "FDISCO",
+                "generated_timestamp": "2025-12-15T00:00:00Z"
+            },
+            "scores": {
+                "completeness": {
+                    "c_step": {
+                        "score": 1,
+                        "max_score": 2,
+                        "description": "步骤模块完整性",
+                        "reasoning": "核心流程（脱水、漂白、复水、透化、封闭、免疫标记、脱水、透明化和RI匹配）齐全，但成像准备步骤缺少必要的密封或防挥发措施（DBE直接暴露在空气中易吸水变浑浊），视为微小瑕疵。骨骼样本根据FDISCO文献可无需脱钙，因此不扣分。"
+                    },
+                    "c_param": {
+                        "score": 3,
+                        "max_score": 3,
+                        "description": "参数细节完整性",
+                        "reasoning": "所有步骤均给出了明确的时间、温度和试剂浓度，参数极其详细，如同标准操作附录。"
+                    },
+                    "total_weighted_score": 4.0
+                },
+                "correctness": {
+                    "co_order": {
+                        "score": 3,
+                        "max_score": 3,
+                        "description": "步骤顺序逻辑",
+                        "reasoning": "完全符合FDISCO/iDISCO+的经典“三明治”结构：脱水→漂白→复水→透化→封闭→一抗→清洗→二抗→再脱水→脱脂→RI匹配，流程无逻辑错误。"
+                    },
+                    "co_method": {
+                        "score": 2,
+                        "max_score": 2,
+                        "description": "方法-试剂一致性",
+                        "reasoning": "使用的甲醇、H2O2/甲醇、DCM/己烷、DBE均为FDISCO专用试剂，无混用其他澄清方法试剂。"
+                    },
+                    "co_param": {
+                        "score": 2,
+                        "max_score": 2,
+                        "description": "参数范围物理合理性",
+                        "reasoning": "对于2 mm厚的硬组织，脱水每步0.5–1 h、漂白12 h、复水0.5 h/步、透化/封闭/抗体孵育天数、再次脱水和DCM/DBE的时长均符合菲克扩散定律与经验值。"
+                    },
+                    "co_chem": {
+                        "score": 1,
+                        "max_score": 1,
+                        "description": "化学与安全常识",
+                        "reasoning": "方案仅使用FDISCO标准试剂（甲醇、H2O2、DCM、DBE），未引入额外危险品。DCM未在密闭容器中加热，甲醇/H2O2混合在4°C低温进行，属安全操作。"
+                    },
+                    "critical_warnings": [],
+                    "total_weighted_score": 8.0
+                },
+                "effectiveness": {
+                    "s_method": {
+                        "score": 1.3357,
+                        "max_score": 2.5,
+                        "description": "透明方法选择适配度",
+                        "reasoning": "Signed need-weighted method-fit [-2.5,+2.5] (F_fp xor P_dye x2; caps signed). Method: FDISCO"
+                    },
+                    "s_label": {
+                        "score": 4.5,
+                        "max_score": 6,
+                        "description": "标记与方法兼容性",
+                        "reasoning": "target_match=6.0, marker_fluor_compat=6.0, method_fluor_compat=4.5. marker_dict={'Alexa Fluor 488': 'Osx (Osterix)', 'Alexa Fluor 647': 'Osteocalcin'}"
+                    },
+                    "s_trans": {
+                        "score": 0.03332698961472665,
+                        "max_score": 3,
+                        "description": "方法-组织 RI 域匹配度",
+                        "reasoning": "Method-tissue domain match. RI_tissue(question)=1.56, RI_method_ref(best-suited sample)=1.47, σ_RI=0.03, tier=T07_HARD_TISSUE_BONE_TOOTH_COCHLEA, status=scored"
+                    },
+                    "s_time": {
+                        "score": 0.0,
+                        "max_score": 3,
+                        "description": "时间效率评分",
+                        "reasoning": "Time deviation score. Act: 19.5, Ref Range: [18, 24]"
+                    },
+                    "total_weighted_score": 5.869026989614727
+                }
+            }
+        }
+    },
+    {
+        "question_id": 42,
+        "evaluation": {
+            "meta_data": {
+                "protocol_id": 42,
+                "sample_info": "我需要对出生后 P7 小鼠颅骨缝区域进行透明化处理，用于比较成骨谱系细胞在不同分化阶段的三维分布。样本为包含颅骨缝、骨化前沿和邻近颅骨板的硬组织块，大小约 5 mm × 5 mm × 2 mm，已完成固定和后固定。科学目标是区分较早期成骨祖细胞和较成熟成骨细胞，比较它们在颅骨缝中央间充质区、骨缝边缘、骨化前沿和矿化骨板附近的空间分布差异，以分析出生后颅骨缝维持、骨形成和骨缝闭合相关的细胞组织模式。\n\n请根据该科学问题选择兼容的双靶点荧光/标记策略，并选择与这些信号兼容的组织透明方法。所选方案应适合 P7 小鼠颅骨硬组织、成骨细胞免疫标记、骨组织自发荧光控制、低形变三维成像和成骨谱系空间分析。请仅输出 protocol，第 1 行写明所选双靶点荧光/标记策略和组织透明方法，随后仅列出透明处理、RI 匹配和保存/成像前处理步骤的关键试剂、条件和时间。",
+                "target_method": "FDISCO",
+                "generated_timestamp": "2025-12-15T00:00:00Z"
+            },
+            "scores": {
+                "completeness": {
+                    "c_step": {
+                        "score": 0,
+                        "max_score": 2,
+                        "description": "步骤模块完整性",
+                        "reasoning": "骨骼硬组织透明化必需脱钙步骤，但该方案完全没有包含脱钙模块，缺失关键功能模块，将导致矿物散射严重，无法实现有效透明化与深层成像。"
+                    },
+                    "c_param": {
+                        "score": 3,
+                        "max_score": 3,
+                        "description": "参数细节完整性",
+                        "reasoning": "各步骤均给出了明确的时间（小时）、温度（RT、37℃、4℃）和浓度（甲醇梯度、H₂O₂ 5%、Triton X-100 0.5%/0.2%、抗体稀释度等），参数详细，可直接执行。"
+                    },
+                    "total_weighted_score": 3.0,
+                    "critical_warnings": [
+                        "严重缺失：未包含脱钙步骤，骨骼样本将无法透明化，实验失败。"
+                    ]
+                },
+                "correctness": {
+                    "co_order": {
+                        "score": 3,
+                        "max_score": 3,
+                        "description": "步骤顺序逻辑",
+                        "reasoning": "顺序完全符合iDISCO/FDISCO标准三明治结构：脱水→漂白（可选）→复水→免疫染色→再次脱水→DCM脱脂→BABB折射率匹配，逻辑连贯无冲突。"
+                    },
+                    "co_method": {
+                        "score": 2,
+                        "max_score": 2,
+                        "description": "方法-试剂一致性",
+                        "reasoning": "使用的试剂（甲醇、DCM、BABB、H₂O₂漂白）均为FDISCO/有机溶剂透明化体系的标准组分，未混用水性透明化试剂。"
+                    },
+                    "co_param": {
+                        "score": 2,
+                        "max_score": 2,
+                        "description": "参数范围物理合理性",
+                        "reasoning": "针对2 mm厚样本，脱水、脱脂（DCM 30 min×2）、BABB匹配时间的设定符合菲克扩散经验值，未出现明显不合理的时间（如全脑仅1 h脱脂）。"
+                    },
+                    "co_chem": {
+                        "score": 1,
+                        "max_score": 1,
+                        "description": "化学与安全常识",
+                        "reasoning": "仅使用了该方案固有的化学品（H₂O₂漂白为骨自发荧光控制的常规操作），未引入额外危险药品或危险操作（如密封加热DCM），方案本身不主动引入危险。"
+                    },
+                    "critical_warnings": [
+                        "关键提示：骨骼样本未脱钙将导致组织无法达到理想RI匹配，成像深度和信号质量极低，建议补充EDTA脱钙步骤。"
+                    ],
+                    "total_weighted_score": 8.0
+                },
+                "effectiveness": {
+                    "s_method": {
+                        "score": 0.9868,
+                        "max_score": 2.5,
+                        "description": "透明方法选择适配度",
+                        "reasoning": "Signed need-weighted method-fit [-2.5,+2.5] (F_fp xor P_dye x2; caps signed). Method: FDISCO"
+                    },
+                    "s_label": {
+                        "score": 4.199999999999999,
+                        "max_score": 6,
+                        "description": "标记与方法兼容性",
+                        "reasoning": "target_match=6.0, marker_fluor_compat=6.0, method_fluor_compat=4.2. marker_dict={'Alexa Fluor 488': 'Osx (Osterix)', 'Alexa Fluor 568': 'Osteocalcin', 'TO-PRO-3': ''}"
+                    },
+                    "s_trans": {
+                        "score": 0.03332698961472665,
+                        "max_score": 3,
+                        "description": "方法-组织 RI 域匹配度",
+                        "reasoning": "Method-tissue domain match. RI_tissue(question)=1.56, RI_method_ref(best-suited sample)=1.47, σ_RI=0.03, tier=T07_HARD_TISSUE_BONE_TOOTH_COCHLEA, status=scored"
+                    },
+                    "s_time": {
+                        "score": 0.0,
+                        "max_score": 3,
+                        "description": "时间效率评分",
+                        "reasoning": "Time deviation score. Act: 15.0, Ref Range: [48, 72]"
+                    },
+                    "total_weighted_score": 5.220126989614726
+                }
+            }
+        }
+    },
+    {
+        "question_id": 44,
+        "evaluation": {
+            "_error": "Teacher returned empty content",
+            "_raw_content_preview": "",
+            "_question_id": 44
+        }
+    },
+    {
+        "question_id": 45,
+        "evaluation": {
+            "meta_data": {
+                "protocol_id": 45,
+                "sample_info": "我需要对完整小鼠股骨进行透明化处理，用于研究骨髓造血干细胞微环境中交感神经纤维、血管结构及其周围基质成分的三维空间关系。样本为完整小鼠股骨，长度约 15 mm，已完成固定和后固定。科学目标是在完整骨髓腔尺度下观察交感神经纤维在骨髓中的走行、分支和密度分布，并同时显示骨髓血管或血管周围结构，以分析神经纤维与血管龛、骨髓腔不同区域以及潜在造血干细胞微环境之间的空间邻近关系。\n\n请根据该科学问题自行选择合适的双靶点荧光/标记策略，并基于所选标记样本选择匹配的组织透明方法。请仅输出 protocol，第 1 行写明所选双靶点荧光/标记策略和组织透明方法，随后仅列出透明处理、RI 匹配和保存/成像前处理步骤的关键试剂、条件和时间。",
+                "target_method": "FDISCO",
+                "generated_timestamp": "2025-12-15T00:00:00Z"
+            },
+            "scores": {
+                "completeness": {
+                    "c_step": {
+                        "score": 0,
+                        "max_score": 2,
+                        "description": "步骤模块完整性",
+                        "reasoning": "方案缺失针对完整骨骼（硬组织）必不可少的脱钙步骤。FDISCO/溶剂透明化方法处理矿化骨时，若不预先脱钙（如EDTA脱钙），矿物质会严重阻碍光穿透和抗体渗透，导致实验失败。因此关键模块缺失，方案不可用。"
+                    },
+                    "c_param": {
+                        "score": 3,
+                        "max_score": 3,
+                        "description": "参数细节完整性",
+                        "reasoning": "所有关键步骤均给出了具体的时间（小时）、温度（RT、4°C、37°C）、浓度（甲醇梯度20-100%、H2O2 5%、Triton 0.2%、血清10%、叠氮化钠0.5%、抗体稀释度等），细节完整，接近正式发表的水平。"
+                    },
+                    "total_weighted_score": 3.0
+                },
+                "correctness": {
+                    "co_order": {
+                        "score": 3,
+                        "max_score": 3,
+                        "description": "步骤顺序逻辑",
+                        "reasoning": "流程完全符合iDISCO+/FDISCO的标准“三明治”结构：脱水→漂白→复水→免疫标记→再脱水→脱脂→折射率匹配。逻辑严谨，过渡步骤齐全。"
+                    },
+                    "co_method": {
+                        "score": 2,
+                        "max_score": 2,
+                        "description": "方法-试剂一致性",
+                        "reasoning": "所有试剂（甲醇梯度、DCM、DBE）均属于FDISCO经典体系，未混用不相容的水性/有机溶剂。"
+                    },
+                    "co_param": {
+                        "score": 0,
+                        "max_score": 2,
+                        "description": "参数范围物理合理性",
+                        "reasoning": "对于完整未脱钙的矿化小鼠股骨（长度15 mm，皮质骨致密），抗体和溶剂难以渗透。方案中72小时一抗孵育、48小时二抗孵育以及总脱脂+透明化仅17.5小时的时间，远远不足以实现深层标记和透明化，严重违反扩散定律和物理常识。"
+                    },
+                    "co_chem": {
+                        "score": 1,
+                        "max_score": 1,
+                        "description": "化学与安全常识",
+                        "reasoning": "所使用的DCM、DBE、甲醇、H2O2等均为FDISCO标准试剂，叠氮化钠浓度低，没有引入额外的危险化学品或操作，方案本身安全。"
+                    },
+                    "critical_warnings": [],
+                    "total_weighted_score": 6.0
+                },
+                "effectiveness": {
+                    "s_method": {
+                        "score": 1.7667,
+                        "max_score": 2.5,
+                        "description": "透明方法选择适配度",
+                        "reasoning": "Signed need-weighted method-fit [-2.5,+2.5] (F_fp xor P_dye x2; caps signed). Method: FDISCO"
+                    },
+                    "s_label": {
+                        "score": 4.5,
+                        "max_score": 6,
+                        "description": "标记与方法兼容性",
+                        "reasoning": "target_match=6.0, marker_fluor_compat=6.0, method_fluor_compat=4.5. marker_dict={'Alexa Fluor 488': 'tyrosine hydroxylase (TH)', 'Alexa Fluor 647': 'CD31'}"
+                    },
+                    "s_trans": {
+                        "score": 0.03332698961472665,
+                        "max_score": 3,
+                        "description": "方法-组织 RI 域匹配度",
+                        "reasoning": "Method-tissue domain match. RI_tissue(question)=1.56, RI_method_ref(best-suited sample)=1.47, σ_RI=0.03, tier=T07_HARD_TISSUE_BONE_TOOTH_COCHLEA, status=scored"
+                    },
+                    "s_time": {
+                        "score": 0.0,
+                        "max_score": 3,
+                        "description": "时间效率评分",
+                        "reasoning": "Time deviation score. Act: 17.5, Ref Range: []"
+                    },
+                    "total_weighted_score": 6.300026989614727
+                }
+            }
+        }
+    },
+    {
+        "question_id": 46,
+        "evaluation": {
+            "_error": "JSON parse failed: Expecting value: line 34 column 21 (char 983)",
+            "_raw_content_preview": "{\n  \"meta_data\": {\n    \"protocol_id\": \"\",\n    \"sample_info\": \"Intact mouse femur, ~15 mm, TH+CD31 labeling\",\n    \"target_method\": \"FDISCO\"\n  },\n  \"overall_score\": 91,\n  \"comments\": {\n    \"completeness\": \"方案缺少骨骼透明必需的脱钙模块，且未提及成像前密封/封片步骤，严重影响可行性；但参数细节非常详尽。\",\n    \"correctness\": \"步骤顺序、试剂选用、参数范围和安全均无错误，完全符合FDISCO方法的标准流程。\"\n  },\n  \"scores\": {\n    \"completeness\": {\n      \"c_step\": {\n        \"score\": 1,\n        \"max_score\": 2,\n        \"description\": \"步骤模块完整性\",\n        \"reasoning\": \"方案包含了脱水、脱脂、折射率匹配、免疫染色等核心模块，但缺失骨骼透明必需的脱钙步骤，且有机溶剂法必需的后处理（封片/密封）未提及，可能影响成像稳定性。\"\n      },\n      \"c_param\": {\n        \"score\": 3,\n        \"max_score\": 3,\n        \"description\": \"参数细节完整性\",\n        \"reasoning\": \"所有步骤均给出了具体的时间、温度和浓度（如梯度甲醇、抗体稀释比、孵育时间），参数详尽，符合发表标准。\"\n      },\n      \"correctness_critical_warnings\": [\n        \"缺失脱钙步骤：完整小鼠股骨为硬组织，未进行脱钙（如EDTA）会导致矿物质残留，严重阻碍光穿透，无法实现深层透明化。\"\n      ],\n      \"total_weighted_score\": 4.0\n    },\n    \"correctness\": {\n      \"co_order\": {\n        \"score\": 3,\n        \"max_score\":",
+            "_question_id": 46
+        }
+    },
+    {
+        "question_id": 48,
+        "evaluation": {
+            "meta_data": {
+                "protocol_id": 48,
+                "sample_info": "我需要对完整小鼠股骨进行透明化处理，用于研究骨髓造血干细胞微环境中交感神经纤维、血管网络及血管周围结构的三维空间关系。样本为完整股骨，长度约 15 mm，已完成固定和后固定。科学目标是在完整骨髓腔尺度下同时观察交感神经纤维和血管/血管周围结构，分析它们在骨髓中央区、骨内膜区域和干骺端区域中的空间分布、距离关系、局部富集和潜在龛结构组织方式。\n\n我在进行小鼠股骨骨髓透明化实验时遇到问题：组织在叔丁醇梯度 70% 步骤后变得非常脆，后续操作中容易碎裂，导致完整股骨结构和骨髓腔空间连续性被破坏。此前流程为固定和免疫标记后，直接按照 BoneClear protocol 进行处理。请根据上述科学目标，在不引入给定标记物列表之外靶点或表外荧光团的前提下，重新选择或调整荧光/标记策略与组织透明方法，使其适合完整股骨硬组织透明化、骨髓腔结构保留、交感神经纤维和血管/周细胞结构双信号检测，以及低脆裂风险的三维成像。\n\n请仅输出修正后的 protocol，第 1 行写明应保留或更换的双靶点荧光/标记策略和组织透明方法，随后仅列出透明处理、RI 匹配和保存/成像前处理步骤的关键试剂、条件和时间。",
+                "target_method": "Ce3D",
+                "generated_timestamp": "2025-12-15T00:00:00Z"
+            },
+            "scores": {
+                "completeness": {
+                    "c_step": {
+                        "score": 2,
+                        "max_score": 2,
+                        "description": "步骤模块完整性",
+                        "reasoning": "方案包含了固定后组织处理、免疫标记、Ce3D三步透明化、折射率匹配及成像准备等所有针对完整股骨硬组织透明化的核心模块。Ce3D方法已验证可用于骨组织，无需单独脱钙步骤，未遗漏关键环节。"
+                    },
+                    "c_param": {
+                        "score": 3,
+                        "max_score": 3,
+                        "description": "参数细节完整性",
+                        "reasoning": "所有关键步骤均明确提供了浓度（如封闭缓冲液成分、抗体稀释度、Ce3D各溶液精确配方和pH）、温度（37°C或RT）和时间（2小时、5天、3天、24/48/12小时等），细节级别达到正式发表论文附录标准。"
+                    },
+                    "total_weighted_score": 5.0
+                },
+                "correctness": {
+                    "co_order": {
+                        "score": 3,
+                        "max_score": 3,
+                        "description": "步骤顺序逻辑",
+                        "reasoning": "流程为：固定后→免疫标记→透明化→折射率匹配→成像，完全符合Ce3D先标记后透明化的标准SOP，且标记与透明化之间无溶剂不相容冲突。"
+                    },
+                    "co_method": {
+                        "score": 2,
+                        "max_score": 2,
+                        "description": "方法-试剂一致性",
+                        "reasoning": "所用试剂均为Ce3D协议的核心成分（α-硫代甘油、尿素、甘油），未混入任何与其化学体系不兼容的有机溶剂或其它方法专属试剂。"
+                    },
+                    "co_param": {
+                        "score": 2,
+                        "max_score": 2,
+                        "description": "参数范围物理合理性",
+                        "reasoning": "对于约15 mm长的完整小鼠股骨，抗体孵育（5天+3天）和透明化总时间（108小时）均符合被动扩散的菲克定律和经验值，既不过短也不至过度处理。"
+                    },
+                    "co_chem": {
+                        "score": 1,
+                        "max_score": 1,
+                        "description": "化学与安全常识",
+                        "reasoning": "所有化学品均为Ce3D常规试剂，无危险添加物或操作（如高温加热易燃试剂、使用不相容容器等），方案自身无安全风险。"
+                    },
+                    "critical_warnings": [],
+                    "total_weighted_score": 8.0
+                },
+                "effectiveness": {
+                    "s_method": {
+                        "score": 1.25,
+                        "max_score": 2.5,
+                        "description": "透明方法选择适配度",
+                        "reasoning": "Signed need-weighted method-fit [-2.5,+2.5] (F_fp xor P_dye x2; caps signed). Method: Ce3D"
+                    },
+                    "s_label": {
+                        "score": 5.4,
+                        "max_score": 6,
+                        "description": "标记与方法兼容性",
+                        "reasoning": "target_match=6.0, marker_fluor_compat=6.0, method_fluor_compat=5.4. marker_dict={'Alexa Fluor 488': 'TH (tyrosine hydroxylase)', 'Alexa Fluor 647': 'CD31 (PECAM-1)'}"
+                    },
+                    "s_trans": {
+                        "score": 0.1971855858495904,
+                        "max_score": 3,
+                        "description": "方法-组织 RI 域匹配度",
+                        "reasoning": "Method-tissue domain match. RI_tissue(question)=1.56, RI_method_ref(best-suited sample)=1.49, σ_RI=0.03, tier=T07_HARD_TISSUE_BONE_TOOTH_COCHLEA, status=scored"
+                    },
+                    "s_time": {
+                        "score": 0.0,
+                        "max_score": 3,
+                        "description": "时间效率评分",
+                        "reasoning": "Time deviation score. Act: 108.0, Ref Range: []"
+                    },
+                    "total_weighted_score": 6.847185585849591
+                }
+            }
+        }
+    },
+    {
+        "question_id": 49,
+        "evaluation": {
+            "meta_data": {
+                "protocol_id": 49,
+                "sample_info": "我需要对小鼠耳蜗进行透明化处理，用于全耳蜗范围内的毛细胞三维计数，以评估噪音损伤后耳蜗不同区域的毛细胞缺失模式。样本为完整小鼠耳蜗，深埋于致密听泡骨中，整体呈螺旋状结构，大小约 3 mm × 2 mm × 2 mm，已完成固定和后固定。科学目标是在尽量保留耳蜗螺旋结构和感觉上皮空间关系的前提下，识别内毛细胞和外毛细胞的位置、排列连续性、局部缺失区域和损伤梯度，并获得可用于全耳蜗自动化计数和三维重建的清晰信号。\n\n请根据该科学问题自行选择合适的荧光/标记策略；若限制范围内的小分子荧光探针能够直接完成某一结构标记，则不应额外选择抗体靶点。请基于所选标记样本选择匹配的组织透明方法。请仅输出 protocol，第 1 行写明所选荧光/标记策略和组织透明方法，随后仅列出透明处理、RI 匹配和保存/成像前处理步骤的关键试剂、条件和时间。",
+                "target_method": "FDISCO",
+                "generated_timestamp": "2025-12-15T00:00:00Z"
+            },
+            "scores": {
+                "completeness": {
+                    "c_step": {
+                        "score": 2,
+                        "max_score": 2,
+                        "description": "步骤模块完整性",
+                        "reasoning": "方案涵盖了FDISCO标准流程的所有核心模块：脱水、脱脂/脱色、复水、透化、封闭、一抗、洗涤、二抗/鬼笔环肽共染、再次脱水、DCM脱脂、BABB折射率匹配和成像准备。但耳蜗样本被致密听泡骨包裹，方案未包含任何脱钙步骤或解释为何可省略，存在轻微瑕疵。"
+                    },
+                    "c_param": {
+                        "score": 3,
+                        "max_score": 3,
+                        "description": "参数细节完整性",
+                        "reasoning": "关键步骤均标注了详细的试剂名称、浓度（如甲醇梯度20–100%、5% H₂O₂、0.2% Triton X-100、10%/5% NGS、抗体稀释度1:200和1:500、鬼笔环肽1:100）、孵育时间（1–48小时不等）和温度（RT, 4°C, 37°C），细节非常充分，达到正规发表水平。"
+                    },
+                    "total_weighted_score": 5.0
+                },
+                "correctness": {
+                    "co_order": {
+                        "score": 3,
+                        "max_score": 3,
+                        "description": "步骤顺序逻辑",
+                        "reasoning": "流程严格遵守标准的FDISCO操作顺序：初脱水 → 脱脂/漂白 → 复水 → 免疫标记 → 再脱水 → DCM脱脂 → BABB折射率匹配，逻辑完整无缺陷。"
+                    },
+                    "co_method": {
+                        "score": 2,
+                        "max_score": 2,
+                        "description": "方法-试剂一致性",
+                        "reasoning": "所用试剂均为FDISCO体系的标准配置：甲醇梯度脱水，甲醇中H₂O₂脱色/脱脂，DCM脱脂，BABB折射率匹配，未混用不兼容试剂。"
+                    },
+                    "co_param": {
+                        "score": 2,
+                        "max_score": 2,
+                        "description": "参数范围物理合理性",
+                        "reasoning": "对约3 mm大小的耳蜗样本，给定的孵育时间（如脱色12h、DCM共1h、BABB 2h）符合菲克扩散定律和该尺寸组织的经验值，不存在时间过短或过长等不合理情况。"
+                    },
+                    "co_chem": {
+                        "score": 1,
+                        "max_score": 1,
+                        "description": "化学与安全常识",
+                        "reasoning": "方案使用的所有化学品（甲醇、H₂O₂、DCM、BABB、Triton X-100、NGS等）均为FDISCO方法的标准试剂，未引入额外危险药品或描述危险操作。"
+                    },
+                    "critical_warnings": [],
+                    "total_weighted_score": 8.0
+                },
+                "effectiveness": {
+                    "s_method": {
+                        "score": 0.75,
+                        "max_score": 2.5,
+                        "description": "透明方法选择适配度",
+                        "reasoning": "Signed need-weighted method-fit [-2.5,+2.5] (F_fp xor P_dye x2; caps signed). Method: FDISCO"
+                    },
+                    "s_label": {
+                        "score": 4.5,
+                        "max_score": 6,
+                        "description": "标记与方法兼容性",
+                        "reasoning": "target_match=6.0, marker_fluor_compat=6.0, method_fluor_compat=4.5. marker_dict={'Alexa Fluor 647': 'F-actin in stereocilia (Phalloidin)', 'Alexa Fluor 488': 'Myosin VIIa in hair cell soma'}"
+                    },
+                    "s_trans": {
+                        "score": 0.03332698961472665,
+                        "max_score": 3,
+                        "description": "方法-组织 RI 域匹配度",
+                        "reasoning": "Method-tissue domain match. RI_tissue(question)=1.56, RI_method_ref(best-suited sample)=1.47, σ_RI=0.03, tier=T07_HARD_TISSUE_BONE_TOOTH_COCHLEA, status=scored"
+                    },
+                    "s_time": {
+                        "score": 0.0,
+                        "max_score": 3,
+                        "description": "时间效率评分",
+                        "reasoning": "Time deviation score. Act: 15.0, Ref Range: [12, 48]"
+                    },
+                    "total_weighted_score": 5.283326989614727
+                }
+            }
+        }
+    },
+    {
+        "question_id": 47,
+        "evaluation": {
+            "meta_data": {
+                "protocol_id": 47,
+                "sample_info": "我需要对完整小鼠股骨进行透明化处理，用于构建骨髓神经-血管微环境的三维图谱。样本为完整股骨，长度约 15 mm，已完成固定和后固定。科学目标是在完整骨髓腔中观察交感神经纤维与血管周围细胞或内皮结构的空间关系，分析神经纤维是否沿血管走行、是否在特定骨髓区域富集，以及血管周围微环境是否形成可能支持造血干细胞定位和维持的空间结构。\n\n请根据该科学问题自行选择合适的双靶点荧光/标记策略，并匹配适合完整股骨骨髓微环境成像的组织透明方法。请仅输出 protocol，第 1 行写明所选双靶点荧光/标记策略和组织透明方法，随后仅列出透明处理、RI 匹配和保存/成像前处理步骤的关键试剂、条件和时间。",
+                "target_method": "FDISCO",
+                "generated_timestamp": "2025-12-15T00:00:00Z"
+            },
+            "scores": {
+                "completeness": {
+                    "c_step": {
+                        "score": 0,
+                        "max_score": 2,
+                        "description": "步骤模块完整性",
+                        "reasoning": "方案缺少针对骨骼样本的关键脱钙步骤，无法去除骨矿物质，严重阻碍组织透明化和深层成像，实验失败风险极高。"
+                    },
+                    "c_param": {
+                        "score": 3,
+                        "max_score": 3,
+                        "description": "参数细节完整性",
+                        "reasoning": "所有步骤均标注了具体的试剂浓度、孵育时间（如12小时、7天）、温度（RT、37°C、4°C）以及缓冲液配方，细节完备，可直接重复。"
+                    },
+                    "total_weighted_score": 3.0
+                },
+                "correctness": {
+                    "co_order": {
+                        "score": 3,
+                        "max_score": 3,
+                        "description": "步骤顺序逻辑",
+                        "reasoning": "顺序完全符合FDISCO/iDISCO类溶剂法的经典三明治结构：脱水→脱色→复水→免疫标记→脱水→脱脂→折射率匹配，逻辑严密，无跳步。"
+                    },
+                    "co_method": {
+                        "score": 2,
+                        "max_score": 2,
+                        "description": "方法-试剂一致性",
+                        "reasoning": "全部使用甲醇、DCM、BABB等FDISCO定义的标准溶剂，无水性透明化试剂混用。"
+                    },
+                    "co_param": {
+                        "score": 1,
+                        "max_score": 2,
+                        "description": "参数范围物理合理性",
+                        "reasoning": "完整股骨（~15mm）的抗体渗透极为困难，7天的一抗时间和24小时通透对如此致密的矿化组织偏短，可能导致染色深度不足，但仍有一定可行性，偏差在50%左右。"
+                    },
+                    "co_chem": {
+                        "score": 1,
+                        "max_score": 1,
+                        "description": "化学与安全常识",
+                        "reasoning": "所有化学品（H2O2甲醇漂白液、DCM、BABB）均为FDISCO标准试剂，浓度和操作条件无额外危险，方案本身不引入安全隐患。"
+                    },
+                    "critical_warnings": [],
+                    "total_weighted_score": 7.0
+                },
+                "effectiveness": {
+                    "s_method": {
+                        "score": 1.3357,
+                        "max_score": 2.5,
+                        "description": "透明方法选择适配度",
+                        "reasoning": "Signed need-weighted method-fit [-2.5,+2.5] (F_fp xor P_dye x2; caps signed). Method: FDISCO"
+                    },
+                    "s_label": {
+                        "score": 4.5,
+                        "max_score": 6,
+                        "description": "标记与方法兼容性",
+                        "reasoning": "target_match=6.0, marker_fluor_compat=6.0, method_fluor_compat=4.5. marker_dict={'Alexa Fluor 488': 'TH', 'Alexa Fluor 647': 'CD31'}"
+                    },
+                    "s_trans": {
+                        "score": 0.03332698961472665,
+                        "max_score": 3,
+                        "description": "方法-组织 RI 域匹配度",
+                        "reasoning": "Method-tissue domain match. RI_tissue(question)=1.56, RI_method_ref(best-suited sample)=1.47, σ_RI=0.03, tier=T07_HARD_TISSUE_BONE_TOOTH_COCHLEA, status=scored"
+                    },
+                    "s_time": {
+                        "score": 0.0,
+                        "max_score": 3,
+                        "description": "时间效率评分",
+                        "reasoning": "Time deviation score. Act: 17.0, Ref Range: [17, 24]"
+                    },
+                    "total_weighted_score": 5.869026989614727
+                }
+            }
+        }
+    },
+    {
+        "question_id": 50,
+        "evaluation": {
+            "_error": "JSON parse failed: Expecting property name enclosed in double quotes: line 68 column 26 (char 2263)",
+            "_raw_content_preview": "{\n  \"meta_data\": {\n    \"protocol_id\": \"eval-20250220-001\",\n    \"sample_info\": \"Mouse Cochlea, ~3 mm × 2 mm × 2 mm, fixed and post-fixed\",\n    \"target_method\": \"FDISCO\"\n  },\n  \"scores\": {\n    \"completeness\": {\n      \"c_step\": {\n        \"score\": 0,\n        \"max_score\": 2,\n        \"description\": \"步骤模块完整性\",\n        \"reasoning\": \"方案针对致密骨组织（小鼠耳蜗）缺失必需的脱钙步骤。尽管声明FDISCO具有脱钙样效果，但对于完整的听泡骨，单独利用有机溶剂脱脂无法充分去除磷酸钙，会导致透明不完全甚至不透明，影响深层成像。此外，初始脱水前缺少PBS充分洗涤的过渡（虽然不影响逻辑，但脱钙缺失是关键缺陷）。\"\n      },\n      \"c_param\": {\n        \"score\": 3,\n        \"max_score\": 3,\n        \"description\": \"参数细节完整性\",\n        \"reasoning\": \"所有步骤均详细标注了试剂浓度、孵育时间和温度，信息完整，达到发表级别附录水准。\"\n      },\n      \"total_weighted_score\": 3.0,\n      \"completeness_critical_warnings\": [\n        \"致命缺陷：骨样品未包含脱钙步骤，有机溶剂法无法充分去除矿物质，可能导致透明失败。\"\n      ]\n    },\n    \"correctness\": {\n      \"co_order\": {\n        \"score\": 3,\n        \"max_score\": 3,\n        \"description\": \"步骤顺序逻辑\",\n        \"reasoning\": \"流程符合iDISCO/FDISCO型主动染色方案：先甲醇脱水、漂白（可选），复水后透化、封闭、抗体/小分子标记，再次脱水、脱脂、折射率匹配。顺序无矛盾。\"\n      },\n      \"co_method\": {\n        \"score\": 2,\n        \"max_score\": 2,\n        \"description\": \"方法-试剂一致性\",\n        \"reasoning\": \"所用试剂（甲醇脱水、DCM脱脂、BABB折射率匹配）均为FDISCO/有机溶剂法的标准匹配，未混用不相容体系。\"\n      },\n      \"co_param\": {\n        \"score\": 2,\n        \"max_score\": 2,\n        \"description\": \"参数范围物理合理性\",\n        \"reasoning\": \"3 mm样本，一抗48 h（37℃）、二抗24 h（37℃）、DCM脱脂共1 h、BABB匹配共2 h，时间符合菲克扩散定律的合理预期，无过度或过短。\"\n      },\n      \"co_chem\": {\n        \"score\": 1,\n        \"max_score\": 1,\n        \"description\": \"化学与安全常识\",\n        \"reasoning\": \"所用试剂均为标准FDISCO组分，无额外危险化学品添加；H₂O₂漂白控制在4℃并用于脱色，无危险操作引入。\"\n      },\n      \"critical_warnings\": [],\n      \"total_weighted_score\": 8.0\n    }\n  },\n  \"extraction\": {\n    \"marker_dict\": {\n      \"Alexa Fluor 488\": \"\",\n      \"Alexa Fluor 568\": \"Myosin VIIa\",\n      \"TO-PRO-3\": \"\"\n    },\n    \"clearing_total_time_hours\": 15.0,\n    \"method_name\": \"FDISCO\",\n    \"reagent_ri_value\": 1.56,\n    \"sample_ri_value\": 1.56,\n    \"protocol_time_hours\": [12, 24],\n    \"reasoning\": \"标记提取：Phalloidin",
+            "_question_id": 50
+        }
+    }
+]

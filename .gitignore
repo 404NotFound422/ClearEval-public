@@ -7,6 +7,10 @@ Auto-claude-code-research-in-sleep/
 # Pipeline scratch
 .aris/
 
+# Real API config (contains live keys) — keep out of the public mirror.
+# NOTE: if already tracked, run: git rm --cached config/config.yaml
+config/config.yaml
+
 # TeX Live installation temporary files
 .texlive-setup/
 paper/build/
@@ -20,3 +24,5 @@ paper/build/
 *.fls
 
 workflow/
+dataset/Q+AR/rag_context/
+dataset/Q+AR/rag_context_v2/

@@ -159,6 +159,82 @@ def calculate_cosine_similarity(vec1, vec2):
     if norm1 == 0 or norm2 == 0: return 0.0
     return dot_product / (norm1 * norm2)
 
+
+def calculate_method_suitability(user_pref_vector_dict, method_vector_dict, sigma=0.6,
+                                  hard_constraint_threshold=0.7,
+                                  hard_constraint_penalty=0.75):
+    """
+    计算方法适配度 S_method（改进版）。
+
+    原实现使用未加权的余弦相似度，导致所有方法的得分都集中在 4.0-5.0 区间，
+    无法区分专家判为合适/不合适的方法（ICC ≈ 0.04）。改进点：
+
+    1. 改用加权欧氏距离，直接惩罚用户重视维度上的失配。
+    2. 同时引入用户权重（weight）和方法权重（W），忽视不重要或不可靠的维度。
+    3. 对 M_geo 做统一尺度归一化（用户 target ∈ [0,2]，方法 V ∈ [0.5,1.5]）。
+    4. 对用户严格约束维度（weight ≥ 0.9）出现显著失配时施加额外惩罚。
+
+    参数:
+        sigma: 高斯核容忍度，越大对失配越宽容。
+        hard_constraint_threshold: 严格约束维度的失配阈值。
+        hard_constraint_penalty: 每次违反严格约束的惩罚乘数。
+
+    返回: float, 范围 [0, 5]
+    """
+    mapping = [
+        ("fluorescence_protein_preservation", "F_fp"),
+        ("dye_permeability", "P_dye"),
+        ("clearing_challenge", "C_opt"),
+        ("geometry_preference", "M_geo"),
+        ("operational_economy", "E_ops"),
+        ("safety_compatibility", "S_safe"),
+    ]
+
+    diffs = []
+    weights = []
+    hard_violations = 0
+
+    for user_key, method_key in mapping:
+        u_entry = user_pref_vector_dict.get(user_key, {}) or {}
+        u_val = float(u_entry.get("target", 0.0) or 0.0)
+        u_w = float(u_entry.get("weight", 0.0) or 0.0)
+
+        m_entry = method_vector_dict.get(method_key, {}) or {}
+        m_val = float(m_entry.get("V", 0.0) or 0.0)
+        m_w = float(m_entry.get("W", 0.0) or 0.0)
+
+        # 统一 M_geo 尺度
+        if method_key == "M_geo":
+            u_val = u_val / 2.0
+            m_val = (m_val - 0.5) / 1.0
+            m_val = max(0.0, min(1.0, m_val))
+
+        diff = abs(u_val - m_val)
+        w = u_w * m_w
+
+        diffs.append(diff)
+        weights.append(w)
+
+        if u_w >= 0.9 and diff > 0.5:
+            hard_violations += 1
+
+    diffs = np.array(diffs, dtype=float)
+    weights = np.array(weights, dtype=float)
+    weights_sum = weights.sum()
+
+    if weights_sum == 0:
+        return 0.0
+
+    weighted_rmsd = np.sqrt(np.sum(weights * diffs ** 2) / weights_sum)
+    sim = np.exp(-weighted_rmsd ** 2 / (2 * sigma ** 2))
+
+    if hard_violations > 0:
+        sim *= hard_constraint_penalty ** min(hard_violations, 2)
+
+    s_method = 5.0 * sim
+    return float(max(0.0, min(5.0, s_method)))
+
+
 def calculate_effectiveness_score(quantitative_data, user_pref_vector_dict, model_space):
     """计算有效性评分 E_score (复用 run_grading_new.py 逻辑)"""
     w1, w2, w3, w4 = 1.0, 1.0, 1.0, 1.0
@@ -177,24 +253,11 @@ def calculate_effectiveness_score(quantitative_data, user_pref_vector_dict, mode
     if not found_method:
         s_method = 0.0
     else:
-        user_vec = []
-        method_vec = []
-        mapping = [
-            ("fluorescence_protein_preservation", "F_fp"),
-            ("dye_permeability", "P_dye"),
-            ("clearing_challenge", "C_opt"),
-            ("geometry_preference", "M_geo"),
-            ("operational_economy", "E_ops"),
-            ("safety_compatibility", "S_safe")
-        ]
-        for user_key, method_key in mapping:
-            u_val = user_pref_vector_dict.get(user_key, {}).get("target", 0.0)
-            m_val = method_vector_dict.get(method_key, {}).get("V", 0.0)
-            user_vec.append(u_val)
-            method_vec.append(m_val)
-        
-        cos_sim = calculate_cosine_similarity(user_vec, method_vec)
-        s_method = max(0.0, min(5.0, 5 * cos_sim))
+        s_method = calculate_method_suitability(
+            user_pref_vector_dict, method_vector_dict, sigma=0.6,
+            hard_constraint_threshold=0.7,
+            hard_constraint_penalty=0.75
+        )
 
     # 2. S_label
     fluor_suitable = quantitative_data.get("fluor_suitable_score", [])

@@ -1,3 +1,4 @@
+import argparse
 import json
 import os
 import sys
@@ -21,7 +22,7 @@ OUTPUT_FILE_NAME = 'oeq_stats_260223.jsonl'
 # 归一化满分标准
 MAX_SCORES = {
     'c_step': 2, 'c_param': 3, 'co_order': 3, 'co_method': 2,
-    'co_param': 2, 'co_chem': 1, 's_method': 5, 's_label': 6,
+    'co_param': 2, 'co_chem': 1, 's_method': 2.5, 's_label': 6,
     's_trans': 3, 's_time': 3
 }
 
@@ -37,17 +38,19 @@ def find_dir(dirname):
             return path
     return None
 
-def aggregate_oeq():
-    oeq_dir = find_dir(DEFAULT_OEQ_DIR)
+def aggregate_oeq(oeq_dir=None, output_file=None):
+    if oeq_dir is None:
+        oeq_dir = find_dir(DEFAULT_OEQ_DIR)
     if not oeq_dir:
         print(f"错误: 找不到评分结果目录 ({DEFAULT_OEQ_DIR})。")
         sys.exit(1)
 
     # 确定输出文件路径，默认存放在 results 目录下
-    output_dir = 'results'
-    if not os.path.exists(output_dir):
-        os.makedirs(output_dir)
-    output_file = os.path.join(output_dir, OUTPUT_FILE_NAME)
+    if output_file is None:
+        output_dir = 'results'
+        if not os.path.exists(output_dir):
+            os.makedirs(output_dir)
+        output_file = os.path.join(output_dir, OUTPUT_FILE_NAME)
 
     results = []
     for filename in os.listdir(oeq_dir):
@@ -73,17 +76,20 @@ def aggregate_oeq():
                     comp = scores_obj.get('completeness', {})
                     for m in ['c_step', 'c_param']:
                         val = comp.get(m, {}).get('score')
-                        if val is not None: metrics[m].append(float(val))
-                    
+                        if val is not None:
+                            metrics[m].append(float(val))
+
                     corr = scores_obj.get('correctness', {})
                     for m in ['co_order', 'co_method', 'co_param', 'co_chem']:
                         val = corr.get(m, {}).get('score')
-                        if val is not None: metrics[m].append(float(val))
-                        
+                        if val is not None:
+                            metrics[m].append(float(val))
+
                     eff = scores_obj.get('effectiveness', {})
                     for m in ['s_method', 's_label', 's_trans', 's_time']:
                         val = eff.get(m, {}).get('score')
-                        if val is not None: metrics[m].append(float(val))
+                        if val is not None:
+                            metrics[m].append(float(val))
                 
                 if not any(metrics.values()):
                     continue
@@ -109,4 +115,8 @@ def aggregate_oeq():
     print(f"已将 {len(results)} 个模型的 OEQ 结果聚合至 {output_file}")
 
 if __name__ == "__main__":
-    aggregate_oeq()
+    parser = argparse.ArgumentParser(description="Aggregate OEQ evaluation results.")
+    parser.add_argument("--input-dir", default=None, help="Directory containing evaluation_results_*.json files")
+    parser.add_argument("--output", default=None, help="Output JSONL file path")
+    args = parser.parse_args()
+    aggregate_oeq(oeq_dir=args.input_dir, output_file=args.output)

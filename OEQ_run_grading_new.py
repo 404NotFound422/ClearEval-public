@@ -30,7 +30,7 @@
 - `result/evaluation_results_{model_name}.json`: 各个被测模型的评分结果。
 """
 
-import json,datetime
+import json
 import os
 import re
 import sys
@@ -44,6 +44,7 @@ from prompts.parse_user_preference_vector import USER_PREFERENCE_PROMPT
 
 OEQ_OUTPUT_DIR = 'dataset/Q+AR/model_response'
 OEQ_SCORE_DIR = 'dataset/Q+AR/result'
+RAG_CONTEXT_DIR = 'dataset/Q+AR/rag_context'  # per-question KB-RAG cards (see build_rag_context.py)
 
 # -------------------------------------------------------------------------
 # Load KnowledgeBase for rule-based scoring
@@ -65,6 +66,15 @@ with open('KnowledgeBase/method_ri_ref.json', 'r', encoding='utf-8') as f:
 # Question metadata (loaded once at startup; avoids per-call file I/O)
 with open('dataset/Q+AR/src/question_final.json', 'r', encoding='utf-8') as f:
     _QUESTION_LIST = json.load(f)
+
+# Marker specificity tiers for target_match scoring (0/3/6)
+_MARKER_SPECIFICITY_TIERS_PATH = 'workflow/s_label_audit/marker_specificity_tiers.json'
+_MARKER_SPECIFICITY_TIERS: dict = {"tier_0": [], "tier_3": [], "tier_6": []}
+if os.path.exists(_MARKER_SPECIFICITY_TIERS_PATH):
+    try:
+        _MARKER_SPECIFICITY_TIERS = json.load(open(_MARKER_SPECIFICITY_TIERS_PATH, encoding='utf-8'))
+    except Exception:
+        pass
 
 # Flatten tissue_ri.json into a single tissue_key → RI table
 _DEFAULT_TISSUE_RI: float = float(_TISSUE_RI_RAW["tissue_ri_database"].get("default_ri", 1.48))
@@ -89,40 +99,74 @@ def _resolve_tissue_ri(tissue_inferred: str) -> float:
         return _TISSUE_RI_TABLE["brain_tumor"]
     if "骨骼肌" in s or "腓肠肌" in s or "椎旁肌" in s:
         return _TISSUE_RI_TABLE["skeletal_muscle"]
-    if "牙" in s: return _TISSUE_RI_TABLE["tooth"]
-    if "颅骨" in s or "股骨" in s or "骨髓" in s or "骨" in s: return _TISSUE_RI_TABLE["bone"]
-    if "耳蜗" in s: return _TISSUE_RI_TABLE["cochlea"]
-    if "皮肤" in s: return _TISSUE_RI_TABLE["skin"]
-    if "心" in s: return _TISSUE_RI_TABLE["heart"]
-    if "肌" in s: return _TISSUE_RI_TABLE["skeletal_muscle"]
-    if "黑色素瘤" in s: return _TISSUE_RI_TABLE["melanoma"]
-    if "石蜡" in s: return _TISSUE_RI_TABLE["tumor_paraffin"]
-    if "淋巴结" in s: return _TISSUE_RI_TABLE["lymph_node"]
-    if "乳腺癌" in s: return _TISSUE_RI_TABLE["breast_cancer"]
-    if "前列腺" in s: return _TISSUE_RI_TABLE["prostate"]
-    if "肝" in s: return _TISSUE_RI_TABLE["liver"]
-    if "肾" in s: return _TISSUE_RI_TABLE["kidney"]
-    if "脾" in s: return _TISSUE_RI_TABLE["spleen"]
-    if "胰" in s: return _TISSUE_RI_TABLE["pancreas"]
-    if "胎盘" in s: return _TISSUE_RI_TABLE["placenta"]
-    if "胃" in s: return _TISSUE_RI_TABLE["stomach"]
-    if "肠" in s and "类器官" not in s: return _TISSUE_RI_TABLE["intestine"]
-    if "肺" in s: return _TISSUE_RI_TABLE["lung"]
-    if "睾丸" in s: return _TISSUE_RI_TABLE["testis"]
-    if "脂肪" in s: return _TISSUE_RI_TABLE["fat"]
-    if "肿瘤" in s: return _TISSUE_RI_TABLE["tumor_dense"]
-    if "全身" in s: return _TISSUE_RI_TABLE["kidney"]  # whole-body soft-tissue default
-    if "类器官" in s or "果蝇" in s: return _TISSUE_RI_TABLE["organoid"]
-    if "elegans" in s.lower(): return _TISSUE_RI_TABLE["celegans"]
-    if "E14" in s: return _TISSUE_RI_TABLE["embryo_brain"]
-    if "胚胎" in s: return _TISSUE_RI_TABLE["embryo_whole"]
-    if "人脑" in s: return _TISSUE_RI_TABLE["human_brain_block"]
-    if "海马" in s: return _TISSUE_RI_TABLE["hippocampus_ca1"]
-    if "视网膜" in s or "眼球" in s: return _TISSUE_RI_TABLE["eye_retina"]
-    if "脊髓" in s or "CNS" in s: return _TISSUE_RI_TABLE["spinal_cord"]
-    if "斑马鱼" in s: return _TISSUE_RI_TABLE["zebrafish"]
-    if "脑" in s: return _TISSUE_RI_TABLE["whole_brain"]
-    if "植物" in s or "拟南芥" in s: return _TISSUE_RI_TABLE["plant"]
+    if "牙" in s:
+        return _TISSUE_RI_TABLE["tooth"]
+    if "颅骨" in s or "股骨" in s or "骨髓" in s or "骨" in s:
+        return _TISSUE_RI_TABLE["bone"]
+    if "耳蜗" in s:
+        return _TISSUE_RI_TABLE["cochlea"]
+    if "皮肤" in s:
+        return _TISSUE_RI_TABLE["skin"]
+    if "心" in s:
+        return _TISSUE_RI_TABLE["heart"]
+    if "肌" in s:
+        return _TISSUE_RI_TABLE["skeletal_muscle"]
+    if "黑色素瘤" in s:
+        return _TISSUE_RI_TABLE["melanoma"]
+    if "石蜡" in s:
+        return _TISSUE_RI_TABLE["tumor_paraffin"]
+    if "淋巴结" in s:
+        return _TISSUE_RI_TABLE["lymph_node"]
+    if "乳腺癌" in s:
+        return _TISSUE_RI_TABLE["breast_cancer"]
+    if "前列腺" in s:
+        return _TISSUE_RI_TABLE["prostate"]
+    if "肝" in s:
+        return _TISSUE_RI_TABLE["liver"]
+    if "肾" in s:
+        return _TISSUE_RI_TABLE["kidney"]
+    if "脾" in s:
+        return _TISSUE_RI_TABLE["spleen"]
+    if "胰" in s:
+        return _TISSUE_RI_TABLE["pancreas"]
+    if "胎盘" in s:
+        return _TISSUE_RI_TABLE["placenta"]
+    if "胃" in s:
+        return _TISSUE_RI_TABLE["stomach"]
+    if "肠" in s and "类器官" not in s:
+        return _TISSUE_RI_TABLE["intestine"]
+    if "肺" in s:
+        return _TISSUE_RI_TABLE["lung"]
+    if "睾丸" in s:
+        return _TISSUE_RI_TABLE["testis"]
+    if "脂肪" in s:
+        return _TISSUE_RI_TABLE["fat"]
+    if "肿瘤" in s:
+        return _TISSUE_RI_TABLE["tumor_dense"]
+    if "全身" in s:
+        return _TISSUE_RI_TABLE["kidney"]  # whole-body soft-tissue default
+    if "类器官" in s or "果蝇" in s:
+        return _TISSUE_RI_TABLE["organoid"]
+    if "elegans" in s.lower():
+        return _TISSUE_RI_TABLE["celegans"]
+    if "E14" in s:
+        return _TISSUE_RI_TABLE["embryo_brain"]
+    if "胚胎" in s:
+        return _TISSUE_RI_TABLE["embryo_whole"]
+    if "人脑" in s:
+        return _TISSUE_RI_TABLE["human_brain_block"]
+    if "海马" in s:
+        return _TISSUE_RI_TABLE["hippocampus_ca1"]
+    if "视网膜" in s or "眼球" in s:
+        return _TISSUE_RI_TABLE["eye_retina"]
+    if "脊髓" in s or "CNS" in s:
+        return _TISSUE_RI_TABLE["spinal_cord"]
+    if "斑马鱼" in s:
+        return _TISSUE_RI_TABLE["zebrafish"]
+    if "脑" in s:
+        return _TISSUE_RI_TABLE["whole_brain"]
+    if "植物" in s or "拟南芥" in s:
+        return _TISSUE_RI_TABLE["plant"]
     return _DEFAULT_TISSUE_RI
 
 
@@ -207,6 +251,75 @@ def _normalize_name(name):
     return s
 
 
+# Fluorophore evidence-based mapping and penalty list (loaded after _normalize_name is defined)
+_FLUOR_EVIDENCE_PATH = 'workflow/s_label_audit/fluorophore_classification_for_review.json'
+_FLUOR_TO_TISSUE_COL: dict = {}
+_PENALTY_FLUORS: set = set()
+_MARKER_REDIRECT_FLUORS: set = set()
+if os.path.exists(_FLUOR_EVIDENCE_PATH):
+    try:
+        _fluor_evidence = json.load(open(_FLUOR_EVIDENCE_PATH, encoding='utf-8'))
+        for entry in _fluor_evidence.get('tissue_mappings', []):
+            fluor = entry.get('fluor')
+            target = entry.get('target_column')
+            if fluor and target:
+                _FLUOR_TO_TISSUE_COL[_normalize_name(fluor)] = target
+        for entry in _fluor_evidence.get('penalty_list', []):
+            fluor = entry.get('fluor')
+            if fluor:
+                _PENALTY_FLUORS.add(_normalize_name(fluor))
+        for entry in _fluor_evidence.get('marker_redirects', []):
+            fluor = entry.get('fluor')
+            if fluor:
+                _MARKER_REDIRECT_FLUORS.add(_normalize_name(fluor))
+    except Exception:
+        _FLUOR_TO_TISSUE_COL = {}
+        _PENALTY_FLUORS = set()
+        _MARKER_REDIRECT_FLUORS = set()
+
+
+def _classify_marker_specificity(marker_str, fluor_str=None, marker_query_targets=None):
+    """Return 0/3/6 specificity score for a marker string.
+
+    The tier table is a supplement for markers that did not match the question
+    targets directly.  Vague/descriptive terms receive 0, incomplete-but-inferable
+    terms receive 3, and concrete markers receive 6 (which then allows a
+    major-category partial-credit fallback in the caller).
+    """
+    if not marker_str:
+        return 0
+    norm = _normalize_name(marker_str)
+    lower = marker_str.lower()
+
+    # Exact normalized match against tiers
+    tier_0_norm = {_normalize_name(m) for m in _MARKER_SPECIFICITY_TIERS.get("tier_0", [])}
+    tier_3_norm = {_normalize_name(m) for m in _MARKER_SPECIFICITY_TIERS.get("tier_3", [])}
+    tier_6_norm = {_normalize_name(m) for m in _MARKER_SPECIFICITY_TIERS.get("tier_6", [])}
+    if norm in tier_0_norm:
+        return 0
+    if norm in tier_3_norm:
+        return 3
+    if norm in tier_6_norm:
+        return 6
+
+    # Substring / containment match for tier entries that contain qualifiers
+    # (e.g. "Alexa Fluor" inside "Alexa Fluor (unspecified)").
+    for vague in _MARKER_SPECIFICITY_TIERS.get("tier_0", []):
+        if vague and (vague.lower() in lower or lower in vague.lower()):
+            return 0
+    for incomplete in _MARKER_SPECIFICITY_TIERS.get("tier_3", []):
+        if incomplete and (incomplete.lower() in lower or lower in incomplete.lower()):
+            return 3
+    for specific in _MARKER_SPECIFICITY_TIERS.get("tier_6", []):
+        if specific and (specific.lower() in lower or lower in specific.lower()):
+            return 6
+
+    # Marker not catalogued: treat as a specific marker so the caller can still
+    # apply the major-category fallback.  This avoids penalising concrete marker
+    # names that are absent from the tier table.
+    return 6
+
+
 def _extract_parenthetical(name):
     """提取括号内的缩写，如 'β-III Tubulin (TUJ1)' -> ['tuj1']"""
     import re
@@ -217,8 +330,9 @@ def _extract_parenthetical(name):
 def _map_fluor_to_tissue_col(fluor_name):
     """将大模型返回的荧光团名称映射到 tissue.json 的列名"""
     s = _normalize_name(fluor_name)
-    # 先按空格分割，取第一个词尝试精确匹配
-    first_word = s.split()[0] if s else ""
+    if not s:
+        return None
+    # 1. Hard-coded canonical mappings
     mapping = {
         "gfp": "GFP/YFP", "egfp": "GFP/YFP", "yfp": "GFP/YFP",
         "tdtomato": "tdTomato/RFP ", "rfp": "tdTomato/RFP ", "mcherry": "tdTomato/RFP ", "mrfp": "tdTomato/RFP ",
@@ -229,20 +343,94 @@ def _map_fluor_to_tissue_col(fluor_name):
         "alexafluor647": "AlexaFluor 647/Cy5 ", "alexa647": "AlexaFluor 647/Cy5 ", "cy5": "AlexaFluor 647/Cy5 ",
         "cd31": "CD31", "lectin": "Lectin",
     }
-    # 尝试完整匹配
     if s in mapping:
         return mapping[s]
-    # 尝试前缀匹配
+    # 2. Evidence-based mapping from fluorophore_evidence_suggestions.json
+    if s in _FLUOR_TO_TISSUE_COL:
+        return _FLUOR_TO_TISSUE_COL[s]
+    # 3. Prefix / substring fallback
     for k, v in mapping.items():
         if s.startswith(k) or k in s:
             return v
     return None
 
 
+def _is_penalty_fluor(fluor_name):
+    """Return True for fluorophores that are not real fluorophores/marker pairs (e.g. 'Alexa Fluor' unspecified)."""
+    return _normalize_name(fluor_name) in _PENALTY_FLUORS
+
+
+def _preprocess_marker_dict(marker_dict):
+    """Move fluorophore keys that are actually markers to the marker value side.
+
+    Returns a tuple (preprocessed_pairs, has_marker_without_fluor, has_fluor_without_marker).
+    preprocessed_pairs is a list of (fluor_str, marker_str) to preserve duplicates.
+    """
+    preprocessed = []
+    has_marker_without_fluor = False
+    has_fluor_without_marker = False
+    for fluor, marker in marker_dict.items():
+        fluor_str = str(fluor).strip() if fluor else ""
+        marker_str = str(marker).strip() if marker else ""
+        if fluor_str and _normalize_name(fluor_str) in _MARKER_REDIRECT_FLUORS:
+            # The fluorophore field contains a marker name; move it to marker side
+            preprocessed.append(("", fluor_str))
+            if not marker_str:
+                has_marker_without_fluor = True
+            continue
+        preprocessed.append((fluor_str, marker_str))
+        if fluor_str and not marker_str:
+            has_fluor_without_marker = True
+        if marker_str and not fluor_str:
+            has_marker_without_fluor = True
+    return preprocessed, has_marker_without_fluor, has_fluor_without_marker
+
+
 def _map_fluor_to_method_key(fluor_name):
     """将大模型返回的荧光团名称映射到 method_fluro_compati.json 的键名"""
     s = _normalize_name(fluor_name)
-    mapping = {
+    if not s:
+        return None
+    # 1. Specific dye mappings (checked before coarse families)
+    specific_mapping = {
+        # Alexa Fluor series
+        "alexafluor405": "Alexa Fluor 405",
+        "alexafluor488": "Alexa Fluor 488",
+        "alexa488": "Alexa Fluor 488",
+        "alexafluor546": "Alexa Fluor 546",
+        "alexafluor555": "Alexa Fluor 555",
+        "alexafluor568": "Alexa Fluor 568",
+        "alexafluor594": "Alexa Fluor 594",
+        "alexafluor633": "Alexa Fluor 633",
+        "alexafluor647": "Alexa Fluor 647",
+        "alexafluor680": "Alexa Fluor 680",
+        "alexafluor750": "Alexa Fluor 750",
+        # Common organic dyes
+        "fitc": "FITC",
+        "fluorescein": "FITC",
+        "tritc": "TRITC",
+        "cy3": "Cy3",
+        "cy5": "Cy5",
+        # DyLight series
+        "dylight405": "DyLight 405",
+        "dylight488": "DyLight 488",
+        "dylight550": "DyLight 550",
+        "dylight594": "DyLight 594",
+        "dylight649": "DyLight 649",
+        # iFluor series
+        "ifluor594": "iFluor 594",
+        "ifluor647": "iFluor 647",
+        # Others
+        "pe": "PE",
+        "calcofluorwhite": "Calcofluor White",
+        "calcofluor": "Calcofluor White",
+        "neurotrace500": "NeuroTrace 500",
+        "neurotrace": "NeuroTrace 500",
+    }
+    if s in specific_mapping:
+        return specific_mapping[s]
+    # 2. Coarse family mappings
+    coarse_mapping = {
         "gfp": "GFP", "egfp": "EGFP", "yfp": "YFP",
         "tdtomato": "tdTomato", "rfp": "RFP", "mcherry": "mCherry", "mrfp": "mRFP",
         "alexafluor": "Alexa Fluor", "alexa": "Alexa Fluor",
@@ -254,33 +442,165 @@ def _map_fluor_to_method_key(fluor_name):
         "lectin": "Lectin", "ib4": "IB4",
         "scrirenaissance2200": "SCRI Renaissance 2200",
     }
-    if s in mapping:
-        return mapping[s]
-    for k, v in mapping.items():
-        if s.startswith(k) or k in s:
+    if s in coarse_mapping:
+        return coarse_mapping[s]
+    # 3. Prefix fallback (avoid short-key substring false matches like "pe" in "specified")
+    for k, v in specific_mapping.items():
+        if s.startswith(k):
+            return v
+    for k, v in coarse_mapping.items():
+        if s.startswith(k):
             return v
     return None
 
 
-def _match_marker_to_targets(marker_name, marker_query_targets):
-    """检查 marker_name 是否与 marker_query_targets 中任一 marker_name 匹配"""
-    norm_marker = _normalize_name(marker_name)
-    norm_abbreviations = _extract_parenthetical(marker_name)
+# Marker alias table for semantic equivalence beyond string normalization.
+# Key: normalized marker name; Value: list of normalized equivalent names.
+_MARKER_ALIASES: dict = {
+    # Reporter fluorophores
+    "gfp": ["gfp", "egfp", "gfp/yfp"],
+    "egfp": ["egfp", "gfp", "gfp/yfp"],
+    "yfp": ["yfp", "gfp", "gfp/yfp"],
+    "rfp": ["rfp", "tdtomato", "mcherry", "mrfp"],
+    "tdtomato": ["tdtomato", "rfp", "mcherry"],
+    "mcherry": ["mcherry", "rfp", "tdtomato"],
+    "tdtomatoreporter": ["tdtomato", "rfp", "mcherry"],
+    # Neuronal markers
+    "tuj1": ["tuj1", "βiiitubulin", "tubulinβiii", "tubulinbeta3", "beta3tubulin", "tubulinβ3"],
+    "βiiitubulin": ["βiiitubulin", "tuj1", "tubulinβiii", "tubulinbeta3", "beta3tubulin"],
+    "map2": ["map2", "microtubuleassociatedprotein2"],
+    "neun": ["neun", "rbfox3"],
+    "rbfox3": ["rbfox3", "neun"],
+    "pgp95": ["pgp95", "pgp9.5", "proteingeneproduct9.5", "ubiquitincarboxylterminalhydrolase1"],
+    "pgp9.5": ["pgp9.5", "pgp95", "proteingeneproduct9.5"],
+    "neurofilament": ["neurofilament", "nf200", "nf"],
+    "nf200": ["nf200", "neurofilament"],
+    # Immediate early genes / activity markers
+    "cfos": ["cfos", "c-fos", "fos"],
+    "c-fos": ["c-fos", "cfos", "fos"],
+    "fos": ["fos", "cfos", "c-fos"],
+    "npas4": ["npas4"],
+    # Vascular / endothelial markers
+    "cd31": ["cd31", "pecam1"],
+    "pecam1": ["pecam1", "cd31"],
+    "lectin": ["lectin", "ib4", "isolectin"],
+    "ib4": ["ib4", "lectin", "isolectin"],
+    # Lipophilic dyes
+    "dii": ["dii", "dio", "did", "di"],
+    "dio": ["dio", "dii", "did", "di"],
+    "did": ["did", "dii", "dio", "di"],
+    # Neuromuscular / muscle
+    "alphabungarotoxin": ["alphabungarotoxin", "bungarotoxin", "achr"],
+    "bungarotoxin": ["bungarotoxin", "alphabungarotoxin", "achr"],
+    "phalloidin": ["phalloidin", "f-actin", "factin", "f-actin"],
+    "factin": ["factin", "f-actin", "phalloidin"],
+    # Cytokeratins
+    "pancytokeratin": ["pancytokeratin", "ck", "cytokeratin"],
+    "ck7": ["ck7", "cytokeratin7"],
+    "ck19": ["ck19", "cytokeratin19"],
+}
+
+
+def _expand_marker_candidates(name):
+    """Return a set of normalized candidate names for a marker, including aliases."""
+    import re
+    norm = _normalize_name(name)
+    if not norm:
+        return set()
+    candidates = {norm}
+    # Add the base name with parenthetical content stripped (e.g. "GFP (anti-GFP secondary)" -> "gfp")
+    base = _normalize_name(re.sub(r"\s*\([^)]*\)", "", str(name)))
+    if base and base != norm:
+        candidates.add(base)
+    # Add parenthetical abbreviations
+    candidates.update(_extract_parenthetical(name))
+    # Add aliases
+    for key, equivalents in _MARKER_ALIASES.items():
+        if key in candidates:
+            candidates.update(equivalents)
+    # Reverse lookup: if a value equivalent is in candidates, add its key
+    expanded = set(candidates)
+    for key, equivalents in _MARKER_ALIASES.items():
+        if expanded & set(equivalents):
+            expanded.add(key)
+            expanded.update(equivalents)
+    return expanded
+
+
+def _is_reporter_fluor(fluor_name):
+    """判断荧光团是否为常见的内源/外源报告基因荧光蛋白"""
+    s = _normalize_name(fluor_name)
+    return any(x in s for x in ["gfp", "egfp", "yfp", "rfp", "tdtomato", "mcherry", "mrfp"])
+
+
+def _is_reporter_target(target_name):
+    """判断题目 target 是否为 reporter 类型标记"""
+    s = _normalize_name(target_name)
+    return "reporter" in s or "Դ" in target_name  # include Chinese source/reporter
+
+
+def _split_marker_value(value):
+    """Split a marker value that may contain multiple markers separated by delimiters."""
+    import re
+    if not value:
+        return []
+    parts = re.split(r"[;/,]|\band\b|\bor\b", str(value))
+    return [p.strip() for p in parts if p.strip()]
+
+
+def _match_marker_to_targets(marker_name, marker_query_targets, fluor_name=None):
+    """检查 marker_name（及可选的 fluor_name）是否与 marker_query_targets 中任一 marker_name 匹配。
+
+    改进点：
+    1. 引入同义词/别名表，处理 GFP/EGFP、TUJ1/β-III Tubulin、CD31/PECAM1 等。
+    2. marker_dict 的 value 可能为描述性文字或包含多个 marker，拆分后分别匹配。
+    3. marker_dict 的 key 有时就是 marker（尤其 reporter），也作为候选。
+    4. reporter 靶标（EGFP reporter 等）与 reporter 荧光团直接匹配。
+    """
+    # Collect all candidate strings: the main marker, split parts, and fluor key if provided
+    candidate_names = []
+    if marker_name and str(marker_name).strip():
+        candidate_names.append(str(marker_name).strip())
+        candidate_names.extend(_split_marker_value(marker_name))
+    if fluor_name and str(fluor_name).strip():
+        candidate_names.append(str(fluor_name).strip())
+
+    # Precompute expanded candidate sets
+    candidate_sets = [_expand_marker_candidates(c) for c in candidate_names]
+
     for target in marker_query_targets:
         target_name = target.get("marker_name", "")
+        if not target_name:
+            continue
         norm_target = _normalize_name(target_name)
         target_abbrevs = _extract_parenthetical(target_name)
-        # 直接匹配
-        if norm_marker == norm_target:
-            return True
-        # 缩写匹配
-        if norm_marker in target_abbrevs or norm_target in norm_abbreviations:
-            return True
-        # 子串匹配（容忍部分差异）
-        if norm_marker in norm_target or norm_target in norm_marker:
-            # 避免过短的子串误匹配（如 'a' in 'map2'）
-            if len(norm_marker) >= 3 and len(norm_target) >= 3:
+        target_candidates = _expand_marker_candidates(target_name)
+
+        for cand_set in candidate_sets:
+            # Direct normalized match or alias match
+            if cand_set & target_candidates:
                 return True
+            # Abbreviation match
+            if cand_set & set(target_abbrevs):
+                return True
+            # Substring match (avoid short tokens)
+            for cand in cand_set:
+                if len(cand) < 3:
+                    continue
+                for tc in target_candidates:
+                    if len(tc) < 3:
+                        continue
+                    if cand in tc or tc in cand:
+                        return True
+
+        # Special reporter handling: if target is a reporter and fluor is a reporter fluorophore
+        if fluor_name and _is_reporter_target(target_name) and _is_reporter_fluor(fluor_name):
+            fluor_set = _expand_marker_candidates(fluor_name)
+            # Match fluor against target name (e.g. EGFP vs EGFP reporter, tdTomato vs mCherry/RFP reporter)
+            for fc in fluor_set:
+                if len(fc) >= 3 and (fc in norm_target or norm_target in fc):
+                    return True
+
     return False
 
 
@@ -448,18 +768,52 @@ def load_data():
         model_space = json.load(f)
     return questions, standard_responses, model_space
 
-def generate_model_prompt(question, restrictions, standard_responses=None, shot_type="1-shot"):
+
+def _shot_flags(shot_type):
+    """Map a shot_type token to (use_rag, use_self_check).
+
+    '1-shot'                     -> (False, False)  (unchanged baseline)
+    '1-shot+KB-RAG'              -> (True,  False)
+    '1-shot+KB-RAG+self-check'   -> (True,  True)
+    """
+    st = (shot_type or "").lower()
+    use_rag = ("kb-rag" in st) or ("kbrag" in st) or ("rag" in st)
+    use_sc = ("self-check" in st) or ("selfcheck" in st) or ("self_check" in st)
+    return use_rag, use_sc
+
+
+_RAG_BLOCK_CACHE: dict = {}
+
+
+def _load_rag_context_block(qid):
+    """Load the pre-rendered KB-RAG prompt block for a question id (cached). '' if absent."""
+    if qid in _RAG_BLOCK_CACHE:
+        return _RAG_BLOCK_CACHE[qid]
+    path = os.path.join(RAG_CONTEXT_DIR, f'rag_context_{qid}.json')
+    block = ""
+    if os.path.exists(path):
+        try:
+            block = json.load(open(path, encoding='utf-8')).get("prompt_block", "")
+        except Exception:
+            block = ""
+    _RAG_BLOCK_CACHE[qid] = block
+    return block
+
+
+def generate_model_prompt(question, restrictions, standard_responses=None, shot_type="1-shot", rag_context_block=""):
     """
     方法目的及步骤：
     构建发送给被测模型的 Prompt 字符串。
     使用 prompts/gen_protocol_template.py 中的 TEST_MODEL_GENERATION_PROMPT 模板，
     并将 dataset/Q+AR/src/restrict.py 中的限制条件格式化填入。
-    
+
     Args:
         question (dict): 当前处理的问题对象。
         restrictions (dict): 限制条件字典（来自 load_restrictions() 加载的 DEFAULT_RESTRICT）。
         standard_responses (list): 标准回答列表（已废弃，保留参数以兼容调用方）。
         shot_type (str): "0-shot" 或 "1-shot"（已废弃，模板已内置 1-shot 示例）。
+        rag_context_block (str): 可选的 KB-RAG 检索上下文。为空时行为与原 1-shot 完全一致；
+            非空时在 "Your Task Steps" 之前注入一段非泄漏的领域 grounding。
     """
     # 格式化限制条件（DEFAULT_RESTRICT 的值是 set，里面包着一个顿号分隔的字符串）
     restrict_lines = []
@@ -471,11 +825,24 @@ def generate_model_prompt(question, restrictions, standard_responses=None, shot_
             value_str = str(value)
         restrict_lines.append(f"{key}:{{{value_str}}}")
     restrict_str = "\n".join(restrict_lines)
-    
+
     # 使用模板并替换占位符
     prompt = TEST_MODEL_GENERATION_PROMPT.replace("[specific_question]", question['question'])
     prompt = prompt.replace("{{restrictions}}", restrict_str)
-    
+
+    # KB-RAG: 在任务步骤前注入检索到的知识库上下文（若提供）。
+    if rag_context_block:
+        anchor = "**Your Task Steps:**"
+        block = (
+            "\n" + rag_context_block.strip() + "\n"
+            "Use the retrieved knowledge-base context above as domain grounding: choose a "
+            "target-specific marker for each required labeling target, pair it with a "
+            "fluorophore/method combination marked compatible, and select a clearing method "
+            "that is established for this sample tier. The context deliberately omits exact "
+            "refractive-index and timing values.\n\n"
+        )
+        prompt = prompt.replace(anchor, block + anchor, 1)
+
     return prompt
 
 async def get_model_response(model_instance, prompt):
@@ -485,6 +852,38 @@ async def get_model_response(model_instance, prompt):
     except Exception as e:
         print(f"获取模型回答出错: {e}")
         return ""
+
+
+# Fixed self-check checklist (cheap alternative to self-consistency): one grounded
+# review + single revision. Targets the known failure modes without leaking numbers.
+SELF_CHECK_PROMPT = """You previously produced the tissue-clearing protocol below. Before finalizing, run this fixed checklist against the retrieved knowledge-base context and your own protocol, then output a single corrected protocol.
+
+{context}
+
+--- YOUR CURRENT PROTOCOL ---
+{protocol}
+--- END OF YOUR CURRENT PROTOCOL ---
+
+Checklist (fix any item that fails; do not introduce new violations):
+1. Target match: does each fluorescent marker you chose correspond to a target-specific marker for the required labeling target (not a pan-lineage marker and not a bare nuclear counterstain)?
+2. Marker-fluorophore compatibility: is each marker paired with a compatible fluorophore (avoid any pair listed as 'avoid')?
+3. Method-fluorophore compatibility: is your fluorophore choice compatible with the chosen clearing method (avoid statuses marked 'avoid')?
+4. Method-tier support: is the chosen clearing method established for this sample tier (per the feasibility list)?
+5. Timing plausibility: is the clearing time order-of-magnitude appropriate for this sample tier?
+6. RI / medium: is the clearing-medium family appropriate (e.g. do not rely on endogenous fluorescent proteins together with an FP-quenching solvent method)?
+
+Output the FULL corrected protocol in the EXACT same format as before (starting with '**Chosen Method:**', then '**Chosen Labeling:**', then '**Justification:**', then '**Protocol Steps:**'), even if you make no changes. Output only the protocol, with no commentary about the checklist."""
+
+
+async def self_check_and_revise(model_instance, first_answer, rag_context_block):
+    """One grounded self-check + single revision. Returns the first answer unchanged if
+    the revised output is empty/invalid."""
+    prompt = SELF_CHECK_PROMPT.format(
+        context=(rag_context_block or "(no retrieved context available)"),
+        protocol=first_answer,
+    )
+    revised = await get_model_response(model_instance, prompt)
+    return revised if _is_valid_response(revised) else first_answer
 
 async def get_user_preference_vector(teacher_model, question_text):
     """
@@ -512,7 +911,7 @@ async def get_user_preference_vector(teacher_model, question_text):
 
 def calculate_cosine_similarity(vec1, vec2):
     """
-    计算两个向量的余弦相似度
+    计算两个向量的余弦相似度（保留备用）
     """
     dot_product = np.dot(vec1, vec2)
     norm1 = np.linalg.norm(vec1)
@@ -520,6 +919,90 @@ def calculate_cosine_similarity(vec1, vec2):
     if norm1 == 0 or norm2 == 0:
         return 0.0
     return dot_product / (norm1 * norm2)
+
+
+# ---- SIGNED method-fit (ported from results/refresh_s_method.py, 2026-07-01) ----
+# Capability space: F_fp/P_dye/M_geo/E_ops/S_safe in [-1,+1] (+ helps the objective,
+# - actively harms it); C_opt is a non-negative clearing-power magnitude [0,1].
+_MS_SIGNED_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)),
+                               "dataset/Q+AR/src/model_space_signed.json")
+try:
+    with open(_MS_SIGNED_PATH, encoding="utf-8") as _f:
+        MODEL_SPACE_SIGNED = json.load(_f).get("methods", {})
+except Exception as _e:  # pragma: no cover
+    print(f"Warning: could not load model_space_signed.json ({_e}); s_method will gate to 0.")
+    MODEL_SPACE_SIGNED = {}
+
+_SM_DIMS = [("fluorescence_protein_preservation", "F_fp"), ("dye_permeability", "P_dye"),
+            ("clearing_challenge", "C_opt"), ("geometry_preference", "M_geo"),
+            ("operational_economy", "E_ops"), ("safety_compatibility", "S_safe")]
+S_METHOD_MAX = 2.5   # signed score normalizes to symmetric [-1,+1]
+_SM_DWEIGHT = 2.0    # emphasis on the winning labeling axis (F_fp xor P_dye)
+
+
+def _sm_norm(s):
+    s = str(s or "").lower()
+    for ch in " -_/()":
+        s = s.replace(ch, "")
+    return s.replace("+", "")
+
+
+def find_signed_method(name):
+    """Match an extracted method name to a signed capability vector (with organic-solvent fallback)."""
+    nl = _sm_norm(name)
+    if not nl:
+        return None
+    for k, v in MODEL_SPACE_SIGNED.items():
+        kl = _sm_norm(k)
+        if (nl in kl or kl in nl) and min(len(nl), len(kl)) >= 3:
+            return v
+    for kw, canon in (("3disco", "3DISCO"), ("thf", "3DISCO"), ("dbe", "3DISCO"),
+                      ("dcm", "3DISCO"), ("babb", "BABB"), ("benzyl", "BABB"),
+                      ("ethylcinnamate", "BABB"), ("idisco", "iDISCO (iDISCO+)"),
+                      ("solvent", "3DISCO")):
+        if kw in nl and canon in MODEL_SPACE_SIGNED:
+            return MODEL_SPACE_SIGNED[canon]
+    return None
+
+
+def calculate_method_suitability(user_pref_vector_dict, method_vector_dict, **kwargs):
+    """SIGNED need-weighted method-fit, in [-2.5, +2.5] (max_score 2.5).
+
+    demand strength  ds = scenario_weight * target  (silent axis -> W=0 -> drops out);
+    capability read directly from the SIGNED model_space (+ helps / - harms; C_opt magnitude).
+    The two labeling axes F_fp/P_dye are MUTUALLY EXCLUSIVE: the axis with the larger weighted
+    demand is emphasized (xDWEIGHT), the other zeroed. score = 2.5 * sum(ds*cap)/sum(ds).
+    Returns 0.0 (neutral) if no axis is constrained. (kwargs absorbed for backward-compatible calls.)
+    """
+    if not user_pref_vector_dict or not method_vector_dict:
+        return 0.0
+
+    def _dem(longk):
+        o = user_pref_vector_dict.get(longk, {}) or {}
+        return float(o.get("target", 0) or 0), float(o.get("weight", 0) or 0)
+
+    t_fp, w_fp = _dem("fluorescence_protein_preservation")
+    t_pd, w_pd = _dem("dye_permeability")
+    mult = {"F_fp": 1.0, "P_dye": 1.0}
+    if w_fp * t_fp >= w_pd * t_pd:
+        mult["F_fp"], mult["P_dye"] = _SM_DWEIGHT, 0.0
+    else:
+        mult["F_fp"], mult["P_dye"] = 0.0, _SM_DWEIGHT
+
+    num = den = 0.0
+    for longk, short in _SM_DIMS:
+        t, w = _dem(longk)
+        if short == "M_geo":
+            t = min(t, 1.0)   # isotropy demand treated as unipolar preserve-need
+        ds = mult.get(short, 1.0) * w * t
+        if ds <= 0:
+            continue
+        num += ds * float(method_vector_dict.get(short, 0) or 0)
+        den += ds
+    if den <= 0:
+        return 0.0
+    return float(round(S_METHOD_MAX * (num / den), 4))
+
 
 def calculate_effectiveness_score(quantitative_data, user_pref_vector_dict, model_space, marker_dict, marker_query_targets):
     """
@@ -531,87 +1014,60 @@ def calculate_effectiveness_score(quantitative_data, user_pref_vector_dict, mode
     # 1. S_method: 透明方法选择总体适配度
     method_name = _coerce_str(quantitative_data.get("method_name"), default="")
 
-    # 查找 method_vector
-    # model_space.json 结构: {"methods": {"CUBIC": {"F_fp": {"V": x, "W": y}, ...}, ...}}
-    # 需要处理大小写或部分匹配
-    method_vector_dict = {}
-    found_method = False
+    # 查找 signed 容量向量（model_space_signed.json，结构 {"methods": {"CUBIC": {"F_fp": x, ...}}}）
+    # 通过 find_signed_method 做大小写/部分匹配 + 有机溶剂兜底（BABB/3DISCO 等）
+    method_vector_dict = find_signed_method(method_name)
 
-    if method_name:  # Skip lookup entirely if LLM didn't extract a method name
-        mn_low = method_name.lower()
-        for key, val in model_space.get("methods", {}).items():
-            kl = key.lower()
-            # Require at least 3-char overlap to avoid empty-string false matches
-            if (mn_low in kl or kl in mn_low) and min(len(mn_low), len(kl)) >= 3:
-                method_vector_dict = val
-                found_method = True
-                break
-
-    if not found_method:
-        # 如果没找到，给一个默认低分或0分
+    if method_vector_dict is None:
+        # 未匹配到方法：s_method 记为中性 0（signed 区间 [-2.5,+2.5] 的零点）
         if method_name:
-            print(f"Warning: Method '{method_name}' not found in model_space. Using default vector (0).")
+            print(f"Warning: Method '{method_name}' not found in signed model_space. s_method=0.")
         s_method = 0.0
     else:
-        # 构建向量
-        # 顺序: F_fp, P_dye, C_opt, M_geo, E_ops, S_safe
-        # User Pref Map:
-        # fluorescence_protein_preservation -> F_fp
-        # dye_permeability -> P_dye
-        # clearing_challenge -> C_opt
-        # geometry_preference -> M_geo
-        # operational_economy -> E_ops
-        # safety_compatibility -> S_safe
-        
-        user_vec = []
-        method_vec = []
-        
-        mapping = [
-            ("fluorescence_protein_preservation", "F_fp"),
-            ("dye_permeability", "P_dye"),
-            ("clearing_challenge", "C_opt"),
-            ("geometry_preference", "M_geo"),
-            ("operational_economy", "E_ops"),
-            ("safety_compatibility", "S_safe")
-        ]
-        
-        for user_key, method_key in mapping:
-            u_val = user_pref_vector_dict.get(user_key, {}).get("target", 0.0)
-            m_val = method_vector_dict.get(method_key, {}).get("V", 0.0)
-            user_vec.append(u_val)
-            method_vec.append(m_val)
-            
-        cos_sim = calculate_cosine_similarity(user_vec, method_vec)
-        s_method = 5 * cos_sim
-        s_method = max(0.0, min(5.0, s_method)) # Clamp to [0, 5]
+        s_method = calculate_method_suitability(user_pref_vector_dict, method_vector_dict)
 
     # 2. S_label: 标记与方法兼容性评分 (Python 规则计算)
+    # Preprocess: fluorophore keys that are actually markers get moved to marker side,
+    # and detect imbalanced entries (marker without fluorophore or vice versa).
+    marker_pairs, has_marker_without_fluor, has_fluor_without_marker = _preprocess_marker_dict(marker_dict)
+
     # 步骤2.1: s_target_match — 标记位点与 question 要求的匹配度
     target_match_scores = []
-    for fluor, marker in marker_dict.items():
-        if not marker or not str(marker).strip():
+    for fluor_str, marker_str in marker_pairs:
+        # Preserve original behavior: entries without an explicit marker value are not scored.
+        if not marker_str:
             continue
-        if _match_marker_to_targets(marker, marker_query_targets):
+        if _match_marker_to_targets(marker_str, marker_query_targets, fluor_name=fluor_str):
             target_match_scores.append(6.0)
         else:
-            # 查 tissue.json 看是否同一大类
-            marker_major = _get_tissue_major_category(marker)
-            # 取 question 中第一个 target 的大类作为参考（通常同 question 的 targets 大类一致）
-            question_major = ""
-            if marker_query_targets:
-                question_major = marker_query_targets[0].get("major_category", "")
-            if marker_major and question_major and marker_major == question_major:
+            # Determine specificity tier: 0 = vague/descriptive, 3 = incomplete but inferable, 6 = specific marker
+            specificity = _classify_marker_specificity(marker_str, fluor_str, marker_query_targets)
+            if specificity == 0:
+                target_match_scores.append(0.0)
+            elif specificity == 3:
+                # Incomplete but reasonable -> half credit
                 target_match_scores.append(3.0)
             else:
-                target_match_scores.append(0.0)
+                # Specific marker: check tissue.json major_category for partial credit
+                marker_major = _get_tissue_major_category(marker_str)
+                question_major = ""
+                if marker_query_targets:
+                    question_major = marker_query_targets[0].get("major_category", "")
+                if marker_major and question_major and marker_major == question_major:
+                    target_match_scores.append(3.0)
+                else:
+                    target_match_scores.append(0.0)
     s_target_match = min(target_match_scores) if target_match_scores else 0.0
 
     # 步骤2.2: s_marker_fluor_compat — 标记位点与荧光团兼容性 (tissue.json)
     marker_fluor_scores = []
-    for fluor, marker in marker_dict.items():
-        if not marker or not str(marker).strip():
+    for fluor_str, marker_str in marker_pairs:
+        if not marker_str:
             continue
-        compat = _get_marker_fluor_compat(marker, fluor)
+        if _is_penalty_fluor(fluor_str):
+            marker_fluor_scores.append(0.0)
+            continue
+        compat = _get_marker_fluor_compat(marker_str, fluor_str)
         if compat is False:
             marker_fluor_scores.append(0.0)
         else:
@@ -621,8 +1077,11 @@ def calculate_effectiveness_score(quantitative_data, user_pref_vector_dict, mode
 
     # 步骤2.3: s_method_fluor_compat — 荧光团与透明方法兼容性 (method_fluro_compati.json)
     method_fluor_scores = []
-    for fluor, marker in marker_dict.items():
-        compat_val = _get_method_fluor_compat(method_name, fluor)
+    for fluor_str, marker_str in marker_pairs:
+        if _is_penalty_fluor(fluor_str):
+            method_fluor_scores.append(0.0)
+            continue
+        compat_val = _get_method_fluor_compat(method_name, fluor_str)
         if compat_val is None:
             method_fluor_scores.append(6.0)  # 未知时不 penalize
         else:
@@ -969,9 +1428,9 @@ async def evaluate_response_with_teacher(teacher_model, question_text, model_pro
                 "effectiveness": {
                     "s_method": {
                         "score": effectiveness_scores["s_method"],
-                        "max_score": 5,
+                        "max_score": 2.5,
                         "description": "透明方法选择适配度",
-                        "reasoning": f"Cos distance based score. Method: {quantitative_data.get('method_name')}"
+                        "reasoning": f"Signed need-weighted method-fit [-2.5,+2.5] (F_fp xor P_dye x2; caps signed). Method: {quantitative_data.get('method_name')}"
                     },
                     "s_label": {
                         "score": effectiveness_scores["s_label"],
@@ -1056,14 +1515,25 @@ async def process_model(model_name, model_instance, questions, restrictions, sta
         print(f"[{model_name}] 所有问题已有有效回答，无需生成。")
         return model_outputs
 
+    use_rag, use_sc = _shot_flags(shot_type)
+    if use_rag or use_sc:
+        print(f"[{model_name}] setting flags: KB-RAG={use_rag}, self-check={use_sc}")
+
     print(f"[{model_name}] 待生成 {len(pending_questions)} 题，并发上限 {gen_concurrency}")
     sem = asyncio.Semaphore(gen_concurrency)
     lock = asyncio.Lock()
 
     async def _gen_one(q):
         async with sem:
-            prompt = generate_model_prompt(q, restrictions, standard_responses, shot_type=shot_type)
-            response_text = await get_model_response(model_instance, prompt)
+            rag_block = _load_rag_context_block(q["question_id"]) if use_rag else ""
+            prompt = generate_model_prompt(q, restrictions, standard_responses,
+                                           shot_type=shot_type, rag_context_block=rag_block)
+            first_response = await get_model_response(model_instance, prompt)
+            response_text = first_response
+            sc_applied = False
+            if use_sc and _is_valid_response(first_response):
+                response_text = await self_check_and_revise(model_instance, first_response, rag_block)
+                sc_applied = True
             output_entry = {
                 "question_id": q["question_id"],
                 "specific_question": q["question"],
@@ -1074,8 +1544,12 @@ async def process_model(model_name, model_instance, questions, restrictions, sta
                 "prompt": prompt,
                 "restrictions": str(restrictions),
                 "model_response": response_text,
-                "shot_type": shot_type
+                "shot_type": shot_type,
+                "rag_grounded": use_rag,
+                "self_check_applied": sc_applied,
             }
+            if use_sc:
+                output_entry["first_response"] = first_response
             async with lock:
                 # 双重检查，避免并发条件下重复写入同一题
                 current_ids = {e["question_id"] for e in model_outputs}
@@ -1282,11 +1756,23 @@ async def main(argv=None):
                         help="Skip generation phase, evaluate existing from_<model>.json files only")
     parser.add_argument("--no-evaluation", action="store_true",
                         help="Skip evaluation phase, only generate responses (legacy behavior)")
+    parser.add_argument("--rag-dir", default=None,
+                        help="Override the KB-RAG context directory (e.g. dataset/Q+AR/rag_context_v2)")
+    parser.add_argument("--limit", type=int, default=None,
+                        help="Only run the first N questions (dev subset, applies to gen + eval)")
+    parser.add_argument("--qids", nargs="*", type=int, default=None,
+                        help="Only run these specific question ids (stratified sample; overrides --limit)")
     args = parser.parse_args(argv)
 
     if args.eval_only and args.no_evaluation:
         print("错误：--eval-only 和 --no-evaluation 互斥")
         return 2
+
+    global RAG_CONTEXT_DIR
+    if args.rag_dir:
+        RAG_CONTEXT_DIR = args.rag_dir
+        _RAG_BLOCK_CACHE.clear()
+        print(f"KB-RAG context dir: {RAG_CONTEXT_DIR}")
 
     # 1. 加载模型管理器
     loader = ModelLoader('config/config.yaml')
@@ -1310,6 +1796,13 @@ async def main(argv=None):
 
     # 3. 加载数据
     questions, standard_responses, model_space = load_data()
+    if args.qids:
+        idset = set(args.qids)
+        questions = [q for q in questions if q["question_id"] in idset]
+        print(f"[dev] restricting to {len(questions)} specified question ids")
+    elif args.limit:
+        questions = questions[:args.limit]
+        print(f"[dev] limiting to first {len(questions)} questions")
     restrictions = load_restrictions()
     prompt_template = load_prompt_method_generate()
 

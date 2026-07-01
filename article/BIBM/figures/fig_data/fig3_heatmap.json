@@ -1,0 +1,197 @@
+{
+  "description": "Clearing-method selection per model (% of that model choices). H = Shannon entropy of the choice distribution (bits). Rows pre-sorted most-diverse (high H) to most-anchored (low H).",
+  "x_methods": [
+    "iDISCO+",
+    "uDISCO",
+    "CUBIC",
+    "PEGASOS",
+    "BoneClear",
+    "FDISCO",
+    "seeDB2",
+    "Other"
+  ],
+  "models": [
+    {
+      "name": "Gemini-3-Flash",
+      "entropy_H": 2.97,
+      "pct": [
+        29.9,
+        1.2,
+        12.4,
+        20.3,
+        1.2,
+        15.1,
+        4.4,
+        15.5
+      ]
+    },
+    {
+      "name": "GPT-5.2-Fast",
+      "entropy_H": 2.76,
+      "pct": [
+        43.1,
+        0.0,
+        12.6,
+        13.4,
+        3.2,
+        4.7,
+        8.7,
+        14.2
+      ]
+    },
+    {
+      "name": "GPT-5.2-Think",
+      "entropy_H": 2.69,
+      "pct": [
+        46.2,
+        0.0,
+        11.5,
+        12.3,
+        3.2,
+        6.7,
+        7.1,
+        13.0
+      ]
+    },
+    {
+      "name": "GLM-4.7-Think",
+      "entropy_H": 2.65,
+      "pct": [
+        46.6,
+        5.0,
+        15.1,
+        1.7,
+        8.8,
+        3.4,
+        3.8,
+        15.5
+      ]
+    },
+    {
+      "name": "Gemini-3-Pro",
+      "entropy_H": 2.56,
+      "pct": [
+        45.8,
+        0.0,
+        19.8,
+        9.1,
+        1.2,
+        6.3,
+        4.7,
+        13.0
+      ]
+    },
+    {
+      "name": "Claude-4.6",
+      "entropy_H": 2.49,
+      "pct": [
+        53.8,
+        0.0,
+        4.7,
+        8.3,
+        10.7,
+        5.1,
+        0.8,
+        16.6
+      ]
+    },
+    {
+      "name": "GLM-4.7",
+      "entropy_H": 2.3,
+      "pct": [
+        37.5,
+        15.4,
+        31.6,
+        0.4,
+        5.9,
+        1.6,
+        2.4,
+        5.1
+      ]
+    },
+    {
+      "name": "Qwen3-Max",
+      "entropy_H": 2.27,
+      "pct": [
+        40.3,
+        0.8,
+        34.4,
+        7.1,
+        6.3,
+        0.4,
+        2.4,
+        8.3
+      ]
+    },
+    {
+      "name": "DeepSeek-Think",
+      "entropy_H": 1.82,
+      "pct": [
+        4.7,
+        69.6,
+        5.9,
+        7.1,
+        3.2,
+        0.8,
+        2.4,
+        6.3
+      ]
+    },
+    {
+      "name": "DeepSeek",
+      "entropy_H": 1.75,
+      "pct": [
+        4.7,
+        70.8,
+        5.5,
+        6.7,
+        3.2,
+        0.4,
+        2.8,
+        5.9
+      ]
+    },
+    {
+      "name": "Qwen3-235B",
+      "entropy_H": 1.64,
+      "pct": [
+        71.9,
+        2.8,
+        0.8,
+        0.8,
+        11.9,
+        0.4,
+        1.6,
+        9.9
+      ]
+    },
+    {
+      "name": "Qwen3-32B",
+      "entropy_H": 1.63,
+      "pct": [
+        62.8,
+        0.8,
+        19.8,
+        0.8,
+        11.1,
+        0.0,
+        0.0,
+        4.7
+      ]
+    },
+    {
+      "name": "Qwen3-14B",
+      "entropy_H": 1.35,
+      "pct": [
+        73.9,
+        9.1,
+        0.8,
+        0.0,
+        11.9,
+        0.0,
+        0.0,
+        4.3
+      ]
+    }
+  ]
+}

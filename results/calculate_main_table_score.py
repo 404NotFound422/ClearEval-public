@@ -1,3 +1,4 @@
+import argparse
 import json
 
 """
@@ -10,7 +11,7 @@ import json
    - I_K = (Tissue + Reagent + Method) / 3
 
 2. Application (OEQ) - Index I_A:
-   - Completeness: c_step 和 c_param 的平均值。
+   - Completeness: c_step 与 c_param 的 40/60 加权（Step Integrity 0.4, Param Detail 0.6，与论文 Table 一致）。
    - Correctness: co_order, co_method, co_param, co_chem 的平均值。
    - Effectiveness: s_method, s_label, s_trans, s_time 的平均值。
    - I_A = min(Completeness, Correctness, Effectiveness)  # 瓶颈/最弱环
@@ -47,9 +48,10 @@ def load_oeq(filepath):
             scores = item['average_scores']
             
             # 聚合逻辑
-            completeness = (scores['c_step_norm'] + scores['c_param_norm']) / 2
+            completeness = 0.4 * scores['c_step_norm'] + 0.6 * scores['c_param_norm']
             correctness = (scores['co_order_norm'] + scores['co_method_norm'] + scores['co_param_norm'] + scores['co_chem_norm']) / 4
-            effectiveness = (scores['s_method_norm'] + scores['s_label_norm'] + scores['s_trans_norm'] + scores['s_time_norm']) / 4
+            # signed s_method_norm can be negative; clamp Effectiveness at 0 to protect the harmonic-mean Total
+            effectiveness = max(0.0, (scores['s_method_norm'] + scores['s_label_norm'] + scores['s_trans_norm'] + scores['s_time_norm']) / 4)
             
             data[model] = {
                 'Completeness': completeness * 100,
@@ -58,9 +60,9 @@ def load_oeq(filepath):
             }
     return data
 
-def main():
+def main(oeq_file='results/oeq_stats_260223.jsonl'):
     mcq_data = load_mcq('results/mcq_stats_20260222.jsonl')
-    oeq_data = load_oeq('results/oeq_stats_260223.jsonl')
+    oeq_data = load_oeq(oeq_file)
 
     # 模型名称映射（内部名称到展示名称）
     model_mapping = {
@@ -107,4 +109,7 @@ def main():
         print(" | ".join(row))
 
 if __name__ == "__main__":
-    main()
+    parser = argparse.ArgumentParser(description="Calculate main table scores.")
+    parser.add_argument("--oeq-file", default="results/oeq_stats_260223.jsonl", help="Path to OEQ stats JSONL")
+    args = parser.parse_args()
+    main(oeq_file=args.oeq_file)

@@ -61,14 +61,14 @@ database-grounded feasibility benchmark for LLM-generated TOC protocols.
 ClearEval is built on a structured TOC feasibility database integrating 372
 wet-lab experimental records, 400+ curated tissue-clearing literature chunks,
 and expert-reviewed constraints on methods, tissues, markers, timing, and
-compatibility. It evaluates 12 state-of-the-art LLMs through two tracks: 2{,}588
+compatibility. It evaluates 13 state-of-the-art LLMs through two tracks: 2{,}588
 multiple-choice questions for static knowledge and 253 open-ended scenarios for
 protocol generation. Generated protocols are scored by our Completeness,
 Correctness, and Effectiveness (CCE) framework, which combines rubric-based
 procedural assessment with database-grounded feasibility rules and formulas.
-Models reach 80--91% accuracy on static knowledge, but performance drops on
+Models reach 79--91% accuracy on static knowledge, but performance drops on
 executable protocol generation; the strongest model falls from 91.1% Knowledge
-Index to a 64.1 Application Index. The main failures arise from executable
+Index to a 55.2 Application Index. The main failures arise from executable
 parameterization, especially matching fluorescent markers to required labeling
 targets. ClearEval provides a depth-first feasibility benchmark that complements
 breadth-oriented protocol benchmarks and supports pre-experimental evaluation in TOC and related wet-lab subdomains. Code and data:
@@ -80,6 +80,18 @@ breadth-oriented protocol benchmarks and supports pre-experimental evaluation in
 Benchmark, Tissue optical clearing, Wet-lab protocols, Large language models
 \end{IEEEkeywords}
 \section{Introduction}
+
+\begin{figure*}[t]
+\centering
+\includegraphics[width=0.8\textwidth]{figures/overview.png}
+\caption{Overview of ClearEval. A TOC feasibility database is constructed
+from wet-lab experimental records, curated literature chunks, and
+expert-reviewed constraints. The database supports both task construction
+and protocol scoring. The Knowledge track is scored by the Knowledge Index
+($I_K$), while the Application track is scored by the Application Index
+($I_A$), which combines Completeness, Correctness, and Effectiveness.}
+\label{fig:overview}
+\end{figure*}
 
 Tissue Optical Clearing (TOC) renders biological tissues optically transparent
 by reducing light scattering and refractive-index mismatch, enabling
@@ -118,13 +130,12 @@ protocol generation. Generated protocols are evaluated by our
 combines rubric-based procedural assessment with database-grounded rules and
 formulas for experimental effectiveness.
 
-Experiments on 12 state-of-the-art LLMs show that static knowledge performance
+Experiments on 13 state-of-the-art LLMs show that static knowledge performance
 is close to saturation, whereas open-ended feasibility evaluation remains
 discriminative. For example, GPT-5.2-Fast achieves 91.1% on the Knowledge
-Index but only 64.1 on the Application Index
-(Table~\ref{tab:main_results_total}). The radar plots further show that MCQ
-profiles are tightly clustered, while OEQ-based CCE scores expose
-model-specific execution failures. The most reliable failures arise from
+Index but only 55.2 on the Application Index
+(Table~\ref{tab:main_results_total}); MCQ profiles are tightly clustered, while
+OEQ-based CCE scores expose model-specific execution failures. The most reliable failures arise from
 executable parameterization, especially matching fluorescent markers to the
 required labeling targets. Our contributions are: (1) a structured TOC
 feasibility database integrating experimental records, literature evidence, and
@@ -157,8 +168,11 @@ protocol understanding and reasoning across multiple subfields, including
 protocol QA, step ordering, error correction, generation, and reasoning.
 LAB-Bench~\cite{labbench} evaluates language models on biology research tasks,
 including literature use, protocol planning, and data analysis. BixBench
-~\cite{bixbench} considers multi-step computational-biology agent tasks. These
-benchmarks characterize broad biological or research capabilities. ClearEval
+~\cite{bixbench} considers multi-step computational-biology agent tasks.
+SeedBench~\cite{ying2025seedbench} similarly targets a single wet-lab subdomain
+(seed science) but evaluates multi-task knowledge rather than parameter-level
+protocol feasibility. These benchmarks characterize broad biological or research
+capabilities. ClearEval
 focuses on a complementary setting: parameter-level feasibility assessment for
 LLM-generated Tissue Optical Clearing protocols, where multiple method--marker
 --time combinations may be acceptable and must be checked against explicit
@@ -171,50 +185,17 @@ G-Eval~\cite{liu2023geval}, enable scalable assessment of generated outputs.
 Recent work has also analyzed systematic effects in LLM-as-a-judge
 methods~\cite{li2024survey,zheng2023judging}. In ClearEval, LLM judgment is
 used for rubric-defined procedural dimensions, while Effectiveness is computed
-from a structured TOC feasibility database. TOC methods such as CLARITY, CUBIC,
-iDISCO, uDISCO, and PEGASOS have enabled high-resolution 3D imaging across
-tissues and organ scales~\cite{chung2013clarity,ueda2020tissue,
-wang2025advances,richardson2025unlocking,mai2024tissue}. This literature
-provides the basis for reasoning about method suitability, refractive-index
-matching, labeling preservation, and clearing time. ClearEval organizes these
-resources into a machine-readable feasibility checker for LLM-generated
-protocols, which may also serve as a pre-experimental component for future
-vertical scientific agents~\cite{boiko2023autonomous,hartung2025ai}.
+from a structured TOC feasibility database. TOC methods (CLARITY, CUBIC, iDISCO,
+uDISCO, PEGASOS) enable high-resolution 3D imaging across tissue and organ
+scales~\cite{chung2013clarity,ueda2020tissue,wang2025advances,richardson2025unlocking,mai2024tissue};
+ClearEval organizes this literature into a machine-readable feasibility checker
+for LLM-generated protocols, a pre-experimental component for vertical
+scientific agents~\cite{boiko2023autonomous,hartung2025ai}.
 
 
-\begin{table}[t]
-\centering
-\caption{Positioning of ClearEval relative to representative LLM benchmarks.}
-\label{tab:positioning}
-\scriptsize
-\setlength{\tabcolsep}{2.5pt} % 縮減列間距以適應單欄
-\renewcommand{\arraystretch}{1.15}
-% 使用 tabularx 確保總寬度剛好等於單欄寬度 (\columnwidth)
-\begin{tabularx}{\columnwidth}{l X X}
-\toprule
-\textbf{Benchmark} & \textbf{Scope \& Output} & \textbf{Main Signal / Feasibility} \\
-\midrule
-MMLU / MedQA~\cite{hendrycks2021mmlu,jin2021disease} & 
-Gen/Biomed QA; Closed answers & 
-Knowledge accuracy; Knowledge level \\
-\midrule
-BioProBench~\cite{bioprobench} & 
-Broad bio-protocols; QA, ordering, generation & 
-Protocol reasoning; Understanding level \\
-\midrule
-LAB / BixBench~\cite{labbench,bixbench} & 
-Bio-research \& comp-bio; Plans, workflows & 
-Task/scenario evaluation; Workflow level \\
-\midrule
-\textbf{ClearEval} & 
-\textbf{TOC protocols; LLM wet-lab protocols} & 
-\textbf{DB-grounded CCE; Parameter wet-lab feasibility} \\
-\bottomrule
-\end{tabularx}
-\end{table}
 
 
-\section{The ClearEval Benchmark}
+\section{The ClearEval Benchmark}\label{sec: ClearEval-benchmark}
 ClearEval is organized around three linked components: a TOC feasibility
 database, a dual-track task suite, and a scoring framework
 (Fig.~\ref{fig:overview}). The feasibility database converts experimental
@@ -223,18 +204,6 @@ machine-readable resources. The task suite uses these resources to construct
 knowledge questions and open-ended protocol-design scenarios. The scoring
 framework evaluates model outputs with a Knowledge Index ($I_K$) for MCQs and
 an Application Index ($I_A$) for generated protocols.
-
-\begin{figure*}[t]
-\centering
-\includegraphics[width=0.8\textwidth]{figures/overview.png}
-\caption{Overview of ClearEval. A TOC feasibility database is constructed
-from wet-lab experimental records, curated literature chunks, and
-expert-reviewed constraints. The database supports both task construction
-and protocol scoring. The Knowledge track is scored by the Knowledge Index
-($I_K$), while the Application track is scored by the Application Index
-($I_A$), which combines Completeness, Correctness, and Effectiveness.}
-\label{fig:overview}
-\end{figure*}
 
 \subsection{TOC Feasibility Database}
 ClearEval formalizes TOC protocol constraints as a structured feasibility
@@ -288,32 +257,35 @@ static knowledge evaluation and application-level feasibility assessment.
 \begin{table}[htbp]
 \centering
 \caption{The hierarchical metric system of ClearEval. Evaluation scales from
-static knowledge retrieval to empirically grounded protocol execution.}
+static knowledge retrieval to empirically grounded protocol execution. Within
+each Application dimension, sub-scores are normalized to $[0,1]$ and combined by
+the listed weights.}
 \label{tab:metrics}
 \resizebox{\columnwidth}{!}{
 \begin{tabular}{l l l l c}
 \toprule
 \textbf{Level} & \textbf{Dimension} & \textbf{Sub-Metric} &
-\textbf{Method} & \textbf{Max} \\
+\textbf{Method} & \textbf{Weight} \\
 \midrule
 Knowledge ($I_K$) & Static Retrieval & Accuracy &
 Deterministic & 100\% \\
 \midrule
-\multirow{9}{*}{Application ($I_A$)}
+\multirow{10}{*}{Application ($I_A$)}
 & \multirow{2}{*}{Completeness} & Step Integrity &
 LLM-Judge & 40\% \\
 & & Param Detail & LLM-Judge & 60\% \\
 \cmidrule{2-5}
-& \multirow{3}{*}{Correctness} & Sequential Logic &
-LLM-Judge & 40\% \\
-& & Consistency & LLM-Judge & 20\% \\
-& & Physics Plausibility & LLM-Judge & 40\% \\
+& \multirow{4}{*}{Correctness} & Seq. Logic ($co\_order$) &
+LLM-Judge & 25\% \\
+& & Method Consist. ($co\_method$) & LLM-Judge & 25\% \\
+& & Param Consist. ($co\_param$) & LLM-Judge & 25\% \\
+& & Chem. Safety ($co\_chem$) & LLM-Judge & 25\% \\
 \cmidrule{2-5}
-& \multirow{4}{*}{Effectiveness} & Method Suitability &
-Vector Sim. & 30\% \\
-& & Label Compatibility & Rule-Based & 40\% \\
-& & Trans. Validity ($S_{trans}$) & Physics Eq. & 15\% \\
-& & Time Efficiency ($S_{time}$) & Physics Eq. & 15\% \\
+& \multirow{4}{*}{Effectiveness} & Method Suit. ($S_{method}$) &
+Signed Fit & 25\% \\
+& & Label Compat. ($S_{label}$) & Rule-Based & 25\% \\
+& & Trans. Validity ($S_{trans}$) & Physics Eq. & 25\% \\
+& & Time Efficiency ($S_{time}$) & Physics Eq. & 25\% \\
 \midrule
 \textbf{Overall} & Expert Score & Harmonic Mean &
 Aggregation & 100\% \\
@@ -323,25 +295,18 @@ Aggregation & 100\% \\
 \end{table}
 
 \paragraph{Completeness and Correctness.}
-Completeness measures whether a generated protocol provides the information
-needed to specify a TOC experiment. It includes Step Integrity, which checks
-whether essential stages such as fixation or pre-treatment, labeling, clearing,
-refractive-index matching, and imaging preparation are present when applicable,
-and Parameter Detail, which checks whether key experimental parameters are
-specified, including reagent or method choices, sample scale, incubation time,
-temperature, concentration, labeling conditions, and imaging settings.
-
-Correctness measures whether the specified protocol is internally consistent
-and compatible with basic TOC principles. It includes Sequential Logic, which
-checks whether operations follow a plausible wet-lab order; Consistency, which
-checks for contradictions in sample scale, timing, or method choice; and
-Physics Plausibility, which checks whether the protocol respects constraints
-such as diffusion, tissue scale, refractive-index matching, and preservation of
-the labeling signal.
-
-Completeness and Correctness are evaluated by an LLM judge
-under a fixed rubric, because they require interpretation of free-form
-procedural text.
+Completeness measures whether a protocol specifies a runnable TOC experiment,
+via Step Integrity (are essential stages---fixation/pre-treatment, labeling,
+clearing, RI matching, imaging preparation---present when applicable) and
+Parameter Detail (are key parameters given: reagent/method choice, sample scale,
+incubation time, temperature, concentration, labeling, imaging settings).
+Correctness measures internal consistency with TOC principles through four
+equally-weighted sub-checks: Sequential Logic ($co\_order$, plausible wet-lab
+ordering); Method Consistency ($co\_method$, method matches goal and sample);
+Parameter Consistency ($co\_param$, scale/timing/concentration/temperature
+mutually consistent and respecting diffusion limits); and Chemical Safety
+($co\_chem$, no introduced non-standard hazard). Both are scored by an LLM judge
+(GPT-5.4) under a fixed rubric, since they require interpreting free-form text.
 
 \paragraph{Effectiveness.}
 Effectiveness evaluates whether the extracted experimental choices satisfy
@@ -352,20 +317,36 @@ extract the clearing method, labeling target, fluorescent marker or labeling
 strategy, refractive-index condition, and total processing time. These fields
 are scored by four sub-metrics:
 \begin{equation}
-E_{score}
-= S_{method} + S_{label} + S_{trans} + S_{time},
+\text{Effectiveness}
+= \max\!\Big(0,\ \tfrac{1}{4}\big(\hat{S}_{method} + \hat{S}_{label} + \hat{S}_{trans} + \hat{S}_{time}\big)\Big),
 \end{equation}
-with maxima scores $5$, $6$, $3$, and $3$, respectively.
+where $\hat{S}_{label},\hat{S}_{trans},\hat{S}_{time}\in[0,1]$ are normalized by
+their maxima ($6$, $3$, and $3$), while the signed
+$\hat{S}_{method}=S_{method}/2.5\in[-1,+1]$ can be negative when the chosen
+method conflicts with the scenario---so a poor method choice penalizes
+Effectiveness, which is clamped at $0$.
 
-\noindent\textbf{Method suitability ($S_{method}$, max $5$).}
-Each clearing method has a six-dimensional capability vector
-$\mathbf{v}_{ref}\in[0,1]^6$ over the experimental axes defined above. Each
-scenario is parsed into a demand vector $\mathbf{v}_{pred}$ over the same
-axes. Method suitability is computed as
+\noindent\textbf{Method suitability ($S_{method}$, signed, max $2.5$).}
+Each clearing method carries a \emph{signed} six-dimensional capability vector:
+five axes (fluorescent-protein preservation, dye penetration, geometry,
+operational economy, safety) lie in $[-1,+1]$---a positive entry means the
+method helps that objective, a negative entry that it actively harms it (an
+organic solvent quenches endogenous fluorescence, $c_{\text{F\_fp}}<0$)---while
+clearing power $c_{\text{C\_opt}}\in[0,1]$ is a non-negative magnitude. Each
+scenario is parsed by the teacher into a demand vector giving every axis a
+target $t_a\in[0,1]$ and a constraint weight $w_a\in\{0,0.5,1\}$ ($w_a=0$ when
+the scenario is silent), so the per-axis demand strength $d_a=w_a t_a$ makes
+unconstrained axes drop out. The two labeling axes are mutually exclusive:
+whichever of FP-preservation / dye-penetration has the larger weighted demand is
+emphasized ($\times2$) and the other zeroed. Suitability is the need-weighted
+signed fit
 \begin{equation}
 S_{method}
-= 5 \cdot \max\big(0,\cos(\mathbf{v}_{pred}, \mathbf{v}_{ref})\big).
+= 2.5 \cdot \frac{\sum_a d_a\, c_a}{\sum_a d_a}\ \in[-2.5,+2.5],
 \end{equation}
+positive when the method matches the scenario's binding constraints and negative
+when it conflicts (e.g.\ an FP-quenching solvent for a reporter-line sample),
+replacing an earlier cosine variant that collapsed onto a single default method.
 
 \noindent\textbf{Label compatibility ($S_{label}$, max $6$).}
 This metric evaluates whether the proposed labeling strategy is compatible
@@ -411,11 +392,10 @@ S_{time}
 \end{equation}
 where $\tau$ is set deterministically to $0.2\times$ the median clearing time.
 
-All timing windows, RI references, and $\sigma_{RI}/\tau$ tolerances are
-traceable to literature evidence, wet-lab records, and expert review
-(Appendix~\ref{app:curation}). The raw $E_{score}$, with maximum $17$, is
-min--max normalized to $[0,100]$ before being combined with Completeness and
-Correctness in the $I_A$ bottleneck.
+All timing windows, RI references, and $\sigma_{RI}/\tau$ tolerances trace to
+literature, wet-lab records, and expert review (Appendix~\ref{app:curation}).
+Effectiveness is the clamped mean of the four normalized sub-scores, scaled to
+$[0,100]$ before entering the $I_A$ bottleneck.
 
 \paragraph{Overall Expert Score.}
 The final ClearEval Expert Score combines static knowledge and
@@ -428,67 +408,44 @@ but fail to generate experimentally feasible protocols.
 
 \section{Experiments}
 \subsection{Models and Settings}
-We benchmark 12 LLMs across the GPT, Gemini, Claude, DeepSeek, GLM, and Qwen
+We benchmark 13 LLMs across the GPT, Gemini, Claude, DeepSeek, GLM, and Qwen
 families. For all evaluated API models we set temperature to $0.0$ for both
 Knowledge and Application tasks to maximize reproducibility; reasoning variants
-additionally run in their native thinking mode (Table~\ref{tab:modelconfig}).
+additionally run in their native thinking mode.
 Exact provider snapshot strings, context windows, maximum output tokens, and
 API call dates are released in the repository configuration
 (Appendix~\ref{app:repro}).
 
-\begin{table}[htbp]
-    \centering
-    \caption{Decoding configuration for the 12 evaluated models. ``Reasoning''
-    denotes whether the run used the model's native thinking mode. Temperature
-    is $0.0$ throughout; full per-model snapshots and context windows are in the
-    released configuration (Appendix~\ref{app:repro}).}
-    \label{tab:modelconfig}
-    \small
-    \begin{tabular}{l l c c}
-        \toprule
-        \textbf{Model} & \textbf{Provider} & \textbf{Reasoning} & \textbf{Temp.} \\
-        \midrule
-        GPT-5.2-Fast        & OpenAI    & --       & 0.0 \\
-        GPT-5.2-Think       & OpenAI    & \checkmark & 0.0 \\
-        Gemini-3-Flash      & Google    & --       & 0.0 \\
-        Gemini-3-Pro        & Google    & \checkmark & 0.0 \\
-        Claude-4.6-Sonnet   & Anthropic & --       & 0.0 \\
-        GLM-4.7             & Zhipu     & --       & 0.0 \\
-        DeepSeek-V3.2       & DeepSeek  & --       & 0.0 \\
-        DeepSeek-V3.2-Think & DeepSeek  & \checkmark & 0.0 \\
-        Qwen3-max           & Alibaba   & --       & 0.0 \\
-        Qwen3-235B-A22B     & Alibaba   & --       & 0.0 \\
-        Qwen3-32B           & Alibaba   & --       & 0.0 \\
-        Qwen3-14B           & Alibaba   & --       & 0.0 \\
-        \bottomrule
-    \end{tabular}
-\end{table}
-
 \subsection{Main Results: The Knowledge-Execution Gap}
 Table~\ref{tab:main_results_total} reveals a stark capability imbalance between
-static recall and wet-lab execution: Knowledge indices cluster at $80$--$91$,
-yet the bottleneck Application Index $I_A$ ranges from $64$ down to $18$. This
-is visually highlighted in Fig.~\ref{fig:radar_chart}: the left panel shows all
-models with uniformly high, tightly clustered Knowledge proficiency, whereas
-Application Performance (right) is highly erratic. Models generally maintain
-high procedural completeness ($79$ on average) but collapse on Correctness
-($50$) and Effectiveness ($59$); for the three strongest models the binding
-constraint is Effectiveness, for the other nine it is Correctness---though that
-dimension is partly deflated by the weakly-calibrated $co\_chem$ sub-score
-(Sec.~\ref{sec:calib}). The most reliable single failure is label suitability
-($S_{label}$): models propose fluorescent markers that miss the scenario's
-required labeling targets (Sec.~\ref{sec:diag}), exposing a severe
-knowledge--execution gap.
+static recall and wet-lab execution: Knowledge indices cluster at $79$--$91$,
+yet the bottleneck Application Index $I_A$ ranges from $56$ down to $35$. This is
+visualized in Fig.~\ref{fig:radar_chart}: Knowledge proficiency is uniformly high
+and tightly clustered, whereas Application performance is highly erratic. Models
+generally maintain
+high procedural Completeness ($79$ on average) and Correctness ($69$), but
+collapse on Effectiveness ($50$): for $12$ of the $13$ models Effectiveness is
+the binding constraint, the sole exception being Qwen3-14B, whose
+fluorescent-marker mismatches pull Correctness down to $35$. (GLM-4.7-Think's
+frequently truncated reasoning further depresses its Completeness to $51$.)
+The dominant failure is label suitability ($S_{label}$): models
+propose fluorescent markers that miss the scenario's required labeling targets
+(Sec.~\ref{sec:diag}), exposing a severe knowledge--execution gap.
 
 \begin{table*}[t]
     \centering
     \caption{Performance of state-of-the-art models on ClearEval. Evaluation
     covers Knowledge (MCQ) and Application (OEQ). $I_K$ represents the average
     of the Knowledge subset, $I_A$ represents the minimum score across the
-    Application subset, and Total is their harmonic mean.}
+    Application subset, and Total is their harmonic mean. GLM-4.7-Think's thinking-mode reasoning frequently
+    exhausts the output-token budget and truncates its protocols, lowering its
+    Completeness. $^\dagger$GLM-4.7-Think is not covered by the expert
+    calibration (Sec.~\ref{sec:calib}); $^\ddagger$Gemini-3-Flash is scored on
+    $251/253$ scenarios (two unparseable responses omitted, not a systematic
+    filter).}
     \label{tab:main_results_total}
     \setlength{\tabcolsep}{4pt}
-    \resizebox{0.85\textwidth}{!}{%
+    \resizebox{0.74\textwidth}{!}{%
     \begin{tabular}{l cccc cccc c}
         \toprule
         \multirow{2}{*}{\textbf{Models}} & \multicolumn{4}{c}{\textbf{Knowledge (MCQ)}} & \multicolumn{4}{c}{\textbf{Application (OEQ)}} & \multirow{2}{*}{\textbf{Total}} \\
@@ -497,21 +454,22 @@ knowledge--execution gap.
         \midrule
         \multicolumn{10}{l}{\textit{Proprietary Models}} \\
         \midrule
-        GPT-5.2-Fast & \textbf{91.1} & \textbf{88.7} & 93.5 & \textbf{91.1} & \underline{96.8} & \textbf{67.9} & \textbf{64.1} & \textbf{64.1} & \textbf{75.3} \\
-        GPT-5.2-Think & \underline{90.5} & \underline{87.3} & \underline{93.6} & \underline{90.5} & 96.6 & \underline{67.6} & 63.5 & \underline{63.5} & \underline{74.6} \\
-        Gemini-3-Flash & 78.7 & 81.8 & 91.1 & 83.8 & 75.1 & 55.8 & 63.4 & 55.8 & 67.0 \\
-        Gemini-3-Pro & 88.8 & 77.2 & 86.7 & 84.2 & 81.2 & 60.5 & \underline{63.8} & 60.5 & 70.4 \\
-        Claude-4.6-Sonnet & 87.6 & 82.9 & \textbf{94.9} & 88.5 & \textbf{98.3} & 63.9 & 63.2 & 63.2 & 73.7 \\
+        GPT-5.2-Fast & \textbf{91.1} & \textbf{88.7} & 93.5 & \textbf{91.1} & \underline{97.0} & 84.4 & \underline{55.2} & \underline{55.2} & \textbf{68.7} \\
+        GPT-5.2-Think & \underline{90.5} & \underline{87.3} & \underline{93.6} & \underline{90.5} & 96.9 & \textbf{85.4} & 54.4 & 54.4 & \underline{68.0} \\
+        Gemini-3-Flash$^\ddagger$ & 78.7 & 81.8 & 91.1 & 83.8 & 78.2 & 79.7 & 52.2 & 52.2 & 64.3 \\
+        Gemini-3-Pro & 88.8 & 77.2 & 86.7 & 84.2 & 83.8 & \underline{85.0} & 46.6 & 46.6 & 60.0 \\
+        Claude-4.6-Sonnet & 87.6 & 82.9 & \textbf{94.9} & 88.5 & \textbf{98.6} & 77.4 & \textbf{56.2} & \textbf{56.2} & \textbf{68.7} \\
         \midrule
         \multicolumn{10}{l}{\textit{Open-Weight Models}} \\
         \midrule
-        GLM-4.7 & 79.3 & 80.2 & 93.5 & 84.3 & 74.1 & 55.2 & 62.3 & 55.2 & 66.7 \\
-        DeepSeek-V3.2 & 79.9 & 77.9 & 91.7 & 83.1 & 75.8 & 46.4 & 50.0 & 46.4 & 59.6 \\
-        DeepSeek-V3.2-Think & 85.3 & 83.8 & 93.5 & 87.5 & 75.3 & 46.0 & 49.2 & 46.0 & 60.3 \\
-        Qwen3-max & 79.9 & \underline{87.3} & 93.1 & 86.8 & 84.3 & 54.7 & 62.6 & 54.7 & 67.1 \\
-        Qwen3-235B-A22B & 77.5 & 81.2 & 89.1 & 82.6 & 74.8 & 33.8 & 56.0 & 33.8 & 47.9 \\
-        Qwen3-32B & 73.4 & 78.6 & 89.9 & 80.6 & 59.6 & 30.2 & 52.4 & 30.2 & 44.0 \\
-        Qwen3-14B & 73.4 & 77.8 & 88.4 & 79.9 & 56.3 & 18.4 & 55.3 & 18.4 & 29.9 \\
+        GLM-4.7 & 79.3 & 80.2 & 93.5 & 84.3 & 77.5 & 73.2 & 53.4 & 53.4 & 65.4 \\
+        GLM-4.7-Think$^\dagger$ & 78.7 & 70.5 & 90.7 & 80.0 & 51.1 & 67.2 & 47.6 & 47.6 & 59.7 \\
+        DeepSeek-V3.2 & 79.9 & 77.9 & 91.7 & 83.1 & 78.6 & 68.3 & 41.6 & 41.6 & 55.4 \\
+        DeepSeek-V3.2-Think & 85.3 & 83.8 & 93.5 & 87.5 & 78.2 & 67.6 & 41.3 & 41.3 & 56.1 \\
+        Qwen3-max & 79.9 & \underline{87.3} & 93.1 & 86.8 & 87.0 & 72.5 & 53.6 & 53.6 & 66.2 \\
+        Qwen3-235B-A22B & 77.5 & 81.2 & 89.1 & 82.6 & 76.8 & 52.4 & 50.1 & 50.1 & 62.3 \\
+        Qwen3-32B & 73.4 & 78.6 & 89.9 & 80.6 & 61.7 & 50.8 & 45.1 & 45.1 & 57.8 \\
+        Qwen3-14B & 73.4 & 77.8 & 88.4 & 79.9 & 58.4 & 35.3 & 46.8 & 35.3 & 48.9 \\
         \bottomrule
     \end{tabular}%
     }
@@ -519,12 +477,11 @@ knowledge--execution gap.
 
 \begin{figure*}[t]
     \centering
-    \includegraphics[width=0.8\textwidth]{figures/radar_chart.png}
-    \caption{Performance comparison of 12 LLMs on the ClearEval benchmark. The
-    left panel shows Knowledge Performance ($I_K$) across domain-specific
-    attributes (Tissue, Reagent, Method). The right panel details Application
-    Performance ($I_A$), evaluated on completeness, correctness, and an
-    Empirically-Grounded effectiveness metric.}
+    \includegraphics[width=0.62\textwidth]{figures/radar_chart.png}
+    \caption{Performance comparison of 13 LLMs on ClearEval. Left: Knowledge
+    Performance ($I_K$) across domain attributes (Tissue, Reagent, Method).
+    Right: Application Performance ($I_A$), across the CCE sub-metrics. MCQ
+    profiles are tightly clustered; CCE scores are highly erratic.}
     \label{fig:radar_chart}
 \end{figure*}
 
@@ -535,20 +492,21 @@ ignores absolute bias, we report, per dimension, Pearson $r$, Spearman $\rho$,
 ICC(2,1), quadratic-weighted $\kappa$, and Krippendorff's $\alpha$
 (Table~\ref{tab:calib}; full 14-row sub-dimension breakdown in
 Appendix~\ref{app:judge}). The aggregate CCE dimensions align well with experts
-(ICC $0.75$/$0.65$/$0.81$ for Completeness/Correctness/Effectiveness; Overall
-$r=0.84$). Crucially, agreement is \emph{uneven} across the Effectiveness
-sub-metrics: the empirically-grounded label-compatibility ($S_{label}$, ICC
-$0.86$) and timing ($S_{time}$, ICC $0.82$) checks align strongly with experts,
-and transparency ($S_{trans}$, ICC $0.58$) moderately, whereas the
-cosine-similarity method-suitability score ($S_{method}$, ICC $0.04$, $r=0.11$)
-is near-degenerate---it is therefore reported as a soft preference signal rather
-than a calibrated score. Among the two LLM-judged dimensions, the weakest
-agreement is on chemical correctness ($co\_chem$, ICC $0.32$). We thus restrict
-LLM-as-judge to Completeness and Correctness---noting that $co\_chem$ is the
-least reliable sub-score and reading the corresponding failure as suggestive
-(Sec.~\ref{sec:diag})---and rely on the non-LLM physical checks for
-Effectiveness, where the dominant failure ($S_{label}$) is also the
-best-calibrated ($\mathrm{ICC}\,0.86$).
+(ICC $0.75$/$0.74$/$0.69$ for Completeness/Correctness/Effectiveness; Overall
+$r=0.79$). Agreement is \emph{uneven} across the Effectiveness sub-metrics.
+Method suitability ($S_{method}$)---the signed need-weighted fit, validated
+against expert method-suitability ratings we collected specifically---is among
+the best-calibrated ($\mathrm{ICC}\,0.82$, $r{=}0.83$), confirming that the
+signed axis space captures how experts judge method choice; timing ($S_{time}$,
+ICC $0.78$) also tracks experts strongly and transparency ($S_{trans}$, $0.58$)
+moderately. The exception is label compatibility ($S_{label}$, ICC $0.51$): its
+hard-minimum over three binary checks is coarser than the graded expert scale,
+so although it is the dominant execution \emph{failure} (Sec.~\ref{sec:diag}) it
+is the most weakly-calibrated sub-metric. On the Correctness side all four
+checks calibrate well, including chemical safety ($co\_chem$,
+$\mathrm{ICC}\,0.80$) once its rubric was revised to flag only introduced
+hazards---not the \emph{absence} of unrequested safety caveats---and re-judged
+with GPT-5.4 ($28\%$ penalized).
 
 \begin{table}[htbp]
     \centering
@@ -563,89 +521,132 @@ best-calibrated ($\mathrm{ICC}\,0.86$).
         \textbf{Dimension} & \textbf{Pearson} $r$ & \textbf{Spearman} & \textbf{ICC} & \textbf{QWK} & $\boldsymbol{\alpha}$ \\
         \midrule
         Completeness  & 0.77 & 0.79 & 0.75 & 0.70 & 0.75 \\
-        Correctness   & 0.68 & 0.66 & 0.65 & 0.65 & 0.64 \\
-        Effectiveness & 0.83 & 0.81 & 0.81 & 0.80 & 0.80 \\
-        Overall       & 0.84 & 0.84 & 0.79 & 0.79 & 0.78 \\
+        Correctness   & 0.79 & 0.77 & 0.74 & 0.72 & 0.73 \\
+        Effectiveness & 0.71 & 0.72 & 0.69 & 0.68 & 0.69 \\
+        Overall       & 0.79 & 0.79 & 0.74 & 0.73 & 0.74 \\
         \midrule
         \multicolumn{6}{l}{\textit{Effectiveness sub-metrics}} \\
-        $S_{method}$ (cosine)  & 0.11 & 0.15 & 0.04 & 0.10 & $-0.04$ \\
-        $S_{label}$ (rule)     & 0.86 & 0.82 & 0.86 & 0.85 & 0.86 \\
+        $S_{method}$ (signed fit) & 0.83 & 0.77 & 0.82 & 0.77 & 0.82 \\
+        $S_{label}$ (rule)     & 0.51 & 0.48 & 0.51 & 0.51 & 0.51 \\
         $S_{trans}$ (physics)  & 0.63 & 0.46 & 0.58 & 0.52 & 0.56 \\
-        $S_{time}$ (physics)   & 0.84 & 0.77 & 0.82 & 0.80 & 0.82 \\
+        $S_{time}$ (physics)   & 0.80 & 0.75 & 0.78 & 0.75 & 0.78 \\
         \bottomrule
     \end{tabular}%
     }
 \end{table}
 
-\begin{figure}[htbp]
-    \centering
-    \includegraphics[width=\columnwidth]{figures/alignment.png}
-    \caption{Calibration of automated metrics against expert consensus
-    ($n{=}240$). (a) Per-dimension correlation with expert ratings.
-    (b) Bland--Altman plot showing high absolute agreement.}
-    \label{fig:alignment}
-\end{figure}
-
 \subsection{Fine-Grained Diagnosis: Where Execution Fails}\label{sec:diag}
-Averaging normalized sub-scores over all 253 scenarios and 12 models, the
+Averaging normalized sub-scores over all 253 scenarios and 13 models, the
 \emph{reliably}-measured deficit concentrates in label suitability
 (Fig.~\ref{fig:violin_limits}). \textbf{Label suitability} ($S_{label}$, mean
-$0.23$) is a hard minimum over a marker--target match and two
-fluorophore-compatibility checks, and $66\%$ of protocols score $0$. Decomposing
+$0.32$) is a hard minimum over a marker--target match and two
+fluorophore-compatibility checks, and $53\%$ of protocols score $0$. Decomposing
 these zeros from the scorer's own breakdown shows the binding cause is
 \textbf{marker--target mismatch}---the fluorescent markers models propose do not
-match the scenario's required labeling targets---rather than fluorophore
-quenching, which is the minority case. Because $S_{label}$ is our best-calibrated
-Effectiveness check (ICC $0.86$, Sec.~\ref{sec:calib}), this is the most
-trustworthy execution failure we observe. The nominally lower chemical-safety
-score ($co\_chem$, mean $0.07$) requires care: inspecting the judge's rationales
-shows it is dominated by penalties for the \emph{absence} of safety/handling
-caveats (fume-hood use, solvent-compatible containers) that our generation prompt
-never requested; given this and its weak calibration (ICC $0.32$), we treat
-$co\_chem$ as suggestive rather than a capability measure. By contrast,
-transparency / refractive-index matching ($S_{trans}$, $0.64$) and timing
-($S_{time}$, $0.59$) are only moderately impaired---though $S_{time}$ is
-sensitive to the width of the literature time windows, and individual estimates
-can still be wildly off (occasionally exceeding 800 hours against a 0--200 hour
-window). The cosine method-suitability score ($S_{method}$, $0.89$) appears high
-but, being near-degenerate against experts (ICC $0.04$), is discounted. In short,
-the most reliable wet-lab constraint these LLMs miss is matching fluorescent
-markers to the scenario's required targets.
+match the scenario's required labeling targets. Every $S_{label}{=}0$ is a
+target mismatch; the quenching check often binds ($\sim$44\%) but stays high
+($4.2/6$) and never zeros. These zeros are \emph{deterministic} labeling
+errors---directly verifiable, not scoring artifacts---so despite $S_{label}$'s
+only moderate graded calibration (ICC $0.51$, Sec.~\ref{sec:calib}) this dominant
+deficit is a trustworthy execution failure. The re-judged $co\_chem$ (GPT-5.4) flags
+introduced hazards in $\sim$28\% of protocols.
+Transparency ($S_{trans}$, $0.64$) and timing ($S_{time}$, $0.56$) are
+moderately impaired, with small-sample timing failures: models over-estimate
+clearing time (e.g.\ $\sim$10\,h for a $\leq 500\,\mu$m slice cleared in
+$<2$\,h) against the refined windows.
+$S_{time}$ stays well-calibrated against experts (ICC $0.78$, Sec.~\ref{sec:calib}). Method suitability ($S_{method}$, $0.73$) is
+comparatively high and now well-calibrated against experts (ICC $0.82$,
+Sec.~\ref{sec:calib}), so method \emph{choice} is not the main deficit. In short, the most reliable constraint these LLMs miss is matching
+fluorescent markers to required targets.
 
-\begin{figure}[htbp]
+\begin{figure}[!htb]
+    \centering
+    \includegraphics[width=\columnwidth]{figures/method_usage.png}
+    \caption{Clearing-method selection per model (\% of choices), rows sorted by
+    choice entropy $H$. iDISCO+ dominates ($43\%$); smaller models anchor hardest
+    (Qwen3-14B $74\%$), DeepSeek on uDISCO---a training-frequency prior.}
+    \label{fig:method_usage}
+\end{figure}
+
+\noindent\textbf{Method path-dependence.} Method \emph{selection} is
+concentrated and largely scenario-independent (Fig.~\ref{fig:method_usage}):
+iDISCO+ alone accounts for $43\%$ of all $3{,}272$ choices. Anchoring tracks
+scale---smaller models collapse onto a single default while stronger ones
+diversify (choice entropy $1.35$ to $2.97$ bits). The same familiarity prior
+drives labeling (canonical fluorophores over the required target, the
+$S_{label}$ mismatch), a literature-frequency bias overriding scenario-specific
+reasoning.
+
+\begin{figure}[!htb]
     \centering
     \includegraphics[width=\columnwidth]{figures/violin_plots.png}
-    \caption{Sub-metric score distributions over all 253 scenarios, pooled
-    across the 12 models and normalized to $[0,1]$ (means annotated). Left:
-    Effectiveness sub-metrics---label compatibility ($S_{label}$, $0.23$) is the
-    dominant failure, while cosine method-suitability ($S_{method}$, $0.89$) is
-    high but weakly calibrated (ICC $0.04$). Right: Correctness sub-metrics---chemical
-    correctness ($co\_chem$, $0.07$) collapses to near zero. Both binding
-    failures are chemical.}
+    \caption{Effectiveness sub-metric distributions over all $253{\times}13$
+    protocols, normalized to $[0,1]$ (mean $\Diamond$, median $\circ$, IQR bar;
+    signed $S_{method}$ rescaled so $0.5$ is neutral). $S_{label}$ ($0.32$) is
+    the dominant failure, while $S_{method}$ ($0.73$) is high and well-calibrated
+    against experts (ICC $0.82$).}
     \label{fig:violin_limits}
 \end{figure}
 
 \subsection{Inference-Time Robustness Protocol}\label{sec:baselines}
-A natural follow-up question is whether the knowledge--execution gap narrows
-once standard inference-time techniques are applied, rather than being an
-artifact of greedy decoding. To make this directly testable on ClearEval, we
-release a turnkey harness that scores four recipes against the greedy default on
-the full 253-scenario Application set: (i) \textbf{few-shot} (3 in-context
-exemplars); (ii) \textbf{self-consistency} ($k{=}5$ samples at temperature
-$0.7$, aggregated by method-majority then continuous-field median); (iii)
-\textbf{KB-RAG}, prepending retrieved knowledge-base context (method properties
-and compatibility records, with numeric RI/time targets withheld so the answer
-key is never leaked); and (iv) \textbf{KB-RAG $+$ self-consistency}. Because
-every recipe is scored by the same calibrated CCE pipeline
-(Sec.~\ref{sec:calib}), the bottleneck Application Index $I_A$---reported with
-95\% confidence intervals over samples---is directly comparable across recipes
-and against Table~\ref{tab:main_results_total}. We treat KB-RAG as an upper
-bound on grounding benefit and leave full literature-RAG over an external corpus
-to future work. The harness and the exact run protocol are released
-(Appendix~\ref{app:repro}); a complete multi-model sweep under paid inference is
-ongoing and will be reported in an extended version. We deliberately do not
-report partial numbers here to avoid drawing conclusions from an incomplete
-sweep.
+A natural follow-up is whether the knowledge--execution gap narrows once standard
+inference-time grounding is applied, rather than being an artifact of greedy
+decoding. We release a turnkey harness that scores grounding recipes against the
+greedy default on the full 253-scenario Application set, and instantiate it here
+on GPT-5.2-Fast---our strongest Application model---across three settings: the
+$1$-shot default; $+$\textbf{KB-RAG}, which prepends a per-scenario knowledge-base
+context (standardized scenario slots, target$\rightarrow$marker candidate sets, and
+qualitative method / compatibility records, \emph{with numeric RI/time targets and
+gold protocols withheld so the answer key is never leaked}); and
+$+$\textbf{KB-RAG$+$self-check}, a deliberately cheap alternative to
+self-consistency in which the model runs one fixed feasibility checklist over its
+grounded answer and revises exactly once. The per-scenario RAG context is built
+deterministically from scenario metadata (identical across models) and released.
+Every setting is scored by the same calibrated CCE pipeline (Sec.~\ref{sec:calib}),
+so the bottleneck $I_A$ is directly comparable to
+Table~\ref{tab:main_results_total}. We treat KB-RAG as an upper bound on grounding
+benefit and leave full literature-RAG and a paid multi-model sweep to an extended
+version.
+
+\begin{table}[t]
+\centering
+\small
+\setlength{\tabcolsep}{4pt}
+\caption{Inference-time grounding on GPT-5.2-Fast over the 253 Application
+scenarios. Com/Cor/Eff/$I_A$ are percentages (as in
+Table~\ref{tab:main_results_total}); effectiveness sub-scores are normalized means
+($\hat S_{method}\!\in\![-1,1]$ signed, others $\in\![0,1]$). KB-RAG withholds all
+numeric RI/time answer keys; self-check is a single grounded checklist revision,
+not self-consistency.}
+\label{tab:inference_time}
+\begin{tabular}{lcccc cccc}
+\toprule
+Setting & Com & Cor & Eff & $I_A$ & $\hat S_{m}$ & $\hat S_{lab}$ & $\hat S_{tr}$ & $\hat S_{ti}$ \\
+\midrule
+$1$-shot (default)     & 97.0 & 84.4 & 55.2 & 55.2 & 0.52 & 0.32 & \textbf{0.67} & \textbf{0.70} \\
+$+$KB-RAG              & 93.8 & 78.8 & 53.2 & 53.2 & 0.58 & 0.44 & 0.57 & 0.53 \\
+\shortstack[l]{$+$KB-RAG\\$+$self-check} & 92.1 & 79.7 & \textbf{57.1} & \textbf{57.1} & 0.59 & \textbf{0.59} & 0.60 & 0.51 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Grounding sharply attacks the dominant failure mode: label suitability
+$\hat S_{label}$ nearly doubles ($0.32\!\rightarrow\!0.44\!\rightarrow\!0.59$),
+confirming that marker--target mismatch is an addressable knowledge gap rather
+than an intrinsic limit. Yet KB-RAG \emph{alone} does not move the bottleneck
+($I_A$: $55.2\!\rightarrow\!53.2$): to satisfy target-specific labeling the model
+is steered toward strong-clearing organic solvents, which incurs a compensating
+loss on refractive-index and timing validity
+($\hat S_{trans}$: $0.67\!\rightarrow\!0.57$; $\hat S_{time}$:
+$0.70\!\rightarrow\!0.53$) on soft tissue whose native RI favors aqueous media---a
+genuine trade-off that the balanced Effectiveness average exposes and that a single
+sub-metric would hide. The cheap self-check recovers most of this loss by
+re-verifying method--tier feasibility---it removes the RI/timing applicability
+zeros that KB-RAG had introduced---lifting $I_A$ to $57.1$ ($+1.9$ over the
+$1$-shot default). The single-model probe thus shows that closing the
+marker--target gap is necessary but, under a feasibility-balanced metric, not
+sufficient to raise end-to-end protocol quality without an explicit feasibility
+check.
 
 \section{Discussion and Limitations}\label{sec:discussion}
 Within TOC, ClearEval shows the bottleneck is not declarative retrieval but
@@ -654,59 +655,53 @@ required labeling targets, with refractive-index and timing errors
 secondary. Whether this pattern generalizes across wet-lab subdomains is an open
 question our single-subdomain design cannot settle.
 
-\noindent\textbf{External validity.} ClearEval covers one subdomain (TOC). Our
-claims are therefore about TOC protocol feasibility, not LLM scientific
-competence in general. Generalizing the methodology requires re-curating
-subdomain-specific physical knowledge bases (refractive indices, incubation
-windows, compatibility matrices), which is non-trivial
-(Appendix~\ref{app:curation}); we offer CCE as a transferable recipe rather than
-a finished multi-domain benchmark.
+\noindent\textbf{External validity.} ClearEval covers one subdomain (TOC), so
+our claims are about TOC protocol feasibility, not LLM scientific competence in
+general. Generalizing requires re-curating subdomain-specific knowledge bases
+(refractive indices, incubation windows, compatibility matrices), which is
+non-trivial (Appendix~\ref{app:curation}); we offer CCE as a transferable
+recipe, not a finished multi-domain benchmark.
 
 \noindent\textbf{Complementarity.} Depth-first ClearEval and breadth-first
 benchmarks such as BioProBench~\cite{bioprobench} are complementary: the former
-contributes experiment-derived, parameter-level feasibility scoring within a
-subdomain, the latter broad coverage. Together they give a fuller picture of LLM
-protocol-design ability than either alone.
+contributes parameter-level feasibility scoring within a subdomain, the latter
+broad coverage---together a fuller picture than either alone.
 
 \noindent\textbf{Toward grounded agents.} For LLMs to become viable in
-specialized wet-lab domains, they must internalize experimental
-constraints---such as reagent diffusion scales---within their reasoning loops;
-ClearEval can serve as a pre-experimental feasibility gate for such agents
-before irreversible reagent commitment.
+specialized wet-lab domains, they must internalize experimental constraints
+within their reasoning loops; ClearEval can serve as a pre-experimental
+feasibility gate before irreversible reagent commitment.
 
-\noindent\textbf{Limitations.} ClearEval remains a static paradigm. Real-world
+\noindent\textbf{Limitations.} ClearEval remains a static paradigm: real-world
 wet labs involve stochastic variables (reagent degradation, tissue
-heterogeneity) that are hard to model in silico; our expert grounding is
-literature-bounded and refined by expert review rather than exhaustively
-re-measured; and the cosine method-suitability sub-score is weakly calibrated
-(Sec.~\ref{sec:calib}). Future work should integrate dynamic hardware feedback
-so agents iteratively optimize protocols from real-time signals.
+heterogeneity) hard to model in silico, and our expert grounding is
+literature-bounded rather than exhaustively re-measured. Future work should
+integrate dynamic hardware feedback so agents iteratively optimize protocols
+from real-time signals.
 
 \section{Conclusion}
 We presented ClearEval, an expert-curated benchmark for TOC protocol design
 that shifts evaluation from semantic similarity to empirically grounded
 functional validation. By leveraging a dual-track pipeline and a data-driven
 CCE framework, ClearEval exposes a significant knowledge-execution gap in
-current LLMs on TOC protocol design. Our results indicate that while models
-excel at knowledge recall, they struggle with the marker--target matching and
-physical-feasibility constraints required for wet-lab execution. We anticipate
-that ClearEval---and the transferable CCE recipe---will facilitate the
-development of reliable scientific agents, starting with tissue-clearing
-workflows.
+current LLMs on TOC protocol design. Models excel at knowledge recall but
+struggle with the marker--target matching and physical-feasibility constraints
+required for wet-lab execution. ClearEval and the transferable CCE recipe aim to
+facilitate reliable scientific agents, starting with tissue-clearing workflows.
 
 \appendices
 
 \section{Knowledge-Base Curation and Expert Grounding}\label{app:curation}
-\noindent\textbf{Expert panel and consensus.} The knowledge bases and the CCE
-rubric were curated by a panel of tissue-clearing wet-lab experts together with
-a knowledge-graph specialist. Application protocols were first scored blind
-against the rubric and then reconciled by panel consensus; the released scores
-are per-protocol consensus values.
+\noindent\textbf{Expert panel and consensus.} The knowledge bases and CCE
+rubric were curated by a panel of tissue-clearing wet-lab experts with a
+knowledge-graph specialist. Application protocols were scored blind against the
+rubric then reconciled by consensus; released scores are per-protocol consensus
+values.
 
 \noindent\textbf{Knowledge bases.} Grounding is encoded in seven JSON knowledge
-bases: reference refractive index for 18 clearing methods (CUBIC, ScaleS, MACS,
-iDISCO+, FDISCO, SOLID, SeeDB2, PEGASOS, BoneClear, Ce3D, TDE, ClearT2, ClearSee,
-EyeCi, FOCM, SWITCH, uDISCO, FlyClear); per-method RI tolerance $\sigma_{RI}$;
+bases: reference refractive index for 18 clearing methods (CUBIC, ScaleS,
+iDISCO+, FDISCO, SeeDB2, PEGASOS, SWITCH, uDISCO, \ldots); per-method RI
+tolerance $\sigma_{RI}$;
 per-method incubation-time tolerance $\tau$; a timing base of 84 (method,
 sample-tier) rows giving the viable window $[t_{min}, t_{max}]$; a
 marker$\times$method fluorophore-compatibility matrix; a tissue table; and
@@ -714,41 +709,23 @@ tissue-RI references.
 
 \noindent\textbf{Provenance.} Each timing row records a literature source key,
 source URL, evidence locator, confidence level, and review status, giving an
-audit trail from each parameter to its literature basis (Table~\ref{tab:kbprov}).
+audit trail from each parameter to its literature basis.
 RI references cite their originating protocol (e.g., CUBIC RI${=}1.46$, Susaki
 et al., \emph{Nat. Protoc.}). Timing tolerances are derived deterministically as
 $\tau{=}0.2\times$ the median clearing time. Parameters are literature-bounded
 and refined by expert review rather than exhaustively re-measured.
 
 \noindent\textbf{Operationalization.} The Effectiveness terms read directly from
-these bases: $S_{method}$ from tissue/method preference vectors (cosine);
+these bases: $S_{method}$ from the signed method-capability and
+scenario-demand vectors (a signed need-weighted fit);
 $S_{label}$ from the fluorophore-compatibility matrix (hard zero on quenching);
 $S_{trans}$ from RI references and $\sigma_{RI}$, gated to zero when a (method,
 tier) pair is unsupported; and $S_{time}$ from $[t_{min},t_{max}]$ and $\tau$.
 
-\begin{table}[htbp]
-    \centering
-    \caption{Schema of the timing knowledge base (84 rows). Every row is
-    traceable to a literature source and a review decision.}
-    \label{tab:kbprov}
-    \small
-    \begin{tabular}{l l}
-        \toprule
-        \textbf{Field} & \textbf{Role / example} \\
-        \midrule
-        method, tier & e.g.\ CUBIC, whole-organ tier \\
-        $[t_{min}, t_{med}, t_{max}]$ & viable incubation window (h) \\
-        source\_key, source\_url & e.g.\ CUBIC\_NATPROT\_2015 \\
-        evidence\_location & locator within the cited source \\
-        confidence & high / medium / low \\
-        review\_status & added / modified / removed \\
-        \bottomrule
-    \end{tabular}
-\end{table}
-
 \section{Judge Calibration Details}\label{app:judge}
 Table~\ref{tab:calibfull} reports the full per-sub-dimension agreement between
-automated and blinded expert-consensus scores ($n{=}240$). The two LLM-judged
+automated and blinded expert-consensus scores ($n{=}240$), including the
+now well-calibrated $S_{method}$. The two LLM-judged
 dimensions use a fixed rubric (\texttt{eval\_oeq\_teacher\_rubric.txt},
 \texttt{eval\_completeness\_checklist.txt}, released in the repository) at
 temperature $0.0$. Because raw per-annotator sheets were not preserved, we report
@@ -771,40 +748,41 @@ reliability.
         \textbf{Completeness} & 0.77 & 0.79 & 0.75 & 0.70 & 0.75 \\
         \midrule
         $co\_order$  & 0.66 & 0.65 & 0.61 & 0.58 & 0.60 \\
-        $co\_method$ & 0.46 & 0.44 & 0.40 & 0.39 & 0.37 \\
+        $co\_method$ & 0.83 & 0.81 & 0.79 & 0.77 & 0.79 \\
         $co\_param$  & 0.55 & 0.56 & 0.53 & 0.48 & 0.53 \\
-        $co\_chem$   & 0.41 & 0.32 & 0.32 & 0.37 & 0.25 \\
-        \textbf{Correctness} & 0.68 & 0.66 & 0.65 & 0.65 & 0.64 \\
+        $co\_chem$   & 0.83 & 0.69 & 0.80 & 0.66 & 0.79 \\
+        \textbf{Correctness} & 0.79 & 0.77 & 0.74 & 0.72 & 0.73 \\
         \midrule
-        $S_{method}$ & 0.11 & 0.15 & 0.04 & 0.10 & $-0.04$ \\
-        $S_{label}$  & 0.86 & 0.82 & 0.86 & 0.85 & 0.86 \\
+        $S_{method}$ & 0.83 & 0.77 & 0.82 & 0.77 & 0.82 \\
+        $S_{label}$  & 0.51 & 0.48 & 0.51 & 0.51 & 0.51 \\
         $S_{trans}$  & 0.63 & 0.46 & 0.58 & 0.52 & 0.56 \\
-        $S_{time}$   & 0.84 & 0.77 & 0.82 & 0.80 & 0.82 \\
-        \textbf{Effectiveness} & 0.83 & 0.81 & 0.81 & 0.80 & 0.80 \\
+        $S_{time}$   & 0.80 & 0.75 & 0.78 & 0.75 & 0.78 \\
+        \textbf{Effectiveness} & 0.71 & 0.72 & 0.69 & 0.68 & 0.69 \\
         \midrule
-        \textbf{Overall} & 0.84 & 0.84 & 0.79 & 0.79 & 0.78 \\
+        \textbf{Overall} & 0.79 & 0.79 & 0.74 & 0.73 & 0.74 \\
         \bottomrule
     \end{tabular}
 \end{table}
 
 \section{Reproducibility and Artifact Manifest}\label{app:repro}
-\noindent\textbf{Artifacts.} The repository releases the 253 Application
-scenarios and 2{,}588 MCQs; the seven knowledge bases; all 12 model generations
-and their evaluation results; the generation and judge prompts; and the
-scoring/plotting code, with an English README, a \texttt{requirements.txt}, and
-UTF-8 knowledge-base fields.
+\noindent\textbf{Artifacts and determinism.} The repository releases the 253
+Application scenarios and 2{,}588 MCQs, the seven knowledge bases, all 13 model
+generations and their evaluation results, the generation/judge prompts, and the
+scoring/plotting code (English README, \texttt{requirements.txt}). All evaluated
+API models run at temperature $0.0$; since hosted
+models are non-deterministic and snapshot aliases drift, we release the raw
+responses---with provider snapshots and API-call dates---so results are
+replayable even when regeneration is not bit-identical.
 
-\noindent\textbf{Determinism.} All evaluated API models run at temperature
-$0.0$ (Table~\ref{tab:modelconfig}); because hosted models are non-deterministic
-and snapshot aliases drift, we release the raw model responses so results are
-replayable even when regeneration is not bit-identical. Provider snapshot
-strings and API-call dates are recorded in the released configuration.
-
-\noindent\textbf{Inference-time run protocol (Sec.~\ref{sec:baselines}).}
-Few-shot uses 3 exemplars; self-consistency draws $k{=}5$ samples at temperature
-$0.7$ aggregated by method-majority then continuous-field median; KB-RAG
-prepends retrieved compatibility/method records with numeric RI/time targets
-withheld; reported $I_A$ carries 95\% CIs over samples.
+\noindent\textbf{Inference-time protocol (Sec.~\ref{sec:baselines}).} KB-RAG
+prepends per-scenario cards---scenario slots, target$\rightarrow$marker candidate
+sets, and qualitative method/compatibility records---built deterministically from
+scenario metadata, with numeric RI/time targets and gold protocols withheld;
+self-check runs one fixed feasibility checklist over the grounded answer and
+revises exactly once (a cheap alternative to $k{=}5$ self-consistency). The
+released harness also exposes few-shot and self-consistency recipes; the
+single-model GPT-5.2-Fast instantiation is reported in
+Table~\ref{tab:inference_time}.
 
 % ---- Bibliography ----
 \bibliographystyle{IEEEtran}

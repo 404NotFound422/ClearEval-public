@@ -114,7 +114,8 @@ MODEL_NAME_MAP = {
 
 LEGEND_GRID = [
     ['GPT-5.2-Fast', 'Gemini-3-Flash', 'DeepSeek-Chat', 'Qwen3-Max', 'Qwen3-32B', 'Claude-4.6-sonnet'],
-    ['GPT-5.2-Think', 'Gemini-3-Pro', 'DeepSeek-Think', 'Qwen3-235B', 'Qwen3-14B', 'GLM-4.7']
+    ['GPT-5.2-Think', 'Gemini-3-Pro', 'DeepSeek-Think', 'Qwen3-235B', 'Qwen3-14B', 'GLM-4.7'],
+    [None, None, None, None, None, 'GLM-4.7-Think']
 ]
 
 def clean_model_name(name):

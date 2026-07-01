@@ -1,0 +1,25 @@
+{
+  "_note": "SIGNED capability model_space (re-annotated 2026-07-01). F_fp/P_dye/M_geo/E_ops/S_safe in [-1,+1] (+ = helps that objective, - = actively harms); C_opt is MAGNITUDE [0,1] (clearing power). E_ops: organic/solvent methods positive (fast), aqueous negative (slow), faster = more positive. Calibrated so no method is non-negative on all signed axes.",
+  "methods": {
+    "CUBIC":            {"F_fp": 0.75,  "P_dye": 0.35,  "C_opt": 0.5,  "M_geo": -0.4,  "E_ops": -0.8,  "S_safe": 0.85},
+    "SCALE (ScaleS)":   {"F_fp": 0.85,  "P_dye": 0.3,   "C_opt": 0.5,  "M_geo": 0.2,   "E_ops": -0.85, "S_safe": 0.85},
+    "MACS":             {"F_fp": 0.7,   "P_dye": 0.5,   "C_opt": 0.7,  "M_geo": -0.2,  "E_ops": -0.2,  "S_safe": 0.75},
+    "iDISCO (iDISCO+)": {"F_fp": -0.85, "P_dye": 0.9,   "C_opt": 0.95, "M_geo": -0.4,  "E_ops": 0.6,   "S_safe": -0.9},
+    "FDISCO":           {"F_fp": -0.35, "P_dye": 0.6,   "C_opt": 0.92, "M_geo": -0.5,  "E_ops": 0.55,  "S_safe": -0.85},
+    "SOLID":            {"F_fp": -0.5,  "P_dye": 0.55,  "C_opt": 0.85, "M_geo": -0.35, "E_ops": 0.45,  "S_safe": -0.7},
+    "seeDB2":           {"F_fp": 0.9,   "P_dye": -0.5,  "C_opt": 0.4,  "M_geo": 0.9,   "E_ops": -0.7,  "S_safe": 0.85},
+    "PEGASOS":          {"F_fp": -0.5,  "P_dye": 0.65,  "C_opt": 0.93, "M_geo": -0.45, "E_ops": 0.5,   "S_safe": -0.75},
+    "ClearSee":         {"F_fp": 0.85,  "P_dye": -0.3,  "C_opt": 0.45, "M_geo": 0.7,   "E_ops": -0.7,  "S_safe": 0.9},
+    "BoneClear":        {"F_fp": -0.8,  "P_dye": 0.85,  "C_opt": 0.95, "M_geo": -0.55, "E_ops": 0.55,  "S_safe": -0.85},
+    "EyeCi":            {"F_fp": 0.55,  "P_dye": -0.2,  "C_opt": 0.6,  "M_geo": 0.75,  "E_ops": -0.55, "S_safe": 0.55},
+    "uDISCO":           {"F_fp": -0.75, "P_dye": 0.65,  "C_opt": 0.97, "M_geo": -0.85, "E_ops": 0.65,  "S_safe": -0.9},
+    "FlyClear":         {"F_fp": 0.8,   "P_dye": -0.25, "C_opt": 0.4,  "M_geo": 0.7,   "E_ops": -0.6,  "S_safe": 0.85},
+    "Ce3D":             {"F_fp": 0.7,   "P_dye": 0.6,   "C_opt": 0.5,  "M_geo": 0.85,  "E_ops": -0.35, "S_safe": 0.55},
+    "TDE":              {"F_fp": 0.85,  "P_dye": -0.55, "C_opt": 0.35, "M_geo": 0.9,   "E_ops": -0.4,  "S_safe": 0.7},
+    "ClearT2":          {"F_fp": 0.55,  "P_dye": -0.45, "C_opt": 0.4,  "M_geo": 0.9,   "E_ops": -0.5,  "S_safe": 0.35},
+    "FOCM":             {"F_fp": 0.7,   "P_dye": 0.0,   "C_opt": 0.5,  "M_geo": 0.85,  "E_ops": -0.25, "S_safe": 0.6},
+    "SWITCH":           {"F_fp": -0.35, "P_dye": 0.85,  "C_opt": 0.55, "M_geo": 0.2,   "E_ops": -0.7,  "S_safe": 0.1},
+    "BABB":             {"F_fp": -0.85, "P_dye": 0.55,  "C_opt": 0.9,  "M_geo": -0.6,  "E_ops": 0.5,   "S_safe": -0.9},
+    "3DISCO":           {"F_fp": -0.95, "P_dye": 0.8,   "C_opt": 0.95, "M_geo": -0.5,  "E_ops": 0.7,   "S_safe": -0.9}
+  }
+}

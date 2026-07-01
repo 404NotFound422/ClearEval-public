@@ -27,21 +27,48 @@ kb = json.load(open(os.path.join(ROOT, "KnowledgeBase/time_kb.json"), encoding="
 LUT = {(norm(r["method"]), r["tier_code"]):
        (r.get("clearing_time_min_h"), r.get("clearing_time_max_h"), r.get("clearing_time_median_h"))
        for r in kb}
+
+# Parent-tier fallback: questions tag the parent tiers (T07 hard tissue, T11
+# plant), but several methods are stored in the KB only under finer sub-tiers
+# (T07A/T07B, T11A/T11B). For a method lacking the parent row, synthesize it from
+# the union of its sub-tier windows (min of mins, max of maxes, mean of medians).
+PARENT_SUB = {
+    "T07_HARD_TISSUE_BONE_TOOTH_COCHLEA": ["T07A_SMALL_HARD_TISSUE_BONE_TOOTH", "T07B_LARGE_HARD_TISSUE_BONE_COCHLEA"],
+    "T11_PLANT_WHOLE_SEEDLING": ["T11A_PLANT_LEAF_SMALL_SEEDLING", "T11B_PLANT_WHOLE_SEEDLING_ROOT"],
+}
+for _parent, _subs in PARENT_SUB.items():
+    for _m in {m for (m, t) in list(LUT)}:
+        if (_m, _parent) in LUT:
+            continue
+        # Stricter mapping: among the method's available sub-tiers, use the one
+        # with the SHORTEST reference time (smallest median), so an over-long
+        # proposal for a parent-tagged tissue is penalized rather than excused by
+        # the wider sub-tier window.
+        _cands = [LUT[(_m, s)] for s in _subs if (_m, s) in LUT and LUT[(_m, s)][2] is not None]
+        if _cands:
+            LUT[(_m, _parent)] = min(_cands, key=lambda v: v[2])
+
 Q = {q["question_id"]: q.get("tissue_hierarchy_from_tissue_xlsx", {}).get("tissue_tier_code", "")
      for q in json.load(open(os.path.join(ROOT, "dataset/Q+AR/src/question_final.json"), encoding="utf-8"))}
+
+
+# Asymmetric tolerance: over-long proposals are penalized harder than too-fast
+# ones. tau scales with the (tier-specific) median, so small-sample tiers --
+# whose medians are small -- get the harshest over-long penalty.
+TAU_UNDER = 0.2   # tolerance for t < t_min (faster than evidence)
+TAU_OVER = 0.1    # tolerance for t > t_max (slower than evidence) -- 2x harsher
 
 
 def stime(t, lo, hi, med):
     if med is None or med <= 0 or lo is None or hi is None:
         return 0.0
-    tau = 0.2 * med
     if t < lo:
-        dt = lo - t
+        dt = lo - t; tau = TAU_UNDER * med
     elif t > hi:
-        dt = t - hi
+        dt = t - hi; tau = TAU_OVER * med
     else:
-        dt = 0.0
-    return 3.0 if dt == 0 else max(0.0, min(3.0, 3.0 * math.exp(-0.5 * (dt / tau) ** 2)))
+        return 3.0
+    return max(0.0, min(3.0, 3.0 * math.exp(-0.5 * (dt / tau) ** 2)))
 
 
 PATCH = "--patch" in sys.argv
@@ -81,8 +108,9 @@ for f in glob.glob(os.path.join(ROOT, "dataset/Q+AR/result/evaluation_results_*_
                 val_ok += (abs(ns - old_s) < 0.01)
         if PATCH:
             stt["score"] = round(ns, 4)
-            tau_s = round(0.2 * med, 2) if med else None
-            stt["reasoning"] = f"Time deviation score (refreshed vs current time_kb). Act: {t}, Ref Range: [{lo}, {hi}], tau=0.2*median={tau_s}"
+            stt["reasoning"] = (f"Time deviation score (refreshed vs current time_kb; asymmetric, over-long "
+                                f"penalized harder). Act: {t}, Ref Range: [{lo}, {hi}], "
+                                f"tau_under={TAU_UNDER}*med, tau_over={TAU_OVER}*med, med={med}")
             e["total_weighted_score"] = sum(
                 (e[k]["score"] if isinstance(e.get(k), dict) else 0) for k in ("s_method", "s_label", "s_trans", "s_time"))
             dirty = True
