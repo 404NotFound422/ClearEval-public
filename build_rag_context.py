@@ -236,7 +236,7 @@ def _target_marker_card(target):
 # ---------------------------------------------------------------------------
 # Card C: method mini-index + top-5 candidate cards
 # ---------------------------------------------------------------------------
-def _method_oneliner(method):
+def _method_oneliner(method, tier=None):
     cap = _cap(method)
     bits = [FAMILY.get(method, '')]
     f = cap.get('F_fp', 0)
@@ -250,13 +250,10 @@ def _method_oneliner(method):
         bits.append('limited dye penetration')
     if cap.get('C_opt', 0) >= 0.85:
         bits.append('strong clearing')
-    e = cap.get('E_ops', 0)
-    if e >= 0.3:
-        bits.append('faster')
-    elif e <= -0.3:
-        bits.append('slower')
     if cap.get('S_safe', 0) <= -0.5:
         bits.append('hazardous solvents')
+    if tier:  # per-method clearing-time hint for this tier (replaces the misleading E_ops "faster" tag)
+        bits.append(f'clearing time {_method_time_bucket(method, tier)}')
     ps = RI_REF.get(method, {}).get('primary_sample', '')
     return f"{method}: " + '; '.join([b for b in bits if b]) + (f" (typical: {ps})" if ps else '')
 
@@ -313,8 +310,6 @@ def _method_full_card(method, tier):
         strengths.append('high clearing power for dense/large tissue')
     if cap.get('M_geo', 0) >= 0.3:
         strengths.append('preserves morphology')
-    if cap.get('E_ops', 0) >= 0.3:
-        strengths.append('relatively fast')
     if cap.get('S_safe', 0) >= 0.3:
         strengths.append('low-toxicity reagents')
     if cap.get('F_fp', 0) <= -0.3:
@@ -323,8 +318,6 @@ def _method_full_card(method, tier):
         limits.append('poor deep-dye penetration')
     if cap.get('M_geo', 0) <= -0.3:
         limits.append('tissue shrinkage/distortion risk')
-    if cap.get('E_ops', 0) <= -0.3:
-        limits.append('slower protocol')
     if cap.get('S_safe', 0) <= -0.5:
         limits.append('hazardous organic solvents (fume hood)')
     return {
@@ -334,6 +327,7 @@ def _method_full_card(method, tier):
         'established_for_this_tier': _tier_supported(method, tier),
         'strengths': strengths,
         'limitations': limits,
+        'time_scale': _method_time_bucket(method, tier),
         'ri_medium_summary': f'{FAMILY.get(method, "")} clearing medium (qualitative; numeric RI withheld)',
         'evidence': ri.get('source', ''),
     }
@@ -406,17 +400,49 @@ def _tier_timing_bucket(tier_code):
     return 'about one to several weeks'
 
 
+_PARENT_SUB_T = {
+    'T07_HARD_TISSUE_BONE_TOOTH_COCHLEA': ['T07A_SMALL_HARD_TISSUE_BONE_TOOTH', 'T07B_LARGE_HARD_TISSUE_BONE_COCHLEA'],
+    'T11_PLANT_WHOLE_SEEDLING': ['T11A_PLANT_LEAF_SMALL_SEEDLING', 'T11B_PLANT_WHOLE_SEEDLING_ROOT'],
+}
+
+
+def _method_median_h(method, tier_code):
+    """This method's median clearing time for the tier (parent-tier T07/T11 fallback)."""
+    cell = TIME_LOOKUP.get(method, {}).get(tier_code)
+    if cell and cell.get('clearing_time_median_h') is not None:
+        return float(cell['clearing_time_median_h'])
+    meds = [float(TIME_LOOKUP[method][s]['clearing_time_median_h'])
+            for s in _PARENT_SUB_T.get(tier_code, [])
+            if TIME_LOOKUP.get(method, {}).get(s, {}).get('clearing_time_median_h') is not None]
+    return min(meds) if meds else None
+
+
+def _method_time_bucket(method, tier_code):
+    """Per-method qualitative clearing-time hint for THIS tier (no exact hours exposed)."""
+    med = _method_median_h(method, tier_code)
+    if med is None:
+        return 'timing not established for this tier'
+    if med < 8:
+        return 'about a few hours'
+    if med < 24:
+        return 'about overnight (~1 day)'
+    if med < 72:
+        return 'about 1-3 days'
+    if med < 168:
+        return 'about several days to a week'
+    if med < 336:
+        return 'about 1-2 weeks'
+    return 'about 2+ weeks'
+
+
 def _feasibility_card(top_methods, tier_code):
-    speeds = {}
-    for m in top_methods:
-        e = _cap(m).get('E_ops', 0)
-        speeds[m] = 'faster' if e >= 0.3 else ('slower' if e <= -0.3 else 'moderate')
+    per_method_time = {m: _method_time_bucket(m, tier_code) for m in top_methods}
     return {
         'sample_tier': tier_code,
         'established_methods_for_tier': [m for m in top_methods if _tier_supported(m, tier_code)],
-        'relative_speed': speeds,
-        'timing_order_for_tier': _tier_timing_bucket(tier_code),
-        'timing_caution': 'Clearing time scales with sample size; do not assign whole-organ timing to small slices, or slice timing to whole organs.',
+        'per_method_clearing_time': per_method_time,
+        'timing_caution': 'Match your stated TOTAL clearing time to the per-method hint for the method you choose '
+                          '(aqueous methods are generally slower than organic-solvent methods for the same sample).',
         'withheld': ['exact [t_min, t_max]', 'exact clearing tolerance', 'gold protocol time', 'numeric RI targets'],
     }
 
@@ -451,7 +477,8 @@ def _render(scn, target_cards, mini_index, method_cards, compat, feas, ri_guidan
         tag = 'established for this tier' if mc['established_for_this_tier'] else 'NOT established for this tier'
         strengths = ', '.join(mc['strengths']) or 'general-purpose'
         limits = ('; limits: ' + ', '.join(mc['limitations'])) if mc['limitations'] else ''
-        L.append(f"{i}. {mc['method']} [{mc['family']}] ({tag}): {strengths}{limits}")
+        tsc = f"; clearing time {mc['time_scale']}" if mc.get('time_scale') else ''
+        L.append(f"{i}. {mc['method']} [{mc['family']}] ({tag}): {strengths}{limits}{tsc}")
     L.append('Mini-index (all methods, escape hatch): ' + ' | '.join(mini_index))
     # D
     L.append('')
@@ -475,8 +502,9 @@ def _render(scn, target_cards, mini_index, method_cards, compat, feas, ri_guidan
     est = ', '.join(feas['established_methods_for_tier']) or '(none of the above)'
     _hard = (' Choose ONLY a method established for this tier; methods not established for it '
              'are scored zero on transparency and timing.') if ri_guidance else ''
+    times = '; '.join(f"{m}: {t}" for m, t in feas.get('per_method_clearing_time', {}).items())
     L.append(f"[Feasibility] Established methods for tier {feas['sample_tier']}: {est}. "
-             f"Typical clearing time order for this tier: {feas['timing_order_for_tier']}. "
+             f"Per-method clearing-time hint (match your stated total clearing time to your chosen method): {times}. "
              f"{feas['timing_caution']}{_hard}")
     return '\n'.join(L)
 
@@ -500,7 +528,7 @@ def build_one(q, ri_aware=False):
         target_cards.append(_target_marker_card(t))
     top5, _all_supported = _rank_methods(q, ri_aware=ri_aware)
     method_cards = [_method_full_card(m, tier) for m in top5]
-    mini_index = [_method_oneliner(m) for m in METHODS]
+    mini_index = [_method_oneliner(m, tier) for m in METHODS]
     compat = _compat_records(top5, target_cards)
     feas = _feasibility_card(top5, tier)
     ri_guidance = None

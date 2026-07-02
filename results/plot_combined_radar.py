@@ -132,6 +132,8 @@ def load_data():
                 for dim in OEQ_DIMENSIONS:
                     key = OEQ_MAPPING[dim]
                     val = item['average_scores'].get(key, 0)
+                    if key == 's_method_norm':
+                        val = (val + 1) / 2  # signed F_method in [-1,1] -> [0,1] per paper Eq. (2)
                     scores.append(val * 100)
                 oeq_data[name] = scores
 

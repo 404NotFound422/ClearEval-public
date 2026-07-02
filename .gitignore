@@ -1,4 +1,6 @@
+# Python cache
 __pycache__/
+*.py[cod]
 dataset/Q+AR/logs
 
 # Unrelated local automation framework — must NOT ship in the public mirror
@@ -26,3 +28,9 @@ paper/build/
 workflow/
 dataset/Q+AR/rag_context/
 dataset/Q+AR/rag_context_v2/
+dataset/Q+AR/rag_context_v3/
+dataset/Q+AR/result_fixdev/
+
+# Linter/cache artifacts
+.ruff_cache/
+.DS_Store

@@ -1298,5 +1298,1222 @@
                 }
             }
         }
+    },
+    {
+        "question_id": 17,
+        "evaluation": {
+            "meta_data": {
+                "protocol_id": 17,
+                "sample_info": "我需要对包含胶质母细胞瘤的小鼠脑组织进行透明化处理，用于观察肿瘤细胞沿血管结构侵袭和扩散的三维空间模式。样本为包含肿瘤区域及邻近正常脑组织的小鼠脑组织块，尺寸约 8 mm × 6 mm × 5 mm，已完成固定和后固定。科学目标是在三维空间中保留肿瘤主体、侵袭前沿和周围血管网络的组织结构，观察肿瘤区域内及肿瘤边缘处血管形态、血管密度、血管分支和肿瘤-血管空间邻近关系，以分析 GBM 是否沿血管周围空间发生浸润性扩散。\n\n请根据该科学问题自行选择合适的双靶点荧光/标记策略，并基于所选标记样本选择匹配的组织透明方法。请仅输出 protocol，第 1 行写明所选双靶点荧光/标记策略和组织透明方法，随后仅列出透明处理、RI 匹配和保存/成像前处理步骤的关键试剂、条件和时间。",
+                "target_method": "Ce3D",
+                "generated_timestamp": "2025-12-15T00:00:00Z"
+            },
+            "scores": {
+                "completeness": {
+                    "c_step": {
+                        "score": 2,
+                        "max_score": 2,
+                        "description": "步骤模块完整性",
+                        "reasoning": "包含PBS清洗、透化、完整的免疫染色链条（封闭→一抗→洗→二抗→洗）、透明化核心（Ce3D孵育）以及RI匹配与成像装载/保存步骤。对脑组织块不需要脱钙；也未采用有机溶剂法因此不要求封片密封。"
+                    },
+                    "c_param": {
+                        "score": 3,
+                        "max_score": 3,
+                        "description": "参数细节完整性",
+                        "reasoning": "关键步骤均给出温度、时间与主要浓度/稀释度（Triton 0.2%、血清比例、抗体稀释、NaN3 0.05%、透明化与RI匹配时间窗口及换液频率），可直接执行。"
+                    },
+                    "total_weighted_score": 5
+                },
+                "correctness": {
+                    "co_order": {
+                        "score": 3,
+                        "max_score": 3,
+                        "description": "步骤顺序逻辑",
+                        "reasoning": "流程为水相免疫染色→水相透明化/RI匹配→成像准备，顺序连贯，无水相/疏水相直接跳转等致命断层。"
+                    },
+                    "co_method": {
+                        "score": 2,
+                        "max_score": 2,
+                        "description": "方法-试剂一致性",
+                        "reasoning": "全程使用PBS/Triton/血清体系与Ce3D工作液，未混入iDISCO类有机溶剂或CUBIC/Scale等不匹配的终端RIMS。"
+                    },
+                    "co_param": {
+                        "score": 2,
+                        "max_score": 2,
+                        "description": "参数范围物理合理性",
+                        "reasoning": "对8×6×5 mm脑组织块，抗体孵育5–7天/3–5天与Ce3D透明化48–72小时在被动扩散与经验范围内合理；37℃加速渗透与染色也常见。"
+                    },
+                    "co_chem": {
+                        "score": 0,
+                        "max_score": 1,
+                        "description": "化学与安全常识",
+                        "reasoning": "方案多处建议加入0.05% NaN3（叠氮化钠）作为防腐剂，属于额外引入的高毒危险化学品；按评分原则需扣分。"
+                    },
+                    "critical_warnings": [
+                        "方案主动引入0.05% NaN3（叠氮化钠）作为防腐剂，属于高毒危险化学品；不影响流程逻辑但按化学安全评分需判为不安全引入。"
+                    ],
+                    "total_weighted_score": 7
+                },
+                "effectiveness": {
+                    "s_method": {
+                        "score": 1.5903,
+                        "max_score": 2.5,
+                        "description": "透明方法选择适配度",
+                        "reasoning": "Signed need-weighted method-fit [-2.5,+2.5] (F_fp xor P_dye x2; caps signed). Method: Ce3D"
+                    },
+                    "s_label": {
+                        "score": 0.0,
+                        "max_score": 6,
+                        "description": "标记与方法兼容性",
+                        "reasoning": "target_match=0.0, marker_fluor_compat=6.0, method_fluor_compat=5.1. marker_dict={'mCherry/RFP': 'tumor cells', 'Alexa Fluor 647': 'CD31(PECAM1)'}"
+                    },
+                    "s_trans": {
+                        "score": 2.324512286649747,
+                        "max_score": 3,
+                        "description": "方法-组织 RI 域匹配度",
+                        "reasoning": "Method-tissue domain match. RI_tissue(question)=1.47, RI_method_ref(best-suited sample)=1.49, σ_RI=0.028, tier=T04_WHOLE_MOUSE_BRAIN_5_12MM, status=scored"
+                    },
+                    "s_time": {
+                        "score": 2.4971909030943322e-15,
+                        "max_score": 3,
+                        "description": "时间效率评分",
+                        "reasoning": "Time deviation score. Act: 108.0, Ref Range: []"
+                    },
+                    "total_weighted_score": 3.9148122866497497
+                }
+            }
+        }
+    },
+    {
+        "question_id": 27,
+        "evaluation": {
+            "meta_data": {
+                "protocol_id": 27,
+                "sample_info": "我需要对厚人脑皮层切片进行透明化处理，用于在致密临床脑组织中获得成熟神经元的三维分布图谱。样本为 3 mm 厚的人脑皮层切片，已完成固定和后固定。科学目标是在整个切片厚度范围内标记成熟神经元相关核/胞体信号，用于神经元定位、细胞计数、皮层层次分析和局部神经元密度比较，并通过两种成熟神经元相关标记提高深层细胞识别可靠性。\n\n实验室新人进行厚人脑皮层神经元染色时出现问题：染色后只有表层约 1 mm 有信号，深层组织完全无标记。实验记录显示：固定用了 24 h；荧光标记试剂在 4°C 孵育 72 h；用 PBS 稀释荧光标记试剂。请根据上述科学目标，在不引入给定标记物列表之外靶点或表外荧光团的前提下，重新选择或调整荧光/标记策略与组织透明方法，使其适合厚人脑皮层组织的充分固定、抗体深层渗透、成熟神经元双信号检测、透明化和三维成像。\n\n请仅输出修正后的 protocol，第 1 行写明应保留或更换的双靶点荧光/标记策略和组织透明方法，随后仅列出透明处理、RI 匹配和保存/成像前处理步骤的关键试剂、条件和时间。",
+                "target_method": "iDISCO+",
+                "generated_timestamp": "2025-12-15T00:00:00Z"
+            },
+            "scores": {
+                "completeness": {
+                    "c_step": {
+                        "score": 2,
+                        "max_score": 2,
+                        "description": "步骤模块完整性",
+                        "reasoning": "包含iDISCO+关键模块：PBS清洗、甲醇梯度脱水、H2O2/MeOH脱色、复水、渗透/封闭、（免疫标记模块完整给出）、再脱水、DCM脱脂、DBE折射率匹配，以及有机溶剂法成像前的避光密封保存/更换介质等步骤。对临床脑组织自发荧光也加入了合理的漂白步骤。"
+                    },
+                    "c_param": {
+                        "score": 3,
+                        "max_score": 3,
+                        "description": "参数细节完整性",
+                        "reasoning": "绝大多数步骤给出了可执行的时间、温度与浓度/配方（MeOH梯度、H2O2比例、Triton/DMSO/glycine/血清、肝素洗涤、DCM/MeOH比例、DBE时间等），达到论文补充材料级别。"
+                    },
+                    "total_weighted_score": 5.0,
+                    "comment": "流程模块齐全且参数充分，适合3 mm致密人脑皮层的深层免疫标记与有机溶剂透明化。"
+                },
+                "correctness": {
+                    "co_order": {
+                        "score": 3,
+                        "max_score": 3,
+                        "description": "步骤顺序逻辑",
+                        "reasoning": "符合iDISCO+经典“三明治”结构：脱水→（MeOH中漂白）→复水→渗透/封闭→一抗/洗→二抗/洗→再脱水→DCM脱脂→DBE RI匹配。不存在水相与疏水相试剂的直接跳转。"
+                    },
+                    "co_method": {
+                        "score": 2,
+                        "max_score": 2,
+                        "description": "方法-试剂一致性",
+                        "reasoning": "所用MeOH、H2O2/MeOH漂白、Triton/DMSO渗透、DCM脱脂、DBE匹配均与iDISCO+体系一致，未混入水性CUBIC/Scale等不相容终端匹配液。"
+                    },
+                    "co_param": {
+                        "score": 2,
+                        "max_score": 2,
+                        "description": "参数范围物理合理性",
+                        "reasoning": "针对3 mm厚人脑皮层，37°C下7–10天一抗、5–7天二抗及多日洗涤符合被动扩散与经验范围；脱水/复水与DCM/DBE处理时间也在常见可行区间内。"
+                    },
+                    "co_chem": {
+                        "score": 1,
+                        "max_score": 1,
+                        "description": "化学与安全常识",
+                        "reasoning": "使用的DCM、DBE、甲醇与H2O2均为iDISCO+常规试剂；未提出额外不必要的强酸强碱或明显危险操作（如密闭高温加热挥发性溶剂、直接混合不相容试剂等）。"
+                    },
+                    "critical_warnings": [],
+                    "total_weighted_score": 8.0,
+                    "comment": "方法选择与步骤顺序正确，参数对3 mm厚临床脑组织的扩散限制考虑充分，整体可执行。"
+                },
+                "effectiveness": {
+                    "s_method": {
+                        "score": 1.4688,
+                        "max_score": 2.5,
+                        "description": "透明方法选择适配度",
+                        "reasoning": "Signed need-weighted method-fit [-2.5,+2.5] (F_fp xor P_dye x2; caps signed). Method: iDISCO+"
+                    },
+                    "s_label": {
+                        "score": 3.0,
+                        "max_score": 6,
+                        "description": "标记与方法兼容性",
+                        "reasoning": "target_match=3.0, marker_fluor_compat=6.0, method_fluor_compat=5.1. marker_dict={'Alexa Fluor 647': 'NeuN (RBFOX3)', 'Alexa Fluor 568': 'MAP2'}"
+                    },
+                    "s_trans": {
+                        "score": 2.8378784067202965,
+                        "max_score": 3,
+                        "description": "方法-组织 RI 域匹配度",
+                        "reasoning": "Method-tissue domain match. RI_tissue(question)=1.46, RI_method_ref(best-suited sample)=1.47, σ_RI=0.03, tier=T09_HUMAN_DENSE_CLINICAL_BLOCK, status=scored"
+                    },
+                    "s_time": {
+                        "score": 3.0,
+                        "max_score": 3,
+                        "description": "时间效率评分",
+                        "reasoning": "Time deviation score. Act: 34.0, Ref Range: [24, 72]"
+                    },
+                    "total_weighted_score": 10.306678406720296
+                }
+            }
+        }
+    },
+    {
+        "question_id": 85,
+        "evaluation": {
+            "meta_data": {
+                "protocol_id": 85,
+                "sample_info": "我需要对小鼠皮下移植瘤进行透明化处理，用于定量分析肿瘤核心区域与边缘区域的 T 细胞浸润密度，从而区分免疫“冷”肿瘤和“热”肿瘤。样本为完整皮下移植瘤组织块，大小约 8 mm × 8 mm × 6 mm，已完成固定和后固定。科学目标是在完整肿瘤尺度下识别总 T 细胞群体和细胞毒性 T 细胞亚群，比较它们在肿瘤边缘、肿瘤核心、坏死区周围和间质区域中的空间分布、浸润深度、细胞密度和聚集模式。\n\n请根据该科学问题自行选择合适的荧光/标记策略，并基于所选标记样本选择匹配的组织透明方法。若限制范围内的核染料只能提供细胞密度或肿瘤结构参考，则不应替代 T 细胞身份标记。请仅输出 protocol，第 1 行写明所选荧光/标记策略和组织透明方法，随后仅列出透明处理、RI 匹配和保存/成像前处理步骤的关键试剂、条件和时间。",
+                "target_method": "iDISCO+",
+                "generated_timestamp": "2025-12-15T00:00:00Z"
+            },
+            "scores": {
+                "completeness": {
+                    "c_step": {
+                        "score": 2,
+                        "max_score": 2,
+                        "description": "步骤模块完整性",
+                        "reasoning": "包含PBS清洗/透化、MeOH梯度脱水、H2O2脱色、复水后封闭-一抗-洗涤-二抗-洗涤、再脱水、DCM脱脂/溶剂转换、DBE折射率匹配，以及DBE中密封保存与成像前装载步骤；符合iDISCO+用于整块肿瘤免疫标记与透明化的核心模块要求。"
+                    },
+                    "c_param": {
+                        "score": 3,
+                        "max_score": 3,
+                        "description": "参数细节完整性",
+                        "reasoning": "绝大多数步骤给出了明确的时间、温度与浓度/配方（Triton、DMSO、glycine、MeOH梯度、H2O2%、DCM/MeOH比例、DBE时间范围、抗体稀释范围等），可直接执行。"
+                    },
+                    "total_weighted_score": 5.0,
+                    "comment": "流程模块齐全且参数细化到可操作水平，满足整块移植瘤iDISCO+透明化与免疫标记的基本要求。"
+                },
+                "correctness": {
+                    "co_order": {
+                        "score": 3,
+                        "max_score": 3,
+                        "description": "步骤顺序逻辑",
+                        "reasoning": "整体符合iDISCO/iDISCO+经典“三明治”结构：PBS/透化→MeOH脱水→H2O2脱色→复水→封闭/免疫染色→再脱水→DCM脱脂/转换→DBE RI匹配；水相与有机相之间均通过MeOH梯度过渡，顺序逻辑正确。"
+                    },
+                    "co_method": {
+                        "score": 2,
+                        "max_score": 2,
+                        "description": "方法-试剂一致性",
+                        "reasoning": "使用MeOH梯度、H2O2/MeOH漂白、DCM脱脂、DBE匹配，均为iDISCO+常见/兼容体系；未混入水性CUBIC/水凝胶SDS等不相容体系。"
+                    },
+                    "co_param": {
+                        "score": 2,
+                        "max_score": 2,
+                        "description": "参数范围物理合理性",
+                        "reasoning": "针对6 mm厚肿瘤块，24 h透化、4–6 d一抗、3–4 d二抗、各48 h洗涤、以及DCM与DBE各在小时到1天量级的处理时间总体符合经验与扩散尺度；未出现明显违反物理常识的极端时间/温度。"
+                    },
+                    "co_chem": {
+                        "score": 1,
+                        "max_score": 1,
+                        "description": "化学与安全常识",
+                        "reasoning": "所用危险化学品（DCM、DBE、H2O2/MeOH）属于iDISCO+标准体系；未引入额外不必要的强酸强碱/叠氮化钠等，也未提出明显危险操作（如密闭高温加热DCM）。"
+                    },
+                    "critical_warnings": [],
+                    "total_weighted_score": 8.0,
+                    "comment": "顺序与试剂体系符合iDISCO+标准逻辑，时间尺度对6 mm厚肿瘤块基本合理，未见会直接导致失败的硬性矛盾。"
+                },
+                "effectiveness": {
+                    "s_method": {
+                        "score": 1.2656,
+                        "max_score": 2.5,
+                        "description": "透明方法选择适配度",
+                        "reasoning": "Signed need-weighted method-fit [-2.5,+2.5] (F_fp xor P_dye x2; caps signed). Method: iDISCO+"
+                    },
+                    "s_label": {
+                        "score": 3.9000000000000004,
+                        "max_score": 6,
+                        "description": "标记与方法兼容性",
+                        "reasoning": "target_match=6.0, marker_fluor_compat=6.0, method_fluor_compat=3.9. marker_dict={'Alexa Fluor 647': 'CD3', 'Alexa Fluor 568': 'CD8', 'TO-PRO-3': ''}"
+                    },
+                    "s_trans": {
+                        "score": 0.8850679685233267,
+                        "max_score": 3,
+                        "description": "方法-组织 RI 域匹配度",
+                        "reasoning": "Method-tissue domain match. RI_tissue(question)=1.52, RI_method_ref(best-suited sample)=1.47, σ_RI=0.032, tier=T05_MOUSE_SOFT_ORGAN_5_20MM, status=scored"
+                    },
+                    "s_time": {
+                        "score": 0.7480566263318885,
+                        "max_score": 3,
+                        "description": "时间效率评分",
+                        "reasoning": "Time deviation score. Act: 56.0, Ref Range: [24, 72]"
+                    },
+                    "total_weighted_score": 6.798724594855216
+                }
+            }
+        }
+    },
+    {
+        "question_id": 56,
+        "evaluation": {
+            "meta_data": {
+                "protocol_id": 56,
+                "sample_info": "我需要对完整小鼠磨牙进行透明化处理，用于观察牙髓内神经纤维和牙髓腔软组织结构的三维空间分布。样本为完整磨牙，大小约 2 mm × 1.5 mm × 1.5 mm，已完成固定和后固定。科学目标是在不破坏牙釉质和牙本质的前提下，保留牙髓腔形态，显示神经纤维从根尖进入后的分支和走行，并保留牙髓软组织结构轮廓。\n\n我在进行小鼠牙齿透明化实验时遇到问题：透明化后牙髓组织出现明显收缩和变形。此前使用 BoneClear protocol，但在 decoloration 后直接进行 BB-PEG 处理。请根据上述科学目标，在不引入给定标记物列表之外靶点或表外荧光团的前提下，重新选择或调整荧光/标记策略与组织透明方法。若限制范围内的小分子染料可以直接提供组织结构参考，应优先使用。\n\n请仅输出修正后的 protocol，第 1 行写明应保留或更换的荧光/标记策略和组织透明方法，随后仅列出透明处理、RI 匹配和保存/成像前处理步骤的关键试剂、条件和时间。",
+                "target_method": "Ce3D",
+                "generated_timestamp": "2025-12-15T00:00:00Z"
+            },
+            "scores": {
+                "completeness": {
+                    "c_step": {
+                        "score": 1,
+                        "max_score": 2,
+                        "description": "步骤模块完整性",
+                        "reasoning": "包含PBS清洗、透化、（可选）脱色、免疫标记流程、RI匹配与保存/装载等模块；但针对“完整牙齿/矿化组织”缺少关键的脱钙模块（通常是实现牙髓腔内深部成像与抗体进入的核心步骤），且Ce3D过渡液配方/梯度定义不清，属于关键模块细节缺口。"
+                    },
+                    "c_param": {
+                        "score": 2,
+                        "max_score": 3,
+                        "description": "参数细节完整性",
+                        "reasoning": "多数步骤给出了时间与温度，并对Triton、H2O2、血清、NaN3给出浓度范围；但Ce3D“低/中RI过渡液”未给出可执行的配比或目标RI值，SCRI R2200与TO-PRO-3仅写“常用工作浓度”不可复现，且未给出任何脱钙参数（若需要）。"
+                    },
+                    "total_weighted_score": 3.0,
+                    "comment": "流程框架基本完整，但对牙齿样本的关键特殊步骤（脱钙/明确RI梯度）缺失，导致可执行性与成功率受限。"
+                },
+                "correctness": {
+                    "co_order": {
+                        "score": 2,
+                        "max_score": 3,
+                        "description": "步骤顺序逻辑",
+                        "reasoning": "整体顺序（清洗/透化→（可选）脱色→封闭/一抗/二抗→结构染→RI匹配→保存/装载）逻辑通顺，且避免了水相与有机溶剂的直接相邻；但对矿化牙齿而言，通常应在免疫染色前完成充分脱钙/通透化增强，否则深部抗体扩散与成像透明度可能失败，属于顺序/模块安排上的重要缺陷。"
+                    },
+                    "co_method": {
+                        "score": 1,
+                        "max_score": 2,
+                        "description": "方法-试剂一致性",
+                        "reasoning": "方案自称采用Ce3D（水性RI匹配思路）且未混入DCM/DBE/BABB等明显不兼容有机体系；但“Ce3D低/中RI版本”作为关键试剂被引用却未定义，属于方法描述与可执行试剂体系不完全一致（更像概念性梯度而非标准Ce3D SOP）。"
+                    },
+                    "co_param": {
+                        "score": 1,
+                        "max_score": 2,
+                        "description": "参数范围物理合理性",
+                        "reasoning": "对2 mm级样本，3–5天一抗、2–3天二抗在37℃并配合较高Triton有一定可行性；但完整磨牙存在牙本质/釉质屏障，若不脱钙或不做更强的渗透策略，单靠0.5% Triton被动扩散可能不足，导致“时间-尺寸/屏障”层面的成功率偏低。"
+                    },
+                    "co_chem": {
+                        "score": 0,
+                        "max_score": 1,
+                        "description": "化学与安全常识",
+                        "reasoning": "方案主动引入0.05% NaN3（叠氮化钠）作为常规渗透/封闭/保存添加剂；按本rubric属于额外引入的危险化学品，因此扣分。"
+                    },
+                    "critical_warnings": [
+                        "缺少脱钙步骤：对完整磨牙进行深部牙髓免疫标记与透明成像通常不可或极难实现，可能导致抗体进不去/信号局限于根尖孔附近或表层，且透明度不足。",
+                        "Ce3D过渡液未给出配方或目标RI，实际操作中难以复现“渐进式进入高RI”以减少形变的关键控制点。"
+                    ],
+                    "total_weighted_score": 4.0,
+                    "comment": "总体流程方向合理（偏水性、避免强脱水以减收缩），但对牙齿矿化屏障的处理不足且引入NaN3触发安全扣分；关键试剂梯度不明确影响可重复性。"
+                },
+                "effectiveness": {
+                    "s_method": {
+                        "score": 1.6389,
+                        "max_score": 2.5,
+                        "description": "透明方法选择适配度",
+                        "reasoning": "Signed need-weighted method-fit [-2.5,+2.5] (F_fp xor P_dye x2; caps signed). Method: Ce3D"
+                    },
+                    "s_label": {
+                        "score": 0.30000000000000004,
+                        "max_score": 6,
+                        "description": "标记与方法兼容性",
+                        "reasoning": "target_match=6.0, marker_fluor_compat=6.0, method_fluor_compat=0.3. marker_dict={'Alexa Fluor 647': 'PGP9.5', 'SCRI Renaissance 2200': '', 'TO-PRO-3': ''}"
+                    },
+                    "s_trans": {
+                        "score": 0.08569650235365053,
+                        "max_score": 3,
+                        "description": "方法-组织 RI 域匹配度",
+                        "reasoning": "Method-tissue domain match. RI_tissue(question)=1.57, RI_method_ref(best-suited sample)=1.49, σ_RI=0.03, tier=T07_HARD_TISSUE_BONE_TOOTH_COCHLEA, status=scored"
+                    },
+                    "s_time": {
+                        "score": 0.0,
+                        "max_score": 3,
+                        "description": "时间效率评分",
+                        "reasoning": "Time deviation score. Act: 72.0, Ref Range: []"
+                    },
+                    "total_weighted_score": 2.0245965023536505
+                }
+            }
+        }
+    },
+    {
+        "question_id": 114,
+        "evaluation": {
+            "meta_data": {
+                "protocol_id": 114,
+                "sample_info": "我需要对完整小鼠胎盘进行透明化处理，用于同时观察胎盘血管内皮细胞形态和功能性灌流血管腔面。样本为完整胎盘，大小约 10 mm × 8 mm × 3 mm，已完成固定和后固定。科学目标是区分胎盘绒毛区中“存在内皮结构的血管”和“实际被灌流探针标记到的功能性血管”，比较二者在迷路层、滋养层相关区域和胎盘边缘区域中的空间重叠、灌流缺失、血管稀疏化和异常分枝模式，从而评估先兆子痫模型中的胎盘血管功能障碍。\n\n请根据该科学问题选择兼容的荧光/标记策略，并选择匹配的组织透明方法。若直接血管腔面探针能够回答灌流功能问题，应作为功能性血管通道；若需要判断血管内皮形态和结构完整性，则应选择表内内皮相关靶点。请仅输出 protocol，第 1 行写明所选荧光/标记策略和组织透明方法，随后仅列出透明处理、RI 匹配和保存/成像前处理步骤的关键试剂、条件和时间。",
+                "target_method": "Ce3D",
+                "generated_timestamp": "2025-12-15T00:00:00Z"
+            },
+            "scores": {
+                "completeness": {
+                    "c_step": {
+                        "score": 2,
+                        "max_score": 2,
+                        "description": "步骤模块完整性",
+                        "reasoning": "包含PBS清洗、含血红素组织所需的脱色/去血红素思路、通透与封闭、完整免疫标记链条（封闭→一抗→洗→二抗→洗）、Ce3D透明处理、RI匹配、成像装载/平衡与保存步骤；作为水相法不需要有机溶剂脱水模块，未缺关键模块。"
+                    },
+                    "c_param": {
+                        "score": 3,
+                        "max_score": 3,
+                        "description": "参数细节完整性",
+                        "reasoning": "大多数关键步骤给出了温度（RT/37℃/4℃）、时间（小时到天）、以及主要试剂浓度（Triton、DMSO、血清、NaN3、TO-PRO-3浓度范围、抗体稀释范围）。Ce3D工作液/RI匹配液未给出明确配方与RI数值，但不影响整体可执行性，仍满足>80%参数细节要求。"
+                    },
+                    "total_weighted_score": 5.0,
+                    "comment": "流程模块齐全，且针对胎盘高血红素特点加入了脱色/通透与长时间抗体孵育，具备可执行性。"
+                },
+                "correctness": {
+                    "co_order": {
+                        "score": 3,
+                        "max_score": 3,
+                        "description": "步骤顺序逻辑",
+                        "reasoning": "顺序为PBS清洗→通透/封闭→一抗/二抗免疫→核染/（可选）Lectin补强→Ce3D透明→RI匹配→装载成像，符合水相透明与免疫染色的一般SOP；不存在水相/有机相直接相邻等致命过渡错误。"
+                    },
+                    "co_method": {
+                        "score": 1,
+                        "max_score": 2,
+                        "description": "方法-试剂一致性",
+                        "reasoning": "整体为水相体系并保持一致，但“脱色/去血红素”步骤主要是Triton+DMSO+NaN3+（可选）glycine，并非Ce3D文献中典型的专用脱色/去血红素试剂表述；此外对Ce3D工作液/RI匹配液仅以“按配方配制”概述，方法学指向正确但与标准Ce3D试剂体系描述不够严谨，因此扣1分。"
+                    },
+                    "co_param": {
+                        "score": 2,
+                        "max_score": 2,
+                        "description": "参数范围物理合理性",
+                        "reasoning": "针对3 mm厚完整胎盘，3–5天一抗、2–3天二抗、以及1–2天Ce3D透明/RI匹配属于被动扩散与经验范围内；37℃加速渗透在多数抗体/组织透明免疫中可行，未出现明显违反扩散定律的超短时间承诺。"
+                    },
+                    "co_chem": {
+                        "score": 0,
+                        "max_score": 1,
+                        "description": "化学与安全常识",
+                        "reasoning": "方案在多步中主动加入0.02%叠氮化钠(NaN3)作为防腐剂；叠氮化钠属于额外引入的高毒性危险化学品（且并非所有Ce3D标准流程必需），按评分原则(a)需扣分。"
+                    },
+                    "critical_warnings": [
+                        "功能性灌流Lectin通道依赖“体内已灌流Lectin并固定”的前提；若未在固定前完成灌流标记，则本方案无法产生真正的功能性灌流读出，只能得到后续补强/非功能性结合信号。",
+                        "多处使用NaN3（叠氮化钠）属于高毒性试剂；若实验室不允许或废液体系不匹配，会带来合规与安全风险。"
+                    ],
+                    "total_weighted_score": 6.0,
+                    "comment": "流程逻辑与时间尺度总体合理，但引入NaN3触发化学安全扣分；此外Ce3D关键试剂（尤其RI信息）描述偏概述，方法一致性略受影响。"
+                },
+                "effectiveness": {
+                    "s_method": {
+                        "score": 1.7037,
+                        "max_score": 2.5,
+                        "description": "透明方法选择适配度",
+                        "reasoning": "Signed need-weighted method-fit [-2.5,+2.5] (F_fp xor P_dye x2; caps signed). Method: Ce3D"
+                    },
+                    "s_label": {
+                        "score": 5.1,
+                        "max_score": 6,
+                        "description": "标记与方法兼容性",
+                        "reasoning": "target_match=6.0, marker_fluor_compat=6.0, method_fluor_compat=5.1. marker_dict={'Alexa Fluor 647': 'CD31(PECAM1)', 'Lectin': '血管腔面/灌流示踪', 'TO-PRO-3': ''}"
+                    },
+                    "s_trans": {
+                        "score": 2.8378784067202965,
+                        "max_score": 3,
+                        "description": "方法-组织 RI 域匹配度",
+                        "reasoning": "Method-tissue domain match. RI_tissue(question)=1.5, RI_method_ref(best-suited sample)=1.49, σ_RI=0.03, tier=T10_LIPID_OR_PIGMENT_RICH, status=scored"
+                    },
+                    "s_time": {
+                        "score": 0.13181080087022226,
+                        "max_score": 3,
+                        "description": "时间效率评分",
+                        "reasoning": "Time deviation score. Act: 96.0, Ref Range: [48, 120]"
+                    },
+                    "total_weighted_score": 9.773389207590517
+                }
+            }
+        }
+    },
+    {
+        "question_id": 41,
+        "evaluation": {
+            "meta_data": {
+                "protocol_id": 41,
+                "sample_info": "我需要对出生后 P7 小鼠颅骨缝区域进行透明化处理，用于观察颅骨缝处成骨谱系细胞的三维空间分布。样本为包含颅骨缝及邻近颅骨板的硬组织块，大小约 5 mm × 5 mm × 2 mm，已完成固定和后固定。科学目标是在颅骨缝区域中区分成骨谱系不同分化阶段的细胞群体，观察其在骨缝边缘、骨化前沿和邻近骨板中的空间位置、密度变化和排列模式，并用于分析出生后颅骨生长和骨缝闭合过程中的成骨细胞组织结构。\n\n请根据该科学问题自行选择合适的双靶点荧光/标记策略，并基于所选标记样本选择匹配的组织透明方法。请仅输出 protocol，第 1 行写明所选双靶点荧光/标记策略和组织透明方法，随后仅列出透明处理、RI 匹配和保存/成像前处理步骤的关键试剂、条件和时间。",
+                "target_method": "FDISCO",
+                "generated_timestamp": "2025-12-15T00:00:00Z"
+            },
+            "scores": {
+                "completeness": {
+                    "c_step": {
+                        "score": 2,
+                        "max_score": 2,
+                        "description": "步骤模块完整性",
+                        "reasoning": "包含硬组织必需的脱钙（EDTA）、免疫标记完整链条（封闭→一抗→洗→二抗→洗）、有机溶剂法核心模块（MeOH梯度脱水→THF/DCM置换/脱脂→DBE折射率匹配），并给出了DBE中密封保存与成像装样要点。"
+                    },
+                    "c_param": {
+                        "score": 3,
+                        "max_score": 3,
+                        "description": "参数细节完整性",
+                        "reasoning": "关键步骤普遍给出浓度/配方（EDTA 0.2–0.5M、Triton/Tween/NaN3、MeOH梯度、H2O2 5% in MeOH、THF/DCM/DBE）、温度（RT/4℃/37℃）与时间范围（小时到天），可直接执行。"
+                    },
+                    "total_weighted_score": 5.0,
+                    "comment": "模块齐全且参数可操作，符合硬组织+免疫+有机溶剂透明的基本要求。"
+                },
+                "correctness": {
+                    "co_order": {
+                        "score": 2,
+                        "max_score": 3,
+                        "description": "步骤顺序逻辑",
+                        "reasoning": "水相免疫染色后通过MeOH梯度进入有机相、再THF/DCM/DBE透明的总体顺序可运行；但经典iDISCO/FDISCO常见做法是先完成有机相预处理（脱水/漂白/复水）再进行免疫染色，之后再脱水透明（“三明治”结构）。本方案把漂白放在染色之后，可能降低已标记荧光信号并增加失败风险，因此扣分。"
+                    },
+                    "co_method": {
+                        "score": 2,
+                        "max_score": 2,
+                        "description": "方法-试剂一致性",
+                        "reasoning": "透明化核心试剂与FDISCO/3DISCO系一致（MeOH、THF、DCM、DBE，含可选BHT），未出现水性法/水凝胶法不兼容混用。"
+                    },
+                    "co_param": {
+                        "score": 1,
+                        "max_score": 2,
+                        "description": "参数范围物理合理性",
+                        "reasoning": "对5×5×2 mm骨块：EDTA脱钙1–3天在P7阶段可能可行；有机相透明（THF/DCM/DBE）给出的小时级时间也合理。但37℃下2–4天一抗、2–3天二抗对2 mm厚组织偏乐观，且未给出更强渗透策略（如更长时间/更高渗透体系/主动输运），存在深部染色不足风险，因此不满分。"
+                    },
+                    "co_chem": {
+                        "score": 0,
+                        "max_score": 1,
+                        "description": "化学与安全常识",
+                        "reasoning": "方案在渗透/封闭/孵育液中加入0.02% NaN3（叠氮化钠），属于该透明方法标准流程并不必需的额外高毒危险化学品，引入了不必要风险，按rubric扣分。"
+                    },
+                    "critical_warnings": [
+                        "将5% H2O2/MeOH漂白放在完成Alexa Fluor二抗标记之后，可能显著损伤/降低荧光信号，导致成像失败或信噪比下降；更常见做法是漂白在免疫染色之前完成。",
+                        "FDISCO（THF/DCM/DBE）对DAPI信号与部分有机染料稳定性不佳，DAPI在有机溶剂中易衰减/丢失，核染可能不可靠。"
+                    ],
+                    "total_weighted_score": 5.0,
+                    "comment": "方法体系匹配，但漂白步骤位置与加入NaN3带来明显风险；深部免疫渗透与荧光保持存在不确定性。"
+                },
+                "effectiveness": {
+                    "s_method": {
+                        "score": 0.9265,
+                        "max_score": 2.5,
+                        "description": "透明方法选择适配度",
+                        "reasoning": "Signed need-weighted method-fit [-2.5,+2.5] (F_fp xor P_dye x2; caps signed). Method: FDISCO"
+                    },
+                    "s_label": {
+                        "score": 4.199999999999999,
+                        "max_score": 6,
+                        "description": "标记与方法兼容性",
+                        "reasoning": "target_match=6.0, marker_fluor_compat=6.0, method_fluor_compat=4.2. marker_dict={'Alexa Fluor 568': 'Osx (Osterix)', 'Alexa Fluor 647': 'Osteocalcin', 'DAPI': ''}"
+                    },
+                    "s_trans": {
+                        "score": 0.03332698961472665,
+                        "max_score": 3,
+                        "description": "方法-组织 RI 域匹配度",
+                        "reasoning": "Method-tissue domain match. RI_tissue(question)=1.56, RI_method_ref(best-suited sample)=1.47, σ_RI=0.03, tier=T07_HARD_TISSUE_BONE_TOOTH_COCHLEA, status=scored"
+                    },
+                    "s_time": {
+                        "score": 0.0,
+                        "max_score": 3,
+                        "description": "时间效率评分",
+                        "reasoning": "Time deviation score. Act: 69.0, Ref Range: [24, 96]"
+                    },
+                    "total_weighted_score": 5.159826989614726
+                }
+            }
+        }
+    },
+    {
+        "question_id": 187,
+        "evaluation": {
+            "meta_data": {
+                "protocol_id": 187,
+                "sample_info": "我需要对完整小鼠脑胶质瘤组织进行透明化处理，用于建立肿瘤核心区域与边缘区域血管形态和灌流状态的三维图谱。样本为脑胶质瘤组织块，大小约 8 mm × 6 mm × 4 mm，已完成固定和后固定。科学目标是在肿瘤核心、侵袭边缘和邻近脑组织中同时观察血管内皮网络和功能性灌流血管腔面，比较血管密度、血管直径、分支复杂度、灌流缺失区、血管断裂和血管正常化程度，以评估抗血管生成治疗对胶质瘤血管微环境的影响。\n\n请根据该科学问题自行选择合适的荧光/标记策略，并匹配适合脑肿瘤血管网络三维成像的透明方法。若 Lectin 或 IB4 能够直接显示灌流血管，应作为功能性血管通道；若需要显示全部血管内皮结构，则加入 CD31/PECAM1 等表内内皮标记。请仅输出 protocol，第 1 行写明所选荧光/标记策略和组织透明方法，随后仅列出透明处理、RI 匹配和保存/成像前处理步骤的关键试剂、条件和时间。",
+                "target_method": "Ce3D",
+                "generated_timestamp": "2025-12-15T00:00:00Z"
+            },
+            "scores": {
+                "completeness": {
+                    "c_step": {
+                        "score": 2,
+                        "max_score": 2,
+                        "description": "步骤模块完整性",
+                        "reasoning": "包含PBS清洗/再固定、通透与封闭、完整免疫标记链条（封闭-一抗-洗-二抗-洗）、以及水相透明化与RI匹配（Ce3D预浸→100% Ce3D）和成像前装样/密封保存等模块。该样本为脑组织块，不强制要求灌注或脱色步骤；方案也未采用有机溶剂法，因此不需要脱水/封片防挥发等特定模块。"
+                    },
+                    "c_param": {
+                        "score": 3,
+                        "max_score": 3,
+                        "description": "参数细节完整性",
+                        "reasoning": "关键步骤普遍给出了浓度（Triton、Glycine、血清、NaN3、PFA、TO-PRO-3、Ce3D比例）、温度（RT/4℃/37℃）与时间（小时/天/过夜），可直接执行；仅Ce3D配方细节未展开但不影响作为关键参数完整性评分。"
+                    },
+                    "total_weighted_score": 5.0,
+                    "comment": "流程模块齐全，参数给得较细，具备可操作性。"
+                },
+                "correctness": {
+                    "co_order": {
+                        "score": 3,
+                        "max_score": 3,
+                        "description": "步骤顺序逻辑",
+                        "reasoning": "顺序符合水相免疫染色+水相RI匹配的常规逻辑：清洗/通透→封闭→一抗/二抗及充分洗涤→（可选核染）→Ce3D渐进过渡与最终匹配→成像前去泡与装样。不存在水相与疏水溶剂直接相邻的禁忌。"
+                    },
+                    "co_method": {
+                        "score": 2,
+                        "max_score": 2,
+                        "description": "方法-试剂一致性",
+                        "reasoning": "全流程均为水相体系（PBS/Triton/血清/抗体/核染）并以Ce3D作为透明与RI匹配介质，未混入iDISCO类有机溶剂或CUBIC/CLARITY特有的关键步骤，方法命名与试剂匹配。"
+                    },
+                    "co_param": {
+                        "score": 2,
+                        "max_score": 2,
+                        "description": "参数范围物理合理性",
+                        "reasoning": "针对4 mm厚组织块，3–5天一抗、2–3天二抗、以及Ce3D 24–48 h（必要时再24 h）在被动扩散与经验范围内合理；通透12 h与阻断12 h也可行。"
+                    },
+                    "co_chem": {
+                        "score": 0,
+                        "max_score": 1,
+                        "description": "化学与安全常识",
+                        "reasoning": "方案在阻断/抗体稀释/保存中主动加入0.05% NaN3（叠氮化钠），属于额外引入的高毒危险化学品（并非所有Ce3D标准流程必需），按规则需扣分。其余操作未见明显危险操作描述。"
+                    },
+                    "critical_warnings": [
+                        "功能性灌流通道Lectin/IB4仅在“体内灌流预标记”前提下成立；当前样本已固定/后固定且未明确已做体内Lectin灌流，则该通道可能不存在或无法代表真实灌流状态（最多只能做结合位点染色而非功能灌流）。"
+                    ],
+                    "total_weighted_score": 7.0,
+                    "comment": "流程逻辑与方法匹配良好、时间尺度合理；但引入NaN3触发化学安全扣分，且“功能性灌流”前提条件未被样本信息保证。"
+                },
+                "effectiveness": {
+                    "s_method": {
+                        "score": 1.6583,
+                        "max_score": 2.5,
+                        "description": "透明方法选择适配度",
+                        "reasoning": "Signed need-weighted method-fit [-2.5,+2.5] (F_fp xor P_dye x2; caps signed). Method: Ce3D"
+                    },
+                    "s_label": {
+                        "score": 5.1,
+                        "max_score": 6,
+                        "description": "标记与方法兼容性",
+                        "reasoning": "target_match=6.0, marker_fluor_compat=6.0, method_fluor_compat=5.1. marker_dict={'Alexa Fluor 647': 'CD31/PECAM1', 'TO-PRO-3': '', 'Lectin': 'perfused vessel lumen (if pre-perfused)'}"
+                    },
+                    "s_trans": {
+                        "score": 2.324512286649747,
+                        "max_score": 3,
+                        "description": "方法-组织 RI 域匹配度",
+                        "reasoning": "Method-tissue domain match. RI_tissue(question)=1.47, RI_method_ref(best-suited sample)=1.49, σ_RI=0.028, tier=T04_WHOLE_MOUSE_BRAIN_5_12MM, status=scored"
+                    },
+                    "s_time": {
+                        "score": 1.2248508123427553e-07,
+                        "max_score": 3,
+                        "description": "时间效率评分",
+                        "reasoning": "Time deviation score. Act: 90.0, Ref Range: [24, 96]"
+                    },
+                    "total_weighted_score": 9.08281240913483
+                }
+            }
+        }
+    },
+    {
+        "question_id": 131,
+        "evaluation": {
+            "meta_data": {
+                "protocol_id": 131,
+                "sample_info": "我需要对人大脑类器官进行快速透明化处理，用于高通量评估药物对 3D 类器官整体生长、细胞密度和组织结构完整性的影响。样本为直径约 1–3 mm 的固定类器官。科学目标是在三维空间中测量类器官体积、外层细胞密度、中心区域细胞缺失或坏死样改变，并结合增殖信号判断药物是否导致生长停滞、增殖下降或整体结构破坏。\n\n请根据该科学问题自行选择合适的荧光/标记策略，并匹配适合 3D 类器官高通量成像的组织透明方法。若限制范围内的核染料和 Phalloidin 可以直接提供总细胞核、类器官轮廓或 F-actin 结构参考，应优先作为辅助探针；若需要评估增殖抑制，则仍需选择表内增殖相关靶点。请仅输出 protocol，第 1 行写明所选荧光/标记策略和组织透明方法，随后仅列出透明处理、RI 匹配和保存/成像前处理步骤的关键试剂、条件和时间。",
+                "target_method": "iDISCO+",
+                "generated_timestamp": "2025-12-15T00:00:00Z"
+            },
+            "scores": {
+                "completeness": {
+                    "c_step": {
+                        "score": 1,
+                        "max_score": 2,
+                        "description": "步骤模块完整性",
+                        "reasoning": "包含iDISCO+核心模块：MeOH梯度脱水、H2O2脱色、复水、透化/封闭、一抗/二抗及清洗、再脱水、DCM脱脂、DBE折射率匹配，并给出成像前在DBE中装载/平衡。主要缺失：未明确写固定(PFA)与固定后PBS清洗；有机溶剂法成像前虽提到mounting chamber，但未明确“封片/密封”以防DBE挥发/吸水，属于非致命缺项。"
+                    },
+                    "c_param": {
+                        "score": 3,
+                        "max_score": 3,
+                        "description": "参数细节完整性",
+                        "reasoning": "绝大多数步骤给出明确浓度(如MeOH梯度、H2O2 5%、Triton 0.2%、DMSO比例、glycine 0.3M)、温度(RT/4℃/37℃)与时间范围(分钟到小时/天)，可直接执行。"
+                    },
+                    "total_weighted_score": 4.0,
+                    "comment": "核心透明化与RI匹配流程齐全，但固定与成像密封细节未写清。"
+                },
+                "correctness": {
+                    "co_order": {
+                        "score": 3,
+                        "max_score": 3,
+                        "description": "步骤顺序逻辑",
+                        "reasoning": "符合iDISCO+典型“三明治”结构：脱水→(MeOH中H2O2)脱色→复水→透化/封闭→免疫染色→再脱水→DCM脱脂/溶剂转换→DBE RI匹配。水相与有机相之间均通过MeOH梯度过渡，未出现PBS直接进DBE/DCM的致命跳步。"
+                    },
+                    "co_method": {
+                        "score": 2,
+                        "max_score": 2,
+                        "description": "方法-试剂一致性",
+                        "reasoning": "使用MeOH、H2O2/MeOH漂白、Triton/DMSO/glycine渗透、DCM脱脂、DBE匹配，均为iDISCO+/3DISCO系常用组合；未混入CUBIC等水性体系的RI匹配液。"
+                    },
+                    "co_param": {
+                        "score": 1,
+                        "max_score": 2,
+                        "description": "参数范围物理合理性",
+                        "reasoning": "对1–3 mm类器官，MeOH梯度与DCM/DBE时间设置总体合理；但免疫步骤在37℃ 24–48 h对3 mm样本可能仍偏短且可能增加背景/抗体失活风险（非物理不可能，但存在可重复性隐患）。另外DBE匹配“2–6 h + 6–16 h”对3 mm可行。"
+                    },
+                    "co_chem": {
+                        "score": 1,
+                        "max_score": 1,
+                        "description": "化学与安全常识",
+                        "reasoning": "所用危险化学品(DCM、DBE、H2O2/MeOH)属于iDISCO+标准体系，未引入额外不必要的高危试剂或明确危险操作。"
+                    },
+                    "critical_warnings": [
+                        "DAPI与多数Alexa-Phalloidin在DBE/有机溶剂体系中可能显著衰减或流失；若依赖其做定量（核密度/轮廓），可能导致信号不稳定与批间差异。更稳妥通常是使用溶剂兼容核染（如TO-PRO-3/propidium iodide类）或改用ECi等更温和体系。"
+                    ],
+                    "total_weighted_score": 7.0,
+                    "comment": "流程顺序与方法匹配正确；主要风险在于部分荧光探针在DBE中的稳定性与37℃免疫条件的可重复性。"
+                },
+                "effectiveness": {
+                    "s_method": {
+                        "score": 1.1107,
+                        "max_score": 2.5,
+                        "description": "透明方法选择适配度",
+                        "reasoning": "Signed need-weighted method-fit [-2.5,+2.5] (F_fp xor P_dye x2; caps signed). Method: iDISCO+"
+                    },
+                    "s_label": {
+                        "score": 3.9000000000000004,
+                        "max_score": 6,
+                        "description": "标记与方法兼容性",
+                        "reasoning": "target_match=6.0, marker_fluor_compat=6.0, method_fluor_compat=3.9. marker_dict={'DAPI': '', 'Alexa Fluor 647': 'Ki67', 'Alexa Fluor (Phalloidin)': 'F-actin'}"
+                    },
+                    "s_trans": {
+                        "score": 2.1784471112210717,
+                        "max_score": 3,
+                        "description": "方法-组织 RI 域匹配度",
+                        "reasoning": "Method-tissue domain match. RI_tissue(question)=1.45, RI_method_ref(best-suited sample)=1.47, σ_RI=0.025, tier=T03_SMALL_WHOLE_SAMPLE_1_5MM, status=scored"
+                    },
+                    "s_time": {
+                        "score": 3.0,
+                        "max_score": 3,
+                        "description": "时间效率评分",
+                        "reasoning": "Time deviation score. Act: 22.5, Ref Range: [6, 24]"
+                    },
+                    "total_weighted_score": 10.189147111221072
+                }
+            }
+        }
+    },
+    {
+        "question_id": 250,
+        "evaluation": {
+            "meta_data": {
+                "protocol_id": 250,
+                "sample_info": "一只固定小鼠整肾需要在单次光片成像中同时观察肾小球、肾血管和细胞核，样本厚度约 3–4 mm，要求兼顾深层标记和肾脏结构保留。需根据以下科学目标选择兼容的荧光/标记策略：需要同时标记足细胞裂孔隔膜的两种关键结构蛋白，以评估肾小球滤过屏障的完整性，并选择匹配的组织透明方法；若需要血管或细胞核参考，可使用限制范围内的血管探针或核染料作为辅助通道。请仅输出 protocol，第 1 行写明所选双靶点荧光/标记策略和组织透明方法，随后仅列出透明处理、RI 匹配和保存/成像前处理步骤的关键试剂、条件和时间。",
+                "target_method": "Ce3D",
+                "generated_timestamp": "2025-12-15T00:00:00Z"
+            },
+            "scores": {
+                "completeness": {
+                    "c_step": {
+                        "score": 1,
+                        "max_score": 2,
+                        "description": "步骤模块完整性",
+                        "reasoning": "包含PBS清洗、透化/封闭、双靶点免疫（封闭→一抗→洗→二抗→洗）、辅助血管/核染、透明处理、RI匹配与成像装载/保存等核心模块。但针对肾这类富血器官，缺少必需的灌注(perfusion)或脱色/去血红素(decolorization)步骤，可能影响透明度与深层成像背景。"
+                    },
+                    "c_param": {
+                        "score": 3,
+                        "max_score": 3,
+                        "description": "参数细节完整性",
+                        "reasoning": "大多数关键步骤给出了温度、时间与主要浓度（Triton、Glycine、血清比例、抗体稀释范围、Ce3D孵育时长等），可操作性较强；Ce3D具体配方/RI数值未写明但不影响本项达到>80%细节覆盖。"
+                    },
+                    "total_weighted_score": 4.0
+                },
+                "correctness": {
+                    "co_order": {
+                        "score": 3,
+                        "max_score": 3,
+                        "description": "步骤顺序逻辑",
+                        "reasoning": "整体顺序符合水相透明+免疫标记的一般逻辑：清洗/透化→封闭→一抗/二抗→（可选小分子/凝集素）→透明/RI匹配→装载成像；不存在水相与有机溶剂直接相邻的禁忌过渡问题。"
+                    },
+                    "co_method": {
+                        "score": 2,
+                        "max_score": 2,
+                        "description": "方法-试剂一致性",
+                        "reasoning": "全流程为水相体系（PBS/Triton/血清封闭/核染/凝集素）并以Ce3D作为透明与RI介质，未混入DCM/DBE/BABB等不兼容有机溶剂，方法声明与试剂体系一致。"
+                    },
+                    "co_param": {
+                        "score": 1,
+                        "max_score": 2,
+                        "description": "参数范围物理合理性",
+                        "reasoning": "对3–4 mm整肾，37°C下3–5天一抗+2–3天二抗在被动扩散条件下属于可行但偏乐观的范围（尤其肾小球深部与髓质区域）；Ce3D透明2–4天+RI平衡12–24h对该厚度基本合理。缺少去血/脱色可能导致实际透明时间更长或成像背景更高。"
+                    },
+                    "co_chem": {
+                        "score": 0,
+                        "max_score": 1,
+                        "description": "化学与安全常识",
+                        "reasoning": "方案多处主动加入NaN3（0.05%用于透化/封闭/抗体孵育，且保存中也建议加入），叠氮化钠属于额外引入的危险化学品（剧毒），按评分规则需扣分。"
+                    },
+                    "critical_warnings": [
+                        "富血器官（肾）未包含灌注或脱色/去血红素步骤，可能导致透明度不足、深层散射与自发荧光背景升高，影响单次光片成像质量。",
+                        "多处使用0.05% NaN3（叠氮化钠）属于主动引入的危险化学品；若实验室不允许或废液处理不当存在安全与合规风险。"
+                    ],
+                    "total_weighted_score": 6.0
+                },
+                "effectiveness": {
+                    "s_method": {
+                        "score": 1.565,
+                        "max_score": 2.5,
+                        "description": "透明方法选择适配度",
+                        "reasoning": "Signed need-weighted method-fit [-2.5,+2.5] (F_fp xor P_dye x2; caps signed). Method: Ce3D"
+                    },
+                    "s_label": {
+                        "score": 5.1,
+                        "max_score": 6,
+                        "description": "标记与方法兼容性",
+                        "reasoning": "target_match=6.0, marker_fluor_compat=6.0, method_fluor_compat=5.1. marker_dict={'Alexa Fluor 568': 'Nephrin (NPHS1)', 'Alexa Fluor 647': 'Podocin (NPHS2)', 'Alexa Fluor 488': 'Lectin (vasculature)', 'TO-PRO-3': ''}"
+                    },
+                    "s_trans": {
+                        "score": 2.8570343996855287,
+                        "max_score": 3,
+                        "description": "方法-组织 RI 域匹配度",
+                        "reasoning": "Method-tissue domain match. RI_tissue(question)=1.5, RI_method_ref(best-suited sample)=1.49, σ_RI=0.032, tier=T05_MOUSE_SOFT_ORGAN_5_20MM, status=scored"
+                    },
+                    "s_time": {
+                        "score": 0.0,
+                        "max_score": 3,
+                        "description": "时间效率评分",
+                        "reasoning": "Time deviation score. Act: 120.0, Ref Range: []"
+                    },
+                    "total_weighted_score": 9.522034399685527
+                }
+            }
+        }
+    },
+    {
+        "question_id": 210,
+        "evaluation": {
+            "meta_data": {
+                "protocol_id": 210,
+                "sample_info": "我需要对完整小鼠心脏进行透明化处理，用于在三维空间中同时观察心脏传导系统的起搏细胞和浦肯野纤维。样本为完整心脏，长约 15–20 mm，已固定。科学目标是通过起搏/传导系统相关离子通道信号定位窦房结和房室结区域，并通过浦肯野纤维标记显示心室内传导网络，比较不同传导系统结构之间的空间连接、信号连续性、区域分布和与心肌纤维取向之间的关系。\n\n请根据该科学问题选择兼容的荧光/标记策略，并选择匹配的组织透明方法。若直接 F-actin 探针只能显示心肌纤维方向或肌节结构，则只能作为结构辅助信号；传导系统细胞身份必须由给定标记物列表中的心脏传导系统相关靶点完成。请仅输出 protocol，第 1 行写明所选荧光/标记策略和组织透明方法，随后仅列出透明处理、RI 匹配和保存/成像前处理步骤的关键试剂、条件和时间。",
+                "target_method": "iDISCO+",
+                "generated_timestamp": "2025-12-15T00:00:00Z"
+            },
+            "scores": {
+                "completeness": {
+                    "c_step": {
+                        "score": 2,
+                        "max_score": 2,
+                        "description": "步骤模块完整性",
+                        "reasoning": "包含PBS清洗、甲醇梯度脱水/复水、H2O2脱色、透化/封闭、一抗-洗-二抗/染色-洗、再脱水、DCM脱脂、DBE折射率匹配，以及DBE密封保存与成像前装载/脱泡，符合整器官iDISCO+核心模块要求。"
+                    },
+                    "c_param": {
+                        "score": 3,
+                        "max_score": 3,
+                        "description": "参数细节完整性",
+                        "reasoning": "绝大多数步骤给出了明确的时间、温度与浓度/配方（MeOH梯度、H2O2比例、Triton/DMSO/Glycine/血清、DCM/MeOH比例、DBE置换时间等），细节接近可直接执行的发表级别。"
+                    },
+                    "total_weighted_score": 5.0,
+                    "comment": "模块齐全且衔接完整，参数信息充分，适合整心iDISCO+免疫标记后透明化。"
+                },
+                "correctness": {
+                    "co_order": {
+                        "score": 3,
+                        "max_score": 3,
+                        "description": "步骤顺序逻辑",
+                        "reasoning": "遵循iDISCO+典型“三明治”结构：脱水→漂白→复水→透化/封闭→免疫染色→再脱水→DCM脱脂→DBE RI匹配；水相与有机相之间均通过甲醇梯度过渡，顺序逻辑正确。"
+                    },
+                    "co_method": {
+                        "score": 2,
+                        "max_score": 2,
+                        "description": "方法-试剂一致性",
+                        "reasoning": "使用MeOH梯度、H2O2/MeOH漂白、PTwH洗液、Triton/DMSO渗透、DCM脱脂与DBE匹配，均为iDISCO+/3DISCO系常用组合，未混入不相容的水性RI体系。"
+                    },
+                    "co_param": {
+                        "score": 2,
+                        "max_score": 2,
+                        "description": "参数范围物理合理性",
+                        "reasoning": "针对15–20 mm整心：一抗5–7天、二抗3–5天、渗透/封闭各24 h、DCM与DBE置换为小时级到过夜，整体与被动扩散/溶剂置换经验相符；未出现明显违反扩散定律的极端短时处理。"
+                    },
+                    "co_chem": {
+                        "score": 1,
+                        "max_score": 1,
+                        "description": "化学与安全常识",
+                        "reasoning": "所用危险化学品（DCM、DBE、H2O2/MeOH）属于iDISCO+标准流程范畴，未引入额外不必要的强酸强碱或不相容混合/高温密闭等危险操作描述。"
+                    },
+                    "critical_warnings": [
+                        "方案将DAPI与二抗/Phalloidin同池在37°C孵育3–5天，可能导致DAPI背景升高或信号不稳定；虽不一定致命，但通常建议缩短DAPI孵育或后置短时染核。"
+                    ],
+                    "total_weighted_score": 8.0,
+                    "comment": "流程顺序与iDISCO+高度一致，参数在整心尺度上合理；仅有少量染料共孵育条件可能带来背景/稳定性风险。"
+                },
+                "effectiveness": {
+                    "s_method": {
+                        "score": 1.63,
+                        "max_score": 2.5,
+                        "description": "透明方法选择适配度",
+                        "reasoning": "Signed need-weighted method-fit [-2.5,+2.5] (F_fp xor P_dye x2; caps signed). Method: iDISCO+"
+                    },
+                    "s_label": {
+                        "score": 3.9000000000000004,
+                        "max_score": 6,
+                        "description": "标记与方法兼容性",
+                        "reasoning": "target_match=6.0, marker_fluor_compat=6.0, method_fluor_compat=3.9. marker_dict={'Alexa Fluor 647': 'Cx40/Hcn4 (primary antibody targets; pacemaker/conduction nodes)', 'Alexa Fluor 568': 'Cntn2 (primary antibody target; Purkinje fibers)', 'Alexa Fluor 488': 'F-actin (Phalloidin)', 'DAPI': ''}"
+                    },
+                    "s_trans": {
+                        "score": 0.8850679685233267,
+                        "max_score": 3,
+                        "description": "方法-组织 RI 域匹配度",
+                        "reasoning": "Method-tissue domain match. RI_tissue(question)=1.52, RI_method_ref(best-suited sample)=1.47, σ_RI=0.032, tier=T05_MOUSE_SOFT_ORGAN_5_20MM, status=scored"
+                    },
+                    "s_time": {
+                        "score": 3.0,
+                        "max_score": 3,
+                        "description": "时间效率评分",
+                        "reasoning": "Time deviation score. Act: 46.0, Ref Range: [48, 120]"
+                    },
+                    "total_weighted_score": 9.415067968523328
+                }
+            }
+        }
+    },
+    {
+        "question_id": 166,
+        "evaluation": {
+            "meta_data": {
+                "protocol_id": 166,
+                "sample_info": "我需要对小鼠完整脊髓、丘脑和体感皮层进行整体透明化处理，用于比较两条不同躯体感觉通路从外周进入脊髓、上行至丘脑并投射到体感皮层的三维路径。样本包含约 3 cm 长完整脊髓、约 5 mm × 4 mm × 4 mm 的丘脑和约 1 cm × 0.8 cm × 2 mm 的体感皮层组织，已固定。科学目标是使用两种脂溶性示踪染料分别标记不同感觉通路纤维，分析其在脊髓上行束、丘脑中继区域和体感皮层终末区中的路径分布、终末投射范围和双通道重叠程度。\n\n请根据该科学问题选择兼容的荧光/标记策略，并选择匹配的组织透明方法。若脂溶性染料已经能直接回答不同感觉通路投射追踪问题，不应额外加入神经抗体作为主标记；核染料或结构标记只能作为辅助配准信号。请仅输出 protocol，第 1 行写明所选荧光/标记策略和组织透明方法，随后仅列出透明处理、RI 匹配和保存/成像前处理步骤的关键试剂、条件和时间。",
+                "target_method": "FDISCO",
+                "generated_timestamp": "2025-12-15T00:00:00Z"
+            },
+            "scores": {
+                "completeness": {
+                    "c_step": {
+                        "score": 2,
+                        "max_score": 2,
+                        "description": "步骤模块完整性",
+                        "reasoning": "包含PBS清洗/平衡、（辅助）核染、溶剂法核心链条（THF梯度脱水→DCM脱脂→RI匹配DBE/同类介质）、以及成像前密闭/装载与除泡等准备步骤。样本为中枢神经组织，不要求灌注/脱色；有机溶剂法也给出了密闭保存与成像腔装载，满足挥发/吸水风险的后处理需求。"
+                    },
+                    "c_param": {
+                        "score": 3,
+                        "max_score": 3,
+                        "description": "参数细节完整性",
+                        "reasoning": "关键步骤给出了浓度/配比（THF梯度、NaN3 0.02%、Triton 0.2%、TO-PRO-3稀释与估算终浓度）、温度（RT/4℃）与分组织尺寸的时间范围（脊髓 vs 丘脑/皮层），可直接执行。RI匹配液虽写“DBE或推荐介质”，但仍明确为FDISCO终端高RI介质并给出时间。"
+                    },
+                    "total_weighted_score": 5.0,
+                    "comment": "流程模块齐全，且对不同体积样本给出分段时间，具备可操作性。"
+                },
+                "correctness": {
+                    "co_order": {
+                        "score": 3,
+                        "max_score": 3,
+                        "description": "步骤顺序逻辑",
+                        "reasoning": "水相（PBS/核染）后进入THF梯度脱水，再DCM脱脂，随后回到THF去除DCM并进入终端RI匹配，符合溶剂型透明化的标准顺序；未出现PBS直接进DBE/DCM等会导致乳化/发白的致命跳步。"
+                    },
+                    "co_method": {
+                        "score": 2,
+                        "max_score": 2,
+                        "description": "方法-试剂一致性",
+                        "reasoning": "THF梯度+DCM+DBE（或FDISCO同类高RI介质）属于FDISCO/3DISCO系常见组合；未混入水性CUBIC/水凝胶SDS等不相容体系。"
+                    },
+                    "co_param": {
+                        "score": 1,
+                        "max_score": 2,
+                        "description": "参数范围物理合理性",
+                        "reasoning": "对3 cm整段脊髓给出的THF每级6–8 h、100% THF 8–12 h×2、DCM 45–60 min×2、RI匹配12–24 h+24–48 h总体在经验上可行，但对“完全透明/无折射边界”的保证仍偏乐观（长段脊髓常需更长RI渗透/更频繁换液，且DCM时间过短可能导致髓鞘丰富区域残余散射）。因此给部分扣分而非判定不可用。"
+                    },
+                    "co_chem": {
+                        "score": 0,
+                        "max_score": 1,
+                        "description": "化学与安全常识",
+                        "reasoning": "方案主动加入了0.02% NaN3（叠氮化钠）作为防腐剂，该化学品并非FDISCO核心必需且属于额外引入的高危毒性化学品，按量表需扣分。其余溶剂（THF/DCM/DBE）属于该类方法固有试剂，不构成此项扣分。"
+                    },
+                    "critical_warnings": [
+                        "FDISCO/DBE等溶剂体系对经典脂溶性膜染料（DiI/DiD）信号保持存在不确定性：强脱脂/有机溶剂可能导致膜染料迁移或信号下降；方案虽缩短DCM时间但仍有失败风险。",
+                        "TO-PRO-3与DiD均在远红通道，实际成像可能出现光谱串扰/通道分离困难（需严格选择激发/发射窗口或改用不同核染）。"
+                    ],
+                    "total_weighted_score": 6.0,
+                    "comment": "顺序与方法体系匹配，但加入NaN3触发安全扣分；部分时间参数对长段脊髓透明度可能偏乐观，且膜染料在溶剂法中的稳定性存在实验风险。"
+                },
+                "effectiveness": {
+                    "s_method": {
+                        "score": 2.0,
+                        "max_score": 2.5,
+                        "description": "透明方法选择适配度",
+                        "reasoning": "Signed need-weighted method-fit [-2.5,+2.5] (F_fp xor P_dye x2; caps signed). Method: FDISCO"
+                    },
+                    "s_label": {
+                        "score": 0.0,
+                        "max_score": 6,
+                        "description": "标记与方法兼容性",
+                        "reasoning": "target_match=0.0, marker_fluor_compat=6.0, method_fluor_compat=2.1. marker_dict={'DiI': '', 'DiD': '', 'TO-PRO-3': ''}"
+                    },
+                    "s_trans": {
+                        "score": 2.886463475140374,
+                        "max_score": 3,
+                        "description": "方法-组织 RI 域匹配度",
+                        "reasoning": "Method-tissue domain match. RI_tissue(question)=1.46, RI_method_ref(best-suited sample)=1.47, σ_RI=0.036, tier=T06_LONG_CNS_OR_TUBULAR_15_80MM, status=scored"
+                    },
+                    "s_time": {
+                        "score": 3.0,
+                        "max_score": 3,
+                        "description": "时间效率评分",
+                        "reasoning": "Time deviation score. Act: 93.0, Ref Range: [24, 120]"
+                    },
+                    "total_weighted_score": 7.886463475140374
+                }
+            }
+        }
+    },
+    {
+        "question_id": 151,
+        "evaluation": {
+            "meta_data": {
+                "protocol_id": 151,
+                "sample_info": "我需要对小鼠完整腓肠肌进行透明化处理，用于建立神经肌肉接头、运动轴突和肌纤维结构之间的三维空间关系图谱。样本为完整骨骼肌，大小约 8 mm × 5 mm × 3 mm，已固定。科学目标是在完整肌肉中显示 NMJ 突触后膜 AChR 聚集，并同时观察运动神经末梢或轴突骨架，结合肌纤维或 F-actin 结构参考，分析 NMJ 沿肌纤维排列的位置、终板带分布、神经末梢覆盖率和局部肌纤维结构关系。\n\n请根据该科学问题自行选择合适的荧光/标记策略，并匹配适合完整骨骼肌三维成像的组织透明方法。若限制范围内的 alpha-bungarotoxin 可直接标记突触后膜，应作为主标记；若 Phalloidin 可提供肌纤维 F-actin 结构参考，可作为辅助探针，但不能替代 NMJ 或神经末梢标记。请仅输出 protocol，第 1 行写明所选荧光/标记策略和组织透明方法，随后仅列出透明处理、RI 匹配和保存/成像前处理步骤的关键试剂、条件和时间。",
+                "target_method": "iDISCO+",
+                "generated_timestamp": "2025-12-15T00:00:00Z"
+            },
+            "scores": {
+                "completeness": {
+                    "c_step": {
+                        "score": 1,
+                        "max_score": 2,
+                        "description": "步骤模块完整性",
+                        "reasoning": "整体包含iDISCO+关键模块（MeOH梯度脱水/复水、透化、封闭、一次/二次抗体、再脱水、DCM脱脂、DBE折射率匹配）且包含有机溶剂法成像前密封/封装思路（DBE中保存与DBE兼容腔室mount）。但缺少固定后PBS清洗/起始状态衔接描述（样本已固定但未给出进入MeOH前的PBS洗/脱盐），属于非致命缺失。"
+                    },
+                    "c_param": {
+                        "score": 3,
+                        "max_score": 3,
+                        "description": "参数细节完整性",
+                        "reasoning": "绝大多数步骤给出了明确浓度（MeOH梯度、H2O2%、Triton/DMSO/甘氨酸/血清、抗体稀释、DCM/DBE）、温度（RT/4℃/37℃）与时间（小时/过夜/天级），细节接近可直接执行的补充材料水平。"
+                    },
+                    "total_weighted_score": 4.0,
+                    "comment": "步骤链条基本完整且参数充分，但起始固定后清洗/缓冲衔接未写明，略影响可复现性。"
+                },
+                "correctness": {
+                    "co_order": {
+                        "score": 3,
+                        "max_score": 3,
+                        "description": "步骤顺序逻辑",
+                        "reasoning": "符合iDISCO+典型“三明治”结构：脱水→MeOH/H2O2脱色→复水→透化/封闭→免疫/探针标记→再脱水→DCM脱脂/溶剂交换→DBE RI匹配→DBE中封存与成像准备；水相与有机相之间均通过MeOH梯度过渡，未出现PBS直接进DCM/DBE的致命跳步。"
+                    },
+                    "co_method": {
+                        "score": 2,
+                        "max_score": 2,
+                        "description": "方法-试剂一致性",
+                        "reasoning": "MeOH梯度、MeOH/H2O2漂白、PTwH洗液、Triton/DMSO渗透、DCM脱脂、DBE匹配均属于iDISCO+/3DISCO系常用组合，方法命名与试剂体系一致。"
+                    },
+                    "co_param": {
+                        "score": 1,
+                        "max_score": 2,
+                        "description": "参数范围物理合理性",
+                        "reasoning": "对8×5×3 mm整块骨骼肌，透化/封闭各24 h、一次抗体4–6天、二抗3–4天、长洗多次过夜总体在经验可行范围。主要疑点是将phalloidin与长达4–6天的37℃一次抗体共孵育（即使“后半程加入”仍可能在高温长时间下增加背景/降低特异性），以及TUJ1用于运动神经末梢/轴突在肌肉内的特异性不如神经丝/ChAT/VAChT等，可能影响目标结构判读，但不至于物理不可行。"
+                    },
+                    "co_chem": {
+                        "score": 1,
+                        "max_score": 1,
+                        "description": "化学与安全常识",
+                        "reasoning": "所用危险化学品（DCM、DBE、MeOH、H2O2、叠氮化钠）均为该类有机溶剂透明与免疫保存的常规组成，未提出额外不必要的强酸强碱或危险操作条件（如密闭高温加热）。"
+                    },
+                    "critical_warnings": [
+                        "一次孵育液中加入0.01% sodium azide（叠氮化钠）虽常见，但属于剧毒防腐剂；若后续与含金属管路/废液处理不当有风险（不影响流程逻辑，但需实验室规范处理）。",
+                        "Phalloidin在37℃长时间（天级）共孵育可能导致高背景或信号衰减，建议单独缩短孵育或改在二抗阶段短孵育；否则可能影响F-actin参考结构质量。"
+                    ],
+                    "total_weighted_score": 7.0,
+                    "comment": "流程顺序与方法体系正确；参数总体合理，但个别探针（phalloidin）在37℃长时间共孵育的可操作性与成像质量存在风险。"
+                },
+                "effectiveness": {
+                    "s_method": {
+                        "score": 1.63,
+                        "max_score": 2.5,
+                        "description": "透明方法选择适配度",
+                        "reasoning": "Signed need-weighted method-fit [-2.5,+2.5] (F_fp xor P_dye x2; caps signed). Method: iDISCO+"
+                    },
+                    "s_label": {
+                        "score": 5.1,
+                        "max_score": 6,
+                        "description": "标记与方法兼容性",
+                        "reasoning": "target_match=6.0, marker_fluor_compat=6.0, method_fluor_compat=5.1. marker_dict={'Alexa Fluor 647': 'AChR (alpha-bungarotoxin)', 'Alexa Fluor 568': 'β-III Tubulin (TUJ1) via secondary antibody', 'Alexa Fluor 488': 'F-actin (phalloidin)'}"
+                    },
+                    "s_trans": {
+                        "score": 0.8850679685233267,
+                        "max_score": 3,
+                        "description": "方法-组织 RI 域匹配度",
+                        "reasoning": "Method-tissue domain match. RI_tissue(question)=1.52, RI_method_ref(best-suited sample)=1.47, σ_RI=0.032, tier=T05_MOUSE_SOFT_ORGAN_5_20MM, status=scored"
+                    },
+                    "s_time": {
+                        "score": 3.0,
+                        "max_score": 3,
+                        "description": "时间效率评分",
+                        "reasoning": "Time deviation score. Act: 34.0, Ref Range: [24, 72]"
+                    },
+                    "total_weighted_score": 10.615067968523327
+                }
+            }
+        }
+    },
+    {
+        "question_id": 256,
+        "evaluation": {
+            "meta_data": {
+                "protocol_id": 256,
+                "sample_info": "一块约 2 × 2 × 1 mm³ 的人皮肤组织包含表皮、真皮和皮下部分，黑色素较多，目标是显示 CD8+ T 细胞在表皮/真皮交界处的三维分布，并降低色素背景。需根据以下科学目标选择兼容的荧光/标记策略：需要在三维免疫荧光中区分 T 细胞和细胞毒性 T 细胞亚群，并选择匹配的组织透明方法。请仅输出 protocol，第 1 行写明所选双靶点荧光/标记策略和组织透明方法，随后仅列出透明处理、RI 匹配和保存/成像前处理步骤的关键试剂、条件和时间。",
+                "target_method": "iDISCO+",
+                "generated_timestamp": "2025-12-15T00:00:00Z"
+            },
+            "scores": {
+                "completeness": {
+                    "c_step": {
+                        "score": 2,
+                        "max_score": 2,
+                        "description": "步骤模块完整性",
+                        "reasoning": "包含PBS清洗、MeOH梯度脱水/复水、H2O2脱色、透化/封闭、完整的一抗/二抗免疫染色与洗涤、再次脱水、DCM脱脂、DBE折射率匹配，以及成像前DBE平衡与密闭保存/成像准备等有机溶剂法关键模块。"
+                    },
+                    "c_param": {
+                        "score": 3,
+                        "max_score": 3,
+                        "description": "参数细节完整性",
+                        "reasoning": "关键步骤普遍给出浓度（如0.2% Triton、20% DMSO、0.3M Glycine、5% H2O2、MeOH梯度、DCM/MeOH=2:1、100% DBE）、温度（RT/4℃/37℃）与时间（分钟到过夜/48h/小时级RI匹配），可直接执行。"
+                    },
+                    "total_weighted_score": 5.0,
+                    "comment": "流程模块齐全且参数充分，符合iDISCO+用于皮肤小块样本的可执行写法。"
+                },
+                "correctness": {
+                    "co_order": {
+                        "score": 3,
+                        "max_score": 3,
+                        "description": "步骤顺序逻辑",
+                        "reasoning": "符合iDISCO+/iDISCO类“三明治”结构：MeOH脱水→H2O2/MeOH脱色→复水→透化/封闭→抗体染色→再脱水→DCM脱脂→DBE RI匹配；水相与有机相之间均通过MeOH梯度过渡，顺序合理。"
+                    },
+                    "co_method": {
+                        "score": 2,
+                        "max_score": 2,
+                        "description": "方法-试剂一致性",
+                        "reasoning": "使用MeOH梯度、H2O2/MeOH漂白、Triton/DMSO/Glycine/NDS免疫缓冲体系、DCM脱脂与DBE匹配，均与iDISCO+/iDISCO常见体系一致，未混入不相容的水性RIMS或水凝胶步骤。"
+                    },
+                    "co_param": {
+                        "score": 2,
+                        "max_score": 2,
+                        "description": "参数范围物理合理性",
+                        "reasoning": "对1 mm厚皮肤块：H2O2/MeOH 12–16h、透化/封闭过夜级别、抗体各48h、DCM处理30min+2×15min、DBE 2–4h均在经验可行范围内；37℃加速抗体渗透对该尺寸样本也合理。"
+                    },
+                    "co_chem": {
+                        "score": 1,
+                        "max_score": 1,
+                        "description": "化学与安全常识",
+                        "reasoning": "所用危险化学品（DCM、DBE、H2O2/MeOH）属于iDISCO+标准体系，并未额外引入非必要的强酸强碱/叠氮化钠等；也未提出明显危险操作（如密闭高温加热挥发性溶剂）。"
+                    },
+                    "critical_warnings": [
+                        "方案未包含固定步骤（如4% PFA），虽然可假设样本已固定，但若未固定会导致抗原流失/结构破坏；建议在正式SOP中明确。",
+                        "iDISCO+/DBE为有机溶剂体系，部分荧光团/抗体偶联染料在长时间溶剂暴露下可能衰减；虽Alexa 647/568通常可用，但仍存在信号下降风险（非致命）。"
+                    ],
+                    "total_weighted_score": 8.0,
+                    "comment": "顺序与方法匹配度高、参数合理；主要瑕疵是未明确写出固定前提与有机溶剂对荧光稳定性的潜在影响。"
+                },
+                "effectiveness": {
+                    "s_method": {
+                        "score": 2.3021,
+                        "max_score": 2.5,
+                        "description": "透明方法选择适配度",
+                        "reasoning": "Signed need-weighted method-fit [-2.5,+2.5] (F_fp xor P_dye x2; caps signed). Method: iDISCO+"
+                    },
+                    "s_label": {
+                        "score": 5.1,
+                        "max_score": 6,
+                        "description": "标记与方法兼容性",
+                        "reasoning": "target_match=6.0, marker_fluor_compat=6.0, method_fluor_compat=5.1. marker_dict={'Alexa Fluor 647': 'CD3', 'Alexa Fluor 568': 'CD8'}"
+                    },
+                    "s_trans": {
+                        "score": 0.9739574020750472,
+                        "max_score": 3,
+                        "description": "方法-组织 RI 域匹配度",
+                        "reasoning": "Method-tissue domain match. RI_tissue(question)=1.53, RI_method_ref(best-suited sample)=1.47, σ_RI=0.04, tier=T10_LIPID_OR_PIGMENT_RICH, status=scored"
+                    },
+                    "s_time": {
+                        "score": 2.899980081525103,
+                        "max_score": 3,
+                        "description": "时间效率评分",
+                        "reasoning": "Time deviation score. Act: 21.5, Ref Range: [8, 48]"
+                    },
+                    "total_weighted_score": 11.276037483600149
+                }
+            }
+        }
+    },
+    {
+        "question_id": 255,
+        "evaluation": {
+            "meta_data": {
+                "protocol_id": 255,
+                "sample_info": "一只固定成年小鼠眼球需要观察视网膜血管和神经节细胞层，可接受摘除角膜，样本含眼内色素并易产生自发背景。需根据以下科学目标选择兼容的荧光/标记策略：需要同时标记视网膜神经节细胞的两个身份验证标志物；若严格要求两种转录因子，应选择两种 Brn3/POU4F 家族相关靶点，并选择匹配的组织透明方法。请仅输出 protocol，第 1 行写明所选双靶点荧光/标记策略和组织透明方法，随后仅列出透明处理、RI 匹配和保存/成像前处理步骤的关键试剂、条件和时间。",
+                "target_method": "iDISCO+",
+                "generated_timestamp": "2025-12-15T00:00:00Z"
+            },
+            "scores": {
+                "completeness": {
+                    "c_step": {
+                        "score": 2,
+                        "max_score": 2,
+                        "description": "步骤模块完整性",
+                        "reasoning": "包含iDISCO+关键模块：甲醇梯度脱水→H2O2/MeOH脱色→复水→渗透/封闭→一抗/二抗及洗涤→再脱水→DCM去脂/置换→DBE折射率匹配，并给出DBE密封保存与成像前固定/预平衡（满足有机溶剂法成像前密封/封装要求）。虽未写PFA固定步骤，但题干已说明为固定样本，且不影响透明核心流程完整性评分。"
+                    },
+                    "c_param": {
+                        "score": 3,
+                        "max_score": 3,
+                        "description": "参数细节完整性",
+                        "reasoning": "绝大多数步骤给出明确浓度/配比（MeOH梯度、5% H2O2/MeOH、Triton/DMSO/BSA、DCM/MeOH、DBE）、温度（RT/4℃/37℃）与时间（小时到天、过夜区间），达到可复现实验的细节水平。"
+                    },
+                    "total_weighted_score": 5.0,
+                    "comment": "流程模块齐全且参数充分，符合iDISCO+用于含色素眼组织的常见结构。"
+                },
+                "correctness": {
+                    "co_order": {
+                        "score": 3,
+                        "max_score": 3,
+                        "description": "步骤顺序逻辑",
+                        "reasoning": "符合iDISCO+典型“三明治”结构：脱水/漂白→复水→免疫染色→再脱水→DCM→DBE；水相与有机相之间均通过甲醇梯度过渡，顺序逻辑正确。"
+                    },
+                    "co_method": {
+                        "score": 2,
+                        "max_score": 2,
+                        "description": "方法-试剂一致性",
+                        "reasoning": "所用试剂与iDISCO+体系一致（MeOH、H2O2/MeOH漂白、Triton/DMSO渗透、DCM去脂、DBE RI匹配），未出现与水性/水凝胶法不兼容的混用。"
+                    },
+                    "co_param": {
+                        "score": 2,
+                        "max_score": 2,
+                        "description": "参数范围物理合理性",
+                        "reasoning": "对成年小鼠眼球尺度而言，MeOH梯度与DCM/DBE置换时间（小时级）合理；免疫孵育3–5天/2–3天在37℃偏激进但在iDISCO+中仍可行（尤其小器官），总体不违反扩散与经验范围。"
+                    },
+                    "co_chem": {
+                        "score": 1,
+                        "max_score": 1,
+                        "description": "化学与安全常识",
+                        "reasoning": "未引入非必要的额外高危化学品或危险操作；H2O2/MeOH漂白、DCM与DBE属于iDISCO+标准流程固有试剂，未出现不相容直接混合等会导致事故的描述。"
+                    },
+                    "critical_warnings": [
+                        "未明确说明两种一抗的宿主来源与二抗对应关系（仅写“抗兔/抗鼠按宿主匹配”），若两种一抗同宿主将导致交叉反应、无法区分Brn3a与Brn3b信号（实验结果可能失败）。"
+                    ],
+                    "total_weighted_score": 8.0,
+                    "comment": "流程顺序与方法匹配度高、参数总体合理；主要风险在于双标一抗宿主/二抗选择未被明确锁定，可能造成串色或无法分辨。"
+                },
+                "effectiveness": {
+                    "s_method": {
+                        "score": 2.2721,
+                        "max_score": 2.5,
+                        "description": "透明方法选择适配度",
+                        "reasoning": "Signed need-weighted method-fit [-2.5,+2.5] (F_fp xor P_dye x2; caps signed). Method: iDISCO+"
+                    },
+                    "s_label": {
+                        "score": 5.1,
+                        "max_score": 6,
+                        "description": "标记与方法兼容性",
+                        "reasoning": "target_match=6.0, marker_fluor_compat=6.0, method_fluor_compat=5.1. marker_dict={'Alexa Fluor 568': 'Brn3a/POU4F1', 'Alexa Fluor 647': 'Brn3b/POU4F2'}"
+                    },
+                    "s_trans": {
+                        "score": 2.7861139950577547,
+                        "max_score": 3,
+                        "description": "方法-组织 RI 域匹配度",
+                        "reasoning": "Method-tissue domain match. RI_tissue(question)=1.46, RI_method_ref(best-suited sample)=1.47, σ_RI=0.026, tier=T12_WHOLE_EYE_OR_RETINA, status=scored"
+                    },
+                    "s_time": {
+                        "score": 0.0,
+                        "max_score": 3,
+                        "description": "时间效率评分",
+                        "reasoning": "Time deviation score. Act: 35.0, Ref Range: [24, 72]"
+                    },
+                    "total_weighted_score": 10.158213995057753
+                }
+            }
+        }
     }
 ]

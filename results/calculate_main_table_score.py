@@ -50,8 +50,9 @@ def load_oeq(filepath):
             # 聚合逻辑
             completeness = 0.4 * scores['c_step_norm'] + 0.6 * scores['c_param_norm']
             correctness = (scores['co_order_norm'] + scores['co_method_norm'] + scores['co_param_norm'] + scores['co_chem_norm']) / 4
-            # signed s_method_norm can be negative; clamp Effectiveness at 0 to protect the harmonic-mean Total
-            effectiveness = max(0.0, (scores['s_method_norm'] + scores['s_label_norm'] + scores['s_trans_norm'] + scores['s_time_norm']) / 4)
+            # s_method_norm is the signed fit F_method in [-1,1]; rescale to [0,1] via (F+1)/2 per paper Eq. (2) before averaging
+            s_method_01 = (scores['s_method_norm'] + 1) / 2
+            effectiveness = (s_method_01 + scores['s_label_norm'] + scores['s_trans_norm'] + scores['s_time_norm']) / 4
             
             data[model] = {
                 'Completeness': completeness * 100,

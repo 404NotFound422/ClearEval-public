@@ -508,10 +508,15 @@ def _expand_marker_candidates(name):
     if not norm:
         return set()
     candidates = {norm}
-    # Add the base name with parenthetical content stripped (e.g. "GFP (anti-GFP secondary)" -> "gfp")
-    base = _normalize_name(re.sub(r"\s*\([^)]*\)", "", str(name)))
+    # Add the base name with parenthetical content stripped, half- AND full-width, incl. a
+    # stray unclosed paren (e.g. "Lectin (AF488/…未指定)" -> "lectin", "Lectin (AF488" -> "lectin")
+    base = _normalize_name(re.sub(r"\s*[\(（][^)）]*[\)）]?", "", str(name)))
     if base and base != norm:
         candidates.add(base)
+    # Add the leading token before the first paren / Chinese-or-ASCII comma / semicolon
+    lead = _normalize_name(re.split(r"[\(（,，、;；]", str(name))[0])
+    if lead and lead not in candidates:
+        candidates.add(lead)
     # Add parenthetical abbreviations
     candidates.update(_extract_parenthetical(name))
     # Add aliases
@@ -540,11 +545,13 @@ def _is_reporter_target(target_name):
 
 
 def _split_marker_value(value):
-    """Split a marker value that may contain multiple markers separated by delimiters."""
+    """Split a marker value that may contain multiple markers separated by delimiters.
+    Handles Chinese punctuation (、，；／·) and conjunctions so re-worded multi-marker
+    strings like 'MAP2、Nestin' or 'IB4/Lectin (…)' are split into matchable tokens."""
     import re
     if not value:
         return []
-    parts = re.split(r"[;/,]|\band\b|\bor\b", str(value))
+    parts = re.split(r"[;/,、，；／·]|\band\b|\bor\b|和|或", str(value))
     return [p.strip() for p in parts if p.strip()]
 
 
@@ -1004,6 +1011,30 @@ def calculate_method_suitability(user_pref_vector_dict, method_vector_dict, **kw
     return float(round(S_METHOD_MAX * (num / den), 4))
 
 
+# T07/T11 questions tag the PARENT tier, but several methods are stored in the KB only under
+# finer sub-tiers (T07A/B, T11A/B). Mirror results/refresh_s_time.py: fall back to the sub-tier
+# with the SHORTEST median (so over-long proposals are penalized, not excused).
+_PARENT_SUB = {
+    "T07_HARD_TISSUE_BONE_TOOTH_COCHLEA": ["T07A_SMALL_HARD_TISSUE_BONE_TOOTH", "T07B_LARGE_HARD_TISSUE_BONE_COCHLEA"],
+    "T11_PLANT_WHOLE_SEEDLING": ["T11A_PLANT_LEAF_SMALL_SEEDLING", "T11B_PLANT_WHOLE_SEEDLING_ROOT"],
+}
+
+
+def _time_kb_row(method_key, tier_code):
+    """time_kb window dict for (normalized method, tier) with T07/T11 parent-tier fallback
+    (shortest-median sub-tier), matching results/refresh_s_time.py."""
+    row = TIME_KB_LOOKUP.get(method_key, {}).get(tier_code)
+    if row is not None:
+        return row
+    subs = _PARENT_SUB.get(tier_code)
+    if subs:
+        cands = [TIME_KB_LOOKUP[method_key][s] for s in subs
+                 if TIME_KB_LOOKUP.get(method_key, {}).get(s, {}).get("clearing_time_median_h") is not None]
+        if cands:
+            return min(cands, key=lambda v: v["clearing_time_median_h"])
+    return None
+
+
 def calculate_effectiveness_score(quantitative_data, user_pref_vector_dict, model_space, marker_dict, marker_query_targets):
     """
     计算有效性评分 E_score
@@ -1106,7 +1137,7 @@ def calculate_effectiveness_score(quantitative_data, user_pref_vector_dict, mode
     ri_tissue = quantitative_data.get("tissue_ri_value", 0.0)
     ri_method_ref = METHOD_RI_REF_KB.get(method_key)
     sigma_ri = SIGMA_RI_KB.get(method_key, {}).get(tier_code) if tier_code else None
-    time_kb_supported = bool(TIME_KB_LOOKUP.get(method_key, {}).get(tier_code))
+    time_kb_supported = bool(_time_kb_row(method_key, tier_code))
 
     if not time_kb_supported:
         # 方法不支持该样本尺度（time_kb 无该 method×tier 条目）→ 直接 0 分
@@ -1132,10 +1163,12 @@ def calculate_effectiveness_score(quantitative_data, user_pref_vector_dict, mode
     # tier_code 由题目定义传入，不依赖 LLM 提取
     t_act = _coerce_float(quantitative_data.get("total_time_hours"), default=0.0)
 
-    tier_data = TIME_KB_LOOKUP.get(method_key, {}).get(tier_code)
-    tau_val   = TIME_TAU_KB.get(method_key, {}).get(tier_code)
+    _TAU_UNDER, _TAU_OVER = 0.2, 0.1  # asymmetric tolerance (over-long penalized 2x harder)
+    tier_data = _time_kb_row(method_key, tier_code)  # parent-tier (T07/T11) fallback applied
+    _s_time_med = (float(tier_data["clearing_time_median_h"])
+                   if (tier_data and tier_data.get("clearing_time_median_h") is not None) else None)
 
-    if tier_data is None or tau_val is None or float(tau_val) == 0.0:
+    if tier_data is None or _s_time_med is None or _s_time_med <= 0.0:
         # 无 KB 条目（方法×tier 组合不支持）→ 得 0 分
         s_time = 0.0
         _s_time_t_min = _s_time_t_max = _s_time_tau = None
@@ -1144,18 +1177,21 @@ def calculate_effectiveness_score(quantitative_data, user_pref_vector_dict, mode
         s_time = 0.0
         _s_time_t_min = float(tier_data["clearing_time_min_h"])
         _s_time_t_max = float(tier_data["clearing_time_max_h"])
-        _s_time_tau   = float(tau_val)
+        _s_time_tau   = _TAU_UNDER * _s_time_med
     else:
         _s_time_t_min = float(tier_data["clearing_time_min_h"])
         _s_time_t_max = float(tier_data["clearing_time_max_h"])
-        _s_time_tau   = float(tau_val)
-
+        # τ derived from tier median: faster-than-evidence τ=0.2·med; slower τ=0.1·med (2x harsher).
+        # Matches results/refresh_s_time.py so grading is consistent with the 1-shot files.
         if t_act < _s_time_t_min:
             delta_t = _s_time_t_min - t_act
+            _s_time_tau = _TAU_UNDER * _s_time_med
         elif t_act > _s_time_t_max:
             delta_t = t_act - _s_time_t_max
+            _s_time_tau = _TAU_OVER * _s_time_med
         else:
             delta_t = 0.0
+            _s_time_tau = _TAU_UNDER * _s_time_med
 
         if delta_t == 0.0:
             s_time = 3.0
@@ -1177,7 +1213,7 @@ def calculate_effectiveness_score(quantitative_data, user_pref_vector_dict, mode
         "s_marker_fluor_compat": s_marker_fluor_compat,
         "s_method_fluor_compat": s_method_fluor_compat,
         # 调试信息
-        "_s_time_ref_source": "time_kb+tau_kb" if (tier_data and tau_val) else "missing_kb",
+        "_s_time_ref_source": "time_kb_median_asym" if tier_data else "missing_kb",
         "_s_time_t_min":  _s_time_t_min,
         "_s_time_t_max":  _s_time_t_max,
         "_s_time_tau":    _s_time_tau,
@@ -1762,17 +1798,23 @@ async def main(argv=None):
                         help="Only run the first N questions (dev subset, applies to gen + eval)")
     parser.add_argument("--qids", nargs="*", type=int, default=None,
                         help="Only run these specific question ids (stratified sample; overrides --limit)")
+    parser.add_argument("--score-dir", default=None,
+                        help="Override the evaluation-results output dir (keeps canonical results untouched)")
     args = parser.parse_args(argv)
 
     if args.eval_only and args.no_evaluation:
         print("错误：--eval-only 和 --no-evaluation 互斥")
         return 2
 
-    global RAG_CONTEXT_DIR
+    global RAG_CONTEXT_DIR, OEQ_SCORE_DIR
     if args.rag_dir:
         RAG_CONTEXT_DIR = args.rag_dir
         _RAG_BLOCK_CACHE.clear()
         print(f"KB-RAG context dir: {RAG_CONTEXT_DIR}")
+    if args.score_dir:
+        OEQ_SCORE_DIR = args.score_dir
+        os.makedirs(OEQ_SCORE_DIR, exist_ok=True)
+        print(f"score output dir: {OEQ_SCORE_DIR}")
 
     # 1. 加载模型管理器
     loader = ModelLoader('config/config.yaml')
