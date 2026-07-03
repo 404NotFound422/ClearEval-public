@@ -104,21 +104,21 @@ axA.set_xticks([1, 2, 3, 4])
 axA.set_xticklabels([r'$S_{method}$', r'$S_{label}$', r'$S_{trans}$', r'$S_{time}$'], rotation=45, ha='right')
 axA.axhline(0.5, ls=':', color='0.6', lw=0.6)
 axA.set_ylim(-0.03, 1.10); axA.set_ylabel('score')
-axA.set_title(r'$\mathbf{a}$   Effectiveness sub-scores', loc='left', fontsize=8.5, pad=6)
+axA.set_title('$\\mathbf{a}$  Effectiveness\nsub-scores', loc='center', fontsize=8.5, pad=5)
 
 # ---- Panel b: per-model S_label (rose) ----
 violins(axB, [per[m]['slabel'] for m in order], [FILL['s_label']] * len(order), [EDGE['s_label']] * len(order))
 axB.set_ylim(-0.03, 1.10); axB.set_ylabel(r'$S_{label}$')
 axB.set_xticks(np.arange(1, len(order) + 1)); axB.set_xticklabels(disp, rotation=45, ha='right')
-axB.set_title(r'$\mathbf{b}$   Per-model $S_{label}$ (labeling)', loc='left', fontsize=8.5, pad=6)
-axB.legend(handles=_lg, loc='upper right', fontsize=7, frameon=False, ncol=2,
-           handlelength=1.2, columnspacing=1.0, borderpad=0.2)
+axB.set_title(r'$\mathbf{b}$   Per-model $S_{label}$ (labeling)', loc='center', fontsize=8.5, pad=5)
+axB.legend(handles=_lg, loc='upper left', fontsize=7, frameon=False, ncol=1,
+           handlelength=1.2, labelspacing=0.3, borderpad=0.25)
 
 # ---- Panel c: per-model S_time (sky) ----
 violins(axC, [per[m]['stime'] for m in order], [FILL['s_time']] * len(order), [EDGE['s_time']] * len(order))
 axC.set_ylim(-0.03, 1.05); axC.set_ylabel(r'$S_{time}$')
 axC.set_xticks(np.arange(1, len(order) + 1)); axC.set_xticklabels(disp, rotation=45, ha='right')
-axC.set_title(r'$\mathbf{c}$   Per-model $S_{time}$ (timing)', loc='left', fontsize=8.5, pad=6)
+axC.set_title(r'$\mathbf{c}$   Per-model $S_{time}$ (timing)', loc='center', fontsize=8.5, pad=5)
 
 fig.tight_layout(w_pad=1.2)
 for _ext in ('pdf', 'png'):

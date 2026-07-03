@@ -764,11 +764,9 @@ embryo-clearing scenario, the protocol the model generates, and its CCE
 scoring. Completeness and Correctness are perfect, and method fit, RI
 matching, and timing score highly; yet $S_{label}{=}0$, because the reply
 labels the early-neuron target correctly (TUJ1) but substitutes Cntn2 for
-the recommended Neurofilament marker. Since
-$S_{label}=\min(R_{target},R_{marker},R_{method\text{-}marker})$, one
-off-target marker forces $R_{target}{=}0$, so Effectiveness---and thus
-$I_A{=}\min(\mathrm{Com},\mathrm{Cor},\mathrm{Eff})$---is only $0.72$
-despite perfect Completeness and Correctness, the dominant failure mode.
+the recommended Neurofilament marker. Since $S_{label}$ is a minimum over
+the required targets, this single off-target marker zeroes it, dragging
+$I_A$ to $0.72$ despite perfect Completeness and Correctness.
 
 \begin{table*}[t]
 \centering
@@ -801,9 +799,9 @@ Dimension & Sub-metric & Value & Rationale (released scorer output) \\
 \midrule
 \multirow{4}{*}{Effectiveness}
  & Method fit $S_{method}$ & 0.96 & iDISCO+ strongly fits a whole embryo: signed need-weighted fit $F{=}0.91$, rescaled $(F{+}1)/2{=}0.96$. \\
- & Label $S_{label}$ & \textbf{0.00} & $\min(R_{target}{=}0.00,\ R_{marker}{=}1.00,\ R_{method\text{-}marker}{=}0.85)$. $R_{target}{=}0$ because Cntn2 replaces the recommended Neurofilament marker of the nerve-bundle target. \\
+ & Label $S_{label}$ & \textbf{0.00} & $\min(R_{target}{=}0,R_{marker}{=}1.00,R_{method\text{-}marker}{=}0.85){=}0$. The $0$ is $R_{target}$: TUJ1 hits the neurite target, but the nerve-bundle target (recommended \emph{Neurofilament}) is given \emph{Cntn2}, which matches no required target; target-match is a $\min$ over committed markers, so one off-target marker zeroes it. ($R_{method\text{-}marker}{=}0.85$: Alexa~568 slightly less solvent-stable in iDISCO+, non-binding.) \\
  & RI match $S_{trans}$ & 0.92 & Tissue RI $1.48$ vs.\ method reference $1.47$ ($\sigma_{RI}{=}0.025$). \\
- & Timing $S_{time}$ & 1.00 & Total $36$\,h lies inside the evidence window $[12,48]$\,h. \\
+ & Timing $S_{time}$ & 1.00 & The \emph{clearing-phase} time only (dehydration$+$delipidation$+$RI matching; multi-day antibody staining is labeling, excluded): ${\approx}36$\,h, inside the iDISCO+ window $[12,48]$\,h. \\
 \midrule
 \multicolumn{4}{@{}l}{\textbf{Com}${=}1.00$,\ \ \textbf{Cor}${=}1.00$,\ \ \textbf{Eff}${=}\tfrac{1}{4}(0.96{+}0{+}0.92{+}1.00){=}0.72$,\ \ $I_A{=}\min(\mathrm{Com},\mathrm{Cor},\mathrm{Eff}){=}\mathbf{0.72}$} \\
 \bottomrule
