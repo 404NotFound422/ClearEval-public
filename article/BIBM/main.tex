@@ -195,18 +195,19 @@ curation details are provided in Appendix~\ref{app:curation}.
 evidence or expert-reviewed rules used for task construction or protocol
 scoring.}
 \label{tab:db_inventory}
+\setlength{\tabcolsep}{4pt}%
 \resizebox{\columnwidth}{!}{%
-\begin{tabular}{l r l}
+\begin{tabular}{c c c}
 \toprule
 \textbf{Knowledge Base} & \textbf{Entries} & \textbf{Source} \\
 \midrule
-Method capability vectors & 20 methods, 6 axes & Expert review + literature \\
-Fluorophore compat.\ matrix & marker$\times$method & Expert review + literature \\
-Tissue \& target table & 30+ tissue types & Literature + expert review \\
-RI references ($\sigma_{RI}$) & 20 clearing methods & Literature~\cite{ueda2020tissue,chung2013clarity} \\
-Timing database ($\tau$) & 126 (method, tier) rows & Wet-lab records + literature \\
+Method capability vectors & 20 methods, 6 axes & Expert + lit. \\
+Fluorophore compat.\ matrix & marker$\times$method & Expert + lit. \\
+Tissue \& target table & 30+ tissue types & Lit. + expert \\
+RI references ($\sigma_{RI}$) & 20 clearing methods & Literature \\
+Timing database ($\tau$) & 126 (method, tier) rows & Wet-lab + lit. \\
 Wet-lab experimental records & 372 protocols & Lab data \\
-Literature chunks & 400+ paragraphs & TOC literature \\
+Literature chunks & 400+ paragraphs & Literature \\
 \bottomrule
 \end{tabular}%
 }
@@ -260,34 +261,35 @@ separate knowledge audit.
 $I_A$ scores generated TOC protocols. $H_{KA}$ is a model-level summary that
 combines knowledge and application performance.}
 \label{tab:metrics}
+\setlength{\tabcolsep}{4pt}%
 \resizebox{\columnwidth}{!}{
-\begin{tabular}{l l l l c}
+\begin{tabular}{l p{2.8cm} p{4.2cm} l}
 \toprule
 \textbf{Level} & \textbf{Dimension} & \textbf{Sub-Metric} &
-\textbf{Method} & \textbf{Weight} \\
+\textbf{Method} \\
 \midrule
-\shortstack[l]{Knowledge\\($I_K$)} & \shortstack[l]{Knowledge\\audit} & Accuracy &
-Deterministic & 100\% \\
+\shortstack[l]{Knowledge\\($I_K$)} & Knowledge audit & Accuracy &
+Deterministic \\
 \midrule
 \multirow{10}{*}{\shortstack[l]{Application\\($I_A$)}}
 & \multirow{2}{*}{Completeness} & Step Integrity &
-LLM rubric & 40\% \\
-& & Parameter Detail & LLM rubric & 60\% \\
-\cmidrule{2-5}
+LLM rubric \\
+& & Parameter Detail & LLM rubric \\
+\cmidrule{2-4}
 & \multirow{4}{*}{Correctness} & Step Order ($co\_order$) &
-LLM rubric & 25\% \\
-& & Method Consistency ($co\_method$) & LLM rubric & 25\% \\
-& & Parameter Consistency ($co\_param$) & LLM rubric & 25\% \\
-& & Chemical Safety ($co\_chem$) & LLM rubric & 25\% \\
-\cmidrule{2-5}
+LLM rubric \\
+& & Method Consistency ($co\_method$) & LLM rubric \\
+& & Parameter Consistency ($co\_param$) & LLM rubric \\
+& & Chemical Safety ($co\_chem$) & LLM rubric \\
+\cmidrule{2-4}
 & \multirow{4}{*}{Effectiveness} & Method Suitability ($S_{method}$) &
-Signed fit & 25\% \\
-& & Label Compatibility ($S_{label}$) & Rule-based & 25\% \\
-& & RI Matching ($S_{trans}$) & Formula & 25\% \\
-& & Timing ($S_{time}$) & Formula & 25\% \\
+Signed fit \\
+& & Label Compatibility ($S_{label}$) & Rule-based \\
+& & RI Matching ($S_{trans}$) & Formula \\
+& & Timing ($S_{time}$) & Formula \\
 \midrule
-\shortstack[l]{Diagnostic\\summary} & \shortstack[l]{Knowledge--Application\\Harmonic Score ($H_{KA}$)} &
-\shortstack[l]{Harmonic mean\\of $I_K$ and $I_A$} & Aggregation & -- \\
+\shortstack[l]{Diagnostic\\summary} & Knowledge--Application Harmonic Score ($H_{KA}$) &
+Harmonic mean of $I_K$ and $I_A$ & Aggregation \\
 \bottomrule
 \end{tabular}%
 }
