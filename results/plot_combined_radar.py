@@ -188,19 +188,20 @@ def plot_combined():
         'grid.linewidth': 1.5,
     })
 
-    fig = plt.figure(figsize=(26, 20), dpi=300)
+    # Wide, short canvas: two radars on the left, legend on the right (reduces vertical footprint).
+    fig = plt.figure(figsize=(30, 13), dpi=300)
 
     # 子图 1: Knowledge Performance (MCQ)
     theta_mcq = radar_factory(len(mcq_labels), frame='polygon')
     ax1 = fig.add_subplot(1, 2, 1, projection='radar')
-    ax1.set_title('Knowledge Performance', pad=140)
+    ax1.set_title('Knowledge Performance', pad=135)
     ax1.set_varlabels(mcq_labels)
     ax1.set_rlim(0, 100)
     ax1.set_rticks([20, 40, 60, 80, 100])
-    ax1.tick_params(pad=80, labelsize=26)
-    
-    ax1.set_position([0.08, 0.42, 0.38, 0.42])
-    
+    ax1.tick_params(pad=45, labelsize=26)
+
+    ax1.set_position([0.02, 0.05, 0.25, 0.74])
+
     for row in LEGEND_GRID:
         for model in row:
             if model and model in mcq_data:
@@ -210,13 +211,13 @@ def plot_combined():
     # 子图 2: Application Performance (OEQ)
     theta_oeq = radar_factory(len(oeq_labels), frame='polygon')
     ax2 = fig.add_subplot(1, 2, 2, projection='radar')
-    ax2.set_title('Application Performance', pad=140)
+    ax2.set_title('Application Performance', pad=135)
     ax2.set_varlabels(oeq_labels)
     ax2.set_rlim(0, 100)
     ax2.set_rticks([20, 40, 60, 80, 100])
-    ax2.tick_params(pad=80, labelsize=26)
-    
-    ax2.set_position([0.54, 0.42, 0.38, 0.42])
+    ax2.tick_params(pad=45, labelsize=26)
+
+    ax2.set_position([0.35, 0.05, 0.25, 0.74])
 
     for row in LEGEND_GRID:
         for model in row:
@@ -224,22 +225,18 @@ def plot_combined():
                 ax2.plot(theta_oeq, oeq_data[model], color=color_map.get(model, 'gray'), linewidth=6, label=model)
                 ax2.fill(theta_oeq, oeq_data[model], facecolor=color_map.get(model, 'gray'), alpha=0.05)
 
-    ncol = len(LEGEND_GRID[0])
+    # Right-side legend (2 columns), vertically centered.
     handles_map = {h.get_label(): h for h in ax1.get_legend_handles_labels()[0]}
-    
-    final_handles = []
-    final_labels = []
+    final_handles, final_labels = [], []
     for row in LEGEND_GRID:
         for model in row:
             if model and model in present_models:
                 final_handles.append(handles_map[model])
                 final_labels.append(model)
-            else:
-                final_handles.append(plt.Line2D([0], [0], color='none', label=''))
-                final_labels.append('')
 
-    fig.legend(final_handles, final_labels, loc='lower center', ncol=ncol, 
-               bbox_to_anchor=(0.5, 0.12), frameon=False, columnspacing=1.2, handletextpad=0.5)
+    fig.legend(final_handles, final_labels, loc='center left', ncol=1,
+               bbox_to_anchor=(0.665, 0.5), frameon=False,
+               handletextpad=0.5, labelspacing=1.1, fontsize=24)
 
     output_path = 'results/combined_radar_chart.png'
     plt.savefig(output_path, facecolor='white', dpi=300, bbox_inches='tight')

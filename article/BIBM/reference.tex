@@ -13,9 +13,6 @@
 \usepackage{graphicx}
 \usepackage{booktabs}
 \usepackage{multirow}
-\renewcommand{\dbltopfraction}{0.9}
-\renewcommand{\dblfloatpagefraction}{0.5}
-\renewcommand{\topfraction}{0.9}
 \usepackage{textcomp}
 \usepackage{xcolor}
 \usepackage[T1]{fontenc}
@@ -136,36 +133,51 @@ checks for protocol feasibility.
 \section{Related Work}\label{sec:related}
 
 \noindent\textbf{Scientific and biomedical LLM evaluation.}
-Biomedical LLM benchmarks have grown from general knowledge tests
-(MMLU~\cite{hendrycks2021mmlu}, MedQA~\cite{jin2021disease},
-Med-PaLM~\cite{singhal2023medpalm}) to medical and biological
-tasks~\cite{zhang2025benchmarking,wang2025cardbiomedbench,feng2024mediq}
-covering domain knowledge, clinical reasoning, and question answering. ClearEval
-instead evaluates whether the experimental choices in a free-text,
-LLM-generated TOC protocol are feasible.
+Scientific and biomedical LLM benchmarks have expanded from general knowledge
+tests to medical and biological tasks. MMLU~\cite{hendrycks2021mmlu},
+MedQA~\cite{jin2021disease}, Med-PaLM-style
+evaluations~\cite{singhal2023medpalm}, and recent biomedical
+benchmarks~\cite{zhang2025benchmarking,wang2025cardbiomedbench,feng2024mediq}
+evaluate domain knowledge, clinical reasoning, biomedical NLP, and interactive
+question answering. ClearEval focuses on LLM-generated TOC protocols written as
+free text and evaluates whether the experimental choices in each protocol are
+feasible.
 
 \noindent\textbf{Biological protocol and wet-lab benchmarks.}
-Recent benchmarks cover biological protocols and lab workflows:
-BioProBench~\cite{bioprobench} (protocol QA, step ordering, error correction,
-generation), LAB-Bench~\cite{labbench} (literature use, planning, data
-analysis), BixBench~\cite{bixbench} (computational-biology agents), and
-SeedBench~\cite{ying2025seedbench} (seed science). ClearEval targets Tissue
-Optical Clearing and scores feasibility at the parameter level (clearing method,
-marker--target matching, refractive index, timing); because multiple TOC routes
-can be valid, it uses database-grounded checks rather than similarity to a
-single reference.
+Recent benchmarks also cover biological protocols and laboratory workflows.
+BioProBench~\cite{bioprobench} evaluates biological protocol understanding and
+reasoning across multiple subfields, including protocol QA, step ordering,
+error correction, and generation. LAB-Bench~\cite{labbench} covers biology
+research tasks such as literature use, protocol planning, and data analysis.
+BixBench~\cite{bixbench} evaluates multi-step computational-biology agent
+tasks. SeedBench~\cite{ying2025seedbench} focuses on seed science and evaluates
+multi-task knowledge in a wet-lab subdomain. ClearEval focuses on Tissue
+Optical Clearing and evaluates protocol feasibility at the parameter level,
+including clearing method, marker--target matching, refractive-index condition,
+and timing. Because multiple TOC protocol routes can be valid, ClearEval uses
+database-grounded feasibility checks rather than similarity to a single
+reference protocol.
 
 \noindent\textbf{Automatic evaluation, TOC, and pre-experimental checking.}
-Automatic evaluators range from text-overlap metrics
-(BLEU~\cite{papineni2002bleu}) to LLM judges (G-Eval~\cite{liu2023geval}), whose
-bias and consistency are actively studied~\cite{li2024survey,zheng2023judging}.
-ClearEval uses LLM judgment only for Completeness and Correctness, and scores
-Effectiveness with non-LLM rules grounded in the feasibility database. TOC
-methods such as CLARITY, CUBIC, iDISCO, uDISCO, and PEGASOS support
-high-resolution 3D imaging across scales~\cite{chung2013clarity,ueda2020tissue,
-wang2025advances,richardson2025unlocking,mai2024tissue}; ClearEval encodes the
-relations among method, scale, labeling, refractive index, and time from this
-literature into a structured database for pre-experimental checking.
+Automatic evaluation methods include text-overlap metrics such as
+BLEU~\cite{papineni2002bleu} and LLM-based evaluators such as
+G-Eval~\cite{liu2023geval}. Recent work has studied bias and consistency in
+LLM-as-a-judge methods~\cite{li2024survey,zheng2023judging}. ClearEval uses
+LLM judgment for Completeness and Correctness, where scoring requires reading
+free-form procedural text. Effectiveness is evaluated with non-LLM feasibility
+checks. The scorer extracts the clearing method, labeling target and marker,
+refractive-index condition, and processing time from each generated protocol,
+then scores these fields with rules and formulas grounded in the TOC feasibility
+database.
+
+TOC methods such as CLARITY, CUBIC, iDISCO, uDISCO, and PEGASOS support
+high-resolution 3D imaging across tissue and organ scales
+~\cite{chung2013clarity,ueda2020tissue,wang2025advances,
+richardson2025unlocking,mai2024tissue}. This literature records relations
+between clearing methods, sample scale, labeling strategy, refractive-index
+matching, and clearing time. ClearEval encodes these relations into a
+structured feasibility database and uses them for pre-experimental checking of
+LLM-generated TOC protocols.
 
 \section{The ClearEval Benchmark}\label{sec:benchmark}
 
@@ -196,17 +208,17 @@ evidence or expert-reviewed rules used for task construction or protocol
 scoring.}
 \label{tab:db_inventory}
 \resizebox{\columnwidth}{!}{%
-\begin{tabular}{l r l}
+\begin{tabular}{l r l l}
 \toprule
-\textbf{Knowledge Base} & \textbf{Entries} & \textbf{Source} \\
+\textbf{Knowledge Base} & \textbf{Entries} & \textbf{Source} & \textbf{Use} \\
 \midrule
-Method capability vectors & 20 methods, 6 axes & Expert review + literature \\
-Fluorophore compat.\ matrix & marker$\times$method & Expert review + literature \\
-Tissue \& target table & 30+ tissue types & Literature + expert review \\
-RI references ($\sigma_{RI}$) & 20 clearing methods & Literature~\cite{ueda2020tissue,chung2013clarity} \\
-Timing database ($\tau$) & 126 (method, tier) rows & Wet-lab records + literature \\
-Wet-lab experimental records & 372 protocols & Lab data \\
-Literature chunks & 400+ paragraphs & TOC literature \\
+Method capability vectors & 20 methods, 6 axes & Expert review + literature & $S_{method}$ \\
+Fluorophore compat.\ matrix & marker$\times$method & Expert review + literature & $S_{label}$ \\
+Tissue \& target table & 30+ tissue types & Literature + expert review & $S_{label}$ \\
+RI references ($\sigma_{RI}$) & 20 clearing methods & Literature~\cite{ueda2020tissue,chung2013clarity} & $S_{trans}$ \\
+Timing database ($\tau$) & 126 (method, tier) rows & Wet-lab records + literature & $S_{time}$ \\
+Wet-lab experimental records & 372 protocols & Lab data & Task construction + $S_{time}$ \\
+Literature chunks & 400+ paragraphs & TOC literature & Task construction \\
 \bottomrule
 \end{tabular}%
 }
@@ -266,10 +278,10 @@ combines knowledge and application performance.}
 \textbf{Level} & \textbf{Dimension} & \textbf{Sub-Metric} &
 \textbf{Method} & \textbf{Weight} \\
 \midrule
-\shortstack[l]{Knowledge\\($I_K$)} & \shortstack[l]{Knowledge\\audit} & Accuracy &
+Knowledge ($I_K$) & Knowledge audit & Accuracy &
 Deterministic & 100\% \\
 \midrule
-\multirow{10}{*}{\shortstack[l]{Application\\($I_A$)}}
+\multirow{10}{*}{Application ($I_A$)}
 & \multirow{2}{*}{Completeness} & Step Integrity &
 LLM rubric & 40\% \\
 & & Parameter Detail & LLM rubric & 60\% \\
@@ -286,8 +298,8 @@ Signed fit & 25\% \\
 & & RI Matching ($S_{trans}$) & Formula & 25\% \\
 & & Timing ($S_{time}$) & Formula & 25\% \\
 \midrule
-\shortstack[l]{Diagnostic\\summary} & \shortstack[l]{Knowledge--Application\\Harmonic Score ($H_{KA}$)} &
-\shortstack[l]{Harmonic mean\\of $I_K$ and $I_A$} & Aggregation & -- \\
+Diagnostic summary & Knowledge--Application Harmonic Score ($H_{KA}$) &
+Harmonic mean of $I_K$ and $I_A$ & Aggregation & -- \\
 \bottomrule
 \end{tabular}%
 }
@@ -358,50 +370,59 @@ $S_{method}=(F_{method}+1)/2\in[0,1]$ before computing Effectiveness.
 
 \noindent\textbf{Label compatibility ($S_{label}$).}
 Label compatibility checks whether the proposed labeling strategy matches the
-biological target and the selected clearing method. The label score is
+biological target and the selected clearing method. The raw label score is
 \begin{equation}
-S_{label}
-= \min(R_{target}, R_{marker}, R_{method\text{-}marker})\ \in[0,1].
+R_{label}
+= \min(R_{target}, R_{marker}, R_{method\text{-}marker}).
 \end{equation}
 $R_{target}$ checks whether the marker matches the required labeling target.
 $R_{marker}$ checks marker--fluorophore compatibility.
 $R_{method\text{-}marker}$ checks whether the fluorophore is compatible with the
 selected clearing method using the quenching matrix. 
 
-Each term is scored on $[0,1]$. The minimum rule is used because failure in any one part makes the labeling strategy
+Each raw term is scored on $[0,6]$. The raw score is normalized to $S_{label}\in[0,1]$ by dividing by 6. The minimum rule is used because failure in any one part makes the labeling strategy
 unusable.
 
 \noindent\textbf{RI matching ($S_{trans}$).}
 RI matching checks whether the refractive-index condition of the selected method
-fits the tissue and sample scale. The score penalizes the gap between the
+fits the tissue and sample scale. The raw score penalizes the gap between the
 tissue reference RI ($RI_{tissue}$) and the method RI ($RI_{ref}$):
 \begin{equation}
-S_{trans}
-= \exp\left(
+R_{trans}
+= 3 \cdot
+\exp\left(
 -\frac{(RI_{tissue}-RI_{ref})^2}{2\sigma_{RI}^2}
-\right)\ \in[0,1].
+\right).
 \end{equation}
-$S_{trans}$ is set to $0$ when the selected method has no supported entry for
-the requested sample scale.
+$R_{trans}$ is set to $0$ when the selected method has no supported entry for
+the requested sample scale. The normalized score is
+\begin{equation}
+S_{trans} = R_{trans}/3.
+\end{equation}
 
 \noindent\textbf{Timing ($S_{time}$).}
 Timing checks whether the proposed total processing time falls within an
 evidence-supported window $[t_{min},t_{max}]$. These windows come from TOC
 literature, 372 wet-lab experimental records, and expert review. Let $\Delta t$
 be the distance from this window, with $\Delta t=0$ when the proposed time falls
-inside the window. The timing score is
+inside the window. The raw timing score is
 \begin{equation}
-S_{time}
-= \exp\left(
+R_{time}
+= 3 \cdot
+\exp\left(
 -\frac{\Delta t^2}{2\tau^2}
-\right)\ \in[0,1],
+\right),
 \end{equation}
-where $\tau$ is set to $0.2\times$ the median clearing time.
+where $\tau$ is set to $0.2\times$ the median clearing time. The normalized
+score is
+\begin{equation}
+S_{time} = R_{time}/3.
+\end{equation}
 
 All timing windows, RI references, $\sigma_{RI}$ values, and $\tau$ values come
 from literature, wet-lab records, and expert review
 (Appendix~\ref{app:curation}). Effectiveness is computed from the four
-sub-scores and then scaled to $[0,100]$ before entering the $I_A$
+normalized sub-scores and then scaled to $[0,100]$ before entering the $I_A$
 minimum rule.
 
 \paragraph{Knowledge--Application Harmonic Score.}
@@ -422,14 +443,32 @@ one-shot protocol example as the default prompt. Reasoning variants run in their
 native thinking mode when available. We release provider snapshot strings,
 context windows, maximum output tokens, API call dates, prompts, raw responses,
 and scoring outputs in the repository configuration.
+(Appendix~\ref{app:repro}).
 
 \subsection{Calibration of the Automated Metrics}\label{sec:calib}
 
 Before reporting model results, we validate the automated CCE scores against
-blinded expert consensus on 260 protocols (20 scenarios $\times$ 13 models).
+blinded expert consensus on 240 protocols (20 scenarios $\times$ 12 models).
 We report Pearson $r$, Spearman $\rho$, ICC(2,1), quadratic-weighted $\kappa$,
 and Krippendorff's $\alpha$ (Table~\ref{tab:calib}; full 14-row breakdown in
 Appendix~\ref{app:judge}).
+
+The aggregate CCE scores agree well with expert consensus. ICC is $0.75$ for
+Completeness, $0.74$ for Correctness, and $0.80$ for Effectiveness. The overall
+protocol score also reaches ICC $0.80$. Among Effectiveness sub-scores,
+$S_{method}$ agrees well with expert method-suitability ratings
+(ICC $0.82$, $r=0.83$). After correction, $S_{label}$ also shows good agreement
+with expert scores (ICC $0.75$, $r=0.77$), supporting its use in the failure
+analysis. $S_{time}$ remains well aligned with experts (ICC $0.78$).
+$S_{trans}$ shows moderate absolute agreement (ICC $0.64$), although its rank
+correlation is low; we therefore use RI-related results as a secondary
+diagnostic.
+
+For Correctness, the aggregate ICC is $0.74$. Chemical safety ($co\_chem$) is
+evaluated with a revised rubric that flags introduced hazardous reagents or
+operations, rather than the absence of unrequested safety caveats. With this
+rubric, $co\_chem$ reaches ICC $0.80$ and flags hazards in about $28\%$ of
+protocols.
 
 \begin{table}[!t]
     \centering
@@ -458,26 +497,30 @@ Appendix~\ref{app:judge}).
     }
 \end{table}
 
-The aggregate CCE scores agree well with expert consensus. ICC is $0.75$ for
-Completeness, $0.74$ for Correctness, and $0.80$ for Effectiveness. The overall
-protocol score also reaches ICC $0.80$. Among Effectiveness sub-scores,
-$S_{method}$ agrees well with expert method-suitability ratings
-(ICC $0.82$, $r=0.83$). After correction, $S_{label}$ also shows good agreement
-with expert scores (ICC $0.75$, $r=0.77$), supporting its use in the failure
-analysis. $S_{time}$ remains well aligned with experts (ICC $0.78$).
-$S_{trans}$ shows moderate absolute agreement (ICC $0.64$), although its rank
-correlation is low; we therefore use RI-related results as a secondary
-diagnostic.
-
-For Correctness, the aggregate ICC is $0.74$. Chemical safety ($co\_chem$) is
-evaluated with a revised rubric that flags introduced hazardous reagents or
-operations, rather than the absence of unrequested safety caveats. With this
-rubric, $co\_chem$ reaches ICC $0.80$ and flags hazards in about $28\%$ of
-protocols.
-
 \subsection{Main Results: Knowledge and Protocol Feasibility}
 
-\begin{table*}[!t]
+Table~\ref{tab:main_results_total} shows a clear gap between static TOC
+knowledge and protocol-level feasibility. Knowledge Index scores are high and
+close across models ($79.9$--$91.1$), while Application Index scores are lower
+and more spread out ($35.3$--$62.3$). Fig.~\ref{fig:radar_chart} shows the same
+pattern: Knowledge profiles are similar across models, while Application scores
+show larger differences.
+
+Models generally score higher on Completeness and Correctness than on
+Effectiveness. Average Completeness is $79$, average Correctness is $69$, and
+average Effectiveness is $56$. Effectiveness is the bottleneck for 9 of the 13
+models. The remaining models are limited by Correctness or by truncated
+Completeness. Qwen3-235B-A22B, Qwen3-32B, and Qwen3-14B are limited by
+Correctness, with Qwen3-14B reaching $35.3$ on this dimension. GLM-4.7-Think is
+limited by Completeness because its reasoning-mode outputs are often truncated.
+
+These results show why the Knowledge audit and the Application score are both
+needed. A model can answer TOC knowledge questions well but still make
+infeasible protocol choices. The main feasibility error is label suitability:
+models often propose fluorescent markers that do not match the required
+labeling targets (Sec.~\ref{sec:diag}).
+
+\begin{table*}[t]
     \centering
     \caption{ClearEval results for the evaluated models. $I_K$ is the Knowledge
     Index from the static TOC knowledge audit. $I_A$ is the Application Index for
@@ -489,7 +532,7 @@ protocols.
     scenarios because two responses were unparseable.}
     \label{tab:main_results_total}
     \setlength{\tabcolsep}{4pt}
-    \resizebox{0.66\textwidth}{!}{%
+    \resizebox{0.74\textwidth}{!}{%
     \begin{tabular}{l cccc cccc c}
         \toprule
         \multirow{2}{*}{\textbf{Models}} & \multicolumn{4}{c}{\textbf{Knowledge (MCQ)}} & \multicolumn{4}{c}{\textbf{Application (OEQ)}} & \multirow{2}{*}{\textbf{$H_{KA}$}} \\
@@ -519,9 +562,9 @@ protocols.
     }
 \end{table*}
 
-\begin{figure*}[!t]
+\begin{figure*}[t]
     \centering
-    \includegraphics[width=0.8\textwidth]{figures/radar_chart.png}
+    \includegraphics[width=0.62\textwidth]{figures/radar_chart.png}
     \caption{ClearEval results for 13 LLMs. Left: Knowledge Index components
     (Tissue, Reagent, Method). Right: Application dimensions and sub-scores.
     Knowledge profiles are close across models, while Application scores show
@@ -529,116 +572,97 @@ protocols.
     \label{fig:radar_chart}
 \end{figure*}
 
-Table~\ref{tab:main_results_total} shows a clear gap between static TOC
-knowledge and protocol-level feasibility. Knowledge Index scores are high and
-close across models ($79.9$--$91.1$), while Application Index scores are lower
-and more spread out ($35.3$--$62.3$). Fig.~\ref{fig:radar_chart} shows the same
-pattern: Knowledge profiles are similar across models, while Application scores
-show larger differences.
+\subsection{Fine-Grained Diagnosis: Where Protocols Fail}\label{sec:diag}
 
-Models generally score higher on Completeness and Correctness than on
-Effectiveness. Average Completeness is $79$, average Correctness is $69$, and
-average Effectiveness is $56$. Effectiveness is the bottleneck for 9 of the 13
-models. The remaining models are limited by Correctness or by truncated
-Completeness. Qwen3-235B-A22B, Qwen3-32B, and Qwen3-14B are limited by
-Correctness, with Qwen3-14B reaching $35.3$ on this dimension. GLM-4.7-Think is
-limited by Completeness because its reasoning-mode outputs are often truncated.
+We examine the Effectiveness sub-scores over all 3{,}287 scored protocols.
+The largest deficit is label suitability ($S_{label}$), with a mean score of
+$0.32$ (Fig.~\ref{fig:violin_limits}). $S_{label}$ is computed from three
+checks: marker--target match, marker--fluorophore compatibility, and
+method--marker compatibility. After correction, it shows good agreement with
+expert consensus (ICC $0.75$), supporting its use for failure analysis.
 
-These results show why the Knowledge audit and the Application score are both
-needed. A model can answer TOC knowledge questions well but still make
-infeasible protocol choices. The main feasibility error is label suitability:
-models often propose fluorescent markers that do not match the required
-labeling targets (Sec.~\ref{sec:diag}).
+In total, $53\%$ of protocols receive $S_{label}=0$. Among these zero-score
+cases, $86\%$ involve marker--target mismatch. These cases may also include
+other labeling errors, because the categories are not mutually exclusive. The
+remaining zero-score cases are mainly related to fluorophore compatibility. The
+quenching-related check affects about $41\%$ of protocols and reaches zero in
+about $10\%$. This shows that the main label failure is choosing a marker that
+does not match the requested biological target.
 
-\subsection{Failure Analysis}\label{sec:diag}
+Other Effectiveness terms are less impaired. RI matching ($S_{trans}$) has a
+mean of $0.64$, and timing ($S_{time}$) has a mean of $0.56$. Timing errors
+often occur in small-sample settings, where models over-estimate clearing time,
+such as proposing about $10$ hours for a $\leq 500\,\mu$m slice that falls
+within a shorter evidence-supported window. Method suitability
+($S_{method}$) is higher on average (mean $0.73$) and agrees well with expert
+ratings (ICC $0.82$). Thus, the main measured failure is labeling design,
+especially marker--target matching, rather than clearing-method choice.
 
-Fig.~\ref{fig:violin_limits} localizes the main source of low Effectiveness
-scores. Across all 3{,}287 scored protocols, label suitability ($S_{label}$)
-has the lowest mean score ($0.32$), while method suitability is higher
-($S_{method}=0.73$). RI matching ($S_{trans}=0.64$) and timing
-($S_{time}=0.56$) also reduce Effectiveness, but they are less severe than
-labeling in the aggregate view. Since the corrected $S_{label}$ score agrees
-well with expert consensus (ICC $0.75$), we use it as the main signal for
-labeling failure.
-
-The per-model $S_{label}$ distributions show that this failure is not limited
-to one model. Most models have a large mass at $S_{label}=0$, although the
-average score varies across models. In total, $53\%$ of protocols receive
-$S_{label}=0$. Among these zero-score cases, $86\%$ involve marker--target
-mismatch. These categories are not mutually exclusive, so a protocol may also
-include marker--fluorophore or method--marker compatibility errors. The main
-labeling failure is therefore choosing a marker that does not match the
-requested biological target.
-
-Timing errors form a secondary pattern. The per-model $S_{time}$ distributions
-are broad, showing that some protocols use reasonable timing while others fall
-outside evidence-supported windows. These errors often appear in small-sample
-settings, where models over-estimate processing time. Together, the failure
-analysis shows that low protocol feasibility is mainly driven by labeling
-design, with RI matching and timing as additional constraints.
-
-\begin{figure*}[t]
+\begin{figure}[!htb]
     \centering
-    \includegraphics[width=0.92\textwidth]{figures/failure_localization.pdf}
-    \caption{\textbf{Failure localization} ($\Diamond=$ mean, bar $=$ median).
-    (A) Effectiveness sub-score distributions over all $3{,}287$ protocols, normalized
-    to $[0,1]$ ($S_{method}{=}(F_{method}{+}1)/2$, $0.5$ neutral): $S_{label}$ has the
-    lowest mean ($0.32$) while $S_{method}$ is high ($0.73$). (B) Per-model $S_{label}$
-    distributions (sorted worst-first): the labeling-failure mass concentrates at $0$
-    for every model---most severely for Gemini-3-Pro (mean $0.06$)---and $86\%$ of the
-    $S_{label}{=}0$ cases are marker--target mismatches, localizing the bottleneck to
-    matching fluorescent markers to the required targets. (C) Per-model $S_{time}$
-    distributions.}
+    \includegraphics[width=\columnwidth]{figures/violin_plots.png}
+    \caption{Effectiveness sub-score distributions over all $3{,}287$ scored
+    protocols, normalized to $[0,1]$ (mean $\Diamond$, median $\circ$, IQR bar;
+    $S_{method}{=}(F_{method}+1)/2$ so $0.5$ is neutral). $S_{label}$ has the
+    lowest mean score ($0.32$) and agrees well with expert consensus after
+    correction (ICC $0.75$). $S_{method}$ is higher on average ($0.73$) and also
+    agrees well with expert ratings (ICC $0.82$).}
     \label{fig:violin_limits}
-\end{figure*}
+\end{figure}
+
+\noindent\textbf{Method choice concentration.}
+Model method choices are concentrated (Fig.~\ref{fig:method_usage}). iDISCO+
+accounts for $43\%$ of all 3{,}287 choices, and some smaller models rely more
+heavily on one clearing method. For example, Qwen3-14B selects iDISCO+ in
+$74\%$ of scenarios. Choice entropy ranges from $1.35$ to $2.97$ bits across
+models.
+
+This concentration does not by itself explain the low Application scores.
+iDISCO+ is broadly usable in many TOC settings, and the average $S_{method}$ is
+high. Thus, method choice concentration is an observed generation pattern, but
+not the main measured failure. The larger measured error is in labeling, where
+models often choose markers that do not match the requested target.
+
+\begin{figure}[!htb]
+    \centering
+    \includegraphics[width=\columnwidth]{figures/method_usage.png}
+    \caption{Clearing-method choices by model, reported as percentage of generated
+    protocols. Rows are sorted by choice entropy $H$. Method choices are
+    concentrated in several models; iDISCO+ accounts for $43\%$ of all choices.}
+    \label{fig:method_usage}
+\end{figure}
 
 \subsection{Inference-Time Grounding}\label{sec:baselines}
 
-We run a controlled grounding test on three models: GPT-5.2-Fast, Qwen3-Max,
-and Qwen3-14B. Each model is evaluated under the one-shot default, one-shot with
-KB-RAG, and one-shot with KB-RAG plus self-check. KB-RAG provides per-scenario
-context from scenario metadata, including scenario slots, broad target--marker
-guidance, and qualitative method and compatibility records. It gives candidate
-ranges rather than exact protocol answers, and withholds gold protocols, expert
-scores, exact scoring thresholds, and numeric RI/time answer keys. Self-check
-applies one fixed feasibility checklist and revises once. All outputs are
-scored by the same calibrated CCE pipeline.
+We test whether structured TOC grounding changes the Application results. This
+experiment is not intended to cover all prompting or agent settings. It is a
+controlled grounding test using the same CCE scorer as the main experiments.
 
-KB-RAG improves label suitability for all three models, and self-check further
-improves or preserves this gain. With KB-RAG plus self-check, $S_{label}$
-increases from $0.32$ to $0.60$ for GPT-5.2-Fast, from $0.40$ to $0.56$ for
-Qwen3-Max, and from $0.28$ to $0.55$ for Qwen3-14B. This supports the diagnosis
-that marker--target matching is an addressable failure mode.
+We evaluate three models across the capability range: GPT-5.2-Fast, Qwen3-Max,
+and Qwen3-14B. Each model is tested under three settings: the one-shot default,
+one-shot with KB-RAG, and one-shot with KB-RAG plus self-check. KB-RAG prepends
+a per-scenario context built from scenario metadata. The context includes
+standardized scenario slots, broad target--marker guidance, and qualitative
+method and compatibility records. It gives reasonable candidate ranges rather
+than exact protocol answers. Gold protocols, expert scores, exact scoring
+thresholds, and numeric RI/time answer keys are withheld. The same retrieved
+context is used for all models. In the self-check setting, the model applies one
+fixed feasibility checklist to its grounded answer and revises once.
 
-The effect on $I_A$ is smaller and model-dependent. KB-RAG plus self-check
-improves GPT-5.2-Fast and Qwen3-14B, but not Qwen3-Max, where the label gain is
-offset by lower RI and timing scores. Since these changes are not tested for
-statistical significance, we interpret this experiment as a diagnostic grounding
-probe rather than a full prompting comparison. Overall, grounding helps labeling,
-but full protocol feasibility still depends on method, RI, and timing choices.
+All outputs are scored by the same calibrated CCE pipeline
+(Sec.~\ref{sec:calib}), so $I_A$ is directly comparable with
+Table~\ref{tab:main_results_total}. Full literature retrieval and agentic
+protocol optimization are outside this controlled test.
 
-\noindent\textbf{Retrieval variants.}
-We also tested three context designs: demand-ranked candidate methods,
-RI-family-aware ranking, and RI-aware ranking with qualitative timing hints.
-These variants changed different Effectiveness sub-scores. Label compatibility
-improved across variants, while RI and timing scores changed with the retrieved
-method context. None of the variants improved all four Effectiveness sub-scores
-at the same time.
-
-We therefore report the released, non-per-model-tuned KB-RAG setting as a
-controlled grounding test. These results suggest that grounding context affects
-the balance among method, labeling, RI, and timing. Joint optimization of these
-choices is outside the scope of this benchmark study.
-
-\begin{table}[t]
+\begin{table*}[!t]
 \centering
-\setlength{\tabcolsep}{3pt}
+\small
+\setlength{\tabcolsep}{5pt}
 \caption{Inference-time grounding on three models over 253 Application
 scenarios. Com/Cor/Eff/$I_A$ are percentages. Effectiveness sub-scores are
 normalized means in $[0,1]$. KB-RAG withholds gold protocols and numeric RI/time
 answer keys. Self-check is one checklist-based revision.}
 \label{tab:inference_time}
-\resizebox{\columnwidth}{!}{%
 \begin{tabular}{llcccc cccc}
 \toprule
 Model & Setting & Com & Cor & Eff & $I_A$ & $S_{m}$ & $S_{lab}$ & $S_{tr}$ & $S_{ti}$ \\
@@ -658,9 +682,40 @@ Model & Setting & Com & Cor & Eff & $I_A$ & $S_{m}$ & $S_{lab}$ & $S_{tr}$ & $S_
  & $+$KB-RAG      & 63.1 & 41.8 & 59.8 & 41.8 & 0.73 & 0.52 & 0.66 & 0.48 \\
  & $+$KB-RAG$+$SC & 63.3 & 42.4 & 60.6 & \textbf{42.4} & 0.73 & 0.55 & 0.66 & 0.49 \\
 \bottomrule
-\end{tabular}%
-}
-\end{table}
+\end{tabular}
+\end{table*}
+
+KB-RAG improves label suitability for all three models. With KB-RAG plus
+self-check, $S_{label}$ increases from $0.32$ to $0.60$ for GPT-5.2-Fast, from
+$0.40$ to $0.56$ for Qwen3-Max, and from $0.28$ to $0.55$ for Qwen3-14B. This
+supports the diagnosis that marker--target mismatch is a major and addressable
+failure mode.
+
+The change in $I_A$ is smaller and depends on the model. KB-RAG plus self-check
+improves GPT-5.2-Fast from $61.2$ to $63.2$ and Qwen3-14B from $35.3$ to
+$42.4$, but Qwen3-Max decreases from $60.9$ to $58.6$. For Qwen3-Max, the label
+gain is offset by lower RI and timing scores. This shows why the Application
+score uses multiple feasibility checks: improving one experimental choice does
+not guarantee a better full protocol.
+
+Self-check improves over KB-RAG alone for all three models, but it does not
+remove the trade-off between labeling, RI matching, and timing. Overall,
+structured grounding helps with marker--target matching, while end-to-end
+protocol feasibility still depends on balancing several experimental
+constraints.
+
+\noindent\textbf{Retrieval variants.}
+We also tested three context designs: demand-ranked candidate methods,
+RI-family-aware ranking, and RI-aware ranking with qualitative timing hints.
+These variants changed different Effectiveness sub-scores. Label compatibility
+improved across variants, while RI and timing scores changed with the retrieved
+method context. None of the variants improved all four Effectiveness sub-scores
+at the same time.
+
+We therefore report the released, non-per-model-tuned KB-RAG setting as a
+controlled grounding test. These results suggest that grounding context affects
+the balance among method, labeling, RI, and timing. Joint optimization of these
+choices is outside the scope of this benchmark study.
 
 \section{Discussion and Conclusion}\label{sec:discussion}
 
@@ -680,12 +735,16 @@ those benchmarks cover more biological areas and task types, while ClearEval
 provides a deeper feasibility check within one subdomain.
 
 \noindent\textbf{Limitations.}
-ClearEval is an offline pre-experimental benchmark: it does not model all
-wet-lab variation (reagent age, batch effects, tissue heterogeneity, hardware),
-and its database is literature-, record-, and expert-based rather than
-exhaustively re-measured. Its calibrated CCE scores do not replace real wet-lab
-validation, and the grounding experiment is a controlled KB-RAG/self-check test,
-not a full search over prompting, retrieval, or agent settings.
+ClearEval is an offline pre-experimental benchmark. It does not model all
+sources of wet-lab variation, such as reagent age, batch effects, tissue
+heterogeneity, or hardware differences. Its feasibility database is based on
+literature, wet-lab records, and expert review, but the full parameter space is
+not exhaustively re-measured. Completeness and Correctness are scored by
+LLM-based rubrics, while Effectiveness is computed by non-LLM rules and
+formulas. These scores are calibrated against expert consensus, but they do not
+replace real wet-lab validation. The inference-time grounding experiment is a
+controlled test of KB-RAG and self-check, not a full search over prompting,
+retrieval, or agent settings.
 
 Overall, ClearEval turns expert judgment on TOC protocol feasibility into
 computable checks over method choice, labeling, RI matching, and timing. It
@@ -703,31 +762,44 @@ targets, marker compatibility, refractive-index matching, timing windows, and
 safety-related rules.
 
 \noindent\textbf{Knowledge bases and provenance.}
-Seven JSON knowledge bases (Table~\ref{tab:db_inventory}) support the
-Effectiveness checks, storing method capability vectors, marker/fluorophore
-compatibility, tissue and target information, RI references, timing windows,
-wet-lab records, and literature chunks. Each timing row carries a source key,
-URL, evidence locator, and confidence level (an audit trail to its evidence);
-tolerances are set as $\tau=0.2\times$ the median clearing time.
+Seven JSON knowledge bases, listed in Table~\ref{tab:db_inventory}, support the
+Effectiveness checks. They store method capability vectors, marker and
+fluorophore compatibility, tissue and target information, RI references, timing
+windows, wet-lab records, and curated literature chunks. Timing rows include a
+source key, URL, evidence locator, confidence level, and review status, giving
+an audit trail from each timing parameter to its evidence. Timing tolerances are
+set deterministically as $\tau=0.2\times$ the median clearing time and reviewed
+by experts.
+
+\noindent\textbf{Use in scoring.}
+Effectiveness is computed from protocol fields extracted from each generated
+answer. $S_{method}$ uses the signed method-capability vector and the fixed
+scenario-demand vector. $S_{label}$ uses marker--target, marker--fluorophore,
+and method--marker compatibility rules. $S_{trans}$ uses RI references and
+$\sigma_{RI}$, with unsupported method--tier pairs scored as zero. $S_{time}$
+uses the evidence-supported timing window $[t_{min},t_{max}]$ and tolerance
+$\tau$.
 
 \section{Calibration Against Expert Consensus}\label{app:judge}
 
 Table~\ref{tab:calibfull} reports the full sub-dimension agreement between
 automated scores and blinded expert-consensus scores on the calibration subset
-($n=260$). The LLM-judged dimensions, Completeness and Correctness, use fixed
+($n=240$). The LLM-judged dimensions, Completeness and Correctness, use fixed
 rubrics released in the repository
 (\texttt{eval\_oeq\_teacher\_rubric.txt} and
 \texttt{eval\_completeness\_checklist.txt}) and are run at temperature $0.0$.
 Effectiveness sub-scores are computed with non-LLM rules and formulas using the
 TOC feasibility database.
 
-The expert review produced consensus reference scores, so we report
-automated-vs-consensus agreement rather than human--human reliability.
+The expert review for this subset was designed to produce consensus reference
+scores rather than independent-rater labels. We therefore report agreement
+between automated scores and expert-consensus scores, rather than human--human
+inter-annotator reliability.
 
 \begin{table}[htbp]
     \centering
     \caption{Full per-dimension agreement of automated vs.\ expert-consensus
-    scores ($n{=}260$). ICC${=}$ICC(2,1); QWK${=}$quadratic-weighted $\kappa$;
+    scores ($n{=}240$). ICC${=}$ICC(2,1); QWK${=}$quadratic-weighted $\kappa$;
     $\alpha{=}$interval Krippendorff.}
     \label{tab:calibfull}
     \small
@@ -745,135 +817,16 @@ automated-vs-consensus agreement rather than human--human reliability.
         $co\_chem$   & 0.83 & 0.69 & 0.80 & 0.66 & 0.79 \\
         \textbf{Correctness} & 0.79 & 0.77 & 0.74 & 0.72 & 0.73 \\
         \midrule
-        $S_{method}$ & 0.83 & 0.77 & 0.82 & 0.77 & 0.82 \\
-        $S_{label}$  & 0.77 & 0.76 & 0.75 & 0.73 & 0.75 \\
-        $S_{trans}$  & 0.77 & 0.15 & 0.64 & 0.62 & 0.61 \\
+        $S_{method}$ ($=\!(F_{method}\!+\!1)/2$) & 0.83 & 0.77 & 0.82 & 0.77 & 0.82 \\
+        $S_{label}$  & 0.51 & 0.48 & 0.51 & 0.51 & 0.51 \\
+        $S_{trans}$  & 0.63 & 0.46 & 0.58 & 0.52 & 0.56 \\
         $S_{time}$   & 0.80 & 0.75 & 0.78 & 0.75 & 0.78 \\
-        \textbf{Effectiveness} & 0.80 & 0.79 & 0.80 & 0.79 & 0.80 \\
+        \textbf{Effectiveness} & 0.71 & 0.72 & 0.69 & 0.68 & 0.69 \\
         \midrule
-        \textbf{Overall} & 0.83 & 0.82 & 0.80 & 0.80 & 0.80 \\
+        \textbf{Overall} & 0.79 & 0.79 & 0.74 & 0.73 & 0.74 \\
         \bottomrule
     \end{tabular}
 \end{table}
-
-\section{Worked Scoring Example}\label{app:example}
-
-To make CCE concrete, Table~\ref{tab:worked} traces one real Application
-item end to end (GPT-5.2-Fast, one-shot): the dual-target
-embryo-clearing scenario, the protocol the model generates, and its CCE
-scoring. Completeness and Correctness are perfect, and method fit, RI
-matching, and timing score highly; yet $S_{label}{=}0$, because the reply
-labels the early-neuron target correctly (TUJ1) but substitutes Cntn2 for
-the recommended Neurofilament marker. Since
-$S_{label}=\min(R_{target},R_{marker},R_{method\text{-}marker})$, one
-off-target marker forces $R_{target}{=}0$, so Effectiveness---and thus
-$I_A{=}\min(\mathrm{Com},\mathrm{Cor},\mathrm{Eff})$---is only $0.72$
-despite perfect Completeness and Correctness, the dominant failure mode.
-
-\begin{table*}[t]
-\centering
-\footnotesize
-\setlength{\tabcolsep}{4pt}
-\renewcommand{\arraystretch}{1.0}
-\caption{Worked CCE example (GPT-5.2-Fast, one-shot): the scenario, the
-generated protocol, and the CCE breakdown for one real Application item.
-Completeness/Correctness sub-scores are rubric points (raw/max);
-Effectiveness sub-scores are normalized to $[0,1]$
-($S_{method}{=}(F{+}1)/2$). Values are from the released scorer output;
-the full prompt and response are in Appendix~\ref{app:fullexample}.}
-\label{tab:worked}
-\begin{tabularx}{\textwidth}{@{}llcX@{}}
-\toprule
-\multicolumn{4}{@{}p{0.98\textwidth}@{}}{\textbf{Scenario.} Fixed whole E12.5 mouse embryo ($\sim$8--10\,mm), dual-target 3D imaging of the developing nervous system: (i)~mature bundled cranial/spinal nerves and (ii)~early extending neurites. Database-recommended markers: \emph{Neurofilament} for (i), \emph{$\beta$-III Tubulin/TUJ1} for (ii).} \\
-\addlinespace[2pt]
-\multicolumn{4}{@{}p{0.98\textwidth}@{}}{\textbf{Model output} (translated; the full reply is a \emph{complete} 11-step protocol with $\sim$30 parameterized sub-steps). \emph{Method:} iDISCO+. \emph{Labeling:} TUJ1$+$Alexa~647, Cntn2$+$Alexa~568. \emph{Protocol (all 11 main steps):} 1~dehydration $\rightarrow$ 2~H$_2$O$_2$ bleaching $\rightarrow$ 3~rehydration/permeabilization $\rightarrow$ 4~primary immunostaining $\rightarrow$ 5~wash $\rightarrow$ 6~secondary immunostaining $\rightarrow$ 7~wash $\rightarrow$ 8~re-dehydration $\rightarrow$ 9~DCM delipidation $\rightarrow$ 10~DBE RI matching (RI\,$\approx$\,1.56) $\rightarrow$ 11~storage/mounting; each with per-sub-step reagents, temperatures, and times (e.g., 4.1~anti-TUJ1$+$anti-Cntn2, 1:200, $37^{\circ}$C, 4--6\,d; 9.2~100\% DCM, RT, $2{\times}1.5$\,h; 10.1~DBE, RT, 2--3\,h).} \\
-\midrule
-Dimension & Sub-metric & Value & Rationale (released scorer output) \\
-\midrule
-\multirow{2}{*}{Completeness}
- & Step modules $c_{step}$ & 2/2 & All iDISCO+ modules present: dehydration, bleaching, permeabilization/blocking, dual immunostaining, re-dehydration, DCM delipidation, DBE RI matching, mounting. \\
- & Parameters $c_{param}$ & 3/3 & Concentration, temperature, and time are given for essentially every step. \\
-\midrule
-\multirow{4}{*}{Correctness}
- & Order $co_{order}$ & 3/3 & Canonical iDISCO+ sequence: dehydrate/bleach $\rightarrow$ rehydrate/permeabilize $\rightarrow$ stain $\rightarrow$ re-dehydrate $\rightarrow$ delipidate $\rightarrow$ RI match. \\
- & Method $co_{method}$ & 2/2 & MeOH/DCM/DBE reagents mutually consistent; no aqueous-RIMS contamination. \\
- & Parameters $co_{param}$ & 2/2 & 4--6\,d primary / 3--5\,d secondary staining and 12--24\,h DBE are feasible at whole-embryo scale. \\
- & Chem/safety $co_{chem}$ & 1/1 & Standard reagents; a solvent-ventilation caveat is noted but not penalized. \\
-\midrule
-\multirow{4}{*}{Effectiveness}
- & Method fit $S_{method}$ & 0.96 & iDISCO+ strongly fits a whole embryo: signed need-weighted fit $F{=}0.91$, rescaled $(F{+}1)/2{=}0.96$. \\
- & Label $S_{label}$ & \textbf{0.00} & $\min(R_{target}{=}0.00,\ R_{marker}{=}1.00,\ R_{method\text{-}marker}{=}0.85)$. $R_{target}{=}0$ because Cntn2 replaces the recommended Neurofilament marker of the nerve-bundle target. \\
- & RI match $S_{trans}$ & 0.92 & Tissue RI $1.48$ vs.\ method reference $1.47$ ($\sigma_{RI}{=}0.025$). \\
- & Timing $S_{time}$ & 1.00 & Total $36$\,h lies inside the evidence window $[12,48]$\,h. \\
-\midrule
-\multicolumn{4}{@{}l}{\textbf{Com}${=}1.00$,\ \ \textbf{Cor}${=}1.00$,\ \ \textbf{Eff}${=}\tfrac{1}{4}(0.96{+}0{+}0.92{+}1.00){=}0.72$,\ \ $I_A{=}\min(\mathrm{Com},\mathrm{Cor},\mathrm{Eff}){=}\mathbf{0.72}$} \\
-\bottomrule
-\end{tabularx}
-\end{table*}
-
-\section{Full Prompt and Model Response}\label{app:fullexample}
-
-For transparency we reproduce, in full, the prompt and the generated
-protocol summarized in Table~\ref{tab:worked} (translated from the
-released Chinese prompt and response; scenario~\#34, GPT-5.2-Fast,
-one-shot; boilerplate few-shot formatting instructions omitted).
-
-\noindent\textbf{Problem statement.}
-\emph{``Clear an E12.5 mouse embryo to simultaneously visualize the more
-mature nerve-bundle structures and the early neuronal processes. The
-sample is an intact mouse embryo ($\sim$8--10\,mm), already fixed and
-post-fixed. The scientific goal spans neural structures at different
-developmental stages: show both the continuous, bundled cranial and
-spinal nerves and the extending/branching early neurites entering
-peripheral target regions, so as to analyze the 3D process by which the
-embryonic nervous system establishes central-to-peripheral connectivity.
-Choose a compatible dual-target fluorescence/labeling strategy and a
-clearing method compatible with those signals; the choice should suit
-whole-embryo-scale neural labeling, low-background deep imaging, continuous
-tract tracing, and early-neurite visualization. Output only the protocol:
-line~1 states the chosen dual-target labeling strategy and clearing
-method, followed by the key reagents, conditions, and times for clearing,
-RI matching, and storage/pre-imaging.''}
-
-\noindent\textbf{Answer space.} exactly one clearing method from a fixed
-set of 18 (CUBIC, ScaleS, MACS, iDISCO+, FDISCO, SOLID, SeeDB2, PEGASOS,
-BoneClear, Ce3D, TDE, ClearT2, ClearSee, EyeCi, FOCM, SWITCH, uDISCO,
-FlyClear), plus fluorophores and markers drawn from fixed lists (21
-dyes/fluorophores and ${\sim}120$ markers).
-
-\smallskip
-\noindent\textbf{Model response.}
-\emph{Method:} iDISCO+.\quad \emph{Labeling:}
-$\beta$-III~Tubulin/TUJ1$\,{+}\,$Alexa~647 and Cntn2$\,{+}\,$Alexa~568.
-
-\noindent\emph{Justification:} iDISCO+ suits deep clearing and
-low-background light-sheet imaging of an intact 8--10\,mm embryo; methanol
-dehydration with DCM delipidation gives high transparency and aids
-continuous tracing of long-range tracts. TUJ1 marks early neurons/neurites
-(extending and branching fine fibers) while Cntn2 marks the more mature,
-bundled axon tracts (cranial/spinal nerves), together covering both
-developmental stages; Alexa~647/568 preserve stable multi-channel signal
-after iDISCO+ organic-phase RI matching.
-
-\noindent\emph{Protocol.}\\
-\textbf{1~Dehydration:} 1.1 PBS wash (RT, 3$\times$20\,min); 1.2 50\% MeOH/H$_2$O (RT, 1\,h); 1.3 80\% MeOH (RT, 1\,h); 1.4 100\% MeOH (RT, 1\,h); 1.5 fresh 100\% MeOH (RT, 1\,h).\\
-\textbf{2~Bleaching:} 2.1 5\% H$_2$O$_2$/MeOH (30\% H$_2$O$_2$:MeOH${=}$1:5), dark (4\,$^{\circ}$C, 12--16\,h); 2.2 100\% MeOH wash (RT, 2$\times$30\,min).\\
-\textbf{3~Rehydration \& permeabilization:} 3.1 80\% MeOH (RT, 45\,min); 3.2 50\% MeOH (RT, 45\,min); 3.3 PBS (RT, 2$\times$30\,min); 3.4 permeabilize --- PBS/0.2\% Triton~X-100/20\% DMSO/0.3\,M glycine (37\,$^{\circ}$C, 12--16\,h); 3.5 block --- PBS/0.2\% Triton~X-100/10\% DMSO/6\% normal donkey serum (37\,$^{\circ}$C, 12--16\,h).\\
-\textbf{4~Primary immunostaining:} 4.1 anti-TUJ1 $+$ anti-Cntn2 (each 1:200) in PTw (PBS/0.2\% Tween-20)/10\,$\mu$g\,mL$^{-1}$ heparin/5\% DMSO/3\% donkey serum (37\,$^{\circ}$C, 4--6\,d, gentle shaking, dark).\\
-\textbf{5~Wash:} 5.1 PTw/heparin (RT, 6$\times$1\,h); 5.2 PTw/heparin (37\,$^{\circ}$C, 2$\times$12\,h).\\
-\textbf{6~Secondary immunostaining:} 6.1 donkey anti-host secondaries --- Alexa~647 (TUJ1) $+$ Alexa~568 (Cntn2), each 1:300, in PTw/heparin/3\% donkey serum (37\,$^{\circ}$C, 3--5\,d, dark).\\
-\textbf{7~Wash:} 7.1 PTw/heparin (RT, 6$\times$1\,h, dark); 7.2 PTw/heparin (37\,$^{\circ}$C, 2$\times$12\,h, dark).\\
-\textbf{8~Re-dehydration:} 8.1 50\% MeOH (RT, 45\,min); 8.2 80\% MeOH (RT, 45\,min); 8.3 100\% MeOH (RT, 1\,h); 8.4 fresh 100\% MeOH (RT, 1\,h).\\
-\textbf{9~Delipidation:} 9.1 66\% DCM/33\% MeOH (RT, 2\,h); 9.2 100\% DCM (RT, 2$\times$1.5\,h).\\
-\textbf{10~RI matching:} 10.1 dibenzyl ether (DBE, RI${\approx}$1.56), dark (RT, 2--3\,h); 10.2 fresh DBE until fully transparent (RT, 12--24\,h, dark).\\
-\textbf{11~Storage \& pre-imaging:} 11.1 store in DBE, dark, container filled to limit oxidation (RT or 4\,$^{\circ}$C, up to weeks); 11.2 equilibrate in fresh DBE (RT, 1--2\,h), then mount in a DBE-compatible chamber/capillary or low-fluorescence glue; 11.3 image by light-sheet microscopy with RI${\approx}$1.56 optics/immersion, acquiring the Alexa~568 and Alexa~647 channels.
-
-\smallskip
-\noindent The scorer parses this reply into method iDISCO+ and labeling
-$\{$Alexa~647{:}~TUJ1,\ Alexa~568{:}~Cntn2$\}$, giving the sub-scores in
-Table~\ref{tab:worked}: TUJ1 matches the early-neurite target, but Cntn2
-is not the database-recommended marker (Neurofilament) for the mature
-nerve-bundle target, so the minimum-based $S_{label}{=}0$.
 
 % ---- Bibliography ----
 \bibliographystyle{IEEEtran}

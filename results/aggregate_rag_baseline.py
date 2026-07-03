@@ -70,13 +70,15 @@ def aggregate_file(path):
         norm[m] = avg / MAX_SCORES[m] if MAX_SCORES[m] else 0.0
     completeness = 0.4 * norm['c_step'] + 0.6 * norm['c_param']
     correctness = (norm['co_order'] + norm['co_method'] + norm['co_param'] + norm['co_chem']) / 4
-    effectiveness = max(0.0, (norm['s_method'] + norm['s_label'] + norm['s_trans'] + norm['s_time']) / 4)
+    # s_method is the signed fit F_method in [-1,1]; rescale to [0,1] via (F+1)/2 per paper Eq. (2)
+    s_method_01 = (norm['s_method'] + 1) / 2
+    effectiveness = (s_method_01 + norm['s_label'] + norm['s_trans'] + norm['s_time']) / 4
     i_a = min(completeness, correctness, effectiveness)
     return {
         'n': n_graded,
         'total_items': len(items),
         'Com': completeness * 100, 'Cor': correctness * 100, 'Eff': effectiveness * 100, 'I_A': i_a * 100,
-        's_method': norm['s_method'] * 100, 's_label': norm['s_label'] * 100,
+        's_method': s_method_01 * 100, 's_label': norm['s_label'] * 100,
         's_trans': norm['s_trans'] * 100, 's_time': norm['s_time'] * 100,
     }
 
