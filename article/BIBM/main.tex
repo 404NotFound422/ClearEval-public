@@ -779,14 +779,13 @@ despite perfect Completeness and Correctness, the dominant failure mode.
 generated protocol, and the CCE breakdown for one real Application item.
 Completeness/Correctness sub-scores are rubric points (raw/max);
 Effectiveness sub-scores are normalized to $[0,1]$
-($S_{method}{=}(F{+}1)/2$). Values are from the released scorer output;
-the full prompt and response are in Appendix~\ref{app:fullexample}.}
+($S_{method}{=}(F{+}1)/2$). Values are from the released scorer output.}
 \label{tab:worked}
 \begin{tabularx}{\textwidth}{@{}llcX@{}}
 \toprule
-\multicolumn{4}{@{}p{0.98\textwidth}@{}}{\textbf{Scenario.} Fixed whole E12.5 mouse embryo ($\sim$8--10\,mm), dual-target 3D imaging of the developing nervous system: (i)~mature bundled cranial/spinal nerves and (ii)~early extending neurites. Database-recommended markers: \emph{Neurofilament} for (i), \emph{$\beta$-III Tubulin/TUJ1} for (ii).} \\
+\multicolumn{4}{@{}p{0.98\textwidth}@{}}{\textbf{OEQ prompt} . ``Clear an E12.5 mouse embryo ($\sim$8--10\,mm, fixed) to simultaneously visualize the more mature, bundled cranial/spinal nerves and the extending/branching early neurites entering peripheral targets, so as to analyze how the embryonic nervous system builds central-to-peripheral connectivity in 3D. Choose a compatible \emph{dual-target} labeling strategy and a compatible clearing method suited to whole-embryo neural labeling, low-background deep imaging, continuous tract tracing, and early-neurite visualization. Output only the protocol (line~1: the chosen labeling strategy and clearing method), then the key reagents, conditions, and times for clearing, RI matching, and storage/pre-imaging.'' \emph{Answer space:} one clearing method from a fixed set of 18; fluorophores/markers from fixed lists. \emph{Database-recommended markers:} Neurofilament (mature bundles), $\beta$-III~Tubulin/TUJ1 (early neurites).} \\
 \addlinespace[2pt]
-\multicolumn{4}{@{}p{0.98\textwidth}@{}}{\textbf{Model output} (translated; the full reply is a \emph{complete} 11-step protocol with $\sim$30 parameterized sub-steps). \emph{Method:} iDISCO+. \emph{Labeling:} TUJ1$+$Alexa~647, Cntn2$+$Alexa~568. \emph{Protocol (all 11 main steps):} 1~dehydration $\rightarrow$ 2~H$_2$O$_2$ bleaching $\rightarrow$ 3~rehydration/permeabilization $\rightarrow$ 4~primary immunostaining $\rightarrow$ 5~wash $\rightarrow$ 6~secondary immunostaining $\rightarrow$ 7~wash $\rightarrow$ 8~re-dehydration $\rightarrow$ 9~DCM delipidation $\rightarrow$ 10~DBE RI matching (RI\,$\approx$\,1.56) $\rightarrow$ 11~storage/mounting; each with per-sub-step reagents, temperatures, and times (e.g., 4.1~anti-TUJ1$+$anti-Cntn2, 1:200, $37^{\circ}$C, 4--6\,d; 9.2~100\% DCM, RT, $2{\times}1.5$\,h; 10.1~DBE, RT, 2--3\,h).} \\
+\multicolumn{4}{@{}p{0.98\textwidth}@{}}{\textbf{Model response}  \emph{Method:} iDISCO+.\ \emph{Labeling:} TUJ1$+$Alexa~647, Cntn2$+$Alexa~568.\ \emph{Justification:} ``iDISCO+ suits deep, low-background light-sheet imaging of an intact embryo; MeOH dehydration $+$ DCM delipidation give high transparency and long-range tract tracing; TUJ1 marks early neurites, Cntn2 mature bundled axons, and Alexa~647/568 stay stable after organic-phase RI matching.'' \emph{Protocol:} \textbf{1}~dehydration --- PBS wash (RT, 3$\times$20\,min), then 50/80/100\% and fresh 100\% MeOH (RT, 1\,h each); \textbf{2}~bleaching --- 5\% H$_2$O$_2$/MeOH (4\,$^{\circ}$C, 12--16\,h), MeOH wash; \textbf{3}~rehydration/permeabilization --- 80/50\% MeOH, PBS, then 0.2\% Triton/20\% DMSO/0.3\,M glycine and block (10\% DMSO/6\% donkey serum) (37\,$^{\circ}$C, 12--16\,h each); \textbf{4}~primary --- anti-TUJ1$+$anti-Cntn2 (1:200, 37\,$^{\circ}$C, 4--6\,d); \textbf{5}~wash (RT then 37\,$^{\circ}$C); \textbf{6}~secondary --- Alexa~647/568 (1:300, 37\,$^{\circ}$C, 3--5\,d); \textbf{7}~wash; \textbf{8}~re-dehydration (50--100\% MeOH); \textbf{9}~delipidation --- 66\% DCM/MeOH then 100\% DCM (RT); \textbf{10}~RI matching --- DBE (RI${\approx}$1.56), 2--3\,h then fresh DBE 12--24\,h; \textbf{11}~storage/mounting in DBE and light-sheet imaging at RI${\approx}$1.56 (Alexa~568/647).} \\
 \midrule
 Dimension & Sub-metric & Value & Rationale (released scorer output) \\
 \midrule
@@ -810,70 +809,6 @@ Dimension & Sub-metric & Value & Rationale (released scorer output) \\
 \bottomrule
 \end{tabularx}
 \end{table*}
-
-\section{Full Prompt and Model Response}\label{app:fullexample}
-
-For transparency we reproduce, in full, the prompt and the generated
-protocol summarized in Table~\ref{tab:worked} (translated from the
-released Chinese prompt and response; scenario~\#34, GPT-5.2-Fast,
-one-shot; boilerplate few-shot formatting instructions omitted).
-
-\noindent\textbf{Problem statement.}
-\emph{``Clear an E12.5 mouse embryo to simultaneously visualize the more
-mature nerve-bundle structures and the early neuronal processes. The
-sample is an intact mouse embryo ($\sim$8--10\,mm), already fixed and
-post-fixed. The scientific goal spans neural structures at different
-developmental stages: show both the continuous, bundled cranial and
-spinal nerves and the extending/branching early neurites entering
-peripheral target regions, so as to analyze the 3D process by which the
-embryonic nervous system establishes central-to-peripheral connectivity.
-Choose a compatible dual-target fluorescence/labeling strategy and a
-clearing method compatible with those signals; the choice should suit
-whole-embryo-scale neural labeling, low-background deep imaging, continuous
-tract tracing, and early-neurite visualization. Output only the protocol:
-line~1 states the chosen dual-target labeling strategy and clearing
-method, followed by the key reagents, conditions, and times for clearing,
-RI matching, and storage/pre-imaging.''}
-
-\noindent\textbf{Answer space.} exactly one clearing method from a fixed
-set of 18 (CUBIC, ScaleS, MACS, iDISCO+, FDISCO, SOLID, SeeDB2, PEGASOS,
-BoneClear, Ce3D, TDE, ClearT2, ClearSee, EyeCi, FOCM, SWITCH, uDISCO,
-FlyClear), plus fluorophores and markers drawn from fixed lists (21
-dyes/fluorophores and ${\sim}120$ markers).
-
-\smallskip
-\noindent\textbf{Model response.}
-\emph{Method:} iDISCO+.\quad \emph{Labeling:}
-$\beta$-III~Tubulin/TUJ1$\,{+}\,$Alexa~647 and Cntn2$\,{+}\,$Alexa~568.
-
-\noindent\emph{Justification:} iDISCO+ suits deep clearing and
-low-background light-sheet imaging of an intact 8--10\,mm embryo; methanol
-dehydration with DCM delipidation gives high transparency and aids
-continuous tracing of long-range tracts. TUJ1 marks early neurons/neurites
-(extending and branching fine fibers) while Cntn2 marks the more mature,
-bundled axon tracts (cranial/spinal nerves), together covering both
-developmental stages; Alexa~647/568 preserve stable multi-channel signal
-after iDISCO+ organic-phase RI matching.
-
-\noindent\emph{Protocol.}\\
-\textbf{1~Dehydration:} 1.1 PBS wash (RT, 3$\times$20\,min); 1.2 50\% MeOH/H$_2$O (RT, 1\,h); 1.3 80\% MeOH (RT, 1\,h); 1.4 100\% MeOH (RT, 1\,h); 1.5 fresh 100\% MeOH (RT, 1\,h).\\
-\textbf{2~Bleaching:} 2.1 5\% H$_2$O$_2$/MeOH (30\% H$_2$O$_2$:MeOH${=}$1:5), dark (4\,$^{\circ}$C, 12--16\,h); 2.2 100\% MeOH wash (RT, 2$\times$30\,min).\\
-\textbf{3~Rehydration \& permeabilization:} 3.1 80\% MeOH (RT, 45\,min); 3.2 50\% MeOH (RT, 45\,min); 3.3 PBS (RT, 2$\times$30\,min); 3.4 permeabilize --- PBS/0.2\% Triton~X-100/20\% DMSO/0.3\,M glycine (37\,$^{\circ}$C, 12--16\,h); 3.5 block --- PBS/0.2\% Triton~X-100/10\% DMSO/6\% normal donkey serum (37\,$^{\circ}$C, 12--16\,h).\\
-\textbf{4~Primary immunostaining:} 4.1 anti-TUJ1 $+$ anti-Cntn2 (each 1:200) in PTw (PBS/0.2\% Tween-20)/10\,$\mu$g\,mL$^{-1}$ heparin/5\% DMSO/3\% donkey serum (37\,$^{\circ}$C, 4--6\,d, gentle shaking, dark).\\
-\textbf{5~Wash:} 5.1 PTw/heparin (RT, 6$\times$1\,h); 5.2 PTw/heparin (37\,$^{\circ}$C, 2$\times$12\,h).\\
-\textbf{6~Secondary immunostaining:} 6.1 donkey anti-host secondaries --- Alexa~647 (TUJ1) $+$ Alexa~568 (Cntn2), each 1:300, in PTw/heparin/3\% donkey serum (37\,$^{\circ}$C, 3--5\,d, dark).\\
-\textbf{7~Wash:} 7.1 PTw/heparin (RT, 6$\times$1\,h, dark); 7.2 PTw/heparin (37\,$^{\circ}$C, 2$\times$12\,h, dark).\\
-\textbf{8~Re-dehydration:} 8.1 50\% MeOH (RT, 45\,min); 8.2 80\% MeOH (RT, 45\,min); 8.3 100\% MeOH (RT, 1\,h); 8.4 fresh 100\% MeOH (RT, 1\,h).\\
-\textbf{9~Delipidation:} 9.1 66\% DCM/33\% MeOH (RT, 2\,h); 9.2 100\% DCM (RT, 2$\times$1.5\,h).\\
-\textbf{10~RI matching:} 10.1 dibenzyl ether (DBE, RI${\approx}$1.56), dark (RT, 2--3\,h); 10.2 fresh DBE until fully transparent (RT, 12--24\,h, dark).\\
-\textbf{11~Storage \& pre-imaging:} 11.1 store in DBE, dark, container filled to limit oxidation (RT or 4\,$^{\circ}$C, up to weeks); 11.2 equilibrate in fresh DBE (RT, 1--2\,h), then mount in a DBE-compatible chamber/capillary or low-fluorescence glue; 11.3 image by light-sheet microscopy with RI${\approx}$1.56 optics/immersion, acquiring the Alexa~568 and Alexa~647 channels.
-
-\smallskip
-\noindent The scorer parses this reply into method iDISCO+ and labeling
-$\{$Alexa~647{:}~TUJ1,\ Alexa~568{:}~Cntn2$\}$, giving the sub-scores in
-Table~\ref{tab:worked}: TUJ1 matches the early-neurite target, but Cntn2
-is not the database-recommended marker (Neurofilament) for the mature
-nerve-bundle target, so the minimum-based $S_{label}{=}0$.
 
 % ---- Bibliography ----
 \bibliographystyle{IEEEtran}

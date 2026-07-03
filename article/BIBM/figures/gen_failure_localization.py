@@ -91,31 +91,34 @@ def panel_label(ax, letter):
             fontweight='bold', va='top', ha='left')
 
 
-fig, (axA, axB, axC) = plt.subplots(1, 3, figsize=(7.15, 2.4),
-                                    gridspec_kw={'width_ratios': [0.82, 2.05, 2.05]})
+from matplotlib.lines import Line2D
+_lg = [Line2D([0], [0], marker='D', color='none', markerfacecolor='#333333', markersize=5, label='mean'),
+       Line2D([0], [0], color='#333333', lw=1.3, label='median')]
+
+fig, (axA, axB, axC) = plt.subplots(1, 3, figsize=(7.15, 2.55),
+                                    gridspec_kw={'width_ratios': [0.9, 2.05, 2.05]})
 
 # ---- Panel a ----
 violins(axA, [dist[k] for k in SUBS], [FILL[k] for k in SUBS], [EDGE[k] for k in SUBS])
 axA.set_xticks([1, 2, 3, 4])
-axA.set_xticklabels([r'$S_{m}$', r'$S_{lab}$', r'$S_{tr}$', r'$S_{ti}$'])
+axA.set_xticklabels([r'$S_{method}$', r'$S_{label}$', r'$S_{trans}$', r'$S_{time}$'], rotation=45, ha='right')
 axA.axhline(0.5, ls=':', color='0.6', lw=0.6)
 axA.set_ylim(-0.03, 1.10); axA.set_ylabel('score')
-axA.set_title('Effectiveness sub-scores', fontsize=8.5, pad=10)
-panel_label(axA, 'a')
+axA.set_title(r'$\mathbf{a}$   Effectiveness sub-scores', loc='left', fontsize=8.5, pad=6)
 
 # ---- Panel b: per-model S_label (rose) ----
 violins(axB, [per[m]['slabel'] for m in order], [FILL['s_label']] * len(order), [EDGE['s_label']] * len(order))
-axB.set_ylim(-0.03, 1.05); axB.set_ylabel(r'$S_{label}$')
+axB.set_ylim(-0.03, 1.10); axB.set_ylabel(r'$S_{label}$')
 axB.set_xticks(np.arange(1, len(order) + 1)); axB.set_xticklabels(disp, rotation=45, ha='right')
-axB.set_title(r'Per-model $S_{label}$ (labeling)', fontsize=8.5, pad=10)
-panel_label(axB, 'b')
+axB.set_title(r'$\mathbf{b}$   Per-model $S_{label}$ (labeling)', loc='left', fontsize=8.5, pad=6)
+axB.legend(handles=_lg, loc='upper right', fontsize=7, frameon=False, ncol=2,
+           handlelength=1.2, columnspacing=1.0, borderpad=0.2)
 
 # ---- Panel c: per-model S_time (sky) ----
 violins(axC, [per[m]['stime'] for m in order], [FILL['s_time']] * len(order), [EDGE['s_time']] * len(order))
 axC.set_ylim(-0.03, 1.05); axC.set_ylabel(r'$S_{time}$')
 axC.set_xticks(np.arange(1, len(order) + 1)); axC.set_xticklabels(disp, rotation=45, ha='right')
-axC.set_title(r'Per-model $S_{time}$ (timing)', fontsize=8.5, pad=10)
-panel_label(axC, 'c')
+axC.set_title(r'$\mathbf{c}$   Per-model $S_{time}$ (timing)', loc='left', fontsize=8.5, pad=6)
 
 fig.tight_layout(w_pad=1.2)
 for _ext in ('pdf', 'png'):
