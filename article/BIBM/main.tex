@@ -65,7 +65,26 @@ email withheld}}
 \maketitle
 
 \begin{abstract}
-Tissue Optical Clearing (TOC) enables non-destructive, high-resolution 3D imaging, but designing a feasible protocol requires aligning the experimental goal, specimen type, and fluorescence/labeling modality with an appropriate clearing method and protocol parameters. Existing biomedical LLM evaluations have emphasized static knowledge, question answering, and text-based reasoning, while the experimental feasibility of generated wet-lab protocols remains less studied. We introduce ClearEval, a database-grounded, text-reference-free feasibility benchmark for LLM-generated TOC protocols. ClearEval is built on a structured TOC feasibility database integrating 372 wet-lab experimental records, 400+ curated tissue-clearing literature chunks, and expert-reviewed constraints on methods, tissues, markers, timing, and compatibility. It contains 253 open-ended protocol-generation scenarios for evaluating TOC protocols, plus a 2{,}588-question static knowledge audit to separate knowledge gaps from application failures. Generated protocols are evaluated with CCE, a three-part framework covering Completeness, Correctness, and Effectiveness. Completeness and Correctness are scored by LLM-based rubric judgment, while Effectiveness is computed from database-grounded feasibility rules and formulas. Applying ClearEval to 13 state-of-the-art LLMs, we find that static TOC knowledge does not reliably translate into feasible protocol generation. The dominant failures arise from executable parameterization in TOC, especially matching fluorescent markers to required labeling targets. ClearEval converts expert criteria for TOC protocol feasibility into a computable evaluation framework. It provides a depth-first feasibility benchmark for TOC and a re-curatable template for building similar benchmarks in other wet-lab domains. Code and data:
+Tissue Optical Clearing (TOC) enables non-destructive, high-resolution 3D imaging, 
+but designing a feasible protocol requires aligning the experimental goal, specimen type, 
+and fluorescence/labeling modality with an appropriate clearing method and protocol parameters. 
+Existing biomedical LLM evaluations have emphasized static knowledge, question answering, 
+and text-based reasoning, while the experimental feasibility of generated wet-lab protocols 
+remains less studied. We introduce ClearEval, a database-grounded, text-reference-free feasibility benchmark
+for LLM-generated TOC protocols. ClearEval is built on a structured TOC feasibility database 
+integrating 372 wet-lab experimental records, 400+ curated tissue-clearing literature chunks, 
+and expert-reviewed constraints on methods, tissues, markers, timing, and compatibility. 
+It contains 253 open-ended protocol-generation scenarios for evaluating TOC protocols, 
+plus a 2{,}588-question static knowledge audit to separate knowledge gaps from application failures. 
+Generated protocols are evaluated with CCE, a three-part framework covering Completeness, Correctness, 
+and Effectiveness. Completeness and Correctness are scored by LLM-based rubric judgment, 
+while Effectiveness is computed from database-grounded feasibility rules and formulas. 
+Applying ClearEval to 13 state-of-the-art LLMs, we find that static TOC knowledge does not reliably 
+translate into feasible protocol generation. The dominant failures arise from executable parameterization in TOC, 
+especially matching fluorescent markers to required labeling targets.
+By converting expert criteria into a computable framework, ClearEval provides a depth-first feasibility benchmark 
+for TOC, a re-curatable template for other wet-lab domains, and an evaluation basis for future scientific AI agents.
+Code and data:
 \url{https://anonymous.4open.science/r/ClearEval}.
 
 \end{abstract}
@@ -108,7 +127,7 @@ have advanced the evaluation of biomedical knowledge, question answering, and
 text-based reasoning. For generated wet-lab protocols, the key question is not only textual plausibility, but alignment with real experimental constraints. Likewise, semantic metrics such as
 BLEU~\cite{papineni2002bleu} and general-purpose LLM
 evaluators~\cite{liu2023geval,li2024survey} do not explicitly evaluate
-method--label compatibility, refractive-index suitability, or timing
+method-label compatibility, refractive-index suitability, or timing
 plausibility. This creates a gap between knowledge evaluation and
 pre-experimental feasibility checking.
 
@@ -146,34 +165,37 @@ checks for protocol feasibility.
 \section{Related Work}\label{sec:related}
 
 \noindent\textbf{Scientific and biomedical LLM evaluation.}
-Biomedical LLM benchmarks have grown from general knowledge tests
-(MMLU~\cite{hendrycks2021mmlu}, MedQA~\cite{jin2021disease},
-Med-PaLM~\cite{singhal2023medpalm}) to medical and biological
-tasks~\cite{zhang2025benchmarking,wang2025cardbiomedbench,feng2024mediq}
-covering domain knowledge, clinical reasoning, and question answering. 
+Biomedical LLM benchmarks have expanded from general knowledge assessments 
+including MMLU~\cite{hendrycks2021mmlu} to specific medical and biological tasks. 
+Initial frameworks, such as MedQA~\cite{jin2021disease} and
+Med-PaLM~\cite{singhal2023medpalm}, focused on clinical reasoning and medical 
+question-answering via multiple-choice formats. Recent benchmarks cover broader 
+biological domains~\cite{zhang2025benchmarking,wang2025cardbiomedbench,feng2024mediq}, 
+evaluating literature comprehension, multi-modal data interpretation, and 
+bioinformatics queries. These benchmarks primarily measure theoretical knowledge 
+retrieval rather than the generation of experimental strategies.
 
 \noindent\textbf{Biological protocol and wet-lab benchmarks.}
-Recent benchmarks cover biological protocols and lab workflows:
-BioProBench~\cite{bioprobench} (protocol QA, step ordering, error correction,
-generation), LAB-Bench~\cite{labbench} (literature use, planning, data
-analysis), BixBench~\cite{bixbench} (computational-biology agents), and
-SeedBench~\cite{ying2025seedbench} (seed science). ClearEval targets Tissue
-Optical Clearing and scores feasibility at the parameter level (clearing method,
-marker--target matching, refractive index, timing); because multiple TOC routes
-can be valid, it uses database-grounded checks rather than similarity to a
-single reference.
+Recent benchmarks address biological protocols and wet-lab workflows. 
+BioProBench~\cite{bioprobench} evaluates protocol QA, step ordering, and error 
+correction. LAB-Bench~\cite{labbench} tests literature use, experimental planning, 
+and data analysis. Other domain-specific evaluations include BixBench~\cite{bixbench} 
+for computational-biology agents and SeedBench~\cite{ying2025seedbench} for seed 
+science. Evaluating wet-lab experimental designs requires accommodating multiple 
+valid procedural routes for a given objective. This characteristic makes 
+text-similarity comparisons against a single reference inadequate for assessing 
+experimental feasibility.
 
 \noindent\textbf{Automatic evaluation, TOC, and pre-experimental checking.}
-Automatic evaluators range from text-overlap metrics
-(BLEU~\cite{papineni2002bleu}) to LLM judges (G-Eval~\cite{liu2023geval}), whose
-bias and consistency are actively studied~\cite{li2024survey,zheng2023judging}.
-ClearEval uses LLM judgment only for Completeness and Correctness, and scores
-Effectiveness with non-LLM rules grounded in the feasibility database. TOC
-methods such as CLARITY, CUBIC, iDISCO, uDISCO, and PEGASOS support
-high-resolution 3D imaging across scales~\cite{chung2013clarity,ueda2020tissue,
-wang2025advances,richardson2025unlocking,mai2024tissue}; ClearEval encodes the
-relations among method, scale, labeling, refractive index, and time from this
-literature into a structured database for pre-experimental checking.
+Current evaluation methods use text-overlap metrics like BLEU~\cite{papineni2002bleu} 
+or LLM judges like G-Eval~\cite{liu2023geval}. The consistency of LLM judges is 
+still being studied~\cite{li2024survey,zheng2023judging}, especially for scientific 
+fields that require strict physical and chemical rules. In Tissue Optical Clearing 
+(TOC), methods such as CLARITY, CUBIC, iDISCO, uDISCO, and PEGASOS are used for 
+3D imaging~\cite{chung2013clarity,ueda2020tissue,wang2025advances,
+richardson2025unlocking,mai2024tissue}. Designing a TOC experiment requires 
+empirically-grounded compatibility checks among specimen, labeling target,
+imaging goal, and laboratory constraint.
 
 \section{The ClearEval Benchmark}\label{sec:benchmark}
 
