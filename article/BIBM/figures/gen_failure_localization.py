@@ -95,7 +95,7 @@ from matplotlib.lines import Line2D
 _lg = [Line2D([0], [0], marker='D', color='none', markerfacecolor='#333333', markersize=5, label='mean'),
        Line2D([0], [0], color='#333333', lw=1.3, label='median')]
 
-fig, (axA, axB, axC) = plt.subplots(1, 3, figsize=(7.15, 2.55),
+fig, (axA, axB, axC) = plt.subplots(1, 3, figsize=(7.15, 2.7),
                                     gridspec_kw={'width_ratios': [0.9, 2.05, 2.05]})
 
 # ---- Panel a ----
@@ -104,23 +104,26 @@ axA.set_xticks([1, 2, 3, 4])
 axA.set_xticklabels([r'$S_{method}$', r'$S_{label}$', r'$S_{trans}$', r'$S_{time}$'], rotation=45, ha='right')
 axA.axhline(0.5, ls=':', color='0.6', lw=0.6)
 axA.set_ylim(-0.03, 1.10); axA.set_ylabel('score')
-axA.set_title('$\\mathbf{a}$  Effectiveness\nsub-scores', loc='center', fontsize=8.5, pad=5)
+axA.set_title('Effectiveness\nsub-scores', loc='center', fontsize=8.5, pad=4)
+axA.set_title('a', loc='left', fontweight='bold', fontsize=11, pad=4)
 
 # ---- Panel b: per-model S_label (rose) ----
 violins(axB, [per[m]['slabel'] for m in order], [FILL['s_label']] * len(order), [EDGE['s_label']] * len(order))
 axB.set_ylim(-0.03, 1.10); axB.set_ylabel(r'$S_{label}$')
 axB.set_xticks(np.arange(1, len(order) + 1)); axB.set_xticklabels(disp, rotation=45, ha='right')
-axB.set_title(r'$\mathbf{b}$   Per-model $S_{label}$ (labeling)', loc='center', fontsize=8.5, pad=5)
-axB.legend(handles=_lg, loc='upper left', fontsize=7, frameon=False, ncol=1,
-           handlelength=1.2, labelspacing=0.3, borderpad=0.25)
+axB.set_title(r'Per-model $S_{label}$ (labeling)', loc='center', fontsize=8.5, pad=4)
+axB.set_title('b', loc='left', fontweight='bold', fontsize=11, pad=4)
 
 # ---- Panel c: per-model S_time (sky) ----
 violins(axC, [per[m]['stime'] for m in order], [FILL['s_time']] * len(order), [EDGE['s_time']] * len(order))
 axC.set_ylim(-0.03, 1.05); axC.set_ylabel(r'$S_{time}$')
 axC.set_xticks(np.arange(1, len(order) + 1)); axC.set_xticklabels(disp, rotation=45, ha='right')
-axC.set_title(r'$\mathbf{c}$   Per-model $S_{time}$ (timing)', loc='center', fontsize=8.5, pad=5)
+axC.set_title(r'Per-model $S_{time}$ (timing)', loc='center', fontsize=8.5, pad=4)
+axC.set_title('c', loc='left', fontweight='bold', fontsize=11, pad=4)
 
-fig.tight_layout(w_pad=1.2)
+fig.tight_layout(w_pad=1.2, rect=[0, 0.08, 1, 1])
+fig.legend(handles=_lg, loc='lower center', ncol=2, frameon=False,
+           bbox_to_anchor=(0.5, 0.035), fontsize=8, columnspacing=2.0, handlelength=1.6)
 for _ext in ('pdf', 'png'):
     fig.savefig(os.path.join(HERE, f'failure_localization.{_ext}'))
 print('saved failure_localization.{pdf,png} | models=', len(order))

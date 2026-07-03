@@ -24,6 +24,13 @@
 \usepackage{booktabs}
 \usepackage{tabularx}
 
+% --- Tighten float/caption whitespace (reclaim vertical space; keep the paper at 8 pages) ---
+\setlength{\textfloatsep}{7pt plus 2pt minus 2pt}
+\setlength{\dbltextfloatsep}{8pt plus 2pt minus 2pt}
+\setlength{\floatsep}{6pt plus 2pt minus 2pt}
+\setlength{\intextsep}{7pt plus 2pt minus 2pt}
+\setlength{\abovecaptionskip}{4pt}
+\setlength{\belowcaptionskip}{0pt}
 
 \begin{document}
 
@@ -263,33 +270,27 @@ combines knowledge and application performance.}
 \label{tab:metrics}
 \setlength{\tabcolsep}{4pt}%
 \resizebox{\columnwidth}{!}{
-\begin{tabular}{l p{2.8cm} p{4.2cm} l}
+\begin{tabular}{>{\raggedright\arraybackslash}m{1.6cm} >{\raggedright\arraybackslash}m{2.6cm} >{\raggedright\arraybackslash}m{4.2cm} >{\raggedright\arraybackslash}m{2.3cm}}
 \toprule
-\textbf{Level} & \textbf{Dimension} & \textbf{Sub-Metric} &
-\textbf{Method} \\
+\textbf{Level} & \textbf{Dimension} & \textbf{Sub-Metric} & \textbf{Method} \\
 \midrule
-\shortstack[l]{Knowledge\\($I_K$)} & Knowledge audit & Accuracy &
-Deterministic \\
+Knowledge ($I_K$) & Knowledge audit & Accuracy & Deterministic \\
 \midrule
-\multirow{10}{*}{\shortstack[l]{Application\\($I_A$)}}
-& \multirow{2}{*}{Completeness} & Step Integrity &
-LLM rubric \\
+\multirow{10}{1.6cm}{Application ($I_A$)}
+& \multirow{2}{2.6cm}{Completeness} & Step Integrity & LLM rubric \\
 & & Parameter Detail & LLM rubric \\
 \cmidrule{2-4}
-& \multirow{4}{*}{Correctness} & Step Order ($co\_order$) &
-LLM rubric \\
+& \multirow{4}{2.6cm}{Correctness} & Step Order ($co\_order$) & LLM rubric \\
 & & Method Consistency ($co\_method$) & LLM rubric \\
 & & Parameter Consistency ($co\_param$) & LLM rubric \\
 & & Chemical Safety ($co\_chem$) & LLM rubric \\
 \cmidrule{2-4}
-& \multirow{4}{*}{Effectiveness} & Method Suitability ($S_{method}$) &
-Signed fit \\
+& \multirow{4}{2.6cm}{Effectiveness} & Method Suitability ($S_{method}$) & Signed fit \\
 & & Label Compatibility ($S_{label}$) & Rule-based \\
 & & RI Matching ($S_{trans}$) & Formula \\
 & & Timing ($S_{time}$) & Formula \\
 \midrule
-\shortstack[l]{Diagnostic\\summary} & Knowledge--Application Harmonic Score ($H_{KA}$) &
-Harmonic mean of $I_K$ and $I_A$ & Aggregation \\
+Diagnostic summary & Knowledge--Application Harmonic Score ($H_{KA}$) & Harmonic mean of $I_K$ and $I_A$ & Aggregation \\
 \bottomrule
 \end{tabular}%
 }
