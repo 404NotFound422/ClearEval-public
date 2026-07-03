@@ -271,6 +271,25 @@ Requirements: 需要抗体/染料深层穿透；高清除力（致密组织）�
 
 覆盖能力谱的 3 个模型：**GPT-5.2-Fast**、**Qwen3-Max**（两个强模型）、**Qwen3-14B**（弱模型）。此外还测过 3 种**检索变体**（需求排序 / RI-家族感知排序 / RI 感知 + 定性时间提示），见下方「发现 5」；正文只报告未做 per-model 调参的、已发布的 KB-RAG 设置。
 
+### self-check 是怎么做的
+
+`+KB-RAG+self-check` 在 `+KB-RAG` 之上多加**一轮自查 + 一次修订**（比 self-consistency 便宜：只多一次调用，不做多次采样投票）：
+
+1. 模型先在 KB-RAG 卡片下生成第一版协议；
+2. 把「同一张不泄漏答案的 KB 卡片」+「模型自己的第一版协议」一起塞回给**同一个模型**，附一张**固定的 6 项可行性 checklist**，要求它逐项对照、修正未通过项（且不得引入新违规），输出**一份完整的修订协议**（格式与初版一致，即使无改动也要重新输出整份）；
+3. 若修订输出无效（空/格式错误），**回退到第一版协议**。
+
+固定 checklist（`OEQ_run_grading_new.py` 中的 `SELF_CHECK_PROMPT`）对准 Failure Analysis 里的失败模式，且**全为定性判据**（不含任何被隐藏的数值答案键）：
+
+1. **Target match** —— 每个荧光 marker 是否为目标特异性 marker（不是泛谱系 marker，也不是单纯核染料）？
+2. **Marker–荧光团兼容** —— 每个 marker 是否配了兼容荧光团（避开标为 `avoid` 的组合）？
+3. **Method–荧光团兼容** —— 荧光团是否与所选清除方法兼容（避开 `avoid`）？
+4. **Method–档位支持** —— 所选方法在该样本档位是否成熟（按可行性列表）？
+5. **时间合理性** —— 清除时间的**数量级**对该档位是否合适？
+6. **RI/介质** —— 清除介质家族是否合适（例如不要在用 FP-淬灭型溶剂法时依赖内源荧光蛋白）？
+
+代码入口：`self_check_and_revise(model_instance, first_answer, rag_context_block)`。由于 checklist 只给定性判据、不给 `[t_min,t_max]` / `τ` / `σ_RI` / `RI_ref` 等数值答案键，self-check 主要再修好 `S_label`（marker–target 匹配）；但如「发现 4」所述，它是一张**全局** checklist，消不掉强模型上 `S_time` / `S_trans` 的回退。
+
 ### 结果（253 个 Application 场景；Com/Cor/Eff/I_A 为百分比，四个 Eff 子分为 [0,1] 归一化均值）
 
 | 模型 | 设置 | Com | Cor | Eff | I_A | S_method | S_label | S_trans | S_time | ΔI_A | ΔS_label |

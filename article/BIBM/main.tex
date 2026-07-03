@@ -246,7 +246,7 @@ labeling strategy, refractive-index condition, and timing.
 
 \subsection{Scoring Framework}
 
-ClearEval reports two main indices (Table~\ref{tab:metrics}). The Knowledge
+ClearEval reports two main scores (Table~\ref{tab:metrics}). The Knowledge
 Index ($I_K$) is the score of the static TOC knowledge audit. It macro-averages
 accuracy across the three MCQ groups: Tissue, Reagent, and Method. $I_K$ is not
 used to score a generated protocol. It is used to separate lack of basic TOC
@@ -302,10 +302,10 @@ Diagnostic summary & Knowledge--Application Harmonic Score ($H_{KA}$) & Harmonic
 \paragraph{Completeness and Correctness.}
 Completeness checks whether a protocol contains the information needed to run a
 TOC experiment. Step Integrity checks whether core stages are present when
-needed, including fixation or pre-treatment, labeling, clearing, RI matching,
+needed, including fixation or pre-treatment, labeling, RI matching,
 and imaging preparation. Parameter Detail checks whether key parameters are
 specified, such as method choice, sample scale, incubation time, temperature,
-concentration, labeling conditions, and imaging settings.
+concentration, and labeling conditions.
 
 Correctness checks whether the protocol is internally consistent with TOC
 practice. It includes four equally weighted sub-checks: Step Order
@@ -320,10 +320,8 @@ rubrics, because they require reading free-form procedural text.
 \paragraph{Effectiveness.}
 Effectiveness checks whether the key experimental choices in a generated
 protocol are feasible for TOC. It is computed with non-LLM rules and formulas
-using values from the TOC feasibility database
-(Appendix~\ref{app:curation}). For each generated protocol, the scorer extracts
-the clearing method, labeling target, fluorescent marker or labeling strategy,
-refractive-index condition, and total processing time. These fields are scored
+using values from the TOC feasibility database. For each generated protocol, the scorer extracts
+the clearing method, labeling target, fluorescent marker, and total clearing processing time. These fields are scored
 by four normalized sub-scores:
 \begin{equation}
 E =
@@ -337,19 +335,14 @@ where $E\in[0,1]$. The reported Effectiveness score is $100E$.
 \noindent\textbf{Method suitability ($S_{method}$).}
 Method suitability checks whether the selected clearing method fits the scenario.
 Each clearing method has a signed six-axis capability vector. The axes describe
-fluorescent-protein preservation, dye penetration, clearing capacity, sample
+fluorescent-protein preservation, staining requirement, clearing capacity, sample
 geometry, operational economy, and safety. Positive values mean the method
-supports that need; negative values mean the method conflicts with it. For
-example, a solvent-based method that quenches endogenous fluorescence receives a
-negative value on the fluorescent-protein preservation axis.
+supports that need; negative values mean the method conflicts with it.
 
 Each scenario has a fixed demand vector prepared from scenario metadata and
-reviewed before model evaluation. The vector gives each axis a target value
-$t_a\in[0,1]$ and a weight $w_a\in\{0,0.5,1\}$. A weight of $0$ means the
-scenario does not depend on that axis. The per-axis demand is
-\[
-d_a = w_a t_a .
-\]
+reviewed before model evaluation. The vector gives each axis a target value $t_a\in[0,1]$
+and a weight $w_a\in\{0,0.5,1\}$. A weight of $0$ means the
+scenario does not depend on that axis. 
 For labeling, only the relevant route is emphasized. If fluorescent-protein
 preservation is needed, the preservation axis is
 doubled and the dye axis is ignored; otherwise the reverse is applied.
@@ -378,7 +371,7 @@ Each term is scored on $[0,1]$. The minimum rule is used because failure in any 
 unusable.
 
 \noindent\textbf{RI matching ($S_{trans}$).}
-RI matching checks whether the refractive-index condition of the selected method
+RI matching checks whether the selected method
 fits the tissue and sample scale. The score penalizes the gap between the
 tissue reference RI ($RI_{tissue}$) and the method RI ($RI_{ref}$):
 \begin{equation}
@@ -405,8 +398,7 @@ S_{time}
 where $\tau$ is set to $0.2\times$ the median clearing time.
 
 All timing windows, RI references, $\sigma_{RI}$ values, and $\tau$ values come
-from literature, wet-lab records, and expert review
-(Appendix~\ref{app:curation}). Effectiveness is computed from the four
+from literature, wet-lab records, and expert review. Effectiveness is computed from the four
 sub-scores and then scaled to $[0,100]$ before entering the $I_A$
 minimum rule.
 
@@ -554,7 +546,7 @@ These results show why the Knowledge audit and the Application score are both
 needed. A model can answer TOC knowledge questions well but still make
 infeasible protocol choices. The main feasibility error is label suitability:
 models often propose fluorescent markers that do not match the required
-labeling targets (Sec.~\ref{sec:diag}).
+labeling targets.
 
 \subsection{Failure Analysis}\label{sec:diag}
 
@@ -619,8 +611,10 @@ probe rather than a full prompting comparison. Overall, grounding helps labeling
 but full protocol feasibility still depends on method, RI, and timing choices.
 
 \noindent\textbf{Retrieval variants.}
-We also tested three context designs: demand-ranked candidate methods,
-RI-family-aware ranking, and RI-aware ranking with qualitative timing hints.
+We also tested three ways of building the retrieved context: (i) candidate
+clearing methods ranked by how well they fit the scenario's needs; (ii) methods
+ranked by whether their refractive index matches the tissue; and (iii) the same
+refractive-index ranking plus a rough fast/slow speed hint for each method.
 These variants changed different Effectiveness sub-scores. Label compatibility
 improved across variants, while RI and timing scores changed with the retrieved
 method context. None of the variants improved all four Effectiveness sub-scores
@@ -708,23 +702,21 @@ safety-related rules.
 Seven JSON knowledge bases (Table~\ref{tab:db_inventory}) support the
 Effectiveness checks, storing method capability vectors, marker/fluorophore
 compatibility, tissue and target information, RI references, timing windows,
-wet-lab records, and literature chunks. Each timing row carries a source key,
-URL, evidence locator, and confidence level (an audit trail to its evidence);
-tolerances are set as $\tau=0.2\times$ the median clearing time.
+wet-lab records, and literature chunks. 
 
-\section{Calibration Against Expert Consensus}\label{app:judge}
+\section{Expert panel and scoring procedure.}\label{app:judge}
 
-Table~\ref{tab:calibfull} reports the full sub-dimension agreement between
-automated scores and blinded expert-consensus scores on the calibration subset
-($n=260$). The LLM-judged dimensions, Completeness and Correctness, use fixed
-rubrics released in the repository
-(\texttt{eval\_oeq\_teacher\_rubric.txt} and
-\texttt{eval\_completeness\_checklist.txt}) and are run at temperature $0.0$.
-Effectiveness sub-scores are computed with non-LLM rules and formulas using the
-TOC feasibility database.
-
-The expert review produced consensus reference scores, so we report
-automated-vs-consensus agreement rather than human--human reliability.
+The reference scores come from a two-stage expert-panel procedure, not a single
+annotator. First, a wet-lab TOC expert scored every protocol blind to model
+identity, using the same CCE rubric applied by the automated pipeline. A panel of
+five TOC wet-lab experts and one knowledge-graph specialist then reviewed and
+adjusted these scores through discussion, combining their complementary
+backgrounds to adjudicate hard cases such as incubation-time scaling and
+marker--fluorophore compatibility. This consensus procedure improves consistency
+and avoids the failure modes of both single-rater scoring and independent
+multi-rater majority voting; because it yields one consensus reference per
+protocol, we report automated-vs-consensus agreement rather than human--human
+reliability.
 
 \begin{table}[htbp]
     \centering
