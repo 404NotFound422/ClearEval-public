@@ -32,6 +32,9 @@
 \setlength{\abovecaptionskip}{4pt}
 \setlength{\belowcaptionskip}{0pt}
 
+% Dashed column-group separator via arydshln if available; solid rule as fallback.
+\IfFileExists{arydshln.sty}{\usepackage{arydshln}\newcolumntype{I}{:}}{\newcolumntype{I}{|}}
+
 \begin{document}
 
 \title{ClearEval: A Database-Grounded Feasibility Benchmark for LLM-Generated Tissue Optical Clearing Protocols}
@@ -430,32 +433,32 @@ and scoring outputs in the repository configuration.
 
 Before reporting model results, we validate the automated CCE scores against
 blinded expert consensus on 260 protocols (20 scenarios $\times$ 13 models).
-We report Pearson $r$, Spearman $\rho$, ICC(2,1), quadratic-weighted $\kappa$,
-and Krippendorff's $\alpha$ (Table~\ref{tab:calib}; full 14-row breakdown in
+We report Spearman $\rho$, ICC(2,1), and quadratic-weighted $\kappa$ (QWK)
+(Table~\ref{tab:calib}; full 14-row breakdown in
 Appendix~\ref{app:judge}).
 
 \begin{table}[!t]
     \centering
     \caption{Agreement of automated vs.\ blinded expert-consensus scores on 260
     protocols (20 scenarios $\times$ 13 models). ICC${=}$ICC(2,1);
-    QWK${=}$quadratic-weighted $\kappa$; $\alpha{=}$interval Krippendorff. Full
+    QWK${=}$quadratic-weighted $\kappa$. Full
     14-row breakdown in Appendix~\ref{app:judge}.}
     \label{tab:calib}
     \resizebox{\columnwidth}{!}{%
-    \begin{tabular}{l c c c c c}
+    \begin{tabular}{l c c c}
         \toprule
-        \textbf{Dimension} & \textbf{Pearson} $r$ & \textbf{Spearman} & \textbf{ICC} & \textbf{QWK} & $\boldsymbol{\alpha}$ \\
+        \textbf{Dimension} & \textbf{Spearman} & \textbf{ICC} & \textbf{QWK} \\
         \midrule
-        Completeness  & 0.77 & 0.79 & 0.75 & 0.70 & 0.75 \\
-        Correctness   & 0.79 & 0.77 & 0.74 & 0.72 & 0.73 \\
-        Effectiveness & 0.80 & 0.79 & 0.80 & 0.79 & 0.80 \\
-        CCE Overall       & 0.83 & 0.82 & 0.80 & 0.80 & 0.80 \\
+        Completeness  & 0.79 & 0.75 & 0.70 \\
+        Correctness   & 0.77 & 0.74 & 0.72 \\
+        Effectiveness & 0.79 & 0.80 & 0.79 \\
+        CCE Overall       & 0.82 & 0.80 & 0.80 \\
         \midrule
-        \multicolumn{6}{l}{\textit{Effectiveness sub-metrics}} \\
-        $S_{method}$ (method suit.) & 0.83 & 0.77 & 0.82 & 0.77 & 0.82 \\
-        $S_{label}$ (rule)     & 0.77 & 0.76 & 0.75 & 0.73 & 0.75 \\
-        $S_{trans}$ (physics)  & 0.77 & 0.15 & 0.64 & 0.62 & 0.61 \\
-        $S_{time}$ (physics)   & 0.80 & 0.75 & 0.78 & 0.75 & 0.78 \\
+        \multicolumn{4}{l}{\textit{Effectiveness sub-metrics}} \\
+        $S_{method}$ (method suit.) & 0.77 & 0.82 & 0.77 \\
+        $S_{label}$ (rule)     & 0.76 & 0.75 & 0.73 \\
+        $S_{trans}$ (physics)  & 0.15 & 0.64 & 0.62 \\
+        $S_{time}$ (physics)   & 0.75 & 0.78 & 0.75 \\
         \bottomrule
     \end{tabular}%
     }
@@ -465,8 +468,8 @@ The aggregate CCE scores agree well with expert consensus. ICC is $0.75$ for
 Completeness, $0.74$ for Correctness, and $0.80$ for Effectiveness. The overall
 protocol score also reaches ICC $0.80$. Among Effectiveness sub-scores,
 $S_{method}$ agrees well with expert method-suitability ratings
-(ICC $0.82$, $r=0.83$). After correction, $S_{label}$ also shows good agreement
-with expert scores (ICC $0.75$, $r=0.77$), supporting its use in the failure
+(ICC $0.82$). After correction, $S_{label}$ also shows good agreement
+with expert scores (ICC $0.75$), supporting its use in the failure
 analysis. $S_{time}$ remains well aligned with experts (ICC $0.78$).
 $S_{trans}$ shows moderate absolute agreement (ICC $0.64$), although its rank
 correlation is low; we therefore use RI-related results as a secondary
@@ -555,6 +558,16 @@ labeling targets (Sec.~\ref{sec:diag}).
 
 \subsection{Failure Analysis}\label{sec:diag}
 
+\begin{figure*}[t]
+    \centering
+    \includegraphics[width=0.92\textwidth]{figures/failure_localization.pdf}
+    \caption{Failure localization.
+    (A) Effectiveness sub-score distributions over all $3{,}287$ protocols, normalized
+    to $[0,1]$ : $S_{label}$ has the owest mean ($0.32$) while $S_{method}$ is high ($0.73$). (B) Per-model $S_{label}$
+    distributions (sorted worst-first) (C) Per-model $S_{time}$ distributions.}
+    \label{fig:violin_limits}
+\end{figure*}
+
 Fig.~\ref{fig:violin_limits} localizes the main source of low Effectiveness
 scores. Across all 3{,}287 scored protocols, label suitability ($S_{label}$)
 has the lowest mean score ($0.32$), while method suitability is higher
@@ -579,21 +592,6 @@ outside evidence-supported windows. These errors often appear in small-sample
 settings, where models over-estimate processing time. Together, the failure
 analysis shows that low protocol feasibility is mainly driven by labeling
 design, with RI matching and timing as additional constraints.
-
-\begin{figure*}[t]
-    \centering
-    \includegraphics[width=0.92\textwidth]{figures/failure_localization.pdf}
-    \caption{\textbf{Failure localization} ($\Diamond=$ mean, bar $=$ median).
-    (A) Effectiveness sub-score distributions over all $3{,}287$ protocols, normalized
-    to $[0,1]$ ($S_{method}{=}(F_{method}{+}1)/2$, $0.5$ neutral): $S_{label}$ has the
-    lowest mean ($0.32$) while $S_{method}$ is high ($0.73$). (B) Per-model $S_{label}$
-    distributions (sorted worst-first): the labeling-failure mass concentrates at $0$
-    for every model---most severely for Gemini-3-Pro (mean $0.06$)---and $86\%$ of the
-    $S_{label}{=}0$ cases are marker--target mismatches, localizing the bottleneck to
-    matching fluorescent markers to the required targets. (C) Per-model $S_{time}$
-    distributions.}
-    \label{fig:violin_limits}
-\end{figure*}
 
 \subsection{Inference-Time Grounding}\label{sec:baselines}
 
@@ -638,28 +636,29 @@ choices is outside the scope of this benchmark study.
 \setlength{\tabcolsep}{3pt}
 \caption{Inference-time grounding on three models over 253 Application
 scenarios. Com/Cor/Eff/$I_A$ are percentages. Effectiveness sub-scores are
-normalized means in $[0,1]$. KB-RAG withholds gold protocols and numeric RI/time
+normalized means in $[0,1]$. \textbf{Bold}${=}$best value per column within each
+model. KB-RAG withholds gold protocols and numeric RI/time
 answer keys. Self-check is one checklist-based revision.}
 \label{tab:inference_time}
 \resizebox{\columnwidth}{!}{%
-\begin{tabular}{llcccc cccc}
+\begin{tabular}{llccccIcccc}
 \toprule
 Model & Setting & Com & Cor & Eff & $I_A$ & $S_{m}$ & $S_{lab}$ & $S_{tr}$ & $S_{ti}$ \\
 \midrule
 \multirow{3}{*}{GPT-5.2-Fast}
- & $1$-shot       & 97.0 & 84.4 & 61.2 & 61.2 & 0.76 & 0.32 & 0.67 & 0.70 \\
- & $+$KB-RAG      & 94.2 & 79.0 & 62.3 & 62.3 & 0.79 & 0.45 & 0.67 & 0.57 \\
- & $+$KB-RAG$+$SC & 92.0 & 80.2 & 63.2 & \textbf{63.2} & 0.79 & 0.60 & 0.60 & 0.54 \\
+ & $1$-shot       & \textbf{97.0} & \textbf{84.4} & 61.2 & 61.2 & 0.76 & 0.32 & \textbf{0.67} & \textbf{0.70} \\
+ & $+$KB-RAG      & 94.2 & 79.0 & 62.3 & 62.3 & \textbf{0.79} & 0.45 & \textbf{0.67} & 0.57 \\
+ & $+$KB-RAG$+$SC & 92.0 & 80.2 & \textbf{63.2} & \textbf{63.2} & \textbf{0.79} & \textbf{0.60} & 0.60 & 0.54 \\
 \midrule
 \multirow{3}{*}{Qwen3-Max}
- & $1$-shot       & 87.0 & 72.5 & 60.9 & \textbf{60.9} & 0.71 & 0.40 & 0.64 & 0.69 \\
- & $+$KB-RAG      & 85.1 & 73.4 & 57.8 & 57.8 & 0.77 & 0.50 & 0.56 & 0.49 \\
- & $+$KB-RAG$+$SC & 85.2 & 73.6 & 58.6 & 58.6 & 0.76 & 0.56 & 0.57 & 0.45 \\
+ & $1$-shot       & \textbf{87.0} & 72.5 & \textbf{60.9} & \textbf{60.9} & 0.71 & 0.40 & \textbf{0.64} & \textbf{0.69} \\
+ & $+$KB-RAG      & 85.1 & 73.4 & 57.8 & 57.8 & \textbf{0.77} & 0.50 & 0.56 & 0.49 \\
+ & $+$KB-RAG$+$SC & 85.2 & \textbf{73.6} & 58.6 & 58.6 & 0.76 & \textbf{0.56} & 0.57 & 0.45 \\
 \midrule
 \multirow{3}{*}{Qwen3-14B}
  & $1$-shot       & 58.4 & 35.3 & 53.5 & 35.3 & 0.73 & 0.28 & 0.66 & 0.46 \\
  & $+$KB-RAG      & 63.1 & 41.8 & 59.8 & 41.8 & 0.73 & 0.52 & 0.66 & 0.48 \\
- & $+$KB-RAG$+$SC & 63.3 & 42.4 & 60.6 & \textbf{42.4} & 0.73 & 0.55 & 0.66 & 0.49 \\
+ & $+$KB-RAG$+$SC & \textbf{63.3} & \textbf{42.4} & \textbf{60.6} & \textbf{42.4} & 0.73 & \textbf{0.55} & 0.66 & \textbf{0.49} \\
 \bottomrule
 \end{tabular}%
 }
@@ -730,31 +729,30 @@ automated-vs-consensus agreement rather than human--human reliability.
 \begin{table}[htbp]
     \centering
     \caption{Full per-dimension agreement of automated vs.\ expert-consensus
-    scores ($n{=}260$). ICC${=}$ICC(2,1); QWK${=}$quadratic-weighted $\kappa$;
-    $\alpha{=}$interval Krippendorff.}
+    scores ($n{=}260$). ICC${=}$ICC(2,1); QWK${=}$quadratic-weighted $\kappa$.}
     \label{tab:calibfull}
     \small
-    \begin{tabular}{l c c c c c}
+    \begin{tabular}{l c c c}
         \toprule
-        \textbf{Dimension} & $r$ & $\rho$ & \textbf{ICC} & \textbf{QWK} & $\boldsymbol{\alpha}$ \\
+        \textbf{Dimension} & $\rho$ & \textbf{ICC} & \textbf{QWK} \\
         \midrule
-        $c\_step$  & 0.71 & 0.72 & 0.70 & 0.54 & 0.70 \\
-        $c\_param$ & 0.71 & 0.71 & 0.68 & 0.60 & 0.67 \\
-        \textbf{Completeness} & 0.77 & 0.79 & 0.75 & 0.70 & 0.75 \\
+        $c\_step$  & 0.72 & 0.70 & 0.54 \\
+        $c\_param$ & 0.71 & 0.68 & 0.60 \\
+        \textbf{Completeness} & 0.79 & 0.75 & 0.70 \\
         \midrule
-        $co\_order$  & 0.66 & 0.65 & 0.61 & 0.58 & 0.60 \\
-        $co\_method$ & 0.83 & 0.81 & 0.79 & 0.77 & 0.79 \\
-        $co\_param$  & 0.55 & 0.56 & 0.53 & 0.48 & 0.53 \\
-        $co\_chem$   & 0.83 & 0.69 & 0.80 & 0.66 & 0.79 \\
-        \textbf{Correctness} & 0.79 & 0.77 & 0.74 & 0.72 & 0.73 \\
+        $co\_order$  & 0.65 & 0.61 & 0.58 \\
+        $co\_method$ & 0.81 & 0.79 & 0.77 \\
+        $co\_param$  & 0.56 & 0.53 & 0.48 \\
+        $co\_chem$   & 0.69 & 0.80 & 0.66 \\
+        \textbf{Correctness} & 0.77 & 0.74 & 0.72 \\
         \midrule
-        $S_{method}$ & 0.83 & 0.77 & 0.82 & 0.77 & 0.82 \\
-        $S_{label}$  & 0.77 & 0.76 & 0.75 & 0.73 & 0.75 \\
-        $S_{trans}$  & 0.77 & 0.15 & 0.64 & 0.62 & 0.61 \\
-        $S_{time}$   & 0.80 & 0.75 & 0.78 & 0.75 & 0.78 \\
-        \textbf{Effectiveness} & 0.80 & 0.79 & 0.80 & 0.79 & 0.80 \\
+        $S_{method}$ & 0.77 & 0.82 & 0.77 \\
+        $S_{label}$  & 0.76 & 0.75 & 0.73 \\
+        $S_{trans}$  & 0.15 & 0.64 & 0.62 \\
+        $S_{time}$   & 0.75 & 0.78 & 0.75 \\
+        \textbf{Effectiveness} & 0.79 & 0.80 & 0.79 \\
         \midrule
-        \textbf{Overall} & 0.83 & 0.82 & 0.80 & 0.80 & 0.80 \\
+        \textbf{Overall} & 0.82 & 0.80 & 0.80 \\
         \bottomrule
     \end{tabular}
 \end{table}
