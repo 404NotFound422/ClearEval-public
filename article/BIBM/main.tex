@@ -21,8 +21,6 @@
 \usepackage[T1]{fontenc}
 \usepackage{url}
 \usepackage{tabularx}
-\usepackage{booktabs}
-\usepackage{tabularx}
 
 % --- Tighten float/caption whitespace (reclaim vertical space; keep the paper at 8 pages) ---
 \setlength{\textfloatsep}{7pt plus 2pt minus 2pt}
@@ -70,7 +68,7 @@ but designing a feasible protocol requires aligning the experimental goal, speci
 and fluorescence/labeling modality with an appropriate clearing method and protocol parameters. 
 Existing biomedical LLM evaluations have emphasized static knowledge, question answering, 
 and text-based reasoning, while the experimental feasibility of generated wet-lab protocols 
-remains less studied. We introduce ClearEval, a database-grounded, text-reference-free feasibility benchmark
+remains less studied. We introduce ClearEval, a database-grounded, text-reference-free pre-experimental benchmark
 for LLM-generated TOC protocols. ClearEval is built on a structured TOC feasibility database 
 integrating 372 wet-lab experimental records, 400+ curated tissue-clearing literature chunks, 
 and expert-reviewed constraints on methods, tissues, markers, timing, and compatibility. 
@@ -79,9 +77,8 @@ plus a 2{,}588-question static knowledge audit to separate knowledge gaps from a
 Generated protocols are evaluated with CCE, a three-part framework covering Completeness, Correctness, 
 and Effectiveness. Completeness and Correctness are scored by LLM-based rubric judgment, 
 while Effectiveness is computed from database-grounded feasibility rules and formulas. 
-Applying ClearEval to 13 state-of-the-art LLMs, we find that static TOC knowledge does not reliably 
-translate into feasible protocol generation. The dominant failures arise from executable parameterization in TOC, 
-especially matching fluorescent markers to required labeling targets.
+Applying ClearEval to 13 state-of-the-art LLMs, we find that static TOC knowledge is necessary but not sufficient for feasible protocol generation. 
+The dominant failures arise from executable parameterization in TOC, especially matching fluorescent markers to required labeling targets.
 By converting expert criteria into a computable framework, ClearEval provides a depth-first feasibility benchmark 
 for TOC, a re-curatable template for other wet-lab domains, and an evaluation basis for future scientific AI agents.
 Code and data:
@@ -128,8 +125,7 @@ text-based reasoning. For generated wet-lab protocols, the key question is not o
 BLEU~\cite{papineni2002bleu} and general-purpose LLM
 evaluators~\cite{liu2023geval,li2024survey} do not explicitly evaluate
 method-label compatibility, refractive-index suitability, or timing
-plausibility. This creates a gap between knowledge evaluation and
-pre-experimental feasibility checking.
+plausibility. 
 
 We introduce \textbf{ClearEval}, a database-grounded, text-reference-free
 feasibility benchmark that converts expert judgment for TOC protocol feasibility
@@ -156,11 +152,11 @@ feasibility checks. The main error is in executable parameter choices,
 especially matching fluorescent markers to the required labeling targets.
 
 Our contributions are: (1) a structured TOC feasibility database built from
-experimental records, literature evidence, and expert-reviewed rules; (2) a
-text-reference-free benchmark for evaluating LLM-generated TOC protocols, with a
-static knowledge audit for diagnosing knowledge gaps; and (3) a
-database-grounded CCE evaluator that turns TOC expert judgment into computable
-checks for protocol feasibility.
+experimental records, literature evidence, and expert-reviewed rules; (2) ClearEval, 
+a database-grounded, text-reference-free benchmark that turns TOC expert judgment 
+into computable feasibility checks; and (3)experiment results showing that high static TOC 
+knowledge is necessary but not sufficient for feasible protocols, 
+with marker–target mismatch as the dominant, addressable failure mode.
 
 \section{Related Work}\label{sec:related}
 
@@ -190,12 +186,16 @@ experimental feasibility.
 Current evaluation methods use text-overlap metrics like BLEU~\cite{papineni2002bleu} 
 or LLM judges like G-Eval~\cite{liu2023geval}. The consistency of LLM judges is 
 still being studied~\cite{li2024survey,zheng2023judging}, especially for scientific 
-fields that require strict physical and chemical rules. In Tissue Optical Clearing 
+fields that require strict physical and chemical rules. Hallucination and factuality
+benchmarks~\cite{bang2025hallulens,zhang2025survey} probe whether outputs are factually
+grounded, but target free-form claims rather than wet-lab executability. In Tissue Optical Clearing
 (TOC), methods such as CLARITY, CUBIC, iDISCO, uDISCO, and PEGASOS are used for 
 3D imaging~\cite{chung2013clarity,ueda2020tissue,wang2025advances,
 richardson2025unlocking,mai2024tissue}. Designing a TOC experiment requires 
 empirically-grounded compatibility checks among specimen, labeling target,
-imaging goal, and laboratory constraint.
+imaging goal, and laboratory constraint. As autonomous scientific agents that plan and
+execute experiments mature~\cite{boiko2023autonomous,hartung2025ai}, such pre-experimental
+feasibility checking becomes a prerequisite for safe closed-loop lab automation.
 
 \section{The ClearEval Benchmark}\label{sec:benchmark}
 
@@ -447,7 +447,7 @@ Before reporting model results, we validate the automated CCE scores against
 blinded expert consensus on 260 protocols (20 scenarios $\times$ 13 models).
 We report Spearman $\rho$, ICC(2,1), and quadratic-weighted $\kappa$ (QWK)
 (Table~\ref{tab:calib}; full 14-row breakdown in
-Appendix~\ref{app:judge}).
+Table~\ref{tab:calibfull}, Appendix~\ref{app:judge}).
 
 \begin{table}[!t]
     \centering
@@ -575,7 +575,7 @@ labeling targets.
     \includegraphics[width=0.92\textwidth]{figures/failure_localization.pdf}
     \caption{Failure localization.
     (A) Effectiveness sub-score distributions over all $3{,}287$ protocols, normalized
-    to $[0,1]$ : $S_{label}$ has the owest mean ($0.32$) while $S_{method}$ is high ($0.73$). (B) Per-model $S_{label}$
+    to $[0,1]$ : $S_{label}$ has the lowest mean ($0.32$) while $S_{method}$ is high ($0.73$). (B) Per-model $S_{label}$
     distributions (sorted worst-first) (C) Per-model $S_{time}$ distributions.}
     \label{fig:violin_limits}
 \end{figure*}
@@ -615,7 +615,7 @@ guidance, and qualitative method and compatibility records. It gives candidate
 ranges rather than exact protocol answers, and withholds gold protocols, expert
 scores, exact scoring thresholds, and numeric RI/time answer keys. Self-check
 applies one fixed feasibility checklist and revises once. All outputs are
-scored by the same calibrated CCE pipeline.
+scored by the same calibrated CCE pipeline (Table~\ref{tab:inference_time}).
 
 KB-RAG improves label suitability for all three models, and self-check further
 improves or preserves this gain. With KB-RAG plus self-check, $S_{label}$
@@ -801,14 +801,14 @@ Effectiveness sub-scores are normalized to $[0,1]$
 Dimension & Sub-metric & Value & Rationale (released scorer output) \\
 \midrule
 \multirow{2}{*}{Completeness}
- & Step modules $c_{step}$ & 2/2 & All iDISCO+ modules present: dehydration, bleaching, permeabilization/blocking, dual immunostaining, re-dehydration, DCM delipidation, DBE RI matching, mounting. \\
- & Parameters $c_{param}$ & 3/3 & Concentration, temperature, and time are given for essentially every step. \\
+ & Step modules $c\_step$ & 2/2 & All iDISCO+ modules present: dehydration, bleaching, permeabilization/blocking, dual immunostaining, re-dehydration, DCM delipidation, DBE RI matching, mounting. \\
+ & Parameters $c\_param$ & 3/3 & Concentration, temperature, and time are given for essentially every step. \\
 \midrule
 \multirow{4}{*}{Correctness}
- & Order $co_{order}$ & 3/3 & Canonical iDISCO+ sequence: dehydrate/bleach $\rightarrow$ rehydrate/permeabilize $\rightarrow$ stain $\rightarrow$ re-dehydrate $\rightarrow$ delipidate $\rightarrow$ RI match. \\
- & Method $co_{method}$ & 2/2 & MeOH/DCM/DBE reagents mutually consistent; no aqueous-RIMS contamination. \\
- & Parameters $co_{param}$ & 2/2 & 4--6\,d primary / 3--5\,d secondary staining and 12--24\,h DBE are feasible at whole-embryo scale. \\
- & Chem/safety $co_{chem}$ & 1/1 & Standard reagents; a solvent-ventilation caveat is noted but not penalized. \\
+ & Order $co\_order$ & 3/3 & Canonical iDISCO+ sequence: dehydrate/bleach $\rightarrow$ rehydrate/permeabilize $\rightarrow$ stain $\rightarrow$ re-dehydrate $\rightarrow$ delipidate $\rightarrow$ RI match. \\
+ & Method $co\_method$ & 2/2 & MeOH/DCM/DBE reagents mutually consistent; no aqueous-RIMS contamination. \\
+ & Parameters $co\_param$ & 2/2 & 4--6\,d primary / 3--5\,d secondary staining and 12--24\,h DBE are feasible at whole-embryo scale. \\
+ & Chem/safety $co\_chem$ & 1/1 & Standard reagents; a solvent-ventilation caveat is noted but not penalized. \\
 \midrule
 \multirow{4}{*}{Effectiveness}
  & Method fit $S_{method}$ & 0.96 & iDISCO+ strongly fits a whole embryo: signed need-weighted fit $F{=}0.91$, rescaled $(F{+}1)/2{=}0.96$. \\
