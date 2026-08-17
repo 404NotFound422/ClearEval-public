@@ -1,0 +1,39 @@
+diagnostic_audit_v1
+
+You are an expert reviewer of tissue-clearing protocol descriptions (optical clearing, immunostaining, 3D imaging). Your task is to audit ONE protocol text against ONE original experimental question and produce a single diagnostic finding.
+
+# Inputs
+[QUESTION]
+{{question_text}}
+
+[PROTOCOL]
+{{protocol_text}}
+
+# Task
+Assess whether PROTOCOL satisfies QUESTION as an evidence-backed, executable tissue-clearing protocol. Ground every judgment in (a) the protocol text itself, (b) standard domain knowledge of tissue clearing, and (c) the stated knowledge-base constraints when they are provided (e.g. clearing-time windows per method+tier, method-fluorophore compatibility, method reference refractive index, tissue native RI, marker-fluorophore compatibility). Cite supporting knowledge-base identifiers or rule identifiers explicitly when you rely on them.
+
+# Evidence-groundedness and abstention
+- If the protocol text does not give you enough information to decide whether a parameter or step is valid (e.g. a parameter value is absent, the method family is not stated, or a required reference value is not given in the prompt and is not common domain knowledge), you MUST rate evidence_status = INSUFFICIENT and minimal_next_action = ABSTAIN (or EVIDENCE_REQUIRED) rather than guessing.
+- If the finding concerns something outside the scope of a defensible protocol audit (e.g. it is not a piece of scientific/protocol content), use evidence_status = OUT_OF_SCOPE.
+- Only when you can cite concrete evidence (text span, rule, or knowledge-base id) do you rate evidence_status = SUFFICIENT.
+
+# Output format
+Return a SINGLE strict JSON object with EXACTLY these keys and no others. Do not add any text outside the JSON object, and do not include any chain of thought, preamble, or trailing commentary.
+
+{
+  "evidence_status": "SUFFICIENT" | "INSUFFICIENT" | "OUT_OF_SCOPE",
+  "relation": "EQUIVALENT" | "DEGRADED" | "HARD_FAIL",
+  "affected_component": "COMPLETENESS" | "CORRECTNESS" | "S_METHOD" | "S_LABEL" | "S_TRANS" | "S_TIME" | "MULTIPLE",
+  "violation_type": "<short machine-readable type, e.g. clearing_time_out_of_range>",
+  "location": "<precise span/step/field reference in the protocol text>",
+  "reason_code": "<compact rule or defect identifier>",
+  "supporting_kb_or_rule_ids": ["<kb:file:key or rule id(s), empty if none>"],
+  "minimal_next_action": "NO_CHANGE" | "LOCAL_EDIT" | "EVIDENCE_REQUIRED" | "BACKTRACK" | "ABSTAIN",
+  "rationale": "<concise, evidence-grounded sentence(s); no chain of thought>"
+}
+
+# Field semantics
+- relation: net assessment of this protocol relative to what the question requires. EQUIVALENT = no material defect; DEGRADED = a localized defect that still leaves a conditionally usable protocol; HARD_FAIL = a scope/feasibility violation (e.g. method unsupported for the sample tier, out-of-range clearing time) that makes the protocol not executable as written.
+- affected_component: the evaluator score component most affected; MULTIPLE if the finding spans more than one component.
+- minimal_next_action: the smallest defensible next step. NO_CHANGE when the protocol is fine; LOCAL_EDIT for a localized correction of otherwise-sound content; EVIDENCE_REQUIRED when a value needs authoritative evidence; BACKTRACK when the approach/design itself must be reconsidered; ABSTAIN when the evidence does not allow an assessment.
+- rationale: 1-3 sentences, citing specific text or knowledge-base ids; never include any step-by-step reasoning.
