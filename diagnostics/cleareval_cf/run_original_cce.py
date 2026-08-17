@@ -375,7 +375,7 @@ class RuleKBs:
     # -- tissue RI (faithful copy of production _resolve_tissue_ri) -----------
     def _resolve_tissue_ri(self, tissue_inferred: str) -> float:
         """Map Chinese tissue_inferred label -> tissue native RI (production
-        OEQ_run_grading_new.py:101-167; branch order and fallback mirrored
+        OEQ_run_grading_new.py:88-170; branch order and fallback mirrored
         VERBATIM -- final-review finding #4)."""
         if not tissue_inferred:
             return self._default_tissue_ri
