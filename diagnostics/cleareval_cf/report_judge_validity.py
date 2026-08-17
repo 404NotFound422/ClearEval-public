@@ -71,8 +71,10 @@ DEFAULT_REVIEW_PACKAGE = os.path.join(MANIFESTS_DIR, "review_package.jsonl")
 
 PROMISED_CLAIM = (
     "ClearEval does not require a unique reference protocol text, but its "
-    "evaluator is validated against expert-reviewed local counterfactual "
-    "relations, evidence-backed constraints, and blind test cases."
+    "evaluator is designed to be validated against expert-reviewed local "
+    "counterfactual relations, evidence-backed constraints, and blind test "
+    "cases. Validation results are pending expert review of the counterfactual "
+    "review package and a role-blind judge run."
 )
 
 
@@ -84,16 +86,29 @@ PROMISED_CLAIM = (
 def verdict(metrics: Dict[str, Any], blind_results: Optional[Dict[str, Any]] = None) -> str:
     """GO_NO_GO verdict per the documented rule.
 
-    ``blind_results``: the blind-split metrics/audit summary (None when the
-    blind split has not been run).  In the current suite state it is always
-    None -> the verdict is LIMITED and GO_NO_GO states why.
+    ``blind_results``: the blind-split evaluation.  It may be:
+      - None                        -> the dot has not run; verdict is LIMITED.
+      - a dict with a ``metrics`` key (a blind-run summary / compute_all
+        output) -> the blind METRICS are evaluated (finding #8), not the
+        development metrics.
+      - a plain metrics dict (from compute_all on the blind pairs) -> evaluated
+        directly.
+    In the current suite state it is always None -> the verdict is LIMITED and
+    GO_NO_GO states why.
     """
     if blind_results is None:
         return "LIMITED"
-    m91 = metrics.get("9.1_directional_accuracy", {})
-    m92 = metrics.get("9.2_metamorphic_invariance", {})
-    m94 = metrics.get("9.4_fatal_false_pass", {})
-    m93 = metrics.get("9.3_component_localization", {})
+    if isinstance(blind_results, dict) and isinstance(blind_results.get("metrics"), dict):
+        blind_metrics = blind_results["metrics"]
+    elif isinstance(blind_results, dict) and "9.1_directional_accuracy" in blind_results:
+        blind_metrics = blind_results
+    else:
+        # A blind-run summary with no metrics: not enough evidence -> LIMITED
+        return "LIMITED"
+    m91 = blind_metrics.get("9.1_directional_accuracy", {})
+    m92 = blind_metrics.get("9.2_metamorphic_invariance", {})
+    m94 = blind_metrics.get("9.4_fatal_false_pass", {})
+    m93 = blind_metrics.get("9.3_component_localization", {})
     # SUPPORTED only when: correct directional behavior + acceptable invariance
     # + low fatal false-PASS + useful localization, all on blind evidence.
     directional_ok = m91.get("accuracy_assessable") is not None and m91["accuracy_assessable"] >= 0.8
@@ -279,8 +294,9 @@ def render_judge_validity_md(metrics: Dict[str, Any],
     m94 = metrics["9.4_fatal_false_pass"]
     lines.append("## 9.4 Fatal false-PASS (expert HARD_FAIL accepted)")
     lines.append("")
+    no_gold_marker = "" if m94["n_hard_fail_gold"] else " (metric pending: no HARD_FAIL gold)"
     lines.append(f"- HARD_FAIL gold pairs : {m94['n_hard_fail_gold']}  detected: {m94['n_detected']}  "
-                 f"false-pass: {m94['n_false_pass']}  pending: {m94['n_pending']}")
+                 f"false-pass: {m94['n_false_pass']}  pending: {m94['n_pending']}{no_gold_marker}")
     lines.append(f"- fatal false-pass rate: {fmt_opt(m94['fatal_false_pass_rate'])}")
     lines.append("")
 
@@ -321,23 +337,29 @@ def render_judge_validity_md(metrics: Dict[str, Any],
     lines.append(f"- unscored cce rows   : {len(bad_cce)}")
     for r in bad_cce[:500]:
         lines.append(f"  - {r.get('pair_id')}/{r.get('side')}: {r.get('status')}")
+    lines.append(f"- missing audit pairs : {len(m97.get('missing_audit_pair_ids', []))} "
+                 f"{m97.get('missing_audit_pair_ids', [])}")
+    lines.append(f"- missing cce pairs   : {len(m97.get('missing_cce_pair_ids', []))} "
+                 f"{m97.get('missing_cce_pair_ids', [])}")
     lines.append(f"- missing gold pairs  : {len(m97['missing_gold_pair_ids'])}")
+    lines.append(f"- non-adjudicated gold rows: {len(m97.get('non_adjudicated_gold_pair_ids', []))}")
     lines.append("")
 
-    lines.append("## Baselines comparison (experimental design; values pending)")
+    lines.append("## Baselines comparison (A/B/C -- generated from data)")
     lines.append("")
-    lines.append("| baseline | scorers used | structured fields | localization/hard-fail tests | expected added value of (C) vs (A)/(B) |")
-    lines.append("|---|---|---|---|---|")
-    rows = [
-        ("A", "CCE scalar/component only", "none", "none",
-         "reference floor: does CCE alone separate defects from EQUIVALENT changes? Weakest for localization and hard-fail recall."),
-        ("B", "CCE + free-text teacher reasoning", "free-text reasoning string", "manual read of reasoning",
-         "adds qualitative signal; not machine-checkable; not reproducible field-by-field."),
-        ("C", "CCE + structured DiagnosticAudit (this overlay)", "evidence_status/relation/affected_component/violation_type/location/reason_code/next_action",
-         "9.3 localization, 9.4 hard-fail detection, 9.6/9.2 reproducibility", "the structured audit's value is argued ONLY via localization accuracy, hard-fail detection, and reproducibility -- never via an unverifiable total score."),
-    ]
-    for a, b, c, d, e in rows:
-        lines.append(f"| {a} | {b} | {c} | {d} | {e} |")
+    bl = metrics.get("baselines_A_B_C", {})
+    bl_rows = bl.get("rows", [])
+    lines.append(f"- pending: {bl.get('pending', True)}  "
+                 f"({bl.get('note', '')})")
+    lines.append("")
+    lines.append("| baseline | scorers | structured fields | 9.1 acc | 9.2 within-tol% | 9.3 loc acc | 9.4 false-pass | observation |")
+    lines.append("|---|---|---|---|---|---|---|---|")
+    for r in bl_rows:
+        lines.append(
+            f"| {r['baseline']} | {r['scorers']} | {r['structured_fields']} | "
+            f"{fmt_opt(r['directional_accuracy'])} | {fmt_opt(r['invariance_within_tolerance_pct'])} | "
+            f"{fmt_opt(r['localization_accuracy'])} | {fmt_opt(r['fatal_false_pass_rate'])} | "
+            f"{r['observation']} |")
     lines.append("")
     return "\n".join(lines)
 
@@ -436,15 +458,33 @@ def write_paper_csvs(metrics: Dict[str, Any], cce_rows: List[Dict[str, Any]],
     os.makedirs(os.path.dirname(table_path), exist_ok=True)
     # ---- table: per-family validity numbers (from metrics) ----
     m91 = metrics["9.1_directional_accuracy"]
+    m92 = metrics["9.2_metamorphic_invariance"]
     m94 = metrics["9.4_fatal_false_pass"]
     m93 = metrics["9.3_component_localization"]
+    m95 = metrics["9.5_judge_expert_agreement"]
+    m96 = metrics["9.6_test_retest_stability"]
+    m97 = metrics["9.7_coverage"]
+    jv = m95.get("judge_vs_expert_A", {})
+    ev = m95.get("expert_A_vs_expert_B", {})
     cols = ["metric", "value", "n", "pending"]
+    # Every metric 9.1-9.7 is a row with an explicit pending marker where no
+    # data exists (final-review finding #13).
     table_rows = [
         ["9.1_directional_accuracy", fmt_opt(m91["accuracy_assessable"]), m91["n_correct"] + m91["n_incorrect"], m91["pending"]],
+        ["9.1_correct_by_score_drop", m91["n_correct_by_score_drop"], m91["n_correct"], m91["pending"]],
+        ["9.1_correct_by_hard_fail", m91["n_correct_by_hard_fail"], m91["n_correct"], m91["pending"]],
         ["9.1_floor_only(not credited)", m91["n_floor_only"], m91["n_incorrect"], False],
         ["9.2_equivalent_within_tolerance", m92_pct(metrics), metrics_sum(metrics, "9.2", "n_pairs_scored_both_sides"), metrics_pending(metrics, "9.2")],
         ["9.3_affected_component_accuracy", fmt_opt(m93["affected_component_accuracy"]), m93["n_gold_pairs"], m93["pending"]],
         ["9.4_fatal_false_pass_rate", fmt_opt(m94["fatal_false_pass_rate"]), m94["n_detected"] + m94["n_false_pass"], m94["pending"]],
+        ["9.5_judgevs_expert_A_raw_agreement", fmt_opt(jv.get("raw_agreement")), jv.get("n"), m95.get("pending", True)],
+        ["9.5_judgevs_expert_A_cohen_kappa", fmt_opt(jv.get("cohen_kappa")), jv.get("n"), m95.get("pending", True)],
+        ["9.5_expert_A_vs_B_raw_agreement", fmt_opt(ev.get("raw_agreement")), ev.get("n"), m95.get("pending", True)],
+        ["9.6_test_retest_relation_consistent", m96["n_groups_relation_consistent"], m96["n_groups"], m96["pending"]],
+        ["9.6_invalid_output_rate", fmt_opt(m96["invalid_output_rate"]), m96["n_calls"], m96["pending"]],
+        ["9.7_all_scored", m97["all_scored"], m97["n_proposals"], m97["pending"]],
+        ["9.7_missing_audit_pairs", len(m97.get("missing_audit_pair_ids", [])), m97["n_proposals"], m97["pending"]],
+        ["9.7_missing_cce_pairs", len(m97.get("missing_cce_pair_ids", [])), m97["n_proposals"], m97["pending"]],
     ]
     with open(table_path, "w", encoding="utf-8", newline="\n") as fh:
         w = csv.writer(fh)
@@ -494,11 +534,23 @@ def m92_pct(metrics: Dict[str, Any]) -> str:
 
 
 def metrics_sum(metrics: Dict[str, Any], key: str, sub: str) -> Any:
-    return metrics.get(key, {}).get(sub)
+    return metrics.get(_METRIC_FULL_KEYS.get(key, key), {}).get(sub)
 
 
 def metrics_pending(metrics: Dict[str, Any], key: str) -> bool:
-    return bool(metrics.get(key, {}).get("pending"))
+    return bool(metrics.get(_METRIC_FULL_KEYS.get(key, key), {}).get("pending"))
+
+
+# short metric label -> full metrics-dict key (report helpers use the 9.x label)
+_METRIC_FULL_KEYS = {
+    "9.1": "9.1_directional_accuracy",
+    "9.2": "9.2_metamorphic_invariance",
+    "9.3": "9.3_component_localization",
+    "9.4": "9.4_fatal_false_pass",
+    "9.5": "9.5_judge_expert_agreement",
+    "9.6": "9.6_test_retest_stability",
+    "9.7": "9.7_coverage",
+}
 
 
 def _comp(cce: Optional[Dict[str, Any]], part: str, field: str) -> Optional[float]:
@@ -543,7 +595,7 @@ def write_methods_and_limitations(path_methods: str, path_limits: str) -> None:
         "against the frozen scoring rubric and knowledge bases without a single 'gold' protocol. "
         "To validate that the evaluator actually tracks protocol quality (rather than wording), we "
         "build a local counterfactual overlay: for each selected (question x model) response we "
-        "construct one semantics-preserving variant and two single-defect variants per family "
+        "construct one semantics-preserving variant and two single-defect variants per seed "
         "(72 pairs total, 24 seeds), all generated deterministically from span-level edits grounded "
         "in the frozen knowledge bases. Each pair is scored under a role-blind protocol: the "
         "original and the mutated text are scored in fully independent judge calls that see only "
@@ -585,7 +637,10 @@ def write_methods_and_limitations(path_methods: str, path_limits: str) -> None:
           "are scored by a rule-based re-derivation whose deterministic extraction of "
           "`method_name` / `marker_dict` / clearing time differs from the teacher's extraction, so "
           "absolute effectiveness values for mutated texts are not production-identical (directional "
-          "behaviour is the target). No new ClearEval total score is introduced anywhere.",
+          "behaviour is the target). The seeded ORIGINAL side on the audit path uses the frozen "
+          "production CCE record, but any local re-derivation of an original's effectiveness can "
+          "likewise diverge from the frozen totals; only the frozen seed CCE is bit-exact production. "
+          "No new ClearEval total score is introduced anywhere.",
         "",
         "Scientific claim scope:",
         "",

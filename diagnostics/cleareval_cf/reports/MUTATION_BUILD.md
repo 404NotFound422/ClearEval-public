@@ -3,7 +3,7 @@
 - proposals out : `mutation_proposals.jsonl`
 - gold stub out : `reviewed_gold.jsonl` (empty file = no gold approved yet)
 - proposal count: 72 (equivalent 24, degrading 48)
-- sha256 mutation_proposals.jsonl: e5718e862dfff97adf66411db9c8a8a35b73830b524d122e142954df4a99d950
+- sha256 mutation_proposals.jsonl: 4007ec208f23b2a4a6dfe3e44b08244ebaa5eb94b28c4886a29cf94705b42731
 
 All operators: `mutation_operator_version = v1.0`, span-level edits on the
 seed `response_text`.  Every record is PENDING_REVIEW with empty reviewer_ids
@@ -13,6 +13,8 @@ No ClearEval gold / expert labels / mutation labels / scorer thresholds are used
 ## Family -> seed assignment (seeded RNG, documented)
 
 Algorithm: `FAMILIES` = the 6 families in canonical order; `rng = random.Random(20260817)`; `order = list(range(24)); rng.shuffle(order)`; the seed at shuffled index `i` receives `FAMILIES[(2*i) % 6]` and `FAMILIES[(2*i+1) % 6]`.  This is the only RNG consumption of the builder.  Each family is used exactly 8 times; every seed gets exactly 2 distinct families.  The EQUIVALENT variant of a seed carries the seed's first assigned family as its control axis (documented convention; the relation field is the semantic marker, not the placeholder family).
+
+**EQUIVALENT control-axis coverage convention:** `FAMILIES[(2*i) % 6]` cycles i over 24 seeds, so only 3 of the 6 families ever appear as the first assigned family (indices 0/2/4 -> REQUIRED_INFORMATION_OMISSION, TARGET_MARKER_MISMATCH, SAMPLE_METHOD_OR_RI_SCOPE_CONFLICT).  The `mutation_family` value on an EQUIVALENT record is therefore a *placeholder control axis* only -- it is documented here and is never treated as a semantic claim about the mutation (the relation field is the semantic marker).
 
 | seed_id | family 1 | family 2 |
 |---|---|---|

@@ -77,7 +77,8 @@ diagnostics/cleareval_cf/
 │    written only when it is invoked directly with --audit-runs/--cce-scores)
 ├── reports/                 DATA_SUMMARY / MUTATION_BUILD / MUTATION_VALIDATION /
 │                            AGGREGATION_VERIFICATION / JUDGE_VALIDITY / BLIND_RESULTS /
-│                            GO_NO_GO / PAPER_* / VALIDITY_METRICS.json
+│                            GO_NO_GO / PAPER_*  (VALIDITY_METRICS.json is written only
+│                            when score_counterfactual_relations.py is invoked as a CLI)
 └── .sdd/                    task-1/2/3 reports
 tests/diagnostics/cleareval_cf/   test_schemas / test_seed_selection /
                                   test_mutations / test_runners_and_scoring
@@ -149,13 +150,17 @@ The paper-adjacent artefacts (PAPER_METHODS_TEXT.md / PAPER_LIMITATIONS_TEXT.md
 / PAPER_TABLE / PAPER_FIGURE) make exactly this claim and no more:
 
 > "ClearEval does not require a unique reference protocol text, but its
-> evaluator is validated against expert-reviewed local counterfactual
-> relations, evidence-backed constraints, and blind test cases."
+> evaluator is designed to be validated against expert-reviewed local
+> counterfactual relations, evidence-backed constraints, and blind test
+> cases. Validation results are pending expert review of the counterfactual
+> review package and a role-blind judge run."
 
 No laboratory validation is claimed; no new ClearEval total score is
 introduced; the limitations section records the pending expert review, the
 frozen-data eligibility-pool skew (documented in the Task 1 report), and the
-deterministic-effectiveness re-derivation divergence.
+deterministic-effectiveness re-derivation divergence (including that the
+seeded originals' effectiveness is re-derived and can diverge from the frozen
+totals).
 
 ## Current state
 
@@ -166,5 +171,6 @@ the blind run; no prompt tuning after blind results.
 ## Tests
 
 `python -m unittest discover -s tests -t .` runs the full Task 1+2+3 suite
-offline (51 + 21 + Task 3 tests). pytest is installed in the conda env but its
+offline (119 tests: Task 1 seed/selection 55, Task 2 mutations 23, Task 3
+runners/metrics/reports 41). pytest is installed in the conda env but its
 environment is broken (opentelemetry import error), so unittest is used.

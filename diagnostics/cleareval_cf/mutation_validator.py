@@ -13,7 +13,8 @@ requirements and writes ``reports/MUTATION_VALIDATION.md``:
    matches the seed record.
 4. **Span integrity**: re-applying the declared original/mutated spans to the
    seed ``response_text`` reproduces the mutated text exactly (offsets +
-   slice self-consistency), and a masked comparison proves there are **no
+   slice self-consistency), and the *persisted* mutated full text is diffed
+   against the seed text (masked comparison) to prove there are **no
    undeclared differences** (the mutation changes ONLY declared fields).
    EQUIVALENT pairs additionally require ``changed_field_paths`` empty and
    the ``surface_edits`` to reproduce the same mutated text.
@@ -23,8 +24,10 @@ requirements and writes ``reports/MUTATION_VALIDATION.md``:
    tissue_ri by tissue key).  Evidence-backed families (METHOD_FLUOROPHORE,
    SAMPLE_METHOD_OR_RI_SCOPE, CLEARING_TIME) must carry at least one evidence
    id.
-6. **Fallbacks used**: mirrored from the build report (MUTATION_BUILD.md) so
-   the final validation doc lists every documented fallback.
+6. **Fallbacks used**: read from ``operator_fallback_used`` /
+   ``operator_fallback_note`` persisted on each proposal record by the
+   builder (no markdown parsing), so the validation doc lists every
+   documented fallback from the manifest itself.
 
 Stdlib-only, offline, deterministic.
 """
@@ -121,12 +124,29 @@ def _masked(text: str, spans: List[Tuple[int, int]]) -> str:
 def detect_undeclared_edits(seed_text: str, proposal: MutationProposal) -> bool:
     """True if seed->mutated has any difference NOT covered by declared spans.
 
-    Uses a masked comparison: mask out every declared original span (and the
-    corresponding mutated span), then require the residuals to be identical.
+    When the proposal persists its ``mutated_text`` (every record the builder
+    writes does), the check is a REAL diff: mask out every declared original
+    span and the corresponding mutated span in the *persisted* mutated text,
+    then require the residuals to be identical -- so a forged/tampered span or
+    any undeclared change is detected against the actual text (final-review
+    finding #11).  For legacy manifests without ``mutated_text`` the old
+    span-reconstruction masked comparison is kept as a weaker check.
     """
     mutated, _ = reconstruct_mutated(seed_text, proposal)
     if len(proposal.original_text_spans) != len(proposal.mutated_text_spans):
         return True
+    persisted = getattr(proposal, "mutated_text", "") or ""
+    if persisted:
+        # reconstruction from declared spans must equal the persisted text
+        if mutated != persisted:
+            return True
+        try:
+            masked_seed = _masked(seed_text, [(s.start, s.end) for s in proposal.original_text_spans])
+            masked_mut = _masked(persisted, [(m.start, m.end) for m in proposal.mutated_text_spans])
+        except ValidationError:
+            return True
+        return masked_seed != masked_mut
+    # legacy span-reconstruction check only (no persisted mutated text)
     try:
         masked_orig = _masked(seed_text, [(s.start, s.end) for s in proposal.original_text_spans])
         masked_mut = _masked(mutated, [(m.start, m.end) for m in proposal.mutated_text_spans])
@@ -385,9 +405,6 @@ def validate_manifest(
         if got != 8:
             res.problems.append(f"family balance: {fam.value} has {got} degrading pairs (expected 8)")
 
-    relation_problems = {}
-    if res.relation_counts.get("EQUIVALENT", 0) != 24:
-        relation_problems["24 EQUIVALENT"] = res.relation_counts.get("EQUIVALENT", 0)
     degrading_total = res.relation_counts.get("DEGRADED", 0) + res.relation_counts.get("HARD_FAIL", 0)
     if degrading_total != 48:
         res.problems.append(f"degrading total {degrading_total} != 48")
@@ -405,8 +422,18 @@ def validate_manifest(
     if unknown:
         res.problems.append(f"proposals reference seeds outside the split: {sorted(unknown)}")
 
-    # fallbacks mirror from the build report
-    fallbacks = _read_fallbacks(build_report_path)
+    # fallbacks: persisted on the proposal records by the builder (finding #22);
+    # read straight from the manifest instead of parsing markdown prose.
+    fallbacks = [
+        {
+            "seed_id": p.seed_id,
+            "family": p.mutation_family.value,
+            "operator": p.mutation_operator_version,
+            "note": p.operator_fallback_note,
+        }
+        for p in proposals
+        if p.operator_fallback_used
+    ]
 
     valid = not res.problems
     _write_validation_report(
@@ -433,33 +460,6 @@ def validate_manifest(
         "fallbacks": fallbacks,
         "report_path": validation_report_path,
     }
-
-
-def _read_fallbacks(build_report_path: str) -> List[Dict[str, str]]:
-    """Parse the fallback table from MUTATION_BUILD.md (best effort)."""
-    fallbacks: List[Dict[str, str]] = []
-    if not os.path.isfile(build_report_path):
-        return fallbacks
-    with open(build_report_path, "r", encoding="utf-8") as fh:
-        lines = fh.read().splitlines()
-    in_table = False
-    for line in lines:
-        if line.startswith("## Fallbacks used"):
-            in_table = True
-            continue
-        if in_table and line.startswith("## "):
-            break
-        if in_table and line.startswith("|"):
-            cells = [c.strip() for c in line.strip("| ").split("|")]
-            if cells and cells[0] == "seed_id":
-                continue
-            if cells and re.fullmatch(r"-{3,}", cells[0]):
-                continue  # markdown separator row
-            if len(cells) == 4 and re.fullmatch(r"SEED-\d{3}", cells[0]):
-                fallbacks.append(
-                    {"seed_id": cells[0], "family": cells[1], "operator": cells[2], "note": cells[3]}
-                )
-    return fallbacks
 
 
 def _write_validation_report(
@@ -509,7 +509,7 @@ def _write_validation_report(
     lines.append(f"- span-integrity failures : {res.n_span_fail}")
     lines.append(f"- evidence failures       : {res.n_evidence_fail}")
     lines.append("")
-    lines.append("## Fallbacks used (mirrored from MUTATION_BUILD.md)")
+    lines.append("## Fallbacks used (persisted on proposal records)")
     lines.append("")
     if not fallbacks:
         lines.append("None -- all degrading pairs used their primary span operator.")

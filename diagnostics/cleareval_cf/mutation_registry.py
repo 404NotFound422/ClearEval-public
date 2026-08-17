@@ -53,9 +53,8 @@ try:  # run as `python -m diagnostics.cleareval_cf.mutation_registry`
         SeedCandidate,
         ValidationError,
         load_mutation_proposals,
-        load_seed_candidates,
     )
-    from .seed_selector import load_split_manifest
+    from .seed_selector import load_seed_candidates_role, load_split_manifest
 except ImportError:  # run as `python diagnostics/cleareval_cf/mutation_registry.py`
     import sys
 
@@ -68,9 +67,8 @@ except ImportError:  # run as `python diagnostics/cleareval_cf/mutation_registry
         SeedCandidate,
         ValidationError,
         load_mutation_proposals,
-        load_seed_candidates,
     )
-    from seed_selector import load_split_manifest  # type: ignore
+    from seed_selector import load_seed_candidates_role, load_split_manifest  # type: ignore
 
 PKG_DIR = os.path.dirname(os.path.abspath(__file__))
 REPO_ROOT = os.path.dirname(os.path.dirname(PKG_DIR))
@@ -116,7 +114,10 @@ class MutationRegistry:
         self.split_path = split_path
 
         self.split = self._load_split()
-        self._all_seeds = load_seed_candidates(seed_path)
+        # Role-routed seed loading: development-role code must use the dev-only
+        # manifest (seed_candidates_development.jsonl); the full manifest is
+        # blind-only opt-in (final-review finding #15).
+        self._all_seeds = load_seed_candidates_role(seed_path, self.role, self.split_path)
         # Split containment: every loaded seed must belong to exactly one
         # split side (registered seed ids vs manifest contents).
         dev = set(self.split.development_seed_ids)
@@ -178,6 +179,17 @@ class MutationRegistry:
         if self._proposals is not None:
             return self._proposals
         proposals = load_mutation_proposals(self.proposals_path)
+        # development-role guard FIRST: a manifest that references any
+        # blind-listed seed id is refused as BlindSplitAccessError (finding #15)
+        # -- never silently downgraded to the "unknown seed" containment error.
+        if self.role == "development":
+            blind = set(self.split.blind_seed_ids)
+            bad = sorted({p.seed_id for p in proposals} & blind)
+            if bad:
+                raise BlindSplitAccessError(
+                    f"development-role load of mutation proposals refused: manifest "
+                    f"references blind-listed seed id(s) {bad}; use the dev-scoped "
+                    f"proposals manifest instead")
         for prop in proposals:
             self._enforce_gold_guard(prop)
             # Split containment of the pair's seed.
@@ -286,12 +298,16 @@ class MutationRegistry:
             surface_edits=list(target.surface_edits),
             expected_relation=target.expected_relation,
             expected_affected_components=list(target.expected_affected_components),
-            expected_location=target.expected_location + f" | gold_note: {adjudication_evidence.strip()}",
+            expected_location=target.expected_location,
             expected_severity=target.expected_severity,
             supporting_rule_or_evidence_ids=list(target.supporting_rule_or_evidence_ids),
             review_status=ReviewStatus.APPROVED_GOLD,
             reviewer_ids=[r for r in reviewer_ids],
             adjudication_status=AdjudicationStatus.ADJUDICATED,
+            mutated_text=target.mutated_text,
+            gold_note=adjudication_evidence.strip(),
+            operator_fallback_used=target.operator_fallback_used,
+            operator_fallback_note=target.operator_fallback_note,
         )
         promoted.validate()  # schema-level Gold guard runs again here
         idx = proposals.index(target)

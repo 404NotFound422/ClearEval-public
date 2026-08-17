@@ -111,11 +111,11 @@
 - span-integrity failures : 0
 - evidence failures       : 0
 
-## Fallbacks used (mirrored from MUTATION_BUILD.md)
+## Fallbacks used (persisted on proposal records)
 
 | seed_id | family | operator | note |
 |---|---|---|---|
-| SEED-018 | CLEARING_TIME_OUT_OF_RANGE | clearing_time_out_of_range_v1.0 | no (method, tier) row in time_kb.json; used documented '45 days' gate |
+| SEED-018 | CLEARING_TIME_OUT_OF_RANGE | v1.0 | no (method, tier) row in time_kb.json; used documented '45 days' gate |
 
 ## Violations
 

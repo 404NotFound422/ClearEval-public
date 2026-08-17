@@ -57,7 +57,6 @@ def online_audit_call(
     teacher_name: str,
     config_path: Optional[str],
     repo_root: str,
-    run_meta: Dict[str, Any],
 ) -> Dict[str, Any]:
     """One online role-blind DiagnosticAudit call."""
     from .run_diagnostic_audit import build_audit_prompt, sha256_text  # same package

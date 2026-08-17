@@ -102,14 +102,15 @@ except ImportError:  # script context
 PKG_DIR = os.path.dirname(os.path.abspath(__file__))
 REPO_ROOT = os.path.dirname(os.path.dirname(PKG_DIR))
 
-PROMT_DIR = os.path.join(PKG_DIR, "prompts")
 AUDIT_PROMPT_REL = os.path.join("prompts", "diagnostic_audit_v1.txt")
 AUDIT_PROMPT_PATH = os.path.join(PKG_DIR, AUDIT_PROMPT_REL)
 PROMPT_VERSION = "diagnostic_audit_v1"  # mirrors the version header line in the file
 
 DEFAULT_SPLIT_PATH = os.path.join(PKG_DIR, "manifests", "split_manifest.json")
 DEFAULT_SEED_PATH = os.path.join(PKG_DIR, "manifests", "seed_candidates.jsonl")
+DEFAULT_DEV_SEED_PATH = os.path.join(PKG_DIR, "manifests", "seed_candidates_development.jsonl")
 DEFAULT_PROPOSALS_PATH = os.path.join(PKG_DIR, "manifests", "mutation_proposals.jsonl")
+DEFAULT_DEV_PROPOSALS_PATH = os.path.join(PKG_DIR, "manifests", "mutation_proposals_development.jsonl")
 DEFAULT_AUDIT_RUNS = os.path.join(PKG_DIR, "manifests", "audit_runs.jsonl")
 DEFAULT_CCE_SCORES = os.path.join(PKG_DIR, "manifests", "cce_scores.jsonl")
 
@@ -239,7 +240,6 @@ class OnlineAuditJudge(AuditJudge):
             teacher_name=self.teacher_name,
             config_path=self.config_path,
             repo_root=self.repo_root,
-            run_meta=run_meta,
         )
 
 
@@ -252,9 +252,18 @@ def freeze_prompt(split_path: str, prompt_sha: Optional[str] = None) -> Dict[str
     """Write the current prompt sha256 into the split manifest (single freeze).
 
     The frozen sha256 documents the exact prompt revision used for the blind run
-    so no prompt tuning happens after blind results are produced.
+    so no prompt tuning happens after blind results are produced.  Re-freezing
+    is REFUSED once a freeze exists (``FreezeError``) -- the freeze is one-shot
+    (final-review finding #3), so a stale frozen hash cannot be silently
+    overwritten after prompt tuning.
     """
     split = load_split_manifest(split_path)
+    if split.frozen_prompt_sha256 is not None:
+        raise FreezeError(
+            "the prompt is already frozen "
+            f"(split_manifest.frozen_prompt_sha256={split.frozen_prompt_sha256[:12]}...); "
+            "unfreeze-revise-RE-freeze is not allowed -- the freeze records the single "
+            "revision used for the blind run")
     if prompt_sha is None:
         prompt_sha = current_prompt_sha256()
     split.frozen_prompt_sha256 = prompt_sha
@@ -320,13 +329,32 @@ def run_audit(
     if role not in ("development", "blind"):
         raise ValueError("role must be 'development' or 'blind'")
 
+    # Role-routed seed default: development-role runs open the dev-only seed
+    # manifest (no blind content) unless a path is given explicitly; the full
+    # manifest stays blind-only opt-in (final-review finding #15).  Proposals
+    # are NEVER re-routed here -- a caller that points the dev role at the full
+    # 72-record manifest must get a BlindSplitAccessError, not a silent swap.
+    if role == "development" and seed_path == DEFAULT_SEED_PATH:
+        seed_path = DEFAULT_DEV_SEED_PATH
+
     split = load_split_manifest(split_path)
     registry = MutationRegistry(
         role=role, seed_path=seed_path, proposals_path=proposals_path, split_path=split_path)
-    if role == "blind" and require_frozen_for_blind and not split.frozen_prompt_sha256:
-        raise FreezeError(
-            "blind split requires a frozen prompt revision; run with --freeze-prompt first "
-            "(split_manifest.frozen_prompt_sha256 is null)")
+    if role == "blind" and require_frozen_for_blind:
+        if not split.frozen_prompt_sha256:
+            raise FreezeError(
+                "blind split requires a frozen prompt revision; run with --freeze-prompt first "
+                "(split_manifest.frozen_prompt_sha256 is null)")
+        # a blind run is only valid against the EXACT prompt revision that was
+        # frozen -- a blind run under a drift/tuned prompt is refused (finding #3)
+        prompt_sha = current_prompt_sha256()
+        if split.frozen_prompt_sha256 != prompt_sha:
+            raise FreezeError(
+                "blind split refused: the frozen prompt revision does not match the current "
+                "prompt file (frozen "
+                f"{split.frozen_prompt_sha256[:12]}... vs current {prompt_sha[:12]}...); "
+                "no prompt tuning may happen after the freeze -- restore the prompt or "
+                "unfreeze the split (freeze is one-shot)")
 
     proposals = registry.load_proposals()  # dev role raises BlindSplitAccessError on blind content
     seeds = {s.seed_id: s for s in registry.seeds}
@@ -465,6 +493,15 @@ def main(argv: Optional[List[str]] = None) -> int:
     parser.add_argument("--freeze-prompt", action="store_true",
                         help="document the current prompt revision into the split manifest before running")
     args = parser.parse_args(argv)
+
+    # development-role CLI defaults route to the dev-scoped manifests (no blind
+    # content; final-review finding #15); the full 72-record manifest is
+    # reserved for explicit + blind role.
+    if args.split == "development":
+        if args.seeds == DEFAULT_SEED_PATH:
+            args.seeds = DEFAULT_DEV_SEED_PATH
+        if args.proposals == DEFAULT_PROPOSALS_PATH:
+            args.proposals = DEFAULT_DEV_PROPOSALS_PATH
 
     if args.split == "blind" and args.freeze_prompt:
         freeze_prompt(args.split_manifest)

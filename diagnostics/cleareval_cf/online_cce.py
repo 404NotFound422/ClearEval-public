@@ -180,9 +180,15 @@ def score_online_cce(
             )
             if size_match:
                 sample_size = size_match.group(0)
+            # [CRITICAL FORMAT RULE] block copied VERBATIM from production
+            # OEQ_run_grading_new.py:evaluate_response_with_teacher (final-review finding #5).
             format_enforcement = (
                 "\n[CRITICAL FORMAT RULE]\n"
-                "Your ENTIRE response must be a SINGLE valid JSON object. ...\n\n"
+                "Your ENTIRE response must be a SINGLE valid JSON object. "
+                "Use the EXACT nested structure shown in the final example below. "
+                "Do NOT output separate JSON blocks for each section. "
+                "Do NOT put keys like C_step, Co_order, or marker_dict at the top level. "
+                "They MUST be nested inside 'scores.completeness', 'scores.correctness', and 'extraction'.\n\n"
             )
             prompt = (
                 rubric

@@ -177,7 +177,7 @@ class AuditIndependenceSuite(unittest.TestCase):
 
     @classmethod
     def setUpClass(cls):
-        cls.tmp = tempfile.mkdtemp(dir=MANIFESTS, prefix=".test-task3-")
+        cls.tmp = tempfile.mkdtemp(prefix=".test-task3-")
         cls.dev = _build_dev(cls.tmp)
         cls.props = load_mutation_proposals(cls.dev["proposals_path"])
         cls.seeds = {s.seed_id: s for s in load_seed_candidates(SEED_PATH)}
@@ -271,7 +271,7 @@ class MetadataStabilitySuite(unittest.TestCase):
 
     @classmethod
     def setUpClass(cls):
-        cls.tmp = tempfile.mkdtemp(dir=MANIFESTS, prefix=".test-task3-meta-")
+        cls.tmp = tempfile.mkdtemp(prefix=".test-task3-meta-")
         cls.dev = _build_dev(cls.tmp)
         cls.props = load_mutation_proposals(cls.dev["proposals_path"])
         cls.seeds = {s.seed_id: s for s in load_seed_candidates(SEED_PATH)}
@@ -324,7 +324,7 @@ class CoverageAndAdapterSuite(unittest.TestCase):
 
     @classmethod
     def setUpClass(cls):
-        cls.tmp = tempfile.mkdtemp(dir=MANIFESTS, prefix=".test-task3-cov-")
+        cls.tmp = tempfile.mkdtemp(prefix=".test-task3-cov-")
         cls.dev = _build_dev(cls.tmp)
         cls.props = load_mutation_proposals(cls.dev["proposals_path"])
         cls.seeds = {s.seed_id: s for s in load_seed_candidates(SEED_PATH)}
@@ -491,6 +491,78 @@ class MetricsSuite(unittest.TestCase):
         a = krippendorff_alpha_nominal(["A", "A", "B"], ["A", "A", "B"])
         self.assertEqual(a, 1.0)
         self.assertIsNone(krippendorff_alpha_nominal([], []))
+        self.assertIsNone(krippendorff_alpha_nominal(["A"], ["A"]))
+
+    def test_krippendorff_alpha_known_value(self):
+        """Coincidence-matrix Krippendorff alpha on a hand-computed fixture
+        (final-review finding #6): units (A,A),(A,A),(A,B),(B,A),(B,B) ->
+        n=5, D_obs=2/5, D_exp=(6*4+4*6)/(10*9)=48/90 -> alpha = 1 - 36/48 = 0.25.
+        This is NOT Scott's pi (= 0.23077 for the same data), which proves the
+        correct N(N-1) coincidence expectation is used."""
+        alpha = krippendorff_alpha_nominal(
+            ["A", "A", "A", "B", "B"], ["A", "A", "B", "A", "B"])
+        self.assertAlmostEqual(alpha, 0.25, places=9)
+
+    def test_adjudicated_gate_for_gold_metrics(self):
+        """9.3/9.4/9.5 must only consume ADJUDICATED gold; PENDING gold rows are
+        reported pending, never treated as expert ground truth (finding #7)."""
+        # audit rows: MUT-30 degraded (found equiv -> localization mismatch),
+        # MUT-31 hard-fail (found hard-fail -> detected)
+        pairs = [
+            {"pair_id": "MUT-30", "expected_relation": "DEGRADED",
+             "expected_affected_components": ["CORRECTNESS"],
+             "mutated_finding": _finding("EQUIVALENT", "S_METHOD")},
+            {"pair_id": "MUT-31", "expected_relation": "HARD_FAIL",
+             "expected_affected_components": ["S_TIME"],
+             "mutated_finding": _finding("HARD_FAIL", "S_TIME")},
+        ]
+        # both gold rows are PENDING (not adjudicated)
+        gold_pending = [
+            {"pair_id": "MUT-30", "expected_relation": "DEGRADED",
+             "expected_affected_components": ["CORRECTNESS"], "adjudication_status": "PENDING"},
+            {"pair_id": "MUT-31", "expected_relation": "HARD_FAIL", "hard_fail_status": True,
+             "adjudication_status": "PENDING"},
+        ]
+        cce = []
+        audit_rows = [{"pair_id": p["pair_id"], "side": "mutated", "status": "ok",
+                       "finding": p["mutated_finding"]} for p in pairs]
+        proposals = [{"pair_id": p["pair_id"], "expected_relation": p["expected_relation"],
+                      "expected_affected_components": p["expected_affected_components"]}
+                     for p in pairs]
+        m = compute_all(audit_rows, cce, gold_pending, proposals)
+        # PENDING gold must NOT feed 9.3/9.4/9.5
+        self.assertEqual(m["9.3_component_localization"]["n_gold_pairs"], 0)
+        self.assertEqual(m["9.4_fatal_false_pass"]["n_hard_fail_gold"], 0)
+        self.assertTrue(m["9.4_fatal_false_pass"]["pending"])
+        self.assertEqual(m["9.5_judge_expert_agreement"]["judge_vs_expert_A"]["n"], 0)
+        self.assertEqual(m["n_non_adjudicated_gold_pairs"], 2)
+        self.assertEqual(m["reference_source"], "provisional")
+        # same gold ADJUDICATED -> metrics become assessable
+        gold_adj = [{**g, "adjudication_status": "ADJUDICATED",
+                     "reviewer_id": "r1", "gold_note": "adjudicated"} for g in gold_pending]
+        audit_rows_adj = audit_rows + [
+            {"pair_id": p["pair_id"], "side": "original", "status": "ok", "finding": None}
+            for p in pairs]
+        m2 = compute_all(audit_rows_adj, cce, gold_adj, proposals)
+        self.assertEqual(m2["n_non_adjudicated_gold_pairs"], 0)
+        self.assertEqual(m2["9.4_fatal_false_pass"]["n_hard_fail_gold"], 1)
+        self.assertFalse(m2["9.4_fatal_false_pass"]["pending"])
+
+    def test_coverage_reports_pairs_absent_from_audit_and_cce(self):
+        """9.7 must enumerate pairs ENTIRELY absent from the audit/CCE manifests
+        (finding #9): proposal_pair_ids - observed are listed explicitly."""
+        proposals = [{"pair_id": "MUT-50"}, {"pair_id": "MUT-51"}, {"pair_id": "MUT-52"}]
+        audit = [{"pair_id": "MUT-50", "side": "original", "status": "ok"},
+                 {"pair_id": "MUT-50", "side": "mutated", "status": "ok"},
+                 {"pair_id": "MUT-51", "side": "original", "status": "ok"},
+                 {"pair_id": "MUT-51", "side": "mutated", "status": "judge_pending"}]
+        cce = [{"pair_id": "MUT-50", "side": "original", "status": "ok"}]
+        m = coverage_report(audit, cce, [], proposals)
+        self.assertEqual(m["missing_audit_pair_ids"], ["MUT-52"])
+        self.assertEqual(m["missing_pair_ids"], ["MUT-52"])
+        self.assertEqual(m["missing_cce_pair_ids"], ["MUT-51", "MUT-52"])
+        self.assertFalse(m["all_scored"])
+        self.assertTrue(m["pending"])
 
     def test_empirical_invariance_tolerance_from_distribution(self):
         devs = [0.1, 0.1, 0.05, 0.5, 0.2, 0.15, 0.3, 0.05]
@@ -573,7 +645,7 @@ class BlindFreezeMechanicsSuite(unittest.TestCase):
 
     @classmethod
     def setUpClass(cls):
-        cls.tmp = tempfile.mkdtemp(dir=MANIFESTS, prefix=".test-task3-blind-")
+        cls.tmp = tempfile.mkdtemp(prefix=".test-task3-blind-")
         cls.seeds = {s.seed_id: s for s in load_seed_candidates(SEED_PATH)}
         with open(SPLIT_PATH, "r", encoding="utf-8") as fh:
             cls.split_copy = json.load(fh)
@@ -600,6 +672,35 @@ class BlindFreezeMechanicsSuite(unittest.TestCase):
                 proposals_path=FULL_PROPOSALS, judge=FixtureAuditJudge(fixtures),
                 audit_runs_path=os.path.join(self.tmp, "x.jsonl"),
                 cce_scores_path=os.path.join(self.tmp, "y.jsonl"))
+
+    def test_blind_frozen_but_mismatched_prompt_refuses(self):
+        """A blind run is only valid under the EXACT frozen prompt revision; a
+        drift/tuned prompt is refused even though a freeze exists (finding #3)."""
+        split = dict(self.split_copy)
+        split["frozen_prompt_sha256"] = "f" * 64  # not the current prompt hash
+        mismatch_path = os.path.join(self.tmp, "split_mismatch.json")
+        with open(mismatch_path, "w", encoding="utf-8", newline="\n") as fh:
+            json.dump(split, fh, ensure_ascii=False, sort_keys=True, indent=2)
+            fh.write("\n")
+        fixtures = self._blind_fixtures(os.path.join(self.tmp, "bf_m.jsonl"))
+        with self.assertRaises(FreezeError):
+            run_audit(
+                role="blind", split_path=mismatch_path,
+                proposals_path=FULL_PROPOSALS, judge=FixtureAuditJudge(fixtures),
+                audit_runs_path=os.path.join(self.tmp, "xm.jsonl"),
+                cce_scores_path=os.path.join(self.tmp, "ym.jsonl"))
+
+    def test_refreeze_refused_once_frozen(self):
+        """freeze_prompt is one-shot: re-freezing after a freeze is refused
+        (finding #3) -- a stale frozen hash cannot be silently overwritten."""
+        own = dict(self.split_copy)  # frozen_prompt_sha256 = None
+        own_path = os.path.join(self.tmp, "split_refreeze.json")
+        with open(own_path, "w", encoding="utf-8", newline="\n") as fh:
+            json.dump(own, fh, ensure_ascii=False, sort_keys=True, indent=2)
+            fh.write("\n")
+        freeze_prompt(own_path, prompt_sha=current_prompt_sha256())
+        with self.assertRaises(FreezeError):
+            freeze_prompt(own_path, prompt_sha=current_prompt_sha256())
 
     def test_dev_role_cannot_load_blind_pairs(self):
         with self.assertRaises(BlindSplitAccessError):

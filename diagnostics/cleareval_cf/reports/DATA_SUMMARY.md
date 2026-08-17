@@ -13,8 +13,10 @@ were used to select or generate content.
 | Stratum | Definition | Questions |
 |---|---|---|
 | ERROR_CORRECTION | question text matches `错误|纠正|纠错|排查|失败|修正|不妥|不当|问题所在` | 60 |
-| COMPLEX_GENERATION | not ERROR_CORRECTION and `len(marker_query_targets) >= 4` | 96 |
-| SIMPLE_GENERATION | remaining questions | 97 |
+| COMPLEX_GENERATION | not ERROR_CORRECTION and `len(marker_query_targets) >= 4` | 70 |
+| SIMPLE_GENERATION | remaining questions | 123 |
+
+Counts are derived per question with `derive_scenario_type(question_text, len(marker_query_targets))` over `question_final.json` (253 questions); the table is regenerated, never hardcoded.
 
 ## 2. Input files (sha256)
 

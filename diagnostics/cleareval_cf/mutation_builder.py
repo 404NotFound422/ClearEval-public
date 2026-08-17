@@ -47,8 +47,11 @@ Operators + expected-relation rules (documented; deterministic)
 
 Fallbacks: when an operator cannot find a textual target it emits a
 *documented* template insertion instead of failing silently (see
-MUTATION_BUILD.md).  No fallback is expected to trigger for the frozen seeds;
-the validator lists every one that does.
+MUTATION_BUILD.md).  Fallback metadata is persisted on every proposal record
+(``operator_fallback_used`` / ``operator_fallback_note``) so the validator and
+reports read it from the manifest, not from markdown prose.  No fallback is
+expected to trigger for the frozen seeds; the validator lists every one that
+does.
 
 --------------------------------------------------------------------------------
 Family -> seed assignment (deterministic, seeded RNG, documented)
@@ -91,10 +94,9 @@ try:  # run as `python -m diagnostics.cleareval_cf.mutation_builder`
         SurfaceEdit,
         TextSpan,
         ValidationError,
-        load_seed_candidates,
         write_mutation_proposals,
     )
-    from .seed_selector import load_split_manifest
+    from .seed_selector import DEFAULT_DEV_SEED_PATH, load_seed_candidates_role, load_split_manifest
 except ImportError:  # run as `python diagnostics/cleareval_cf/mutation_builder.py`
     sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
     from schemas import (  # type: ignore
@@ -109,16 +111,20 @@ except ImportError:  # run as `python diagnostics/cleareval_cf/mutation_builder.
         SurfaceEdit,
         TextSpan,
         ValidationError,
-        load_seed_candidates,
         write_mutation_proposals,
     )
-    from seed_selector import load_split_manifest  # type: ignore
+    from seed_selector import (  # type: ignore
+        DEFAULT_DEV_SEED_PATH,
+        load_seed_candidates_role,
+        load_split_manifest,
+    )
 
 PKG_DIR = os.path.dirname(os.path.abspath(__file__))
 REPO_ROOT = os.path.dirname(os.path.dirname(PKG_DIR))
 KB_ROOT = os.path.join(REPO_ROOT, "KnowledgeBase")
 
 DEFAULT_SEED_PATH = os.path.join(PKG_DIR, "manifests", "seed_candidates.jsonl")
+DEFAULT_DEV_SEED_PATH = os.path.join(PKG_DIR, "manifests", "seed_candidates_development.jsonl")
 DEFAULT_SPLIT_PATH = os.path.join(PKG_DIR, "manifests", "split_manifest.json")
 DEFAULT_PROPOSALS_PATH = os.path.join(PKG_DIR, "manifests", "mutation_proposals.jsonl")
 DEFAULT_GOLD_PATH = os.path.join(PKG_DIR, "manifests", "reviewed_gold.jsonl")
@@ -993,6 +999,10 @@ def assemble_proposal(seed: SeedCandidate, res: _OpResult) -> MutationProposal:
         review_status=ReviewStatus.PENDING_REVIEW,
         reviewer_ids=[],
         adjudication_status=AdjudicationStatus.PENDING,
+        mutated_text=mutated,
+        gold_note="",
+        operator_fallback_used=res.fallback_used,
+        operator_fallback_note=res.fallback_note,
     )
     prop.validate()
     return prop
@@ -1085,7 +1095,11 @@ def build(
     os.makedirs(os.path.dirname(gold_path), exist_ok=True)
     os.makedirs(os.path.dirname(build_report_path), exist_ok=True)
 
-    seeds = load_seed_candidates(seed_path)
+    # role-routed seed loading: development role must use the dev-only manifest
+    # (no blind rows); the full manifest is blind-only opt-in (finding #15).
+    if role == "development" and seed_path == DEFAULT_SEED_PATH:
+        seed_path = DEFAULT_DEV_SEED_PATH
+    seeds = load_seed_candidates_role(seed_path, role, split_path)
     split = load_split_manifest(split_path)
     dev = set(split.development_seed_ids)
     blind = set(split.blind_seed_ids)
@@ -1131,10 +1145,15 @@ def build(
                     }
                 )
 
-    # deterministic pair ids after a fixed sort
+    # deterministic pair ids after a fixed sort.  The development-scoped build
+    # prefixes its ids DEV-MUT-* so dev numbering can never collide with the
+    # canonical MUT-* numbering of the blind-scope manifest (final-review
+    # finding #2: the old dev manifest reused MUT-001..048 for different seeds,
+    # so joins on pair_id silently mismatched).
+    prefix = "DEV-" if role == "development" else ""
     pairs.sort(key=lambda pr: _sort_key(pr[0]))
     for idx, (prop, _res) in enumerate(pairs, start=1):
-        prop.pair_id = f"MUT-{idx:03d}"
+        prop.pair_id = f"{prefix}MUT-{idx:03d}"
 
     proposals = [prop for prop, _ in pairs]
     write_mutation_proposals(proposals_path, proposals)
@@ -1147,6 +1166,7 @@ def build(
         "proposals_path": proposals_path,
         "gold_path": gold_path,
         "build_report_path": build_report_path,
+        "role": role,
         "n_proposals": len(proposals),
         "n_equivalent": sum(1 for p in proposals if p.expected_relation is ExpectedRelation.EQUIVALENT),
         "n_degrading": sum(1 for p in proposals if p.expected_relation is not ExpectedRelation.EQUIVALENT),
@@ -1167,7 +1187,14 @@ def _load_questions_list(question_path: str) -> Dict[int, Dict[str, Any]]:
 
 def write_build_report(report_path: str, info: Dict[str, Any]) -> None:
     lines: List[str] = []
-    lines.append("# MUTATION_BUILD -- proposal construction report (Task 2)")
+    if info.get("role") == "development":
+        lines.append("# DEV_BUILD -- development-scoped proposal construction report (Task 2)")
+        lines.append("")
+        lines.append("Development-role build (16 seeds / 48 proposals): pair ids use the "
+                     "`DEV-MUT-<NNN>` namespace so they can never collide with the canonical "
+                     "`MUT-<NNN>` ids of the blind-scope manifest (72 pairs).")
+    else:
+        lines.append("# MUTATION_BUILD -- proposal construction report (Task 2)")
     lines.append("")
     lines.append(f"- proposals out : `{os.path.basename(info['proposals_path'])}`")
     lines.append(f"- gold stub out : `{os.path.basename(info['gold_path'])}` (empty file = no gold approved yet)")
@@ -1191,6 +1218,14 @@ def write_build_report(report_path: str, info: Dict[str, Any]) -> None:
         "axis (documented convention; the relation field is the semantic marker, not the placeholder "
         "family)."
     )
+    lines.append("")
+    lines.append("**EQUIVALENT control-axis coverage convention:** `FAMILIES[(2*i) % 6]` cycles i over "
+                 "24 seeds, so only 3 of the 6 families ever appear as the first assigned family "
+                 "(indices 0/2/4 -> REQUIRED_INFORMATION_OMISSION, TARGET_MARKER_MISMATCH, "
+                 "SAMPLE_METHOD_OR_RI_SCOPE_CONFLICT).  The `mutation_family` value on an EQUIVALENT "
+                 "record is therefore a *placeholder control axis* only -- it is documented here and "
+                 "is never treated as a semantic claim about the mutation (the relation field is the "
+                 "semantic marker).")
     lines.append("")
     assignment = info["assignment"]
     lines.append("| seed_id | family 1 | family 2 |")

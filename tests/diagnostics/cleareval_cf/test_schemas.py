@@ -183,6 +183,48 @@ class MutationProposalTests(unittest.TestCase):
         # empty reviewer_ids is legal there.
         MutationProposal.from_dict(_proposal_dict()).validate()
 
+    def test_review_fields_required_no_silent_defaults(self):
+        """Missing review fields (review_status / reviewer_ids /
+        adjudication_status) must raise, never silently default (finding #20)."""
+        d = _proposal_dict()
+        for field in ("review_status", "reviewer_ids", "adjudication_status"):
+            bad = {k: v for k, v in d.items() if k != field}
+            with self.assertRaises(ValidationError, msg=f"missing {field} must raise"):
+                MutationProposal.from_dict(bad)
+        with self.assertRaises(ValidationError):
+            MutationProposal.from_dict(_proposal_dict(review_status="NONSENSE"))
+        with self.assertRaises(ValidationError):
+            MutationProposal.from_dict(_proposal_dict(adjudication_status="NONSENSE"))
+
+    def test_fallback_and_gold_metadata_fields_round_trip(self):
+        prop = MutationProposal.from_dict(_proposal_dict(
+            mutated_text="full mutated text",
+            gold_note="adjudication evidence",
+            operator_fallback_used=True,
+            operator_fallback_note="no Time: clause found",
+        ))
+        loaded = MutationProposal.from_dict(prop.to_dict())
+        self.assertEqual(loaded.mutated_text, "full mutated text")
+        self.assertEqual(loaded.gold_note, "adjudication evidence")
+        self.assertTrue(loaded.operator_fallback_used)
+        self.assertEqual(loaded.operator_fallback_note, "no Time: clause found")
+        # legacy manifests without the new keys still load (backward compatible)
+        legacy = {k: v for k, v in _proposal_dict().items()
+                  if k not in ("mutated_text", "gold_note", "operator_fallback_used",
+                               "operator_fallback_note")}
+        leg = MutationProposal.from_dict(legacy)
+        self.assertEqual(leg.mutated_text, "")
+        self.assertEqual(leg.gold_note, "")
+        self.assertFalse(leg.operator_fallback_used)
+
+    def test_pair_id_allows_dev_prefix(self):
+        prop = MutationProposal.from_dict(_proposal_dict(pair_id="DEV-MUT-001"))
+        self.assertEqual(prop.pair_id, "DEV-MUT-001")
+        with self.assertRaises(ValidationError):
+            MutationProposal.from_dict(_proposal_dict(pair_id="MUT-1"))
+        with self.assertRaises(ValidationError):
+            MutationProposal.from_dict(_proposal_dict(pair_id="X-MUT-001"))
+
     def test_gold_requires_reviewers(self):
         with self.assertRaises(ValidationError) as ctx:
             MutationProposal.from_dict(_proposal_dict(review_status="APPROVED_GOLD"))

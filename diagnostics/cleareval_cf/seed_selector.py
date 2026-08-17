@@ -20,7 +20,8 @@ Derivation rules (all mechanical, all documented in DATA_SUMMARY.md)
      COMPLEX_GENERATION if not ERROR_CORRECTION and
                        len(marker_query_targets) >= 4
      SIMPLE_GENERATION otherwise
-   (Counts on the frozen corpus: 60 / 96 / 97.)
+   (Counts on the frozen corpus -- recomputed at report time from
+   question_final.json via derive_scenario_type, never hardcoded: 60 / 70 / 123.)
 
 2. clearing_method_family (per question, from question text only):
      first match wins, in this priority order (all ASCII patterns are
@@ -129,6 +130,7 @@ try:  # run as `python -m diagnostics.cleareval_cf.seed_selector`
         ScenarioType,
         SeedCandidate,
         SplitManifest,
+        load_seed_candidates,
         write_seed_candidates,
     )
 except ImportError:  # run as `python diagnostics/cleareval_cf/seed_selector.py`
@@ -138,6 +140,7 @@ except ImportError:  # run as `python diagnostics/cleareval_cf/seed_selector.py`
         ScenarioType,
         SeedCandidate,
         SplitManifest,
+        load_seed_candidates,
         write_seed_candidates,
     )
 
@@ -241,6 +244,8 @@ RESPONSE_DIR_REL = os.path.join("dataset", "Q+AR", "model_response")
 EVAL_DIR_REL = os.path.join("dataset", "Q+AR", "result")
 
 DEFAULT_MANIFEST_PATH = os.path.join(PKG_DIR, "manifests", "split_manifest.json")
+DEFAULT_SEED_PATH = os.path.join(PKG_DIR, "manifests", "seed_candidates.jsonl")
+DEFAULT_DEV_SEED_PATH = os.path.join(PKG_DIR, "manifests", "seed_candidates_development.jsonl")
 
 
 # ---------------------------------------------------------------------------
@@ -333,6 +338,19 @@ def load_questions(data_root: str) -> Dict[int, Dict[str, Any]]:
     with open(os.path.join(data_root, QUESTION_FILE_REL), "r", encoding="utf-8") as fh:
         records = json.load(fh)
     return {r["question_id"]: r for r in records}
+
+
+def _default_stratum_question_counts() -> Dict[str, int]:
+    """Question-level scenario counts derived from question_final.json (253 q)."""
+    counts: "collections.Counter[str]" = collections.Counter()
+    for r in load_questions(REPO_ROOT).values():
+        qtext = r["question"]
+        n_targets = len(r.get("marker_query_targets") or [])
+        counts[derive_scenario_type(qtext, n_targets).value] += 1
+    return {
+        sc.value: counts[sc.value]
+        for sc in STRATUM_ORDER
+    }
 
 
 def build_pool(data_root: str) -> Dict[str, Any]:
@@ -605,6 +623,39 @@ def assert_split_access(
         )
 
 
+def load_seed_candidates_role(
+    path: str,
+    role: str,
+    split_path: Optional[str] = None,
+) -> List[Any]:
+    """Role-routed seed loading: the ONLY sanctioned way seed manifests are
+    opened by role-aware code (registry / builder / audit runner).
+
+    In role="development" the manifest must contain NO blind-listed seed id:
+    loading the full ``seed_candidates.jsonl`` under the development role
+    raises ``BlindSplitAccessError``.  Development code must use the shipped
+    dev-only manifest ``seed_candidates_development.jsonl`` (16 rows, no blind
+    content).  The full manifest stays loadable with role="blind" (opt-in) --
+    the guard is one-directional, matching ``assert_split_access``.
+    """
+    from .schemas import load_seed_candidates  # local import: avoid cycle
+
+    manifest = load_split_manifest(split_path) if role == "development" else None
+    # file-level guard first (basename tokens), then per-record seed ids
+    assert_split_access(path, role, manifest=manifest)
+    seeds = load_seed_candidates(path)
+    if role == "development":
+        blind = set(manifest.blind_seed_ids)  # type: ignore[union-attr]
+        bad = sorted(s.seed_id for s in seeds if s.seed_id in blind)
+        if bad:
+            raise BlindSplitAccessError(
+                f"development-role seed load refused: {path} contains "
+                f"blind-listed seed id(s) {bad}; use the dev-only manifest "
+                f"({DEFAULT_DEV_SEED_PATH}) instead"
+            )
+    return seeds
+
+
 # ---------------------------------------------------------------------------
 # Reports
 # ---------------------------------------------------------------------------
@@ -637,6 +688,7 @@ def write_data_summary(
     seed_candidates_path: str,
     split_manifest_path: str,
     split_seed: int,
+    stratum_question_counts: Optional[Dict[str, int]] = None,
 ) -> None:
     lines: List[str] = []
     lines.append("# ClearEval counterfactual-validity overlay -- DATA_SUMMARY (Task 1)")
@@ -650,16 +702,28 @@ def write_data_summary(
     lines.append("were used to select or generate content.")
     lines.append("")
 
-    # 1. Stratum definitions + question-level counts
+    # 1. Stratum definitions + question-level counts (recomputed at run time via
+    #    derive_scenario_type -- never hardcoded; final-review finding #10).
+    counts = stratum_question_counts or _default_stratum_question_counts()
     lines.append("## 1. Scenario strata (definition + question-level counts)")
     lines.append("")
     lines.append("| Stratum | Definition | Questions |")
     lines.append("|---|---|---|")
     lines.append(
-        "| ERROR_CORRECTION | question text matches `错误|纠正|纠错|排查|失败|修正|不妥|不当|问题所在` | 60 |"
+        f"| ERROR_CORRECTION | question text matches `错误|纠正|纠错|排查|失败|修正|不妥|不当|问题所在` | {counts['ERROR_CORRECTION']} |"
     )
-    lines.append("| COMPLEX_GENERATION | not ERROR_CORRECTION and `len(marker_query_targets) >= 4` | 96 |")
-    lines.append("| SIMPLE_GENERATION | remaining questions | 97 |")
+    lines.append(
+        f"| COMPLEX_GENERATION | not ERROR_CORRECTION and `len(marker_query_targets) >= 4` | {counts['COMPLEX_GENERATION']} |"
+    )
+    lines.append(
+        f"| SIMPLE_GENERATION | remaining questions | {counts['SIMPLE_GENERATION']} |"
+    )
+    lines.append("")
+    lines.append(
+        "Counts are derived per question with `derive_scenario_type(question_text, "
+        "len(marker_query_targets))` over `question_final.json` (253 questions); the "
+        "table is regenerated, never hardcoded."
+    )
     lines.append("")
 
     # 2. Input hashes
@@ -849,7 +913,15 @@ def run(
     seed_path = os.path.join(output_dir, "seed_candidates.jsonl")
     write_seed_candidates(seed_path, seed_records)
 
+    # dev-only seed manifest (16 development rows, NO blind content): the
+    # role-routed seed-loading API (load_seed_candidates_role) points
+    # development-role code here, so blind seed response texts are never
+    # opened by development-role tools (final-review finding #15).
     split = make_split(seeds, split_seed)
+    dev_seed_ids = set(split["development_seed_ids"])
+    dev_seed_path = os.path.join(output_dir, "seed_candidates_development.jsonl")
+    write_seed_candidates(dev_seed_path, [s for s in seed_records if s.seed_id in dev_seed_ids])
+
     manifest_path = os.path.join(output_dir, "split_manifest.json")
     manifest = SplitManifest(
         development_seed_ids=split["development_seed_ids"],
@@ -863,6 +935,12 @@ def run(
         fh.write("\n")
 
     report_path = os.path.join(report_dir, "DATA_SUMMARY.md")
+    questions = load_questions(data_root)
+    question_counts: "collections.Counter[str]" = collections.Counter()
+    for r in questions.values():
+        qtext = r["question"]
+        n_targets = len(r.get("marker_query_targets") or [])
+        question_counts[derive_scenario_type(qtext, n_targets).value] += 1
     write_data_summary(
         report_path,
         pool,
@@ -871,10 +949,12 @@ def run(
         seed_path,
         manifest_path,
         split_seed,
+        stratum_question_counts={sc.value: question_counts[sc.value] for sc in STRATUM_ORDER},
     )
 
     return {
         "seed_candidates_path": seed_path,
+        "dev_seed_candidates_path": dev_seed_path,
         "split_manifest_path": manifest_path,
         "report_path": report_path,
         "n_seeds": len(seeds),

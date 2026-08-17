@@ -63,6 +63,7 @@ from diagnostics.cleareval_cf.schemas import (  # noqa: E402
 
 MANIFESTS = os.path.join(_REPO_ROOT, "diagnostics", "cleareval_cf", "manifests")
 SEED_PATH = os.path.join(MANIFESTS, "seed_candidates.jsonl")
+DEV_SEED_PATH = os.path.join(MANIFESTS, "seed_candidates_development.jsonl")
 SPLIT_PATH = os.path.join(MANIFESTS, "split_manifest.json")
 REPORTS = os.path.join(_REPO_ROOT, "diagnostics", "cleareval_cf", "reports")
 
@@ -94,7 +95,7 @@ class MutationBuilderSuite(unittest.TestCase):
 
     @classmethod
     def setUpClass(cls):
-        cls.tmp = tempfile.mkdtemp(dir=MANIFESTS, prefix=".test-builder-")
+        cls.tmp = tempfile.mkdtemp(prefix=".test-builder-")
         cls.summary = _build_to(cls.tmp)
         cls.props = load_mutation_proposals(cls.summary["proposals_path"])
         cls.seeds = {s.seed_id: s for s in load_seed_candidates(SEED_PATH)}
@@ -153,13 +154,25 @@ class MutationBuilderSuite(unittest.TestCase):
             ok, msg = check_equivalent(self.seeds[p.seed_id].response_text, p)
             self.assertTrue(ok, f"{p.pair_id}: {msg}")
 
+    def test_per_seed_structure_1_equivalent_2_degrading(self):
+        """Every seed hosts exactly 1 EQUIVALENT + 2 degrading proposals
+        (final-review finding #23 per-seed structure assertion)."""
+        by_seed = collections.defaultdict(list)
+        for p in self.props:
+            by_seed[p.seed_id].append(p.expected_relation.value)
+        self.assertEqual(len(by_seed), len(self.seeds))
+        for sid, rels in sorted(by_seed.items()):
+            self.assertEqual(rels.count("EQUIVALENT"), 1, sid)
+            degrading = len(rels) - rels.count("EQUIVALENT")
+            self.assertEqual(degrading, 2, f"{sid}: {rels}")
+
 
 class MutationIntegritySuite(unittest.TestCase):
     """Span reconstruction + negative (undeclared/tampered) detection."""
 
     @classmethod
     def setUpClass(cls):
-        cls.tmp = tempfile.mkdtemp(dir=MANIFESTS, prefix=".test-integrity-")
+        cls.tmp = tempfile.mkdtemp(prefix=".test-integrity-")
         cls.props = load_mutation_proposals(_build_to(cls.tmp)["proposals_path"])
         cls.seeds = {s.seed_id: s for s in load_seed_candidates(SEED_PATH)}
 
@@ -225,10 +238,10 @@ class MutationRegistrySuite(unittest.TestCase):
 
     @classmethod
     def setUpClass(cls):
-        cls.tmp = tempfile.mkdtemp(dir=MANIFESTS, prefix=".test-registry-")
+        cls.tmp = tempfile.mkdtemp(prefix=".test-registry-")
         _build_to(cls.tmp)
         cls.props_path = os.path.join(cls.tmp, "mutation_proposals.jsonl")
-        cls.dev_tmp = tempfile.mkdtemp(dir=MANIFESTS, prefix=".test-registry-dev-")
+        cls.dev_tmp = tempfile.mkdtemp(prefix=".test-registry-dev-")
         cls.dev = _build_to(cls.dev_tmp, role="development")
         cls.dev_path = cls.dev["proposals_path"]
 
@@ -237,16 +250,22 @@ class MutationRegistrySuite(unittest.TestCase):
         shutil.rmtree(cls.tmp, ignore_errors=True)
         shutil.rmtree(cls.dev_tmp, ignore_errors=True)
 
-    def _reg(self, role, proposals_path):
+    def _reg(self, role, proposals_path, seed_path=SEED_PATH):
         return MutationRegistry(
             role=role,
-            seed_path=SEED_PATH,
+            seed_path=seed_path,
             proposals_path=proposals_path,
             split_path=SPLIT_PATH,
         )
 
     def test_development_role_rejects_full_manifest(self):
-        reg = self._reg("development", self.props_path)
+        # development-role registry pointed at the FULL seed manifest is refused
+        # at construction (blind seed content; final-review finding #15)...
+        with self.assertRaises(BlindSplitAccessError):
+            self._reg("development", self.props_path, seed_path=SEED_PATH)
+        # ...and even with the dev-only seed manifest, loading the full 72-record
+        # proposals manifest still raises BlindSplitAccessError.
+        reg = self._reg("development", self.props_path, seed_path=DEV_SEED_PATH)
         with self.assertRaises(BlindSplitAccessError):
             reg.load_proposals()
 
@@ -256,12 +275,23 @@ class MutationRegistrySuite(unittest.TestCase):
         self.assertEqual(len(reg.seeds), 24)
 
     def test_development_build_loads_under_development_role(self):
-        reg = self._reg("development", self.dev_path)
+        reg = self._reg("development", self.dev_path, seed_path=DEV_SEED_PATH)
         props = reg.load_proposals()
         self.assertEqual(len(props), 48)
         self.assertEqual(len(reg.seeds), 16)
         for p in props:
             self.assertEqual(reg.split_of(p.seed_id), "development")
+
+    def test_development_build_ids_are_dev_prefixed(self):
+        """Dev-scoped pair ids use the DEV-MUT-* namespace so they cannot
+        collide with the canonical MUT-* ids of the full manifest (finding #2)."""
+        reg = self._reg("development", self.dev_path, seed_path=DEV_SEED_PATH)
+        ids = [p.pair_id for p in reg.load_proposals()]
+        self.assertEqual(ids, [f"DEV-MUT-{i:03d}" for i in range(1, 49)])
+        canonical = self._reg("blind", self.props_path).load_proposals()
+        canonical_ids = {p.pair_id for p in canonical}
+        self.assertTrue(canonical_ids.isdisjoint(ids),
+                        "dev and canonical pair id namespaces must be disjoint")
 
     def test_counts_introspection(self):
         reg = self._reg("blind", self.props_path)
@@ -285,7 +315,11 @@ class MutationRegistrySuite(unittest.TestCase):
         self.assertIs(prom.review_status, ReviewStatus.APPROVED_GOLD)
         self.assertEqual(prom.reviewer_ids, ["reviewer-1", "reviewer-2"])
         self.assertIs(prom.adjudication_status, AdjudicationStatus.ADJUDICATED)
-        self.assertIn("gold_note: human adjudication evidence", prom.expected_location)
+        # adjudication evidence lands in the dedicated gold_note field, NOT in
+        # the specification field expected_location (final-review finding #19)
+        self.assertEqual(prom.gold_note, "human adjudication evidence")
+        self.assertNotIn("gold_note", prom.expected_location)
+        self.assertNotIn("human adjudication evidence", prom.expected_location)
         # the registry now refuses a second promotion of the same pair
         with self.assertRaises(ValidationError):
             reg.promote_to_gold("MUT-001", ["another"], "again")
@@ -308,8 +342,8 @@ class MutationDeterminismSuite(unittest.TestCase):
     """Byte-identical reruns and the committed-manifest end-to-end check."""
 
     def test_build_twice_byte_identical(self):
-        d1 = tempfile.mkdtemp(dir=MANIFESTS, prefix=".test-det1-")
-        d2 = tempfile.mkdtemp(dir=MANIFESTS, prefix=".test-det2-")
+        d1 = tempfile.mkdtemp(prefix=".test-det1-")
+        d2 = tempfile.mkdtemp(prefix=".test-det2-")
         try:
             p1 = _build_to(d1)["proposals_path"]
             p2 = _build_to(d2)["proposals_path"]
@@ -336,7 +370,7 @@ class MutationDeterminismSuite(unittest.TestCase):
         build_report = os.path.join(REPORTS, "MUTATION_BUILD.md")
         if not os.path.isfile(build_report):
             build_report = ""
-        vtmp = tempfile.mkdtemp(dir=MANIFESTS, prefix=".test-val-")
+        vtmp = tempfile.mkdtemp(prefix=".test-val-")
         try:
             summary = validate_manifest(
                 proposals_path=proposals,

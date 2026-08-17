@@ -153,6 +153,7 @@ def directional_accuracy(
     by_ref = {str(r["pair_id"]): r for r in reference}
     detail: List[Dict[str, Any]] = []
     n_correct = n_incorrect = n_pending = n_floor_only = 0
+    n_correct_by_score_drop = n_correct_by_hard_fail = 0
     floor_keys = []
     for pair in audited_pairs:
         pid = str(pair["pair_id"])
@@ -194,8 +195,6 @@ def directional_accuracy(
                 if vo is None or vm is None:
                     continue
                 drops.append((field, vo, vm))
-                if vo > vm + 1e-9:
-                    pass  # a drop occurred on this field
                 any_observable = True
                 if vm >= vo - 1e-9:
                     # no decrease on this field
@@ -211,8 +210,16 @@ def directional_accuracy(
         correct = bool(hard_fail_detected) or all_expected_drop
         if correct:
             n_correct += 1
+            # 9.1 sub-metrics (final-review finding #14): decompose "correct"
+            # by which criterion fired (a pair may fire both).
+            if all_expected_drop:
+                n_correct_by_score_drop += 1
+            if hard_fail_detected:
+                n_correct_by_hard_fail += 1
             detail.append({"pair_id": pid, "outcome": "correct",
                            "hard_fail_detected": hard_fail_detected,
+                           "correct_by_score_drop": all_expected_drop,
+                           "correct_by_hard_fail": hard_fail_detected,
                            "drops": drops})
         elif floor_comp and not hard_fail_detected:
             n_floor_only += 1
@@ -235,6 +242,8 @@ def directional_accuracy(
                                   if (by_ref.get(str(p["pair_id"])) or p).get("expected_relation")
                                   not in ("EQUIVALENT", ExpectedRelation.EQUIVALENT.value)]),
         "n_correct": n_correct,
+        "n_correct_by_score_drop": n_correct_by_score_drop,
+        "n_correct_by_hard_fail": n_correct_by_hard_fail,
         "n_incorrect": n_incorrect,
         "n_pending": n_pending,
         "n_floor_only": n_floor_only,
@@ -507,31 +516,32 @@ def krippendorff_alpha_nominal(labels_a: Sequence[Optional[str]],
                                labels_b: Sequence[Optional[str]]) -> Optional[float]:
     """Krippendorff's alpha (nominal, 2 coders) -- chance-corrected agreement.
 
-    alpha = 1 - D_obs / D_exp where D_obs is observed disagreement and D_exp is
-    expected disagreement under independence (for nominal data the standard
-    formula reduces to a form of Scott's pi with the same marginal structure).
+    alpha = 1 - D_obs / D_exp with the coincidence-matrix expectation:
+
+      D_obs = (1/n) * sum over units of [a_u != b_u]   (observed disagreement)
+      D_exp = sum_c n_c * (n - n_c) / (n * (n - 1))    (expected under
+              independence), where n = 2 * n_units is the total number of
+              value assignments and n_c = count of category c across both
+              coders.
+
+    This is NOT Scott's pi (which uses N^2 in the denominator and equals
+    alpha only in the no-missing-data two-coder case for binary data); the
+    final-review finding #6 flags the previous N^2 formulation as incorrect.
     """
     pairs = [(a, b) for a, b in zip(labels_a, labels_b) if a is not None and b is not None]
     if len(pairs) < 2:
         return None
-    n = len(pairs)
+    n_units = len(pairs)
+    n_values = 2 * n_units
     cats = sorted({a for a, b in pairs} | {b for a, b in pairs})
     counts = {c: sum(1 for a, b in pairs if a == c) + sum(1 for a, b in pairs if b == c) for c in cats}
-    do = 0.0
-    for a, b in pairs:
-        do += 0.0 if a == b else 1.0
-    p_a = do / n  # observed proportion of disagreement
-    # expected disagreement under independence (nominal)
-    de = 0.0
-    for a in cats:
-        for b in cats:
-            if a != b:
-                de += (counts[a] / (2 * n)) * (counts[b] / (2 * n))
-    if de == 0 and p_a == 0:
+    do = sum(1 for a, b in pairs if a != b) / n_units
+    de = sum(counts[c] * (n_values - counts[c]) for c in cats) / (n_values * (n_values - 1))
+    if de == 0 and do == 0:
         return 1.0
     if de == 0:
         return None
-    return 1.0 - (p_a / de) if de != 0 else None
+    return 1.0 - (do / de) if de != 0 else None
 
 
 def judge_expert_agreement(judge_labels: Sequence[Optional[str]],
@@ -590,7 +600,6 @@ def test_retest_stability(repeat_groups: List[List[Dict[str, Any]]]) -> Dict[str
     invalid = 0
     relation_agree = component_agree = 0
     comp_vars: Dict[str, List[float]] = {}
-    valid_groups_with_cc = 0
     for group in repeat_groups:
         findings = [r for r in group if r.get("status") == "ok"]
         invalid += len(group) - len(findings)
@@ -613,7 +622,6 @@ def test_retest_stability(repeat_groups: List[List[Dict[str, Any]]]) -> Dict[str
                     mean = sum(vals) / len(vals)
                     var = sum((v - mean) ** 2 for v in vals) / (len(vals) - 1)
                     comp_vars.setdefault(field, []).append(var)
-                    valid_groups_with_cc += 1
     return {
         "metric": "9.6_test_retest_stability",
         "n_groups": n_groups,
@@ -645,6 +653,16 @@ def coverage_report(audit_rows: List[Dict[str, Any]],
     missing_gold = [pid for pid in proposal_pair_ids if pid not in gold_pair_ids]
     bad_repeats = [r for r in (repeat_rows or []) if r.get("status") != "ok"]
     no_input_data = not (audit_rows or cce_rows or gold_rows or proposals or repeat_rows)
+    # pairs ENTIRELY absent from the audit/CCE manifests (final-review #9): a
+    # proposal that never got a row must be named, never silently dropped.
+    observed_audit = {str(r.get("pair_id")) for r in audit_rows}
+    observed_cce = {str(r.get("pair_id")) for r in cce_rows}
+    missing_audit = [pid for pid in proposal_pair_ids if pid not in observed_audit]
+    missing_cce = [pid for pid in proposal_pair_ids if pid not in observed_cce]
+    non_adjudicated_gold = [
+        str(r.get("pair_id")) for r in gold_rows
+        if str(r.get("adjudication_status")) != "ADJUDICATED"
+    ]
     return {
         "metric": "9.7_coverage",
         "n_audit_rows": len(audit_rows),
@@ -655,11 +673,123 @@ def coverage_report(audit_rows: List[Dict[str, Any]],
                             "status": r.get("status"), "error": r.get("error", "")} for r in bad_audits],
         "bad_cce_rows": [{"pair_id": r.get("pair_id"), "side": r.get("side"),
                           "status": r.get("status"), "error": r.get("error", "")} for r in bad_cce],
+        "missing_pair_ids": sorted(missing_audit),
+        "missing_audit_pair_ids": sorted(missing_audit),
+        "missing_cce_pair_ids": sorted(missing_cce),
+        "non_adjudicated_gold_pair_ids": sorted(non_adjudicated_gold),
         "missing_gold_pair_ids": sorted(missing_gold),
         "bad_repeat_rows": [{"status": r.get("status")} for r in bad_repeats],
-        "all_scored": not (bad_audits or bad_cce),
-        "pending": no_input_data or bool(bad_audits or bad_cce or missing_gold),
+        "all_scored": not (bad_audits or bad_cce or missing_audit or missing_cce),
+        "pending": no_input_data or bool(bad_audits or bad_cce or missing_audit
+                                         or missing_cce or missing_gold or non_adjudicated_gold),
     }
+
+
+# ---------------------------------------------------------------------------
+# Baselines A/B/C comparison (final-review finding #14)
+# ---------------------------------------------------------------------------
+
+# Baselines documented in JUDGE_VALIDITY.md "Baselines comparison":
+#   A -- CCE scalar/component only (no structured fields, no findings).
+#   B -- CCE + free-text teacher reasoning (not machine-checkable field-by-field).
+#   C -- CCE + structured DiagnosticAudit (this overlay; drives 9.3/9.4).
+BASELINES_A_B_C = {
+    "A": {"scorers": "CCE", "structured": "none",
+          "observation": "reference floor: does CCE alone separate defects from "
+                         "EQUIVALENT changes? Weakest for localization and hard-fail recall."},
+    "B": {"scorers": "CCE + free-text reasoning", "structured": "free-text",
+          "observation": "adds qualitative signal; not machine-checkable; not "
+                         "reproducible field-by-field."},
+    "C": {"scorers": "CCE + structured DiagnosticAudit", "structured": "evidence/relation/"
+                                                                       "affected_component/type/"
+                                                                       "location/reason_code/next_action",
+          "observation": "structured audit is argued ONLY via localization, hard-fail "
+                         "detection, and reproducibility -- never an unverifiable total score."},
+}
+
+
+def baseline_comparison(metrics: Dict[str, Any],
+                        audit_rows: Optional[List[Dict[str, Any]]] = None,
+                        cce_rows: Optional[List[Dict[str, Any]]] = None) -> Dict[str, Any]:
+    """Generate the A/B/C baselines comparison from whatever per-baseline signal
+    exists, with explicit pending handling (never an unverifiable total score).
+
+    Each baseline's row reports the comparands it can support, pulled from the
+    computed 9.1/9.2/9.3/9.4 metrics and the raw audit/CCE row counts.  In the
+    current pending-data state (no judge runs, no gold) every comparand is
+    ``None`` and ``pending`` is True for the whole table -- that IS the state of
+    the artefact, not a fabricated number.
+    """
+    m91 = metrics.get("9.1") or metrics.get("9.1_directional_accuracy") or {}
+    m92 = metrics.get("9.2") or metrics.get("9.2_metamorphic_invariance") or {}
+    m93 = metrics.get("9.3") or metrics.get("9.3_component_localization") or {}
+    m94 = metrics.get("9.4") or metrics.get("9.4_fatal_false_pass") or {}
+    n_audit = len(audit_rows or [])
+    n_cce = len(cce_rows or [])
+    n_findings = sum(1 for r in (audit_rows or []) if r.get("status") == "ok" and r.get("finding"))
+    any_data = bool(n_audit or n_cce)
+
+    def _row(baseline: str) -> Dict[str, Any]:
+        meta = BASELINES_A_B_C[baseline]
+        if baseline == "A":
+            # CCE-only: directional accuracy (score-drop sub-metric) + invariance
+            row = {
+                "baseline": baseline,
+                "scorers": meta["scorers"],
+                "structured_fields": meta["structured"],
+                "directional_accuracy": m91.get("accuracy_assessable"),
+                "invariance_within_tolerance_pct": _invariance_pct(m92),
+                "localization_accuracy": None,
+                "fatal_false_pass_rate": None,
+                "observation": meta["observation"],
+            }
+        elif baseline == "B":
+            # CCE + free-text: same CCE signal as A; hard-fail/localization
+            # requires manual reading of the free-text (not machine-checkable).
+            row = {
+                "baseline": baseline,
+                "scorers": meta["scorers"],
+                "structured_fields": meta["structured"],
+                "directional_accuracy": m91.get("accuracy_assessable"),
+                "invariance_within_tolerance_pct": _invariance_pct(m92),
+                "localization_accuracy": None,
+                "fatal_false_pass_rate": None,
+                "observation": meta["observation"] + (" Manual read of free-text "
+                                                      "(not machine-checkable)."),
+            }
+        else:  # C
+            row = {
+                "baseline": baseline,
+                "scorers": meta["scorers"],
+                "structured_fields": meta["structured"],
+                "directional_accuracy": m91.get("accuracy_assessable"),
+                "invariance_within_tolerance_pct": _invariance_pct(m92),
+                "localization_accuracy": m93.get("affected_component_accuracy"),
+                "fatal_false_pass_rate": m94.get("fatal_false_pass_rate"),
+                "observation": meta["observation"],
+            }
+        row["n_audit_rows"] = n_audit
+        row["n_cce_rows"] = n_cce
+        row["n_findings"] = n_findings
+        return row
+
+    return {
+        "metric": "baselines_A_B_C",
+        "rows": [_row(b) for b in ("A", "B", "C")],
+        "pending": not any_data or m91.get("accuracy_assessable") is None,
+        "note": "A/B/C are generated from the per-baseline signal present in the auditing "
+                "artefacts. Pending rows mean the input data for that baseline does not "
+                "exist yet (no judge runs / no gold) -- no number is imputed.",
+    }
+
+
+def _invariance_pct(m92: Dict[str, Any]) -> Optional[float]:
+    per = m92.get("per_component", {})
+    vals = [(c.get("n_within_tolerance"), c.get("n_pairs_with_scores")) for c in per.values()
+            if c.get("n_pairs_with_scores")]
+    if not vals:
+        return None
+    return sum(a for a, _ in vals) / sum(b for _, b in vals)
 
 
 # ---------------------------------------------------------------------------
@@ -685,7 +815,13 @@ def compute_all(
     # build the pair-level view used by 9.1/9.3/9.4
     pair_ids = sorted({r.get("pair_id") for r in proposals})
     by_ref = {str(p.get("pair_id")): p for p in proposals}
-    gold_ref = {str(g.get("pair_id")): g for g in gold_rows}
+    # Gold-referenced metrics may only consume ADJUDICATED gold rows; any
+    # PENDING-review gold is not (yet) expert ground truth (finding #7).
+    adjudicated_gold = [
+        g for g in gold_rows
+        if str(g.get("adjudication_status")) == "ADJUDICATED"
+    ]
+    gold_ref = {str(g.get("pair_id")): g for g in adjudicated_gold}
     audited_pairs: List[Dict[str, Any]] = []
     for pid in pair_ids:
         ref = gold_ref.get(pid) or by_ref.get(pid) or {}
@@ -698,7 +834,7 @@ def compute_all(
             "mutated_finding": _finding_of(audit_rows, pid, "mutated"),
         })
 
-    reference_source = "gold" if gold_rows else "provisional"
+    reference_source = "gold" if adjudicated_gold else "provisional"
     m91 = directional_accuracy(audited_pairs, cce_rows, proposals, source=reference_source)
     equivalent_pairs = [
         {"pair_id": p.get("pair_id")}
@@ -706,14 +842,14 @@ def compute_all(
         if p.get("expected_relation") in ("EQUIVALENT", ExpectedRelation.EQUIVALENT.value)
     ]
     m92 = metamorphic_invariance(equivalent_pairs, cce_rows, repeat_scores=_repeat_cce(repeat_rows))
-    m93 = component_localization(audited_pairs, gold_rows)
-    m94 = fatal_false_pass(audited_pairs, gold_rows)
+    m93 = component_localization(audited_pairs, adjudicated_gold)
+    m94 = fatal_false_pass(audited_pairs, adjudicated_gold)
     judge_rel_labels = [(_finding_of(audit_rows, pid, "mutated") or {}).get("relation")
                         for pid in pair_ids]
-    gold_rel_labels = [_gold_rel(gold_rows, pid) for pid in pair_ids]
+    gold_rel_labels = [_gold_rel(adjudicated_gold, pid) for pid in pair_ids]
     expert_b_rel_labels: List[Optional[str]] = []
     if gold_expert_b:
-        expert_b_rel_labels = [(_gold_find(gold_expert_b, pid, "expected_relation")) for pid in pair_ids]
+        expert_b_rel_labels = [_gold_find(gold_expert_b, pid, "expected_relation") for pid in pair_ids]
     else:
         expert_b_rel_labels = [None] * len(pair_ids)
     m95 = judge_expert_agreement(judge_rel_labels, gold_rel_labels, expert_b_rel_labels)
@@ -724,6 +860,7 @@ def compute_all(
                                    ("9.5", m95), ("9.6", m96), ("9.7", m97)) if m.get("pending")]
     return {
         "reference_source": reference_source,
+        "n_non_adjudicated_gold_pairs": len(gold_rows) - len(adjudicated_gold),
         "9.1_directional_accuracy": m91,
         "9.2_metamorphic_invariance": m92,
         "9.3_component_localization": m93,
@@ -731,6 +868,8 @@ def compute_all(
         "9.5_judge_expert_agreement": m95,
         "9.6_test_retest_stability": m96,
         "9.7_coverage": m97,
+        "baselines_A_B_C": baseline_comparison(
+            {"9.1": m91, "9.2": m92, "9.3": m93, "9.4": m94}, audit_rows, cce_rows),
         "pending_metrics": sorted(pending_list),
         "all_metrics_pending": sorted(pending_list) == ["9.1", "9.2", "9.3", "9.4", "9.5", "9.6", "9.7"],
     }

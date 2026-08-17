@@ -239,6 +239,24 @@ class SeedSelectionTests(unittest.TestCase):
             assert_split_access(m.blind_seed_ids[0], "development", manifest=m)
         assert_split_access(m.development_seed_ids[0], "development", manifest=m)
 
+    # -- role-routed seed loading (finding #15) ------------------------------
+
+    def test_dev_role_seed_load_guarded(self):
+        """The role-routed seed-loading API refuses the full manifest in dev
+        role and accepts the dev-only manifest."""
+        from diagnostics.cleareval_cf.seed_selector import DEFAULT_DEV_SEED_PATH, DEFAULT_SEED_PATH, load_seed_candidates_role
+
+        with self.assertRaises(BlindSplitAccessError):
+            load_seed_candidates_role(DEFAULT_SEED_PATH, "development")
+        dev_seeds = load_seed_candidates_role(DEFAULT_DEV_SEED_PATH, "development")
+        self.assertEqual(len(dev_seeds), 16)
+        # dev-only manifest carries NO blind seed id
+        blind_ids = set(self.manifest.blind_seed_ids)
+        self.assertTrue(all(s.seed_id not in blind_ids for s in dev_seeds))
+        # blind role may load the full manifest (one-directional opt-in)
+        full = load_seed_candidates_role(DEFAULT_SEED_PATH, "blind")
+        self.assertEqual(len(full), 24)
+
     # -- report ----------------------------------------------------------
 
     def test_report_exists_and_documents_split(self):

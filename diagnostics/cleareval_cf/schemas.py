@@ -220,7 +220,10 @@ LABELING_REQUIREMENTS = frozenset(
 )
 
 _SEED_ID_RE = re.compile(r"^SEED-\d{3}$")
-_PAIR_ID_RE = re.compile(r"^MUT-\d{3,}$")
+# Canonical pair ids are MUT-<NNN>; the development-scoped build prefixes its
+# ids DEV-MUT-<NNN> so a dev-scoped manifest can never collide with the
+# canonical (blind-scope) numbering (final-review finding #2).
+_PAIR_ID_RE = re.compile(r"^(?:DEV-)?MUT-\d{3,}$")
 _HEX64_RE = re.compile(r"^[0-9a-f]{64}$")
 
 
@@ -572,9 +575,20 @@ class MutationProposal(_Validatable):
     review_status: ReviewStatus = ReviewStatus.PENDING_REVIEW
     reviewer_ids: List[str] = field(default_factory=list)
     adjudication_status: AdjudicationStatus = AdjudicationStatus.PENDING
+    # Mutated full text (persisted at build time; the span-integrity validator
+    # diffs it against the seed text so undeclared edits are detected for real).
+    mutated_text: str = ""
+    # Human adjudication evidence (filled only by promote_to_gold; never by the
+    # builder).  Kept OUT of expected_location -- a dedicated field, per the
+    # final-review finding #19.
+    gold_note: str = ""
+    # Fallback metadata persisted on the record (mirrors the build report; the
+    # validator reads it from the manifest, not from markdown prose).
+    operator_fallback_used: bool = False
+    operator_fallback_note: str = ""
 
     def validate(self) -> None:
-        _require(_PAIR_ID_RE.match(self.pair_id or ""), f"invalid pair_id {self.pair_id!r}; expected MUT-<NNN>")
+        _require(_PAIR_ID_RE.match(self.pair_id or ""), f"invalid pair_id {self.pair_id!r}; expected MUT-<NNN> (or DEV-MUT-<NNN> for the development-scoped manifest)")
         _require(_SEED_ID_RE.match(self.seed_id or ""), f"invalid seed_id {self.seed_id!r}; expected SEED-<NNN>")
         _require(
             isinstance(self.question_id, int) and not isinstance(self.question_id, bool),
@@ -626,6 +640,13 @@ class MutationProposal(_Validatable):
                 adjudication is AdjudicationStatus.ADJUDICATED,
                 "APPROVED_GOLD requires adjudication_status = ADJUDICATED",
             )
+        _require(
+            isinstance(self.mutated_text, str),
+            "mutated_text must be a str (empty when a legacy manifest omits it)",
+        )
+        _require(isinstance(self.gold_note, str), "gold_note must be a str")
+        _require(isinstance(self.operator_fallback_used, bool), "operator_fallback_used must be a bool")
+        _require(isinstance(self.operator_fallback_note, str), "operator_fallback_note must be a str")
 
     def to_dict(self) -> Dict[str, Any]:
         self.validate()
@@ -648,6 +669,10 @@ class MutationProposal(_Validatable):
             "review_status": self.review_status.value,
             "reviewer_ids": list(self.reviewer_ids),
             "adjudication_status": self.adjudication_status.value,
+            "mutated_text": self.mutated_text,
+            "gold_note": self.gold_note,
+            "operator_fallback_used": self.operator_fallback_used,
+            "operator_fallback_note": self.operator_fallback_note,
         }
 
     @classmethod
@@ -673,17 +698,18 @@ class MutationProposal(_Validatable):
                 expected_location=str(data["expected_location"]),
                 expected_severity=_enum(data["expected_severity"], SeverityLevel, "expected_severity"),
                 supporting_rule_or_evidence_ids=[str(i) for i in data["supporting_rule_or_evidence_ids"]],
-                review_status=_enum(
-                    data.get("review_status", ReviewStatus.PENDING_REVIEW.value),
-                    ReviewStatus,
-                    "review_status",
+                # Review fields are REQUIRED on every manifest record: a missing
+                # or unknown value must raise ValidationError, never silently
+                # default (final-review finding #20).
+                review_status=_enum(data["review_status"], ReviewStatus, "review_status"),
+                reviewer_ids=[str(r) for r in data["reviewer_ids"]],
+                adjudication_status=_enum(data["adjudication_status"], AdjudicationStatus, "adjudication_status"),
+                mutated_text=str(data.get("mutated_text", "")),
+                gold_note=str(data.get("gold_note", "")),
+                operator_fallback_used=(
+                    data["operator_fallback_used"] if "operator_fallback_used" in data else False
                 ),
-                reviewer_ids=[str(r) for r in data.get("reviewer_ids", [])],
-                adjudication_status=_enum(
-                    data.get("adjudication_status", AdjudicationStatus.PENDING.value),
-                    AdjudicationStatus,
-                    "adjudication_status",
-                ),
+                operator_fallback_note=str(data.get("operator_fallback_note", "")),
             )
         except KeyError as exc:
             raise ValidationError(f"MutationProposal missing field: {exc.args[0]}")

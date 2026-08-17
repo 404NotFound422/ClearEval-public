@@ -375,7 +375,8 @@ class RuleKBs:
     # -- tissue RI (faithful copy of production _resolve_tissue_ri) -----------
     def _resolve_tissue_ri(self, tissue_inferred: str) -> float:
         """Map Chinese tissue_inferred label -> tissue native RI (production
-        OEQ_run_grading_new.py:88-170)."""
+        OEQ_run_grading_new.py:101-167; branch order and fallback mirrored
+        VERBATIM -- final-review finding #4)."""
         if not tissue_inferred:
             return self._default_tissue_ri
         s = tissue_inferred
@@ -414,28 +415,44 @@ class RuleKBs:
             return tbl["spleen"]
         if "胰" in s:
             return tbl["pancreas"]
-        if "肠" in s or "胃" in s:
+        if "胎盘" in s:
+            return tbl["placenta"]
+        if "胃" in s:
+            return tbl["stomach"]
+        if "肠" in s and "类器官" not in s:
             return tbl["intestine"]
-        if "骨髓" in s:
-            return tbl["bone"]
-        if "肿瘤" in s or "癌" in s:
+        if "肺" in s:
+            return tbl["lung"]
+        if "睾丸" in s:
+            return tbl["testis"]
+        if "脂肪" in s:
+            return tbl["fat"]
+        if "肿瘤" in s:
             return tbl["tumor_dense"]
-        if "坐骨神经" in s or "神经" in s or "脊髓" in s:
-            return tbl["spinal_cord"]
-        if "卵黄囊" in s:
-            return tbl["embryo_whole"]
+        if "全身" in s:
+            return tbl["kidney"]  # whole-body soft-tissue default
+        if "类器官" in s or "果蝇" in s:
+            return tbl["organoid"]
+        if "elegans" in s.lower():
+            return tbl["celegans"]
+        if "E14" in s:
+            return tbl["embryo_brain"]
         if "胚胎" in s:
             return tbl["embryo_whole"]
+        if "人脑" in s:
+            return tbl["human_brain_block"]
+        if "海马" in s:
+            return tbl["hippocampus_ca1"]
+        if "视网膜" in s or "眼球" in s:
+            return tbl["eye_retina"]
+        if "脊髓" in s or "CNS" in s:
+            return tbl["spinal_cord"]
         if "斑马鱼" in s:
             return tbl["zebrafish"]
-        if "线虫" in s or "蠕虫" in s:
-            return tbl["celegans"]
-        if "拟南芥" in s or "根" in s or "叶片" in s:
+        if "脑" in s:
+            return tbl["whole_brain"]
+        if "植物" in s or "拟南芥" in s:
             return tbl["plant"]
-        if "脂肪" in s or "乳腺" in s:
-            return tbl["fat"]
-        if "尾静脉" in s:
-            return tbl["skin"]
         return self._default_tissue_ri
 
     def question_meta(self, question_id: int) -> Dict[str, Any]:
@@ -624,6 +641,19 @@ def _normalize_name(name: Any) -> str:
     return s
 
 
+def _sm_norm(name: Any) -> str:
+    """Production _sm_norm used ONLY by find_signed_method (like production).
+
+    Additionally strips parentheses and '+' beyond _normalize_name -- the two
+    normalizers differ on purpose; method-fit matching must mirror the
+    production matcher (final-review finding #17).
+    """
+    s = str(name or "").lower()
+    for ch in " -_/()":
+        s = s.replace(ch, "")
+    return s.replace("+", "")
+
+
 def _extract_parenthetical(name: Any) -> List[str]:
     """Faithful copy of production _extract_parenthetical."""
     matches = re.findall(r"\(([^)]+)\)", str(name))
@@ -711,13 +741,17 @@ def match_marker_to_targets(marker_name: str, marker_query_targets: List[Any],
 
 
 def find_signed_method(name: str) -> Optional[Dict[str, float]]:
-    """Faithful copy of production find_signed_method (model_space_signed)."""
-    nl = _normalize_name(name)
+    """Faithful copy of production find_signed_method (model_space_signed).
+
+    Uses production's ``_sm_norm`` (strips ``()``/``+`` too), matching the
+    organic-solvent keyword fallback exactly.
+    """
+    nl = _sm_norm(name)
     if not nl:
         return None
     space = _signed_space()
     for k, v in space.items():
-        kl = _normalize_name(k)
+        kl = _sm_norm(k)
         if (nl in kl or kl in nl) and min(len(nl), len(kl)) >= 3:
             return v
     for kw, canon in (("3disco", "3DISCO"), ("thf", "3DISCO"), ("dbe", "3DISCO"),
@@ -1277,45 +1311,6 @@ class CCEScorer:
             eff["_source"] = "local_rule_re-derivation"
         return assemble_cce(question_id, protocol_text, judge, eff, meta, status="ok")
 
-    def score_frozen_original(self, seed: Any) -> Dict[str, Any]:
-        """Score a seed's ORIGINAL protocol from the frozen production record.
-
-        ``seed`` is a schemas.SeedCandidate: its ``cce_scores`` *are* the frozen
-        production CCE output, so this path is bit-exact production with zero
-        re-derivation.  Used for the seeded originals in the audit pipeline.
-        """
-        judge, effectiveness = frozen_effectiveness_to_components(seed.cce_scores)
-        # re-fold subscore dicts + totals into the canonical judge shape and
-        # validate through the same path as every other caller.
-        judge_cc = {
-            "completeness": {sub: {"score": judge["completeness"][sub]["score"],
-                                   "max_score": judge["completeness"][sub]["max_score"]}
-                             for sub in ("c_step", "c_param")},
-            "correctness": {sub: {"score": judge["correctness"][sub]["score"],
-                                  "max_score": judge["correctness"][sub]["max_score"]}
-                            for sub in ("co_order", "co_method", "co_param", "co_chem")},
-        }
-        for part in ("completeness", "correctness"):
-            if "total" in judge[part]:
-                judge_cc[part]["total_weighted_score"] = judge[part]["total"]
-        try:
-            canonical_judge = validate_judge_payload({"scores": judge_cc})
-        except JudgeError:
-            # Frozen seed records are production output; a validation failure
-            # here signals a seed we cannot score -- report it as a failure.
-            meta = make_metadata(mode="frozen", teacher_model="openai_gpt-5.2-thinking")
-            return {
-                "question_id": int(seed.question_id),
-                "protocol_sha256": sha256_text(seed.response_text),
-                "status": "frozen_unusable",
-                "total_cc": None,
-                "components": None,
-                "metadata": meta,
-            }
-        meta = make_metadata(mode="frozen", teacher_model="openai_gpt-5.2-thinking")
-        return assemble_cce(
-            seed.question_id, seed.response_text, canonical_judge, effectiveness, meta, status="ok")
-
     # -- online scoring (NEVER used by tests; requires repo deps) --------------
     def score_online(self, protocol_text: str, question_id: int,
                      teacher_name: str = "openai_gpt-5.2-thinking",
@@ -1433,7 +1428,6 @@ def compare_stats_with_frozen(recomputed: List[Dict[str, Any]],
         if frow is None:
             report["rows"].append({"model_name": name, "present_in_frozen": False, "max_abs_diff": None})
             continue
-        keys = [k for k in frow.get("average_scores", {}) if k.endswith("score") or k.endswith("_norm") or k == "score"]
         keys = sorted(set(list(frow.get("average_scores", {})) + list(row.get("average_scores", {}))))
         diffs = []
         for k in keys:

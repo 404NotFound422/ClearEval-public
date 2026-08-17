@@ -48,7 +48,7 @@ except ImportError:
         ValidationError,
     )
 
-_PAIR_RE = re.compile(r"^MUT-\d{3,}$")
+_PAIR_RE = re.compile(r"^(?:DEV-)?MUT-\d{3,}$")
 
 
 def _enum_or_none(enum_cls: Any, value: Any, field_name: str) -> Optional[Any]:
@@ -86,7 +86,7 @@ class GoldReview:
 
     def validate(self) -> None:
         if not _PAIR_RE.match(self.pair_id or ""):
-            raise ValidationError(f"invalid pair_id {self.pair_id!r}; expected MUT-<NNN>")
+            raise ValidationError(f"invalid pair_id {self.pair_id!r}; expected MUT-<NNN> (or DEV-MUT-<NNN>)")
         if not (self.seed_id or "").startswith("SEED-"):
             raise ValidationError(f"invalid seed_id {self.seed_id!r}")
         if not isinstance(self.question_id, int) or isinstance(self.question_id, bool):
@@ -97,11 +97,6 @@ class GoldReview:
             _enum_or_none(ComponentId, self.affected_component, "affected_component")
         if self.minimal_next_action is not None:
             _enum_or_none(NextAction, self.minimal_next_action, "minimal_next_action")
-        if self.expected_relation is ExpectedRelation.HARD_FAIL and not self.hard_fail_status:
-            # a HARD_FAIL gold label implies the hard_fail flag is set; document
-            # rather than silently forcing it (reviewer may leave it null until
-            # adjudication, so this is a soft warning, not an error).
-            pass
         if self.adjudication_status is AdjudicationStatus.ADJUDICATED:
             if not (self.reviewer_id or "").strip():
                 raise ValidationError("ADJUDICATED gold requires a non-empty reviewer_id")
@@ -132,6 +127,13 @@ class GoldReview:
         if not isinstance(data, dict):
             raise ValidationError("GoldReview must be an object")
         try:
+            raw_adj = data["adjudication_status"]
+        except KeyError as exc:
+            raise ValidationError(f"GoldReview missing field: {exc.args[0]}")
+        if str(raw_adj) not in {s.value for s in AdjudicationStatus}:
+            allowed = ", ".join(sorted(s.value for s in AdjudicationStatus))
+            raise ValidationError(f"invalid adjudication_status={raw_adj!r}; expected one of: {allowed}")
+        try:
             g = cls(
                 pair_id=str(data["pair_id"]),
                 seed_id=str(data["seed_id"]),
@@ -145,9 +147,7 @@ class GoldReview:
                 minimal_next_action=_enum_or_none(NextAction, data.get("minimal_next_action"), "minimal_next_action"),
                 supporting_rule_or_evidence_ids=[str(i) for i in (data.get("supporting_rule_or_evidence_ids") or [])],
                 reviewer_id=str(data.get("reviewer_id") or ""),
-                adjudication_status=AdjudicationStatus(data.get("adjudication_status", "PENDING"))
-                if str(data.get("adjudication_status") or "PENDING") in {s.value for s in AdjudicationStatus}
-                else AdjudicationStatus.PENDING,
+                adjudication_status=AdjudicationStatus(str(raw_adj)),
                 gold_note=str(data.get("gold_note") or ""),
             )
         except KeyError as exc:
@@ -181,44 +181,51 @@ def write_gold(path: str, rows: List[GoldReview]) -> None:
 def assemble_gold(package_rows: List[Dict[str, Any]],
                   reviewer_id: str,
                   adjudicated: bool = False,
-                  gold_note: str = "") -> List[GoldReview]:
+                  gold_note: str = "",
+                  expert: str = "A") -> List[GoldReview]:
     """Turn filled review-package rows (one dict per pair) into GoldReview rows.
 
     ``package_rows`` are the review_package.jsonl rows after an expert fills in
-    the ``seed_suitable`` / ``mutation_valid`` / ``expected_relation`` /
-    ``affected_component`` / ``violation_location`` / ``hard_fail_status`` /
-    ``minimal_next_action`` / ``supporting_rule_or_evidence_ids`` label fields.
-    Only rows whose key labels are filled are converted; unfilled rows are
-    skipped (and are covered by 9.7 coverage).
+    the ``reviewer_{expert}_*`` label fields (expert "A" or "B"; default "A").
+    ONLY the per-expert label keys are read -- the package row also carries the
+    *programmatic* proposal expectation under unprefixed names
+    (``expected_relation``, ``expected_affected_components``, ...), and those
+    must NEVER leak into Gold (final-review finding #1).  Rows whose expert
+    label fields are all empty are skipped (and are covered by 9.7 coverage).
     """
+    if expert not in ("A", "B"):
+        raise ValueError(f"expert must be 'A' or 'B', got {expert!r}")
+    prefix = f"reviewer_{expert}_"
+    label_keys = (
+        "seed_suitable_for_local_counterfactual_testing",
+        "mutation_scientifically_valid",
+        "expected_relation",
+        "affected_cc_component",
+        "violation_location",
+        "hard_fail_status",
+        "minimal_next_action",
+        "supporting_rule_or_evidence_ids",
+    )
     out: List[GoldReview] = []
     for row in package_rows:
         if row.get("_review_filled") is False:
             continue
-        filled = any(row.get(k) not in (None, "", []) for k in (
-            "seed_suitable_for_local_counterfactual_testing",
-            "mutation_scientifically_valid",
-            "expected_relation",
-            "affected_component",
-            "hard_fail_status",
-            "minimal_next_action",
-            "violation_location",
-            "supporting_rule_or_evidence_ids",
-        ))
+        values = {k: row.get(prefix + k) for k in label_keys}
+        filled = any(v not in (None, "", []) for v in values.values())
         if not filled:
             continue
         g = GoldReview(
             pair_id=str(row["pair_id"]),
             seed_id=str(row.get("seed_id", "")),
             question_id=int(row.get("question_id", -1)),
-            seed_suitable_for_local_counterfactual_testing=row.get("seed_suitable_for_local_counterfactual_testing"),
-            mutation_scientifically_valid=row.get("mutation_scientifically_valid"),
-            expected_relation=row.get("expected_relation"),
-            affected_component=row.get("affected_component"),
-            violation_location=str(row.get("violation_location") or ""),
-            hard_fail_status=row.get("hard_fail_status"),
-            minimal_next_action=row.get("minimal_next_action"),
-            supporting_rule_or_evidence_ids=[str(i) for i in (row.get("supporting_rule_or_evidence_ids") or [])],
+            seed_suitable_for_local_counterfactual_testing=values["seed_suitable_for_local_counterfactual_testing"],
+            mutation_scientifically_valid=values["mutation_scientifically_valid"],
+            expected_relation=_enum_or_none(ExpectedRelation, values["expected_relation"], "expected_relation"),
+            affected_component=_enum_or_none(ComponentId, values["affected_cc_component"], "affected_component"),
+            violation_location=str(values["violation_location"] or ""),
+            hard_fail_status=values["hard_fail_status"],
+            minimal_next_action=_enum_or_none(NextAction, values["minimal_next_action"], "minimal_next_action"),
+            supporting_rule_or_evidence_ids=[str(i) for i in (values["supporting_rule_or_evidence_ids"] or [])],
             reviewer_id=reviewer_id,
             adjudication_status=AdjudicationStatus.ADJUDICATED if adjudicated else AdjudicationStatus.PENDING,
             gold_note=gold_note,
