@@ -1,0 +1,34 @@
+**Objective**: Generate a JSON-formatted list of scenario-based questions to assess a model's ability to design tissue clearing protocols. Follow these guidelines:
+
+1. **Question Structure**:
+   - Each entry must include:
+     - `"question_id"`: Unique integer starting from 1.
+     - `"specific_question"`: A question demanding a **step-by-step protocol** without naming specific methods. Describe functional needs (e.g., "preserve membrane-bound dyes" or "handle calcified tissues").
+     - End each question with: _"Please generate a step-by-step protocol to guide me in achieving this goal, including..."_ followed by 2-3 key technical aspects (e.g., reagent ratios, incubation conditions).
+
+2. **Technical Requirements**:
+   - **Avoid**: 
+     - Explicit method names (e.g., MACS, CLARITY).
+     - Imaging/data analysis steps.
+   - **Include**:
+     - General tissue challenges (e.g., vascular density, tissue rigidity).
+     - Functional needs (e.g., fluorescence preservation, lipid retention).
+     - Key parameters: reagent concentrations, incubation time/temperature.
+
+3. **Difficulty Tiers**:
+   - **Tier 1 (Basic)**: Single-organ protocols with standard requirements (e.g., brain, kidney).
+   - **Tier 2 (Intermediate)**: Multi-objective tasks (e.g., dual labeling, decalcification + clearing).
+   - **Tier 3 (Advanced)**: Disease models or slightly complex tissues (e.g., diabetic organs).
+
+4. **Output Format**:
+```json
+{
+  "question_id": <int>,
+  "specific_question": "<question_text>"
+}
+
+5. **example**
+{
+  "question_id": 1,
+  "specific_question": "Design a protocol to clear an adult mouse brain while preserving endogenous fluorescent proteins. Please generate a step-by-step protocol to guide me in achieving this goal, including osmotic balance control and refractive index adjustment."
+}

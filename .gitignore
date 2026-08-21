@@ -1,0 +1,39 @@
+# Python cache
+__pycache__/
+*.py[cod]
+dataset/Q+AR/logs
+config/config.yaml
+# Unrelated local automation framework; do not publish it.
+Auto-claude-code-research-in-sleep/
+
+# Pipeline scratch
+.aris/
+
+# Real API configuration may contain live keys; keep it out of the artifact.
+# NOTE: if already tracked, run: git rm --cached config/config.yaml
+
+# Generated document-build files
+.texlive-setup/
+*.aux
+*.bbl
+*.blg
+*.log
+*.out
+*.synctex.gz
+*.fdb_latexmk
+*.fls
+
+workflow/
+dataset/Q+AR/rag_context/
+dataset/Q+AR/rag_context_v2/
+dataset/Q+AR/rag_context_v3/
+dataset/Q+AR/result_fixdev/
+
+# Linter/cache artifacts
+.ruff_cache/
+.DS_Store
+
+# Local archives and exploratory artifacts
+archive/
+s_label_s_trans_expert_scores_v1.json
+s_label_s_trans_rescore_report_v1.md

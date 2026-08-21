@@ -1,0 +1,285 @@
+{
+  "TOC_Method_Name": {
+    "Text1": "FDISCO",
+    "Text1_Reference": [
+      "Title: 'FDISCO: Advanced solvent-based clearing method for imaging whole organs.'"
+    ]
+  },
+  "General_Description": {
+    "Text1": "FDISCO is an advanced solvent-based clearing method designed to preserve fluorescence signals while maintaining high tissue-clearing capability. It allows for the imaging and reconstruction of neuronal and vascular networks in whole organs, overcoming the fluorescence quenching limitations of previous methods like 3DISCO. FDISCO employs temperature and pH adjustments to enhance fluorescence preservation of various probes, making it suitable for long-term storage and compatible with labeling by multiple viruses.",
+    "Text1_Reference": [
+      "Page 1, Abstract: 'FDISCO can effectively preserve the fluorescence of various fluorescent probes and can achieve a long storage time of months while retaining potent clearing capability.'",
+      "Page 1, Introduction: 'Organic solvent-based clearing methods, such as three-dimensional imaging of solvent-cleared organs (3DISCO)... FDISCO represents an effective alternative to the three-dimensional mapping of whole organs.'",
+      "Page 2, Results: 'FDISCO can achieve a high level of fluorescence preservation of various probes...'"
+    ]
+  },
+  "Tissue_Types": [
+    {
+      "Text1": "FDISCO allows 3D imaging of neuronal and vascular structures in various large samples, including the intact brain, kidney, and muscle.",
+      "Text1_Reference": [
+        "Results: 'FDISCO allows 3D imaging of neuronal and vascular structures in various large samples, including the intact brain, kidney, and muscle, in combination with LSFM.'"
+      ]
+    },
+    {
+      "Text2": "FDISCO achieved effective clearing of various specimens, including internal organs (stomach, liver, lung, and kidney), soft tissues (muscle), hard tissues (calcified bone), and mouse embryos and was also applicable to rat organs.",
+      "Text2_Reference": [
+        "Results: 'In addition to its application for the entire CNS, FDISCO achieved effective clearing of various specimens, including internal organs (stomach, liver, lung, and kidney), soft tissues (muscle), hard tissues (calcified bone), and mouse embryos and was also applicable to rat organs.'"
+      ]
+    },
+    {
+      "text": "FDISCO also enabled simple, effective whole-body clearing of an adult mouse without the organic solvent perfusion adopted by uDISCO",
+      "text_reference": [
+        "'Results','FDISCO performs good clearing capability':'FDISCO also enabled simple, effective whole-body clearing of an adult mouse without the organic solvent perfusion adopted by uDISCO'"
+      ]
+    },
+    {
+      "mouse": [
+      "大脑 (Brain)",
+      "脑片 (Brain slice)",
+      "脊髓 (Spinal Cord)",
+      "中枢神经系统 (Central Nervous System)",
+      "肾脏 (Kidney)",
+      "肌肉 (Muscle)",
+      "胃 (Stomach)",
+      "肝脏 (Liver)",
+      "肺 (Lung)",
+      "骨骼 (Bone)",
+      "胚胎 (Embryo)",
+      "完整身体 (Whole body)"
+      ],
+      "rat": [
+        "大脑 (Brain)",
+        "脊髓 (Spinal Cord)",
+        "肌肉 (Muscle)",
+        "肝脏 (Liver)"
+      ]
+    }
+
+  ],
+  "Time_Consumption": [
+    {
+      "Text1": "FDISCO achieved high transparency similar to that of 3DISCO and uDISCO within days, while FluoClearBABB and Ethanol-ECi demonstrated lower transparency.",
+      "Text1_Reference": [
+        "Page 3, Results: 'FDISCO achieved high transparency similar to that of 3DISCO and uDISCO within days, while FluoClearBABB and Ethanol-ECi demonstrated lower transparency.'"
+      ]
+    },
+    {
+      "mouse":{
+        "mouse_brain_slice_1mm": "5.5 hours",
+        "mouse_SpinalCord": "5.5 hours",
+        "mouse_Bone": "14 hours",
+        "mouse_muscle": "14 hours",
+        "mouse_visceral organs": "14 hours",
+        "mouse_brain": "84 hours",
+        "mouse_CNS": "84 hours",
+        "mouse_embryo": "84 hours",
+        "mouse_WholeBody": "7.5 days"
+      },
+      "rat":{
+        "rat_Spinal cord": "10.5 hours",
+        "rat_brain": "126 hours",
+        "rat_muscle": "126 hours",
+        "rat_visceral organs": "126 hours"
+        
+      },
+      "reference": "table S1. FDISCO protocols for various tissues."
+    }
+  ],
+  "Tissue_Deformation": [
+    {
+      "Text1": "We calculated the size reductions and found that there was no significant difference between FDISCO and 3DISCO.",
+      "Text1_Reference": [
+        "Page 3, Results: 'We calculated the size reductions and found that there was no significant difference between FDISCO and 3DISCO.'"
+      ]
+    }
+  ],
+  "Fluorescence_Compati": [
+    {
+      "Text1": "FDISCO can effectively preserve the fluorescence of various fluorescent probes and can achieve a long storage time of months while retaining potent clearing capability.",
+      "Text1_Reference": [
+        "Page 1, Abstract: 'FDISCO can effectively preserve the fluorescence of various fluorescent probes and can achieve a long storage time of months while retaining potent clearing capability.'"
+      ]
+    },
+    {
+      "Text2": "FDISCO demonstrated better fluorescence preservation than 3DISCO and uDISCO, similar to the results for EGFP.",
+      "Text2_Reference": [
+        "Page 2, Results: 'For enhanced yellow fluorescent protein (EYFP) and tdTomato, FDISCO demonstrated better fluorescence preservation than 3DISCO and uDISCO, similar to the results for EGFP.'"
+      ]
+    },
+    {
+      "Text3": "In particular, FDISCO was suitable for tdTomato fluorescence, which is incompatible with uDISCO clearing.",
+      "Text3_Reference": [
+        "Page 2, Results: 'In particular, FDISCO was suitable for tdTomato fluorescence, which is incompatible with uDISCO clearing.'"
+      ]
+    },
+    {
+      "Text5": "FDISCO improved the fluorescence preservation by more than 50% for LEL-Dylight649 and Cy5, which decay rapidly during the 3DISCO clearing or storage procedure.",
+      "Text5_Reference": [
+        "Page 2, Results: 'For LEL-Dylight649 and Cy5 in particular, which decay rapidly during the 3DISCO clearing or storage procedure, FDISCO improved the fluorescence preservation by more than 50%.'"
+      ]
+    },
+
+    {
+      "Text": "In addition to FPs, many valuable chemical fluorescent tracers have been used to label tissues. Here, we tested FDISCO with several types of tracers, including the DyLight 649 Lycopersicon esculentum lectin (LEL-Dylight649) and Alexa Fluor 647 anti-mouse CD31 antibody (CD31-A647) for blood vessel labeling, fluorescent dyes for nuclear staining [propidium iodide (PI)], and antibodies conjugated to different fluorophores for neuron immunostaining. For immunostaining, 1-mm-thick Thy1-GFP-M brain sections were stained with primary antibodies against GFP, followed by secondary antibodies conjugated to Cy3, Cy5, or Alexa Fluor 594 (A594).",
+      "Text_Reference": [
+        "Results:'In addition to FPs, many valuable chemical fluorescent tracers have been used to label tissues (39). Here, we tested FDISCO with several types of tracers, including the DyLight 649 Lycopersicon esculentum lectin (LEL-Dylight649) and Alexa Fluor 647 anti-mouse CD31 antibody (CD31-A647) for blood vessel labeling, fluorescent dyes for nuclear staining [propidium iodide (PI)], and antibodies conjugated to different fluorophores for neuron immunostaining. For immunostaining, 1-mm-thick Thy1-GFP-M brain sections were stained with primary antibodies against GFP, followed by secondary antibodies conjugated to Cy3, Cy5, or Alexa Fluor 594 (A594).'"
+      ]
+    },
+    {
+      "Text": "Compared with 3DISCO, FDISCO significantly improved the maintenance of LEL-Dylight649,Cy5,Cy3,PI. Compared with 3DISCO, CD31-A647 and A594 were not significant.",
+      "Text_Reference": [
+        "Fig. 2, F to J, and fig. S1, C and D"
+      ]
+    },
+    {
+      "Text": "Here, we applied FDISCO to visualize the neuronal connectivity of  whole brains labeled with multiple viruses, including rabies virus (RV), pseudorabies virus (PRV), and adeno-associated virus (AAV).",
+      "Text_Reference": [
+        "'Results','FDISCO allows the detection of weakly labeled neurons with virus':'Here, we applied FDISCO to visualize the neuronal connectivity of  whole brains labeled with multiple viruses, including rabies virus (RV), pseudorabies virus (PRV), and adeno-associated virus (AAV).'"
+      ]
+    },
+    {
+      "Text": "We quantified the level of fluorescence signals from the cortical neurons of the cleared brains (FDISCO, 24.41 ± 1.13; 3DISCO, 2.18 ± 0.50; uDISCO, 12.26 ± 0.82; FluoClearBABB, 11.88 ± 1.71; Ethanol-ECi, 2.29 ± 0.68; CUBIC, 6.14 ± 1.06; PACT, 8.99 ± 1.78), which showed that FDISCO could preserve the fluorescence signal significantly better than the other methods could",
+      "Text_Reference": [
+        "Results,'FDISCO performs good clearing capability':'We quantified the level of fluorescence signals from the cortical neurons of the cleared brains (FDISCO, 24.41 ± 1.13; 3DISCO, 2.18 ± 0.50; uDISCO, 12.26 ± 0.82; FluoClearBABB, 11.88 ± 1.71; Ethanol-ECi, 2.29 ± 0.68; CUBIC, 6.14 ± 1.06; PACT, 8.99 ± 1.78), which showed that FDISCO could preserve the fluorescence signal significantly better than the other methods could'"
+      ]
+    },
+    {
+      "FPs":[
+        "Thy1-GFP-M",
+        "EGFP",
+        "EYFP",
+        "tdTomato" 
+      ],
+      "antibodies":[
+        "CD31-A647"
+      ],
+      "dyes":[
+        "Cy3",
+        "Cy5",
+        "Propidium Iodide (PI)",
+        "Alexa Fluor 594 (A594)",
+        "LEL-Dylight649"
+      ],
+      "viruses":[
+        "RV-DsRed",
+        "AAV-EYFP",
+        "AAV-mCherry"
+      ]
+    }
+  ],
+  "Preservation_Stabili": [
+    {
+      "Text1": "The fluorescence level of FDISCO samples at each time point was significantly higher than those of 3DISCO and uDISCO samples.",
+      "Text1_Reference": [
+        "Results: 'The fluorescence level of FDISCO samples at each time point was significantly higher than those of 3DISCO and uDISCO samples.'"
+      ]
+    },
+    {
+      "Text2": "FDISCO could maintain the EGFP fluorescence at a fairly high level over 7 months, which allowed repeated imaging of the cleared samples.",
+      "Text2_Reference": [
+        "Results: 'We recorded the EGFP fluorescence of cleared brains at different time points after clearing and found that FDISCO could maintain the EGFP fluorescence at a fairly high level over 7 months, which allowed repeated imaging of the cleared samples.'"
+      ]
+    },
+    {
+      "Text4": "Moreover, the endogenous fluorescence signals(EYFP and tdTomato) could still be detected after 28 days of storage .",
+      "Text4_Reference": [
+        "Results:'Moreover, the endogenous fluorescence signals could still be detected after 28 days of storage (Fig. 2, D and E).'"
+      ]
+    }
+
+  ],
+  "Application": [
+    {
+      "Text1": "FDISCO was used for high-resolution imaging and reconstruction of neuronal and vascular networks.",
+      "Text1_Reference": [
+        "Abstract: 'We used FDISCO for high-resolution imaging and reconstruction of neuronal and vascular networks.'"
+      ]
+    },
+    {
+      "Text2": "FDISCO is compatible with labeling by multiple viruses and enables fine visualization of neurons with weak fluorescence labeling in the whole brain.",
+      "Text2_Reference": [
+        "Abstract: 'Moreover, FDISCO is compatible with labeling by multiple viruses and enables fine visualization of neurons with weak fluorescence labeling in the whole brain.'"
+      ]
+    },
+    {
+      "Text3": "FDISCO allows 3D imaging of neuronal and vascular structures in various large samples, including the intact brain, kidney, and muscle.",
+      "Text3_Reference": [
+        "Page 1, Results: 'FDISCO allows 3D imaging of neuronal and vascular structures in various large samples, including the intact brain, kidney, and muscle, in combination with LSFM.'"
+      ]
+    },
+    {
+      "Text4": "FDISCO detected weakly labeled neurons with virus in the whole brain and analyzed the spatial distributions of cells projecting to the virus-injected region.",
+      "Text4_Reference": [
+        "Page 1, Results: 'Using FDISCO, we detected weakly labeled neurons with virus in the whole brain and analyzed the spatial distributions of cells projecting to the virus-injected region.'"
+      ]
+    },
+    {
+      "text": "This fluorescence-preserving capability, together with the high tissue transparency and size reduction, allowed full-depth imaging through the entire central nervous system (CNS; whole brain and spinal cord) with LSFM",
+      "text_reference": [
+        "'Results','FDISCO performs good clearing capability':'This fluorescence-preserving capability, together with the high tissue transparency and size reduction, allowed full-depth imaging through the entire central nervous system (CNS; whole brain and spinal cord) with LSFM'"
+      ]
+    },
+    {
+      "text": "FDISCO allowed clearing of the entire CNS of an adult Thy1-GFP-M mouse and fine 3D visualization of the nervous system with LSFM imaging",
+      "text_reference": [
+        "'Results','FDISCO allows 3D visualization of the nervous and vascular systems':'FDISCO allowed clearing of the entire CNS of an adult Thy1-GFP-M mouse and fine 3D visualization of the nervous system with LSFM imaging'"
+      ]
+    },
+    {
+      "text": "Moreover, we applied FDISCO to the Sst-IRES-Cre::Ai14 transgenic mouse brain, which selectively expressed tdTomato in dendritic inhibitory interneurons, and imaged the brain with LSFM. With the good fluorescence preservation of tdTomato, FDISCO achieved fine reconstruction of neurons in different brain regions at single-cell resolution.",
+      "text_reference": [
+        "'Results','FDISCO allows 3D visualization of the nervous and vascular systems':'Moreover, we applied FDISCO to the Sst-IRES-Cre::Ai14 transgenic mouse brain, which selectively expressed tdTomato in dendritic inhibitory interneurons (40), and imaged the brain with LSFM. With the good fluorescence preservation of tdTomato, which is incompatible with uDISCO, FDISCO achieved fine reconstruction of neurons in different brain regions at single-cell resolution.'"
+      ]
+    },
+    {
+      "text": "In addition, we reconstructed the nerve branches and the motor endplates in muscle tissue by FDISCO. The nerve branches and motor endplates in the gastrocnemius muscle were lighted by YFP (Thy1-YFP-16) and Alexa Fluor 647conjugated a-BTX (bungarotoxin), respectively. The 3D visualization by FDISCO allowed the tracing of nerve branches and the locating of motor endplates readily. The morphologies of the individual motor endplates and the contact to the axon were identified",
+      "text_reference": [
+        "'Results','FDISCO allows 3D visualization of the nervous and vascular systems':'In addition, we reconstructed the nerve branches and the motor endplates in muscle tissue by FDISCO (Fig. 4, E and F, and movie S2). The nerve branches and motor endplates in the gastrocnemius muscle were lighted by YFP (Thy1-YFP-16) and Alexa Fluor 647conjugated a-BTX (bungarotoxin), respectively. The 3D visualization by FDISCO allowed the tracing of nerve branches and the locating of motor endplates readily, while 3DISCO could not. The morphologies of the individual motor endplates and the contact to the axon were identified'"
+      ]
+    },
+    {
+      "text": "For kidney imaging, FDISCO can obtain the 3D distribution of blood vessels and glomeruli in the kidney. The glomeruli were mainly distributed in the renal cortex, and the number of glomeruli could be counted.",
+      "text_reference": [
+        "'Results','FDISCO allows 3D visualization of the nervous and vascular systems':'For kidney imaging, we obtained the 3D distribution of blood vessels and glomeruli in the kidney (Fig. 5, F to I, and movie S4). The glomeruli were mainly distributed in the renal cortex, and the number of glomeruli could be counted.'"
+      ]
+    },
+    {
+      "text": "FDISCO successfully visualized weakly labeled neuronal connectivity using RV-DsRed labeling throughout the whole brain, which is difficult to achieve by 3DISCO and uDISCO.",
+      "text_reference": [
+        "'Results','FDISCO allows the detection of weakly labeled neurons with virus':'FDISCO successfully visualized weakly labeled neuronal connectivity using RV-DsRed labeling throughout the whole brain, which is difficult to achieve by 3DISCO and uDISCO.'"
+      ]
+    },
+    {
+      "Text": "FDISCO also cleared a brain labeled with AAV. We injected the left and right primary motor cortices of mice with AAV-EYFP and AAV-mCherry, respectively. We observed that the motor neurons sent long axon bundles to the contralateral primary motor cortex and spinal cord throughout the brain.",
+      "Text_Reference": [
+        "'Results','FDISCO allows the detection of weakly labeled neurons with virus':'We also applied FDISCO to clear a brain labeled with AAV. We injected the left and right primary motor cortices of mice with AAVEYFP and AAV-mCherry, respectively. We observed that the motor neurons sent long axon bundles to the contralateral primary motor cortex and spinal cord throughout the brain'"
+      ]
+    },
+    {
+      "Text": "FDISCO was used to image functionally connected neurons in the brain, which regulate the motor function of the skeletal muscle. PRV152-EGFP was injected into the flexor digitorum superficialis muscle and then underwent retrograde propagation through multisynaptic circuits in the CNS.",
+      "Text_Reference": [
+        "'Results','FDISCO allows the detection of weakly labeled neurons with virus':'FDISCO was used to image functionally connected neurons in the brain, which regulate the motor function of the skeletal muscle. PRV152-EGFP was injected into the flexor digitorum superficialis muscle and then underwent retrograde propagation through multisynaptic circuits in the CNS.'"
+      ]
+    }
+  ],
+  "Note": [
+    {
+      "Text6": "FDISCO is not compatible with DiI and SYTO 16 tracers.",
+      "Text6_Reference": [
+        "Page 9, Discussion: 'FDISCO could significantly reduce the fluorescence quenching of FPs and most tested tracers, it did not change the incompatibility with some specific tracers (such as DiI and SYTO 16).'"
+      ]
+    },
+    {
+      "Text7": "FDISCO-cleared samples cannot be further studied by electron microscopy because the lipid structures are dissolved by the clearing agents.",
+      "Text7_Reference": [
+        "Page 9, Discussion: 'The FDISCO-cleared samples could not be further studied by electron microscopy because the lipid structures were dissolved by the clearing agents.'"
+      ]
+    },
+    {
+      "Text8": "Redness appears in heme-rich tissues after FDISCO clearing due to residual blood, decreasing transparency.Some decolorizing reagents can be used before clearing.",
+      "Text8_Reference": [
+        "Page 9, Discussion: 'after FDISCO clearing, redness appeared in heme-rich tissues (such as rat liver) due to the residual blood in tissues, which decreased the tissue transparency.'"
+      ]
+    }
+  ]
+}

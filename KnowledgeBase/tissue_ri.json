@@ -1,0 +1,62 @@
+{
+  "tissue_ri_database": {
+    "description": "Ground Truth Refractive Indices for Optimal Clearing. Based on protein/lipid/mineral composition density.",
+    "default_ri": 1.48,
+    "tissues": {
+      "brain": {
+        "cortex_slice": 1.46,
+        "whole_brain": 1.46,
+        "human_brain_block": 1.47,
+        "embryo_brain": 1.45,
+        "brain_tumor": 1.47,
+        "hippocampus_ca1": 1.46,
+        "note": "脑组织脂质丰富但密度较低，CUBIC/Scale (1.47-1.49) 或 iDISCO (1.56) 均可，但物理基准通常定为 1.46-1.48。"
+      },
+      "viscera_soft": {
+        "liver": 1.50,
+        "kidney": 1.50,
+        "lung": 1.49,
+        "lymph_node": 1.51,
+        "pancreas": 1.50,
+        "spleen": 1.50,
+        "stomach": 1.50,
+        "intestine": 1.49,
+        "placenta": 1.50,
+        "testis": 1.49,
+        "heart": 1.52,
+        "note": "内脏器官蛋白密度高于脑，理想 RI 略高，约在 1.50 左右。"
+      },
+      "muscle_fibrous": {
+        "heart": 1.52,
+        "skin": 1.53,
+        "tumor_dense": 1.52,
+        "skeletal_muscle": 1.52,
+        "note": "肌肉和皮肤富含胶原蛋白 (Collagen RI=1.53) 和肌纤维，需要更高的 RI 来消除散射。"
+      },
+      "hard_tissue": {
+        "skull": 1.56,
+        "femur": 1.56,
+        "tooth": 1.57,
+        "cochlea": 1.56,
+        "bone": 1.56,
+        "note": "硬组织含矿物质 (Hydroxyapatite)，需要极高 RI 的溶剂 (如 PEGASOS/BABB 1.56+) 才能透明。"
+      },
+      "special": {
+        "organoid": 1.45,
+        "embryo_whole": 1.48,
+        "eye_retina": 1.46,
+        "tumor_paraffin": 1.52,
+        "spinal_cord": 1.46,
+        "fat": 1.49,
+        "prostate": 1.50,
+        "breast_cancer": 1.51,
+        "melanoma": 1.52,
+        "celegans": 1.45,
+        "zebrafish": 1.46,
+        "plant": 1.47,
+        "lymph_node": 1.51,
+        "note": "类器官含水量高，密度低；石蜡切片脱蜡后蛋白致密。"
+      }
+    }
+  }
+}
