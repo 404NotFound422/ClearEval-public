@@ -3,19 +3,17 @@ __pycache__/
 *.py[cod]
 dataset/Q+AR/logs
 config/config.yaml
-# Unrelated local automation framework — must NOT ship in the public mirror
+# Unrelated local automation framework; do not publish it.
 Auto-claude-code-research-in-sleep/
 
 # Pipeline scratch
 .aris/
 
-# Real API config (contains live keys) — keep out of the public mirror.
+# Real API configuration may contain live keys; keep it out of the artifact.
 # NOTE: if already tracked, run: git rm --cached config/config.yaml
-config/config.yaml
 
-# TeX Live installation temporary files
+# Generated document-build files
 .texlive-setup/
-paper/build/
 *.aux
 *.bbl
 *.blg
@@ -35,7 +33,7 @@ dataset/Q+AR/result_fixdev/
 .ruff_cache/
 .DS_Store
 
-# Local archive / exploratory artifacts (not needed for the paper)
+# Local archives and exploratory artifacts
 archive/
 s_label_s_trans_expert_scores_v1.json
 s_label_s_trans_rescore_report_v1.md

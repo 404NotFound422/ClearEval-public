@@ -53,8 +53,10 @@ def aggregate_oeq(oeq_dir=None, output_file=None):
         output_file = os.path.join(output_dir, OUTPUT_FILE_NAME)
 
     results = []
-    for filename in os.listdir(oeq_dir):
-        if filename.startswith('evaluation_results_') and filename.endswith('.json'):
+    for filename in sorted(os.listdir(oeq_dir)):
+        # The base aggregate uses only the 13 one-shot runs. RAG and
+        # self-check variants are aggregated separately by aggregate_rag_baseline.py.
+        if filename.startswith('evaluation_results_') and filename.endswith('_1-shot.json'):
             model_name = filename[len('evaluation_results_'):-len('.json')]
             if model_name.endswith('_0-shot'):
                 model_name = model_name[:-len('_0-shot')]

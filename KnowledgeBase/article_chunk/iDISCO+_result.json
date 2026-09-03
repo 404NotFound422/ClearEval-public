@@ -1,0 +1,227 @@
+{
+  "TOC_Method_Name": {
+    "Text": "iDISCO+",
+    "Text_Reference": [
+      "Highlights section: 'iDISCO+ preserves morphology...'",
+      "RESULTS section, 'Imaging and Registration of IEGs in the Mouse Brain': '...protocol is termed iDISCO+.'"
+    ]
+  },
+  "General_Description": {
+    "Text": "iDISCO is a simple, rapid, and inexpensive solvent-based method for whole-mount immunolabeling and volume imaging of large, intact tissue samples. It is highly versatile, allowing for the visualization of molecular structures in samples ranging from whole mouse embryos to adult organs like the brain and kidneys. The protocol is compatible with a wide range of antibodies and preserves the signal from transgenic fluorescent reporters like GFP. Its primary limitation, which led to the development of iDISCO+, is the significant tissue shrinkage caused by the clearing solvents, affecting the absolute accuracy of morphological measurements.",
+    "Text_Reference": [
+      "SUMMARY: 'The visualization of molecularly labeled structures within large intact tissues in three dimensions is an area of intense focus. We describe a simple, rapid, and inexpensive method, iDISCO, that permits whole-mount immunolabeling with volume imaging of large cleared samples ranging from perinatal mouse embryos to adult organs, such as brains or kidneys.'",
+      "SUMMARY: 'iDISCO is modeled on classical histology techniques, facilitating translation of section staining assays to intact tissues, as evidenced by compatibility with 28 antibodies to both endogenous antigens and transgenic reporters like GFP.'",
+      "DISCUSSION: 'The combined iDISCO-3DISCO procedure is simple, fast, and inexpensive...'"
+    ]
+  },
+  "Tissue_Types": [
+    {
+      "Text1": "The original iDISCO protocol for immunolabeling and brain clearing permits detection of immunolabeled structures throughout the intact adult mouse brain and is compatible with a wide variety of antibodies to diverse epitopes.",
+      "Text1_Reference": [
+        "RESULTS section, 'Imaging and Registration of IEGs in the Mouse Brain': 'The original iDISCO protocol... permits detection of immunolabeled structures throughout the intact adult mouse brain and is compatible with a wide variety of antibodies to diverse epitopes.'"
+      ]
+    },
+    {
+      "Text2": "iDISCO+ is also compatible with other tissues such as mouse embryos, kidneys, and other organs.",
+      "Text2_Reference": [
+        "INTRODUCTION section: 'iDISCO is modeled on classical histology techniques, facilitating translation of section staining assays to intact tissues, as evidenced by compatibility with 28 antibodies to both endogenous antigens and transgenic reporters like GFP.'",
+        "INTRODUCTION section: '...from large mouse embryos to adult organs, such as brains or kidneys.'"
+      ]
+    },
+    {
+      "Text": "The iDISCO method is suitable for large cleared samples, which range from perinatal mouse embryos (such as E12.5, E13.5, and E15.5 stages) to various adult organs, including the whole mouse brain, kidneys, and dorsal root ganglia (DRG).",
+      "Text_Reference": [
+        "SUMMARY: '...permits whole-mount immunolabeling with volume imaging of large cleared samples ranging from perinatal mouse embryos to adult organs, such as brains or kidneys.'",
+        "Figure 3: 'Imaging of Cleaved Caspase-3 in Neurons of Adult Dorsal Root Ganglia (DRG) by iDISCO.'",
+        "Figure S1: 'Whole-mount immunolabeling of E15.5 embryo... Whole-mount immunolabeling of E12.5 embryo...'"
+      ]
+    },
+    {
+      "mouse": [
+        "Whole Brain",
+        "Cut hemisphere",
+        "Hindbrain + cerebellum",
+        "Kidney",
+        "Dorsal Root Ganglia, DRG",
+        "Embryos, E12.5-E15.5",
+        "Peripheral nerves",
+        "Muscle",
+        "stomach"
+    ],
+    "Text_Reference": [
+      "SUMMARY: '...large cleared samples ranging from perinatal mouse embryos to adult organs, such as brains or kidneys.'",
+      "Figure 3: 'Imaging of Cleaved Caspase-3 in Neurons of Adult Dorsal Root Ganglia (DRG) by iDISCO.'",
+      "Figure S1: 'Whole-mount immunolabeling of E15.5 embryo... Whole-mount immunolabeling of E12.5 embryo...'",
+      "Figure S1 legend: 'The inset shows a higher magnification of the boxed region, illustrating the mapping of S100b-positive Schwann cells along the peripheral nerves...'",
+      "Tissue_Types Text2: 'iDISCO+ is compatible with other tissues such as mouse embryos, kidneys, and other organs.'",
+      "Figure 4: 'Application to Adult Kidney and Muscle and Embryonic Vasculature'"
+    ]
+  }
+    
+  ],
+  "Time_Consumption": [
+
+    {
+      "Text2": "For embryonic samples, the clearing time varies: E10-E11 embryos take 1 day, E12 embryos take 2 days, E13-E14 embryos take 3 days, and E15-16 embryos take 4 days.",
+      "Text2_Reference": [
+        "iDISCO+ protocol: 'Sample type: Embryonic. E10-E11 embryo: 1d; E12 embryo: 2d; E13-E14 embryo: 3d; E15-16 embryo: 4d.'"
+      ]
+    },
+    {
+      "Text3": "For adult organs, the clearing time is generally 4 days for hindbrain + cerebellum, 5 days for cut hemisphere, and 7 days for the whole brain.",
+      "Text3_Reference": [
+        "iDISCO+ protocol: 'Sample type: Adult organ. hindbrain+cerebellum: 3d; cut hemisphere: 5d; Whole brain: 7d.'"
+      ]
+    }
+  ],
+  "Tissue_Deformation": [
+    {
+      "Text1": "With this novel iDISCO protocol, which we term iDISCO+, only minor tissue deformation occurred.",
+      "Text1_Reference": [
+        "RESULTS section, 'Imaging and Registration of IEGs in the Mouse Brain': 'With this novel iDISCO protocol... only minor tissue deformation occurred.'"
+      ]
+    },
+    {
+      "Text2": "The optimized affine transformation coefficients determined by Elastix indicate a modest linear reduction in size of 7% and 9% in the medio-lateral and rostro-caudal axis respectively and a small linear expansion of 5% along the dorso-ventral axis (n = 5).",
+      "Text2_Reference": [
+        "RESULTS section, 'Quantification of Shrinkage and Deformations': 'The singular values of decomposition... show a modest linear change in size...'"
+      ]
+    },
+    {
+      "Text3": "The overall volume shrinkage as determined by the determinant of the transformation matrix was 11%, down from the reported 50% shrinkage observed with the original 3DISCO clearing protocol.",
+      "Text3_Reference": [
+        "RESULTS section, 'Quantification of Shrinkage and Deformations': 'The overall volume shrinkage... was 11%, down from the reported 50% shrinkage...'"
+      ]
+    }
+  ],
+  "Fluorescence_Compati": [
+    {
+      "Text1": "In particular, it is compatible with antibodies that detect a variety of IEGs. Specific signals are detected using secondary antibodies coupled to Alexa fluorophores that emit in the far-red spectrum (647 nm laser excitation), to which the cleared brain is essentially transparent.",
+      "Text1_Reference": [
+        "RESULTS section, 'Imaging and Registration of IEGs in the Mouse Brain': 'Specific signals are detected using secondary antibodies coupled to Alexa fluorophores...'"
+      ]
+    },
+    {
+      "antibodies": [
+        "Aquaporin2",
+        "β-Catenin",
+        "β-Galatosidase",
+        "cFos",
+        "Cleaved Caspase 3",
+        "Cleaved Caspase 9",
+        "E-Cadherin",
+        "FoxP2",
+        "GFP(rabbit)",
+        "GFP(chicken)",
+        "GFP (rabbit)",
+        "Laminin",
+        "N-Cadherin",
+        "Nephrin",
+        "Neurofilament-M",
+        "Parvalbumin",
+        "PeCAM",
+        "Phospho-cJun(two distinct sites)",
+        "Phospho-Histone-H3",
+        "RFP (tdtomato)",
+        "Ret",
+        "Robo3",
+        "TrkA",
+        "TrkB",
+        "TrkC",
+        "Tuj1",
+        "Tyrosine Hydroxylase"
+      ],
+      "dyes":[
+        "TO-PRO-3"
+      ],
+      "others":[
+        "EdU",
+        "Cholera Toxin β"
+      ],
+      "Reference": [
+        "Table S3.Antibodies and other labeling reagents tested"
+    ]
+    }
+
+
+  ],
+  "Preservation_Stabili": [
+    {
+      "Text1": "iDISCO+ uses Alexa Fluor dyes, which can be imaged repeatedly with very low photobleaching and are stable for many months in the index matching solution at room temperature.",
+      "Text1_Reference": [
+        "INTRODUCTION section: 'Whereas some other clearing platforms cause samples to be unstable in the index matching solution, necessitating prompt imaging and storage in a different solution, iDISCO uses Alexa Fluor dyes, which can be imaged repeatedly with very low photobleaching and are stable for many months in the index matching solution at room temperature.'"
+      ]
+    },
+    {
+      "Text4": "iDISCO+ was used to validate antibodies for c-Fos, Arc, Egr-1, Phospho-S6, and Npas4 by mapping activity evoked in the barrel cortex by whisker stimulation.",
+      "Text4_Reference": [
+        "RESULTS section, 'Imaging and Registration of IEGs in the Mouse Brain': 'To test the ability of the method to detect the induction of known IEGs, we relied on activity evoked in the barrel cortex...'"
+      ]
+    }
+  ],
+  "Application": [
+    {
+      "Text": "A primary application of iDISCO+ is the high-throughput mapping of immediate early genes (IEGs) such as c-Fos, Arc, and Egr-1 across the entire brain to identify neuronal activity.",
+      "Text_Reference": [
+        "RESULTS section, 'Imaging and Registration of IEGs in the Mouse Brain': 'To test the ability of the method to detect the induction of known IEGs, we relied on activity evoked in the barrel cortex by whisker stimulation, which is known to induce the expression of c-Fos, Arc, and Egr-1...'"
+      ]
+    },
+    {
+      "Text6": "iDISCO+ combined with ClearMap allows automated analysis of c-Fos+ cell distribution in mouse brains exposed to haloperidol, identifying brain regions activated by the drug.",
+      "Text6_Reference": [
+        "RESULTS section, 'Mapping of Pharmacologically Induced Brain Activity': 'Automated analysis of c-Fos+ cell distribution in mouse brains harvested 3 hr after exposure to haloperidol...'"
+      ]
+    },
+    {
+      "Text7": "iDISCO+ was used to study brain regions involved in parental behavior by combining activity mapping with axon tracing.",
+      "Text7_Reference": [
+        "Highlights section: 'We use ClearMap to study brain regions involved in parental behavior'",
+        "RESULTS section, 'Activity Mapping with Axonal Tracing to Investigate Parental Behavior': 'We combined activity mapping with axon tracing to uncover new brain regions...'"
+      ]
+    },
+    {
+      "Text2": "In the blue-green spectrum (480 nm laser excitation), intrinsic tissue fluorescence highlights the major structures in the brain, such as myelinated tracts, cortical regions, and various deep nuclei.",
+      "Text2_Reference": [
+        "RESULTS section, 'Imaging and Registration of IEGs in the Mouse Brain': 'In the blue-green spectrum... intrinsic tissue fluorescence highlights the major structures...'"
+      ]
+    },
+    {
+      "Text": "The iDISCO method was applied to study neuronal degeneration in 3D. It permitted the imaging of single degenerating axons within the adult brain and enabled the first in vivo visualization of cleaved Caspase-3, an apoptosis marker, in individual sensory axons within intact embryos.",
+      "Text_Reference": [
+        "SUMMARY: 'When applied to degenerating neurons, iDISCO revealed unexpected variability... It also permitted imaging of single degenerating axons in adult brain and the first visualization of cleaved Caspase-3 in degenerating embryonic sensory axons in vivo, even single axons.'"
+      ]
+    },
+    {
+      "Text": "A major application was mapping the projections of molecularly defined neuronal populations. For example, by using an antibody against Tyrosine Hydroxylase (TH), iDISCO was used to visualize the complete 3D network of dopaminergic neurons throughout an entire adult mouse brain hemisphere.",
+      "Text_Reference": [
+        "RESULTS: 'To illustrate how iDISCO can be used to map the projections of molecularly defined cell types, we used iDISCO to map the projections of dopaminergic neurons in the adult mouse brain...'"
+      ]
+    },
+    {
+      "Text": "The method was also used to visualize non-neuronal cell types in the peripheral nervous system. Specifically, it enabled the mapping of S100b-positive Schwann cells along the peripheral nerves of a whole E15.5 mouse embryo.",
+      "Text_Reference": [
+        "Figure S1 C legend: 'The inset shows a higher magnification of the boxed region, illustrating the mapping of S100b-positive Schwann cells along the peripheral nerves...'"
+      ]
+    }
+  ],
+  "Note": [
+    {
+      "Text1": "iDISCO+ reduces sample shrinkage and better preserves brain morphology compared to the original iDISCO protocol.",
+      "Text1_Reference": [
+        "RESULTS section, 'Imaging and Registration of IEGs in the Mouse Brain': 'First, we improved the iDISCO protocol to reduce sample shrinkage...'"
+      ]
+    },
+    {
+      "Text2": "The clearing performance of iDISCO+ enables imaging of c-Fos+ cells with consistent signal throughout the working distance of the objective.",
+      "Text2_Reference": [
+        "RESULTS section, 'Imaging and Registration of IEGs in the Mouse Brain': 'The clearing performance of iDISCO+ enables imaging of c-Fos+ cells...'"
+      ]
+    },
+    {
+      "Text3": "iDISCO+ remains compatible with all tissues and has an identical clearing performance to that seen with iDISCO/3DISCO.",
+      "Text3_Reference": [
+        "RESULTS section, 'Imaging and Registration of IEGs in the Mouse Brain': 'We verified that the new clearing protocol remains compatible with all tissues...'"
+      ]
+    }
+  ]
+}
