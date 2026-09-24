@@ -94,6 +94,13 @@ contains 253 open-ended protocol-design scenarios. Each record includes the
 tissue tier, inferred tissue label, and marker or target requirements used by
 the deterministic Effectiveness scorer.
 
+The current question stems and allowed-marker list were revised on 2026-09-13.
+All 253 question IDs are preserved. See the
+[revision record and before/after comparison](dataset/Q+AR/revisions/2026-09-13-stem-fixes/README.md)
+for the changes, original snapshots, source references, and validation.
+Released model responses and scores still correspond to the earlier inputs;
+use a separate output directory for runs on the revised dataset.
+
 ### Scoring knowledge bases
 
 | File | Purpose |
@@ -145,23 +152,22 @@ aggregation scripts against the included model outputs.
 Run commands from the repository root:
 
 ```bash
-# Generate protocols and grade them
-python OEQ_run_grading_new.py
-
-# Grade the included generations only
-python OEQ_run_grading_new.py --eval-only
-
-# Generate without grading
+# Generate protocols for the revised questions without grading
 python OEQ_run_grading_new.py --no-evaluation
 
-# Limit a run to selected configured models
-python OEQ_run_grading_new.py --eval-only --models <model_a> <model_b>
+# Grade included generations against their original question snapshot
+python OEQ_run_grading_new.py --eval-only --question-file dataset/Q+AR/revisions/2026-09-13-stem-fixes/before/question_final.json --response-dir dataset/Q+AR/model_response --score-dir dataset/Q+AR/result_scoring_v2
 ```
 
-Useful options include `--teacher`, `--eval-concurrency`, `--gen-concurrency`,
-and `--shot-types`. Generated protocols are written to
-`dataset/Q+AR/model_response/`, and graded records are written to
-`dataset/Q+AR/result/`.
+Useful options include `--models`, `--teacher`, `--eval-concurrency`,
+`--gen-concurrency`, `--shot-types`, `--qids`, and `--limit`.
+New outputs default to `dataset/Q+AR/model_response_scoring_v2/` and
+`dataset/Q+AR/result_scoring_v2/`. Version manifests prevent incompatible resumes.
+
+The fixed demand table is bound to the original question snapshot. Scoring the
+revised questions requires audited demand vectors and a matching manifest;
+reusing the old binding fails before model calls. See the
+[scoring repair notes](docs/scoring_repair_v2.md) for formulas, scope, and commands.
 
 ### Inference-time grounding baseline
 
@@ -173,10 +179,14 @@ python build_rag_context.py --check-leakage
 Context cards are generated from scenario metadata only. They do not depend on
 the output of the model being evaluated.
 
-## Reproducing released aggregate results
+## Reaggregating released scores
 
 The following commands use the included model outputs and do not call external
 model APIs:
+
+The OEQ aggregate now averages the per-protocol minimum. Outputs use new
+`*_scoring_v2` filenames; archived paper tables retain their original values.
+Reaggregation does not rerun the teacher or change individual scores.
 
 ```bash
 # Aggregate the 13 base one-shot runs
@@ -194,6 +204,12 @@ python results/aggregate_rag_baseline.py
 ```
 
 ## Validation status
+
+The repeat-grading pilot and its collection safeguards are documented in
+[docs/judge_blind_pilot.md](docs/judge_blind_pilot.md). The current scoring contract
+is `cleareval-fixed-demand-v4-marker-identity`, which also records a source-backed
+MECA-79/PNAd target-recognition rule. Scoring versions and archived outputs remain
+separate; repeatability does not establish scientific validity.
 
 The reduced artifact is checked before publication for JSON/JSONL validity,
 Python syntax, MCQ checkpoint coverage, deterministic aggregate reproduction,

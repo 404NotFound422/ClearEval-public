@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>组织透明化方案匿名评阅</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#f3f5f8;color:#202937;font:16px/1.6 system-ui,"Microsoft YaHei",sans-serif}
+header{padding:20px 4%;background:#142d45;color:white}h1{font-size:23px;margin:0}header p{margin:5px 0;color:#d3e0ee}
+nav{padding:12px 4%;background:white;border-bottom:1px solid #d8e0e8;display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+button,select,input,textarea{font:inherit;border:1px solid #b7c7d5;border-radius:5px;padding:8px;background:white}button{cursor:pointer;color:#123d68}button:disabled{opacity:.45;cursor:default}
+main{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(320px,1fr);gap:20px;max-width:1450px;margin:20px auto;padding:0 3%}
+article,aside{background:white;border:1px solid #dce3eb;padding:22px;border-radius:8px}h2{font-size:18px;margin:6px 0 12px}h3{font-size:16px;margin:20px 0 6px}
+pre{white-space:pre-wrap;overflow-wrap:anywhere;font-family:inherit;font-size:15px;line-height:1.8;margin:10px 0}label{display:block;margin-top:14px;font-weight:600}label span{font-size:13px;color:#53657a;display:block;font-weight:400}label select,textarea{display:block;width:100%;margin-top:5px}textarea{min-height:95px;resize:vertical}
+details{font-size:14px;border-bottom:1px solid #e3e8ed;padding-bottom:12px;margin-bottom:12px}summary{cursor:pointer;font-weight:600}.muted{font-size:13px;color:#667689}#saved{min-height:22px;color:#315d42}.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}.progress{margin-left:auto;font-weight:600}
+@media(max-width:850px){main{grid-template-columns:1fr}header{padding:15px}aside{order:0}}
+@media print{nav,aside{display:none}main{display:block}article{border:0}header{background:white;color:black}}
+</style></head><body>
+<header><h1>组织透明化方案匿名评阅</h1><p id="reviewer"></p></header>
+<nav><button id="prev">上一份</button><select id="caseSelect" aria-label="选择匿名案例"></select><button id="next">下一份</button><span class="progress" id="progress"></span></nav>
+<main><article><h2 id="caseTitle"></h2><h3>任务与样本条件</h3><pre id="question"></pre><details><summary>任务原有的候选方法与标记限制</summary><pre id="restrictions"></pre></details><h3>待评方案原文</h3><pre id="protocol"></pre></article>
+<aside><h2>独立评阅</h2><details open><summary>评分说明</summary><p>请依据本题目标、给定样本和方案原文独立判断。可以查阅原始文献，并记录出处；请在提交前独立完成，不与其他评阅者讨论。</p><p>首先评估方案是否有望实现任务目标。缺乏依据时选择“无法判断”，并填写原因。对已经明确完成的前处理不重复扣分。不要把某方法的一般特征当成适用于全部样本和条件的规则。</p><p>记录支持判断的具体步骤、冲突或遗漏。表格中的子项帮助解释总体评分，不要求以算术平均得到总体评分。</p></details>
+<div id="fields"></div><label>判断依据或关键问题<textarea id="rationale" placeholder="请指出具体步骤、遗漏或矛盾"></textarea></label>
+<label>参考文献 DOI 或链接（如使用）<textarea id="references" placeholder="可留空"></textarea></label>
+<label>无法判断的原因（如适用）<textarea id="unable_reason" placeholder="说明缺少哪些信息或证据"></textarea></label>
+<div class="actions"><button id="save">保存本份</button><button id="export">导出评分 JSON</button><button id="exportCsv">导出评分 CSV</button></div><p id="saved" role="status"></p>
+<p class="muted">进度保存在当前浏览器。完成后请导出文件交回研究负责人。页面不会发送评分或方案内容。</p>
+</aside></main>
+<script id="data" type="application/json">__REVIEW_DATA__</script>
+<script>
+'use strict';
+const DATA=JSON.parse(document.getElementById('data').textContent);
+const specs=DATA.rating_fields, cases=DATA.cases;
+const storageKey='cleareval-blind-'+DATA.package_id+'-'+DATA.reviewer_id;
+let saved={};try{saved=JSON.parse(localStorage.getItem(storageKey)||'{}');}catch(e){saved={};}
+let current=0;
+const select=document.getElementById('caseSelect');
+document.getElementById('reviewer').textContent='评阅者 '+DATA.reviewer_id+' · 共 '+cases.length+' 份匿名材料';
+for(const [i,c] of cases.entries()){const opt=document.createElement('option');opt.value=i;opt.textContent=(i+1)+' / '+cases.length+' · '+c.blind_id;select.appendChild(opt);}
+for(const spec of specs){const label=document.createElement('label');label.textContent=spec.label;const hint=document.createElement('span');hint.textContent=spec.hint;label.appendChild(hint);const field=document.createElement('select');field.id=spec.key;for(const [value,text]of [['','请选择'],...spec.options]){const opt=document.createElement('option');opt.value=value;opt.textContent=text;field.appendChild(opt);}label.appendChild(field);document.getElementById('fields').appendChild(label);}
+const fieldKeys=[...specs.map(s=>s.key),'rationale','references','unable_reason'];
+function getRow(){const row={package_id:DATA.package_id,reviewer_id:DATA.reviewer_id,blind_id:cases[current].blind_id};for(const key of fieldKeys)row[key]=document.getElementById(key).value;return row;}
+function persist(){const row=getRow();if(fieldKeys.some(key=>row[key]!=='')){row.recorded_at=new Date().toISOString();saved[row.blind_id]=row;}try{localStorage.setItem(storageKey,JSON.stringify(saved));document.getElementById('saved').textContent='已保存本份进度';}catch(e){document.getElementById('saved').textContent='浏览器无法保存，请及时导出评分文件';}updateProgress();}
+function updateProgress(){const done=Object.values(saved).filter(r=>r.overall_feasibility!==''&&r.rationale&&r.rationale.trim()).length;document.getElementById('progress').textContent='已填写总体判断 '+done+' / '+cases.length;}
+function show(index){current=index;const c=cases[index],row=saved[c.blind_id]||{};select.value=index;document.getElementById('caseTitle').textContent='匿名案例 '+c.blind_id;document.getElementById('question').textContent=c.question;document.getElementById('restrictions').textContent=c.restrictions;document.getElementById('protocol').textContent=c.protocol;for(const key of fieldKeys)document.getElementById(key).value=row[key]||'';document.getElementById('prev').disabled=index===0;document.getElementById('next').disabled=index===cases.length-1;document.getElementById('saved').textContent='';updateProgress();window.scrollTo(0,0);}
+function exportedRows(){return cases.map(c=>saved[c.blind_id]||{package_id:DATA.package_id,reviewer_id:DATA.reviewer_id,blind_id:c.blind_id,...Object.fromEntries(fieldKeys.map(k=>[k,'']))});}
+function download(name,text,mime){const url=URL.createObjectURL(new Blob([text],{type:mime}));const link=document.createElement('a');link.href=url;link.download=name;link.click();setTimeout(()=>URL.revokeObjectURL(url),1000);}
+document.getElementById('prev').onclick=()=>{persist();show(current-1);};document.getElementById('next').onclick=()=>{persist();show(current+1);};select.onchange=()=>{const target=Number(select.value);persist();show(target);};document.getElementById('save').onclick=persist;
+document.getElementById('export').onclick=()=>{persist();download('ratings_'+DATA.reviewer_id+'.json',JSON.stringify({package_id:DATA.package_id,reviewer_id:DATA.reviewer_id,ratings:exportedRows()},null,2),'application/json');};
+document.getElementById('exportCsv').onclick=()=>{persist();const keys=['package_id','reviewer_id','blind_id',...fieldKeys,'recorded_at'];const quote=v=>'"'+String(v??'').replaceAll('"','""')+'"';const text=[keys.map(quote).join(','),...exportedRows().map(r=>keys.map(k=>quote(r[k])).join(','))].join('\r\n');download('ratings_'+DATA.reviewer_id+'.csv','\uFEFF'+text,'text/csv;charset=utf-8');};
+show(0);
+</script></body></html>
