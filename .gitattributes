@@ -1,0 +1,6 @@
+# Preserve exact bytes of dataset files recorded in the revision SHA-256 manifest.
+# Automatic line-ending conversion would invalidate the archived input hashes.
+/dataset/Q+AR/src/question_final.json -text whitespace=cr-at-eol
+/dataset/Q+AR/src/restrict.py -text whitespace=cr-at-eol
+/dataset/Q+AR/revisions/2026-09-13-stem-fixes/before/question_final.json -text whitespace=cr-at-eol
+/dataset/Q+AR/revisions/2026-09-13-stem-fixes/before/restrict.py -text whitespace=cr-at-eol

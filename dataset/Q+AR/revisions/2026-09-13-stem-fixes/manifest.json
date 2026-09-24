@@ -1,0 +1,36 @@
+{
+  "revision": "2026-09-13-stem-fixes",
+  "question_count": 253,
+  "stem_updates": 253,
+  "substantive_or_context_stem_updates": 146,
+  "output_scope_only_updates": 107,
+  "marker_target_updates": 58,
+  "added_marker_entries": 27,
+  "addressed_review_groups": 38,
+  "duplicate_stems": 0,
+  "question_ids_preserved": true,
+  "unrelated_question_fields_preserved": true,
+  "baseline_question_sha256": "487C62E32E7096BF5963EDBBF1AF8BA2FA9D5A371702675A836B309A8CECBD9B",
+  "current_question_sha256": "C2392F7EC345CAB0D26C197468DD3928828531A0BED116B63248F28C7A207A19",
+  "baseline_restrict_sha256": "169A38F554AAFD1EA57A8787D8159AFF8D29322432A4744F8A22B9BA85974FB9",
+  "current_restrict_sha256": "7D96686F602CD25FFD9F5CE6DBE87D4B498A5B62676CD60A805878B962D4B7E8",
+  "model_answers_and_scores_modified": false,
+  "checks_passed": [
+    "All 253 questions retain identifiers, order, and non-editorial metadata",
+    "All review groups have coverage and valid question references",
+    "Method identities and known invented reagent names corrected",
+    "Internal thickness contradiction and duplicated scenario removed",
+    "Perfusion timing and mouse placental circulation explicit",
+    "DiI/DiD tasks state direct/local interpretation and label preservation",
+    "Reporter and sympathetic target metadata agree with stems",
+    "Required missing markers and explicit aliases available",
+    "All linked target names are covered by markers, aliases, or allowed direct labels",
+    "Prompt suffix permits repair of labeling, and new-sample scope is explicit",
+    "Archived inputs match the pre-edit hashes"
+  ],
+  "limitations": [
+    "Checks validate data consistency and selected scientific constraints; they are not wet-lab validation.",
+    "Historical model responses, scores, and derived preference vectors have not been recomputed for the revised stems.",
+    "Added scenario conditions are benchmark inputs, not claims about actual experimental records."
+  ]
+}
