@@ -2,12 +2,13 @@
 aggregate_rag_baseline.py
 =========================
 Reporting view for the inference-time KB-RAG / self-check baseline (Section 4.5).
-Mirrors results/aggregate_oeq.py + results/calculate_main_table_score.py exactly, then
+Uses the shared protocol-level aggregation in results/oeq_metrics.py, then
 adds the Effectiveness sub-scores (S_method / S_label / S_trans / S_time) and the delta
 vs each model's own 1-shot baseline -- so we can see WHERE grounding helps (esp. S_label).
 
 Reads dataset/Q+AR/result/evaluation_results_{model}_{setting}.json.
-Prints a per-model x per-setting table and writes results/rag_baseline_summary.csv.
+Reports paired deltas on common valid IDs and retains the old min-of-means diagnostic.
+Writes results/rag_baseline_summary_scoring_v2.csv without changing historical tables.
 
 Usage:
   python results/aggregate_rag_baseline.py
@@ -16,12 +17,11 @@ Usage:
 import argparse
 import json
 import os
-
-MAX_SCORES = {
-    'c_step': 2, 'c_param': 3, 'co_order': 3, 'co_method': 2,
-    'co_param': 2, 'co_chem': 1, 's_method': 2.5, 's_label': 6,
-    's_trans': 3, 's_time': 3,
-}
+import csv
+try:
+    from .oeq_metrics import aggregate_items, paired_deltas
+except ImportError:
+    from oeq_metrics import aggregate_items, paired_deltas
 
 MODELS = ['openai_gpt-5.2-fast', 'openai_qwen3-max', 'openai_qwen3-14b']
 SETTINGS = [
@@ -31,81 +31,43 @@ SETTINGS = [
 ]
 
 
-def _iter_scores(item):
-    """Yield (metric, value) for a single evaluation item, or nothing if it errored."""
-    ev = item.get('evaluation', {})
-    if not isinstance(ev, dict) or ev.get('_error'):
-        return
-    scores = ev.get('scores', {})
-    for block, metrics in (
-        ('completeness', ['c_step', 'c_param']),
-        ('correctness', ['co_order', 'co_method', 'co_param', 'co_chem']),
-        ('effectiveness', ['s_method', 's_label', 's_trans', 's_time']),
-    ):
-        blk = scores.get(block, {})
-        for m in metrics:
-            v = blk.get(m, {}).get('score')
-            if v is not None:
-                yield m, float(v)
-
-
 def aggregate_file(path):
-    """Return dict of normalized averages + derived indices for one result file, or None."""
+    """Return normalized averages + derived indices; failed runs retain their coverage."""
     with open(path, 'r', encoding='utf-8') as f:
         data = json.load(f)
     items = data if isinstance(data, list) else [data]
-    buckets = {k: [] for k in MAX_SCORES}
-    n_graded = 0
-    for item in items:
-        pairs = list(_iter_scores(item))
-        if pairs:
-            n_graded += 1
-        for m, v in pairs:
-            buckets[m].append(v)
-    if not any(buckets.values()):
-        return None
-    norm = {}
-    for m, vals in buckets.items():
-        avg = sum(vals) / len(vals) if vals else 0.0
-        norm[m] = avg / MAX_SCORES[m] if MAX_SCORES[m] else 0.0
-    completeness = 0.4 * norm['c_step'] + 0.6 * norm['c_param']
-    correctness = (norm['co_order'] + norm['co_method'] + norm['co_param'] + norm['co_chem']) / 4
-    # Rescale signed method fit from [-1, 1] to [0, 1].
-    s_method_01 = (norm['s_method'] + 1) / 2
-    effectiveness = (s_method_01 + norm['s_label'] + norm['s_trans'] + norm['s_time']) / 4
-    i_a = min(completeness, correctness, effectiveness)
+    agg = aggregate_items(items)
     return {
-        'n': n_graded,
-        'total_items': len(items),
-        'Com': completeness * 100, 'Cor': correctness * 100, 'Eff': effectiveness * 100, 'I_A': i_a * 100,
-        's_method': s_method_01 * 100, 's_label': norm['s_label'] * 100,
-        's_trans': norm['s_trans'] * 100, 's_time': norm['s_time'] * 100,
+        'n': agg['sample_count'], 'total_items': agg['total_items'],
+        'coverage': agg['coverage'], 'n_excluded': len(agg['excluded_items']),
+        'aggregation_version': agg['aggregation_version'],
+        **{key: value * 100 if value is not None else None for key, value in agg['indices'].items()},
     }
 
 
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('--result-dir', default='dataset/Q+AR/result')
-    ap.add_argument('--csv', default='results/rag_baseline_summary.csv')
+    ap.add_argument('--csv', default='results/rag_baseline_summary_scoring_v2.csv')
     args = ap.parse_args()
 
     rows = []
     for model in MODELS:
-        base = None
+        base_items = None
         for label, tmpl in SETTINGS:
             token = tmpl.format(m=model)
             path = os.path.join(args.result_dir, f'evaluation_results_{token}.json')
             if not os.path.exists(path):
                 continue
             agg = aggregate_file(path)
-            if agg is None:
-                continue
             agg['model'] = model
             agg['setting'] = label
+            with open(path, encoding='utf-8') as f:
+                items = json.load(f)
             if label == '1-shot':
-                base = agg
-            agg['d_I_A'] = (agg['I_A'] - base['I_A']) if base else None
-            agg['d_s_label'] = (agg['s_label'] - base['s_label']) if base else None
+                base_items = items
+            agg.update(paired_deltas(base_items, items) if base_items is not None else
+                       {'n_paired': 0, 'd_I_A': None, 'd_s_label': None})
             rows.append(agg)
 
     # ---- print table ----
@@ -113,21 +75,25 @@ def main():
           f"{'Smeth':>6} {'Slabel':>7} {'Strans':>7} {'Stime':>6} {'dI_A':>6} {'dSlab':>7}"
     print(hdr)
     print('-' * len(hdr))
+    def fmt(value, width=6):
+        return f'{value:{width}.1f}' if value is not None else f"{'--':>{width}}"
     for r in rows:
         d_ia = f"{r['d_I_A']:+6.1f}" if r['d_I_A'] is not None else f"{'--':>6}"
         d_sl = f"{r['d_s_label']:+7.1f}" if r['d_s_label'] is not None else f"{'--':>7}"
-        print(f"{r['model']:<22} {r['setting']:<26} {r['n']:>4} {r['Com']:>6.1f} {r['Cor']:>6.1f} "
-              f"{r['Eff']:>6.1f} {r['I_A']:>6.1f} {r['s_method']:>6.1f} {r['s_label']:>7.1f} "
-              f"{r['s_trans']:>7.1f} {r['s_time']:>6.1f} {d_ia} {d_sl}")
+        print(f"{r['model']:<22} {r['setting']:<26} {r['n']:>4} {fmt(r['Com'])} {fmt(r['Cor'])} "
+              f"{fmt(r['Eff'])} {fmt(r['I_A'])} {fmt(r['s_method'])} {fmt(r['s_label'], 7)} "
+              f"{fmt(r['s_trans'], 7)} {fmt(r['s_time'])} {d_ia} {d_sl}")
 
     # ---- csv ----
-    cols = ['model', 'setting', 'n', 'total_items', 'Com', 'Cor', 'Eff', 'I_A',
-            's_method', 's_label', 's_trans', 's_time', 'd_I_A', 'd_s_label']
-    os.makedirs(os.path.dirname(args.csv), exist_ok=True)
-    with open(args.csv, 'w', encoding='utf-8') as f:
-        f.write(','.join(cols) + '\n')
-        for r in rows:
-            f.write(','.join('' if r.get(c) is None else (f"{r[c]:.3f}" if isinstance(r.get(c), float) else str(r.get(c))) for c in cols) + '\n')
+    cols = ['model', 'setting', 'n', 'total_items', 'coverage', 'n_excluded',
+            'Com', 'Cor', 'Eff', 'I_A', 'I_A_min_of_means',
+            's_method', 's_label', 's_trans', 's_time', 'n_paired', 'd_I_A', 'd_s_label',
+            'aggregation_version']
+    os.makedirs(os.path.dirname(os.path.abspath(args.csv)), exist_ok=True)
+    with open(args.csv, 'w', encoding='utf-8', newline='') as f:
+        writer = csv.DictWriter(f, fieldnames=cols)
+        writer.writeheader()
+        writer.writerows(rows)
     print(f"\nWrote {len(rows)} rows -> {args.csv}")
 
 

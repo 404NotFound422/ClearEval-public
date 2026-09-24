@@ -36,14 +36,24 @@ import re
 import sys
 import importlib.util
 import asyncio
-import numpy as np
 import math
-from models.Model_Loader import ModelLoader
+from datetime import datetime, timezone
+from pathlib import Path
+from verified_marker_aliases import IDENTITY_VERSION, same_verified_target
+from evaluation_contract import (
+    SCORING_VERSION, FixedDemandRegistry, ensure_manifest, json_hash, sha256_file,
+    time_score_details, time_reasoning,
+)
+from results.oeq_metrics import protocol_scores
 from prompts.gen_protocol_template import TEST_MODEL_GENERATION_PROMPT
 from prompts.parse_user_preference_vector import USER_PREFERENCE_PROMPT
 
-OEQ_OUTPUT_DIR = 'dataset/Q+AR/model_response'
-OEQ_SCORE_DIR = 'dataset/Q+AR/result'
+OEQ_OUTPUT_DIR = 'dataset/Q+AR/model_response_scoring_v2'
+OEQ_SCORE_DIR = 'dataset/Q+AR/result_scoring_v2'
+QUESTION_FILE = 'dataset/Q+AR/src/question_final.json'
+DEMAND_FILE = 'dataset/Q+AR/src/demand_vectors_all.json'
+DEMAND_MANIFEST = None
+_FIXED_DEMANDS = None
 RAG_CONTEXT_DIR = 'dataset/Q+AR/rag_context'  # per-question KB-RAG cards (see build_rag_context.py)
 
 # -------------------------------------------------------------------------
@@ -55,8 +65,6 @@ with open('KnowledgeBase/method_fluro_compati.json', 'r', encoding='utf-8') as f
     METHOD_FLUORO_KB = json.load(f)
 with open('KnowledgeBase/time_kb.json', 'r', encoding='utf-8') as f:
     _TIME_KB_RAW = json.load(f)
-with open('KnowledgeBase/method_time_tau.json', 'r', encoding='utf-8') as f:
-    _TIME_TAU_RAW = json.load(f)
 with open('KnowledgeBase/tissue_ri.json', 'r', encoding='utf-8') as f:
     _TISSUE_RI_RAW = json.load(f)
 with open('KnowledgeBase/method_sigma_ri.json', 'r', encoding='utf-8') as f:
@@ -64,7 +72,7 @@ with open('KnowledgeBase/method_sigma_ri.json', 'r', encoding='utf-8') as f:
 with open('KnowledgeBase/method_ri_ref.json', 'r', encoding='utf-8') as f:
     _METHOD_RI_REF_RAW = json.load(f)
 # Question metadata (loaded once at startup; avoids per-call file I/O)
-with open('dataset/Q+AR/src/question_final.json', 'r', encoding='utf-8') as f:
+with open(QUESTION_FILE, 'r', encoding='utf-8') as f:
     _QUESTION_LIST = json.load(f)
 
 # Marker specificity tiers for target_match scoring (0/3/6)
@@ -181,6 +189,51 @@ QUESTION_META_KB: dict = {
     }
     for q in _QUESTION_LIST
 }
+
+
+def configure_question_snapshot(path):
+    """Update question metadata together; never backfill from a different snapshot."""
+    global QUESTION_FILE, _QUESTION_LIST, QUESTION_META_KB, _FIXED_DEMANDS
+    QUESTION_FILE = str(path)
+    with open(QUESTION_FILE, encoding='utf-8') as f:
+        _QUESTION_LIST = json.load(f)
+    QUESTION_META_KB = {
+        q['question_id']: {
+            'tissue_tier_code': q.get('tissue_hierarchy_from_tissue_xlsx', {}).get('tissue_tier_code', ''),
+            'tissue_inferred': q.get('tissue_hierarchy_from_tissue_xlsx', {}).get('tissue_inferred', ''),
+            'tissue_ri_value': _resolve_tissue_ri(q.get('tissue_hierarchy_from_tissue_xlsx', {}).get('tissue_inferred', '')),
+            'marker_query_targets': q.get('marker_query_targets', []),
+        } for q in _QUESTION_LIST
+    }
+    _FIXED_DEMANDS = None
+
+
+def fixed_demands():
+    global _FIXED_DEMANDS
+    if _FIXED_DEMANDS is None:
+        _FIXED_DEMANDS = FixedDemandRegistry(QUESTION_FILE, DEMAND_FILE, DEMAND_MANIFEST)
+    return _FIXED_DEMANDS
+
+
+def scoring_contract(teacher_model):
+    paths = [
+        'OEQ_run_grading_new.py', 'evaluation_contract.py', 'results/oeq_metrics.py',
+        'verified_marker_aliases.py',
+        'prompts/eval_oeq_teacher_rubric.txt', 'dataset/Q+AR/src/model_space_signed.json',
+        'KnowledgeBase/tissue.json', 'KnowledgeBase/method_fluro_compati.json',
+        'KnowledgeBase/time_kb.json', 'KnowledgeBase/tissue_ri.json',
+        'KnowledgeBase/method_sigma_ri.json', 'KnowledgeBase/method_ri_ref.json',
+    ]
+    return {
+        'scoring_version': SCORING_VERSION, **fixed_demands().provenance,
+        'marker_identity_version': IDENTITY_VERSION,
+        'teacher_model': getattr(teacher_model, 'model_name', 'unknown_teacher'),
+        'source_sha256': {path: sha256_file(path) for path in paths},
+        'marker_specificity_sha256': sha256_file(_MARKER_SPECIFICITY_TIERS_PATH)
+        if os.path.exists(_MARKER_SPECIFICITY_TIERS_PATH) else None,
+        'fluorophore_evidence_sha256': sha256_file(_FLUOR_EVIDENCE_PATH)
+        if os.path.exists(_FLUOR_EVIDENCE_PATH) else None,
+    }
 
 def _strip_markdown_fences(text: str) -> str:
     """Strip ```json / ```JSON / leading-whitespace fences from LLM output.
@@ -579,6 +632,10 @@ def _match_marker_to_targets(marker_name, marker_query_targets, fluor_name=None)
         target_name = target.get("marker_name", "")
         if not target_name:
             continue
+        # Verified clone-to-target identity is separate from substring heuristics.
+        # It establishes target recognition, not staining/secondary compatibility.
+        if any(same_verified_target(candidate, target_name) for candidate in candidate_names):
+            return True
         norm_target = _normalize_name(target_name)
         target_abbrevs = _extract_parenthetical(target_name)
         target_candidates = _expand_marker_candidates(target_name)
@@ -696,11 +753,6 @@ TIME_KB_LOOKUP: dict = {}
 for _method_key, _tiers in _TIME_KB_RAW.get("lookup", {}).items():
     TIME_KB_LOOKUP[_normalize_name(_method_key)] = _tiers
 
-# 构建 τ 查询索引：{normalize(method): {tier_code: tau_hours}}
-TIME_TAU_KB: dict = {}
-for _method_key, _tiers in _TIME_TAU_RAW.get("tau", {}).items():
-    TIME_TAU_KB[_normalize_name(_method_key)] = _tiers
-
 # 构建 σ_RI 查询索引：{normalize(method): {tier_code: sigma}}
 SIGMA_RI_KB: dict = {}
 for _method_key, _tiers in _SIGMA_RI_RAW.get("sigma_RI", {}).items():
@@ -767,7 +819,7 @@ def load_data():
     方法目的及步骤：
     加载问题集、标准回答样例数据集和方法空间数据。
     """
-    with open('dataset/Q+AR/src/question_final.json', 'r', encoding='utf-8') as f:
+    with open(QUESTION_FILE, 'r', encoding='utf-8') as f:
         questions = json.load(f)
     with open('dataset/Q+AR/src/standard_response.json', 'r', encoding='utf-8') as f:
         standard_responses = json.load(f)
@@ -827,7 +879,7 @@ def generate_model_prompt(question, restrictions, standard_responses=None, shot_
     for key, value in restrictions.items():
         if isinstance(value, set):
             # set 中通常只有一个字符串元素
-            value_str = next(iter(value))
+            value_str = '、'.join(sorted(value))
         else:
             value_str = str(value)
         restrict_lines.append(f"{key}:{{{value_str}}}")
@@ -920,6 +972,7 @@ def calculate_cosine_similarity(vec1, vec2):
     """
     计算两个向量的余弦相似度（保留备用）
     """
+    import numpy as np  # Optional legacy helper; the grading path is standard-library only.
     dot_product = np.dot(vec1, vec2)
     norm1 = np.linalg.norm(vec1)
     norm2 = np.linalg.norm(vec2)
@@ -1121,6 +1174,18 @@ def calculate_effectiveness_score(quantitative_data, user_pref_vector_dict, mode
 
     s_label = min(s_target_match, s_marker_fluor_compat, s_method_fluor_compat)
     s_label = max(0.0, min(6.0, s_label)) # Clamp to [0, 6]
+    # The source table calls these recommended markers, not universally required
+    # targets. Expose coverage without silently converting alternatives to AND.
+    marker_coverage_audit = {
+        'reference_targets': [
+            {'marker_name': target.get('marker_name', ''),
+             'matched': any(_match_marker_to_targets(marker, [target], fluor_name=fluor)
+                            for fluor, marker in marker_pairs)}
+            for target in marker_query_targets],
+        'requirement_semantics': 'recommended-target metadata; AND/OR requirements require question-specific review',
+        'unmatched_reported_markers': [marker or fluor for fluor, marker in marker_pairs
+                                     if not _match_marker_to_targets(marker, marker_query_targets, fluor_name=fluor)],
+    }
 
     # Shared lookups for S_trans and S_time (method × sample tier)
     tier_code  = quantitative_data.get("sample_tier", "")
@@ -1156,49 +1221,16 @@ def calculate_effectiveness_score(quantitative_data, user_pref_vector_dict, mode
         s_trans = max(0.0, min(3.0, s_trans))
         _s_trans_status = "scored"
 
-    # 4. S_time: 时间效率评分
-    # 公式: S_time = 3 * exp(-0.5 * (Δt / τ)²)
-    # t_min / t_max 来自 time_kb.json（方法×样本tier）
-    # τ 来自 method_time_tau.json（τ = 0.20 × t_median，绝对小时值）
-    # tier_code 由题目定义传入，不依赖 LLM 提取
-    t_act = _coerce_float(quantitative_data.get("total_time_hours"), default=0.0)
-
-    _TAU_UNDER, _TAU_OVER = 0.2, 0.1  # asymmetric tolerance (over-long penalized 2x harder)
-    tier_data = _time_kb_row(method_key, tier_code)  # parent-tier (T07/T11) fallback applied
-    _s_time_med = (float(tier_data["clearing_time_median_h"])
-                   if (tier_data and tier_data.get("clearing_time_median_h") is not None) else None)
-
-    if tier_data is None or _s_time_med is None or _s_time_med <= 0.0:
-        # 无 KB 条目（方法×tier 组合不支持）→ 得 0 分
-        s_time = 0.0
-        _s_time_t_min = _s_time_t_max = _s_time_tau = None
-    elif t_act <= 0.0:
-        # LLM 未抽到时间或抽到 0 → 无法评分 → 0
-        s_time = 0.0
-        _s_time_t_min = float(tier_data["clearing_time_min_h"])
-        _s_time_t_max = float(tier_data["clearing_time_max_h"])
-        _s_time_tau   = _TAU_UNDER * _s_time_med
-    else:
-        _s_time_t_min = float(tier_data["clearing_time_min_h"])
-        _s_time_t_max = float(tier_data["clearing_time_max_h"])
-        # τ derived from tier median: faster-than-evidence τ=0.2·med; slower τ=0.1·med (2x harsher).
-        # Matches results/refresh_s_time.py so grading is consistent with the 1-shot files.
-        if t_act < _s_time_t_min:
-            delta_t = _s_time_t_min - t_act
-            _s_time_tau = _TAU_UNDER * _s_time_med
-        elif t_act > _s_time_t_max:
-            delta_t = t_act - _s_time_t_max
-            _s_time_tau = _TAU_OVER * _s_time_med
-        else:
-            delta_t = 0.0
-            _s_time_tau = _TAU_UNDER * _s_time_med
-
-        if delta_t == 0.0:
-            s_time = 3.0
-        else:
-            s_time = 3.0 * math.exp(-0.5 * (delta_t / _s_time_tau) ** 2)
-
-    s_time = max(0.0, min(3.0, s_time))
+    # 4. S_time: one computation supplies both the score and its explanation.
+    # This version retains the historical asymmetric tolerance (0.20 / 0.10).
+    t_act = _coerce_float(quantitative_data.get('total_time_hours'), default=0.0)
+    tier_data = _time_kb_row(method_key, tier_code)
+    s_time, time_details = time_score_details(t_act, tier_data, tier_code)
+    if tier_data is not None:
+        time_details['resolved_tier'] = next(
+            (key for key, row in TIME_KB_LOOKUP.get(method_key, {}).items() if row is tier_data), tier_code
+        )
+    time_details['method_key'] = method_key
 
     # 总分
     e_score = w1 * s_method + w2 * s_label + w3 * s_trans + w4 * s_time
@@ -1212,13 +1244,14 @@ def calculate_effectiveness_score(quantitative_data, user_pref_vector_dict, mode
         "s_target_match": s_target_match,
         "s_marker_fluor_compat": s_marker_fluor_compat,
         "s_method_fluor_compat": s_method_fluor_compat,
-        # 调试信息
-        "_s_time_ref_source": "time_kb_median_asym" if tier_data else "missing_kb",
-        "_s_time_t_min":  _s_time_t_min,
-        "_s_time_t_max":  _s_time_t_max,
-        "_s_time_tau":    _s_time_tau,
-        "_s_time_t_act":  t_act,
-        "_s_time_tier":   tier_code,
+        "marker_coverage_audit": marker_coverage_audit,
+        'time_computation': time_details,
+        '_s_time_ref_source': time_details['source'],
+        '_s_time_t_min': time_details['min_hours'],
+        '_s_time_t_max': time_details['max_hours'],
+        '_s_time_tau': time_details['tau_hours'],
+        '_s_time_t_act': time_details['actual_hours'],
+        '_s_time_tier': tier_code,
         # S_trans 调试信息
         "_s_trans_status":        _s_trans_status,
         "_s_trans_ri_tissue":     ri_tissue,
@@ -1226,15 +1259,34 @@ def calculate_effectiveness_score(quantitative_data, user_pref_vector_dict, mode
         "_s_trans_sigma":         _s_trans_sigma,
     }
 
+def validate_teacher_extraction(extraction):
+    """Missing output fields are judge failures; explicit null remains observable."""
+    if not isinstance(extraction, dict):
+        raise ValueError('Teacher extraction must be an object')
+    required = {'method_name', 'marker_dict', 'clearing_total_time_hours'}
+    if not required.issubset(extraction):
+        raise ValueError('Teacher extraction missing required fields: ' + ', '.join(sorted(required - extraction.keys())))
+    if extraction['method_name'] is not None and not isinstance(extraction['method_name'], str):
+        raise ValueError('Teacher method_name must be a string or explicit null')
+    markers = extraction['marker_dict']
+    if not isinstance(markers, dict) or any(not isinstance(k, str) or not isinstance(v, str) for k, v in markers.items()):
+        raise ValueError('Teacher marker_dict must map strings to strings')
+    for key in ('clearing_total_time_hours', 'reagent_ri_value', 'sample_ri_value'):
+        value = extraction.get(key)
+        if value is not None and (isinstance(value, bool) or not isinstance(value, (int, float)) or
+                                  not math.isfinite(value) or value < 0):
+            raise ValueError(f'Teacher {key} must be finite, nonnegative, or explicit null')
+
+
 def _log_teacher_response(teacher_model_name, qid, prompt_len, raw_content, status, detail=""):
     """Append a structured log entry for every teacher-model call to enable post-hoc debugging.
     The FULL raw teacher response is persisted to a separate file so it can be inspected / replayed later."""
     import datetime
-    log_dir = 'dataset/Q+AR/logs'
+    log_dir = os.path.join(OEQ_SCORE_DIR, 'logs')
     raw_dir = os.path.join(log_dir, 'raw')
     os.makedirs(raw_dir, exist_ok=True)
 
-    ts = datetime.datetime.now().strftime('%Y%m%d_%H%M%S')
+    ts = datetime.datetime.now().strftime('%Y%m%d_%H%M%S_%f')
     raw_filename = f'{teacher_model_name}_q{qid}_{ts}.txt'
     raw_path = os.path.join(raw_dir, raw_filename)
 
@@ -1286,7 +1338,8 @@ async def evaluate_response_with_teacher(teacher_model, question_text, model_pro
         return {}
     # 辅助提取：尝试从 model_protocol 中提取声明的方法名
     method_name = "Unknown"
-    m = re.search(r'(?:\*\*)?Chosen Method:\*?\s*([^\n]+)', model_protocol, re.IGNORECASE)
+    m = re.search(r'^\s*(?:\*\*)?Chosen\s+Method:\s*(?:\*\*)?\s*([^\r\n]+)',
+                  model_protocol, re.IGNORECASE | re.MULTILINE)
     if m:
         method_name = m.group(1).strip()
 
@@ -1312,37 +1365,17 @@ async def evaluate_response_with_teacher(teacher_model, question_text, model_pro
         "They MUST be nested inside 'scores.completeness', 'scores.correctness', and 'extraction'.\n\n"
     )
 
-    prompt = (
-        rubric
-        .replace("{{question_text}}", question_text)
-        .replace("{{model_generated_protocol}}", model_protocol)
-        .replace("{{method_name}}", method_name)
-        .replace("{{sample_size}}", sample_size)
-    )
+    substitutions = {'question_text': question_text, 'model_generated_protocol': model_protocol,
+                     'method_name': method_name, 'sample_size': sample_size or 'Read from QUESTION; do not infer missing dimensions.'}
+    prompt = re.sub(r'\{\{(question_text|model_generated_protocol|method_name|sample_size)\}\}',
+                    lambda match: substitutions[match.group(1)], rubric)
     # Insert format enforcement just before the rubric sections begin
     prompt = prompt.replace("1. 完整性评估 Prompt (Completeness)", format_enforcement + "1. 完整性评估 Prompt (Completeness)")
 
-    # Backfill question_meta from QUESTION_META_KB for legacy entries that lack the new fields.
-    # All four fields (tissue_tier_code, tissue_inferred, tissue_ri_value, marker_query_targets)
-    # come from question_final.json — fully reconstructible from question_id alone.
-    qid = question_meta.get("question_id")
-    kb_meta = QUESTION_META_KB.get(qid, {})
-    if not question_meta.get("tissue_tier_code"):
-        question_meta["tissue_tier_code"] = kb_meta.get("tissue_tier_code", "")
-    if not question_meta.get("tissue_inferred"):
-        question_meta["tissue_inferred"]  = kb_meta.get("tissue_inferred", "")
-    if not question_meta.get("tissue_ri_value"):
-        question_meta["tissue_ri_value"]  = kb_meta.get("tissue_ri_value", _DEFAULT_TISSUE_RI)
-    if not question_meta.get("marker_query_targets"):
-        question_meta["marker_query_targets"] = kb_meta.get("marker_query_targets", [])
-
-    # 1. 获取 User Preference Vector
-    user_pref_vector = await get_user_preference_vector(teacher_model, question_text)
-    
-    # # 2. 构建 Evaluation Prompt
-    # prompt = prompt_template.replace("{{protocol_content}}", model_protocol)
-    # prompt = prompt.replace("{{method_name}}", "Derived from protocol") # 让LLM自己判断
-    # prompt = prompt.replace("{{sample_info}}", question_text) # 使用问题描述作为样本信息
+    # Fixed vectors are bound to the selected question snapshot before any API call.
+    user_pref_vector = fixed_demands().get(qid, question_text)
+    snapshot_qid = fixed_demands().questions[str(qid)]['question_id']
+    question_meta = {**question_meta, **QUESTION_META_KB[snapshot_qid]}
 
     try:
         response_data = await teacher_model._acall(prompt)
@@ -1410,15 +1443,11 @@ async def evaluate_response_with_teacher(teacher_model, question_text, model_pro
                     },
                 }
         if not extraction and any(k in llm_output for k in ("marker_dict", "clearing_total_time_hours", "method_name")):
-            extraction = {
-                "marker_dict": llm_output.get("marker_dict", {}),
-                "clearing_total_time_hours": llm_output.get("clearing_total_time_hours"),
-                "method_name": llm_output.get("method_name", ""),
-                "reagent_ri_value": llm_output.get("reagent_ri_value"),
-                "sample_ri_value": llm_output.get("sample_ri_value"),
-                "protocol_time_hours": llm_output.get("protocol_time_hours"),
-                "reasoning": llm_output.get("reasoning", ""),
-            }
+            extraction = {key: llm_output[key] for key in
+                          ('marker_dict', 'clearing_total_time_hours', 'method_name', 'reagent_ri_value',
+                           'sample_ri_value', 'protocol_time_hours', 'reasoning') if key in llm_output}
+
+        validate_teacher_extraction(extraction)
 
         completeness = scores_block.get("completeness", {})
         correctness  = scores_block.get("correctness", {})
@@ -1456,8 +1485,20 @@ async def evaluate_response_with_teacher(teacher_model, question_text, model_pro
                 "protocol_id": question_meta.get("question_id", "unknown"),
                 "sample_info": question_text,
                 "target_method": quantitative_data.get("method_name", "unknown"),
-                "generated_timestamp": "2025-12-15T00:00:00Z" # 模拟时间戳
+                "evaluated_timestamp": datetime.now(timezone.utc).isoformat(),
+                "scoring_version": SCORING_VERSION,
+                "judge_prompt_sha256": json_hash(prompt),
+                "extraction_status": {
+                    'method': 'reported' if extraction['method_name'] else 'explicitly_unreported',
+                    'clearing_time': 'reported' if extraction['clearing_total_time_hours'] is not None else 'explicitly_unreported',
+                    'markers': 'reported' if extraction['marker_dict'] else 'explicitly_empty',
+                },
+                "question_sha256": json_hash(fixed_demands().questions[str(qid)]),
+                "demand_provenance": fixed_demands().provenance,
             },
+            "extraction": extraction,
+            "quantitative_data": quantitative_data,
+            "user_preference_vector": user_pref_vector,
             "scores": {
                 "completeness": completeness,
                 "correctness": correctness,
@@ -1466,12 +1507,14 @@ async def evaluate_response_with_teacher(teacher_model, question_text, model_pro
                         "score": effectiveness_scores["s_method"],
                         "max_score": 2.5,
                         "description": "透明方法选择适配度",
-                        "reasoning": f"Signed need-weighted method-fit [-2.5,+2.5] (F_fp xor P_dye x2; caps signed). Method: {quantitative_data.get('method_name')}"
+                        "reasoning": f"Signed need-weighted method-fit [-2.5,+2.5] (F_fp xor P_dye x2; caps signed; fixed demand lookup). Method: {quantitative_data.get('method_name')}",
+                        "demand_vector": user_pref_vector,
                     },
                     "s_label": {
                         "score": effectiveness_scores["s_label"],
                         "max_score": 6,
                         "description": "标记与方法兼容性",
+                        "coverage_audit": effectiveness_scores['marker_coverage_audit'],
                         "reasoning": f"target_match={effectiveness_scores.get('s_target_match', 'N/A'):.1f}, marker_fluor_compat={effectiveness_scores.get('s_marker_fluor_compat', 'N/A'):.1f}, method_fluor_compat={effectiveness_scores.get('s_method_fluor_compat', 'N/A'):.1f}. marker_dict={marker_dict}"
                     },
                     "s_trans": {
@@ -1491,13 +1534,16 @@ async def evaluate_response_with_teacher(teacher_model, question_text, model_pro
                         "score": effectiveness_scores["s_time"],
                         "max_score": 3,
                         "description": "时间效率评分",
-                        "reasoning": f"Time deviation score. Act: {quantitative_data.get('total_time_hours')}, Ref Range: {quantitative_data.get('protocol_time_hours')}"
+                        "reasoning": time_reasoning(effectiveness_scores['time_computation']),
+                        "computation": effectiveness_scores['time_computation'],
                     },
                     "total_weighted_score": effectiveness_scores["total_effectiveness_score"]
                 }
             }
         }
 
+        # A partial/invalid judge result must be recorded as a failure and retried.
+        protocol_scores({'evaluation': final_result})
         _log_teacher_response(teacher_model_name, qid, len(prompt), content, "success", f"completeness_score={completeness.get('total_completeness_score', 'N/A')}, correctness_score={correctness.get('total_correctness_score', 'N/A')}")
         return final_result
 
@@ -1519,6 +1565,19 @@ async def process_model(model_name, model_instance, questions, restrictions, sta
     
     os.makedirs(OEQ_OUTPUT_DIR, exist_ok=True)
     output_path = os.path.join(OEQ_OUTPUT_DIR, f'from_{model_name}_{shot_type}.json')
+    generation_contract = {
+        'version': SCORING_VERSION, 'model': model_name, 'shot_type': shot_type,
+        'questions_sha256': sha256_file(QUESTION_FILE),
+        'template_sha256': sha256_file('prompts/gen_protocol_template.py'),
+        'runner_sha256': sha256_file(__file__),
+        'restrictions': {key: sorted(value) if isinstance(value, set) else value
+                         for key, value in restrictions.items()},
+    }
+    if any(_shot_flags(shot_type)):
+        generation_contract['rag_sha256'] = {
+            path.name: sha256_file(path) for path in sorted(Path(RAG_CONTEXT_DIR).glob('rag_context_*.json'))
+        }
+    ensure_manifest(output_path, generation_contract)
     
     # 加载已有进度，过滤掉无效/空回答
     model_outputs = []
@@ -1529,7 +1588,13 @@ async def process_model(model_name, model_instance, questions, restrictions, sta
                 raw_outputs = json.load(f)
             valid_outputs = []
             invalid_ids = []
+            seen_ids = set()
+            snapshot = {q['question_id']: q['question'] for q in _QUESTION_LIST}
             for item in raw_outputs:
+                qid = item['question_id']
+                if qid in seen_ids or item.get('specific_question') != snapshot.get(qid):
+                    raise ValueError(f'Duplicate or mismatched cached question {qid}')
+                seen_ids.add(qid)
                 if _is_valid_response(item.get('model_response')):
                     valid_outputs.append(item)
                     answered_ids.add(item['question_id'])
@@ -1542,14 +1607,13 @@ async def process_model(model_name, model_instance, questions, restrictions, sta
                 _atomic_write_json(output_path, model_outputs)
             print(f"[{model_name}] 检测到已有进度，已完成 {len(model_outputs)}/{len(questions)} 个有效问题。")
         except Exception as e:
-            print(f"[{model_name}] 加载已有回答失败，将重新开始: {e}")
-            model_outputs = []
-            answered_ids = set()
+            raise ValueError(f"Cannot safely resume {output_path}: {e}") from e
 
     pending_questions = [q for q in questions if q["question_id"] not in answered_ids]
     if not pending_questions:
         print(f"[{model_name}] 所有问题已有有效回答，无需生成。")
-        return model_outputs
+        selected = {q['question_id'] for q in questions}
+        return [entry for entry in model_outputs if entry['question_id'] in selected]
 
     use_rag, use_sc = _shot_flags(shot_type)
     if use_rag or use_sc:
@@ -1562,6 +1626,8 @@ async def process_model(model_name, model_instance, questions, restrictions, sta
     async def _gen_one(q):
         async with sem:
             rag_block = _load_rag_context_block(q["question_id"]) if use_rag else ""
+            if use_rag and not rag_block:
+                raise ValueError(f"Missing RAG context for question {q['question_id']}; cannot label this run KB-RAG.")
             prompt = generate_model_prompt(q, restrictions, standard_responses,
                                            shot_type=shot_type, rag_context_block=rag_block)
             first_response = await get_model_response(model_instance, prompt)
@@ -1597,7 +1663,8 @@ async def process_model(model_name, model_instance, questions, restrictions, sta
 
     await asyncio.gather(*[_gen_one(q) for q in pending_questions])
     print(f"[{model_name}] 全部回答已保存至 {output_path}")
-    return model_outputs
+    selected = {q['question_id'] for q in questions}
+    return [entry for entry in model_outputs if entry['question_id'] in selected]
 
 def _atomic_write_json(path, obj):
     """Write obj to path atomically (write .tmp then os.replace) so a crash mid-write cannot corrupt the file."""
@@ -1626,6 +1693,14 @@ async def evaluate_responses(
     print(f"\n--- 开始评估模型回答: {model_name} (Shot: {shot_type}, concurrency={eval_concurrency}) ---")
     os.makedirs(OEQ_SCORE_DIR, exist_ok=True)
     result_path = os.path.join(OEQ_SCORE_DIR, f'evaluation_results_{model_name}_{shot_type}.json')
+    # Validate the entire selected input before making any teacher calls.
+    response_by_id = {entry['question_id']: entry for entry in responses}
+    if len(response_by_id) != len(responses):
+        raise ValueError('Duplicate response question IDs')
+    for entry in responses:
+        fixed_demands().get(entry['question_id'], entry['specific_question'])
+    contract = {**scoring_contract(teacher_model), 'model': model_name, 'setting': shot_type}
+    contract_hash = ensure_manifest(result_path, contract)
 
     # 加载已有评分进度（将空 evaluation {} 或包含 _error 的视为未完成）
     results = []
@@ -1634,12 +1709,25 @@ async def evaluate_responses(
         try:
             with open(result_path, 'r', encoding='utf-8') as f:
                 raw_results = json.load(f)
+            seen_ids = set()
             for item in raw_results:
+                qid = item['question_id']
+                if item.get('scoring_contract_sha256') != contract_hash:
+                    raise ValueError(f'Scoring contract changed for question {qid}')
+                if qid in response_by_id and item.get('response_sha256') != json_hash(response_by_id[qid]):
+                    raise ValueError(f'Response changed for question {qid}; select a new score directory')
+                if qid in seen_ids:
+                    raise ValueError(f'Duplicate cached score for question {qid}')
+                seen_ids.add(qid)
+                if qid not in response_by_id:
+                    results.append(item)  # Preserve other subsets, including their failures.
+                    continue
                 ev = item.get('evaluation')
                 if not ev or not isinstance(ev, dict) or ev.get('_error'):
                     continue
-                scores = ev.get('scores', {})
-                if not scores.get('completeness') or not scores.get('correctness'):
+                try:
+                    protocol_scores(item)
+                except ValueError:
                     continue
                 results.append(item)
                 evaluated_ids.add(item['question_id'])
@@ -1649,9 +1737,7 @@ async def evaluate_responses(
             else:
                 print(f"[{model_name}] 检测到已有评分进度，已完成 {len(results)}/{len(responses)} 个评估。")
         except Exception as e:
-            print(f"[{model_name}] 加载已有评估结果失败，将重新开始: {e}")
-            results = []
-            evaluated_ids = set()
+            raise ValueError(f"Cannot safely resume {result_path}: {e}") from e
 
     pending = [e for e in responses if e.get('question_id') not in evaluated_ids]
     if not pending:
@@ -1676,7 +1762,9 @@ async def evaluate_responses(
                 # evaluate_response_with_teacher should catch its own exceptions and return {"_error": ...},
                 # but belt-and-suspenders here for unexpected propagation
                 score = {"_error": str(exc), "_error_type": type(exc).__name__}
-        result_entry = {"question_id": qid, "evaluation": score}
+        result_entry = {"question_id": qid, "evaluation": score,
+                        "scoring_contract_sha256": contract_hash,
+                        "response_sha256": json_hash(entry)}
         async with persist_lock:
             results.append(result_entry)
             completed[0] += 1
@@ -1712,8 +1800,9 @@ async def process_and_evaluate_model(
             with open(response_path, 'r', encoding='utf-8') as f:
                 responses = json.load(f)
             # 验证完整性：过滤无效并检查缺失
-            valid_responses = [r for r in responses if _is_valid_response(r.get('model_response'))]
             all_qids = {q['question_id'] for q in questions}
+            valid_responses = [r for r in responses if r.get('question_id') in all_qids
+                               and _is_valid_response(r.get('model_response'))]
             resp_qids = {r['question_id'] for r in valid_responses}
             missing_qids = sorted(all_qids - resp_qids)
             if missing_qids:
@@ -1749,7 +1838,18 @@ async def process_and_evaluate_model(
             result_path = os.path.join(OEQ_SCORE_DIR, f'evaluation_results_{model_name}_{shot_type}.json')
             if os.path.exists(result_path):
                 with open(result_path, 'r', encoding='utf-8') as f:
-                    summary["n_evaluated"] = len(json.load(f))
+                    saved_results = json.load(f)
+                selected_ids = {q['question_id'] for q in questions}
+                for item in saved_results:
+                    if item.get('question_id') not in selected_ids:
+                        continue
+                    try:
+                        protocol_scores(item)
+                    except ValueError:
+                        continue
+                    summary['n_evaluated'] += 1
+                if summary['n_evaluated'] < len(questions):
+                    summary['error'] = f"Incomplete grading: {summary['n_evaluated']}/{len(questions)} valid scores"
     except Exception as exc:
         import traceback
         summary["error"] = f"{type(exc).__name__}: {exc}\n{traceback.format_exc()[-800:]}"
@@ -1773,6 +1873,7 @@ DEFAULT_MODEL_LIST = [
 
 
 async def main(argv=None):
+    global RAG_CONTEXT_DIR, OEQ_SCORE_DIR, OEQ_OUTPUT_DIR, DEMAND_FILE, DEMAND_MANIFEST
     import argparse
     parser = argparse.ArgumentParser(
         description="OEQ benchmark: generate model responses, then score via teacher LLM. "
@@ -1800,13 +1901,19 @@ async def main(argv=None):
                         help="Only run these specific question ids (stratified sample; overrides --limit)")
     parser.add_argument("--score-dir", default=None,
                         help="Override the evaluation-results output dir (keeps canonical results untouched)")
+    parser.add_argument('--response-dir', default=None,
+                        help='Generation output directory, or existing responses for --eval-only')
+    parser.add_argument('--question-file', default=QUESTION_FILE,
+                        help='Question snapshot matching the responses and fixed demand manifest')
+    parser.add_argument('--demand-vectors', default=DEMAND_FILE)
+    parser.add_argument('--demand-manifest', default=None,
+                        help='Default: <demand-vectors>.manifest.json; binds vectors to a question snapshot')
     args = parser.parse_args(argv)
 
     if args.eval_only and args.no_evaluation:
         print("错误：--eval-only 和 --no-evaluation 互斥")
         return 2
 
-    global RAG_CONTEXT_DIR, OEQ_SCORE_DIR
     if args.rag_dir:
         RAG_CONTEXT_DIR = args.rag_dir
         _RAG_BLOCK_CACHE.clear()
@@ -1815,8 +1922,24 @@ async def main(argv=None):
         OEQ_SCORE_DIR = args.score_dir
         os.makedirs(OEQ_SCORE_DIR, exist_ok=True)
         print(f"score output dir: {OEQ_SCORE_DIR}")
+    if args.response_dir:
+        OEQ_OUTPUT_DIR = args.response_dir
+    for directory, historical, writing in (
+        (OEQ_SCORE_DIR, 'dataset/Q+AR/result', not args.no_evaluation),
+        (OEQ_OUTPUT_DIR, 'dataset/Q+AR/model_response', not args.eval_only),
+    ):
+        if writing and Path(directory).resolve().is_relative_to(Path(historical).resolve()):
+            parser.error(f'Historical output directory is read-only for this runner: {historical}')
+    DEMAND_FILE, DEMAND_MANIFEST = args.demand_vectors, args.demand_manifest
+    configure_question_snapshot(args.question_file)
+    if not args.no_evaluation:
+        try:
+            fixed_demands()  # Fail on version mismatch before initializing network clients.
+        except (ValueError, OSError) as exc:
+            parser.error(str(exc))
 
     # 1. 加载模型管理器
+    from models.Model_Loader import ModelLoader
     loader = ModelLoader('config/config.yaml')
     models = loader.load_models()
 

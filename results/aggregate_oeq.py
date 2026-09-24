@@ -2,6 +2,10 @@ import argparse
 import json
 import os
 import sys
+try:
+    from .oeq_metrics import aggregate_items
+except ImportError:
+    from oeq_metrics import aggregate_items
 
 """
 本脚本用于聚合问答题（OEQ）的评分结果。
@@ -17,14 +21,7 @@ import sys
 # 默认评分结果目录：使用随仓库发布的全部 253 个场景的机器评分结果，
 # 保证 oeq_stats 可由公开数据复现（主结果表 Table 2 的来源）。
 DEFAULT_OEQ_DIR = r'dataset/Q+AR/result'
-OUTPUT_FILE_NAME = 'oeq_stats_260223.jsonl'
-
-# 归一化满分标准
-MAX_SCORES = {
-    'c_step': 2, 'c_param': 3, 'co_order': 3, 'co_method': 2,
-    'co_param': 2, 'co_chem': 1, 's_method': 2.5, 's_label': 6,
-    's_trans': 3, 's_time': 3
-}
+OUTPUT_FILE_NAME = 'oeq_stats_scoring_v2.jsonl'
 
 def find_dir(dirname):
     """查找目录，尝试多种路径。"""
@@ -68,48 +65,11 @@ def aggregate_oeq(oeq_dir=None, output_file=None):
                 with open(filepath, 'r', encoding='utf-8') as f:
                     data = json.loads(f.read())
                 
-                metrics = {k: [] for k in MAX_SCORES.keys()}
-                eval_list = data if isinstance(data, list) else [data]
-                
-                for item in eval_list:
-                    eval_obj = item.get('evaluation', {})
-                    scores_obj = eval_obj.get('scores', {})
-                    
-                    comp = scores_obj.get('completeness', {})
-                    for m in ['c_step', 'c_param']:
-                        val = comp.get(m, {}).get('score')
-                        if val is not None:
-                            metrics[m].append(float(val))
-
-                    corr = scores_obj.get('correctness', {})
-                    for m in ['co_order', 'co_method', 'co_param', 'co_chem']:
-                        val = corr.get(m, {}).get('score')
-                        if val is not None:
-                            metrics[m].append(float(val))
-
-                    eff = scores_obj.get('effectiveness', {})
-                    for m in ['s_method', 's_label', 's_trans', 's_time']:
-                        val = eff.get(m, {}).get('score')
-                        if val is not None:
-                            metrics[m].append(float(val))
-                
-                if not any(metrics.values()):
-                    continue
-                
-                avg_scores = {}
-                for m, vals in metrics.items():
-                    avg = sum(vals) / len(vals) if vals else 0
-                    avg_scores[m] = avg
-                    avg_scores[f"{m}_norm"] = avg / MAX_SCORES[m] if MAX_SCORES[m] > 0 else 0
-                
-                results.append({
-                    "model_name": model_name,
-                    "average_scores": avg_scores,
-                    "sample_count": len(next(iter(metrics.values()))) if metrics.values() else 0
-                })
+                results.append({"model_name": model_name, **aggregate_items(data)})
             except Exception as e:
-                print(f"处理文件 {filename} 时出错: {e}")
+                raise ValueError(f"Failed to aggregate {filename}: {e}") from e
 
+    os.makedirs(os.path.dirname(os.path.abspath(output_file)), exist_ok=True)
     with open(output_file, 'w', encoding='utf-8') as f:
         for res in results:
             f.write(json.dumps(res, ensure_ascii=False) + '\n')

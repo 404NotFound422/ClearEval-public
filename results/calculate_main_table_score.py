@@ -14,7 +14,7 @@ import json
    - Completeness: c_step 与 c_param 的 40/60 加权（Step Integrity 0.4, Param Detail 0.6，与论文 Table 一致）。
    - Correctness: co_order, co_method, co_param, co_chem 的平均值。
    - Effectiveness: s_method, s_label, s_trans, s_time 的平均值。
-   - I_A = min(Completeness, Correctness, Effectiveness)  # 瓶颈/最弱环
+   - I_A = mean_i(min(Completeness_i, Correctness_i, Effectiveness_i))
 
 3. Total Score:
    - Harmonic Mean: Score = 2 * I_K * I_A / (I_K + I_A)
@@ -46,6 +46,11 @@ def load_oeq(filepath):
             item = json.loads(line)
             model = item['model_name']
             scores = item['average_scores']
+            if item.get('aggregation_version') != 'oeq-mean-of-protocol-minima-v2':
+                raise ValueError("OEQ stats use a legacy aggregation. Re-run results/aggregate_oeq.py; "
+                                 "the mean protocol minimum cannot be recovered from dimension means.")
+            if not item.get('sample_count'):
+                continue
             
             # 聚合逻辑
             completeness = 0.4 * scores['c_step_norm'] + 0.6 * scores['c_param_norm']
@@ -57,11 +62,15 @@ def load_oeq(filepath):
             data[model] = {
                 'Completeness': completeness * 100,
                 'Correctness': correctness * 100,
-                'Effectiveness': effectiveness * 100
+                'Effectiveness': effectiveness * 100,
+                'I_A': item['application_index'] * 100,
+                'I_A_min_of_means': item['indices']['I_A_min_of_means'] * 100,
+                'sample_count': item['sample_count'],
+                'total_items': item['total_items'],
             }
     return data
 
-def main(oeq_file='results/oeq_stats_260223.jsonl'):
+def main(oeq_file='results/oeq_stats_scoring_v2.jsonl'):
     mcq_data = load_mcq('results/mcq_stats_20260222.jsonl')
     oeq_data = load_oeq(oeq_file)
 
@@ -98,7 +107,7 @@ def main(oeq_file='results/oeq_stats_260223.jsonl'):
         
         if all(v is not None for v in i_k_vals) and all(v is not None for v in i_a_vals):
             i_k = sum(i_k_vals) / 3
-            i_a = min(i_a_vals)  # Bottleneck (weakest-link) Application Index.
+            i_a = oeq['I_A']
             if (i_k + i_a) > 0:
                 total = 2 * i_k * i_a / (i_k + i_a)
                 row.append(f"{total:>6.1f}")
@@ -111,6 +120,6 @@ def main(oeq_file='results/oeq_stats_260223.jsonl'):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Calculate main table scores.")
-    parser.add_argument("--oeq-file", default="results/oeq_stats_260223.jsonl", help="Path to OEQ stats JSONL")
+    parser.add_argument("--oeq-file", default="results/oeq_stats_scoring_v2.jsonl", help="Path to OEQ stats JSONL")
     args = parser.parse_args()
     main(oeq_file=args.oeq_file)
