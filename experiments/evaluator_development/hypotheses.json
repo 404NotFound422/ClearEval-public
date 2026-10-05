@@ -1,0 +1,224 @@
+{
+  "schema_version": "evaluator-development-hypotheses-v1",
+  "scope": "offline-engineering-only",
+  "science_labels": "PENDING_USER_EXPERT",
+  "hypotheses": [
+    {
+      "id": "H1",
+      "title": "相似性无法单独接受多解/识别关键变化",
+      "typical_use": "BERTScore和reference recall通常围绕候选与参考的词元或断言覆盖。",
+      "failure_hypothesis": "组织光透明可以存在化学路线不同的有效替代；错误否定/范围只改变很少文本。",
+      "first_principles_optimization": "采用需求级语义、全局要求与完整分支；reference similarity保留为描述指标。",
+      "controlled_transformations": [
+        "参考保持/同义改写",
+        "替代路线",
+        "完整单方法备选分别判断，不跨候选借用满足项"
+      ],
+      "expected_engineering_behavior": "同合同替代分支完整则接受；失败分支不能相互借满足项。",
+      "falsification": "若完整可满足分支因名字或表面文字改变被拒，或失败分支拼接后通过，假设优化失败。",
+      "primary_references": [
+        "https://arxiv.org/abs/1904.09675",
+        "https://arxiv.org/abs/2408.08067"
+      ],
+      "fixture_ids": [
+        "req_05_routes_cannot_splice",
+        "req_06_or_cannot_bypass_global",
+        "req_07_complete_alternative_accepted",
+        "req_08_sequential_is_all"
+      ],
+      "scientific_limit": "mechanical oracle仅定义合成合同；科学适用、完整替代路线与目标关系由用户独立专家后续审核。",
+      "status": "FORMAL_SOURCE_SCOPE_FAILURE_REPRODUCED_AND_REPAIRED_SCIENTIFIC_EFFECT_PENDING",
+      "observed_evidence": {
+        "configuration_round": 7,
+        "full_protocol_family_count": 1,
+        "full_document_configurations": 8,
+        "v8_false_accepts": 2,
+        "v9_false_accepts": 0,
+        "v8_requirement_agreement": "24/32",
+        "v9_requirement_agreement": "32/32",
+        "gpt56_plain_agreement": "32/32",
+        "gpt61_plain_agreement": "32/32",
+        "independent_scientific_labels": 0,
+        "advantage_over_strong_judges_established": false,
+        "local_analysis": "development_v2/scope_failure_r07/full_document.analysis.first.json",
+        "native_derivative_local_only": true
+      }
+    },
+    {
+      "id": "H2",
+      "title": "JSON合法不等于原答案抽取忠实",
+      "typical_use": "Pydantic/约束解码验证结构与类型；原文quote validator验证子串存在。",
+      "failure_hypothesis": "实体DiI/DiD、否定、百分比basis、步骤scope和处理/存储温度容易被改变；子串存在仍可能语义错配。",
+      "first_principles_optimization": "保存字段、值、exact quote/span、scope、polarity、unit/basis；原始响应/修复逐次保存。",
+      "controlled_transformations": [
+        "DiI/DiD",
+        "否定",
+        "vol% vs w/v",
+        "处理vs存储温度",
+        "库存vs工作浓度",
+        "字段缺失"
+      ],
+      "expected_engineering_behavior": "引用存在而字段改义仍应UNFAITHFUL；缺少字段不能默认为原值。",
+      "falsification": "如果span通过但字段改义仍被接受，或合法JSON被当成faithful，则优化失败。",
+      "primary_references": [
+        "https://docs.pydantic.dev/latest/concepts/strict_mode/",
+        "https://dottxt-ai.github.io/outlines/1.0.0/features/core/output_types/",
+        "https://python.useinstructor.com/concepts/retrying/"
+      ],
+      "fixture_ids": [
+        "extract_01_faithful",
+        "extract_02_dii_as_did",
+        "extract_03_negation_lost",
+        "extract_04_percent_basis_changed",
+        "extract_05_storage_as_processing",
+        "extract_06_processing_as_storage",
+        "extract_07_version_changed",
+        "extract_08_buffer_stock_as_working",
+        "extract_09_omitted_fact",
+        "json_01_duplicate_key",
+        "json_02_nonfinite",
+        "json_03_unknown_field"
+      ],
+      "scientific_limit": "mechanical oracle仅定义合成合同；科学适用、完整替代路线与目标关系由用户独立专家后续审核。",
+      "status": "PROPOSED_NOT_EXPERIMENTALLY_CONFIRMED"
+    },
+    {
+      "id": "H3",
+      "title": "来源身份、原文真实性、蕴含与适用性必须分层",
+      "typical_use": "ALCE/RAGAs/RefChecker围绕引文和给定上下文支持。",
+      "failure_hypothesis": "文献身份错配、版本过期、样本尺度与标签变化不由引文存在自动解决。",
+      "first_principles_optimization": "source_identity/quote_authenticity/entailment/applicability独立；版本更正链与scope显式。",
+      "controlled_transformations": [
+        "身份错配",
+        "不存在的quote",
+        "真实quote不宣称entailment",
+        "scope外推",
+        "版本更正"
+      ],
+      "expected_engineering_behavior": "quote真实不自动使entailment/applicability通过；旧版本与当前合同不合保持分层结果。",
+      "falsification": "只凭allowlist或quote就宣告科学SATISFIED，或更正链被忽略则失败。",
+      "primary_references": [
+        "https://aclanthology.org/2023.emnlp-main.398/",
+        "https://aclanthology.org/2024.eacl-demo.16/",
+        "https://arxiv.org/abs/2405.14486",
+        "https://bio-protocol.org/en/bpdetail?id=3095&type=0"
+      ],
+      "fixture_ids": [
+        "source_01_identity_conflict",
+        "source_02_quote_absent",
+        "source_03_quote_is_not_entailment",
+        "source_04_scope_changed",
+        "source_05_version_superseded"
+      ],
+      "scientific_limit": "mechanical oracle仅定义合成合同；科学适用、完整替代路线与目标关系由用户独立专家后续审核。",
+      "status": "PROPOSED_NOT_EXPERIMENTALLY_CONFIRMED"
+    },
+    {
+      "id": "H4",
+      "title": "硬要求不能平均补偿，建议不能变成普遍硬要求",
+      "typical_use": "分项加权与通用rubric可用，但没有自动携带必要条件语义。",
+      "failure_hypothesis": "一次关键条件违反可使任务不可行；来源推荐常有尺度/设备范围。",
+      "first_principles_optimization": "硬约束由用户或已审核必要条件授予；GLOBAL AND完整ROUTE OR；保留未决/缺失。",
+      "controlled_transformations": [
+        "一项违反九项满足",
+        "hard vs recommendation",
+        "GLOBAL不能被OR绕开",
+        "one complete method ALL required functions",
+        "complete ROUTE OR",
+        "科学来源缺失"
+      ],
+      "expected_engineering_behavior": "必要项VIOLATED保持VIOLATED；不完整分支不拼接；建议未满足不产生硬失败。",
+      "falsification": "平均补偿、默认补值、强行把建议升级、OR绕GLOBAL任一出现即失败。",
+      "primary_references": [
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC7175264/",
+        "https://bio-protocol.org/en/bpdetail?id=3046&type=0"
+      ],
+      "fixture_ids": [
+        "req_01_hard_violation_no_compensation",
+        "req_02_recommendation_not_gate",
+        "req_03_missing_not_violation",
+        "req_04_unresolved_not_zero",
+        "req_05_routes_cannot_splice",
+        "req_06_or_cannot_bypass_global",
+        "req_07_complete_alternative_accepted",
+        "req_08_sequential_is_all",
+        "req_09_science_without_source_unresolved",
+        "req_10_source_recommendation_is_not_necessary"
+      ],
+      "scientific_limit": "mechanical oracle仅定义合成合同；科学适用、完整替代路线与目标关系由用户独立专家后续审核。",
+      "status": "FORMAL_AGGREGATION_AND_END_TO_END_SOURCE_SCOPE_VERIFIED_SCIENTIFIC_NECESSITY_PENDING",
+      "observed_evidence": {
+        "scope": "Strictly stipulated declaration contract, not independently verified biological necessary conditions",
+        "synthetic_exhaustive_declaration_masks": 16,
+        "source_only_scientific_binding_adversarial_tests": 12,
+        "sample_identity_certification": false,
+        "scientific_truth": null
+      }
+    },
+    {
+      "id": "H5",
+      "title": "可行且可比才可判断Pareto关系",
+      "typical_use": "pymoo等对已有数值约束/目标进行feasibility-first与Pareto判断。",
+      "failure_hypothesis": "目标方向、单位/basis、样本与采集条件不同；未知值/不确定区间可能造成伪支配。",
+      "first_principles_optimization": "先硬约束可行性，再对齐task/scenario/scope/unit/basis/direction；缺值及区间交叠保留未知。",
+      "controlled_transformations": [
+        "交换方案",
+        "时间单位等价",
+        "一优一劣",
+        "不同scope/basis/direction",
+        "缺项",
+        "区间交叠",
+        "硬约束违反"
+      ],
+      "expected_engineering_behavior": "支配反向、取舍不强行排名、不可比/未知单列、不可行不能赢软优势。",
+      "falsification": "任何不可比/缺值仍被宣布支配，或硬违反被软目标补偿则失败。",
+      "primary_references": [
+        "https://pymoo.org/constraints/feas_first.html",
+        "https://pymoo.org/references.html"
+      ],
+      "fixture_ids": [
+        "pareto_01_a_dominates",
+        "pareto_02_swap_relation",
+        "pareto_03_tradeoff",
+        "pareto_04_equivalent",
+        "pareto_05_time_unit_equivalence",
+        "pareto_06_different_scope",
+        "pareto_07_missing_objective",
+        "pareto_08_overlapping_interval",
+        "pareto_09_hard_feasibility_first",
+        "pareto_10_neither_feasible",
+        "pareto_11_unknown_feasibility",
+        "pareto_12_different_direction",
+        "pareto_13_different_basis"
+      ],
+      "scientific_limit": "mechanical oracle仅定义合成合同；科学适用、完整替代路线与目标关系由用户独立专家后续审核。",
+      "status": "PROPOSED_NOT_EXPERIMENTALLY_CONFIRMED"
+    },
+    {
+      "id": "H6",
+      "title": "重复、缓存与失败不能混为评分稳定",
+      "typical_use": "LLM-as-a-judge用于开放式助手偏好；真实裁判可能有位置/篇幅等偏差。",
+      "failure_hypothesis": "长流程抽取/引用/重试可能引入技术漂移；缓存缺字段会伪造固定输入稳定。",
+      "first_principles_optimization": "冻结payload与代码/来源/裁判配置；append-only attempt/repeat ledger；缓存保留origin且不计独立重复。",
+      "controlled_transformations": [
+        "缓存vs独立回放",
+        "来源/裁判版本变化",
+        "首次解析失败后成功重试",
+        "中断恢复"
+      ],
+      "expected_engineering_behavior": "新配置/来源产生新键；失败保留；计划repeat与attempt数量分别记录。",
+      "falsification": "换证据命中旧缓存、成功重试抹去失败、fake/cache算真实模型重复即失败。",
+      "primary_references": [
+        "https://arxiv.org/abs/2306.05685"
+      ],
+      "fixture_ids": [
+        "replay_01_cache_is_not_independent_repeat",
+        "replay_02_changed_config_requires_new_key",
+        "replay_03_retry_preserves_first_failure",
+        "replay_04_source_change_requires_new_key"
+      ],
+      "scientific_limit": "fake/cache回放不证明真实裁判稳定；真实重复稳定也不证明科学正确性。",
+      "status": "PROPOSED_NOT_EXPERIMENTALLY_CONFIRMED"
+    }
+  ]
+}

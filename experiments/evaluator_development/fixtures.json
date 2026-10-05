@@ -1,0 +1,4429 @@
+{
+  "schema_version": "evaluator-development-fixtures-v1",
+  "scope": "offline-engineering-only",
+  "science_labels": "PENDING_USER_EXPERT",
+  "created_at": "2026-10-02",
+  "timezone": "Asia/Shanghai",
+  "provenance_note": "New complete synthetic protocols and synthetic source contracts; no 19-fragment reassessment, historical model output, independent scientific truth, model/API call, or benchmark result.",
+  "sources": [
+    {
+      "id": "SYN-SOURCE-ALPHA-V2",
+      "origin_type": "SYNTHETIC",
+      "method": "SYN-ALPHA",
+      "version": "v2",
+      "scientific_review": "PENDING_USER_EXPERT",
+      "text": "这是虚构的软件合同，不是论文引文或湿实验建议。\n方法身份：SYN-ALPHA v2。\n适用范围：模拟脑切片，厚度 1 mm，标签 DiI。\n步骤合同：洗涤→标签准备→预处理→光透明→折射率匹配→成像→存储。\n模拟处理合同：50 vol% 的虚构试剂 X1；处理温度 4 °C；存储温度 20 °C。\n版本合同：v1 的虚构缓冲液 B0 库存是 10x；v2 要求稀释为 1x 后使用。\n软建议：优先 4 °C 处理；是否硬约束由当前任务明确声明，不由本句决定。",
+      "scope": {
+        "tissue": "synthetic_brain_slice",
+        "scale": "1 mm",
+        "probe": "DiI"
+      },
+      "origin_references": [
+        {
+          "title": "MACS原始研究：仅用于提示尺度/顺序失效假设",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7175264/"
+        },
+        {
+          "title": "SeeDB2更正：仅用于提示真实版本链问题",
+          "url": "https://bio-protocol.org/en/bpdetail?id=3095&type=0"
+        }
+      ]
+    },
+    {
+      "id": "SYN-SOURCE-ALPHA-V1",
+      "origin_type": "SYNTHETIC",
+      "method": "SYN-ALPHA",
+      "version": "v1",
+      "scientific_review": "PENDING_USER_EXPERT",
+      "text": "这是合成旧版本软件合同。\n方法身份：SYN-ALPHA v1。\n虚构缓冲液 B0 库存按 10x 记录，本版本未包含当前 1x 稀释要求。",
+      "scope": {
+        "tissue": "synthetic_brain_slice",
+        "scale": "1 mm",
+        "probe": "DiI"
+      },
+      "origin_references": [
+        {
+          "title": "MACS原始研究：仅用于提示尺度/顺序失效假设",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7175264/"
+        },
+        {
+          "title": "SeeDB2更正：仅用于提示真实版本链问题",
+          "url": "https://bio-protocol.org/en/bpdetail?id=3095&type=0"
+        }
+      ],
+      "superseded_by": "SYN-SOURCE-ALPHA-V2"
+    },
+    {
+      "id": "SYN-SOURCE-BETA-V1",
+      "origin_type": "SYNTHETIC",
+      "method": "SYN-BETA",
+      "version": "v1",
+      "scientific_review": "PENDING_USER_EXPERT",
+      "text": "这是独立虚构的方法身份合同。\n方法身份：SYN-BETA v1。\n适用范围：模拟脑切片，厚度 1 mm，标签 DiD。\n本来源只确认模拟身份与范围，不给真实科学兼容性结论。",
+      "scope": {
+        "tissue": "synthetic_brain_slice",
+        "scale": "1 mm",
+        "probe": "DiD"
+      },
+      "origin_references": [
+        {
+          "title": "FRUIT来源身份核验",
+          "url": "https://www.frontiersin.org/journals/neuroanatomy/articles/10.3389/fnana.2015.00019/full"
+        },
+        {
+          "title": "SeeDB2原始研究，身份须与FRUIT分开",
+          "url": "https://www.sciencedirect.com/science/article/pii/S2211124716301784"
+        }
+      ]
+    }
+  ],
+  "cases": [
+    {
+      "id": "extract_01_faithful",
+      "hypothesis_ids": [
+        "H2"
+      ],
+      "kind": "extraction_fidelity",
+      "input": {
+        "task": {
+          "id": "SYN-TASK-001",
+          "text": "仅检查完整合成方案是否满足软件合同：保留 DiI；不添加 DiD；X1 浓度使用 vol% 基准；处理温度为 4 °C；存储为 20 °C；处理预算不包括存储。 每次仅采用一个透明方法，前处理/匹配/成像/存储是该方法内正常步骤。",
+          "scope": {
+            "tissue": "synthetic_brain_slice",
+            "scale": "1 mm",
+            "probe": "DiI"
+          },
+          "scientific_review": "PENDING_USER_EXPERT",
+          "required_fields": [
+            "probe",
+            "excluded_probe",
+            "concentration",
+            "temperature",
+            "version",
+            "buffer_strength"
+          ],
+          "single_clearing_method_required": true
+        },
+        "protocol": "一个透明方法的完整合成流程；正常前处理和匹配步骤不代表串联透明方法。\n完整合成方案 SYN-ALPHA v2。\n输入样本：已经固定的模拟脑切片，厚度 1 mm。\n1. 前处理：用 1x 虚构缓冲液 B0 洗涤 30 min。\n2. 标签准备：保留 DiI 标记；不添加 DiD。\n3. 预处理：浸入虚构试剂 X0 30 min。\n4. 光透明：使用 50 vol% 的虚构试剂 X1；处理温度 4 °C，持续 2 h。\n5. 终处理：用虚构试剂 Y1 作折射率匹配 1 h。\n6. 成像：采用模拟物镜和同一模拟采集条件记录图像。\n7. 存储：20 °C 避光保存，存储时间不计入处理预算。\n8. 总处理预算：4 h 内，不包括存储。\n本方案仅为软件fixture，不声明真实透明度、荧光保持或湿实验可行性。",
+        "proposed_facts": [
+          {
+            "field": "probe",
+            "value": "DiI",
+            "quote": "保留 DiI 标记",
+            "start": 121,
+            "end": 130,
+            "scope": "label_preparation",
+            "polarity": "positive"
+          },
+          {
+            "field": "excluded_probe",
+            "value": "DiD",
+            "quote": "不添加 DiD",
+            "start": 131,
+            "end": 138,
+            "scope": "label_preparation",
+            "polarity": "negative"
+          },
+          {
+            "field": "concentration",
+            "value": 50,
+            "quote": "50 vol%",
+            "start": 175,
+            "end": 182,
+            "scope": "processing",
+            "unit": "percent",
+            "basis": "v/v"
+          },
+          {
+            "field": "temperature",
+            "value": 4,
+            "quote": "处理温度 4 °C",
+            "start": 192,
+            "end": 201,
+            "scope": "processing",
+            "unit": "degC"
+          },
+          {
+            "field": "temperature",
+            "value": 20,
+            "quote": "存储：20 °C",
+            "start": 268,
+            "end": 276,
+            "scope": "storage",
+            "unit": "degC"
+          },
+          {
+            "field": "version",
+            "value": "v2",
+            "quote": "SYN-ALPHA v2",
+            "start": 42,
+            "end": 54,
+            "scope": "method"
+          },
+          {
+            "field": "buffer_strength",
+            "value": "1x",
+            "quote": "1x 虚构缓冲液 B0",
+            "start": 90,
+            "end": 101,
+            "scope": "pretreatment"
+          }
+        ]
+      },
+      "expected": {
+        "status": "FAITHFUL",
+        "mismatch_fields": [],
+        "annotation": [
+          {
+            "field": "probe",
+            "value": "DiI",
+            "quote": "保留 DiI 标记",
+            "start": 121,
+            "end": 130,
+            "scope": "label_preparation",
+            "polarity": "positive"
+          },
+          {
+            "field": "excluded_probe",
+            "value": "DiD",
+            "quote": "不添加 DiD",
+            "start": 131,
+            "end": 138,
+            "scope": "label_preparation",
+            "polarity": "negative"
+          },
+          {
+            "field": "concentration",
+            "value": 50,
+            "quote": "50 vol%",
+            "start": 175,
+            "end": 182,
+            "scope": "processing",
+            "unit": "percent",
+            "basis": "v/v"
+          },
+          {
+            "field": "temperature",
+            "value": 4,
+            "quote": "处理温度 4 °C",
+            "start": 192,
+            "end": 201,
+            "scope": "processing",
+            "unit": "degC"
+          },
+          {
+            "field": "temperature",
+            "value": 20,
+            "quote": "存储：20 °C",
+            "start": 268,
+            "end": 276,
+            "scope": "storage",
+            "unit": "degC"
+          },
+          {
+            "field": "version",
+            "value": "v2",
+            "quote": "SYN-ALPHA v2",
+            "start": 42,
+            "end": 54,
+            "scope": "method"
+          },
+          {
+            "field": "buffer_strength",
+            "value": "1x",
+            "quote": "1x 虚构缓冲液 B0",
+            "start": 90,
+            "end": 101,
+            "scope": "pretreatment"
+          }
+        ]
+      },
+      "scientific_limit": "仅验证声明合同与机械行为；独立科学标签仍待用户专家审核。"
+    },
+    {
+      "id": "extract_02_dii_as_did",
+      "hypothesis_ids": [
+        "H2"
+      ],
+      "kind": "extraction_fidelity",
+      "input": {
+        "task": {
+          "id": "SYN-TASK-001",
+          "text": "仅检查完整合成方案是否满足软件合同：保留 DiI；不添加 DiD；X1 浓度使用 vol% 基准；处理温度为 4 °C；存储为 20 °C；处理预算不包括存储。 每次仅采用一个透明方法，前处理/匹配/成像/存储是该方法内正常步骤。",
+          "scope": {
+            "tissue": "synthetic_brain_slice",
+            "scale": "1 mm",
+            "probe": "DiI"
+          },
+          "scientific_review": "PENDING_USER_EXPERT",
+          "required_fields": [
+            "probe",
+            "excluded_probe",
+            "concentration",
+            "temperature",
+            "version",
+            "buffer_strength"
+          ],
+          "single_clearing_method_required": true
+        },
+        "protocol": "一个透明方法的完整合成流程；正常前处理和匹配步骤不代表串联透明方法。\n完整合成方案 SYN-ALPHA v2。\n输入样本：已经固定的模拟脑切片，厚度 1 mm。\n1. 前处理：用 1x 虚构缓冲液 B0 洗涤 30 min。\n2. 标签准备：保留 DiI 标记；不添加 DiD。\n3. 预处理：浸入虚构试剂 X0 30 min。\n4. 光透明：使用 50 vol% 的虚构试剂 X1；处理温度 4 °C，持续 2 h。\n5. 终处理：用虚构试剂 Y1 作折射率匹配 1 h。\n6. 成像：采用模拟物镜和同一模拟采集条件记录图像。\n7. 存储：20 °C 避光保存，存储时间不计入处理预算。\n8. 总处理预算：4 h 内，不包括存储。\n本方案仅为软件fixture，不声明真实透明度、荧光保持或湿实验可行性。",
+        "proposed_facts": [
+          {
+            "field": "probe",
+            "value": "DiD",
+            "quote": "保留 DiI 标记",
+            "start": 121,
+            "end": 130,
+            "scope": "label_preparation",
+            "polarity": "positive"
+          },
+          {
+            "field": "excluded_probe",
+            "value": "DiD",
+            "quote": "不添加 DiD",
+            "start": 131,
+            "end": 138,
+            "scope": "label_preparation",
+            "polarity": "negative"
+          },
+          {
+            "field": "concentration",
+            "value": 50,
+            "quote": "50 vol%",
+            "start": 175,
+            "end": 182,
+            "scope": "processing",
+            "unit": "percent",
+            "basis": "v/v"
+          },
+          {
+            "field": "temperature",
+            "value": 4,
+            "quote": "处理温度 4 °C",
+            "start": 192,
+            "end": 201,
+            "scope": "processing",
+            "unit": "degC"
+          },
+          {
+            "field": "temperature",
+            "value": 20,
+            "quote": "存储：20 °C",
+            "start": 268,
+            "end": 276,
+            "scope": "storage",
+            "unit": "degC"
+          },
+          {
+            "field": "version",
+            "value": "v2",
+            "quote": "SYN-ALPHA v2",
+            "start": 42,
+            "end": 54,
+            "scope": "method"
+          },
+          {
+            "field": "buffer_strength",
+            "value": "1x",
+            "quote": "1x 虚构缓冲液 B0",
+            "start": 90,
+            "end": 101,
+            "scope": "pretreatment"
+          }
+        ]
+      },
+      "expected": {
+        "status": "UNFAITHFUL",
+        "mismatch_fields": [
+          "probe"
+        ],
+        "annotation": [
+          {
+            "field": "probe",
+            "value": "DiI",
+            "quote": "保留 DiI 标记",
+            "start": 121,
+            "end": 130,
+            "scope": "label_preparation",
+            "polarity": "positive"
+          },
+          {
+            "field": "excluded_probe",
+            "value": "DiD",
+            "quote": "不添加 DiD",
+            "start": 131,
+            "end": 138,
+            "scope": "label_preparation",
+            "polarity": "negative"
+          },
+          {
+            "field": "concentration",
+            "value": 50,
+            "quote": "50 vol%",
+            "start": 175,
+            "end": 182,
+            "scope": "processing",
+            "unit": "percent",
+            "basis": "v/v"
+          },
+          {
+            "field": "temperature",
+            "value": 4,
+            "quote": "处理温度 4 °C",
+            "start": 192,
+            "end": 201,
+            "scope": "processing",
+            "unit": "degC"
+          },
+          {
+            "field": "temperature",
+            "value": 20,
+            "quote": "存储：20 °C",
+            "start": 268,
+            "end": 276,
+            "scope": "storage",
+            "unit": "degC"
+          },
+          {
+            "field": "version",
+            "value": "v2",
+            "quote": "SYN-ALPHA v2",
+            "start": 42,
+            "end": 54,
+            "scope": "method"
+          },
+          {
+            "field": "buffer_strength",
+            "value": "1x",
+            "quote": "1x 虚构缓冲液 B0",
+            "start": 90,
+            "end": 101,
+            "scope": "pretreatment"
+          }
+        ]
+      },
+      "scientific_limit": "仅验证声明合同与机械行为；独立科学标签仍待用户专家审核。"
+    },
+    {
+      "id": "extract_03_negation_lost",
+      "hypothesis_ids": [
+        "H2"
+      ],
+      "kind": "extraction_fidelity",
+      "input": {
+        "task": {
+          "id": "SYN-TASK-001",
+          "text": "仅检查完整合成方案是否满足软件合同：保留 DiI；不添加 DiD；X1 浓度使用 vol% 基准；处理温度为 4 °C；存储为 20 °C；处理预算不包括存储。 每次仅采用一个透明方法，前处理/匹配/成像/存储是该方法内正常步骤。",
+          "scope": {
+            "tissue": "synthetic_brain_slice",
+            "scale": "1 mm",
+            "probe": "DiI"
+          },
+          "scientific_review": "PENDING_USER_EXPERT",
+          "required_fields": [
+            "probe",
+            "excluded_probe",
+            "concentration",
+            "temperature",
+            "version",
+            "buffer_strength"
+          ],
+          "single_clearing_method_required": true
+        },
+        "protocol": "一个透明方法的完整合成流程；正常前处理和匹配步骤不代表串联透明方法。\n完整合成方案 SYN-ALPHA v2。\n输入样本：已经固定的模拟脑切片，厚度 1 mm。\n1. 前处理：用 1x 虚构缓冲液 B0 洗涤 30 min。\n2. 标签准备：保留 DiI 标记；不添加 DiD。\n3. 预处理：浸入虚构试剂 X0 30 min。\n4. 光透明：使用 50 vol% 的虚构试剂 X1；处理温度 4 °C，持续 2 h。\n5. 终处理：用虚构试剂 Y1 作折射率匹配 1 h。\n6. 成像：采用模拟物镜和同一模拟采集条件记录图像。\n7. 存储：20 °C 避光保存，存储时间不计入处理预算。\n8. 总处理预算：4 h 内，不包括存储。\n本方案仅为软件fixture，不声明真实透明度、荧光保持或湿实验可行性。",
+        "proposed_facts": [
+          {
+            "field": "probe",
+            "value": "DiI",
+            "quote": "保留 DiI 标记",
+            "start": 121,
+            "end": 130,
+            "scope": "label_preparation",
+            "polarity": "positive"
+          },
+          {
+            "field": "excluded_probe",
+            "value": "DiD",
+            "quote": "不添加 DiD",
+            "start": 131,
+            "end": 138,
+            "scope": "label_preparation",
+            "polarity": "positive"
+          },
+          {
+            "field": "concentration",
+            "value": 50,
+            "quote": "50 vol%",
+            "start": 175,
+            "end": 182,
+            "scope": "processing",
+            "unit": "percent",
+            "basis": "v/v"
+          },
+          {
+            "field": "temperature",
+            "value": 4,
+            "quote": "处理温度 4 °C",
+            "start": 192,
+            "end": 201,
+            "scope": "processing",
+            "unit": "degC"
+          },
+          {
+            "field": "temperature",
+            "value": 20,
+            "quote": "存储：20 °C",
+            "start": 268,
+            "end": 276,
+            "scope": "storage",
+            "unit": "degC"
+          },
+          {
+            "field": "version",
+            "value": "v2",
+            "quote": "SYN-ALPHA v2",
+            "start": 42,
+            "end": 54,
+            "scope": "method"
+          },
+          {
+            "field": "buffer_strength",
+            "value": "1x",
+            "quote": "1x 虚构缓冲液 B0",
+            "start": 90,
+            "end": 101,
+            "scope": "pretreatment"
+          }
+        ]
+      },
+      "expected": {
+        "status": "UNFAITHFUL",
+        "mismatch_fields": [
+          "excluded_probe.polarity"
+        ],
+        "annotation": [
+          {
+            "field": "probe",
+            "value": "DiI",
+            "quote": "保留 DiI 标记",
+            "start": 121,
+            "end": 130,
+            "scope": "label_preparation",
+            "polarity": "positive"
+          },
+          {
+            "field": "excluded_probe",
+            "value": "DiD",
+            "quote": "不添加 DiD",
+            "start": 131,
+            "end": 138,
+            "scope": "label_preparation",
+            "polarity": "negative"
+          },
+          {
+            "field": "concentration",
+            "value": 50,
+            "quote": "50 vol%",
+            "start": 175,
+            "end": 182,
+            "scope": "processing",
+            "unit": "percent",
+            "basis": "v/v"
+          },
+          {
+            "field": "temperature",
+            "value": 4,
+            "quote": "处理温度 4 °C",
+            "start": 192,
+            "end": 201,
+            "scope": "processing",
+            "unit": "degC"
+          },
+          {
+            "field": "temperature",
+            "value": 20,
+            "quote": "存储：20 °C",
+            "start": 268,
+            "end": 276,
+            "scope": "storage",
+            "unit": "degC"
+          },
+          {
+            "field": "version",
+            "value": "v2",
+            "quote": "SYN-ALPHA v2",
+            "start": 42,
+            "end": 54,
+            "scope": "method"
+          },
+          {
+            "field": "buffer_strength",
+            "value": "1x",
+            "quote": "1x 虚构缓冲液 B0",
+            "start": 90,
+            "end": 101,
+            "scope": "pretreatment"
+          }
+        ]
+      },
+      "scientific_limit": "仅验证声明合同与机械行为；独立科学标签仍待用户专家审核。"
+    },
+    {
+      "id": "extract_04_percent_basis_changed",
+      "hypothesis_ids": [
+        "H2"
+      ],
+      "kind": "extraction_fidelity",
+      "input": {
+        "task": {
+          "id": "SYN-TASK-001",
+          "text": "仅检查完整合成方案是否满足软件合同：保留 DiI；不添加 DiD；X1 浓度使用 vol% 基准；处理温度为 4 °C；存储为 20 °C；处理预算不包括存储。 每次仅采用一个透明方法，前处理/匹配/成像/存储是该方法内正常步骤。",
+          "scope": {
+            "tissue": "synthetic_brain_slice",
+            "scale": "1 mm",
+            "probe": "DiI"
+          },
+          "scientific_review": "PENDING_USER_EXPERT",
+          "required_fields": [
+            "probe",
+            "excluded_probe",
+            "concentration",
+            "temperature",
+            "version",
+            "buffer_strength"
+          ],
+          "single_clearing_method_required": true
+        },
+        "protocol": "一个透明方法的完整合成流程；正常前处理和匹配步骤不代表串联透明方法。\n完整合成方案 SYN-ALPHA v2。\n输入样本：已经固定的模拟脑切片，厚度 1 mm。\n1. 前处理：用 1x 虚构缓冲液 B0 洗涤 30 min。\n2. 标签准备：保留 DiI 标记；不添加 DiD。\n3. 预处理：浸入虚构试剂 X0 30 min。\n4. 光透明：使用 50 vol% 的虚构试剂 X1；处理温度 4 °C，持续 2 h。\n5. 终处理：用虚构试剂 Y1 作折射率匹配 1 h。\n6. 成像：采用模拟物镜和同一模拟采集条件记录图像。\n7. 存储：20 °C 避光保存，存储时间不计入处理预算。\n8. 总处理预算：4 h 内，不包括存储。\n本方案仅为软件fixture，不声明真实透明度、荧光保持或湿实验可行性。",
+        "proposed_facts": [
+          {
+            "field": "probe",
+            "value": "DiI",
+            "quote": "保留 DiI 标记",
+            "start": 121,
+            "end": 130,
+            "scope": "label_preparation",
+            "polarity": "positive"
+          },
+          {
+            "field": "excluded_probe",
+            "value": "DiD",
+            "quote": "不添加 DiD",
+            "start": 131,
+            "end": 138,
+            "scope": "label_preparation",
+            "polarity": "negative"
+          },
+          {
+            "field": "concentration",
+            "value": 50,
+            "quote": "50 vol%",
+            "start": 175,
+            "end": 182,
+            "scope": "processing",
+            "unit": "percent",
+            "basis": "w/v"
+          },
+          {
+            "field": "temperature",
+            "value": 4,
+            "quote": "处理温度 4 °C",
+            "start": 192,
+            "end": 201,
+            "scope": "processing",
+            "unit": "degC"
+          },
+          {
+            "field": "temperature",
+            "value": 20,
+            "quote": "存储：20 °C",
+            "start": 268,
+            "end": 276,
+            "scope": "storage",
+            "unit": "degC"
+          },
+          {
+            "field": "version",
+            "value": "v2",
+            "quote": "SYN-ALPHA v2",
+            "start": 42,
+            "end": 54,
+            "scope": "method"
+          },
+          {
+            "field": "buffer_strength",
+            "value": "1x",
+            "quote": "1x 虚构缓冲液 B0",
+            "start": 90,
+            "end": 101,
+            "scope": "pretreatment"
+          }
+        ]
+      },
+      "expected": {
+        "status": "UNFAITHFUL",
+        "mismatch_fields": [
+          "concentration.basis"
+        ],
+        "annotation": [
+          {
+            "field": "probe",
+            "value": "DiI",
+            "quote": "保留 DiI 标记",
+            "start": 121,
+            "end": 130,
+            "scope": "label_preparation",
+            "polarity": "positive"
+          },
+          {
+            "field": "excluded_probe",
+            "value": "DiD",
+            "quote": "不添加 DiD",
+            "start": 131,
+            "end": 138,
+            "scope": "label_preparation",
+            "polarity": "negative"
+          },
+          {
+            "field": "concentration",
+            "value": 50,
+            "quote": "50 vol%",
+            "start": 175,
+            "end": 182,
+            "scope": "processing",
+            "unit": "percent",
+            "basis": "v/v"
+          },
+          {
+            "field": "temperature",
+            "value": 4,
+            "quote": "处理温度 4 °C",
+            "start": 192,
+            "end": 201,
+            "scope": "processing",
+            "unit": "degC"
+          },
+          {
+            "field": "temperature",
+            "value": 20,
+            "quote": "存储：20 °C",
+            "start": 268,
+            "end": 276,
+            "scope": "storage",
+            "unit": "degC"
+          },
+          {
+            "field": "version",
+            "value": "v2",
+            "quote": "SYN-ALPHA v2",
+            "start": 42,
+            "end": 54,
+            "scope": "method"
+          },
+          {
+            "field": "buffer_strength",
+            "value": "1x",
+            "quote": "1x 虚构缓冲液 B0",
+            "start": 90,
+            "end": 101,
+            "scope": "pretreatment"
+          }
+        ]
+      },
+      "scientific_limit": "仅验证声明合同与机械行为；独立科学标签仍待用户专家审核。"
+    },
+    {
+      "id": "extract_05_storage_as_processing",
+      "hypothesis_ids": [
+        "H2"
+      ],
+      "kind": "extraction_fidelity",
+      "input": {
+        "task": {
+          "id": "SYN-TASK-001",
+          "text": "仅检查完整合成方案是否满足软件合同：保留 DiI；不添加 DiD；X1 浓度使用 vol% 基准；处理温度为 4 °C；存储为 20 °C；处理预算不包括存储。 每次仅采用一个透明方法，前处理/匹配/成像/存储是该方法内正常步骤。",
+          "scope": {
+            "tissue": "synthetic_brain_slice",
+            "scale": "1 mm",
+            "probe": "DiI"
+          },
+          "scientific_review": "PENDING_USER_EXPERT",
+          "required_fields": [
+            "probe",
+            "excluded_probe",
+            "concentration",
+            "temperature",
+            "version",
+            "buffer_strength"
+          ],
+          "single_clearing_method_required": true
+        },
+        "protocol": "一个透明方法的完整合成流程；正常前处理和匹配步骤不代表串联透明方法。\n完整合成方案 SYN-ALPHA v2。\n输入样本：已经固定的模拟脑切片，厚度 1 mm。\n1. 前处理：用 1x 虚构缓冲液 B0 洗涤 30 min。\n2. 标签准备：保留 DiI 标记；不添加 DiD。\n3. 预处理：浸入虚构试剂 X0 30 min。\n4. 光透明：使用 50 vol% 的虚构试剂 X1；处理温度 4 °C，持续 2 h。\n5. 终处理：用虚构试剂 Y1 作折射率匹配 1 h。\n6. 成像：采用模拟物镜和同一模拟采集条件记录图像。\n7. 存储：20 °C 避光保存，存储时间不计入处理预算。\n8. 总处理预算：4 h 内，不包括存储。\n本方案仅为软件fixture，不声明真实透明度、荧光保持或湿实验可行性。",
+        "proposed_facts": [
+          {
+            "field": "probe",
+            "value": "DiI",
+            "quote": "保留 DiI 标记",
+            "start": 121,
+            "end": 130,
+            "scope": "label_preparation",
+            "polarity": "positive"
+          },
+          {
+            "field": "excluded_probe",
+            "value": "DiD",
+            "quote": "不添加 DiD",
+            "start": 131,
+            "end": 138,
+            "scope": "label_preparation",
+            "polarity": "negative"
+          },
+          {
+            "field": "concentration",
+            "value": 50,
+            "quote": "50 vol%",
+            "start": 175,
+            "end": 182,
+            "scope": "processing",
+            "unit": "percent",
+            "basis": "v/v"
+          },
+          {
+            "field": "temperature",
+            "value": 4,
+            "quote": "处理温度 4 °C",
+            "start": 192,
+            "end": 201,
+            "scope": "processing",
+            "unit": "degC"
+          },
+          {
+            "field": "temperature",
+            "value": 20,
+            "quote": "存储：20 °C",
+            "start": 268,
+            "end": 276,
+            "scope": "processing",
+            "unit": "degC"
+          },
+          {
+            "field": "version",
+            "value": "v2",
+            "quote": "SYN-ALPHA v2",
+            "start": 42,
+            "end": 54,
+            "scope": "method"
+          },
+          {
+            "field": "buffer_strength",
+            "value": "1x",
+            "quote": "1x 虚构缓冲液 B0",
+            "start": 90,
+            "end": 101,
+            "scope": "pretreatment"
+          }
+        ]
+      },
+      "expected": {
+        "status": "UNFAITHFUL",
+        "mismatch_fields": [
+          "temperature.scope"
+        ],
+        "annotation": [
+          {
+            "field": "probe",
+            "value": "DiI",
+            "quote": "保留 DiI 标记",
+            "start": 121,
+            "end": 130,
+            "scope": "label_preparation",
+            "polarity": "positive"
+          },
+          {
+            "field": "excluded_probe",
+            "value": "DiD",
+            "quote": "不添加 DiD",
+            "start": 131,
+            "end": 138,
+            "scope": "label_preparation",
+            "polarity": "negative"
+          },
+          {
+            "field": "concentration",
+            "value": 50,
+            "quote": "50 vol%",
+            "start": 175,
+            "end": 182,
+            "scope": "processing",
+            "unit": "percent",
+            "basis": "v/v"
+          },
+          {
+            "field": "temperature",
+            "value": 4,
+            "quote": "处理温度 4 °C",
+            "start": 192,
+            "end": 201,
+            "scope": "processing",
+            "unit": "degC"
+          },
+          {
+            "field": "temperature",
+            "value": 20,
+            "quote": "存储：20 °C",
+            "start": 268,
+            "end": 276,
+            "scope": "storage",
+            "unit": "degC"
+          },
+          {
+            "field": "version",
+            "value": "v2",
+            "quote": "SYN-ALPHA v2",
+            "start": 42,
+            "end": 54,
+            "scope": "method"
+          },
+          {
+            "field": "buffer_strength",
+            "value": "1x",
+            "quote": "1x 虚构缓冲液 B0",
+            "start": 90,
+            "end": 101,
+            "scope": "pretreatment"
+          }
+        ]
+      },
+      "scientific_limit": "仅验证声明合同与机械行为；独立科学标签仍待用户专家审核。"
+    },
+    {
+      "id": "extract_06_processing_as_storage",
+      "hypothesis_ids": [
+        "H2"
+      ],
+      "kind": "extraction_fidelity",
+      "input": {
+        "task": {
+          "id": "SYN-TASK-001",
+          "text": "仅检查完整合成方案是否满足软件合同：保留 DiI；不添加 DiD；X1 浓度使用 vol% 基准；处理温度为 4 °C；存储为 20 °C；处理预算不包括存储。 每次仅采用一个透明方法，前处理/匹配/成像/存储是该方法内正常步骤。",
+          "scope": {
+            "tissue": "synthetic_brain_slice",
+            "scale": "1 mm",
+            "probe": "DiI"
+          },
+          "scientific_review": "PENDING_USER_EXPERT",
+          "required_fields": [
+            "probe",
+            "excluded_probe",
+            "concentration",
+            "temperature",
+            "version",
+            "buffer_strength"
+          ],
+          "single_clearing_method_required": true
+        },
+        "protocol": "一个透明方法的完整合成流程；正常前处理和匹配步骤不代表串联透明方法。\n完整合成方案 SYN-ALPHA v2。\n输入样本：已经固定的模拟脑切片，厚度 1 mm。\n1. 前处理：用 1x 虚构缓冲液 B0 洗涤 30 min。\n2. 标签准备：保留 DiI 标记；不添加 DiD。\n3. 预处理：浸入虚构试剂 X0 30 min。\n4. 光透明：使用 50 vol% 的虚构试剂 X1；处理温度 4 °C，持续 2 h。\n5. 终处理：用虚构试剂 Y1 作折射率匹配 1 h。\n6. 成像：采用模拟物镜和同一模拟采集条件记录图像。\n7. 存储：20 °C 避光保存，存储时间不计入处理预算。\n8. 总处理预算：4 h 内，不包括存储。\n本方案仅为软件fixture，不声明真实透明度、荧光保持或湿实验可行性。",
+        "proposed_facts": [
+          {
+            "field": "probe",
+            "value": "DiI",
+            "quote": "保留 DiI 标记",
+            "start": 121,
+            "end": 130,
+            "scope": "label_preparation",
+            "polarity": "positive"
+          },
+          {
+            "field": "excluded_probe",
+            "value": "DiD",
+            "quote": "不添加 DiD",
+            "start": 131,
+            "end": 138,
+            "scope": "label_preparation",
+            "polarity": "negative"
+          },
+          {
+            "field": "concentration",
+            "value": 50,
+            "quote": "50 vol%",
+            "start": 175,
+            "end": 182,
+            "scope": "processing",
+            "unit": "percent",
+            "basis": "v/v"
+          },
+          {
+            "field": "temperature",
+            "value": 4,
+            "quote": "处理温度 4 °C",
+            "start": 192,
+            "end": 201,
+            "scope": "storage",
+            "unit": "degC"
+          },
+          {
+            "field": "temperature",
+            "value": 20,
+            "quote": "存储：20 °C",
+            "start": 268,
+            "end": 276,
+            "scope": "storage",
+            "unit": "degC"
+          },
+          {
+            "field": "version",
+            "value": "v2",
+            "quote": "SYN-ALPHA v2",
+            "start": 42,
+            "end": 54,
+            "scope": "method"
+          },
+          {
+            "field": "buffer_strength",
+            "value": "1x",
+            "quote": "1x 虚构缓冲液 B0",
+            "start": 90,
+            "end": 101,
+            "scope": "pretreatment"
+          }
+        ]
+      },
+      "expected": {
+        "status": "UNFAITHFUL",
+        "mismatch_fields": [
+          "temperature.scope"
+        ],
+        "annotation": [
+          {
+            "field": "probe",
+            "value": "DiI",
+            "quote": "保留 DiI 标记",
+            "start": 121,
+            "end": 130,
+            "scope": "label_preparation",
+            "polarity": "positive"
+          },
+          {
+            "field": "excluded_probe",
+            "value": "DiD",
+            "quote": "不添加 DiD",
+            "start": 131,
+            "end": 138,
+            "scope": "label_preparation",
+            "polarity": "negative"
+          },
+          {
+            "field": "concentration",
+            "value": 50,
+            "quote": "50 vol%",
+            "start": 175,
+            "end": 182,
+            "scope": "processing",
+            "unit": "percent",
+            "basis": "v/v"
+          },
+          {
+            "field": "temperature",
+            "value": 4,
+            "quote": "处理温度 4 °C",
+            "start": 192,
+            "end": 201,
+            "scope": "processing",
+            "unit": "degC"
+          },
+          {
+            "field": "temperature",
+            "value": 20,
+            "quote": "存储：20 °C",
+            "start": 268,
+            "end": 276,
+            "scope": "storage",
+            "unit": "degC"
+          },
+          {
+            "field": "version",
+            "value": "v2",
+            "quote": "SYN-ALPHA v2",
+            "start": 42,
+            "end": 54,
+            "scope": "method"
+          },
+          {
+            "field": "buffer_strength",
+            "value": "1x",
+            "quote": "1x 虚构缓冲液 B0",
+            "start": 90,
+            "end": 101,
+            "scope": "pretreatment"
+          }
+        ]
+      },
+      "scientific_limit": "仅验证声明合同与机械行为；独立科学标签仍待用户专家审核。"
+    },
+    {
+      "id": "extract_07_version_changed",
+      "hypothesis_ids": [
+        "H2"
+      ],
+      "kind": "extraction_fidelity",
+      "input": {
+        "task": {
+          "id": "SYN-TASK-001",
+          "text": "仅检查完整合成方案是否满足软件合同：保留 DiI；不添加 DiD；X1 浓度使用 vol% 基准；处理温度为 4 °C；存储为 20 °C；处理预算不包括存储。 每次仅采用一个透明方法，前处理/匹配/成像/存储是该方法内正常步骤。",
+          "scope": {
+            "tissue": "synthetic_brain_slice",
+            "scale": "1 mm",
+            "probe": "DiI"
+          },
+          "scientific_review": "PENDING_USER_EXPERT",
+          "required_fields": [
+            "probe",
+            "excluded_probe",
+            "concentration",
+            "temperature",
+            "version",
+            "buffer_strength"
+          ],
+          "single_clearing_method_required": true
+        },
+        "protocol": "一个透明方法的完整合成流程；正常前处理和匹配步骤不代表串联透明方法。\n完整合成方案 SYN-ALPHA v2。\n输入样本：已经固定的模拟脑切片，厚度 1 mm。\n1. 前处理：用 1x 虚构缓冲液 B0 洗涤 30 min。\n2. 标签准备：保留 DiI 标记；不添加 DiD。\n3. 预处理：浸入虚构试剂 X0 30 min。\n4. 光透明：使用 50 vol% 的虚构试剂 X1；处理温度 4 °C，持续 2 h。\n5. 终处理：用虚构试剂 Y1 作折射率匹配 1 h。\n6. 成像：采用模拟物镜和同一模拟采集条件记录图像。\n7. 存储：20 °C 避光保存，存储时间不计入处理预算。\n8. 总处理预算：4 h 内，不包括存储。\n本方案仅为软件fixture，不声明真实透明度、荧光保持或湿实验可行性。",
+        "proposed_facts": [
+          {
+            "field": "probe",
+            "value": "DiI",
+            "quote": "保留 DiI 标记",
+            "start": 121,
+            "end": 130,
+            "scope": "label_preparation",
+            "polarity": "positive"
+          },
+          {
+            "field": "excluded_probe",
+            "value": "DiD",
+            "quote": "不添加 DiD",
+            "start": 131,
+            "end": 138,
+            "scope": "label_preparation",
+            "polarity": "negative"
+          },
+          {
+            "field": "concentration",
+            "value": 50,
+            "quote": "50 vol%",
+            "start": 175,
+            "end": 182,
+            "scope": "processing",
+            "unit": "percent",
+            "basis": "v/v"
+          },
+          {
+            "field": "temperature",
+            "value": 4,
+            "quote": "处理温度 4 °C",
+            "start": 192,
+            "end": 201,
+            "scope": "processing",
+            "unit": "degC"
+          },
+          {
+            "field": "temperature",
+            "value": 20,
+            "quote": "存储：20 °C",
+            "start": 268,
+            "end": 276,
+            "scope": "storage",
+            "unit": "degC"
+          },
+          {
+            "field": "version",
+            "value": "v1",
+            "quote": "SYN-ALPHA v2",
+            "start": 42,
+            "end": 54,
+            "scope": "method"
+          },
+          {
+            "field": "buffer_strength",
+            "value": "1x",
+            "quote": "1x 虚构缓冲液 B0",
+            "start": 90,
+            "end": 101,
+            "scope": "pretreatment"
+          }
+        ]
+      },
+      "expected": {
+        "status": "UNFAITHFUL",
+        "mismatch_fields": [
+          "version"
+        ],
+        "annotation": [
+          {
+            "field": "probe",
+            "value": "DiI",
+            "quote": "保留 DiI 标记",
+            "start": 121,
+            "end": 130,
+            "scope": "label_preparation",
+            "polarity": "positive"
+          },
+          {
+            "field": "excluded_probe",
+            "value": "DiD",
+            "quote": "不添加 DiD",
+            "start": 131,
+            "end": 138,
+            "scope": "label_preparation",
+            "polarity": "negative"
+          },
+          {
+            "field": "concentration",
+            "value": 50,
+            "quote": "50 vol%",
+            "start": 175,
+            "end": 182,
+            "scope": "processing",
+            "unit": "percent",
+            "basis": "v/v"
+          },
+          {
+            "field": "temperature",
+            "value": 4,
+            "quote": "处理温度 4 °C",
+            "start": 192,
+            "end": 201,
+            "scope": "processing",
+            "unit": "degC"
+          },
+          {
+            "field": "temperature",
+            "value": 20,
+            "quote": "存储：20 °C",
+            "start": 268,
+            "end": 276,
+            "scope": "storage",
+            "unit": "degC"
+          },
+          {
+            "field": "version",
+            "value": "v2",
+            "quote": "SYN-ALPHA v2",
+            "start": 42,
+            "end": 54,
+            "scope": "method"
+          },
+          {
+            "field": "buffer_strength",
+            "value": "1x",
+            "quote": "1x 虚构缓冲液 B0",
+            "start": 90,
+            "end": 101,
+            "scope": "pretreatment"
+          }
+        ]
+      },
+      "scientific_limit": "仅验证声明合同与机械行为；独立科学标签仍待用户专家审核。"
+    },
+    {
+      "id": "extract_08_buffer_stock_as_working",
+      "hypothesis_ids": [
+        "H2"
+      ],
+      "kind": "extraction_fidelity",
+      "input": {
+        "task": {
+          "id": "SYN-TASK-001",
+          "text": "仅检查完整合成方案是否满足软件合同：保留 DiI；不添加 DiD；X1 浓度使用 vol% 基准；处理温度为 4 °C；存储为 20 °C；处理预算不包括存储。 每次仅采用一个透明方法，前处理/匹配/成像/存储是该方法内正常步骤。",
+          "scope": {
+            "tissue": "synthetic_brain_slice",
+            "scale": "1 mm",
+            "probe": "DiI"
+          },
+          "scientific_review": "PENDING_USER_EXPERT",
+          "required_fields": [
+            "probe",
+            "excluded_probe",
+            "concentration",
+            "temperature",
+            "version",
+            "buffer_strength"
+          ],
+          "single_clearing_method_required": true
+        },
+        "protocol": "一个透明方法的完整合成流程；正常前处理和匹配步骤不代表串联透明方法。\n完整合成方案 SYN-ALPHA v2。\n输入样本：已经固定的模拟脑切片，厚度 1 mm。\n1. 前处理：用 1x 虚构缓冲液 B0 洗涤 30 min。\n2. 标签准备：保留 DiI 标记；不添加 DiD。\n3. 预处理：浸入虚构试剂 X0 30 min。\n4. 光透明：使用 50 vol% 的虚构试剂 X1；处理温度 4 °C，持续 2 h。\n5. 终处理：用虚构试剂 Y1 作折射率匹配 1 h。\n6. 成像：采用模拟物镜和同一模拟采集条件记录图像。\n7. 存储：20 °C 避光保存，存储时间不计入处理预算。\n8. 总处理预算：4 h 内，不包括存储。\n本方案仅为软件fixture，不声明真实透明度、荧光保持或湿实验可行性。",
+        "proposed_facts": [
+          {
+            "field": "probe",
+            "value": "DiI",
+            "quote": "保留 DiI 标记",
+            "start": 121,
+            "end": 130,
+            "scope": "label_preparation",
+            "polarity": "positive"
+          },
+          {
+            "field": "excluded_probe",
+            "value": "DiD",
+            "quote": "不添加 DiD",
+            "start": 131,
+            "end": 138,
+            "scope": "label_preparation",
+            "polarity": "negative"
+          },
+          {
+            "field": "concentration",
+            "value": 50,
+            "quote": "50 vol%",
+            "start": 175,
+            "end": 182,
+            "scope": "processing",
+            "unit": "percent",
+            "basis": "v/v"
+          },
+          {
+            "field": "temperature",
+            "value": 4,
+            "quote": "处理温度 4 °C",
+            "start": 192,
+            "end": 201,
+            "scope": "processing",
+            "unit": "degC"
+          },
+          {
+            "field": "temperature",
+            "value": 20,
+            "quote": "存储：20 °C",
+            "start": 268,
+            "end": 276,
+            "scope": "storage",
+            "unit": "degC"
+          },
+          {
+            "field": "version",
+            "value": "v2",
+            "quote": "SYN-ALPHA v2",
+            "start": 42,
+            "end": 54,
+            "scope": "method"
+          },
+          {
+            "field": "buffer_strength",
+            "value": "10x",
+            "quote": "1x 虚构缓冲液 B0",
+            "start": 90,
+            "end": 101,
+            "scope": "pretreatment"
+          }
+        ]
+      },
+      "expected": {
+        "status": "UNFAITHFUL",
+        "mismatch_fields": [
+          "buffer_strength"
+        ],
+        "annotation": [
+          {
+            "field": "probe",
+            "value": "DiI",
+            "quote": "保留 DiI 标记",
+            "start": 121,
+            "end": 130,
+            "scope": "label_preparation",
+            "polarity": "positive"
+          },
+          {
+            "field": "excluded_probe",
+            "value": "DiD",
+            "quote": "不添加 DiD",
+            "start": 131,
+            "end": 138,
+            "scope": "label_preparation",
+            "polarity": "negative"
+          },
+          {
+            "field": "concentration",
+            "value": 50,
+            "quote": "50 vol%",
+            "start": 175,
+            "end": 182,
+            "scope": "processing",
+            "unit": "percent",
+            "basis": "v/v"
+          },
+          {
+            "field": "temperature",
+            "value": 4,
+            "quote": "处理温度 4 °C",
+            "start": 192,
+            "end": 201,
+            "scope": "processing",
+            "unit": "degC"
+          },
+          {
+            "field": "temperature",
+            "value": 20,
+            "quote": "存储：20 °C",
+            "start": 268,
+            "end": 276,
+            "scope": "storage",
+            "unit": "degC"
+          },
+          {
+            "field": "version",
+            "value": "v2",
+            "quote": "SYN-ALPHA v2",
+            "start": 42,
+            "end": 54,
+            "scope": "method"
+          },
+          {
+            "field": "buffer_strength",
+            "value": "1x",
+            "quote": "1x 虚构缓冲液 B0",
+            "start": 90,
+            "end": 101,
+            "scope": "pretreatment"
+          }
+        ]
+      },
+      "scientific_limit": "仅验证声明合同与机械行为；独立科学标签仍待用户专家审核。"
+    },
+    {
+      "id": "extract_09_omitted_fact",
+      "hypothesis_ids": [
+        "H2"
+      ],
+      "kind": "extraction_fidelity",
+      "input": {
+        "task": {
+          "id": "SYN-TASK-001",
+          "text": "仅检查完整合成方案是否满足软件合同：保留 DiI；不添加 DiD；X1 浓度使用 vol% 基准；处理温度为 4 °C；存储为 20 °C；处理预算不包括存储。 每次仅采用一个透明方法，前处理/匹配/成像/存储是该方法内正常步骤。",
+          "scope": {
+            "tissue": "synthetic_brain_slice",
+            "scale": "1 mm",
+            "probe": "DiI"
+          },
+          "scientific_review": "PENDING_USER_EXPERT",
+          "required_fields": [
+            "probe",
+            "excluded_probe",
+            "concentration",
+            "temperature",
+            "version",
+            "buffer_strength"
+          ],
+          "single_clearing_method_required": true
+        },
+        "protocol": "一个透明方法的完整合成流程；正常前处理和匹配步骤不代表串联透明方法。\n完整合成方案 SYN-ALPHA v2。\n输入样本：已经固定的模拟脑切片，厚度 1 mm。\n1. 前处理：用 1x 虚构缓冲液 B0 洗涤 30 min。\n2. 标签准备：保留 DiI 标记；不添加 DiD。\n3. 预处理：浸入虚构试剂 X0 30 min。\n4. 光透明：使用 50 vol% 的虚构试剂 X1；处理温度 4 °C，持续 2 h。\n5. 终处理：用虚构试剂 Y1 作折射率匹配 1 h。\n6. 成像：采用模拟物镜和同一模拟采集条件记录图像。\n7. 存储：20 °C 避光保存，存储时间不计入处理预算。\n8. 总处理预算：4 h 内，不包括存储。\n本方案仅为软件fixture，不声明真实透明度、荧光保持或湿实验可行性。",
+        "proposed_facts": [
+          {
+            "field": "probe",
+            "value": "DiI",
+            "quote": "保留 DiI 标记",
+            "start": 121,
+            "end": 130,
+            "scope": "label_preparation",
+            "polarity": "positive"
+          },
+          {
+            "field": "concentration",
+            "value": 50,
+            "quote": "50 vol%",
+            "start": 175,
+            "end": 182,
+            "scope": "processing",
+            "unit": "percent",
+            "basis": "v/v"
+          },
+          {
+            "field": "temperature",
+            "value": 4,
+            "quote": "处理温度 4 °C",
+            "start": 192,
+            "end": 201,
+            "scope": "processing",
+            "unit": "degC"
+          },
+          {
+            "field": "temperature",
+            "value": 20,
+            "quote": "存储：20 °C",
+            "start": 268,
+            "end": 276,
+            "scope": "storage",
+            "unit": "degC"
+          },
+          {
+            "field": "version",
+            "value": "v2",
+            "quote": "SYN-ALPHA v2",
+            "start": 42,
+            "end": 54,
+            "scope": "method"
+          },
+          {
+            "field": "buffer_strength",
+            "value": "1x",
+            "quote": "1x 虚构缓冲液 B0",
+            "start": 90,
+            "end": 101,
+            "scope": "pretreatment"
+          }
+        ]
+      },
+      "expected": {
+        "status": "UNFAITHFUL",
+        "mismatch_fields": [
+          "excluded_probe.missing"
+        ],
+        "annotation": [
+          {
+            "field": "probe",
+            "value": "DiI",
+            "quote": "保留 DiI 标记",
+            "start": 121,
+            "end": 130,
+            "scope": "label_preparation",
+            "polarity": "positive"
+          },
+          {
+            "field": "excluded_probe",
+            "value": "DiD",
+            "quote": "不添加 DiD",
+            "start": 131,
+            "end": 138,
+            "scope": "label_preparation",
+            "polarity": "negative"
+          },
+          {
+            "field": "concentration",
+            "value": 50,
+            "quote": "50 vol%",
+            "start": 175,
+            "end": 182,
+            "scope": "processing",
+            "unit": "percent",
+            "basis": "v/v"
+          },
+          {
+            "field": "temperature",
+            "value": 4,
+            "quote": "处理温度 4 °C",
+            "start": 192,
+            "end": 201,
+            "scope": "processing",
+            "unit": "degC"
+          },
+          {
+            "field": "temperature",
+            "value": 20,
+            "quote": "存储：20 °C",
+            "start": 268,
+            "end": 276,
+            "scope": "storage",
+            "unit": "degC"
+          },
+          {
+            "field": "version",
+            "value": "v2",
+            "quote": "SYN-ALPHA v2",
+            "start": 42,
+            "end": 54,
+            "scope": "method"
+          },
+          {
+            "field": "buffer_strength",
+            "value": "1x",
+            "quote": "1x 虚构缓冲液 B0",
+            "start": 90,
+            "end": 101,
+            "scope": "pretreatment"
+          }
+        ]
+      },
+      "scientific_limit": "遗漏是抽取忠实性缺陷，不自动证明方案真实科学失败。"
+    },
+    {
+      "id": "json_01_duplicate_key",
+      "hypothesis_ids": [
+        "H2"
+      ],
+      "kind": "strict_json",
+      "input": {
+        "text": "{\"probe\":\"DiI\",\"probe\":\"DiD\"}",
+        "protocol": "完整合成方案 SYN-ALPHA v2。\n输入样本：已经固定的模拟脑切片，厚度 1 mm。\n1. 前处理：用 1x 虚构缓冲液 B0 洗涤 30 min。\n2. 标签准备：保留 DiI 标记；不添加 DiD。\n3. 预处理：浸入虚构试剂 X0 30 min。\n4. 光透明：使用 50 vol% 的虚构试剂 X1；处理温度 4 °C，持续 2 h。\n5. 终处理：用虚构试剂 Y1 作折射率匹配 1 h。\n6. 成像：采用模拟物镜和同一模拟采集条件记录图像。\n7. 存储：20 °C 避光保存，存储时间不计入处理预算。\n8. 总处理预算：4 h 内，不包括存储。\n本方案仅为软件fixture，不声明真实透明度、荧光保持或湿实验可行性。",
+        "task": {
+          "id": "SYN-TASK-001",
+          "text": "仅检查完整合成方案是否满足软件合同：保留 DiI；不添加 DiD；X1 浓度使用 vol% 基准；处理温度为 4 °C；存储为 20 °C；处理预算不包括存储。",
+          "scope": {
+            "tissue": "synthetic_brain_slice",
+            "scale": "1 mm",
+            "probe": "DiI"
+          },
+          "scientific_review": "PENDING_USER_EXPERT"
+        }
+      },
+      "expected": {
+        "status": "INVALID",
+        "reason": "DUPLICATE_KEY"
+      },
+      "scientific_limit": "仅验证声明合同与机械行为；独立科学标签仍待用户专家审核。"
+    },
+    {
+      "id": "json_02_nonfinite",
+      "hypothesis_ids": [
+        "H2"
+      ],
+      "kind": "strict_json",
+      "input": {
+        "text": "{\"temperature\":NaN}",
+        "protocol": "完整合成方案 SYN-ALPHA v2。\n输入样本：已经固定的模拟脑切片，厚度 1 mm。\n1. 前处理：用 1x 虚构缓冲液 B0 洗涤 30 min。\n2. 标签准备：保留 DiI 标记；不添加 DiD。\n3. 预处理：浸入虚构试剂 X0 30 min。\n4. 光透明：使用 50 vol% 的虚构试剂 X1；处理温度 4 °C，持续 2 h。\n5. 终处理：用虚构试剂 Y1 作折射率匹配 1 h。\n6. 成像：采用模拟物镜和同一模拟采集条件记录图像。\n7. 存储：20 °C 避光保存，存储时间不计入处理预算。\n8. 总处理预算：4 h 内，不包括存储。\n本方案仅为软件fixture，不声明真实透明度、荧光保持或湿实验可行性。",
+        "task": {
+          "id": "SYN-TASK-001",
+          "text": "仅检查完整合成方案是否满足软件合同：保留 DiI；不添加 DiD；X1 浓度使用 vol% 基准；处理温度为 4 °C；存储为 20 °C；处理预算不包括存储。",
+          "scope": {
+            "tissue": "synthetic_brain_slice",
+            "scale": "1 mm",
+            "probe": "DiI"
+          },
+          "scientific_review": "PENDING_USER_EXPERT"
+        }
+      },
+      "expected": {
+        "status": "INVALID",
+        "reason": "NON_FINITE_JSON"
+      },
+      "scientific_limit": "仅验证声明合同与机械行为；独立科学标签仍待用户专家审核。"
+    },
+    {
+      "id": "json_03_unknown_field",
+      "hypothesis_ids": [
+        "H2"
+      ],
+      "kind": "strict_json",
+      "input": {
+        "text": "{\"probe\":\"DiI\",\"invented_confidence\":1}",
+        "allowed_fields": [
+          "probe"
+        ],
+        "protocol": "完整合成方案 SYN-ALPHA v2。\n输入样本：已经固定的模拟脑切片，厚度 1 mm。\n1. 前处理：用 1x 虚构缓冲液 B0 洗涤 30 min。\n2. 标签准备：保留 DiI 标记；不添加 DiD。\n3. 预处理：浸入虚构试剂 X0 30 min。\n4. 光透明：使用 50 vol% 的虚构试剂 X1；处理温度 4 °C，持续 2 h。\n5. 终处理：用虚构试剂 Y1 作折射率匹配 1 h。\n6. 成像：采用模拟物镜和同一模拟采集条件记录图像。\n7. 存储：20 °C 避光保存，存储时间不计入处理预算。\n8. 总处理预算：4 h 内，不包括存储。\n本方案仅为软件fixture，不声明真实透明度、荧光保持或湿实验可行性。",
+        "task": {
+          "id": "SYN-TASK-001",
+          "text": "仅检查完整合成方案是否满足软件合同：保留 DiI；不添加 DiD；X1 浓度使用 vol% 基准；处理温度为 4 °C；存储为 20 °C；处理预算不包括存储。",
+          "scope": {
+            "tissue": "synthetic_brain_slice",
+            "scale": "1 mm",
+            "probe": "DiI"
+          },
+          "scientific_review": "PENDING_USER_EXPERT"
+        }
+      },
+      "expected": {
+        "status": "INVALID",
+        "reason": "UNKNOWN_FIELD"
+      },
+      "scientific_limit": "仅验证声明合同与机械行为；独立科学标签仍待用户专家审核。"
+    },
+    {
+      "id": "source_01_identity_conflict",
+      "hypothesis_ids": [
+        "H3"
+      ],
+      "kind": "source_layers",
+      "input": {
+        "task": {
+          "id": "SYN-TASK-001",
+          "text": "仅检查完整合成方案是否满足软件合同：保留 DiI；不添加 DiD；X1 浓度使用 vol% 基准；处理温度为 4 °C；存储为 20 °C；处理预算不包括存储。",
+          "scope": {
+            "tissue": "synthetic_brain_slice",
+            "scale": "1 mm",
+            "probe": "DiI"
+          },
+          "scientific_review": "PENDING_USER_EXPERT"
+        },
+        "protocol": "完整合成方案 SYN-ALPHA v2。\n输入样本：已经固定的模拟脑切片，厚度 1 mm。\n1. 前处理：用 1x 虚构缓冲液 B0 洗涤 30 min。\n2. 标签准备：保留 DiI 标记；不添加 DiD。\n3. 预处理：浸入虚构试剂 X0 30 min。\n4. 光透明：使用 50 vol% 的虚构试剂 X1；处理温度 4 °C，持续 2 h。\n5. 终处理：用虚构试剂 Y1 作折射率匹配 1 h。\n6. 成像：采用模拟物镜和同一模拟采集条件记录图像。\n7. 存储：20 °C 避光保存，存储时间不计入处理预算。\n8. 总处理预算：4 h 内，不包括存储。\n本方案仅为软件fixture，不声明真实透明度、荧光保持或湿实验可行性。",
+        "sources": [
+          {
+            "id": "SYN-SOURCE-ALPHA-V2",
+            "origin_type": "SYNTHETIC",
+            "method": "SYN-ALPHA",
+            "version": "v2",
+            "scientific_review": "PENDING_USER_EXPERT",
+            "text": "这是虚构的软件合同，不是论文引文或湿实验建议。\n方法身份：SYN-ALPHA v2。\n适用范围：模拟脑切片，厚度 1 mm，标签 DiI。\n步骤合同：洗涤→标签准备→预处理→光透明→折射率匹配→成像→存储。\n模拟处理合同：50 vol% 的虚构试剂 X1；处理温度 4 °C；存储温度 20 °C。\n版本合同：v1 的虚构缓冲液 B0 库存是 10x；v2 要求稀释为 1x 后使用。\n软建议：优先 4 °C 处理；是否硬约束由当前任务明确声明，不由本句决定。",
+            "scope": {
+              "tissue": "synthetic_brain_slice",
+              "scale": "1 mm",
+              "probe": "DiI"
+            },
+            "origin_references": [
+              {
+                "title": "MACS原始研究：仅用于提示尺度/顺序失效假设",
+                "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7175264/"
+              },
+              {
+                "title": "SeeDB2更正：仅用于提示真实版本链问题",
+                "url": "https://bio-protocol.org/en/bpdetail?id=3095&type=0"
+              }
+            ]
+          },
+          {
+            "id": "SYN-SOURCE-ALPHA-V1",
+            "origin_type": "SYNTHETIC",
+            "method": "SYN-ALPHA",
+            "version": "v1",
+            "scientific_review": "PENDING_USER_EXPERT",
+            "text": "这是合成旧版本软件合同。\n方法身份：SYN-ALPHA v1。\n虚构缓冲液 B0 库存按 10x 记录，本版本未包含当前 1x 稀释要求。",
+            "scope": {
+              "tissue": "synthetic_brain_slice",
+              "scale": "1 mm",
+              "probe": "DiI"
+            },
+            "origin_references": [
+              {
+                "title": "MACS原始研究：仅用于提示尺度/顺序失效假设",
+                "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7175264/"
+              },
+              {
+                "title": "SeeDB2更正：仅用于提示真实版本链问题",
+                "url": "https://bio-protocol.org/en/bpdetail?id=3095&type=0"
+              }
+            ],
+            "superseded_by": "SYN-SOURCE-ALPHA-V2"
+          },
+          {
+            "id": "SYN-SOURCE-BETA-V1",
+            "origin_type": "SYNTHETIC",
+            "method": "SYN-BETA",
+            "version": "v1",
+            "scientific_review": "PENDING_USER_EXPERT",
+            "text": "这是独立虚构的方法身份合同。\n方法身份：SYN-BETA v1。\n适用范围：模拟脑切片，厚度 1 mm，标签 DiD。\n本来源只确认模拟身份与范围，不给真实科学兼容性结论。",
+            "scope": {
+              "tissue": "synthetic_brain_slice",
+              "scale": "1 mm",
+              "probe": "DiD"
+            },
+            "origin_references": [
+              {
+                "title": "FRUIT来源身份核验",
+                "url": "https://www.frontiersin.org/journals/neuroanatomy/articles/10.3389/fnana.2015.00019/full"
+              },
+              {
+                "title": "SeeDB2原始研究，身份须与FRUIT分开",
+                "url": "https://www.sciencedirect.com/science/article/pii/S2211124716301784"
+              }
+            ]
+          }
+        ],
+        "claimed_source": {
+          "id": "SYN-SOURCE-ALPHA-V2",
+          "method": "SYN-BETA",
+          "version": "v2"
+        },
+        "claim": "方法身份为 SYN-BETA v2。",
+        "quote": "方法身份：SYN-ALPHA v2。",
+        "source_id": "SYN-SOURCE-ALPHA-V2"
+      },
+      "expected": {
+        "source_identity": "CONFLICT",
+        "quote_authenticity": "PRESENT",
+        "entailment": "UNRESOLVED",
+        "applicability": "UNRESOLVED"
+      },
+      "scientific_limit": "合成source用于检查层级分离；真实论文适用性、蕴含及科学正确性不由该case证明。"
+    },
+    {
+      "id": "source_02_quote_absent",
+      "hypothesis_ids": [
+        "H3"
+      ],
+      "kind": "source_layers",
+      "input": {
+        "task": {
+          "id": "SYN-TASK-001",
+          "text": "仅检查完整合成方案是否满足软件合同：保留 DiI；不添加 DiD；X1 浓度使用 vol% 基准；处理温度为 4 °C；存储为 20 °C；处理预算不包括存储。",
+          "scope": {
+            "tissue": "synthetic_brain_slice",
+            "scale": "1 mm",
+            "probe": "DiI"
+          },
+          "scientific_review": "PENDING_USER_EXPERT"
+        },
+        "protocol": "完整合成方案 SYN-ALPHA v2。\n输入样本：已经固定的模拟脑切片，厚度 1 mm。\n1. 前处理：用 1x 虚构缓冲液 B0 洗涤 30 min。\n2. 标签准备：保留 DiI 标记；不添加 DiD。\n3. 预处理：浸入虚构试剂 X0 30 min。\n4. 光透明：使用 50 vol% 的虚构试剂 X1；处理温度 4 °C，持续 2 h。\n5. 终处理：用虚构试剂 Y1 作折射率匹配 1 h。\n6. 成像：采用模拟物镜和同一模拟采集条件记录图像。\n7. 存储：20 °C 避光保存，存储时间不计入处理预算。\n8. 总处理预算：4 h 内，不包括存储。\n本方案仅为软件fixture，不声明真实透明度、荧光保持或湿实验可行性。",
+        "sources": [
+          {
+            "id": "SYN-SOURCE-ALPHA-V2",
+            "origin_type": "SYNTHETIC",
+            "method": "SYN-ALPHA",
+            "version": "v2",
+            "scientific_review": "PENDING_USER_EXPERT",
+            "text": "这是虚构的软件合同，不是论文引文或湿实验建议。\n方法身份：SYN-ALPHA v2。\n适用范围：模拟脑切片，厚度 1 mm，标签 DiI。\n步骤合同：洗涤→标签准备→预处理→光透明→折射率匹配→成像→存储。\n模拟处理合同：50 vol% 的虚构试剂 X1；处理温度 4 °C；存储温度 20 °C。\n版本合同：v1 的虚构缓冲液 B0 库存是 10x；v2 要求稀释为 1x 后使用。\n软建议：优先 4 °C 处理；是否硬约束由当前任务明确声明，不由本句决定。",
+            "scope": {
+              "tissue": "synthetic_brain_slice",
+              "scale": "1 mm",
+              "probe": "DiI"
+            },
+            "origin_references": [
+              {
+                "title": "MACS原始研究：仅用于提示尺度/顺序失效假设",
+                "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7175264/"
+              },
+              {
+                "title": "SeeDB2更正：仅用于提示真实版本链问题",
+                "url": "https://bio-protocol.org/en/bpdetail?id=3095&type=0"
+              }
+            ]
+          },
+          {
+            "id": "SYN-SOURCE-ALPHA-V1",
+            "origin_type": "SYNTHETIC",
+            "method": "SYN-ALPHA",
+            "version": "v1",
+            "scientific_review": "PENDING_USER_EXPERT",
+            "text": "这是合成旧版本软件合同。\n方法身份：SYN-ALPHA v1。\n虚构缓冲液 B0 库存按 10x 记录，本版本未包含当前 1x 稀释要求。",
+            "scope": {
+              "tissue": "synthetic_brain_slice",
+              "scale": "1 mm",
+              "probe": "DiI"
+            },
+            "origin_references": [
+              {
+                "title": "MACS原始研究：仅用于提示尺度/顺序失效假设",
+                "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7175264/"
+              },
+              {
+                "title": "SeeDB2更正：仅用于提示真实版本链问题",
+                "url": "https://bio-protocol.org/en/bpdetail?id=3095&type=0"
+              }
+            ],
+            "superseded_by": "SYN-SOURCE-ALPHA-V2"
+          },
+          {
+            "id": "SYN-SOURCE-BETA-V1",
+            "origin_type": "SYNTHETIC",
+            "method": "SYN-BETA",
+            "version": "v1",
+            "scientific_review": "PENDING_USER_EXPERT",
+            "text": "这是独立虚构的方法身份合同。\n方法身份：SYN-BETA v1。\n适用范围：模拟脑切片，厚度 1 mm，标签 DiD。\n本来源只确认模拟身份与范围，不给真实科学兼容性结论。",
+            "scope": {
+              "tissue": "synthetic_brain_slice",
+              "scale": "1 mm",
+              "probe": "DiD"
+            },
+            "origin_references": [
+              {
+                "title": "FRUIT来源身份核验",
+                "url": "https://www.frontiersin.org/journals/neuroanatomy/articles/10.3389/fnana.2015.00019/full"
+              },
+              {
+                "title": "SeeDB2原始研究，身份须与FRUIT分开",
+                "url": "https://www.sciencedirect.com/science/article/pii/S2211124716301784"
+              }
+            ]
+          }
+        ],
+        "claimed_source": {
+          "id": "SYN-SOURCE-ALPHA-V2",
+          "method": "SYN-ALPHA",
+          "version": "v2"
+        },
+        "claim": "处理温度 40 °C。",
+        "quote": "处理温度 40 °C",
+        "source_id": "SYN-SOURCE-ALPHA-V2"
+      },
+      "expected": {
+        "source_identity": "MATCHED",
+        "quote_authenticity": "ABSENT",
+        "entailment": "UNRESOLVED",
+        "applicability": "UNRESOLVED"
+      },
+      "scientific_limit": "合成source用于检查层级分离；真实论文适用性、蕴含及科学正确性不由该case证明。"
+    },
+    {
+      "id": "source_03_quote_is_not_entailment",
+      "hypothesis_ids": [
+        "H3"
+      ],
+      "kind": "source_layers",
+      "input": {
+        "task": {
+          "id": "SYN-TASK-001",
+          "text": "仅检查完整合成方案是否满足软件合同：保留 DiI；不添加 DiD；X1 浓度使用 vol% 基准；处理温度为 4 °C；存储为 20 °C；处理预算不包括存储。",
+          "scope": {
+            "tissue": "synthetic_brain_slice",
+            "scale": "1 mm",
+            "probe": "DiI"
+          },
+          "scientific_review": "PENDING_USER_EXPERT"
+        },
+        "protocol": "完整合成方案 SYN-ALPHA v2。\n输入样本：已经固定的模拟脑切片，厚度 1 mm。\n1. 前处理：用 1x 虚构缓冲液 B0 洗涤 30 min。\n2. 标签准备：保留 DiI 标记；不添加 DiD。\n3. 预处理：浸入虚构试剂 X0 30 min。\n4. 光透明：使用 50 vol% 的虚构试剂 X1；处理温度 4 °C，持续 2 h。\n5. 终处理：用虚构试剂 Y1 作折射率匹配 1 h。\n6. 成像：采用模拟物镜和同一模拟采集条件记录图像。\n7. 存储：20 °C 避光保存，存储时间不计入处理预算。\n8. 总处理预算：4 h 内，不包括存储。\n本方案仅为软件fixture，不声明真实透明度、荧光保持或湿实验可行性。",
+        "sources": [
+          {
+            "id": "SYN-SOURCE-ALPHA-V2",
+            "origin_type": "SYNTHETIC",
+            "method": "SYN-ALPHA",
+            "version": "v2",
+            "scientific_review": "PENDING_USER_EXPERT",
+            "text": "这是虚构的软件合同，不是论文引文或湿实验建议。\n方法身份：SYN-ALPHA v2。\n适用范围：模拟脑切片，厚度 1 mm，标签 DiI。\n步骤合同：洗涤→标签准备→预处理→光透明→折射率匹配→成像→存储。\n模拟处理合同：50 vol% 的虚构试剂 X1；处理温度 4 °C；存储温度 20 °C。\n版本合同：v1 的虚构缓冲液 B0 库存是 10x；v2 要求稀释为 1x 后使用。\n软建议：优先 4 °C 处理；是否硬约束由当前任务明确声明，不由本句决定。",
+            "scope": {
+              "tissue": "synthetic_brain_slice",
+              "scale": "1 mm",
+              "probe": "DiI"
+            },
+            "origin_references": [
+              {
+                "title": "MACS原始研究：仅用于提示尺度/顺序失效假设",
+                "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7175264/"
+              },
+              {
+                "title": "SeeDB2更正：仅用于提示真实版本链问题",
+                "url": "https://bio-protocol.org/en/bpdetail?id=3095&type=0"
+              }
+            ]
+          },
+          {
+            "id": "SYN-SOURCE-ALPHA-V1",
+            "origin_type": "SYNTHETIC",
+            "method": "SYN-ALPHA",
+            "version": "v1",
+            "scientific_review": "PENDING_USER_EXPERT",
+            "text": "这是合成旧版本软件合同。\n方法身份：SYN-ALPHA v1。\n虚构缓冲液 B0 库存按 10x 记录，本版本未包含当前 1x 稀释要求。",
+            "scope": {
+              "tissue": "synthetic_brain_slice",
+              "scale": "1 mm",
+              "probe": "DiI"
+            },
+            "origin_references": [
+              {
+                "title": "MACS原始研究：仅用于提示尺度/顺序失效假设",
+                "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7175264/"
+              },
+              {
+                "title": "SeeDB2更正：仅用于提示真实版本链问题",
+                "url": "https://bio-protocol.org/en/bpdetail?id=3095&type=0"
+              }
+            ],
+            "superseded_by": "SYN-SOURCE-ALPHA-V2"
+          },
+          {
+            "id": "SYN-SOURCE-BETA-V1",
+            "origin_type": "SYNTHETIC",
+            "method": "SYN-BETA",
+            "version": "v1",
+            "scientific_review": "PENDING_USER_EXPERT",
+            "text": "这是独立虚构的方法身份合同。\n方法身份：SYN-BETA v1。\n适用范围：模拟脑切片，厚度 1 mm，标签 DiD。\n本来源只确认模拟身份与范围，不给真实科学兼容性结论。",
+            "scope": {
+              "tissue": "synthetic_brain_slice",
+              "scale": "1 mm",
+              "probe": "DiD"
+            },
+            "origin_references": [
+              {
+                "title": "FRUIT来源身份核验",
+                "url": "https://www.frontiersin.org/journals/neuroanatomy/articles/10.3389/fnana.2015.00019/full"
+              },
+              {
+                "title": "SeeDB2原始研究，身份须与FRUIT分开",
+                "url": "https://www.sciencedirect.com/science/article/pii/S2211124716301784"
+              }
+            ]
+          }
+        ],
+        "claimed_source": {
+          "id": "SYN-SOURCE-ALPHA-V2",
+          "method": "SYN-ALPHA",
+          "version": "v2"
+        },
+        "claim": "本方法在所有组织均保证真实科学成功。",
+        "quote": "适用范围：模拟脑切片，厚度 1 mm，标签 DiI。",
+        "source_id": "SYN-SOURCE-ALPHA-V2"
+      },
+      "expected": {
+        "source_identity": "MATCHED",
+        "quote_authenticity": "PRESENT",
+        "entailment": "UNRESOLVED",
+        "applicability": "UNRESOLVED"
+      },
+      "scientific_limit": "合成source用于检查层级分离；真实论文适用性、蕴含及科学正确性不由该case证明。"
+    },
+    {
+      "id": "source_04_scope_changed",
+      "hypothesis_ids": [
+        "H3"
+      ],
+      "kind": "source_layers",
+      "input": {
+        "task": {
+          "id": "SYN-TASK-001",
+          "text": "仅检查完整合成方案是否满足软件合同：保留 DiI；不添加 DiD；X1 浓度使用 vol% 基准；处理温度为 4 °C；存储为 20 °C；处理预算不包括存储。",
+          "scope": {
+            "tissue": "synthetic_brain_slice",
+            "scale": "1 mm",
+            "probe": "DiI"
+          },
+          "scientific_review": "PENDING_USER_EXPERT"
+        },
+        "protocol": "完整合成方案 SYN-ALPHA v2。\n输入样本：已经固定的模拟脑切片，厚度 1 mm。\n1. 前处理：用 1x 虚构缓冲液 B0 洗涤 30 min。\n2. 标签准备：保留 DiI 标记；不添加 DiD。\n3. 预处理：浸入虚构试剂 X0 30 min。\n4. 光透明：使用 50 vol% 的虚构试剂 X1；处理温度 4 °C，持续 2 h。\n5. 终处理：用虚构试剂 Y1 作折射率匹配 1 h。\n6. 成像：采用模拟物镜和同一模拟采集条件记录图像。\n7. 存储：20 °C 避光保存，存储时间不计入处理预算。\n8. 总处理预算：4 h 内，不包括存储。\n本方案仅为软件fixture，不声明真实透明度、荧光保持或湿实验可行性。",
+        "sources": [
+          {
+            "id": "SYN-SOURCE-ALPHA-V2",
+            "origin_type": "SYNTHETIC",
+            "method": "SYN-ALPHA",
+            "version": "v2",
+            "scientific_review": "PENDING_USER_EXPERT",
+            "text": "这是虚构的软件合同，不是论文引文或湿实验建议。\n方法身份：SYN-ALPHA v2。\n适用范围：模拟脑切片，厚度 1 mm，标签 DiI。\n步骤合同：洗涤→标签准备→预处理→光透明→折射率匹配→成像→存储。\n模拟处理合同：50 vol% 的虚构试剂 X1；处理温度 4 °C；存储温度 20 °C。\n版本合同：v1 的虚构缓冲液 B0 库存是 10x；v2 要求稀释为 1x 后使用。\n软建议：优先 4 °C 处理；是否硬约束由当前任务明确声明，不由本句决定。",
+            "scope": {
+              "tissue": "synthetic_brain_slice",
+              "scale": "1 mm",
+              "probe": "DiI"
+            },
+            "origin_references": [
+              {
+                "title": "MACS原始研究：仅用于提示尺度/顺序失效假设",
+                "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7175264/"
+              },
+              {
+                "title": "SeeDB2更正：仅用于提示真实版本链问题",
+                "url": "https://bio-protocol.org/en/bpdetail?id=3095&type=0"
+              }
+            ]
+          },
+          {
+            "id": "SYN-SOURCE-ALPHA-V1",
+            "origin_type": "SYNTHETIC",
+            "method": "SYN-ALPHA",
+            "version": "v1",
+            "scientific_review": "PENDING_USER_EXPERT",
+            "text": "这是合成旧版本软件合同。\n方法身份：SYN-ALPHA v1。\n虚构缓冲液 B0 库存按 10x 记录，本版本未包含当前 1x 稀释要求。",
+            "scope": {
+              "tissue": "synthetic_brain_slice",
+              "scale": "1 mm",
+              "probe": "DiI"
+            },
+            "origin_references": [
+              {
+                "title": "MACS原始研究：仅用于提示尺度/顺序失效假设",
+                "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7175264/"
+              },
+              {
+                "title": "SeeDB2更正：仅用于提示真实版本链问题",
+                "url": "https://bio-protocol.org/en/bpdetail?id=3095&type=0"
+              }
+            ],
+            "superseded_by": "SYN-SOURCE-ALPHA-V2"
+          },
+          {
+            "id": "SYN-SOURCE-BETA-V1",
+            "origin_type": "SYNTHETIC",
+            "method": "SYN-BETA",
+            "version": "v1",
+            "scientific_review": "PENDING_USER_EXPERT",
+            "text": "这是独立虚构的方法身份合同。\n方法身份：SYN-BETA v1。\n适用范围：模拟脑切片，厚度 1 mm，标签 DiD。\n本来源只确认模拟身份与范围，不给真实科学兼容性结论。",
+            "scope": {
+              "tissue": "synthetic_brain_slice",
+              "scale": "1 mm",
+              "probe": "DiD"
+            },
+            "origin_references": [
+              {
+                "title": "FRUIT来源身份核验",
+                "url": "https://www.frontiersin.org/journals/neuroanatomy/articles/10.3389/fnana.2015.00019/full"
+              },
+              {
+                "title": "SeeDB2原始研究，身份须与FRUIT分开",
+                "url": "https://www.sciencedirect.com/science/article/pii/S2211124716301784"
+              }
+            ]
+          }
+        ],
+        "claimed_source": {
+          "id": "SYN-SOURCE-ALPHA-V2",
+          "method": "SYN-ALPHA",
+          "version": "v2"
+        },
+        "claim": "该来源适用于当前模拟整脑。",
+        "quote": "适用范围：模拟脑切片，厚度 1 mm，标签 DiI。",
+        "source_id": "SYN-SOURCE-ALPHA-V2",
+        "task_scope": {
+          "tissue": "synthetic_whole_brain",
+          "scale": "whole",
+          "probe": "DiI"
+        }
+      },
+      "expected": {
+        "source_identity": "MATCHED",
+        "quote_authenticity": "PRESENT",
+        "entailment": "UNRESOLVED",
+        "applicability": "SCOPE_MISMATCH"
+      },
+      "scientific_limit": "合成source用于检查层级分离；真实论文适用性、蕴含及科学正确性不由该case证明。"
+    },
+    {
+      "id": "source_05_version_superseded",
+      "hypothesis_ids": [
+        "H3"
+      ],
+      "kind": "source_layers",
+      "input": {
+        "task": {
+          "id": "SYN-TASK-001",
+          "text": "仅检查完整合成方案是否满足软件合同：保留 DiI；不添加 DiD；X1 浓度使用 vol% 基准；处理温度为 4 °C；存储为 20 °C；处理预算不包括存储。",
+          "scope": {
+            "tissue": "synthetic_brain_slice",
+            "scale": "1 mm",
+            "probe": "DiI"
+          },
+          "scientific_review": "PENDING_USER_EXPERT"
+        },
+        "protocol": "完整合成方案 SYN-ALPHA v2。\n输入样本：已经固定的模拟脑切片，厚度 1 mm。\n1. 前处理：用 1x 虚构缓冲液 B0 洗涤 30 min。\n2. 标签准备：保留 DiI 标记；不添加 DiD。\n3. 预处理：浸入虚构试剂 X0 30 min。\n4. 光透明：使用 50 vol% 的虚构试剂 X1；处理温度 4 °C，持续 2 h。\n5. 终处理：用虚构试剂 Y1 作折射率匹配 1 h。\n6. 成像：采用模拟物镜和同一模拟采集条件记录图像。\n7. 存储：20 °C 避光保存，存储时间不计入处理预算。\n8. 总处理预算：4 h 内，不包括存储。\n本方案仅为软件fixture，不声明真实透明度、荧光保持或湿实验可行性。",
+        "sources": [
+          {
+            "id": "SYN-SOURCE-ALPHA-V2",
+            "origin_type": "SYNTHETIC",
+            "method": "SYN-ALPHA",
+            "version": "v2",
+            "scientific_review": "PENDING_USER_EXPERT",
+            "text": "这是虚构的软件合同，不是论文引文或湿实验建议。\n方法身份：SYN-ALPHA v2。\n适用范围：模拟脑切片，厚度 1 mm，标签 DiI。\n步骤合同：洗涤→标签准备→预处理→光透明→折射率匹配→成像→存储。\n模拟处理合同：50 vol% 的虚构试剂 X1；处理温度 4 °C；存储温度 20 °C。\n版本合同：v1 的虚构缓冲液 B0 库存是 10x；v2 要求稀释为 1x 后使用。\n软建议：优先 4 °C 处理；是否硬约束由当前任务明确声明，不由本句决定。",
+            "scope": {
+              "tissue": "synthetic_brain_slice",
+              "scale": "1 mm",
+              "probe": "DiI"
+            },
+            "origin_references": [
+              {
+                "title": "MACS原始研究：仅用于提示尺度/顺序失效假设",
+                "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7175264/"
+              },
+              {
+                "title": "SeeDB2更正：仅用于提示真实版本链问题",
+                "url": "https://bio-protocol.org/en/bpdetail?id=3095&type=0"
+              }
+            ]
+          },
+          {
+            "id": "SYN-SOURCE-ALPHA-V1",
+            "origin_type": "SYNTHETIC",
+            "method": "SYN-ALPHA",
+            "version": "v1",
+            "scientific_review": "PENDING_USER_EXPERT",
+            "text": "这是合成旧版本软件合同。\n方法身份：SYN-ALPHA v1。\n虚构缓冲液 B0 库存按 10x 记录，本版本未包含当前 1x 稀释要求。",
+            "scope": {
+              "tissue": "synthetic_brain_slice",
+              "scale": "1 mm",
+              "probe": "DiI"
+            },
+            "origin_references": [
+              {
+                "title": "MACS原始研究：仅用于提示尺度/顺序失效假设",
+                "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7175264/"
+              },
+              {
+                "title": "SeeDB2更正：仅用于提示真实版本链问题",
+                "url": "https://bio-protocol.org/en/bpdetail?id=3095&type=0"
+              }
+            ],
+            "superseded_by": "SYN-SOURCE-ALPHA-V2"
+          },
+          {
+            "id": "SYN-SOURCE-BETA-V1",
+            "origin_type": "SYNTHETIC",
+            "method": "SYN-BETA",
+            "version": "v1",
+            "scientific_review": "PENDING_USER_EXPERT",
+            "text": "这是独立虚构的方法身份合同。\n方法身份：SYN-BETA v1。\n适用范围：模拟脑切片，厚度 1 mm，标签 DiD。\n本来源只确认模拟身份与范围，不给真实科学兼容性结论。",
+            "scope": {
+              "tissue": "synthetic_brain_slice",
+              "scale": "1 mm",
+              "probe": "DiD"
+            },
+            "origin_references": [
+              {
+                "title": "FRUIT来源身份核验",
+                "url": "https://www.frontiersin.org/journals/neuroanatomy/articles/10.3389/fnana.2015.00019/full"
+              },
+              {
+                "title": "SeeDB2原始研究，身份须与FRUIT分开",
+                "url": "https://www.sciencedirect.com/science/article/pii/S2211124716301784"
+              }
+            ]
+          }
+        ],
+        "claimed_source": {
+          "id": "SYN-SOURCE-ALPHA-V1",
+          "method": "SYN-ALPHA",
+          "version": "v1"
+        },
+        "claim": "当前版本允许直接用10x库存。",
+        "quote": "虚构缓冲液 B0 库存按 10x 记录",
+        "source_id": "SYN-SOURCE-ALPHA-V1",
+        "required_version": "v2"
+      },
+      "expected": {
+        "source_identity": "MATCHED",
+        "quote_authenticity": "PRESENT",
+        "version_status": "SUPERSEDED",
+        "entailment": "UNRESOLVED",
+        "applicability": "UNRESOLVED"
+      },
+      "scientific_limit": "合成source用于检查层级分离；真实论文适用性、蕴含及科学正确性不由该case证明。"
+    },
+    {
+      "id": "req_01_hard_violation_no_compensation",
+      "hypothesis_ids": [
+        "H4"
+      ],
+      "kind": "requirements",
+      "input": {
+        "requirements": [
+          {
+            "id": "g",
+            "text": "处理温度必须4°C",
+            "kind": "TEXT",
+            "necessary": true,
+            "scope": "GLOBAL",
+            "evidence_ids": []
+          },
+          {
+            "id": "p0",
+            "text": "其他合成满足项0",
+            "kind": "TEXT",
+            "necessary": true,
+            "scope": "GLOBAL",
+            "evidence_ids": []
+          },
+          {
+            "id": "p1",
+            "text": "其他合成满足项1",
+            "kind": "TEXT",
+            "necessary": true,
+            "scope": "GLOBAL",
+            "evidence_ids": []
+          },
+          {
+            "id": "p2",
+            "text": "其他合成满足项2",
+            "kind": "TEXT",
+            "necessary": true,
+            "scope": "GLOBAL",
+            "evidence_ids": []
+          },
+          {
+            "id": "p3",
+            "text": "其他合成满足项3",
+            "kind": "TEXT",
+            "necessary": true,
+            "scope": "GLOBAL",
+            "evidence_ids": []
+          },
+          {
+            "id": "p4",
+            "text": "其他合成满足项4",
+            "kind": "TEXT",
+            "necessary": true,
+            "scope": "GLOBAL",
+            "evidence_ids": []
+          },
+          {
+            "id": "p5",
+            "text": "其他合成满足项5",
+            "kind": "TEXT",
+            "necessary": true,
+            "scope": "GLOBAL",
+            "evidence_ids": []
+          },
+          {
+            "id": "p6",
+            "text": "其他合成满足项6",
+            "kind": "TEXT",
+            "necessary": true,
+            "scope": "GLOBAL",
+            "evidence_ids": []
+          },
+          {
+            "id": "p7",
+            "text": "其他合成满足项7",
+            "kind": "TEXT",
+            "necessary": true,
+            "scope": "GLOBAL",
+            "evidence_ids": []
+          },
+          {
+            "id": "p8",
+            "text": "其他合成满足项8",
+            "kind": "TEXT",
+            "necessary": true,
+            "scope": "GLOBAL",
+            "evidence_ids": []
+          }
+        ],
+        "protocol": "完整合成方案 SYN-ALPHA v2。\n输入样本：已经固定的模拟脑切片，厚度 1 mm。\n1. 前处理：用 1x 虚构缓冲液 B0 洗涤 30 min。\n2. 标签准备：保留 DiI 标记；不添加 DiD。\n3. 预处理：浸入虚构试剂 X0 30 min。\n4. 光透明：使用 50 vol% 的虚构试剂 X1；处理温度 40 °C，持续 2 h。\n5. 终处理：用虚构试剂 Y1 作折射率匹配 1 h。\n6. 成像：采用模拟物镜和同一模拟采集条件记录图像。\n7. 存储：20 °C 避光保存，存储时间不计入处理预算。\n8. 总处理预算：4 h 内，不包括存储。\n本方案仅为软件fixture，不声明真实透明度、荧光保持或湿实验可行性。",
+        "judgment": {
+          "requirements": [
+            {
+              "id": "g",
+              "status": "VIOLATED",
+              "basis": "PROTOCOL_TEXT",
+              "evidence_ids": [],
+              "quotes": [
+                "处理温度 40 °C"
+              ],
+              "reason": "本预设返回只表达合成文本合同状态，不给独立科学标签。"
+            },
+            {
+              "id": "p0",
+              "status": "SATISFIED",
+              "basis": "PROTOCOL_TEXT",
+              "evidence_ids": [],
+              "quotes": [
+                "完整合成方案"
+              ],
+              "reason": "本预设返回只表达合成文本合同状态，不给独立科学标签。"
+            },
+            {
+              "id": "p1",
+              "status": "SATISFIED",
+              "basis": "PROTOCOL_TEXT",
+              "evidence_ids": [],
+              "quotes": [
+                "完整合成方案"
+              ],
+              "reason": "本预设返回只表达合成文本合同状态，不给独立科学标签。"
+            },
+            {
+              "id": "p2",
+              "status": "SATISFIED",
+              "basis": "PROTOCOL_TEXT",
+              "evidence_ids": [],
+              "quotes": [
+                "完整合成方案"
+              ],
+              "reason": "本预设返回只表达合成文本合同状态，不给独立科学标签。"
+            },
+            {
+              "id": "p3",
+              "status": "SATISFIED",
+              "basis": "PROTOCOL_TEXT",
+              "evidence_ids": [],
+              "quotes": [
+                "完整合成方案"
+              ],
+              "reason": "本预设返回只表达合成文本合同状态，不给独立科学标签。"
+            },
+            {
+              "id": "p4",
+              "status": "SATISFIED",
+              "basis": "PROTOCOL_TEXT",
+              "evidence_ids": [],
+              "quotes": [
+                "完整合成方案"
+              ],
+              "reason": "本预设返回只表达合成文本合同状态，不给独立科学标签。"
+            },
+            {
+              "id": "p5",
+              "status": "SATISFIED",
+              "basis": "PROTOCOL_TEXT",
+              "evidence_ids": [],
+              "quotes": [
+                "完整合成方案"
+              ],
+              "reason": "本预设返回只表达合成文本合同状态，不给独立科学标签。"
+            },
+            {
+              "id": "p6",
+              "status": "SATISFIED",
+              "basis": "PROTOCOL_TEXT",
+              "evidence_ids": [],
+              "quotes": [
+                "完整合成方案"
+              ],
+              "reason": "本预设返回只表达合成文本合同状态，不给独立科学标签。"
+            },
+            {
+              "id": "p7",
+              "status": "SATISFIED",
+              "basis": "PROTOCOL_TEXT",
+              "evidence_ids": [],
+              "quotes": [
+                "完整合成方案"
+              ],
+              "reason": "本预设返回只表达合成文本合同状态，不给独立科学标签。"
+            },
+            {
+              "id": "p8",
+              "status": "SATISFIED",
+              "basis": "PROTOCOL_TEXT",
+              "evidence_ids": [],
+              "quotes": [
+                "完整合成方案"
+              ],
+              "reason": "本预设返回只表达合成文本合同状态，不给独立科学标签。"
+            }
+          ],
+          "limitations": "仅合成机械合同；科学状态待用户专家。"
+        },
+        "cards": [],
+        "task": {
+          "id": "SYN-req_01_hard_violation_no_compensation",
+          "text": "只检查本case明示的requirements合同与逻辑；necessary=true为当前合成任务硬要求，false为建议/软项。 A/B均为独立单透明方法完整替代；不得拼接方法或步骤。",
+          "science_labels": "PENDING_USER_EXPERT",
+          "single_clearing_method_required": true
+        }
+      },
+      "expected": {
+        "overall": "VIOLATED"
+      },
+      "scientific_limit": "仅验证声明合同与机械行为；独立科学标签仍待用户专家审核。"
+    },
+    {
+      "id": "req_02_recommendation_not_gate",
+      "hypothesis_ids": [
+        "H4"
+      ],
+      "kind": "requirements",
+      "input": {
+        "requirements": [
+          {
+            "id": "g",
+            "text": "必须保留DiI",
+            "kind": "TEXT",
+            "necessary": true,
+            "scope": "GLOBAL",
+            "evidence_ids": []
+          },
+          {
+            "id": "r",
+            "text": "推荐较低处理温度",
+            "kind": "TEXT",
+            "necessary": false,
+            "scope": "GLOBAL",
+            "evidence_ids": []
+          }
+        ],
+        "protocol": "完整合成方案 SYN-ALPHA v2。\n输入样本：已经固定的模拟脑切片，厚度 1 mm。\n1. 前处理：用 1x 虚构缓冲液 B0 洗涤 30 min。\n2. 标签准备：保留 DiI 标记；不添加 DiD。\n3. 预处理：浸入虚构试剂 X0 30 min。\n4. 光透明：使用 50 vol% 的虚构试剂 X1；处理温度 20 °C，持续 2 h。\n5. 终处理：用虚构试剂 Y1 作折射率匹配 1 h。\n6. 成像：采用模拟物镜和同一模拟采集条件记录图像。\n7. 存储：20 °C 避光保存，存储时间不计入处理预算。\n8. 总处理预算：4 h 内，不包括存储。\n本方案仅为软件fixture，不声明真实透明度、荧光保持或湿实验可行性。",
+        "judgment": {
+          "requirements": [
+            {
+              "id": "g",
+              "status": "SATISFIED",
+              "basis": "PROTOCOL_TEXT",
+              "evidence_ids": [],
+              "quotes": [
+                "保留 DiI 标记"
+              ],
+              "reason": "本预设返回只表达合成文本合同状态，不给独立科学标签。"
+            },
+            {
+              "id": "r",
+              "status": "VIOLATED",
+              "basis": "PROTOCOL_TEXT",
+              "evidence_ids": [],
+              "quotes": [
+                "处理温度 20 °C"
+              ],
+              "reason": "本预设返回只表达合成文本合同状态，不给独立科学标签。"
+            }
+          ],
+          "limitations": "仅合成机械合同；科学状态待用户专家。"
+        },
+        "cards": [],
+        "task": {
+          "id": "SYN-req_02_recommendation_not_gate",
+          "text": "只检查本case明示的requirements合同与逻辑；necessary=true为当前合成任务硬要求，false为建议/软项。 A/B均为独立单透明方法完整替代；不得拼接方法或步骤。",
+          "science_labels": "PENDING_USER_EXPERT",
+          "single_clearing_method_required": true
+        }
+      },
+      "expected": {
+        "overall": "SATISFIED"
+      },
+      "scientific_limit": "仅验证声明合同与机械行为；独立科学标签仍待用户专家审核。"
+    },
+    {
+      "id": "req_03_missing_not_violation",
+      "hypothesis_ids": [
+        "H4"
+      ],
+      "kind": "requirements",
+      "input": {
+        "requirements": [
+          {
+            "id": "g",
+            "text": "必须提供后续审核信息",
+            "kind": "TEXT",
+            "necessary": true,
+            "scope": "GLOBAL",
+            "evidence_ids": []
+          }
+        ],
+        "protocol": "完整合成方案 SYN-ALPHA v2。\n输入样本：已经固定的模拟脑切片，厚度 1 mm。\n1. 前处理：用 1x 虚构缓冲液 B0 洗涤 30 min。\n2. 标签准备：保留 DiI 标记；不添加 DiD。\n3. 预处理：浸入虚构试剂 X0 30 min。\n4. 光透明：使用 50 vol% 的虚构试剂 X1；处理温度 4 °C，持续 2 h。\n5. 终处理：用虚构试剂 Y1 作折射率匹配 1 h。\n6. 成像：采用模拟物镜和同一模拟采集条件记录图像。\n7. 存储：20 °C 避光保存，存储时间不计入处理预算。\n8. 总处理预算：4 h 内，不包括存储。\n本方案仅为软件fixture，不声明真实透明度、荧光保持或湿实验可行性。",
+        "judgment": {
+          "requirements": [
+            {
+              "id": "g",
+              "status": "UNDER_SPECIFIED",
+              "basis": "MISSING",
+              "evidence_ids": [],
+              "quotes": [],
+              "reason": "本预设返回只表达合成文本合同状态，不给独立科学标签。"
+            }
+          ],
+          "limitations": "仅合成机械合同；科学状态待用户专家。"
+        },
+        "cards": [],
+        "task": {
+          "id": "SYN-req_03_missing_not_violation",
+          "text": "只检查本case明示的requirements合同与逻辑；necessary=true为当前合成任务硬要求，false为建议/软项。 A/B均为独立单透明方法完整替代；不得拼接方法或步骤。",
+          "science_labels": "PENDING_USER_EXPERT",
+          "single_clearing_method_required": true
+        }
+      },
+      "expected": {
+        "overall": "UNDER_SPECIFIED"
+      },
+      "scientific_limit": "仅验证声明合同与机械行为；独立科学标签仍待用户专家审核。"
+    },
+    {
+      "id": "req_04_unresolved_not_zero",
+      "hypothesis_ids": [
+        "H4"
+      ],
+      "kind": "requirements",
+      "input": {
+        "requirements": [
+          {
+            "id": "g",
+            "text": "合成来源不提供此判定",
+            "kind": "TEXT",
+            "necessary": true,
+            "scope": "GLOBAL",
+            "evidence_ids": []
+          }
+        ],
+        "protocol": "完整合成方案 SYN-ALPHA v2。\n输入样本：已经固定的模拟脑切片，厚度 1 mm。\n1. 前处理：用 1x 虚构缓冲液 B0 洗涤 30 min。\n2. 标签准备：保留 DiI 标记；不添加 DiD。\n3. 预处理：浸入虚构试剂 X0 30 min。\n4. 光透明：使用 50 vol% 的虚构试剂 X1；处理温度 4 °C，持续 2 h。\n5. 终处理：用虚构试剂 Y1 作折射率匹配 1 h。\n6. 成像：采用模拟物镜和同一模拟采集条件记录图像。\n7. 存储：20 °C 避光保存，存储时间不计入处理预算。\n8. 总处理预算：4 h 内，不包括存储。\n本方案仅为软件fixture，不声明真实透明度、荧光保持或湿实验可行性。",
+        "judgment": {
+          "requirements": [
+            {
+              "id": "g",
+              "status": "UNRESOLVED",
+              "basis": "MISSING",
+              "evidence_ids": [],
+              "quotes": [],
+              "reason": "本预设返回只表达合成文本合同状态，不给独立科学标签。"
+            }
+          ],
+          "limitations": "仅合成机械合同；科学状态待用户专家。"
+        },
+        "cards": [],
+        "task": {
+          "id": "SYN-req_04_unresolved_not_zero",
+          "text": "只检查本case明示的requirements合同与逻辑；necessary=true为当前合成任务硬要求，false为建议/软项。 A/B均为独立单透明方法完整替代；不得拼接方法或步骤。",
+          "science_labels": "PENDING_USER_EXPERT",
+          "single_clearing_method_required": true
+        }
+      },
+      "expected": {
+        "overall": "UNRESOLVED"
+      },
+      "scientific_limit": "仅验证声明合同与机械行为；独立科学标签仍待用户专家审核。"
+    },
+    {
+      "id": "req_05_routes_cannot_splice",
+      "hypothesis_ids": [
+        "H1",
+        "H4"
+      ],
+      "kind": "requirements",
+      "input": {
+        "requirements": [
+          {
+            "id": "g",
+            "text": "全局保留DiI",
+            "kind": "TEXT",
+            "necessary": true,
+            "scope": "GLOBAL",
+            "evidence_ids": []
+          },
+          {
+            "id": "a1",
+            "text": "A的第一个必要项",
+            "kind": "TEXT",
+            "necessary": true,
+            "scope": "ROUTE",
+            "route_id": "A",
+            "evidence_ids": []
+          },
+          {
+            "id": "a2",
+            "text": "A的第二个必要项",
+            "kind": "TEXT",
+            "necessary": true,
+            "scope": "ROUTE",
+            "route_id": "A",
+            "evidence_ids": []
+          },
+          {
+            "id": "b1",
+            "text": "B的第一个必要项",
+            "kind": "TEXT",
+            "necessary": true,
+            "scope": "ROUTE",
+            "route_id": "B",
+            "evidence_ids": []
+          },
+          {
+            "id": "b2",
+            "text": "B的第二个必要项",
+            "kind": "TEXT",
+            "necessary": true,
+            "scope": "ROUTE",
+            "route_id": "B",
+            "evidence_ids": []
+          }
+        ],
+        "protocol": "路线A仅采用SYN-ALPHA，路线B仅采用SYN-BETA；各自为一个透明方法完整流程，拼接是工程负例。\n完整合成替代方案。\n共同输入：已经固定的模拟脑切片，标签 DiI。\n全局声明：两条路线不保留任务要求的 DiI。\n路线A：B0洗涤30 min；X0预处理30 min；X1光透明2 h；Y1匹配1 h；模拟成像；20 °C存储。A满足a1，A违反a2。\n路线B：B0洗涤30 min；Z0预处理30 min；Z1光透明2 h；W1匹配1 h；模拟成像；20 °C存储。B违反b1，B满足b2。\n每次只能选择一条完整路线；不得拼接A/B步骤；所有真实效果待审核。",
+        "judgment": {
+          "requirements": [
+            {
+              "id": "g",
+              "status": "VIOLATED",
+              "basis": "PROTOCOL_TEXT",
+              "evidence_ids": [],
+              "quotes": [
+                "不保留任务要求的 DiI"
+              ],
+              "reason": "本预设返回只表达合成文本合同状态，不给独立科学标签。"
+            },
+            {
+              "id": "a1",
+              "status": "SATISFIED",
+              "basis": "PROTOCOL_TEXT",
+              "evidence_ids": [],
+              "quotes": [
+                "A满足a1"
+              ],
+              "reason": "本预设返回只表达合成文本合同状态，不给独立科学标签。"
+            },
+            {
+              "id": "a2",
+              "status": "VIOLATED",
+              "basis": "PROTOCOL_TEXT",
+              "evidence_ids": [],
+              "quotes": [
+                "A违反a2"
+              ],
+              "reason": "本预设返回只表达合成文本合同状态，不给独立科学标签。"
+            },
+            {
+              "id": "b1",
+              "status": "VIOLATED",
+              "basis": "PROTOCOL_TEXT",
+              "evidence_ids": [],
+              "quotes": [
+                "B违反b1"
+              ],
+              "reason": "本预设返回只表达合成文本合同状态，不给独立科学标签。"
+            },
+            {
+              "id": "b2",
+              "status": "SATISFIED",
+              "basis": "PROTOCOL_TEXT",
+              "evidence_ids": [],
+              "quotes": [
+                "B满足b2"
+              ],
+              "reason": "本预设返回只表达合成文本合同状态，不给独立科学标签。"
+            }
+          ],
+          "limitations": "仅合成机械合同；科学状态待用户专家。"
+        },
+        "cards": [],
+        "task": {
+          "id": "SYN-req_05_routes_cannot_splice",
+          "text": "只检查本case明示的requirements合同与逻辑；necessary=true为当前合成任务硬要求，false为建议/软项。 A/B均为独立单透明方法完整替代；不得拼接方法或步骤。",
+          "science_labels": "PENDING_USER_EXPERT",
+          "single_clearing_method_required": true
+        }
+      },
+      "expected": {
+        "overall": "VIOLATED"
+      },
+      "scientific_limit": "仅验证声明合同与机械行为；独立科学标签仍待用户专家审核。"
+    },
+    {
+      "id": "req_06_or_cannot_bypass_global",
+      "hypothesis_ids": [
+        "H1",
+        "H4"
+      ],
+      "kind": "requirements",
+      "input": {
+        "requirements": [
+          {
+            "id": "g",
+            "text": "全局保留DiI",
+            "kind": "TEXT",
+            "necessary": true,
+            "scope": "GLOBAL",
+            "evidence_ids": []
+          },
+          {
+            "id": "a1",
+            "text": "A的第一个必要项",
+            "kind": "TEXT",
+            "necessary": true,
+            "scope": "ROUTE",
+            "route_id": "A",
+            "evidence_ids": []
+          },
+          {
+            "id": "a2",
+            "text": "A的第二个必要项",
+            "kind": "TEXT",
+            "necessary": true,
+            "scope": "ROUTE",
+            "route_id": "A",
+            "evidence_ids": []
+          },
+          {
+            "id": "b1",
+            "text": "B的第一个必要项",
+            "kind": "TEXT",
+            "necessary": true,
+            "scope": "ROUTE",
+            "route_id": "B",
+            "evidence_ids": []
+          },
+          {
+            "id": "b2",
+            "text": "B的第二个必要项",
+            "kind": "TEXT",
+            "necessary": true,
+            "scope": "ROUTE",
+            "route_id": "B",
+            "evidence_ids": []
+          }
+        ],
+        "protocol": "路线A仅采用SYN-ALPHA，路线B仅采用SYN-BETA；各自为一个透明方法完整流程，拼接是工程负例。\n完整合成替代方案。\n共同输入：已经固定的模拟脑切片，标签 DiI。\n全局声明：两条路线不保留任务要求的 DiI。\n路线A：B0洗涤30 min；X0预处理30 min；X1光透明2 h；Y1匹配1 h；模拟成像；20 °C存储。A满足a1，A违反a2。\n路线B：B0洗涤30 min；Z0预处理30 min；Z1光透明2 h；W1匹配1 h；模拟成像；20 °C存储。B违反b1，B满足b2。\n每次只能选择一条完整路线；不得拼接A/B步骤；所有真实效果待审核。",
+        "judgment": {
+          "requirements": [
+            {
+              "id": "g",
+              "status": "VIOLATED",
+              "basis": "PROTOCOL_TEXT",
+              "evidence_ids": [],
+              "quotes": [
+                "不保留任务要求的 DiI"
+              ],
+              "reason": "本预设返回只表达合成文本合同状态，不给独立科学标签。"
+            },
+            {
+              "id": "a1",
+              "status": "SATISFIED",
+              "basis": "PROTOCOL_TEXT",
+              "evidence_ids": [],
+              "quotes": [
+                "A满足a1"
+              ],
+              "reason": "本预设返回只表达合成文本合同状态，不给独立科学标签。"
+            },
+            {
+              "id": "a2",
+              "status": "VIOLATED",
+              "basis": "PROTOCOL_TEXT",
+              "evidence_ids": [],
+              "quotes": [
+                "A违反a2"
+              ],
+              "reason": "本预设返回只表达合成文本合同状态，不给独立科学标签。"
+            },
+            {
+              "id": "b1",
+              "status": "VIOLATED",
+              "basis": "PROTOCOL_TEXT",
+              "evidence_ids": [],
+              "quotes": [
+                "B违反b1"
+              ],
+              "reason": "本预设返回只表达合成文本合同状态，不给独立科学标签。"
+            },
+            {
+              "id": "b2",
+              "status": "SATISFIED",
+              "basis": "PROTOCOL_TEXT",
+              "evidence_ids": [],
+              "quotes": [
+                "B满足b2"
+              ],
+              "reason": "本预设返回只表达合成文本合同状态，不给独立科学标签。"
+            }
+          ],
+          "limitations": "仅合成机械合同；科学状态待用户专家。"
+        },
+        "formula": {
+          "any": [
+            "a1",
+            "b2"
+          ]
+        },
+        "cards": [],
+        "task": {
+          "id": "SYN-req_06_or_cannot_bypass_global",
+          "text": "只检查本case明示的requirements合同与逻辑；necessary=true为当前合成任务硬要求，false为建议/软项。 A/B均为独立单透明方法完整替代；不得拼接方法或步骤。",
+          "science_labels": "PENDING_USER_EXPERT",
+          "single_clearing_method_required": true
+        }
+      },
+      "expected": {
+        "overall": "VIOLATED"
+      },
+      "scientific_limit": "仅验证声明合同与机械行为；独立科学标签仍待用户专家审核。"
+    },
+    {
+      "id": "req_07_complete_alternative_accepted",
+      "hypothesis_ids": [
+        "H1",
+        "H4"
+      ],
+      "kind": "requirements",
+      "input": {
+        "requirements": [
+          {
+            "id": "g",
+            "text": "全局保留DiI",
+            "kind": "TEXT",
+            "necessary": true,
+            "scope": "GLOBAL",
+            "evidence_ids": []
+          },
+          {
+            "id": "a1",
+            "text": "A的第一个必要项",
+            "kind": "TEXT",
+            "necessary": true,
+            "scope": "ROUTE",
+            "route_id": "A",
+            "evidence_ids": []
+          },
+          {
+            "id": "a2",
+            "text": "A的第二个必要项",
+            "kind": "TEXT",
+            "necessary": true,
+            "scope": "ROUTE",
+            "route_id": "A",
+            "evidence_ids": []
+          },
+          {
+            "id": "b1",
+            "text": "B的第一个必要项",
+            "kind": "TEXT",
+            "necessary": true,
+            "scope": "ROUTE",
+            "route_id": "B",
+            "evidence_ids": []
+          },
+          {
+            "id": "b2",
+            "text": "B的第二个必要项",
+            "kind": "TEXT",
+            "necessary": true,
+            "scope": "ROUTE",
+            "route_id": "B",
+            "evidence_ids": []
+          }
+        ],
+        "protocol": "路线A仅采用SYN-ALPHA，路线B仅采用SYN-BETA；各自为一个透明方法完整流程，拼接是工程负例。\n完整合成替代方案。\n共同输入：已经固定的模拟脑切片，标签 DiI。\n全局声明：两条路线保留任务要求的 DiI。\n路线A：B0洗涤30 min；X0预处理30 min；X1光透明2 h；Y1匹配1 h；模拟成像；20 °C存储。A满足a1，A满足a2。\n路线B：B0洗涤30 min；Z0预处理30 min；Z1光透明2 h；W1匹配1 h；模拟成像；20 °C存储。B违反b1，B满足b2。\n每次只能选择一条完整路线；不得拼接A/B步骤；所有真实效果待审核。",
+        "judgment": {
+          "requirements": [
+            {
+              "id": "g",
+              "status": "SATISFIED",
+              "basis": "PROTOCOL_TEXT",
+              "evidence_ids": [],
+              "quotes": [
+                "保留任务要求的 DiI"
+              ],
+              "reason": "本预设返回只表达合成文本合同状态，不给独立科学标签。"
+            },
+            {
+              "id": "a1",
+              "status": "SATISFIED",
+              "basis": "PROTOCOL_TEXT",
+              "evidence_ids": [],
+              "quotes": [
+                "A满足a1"
+              ],
+              "reason": "本预设返回只表达合成文本合同状态，不给独立科学标签。"
+            },
+            {
+              "id": "a2",
+              "status": "SATISFIED",
+              "basis": "PROTOCOL_TEXT",
+              "evidence_ids": [],
+              "quotes": [
+                "A满足a2"
+              ],
+              "reason": "本预设返回只表达合成文本合同状态，不给独立科学标签。"
+            },
+            {
+              "id": "b1",
+              "status": "VIOLATED",
+              "basis": "PROTOCOL_TEXT",
+              "evidence_ids": [],
+              "quotes": [
+                "B违反b1"
+              ],
+              "reason": "本预设返回只表达合成文本合同状态，不给独立科学标签。"
+            },
+            {
+              "id": "b2",
+              "status": "SATISFIED",
+              "basis": "PROTOCOL_TEXT",
+              "evidence_ids": [],
+              "quotes": [
+                "B满足b2"
+              ],
+              "reason": "本预设返回只表达合成文本合同状态，不给独立科学标签。"
+            }
+          ],
+          "limitations": "仅合成机械合同；科学状态待用户专家。"
+        },
+        "cards": [],
+        "task": {
+          "id": "SYN-req_07_complete_alternative_accepted",
+          "text": "只检查本case明示的requirements合同与逻辑；necessary=true为当前合成任务硬要求，false为建议/软项。 A/B均为独立单透明方法完整替代；不得拼接方法或步骤。",
+          "science_labels": "PENDING_USER_EXPERT",
+          "single_clearing_method_required": true
+        }
+      },
+      "expected": {
+        "overall": "SATISFIED"
+      },
+      "scientific_limit": "仅验证声明合同与机械行为；独立科学标签仍待用户专家审核。"
+    },
+    {
+      "id": "req_08_sequential_is_all",
+      "hypothesis_ids": [
+        "H1",
+        "H4"
+      ],
+      "kind": "requirements",
+      "input": {
+        "requirements": [
+          {
+            "id": "pre",
+            "text": "同一透明方法内的必要前处理步骤",
+            "kind": "TEXT",
+            "necessary": true,
+            "scope": "GLOBAL",
+            "evidence_ids": []
+          },
+          {
+            "id": "clear",
+            "text": "同一透明方法内的必要透明步骤",
+            "kind": "TEXT",
+            "necessary": true,
+            "scope": "GLOBAL",
+            "evidence_ids": []
+          },
+          {
+            "id": "match",
+            "text": "同一透明方法内的必要匹配步骤必须进行",
+            "kind": "TEXT",
+            "necessary": true,
+            "scope": "GLOBAL",
+            "evidence_ids": []
+          }
+        ],
+        "protocol": "完整合成方案 SYN-ALPHA v2。\n输入样本：已经固定的模拟脑切片，厚度 1 mm。\n1. 前处理：用 1x 虚构缓冲液 B0 洗涤 30 min。\n2. 标签准备：保留 DiI 标记；不添加 DiD。\n3. 预处理：浸入虚构试剂 X0 30 min。\n4. 光透明：使用 50 vol% 的虚构试剂 X1；处理温度 4 °C，持续 2 h。\n5. 终处理：不进行折射率匹配，跳过该步骤。\n6. 成像：采用模拟物镜和同一模拟采集条件记录图像。\n7. 存储：20 °C 避光保存，存储时间不计入处理预算。\n8. 总处理预算：4 h 内，不包括存储。\n本方案仅为软件fixture，不声明真实透明度、荧光保持或湿实验可行性。",
+        "judgment": {
+          "requirements": [
+            {
+              "id": "pre",
+              "status": "SATISFIED",
+              "basis": "PROTOCOL_TEXT",
+              "evidence_ids": [],
+              "quotes": [
+                "预处理"
+              ],
+              "reason": "本预设返回只表达合成文本合同状态，不给独立科学标签。"
+            },
+            {
+              "id": "clear",
+              "status": "SATISFIED",
+              "basis": "PROTOCOL_TEXT",
+              "evidence_ids": [],
+              "quotes": [
+                "光透明"
+              ],
+              "reason": "本预设返回只表达合成文本合同状态，不给独立科学标签。"
+            },
+            {
+              "id": "match",
+              "status": "VIOLATED",
+              "basis": "PROTOCOL_TEXT",
+              "evidence_ids": [],
+              "quotes": [
+                "不进行折射率匹配"
+              ],
+              "reason": "本预设返回只表达合成文本合同状态，不给独立科学标签。"
+            }
+          ],
+          "limitations": "仅合成机械合同；科学状态待用户专家。"
+        },
+        "formula": {
+          "any": [
+            "pre",
+            "clear",
+            "match"
+          ]
+        },
+        "cards": [],
+        "task": {
+          "id": "SYN-req_08_sequential_is_all",
+          "text": "只检查本case明示的requirements合同与逻辑；necessary=true为当前合成任务硬要求，false为建议/软项。 A/B均为独立单透明方法完整替代；不得拼接方法或步骤。",
+          "science_labels": "PENDING_USER_EXPERT",
+          "single_clearing_method_required": true
+        }
+      },
+      "expected": {
+        "overall": "VIOLATED"
+      },
+      "scientific_limit": "仅验证声明合同与机械行为；独立科学标签仍待用户专家审核。"
+    },
+    {
+      "id": "req_09_science_without_source_unresolved",
+      "hypothesis_ids": [
+        "H4"
+      ],
+      "kind": "requirements",
+      "input": {
+        "requirements": [
+          {
+            "id": "s",
+            "text": "真实DiI保持需要独立科学证据",
+            "kind": "SCIENTIFIC",
+            "necessary": true,
+            "scope": "GLOBAL",
+            "evidence_ids": []
+          }
+        ],
+        "protocol": "完整合成方案 SYN-ALPHA v2。\n输入样本：已经固定的模拟脑切片，厚度 1 mm。\n1. 前处理：用 1x 虚构缓冲液 B0 洗涤 30 min。\n2. 标签准备：保留 DiI 标记；不添加 DiD。\n3. 预处理：浸入虚构试剂 X0 30 min。\n4. 光透明：使用 50 vol% 的虚构试剂 X1；处理温度 4 °C，持续 2 h。\n5. 终处理：用虚构试剂 Y1 作折射率匹配 1 h。\n6. 成像：采用模拟物镜和同一模拟采集条件记录图像。\n7. 存储：20 °C 避光保存，存储时间不计入处理预算。\n8. 总处理预算：4 h 内，不包括存储。\n本方案仅为软件fixture，不声明真实透明度、荧光保持或湿实验可行性。",
+        "judgment": {
+          "requirements": [
+            {
+              "id": "s",
+              "status": "SATISFIED",
+              "basis": "PROTOCOL_TEXT",
+              "evidence_ids": [],
+              "quotes": [
+                "保留 DiI 标记"
+              ],
+              "reason": "本预设返回只表达合成文本合同状态，不给独立科学标签。"
+            }
+          ],
+          "limitations": "仅合成机械合同；科学状态待用户专家。"
+        },
+        "cards": [],
+        "task": {
+          "id": "SYN-req_09_science_without_source_unresolved",
+          "text": "只检查本case明示的requirements合同与逻辑；necessary=true为当前合成任务硬要求，false为建议/软项。 A/B均为独立单透明方法完整替代；不得拼接方法或步骤。",
+          "science_labels": "PENDING_USER_EXPERT",
+          "single_clearing_method_required": true
+        }
+      },
+      "expected": {
+        "overall": "UNRESOLVED",
+        "scientific_validation": "PENDING_INDEPENDENT_REFERENCE"
+      },
+      "scientific_limit": "仅验证声明合同与机械行为；独立科学标签仍待用户专家审核。"
+    },
+    {
+      "id": "req_10_source_recommendation_is_not_necessary",
+      "hypothesis_ids": [
+        "H4"
+      ],
+      "kind": "requirements",
+      "input": {
+        "requirements": [
+          {
+            "id": "g",
+            "text": "必须保留DiI",
+            "kind": "TEXT",
+            "necessary": true,
+            "scope": "GLOBAL",
+            "evidence_ids": []
+          },
+          {
+            "id": "r",
+            "text": "来源建议优先4°C",
+            "kind": "TEXT",
+            "necessary": false,
+            "scope": "GLOBAL",
+            "evidence_ids": [],
+            "authority": "SOURCE_RECOMMENDATION"
+          }
+        ],
+        "protocol": "完整合成方案 SYN-ALPHA v2。\n输入样本：已经固定的模拟脑切片，厚度 1 mm。\n1. 前处理：用 1x 虚构缓冲液 B0 洗涤 30 min。\n2. 标签准备：保留 DiI 标记；不添加 DiD。\n3. 预处理：浸入虚构试剂 X0 30 min。\n4. 光透明：使用 50 vol% 的虚构试剂 X1；处理温度 4 °C，持续 2 h。\n5. 终处理：用虚构试剂 Y1 作折射率匹配 1 h。\n6. 成像：采用模拟物镜和同一模拟采集条件记录图像。\n7. 存储：20 °C 避光保存，存储时间不计入处理预算。\n8. 总处理预算：4 h 内，不包括存储。\n本方案仅为软件fixture，不声明真实透明度、荧光保持或湿实验可行性。",
+        "judgment": {
+          "requirements": [
+            {
+              "id": "g",
+              "status": "SATISFIED",
+              "basis": "PROTOCOL_TEXT",
+              "evidence_ids": [],
+              "quotes": [
+                "保留 DiI 标记"
+              ],
+              "reason": "本预设返回只表达合成文本合同状态，不给独立科学标签。"
+            },
+            {
+              "id": "r",
+              "status": "UNRESOLVED",
+              "basis": "PROTOCOL_TEXT",
+              "evidence_ids": [],
+              "quotes": [
+                "处理温度 4 °C"
+              ],
+              "reason": "本预设返回只表达合成文本合同状态，不给独立科学标签。"
+            }
+          ],
+          "limitations": "仅合成机械合同；科学状态待用户专家。"
+        },
+        "cards": [],
+        "task": {
+          "id": "SYN-req_10_source_recommendation_is_not_necessary",
+          "text": "只检查本case明示的requirements合同与逻辑；necessary=true为当前合成任务硬要求，false为建议/软项。 A/B均为独立单透明方法完整替代；不得拼接方法或步骤。",
+          "science_labels": "PENDING_USER_EXPERT",
+          "single_clearing_method_required": true
+        }
+      },
+      "expected": {
+        "overall": "SATISFIED"
+      },
+      "scientific_limit": "仅验证声明合同与机械行为；独立科学标签仍待用户专家审核。"
+    },
+    {
+      "id": "pareto_01_a_dominates",
+      "hypothesis_ids": [
+        "H5"
+      ],
+      "kind": "pareto",
+      "input": {
+        "a": {
+          "id": "A",
+          "task_id": "SYN-PARETO-TASK",
+          "scenario": {
+            "tissue": "synthetic",
+            "scale": "fixture",
+            "measurement_scope": "same_acquisition"
+          },
+          "constraints": {
+            "hard_id": "SATISFIED"
+          },
+          "objectives": {
+            "time": {
+              "min": 2,
+              "max": 2,
+              "unit": "h",
+              "direction": "min"
+            },
+            "quality": {
+              "min": 0.9,
+              "max": 0.9,
+              "unit": "ratio",
+              "direction": "max"
+            }
+          }
+        },
+        "b": {
+          "id": "B",
+          "task_id": "SYN-PARETO-TASK",
+          "scenario": {
+            "tissue": "synthetic",
+            "scale": "fixture",
+            "measurement_scope": "same_acquisition"
+          },
+          "constraints": {
+            "hard_id": "SATISFIED"
+          },
+          "objectives": {
+            "time": {
+              "min": 3,
+              "max": 3,
+              "unit": "h",
+              "direction": "min"
+            },
+            "quality": {
+              "min": 0.8,
+              "max": 0.8,
+              "unit": "ratio",
+              "direction": "max"
+            }
+          }
+        },
+        "protocols": {
+          "a": "本路线仅采用一个虚构透明方法 SYN-ALPHA；所有正常处理步骤属于该方法。\n完整合成方案 A。\n输入样本：已经固定的模拟组织，sample scale=fixture。\n1. 前处理：虚构缓冲液洗涤。\n2. 标签准备：记录模拟标签并洗去游离探针。\n3. 预处理：虚构预处理液浸泡。\n4. 光透明：虚构透明液分级浸泡。\n5. 终处理：虚构匹配液处理。\n6. 成像：采用声明 scenario 中的模拟采集条件。\n7. 存储：避光存储，不计处理指标。\n8. 目标合同：{\"time\":{\"min\":2,\"max\":2,\"unit\":\"h\",\"direction\":\"min\"},\"quality\":{\"min\":0.9,\"max\":0.9,\"unit\":\"ratio\",\"direction\":\"max\"}}。\n9. 硬约束合同：{\"hard_id\":\"SATISFIED\"}。\n所有指标是合成机械输入，不是实测效果；本材料不是湿实验建议。",
+          "b": "本路线仅采用一个虚构透明方法 SYN-BETA；所有正常处理步骤属于该方法。\n完整合成方案 B。\n输入样本：已经固定的模拟组织，sample scale=fixture。\n1. 前处理：虚构缓冲液洗涤。\n2. 标签准备：记录模拟标签并洗去游离探针。\n3. 预处理：虚构预处理液浸泡。\n4. 光透明：虚构透明液分级浸泡。\n5. 终处理：虚构匹配液处理。\n6. 成像：采用声明 scenario 中的模拟采集条件。\n7. 存储：避光存储，不计处理指标。\n8. 目标合同：{\"time\":{\"min\":3,\"max\":3,\"unit\":\"h\",\"direction\":\"min\"},\"quality\":{\"min\":0.8,\"max\":0.8,\"unit\":\"ratio\",\"direction\":\"max\"}}。\n9. 硬约束合同：{\"hard_id\":\"SATISFIED\"}。\n所有指标是合成机械输入，不是实测效果；本材料不是湿实验建议。"
+        }
+      },
+      "expected": {
+        "relationship": "A_DOMINATES"
+      },
+      "scientific_limit": "数值完全合成且非实测；只证明同条件约束/单位/方向/区间比较逻辑，不证明科学性能或取舍合理性。"
+    },
+    {
+      "id": "pareto_02_swap_relation",
+      "hypothesis_ids": [
+        "H5"
+      ],
+      "kind": "pareto",
+      "input": {
+        "a": {
+          "id": "A",
+          "task_id": "SYN-PARETO-TASK",
+          "scenario": {
+            "tissue": "synthetic",
+            "scale": "fixture",
+            "measurement_scope": "same_acquisition"
+          },
+          "constraints": {
+            "hard_id": "SATISFIED"
+          },
+          "objectives": {
+            "time": {
+              "min": 3,
+              "max": 3,
+              "unit": "h",
+              "direction": "min"
+            },
+            "quality": {
+              "min": 0.8,
+              "max": 0.8,
+              "unit": "ratio",
+              "direction": "max"
+            }
+          }
+        },
+        "b": {
+          "id": "B",
+          "task_id": "SYN-PARETO-TASK",
+          "scenario": {
+            "tissue": "synthetic",
+            "scale": "fixture",
+            "measurement_scope": "same_acquisition"
+          },
+          "constraints": {
+            "hard_id": "SATISFIED"
+          },
+          "objectives": {
+            "time": {
+              "min": 2,
+              "max": 2,
+              "unit": "h",
+              "direction": "min"
+            },
+            "quality": {
+              "min": 0.9,
+              "max": 0.9,
+              "unit": "ratio",
+              "direction": "max"
+            }
+          }
+        },
+        "protocols": {
+          "a": "本路线仅采用一个虚构透明方法 SYN-ALPHA；所有正常处理步骤属于该方法。\n完整合成方案 A。\n输入样本：已经固定的模拟组织，sample scale=fixture。\n1. 前处理：虚构缓冲液洗涤。\n2. 标签准备：记录模拟标签并洗去游离探针。\n3. 预处理：虚构预处理液浸泡。\n4. 光透明：虚构透明液分级浸泡。\n5. 终处理：虚构匹配液处理。\n6. 成像：采用声明 scenario 中的模拟采集条件。\n7. 存储：避光存储，不计处理指标。\n8. 目标合同：{\"time\":{\"min\":3,\"max\":3,\"unit\":\"h\",\"direction\":\"min\"},\"quality\":{\"min\":0.8,\"max\":0.8,\"unit\":\"ratio\",\"direction\":\"max\"}}。\n9. 硬约束合同：{\"hard_id\":\"SATISFIED\"}。\n所有指标是合成机械输入，不是实测效果；本材料不是湿实验建议。",
+          "b": "本路线仅采用一个虚构透明方法 SYN-BETA；所有正常处理步骤属于该方法。\n完整合成方案 B。\n输入样本：已经固定的模拟组织，sample scale=fixture。\n1. 前处理：虚构缓冲液洗涤。\n2. 标签准备：记录模拟标签并洗去游离探针。\n3. 预处理：虚构预处理液浸泡。\n4. 光透明：虚构透明液分级浸泡。\n5. 终处理：虚构匹配液处理。\n6. 成像：采用声明 scenario 中的模拟采集条件。\n7. 存储：避光存储，不计处理指标。\n8. 目标合同：{\"time\":{\"min\":2,\"max\":2,\"unit\":\"h\",\"direction\":\"min\"},\"quality\":{\"min\":0.9,\"max\":0.9,\"unit\":\"ratio\",\"direction\":\"max\"}}。\n9. 硬约束合同：{\"hard_id\":\"SATISFIED\"}。\n所有指标是合成机械输入，不是实测效果；本材料不是湿实验建议。"
+        }
+      },
+      "expected": {
+        "relationship": "B_DOMINATES"
+      },
+      "scientific_limit": "数值完全合成且非实测；只证明同条件约束/单位/方向/区间比较逻辑，不证明科学性能或取舍合理性。"
+    },
+    {
+      "id": "pareto_03_tradeoff",
+      "hypothesis_ids": [
+        "H5"
+      ],
+      "kind": "pareto",
+      "input": {
+        "a": {
+          "id": "A",
+          "task_id": "SYN-PARETO-TASK",
+          "scenario": {
+            "tissue": "synthetic",
+            "scale": "fixture",
+            "measurement_scope": "same_acquisition"
+          },
+          "constraints": {
+            "hard_id": "SATISFIED"
+          },
+          "objectives": {
+            "time": {
+              "min": 2,
+              "max": 2,
+              "unit": "h",
+              "direction": "min"
+            },
+            "quality": {
+              "min": 0.8,
+              "max": 0.8,
+              "unit": "ratio",
+              "direction": "max"
+            }
+          }
+        },
+        "b": {
+          "id": "B",
+          "task_id": "SYN-PARETO-TASK",
+          "scenario": {
+            "tissue": "synthetic",
+            "scale": "fixture",
+            "measurement_scope": "same_acquisition"
+          },
+          "constraints": {
+            "hard_id": "SATISFIED"
+          },
+          "objectives": {
+            "time": {
+              "min": 3,
+              "max": 3,
+              "unit": "h",
+              "direction": "min"
+            },
+            "quality": {
+              "min": 0.9,
+              "max": 0.9,
+              "unit": "ratio",
+              "direction": "max"
+            }
+          }
+        },
+        "protocols": {
+          "a": "本路线仅采用一个虚构透明方法 SYN-ALPHA；所有正常处理步骤属于该方法。\n完整合成方案 A。\n输入样本：已经固定的模拟组织，sample scale=fixture。\n1. 前处理：虚构缓冲液洗涤。\n2. 标签准备：记录模拟标签并洗去游离探针。\n3. 预处理：虚构预处理液浸泡。\n4. 光透明：虚构透明液分级浸泡。\n5. 终处理：虚构匹配液处理。\n6. 成像：采用声明 scenario 中的模拟采集条件。\n7. 存储：避光存储，不计处理指标。\n8. 目标合同：{\"time\":{\"min\":2,\"max\":2,\"unit\":\"h\",\"direction\":\"min\"},\"quality\":{\"min\":0.8,\"max\":0.8,\"unit\":\"ratio\",\"direction\":\"max\"}}。\n9. 硬约束合同：{\"hard_id\":\"SATISFIED\"}。\n所有指标是合成机械输入，不是实测效果；本材料不是湿实验建议。",
+          "b": "本路线仅采用一个虚构透明方法 SYN-BETA；所有正常处理步骤属于该方法。\n完整合成方案 B。\n输入样本：已经固定的模拟组织，sample scale=fixture。\n1. 前处理：虚构缓冲液洗涤。\n2. 标签准备：记录模拟标签并洗去游离探针。\n3. 预处理：虚构预处理液浸泡。\n4. 光透明：虚构透明液分级浸泡。\n5. 终处理：虚构匹配液处理。\n6. 成像：采用声明 scenario 中的模拟采集条件。\n7. 存储：避光存储，不计处理指标。\n8. 目标合同：{\"time\":{\"min\":3,\"max\":3,\"unit\":\"h\",\"direction\":\"min\"},\"quality\":{\"min\":0.9,\"max\":0.9,\"unit\":\"ratio\",\"direction\":\"max\"}}。\n9. 硬约束合同：{\"hard_id\":\"SATISFIED\"}。\n所有指标是合成机械输入，不是实测效果；本材料不是湿实验建议。"
+        }
+      },
+      "expected": {
+        "relationship": "TRADEOFF"
+      },
+      "scientific_limit": "数值完全合成且非实测；只证明同条件约束/单位/方向/区间比较逻辑，不证明科学性能或取舍合理性。"
+    },
+    {
+      "id": "pareto_04_equivalent",
+      "hypothesis_ids": [
+        "H5"
+      ],
+      "kind": "pareto",
+      "input": {
+        "a": {
+          "id": "A",
+          "task_id": "SYN-PARETO-TASK",
+          "scenario": {
+            "tissue": "synthetic",
+            "scale": "fixture",
+            "measurement_scope": "same_acquisition"
+          },
+          "constraints": {
+            "hard_id": "SATISFIED"
+          },
+          "objectives": {
+            "time": {
+              "min": 2,
+              "max": 2,
+              "unit": "h",
+              "direction": "min"
+            },
+            "quality": {
+              "min": 0.9,
+              "max": 0.9,
+              "unit": "ratio",
+              "direction": "max"
+            }
+          }
+        },
+        "b": {
+          "id": "B",
+          "task_id": "SYN-PARETO-TASK",
+          "scenario": {
+            "tissue": "synthetic",
+            "scale": "fixture",
+            "measurement_scope": "same_acquisition"
+          },
+          "constraints": {
+            "hard_id": "SATISFIED"
+          },
+          "objectives": {
+            "time": {
+              "min": 2,
+              "max": 2,
+              "unit": "h",
+              "direction": "min"
+            },
+            "quality": {
+              "min": 0.9,
+              "max": 0.9,
+              "unit": "ratio",
+              "direction": "max"
+            }
+          }
+        },
+        "protocols": {
+          "a": "本路线仅采用一个虚构透明方法 SYN-ALPHA；所有正常处理步骤属于该方法。\n完整合成方案 A。\n输入样本：已经固定的模拟组织，sample scale=fixture。\n1. 前处理：虚构缓冲液洗涤。\n2. 标签准备：记录模拟标签并洗去游离探针。\n3. 预处理：虚构预处理液浸泡。\n4. 光透明：虚构透明液分级浸泡。\n5. 终处理：虚构匹配液处理。\n6. 成像：采用声明 scenario 中的模拟采集条件。\n7. 存储：避光存储，不计处理指标。\n8. 目标合同：{\"time\":{\"min\":2,\"max\":2,\"unit\":\"h\",\"direction\":\"min\"},\"quality\":{\"min\":0.9,\"max\":0.9,\"unit\":\"ratio\",\"direction\":\"max\"}}。\n9. 硬约束合同：{\"hard_id\":\"SATISFIED\"}。\n所有指标是合成机械输入，不是实测效果；本材料不是湿实验建议。",
+          "b": "本路线仅采用一个虚构透明方法 SYN-BETA；所有正常处理步骤属于该方法。\n完整合成方案 B。\n输入样本：已经固定的模拟组织，sample scale=fixture。\n1. 前处理：虚构缓冲液洗涤。\n2. 标签准备：记录模拟标签并洗去游离探针。\n3. 预处理：虚构预处理液浸泡。\n4. 光透明：虚构透明液分级浸泡。\n5. 终处理：虚构匹配液处理。\n6. 成像：采用声明 scenario 中的模拟采集条件。\n7. 存储：避光存储，不计处理指标。\n8. 目标合同：{\"time\":{\"min\":2,\"max\":2,\"unit\":\"h\",\"direction\":\"min\"},\"quality\":{\"min\":0.9,\"max\":0.9,\"unit\":\"ratio\",\"direction\":\"max\"}}。\n9. 硬约束合同：{\"hard_id\":\"SATISFIED\"}。\n所有指标是合成机械输入，不是实测效果；本材料不是湿实验建议。"
+        }
+      },
+      "expected": {
+        "relationship": "EQUIVALENT"
+      },
+      "scientific_limit": "数值完全合成且非实测；只证明同条件约束/单位/方向/区间比较逻辑，不证明科学性能或取舍合理性。"
+    },
+    {
+      "id": "pareto_05_time_unit_equivalence",
+      "hypothesis_ids": [
+        "H5"
+      ],
+      "kind": "pareto",
+      "input": {
+        "a": {
+          "id": "A",
+          "task_id": "SYN-PARETO-TASK",
+          "scenario": {
+            "tissue": "synthetic",
+            "scale": "fixture",
+            "measurement_scope": "same_acquisition"
+          },
+          "constraints": {
+            "hard_id": "SATISFIED"
+          },
+          "objectives": {
+            "time": {
+              "min": 2,
+              "max": 2,
+              "unit": "h",
+              "direction": "min"
+            },
+            "quality": {
+              "min": 0.9,
+              "max": 0.9,
+              "unit": "ratio",
+              "direction": "max"
+            }
+          }
+        },
+        "b": {
+          "id": "B",
+          "task_id": "SYN-PARETO-TASK",
+          "scenario": {
+            "tissue": "synthetic",
+            "scale": "fixture",
+            "measurement_scope": "same_acquisition"
+          },
+          "constraints": {
+            "hard_id": "SATISFIED"
+          },
+          "objectives": {
+            "time": {
+              "min": 120,
+              "max": 120,
+              "unit": "min",
+              "direction": "min"
+            },
+            "quality": {
+              "min": 0.9,
+              "max": 0.9,
+              "unit": "ratio",
+              "direction": "max"
+            }
+          }
+        },
+        "protocols": {
+          "a": "本路线仅采用一个虚构透明方法 SYN-ALPHA；所有正常处理步骤属于该方法。\n完整合成方案 A。\n输入样本：已经固定的模拟组织，sample scale=fixture。\n1. 前处理：虚构缓冲液洗涤。\n2. 标签准备：记录模拟标签并洗去游离探针。\n3. 预处理：虚构预处理液浸泡。\n4. 光透明：虚构透明液分级浸泡。\n5. 终处理：虚构匹配液处理。\n6. 成像：采用声明 scenario 中的模拟采集条件。\n7. 存储：避光存储，不计处理指标。\n8. 目标合同：{\"time\":{\"min\":2,\"max\":2,\"unit\":\"h\",\"direction\":\"min\"},\"quality\":{\"min\":0.9,\"max\":0.9,\"unit\":\"ratio\",\"direction\":\"max\"}}。\n9. 硬约束合同：{\"hard_id\":\"SATISFIED\"}。\n所有指标是合成机械输入，不是实测效果；本材料不是湿实验建议。",
+          "b": "本路线仅采用一个虚构透明方法 SYN-BETA；所有正常处理步骤属于该方法。\n完整合成方案 B。\n输入样本：已经固定的模拟组织，sample scale=fixture。\n1. 前处理：虚构缓冲液洗涤。\n2. 标签准备：记录模拟标签并洗去游离探针。\n3. 预处理：虚构预处理液浸泡。\n4. 光透明：虚构透明液分级浸泡。\n5. 终处理：虚构匹配液处理。\n6. 成像：采用声明 scenario 中的模拟采集条件。\n7. 存储：避光存储，不计处理指标。\n8. 目标合同：{\"time\":{\"min\":120,\"max\":120,\"unit\":\"min\",\"direction\":\"min\"},\"quality\":{\"min\":0.9,\"max\":0.9,\"unit\":\"ratio\",\"direction\":\"max\"}}。\n9. 硬约束合同：{\"hard_id\":\"SATISFIED\"}。\n所有指标是合成机械输入，不是实测效果；本材料不是湿实验建议。"
+        }
+      },
+      "expected": {
+        "relationship": "EQUIVALENT"
+      },
+      "scientific_limit": "数值完全合成且非实测；只证明同条件约束/单位/方向/区间比较逻辑，不证明科学性能或取舍合理性。"
+    },
+    {
+      "id": "pareto_06_different_scope",
+      "hypothesis_ids": [
+        "H5"
+      ],
+      "kind": "pareto",
+      "input": {
+        "a": {
+          "id": "A",
+          "task_id": "SYN-PARETO-TASK",
+          "scenario": {
+            "tissue": "synthetic",
+            "scale": "fixture",
+            "measurement_scope": "same_acquisition"
+          },
+          "constraints": {
+            "hard_id": "SATISFIED"
+          },
+          "objectives": {
+            "time": {
+              "min": 2,
+              "max": 2,
+              "unit": "h",
+              "direction": "min"
+            },
+            "quality": {
+              "min": 0.9,
+              "max": 0.9,
+              "unit": "ratio",
+              "direction": "max"
+            }
+          }
+        },
+        "b": {
+          "id": "B",
+          "task_id": "SYN-PARETO-TASK",
+          "scenario": {
+            "tissue": "synthetic",
+            "scale": "fixture",
+            "measurement_scope": "different_acquisition"
+          },
+          "constraints": {
+            "hard_id": "SATISFIED"
+          },
+          "objectives": {
+            "time": {
+              "min": 3,
+              "max": 3,
+              "unit": "h",
+              "direction": "min"
+            },
+            "quality": {
+              "min": 0.8,
+              "max": 0.8,
+              "unit": "ratio",
+              "direction": "max"
+            }
+          }
+        },
+        "protocols": {
+          "a": "本路线仅采用一个虚构透明方法 SYN-ALPHA；所有正常处理步骤属于该方法。\n完整合成方案 A。\n输入样本：已经固定的模拟组织，sample scale=fixture。\n1. 前处理：虚构缓冲液洗涤。\n2. 标签准备：记录模拟标签并洗去游离探针。\n3. 预处理：虚构预处理液浸泡。\n4. 光透明：虚构透明液分级浸泡。\n5. 终处理：虚构匹配液处理。\n6. 成像：采用声明 scenario 中的模拟采集条件。\n7. 存储：避光存储，不计处理指标。\n8. 目标合同：{\"time\":{\"min\":2,\"max\":2,\"unit\":\"h\",\"direction\":\"min\"},\"quality\":{\"min\":0.9,\"max\":0.9,\"unit\":\"ratio\",\"direction\":\"max\"}}。\n9. 硬约束合同：{\"hard_id\":\"SATISFIED\"}。\n所有指标是合成机械输入，不是实测效果；本材料不是湿实验建议。",
+          "b": "本路线仅采用一个虚构透明方法 SYN-BETA；所有正常处理步骤属于该方法。\n完整合成方案 B。\n输入样本：已经固定的模拟组织，sample scale=fixture。\n1. 前处理：虚构缓冲液洗涤。\n2. 标签准备：记录模拟标签并洗去游离探针。\n3. 预处理：虚构预处理液浸泡。\n4. 光透明：虚构透明液分级浸泡。\n5. 终处理：虚构匹配液处理。\n6. 成像：采用声明 scenario 中的模拟采集条件。\n7. 存储：避光存储，不计处理指标。\n8. 目标合同：{\"time\":{\"min\":3,\"max\":3,\"unit\":\"h\",\"direction\":\"min\"},\"quality\":{\"min\":0.8,\"max\":0.8,\"unit\":\"ratio\",\"direction\":\"max\"}}。\n9. 硬约束合同：{\"hard_id\":\"SATISFIED\"}。\n所有指标是合成机械输入，不是实测效果；本材料不是湿实验建议。"
+        }
+      },
+      "expected": {
+        "relationship": "NOT_COMPARABLE"
+      },
+      "scientific_limit": "数值完全合成且非实测；只证明同条件约束/单位/方向/区间比较逻辑，不证明科学性能或取舍合理性。"
+    },
+    {
+      "id": "pareto_07_missing_objective",
+      "hypothesis_ids": [
+        "H5"
+      ],
+      "kind": "pareto",
+      "input": {
+        "a": {
+          "id": "A",
+          "task_id": "SYN-PARETO-TASK",
+          "scenario": {
+            "tissue": "synthetic",
+            "scale": "fixture",
+            "measurement_scope": "same_acquisition"
+          },
+          "constraints": {
+            "hard_id": "SATISFIED"
+          },
+          "objectives": {
+            "time": {
+              "min": 2,
+              "max": 2,
+              "unit": "h",
+              "direction": "min"
+            },
+            "quality": {
+              "min": 0.9,
+              "max": 0.9,
+              "unit": "ratio",
+              "direction": "max"
+            }
+          }
+        },
+        "b": {
+          "id": "B",
+          "task_id": "SYN-PARETO-TASK",
+          "scenario": {
+            "tissue": "synthetic",
+            "scale": "fixture",
+            "measurement_scope": "same_acquisition"
+          },
+          "constraints": {
+            "hard_id": "SATISFIED"
+          },
+          "objectives": {
+            "time": {
+              "min": 3,
+              "max": 3,
+              "unit": "h",
+              "direction": "min"
+            }
+          }
+        },
+        "protocols": {
+          "a": "本路线仅采用一个虚构透明方法 SYN-ALPHA；所有正常处理步骤属于该方法。\n完整合成方案 A。\n输入样本：已经固定的模拟组织，sample scale=fixture。\n1. 前处理：虚构缓冲液洗涤。\n2. 标签准备：记录模拟标签并洗去游离探针。\n3. 预处理：虚构预处理液浸泡。\n4. 光透明：虚构透明液分级浸泡。\n5. 终处理：虚构匹配液处理。\n6. 成像：采用声明 scenario 中的模拟采集条件。\n7. 存储：避光存储，不计处理指标。\n8. 目标合同：{\"time\":{\"min\":2,\"max\":2,\"unit\":\"h\",\"direction\":\"min\"},\"quality\":{\"min\":0.9,\"max\":0.9,\"unit\":\"ratio\",\"direction\":\"max\"}}。\n9. 硬约束合同：{\"hard_id\":\"SATISFIED\"}。\n所有指标是合成机械输入，不是实测效果；本材料不是湿实验建议。",
+          "b": "本路线仅采用一个虚构透明方法 SYN-BETA；所有正常处理步骤属于该方法。\n完整合成方案 B。\n输入样本：已经固定的模拟组织，sample scale=fixture。\n1. 前处理：虚构缓冲液洗涤。\n2. 标签准备：记录模拟标签并洗去游离探针。\n3. 预处理：虚构预处理液浸泡。\n4. 光透明：虚构透明液分级浸泡。\n5. 终处理：虚构匹配液处理。\n6. 成像：采用声明 scenario 中的模拟采集条件。\n7. 存储：避光存储，不计处理指标。\n8. 目标合同：{\"time\":{\"min\":3,\"max\":3,\"unit\":\"h\",\"direction\":\"min\"}}。\n9. 硬约束合同：{\"hard_id\":\"SATISFIED\"}。\n所有指标是合成机械输入，不是实测效果；本材料不是湿实验建议。"
+        }
+      },
+      "expected": {
+        "relationship": "UNRESOLVED"
+      },
+      "scientific_limit": "数值完全合成且非实测；只证明同条件约束/单位/方向/区间比较逻辑，不证明科学性能或取舍合理性。"
+    },
+    {
+      "id": "pareto_08_overlapping_interval",
+      "hypothesis_ids": [
+        "H5"
+      ],
+      "kind": "pareto",
+      "input": {
+        "a": {
+          "id": "A",
+          "task_id": "SYN-PARETO-TASK",
+          "scenario": {
+            "tissue": "synthetic",
+            "scale": "fixture",
+            "measurement_scope": "same_acquisition"
+          },
+          "constraints": {
+            "hard_id": "SATISFIED"
+          },
+          "objectives": {
+            "time": {
+              "min": 1,
+              "max": 3,
+              "unit": "h",
+              "direction": "min"
+            },
+            "quality": {
+              "min": 0.9,
+              "max": 0.9,
+              "unit": "ratio",
+              "direction": "max"
+            }
+          }
+        },
+        "b": {
+          "id": "B",
+          "task_id": "SYN-PARETO-TASK",
+          "scenario": {
+            "tissue": "synthetic",
+            "scale": "fixture",
+            "measurement_scope": "same_acquisition"
+          },
+          "constraints": {
+            "hard_id": "SATISFIED"
+          },
+          "objectives": {
+            "time": {
+              "min": 2,
+              "max": 4,
+              "unit": "h",
+              "direction": "min"
+            },
+            "quality": {
+              "min": 0.8,
+              "max": 0.8,
+              "unit": "ratio",
+              "direction": "max"
+            }
+          }
+        },
+        "protocols": {
+          "a": "本路线仅采用一个虚构透明方法 SYN-ALPHA；所有正常处理步骤属于该方法。\n完整合成方案 A。\n输入样本：已经固定的模拟组织，sample scale=fixture。\n1. 前处理：虚构缓冲液洗涤。\n2. 标签准备：记录模拟标签并洗去游离探针。\n3. 预处理：虚构预处理液浸泡。\n4. 光透明：虚构透明液分级浸泡。\n5. 终处理：虚构匹配液处理。\n6. 成像：采用声明 scenario 中的模拟采集条件。\n7. 存储：避光存储，不计处理指标。\n8. 目标合同：{\"time\":{\"min\":1,\"max\":3,\"unit\":\"h\",\"direction\":\"min\"},\"quality\":{\"min\":0.9,\"max\":0.9,\"unit\":\"ratio\",\"direction\":\"max\"}}。\n9. 硬约束合同：{\"hard_id\":\"SATISFIED\"}。\n所有指标是合成机械输入，不是实测效果；本材料不是湿实验建议。",
+          "b": "本路线仅采用一个虚构透明方法 SYN-BETA；所有正常处理步骤属于该方法。\n完整合成方案 B。\n输入样本：已经固定的模拟组织，sample scale=fixture。\n1. 前处理：虚构缓冲液洗涤。\n2. 标签准备：记录模拟标签并洗去游离探针。\n3. 预处理：虚构预处理液浸泡。\n4. 光透明：虚构透明液分级浸泡。\n5. 终处理：虚构匹配液处理。\n6. 成像：采用声明 scenario 中的模拟采集条件。\n7. 存储：避光存储，不计处理指标。\n8. 目标合同：{\"time\":{\"min\":2,\"max\":4,\"unit\":\"h\",\"direction\":\"min\"},\"quality\":{\"min\":0.8,\"max\":0.8,\"unit\":\"ratio\",\"direction\":\"max\"}}。\n9. 硬约束合同：{\"hard_id\":\"SATISFIED\"}。\n所有指标是合成机械输入，不是实测效果；本材料不是湿实验建议。"
+        }
+      },
+      "expected": {
+        "relationship": "UNRESOLVED"
+      },
+      "scientific_limit": "数值完全合成且非实测；只证明同条件约束/单位/方向/区间比较逻辑，不证明科学性能或取舍合理性。"
+    },
+    {
+      "id": "pareto_09_hard_feasibility_first",
+      "hypothesis_ids": [
+        "H5"
+      ],
+      "kind": "pareto",
+      "input": {
+        "a": {
+          "id": "A",
+          "task_id": "SYN-PARETO-TASK",
+          "scenario": {
+            "tissue": "synthetic",
+            "scale": "fixture",
+            "measurement_scope": "same_acquisition"
+          },
+          "constraints": {
+            "hard_id": "SATISFIED"
+          },
+          "objectives": {
+            "time": {
+              "min": 2,
+              "max": 2,
+              "unit": "h",
+              "direction": "min"
+            },
+            "quality": {
+              "min": 0.9,
+              "max": 0.9,
+              "unit": "ratio",
+              "direction": "max"
+            }
+          }
+        },
+        "b": {
+          "id": "B",
+          "task_id": "SYN-PARETO-TASK",
+          "scenario": {
+            "tissue": "synthetic",
+            "scale": "fixture",
+            "measurement_scope": "same_acquisition"
+          },
+          "constraints": {
+            "hard_id": "VIOLATED"
+          },
+          "objectives": {
+            "time": {
+              "min": 1,
+              "max": 1,
+              "unit": "h",
+              "direction": "min"
+            },
+            "quality": {
+              "min": 0.99,
+              "max": 0.99,
+              "unit": "ratio",
+              "direction": "max"
+            }
+          }
+        },
+        "protocols": {
+          "a": "本路线仅采用一个虚构透明方法 SYN-ALPHA；所有正常处理步骤属于该方法。\n完整合成方案 A。\n输入样本：已经固定的模拟组织，sample scale=fixture。\n1. 前处理：虚构缓冲液洗涤。\n2. 标签准备：记录模拟标签并洗去游离探针。\n3. 预处理：虚构预处理液浸泡。\n4. 光透明：虚构透明液分级浸泡。\n5. 终处理：虚构匹配液处理。\n6. 成像：采用声明 scenario 中的模拟采集条件。\n7. 存储：避光存储，不计处理指标。\n8. 目标合同：{\"time\":{\"min\":2,\"max\":2,\"unit\":\"h\",\"direction\":\"min\"},\"quality\":{\"min\":0.9,\"max\":0.9,\"unit\":\"ratio\",\"direction\":\"max\"}}。\n9. 硬约束合同：{\"hard_id\":\"SATISFIED\"}。\n所有指标是合成机械输入，不是实测效果；本材料不是湿实验建议。",
+          "b": "本路线仅采用一个虚构透明方法 SYN-BETA；所有正常处理步骤属于该方法。\n完整合成方案 B。\n输入样本：已经固定的模拟组织，sample scale=fixture。\n1. 前处理：虚构缓冲液洗涤。\n2. 标签准备：记录模拟标签并洗去游离探针。\n3. 预处理：虚构预处理液浸泡。\n4. 光透明：虚构透明液分级浸泡。\n5. 终处理：虚构匹配液处理。\n6. 成像：采用声明 scenario 中的模拟采集条件。\n7. 存储：避光存储，不计处理指标。\n8. 目标合同：{\"time\":{\"min\":1,\"max\":1,\"unit\":\"h\",\"direction\":\"min\"},\"quality\":{\"min\":0.99,\"max\":0.99,\"unit\":\"ratio\",\"direction\":\"max\"}}。\n9. 硬约束合同：{\"hard_id\":\"VIOLATED\"}。\n所有指标是合成机械输入，不是实测效果；本材料不是湿实验建议。"
+        }
+      },
+      "expected": {
+        "relationship": "A_ONLY_FEASIBLE"
+      },
+      "scientific_limit": "数值完全合成且非实测；只证明同条件约束/单位/方向/区间比较逻辑，不证明科学性能或取舍合理性。"
+    },
+    {
+      "id": "pareto_10_neither_feasible",
+      "hypothesis_ids": [
+        "H5"
+      ],
+      "kind": "pareto",
+      "input": {
+        "a": {
+          "id": "A",
+          "task_id": "SYN-PARETO-TASK",
+          "scenario": {
+            "tissue": "synthetic",
+            "scale": "fixture",
+            "measurement_scope": "same_acquisition"
+          },
+          "constraints": {
+            "hard_id": "VIOLATED"
+          },
+          "objectives": {
+            "time": {
+              "min": 1,
+              "max": 1,
+              "unit": "h",
+              "direction": "min"
+            },
+            "quality": {
+              "min": 0.99,
+              "max": 0.99,
+              "unit": "ratio",
+              "direction": "max"
+            }
+          }
+        },
+        "b": {
+          "id": "B",
+          "task_id": "SYN-PARETO-TASK",
+          "scenario": {
+            "tissue": "synthetic",
+            "scale": "fixture",
+            "measurement_scope": "same_acquisition"
+          },
+          "constraints": {
+            "hard_id": "VIOLATED"
+          },
+          "objectives": {
+            "time": {
+              "min": 1,
+              "max": 1,
+              "unit": "h",
+              "direction": "min"
+            },
+            "quality": {
+              "min": 0.99,
+              "max": 0.99,
+              "unit": "ratio",
+              "direction": "max"
+            }
+          }
+        },
+        "protocols": {
+          "a": "本路线仅采用一个虚构透明方法 SYN-ALPHA；所有正常处理步骤属于该方法。\n完整合成方案 A。\n输入样本：已经固定的模拟组织，sample scale=fixture。\n1. 前处理：虚构缓冲液洗涤。\n2. 标签准备：记录模拟标签并洗去游离探针。\n3. 预处理：虚构预处理液浸泡。\n4. 光透明：虚构透明液分级浸泡。\n5. 终处理：虚构匹配液处理。\n6. 成像：采用声明 scenario 中的模拟采集条件。\n7. 存储：避光存储，不计处理指标。\n8. 目标合同：{\"time\":{\"min\":1,\"max\":1,\"unit\":\"h\",\"direction\":\"min\"},\"quality\":{\"min\":0.99,\"max\":0.99,\"unit\":\"ratio\",\"direction\":\"max\"}}。\n9. 硬约束合同：{\"hard_id\":\"VIOLATED\"}。\n所有指标是合成机械输入，不是实测效果；本材料不是湿实验建议。",
+          "b": "本路线仅采用一个虚构透明方法 SYN-BETA；所有正常处理步骤属于该方法。\n完整合成方案 B。\n输入样本：已经固定的模拟组织，sample scale=fixture。\n1. 前处理：虚构缓冲液洗涤。\n2. 标签准备：记录模拟标签并洗去游离探针。\n3. 预处理：虚构预处理液浸泡。\n4. 光透明：虚构透明液分级浸泡。\n5. 终处理：虚构匹配液处理。\n6. 成像：采用声明 scenario 中的模拟采集条件。\n7. 存储：避光存储，不计处理指标。\n8. 目标合同：{\"time\":{\"min\":1,\"max\":1,\"unit\":\"h\",\"direction\":\"min\"},\"quality\":{\"min\":0.99,\"max\":0.99,\"unit\":\"ratio\",\"direction\":\"max\"}}。\n9. 硬约束合同：{\"hard_id\":\"VIOLATED\"}。\n所有指标是合成机械输入，不是实测效果；本材料不是湿实验建议。"
+        }
+      },
+      "expected": {
+        "relationship": "NEITHER_FEASIBLE"
+      },
+      "scientific_limit": "数值完全合成且非实测；只证明同条件约束/单位/方向/区间比较逻辑，不证明科学性能或取舍合理性。"
+    },
+    {
+      "id": "pareto_11_unknown_feasibility",
+      "hypothesis_ids": [
+        "H5"
+      ],
+      "kind": "pareto",
+      "input": {
+        "a": {
+          "id": "A",
+          "task_id": "SYN-PARETO-TASK",
+          "scenario": {
+            "tissue": "synthetic",
+            "scale": "fixture",
+            "measurement_scope": "same_acquisition"
+          },
+          "constraints": {
+            "hard_id": "SATISFIED"
+          },
+          "objectives": {
+            "time": {
+              "min": 2,
+              "max": 2,
+              "unit": "h",
+              "direction": "min"
+            },
+            "quality": {
+              "min": 0.9,
+              "max": 0.9,
+              "unit": "ratio",
+              "direction": "max"
+            }
+          }
+        },
+        "b": {
+          "id": "B",
+          "task_id": "SYN-PARETO-TASK",
+          "scenario": {
+            "tissue": "synthetic",
+            "scale": "fixture",
+            "measurement_scope": "same_acquisition"
+          },
+          "constraints": {
+            "hard_id": "UNRESOLVED"
+          },
+          "objectives": {
+            "time": {
+              "min": 1,
+              "max": 1,
+              "unit": "h",
+              "direction": "min"
+            },
+            "quality": {
+              "min": 0.99,
+              "max": 0.99,
+              "unit": "ratio",
+              "direction": "max"
+            }
+          }
+        },
+        "protocols": {
+          "a": "本路线仅采用一个虚构透明方法 SYN-ALPHA；所有正常处理步骤属于该方法。\n完整合成方案 A。\n输入样本：已经固定的模拟组织，sample scale=fixture。\n1. 前处理：虚构缓冲液洗涤。\n2. 标签准备：记录模拟标签并洗去游离探针。\n3. 预处理：虚构预处理液浸泡。\n4. 光透明：虚构透明液分级浸泡。\n5. 终处理：虚构匹配液处理。\n6. 成像：采用声明 scenario 中的模拟采集条件。\n7. 存储：避光存储，不计处理指标。\n8. 目标合同：{\"time\":{\"min\":2,\"max\":2,\"unit\":\"h\",\"direction\":\"min\"},\"quality\":{\"min\":0.9,\"max\":0.9,\"unit\":\"ratio\",\"direction\":\"max\"}}。\n9. 硬约束合同：{\"hard_id\":\"SATISFIED\"}。\n所有指标是合成机械输入，不是实测效果；本材料不是湿实验建议。",
+          "b": "本路线仅采用一个虚构透明方法 SYN-BETA；所有正常处理步骤属于该方法。\n完整合成方案 B。\n输入样本：已经固定的模拟组织，sample scale=fixture。\n1. 前处理：虚构缓冲液洗涤。\n2. 标签准备：记录模拟标签并洗去游离探针。\n3. 预处理：虚构预处理液浸泡。\n4. 光透明：虚构透明液分级浸泡。\n5. 终处理：虚构匹配液处理。\n6. 成像：采用声明 scenario 中的模拟采集条件。\n7. 存储：避光存储，不计处理指标。\n8. 目标合同：{\"time\":{\"min\":1,\"max\":1,\"unit\":\"h\",\"direction\":\"min\"},\"quality\":{\"min\":0.99,\"max\":0.99,\"unit\":\"ratio\",\"direction\":\"max\"}}。\n9. 硬约束合同：{\"hard_id\":\"UNRESOLVED\"}。\n所有指标是合成机械输入，不是实测效果；本材料不是湿实验建议。"
+        }
+      },
+      "expected": {
+        "relationship": "UNRESOLVED"
+      },
+      "scientific_limit": "数值完全合成且非实测；只证明同条件约束/单位/方向/区间比较逻辑，不证明科学性能或取舍合理性。"
+    },
+    {
+      "id": "pareto_12_different_direction",
+      "hypothesis_ids": [
+        "H5"
+      ],
+      "kind": "pareto",
+      "input": {
+        "a": {
+          "id": "A",
+          "task_id": "SYN-PARETO-TASK",
+          "scenario": {
+            "tissue": "synthetic",
+            "scale": "fixture",
+            "measurement_scope": "same_acquisition"
+          },
+          "constraints": {
+            "hard_id": "SATISFIED"
+          },
+          "objectives": {
+            "time": {
+              "min": 2,
+              "max": 2,
+              "unit": "h",
+              "direction": "min"
+            },
+            "quality": {
+              "min": 0.9,
+              "max": 0.9,
+              "unit": "ratio",
+              "direction": "max"
+            }
+          }
+        },
+        "b": {
+          "id": "B",
+          "task_id": "SYN-PARETO-TASK",
+          "scenario": {
+            "tissue": "synthetic",
+            "scale": "fixture",
+            "measurement_scope": "same_acquisition"
+          },
+          "constraints": {
+            "hard_id": "SATISFIED"
+          },
+          "objectives": {
+            "time": {
+              "min": 3,
+              "max": 3,
+              "unit": "h",
+              "direction": "min"
+            },
+            "quality": {
+              "min": 0.8,
+              "max": 0.8,
+              "unit": "ratio",
+              "direction": "min"
+            }
+          }
+        },
+        "protocols": {
+          "a": "本路线仅采用一个虚构透明方法 SYN-ALPHA；所有正常处理步骤属于该方法。\n完整合成方案 A。\n输入样本：已经固定的模拟组织，sample scale=fixture。\n1. 前处理：虚构缓冲液洗涤。\n2. 标签准备：记录模拟标签并洗去游离探针。\n3. 预处理：虚构预处理液浸泡。\n4. 光透明：虚构透明液分级浸泡。\n5. 终处理：虚构匹配液处理。\n6. 成像：采用声明 scenario 中的模拟采集条件。\n7. 存储：避光存储，不计处理指标。\n8. 目标合同：{\"time\":{\"min\":2,\"max\":2,\"unit\":\"h\",\"direction\":\"min\"},\"quality\":{\"min\":0.9,\"max\":0.9,\"unit\":\"ratio\",\"direction\":\"max\"}}。\n9. 硬约束合同：{\"hard_id\":\"SATISFIED\"}。\n所有指标是合成机械输入，不是实测效果；本材料不是湿实验建议。",
+          "b": "本路线仅采用一个虚构透明方法 SYN-BETA；所有正常处理步骤属于该方法。\n完整合成方案 B。\n输入样本：已经固定的模拟组织，sample scale=fixture。\n1. 前处理：虚构缓冲液洗涤。\n2. 标签准备：记录模拟标签并洗去游离探针。\n3. 预处理：虚构预处理液浸泡。\n4. 光透明：虚构透明液分级浸泡。\n5. 终处理：虚构匹配液处理。\n6. 成像：采用声明 scenario 中的模拟采集条件。\n7. 存储：避光存储，不计处理指标。\n8. 目标合同：{\"time\":{\"min\":3,\"max\":3,\"unit\":\"h\",\"direction\":\"min\"},\"quality\":{\"min\":0.8,\"max\":0.8,\"unit\":\"ratio\",\"direction\":\"min\"}}。\n9. 硬约束合同：{\"hard_id\":\"SATISFIED\"}。\n所有指标是合成机械输入，不是实测效果；本材料不是湿实验建议。"
+        }
+      },
+      "expected": {
+        "relationship": "NOT_COMPARABLE"
+      },
+      "scientific_limit": "数值完全合成且非实测；只证明同条件约束/单位/方向/区间比较逻辑，不证明科学性能或取舍合理性。"
+    },
+    {
+      "id": "pareto_13_different_basis",
+      "hypothesis_ids": [
+        "H5"
+      ],
+      "kind": "pareto",
+      "input": {
+        "a": {
+          "id": "A",
+          "task_id": "SYN-PARETO-TASK",
+          "scenario": {
+            "tissue": "synthetic",
+            "scale": "fixture",
+            "measurement_scope": "same_acquisition"
+          },
+          "constraints": {
+            "hard_id": "SATISFIED"
+          },
+          "objectives": {
+            "time": {
+              "min": 2,
+              "max": 2,
+              "unit": "h",
+              "direction": "min"
+            },
+            "quality": {
+              "min": 0.9,
+              "max": 0.9,
+              "unit": "ratio",
+              "direction": "max",
+              "basis": "per_area"
+            }
+          }
+        },
+        "b": {
+          "id": "B",
+          "task_id": "SYN-PARETO-TASK",
+          "scenario": {
+            "tissue": "synthetic",
+            "scale": "fixture",
+            "measurement_scope": "same_acquisition"
+          },
+          "constraints": {
+            "hard_id": "SATISFIED"
+          },
+          "objectives": {
+            "time": {
+              "min": 3,
+              "max": 3,
+              "unit": "h",
+              "direction": "min"
+            },
+            "quality": {
+              "min": 0.8,
+              "max": 0.8,
+              "unit": "ratio",
+              "direction": "max",
+              "basis": "per_volume"
+            }
+          }
+        },
+        "protocols": {
+          "a": "本路线仅采用一个虚构透明方法 SYN-ALPHA；所有正常处理步骤属于该方法。\n完整合成方案 A。\n输入样本：已经固定的模拟组织，sample scale=fixture。\n1. 前处理：虚构缓冲液洗涤。\n2. 标签准备：记录模拟标签并洗去游离探针。\n3. 预处理：虚构预处理液浸泡。\n4. 光透明：虚构透明液分级浸泡。\n5. 终处理：虚构匹配液处理。\n6. 成像：采用声明 scenario 中的模拟采集条件。\n7. 存储：避光存储，不计处理指标。\n8. 目标合同：{\"time\":{\"min\":2,\"max\":2,\"unit\":\"h\",\"direction\":\"min\"},\"quality\":{\"min\":0.9,\"max\":0.9,\"unit\":\"ratio\",\"direction\":\"max\",\"basis\":\"per_area\"}}。\n9. 硬约束合同：{\"hard_id\":\"SATISFIED\"}。\n所有指标是合成机械输入，不是实测效果；本材料不是湿实验建议。",
+          "b": "本路线仅采用一个虚构透明方法 SYN-BETA；所有正常处理步骤属于该方法。\n完整合成方案 B。\n输入样本：已经固定的模拟组织，sample scale=fixture。\n1. 前处理：虚构缓冲液洗涤。\n2. 标签准备：记录模拟标签并洗去游离探针。\n3. 预处理：虚构预处理液浸泡。\n4. 光透明：虚构透明液分级浸泡。\n5. 终处理：虚构匹配液处理。\n6. 成像：采用声明 scenario 中的模拟采集条件。\n7. 存储：避光存储，不计处理指标。\n8. 目标合同：{\"time\":{\"min\":3,\"max\":3,\"unit\":\"h\",\"direction\":\"min\"},\"quality\":{\"min\":0.8,\"max\":0.8,\"unit\":\"ratio\",\"direction\":\"max\",\"basis\":\"per_volume\"}}。\n9. 硬约束合同：{\"hard_id\":\"SATISFIED\"}。\n所有指标是合成机械输入，不是实测效果；本材料不是湿实验建议。"
+        }
+      },
+      "expected": {
+        "relationship": "NOT_COMPARABLE"
+      },
+      "scientific_limit": "数值完全合成且非实测；只证明同条件约束/单位/方向/区间比较逻辑，不证明科学性能或取舍合理性。"
+    },
+    {
+      "id": "replay_01_cache_is_not_independent_repeat",
+      "hypothesis_ids": [
+        "H6"
+      ],
+      "kind": "replay",
+      "input": {
+        "payload": {
+          "task": {
+            "id": "SYN-TASK-001",
+            "text": "仅检查完整合成方案是否满足软件合同：保留 DiI；不添加 DiD；X1 浓度使用 vol% 基准；处理温度为 4 °C；存储为 20 °C；处理预算不包括存储。",
+            "scope": {
+              "tissue": "synthetic_brain_slice",
+              "scale": "1 mm",
+              "probe": "DiI"
+            },
+            "scientific_review": "PENDING_USER_EXPERT"
+          },
+          "protocol": "完整合成方案 SYN-ALPHA v2。\n输入样本：已经固定的模拟脑切片，厚度 1 mm。\n1. 前处理：用 1x 虚构缓冲液 B0 洗涤 30 min。\n2. 标签准备：保留 DiI 标记；不添加 DiD。\n3. 预处理：浸入虚构试剂 X0 30 min。\n4. 光透明：使用 50 vol% 的虚构试剂 X1；处理温度 4 °C，持续 2 h。\n5. 终处理：用虚构试剂 Y1 作折射率匹配 1 h。\n6. 成像：采用模拟物镜和同一模拟采集条件记录图像。\n7. 存储：20 °C 避光保存，存储时间不计入处理预算。\n8. 总处理预算：4 h 内，不包括存储。\n本方案仅为软件fixture，不声明真实透明度、荧光保持或湿实验可行性。",
+          "sources": [
+            {
+              "id": "SYN-SOURCE-ALPHA-V2",
+              "origin_type": "SYNTHETIC",
+              "method": "SYN-ALPHA",
+              "version": "v2",
+              "scientific_review": "PENDING_USER_EXPERT",
+              "text": "这是虚构的软件合同，不是论文引文或湿实验建议。\n方法身份：SYN-ALPHA v2。\n适用范围：模拟脑切片，厚度 1 mm，标签 DiI。\n步骤合同：洗涤→标签准备→预处理→光透明→折射率匹配→成像→存储。\n模拟处理合同：50 vol% 的虚构试剂 X1；处理温度 4 °C；存储温度 20 °C。\n版本合同：v1 的虚构缓冲液 B0 库存是 10x；v2 要求稀释为 1x 后使用。\n软建议：优先 4 °C 处理；是否硬约束由当前任务明确声明，不由本句决定。",
+              "scope": {
+                "tissue": "synthetic_brain_slice",
+                "scale": "1 mm",
+                "probe": "DiI"
+              },
+              "origin_references": [
+                {
+                  "title": "MACS原始研究：仅用于提示尺度/顺序失效假设",
+                  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7175264/"
+                },
+                {
+                  "title": "SeeDB2更正：仅用于提示真实版本链问题",
+                  "url": "https://bio-protocol.org/en/bpdetail?id=3095&type=0"
+                }
+              ]
+            }
+          ],
+          "requirements": [
+            {
+              "id": "g",
+              "text": "必须保留DiI",
+              "kind": "TEXT",
+              "necessary": true,
+              "scope": "GLOBAL",
+              "evidence_ids": []
+            }
+          ],
+          "evaluator_version": "SYN-EVAL-V1",
+          "judge": {
+            "family": "FAKE_ADAPTER",
+            "version": "v1",
+            "temperature": 0
+          }
+        },
+        "planned_count": 3,
+        "attempts": [
+          {
+            "repeat_id": "r1",
+            "attempt_id": "a1",
+            "origin": "FAKE_CALL",
+            "status": "SUCCESS"
+          },
+          {
+            "repeat_id": "r2",
+            "attempt_id": "a2",
+            "origin": "CACHE",
+            "status": "SUCCESS",
+            "cached_from": "a1"
+          },
+          {
+            "repeat_id": "r3",
+            "attempt_id": "a3",
+            "origin": "FAKE_CALL",
+            "status": "SUCCESS"
+          }
+        ]
+      },
+      "expected": {
+        "recorded_count": 3,
+        "independent_adapter_calls": 2,
+        "cache_count": 1,
+        "scientific_validation": "PENDING_USER_EXPERT"
+      },
+      "scientific_limit": "fake/cache回放不是实际模型重复评分，不能证明裁判稳定。"
+    },
+    {
+      "id": "replay_02_changed_config_requires_new_key",
+      "hypothesis_ids": [
+        "H6"
+      ],
+      "kind": "replay",
+      "input": {
+        "payload": {
+          "task": {
+            "id": "SYN-TASK-001",
+            "text": "仅检查完整合成方案是否满足软件合同：保留 DiI；不添加 DiD；X1 浓度使用 vol% 基准；处理温度为 4 °C；存储为 20 °C；处理预算不包括存储。",
+            "scope": {
+              "tissue": "synthetic_brain_slice",
+              "scale": "1 mm",
+              "probe": "DiI"
+            },
+            "scientific_review": "PENDING_USER_EXPERT"
+          },
+          "protocol": "完整合成方案 SYN-ALPHA v2。\n输入样本：已经固定的模拟脑切片，厚度 1 mm。\n1. 前处理：用 1x 虚构缓冲液 B0 洗涤 30 min。\n2. 标签准备：保留 DiI 标记；不添加 DiD。\n3. 预处理：浸入虚构试剂 X0 30 min。\n4. 光透明：使用 50 vol% 的虚构试剂 X1；处理温度 4 °C，持续 2 h。\n5. 终处理：用虚构试剂 Y1 作折射率匹配 1 h。\n6. 成像：采用模拟物镜和同一模拟采集条件记录图像。\n7. 存储：20 °C 避光保存，存储时间不计入处理预算。\n8. 总处理预算：4 h 内，不包括存储。\n本方案仅为软件fixture，不声明真实透明度、荧光保持或湿实验可行性。",
+          "sources": [
+            {
+              "id": "SYN-SOURCE-ALPHA-V2",
+              "origin_type": "SYNTHETIC",
+              "method": "SYN-ALPHA",
+              "version": "v2",
+              "scientific_review": "PENDING_USER_EXPERT",
+              "text": "这是虚构的软件合同，不是论文引文或湿实验建议。\n方法身份：SYN-ALPHA v2。\n适用范围：模拟脑切片，厚度 1 mm，标签 DiI。\n步骤合同：洗涤→标签准备→预处理→光透明→折射率匹配→成像→存储。\n模拟处理合同：50 vol% 的虚构试剂 X1；处理温度 4 °C；存储温度 20 °C。\n版本合同：v1 的虚构缓冲液 B0 库存是 10x；v2 要求稀释为 1x 后使用。\n软建议：优先 4 °C 处理；是否硬约束由当前任务明确声明，不由本句决定。",
+              "scope": {
+                "tissue": "synthetic_brain_slice",
+                "scale": "1 mm",
+                "probe": "DiI"
+              },
+              "origin_references": [
+                {
+                  "title": "MACS原始研究：仅用于提示尺度/顺序失效假设",
+                  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7175264/"
+                },
+                {
+                  "title": "SeeDB2更正：仅用于提示真实版本链问题",
+                  "url": "https://bio-protocol.org/en/bpdetail?id=3095&type=0"
+                }
+              ]
+            }
+          ],
+          "requirements": [
+            {
+              "id": "g",
+              "text": "必须保留DiI",
+              "kind": "TEXT",
+              "necessary": true,
+              "scope": "GLOBAL",
+              "evidence_ids": []
+            }
+          ],
+          "evaluator_version": "SYN-EVAL-V1",
+          "judge": {
+            "family": "FAKE_ADAPTER",
+            "version": "v1",
+            "temperature": 0
+          }
+        },
+        "changed_payload": {
+          "task": {
+            "id": "SYN-TASK-001",
+            "text": "仅检查完整合成方案是否满足软件合同：保留 DiI；不添加 DiD；X1 浓度使用 vol% 基准；处理温度为 4 °C；存储为 20 °C；处理预算不包括存储。",
+            "scope": {
+              "tissue": "synthetic_brain_slice",
+              "scale": "1 mm",
+              "probe": "DiI"
+            },
+            "scientific_review": "PENDING_USER_EXPERT"
+          },
+          "protocol": "完整合成方案 SYN-ALPHA v2。\n输入样本：已经固定的模拟脑切片，厚度 1 mm。\n1. 前处理：用 1x 虚构缓冲液 B0 洗涤 30 min。\n2. 标签准备：保留 DiI 标记；不添加 DiD。\n3. 预处理：浸入虚构试剂 X0 30 min。\n4. 光透明：使用 50 vol% 的虚构试剂 X1；处理温度 4 °C，持续 2 h。\n5. 终处理：用虚构试剂 Y1 作折射率匹配 1 h。\n6. 成像：采用模拟物镜和同一模拟采集条件记录图像。\n7. 存储：20 °C 避光保存，存储时间不计入处理预算。\n8. 总处理预算：4 h 内，不包括存储。\n本方案仅为软件fixture，不声明真实透明度、荧光保持或湿实验可行性。",
+          "sources": [
+            {
+              "id": "SYN-SOURCE-ALPHA-V2",
+              "origin_type": "SYNTHETIC",
+              "method": "SYN-ALPHA",
+              "version": "v2",
+              "scientific_review": "PENDING_USER_EXPERT",
+              "text": "这是虚构的软件合同，不是论文引文或湿实验建议。\n方法身份：SYN-ALPHA v2。\n适用范围：模拟脑切片，厚度 1 mm，标签 DiI。\n步骤合同：洗涤→标签准备→预处理→光透明→折射率匹配→成像→存储。\n模拟处理合同：50 vol% 的虚构试剂 X1；处理温度 4 °C；存储温度 20 °C。\n版本合同：v1 的虚构缓冲液 B0 库存是 10x；v2 要求稀释为 1x 后使用。\n软建议：优先 4 °C 处理；是否硬约束由当前任务明确声明，不由本句决定。",
+              "scope": {
+                "tissue": "synthetic_brain_slice",
+                "scale": "1 mm",
+                "probe": "DiI"
+              },
+              "origin_references": [
+                {
+                  "title": "MACS原始研究：仅用于提示尺度/顺序失效假设",
+                  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7175264/"
+                },
+                {
+                  "title": "SeeDB2更正：仅用于提示真实版本链问题",
+                  "url": "https://bio-protocol.org/en/bpdetail?id=3095&type=0"
+                }
+              ]
+            }
+          ],
+          "requirements": [
+            {
+              "id": "g",
+              "text": "必须保留DiI",
+              "kind": "TEXT",
+              "necessary": true,
+              "scope": "GLOBAL",
+              "evidence_ids": []
+            }
+          ],
+          "evaluator_version": "SYN-EVAL-V1",
+          "judge": {
+            "family": "FAKE_ADAPTER",
+            "version": "v2",
+            "temperature": 0
+          }
+        },
+        "changed_field": "judge.version"
+      },
+      "expected": {
+        "same_cache_key": false,
+        "scientific_validation": "PENDING_USER_EXPERT"
+      },
+      "scientific_limit": "仅验证声明合同与机械行为；独立科学标签仍待用户专家审核。"
+    },
+    {
+      "id": "replay_03_retry_preserves_first_failure",
+      "hypothesis_ids": [
+        "H6"
+      ],
+      "kind": "replay",
+      "input": {
+        "payload": {
+          "task": {
+            "id": "SYN-TASK-001",
+            "text": "仅检查完整合成方案是否满足软件合同：保留 DiI；不添加 DiD；X1 浓度使用 vol% 基准；处理温度为 4 °C；存储为 20 °C；处理预算不包括存储。",
+            "scope": {
+              "tissue": "synthetic_brain_slice",
+              "scale": "1 mm",
+              "probe": "DiI"
+            },
+            "scientific_review": "PENDING_USER_EXPERT"
+          },
+          "protocol": "完整合成方案 SYN-ALPHA v2。\n输入样本：已经固定的模拟脑切片，厚度 1 mm。\n1. 前处理：用 1x 虚构缓冲液 B0 洗涤 30 min。\n2. 标签准备：保留 DiI 标记；不添加 DiD。\n3. 预处理：浸入虚构试剂 X0 30 min。\n4. 光透明：使用 50 vol% 的虚构试剂 X1；处理温度 4 °C，持续 2 h。\n5. 终处理：用虚构试剂 Y1 作折射率匹配 1 h。\n6. 成像：采用模拟物镜和同一模拟采集条件记录图像。\n7. 存储：20 °C 避光保存，存储时间不计入处理预算。\n8. 总处理预算：4 h 内，不包括存储。\n本方案仅为软件fixture，不声明真实透明度、荧光保持或湿实验可行性。",
+          "sources": [
+            {
+              "id": "SYN-SOURCE-ALPHA-V2",
+              "origin_type": "SYNTHETIC",
+              "method": "SYN-ALPHA",
+              "version": "v2",
+              "scientific_review": "PENDING_USER_EXPERT",
+              "text": "这是虚构的软件合同，不是论文引文或湿实验建议。\n方法身份：SYN-ALPHA v2。\n适用范围：模拟脑切片，厚度 1 mm，标签 DiI。\n步骤合同：洗涤→标签准备→预处理→光透明→折射率匹配→成像→存储。\n模拟处理合同：50 vol% 的虚构试剂 X1；处理温度 4 °C；存储温度 20 °C。\n版本合同：v1 的虚构缓冲液 B0 库存是 10x；v2 要求稀释为 1x 后使用。\n软建议：优先 4 °C 处理；是否硬约束由当前任务明确声明，不由本句决定。",
+              "scope": {
+                "tissue": "synthetic_brain_slice",
+                "scale": "1 mm",
+                "probe": "DiI"
+              },
+              "origin_references": [
+                {
+                  "title": "MACS原始研究：仅用于提示尺度/顺序失效假设",
+                  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7175264/"
+                },
+                {
+                  "title": "SeeDB2更正：仅用于提示真实版本链问题",
+                  "url": "https://bio-protocol.org/en/bpdetail?id=3095&type=0"
+                }
+              ]
+            }
+          ],
+          "requirements": [
+            {
+              "id": "g",
+              "text": "必须保留DiI",
+              "kind": "TEXT",
+              "necessary": true,
+              "scope": "GLOBAL",
+              "evidence_ids": []
+            }
+          ],
+          "evaluator_version": "SYN-EVAL-V1",
+          "judge": {
+            "family": "FAKE_ADAPTER",
+            "version": "v1",
+            "temperature": 0
+          }
+        },
+        "planned_count": 1,
+        "attempts": [
+          {
+            "repeat_id": "r1",
+            "attempt_id": "a1",
+            "origin": "FAKE_CALL",
+            "status": "PARSE_FAILURE",
+            "raw": "{"
+          },
+          {
+            "repeat_id": "r1",
+            "attempt_id": "a2",
+            "origin": "FAKE_CALL",
+            "status": "SUCCESS",
+            "retry_of": "a1",
+            "raw": "{\"status\":\"UNRESOLVED\"}"
+          }
+        ]
+      },
+      "expected": {
+        "recorded_attempts": 2,
+        "repeat_count": 1,
+        "first_failure_retained": true,
+        "technical_failures": 1,
+        "scientific_validation": "PENDING_USER_EXPERT"
+      },
+      "scientific_limit": "仅验证声明合同与机械行为；独立科学标签仍待用户专家审核。"
+    },
+    {
+      "id": "replay_04_source_change_requires_new_key",
+      "hypothesis_ids": [
+        "H6"
+      ],
+      "kind": "replay",
+      "input": {
+        "payload": {
+          "task": {
+            "id": "SYN-TASK-001",
+            "text": "仅检查完整合成方案是否满足软件合同：保留 DiI；不添加 DiD；X1 浓度使用 vol% 基准；处理温度为 4 °C；存储为 20 °C；处理预算不包括存储。",
+            "scope": {
+              "tissue": "synthetic_brain_slice",
+              "scale": "1 mm",
+              "probe": "DiI"
+            },
+            "scientific_review": "PENDING_USER_EXPERT"
+          },
+          "protocol": "完整合成方案 SYN-ALPHA v2。\n输入样本：已经固定的模拟脑切片，厚度 1 mm。\n1. 前处理：用 1x 虚构缓冲液 B0 洗涤 30 min。\n2. 标签准备：保留 DiI 标记；不添加 DiD。\n3. 预处理：浸入虚构试剂 X0 30 min。\n4. 光透明：使用 50 vol% 的虚构试剂 X1；处理温度 4 °C，持续 2 h。\n5. 终处理：用虚构试剂 Y1 作折射率匹配 1 h。\n6. 成像：采用模拟物镜和同一模拟采集条件记录图像。\n7. 存储：20 °C 避光保存，存储时间不计入处理预算。\n8. 总处理预算：4 h 内，不包括存储。\n本方案仅为软件fixture，不声明真实透明度、荧光保持或湿实验可行性。",
+          "sources": [
+            {
+              "id": "SYN-SOURCE-ALPHA-V2",
+              "origin_type": "SYNTHETIC",
+              "method": "SYN-ALPHA",
+              "version": "v2",
+              "scientific_review": "PENDING_USER_EXPERT",
+              "text": "这是虚构的软件合同，不是论文引文或湿实验建议。\n方法身份：SYN-ALPHA v2。\n适用范围：模拟脑切片，厚度 1 mm，标签 DiI。\n步骤合同：洗涤→标签准备→预处理→光透明→折射率匹配→成像→存储。\n模拟处理合同：50 vol% 的虚构试剂 X1；处理温度 4 °C；存储温度 20 °C。\n版本合同：v1 的虚构缓冲液 B0 库存是 10x；v2 要求稀释为 1x 后使用。\n软建议：优先 4 °C 处理；是否硬约束由当前任务明确声明，不由本句决定。",
+              "scope": {
+                "tissue": "synthetic_brain_slice",
+                "scale": "1 mm",
+                "probe": "DiI"
+              },
+              "origin_references": [
+                {
+                  "title": "MACS原始研究：仅用于提示尺度/顺序失效假设",
+                  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7175264/"
+                },
+                {
+                  "title": "SeeDB2更正：仅用于提示真实版本链问题",
+                  "url": "https://bio-protocol.org/en/bpdetail?id=3095&type=0"
+                }
+              ]
+            }
+          ],
+          "requirements": [
+            {
+              "id": "g",
+              "text": "必须保留DiI",
+              "kind": "TEXT",
+              "necessary": true,
+              "scope": "GLOBAL",
+              "evidence_ids": []
+            }
+          ],
+          "evaluator_version": "SYN-EVAL-V1",
+          "judge": {
+            "family": "FAKE_ADAPTER",
+            "version": "v1",
+            "temperature": 0
+          }
+        },
+        "changed_payload": {
+          "task": {
+            "id": "SYN-TASK-001",
+            "text": "仅检查完整合成方案是否满足软件合同：保留 DiI；不添加 DiD；X1 浓度使用 vol% 基准；处理温度为 4 °C；存储为 20 °C；处理预算不包括存储。",
+            "scope": {
+              "tissue": "synthetic_brain_slice",
+              "scale": "1 mm",
+              "probe": "DiI"
+            },
+            "scientific_review": "PENDING_USER_EXPERT"
+          },
+          "protocol": "完整合成方案 SYN-ALPHA v2。\n输入样本：已经固定的模拟脑切片，厚度 1 mm。\n1. 前处理：用 1x 虚构缓冲液 B0 洗涤 30 min。\n2. 标签准备：保留 DiI 标记；不添加 DiD。\n3. 预处理：浸入虚构试剂 X0 30 min。\n4. 光透明：使用 50 vol% 的虚构试剂 X1；处理温度 4 °C，持续 2 h。\n5. 终处理：用虚构试剂 Y1 作折射率匹配 1 h。\n6. 成像：采用模拟物镜和同一模拟采集条件记录图像。\n7. 存储：20 °C 避光保存，存储时间不计入处理预算。\n8. 总处理预算：4 h 内，不包括存储。\n本方案仅为软件fixture，不声明真实透明度、荧光保持或湿实验可行性。",
+          "sources": [
+            {
+              "id": "SYN-SOURCE-ALPHA-V1",
+              "origin_type": "SYNTHETIC",
+              "method": "SYN-ALPHA",
+              "version": "v1",
+              "scientific_review": "PENDING_USER_EXPERT",
+              "text": "这是合成旧版本软件合同。\n方法身份：SYN-ALPHA v1。\n虚构缓冲液 B0 库存按 10x 记录，本版本未包含当前 1x 稀释要求。",
+              "scope": {
+                "tissue": "synthetic_brain_slice",
+                "scale": "1 mm",
+                "probe": "DiI"
+              },
+              "origin_references": [
+                {
+                  "title": "MACS原始研究：仅用于提示尺度/顺序失效假设",
+                  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7175264/"
+                },
+                {
+                  "title": "SeeDB2更正：仅用于提示真实版本链问题",
+                  "url": "https://bio-protocol.org/en/bpdetail?id=3095&type=0"
+                }
+              ],
+              "superseded_by": "SYN-SOURCE-ALPHA-V2"
+            }
+          ],
+          "requirements": [
+            {
+              "id": "g",
+              "text": "必须保留DiI",
+              "kind": "TEXT",
+              "necessary": true,
+              "scope": "GLOBAL",
+              "evidence_ids": []
+            }
+          ],
+          "evaluator_version": "SYN-EVAL-V1",
+          "judge": {
+            "family": "FAKE_ADAPTER",
+            "version": "v1",
+            "temperature": 0
+          }
+        },
+        "changed_field": "sources"
+      },
+      "expected": {
+        "same_cache_key": false,
+        "scientific_validation": "PENDING_USER_EXPERT"
+      },
+      "scientific_limit": "仅验证声明合同与机械行为；独立科学标签仍待用户专家审核。"
+    }
+  ],
+  "single_method_policy": "Each complete route uses exactly one clearing method; normal within-method processing phases are not serial combinations of clearing methods. Branch splicing and historical multi-method outputs are negative engineering cases only."
+}

@@ -39,6 +39,8 @@ import json
 import os
 import re
 import statistics
+from pathlib import Path
+from evaluation_contract import FixedDemandRegistry, ensure_manifest, json_hash, sha256_file
 
 SRC_DIR = 'dataset/Q+AR/src'
 KB_DIR = 'KnowledgeBase'
@@ -60,6 +62,46 @@ METHOD_FLUOR = _load(f'{KB_DIR}/method_fluro_compati.json')
 RI_REF = _load(f'{KB_DIR}/method_ri_ref.json')['ri_ref']
 SIGNED = _load(f'{SRC_DIR}/model_space_signed.json')['methods']
 TIME_LOOKUP = _load(f'{KB_DIR}/time_kb.json').get('lookup', {})  # {method: {tier_code: {...}}}
+
+
+
+RAG_BINDING_VERSION = 'question-kb-rag-binding-v2'
+KB_BINDING_FILES = ['KnowledgeBase/tissue.json', 'KnowledgeBase/method_fluro_compati.json',
+                    'KnowledgeBase/time_kb.json', 'KnowledgeBase/method_ri_ref.json',
+                    'dataset/Q+AR/src/model_space_signed.json']
+_KB_LOADED_HASHES = {name:sha256_file(name) for name in KB_BINDING_FILES}
+if Path('KnowledgeBase/source_registry.json').is_file():
+    _KB_LOADED_HASHES['KnowledgeBase/source_registry.json'] = sha256_file('KnowledgeBase/source_registry.json')
+_BOUND_REGISTRY = None
+
+
+def configure_sources(question_file, demand_file, demand_manifest=None):
+    global QUESTIONS, DEMAND, _BOUND_REGISTRY
+    registry = FixedDemandRegistry(question_file, demand_file, demand_manifest)
+    QUESTIONS = _load(question_file)
+    DEMAND = registry.vectors
+    _BOUND_REGISTRY = registry
+    return registry
+
+
+def input_binding(question):
+    if _BOUND_REGISTRY is None:
+        raise ValueError('Configure and validate question/demand sources before building RAG cards')
+    vector = _BOUND_REGISTRY.get(question['question_id'], question['question'])
+    if question != _BOUND_REGISTRY.questions[str(question['question_id'])]:
+        raise ValueError('Question metadata differs from the fixed-demand snapshot')
+    paths = list(_KB_LOADED_HASHES)
+    actual_paths = set(KB_BINDING_FILES)
+    if Path('KnowledgeBase/source_registry.json').is_file():
+        actual_paths.add('KnowledgeBase/source_registry.json')
+    if actual_paths != set(paths) or any(sha256_file(name) != _KB_LOADED_HASHES[name] for name in paths):
+        raise ValueError('Knowledge base changed after loading; start a new builder process')
+    return {'schema_version':RAG_BINDING_VERSION,
+            'question_sha256':json_hash(question),
+            'question_text_sha256':json_hash(question['question']),
+            'demand_sha256':json_hash(vector),
+            'kb_files_sha256':{name:sha256_file(name) for name in paths},
+            'source_registry_sha256':_KB_LOADED_HASHES.get('KnowledgeBase/source_registry.json')}
 
 
 def _norm(s):
@@ -536,8 +578,10 @@ def build_one(q, ri_aware=False):
         ri_guidance = RI_BAND_LABEL[_tissue_ri_band(th.get('tissue_inferred', ''))]
         feas['ri_family_guidance'] = ri_guidance
     prompt_block = _render(scn, target_cards, mini_index, method_cards, compat, feas, ri_guidance)
-    return {
+    card = {
         'question_id': qid,
+        'input_binding': input_binding(q),
+        'knowledge_status': 'HEURISTIC_ADVISORY_NOT_INDEPENDENT_SCIENTIFIC_REFERENCE',
         'leakage_policy': 'method properties + compatibility records exposed as qualitative status; '
                           'numeric RI/time answer keys, marker specificity tiers, and gold protocol withheld',
         'retrieval': 'metadata-keyed (model-agnostic); candidate methods via coarse tier-support + '
@@ -551,6 +595,8 @@ def build_one(q, ri_aware=False):
         'prompt_block': prompt_block,
     }
 
+    card['card_content_sha256'] = json_hash(card)
+    return card
 
 # Numeric answer-key strings that must NOT appear in any prompt_block.
 # Returns (ri_decimal_terms, multi_digit_time_terms). Single-digit integers are NOT
@@ -578,19 +624,35 @@ def main():
     ap.add_argument('--outdir', default=OUT_DIR, help='output directory for rag_context_*.json')
     ap.add_argument('--ri-aware', action='store_true',
                     help='v2: rank candidate methods by RI-family match to the tissue class + harden tier-support guidance')
+    ap.add_argument('--question-file', default=f'{SRC_DIR}/question_final.json')
+    ap.add_argument('--demand-vectors', default=f'{SRC_DIR}/demand_vectors_all.json')
+    ap.add_argument('--demand-manifest')
     args = ap.parse_args()
+    registry = configure_sources(args.question_file, args.demand_vectors, args.demand_manifest)
 
     outdir = args.outdir
     os.makedirs(outdir, exist_ok=True)
+    binding = {'version':RAG_BINDING_VERSION,'questions':json_hash(QUESTIONS),'demands':json_hash(DEMAND),
+               'kb_files':input_binding(QUESTIONS[0])['kb_files_sha256'],'ri_aware':args.ri_aware}
+    ensure_manifest(Path(outdir)/'rag_context_index.json', binding)
     qs = QUESTIONS if not args.qids else [q for q in QUESTIONS if q['question_id'] in set(args.qids)]
 
     built = []
     for q in qs:
         card = build_one(q, ri_aware=args.ri_aware)
         path = os.path.join(outdir, f"rag_context_{card['question_id']}.json")
-        with open(path, 'w', encoding='utf-8') as f:
-            json.dump(card, f, indent=2, ensure_ascii=False)
+        if Path(path).exists():
+            if _load(path) != card:
+                raise ValueError('Refusing to overwrite changed frozen RAG card: '+path)
+        else:
+            with open(path, 'x', encoding='utf-8') as f:
+                json.dump(card, f, indent=2, ensure_ascii=False)
         built.append(card)
+    index = {'binding':binding,'cards':{f"rag_context_{c['question_id']}.json":c['card_content_sha256'] for c in built}}
+    index_path = Path(outdir)/'rag_context_index.json'
+    if index_path.exists():
+        if _load(index_path) != index: raise ValueError('Changed RAG index; use a new directory')
+    else: index_path.write_text(json.dumps(index,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
     print(f"Built {len(built)} rag_context files (ri_aware={args.ri_aware}) -> {outdir}/")
 
     if args.check_leakage:

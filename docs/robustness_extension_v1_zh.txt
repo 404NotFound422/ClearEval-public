@@ -1,0 +1,77 @@
+ClearEval OEQ 鲁棒性扩展 v1（2026-10-04）
+
+交付范围
+本机开发版在原有“答案抽取→参数与实体校验→确定性公式→分项及总分”的主链上，加入以下四类诊断。原有效性公式仍由 OEQ_run_grading_new.py 的 calculate_effectiveness_score 执行，聚合仍复用 results/oeq_metrics.py。未补写知识库，未扩展成像结果评价；知识库证据层由用户另行补充。
+
+1. JSON 抽取忠实性和评分影响
+模块：oeq_fidelity_impact.py。
+严格解析 JSON；逐事实核对原答案的精确跨度、实体、值、单位及变换；显式缺失与未知继续传播。候选抽取与独立人工参考按 JSON pointer 对齐，参考自身不忠实或未决时不能充当 gold。
+评分影响固定问题、知识库、公式、需求向量及原有 Com/Cor，只将候选抽取替换为人工抽取，再调用原有效性公式。报告各分项的 manual-minus-candidate 差值；没有经过参考审核的输入变化不能被归因于抽取误差。显式 null 的比较不会被伪造为零分。
+主要接口：compare_inventories、measure_score_impact、evaluate_fidelity_impact。
+待实证：真实原答案的独立人工抽取；对应自动抽取错误率及分数变化。工程反例与固定 SDK 测试不构成真实答案的人工一致性结果。
+
+2. 单方法替代方案与关键错误
+主流程经 oeq_robustness.py 调用既有 oeq_scientific.apply_assessment。
+完整候选按原问题、原答案、完整单方法候选及冻结条件绑定；检查硬条件、实体和候选内一致性，保留 SAT / VIOL / U 及理由。合理替代可依据适用条件成立，不要求复刻参考答案。
+完整科学可接受性必须同时通过候选整体条件与科学适用性，并绑定独立审核的完整条件集合。只审核局部条件不能获得“完整科学验证”标签。对同一方法的不同可行方案进行条件判定，不引入自行串联多方法路线。
+待实证：完整真实替代方案的独立科学标签，尤其条件相近但含关键错误的负例。独立条件合同标签和完整科学标签分别记录，不互相替代。
+
+3. 独立重复评分和跨模型家族比较
+模块：oeq_score_stability.py；接口 make_trial_plan、analyze_score_stability。
+冻结 question / protocol / numeric_formula / knowledge_base / prompt / request_settings 的 SHA-256，以及 judge 的 family / model / revision / digest。所有计划试次进入分母。
+独立试次需要独立 trial_id、invocation_id、request_id；缓存、重放、重复请求不能当作重复实测。技术失败先于旧分数处理，不回退到失败记录中的旧数字。分别报告抽取一致性与原有数值分项的均值、样本标准差、范围及匹配的跨家族差异。
+分析器只消费明确提供的已保存试次，不派发新请求。单条 OEQ 记录明确标为“不能从单次评分估计稳定性”；重复数据存在也不擅自宣布稳定，稳定阈值须预先规定。
+待实证：冻结同一真实答案的独立重复请求，以及来自不同模型家族的受控评分。已有零散历史运行不自动计入这一实验。
+
+4. 多目标关系
+模块：oeq_objective_bridge.py；接口 build_objective_diagnostics、build_relation_binding。
+先判断候选可行性，再按明确单位、方向、区间和来源比较支配 / 取舍 / 未决关系，主流程报告保留此诊断。目标必须显式声明非成像语义范围；组织光透明方案的时间、资源、任务适配、标记兼容、折射率域匹配、保留要求等可进入比较。
+实测记录、目标要求、候选声明及公式适配代理分别记录来源。公式适配代理不被当成实际测量。缺测、单位不兼容或可行性未决不会被伪造为优劣。
+独立关系参考需绑定两份完整候选、同一任务、目标集合及审核来源；辅助标注或绑定不匹配不能计入独立参考数。
+待实证：真实非成像目标记录和相应独立关系标签。无需增加成像结果评价。
+
+正常 OEQ 使用
+沿用原有正常运行命令；benchmark 模式默认附加鲁棒性诊断。已有审核参考时额外传入：
+    --assessment-mode benchmark --robustness-inputs <输入文件.json>
+只评已有答案仍使用原来的 --eval-only、--response-dir、--question-file 等参数。该命令仍可能调用教师；本次验证只使用固定 SDK，并没有执行新的实际模型请求。
+
+可选输入集合格式：
+{
+  "schema_version": "oeq-robustness-input-set-v1",
+  "entries": [
+    {
+      "schema_version": "oeq-robustness-inputs-v1",
+      "question_sha256": "由 evaluation_contract.json_hash(完整冻结问题) 生成",
+      "protocol_sha256": "由 fidelity.text_hash(精确原答案) 生成",
+      "candidate_inventory": "按 oeq_fidelity_impact.py inventory 格式提供，可省略",
+      "manual_inventory": "独立人工参考 inventory，可省略",
+      "manual_extraction": "与既有评分器兼容的人工扁平抽取，可省略",
+      "candidate_assessment": "context / proposal / 独立审核参考，可省略",
+      "objective_comparison": "完整候选对及独立关系参考，可省略"
+    }
+  ]
+}
+上面是字段说明，不是可直接运行的填充输入。examples/robustness_inputs.empty.json 是有效的空集合；未提供参考时报告保持缺失 / 未决，独立参考数为零。输入集合每条仅允许规定字段；重复绑定或错误绑定拒绝，所选人工抽取/候选/目标输入在教师请求之前检查。
+
+人工 inventory 要点
+schema_version 为 oeq-fidelity-inventory-v1；original_text_sha256 对应精确原答案；field_scope 列出需要审核的 JSON pointer；provenance 记录 record_id、role=MANUAL_REFERENCE、independence=INDEPENDENT、assistance=[]。
+facts 每条包括 path、state、value、value_kind、support。已报告事实的 support 保留原文 spans（start/end/quote）、context_span、raw_value、transform，以及适用时的 unit/basis/polarity/scope。显式空值使用 EXPLICIT_NULL、value=null、support.kind=MISSING。
+独立人工身份是来源声明与绑定校验，不是由软件自动证明。不得将教师生成的参考标记成独立人工参考。
+
+保存、续跑和结果消费
+每条结果保留原问题/原答案、可选输入、数值绑定和完整诊断；数值绑定限定既有公式与知识库文件路径。完整性校验会重算整个诊断，并与原数值输入交叉核验。仅修改内容并重算自带哈希，不能绕过校验。
+已有合法数值结果的重放可修复缺失或损坏的诊断，不产生额外教师请求。消费者和汇总工具也核验 required 报告，保留全部计划记录及各类参考计数；没有独立科学参考时 accuracy 保持 null。
+
+本轮验证
+完整 unittest：667 项运行，0 失败，0 错误，1 跳过，即 666 项通过。跳过的是 jsonschema 缺失时的可选正式 schema 验证；核心契约测试仍执行。
+针对性回归：168/168 通过；新增主流程集成测试：9/9 通过（已包含于完整测试）。
+GPT 6.1 sol 对集成代码完成审查，所指出的输入绑定、报告重算、参考门槛等问题已修复；该审查是工程审查，不是独立科学 gold。
+本轮新增实际模型请求：0。代码仍只在本机开发目录，服务器主目录尚未应用。
+最终源文件哈希和证据路径见同目录的审计交付 CURRENT_ROBUSTNESS_STATE.json。
+
+可作为方法贡献研究的核心
+原文事实→抽取参数→原公式分数的可追溯链，加上抽取替换的受控评分影响；完整单方法方案在硬条件下的替代可接受性；冻结输入后分开分析抽取变化与评分变化；可行性约束下、保留未知的非成像目标偏序关系。
+这些是可检验的方法贡献候选。工程测试通过尚不能证明优于 baseline；须用独立参考、同信息权限及预先定义的指标，验证接受合理替代、发现关键错误、拒绝伪证据及降低评分漂移的效果。
+
+后续证据责任
+评价器已经提供对接、校验、重算和统计接口；真实原答案、完整候选及目标来源可由现有材料整理。独立人工抽取、完整科学可接受性和目标关系标签须由独立标注者审核；专家一致性按用户安排保留。知识库证据补充由用户另行进行。

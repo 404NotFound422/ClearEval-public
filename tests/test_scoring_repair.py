@@ -118,8 +118,8 @@ class TimeScoringTests(unittest.TestCase):
         self.assertEqual(over['tau_hours'], 3)
 
     def test_missing_extraction_is_distinguished_from_missing_kb(self):
-        score, detail = time_score_details(0, self.row, 'T')
-        self.assertEqual(score, 0)
+        score, detail = time_score_details(None, self.row, 'T')
+        self.assertIsNone(score)
         self.assertEqual(detail['status'], 'missing_or_invalid_time')
         self.assertEqual(time_score_details(30, None, 'T')[1]['status'], 'missing_kb')
         self.assertEqual(time_score_details(float('nan'), self.row, 'T')[1]['status'], 'missing_or_invalid_time')
@@ -129,8 +129,26 @@ class TimeScoringTests(unittest.TestCase):
             for tier, row in tiers.items():
                 with self.subTest(method=method, tier=tier):
                     score, detail = time_score_details(row['clearing_time_median_h'], row, tier)
-                    self.assertEqual(score, 3)
-                    self.assertEqual(detail['status'], 'scored')
+                    if method in ("boneclear", "switch") and ("染色步骤" in row.get("time_scope", "")):
+                        self.assertIsNone(score)
+                        self.assertEqual(detail["status"], "time_scope_conflict")
+                    else:
+                        self.assertEqual(score, 3)
+                        self.assertEqual(detail['status'], 'scored')
+
+    def test_explicit_time_scope_conflict_preserves_window_but_blocks_score(self):
+        row = {"clearing_time_min_h": 1, "clearing_time_median_h": 2, "clearing_time_max_h": 3,
+               "time_excludes_labeling": "yes", "time_scope": "包括固定、染色步骤、洗涤"}
+        score, detail = time_score_details(2, row, "synthetic")
+        self.assertIsNone(score)
+        self.assertEqual(detail["status"], "time_scope_conflict")
+        self.assertEqual((detail["min_hours"], detail["median_hours"], detail["max_hours"]), (1, 2, 3))
+        row["time_scope"] = "包括脱脂、洗涤；不含免疫/染料标记步骤"
+        self.assertEqual(time_score_details(2, row, "synthetic")[0], 3)
+        row["time_scope"] = "Includes fixation and staining; before imaging"
+        self.assertIsNone(time_score_details(2, row, "synthetic")[0])
+        row["time_scope"] = "Includes washing, excluding labeling"
+        self.assertEqual(time_score_details(2, row, "synthetic")[0], 3)
 
 
 class VersionTests(unittest.TestCase):
@@ -184,8 +202,17 @@ class FakeTeacher:
         }})}
 
 
+class FakeGenerator:
+    model_name = "offline-generator"
+
+    def __init__(self):
+        self._acall = AsyncMock()
+
+
 class RunnerTests(unittest.IsolatedAsyncioTestCase):
     def setUp(self):
+        self.previous_profile = runner.DEMAND_PROFILE
+        runner.DEMAND_PROFILE = "fixed"
         self.previous_question_file = runner.QUESTION_FILE
         self.previous_demands, self.previous_manifest = runner.DEMAND_FILE, runner.DEMAND_MANIFEST
         runner.DEMAND_FILE, runner.DEMAND_MANIFEST = DEMANDS, None
@@ -197,6 +224,7 @@ class RunnerTests(unittest.IsolatedAsyncioTestCase):
 
     def tearDown(self):
         self.log_patch.stop()
+        runner.DEMAND_PROFILE = self.previous_profile
         runner.DEMAND_FILE, runner.DEMAND_MANIFEST = self.previous_demands, self.previous_manifest
         runner.configure_question_snapshot(self.previous_question_file)
 
@@ -212,15 +240,131 @@ class RunnerTests(unittest.IsolatedAsyncioTestCase):
                 self.teacher, entry['specific_question'], entry['model_response'], {}, entry, '')
         self.assertNotIn('_error', result)
         self.assertEqual(self.teacher.calls, 1)
-        eff = result['scores']['effectiveness']
+        eff = result['legacy_diagnostics']['scores']['effectiveness']
         detail = eff['s_time']['computation']
         self.assertNotIn('9999', eff['s_time']['reasoning'])
         self.assertIn(str(detail['min_hours']), eff['s_time']['reasoning'])
         self.assertEqual(result['extraction']['protocol_time_hours'], [9999, 10000])
+        self.assertFalse(result['cce_eligible'])
+        self.assertIsNone(result['official_scores'])
+        self.assertNotIn('scores', result)
+        self.assertEqual(result['integrity']['fidelity']['fidelity_status'], 'LEGACY_STRUCTURE_ONLY')
         expected = runner.calculate_method_suitability(runner.fixed_demands().get(5, self.question['question']),
                                                        runner.find_signed_method('iDISCO+'))
         self.assertEqual(eff['s_method']['score'], expected)
         self.assertNotIn('generated_timestamp', result['meta_data'])
+
+    async def test_normal_process_reports_completed_diagnostics_without_science_failure(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            with patch.object(runner, "OEQ_SCORE_DIR", tmp), patch.object(runner, "process_model", return_value=[self.response()]):
+                summary = await runner.process_and_evaluate_model(
+                    "offline-local", object(), [self.question], {}, [], self.teacher, {}, "",
+                    shot_type="1-shot", eval_concurrency=1, gen_concurrency=1, assessment_mode="legacy")
+            self.assertIsNone(summary["error"])
+            self.assertEqual(summary["n_evaluated"], 1)
+            self.assertEqual(summary["n_legacy_diagnostics"], 1)
+            self.assertEqual(summary["n_official_scores"], 0)
+            sidecar = json.loads((Path(tmp) / "evaluation_results_offline-local_1-shot.json.diagnostics.json").read_text(encoding="utf-8"))
+            indices = sidecar["legacy_continuous_indices"]
+            self.assertEqual(indices["status"], "UNCALIBRATED_QUALITY_DIAGNOSTIC")
+            self.assertEqual(indices["complete_count"], 1)
+            self.assertEqual(set(indices["means"]), {"Com", "Cor", "Eff", "I_A"})
+            self.assertIsNone(sidecar["formal_cce"])
+
+    async def test_normal_main_loads_config_generates_grades_and_saves_diagnostics(self):
+        from types import SimpleNamespace
+        class SDKClient:
+            calls = []
+            def __init__(self, **kwargs):
+                pass
+            def generate(self, **kwargs):
+                SDKClient.calls.append(kwargs["model"])
+                if kwargs["model"] == "offline-teacher":
+                    payload = {"scores": scored_item(1)["evaluation"]["scores"], "extraction": {
+                        "method_name": "iDISCO+", "clearing_total_time_hours": 35,
+                        "marker_dict": {"Alexa Fluor 647": "NF200"}}}
+                    content = json.dumps(payload)
+                else:
+                    content = "**Chosen Method:** iDISCO+\n**Protocol Steps:** " + "offline fixture " * 40
+                return {"response": content, "done": True, "done_reason": "stop", "eval_count": 20}
+            def close(self):
+                pass
+        with tempfile.TemporaryDirectory() as tmp:
+            config = Path(tmp) / "models.json"
+            config.write_text(json.dumps({"models": [
+                {"name": "offline-local", "type": "Ollama", "model_name": "offline-generator", "transport": "sdk"},
+                {"name": "offline-teacher", "type": "Ollama", "model_name": "offline-teacher", "transport": "sdk", "format": "json"},
+            ]}), encoding="utf-8")
+            responses, scores = Path(tmp) / "responses", Path(tmp) / "scores"
+            with patch.dict("sys.modules", {"ollama": SimpleNamespace(Client=SDKClient)}), patch.object(
+                    runner, "OEQ_OUTPUT_DIR", str(responses)), patch.object(runner, "OEQ_SCORE_DIR", str(scores)):
+                code = await runner.main([
+                    "--assessment-mode", "legacy", "--model-config", str(config), "--models", "offline-local", "--teacher", "offline-teacher",
+                    "--question-file", OLD_QUESTIONS, "--demand-vectors", DEMANDS, "--qids", "5",
+                    "--gen-concurrency", "1", "--eval-concurrency", "1",
+                    "--response-dir", str(responses), "--score-dir", str(scores),
+                ])
+            self.assertEqual(code, 0)
+            self.assertEqual(SDKClient.calls, ["offline-generator", "offline-teacher"])
+            self.assertTrue((responses / "from_offline-local_1-shot.json").is_file())
+            sidecar = json.loads((scores / "evaluation_results_offline-local_1-shot.json.diagnostics.json").read_text(encoding="utf-8"))
+            self.assertEqual(sidecar["technical_valid_count"], 1)
+            self.assertEqual(sidecar["legacy_continuous_indices"]["complete_count"], 1)
+            self.assertIsNone(sidecar["formal_cce"])
+
+    async def test_preflight_only_creates_no_clients_and_reports_missing_config(self):
+        from models.Model_Loader import ModelLoader
+        with patch.object(ModelLoader, "load_models", side_effect=AssertionError("client construction forbidden")):
+            code = await runner.main(["--preflight-only", "--question-file", OLD_QUESTIONS,
+                                     "--demand-vectors", DEMANDS, "--model-config", "nonexistent-model-config.json"])
+        self.assertEqual(code, 2)
+
+    async def test_teacher_successful_provider_metadata_is_preserved(self):
+        entry = self.response()
+        content = json.dumps({"scores": scored_item(1)["evaluation"]["scores"],
+            "extraction": {"method_name": None, "marker_dict": {}, "clearing_total_time_hours": None}})
+        teacher = FakeGenerator()
+        metadata = {"technical_status": "VALID", "finish_reason": "stop", "completion_tokens": 123}
+        teacher._acall.return_value = {"content": content, "metadata": metadata}
+        result = await runner.evaluate_response_with_teacher(
+            teacher, entry["specific_question"], entry["model_response"], {}, entry, "")
+        self.assertEqual(result["technical_status"], "VALID")
+        self.assertEqual(result["teacher_generation"]["metadata"], metadata)
+        self.assertEqual(result["teacher_generation"]["raw_content"], content)
+
+    async def test_teacher_valid_json_with_failed_metadata_is_not_completed(self):
+        entry = self.response()
+        content = json.dumps({"scores": scored_item(1)["evaluation"]["scores"],
+            "extraction": {"method_name": None, "marker_dict": {}, "clearing_total_time_hours": None}})
+        teacher = FakeGenerator()
+        teacher._acall.return_value = {"content": content,
+            "metadata": {"technical_status": "FAILED", "finish_reason": "length"}}
+        result = await runner.evaluate_response_with_teacher(
+            teacher, entry["specific_question"], entry["model_response"], {}, entry, "")
+        self.assertEqual(result["technical_status"], "FAILED")
+        self.assertEqual(result["failure_stage"], "TEACHER_GENERATION")
+        self.assertEqual(result["teacher_generation"]["raw_content"], content)
+        self.assertNotIn("legacy_diagnostics", result)
+        self.assertEqual(teacher._acall.await_count, 1)
+
+    async def test_teacher_exception_partial_and_safe_metadata_are_preserved(self):
+        entry = self.response()
+        partial = '{"scores": {"completeness":'
+        class OutputError(ValueError):
+            def __init__(self):
+                super().__init__("Bearer test-private-credential")
+                self.response_data = {"content": "", "raw_content": partial,
+                    "metadata": {"technical_status": "FAILED", "finish_reason": "length"}}
+        teacher = FakeGenerator()
+        teacher._acall.side_effect = OutputError()
+        result = await runner.evaluate_response_with_teacher(
+            teacher, entry["specific_question"], entry["model_response"], {}, entry, "")
+        self.assertEqual(result["technical_status"], "FAILED")
+        self.assertEqual(result["teacher_generation"]["raw_content"], partial)
+        self.assertEqual(result["teacher_generation"]["metadata"]["finish_reason"], "length")
+        self.assertNotIn("test-private-credential", json.dumps(result))
+        self.assertNotIn("legacy_diagnostics", result)
+        self.assertEqual(teacher._acall.await_count, 1)
 
     async def test_bad_question_fails_before_judge_call(self):
         entry = self.response()
@@ -253,30 +397,47 @@ class RunnerTests(unittest.IsolatedAsyncioTestCase):
         self.assertIsInstance(value['meta_data']['sample_info'], str)
         self.assertIsNone(value['extraction']['protocol_time_hours'])
 
+    async def test_single_method_pipeline_writes_explicit_diagnostics_and_kb_coverage(self):
+        with tempfile.TemporaryDirectory() as tmp, patch.object(runner, 'OEQ_SCORE_DIR', tmp):
+            entry = self.response()
+            path = await runner.evaluate_responses('single-method-smoke', [entry], self.teacher, {}, '', assessment_mode='legacy')
+            records = json.loads(Path(path).read_text(encoding='utf-8'))
+            summary = json.loads(Path(path + '.diagnostics.json').read_text(encoding='utf-8'))
+            self.assertEqual(summary['technical_valid_count'], 1)
+            self.assertEqual(summary['technical_failure_count'], 0)
+            self.assertEqual(summary['legacy_diagnostic_count'], 1)
+            self.assertEqual(summary['components']['effectiveness.s_method']['known_count'], 1)
+            self.assertIsNone(summary['formal_cce'])
+            self.assertEqual(summary['formal_cce_status'], 'NOT_COMPUTED_FROM_LEGACY_PROPOSALS')
+            self.assertFalse(records[0]['evaluation']['cce_eligible'])
+            self.assertEqual(aggregate_items(records)['sample_count'], 0)
+            await runner.evaluate_responses('single-method-smoke', [entry], self.teacher, {}, '', assessment_mode='legacy')
+            self.assertEqual(self.teacher.calls, 1)
+
     async def test_resume_reuses_unchanged_scores_but_rejects_changed_response(self):
         with tempfile.TemporaryDirectory() as tmp, patch.object(runner, 'OEQ_SCORE_DIR', tmp):
             entry = self.response()
-            path = await runner.evaluate_responses('test', [entry], self.teacher, {}, '')
+            path = await runner.evaluate_responses('test', [entry], self.teacher, {}, '', assessment_mode='legacy')
             original = Path(path).read_bytes()
-            await runner.evaluate_responses('test', [entry], self.teacher, {}, '')
+            await runner.evaluate_responses('test', [entry], self.teacher, {}, '', assessment_mode='legacy')
             self.assertEqual(self.teacher.calls, 1)
             changed = {**entry, 'model_response': entry['model_response'] + ' changed'}
             with self.assertRaisesRegex(ValueError, 'Response changed'):
-                await runner.evaluate_responses('test', [changed], self.teacher, {}, '')
+                await runner.evaluate_responses('test', [changed], self.teacher, {}, '', assessment_mode='legacy')
             self.assertEqual(Path(path).read_bytes(), original)
             self.assertEqual(self.teacher.calls, 1)
 
     async def test_resuming_subset_preserves_other_failure_records(self):
         with tempfile.TemporaryDirectory() as tmp, patch.object(runner, 'OEQ_SCORE_DIR', tmp):
             entry = self.response()
-            path = await runner.evaluate_responses('test', [entry], self.teacher, {}, '')
+            path = await runner.evaluate_responses('test', [entry], self.teacher, {}, '', assessment_mode='legacy')
             saved = json.loads(Path(path).read_text(encoding='utf-8'))
             saved.append({'question_id': 6, 'evaluation': {'_error': 'fixture parse failure'},
                           'scoring_contract_sha256': saved[0]['scoring_contract_sha256'],
                           'response_sha256': 'other-input'})
             saved[0]['evaluation'] = {'_error': 'retry selected item'}
             Path(path).write_text(json.dumps(saved), encoding='utf-8')
-            await runner.evaluate_responses('test', [entry], self.teacher, {}, '')
+            await runner.evaluate_responses('test', [entry], self.teacher, {}, '', assessment_mode='legacy')
             after = json.loads(Path(path).read_text(encoding='utf-8'))
             self.assertEqual({item['question_id'] for item in after}, {5, 6})
             self.assertEqual(next(item for item in after if item['question_id'] == 6), saved[1])
@@ -290,9 +451,123 @@ class RunnerTests(unittest.IsolatedAsyncioTestCase):
             self.assertEqual(summary['n_generated'], 1)
             self.assertIsNone(summary['error'])
 
+    async def test_empty_actual_provider_output_is_failed_and_does_not_count_as_generated(self):
+        model = FakeGenerator()
+        model._acall.return_value = {"content": ""}
+        with tempfile.TemporaryDirectory() as tmp, patch.object(runner, "OEQ_OUTPUT_DIR", tmp):
+            summary = await runner.process_and_evaluate_model(
+                "empty-provider", model, [self.question], {}, [], None, {}, "", skip_evaluation=True)
+            rows = json.loads(Path(tmp, "from_empty-provider_1-shot.json").read_text(encoding="utf-8"))
+        self.assertEqual(summary["n_generated"], 0)
+        self.assertEqual(summary["missing_or_invalid_generation_ids"], [5])
+        self.assertIn("Incomplete generation", summary["error"])
+        self.assertEqual(rows[0]["generation_status"], "FAILED")
+        self.assertEqual(rows[0]["generation"]["failure_code"], "EMPTY_OR_INVALID_CONTENT")
+        self.assertEqual(model._acall.await_count, 1)
+
+    async def test_successful_provider_metadata_is_preserved(self):
+        model = FakeGenerator()
+        metadata = {"technical_status": "VALID", "finish_reason": "stop", "prompt_tokens": 12, "completion_tokens": 34}
+        model._acall.return_value = {"content": self.response()["model_response"], "metadata": metadata}
+        with tempfile.TemporaryDirectory() as tmp, patch.object(runner, "OEQ_OUTPUT_DIR", tmp):
+            summary = await runner.process_and_evaluate_model(
+                "valid-provider", model, [self.question], {}, [], None, {}, "", skip_evaluation=True)
+            row = json.loads(Path(tmp, "from_valid-provider_1-shot.json").read_text(encoding="utf-8"))[0]
+        self.assertEqual(summary["n_generated"], 1)
+        self.assertIsNone(summary["error"])
+        self.assertEqual(row["generation"]["metadata"], metadata)
+        self.assertEqual(row["generation_status"], "VALID")
+
+    async def test_partial_exception_response_is_preserved_and_only_explicit_resume_retries(self):
+        import contextlib
+        import io
+        partial = self.response()["model_response"] + "partial unfinished tail"
+        class OutputError(ValueError):
+            def __init__(self):
+                super().__init__("Bearer test-private-credential")
+                self.response_data = {"content": "", "raw_content": partial,
+                    "metadata": {"technical_status": "FAILED", "finish_reason": "length"}}
+        model = FakeGenerator()
+        model._acall.side_effect = [OutputError(), {"content": self.response()["model_response"],
+                "metadata": {"technical_status": "VALID", "finish_reason": "stop"}}]
+        stdout = io.StringIO()
+        with tempfile.TemporaryDirectory() as tmp, patch.object(runner, "OEQ_OUTPUT_DIR", tmp), contextlib.redirect_stdout(stdout):
+            first = await runner.process_and_evaluate_model(
+                "partial-provider", model, [self.question], {}, [], None, {}, "", skip_evaluation=True)
+            failure = json.loads(Path(tmp, "from_partial-provider_1-shot.json").read_text(encoding="utf-8"))[0]
+            self.assertEqual(model._acall.await_count, 1)
+            second = await runner.process_and_evaluate_model(
+                "partial-provider", model, [self.question], {}, [], None, {}, "", skip_evaluation=True)
+            row = json.loads(Path(tmp, "from_partial-provider_1-shot.json").read_text(encoding="utf-8"))[0]
+        self.assertEqual(first["n_generated"], 0)
+        self.assertIsNotNone(first["error"])
+        self.assertEqual(failure["generation"]["raw_content"], partial)
+        self.assertEqual(failure["generation"]["metadata"]["finish_reason"], "length")
+        self.assertEqual(second["n_generated"], 1)
+        self.assertIsNone(second["error"])
+        self.assertEqual(len(row["generation_attempts"]), 2)
+        self.assertEqual(row["generation_attempts"][0]["raw_content"], partial)
+        self.assertNotIn("test-private-credential", stdout.getvalue())
+        self.assertNotIn("test-private-credential", json.dumps(row))
+        self.assertEqual(model._acall.await_count, 2)
+
+    async def test_long_content_with_failed_provider_metadata_is_not_scored(self):
+        model = FakeGenerator()
+        model._acall.return_value = {"content": self.response()["model_response"],
+            "metadata": {"technical_status": "FAILED", "finish_reason": "length"}}
+        with tempfile.TemporaryDirectory() as tmp, patch.object(runner, "OEQ_OUTPUT_DIR", tmp), \
+                patch.object(runner, "OEQ_SCORE_DIR", tmp), patch.object(runner, "evaluate_responses", AsyncMock()) as score:
+            summary = await runner.process_and_evaluate_model(
+                "failed-provider", model, [self.question], {}, [], self.teacher, {}, "")
+            self.assertEqual(score.await_args.args[1], [])
+        self.assertEqual(summary["n_generated"], 0)
+        self.assertIsNotNone(summary["error"])
+        self.assertEqual(self.teacher.calls, 0)
+
+    async def test_eval_only_rejects_cached_partial_despite_nonempty_text(self):
+        entry = dict(self.response(), metadata={"finish_reason": "length", "technical_status": "FAILED"})
+        with tempfile.TemporaryDirectory() as tmp, patch.object(runner, "OEQ_OUTPUT_DIR", tmp):
+            source = Path(tmp, "from_cached-partial_1-shot.json")
+            source.write_text(json.dumps([entry]), encoding="utf-8")
+            original = source.read_bytes()
+            summary = await runner.process_and_evaluate_model(
+                "cached-partial", None, [self.question], {}, [], None, {}, "",
+                skip_generation=True, skip_evaluation=True)
+            self.assertEqual(source.read_bytes(), original)
+        self.assertEqual(summary["n_generated"], 0)
+        self.assertIsNotNone(summary["error"])
+
+    async def test_missing_generated_question_fails_generate_only_summary(self):
+        q6 = next(q for q in runner._QUESTION_LIST if q["question_id"] == 6)
+        with patch.object(runner, "process_model", return_value=[self.response()]):
+            summary = await runner.process_and_evaluate_model(
+                "missing-question", None, [self.question, q6], {}, [], None, {}, "", skip_evaluation=True)
+        self.assertEqual(summary["n_generated"], 1)
+        self.assertEqual(summary["missing_or_invalid_generation_ids"], [6])
+        self.assertIsNotNone(summary["error"])
+
+    async def test_main_generate_only_returns_failure_for_actual_empty_acall(self):
+        from models.Model_Loader import ModelLoader
+        model = FakeGenerator()
+        model.model_name = "offline-empty"
+        model._acall.return_value = {"content": "", "metadata": {"finish_reason": "stop"}}
+        with tempfile.TemporaryDirectory() as tmp:
+            config = Path(tmp) / "models.json"
+            config.write_text(json.dumps({"models": [{"name": "offline-empty", "type": "Ollama", "model_name": "offline-empty"}]}), encoding="utf-8")
+            responses = Path(tmp) / "responses"
+            with patch.object(ModelLoader, "load_models", return_value={"offline-empty": model}), \
+                    patch.object(runner, "OEQ_OUTPUT_DIR", str(responses)):
+                code = await runner.main([
+                    "--no-evaluation", "--model-config", str(config), "--models", "offline-empty",
+                    "--question-file", OLD_QUESTIONS, "--demand-vectors", DEMANDS, "--qids", "5",
+                    "--response-dir", str(responses), "--gen-concurrency", "1"])
+            row = json.loads((responses / "from_offline-empty_1-shot.json").read_text(encoding="utf-8"))[0]
+        self.assertEqual(code, 1)
+        self.assertEqual(row["generation_status"], "FAILED")
+
     async def test_generation_resume_keeps_subset_and_rejects_changed_prompt_inputs(self):
         q6 = next(q for q in runner._QUESTION_LIST if q['question_id'] == 6)
-        mock_generate = AsyncMock(return_value=self.response()['model_response'])
+        mock_generate = AsyncMock(return_value={'content': self.response()['model_response'], 'technical_status': 'VALID', 'metadata': {}})
         with tempfile.TemporaryDirectory() as tmp, patch.object(runner, 'OEQ_OUTPUT_DIR', tmp), \
                 patch.object(runner, 'get_model_response', mock_generate):
             await runner.process_model('test', None, [self.question, q6], {}, [])

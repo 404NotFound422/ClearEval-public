@@ -1,0 +1,72 @@
+{
+  "schema_version": "source-condition-rules-v1",
+  "interpretation": "Local source recommendation diagnostics, never hard scientific constraints or wet-lab failure predictions",
+  "rules": [
+    {
+      "id": "CUBIC_RPLUS_AVOID_4C_STORAGE",
+      "method_key": "CUBIC",
+      "source_id": "CUBIC_ADVANCED_NATPROTOC_2019",
+      "source_sha256": "d5fa3cd70c332157ce22cd536b4a0d25ac38e1135c0bd4cb2859c4e4d82810b3",
+      "source_version": "Nature Protocols 14, 3506-3537 (2019)",
+      "source_passage_ids": [
+        "P1",
+        "P2"
+      ],
+      "source_guidance_span": {
+        "start": 75141,
+        "end": 75413,
+        "quote": "Organs can be left in CUBIC-R + at room temperature. The maximum storage period depends on the staining dye. Organs stained with PI and RD2 can be stored for >1 month at room temperature in a dark environment. Avoid storage at 4 \u00b0C, so that the samples do not crystallize."
+      },
+      "type": "AUTHOR_RECOMMENDATION",
+      "condition_type": "EXPLICIT_IMMERSED_STORAGE_TEMPERATURE",
+      "medium_family": "CUBIC-R+",
+      "avoid_temperature_C": 4,
+      "source_procedure_scope": "Step4A(vii), final non-gel CUBIC-L/R+ pause point",
+      "source_scope_limit": "PI/RD2 shelf-life examples do not establish other labels; no guaranteed crystallization or wet-lab failure",
+      "decision_policy": "ADVISORY_ONLY_NEVER_CHANGE_REQUIREMENT_STATE",
+      "scientific_validation": "PENDING_USER_EXPERT"
+    },
+    {
+      "id": "SEEDB2S_PBS_PREPARATION_ROLE",
+      "method_key": "SeeDB2",
+      "source_id": "SEEDB2_PROTOCOL_2018",
+      "source_sha256": "f7a504425ee9b28b41dc57939894a83dfeb9261bf08d1455158b7886185f7aa0",
+      "source_version": "Bio-protocol 8(20):e3046; corrected by e3095",
+      "source_passage_ids": [
+        "PAGE12"
+      ],
+      "source_guidance_span": {
+        "start": 26635,
+        "end": 26840,
+        "quote": "a. Tris-EDTA buffer pH 7.6 (Recipe 2) is used to prepare SeeDB2S from Histodenz powder.\nDo not use PBS. Phosphate buffer will generate white precipitates after long-term storage\nand impair imaging quality."
+      },
+      "source_recipe_span": {
+        "start": 26608,
+        "end": 27558,
+        "quote": "6. SeeDB2 solutions\nNotes:\na. Tris-EDTA buffer pH 7.6 (Recipe 2) is used to prepare SeeDB2S from Histodenz powder.\nDo not use PBS. Phosphate buffer will generate white precipitates after long-term storage\nand impair imaging quality.\nb. The solution of 0.01% sodium azide can be included in the buffer for long-term preservation.\nDo not store clearing solution for long time.\nc. Pre-made SeeDB2 solutions are also commercialized from FUJIFILM Wako Pure Chemical.\nSolutions Composition\nSeeDB2G with saponin\n(clearing)\n2% saponin in Omnipaque350\nSeeDB2G (mounting) Use Omnipaque350 directly\nOr 7,500 \u03bcl Tris-EDTA (pH 7.6) + 10 g Histodenz\nSeeDB2S with saponin\n(clearing)\n3,780 \u03bcl Tris-EDTA (pH 7.6) + 420 \u03bcl 20% saponin sol ution + 10 g\nHistodenz\nSeeDB2S (mounting) 4,200 \u03bcl Tris-EDTA (pH 7.6) + 10 g Histodenz\nAdd 4,200 \u03bcl Tris-EDTA to a 50 ml conical tube, and then add 10 g\nHistodenz. Use a rotator to fully dissolve the Histodenz in the conical\ntube"
+      },
+      "corrected_by": "SEEDB2_CORRECTION_2018",
+      "correction_binding": {
+        "source_id": "SEEDB2_CORRECTION_2018",
+        "source_sha256": "b5e7998e271a1372d7ed42f9ce576207944a9f5e48230d0f73c5a442c285aa75",
+        "source_version": "Bio-protocol 8(21):e3095; 2018-11-05",
+        "source_passage_ids": [
+          "PAGE1"
+        ],
+        "corrects_source_id": "SEEDB2_PROTOCOL_2018",
+        "source_guidance_span": {
+          "start": 696,
+          "end": 1173,
+          "quote": "After official publication of our protocol in bio -protocol ( https://bio-protocol.org/e3046), we noted an error in the\nprotocol.\nThe recipe for Phosphate -buffered saline (PBS) was in fact the one for 10x PBS. Accordingly, we need to make\ncorrections as follows (in Recipes):\n\u201c1. Phosphate-buffered saline (PBS)\u201d \u2192 \u201c1. 10x Phosphate-buffered saline (10x PBS)\u201d.\n\u201cAdd ddH2O to prepare 1 L PBS\u201d \u2192 \u201cAdd ddH2O to prepare 1 L 10x PBS. Dilute 10 times with ddH 2O to prepare 1x\nPBS\u201d."
+        }
+      },
+      "type": "AUTHOR_SOURCE_RELATION",
+      "condition_type": "EXPLICIT_SEEDB2S_PBS_PREPARATION_ROLE",
+      "medium_family": "SeeDB2S",
+      "source_procedure_scope": "Recipe 6a: SeeDB2S from Histodenz powder; complete Recipe 6 on PAGE12",
+      "source_scope_limit": "Powder PBS preparation is author-recipe nonconformance; stock PBS dilution is local potential risk. Unquantified long-term storage does not prove current precipitation or failure. G and PBS tissue washes are excluded.",
+      "decision_policy": "ADVISORY_ONLY_NEVER_CHANGE_REQUIREMENT_STATE",
+      "scientific_validation": "PENDING_USER_EXPERT"
+    }
+  ]
+}

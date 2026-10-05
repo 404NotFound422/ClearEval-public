@@ -1,31 +1,109 @@
 {
   "schema_version": "method_ri_ref_v1",
-  "description": "Per-method reference RI = the native RI of the sample type each clearing method was historically designed for / performs best on. Used as RI_ref in the S_trans Gaussian-RBF score: closer the question's tissue native RI is to a method's RI_ref, the better that method fits the question. Values are tissue native RI (from tissue_ri.json), not reagent RI.",
+  "description": "Legacy method/tissue-native RI heuristics used only for an uncalibrated diagnostic Gaussian-RBF. These numbers are not source-bound tissue measurements, clearing-solvent RI values, success probabilities, or validated suitability labels.",
   "formula": "S_trans = 3 * exp(-0.5 * ((RI_question_tissue - RI_method_ref) / sigma_RI)^2)",
-  "support_gate": "If (method, tier_code) not in time_kb.json lookup → S_trans = 0 regardless of RI proximity.",
+  "support_gate": "Legacy diagnostic rule only: missing method/tier lookup is NOINFO, not proof that a method cannot support the sample.",
   "ri_ref": {
-    "CUBIC":    {"ri": 1.46, "primary_sample": "mouse whole brain / organs",       "source": "Susaki 2014, Susaki 2015 Nat Protoc"},
-    "ScaleS":   {"ri": 1.46, "primary_sample": "adult mouse brain (slices/whole)", "source": "Hama 2015 Nat Neurosci"},
-    "MACS":     {"ri": 1.46, "primary_sample": "mouse brain / organs",             "source": "Zhu 2020 Nat Commun"},
-    "iDISCO+":  {"ri": 1.47, "primary_sample": "embryos, adult mouse brain, organs","source": "Renier 2014 Cell, 2016"},
-    "FDISCO":   {"ri": 1.47, "primary_sample": "mouse brain (FP-preserving DISCO)","source": "Qi 2019 Sci Adv"},
-    "SOLID":    {"ri": 1.46, "primary_sample": "mouse brain (universal)",          "source": "Hou 2017"},
-    "SeeDB2":   {"ri": 1.46, "primary_sample": "mouse brain (synaptic resolution)","source": "Ke 2016"},
-    "PEGASOS":  {"ri": 1.52, "primary_sample": "whole body / dense tissues / bone","source": "Jing 2018 Cell Res"},
-    "BoneClear":{"ri": 1.56, "primary_sample": "bone (mineralized hard tissue)",   "source": "Wang 2019 Cell Res"},
-    "Ce3D":     {"ri": 1.49, "primary_sample": "lymph nodes / thick tissues",      "source": "Li 2017 PNAS"},
-    "TDE":      {"ri": 1.46, "primary_sample": "brain slices / cells",             "source": "Aoyagi 2015 PLoS ONE"},
-    "ClearT2":  {"ri": 1.46, "primary_sample": "zebrafish / embryos",              "source": "Kuwajima 2013 Development"},
-    "ClearSee": {"ri": 1.47, "primary_sample": "plant whole seedling (Arabidopsis)","source": "Kurihara 2015 Development"},
-    "EyeCi":    {"ri": 1.46, "primary_sample": "whole eye / retina",               "source": "Henning 2019 Sci Rep"},
-    "FOCM":     {"ri": 1.46, "primary_sample": "brain slices (fast)",              "source": "Zhu 2019 Sci Rep"},
-    "SWITCH":   {"ri": 1.46, "primary_sample": "mouse brain (uniform labeling)",   "source": "Murray 2015 Cell"},
-    "uDISCO":   {"ri": 1.50, "primary_sample": "adult mouse whole body / long-range projections","source": "Pan 2016 Nat Methods"},
-    "FlyClear": {"ri": 1.45, "primary_sample": "Drosophila brain / head",          "source": "Pende 2018 Nat Commun"}
+    "CUBIC": {
+      "ri": 1.46,
+      "primary_sample": "mouse whole brain / organs",
+      "source": "Susaki 2014, Susaki 2015 Nat Protoc"
+    },
+    "ScaleS": {
+      "ri": 1.46,
+      "primary_sample": "adult mouse brain (slices/whole)",
+      "source": "Hama 2015 Nat Neurosci"
+    },
+    "MACS": {
+      "ri": 1.46,
+      "primary_sample": "mouse brain / organs",
+      "source": "Zhu et al. 2020, Advanced Science 7(8):1903185, doi:10.1002/advs.201903185 (bibliographic correction only; RI heuristic not source validated)",
+      "source_id": "MACS_ADVSCI_2020"
+    },
+    "iDISCO+": {
+      "ri": 1.47,
+      "primary_sample": "embryos, adult mouse brain, organs",
+      "source": "Renier 2014 Cell, 2016"
+    },
+    "FDISCO": {
+      "ri": 1.47,
+      "primary_sample": "mouse brain (FP-preserving DISCO)",
+      "source": "Qi 2019 Sci Adv"
+    },
+    "SOLID": {
+      "ri": 1.46,
+      "primary_sample": "mouse brain (universal)",
+      "source": "Hou 2017"
+    },
+    "SeeDB2": {
+      "ri": 1.46,
+      "primary_sample": "mouse brain (synaptic resolution)",
+      "source": "Ke 2016",
+      "source_id": "SEEDB2_CELLREP_2016",
+      "interpretation": "Legacy tissue-native RI heuristic. Do not equate this with the published SeeDB2G/S clearing reagent RIs or a single universal method variant."
+    },
+    "PEGASOS": {
+      "ri": 1.52,
+      "primary_sample": "whole body / dense tissues / bone",
+      "source": "Jing 2018 Cell Res"
+    },
+    "BoneClear": {
+      "ri": 1.56,
+      "primary_sample": "bone (mineralized hard tissue)",
+      "source": "Wang 2019 Cell Res"
+    },
+    "Ce3D": {
+      "ri": 1.49,
+      "primary_sample": "lymph nodes / thick tissues",
+      "source": "Li 2017 PNAS"
+    },
+    "TDE": {
+      "ri": 1.46,
+      "primary_sample": "brain slices / cells",
+      "source": "Aoyagi 2015 PLoS ONE"
+    },
+    "ClearT2": {
+      "ri": 1.46,
+      "primary_sample": "zebrafish / embryos",
+      "source": "Kuwajima 2013 Development"
+    },
+    "ClearSee": {
+      "ri": 1.47,
+      "primary_sample": "plant whole seedling (Arabidopsis)",
+      "source": "Kurihara 2015 Development"
+    },
+    "EyeCi": {
+      "ri": 1.46,
+      "primary_sample": "whole eye / retina",
+      "source": "Henning 2019 Sci Rep"
+    },
+    "FOCM": {
+      "ri": 1.46,
+      "primary_sample": "brain slices (fast)",
+      "source": "Zhu 2019 Sci Rep"
+    },
+    "SWITCH": {
+      "ri": 1.46,
+      "primary_sample": "mouse brain (uniform labeling)",
+      "source": "Murray 2015 Cell"
+    },
+    "uDISCO": {
+      "ri": 1.5,
+      "primary_sample": "adult mouse whole body / long-range projections",
+      "source": "Pan 2016 Nat Methods"
+    },
+    "FlyClear": {
+      "ri": 1.45,
+      "primary_sample": "Drosophila brain / head",
+      "source": "Pende 2018 Nat Commun"
+    }
   },
   "interpretation": {
-    "high_score": "Question's tissue RI is close to RI_ref → method was historically designed for this tissue type.",
-    "low_score":  "Question's tissue RI far from RI_ref → method was designed for a different tissue domain, even if technically usable.",
-    "zero_score": "(method, tier_code) not in time_kb.json → method does not support this sample size at all (e.g., CUBIC for plant, EyeCi for bone)."
-  }
+    "high_score": "Legacy tissue/method RI heuristic proximity only; does not establish scientific compatibility.",
+    "low_score": "Legacy heuristic separation; does not establish failure or inferiority.",
+    "zero_score": "Legacy missing-support diagnostic; absence of a lookup is not scientific refutation."
+  },
+  "calibration_status": "LEGACY_HEURISTIC_NOT_CALIBRATED",
+  "scientific_validation": "PENDING_USER_EXPERT",
+  "source_registry": "KnowledgeBase/source_registry.json"
 }

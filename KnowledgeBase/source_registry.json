@@ -1,0 +1,1815 @@
+{
+  "schema_version": "knowledge-source-registry-v1",
+  "scope": "Bibliographic identity, version relationships and bound primary source snapshots; not scientific gold",
+  "scientific_validation": "PENDING_USER_EXPERT",
+  "sources": [
+    {
+      "id": "MACS_ADVSCI_2020",
+      "method": "MACS",
+      "identity": {
+        "title": "MACS: Rapid Aqueous Clearing System for 3D Mapping of Intact Organs",
+        "doi": "10.1002/advs.201903185",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7175264/",
+        "year": 2020,
+        "version": "Advanced Science 7(8):1903185",
+        "publication_status": "UNKNOWN"
+      },
+      "relations": {},
+      "snapshot": {
+        "status": "BOUND_RETRIEVED_PRIMARY_BODY",
+        "raw_path": "KnowledgeBase/primary_sources/MACS_ADVSCI_2020/raw.html",
+        "raw_sha256": "2de7143f8f11bb63b9cc7d5ede09a31ec89d0a1fa586a7b150d3f0767aef6350",
+        "raw_encoding": "UTF-8 re-encoding of HTTP decoded content",
+        "text_path": "KnowledgeBase/primary_sources/MACS_ADVSCI_2020/body.txt",
+        "text_sha256": "ea6a09d02c597adbbbdcecf42362cfa1111ec1d844413294321c9144f185d7da",
+        "characters": 72839,
+        "identity_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7175264/",
+        "version": "Advanced Science 7(8):1903185",
+        "retrieved_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7175264/",
+        "requested_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7175264/",
+        "fetched_at_utc": "2026-10-02T15:40:04.2436767Z",
+        "extraction": {
+          "version": "primary-html-visible-text-v1",
+          "script_sha256": "5f4daba63abd5f003ea16e2d49431410fb259bc4b3cefa1defe8f56354624770",
+          "selector": [
+            "article",
+            null
+          ],
+          "normalization": "HTML entities decoded; script/style/navigation excluded; whitespace normalized; no prose rewritten"
+        },
+        "license": {
+          "links_found": [
+            "http://creativecommons.org/licenses/by/4.0/"
+          ],
+          "statements_from_body": [],
+          "status": "PRIMARY_PAGE_LICENSE_LINKS_RECORDED_PENDING_USER_LICENSE_REVIEW"
+        }
+      },
+      "passages": [
+        {
+          "id": "P1",
+          "start": 20016,
+          "end": 21163,
+          "quote": "DiI is a commonly used lipophilic fluorescent dye for neural tracing and vascular labeling. Due to the high concentration of membrane‐removing detergents or organic solvents, CUBIC‐L, PACT, and uDISCO are not compatible with DiI labeling. By contrast, MACS can preserve the fluorescence of DiI fairly well, similar to ScaleS and SeeDB2 (Figure 2d). Indeed, MACS used neither detergents nor organic solvents, thus samples treated by MACS almost maintained membrane integrity, which was crucial for DiI signaling (Figure 2e). The superior compatibility enables visualization of neuronal projections in the DiI‐labeled hippocampus region in mouse brain tissue (Figure 2f). We also tested MACS with other types of chemical tracers, including propidium iodide (PI) for nuclear staining, tetramethylrhodamine‐conjugated dextran for vessel labeling, virus‐delivered proteins (DsRed and mCherry), and fluorophore‐conjugated antibodies in immunostaining (Alexa Fluor 594 (AF 594) and Alexa Fluor 633 (AF 633)) (Figure 2f and Figure S6c,d, Supporting Information). The results showed that MACS maintained the fluorescence signals of all tested tracers well.",
+          "sha256": "39a3dff78eb37dbfcbcfe484d4632b09998b37c3d601bfd3d01f0ecd5b8b8e52",
+          "locator_search_term": "DiI is a commonly used",
+          "selection": "Literal primary paragraph selected by reproducible keyword; not an entailment label"
+        },
+        {
+          "id": "P2",
+          "start": 21924,
+          "end": 22196,
+          "quote": "Using the rapid MACS clearing protocol, we cleared transgenic whole mouse brains and performed fluorescence imaging by light sheet fluorescence microscopy (LSFM). We obtained the neurons in Thy1‐GFP‐M mouse brain at different depths and performed 3D reconstruction (Figure",
+          "sha256": "176555330988877cadf5f540f018f40adefc6ef19d07f463266fc07aadb16d0e",
+          "locator_search_term": "MACS clearing protocol",
+          "selection": "Literal primary paragraph selected by reproducible keyword; not an entailment label"
+        }
+      ],
+      "grounding_status": "PRIMARY_BODY_AND_LOCATORS_BOUND_APPLICABILITY_ENTAILMENT_PENDING",
+      "guards": [
+        "SOURCE_APPLICABILITY_NOT_REVIEWED",
+        "SEPARATE_ENTAILMENT_UNBOUND"
+      ],
+      "applicability_review": "PENDING_USER_EXPERT",
+      "scientific_validation": "PENDING_USER_EXPERT",
+      "identity_check": {
+        "kind": "PRIMARY_BIBLIOGRAPHIC_WEB_CHECK",
+        "checked_at": "2026-10-02",
+        "fulltext_authenticated": false,
+        "absence_of_corrections_verified": false
+      },
+      "legacy_extraction": {
+        "path": "KnowledgeBase/article_chunk/MACS_result.json",
+        "file_sha256": "bc3a9a2df70b149fe5c543b1de36718339833e6d1a1726d9a7f570df510448b0",
+        "status": "LEGACY_EXTRACTED_CLAIMS_NOT_PRIMARY_FULLTEXT",
+        "publication_identity_not_interchangeable": true
+      },
+      "note": "Corrects the legacy bibliography 'Zhu 2020 Nat Commun'. It does not validate compatibility/time scalars.",
+      "retrieval_status": {
+        "status": "BODY_VALIDATED",
+        "publication_identity": "DOI_AND_METHOD_PRESENT",
+        "scientific_claims_validated": false
+      }
+    },
+    {
+      "id": "FDISCO_SCIADV_2019",
+      "method": "FDISCO",
+      "identity": {
+        "title": "FDISCO: Advanced solvent-based clearing method for imaging whole organs with superior fluorescence preservation",
+        "doi": "10.1126/sciadv.aau8355",
+        "url": "https://www.science.org/doi/10.1126/sciadv.aau8355",
+        "year": 2019,
+        "version": "Science Advances 5(1):eaau8355",
+        "publication_status": "UNKNOWN"
+      },
+      "relations": {},
+      "snapshot": {
+        "status": "BOUND_RETRIEVED_PRIMARY_BODY",
+        "raw_path": "KnowledgeBase/primary_sources/FDISCO_SCIADV_2019/raw.html",
+        "raw_sha256": "ecf0f303e2de80a92007a5269547ec5a753b00053bef0db5509299e1dd4e6162",
+        "raw_encoding": "UTF-8 re-encoding of HTTP decoded content",
+        "text_path": "KnowledgeBase/primary_sources/FDISCO_SCIADV_2019/body.txt",
+        "text_sha256": "e29713ed01520cc4901320b56ba9d22161130b8243297c94174c212871a253aa",
+        "characters": 74112,
+        "identity_url": "https://www.science.org/doi/10.1126/sciadv.aau8355",
+        "version": "Science Advances 5(1):eaau8355",
+        "retrieved_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6357753/",
+        "requested_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6357753/",
+        "fetched_at_utc": "2026-10-02T15:40:09.1253735Z",
+        "extraction": {
+          "version": "primary-html-visible-text-v1",
+          "script_sha256": "5f4daba63abd5f003ea16e2d49431410fb259bc4b3cefa1defe8f56354624770",
+          "selector": [
+            "article",
+            null
+          ],
+          "normalization": "HTML entities decoded; script/style/navigation excluded; whitespace normalized; no prose rewritten"
+        },
+        "license": {
+          "links_found": [
+            "http://creativecommons.org/licenses/by-nc/4.0/"
+          ],
+          "statements_from_body": [
+            "Copyright © 2019 The Authors, some rights reserved; exclusive licensee American Association for the Advancement of Science. No claim to original U.S. Government Works. Distributed under a Creative Commons Attribution NonCommercial License 4.0 (CC BY-NC).",
+            "This is an open-access article distributed under the terms of the Creative Commons Attribution-NonCommercial license, which permits use, distribution, and reproduction in any medium, so long as the resultant use is not for commercial advantage and provided the original work is properly cited."
+          ],
+          "status": "PRIMARY_PAGE_LICENSE_LINKS_RECORDED_PENDING_USER_LICENSE_REVIEW"
+        }
+      },
+      "passages": [
+        {
+          "id": "P1",
+          "start": 37604,
+          "end": 38479,
+          "quote": "Although FDISCO could significantly reduce the fluorescence quenching of FPs and most tested tracers, it did not change the incompatibility with some specific tracers (such as DiI and SYTO 16). This incompatibility may be due to the interference of the interactions between the probes and desired binding targets by the organic solvent reagents used for clearing (39). The FDISCO-cleared samples could not be further studied by electron microscopy because the lipid structures were dissolved by the clearing agents (23). In addition, after FDISCO clearing, redness appeared in heme-rich tissues (such as rat liver) due to the residual blood in tissues, which decreased the tissue transparency and thereby blocked the penetration of light into deeper tissues. To address this problem, some decolorizing reagents, such as Quadrol solution (18, 29), can be used before clearing.",
+          "sha256": "6a144b9cbcd8f2fe382d210a8637c6c32f78fb9e8672e5592ae1c8ad0405e768",
+          "locator_search_term": "incompatibility with some specific tracers",
+          "selection": "Literal primary paragraph selected by reproducible keyword; not an entailment label"
+        },
+        {
+          "id": "P2",
+          "start": 11740,
+          "end": 13453,
+          "quote": "First, we investigated the influence of the temperature and pH conditions of THF on fluorescence preservation by an in vitro assay of recombinant EGFP expressed in Escherichia coli. We dissolved EGFP in pH-adjusted (pH 9.0) or pH-unadjusted THF solutions under different temperature conditions. The experimental groups included 4°C/pH 9.0, 4°C, 25°C (used in the original 3DISCO), and 37°C. For each group, we recorded the fluorescence intensity of the EGFP/THF solutions over time (0, 6, 18, and 24 hours) and measured the emission and absorption spectra of the EGFP/THF solutions at 24 hours. The 4°C/pH 9.0 group demonstrated the best EGFP fluorescence preservation, which indicated that the EGFP fluorescence was quenched more slowly at lower temperatures and that the alkaline pH also contributed to fluorescence preservation (Fig. 1, A to C). The emission spectra of the different groups had the same characteristic peak at 509 nm [the original emission peak (32)], which indicated that the fluorescence characteristics of the retained EGFP were not disturbed by THF under the various temperature and pH conditions (Fig. 1C). The absorption spectra of EGFP incubated in THF solutions showed a fluorescence absorption band at 488 nm and a nonfluorescence absorption band at 383 nm, indicating a natural and denatured EGFP (Fig. 1, D and E) (36–38). As the temperature decreased, the fluorescence absorption band increased, and the nonfluorescence band decreased. In addition, the pH-adjusted group (4°C/pH 9.0) showed a higher peak value at 488 nm than the pH-unadjusted group (4°C) (Fig. 1D). These results indicated that less EGFP was denatured by THF under the lower temperature and alkaline pH condition.",
+          "sha256": "86f15bc9d29388d8f467f5bf8fdf4f81f4a863cf284b427f4b767c0da04ebb00",
+          "locator_search_term": "pH-adjusted",
+          "selection": "Literal primary paragraph selected by reproducible keyword; not an entailment label"
+        },
+        {
+          "id": "P3",
+          "start": 18897,
+          "end": 19369,
+          "quote": "Moreover, the strategy of low temperature adjustment proved to be effective for fluorescence preservation with other clearing protocols. The results showed that the EGFP and EYFP fluorescence intensities were higher for tissue clearing with ethanol and BABB at 4°C than for clearing at 25°C (fig. S2, A and B), and the lower temperature of the storage procedure also contributed to better fluorescence maintenance of cleared tissues for uDISCO clearing (fig. S2, C and D).",
+          "sha256": "06db19ec3e155d5b68ecaa5f32da3519dd1352793f3ea305d79459a010a5314e",
+          "locator_search_term": "low temperature",
+          "selection": "Literal primary paragraph selected by reproducible keyword; not an entailment label"
+        }
+      ],
+      "grounding_status": "PRIMARY_BODY_AND_LOCATORS_BOUND_APPLICABILITY_ENTAILMENT_PENDING",
+      "guards": [
+        "SOURCE_APPLICABILITY_NOT_REVIEWED",
+        "SEPARATE_ENTAILMENT_UNBOUND"
+      ],
+      "applicability_review": "PENDING_USER_EXPERT",
+      "scientific_validation": "PENDING_USER_EXPERT",
+      "identity_check": {
+        "kind": "PRIMARY_BIBLIOGRAPHIC_WEB_CHECK",
+        "checked_at": "2026-10-02",
+        "fulltext_authenticated": false,
+        "absence_of_corrections_verified": false
+      },
+      "legacy_extraction": {
+        "path": "KnowledgeBase/article_chunk/FDISCO_result.json",
+        "file_sha256": "45cbbcd7aa251ec93522bbf529859ab555fb6a4490cb49bc46f172cb0be8e64c",
+        "status": "LEGACY_EXTRACTED_CLAIMS_NOT_PRIMARY_FULLTEXT",
+        "publication_identity_not_interchangeable": true
+      },
+      "note": "Original-method fidelity, tissue size and tested tracers must be scoped separately; deviations are not automatically scientifically refuted.",
+      "retrieval_status": {
+        "status": "BODY_VALIDATED",
+        "publication_identity": "DOI_AND_METHOD_PRESENT",
+        "scientific_claims_validated": false
+      }
+    },
+    {
+      "id": "FRUIT_FRONTNEUROANAT_2015",
+      "method": "FRUIT",
+      "identity": {
+        "title": "Scalable and DiI-compatible optical clearance of the mammalian brain",
+        "doi": "10.3389/fnana.2015.00019",
+        "url": "https://www.frontiersin.org/journals/neuroanatomy/articles/10.3389/fnana.2015.00019/full",
+        "year": 2015,
+        "version": "Frontiers in Neuroanatomy 9:19",
+        "publication_status": "UNKNOWN"
+      },
+      "relations": {},
+      "snapshot": {
+        "status": "BOUND_RETRIEVED_PRIMARY_BODY",
+        "raw_path": "KnowledgeBase/primary_sources/FRUIT_FRONTNEUROANAT_2015/raw.html",
+        "raw_sha256": "2f4acc6ac40ea75a1abb84cdba31bcb93c0986a36fcc81f78097781eb9fc683b",
+        "raw_encoding": "UTF-8 re-encoding of HTTP decoded content",
+        "text_path": "KnowledgeBase/primary_sources/FRUIT_FRONTNEUROANAT_2015/body.txt",
+        "text_sha256": "0a98047eda24263bb60d158b839ef406779e0471762d95359bce9285a286e441",
+        "characters": 49426,
+        "identity_url": "https://www.frontiersin.org/journals/neuroanatomy/articles/10.3389/fnana.2015.00019/full",
+        "version": "Frontiers in Neuroanatomy 9:19",
+        "retrieved_url": "https://www.frontiersin.org/journals/neuroanatomy/articles/10.3389/fnana.2015.00019/full",
+        "requested_url": "https://www.frontiersin.org/journals/neuroanatomy/articles/10.3389/fnana.2015.00019/full",
+        "fetched_at_utc": "2026-10-02T15:40:01.6145039Z",
+        "extraction": {
+          "version": "primary-html-visible-text-v1",
+          "script_sha256": "5f4daba63abd5f003ea16e2d49431410fb259bc4b3cefa1defe8f56354624770",
+          "selector": [
+            "main",
+            "ArticleDetailsV4__main"
+          ],
+          "normalization": "HTML entities decoded; script/style/navigation excluded; whitespace normalized; no prose rewritten"
+        },
+        "license": {
+          "links_found": [
+            "http://creativecommons.org/licenses/by/4.0/"
+          ],
+          "statements_from_body": [
+            "This is an open-access article distributed under the terms of the Creative Commons Attribution License (CC BY). The use, distribution or reproduction in other forums is permitted, provided the original author(s) or licensor are credited and that the original publication in this journal is cited, in accordance with accepted academic practice. No use, distribution or reproduction is permitted which does not comply with these terms."
+          ],
+          "status": "PRIMARY_PAGE_LICENSE_LINKS_RECORDED_PENDING_USER_LICENSE_REVIEW"
+        }
+      },
+      "passages": [
+        {
+          "id": "P1",
+          "start": 24805,
+          "end": 26409,
+          "quote": "By comparing FRUIT with SeeDB and Scale, we concluded that FRUIT-mediated tissue expansion was mainly due to the high concentration of urea. Although reducing the level of urea in FRUIT solutions was beneficial for deformation control, this option was discarded because it would be detrimental to tissue transparency. As fructose can prevent tissue expansion through dehydration in a concentration-dependent manner (Ke et al., ; Susaki et al., ), one expansion-controlling strategy was to increase fructose in the starting concentration of the gradient of FRUIT solutions. We also found that the final size of the brain was seemingly equal to the size after 8 h incubation in the initial concentration of FRUIT, i.e., 20%, regardless of the dynamic volume change across the gradient of FRUIT solutions (Figure 4A). This finding inspired us to consider that choosing an appropriate starting concentration was enough to control FRUIT-mediated tissue expansion. We therefore, compared brain size after brief treatment in various concentrations of FRUIT solution. It was found that only 35% FRUIT was able to preserve the original size of the brain, whereas a lower or higher concentration caused expansion or shrinkage, respectively (Figure 4B). Notably, one-step treatment with 100% FRUIT caused severe shrinkage of the samples (Figure 4B). Based on these results, we modified the initial FRUIT concentration of the gradient. As expected, a gradient of FRUIT solutions starting from 35% preserved the brain size well, whereas those with a lower or higher start concentration deformed the brain (Figure 4C).",
+          "sha256": "c363c14b80914e807415317dcaa704dfc0dc8ac1891291e2d9a1d57066cf5f1d",
+          "locator_search_term": "one-step treatment with 100% FRUIT",
+          "selection": "Literal primary paragraph selected by reproducible keyword; not an entailment label"
+        }
+      ],
+      "grounding_status": "PRIMARY_BODY_AND_LOCATORS_BOUND_APPLICABILITY_ENTAILMENT_PENDING",
+      "guards": [
+        "SOURCE_APPLICABILITY_NOT_REVIEWED",
+        "SEPARATE_ENTAILMENT_UNBOUND"
+      ],
+      "applicability_review": "PENDING_USER_EXPERT",
+      "scientific_validation": "PENDING_USER_EXPERT",
+      "identity_check": {
+        "kind": "PRIMARY_BIBLIOGRAPHIC_WEB_CHECK",
+        "checked_at": "2026-10-02",
+        "fulltext_authenticated": false,
+        "absence_of_corrections_verified": false
+      },
+      "legacy_extraction": {
+        "path": "KnowledgeBase/article_chunk/FRUIT_result.json",
+        "file_sha256": "48faca00e2242ef87fcc4f49dde4ac921672a829e7531b1a2ee8b93f39b798d5",
+        "status": "LEGACY_EXTRACTED_CLAIMS_NOT_PRIMARY_FULLTEXT",
+        "publication_identity_not_interchangeable": true
+      },
+      "note": "PMC4338786 is FRUIT, not SeeDB2. The local extraction remains FRUIT; no title/content substitution was performed.",
+      "retrieval_status": {
+        "status": "BODY_VALIDATED",
+        "publication_identity": "DOI_AND_METHOD_PRESENT",
+        "scientific_claims_validated": false
+      }
+    },
+    {
+      "id": "SEEDB2_CELLREP_2016",
+      "method": "SeeDB2",
+      "identity": {
+        "title": "Super-Resolution Mapping of Neuronal Circuitry With an Index-Optimized Clearing Agent",
+        "doi": "10.1016/j.celrep.2016.02.057",
+        "url": "https://www.sciencedirect.com/science/article/pii/S2211124716301784",
+        "year": 2016,
+        "version": "Cell Reports 14(11):2718-2732",
+        "publication_status": "UNKNOWN"
+      },
+      "relations": {},
+      "snapshot": null,
+      "passages": [],
+      "grounding_status": "UNRESOLVED",
+      "guards": [
+        "PRIMARY_FULLTEXT_SNAPSHOT_UNBOUND",
+        "SOURCE_APPLICABILITY_NOT_REVIEWED",
+        "SEPARATE_ENTAILMENT_UNBOUND"
+      ],
+      "applicability_review": "PENDING_USER_EXPERT",
+      "scientific_validation": "PENDING_USER_EXPERT",
+      "identity_check": {
+        "kind": "PRIMARY_BIBLIOGRAPHIC_WEB_CHECK",
+        "checked_at": "2026-10-02",
+        "fulltext_authenticated": false,
+        "absence_of_corrections_verified": false
+      },
+      "note": "Separate research paper identity; 2018 PBS correction applies to the 2018 protocol, not silently to this record."
+    },
+    {
+      "id": "SEEDB2_PROTOCOL_2018",
+      "method": "SeeDB2",
+      "identity": {
+        "title": "Optical Clearing and Index Matching of Tissue Samples for High-resolution Fluorescence Imaging Using SeeDB2",
+        "doi": "10.21769/BioProtoc.3046",
+        "url": "https://bio-protocol.org/en/bpdetail?id=3046&type=0",
+        "year": 2018,
+        "version": "Bio-protocol 8(20):e3046; corrected by e3095",
+        "publication_status": "CORRECTED"
+      },
+      "relations": {
+        "based_on": "SEEDB2_CELLREP_2016",
+        "corrected_by": "SEEDB2_CORRECTION_2018"
+      },
+      "snapshot": {
+        "status": "BOUND_RETRIEVED_PRIMARY_PDF_TEXT",
+        "raw_path": "KnowledgeBase/primary_sources/SEEDB2_PROTOCOL_2018/raw.pdf",
+        "raw_sha256": "f24edbd152cda1eca7ef4617f6a18dc036546292889dd90accb7481da47f72f3",
+        "bytes": 3589081,
+        "identity_url": "https://bio-protocol.org/en/bpdetail?id=3046&type=0",
+        "version": "Bio-protocol 8(20):e3046; corrected by e3095",
+        "retrieved_url": "https://bio-protocol.org/pdf/Bio-protocol3046.pdf",
+        "requested_url": "https://bio-protocol.org/pdf/Bio-protocol3046.pdf",
+        "fetched_at_utc": "2026-10-02T15:44:01.5527802Z",
+        "text_path": "KnowledgeBase/primary_sources/SEEDB2_PROTOCOL_2018/body.txt",
+        "text_sha256": "f7a504425ee9b28b41dc57939894a83dfeb9261bf08d1455158b7886185f7aa0",
+        "license": {
+          "status": "PRIMARY_PDF_LICENSE_TEXT_RECORDED_PENDING_USER_LICENSE_REVIEW",
+          "statements_from_body": [
+            "Copyright © 2018 The Authors; exclusive licensee Bio-protocol LLC. 1",
+            "Copyright © 2018 The Authors; exclusive licensee Bio-protocol LLC. 2",
+            "Copyright © 2018 The Authors; exclusive licensee Bio-protocol LLC. 3",
+            "Copyright © 2018 The Authors; exclusive licensee Bio-protocol LLC. 4",
+            "Copyright © 2018 The Authors; exclusive licensee Bio-protocol LLC. 5",
+            "Copyright © 2018 The Authors; exclusive licensee Bio-protocol LLC. 6",
+            "Copyright © 2018 The Authors; exclusive licensee Bio-protocol LLC. 7",
+            "Copyright © 2018 The Authors; exclusive licensee Bio-protocol LLC. 8",
+            "Copyright © 2018 The Authors; exclusive licensee Bio-protocol LLC. 9",
+            "Copyright © 2018 The Authors; exclusive licensee Bio-protocol LLC. 10",
+            "Copyright © 2018 The Authors; exclusive licensee Bio-protocol LLC. 11",
+            "Copyright © 2018 The Authors; exclusive licensee Bio-protocol LLC. 12",
+            "Copyright © 2018 The Authors; exclusive licensee Bio-protocol LLC. 13"
+          ]
+        },
+        "characters": 30150,
+        "pages": 13,
+        "page_offsets": [
+          {
+            "page": 1,
+            "start": 0,
+            "end": 3097,
+            "text_sha256": "74e5691ec89f6d291befb3ffc0c867516166b4d53fdda653d8d2f96977972482"
+          },
+          {
+            "page": 2,
+            "start": 3098,
+            "end": 6414,
+            "text_sha256": "c0d49366051f34d47feec9901d98f3f04170878551a1bff8857c230532e25417"
+          },
+          {
+            "page": 3,
+            "start": 6415,
+            "end": 8310,
+            "text_sha256": "5a2570a1ff645baac58031d848e3dff1094eee8c808e09159cc36f30c8e60182"
+          },
+          {
+            "page": 4,
+            "start": 8311,
+            "end": 10575,
+            "text_sha256": "3cadcf6037464a8481db863583b248c3e1f8b2953fb074c521a95035af410921"
+          },
+          {
+            "page": 5,
+            "start": 10576,
+            "end": 13303,
+            "text_sha256": "945a77995c34c3d8c56e4320571d28a5a6a696404ab43377f09c5a1787294dea"
+          },
+          {
+            "page": 6,
+            "start": 13304,
+            "end": 16469,
+            "text_sha256": "4778d98920e4a9cb09a29b74f45f20b6ce3be1ef32874dd037c94fa36080f4d2"
+          },
+          {
+            "page": 7,
+            "start": 16470,
+            "end": 18790,
+            "text_sha256": "61877c43d011db13ce6b4b1232c595eda45ce8ea988d0b494f5542ed62928fdc"
+          },
+          {
+            "page": 8,
+            "start": 18791,
+            "end": 20396,
+            "text_sha256": "55c8846119ecf37c1ad3334671851f9130190f563909de12ec710c3387e4a4ee"
+          },
+          {
+            "page": 9,
+            "start": 20397,
+            "end": 21595,
+            "text_sha256": "82f46a155d0c9a086bb25ae9ed79ea6690bf800f0f14316de11cd4526c30656f"
+          },
+          {
+            "page": 10,
+            "start": 21596,
+            "end": 23806,
+            "text_sha256": "7d5cf8cfe770cff6a2d6cfa5e702ab3a8b8757ba20d54be097f770b1ab3835fd"
+          },
+          {
+            "page": 11,
+            "start": 23807,
+            "end": 26310,
+            "text_sha256": "d9f96f02658868a78746eccea32f742344a069b426f0b57baa73ee82db2e407a"
+          },
+          {
+            "page": 12,
+            "start": 26311,
+            "end": 28764,
+            "text_sha256": "901cf7f9da0af795428b2c886bcdd993ad2ff0c192487e5fd4315ef3cdf479bf"
+          },
+          {
+            "page": 13,
+            "start": 28765,
+            "end": 30150,
+            "text_sha256": "1e055505377bd5fbe45190b179d88e1eec87d5893f2c9b368bff4c4cb31060a4"
+          }
+        ],
+        "extraction": {
+          "version": "primary-pdf-pypdf-text-v1",
+          "script_sha256": "52fc862cfe638a8e6fdb37f2a595f5affa936fe73392f6045dd282e8277319aa",
+          "parser": {
+            "name": "pypdf",
+            "version": "6.19.0",
+            "wheel_url": "https://files.pythonhosted.org/packages/3c/2c/c43c03eaf630435f023f1dc61ec4a4a78951ad5530a62c71cc89bde307b7/pypdf-6.19.0-py3-none-any.whl",
+            "wheel_sha256": "7e5d6e730e7dae87d560a2cee218b852f6498c8be61966f3cd02ead971e48d14",
+            "library_tree_sha256": "d70c5fa010a157180b231a01986fe90ae4b0e644ab1140c80cd5e4570056e6f6",
+            "license": "BSD-3-Clause",
+            "system_installation": false
+          },
+          "normalization": "Page.extract_text; horizontal whitespace and empty lines normalized; no prose rewritten",
+          "limitations": "PDF text ordering/font extraction may be imperfect; compare with saved original PDF during user review"
+        }
+      },
+      "passages": [
+        {
+          "id": "PAGE2",
+          "page": 2,
+          "start": 3098,
+          "end": 6414,
+          "quote": "Copyright © 2018 The Authors; exclusive licensee Bio-protocol LLC. 2\nwww.bio-protocol.org/e3046\nVol 8, Iss 20, Oct 20, 2018\nDOI:10.21769/BioProtoc.3046\nNA = n sinα\nwhere n is the refractive index (RI) of the immersion media, and α is the half angular aperture. Therefore,\nmany of the high NA objective lenses are designed for oil (RI = 1.52) or glycerol (RI = 1.46) immersion\nfor the best resolution. Previously, high NA objective lenses are intended to image thin sections or just\nthe surface of samples. However, if we try to image deeper in the samples with these objective lenses,\nimage quality will be easily impaired due to “spherical aberrations”. As RI of tissue samples are lower\nthan that of immersion oil (RI = 1.52) and a glass coverslip (RI ~1.52), the excitation light will refract at\nthe interface between the coverslip and samples, and it will no longer converge onto a small focal spot.\nThis is known as spherical aberrations, reducing resolution and brightness in microscopy.\nTo minimize spherical aberrations, index matching of samples is crucial. However, many of the existing\nmounting media and clearing solutions have low RI, ranging from 1.33 (water) to 1.46 (glycerol -based\nmounting media). Even our previous clearing agent, SeeDB (RI = 1.49), did not reach RI 1.52 (Ke et al.,\n2013, 2014). 2,2'-thiodiethanol (TDE, RI = 1.52) has been previously proposed for index matching for\noil-immersion objective lenses and has been widely used for synthetic fluorescent dyes (Staudt et al.,\n2007). However, a major drawback of TDE is that most of fluorescent proteins are totally quenched in\nTDE. To overcome this limitation, we developed a new tissue clearing agent, SeeDB2S, that has a high\nrefractive index (RI = 1.52), but also highly preserves fluorescent proteins (Ke et al. , 2016). We also\nformulated SeeDB2G (RI = 1.46) for glycerol -immersion objective lenses. As fluorescent proteins are\nbetter preserved than in commercialized mounting media, SeeDB2G/S are also useful as mounting\nmedia for high- resolution imaging. SeeDB2G/S is particularly powerful for high- resolution confocal\nmicroscopy and super-resolution microscopy of fluorescent proteins in tissues, sections, and cells.\nMaterials and Reagents\n1. 1.5 ml Eppendorf tube (Eppendorf, for 1 ml solution)\n2. 5 ml Eppendorf tube (Eppendorf, catalog number: 0030119401; optional for 3 ml solution, for\nthick brain slices or whole-mount samples)\n3. Paint brush (for thin brain slices, No. 1-2, see Figure 1)\n4. Silicone rubber sheet (translucent, 0.2 mm thick; e.g., AS ONE, catalog number: 6-9085-13; see\nFigure 1)\nNote: Various thickness of silicone rubber sheets are available from Togawa Rubber (AS ONE),\nProfessional Plastics, CS Hyde, etc. , ranging from 0.1 mm to 8.0 mm. The thickness should\nmatch that of brain slices.\n5. Glass slide (76 mm x 26 mm; MATSUNAMI Glass; Figure 1)\n6. Coverslips (18 x 18 mm, No 1.5H; e.g., Paul Marienfeld, catalog number: 0107032 or ZEISS,\ncatalog number: 474030-9000-000; Figure 1)\nNote: No 1.5H (170 ± 5 μm thick) is highly recommended for super-resolution imaging.\nPlease cite this article as: Meng-Tsen and Takeshi , (2018). Optical Clearing and Index Matching of Tissue Samples for High-resolution Fluorescence\nImaging Using SeeDB2, Bio-protocol 8 (20): e3046. DOI: 10.21769/BioProtoc.3046.\n",
+          "sha256": "c0d49366051f34d47feec9901d98f3f04170878551a1bff8857c230532e25417",
+          "locator_search_terms": [
+            "SeeDB2G",
+            "SeeDB2S"
+          ],
+          "selection": "Literal parser page containing source vocabulary; not entailment or scientific truth label"
+        },
+        {
+          "id": "PAGE3",
+          "page": 3,
+          "start": 6415,
+          "end": 8310,
+          "quote": "Copyright © 2018 The Authors; exclusive licensee Bio-protocol LLC. 3\nwww.bio-protocol.org/e3046\nVol 8, Iss 20, Oct 20, 2018\nDOI:10.21769/BioProtoc.3046\nFigure 1. Materials required for preparing imaging chamber and slice mounting\n7. Sodium chloride (NaCl)\n8. Sodium hydrogen phosphate dodecahydrate (Na2HPO4·12H2O)\n9. Potassium chloride (KCl)\n10. Potassium dihydrogen phosphate (KH2PO4)\n11. 4% paraformaldehyde (PFA; e.g., NACALAI TESQUE, catalog number: 26126-25) in PBS\n12. 20% Saponin (NACALAI TESQUE, catalog number: 30502-42) in ddH2O with filter sterilization\nNote: Different vendors prepare saponin from different species of plants. We strongly\nrecommend NACALAI TESQUE . Brownish lots (often found in Sigma- Aldrich) should be\navoided.\n13. Low-melting point agarose (e.g., Thermo Fisher Scientific, catalog number: 16520100)\n14. Omnipaque 350 ( e.g., DAIICHI SANKYO , Omnipaque 350 Injection, 50 m l in 1 bottle; also\navailable from GE healthcare)\n15. Histodenz (e.g., Sigma-Aldrich, catalog number: D2158)\n16. Sodium azide (e.g., Sigma-Aldrich, catalog number: 13412)\n17. 1 M stock of Tris -HCl, pH 7.6 (e.g., NACALAI TESQUE, catalog number: 35436- 01), used to\nprepare Tris-EDTA buffer\n18. 0.5 M stock of EDTA, pH 8.0 (e.g., Dojindo, catalog number: 347-07481), used to prepare Tris-\nEDTA buffer\n19. Immersion media:\nGlycerol ( e.g., Type G Immersion Liquid, Leica Microsystems, catalog number: 11513910;\nGlycerine solution, Leica Microsystems, catalog number: 11513872) for SeeDB2G\nOil (Type F, Olympus, MOIL-30; also available from Leica, Zeiss, etc.) for SeeDB2S\n20. (Optional) SeeDB2 Trial Kit (Wako Pure Chemical Industries, catalog number: 294-80701)\nPlease cite this article as: Meng-Tsen and Takeshi , (2018). Optical Clearing and Index Matching of Tissue Samples for High-resolution Fluorescence\nImaging Using SeeDB2, Bio-protocol 8 (20): e3046. DOI: 10.21769/BioProtoc.3046.\n",
+          "sha256": "5a2570a1ff645baac58031d848e3dff1094eee8c808e09159cc36f30c8e60182",
+          "locator_search_terms": [
+            "SeeDB2G",
+            "SeeDB2S",
+            "Phosphate"
+          ],
+          "selection": "Literal parser page containing source vocabulary; not entailment or scientific truth label"
+        },
+        {
+          "id": "PAGE4",
+          "page": 4,
+          "start": 8311,
+          "end": 10575,
+          "quote": "Copyright © 2018 The Authors; exclusive licensee Bio-protocol LLC. 4\nwww.bio-protocol.org/e3046\nVol 8, Iss 20, Oct 20, 2018\nDOI:10.21769/BioProtoc.3046\n21. Phosphate-buffered saline (PBS) (see Recipes)\n22. Tris-EDTA buffer, pH 7.6 (see Recipes)\n23. Permeabilization solution (see Recipes)\n24. Solution 1 (see Recipes)\n25. Solution 2 (see Recipes)\n26. SeeDB2 solutions (see Recipes)\na. SeeDB2G with saponin (clearing)\nb. SeeDB2G (mounting)\nc. SeeDB2S with saponin (clearing)\nd. SeeDB2S (mounting)\nEquipment\n1. Perforated spoon (optional for handling thick brain slices, custom -ordered, flat head, head\ndiameter = 15 mm, see Figure 1 and Video 1)\n2. Ring forceps (optional for whole- mount samples, e.g., Natsume Seisakusho, NAPOX, catalog\nnumber: A-26, see Figure 1)\n3. Vibratome (e.g., LinearSlicer, DOSAKA, model: PRO7N)\n4. Seesaw shaker (e.g., Bio Craft, model: BC-700)\n5. Rotator (e.g., TAITEC, model: RT-30mini, catalog number: 0057154-000)\n6. Fluorescence microscope\na. Confocal microscope (e.g., Olympus, model: FV3000; Leica Microsystems, model: Leica\nTCS SP8; Nikon, model: A1+)\nb. Super-resolution microscope (e.g., Zeiss , model: LSM 880 with Airyscan; Leica\nMicrosystems, model: Leica TCS SP8 with HyVolution 2; Leica Microsystems, model: Leica\nTCS SP8 STED)\n7. Objective lenses\nExamples: 63x oil-immersion (NA = 1.4, WD = 0.14 mm) (Leica Microsystems, model: HC PL\nAPO 63x/1.4 Oil CS2, catalog number: 15506350); 100x oil-immersion (NA = 1.4, WD = 0.13\nmm) (Leica Microsystems, model: HC PL APO 100x/1.4 Oil CS2, catalog number: 15506325);\n63x glycerol-immersion (NA = 1.3, WD = 0.28 mm) (Leica, model: HCX PL APO 63x/1.30 GLYC\nCORR, catalog number: 11506193); 63x oil-immersion (NA = 1.4, WD = 0.19 mm) (Carl Zeiss,\nmodel: Plan-Apochroamt 63x/1.40 Oil DIC, catalog number: 440762-9904-000)\nProcedure\nA. Choice of optical clearing protocol\n1. SeeDB2G (RI = 1.46) : SeeDB2G is optimized for glycerol -immersion lenses to achieve the\nhighest resolution, but water - and multi -immersion objective lenses are also useful with\nPlease cite this article as: Meng-Tsen and Takeshi , (2018). Optical Clearing and Index Matching of Tissue Samples for High-resolution Fluorescence\nImaging Using SeeDB2, Bio-protocol 8 (20): e3046. DOI: 10.21769/BioProtoc.3046.\n",
+          "sha256": "3cadcf6037464a8481db863583b248c3e1f8b2953fb074c521a95035af410921",
+          "locator_search_terms": [
+            "Recipes",
+            "SeeDB2G",
+            "SeeDB2S",
+            "Phosphate"
+          ],
+          "selection": "Literal parser page containing source vocabulary; not entailment or scientific truth label"
+        },
+        {
+          "id": "PAGE5",
+          "page": 5,
+          "start": 10576,
+          "end": 13303,
+          "quote": "Copyright © 2018 The Authors; exclusive licensee Bio-protocol LLC. 5\nwww.bio-protocol.org/e3046\nVol 8, Iss 20, Oct 20, 2018\nDOI:10.21769/BioProtoc.3046\nreasonable resolution. SeeDB2G is useful for larger tissues due to lower viscosity.\n2. SeeDB2S (RI = 1.52): SeeDB2S is optimized for high-NA oil-immersion objective lenses. Since\nSeeDB2S is viscous and oil -immersion lenses typica lly have a short W.D. (0.1-0.2 mm) , we\nrecommend using relatively thin samples (< 300 μm thick slices) for SeeDB2S.\nIn this protocol, we describe the protocol for high-resolution/super-resolution imaging of mouse brain\nslices. However, SeeDB2 is also useful for high- resolution imaging of other organisms ( e.g.,\nDrosophila), other organs and sample types (mouse oocytes), cultured cells, and frozen sections.\nSee the original paper (Ke et al., 2016) and SeeDB Resources for details.\nNote: SeeDB Resources ( https://sites.google.com/site/seedbresources/) provide updated\ninformation from the authors, see Ke et al., 2014.\nB. Choice of objective lenses and slice thickness\nBecause of the working distance limitations in high- NA lenses, only one-fourth to half of the depth\naccessible by 20x lens can be reached by 63x or 100x lenses. Be sure to select neurons located\nclose to the surface. See Table 1 showing examples of objective lenses used for confocal imaging.\nTable 1. Examples of objective lenses\nObjective lens 10x air 20x multi 40x oil 63x glycerol 63x oil 100x oil\nN.A. 0.4 0.75 1.3-1.4 1.3 1.4 1.4-1.46\nW.D. (mm) 2.2-3.1 0.68 0.21-0.24 0.3 0.14-0.19 0.11-0.13\nImmersion - Water/glycerol/oil Oil Glycerol Oil Oil\nLateral\nresolution\n2 μm 0.5 μm 0.3 μm 0.25 μm 0.21 μm 0.2 μm\nConfocal + + + + + +\nSuper-resolution - - ± ± + +\nSeeDB2G ± + ± + ± ±\nSeeDB2S ± ± + ± + +\nSuitable sample\nthickness\n< 2 mm < 1 mm < 500 μm < 500 μm < 300 μm < 200 μm\n+, optimal; ±, non-optimal; -, not suitable. Data based on Leica and Zeiss objective lenses.\nC. SeeDB2G (Figure 2)\n1. Dissect the mouse brain after an intracardiac perfusion of 4% PFA in PBS. Post-fix the brain\nsample in 4% PFA at 4 °C with gentle shaking overnight.\n2. Wash the sample in PBS three times with gentle shaking (10 min each).\n3. Embed the sample in 4% low-melting point agarose/PBS with desired orientation and then cut\nthe brain with a vibratome.\n4. Transfer the sample into the permeabi lization solution and incubate with shaking overnight (>\n16 h) at 4 °C. Antibody staining and counterstaining should be performed prior to the clearing\nprocess.\nPlease cite this article as: Meng-Tsen and Takeshi , (2018). Optical Clearing and Index Matching of Tissue Samples for High-resolution Fluorescence\nImaging Using SeeDB2, Bio-protocol 8 (20): e3046. DOI: 10.21769/BioProtoc.3046.\n",
+          "sha256": "945a77995c34c3d8c56e4320571d28a5a6a696404ab43377f09c5a1787294dea",
+          "locator_search_terms": [
+            "SeeDB2G",
+            "SeeDB2S"
+          ],
+          "selection": "Literal parser page containing source vocabulary; not entailment or scientific truth label"
+        },
+        {
+          "id": "PAGE6",
+          "page": 6,
+          "start": 13304,
+          "end": 16469,
+          "quote": "Copyright © 2018 The Authors; exclusive licensee Bio-protocol LLC. 6\nwww.bio-protocol.org/e3046\nVol 8, Iss 20, Oct 20, 2018\nDOI:10.21769/BioProtoc.3046\nOptional: Perform antibody staining in 3 ml using 5 ml Eppendorf tubes on a rotator. After\nblocking with blocking buffer (0.5% skim milk, 0.25% fish gelatin, 2% saponin in PBS) for 24 h\nat 4 °C, incubate samples with primary antibodies in washing buffer (2% saponin in PBS) for 24\nh. After three washes with wa shing buffer, incubate samples with secondary antibodies and\nDAPI for 12-16 h. Wash samples three times (2 h each) in washing buffer.\nNote: We recommend 2% saponin for thick mouse brain samples; however, for the thinner slices,\nlower concentrations of Triton X-100 are also workable. Antibodies are able to penetrate up to\n200-300 μm in depth.\n5. Transfer the sample into a new tube filled with solution 1 and place it on a rotator. Incubate for\n6-10 h for whole-mount samples, 2-4 h for slice samples (200-500 μm).\n6. Transfer the sample into a new tube filled with solution 2 and place it on a rotator. Incubate for\n6-10 h for whole-mount samples, 2-4 h for slice samples (200-500 μm).\n7. Transfer the sample into a new tube filled with SeeDB2G with saponin and place it on a rotator.\nIncubate for 6-10 h for whole-mount samples, 2-4 h for slice samples (200-500 μm). An example\nof transmission images is shown in Figure 4.\nNotes:\na. Do not store samples in solutions containing saponin. For thin slice or neonate samples,\nprolonged incubation (> 24 h) in solutions containing saponin may cause damage to the\nsample.\nb. Store the sample in SeeDB2G (without saponin) till mounting and imaging.\nSeeDB2-cleared samples can be stored in Eppendorf at 4 °C for up to 6 months. Sodium\nazide (0.05%) should be added for the long-term storage.\nD. SeeDB2S (Figure 2)\n1. Dissect the mouse brain after intracardiac perfusion of 4% PFA in PBS. Post-fix the brain sample\nin 4% PFA at 4 °C with gentle shaking overnight.\n2. Wash the sample in PBS three times with gentle shaking (10 min each).\n3. Embed the sample in 4% low-melting point agarose/PBS with desired orientation and then cut\nthe brain with a vibratome.\n4. Transfer the sample into permeabilization solution and incubate with shaking overnight (> 16 h)\nat 4 °C. Antibody staining and counterstaining should be performed prior to the clearing process.\nNote: We recommend 2% saponin for thick mouse brain samples; however, for the thinner slices,\nlower concentrations of Triton X-100 are also workable. Antibodies penetrate up to 200-300 μm\ndepth.\n5. Transfer the sample into a new tube filled with solution 1 and place it on a rotator. Incubate for\n2-4 h for slice samples (200-500 μm).\n6. Transfer the sample into a new tube filled with solution 2 and place it on a rotator. Incubate for\n2-4 h for slice samples (200-500 μm).\n7. Transfer the sample into a new tube filled with SeeDB2G with saponin and place it on a rotator.\nPlease cite this article as: Meng-Tsen and Takeshi , (2018). Optical Clearing and Index Matching of Tissue Samples for High-resolution Fluorescence\nImaging Using SeeDB2, Bio-protocol 8 (20): e3046. DOI: 10.21769/BioProtoc.3046.\n",
+          "sha256": "4778d98920e4a9cb09a29b74f45f20b6ce3be1ef32874dd037c94fa36080f4d2",
+          "locator_search_terms": [
+            "SeeDB2G",
+            "SeeDB2S"
+          ],
+          "selection": "Literal parser page containing source vocabulary; not entailment or scientific truth label"
+        },
+        {
+          "id": "PAGE7",
+          "page": 7,
+          "start": 16470,
+          "end": 18790,
+          "quote": "Copyright © 2018 The Authors; exclusive licensee Bio-protocol LLC. 7\nwww.bio-protocol.org/e3046\nVol 8, Iss 20, Oct 20, 2018\nDOI:10.21769/BioProtoc.3046\nIncubate for 2-4 h for slice samples (200-500 μm).\n8. Transfer the sample into a new tube filled with SeeDB2S with saponin and place it on a rotator.\nIncubate for 2-4 h for slice samples (200-500 μm).\n9. Transfer the sample into a new tube filled with SeeDB2S (without saponin, 0.01% sodium azide\ncan be added for long- term storage) for mounting. An example of transmission images are\nshown in Figure 4.\nNote: Do not store samples in solutions containing saponin. For thin slice or neonate samples,\nprolonged incubation (> 24 h) in solutions containing saponin may cause damages to the sample.\nFigure 2. Graphic protocol for SeeDB2\nE. Imaging chamber preparation and sample mounting (Video 1 and Figure 3)\n1. (Optional) Stand the sample in SeeDB2G/S for 2-4 h to remove the air bubbles.\nNote: If air bubbles are heavily accumulated in the tube, transfer the sample to a new tube filled\nwith SeeDB2G/S and incubate it for 2-4 h.\n2. Cut the silicone rubber sheet into appropriate size using scissors or a utility knife.\n3. Remove the protection sheets (stuck to both sides, only found in 0.2 mm silicone sheet) and\npress the sheet onto the glass slide. Push the rubber sheet to remove air bubbles between the\nglass slide and the rubber sheet.\n4. Leave a drop of SeeDB2G/S (from the storage tube, not a fresh one) into the chamber, and pick\nup the brain slice with a perforated spoon and a paint brush to mount the sample.\nNote: Do not place the brain slices onto a dry surface. Do not expose SeeDB2S solution or\nSeeDB2S-cleared samples to the air for long time (> 5 min).\n5. (Optional) Remove the air bubbles in the imaging chamber with a paint brush.\n6. Gently press the cover glass onto the imaging chamber and use the spillover of SeeDB2G/S to\nseal the cover glass. See Figure 3 for mounted samples on a glass slide.\nNote: Do not use nail polish to seal the sample. The excess amount of SeeDB2G/S will form a\ntight film after air drying.\nPlease cite this article as: Meng-Tsen and Takeshi , (2018). Optical Clearing and Index Matching of Tissue Samples for High-resolution Fluorescence\nImaging Using SeeDB2, Bio-protocol 8 (20): e3046. DOI: 10.21769/BioProtoc.3046.\n",
+          "sha256": "61877c43d011db13ce6b4b1232c595eda45ce8ea988d0b494f5542ed62928fdc",
+          "locator_search_terms": [
+            "SeeDB2G",
+            "SeeDB2S"
+          ],
+          "selection": "Literal parser page containing source vocabulary; not entailment or scientific truth label"
+        },
+        {
+          "id": "PAGE8",
+          "page": 8,
+          "start": 18791,
+          "end": 20396,
+          "quote": "Copyright © 2018 The Authors; exclusive licensee Bio-protocol LLC. 8\nwww.bio-protocol.org/e3046\nVol 8, Iss 20, Oct 20, 2018\nDOI:10.21769/BioProtoc.3046\n7. Use an appropriate immersion media for high -resolution fluorescence imaging. Use glycerol\n(Refractive index = 1.46) for SeeDB2G, and oil (Refractive index = 1.52; Type F) for SeeDB2S.\nSeeDB2G/S cannot be used as an immersion media. Figure 5 shows an example of confocal\nimages. Figure 6 shows super-resolution images (Airyscan and STED).\nVideo 1. Imaging chamber preparation and sample mounting. Cut a silicone rubber sheet\n(1 mm-thick and 0.2 mm-thick are shown in this video) into an appropriate size with scissors or\na utility knife. A silicone rubber sheet will adhere to a glass slide, by removing air between the\nrubber sheet and the glass slide. Mount cleared samples (cleared samples are often difficult to\nfind) using a perforated spoon and a paint brush. Use No. 1.5H coverslips to seal the samples.\nFigure 3. Slice sample ready for imaging . A 220 μm brain slice was mounted within the\nimaging chamber. A silicone rubber sheet (0.2 mm thick) was used for the spacer, and a\ncoverslip is placed to seal the sample. The silicone rubber sheet will adhere to the glass slide\nand coverslip without adhesive. The spill -over of the SeeDB2G/S will form a tight film after air\ndrying.\nF. Anticipated Results (Figure 4)\nPlease cite this article as: Meng-Tsen and Takeshi , (2018). Optical Clearing and Index Matching of Tissue Samples for High-resolution Fluorescence\nImaging Using SeeDB2, Bio-protocol 8 (20): e3046. DOI: 10.21769/BioProtoc.3046.\n",
+          "sha256": "55c8846119ecf37c1ad3334671851f9130190f563909de12ec710c3387e4a4ee",
+          "locator_search_terms": [
+            "SeeDB2G",
+            "SeeDB2S"
+          ],
+          "selection": "Literal parser page containing source vocabulary; not entailment or scientific truth label"
+        },
+        {
+          "id": "PAGE9",
+          "page": 9,
+          "start": 20397,
+          "end": 21595,
+          "quote": "Copyright © 2018 The Authors; exclusive licensee Bio-protocol LLC. 9\nwww.bio-protocol.org/e3046\nVol 8, Iss 20, Oct 20, 2018\nDOI:10.21769/BioProtoc.3046\nFigure 4. Transmission images of 500 μm adult mouse brain slices after optical clearing\nwith SeeDB2G and SeeDB2S (Ke et al., 2016). Grids are 2.6 x 3.2 mm.\nData analysis\nData analysis procedures have been described in the original publication (Ke et al. , 2016). No\nstatistical analysis was performed in this protocol paper. We used Neurolucida (MBF Bioscience)\nfor the 3D rendering in Figure 5.\nFigure 5. Confocal imaging of adult brain slices ( Thy1-YFP-H mouse). Adult brain slices\n(220 μm thick) were imaged with 63x oil-immersion lens under confocal microscopy (Leica TCS\nSP8). In the PBS sample (uncleared), due to light scattering and spherical aberrations, the\nresolution and fluorescence signals intensity were dampe ned. The highest resolution was\nmaintained throughout all depths when cleared with SeeDB2S.\nPlease cite this article as: Meng-Tsen and Takeshi , (2018). Optical Clearing and Index Matching of Tissue Samples for High-resolution Fluorescence\nImaging Using SeeDB2, Bio-protocol 8 (20): e3046. DOI: 10.21769/BioProtoc.3046.\n",
+          "sha256": "82f46a155d0c9a086bb25ae9ed79ea6690bf800f0f14316de11cd4526c30656f",
+          "locator_search_terms": [
+            "SeeDB2G",
+            "SeeDB2S"
+          ],
+          "selection": "Literal parser page containing source vocabulary; not entailment or scientific truth label"
+        },
+        {
+          "id": "PAGE10",
+          "page": 10,
+          "start": 21596,
+          "end": 23806,
+          "quote": "Copyright © 2018 The Authors; exclusive licensee Bio-protocol LLC. 10\nwww.bio-protocol.org/e3046\nVol 8, Iss 20, Oct 20, 2018\nDOI:10.21769/BioProtoc.3046\nFigure 6. Super-resolution imaging of adult brain slices (Thy1-YFP-H mouse). Due to the\nminimized spherical aberrations, SeeDB2S is also useful for various kinds of super -resolution\nmicroscopy, such as STED (Leica), Airyscan (Zeiss), HyVolution2 (Leica), and SpinSR\n(Olympus). For large-scale super-resolution imaging, we first imaged with a 20x objective lens.\nThen, we focused on a particular neuron and obtained super-resolution images along the target\nneuron to save imaging time and data volume. We used Neurolucida (MBF Bioscience) for the\nquantification and reconstruction of neuronal morphology. Images adapted from Ke et al. (2016).\nNotes\n1. The saponin solution is brownish\nWe strongly recommend saponin from NACALAI TESQUE. Different vendors prepare saponin\nfrom different species of plants. Brownish lots should be avoided. Alternatively, a low\nconcentration of Triton X-100 can be used.\n2. Histodenz does not dissolve completely\nPrepare ~10 ml SeeDB2S solution in a 50 ml conical tube to prevent insufficient mixing of\niohexol power and Tris buffer. Use rotator for gentle mixing.\n3. White or yellow aggregations in SeeDB2 solutions\nTo avoid bacterial contamination, filter and sterilize the 20% saponin stock solution. Add 0.01%-\n0.1% of sodium azide to each clearing solution and store the solutions containing saponin at\n4 °C.\n4. Water evaporation\nThe surface of SeeDB2 forms a film as the water evaporates from the surface. SeeDB2 should\nbe sealed in the imaging chamber during imaging.\n5. Sealing samples in the imaging chambers/glass slides\nNail polish should not be used to seal the samples. For thick samples, we routinely use a silicone\nrubber. To seal samples on glass slides, we use an excess amount of SeeDB2, which then forms\na tight film after water evaporation.\n6. Samples are floating within SeeDB2\nPlease cite this article as: Meng-Tsen and Takeshi , (2018). Optical Clearing and Index Matching of Tissue Samples for High-resolution Fluorescence\nImaging Using SeeDB2, Bio-protocol 8 (20): e3046. DOI: 10.21769/BioProtoc.3046.\n",
+          "sha256": "7d5cf8cfe770cff6a2d6cfa5e702ab3a8b8757ba20d54be097f770b1ab3835fd",
+          "locator_search_terms": [
+            "SeeDB2S"
+          ],
+          "selection": "Literal parser page containing source vocabulary; not entailment or scientific truth label"
+        },
+        {
+          "id": "PAGE11",
+          "page": 11,
+          "start": 23807,
+          "end": 26310,
+          "quote": "Copyright © 2018 The Authors; exclusive licensee Bio-protocol LLC. 11\nwww.bio-protocol.org/e3046\nVol 8, Iss 20, Oct 20, 2018\nDOI:10.21769/BioProtoc.3046\nT o avoid movement artifacts during imaging, we prepared brain slices that are slightly thicker\nthan the thickness of the spacer (translucent silicone rubber sheet). For example, we prepared\n220 μm brain slices when we used 200 μm-thick rubber sheets. For small samples, it is also\nuseful to prepare SeeDB2 with 0.1% low -melting agarose to immobi lize the sample; we used\nlow-melting agarose to image mouse oocyte samples. Embedding small samples in agarose\nmay also be useful to avoid the loss of samples during clearing, as it is often difficult to find\ninvisible samples from clearing solution.\n7. Movement artifacts\nBecause SeeDB2 allows for imaging up to the limit of the working distance (W.D.) of the\nobjective lens, glass slides are often pushed up by the objective lenses as you get closer to the\nupper limit, which leads to movement artifacts. We recommend using a clamp or placing a\nweight on the glass slide in order to avoid the movement of samples during imaging.\n8. Detecting sample surface\nBecause the refractive index of SeeDB2 is the same as that of coverslips, it is difficult to\ndetermine the surface of the sample when you perform the fluorescence imaging. Make sure to\nattach the sample to the coverslip (see Note 6).\n9. Photo-bleaching\nVarious fluorescent proteins ( e.g., TagBFP2, ECFP, mTurquoise2, EGFP, EYFP, C yO F P,\ntdTomato, tdKatushka2) are very s table and resistant to photo- bleaching in SeeDB2 solution.\nIndeed, SeeDB2 performs much better than commercialized mounting media for fluorescent\nproteins. However, some Alexa dyes and DAPI are easily photo-bleached in SeeDB2. In these\nsituations, we suggest 2,2’-Thiodiethanol (TDE, refractive index up to 1.52) as an alternative for\nchemical dyes (Staudt et al., 2007), however, fluorescent proteins are quenched in TDE.\nRecipes\n1. 10x Phosphate-buffered saline (10x PBS)\n80 g NaCl\n29 g Na2HPO4·12H2O\n2 g KCl\n2 g KH2PO4\nAdd ddH2O to prepare 1 L 10x PBS\nDilute 10 times with ddH2O to prepare 1x PBS\n2. Tris-EDTA buffer, pH 7.6\n10 mM Tris-HCl\n0.25 mM EDTA\n3. Permeabilization solution\n100 μl 20% saponin solution + 900 μl PBS\n4. Solution 1\nPlease cite this article as: Meng-Tsen and Takeshi , (2018). Optical Clearing and Index Matching of Tissue Samples for High-resolution Fluorescence\nImaging Using SeeDB2, Bio-protocol 8 (20): e3046. DOI: 10.21769/BioProtoc.3046.\n",
+          "sha256": "d9f96f02658868a78746eccea32f742344a069b426f0b57baa73ee82db2e407a",
+          "locator_search_terms": [
+            "Recipes",
+            "Phosphate"
+          ],
+          "selection": "Literal parser page containing source vocabulary; not entailment or scientific truth label"
+        },
+        {
+          "id": "PAGE12",
+          "page": 12,
+          "start": 26311,
+          "end": 28764,
+          "quote": "Copyright © 2018 The Authors; exclusive licensee Bio-protocol LLC. 12\nwww.bio-protocol.org/e3046\nVol 8, Iss 20, Oct 20, 2018\nDOI:10.21769/BioProtoc.3046\n100 μl 20% saponin solution + 333 μl Omnipaque350 + 567 μl ddH2O\n5. Solution 2\n100 μl 20% saponin solution + 500 μl Omnipaque350 + 400 μl ddH2O\n6. SeeDB2 solutions\nNotes:\na. Tris-EDTA buffer pH 7.6 (Recipe 2) is used to prepare SeeDB2S from Histodenz powder.\nDo not use PBS. Phosphate buffer will generate white precipitates after long-term storage\nand impair imaging quality.\nb. The solution of 0.01% sodium azide can be included in the buffer for long-term preservation.\nDo not store clearing solution for long time.\nc. Pre-made SeeDB2 solutions are also commercialized from FUJIFILM Wako Pure Chemical.\nSolutions Composition\nSeeDB2G with saponin\n(clearing)\n2% saponin in Omnipaque350\nSeeDB2G (mounting) Use Omnipaque350 directly\nOr 7,500 μl Tris-EDTA (pH 7.6) + 10 g Histodenz\nSeeDB2S with saponin\n(clearing)\n3,780 μl Tris-EDTA (pH 7.6) + 420 μl 20% saponin sol ution + 10 g\nHistodenz\nSeeDB2S (mounting) 4,200 μl Tris-EDTA (pH 7.6) + 10 g Histodenz\nAdd 4,200 μl Tris-EDTA to a 50 ml conical tube, and then add 10 g\nHistodenz. Use a rotator to fully dissolve the Histodenz in the conical\ntube\nAcknowledgments\nThis protocol was adapted from our original publication of the protocol (Ke et al., 2016). We thank\nJ.R. Sanes for providing the Thy1 -YFP-H mouse line, R. Sakaguchi for help with video, and M.\nLeiwe for proofreading. This work was supported by grants from the PRESTO program of the Japan\nScience and Technology Agency (JST), the Brain/MINDS project of the Japan Agency for Medical\nResearch and Development (AMED), the Mitsubishi Foundation, the Strategic Programs for R&D\n(President’s Discretionary Fund) of RIKEN, the JSPS KAKENHI (grant numbers 23680038,\n15K14336, 16K14568, 16H06456, 17H06261), and RIKEN CDB intramural grant. M. -T.K. was\nsupported by RIKEN Foreign Postdoctoral Researcher program. The imaging experiments were\nsupported by the RIKEN Kobe Light Microscopy Facility . Animal experiments were supported by\nLaboratory for Animal Resources and Genetic Engineering (LARGE) at the RIKEN Center for Life\nScience Technologies.\nCompeting interests\nPlease cite this article as: Meng-Tsen and Takeshi , (2018). Optical Clearing and Index Matching of Tissue Samples for High-resolution Fluorescence\nImaging Using SeeDB2, Bio-protocol 8 (20): e3046. DOI: 10.21769/BioProtoc.3046.\n",
+          "sha256": "901cf7f9da0af795428b2c886bcdd993ad2ff0c192487e5fd4315ef3cdf479bf",
+          "locator_search_terms": [
+            "SeeDB2G",
+            "SeeDB2S",
+            "Phosphate"
+          ],
+          "selection": "Literal parser page containing source vocabulary; not entailment or scientific truth label"
+        }
+      ],
+      "grounding_status": "PRIMARY_BODY_AND_LOCATORS_BOUND_APPLICABILITY_ENTAILMENT_PENDING",
+      "guards": [
+        "SOURCE_APPLICABILITY_NOT_REVIEWED",
+        "SEPARATE_ENTAILMENT_UNBOUND"
+      ],
+      "applicability_review": "PENDING_USER_EXPERT",
+      "scientific_validation": "PENDING_USER_EXPERT",
+      "identity_check": {
+        "kind": "PRIMARY_BIBLIOGRAPHIC_WEB_CHECK",
+        "checked_at": "2026-10-02",
+        "fulltext_authenticated": false,
+        "absence_of_corrections_verified": false
+      },
+      "note": "SeeDB2G and SeeDB2S are distinct author protocol variants. Reagent RI and tissue-native RI heuristics must not be interchanged.",
+      "retrieval_status": {
+        "status": "PDF_BODY_EXTRACTED",
+        "html_fetch_status": "FETCH_FAILED",
+        "scientific_claims_validated": false,
+        "pdf_parser_verified": true
+      }
+    },
+    {
+      "id": "SEEDB2_CORRECTION_2018",
+      "method": "SeeDB2",
+      "identity": {
+        "title": "Correction Notice: Optical Clearing and Index Matching of Tissue Samples for High-resolution Fluorescence Imaging Using SeeDB2",
+        "doi": "10.21769/BioProtoc.3095",
+        "url": "https://bio-protocol.org/en/bpdetail?id=3095&type=0",
+        "year": 2018,
+        "version": "Bio-protocol 8(21):e3095; 2018-11-05",
+        "publication_status": "UNKNOWN"
+      },
+      "relations": {
+        "corrects": "SEEDB2_PROTOCOL_2018"
+      },
+      "snapshot": {
+        "status": "BOUND_RETRIEVED_PRIMARY_PDF_TEXT",
+        "raw_path": "KnowledgeBase/primary_sources/SEEDB2_CORRECTION_2018/raw.pdf",
+        "raw_sha256": "0b986896010e1b85c27f0fbe74314611f2a9bff9f9dd43c7aaa2ebaece759c86",
+        "bytes": 250704,
+        "identity_url": "https://bio-protocol.org/en/bpdetail?id=3095&type=0",
+        "version": "Bio-protocol 8(21):e3095; 2018-11-05",
+        "retrieved_url": "https://bio-protocol.org/pdf/Bio-protocol3095.pdf",
+        "requested_url": "https://bio-protocol.org/pdf/Bio-protocol3095.pdf",
+        "fetched_at_utc": "2026-10-02T15:43:54.8913905Z",
+        "text_path": "KnowledgeBase/primary_sources/SEEDB2_CORRECTION_2018/body.txt",
+        "text_sha256": "b5e7998e271a1372d7ed42f9ce576207944a9f5e48230d0f73c5a442c285aa75",
+        "license": {
+          "status": "PRIMARY_PDF_LICENSE_TEXT_RECORDED_PENDING_USER_LICENSE_REVIEW",
+          "statements_from_body": [
+            "Copyright: © 2018 The Authors; exclusive licensee Bio-protocol LLC."
+          ]
+        },
+        "characters": 1353,
+        "pages": 1,
+        "page_offsets": [
+          {
+            "page": 1,
+            "start": 0,
+            "end": 1353,
+            "text_sha256": "b5e7998e271a1372d7ed42f9ce576207944a9f5e48230d0f73c5a442c285aa75"
+          }
+        ],
+        "extraction": {
+          "version": "primary-pdf-pypdf-text-v1",
+          "script_sha256": "52fc862cfe638a8e6fdb37f2a595f5affa936fe73392f6045dd282e8277319aa",
+          "parser": {
+            "name": "pypdf",
+            "version": "6.19.0",
+            "wheel_url": "https://files.pythonhosted.org/packages/3c/2c/c43c03eaf630435f023f1dc61ec4a4a78951ad5530a62c71cc89bde307b7/pypdf-6.19.0-py3-none-any.whl",
+            "wheel_sha256": "7e5d6e730e7dae87d560a2cee218b852f6498c8be61966f3cd02ead971e48d14",
+            "library_tree_sha256": "d70c5fa010a157180b231a01986fe90ae4b0e644ab1140c80cd5e4570056e6f6",
+            "license": "BSD-3-Clause",
+            "system_installation": false
+          },
+          "normalization": "Page.extract_text; horizontal whitespace and empty lines normalized; no prose rewritten",
+          "limitations": "PDF text ordering/font extraction may be imperfect; compare with saved original PDF during user review"
+        }
+      },
+      "passages": [
+        {
+          "id": "PAGE1",
+          "page": 1,
+          "start": 0,
+          "end": 1353,
+          "quote": "Cite as: Ke, M. and Imai, T. (2018). Correction Notice: Optical Clearing and Index Matching of Tissue Samples for High-\nresolution Fluorescence Imaging Using SeeDB2. Bio-protocol 8(21): e3095. DOI: 10.21769/BioProtoc.3095.\nCopyright: © 2018 The Authors; exclusive licensee Bio-protocol LLC.\n1\nPublished: Nov 05, 2018\nCorrection Notice: Optical Clearing and\nIndex Matching of Tissue Samples for\nHigh-resolution Fluorescence Imaging\nUsing SeeDB2\nMeng-Tsen Ke1 and Takeshi Imai1, 2, *\n1Laboratory for Sensory Circuit Formation, RIKEN Center for Developmental Biology, Kobe, Japan\n2Graduate School of Medical Sciences, Kyushu University, Fukuoka, Japan\n*For correspondence: t-imai@med.kyushu-u.ac.jp\nAfter official publication of our protocol in bio -protocol ( https://bio-protocol.org/e3046), we noted an error in the\nprotocol.\nThe recipe for Phosphate -buffered saline (PBS) was in fact the one for 10x PBS. Accordingly, we need to make\ncorrections as follows (in Recipes):\n“1. Phosphate-buffered saline (PBS)” → “1. 10x Phosphate-buffered saline (10x PBS)”.\n“Add ddH2O to prepare 1 L PBS” → “Add ddH2O to prepare 1 L 10x PBS. Dilute 10 times with ddH 2O to prepare 1x\nPBS”.\nReferences\n1. Ke, M. and Imai, T. (2018). Optical Clearing and Index Matching of Tissue Samples for High -resolution\nFluorescence Imaging Using SeeDB2. Bio-protocol 8(20): e3046.\n",
+          "sha256": "b5e7998e271a1372d7ed42f9ce576207944a9f5e48230d0f73c5a442c285aa75",
+          "locator_search_terms": [
+            "10x",
+            "Dilute"
+          ],
+          "selection": "Literal parser page containing source vocabulary; not entailment or scientific truth label"
+        }
+      ],
+      "grounding_status": "PRIMARY_BODY_AND_LOCATORS_BOUND_APPLICABILITY_ENTAILMENT_PENDING",
+      "guards": [
+        "SOURCE_APPLICABILITY_NOT_REVIEWED",
+        "SEPARATE_ENTAILMENT_UNBOUND"
+      ],
+      "applicability_review": "PENDING_USER_EXPERT",
+      "scientific_validation": "PENDING_USER_EXPERT",
+      "identity_check": {
+        "kind": "PRIMARY_BIBLIOGRAPHIC_WEB_CHECK",
+        "checked_at": "2026-10-02",
+        "fulltext_authenticated": false,
+        "absence_of_corrections_verified": false
+      },
+      "note": "Published correction identifies PBS recipe as 10x stock and requires tenfold dilution to prepare 1x PBS. The correction notice is not a new general compatibility label.",
+      "retrieval_status": {
+        "status": "PDF_BODY_EXTRACTED",
+        "html_fetch_status": "FETCH_FAILED",
+        "scientific_claims_validated": false,
+        "pdf_parser_verified": true
+      }
+    },
+    {
+      "id": "CUBIC_ADVANCED_NATPROTOC_2019",
+      "method": "CUBIC",
+      "identity": {
+        "title": "Advanced CUBIC tissue clearing for whole-organ cell profiling",
+        "doi": "10.1038/s41596-019-0240-9",
+        "url": "https://sys-pharm.m.u-tokyo.ac.jp/pdf/Matsumoto_2019.pdf",
+        "year": 2019,
+        "version": "Nature Protocols 14, 3506-3537 (2019)",
+        "publication_status": "UNKNOWN"
+      },
+      "relations": {},
+      "snapshot": {
+        "status": "BOUND_RETRIEVED_PRIMARY_BODY",
+        "raw_path": "KnowledgeBase/primary_sources/CUBIC_ADVANCED_NATPROTOC_2019/raw.pdf",
+        "raw_sha256": "082e098d97baf5c99a5377de78b897c18134368c8eca0ef72b1161ced9499b99",
+        "text_path": "KnowledgeBase/primary_sources/CUBIC_ADVANCED_NATPROTOC_2019/body.txt",
+        "text_sha256": "d5fa3cd70c332157ce22cd536b4a0d25ac38e1135c0bd4cb2859c4e4d82810b3",
+        "characters": 135802,
+        "version": "Nature Protocols 14, 3506-3537 (2019)",
+        "retrieved_url": "https://sys-pharm.m.u-tokyo.ac.jp/pdf/Matsumoto_2019.pdf",
+        "extraction": {
+          "tool": "pypdf",
+          "version": "6.19.0",
+          "fonttools_version": "4.66.1",
+          "normalization": "Per-page extraction; whitespace normalized; no prose rewritten",
+          "fonttools_changed_text": false,
+          "page_ranges": [
+            {
+              "page_zero_based": 0,
+              "start": 0,
+              "end": 4610
+            },
+            {
+              "page_zero_based": 1,
+              "start": 4611,
+              "end": 7553
+            },
+            {
+              "page_zero_based": 2,
+              "start": 7554,
+              "end": 10788
+            },
+            {
+              "page_zero_based": 3,
+              "start": 10789,
+              "end": 15749
+            },
+            {
+              "page_zero_based": 4,
+              "start": 15750,
+              "end": 17653
+            },
+            {
+              "page_zero_based": 5,
+              "start": 17654,
+              "end": 20532
+            },
+            {
+              "page_zero_based": 6,
+              "start": 20533,
+              "end": 21930
+            },
+            {
+              "page_zero_based": 7,
+              "start": 21931,
+              "end": 27566
+            },
+            {
+              "page_zero_based": 8,
+              "start": 27567,
+              "end": 30096
+            },
+            {
+              "page_zero_based": 9,
+              "start": 30097,
+              "end": 35788
+            },
+            {
+              "page_zero_based": 10,
+              "start": 35789,
+              "end": 41475
+            },
+            {
+              "page_zero_based": 11,
+              "start": 41476,
+              "end": 43070
+            },
+            {
+              "page_zero_based": 12,
+              "start": 43071,
+              "end": 44533
+            },
+            {
+              "page_zero_based": 13,
+              "start": 44534,
+              "end": 49982
+            },
+            {
+              "page_zero_based": 14,
+              "start": 49983,
+              "end": 53859
+            },
+            {
+              "page_zero_based": 15,
+              "start": 53860,
+              "end": 57273
+            },
+            {
+              "page_zero_based": 16,
+              "start": 57274,
+              "end": 60855
+            },
+            {
+              "page_zero_based": 17,
+              "start": 60856,
+              "end": 64414
+            },
+            {
+              "page_zero_based": 18,
+              "start": 64415,
+              "end": 69421
+            },
+            {
+              "page_zero_based": 19,
+              "start": 69422,
+              "end": 73607
+            },
+            {
+              "page_zero_based": 20,
+              "start": 73608,
+              "end": 77831
+            },
+            {
+              "page_zero_based": 21,
+              "start": 77832,
+              "end": 82426
+            },
+            {
+              "page_zero_based": 22,
+              "start": 82427,
+              "end": 87087
+            },
+            {
+              "page_zero_based": 23,
+              "start": 87088,
+              "end": 91077
+            },
+            {
+              "page_zero_based": 24,
+              "start": 91078,
+              "end": 95708
+            },
+            {
+              "page_zero_based": 25,
+              "start": 95709,
+              "end": 100102
+            },
+            {
+              "page_zero_based": 26,
+              "start": 100103,
+              "end": 103798
+            },
+            {
+              "page_zero_based": 27,
+              "start": 103799,
+              "end": 107762
+            },
+            {
+              "page_zero_based": 28,
+              "start": 107763,
+              "end": 111104
+            },
+            {
+              "page_zero_based": 29,
+              "start": 111105,
+              "end": 116188
+            },
+            {
+              "page_zero_based": 30,
+              "start": 116189,
+              "end": 121711
+            },
+            {
+              "page_zero_based": 31,
+              "start": 121712,
+              "end": 125126
+            },
+            {
+              "page_zero_based": 32,
+              "start": 125127,
+              "end": 128598
+            },
+            {
+              "page_zero_based": 33,
+              "start": 128599,
+              "end": 130695
+            },
+            {
+              "page_zero_based": 34,
+              "start": 130696,
+              "end": 132225
+            },
+            {
+              "page_zero_based": 35,
+              "start": 132226,
+              "end": 132587
+            },
+            {
+              "page_zero_based": 36,
+              "start": 132588,
+              "end": 133566
+            },
+            {
+              "page_zero_based": 37,
+              "start": 133567,
+              "end": 134666
+            },
+            {
+              "page_zero_based": 38,
+              "start": 134667,
+              "end": 135086
+            },
+            {
+              "page_zero_based": 39,
+              "start": 135087,
+              "end": 135802
+            }
+          ]
+        },
+        "identity_url": "https://sys-pharm.m.u-tokyo.ac.jp/pdf/Matsumoto_2019.pdf"
+      },
+      "passages": [
+        {
+          "id": "P1",
+          "start": 61519,
+          "end": 62042,
+          "quote": "CUBIC-R+(M) CUBIC-R+(M) is the same formula as that for CUBIC-R +(N), except that it contains N-methyl- nicotinamide in place of the nicotinamide. CUBIC-R +(M) can alternatively be purchased (Reagents). cCRITICAL The N-methylnicotinamide in CUBIC-R +(M) retains ﬂuorescent protein signals better than nicotinamide. When observing tissues labeled with ﬂuorescent proteins, use CUBIC-R +(M); otherwise, CUBIC-R +(N) can be used, which is inexpensive. Half-diluted CUBIC-R + Half-diluted CUBIC-R + is an equivalent volume mixt",
+          "sha256": "36899fae707edb15407042b35e6a1479f4242571c2fea102246ef6f04f7d354a",
+          "selection": "Exact reproducible primary text selection; not scientific gold",
+          "page_zero_based": 17
+        },
+        {
+          "id": "P2",
+          "start": 74642,
+          "end": 75413,
+          "quote": "(vii) CUBIC-R+ treatment. Immerse the sample in 4 ml of CUBIC-R + in a 5-ml tube and gently shake it at room temperature overnight. The next day, replace the reagent with fresh reagent and incubate for a further 24 h. The reagent volume and tube size can be adjusted for the organ size. ! CAUTION When imaging ﬂuorescent-protein-labeled organs, the signal intensity may decrease in the CUBIC-R + solution; therefore, long-term storage at this point is not recommended. ? TROUBLESHOOTINGjPAUSE POINT Organs can be left in CUBIC-R + at room temperature. The maximum storage period depends on the staining dye. Organs stained with PI and RD2 can be stored for >1 month at room temperature in a dark environment. Avoid storage at 4 °C, so that the samples do not crystallize.",
+          "sha256": "0321e05808eb5b78440c0bcaf731b92e0c356b0bc27905f6e4471ad44b854ba8",
+          "selection": "Exact reproducible primary text selection; not scientific gold",
+          "page_zero_based": 20
+        }
+      ],
+      "grounding_status": "PRIMARY_BODY_AND_LOCATORS_BOUND_APPLICABILITY_ENTAILMENT_PENDING",
+      "guards": [
+        "SOURCE_APPLICABILITY_NOT_REVIEWED",
+        "SOURCE_PUBLICATION_STATUS_UNKNOWN",
+        "SEPARATE_ENTAILMENT_UNBOUND"
+      ],
+      "scientific_validation": "PENDING_USER_EXPERT",
+      "identity_check": {
+        "kind": "AUTOMATED_PRIMARY_BIBLIOGRAPHIC_SCOPE_REVIEW",
+        "review_first_sha256": "1893320db41dfa1d14a1a4246c2d41e12d47df590c650eb7cdba5bcb688d5e3a",
+        "fulltext_authenticated": false,
+        "absence_of_corrections_verified": false,
+        "version_limit": "Identity based on downloaded publication text, PDF header/metadata/DOI stream checks and hashes, not live publisher/Crossref verification or PDF visual rendering. Normalized display title is not an exact quote."
+      },
+      "note": "CUBIC publication variants are separate; generic method identity does not permit recipe or sample/label substitution."
+    },
+    {
+      "id": "CUBIC_CELL_2014",
+      "method": "CUBIC",
+      "identity": {
+        "title": "Whole-Brain Imaging with Single-Cell Resolution Using Chemical Cocktails and Computational Analysis",
+        "doi": "10.1016/j.cell.2014.03.042",
+        "url": "https://dbarchive.biosciencedbc.jp/data/ssbd/20191216/Archive/48-Susaki-MouseBrainCUBIC/48-Susaki-MouseBrainCUBIC.pdf",
+        "year": 2014,
+        "version": "Cell (2014); downloaded edition explicitly says article in press and prints Cell 157, 1-14",
+        "publication_status": "UNKNOWN"
+      },
+      "relations": {},
+      "snapshot": {
+        "status": "BOUND_RETRIEVED_PRIMARY_BODY",
+        "raw_path": "KnowledgeBase/primary_sources/CUBIC_CELL_2014/raw.pdf",
+        "raw_sha256": "8ef7381097a9f51fa124fb3590039fc7b268af8eae12e9b2e22198409bb9b3ce",
+        "text_path": "KnowledgeBase/primary_sources/CUBIC_CELL_2014/body.txt",
+        "text_sha256": "00125729710bfc1fbdfe79235bb5f0ffb88fad37f966fe7b4b6b97551be53824",
+        "characters": 67684,
+        "version": "Cell (2014); downloaded edition explicitly says article in press and prints Cell 157, 1-14",
+        "retrieved_url": "https://dbarchive.biosciencedbc.jp/data/ssbd/20191216/Archive/48-Susaki-MouseBrainCUBIC/48-Susaki-MouseBrainCUBIC.pdf",
+        "extraction": {
+          "tool": "pypdf",
+          "version": "6.19.0",
+          "fonttools_version": "4.66.1",
+          "normalization": "Per-page extraction; whitespace normalized; no prose rewritten",
+          "fonttools_changed_text": false,
+          "page_ranges": [
+            {
+              "page_zero_based": 0,
+              "start": 0,
+              "end": 5000
+            },
+            {
+              "page_zero_based": 1,
+              "start": 5001,
+              "end": 12067
+            },
+            {
+              "page_zero_based": 2,
+              "start": 12068,
+              "end": 19075
+            },
+            {
+              "page_zero_based": 3,
+              "start": 19076,
+              "end": 19372
+            },
+            {
+              "page_zero_based": 4,
+              "start": 19373,
+              "end": 26520
+            },
+            {
+              "page_zero_based": 5,
+              "start": 26521,
+              "end": 29696
+            },
+            {
+              "page_zero_based": 6,
+              "start": 29697,
+              "end": 34291
+            },
+            {
+              "page_zero_based": 7,
+              "start": 34292,
+              "end": 39179
+            },
+            {
+              "page_zero_based": 8,
+              "start": 39180,
+              "end": 41902
+            },
+            {
+              "page_zero_based": 9,
+              "start": 41903,
+              "end": 46797
+            },
+            {
+              "page_zero_based": 10,
+              "start": 46798,
+              "end": 48225
+            },
+            {
+              "page_zero_based": 11,
+              "start": 48226,
+              "end": 55609
+            },
+            {
+              "page_zero_based": 12,
+              "start": 55610,
+              "end": 63537
+            },
+            {
+              "page_zero_based": 13,
+              "start": 63538,
+              "end": 67684
+            }
+          ]
+        },
+        "identity_url": "https://dbarchive.biosciencedbc.jp/data/ssbd/20191216/Archive/48-Susaki-MouseBrainCUBIC/48-Susaki-MouseBrainCUBIC.pdf"
+      },
+      "passages": [
+        {
+          "id": "P1",
+          "start": 0,
+          "end": 850,
+          "quote": "Resource Whole-Brain Imaging with Single-Cell Resolution Using Chemical Cocktails and Computational Analysis Etsuo A. Susaki, 1,2,3,4,14 Kazuki Tainaka,1,3,4,14 Dimitri Perrin,2,14 Fumiaki Kishino,5 Takehiro Tawara,6 Tomonobu M. Watanabe, 7 Chihiro Yokoyama,8 Hirotaka Onoe,8 Megumi Eguchi,9 Shun Yamaguchi,9,10 Takaya Abe,11 Hiroshi Kiyonari,11 Yoshihiro Shimizu,12 Atsushi Miyawaki,13 Hideo Yokota,6 and Hiroki R. Ueda 1,2,3,4,* 1Laboratory for Synthetic Biology, RIKEN Quantitative Biology Center 2Laboratory for Systems Biology, RIKEN Center for Developmental Biology 2-2-3 Minatojima-minamimachi, Chuo-ku, Kobe, Hyogo 650-0047, Japan 3Department of Systems Pharmacology, Graduate School of Medicine, The University of Tokyo, 7-3-1 Hongo, Bunkyo-ku, Tokyo 113-0033, Japan 4CREST, Japan Science and Technology Agency, 4-1-8 Honcho, Kawaguchi, Sait",
+          "sha256": "1b8dded6a58ad43ef551ab8da26d6bda6261642e8fa1f13af7bfeb8b8f0bab6f",
+          "selection": "Exact reproducible primary text selection; not scientific gold",
+          "page_zero_based": 0
+        },
+        {
+          "id": "P2",
+          "start": 2372,
+          "end": 3222,
+          "quote": "brain clearing and imaging method, termed CUBIC (clear, unobstructed brain imaging cocktails and computational analysis). CUBIC is a simple and efﬁcient method involving the immersion of brain samples in chemical mixtures containing aminoalcohols, which enables rapid whole-brain imaging with single-photon excitation microscopy. CUBIC is applicable to multicolor imag- ing of ﬂuorescent proteins or immunostained sam- ples in adult brains and is scalable from a primate brain to subcellular structures. We also developed a whole-brain cell-nuclear counterstaining protocol and a computational image analysis pipeline that, together with CUBIC reagents, enable the visualiza- tion and quantiﬁcation of neural activities induced by environmental stimulation. CUBIC enables time- course expression proﬁling of whole adult brains with single-cell resolu",
+          "sha256": "cd922da3fa37d66a0817459a7b1d30fc46a4bc4d58f69e5cf412c0ec7205ea79",
+          "selection": "Exact reproducible primary text selection; not scientific gold",
+          "page_zero_based": 0
+        }
+      ],
+      "grounding_status": "PRIMARY_BODY_AND_LOCATORS_BOUND_APPLICABILITY_ENTAILMENT_PENDING",
+      "guards": [
+        "SOURCE_APPLICABILITY_NOT_REVIEWED",
+        "SOURCE_PUBLICATION_STATUS_UNKNOWN",
+        "SEPARATE_ENTAILMENT_UNBOUND"
+      ],
+      "scientific_validation": "PENDING_USER_EXPERT",
+      "identity_check": {
+        "kind": "AUTOMATED_PRIMARY_BIBLIOGRAPHIC_SCOPE_REVIEW",
+        "review_first_sha256": "1893320db41dfa1d14a1a4246c2d41e12d47df590c650eb7cdba5bcb688d5e3a",
+        "fulltext_authenticated": false,
+        "absence_of_corrections_verified": false,
+        "version_limit": "Identity based on downloaded publication text, PDF header/metadata/DOI stream checks and hashes, not live publisher/Crossref verification or PDF visual rendering. Normalized display title is not an exact quote."
+      },
+      "note": "CUBIC publication variants are separate; generic method identity does not permit recipe or sample/label substitution."
+    },
+    {
+      "id": "CUBIC_CHEMICAL_LANDSCAPE_CELLREP_2018",
+      "method": "CUBIC",
+      "identity": {
+        "title": "Chemical Landscape for Tissue Clearing Based on Hydrophilic Reagents",
+        "doi": "10.1016/j.celrep.2018.07.056",
+        "url": "https://sys-pharm.m.u-tokyo.ac.jp/pdf/Tainaka_2018.pdf",
+        "year": 2018,
+        "version": "Cell Reports 24, 2196-2210; August 21, 2018",
+        "publication_status": "UNKNOWN"
+      },
+      "relations": {},
+      "snapshot": {
+        "status": "BOUND_RETRIEVED_PRIMARY_BODY",
+        "raw_path": "KnowledgeBase/primary_sources/CUBIC_CHEMICAL_LANDSCAPE_CELLREP_2018/raw.pdf",
+        "raw_sha256": "81bf38907a9a8255da2d319d936a79c860457737fc97a48e8199ec70b8f5a9b7",
+        "text_path": "KnowledgeBase/primary_sources/CUBIC_CHEMICAL_LANDSCAPE_CELLREP_2018/body.txt",
+        "text_sha256": "ea827d477f862ea5d39c55393eabfb350bbe42b34e1d27df49ae650679ef2c8a",
+        "characters": 136698,
+        "version": "Cell Reports 24, 2196-2210; August 21, 2018",
+        "retrieved_url": "https://sys-pharm.m.u-tokyo.ac.jp/pdf/Tainaka_2018.pdf",
+        "extraction": {
+          "tool": "pypdf",
+          "version": "6.19.0",
+          "fonttools_version": "4.66.1",
+          "normalization": "Per-page extraction; whitespace normalized; no prose rewritten",
+          "fonttools_changed_text": false,
+          "page_ranges": [
+            {
+              "page_zero_based": 0,
+              "start": 0,
+              "end": 1032
+            },
+            {
+              "page_zero_based": 1,
+              "start": 1033,
+              "end": 5898
+            },
+            {
+              "page_zero_based": 2,
+              "start": 5899,
+              "end": 12694
+            },
+            {
+              "page_zero_based": 3,
+              "start": 12695,
+              "end": 14238
+            },
+            {
+              "page_zero_based": 4,
+              "start": 14239,
+              "end": 16787
+            },
+            {
+              "page_zero_based": 5,
+              "start": 16788,
+              "end": 19412
+            },
+            {
+              "page_zero_based": 6,
+              "start": 19413,
+              "end": 26219
+            },
+            {
+              "page_zero_based": 7,
+              "start": 26220,
+              "end": 29262
+            },
+            {
+              "page_zero_based": 8,
+              "start": 29263,
+              "end": 35804
+            },
+            {
+              "page_zero_based": 9,
+              "start": 35805,
+              "end": 42527
+            },
+            {
+              "page_zero_based": 10,
+              "start": 42528,
+              "end": 44978
+            },
+            {
+              "page_zero_based": 11,
+              "start": 44979,
+              "end": 48096
+            },
+            {
+              "page_zero_based": 12,
+              "start": 48097,
+              "end": 51627
+            },
+            {
+              "page_zero_based": 13,
+              "start": 51628,
+              "end": 58057
+            },
+            {
+              "page_zero_based": 14,
+              "start": 58058,
+              "end": 66055
+            },
+            {
+              "page_zero_based": 15,
+              "start": 66056,
+              "end": 70403
+            },
+            {
+              "page_zero_based": 16,
+              "start": 70404,
+              "end": 72487
+            },
+            {
+              "page_zero_based": 17,
+              "start": 72488,
+              "end": 75553
+            },
+            {
+              "page_zero_based": 18,
+              "start": 75554,
+              "end": 81842
+            },
+            {
+              "page_zero_based": 19,
+              "start": 81843,
+              "end": 88266
+            },
+            {
+              "page_zero_based": 20,
+              "start": 88267,
+              "end": 94479
+            },
+            {
+              "page_zero_based": 21,
+              "start": 94480,
+              "end": 101110
+            },
+            {
+              "page_zero_based": 22,
+              "start": 101111,
+              "end": 106392
+            },
+            {
+              "page_zero_based": 23,
+              "start": 106393,
+              "end": 112307
+            },
+            {
+              "page_zero_based": 24,
+              "start": 112308,
+              "end": 114110
+            },
+            {
+              "page_zero_based": 25,
+              "start": 114111,
+              "end": 114643
+            },
+            {
+              "page_zero_based": 26,
+              "start": 114644,
+              "end": 116596
+            },
+            {
+              "page_zero_based": 27,
+              "start": 116597,
+              "end": 118041
+            },
+            {
+              "page_zero_based": 28,
+              "start": 118042,
+              "end": 120229
+            },
+            {
+              "page_zero_based": 29,
+              "start": 120230,
+              "end": 122523
+            },
+            {
+              "page_zero_based": 30,
+              "start": 122524,
+              "end": 123186
+            },
+            {
+              "page_zero_based": 31,
+              "start": 123187,
+              "end": 124375
+            },
+            {
+              "page_zero_based": 32,
+              "start": 124376,
+              "end": 125840
+            },
+            {
+              "page_zero_based": 33,
+              "start": 125841,
+              "end": 126606
+            },
+            {
+              "page_zero_based": 34,
+              "start": 126607,
+              "end": 127527
+            },
+            {
+              "page_zero_based": 35,
+              "start": 127528,
+              "end": 129119
+            },
+            {
+              "page_zero_based": 36,
+              "start": 129120,
+              "end": 130597
+            },
+            {
+              "page_zero_based": 37,
+              "start": 130598,
+              "end": 131413
+            },
+            {
+              "page_zero_based": 38,
+              "start": 131414,
+              "end": 133193
+            },
+            {
+              "page_zero_based": 39,
+              "start": 133194,
+              "end": 133487
+            },
+            {
+              "page_zero_based": 40,
+              "start": 133488,
+              "end": 134638
+            },
+            {
+              "page_zero_based": 41,
+              "start": 134639,
+              "end": 136456
+            },
+            {
+              "page_zero_based": 42,
+              "start": 136457,
+              "end": 136698
+            }
+          ]
+        },
+        "identity_url": "https://sys-pharm.m.u-tokyo.ac.jp/pdf/Tainaka_2018.pdf"
+      },
+      "passages": [
+        {
+          "id": "P1",
+          "start": 0,
+          "end": 850,
+          "quote": "Resource Chemical Landscape for Tissue Clearing Based on Hydrophilic Reagents Graphical Abstract Highlights d Comprehensive chemical proﬁling of hydrophilic chemicals for tissue clearing d Strategic integration of optimal chemical cocktails for rational clearing protocols d Large-tissue clearing and cell-resolution imaging of tissues by CUBIC protocols d Virtual multiplex imaging of ﬂuorescent protein-expressing mouse brains Authors Kazuki Tainaka, Tatsuya C. Murakami, Etsuo A. Susaki, ..., Masashi Fukayama, Akiyoshi Kakita, Hiroki R. Ueda Correspondence uedah-tky@umin.ac.jp In Brief Tainaka et al. describe a strategy for developing hydrophilic tissue-clearing reagents based on comprehensive chemical proﬁling. The strategic integration of optimal chemical cocktails provided a series of CUBIC protocols, which enable the 3D imaging of the m",
+          "sha256": "e30ba194989d2bb707980a698e932d2d6074978b1bd014ab5a93d56be1e2807e",
+          "selection": "Exact reproducible primary text selection; not scientific gold",
+          "page_zero_based": 0
+        },
+        {
+          "id": "P2",
+          "start": 25952,
+          "end": 26802,
+          "quote": " s how 25th–75th percentiles (boxes), 10th–90th percentiles (whiskers), median (horizontal lines), and mean (cross). *p < 0.05, **p < 0.01, and ***p < 0.00 1. See also Figures S1 and S2, Table S2, and the STAR Methods. Cell Reports 24, 2196–2210, August 21, 2018 2201\nH Purpose ResultProtocol Mouse organ & body clearing Tissues including bone clearing Human brain clearing Aggressive organ clearing CUBIC-L CUBIC-L CUBIC-B CUBIC-L CUBIC-R/RA 50% 100% CUBIC-HL CUBIC-L CUBIC-P (optional) J, K, L, S3D PBS PBS PBS PBS PBS I Mouse brain Mouse kidney I, S3C J Mouse leg BeforeAfter Mouse head Mouse body BeforeAfter Mouse spine KL M N BeforeAfter BeforeAfter Human brainHuman heart Human kidney E PBS 70 wt% CU#1283 45 wt% Histodenz 30 wt% CU#1283 + 45 wt% CU#1102 30 wt% CU#1283 + 45 wt% CU#0788 30 wt% CU#1283 + 45 wt% CU#0640 30 wt% CU#1283 + 45 wt% ",
+          "sha256": "9b947d18b1b067756c7287aed05276653f339b3b853cc725ece525290608a265",
+          "selection": "Exact reproducible primary text selection; not scientific gold",
+          "page_zero_based": 6
+        }
+      ],
+      "grounding_status": "PRIMARY_BODY_AND_LOCATORS_BOUND_APPLICABILITY_ENTAILMENT_PENDING",
+      "guards": [
+        "SOURCE_APPLICABILITY_NOT_REVIEWED",
+        "SOURCE_PUBLICATION_STATUS_UNKNOWN",
+        "SEPARATE_ENTAILMENT_UNBOUND"
+      ],
+      "scientific_validation": "PENDING_USER_EXPERT",
+      "identity_check": {
+        "kind": "AUTOMATED_PRIMARY_BIBLIOGRAPHIC_SCOPE_REVIEW",
+        "review_first_sha256": "1893320db41dfa1d14a1a4246c2d41e12d47df590c650eb7cdba5bcb688d5e3a",
+        "fulltext_authenticated": false,
+        "absence_of_corrections_verified": false,
+        "version_limit": "Identity based on downloaded publication text, PDF header/metadata/DOI stream checks and hashes, not live publisher/Crossref verification or PDF visual rendering. Normalized display title is not an exact quote."
+      },
+      "note": "CUBIC publication variants are separate; generic method identity does not permit recipe or sample/label substitution."
+    },
+    {
+      "id": "CUBIC_HISTOVISION_NATCOMM_2020",
+      "method": "CUBIC",
+      "identity": {
+        "title": "Versatile whole-organ/body staining and imaging based on electrolyte-gel properties of biological tissues",
+        "doi": "10.1038/s41467-020-15906-5",
+        "url": "https://sys-pharm.m.u-tokyo.ac.jp/pdf/Susaki_2020.pdf",
+        "year": 2020,
+        "version": "Nature Communications (2020) 11:1982",
+        "publication_status": "UNKNOWN"
+      },
+      "relations": {},
+      "snapshot": {
+        "status": "BOUND_RETRIEVED_PRIMARY_BODY",
+        "raw_path": "KnowledgeBase/primary_sources/CUBIC_HISTOVISION_NATCOMM_2020/raw.pdf",
+        "raw_sha256": "f0f5244e5cc41bfb310c33e5f57c195acf2d7fe6950da194e2485d7ca49190f1",
+        "text_path": "KnowledgeBase/primary_sources/CUBIC_HISTOVISION_NATCOMM_2020/body.txt",
+        "text_sha256": "fbed2b8c36f6f368601bc63cdb4f96121fc4548c4794392571b643b4f8b2b047",
+        "characters": 140006,
+        "version": "Nature Communications (2020) 11:1982",
+        "retrieved_url": "https://sys-pharm.m.u-tokyo.ac.jp/pdf/Susaki_2020.pdf",
+        "extraction": {
+          "tool": "pypdf",
+          "version": "6.19.0",
+          "fonttools_version": "4.66.1",
+          "normalization": "Per-page extraction; whitespace normalized; no prose rewritten",
+          "fonttools_changed_text": false,
+          "page_ranges": [
+            {
+              "page_zero_based": 0,
+              "start": 0,
+              "end": 1515
+            },
+            {
+              "page_zero_based": 1,
+              "start": 1516,
+              "end": 9826
+            },
+            {
+              "page_zero_based": 2,
+              "start": 9827,
+              "end": 12460
+            },
+            {
+              "page_zero_based": 3,
+              "start": 12461,
+              "end": 20487
+            },
+            {
+              "page_zero_based": 4,
+              "start": 20488,
+              "end": 22744
+            },
+            {
+              "page_zero_based": 5,
+              "start": 22745,
+              "end": 31021
+            },
+            {
+              "page_zero_based": 6,
+              "start": 31022,
+              "end": 33759
+            },
+            {
+              "page_zero_based": 7,
+              "start": 33760,
+              "end": 41694
+            },
+            {
+              "page_zero_based": 8,
+              "start": 41695,
+              "end": 43291
+            },
+            {
+              "page_zero_based": 9,
+              "start": 43292,
+              "end": 47585
+            },
+            {
+              "page_zero_based": 10,
+              "start": 47586,
+              "end": 52698
+            },
+            {
+              "page_zero_based": 11,
+              "start": 52699,
+              "end": 56506
+            },
+            {
+              "page_zero_based": 12,
+              "start": 56507,
+              "end": 59969
+            },
+            {
+              "page_zero_based": 13,
+              "start": 59970,
+              "end": 62506
+            },
+            {
+              "page_zero_based": 14,
+              "start": 62507,
+              "end": 72716
+            },
+            {
+              "page_zero_based": 15,
+              "start": 72717,
+              "end": 84243
+            },
+            {
+              "page_zero_based": 16,
+              "start": 84244,
+              "end": 96406
+            },
+            {
+              "page_zero_based": 17,
+              "start": 96407,
+              "end": 108401
+            },
+            {
+              "page_zero_based": 18,
+              "start": 108402,
+              "end": 120204
+            },
+            {
+              "page_zero_based": 19,
+              "start": 120205,
+              "end": 129616
+            },
+            {
+              "page_zero_based": 20,
+              "start": 129617,
+              "end": 137983
+            },
+            {
+              "page_zero_based": 21,
+              "start": 137984,
+              "end": 140006
+            }
+          ]
+        },
+        "identity_url": "https://sys-pharm.m.u-tokyo.ac.jp/pdf/Susaki_2020.pdf"
+      },
+      "passages": [
+        {
+          "id": "P1",
+          "start": 0,
+          "end": 850,
+          "quote": "ARTICLE Versatile whole-organ/body staining and imaging based on electrolyte-gel properties of biological tissues Etsuo A. Susaki et al. # Whole-organ/body three-dimensional (3D) staining and imaging have been enduring chal- lenges in histology. By dissecting the complex physicochemical environment of the staining system, we developed a highly optimized 3D staining imaging pipeline based on CUBIC. Based on our precise characterization of biological tissues as an electrolyte gel, we experi- mentally evaluated broad 3D staining conditions by using an arti ﬁcial tissue-mimicking material. The combination of optimized conditions allows a bottom-up design of a superior 3D staining protocol that can uniformly label whole adult mouse brains, an adult marmoset brain hemisphere, an ~1 cm 3 tissue block of a postmortem adult human cerebellum, and a",
+          "sha256": "129e6108b67ff2fbe37eb30c30693ac73997a7b558fb2515d8e3f5370ecf8276",
+          "selection": "Exact reproducible primary text selection; not scientific gold",
+          "page_zero_based": 0
+        },
+        {
+          "id": "P2",
+          "start": 3862,
+          "end": 4712,
+          "quote": "mall and thin tissues, partially dissected tissues, or embryonic tissues with little extracellular matrix. Low-density antigens such as c-Fos, amyloid plaques or microglia markers have demonstrated the capacity for homogeneous staining of sizeable tissue (e.g., on the order of cm 3 for whole adult mouse brain or dissected human specimens) 17,28. On the other hand, higher density antigens, such as NeuN and neuro ﬁlament, have not yet been adequately demonstrated to be capable of such staining. Other attempts have also been made, including the iterative supply of staining reagents 12,21 or the use of a specialized device26 or transcardial perfusion-based staining 16,18. To overcome these limitations, we applied an objective rather than an empirical approach to exploring essential 3D staining conditions. Beginning with a detailed characteriz",
+          "sha256": "58380def091345ea7ac169597a1d38d4cf7d14cc0545285b79468fdd5405c595",
+          "selection": "Exact reproducible primary text selection; not scientific gold",
+          "page_zero_based": 1
+        }
+      ],
+      "grounding_status": "PRIMARY_BODY_AND_LOCATORS_BOUND_APPLICABILITY_ENTAILMENT_PENDING",
+      "guards": [
+        "SOURCE_APPLICABILITY_NOT_REVIEWED",
+        "SOURCE_PUBLICATION_STATUS_UNKNOWN",
+        "SEPARATE_ENTAILMENT_UNBOUND"
+      ],
+      "scientific_validation": "PENDING_USER_EXPERT",
+      "identity_check": {
+        "kind": "AUTOMATED_PRIMARY_BIBLIOGRAPHIC_SCOPE_REVIEW",
+        "review_first_sha256": "1893320db41dfa1d14a1a4246c2d41e12d47df590c650eb7cdba5bcb688d5e3a",
+        "fulltext_authenticated": false,
+        "absence_of_corrections_verified": false,
+        "version_limit": "Identity based on downloaded publication text, PDF header/metadata/DOI stream checks and hashes, not live publisher/Crossref verification or PDF visual rendering. Normalized display title is not an exact quote."
+      },
+      "note": "CUBIC publication variants are separate; generic method identity does not permit recipe or sample/label substitution."
+    },
+    {
+      "id": "CUBIC_WHOLEBODY_CELL_2014",
+      "method": "CUBIC",
+      "identity": {
+        "title": "Whole-Body Imaging with Single-Cell Resolution by Tissue Decolorization",
+        "doi": "10.1016/j.cell.2014.10.034",
+        "url": "https://www.sys-pharm.m.u-tokyo.ac.jp/pdf/Tainaka_2014.pdf",
+        "year": 2014,
+        "version": "Cell 159, 911-924; November 6, 2014",
+        "publication_status": "UNKNOWN"
+      },
+      "relations": {},
+      "snapshot": {
+        "status": "BOUND_RETRIEVED_PRIMARY_BODY",
+        "raw_path": "KnowledgeBase/primary_sources/CUBIC_WHOLEBODY_CELL_2014/raw.pdf",
+        "raw_sha256": "ba62f3b006ec611c81054ab08d5681e985c5def9f01ff7b2aaad326286414b65",
+        "text_path": "KnowledgeBase/primary_sources/CUBIC_WHOLEBODY_CELL_2014/body.txt",
+        "text_sha256": "da21b58aaa1315cfbd22a3d14353a4e54fb599e8a1c88efe54ecd3e4b3be7ee7",
+        "characters": 127595,
+        "version": "Cell 159, 911-924; November 6, 2014",
+        "retrieved_url": "https://www.sys-pharm.m.u-tokyo.ac.jp/pdf/Tainaka_2014.pdf",
+        "extraction": {
+          "tool": "pypdf",
+          "version": "6.19.0",
+          "fonttools_version": "4.66.1",
+          "normalization": "Per-page extraction; whitespace normalized; no prose rewritten",
+          "fonttools_changed_text": false,
+          "page_ranges": [
+            {
+              "page_zero_based": 0,
+              "start": 0,
+              "end": 4926
+            },
+            {
+              "page_zero_based": 1,
+              "start": 4927,
+              "end": 11872
+            },
+            {
+              "page_zero_based": 2,
+              "start": 11873,
+              "end": 15699
+            },
+            {
+              "page_zero_based": 3,
+              "start": 15700,
+              "end": 17332
+            },
+            {
+              "page_zero_based": 4,
+              "start": 17333,
+              "end": 24264
+            },
+            {
+              "page_zero_based": 5,
+              "start": 24265,
+              "end": 28905
+            },
+            {
+              "page_zero_based": 6,
+              "start": 28906,
+              "end": 30519
+            },
+            {
+              "page_zero_based": 7,
+              "start": 30520,
+              "end": 37691
+            },
+            {
+              "page_zero_based": 8,
+              "start": 37692,
+              "end": 42446
+            },
+            {
+              "page_zero_based": 9,
+              "start": 42447,
+              "end": 44159
+            },
+            {
+              "page_zero_based": 10,
+              "start": 44160,
+              "end": 50994
+            },
+            {
+              "page_zero_based": 11,
+              "start": 50995,
+              "end": 52717
+            },
+            {
+              "page_zero_based": 12,
+              "start": 52718,
+              "end": 60390
+            },
+            {
+              "page_zero_based": 13,
+              "start": 60391,
+              "end": 68203
+            },
+            {
+              "page_zero_based": 14,
+              "start": 68204,
+              "end": 75072
+            },
+            {
+              "page_zero_based": 15,
+              "start": 75073,
+              "end": 82016
+            },
+            {
+              "page_zero_based": 16,
+              "start": 82017,
+              "end": 88470
+            },
+            {
+              "page_zero_based": 17,
+              "start": 88471,
+              "end": 95615
+            },
+            {
+              "page_zero_based": 18,
+              "start": 95616,
+              "end": 102688
+            },
+            {
+              "page_zero_based": 19,
+              "start": 102689,
+              "end": 109835
+            },
+            {
+              "page_zero_based": 20,
+              "start": 109836,
+              "end": 112636
+            },
+            {
+              "page_zero_based": 21,
+              "start": 112637,
+              "end": 115994
+            },
+            {
+              "page_zero_based": 22,
+              "start": 115995,
+              "end": 118101
+            },
+            {
+              "page_zero_based": 23,
+              "start": 118102,
+              "end": 119702
+            },
+            {
+              "page_zero_based": 24,
+              "start": 119703,
+              "end": 120791
+            },
+            {
+              "page_zero_based": 25,
+              "start": 120792,
+              "end": 122957
+            },
+            {
+              "page_zero_based": 26,
+              "start": 122958,
+              "end": 124690
+            },
+            {
+              "page_zero_based": 27,
+              "start": 124691,
+              "end": 126025
+            },
+            {
+              "page_zero_based": 28,
+              "start": 126026,
+              "end": 127595
+            }
+          ]
+        },
+        "identity_url": "https://www.sys-pharm.m.u-tokyo.ac.jp/pdf/Tainaka_2014.pdf"
+      },
+      "passages": [
+        {
+          "id": "P1",
+          "start": 0,
+          "end": 850,
+          "quote": "Resource Whole-Body Imaging with Single-Cell Resolution by Tissue Decolorization Kazuki Tainaka,1,2,3,4 Shimpei I. Kubota, 1,4 Takeru Q. Suyama, 1 Etsuo A. Susaki, 1,2,3 Dimitri Perrin,2 Maki Ukai-Tadenuma,2 Hideki Ukai,2 and Hiroki R. Ueda 1,2,3,* 1Department of Systems Pharmacology, Graduate School of Medicine, The University of Tokyo, 7-3-1 Hongo, Bunkyo-ku, Tokyo 113-0033, Japan 2Laboratory for Synthetic Biology, RIKEN Quantitative Biology Center, 2-2-3 Minatojima-minamimachi, Chuo-ku, Kobe, Hyogo 650-0047, Japan 3CREST, Japan Science and Technology Agency, 4-1-8 Honcho, Kawaguchi, Saitama 332-0012, Japan 4Co-ﬁrst author *Correspondence: uedah-tky@umin.ac.jp http://dx.doi.org/10.1016/j.cell.2014.10.034 SUMMARY The development of whole-body imaging at single- cell resolution enables system-level approaches to studying cellular circuits",
+          "sha256": "464eaed37cc9bf3215e8e35f762b413b272532ed4cba20f8eac9b823b29777d4",
+          "selection": "Exact reproducible primary text selection; not scientific gold",
+          "page_zero_based": 0
+        },
+        {
+          "id": "P2",
+          "start": 113194,
+          "end": 114044,
+          "quote": "o-1,2-propanediol (#4) 3-Amino-1,2-propanediol (#8) 2-Amino-1,3-propanediol (#15) Triethanolamine (#16) Triisopropanolamine (#17) N,N,N',N'-Tetrakis(2-hydroxyethyl)- ethylenediamine (#9) N,N,N',N'-Tetrakis(2-hydroxypropyl)- ethylenediamine (#10) E Tris(hydroxymethyl)aminomethane (Tris) Dihydroxyethyl glycine (DHEG) Ethylenediaminetetraacetic acid (EDTA) Figure S1. Aminoalcohols in CUBIC Cocktails Decolorized the Blood by Efﬁciently Eluting Heme Chromophore, Related to Figure 1 (A) Normalized visible spectra of 0.1% mouse erythrocyte (black), 1/10 diluted supernatant from Figure 1A (red), 10 mM hemin (blue), 10 mM biliveridin (orange), and 100 mM iron(II) chloride (green), in CUBIC-1 reagent. (B) 50 g of CUBIC-1 reagent (red circle, n = 3), 25 wt% aminoalcohol #10 (magenta square, n = 3), 25 wt% basic glycerol (blue triangle, n = 3), 25 wt",
+          "sha256": "253d43096964dc06236b4649f1f55bb2a69a7162caeee87fae13a781dc765d2a",
+          "selection": "Exact reproducible primary text selection; not scientific gold",
+          "page_zero_based": 21
+        }
+      ],
+      "grounding_status": "PRIMARY_BODY_AND_LOCATORS_BOUND_APPLICABILITY_ENTAILMENT_PENDING",
+      "guards": [
+        "SOURCE_APPLICABILITY_NOT_REVIEWED",
+        "SOURCE_PUBLICATION_STATUS_UNKNOWN",
+        "SEPARATE_ENTAILMENT_UNBOUND"
+      ],
+      "scientific_validation": "PENDING_USER_EXPERT",
+      "identity_check": {
+        "kind": "AUTOMATED_PRIMARY_BIBLIOGRAPHIC_SCOPE_REVIEW",
+        "review_first_sha256": "1893320db41dfa1d14a1a4246c2d41e12d47df590c650eb7cdba5bcb688d5e3a",
+        "fulltext_authenticated": false,
+        "absence_of_corrections_verified": false,
+        "version_limit": "Identity based on downloaded publication text, PDF header/metadata/DOI stream checks and hashes, not live publisher/Crossref verification or PDF visual rendering. Normalized display title is not an exact quote."
+      },
+      "note": "CUBIC publication variants are separate; generic method identity does not permit recipe or sample/label substitution."
+    }
+  ],
+  "legacy_binding_audit": [
+    {
+      "legacy_key": "PMC4338786 mislabeled as SeeDB2",
+      "correct_source_id": "FRUIT_FRONTNEUROANAT_2015",
+      "status": "SOURCE_IDENTITY_CONFLICT_BLOCKED",
+      "migration": "Preserve archived records; new artifacts bind FRUIT identity explicitly."
+    },
+    {
+      "legacy_key": "SEEDB2_PROTOCOL_2015",
+      "location": "KnowledgeBase/time_kb.json",
+      "status": "UNRESOLVED_LEGACY_YEAR_VERSION_CHAIN",
+      "candidate_source_id": "SEEDB2_PROTOCOL_2018",
+      "migration": "No automatic relabel or numeric validation. Bind primary snapshot, exact version, corrections, scope and rationale before using for decisive science."
+    }
+  ],
+  "interpretation": "URLs and metadata do not authorize scientific decisions. Missing primary snapshots, passage bindings, applicability and separate checker results remain unresolved.",
+  "primary_snapshot_summary": {
+    "html_bodies_bound": 3,
+    "pdf_bytes_bound_text_pending": 0,
+    "pdf_texts_bound": 2,
+    "scientific_validation": "PENDING_USER_EXPERT",
+    "entailment_results_created": 0
+  }
+}

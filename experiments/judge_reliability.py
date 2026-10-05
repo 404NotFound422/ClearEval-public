@@ -345,6 +345,41 @@ class APIJudge:
         return await asyncio.to_thread(self.request, prompt)
 
 
+def evaluation_observation(evaluation):
+    """Separate technical completion from optional descriptive numeric values."""
+    failed = {'technical_complete': False, 'numeric_scope': 'NOT_AVAILABLE',
+              'numeric_status': 'FAILED', 'indices': None}
+    if not isinstance(evaluation, dict) or evaluation.get('_error'):
+        return {**failed, 'reason': 'EVALUATION_ERROR'}
+    if evaluation.get('technical_status') not in (None, 'VALID'):
+        return {**failed, 'reason': 'TECHNICAL_STATUS_NOT_VALID'}
+    if 'legacy_diagnostics' in evaluation:
+        diagnostic = evaluation['legacy_diagnostics']
+        if (evaluation.get('technical_status') != 'VALID'
+                or not isinstance(diagnostic, dict)
+                or not isinstance(diagnostic.get('scores'), dict)
+                or evaluation.get('cce_eligible') is not False
+                or evaluation.get('official_scores') is not None):
+            return {**failed, 'reason': 'MALFORMED_DIAGNOSTIC_COMPLETION'}
+        # A temporary numeric view never promotes these proposals to science.
+        view = {'evaluation': {'scores': diagnostic['scores']}}
+        scope = 'LEGACY_CONTINUOUS_DIAGNOSTIC'
+        try:
+            indices = protocol_scores(view)
+        except ValueError as exc:
+            return {'technical_complete': True, 'numeric_scope': scope,
+                    'numeric_status': 'UNKNOWN', 'indices': None, 'reason': str(exc)}
+        return {'technical_complete': True, 'numeric_scope': scope,
+                'numeric_status': 'COMPLETE', 'indices': indices, 'reason': None}
+    # Archived root-score rows keep their existing numeric contract, not approval.
+    try:
+        indices = protocol_scores({'evaluation': evaluation})
+    except ValueError as exc:
+        return {**failed, 'reason': str(exc)}
+    return {'technical_complete': True, 'numeric_scope': 'ARCHIVED_SCORE_DESCRIPTIVE',
+            'numeric_status': 'COMPLETE', 'indices': indices, 'reason': None}
+
+
 async def run_judge(study_dir, run_dir, config, max_calls=None):
     """Fresh judge context per protocol/replicate, no automatic retries.
 
@@ -368,10 +403,9 @@ async def run_judge(study_dir, run_dir, config, max_calls=None):
     for saved_path in run_dir.glob('repeat_*/*.json'):
         saved = read_json(saved_path)
         validate_attempt(saved, saved_path, run_dir, items, schedule, contract_hash)
-        if saved.get('api_error') or saved['evaluation'].get('_error'):
+        if saved.get('api_error') or not evaluation_observation(saved.get('evaluation'))['technical_complete']:
             print('Existing failed attempt requires diagnosis; it is retained and will not be skipped.', flush=True)
             return 2
-        protocol_scores({'evaluation': saved['evaluation']})
         returned_models.add(saved.get('api_metadata', {}).get('model'))
     if len(returned_models) > 1:
         raise ValueError('Saved attempts contain different returned model IDs')
@@ -386,10 +420,13 @@ async def run_judge(study_dir, run_dir, config, max_calls=None):
         started = datetime.now(timezone.utc).isoformat()
         result = await runner.evaluate_response_with_teacher(
             judge, item['question'], item['protocol'], {}, {'question_id': item['question_id']}, '')
+        observation = evaluation_observation(result)
         envelope = {'item_id': item['item_id'], 'repeat': task['repeat'],
                     'run_contract_sha256': contract_hash, 'started_at': started,
                     'completed_at': datetime.now(timezone.utc).isoformat(),
                     'protocol_sha256': item['protocol_sha256'], 'evaluation': result,
+                    'numeric_scope': observation['numeric_scope'],
+                    'numeric_status': observation['numeric_status'],
                     'api_metadata': {key: judge.last_response.get(key) for key in
                                      ('id', 'model', 'system_fingerprint', 'usage', 'created')}
                     if isinstance(judge.last_response, dict) else {},
@@ -397,10 +434,10 @@ async def run_judge(study_dir, run_dir, config, max_calls=None):
                     if judge.last_error else None}
         write_json(path, envelope)
         print(json.dumps({'repeat': task['repeat'], 'item_id': item['item_id'],
-                          'status': 'failed' if result.get('_error') else 'scored'}, ensure_ascii=False), flush=True)
+                          'status': 'diagnostic_complete' if observation['technical_complete'] else 'failed'}, ensure_ascii=False), flush=True)
         # Stop on transport/authentication failures or malformed/truncated output;
         # diagnose before spending on the rest of the frozen schedule.
-        if judge.last_error or result.get('_error'):
+        if judge.last_error or not observation['technical_complete']:
             print('Run stopped after failed canary/attempt; inspect the recorded status before resuming.', flush=True)
             return False
         returned_models.add(envelope['api_metadata'].get('model'))
@@ -504,7 +541,7 @@ def analyze(study_dir, run_dir=None, rating_paths=()):
     plan, by_id, schedule = load_validated_study(study_dir)
     items = list(by_id.values())
     assignments = read_json(study_dir / 'private/blinding_key.json')
-    attempts, valid = [], defaultdict(list)
+    attempts, valid, completed = [], defaultdict(list), defaultdict(list)
     if run_dir:
         run_dir = Path(run_dir)
         manifest = read_json(str(run_dir / 'run') + '.manifest.json')
@@ -522,24 +559,32 @@ def analyze(study_dir, run_dir=None, rating_paths=()):
             attempts.append(row)
             if row.get('api_error'):
                 continue
-            try:
-                parsed = protocol_scores({'evaluation': row['evaluation']})
-            except ValueError:
+            observation = evaluation_observation(row.get('evaluation'))
+            if not observation['technical_complete']:
                 continue
-            valid[row['item_id']].append({**row, 'indices': parsed})
+            observed_row = {**row, 'numeric_scope': observation['numeric_scope'],
+                            'numeric_status': observation['numeric_status'],
+                            'numeric_reason': observation['reason']}
+            completed[row['item_id']].append(observed_row)
+            if observation['indices'] is not None:
+                valid[row['item_id']].append({**observed_row, 'indices': observation['indices']})
     per_item = []
     for item in items:
         entries = valid[item['item_id']]
-        repeats = [row['repeat'] for row in entries]
+        technical_entries = completed[item['item_id']]
+        repeats = [row['repeat'] for row in technical_entries]
         if len(set(repeats)) != len(repeats) or any(not 1 <= repeat <= 3 for repeat in repeats):
             raise ValueError('Duplicate or unplanned replicate')
         values = [100 * row['indices']['I_A'] for row in entries]
         per_item.append({'item_id': item['item_id'], 'question_id': item['question_id'],
-                         'model': item['model'], 'setting': item['setting'], 'n_valid_repeats': len(values),
+                         'model': item['model'], 'setting': item['setting'],
+                         'n_technical_complete_repeats': len(technical_entries),
+                         'n_numeric_unknown_repeats': len(technical_entries) - len(values),
+                         'n_valid_repeats': len(values),
                          'mean_I_A': statistics.fmean(values) if values else None,
                          'sd_I_A': statistics.stdev(values) if len(values) >= 2 else None,
                          'range_I_A': max(values) - min(values) if len(values) >= 2 else None,
-                         'distinct_extracted_methods': len({row['evaluation']['meta_data'].get('target_method') for row in entries}) if values else None})
+                         'distinct_extracted_methods': len({row['evaluation'].get('meta_data', {}).get('target_method') for row in entries}) if values else None})
     metrics_by_id = {row['item_id']: row for row in per_item}
     conditions = []
     for setting in SETTINGS[1:]:
@@ -596,12 +641,23 @@ def analyze(study_dir, run_dir=None, rating_paths=()):
             'n_judge_ties_in_matched_pairs': sum(abs(delta) <= 1e-9 for delta in matched_judge),
         })
     variation_rows = [row for row in per_item if row['n_valid_repeats'] == 3]
+    complete_count = sum(len(v) for v in completed.values())
+    numeric_count = sum(len(v) for v in valid.values())
+    numeric_scopes = sorted({row['numeric_scope'] for entries in completed.values() for row in entries})
     summary = {
         'package_id': plan['package_id'], 'scope': plan['scope'],
-        'judge_attempts': len(attempts), 'judge_valid_results': sum(len(v) for v in valid.values()),
-        'judge_failed_results': len(attempts) - sum(len(v) for v in valid.values()),
+        'numeric_scope': 'LEGACY_CONTINUOUS_DIAGNOSTIC' if 'LEGACY_CONTINUOUS_DIAGNOSTIC' in numeric_scopes else 'ARCHIVED_SCORE_DESCRIPTIVE' if numeric_scopes else 'NOT_COLLECTED',
+        'numeric_scopes': numeric_scopes,
+        'scientific_validation': 'NOT_ESTABLISHED_FROM_NUMERIC_DIAGNOSTICS',
+        'scientific_accuracy': None,
+        'judge_attempts': len(attempts), 'judge_valid_results': complete_count,
+        'judge_technical_complete_results': complete_count,
+        'judge_failed_results': len(attempts) - complete_count,
+        'judge_complete_numeric_results': numeric_count,
+        'judge_numeric_unknown_results': complete_count - numeric_count,
         'returned_model_counts': dict(Counter(row.get('api_metadata', {}).get('model') for row in attempts)),
-        'judge_protocols_with_all_3_repeats': len(variation_rows), 'planned_judge_calls': 108,
+        'judge_protocols_with_all_3_repeats': sum(row['n_technical_complete_repeats'] == 3 for row in per_item),
+        'judge_protocols_with_all_3_numeric_repeats': len(variation_rows), 'planned_judge_calls': 108,
         'pooled_within_protocol_sd_I_A_points': math.sqrt(statistics.fmean(row['sd_I_A'] ** 2 for row in variation_rows)) if variation_rows else None,
         'median_within_protocol_range_I_A_points': statistics.median(row['range_I_A'] for row in variation_rows) if variation_rows else None,
         'protocols_with_extracted_method_disagreement': sum(row['distinct_extracted_methods'] > 1 for row in variation_rows),
@@ -613,7 +669,7 @@ def analyze(study_dir, run_dir=None, rating_paths=()):
         'human_duplicate_consistency': duplicate_checks,
         'judge_human_complete_protocols': len(judge_human_ids), 'judge_human_spearman': correspondence,
         'human_condition_contrasts': human_contrasts,
-        'interpretation': 'Repeatability and human validity are separate. No collected result is imputed; a reliable judge can still be wrong. Different human/model scales are compared by rank, not numerical agreement.',
+        'interpretation': 'Continuous numeric values are descriptive diagnostics, not independent scientific approval. Technical completion does not require a complete numeric vector. Repeatability and human validity are separate. No collected result is imputed; a reliable judge can still be wrong. Different human/model scales are compared by rank, not numerical agreement.',
     }
     out = study_dir / 'analysis'
     write_json(out / 'status_and_results.json', summary)

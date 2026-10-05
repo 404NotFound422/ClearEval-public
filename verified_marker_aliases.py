@@ -5,7 +5,7 @@ secondary antibody, spectral compatibility, or tissue clearing is valid.
 """
 import re
 
-IDENTITY_VERSION = 'marker-target-identities-2026-09-22-v1'
+IDENTITY_VERSION = 'marker-target-identities-2026-10-03-conflict-v2'
 IDENTITY_EVIDENCE = [{
     'target': 'PNAd',
     'clone': 'MECA-79',
@@ -25,9 +25,21 @@ TARGET_ALIASES = {
 }
 
 
+def marker_identity_conflict(name):
+    """Reject the observed PNAd/P-selectin expansion conflict; preserve other annotations."""
+    if not isinstance(name, str):
+        return None
+    has_pnad = re.search(r'(?<![a-z0-9])pnad(?![a-z0-9])', name, re.IGNORECASE)
+    has_wrong_expansion = re.search(r'\bp[\s_\-\u2010-\u2015]*selectin\s+adhesion\s+molecule\b',
+                                   name, re.IGNORECASE)
+    if has_pnad and has_wrong_expansion:
+        return "PNAD_P_SELECTIN_EXPANSION_CONFLICT"
+    return None
+
+
 def verified_target_identity(name):
     """Recognize a whole clone/target token, not a partial clone number."""
-    if not isinstance(name, str):
+    if not isinstance(name, str) or marker_identity_conflict(name):
         return None
     if re.search(r'(?<![a-z0-9])(?:meca[\s_\-\u2010-\u2015]*79|pnad)(?![a-z0-9])', name, re.IGNORECASE):
         return 'pnad'

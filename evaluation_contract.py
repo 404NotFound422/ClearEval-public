@@ -3,9 +3,10 @@ import copy
 import hashlib
 import json
 import math
+import re
 from pathlib import Path
 
-SCORING_VERSION = "cleareval-fixed-demand-v4-marker-identity"
+SCORING_VERSION = "cleareval-fixed-demand-v5-integrity"
 TIME_POLICY = "kb-window-asymmetric-median-0.20-under-0.10-over-v1"
 DEMAND_AXES = (
     "fluorescence_protein_preservation", "dye_permeability", "clearing_challenge",
@@ -69,6 +70,44 @@ class FixedDemandRegistry:
         return copy.deepcopy(self.vectors[str(qid)])
 
 
+
+class CurrentDemandRegistry:
+    """Deterministic current-task projection; no expert calibration claimed.
+
+    This profile derives values from the selected question rather than rebinding
+    historical vectors. It is computed without writing data during preflight.
+    """
+    def __init__(self, question_file):
+        from experiments.evidence_materials import demand_migration as migration
+        questions = json.loads(Path(question_file).read_text(encoding="utf-8-sig"))
+        self.questions = {str(q["question_id"]): q for q in questions}
+        if len(self.questions) != len(questions):
+            raise ValueError("Duplicate question IDs in selected snapshot")
+        proposals = [migration.derive_question(q) for q in questions]
+        for q, proposal in zip(questions, proposals):
+            migration.validate_derivation(q, proposal)
+        self.proposals = {str(p["question_id"]): p for p in proposals}
+        self.vectors = {qid: p["vector"] for qid,p in self.proposals.items()}
+        self.provenance = {
+            "questions_sha256": json_hash(questions),
+            "demand_vectors_sha256": json_hash(self.vectors),
+            "requirements_proposals_sha256": json_hash(proposals),
+            "derivation_code_sha256": sha256_file(migration.__file__),
+            "hash_format": "canonical-json-sha256-v1",
+            "demand_profile": "current-proposal",
+            "numeric_scale_status": "UNCALIBRATED_PROJECTION_FOR_REVIEW",
+            "review_status": "PENDING_USER_EXPERT",
+            "scientific_approval": None,
+            "binding_note": "Current explicit task text and metadata; original vectors unchanged.",
+        }
+
+    def get(self, qid, question_text):
+        question = self.questions.get(str(qid))
+        if question is None or question["question"] != question_text:
+            raise ValueError(f"Question {qid} text does not match selected snapshot")
+        return copy.deepcopy(self.vectors[str(qid)])
+
+
 def ensure_manifest(output_path, contract):
     """Refuse to append to unversioned or incompatible files. Never overwrite them."""
     manifest_path = Path(str(output_path) + ".manifest.json")
@@ -86,6 +125,25 @@ def ensure_manifest(output_path, contract):
     return digest
 
 
+def time_scope_conflict(row):
+    """Detect explicit contradictory KB labels, without resolving scientific timing."""
+    if not isinstance(row, dict):
+        return False
+    excluded = row.get("time_excludes_labeling")
+    if excluded is not True and not (isinstance(excluded, str) and excluded.strip().casefold() in ("yes", "true")):
+        return False
+    scope = row.get("time_scope")
+    if not isinstance(scope, str):
+        return False
+    for clause in re.split(r"[;；。\n]", scope):
+        positive = re.split(r"(?:不含|不包括|不包含|\bexclud(?:es|ing|ed)?\b)", clause,
+                            maxsplit=1, flags=re.IGNORECASE)[0]
+        if re.search(r"(?:包括|包含|including|includes?)[^;；。\n]*(?:染色步骤|标记步骤|staining|label[l]?ing)",
+                     positive, re.IGNORECASE):
+            return True
+    return False
+
+
 def time_score_details(actual, row, tier):
     """Score and explain the same KB window. Preserve the established asymmetric rule."""
     details = {"policy": TIME_POLICY, "source": "time_kb.json", "requested_tier": tier,
@@ -93,19 +151,22 @@ def time_score_details(actual, row, tier):
                "median_hours": None, "tau_hours": None, "delta_hours": None,
                "tau_under_fraction": 0.20, "tau_over_fraction": 0.10}
     if not row:
-        return 0.0, {**details, "status": "missing_kb"}
+        return None, {**details, "status": "missing_kb"}
     try:
         low, high, median = (float(row[key]) for key in
                              ("clearing_time_min_h", "clearing_time_max_h", "clearing_time_median_h"))
     except (KeyError, TypeError, ValueError):
-        return 0.0, {**details, "status": "invalid_kb"}
+        return None, {**details, "status": "invalid_kb"}
     if not all(math.isfinite(v) for v in (low, high, median)) or not 0 <= low <= median <= high or median <= 0:
-        return 0.0, {**details, "status": "invalid_kb"}
+        return None, {**details, "status": "invalid_kb"}
     details.update(min_hours=low, max_hours=high, median_hours=median)
-    if not isinstance(actual, (int, float)) or not math.isfinite(actual) or actual <= 0:
-        # Keep the legacy numerical score, but explicitly distinguish extraction failure.
-        details["actual_hours"] = actual if isinstance(actual, (int, float)) and math.isfinite(actual) else None
-        return 0.0, {**details, "status": "missing_or_invalid_time"}
+    if time_scope_conflict(row):
+        return None, {**details, "status": "time_scope_conflict",
+                      "time_scope": row.get("time_scope"), "time_excludes_labeling": row.get("time_excludes_labeling")}
+    if isinstance(actual, bool) or not isinstance(actual, (int, float)) or not math.isfinite(actual) or actual < 0:
+        # Missing/untrusted time is unknown, never imputed as zero-quality evidence.
+        details["actual_hours"] = actual if not isinstance(actual, bool) and isinstance(actual, (int, float)) and math.isfinite(actual) else None
+        return None, {**details, "status": "missing_or_invalid_time"}
     delta = max(low - actual, actual - high, 0.0)
     tau = (0.10 if actual > high else 0.20) * median
     score = 3.0 * math.exp(-0.5 * (delta / tau) ** 2)

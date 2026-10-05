@@ -1,0 +1,27 @@
+{
+  "models": [
+    {
+      "name": "ollama_local",
+      "type": "Ollama",
+      "model_name": "qwen3:8b",
+      "host": "http://localhost:11434",
+      "temperature": 0.1,
+      "max_tokens": 8192,
+      "timeout": 300,
+      "transport": "http",
+      "enable_thinking": false
+    },
+    {
+      "name": "ollama_teacher",
+      "type": "Ollama",
+      "model_name": "qwen3:8b",
+      "host": "http://localhost:11434",
+      "temperature": 0,
+      "max_tokens": 16384,
+      "timeout": 300,
+      "format": "json",
+      "transport": "http",
+      "enable_thinking": false
+    }
+  ]
+}
