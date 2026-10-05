@@ -1,5 +1,5 @@
 """Synthetic fixtures test collection/analysis; they are never research results."""
-from contextlib import redirect_stdout
+from contextlib import contextmanager, ExitStack, redirect_stdout
 import io
 import json
 import os
@@ -14,22 +14,105 @@ from evaluation_contract import json_hash
 import OEQ_run_grading_new as scorer
 
 
+REPO = Path(__file__).resolve().parents[1]
+ORIGINAL_QUESTIONS = REPO / 'dataset/Q+AR/revisions/2026-09-13-stem-fixes/before/question_final.json'
+ORIGINAL_DEMANDS = REPO / 'dataset/Q+AR/src/demand_vectors_all.json'
+
+
+def synthetic_score(qid):
+    """Shape-only legacy numeric fixture; no historical or expert score."""
+    return {'question_id': qid, 'fixture_scope': 'SYNTHETIC_ONLY',
+            'evaluation': {'scores': {
+                'completeness': {'c_step': {'score': 2}, 'c_param': {'score': 3}},
+                'correctness': {key: {'score': maximum} for key, maximum in
+                    [('co_order', 3), ('co_method', 2), ('co_param', 2), ('co_chem', 1)]},
+                'effectiveness': {'s_method': {'score': 2.5}, 's_label': {'score': 6},
+                                  's_trans': {'score': 3}, 's_time': {'score': 3}},
+            }}}
+
+
+@contextmanager
+def synthetic_archive():
+    """New small archives bound to copied question/vector pairs, never bulk results."""
+    temporary = tempfile.TemporaryDirectory(prefix='judge-fixture-', dir=REPO)
+    fixture_root = Path(temporary.name).resolve()
+    if not fixture_root.is_relative_to(REPO.resolve()):
+        raise ValueError('Synthetic cleanup target escapes workspace')
+    try:
+        original = pilot.read_json(ORIGINAL_QUESTIONS)
+        all_vectors = pilot.read_json(ORIGINAL_DEMANDS)
+        by_tier = {}
+        for question in original:
+            tier = question['tissue_hierarchy_from_tissue_xlsx']['tissue_tier_code']
+            by_tier.setdefault(tier, question)
+        if len(by_tier) != 12:
+            raise ValueError('Fixture requires the existing 12 explicit strata')
+        questions = [by_tier[tier] for tier in sorted(by_tier)]
+        vectors = {str(question['question_id']): all_vectors[str(question['question_id'])]
+                   for question in questions}
+        question_file = fixture_root / 'dataset/Q+AR/fixture_questions.json'
+        demand_file = fixture_root / 'dataset/Q+AR/fixture_demands.json'
+        pilot.write_json(question_file, questions)
+        pilot.write_json(demand_file, vectors)
+        pilot.write_json(str(demand_file) + '.manifest.json', {
+            'hash_format': 'canonical-json-sha256-v1',
+            'questions_sha256': json_hash(questions), 'demand_vectors_sha256': json_hash(vectors),
+            'fixture_scope': 'SYNTHETIC_ONLY',
+            'binding_note': ('Software fixture with copied original question/vector pairs. '
+                             'Hash identity is not scientific or expert approval.')})
+        for model in pilot.MODELS:
+            for setting in pilot.SETTINGS:
+                responses = []
+                for question in questions:
+                    protocol = (
+                        'SYNTHETIC_ONLY: a fictional test response, not a historical model answer. '
+                        'Use CUBIC as one clearing method. Wash, label GFP, clear, match, image '
+                        'and store the sample with declared fixture materials. '
+                        'The actual physical effects are unverified. '
+                        f'Fixture stratum {question["question_id"]}, configuration {model}/{setting}.')
+                    responses.append({'question_id': question['question_id'],
+                        'specific_question': question['question'], 'model_response': protocol,
+                        'restrictions': 'SYNTHETIC_ONLY software fixture; not a wet-lab instruction.',
+                        'fixture_scope': 'SYNTHETIC_ONLY'})
+                pilot.write_json(fixture_root /
+                    f'dataset/Q+AR/model_response/from_{model}_{setting}.json', responses)
+                pilot.write_json(fixture_root /
+                    f'dataset/Q+AR/result/evaluation_results_{model}_{setting}.json',
+                    [synthetic_score(question['question_id']) for question in questions])
+        # Empty provenance input: no fabricated collected expert judgments.
+        pilot.write_json(fixture_root / 'dataset/Q+AR/result/Machine_vs_Human_Summary.json', [])
+        template = fixture_root / 'experiments/blind_review_template.html'
+        template.parent.mkdir(parents=True, exist_ok=True)
+        template.write_bytes((REPO / 'experiments/blind_review_template.html').read_bytes())
+        with ExitStack() as stack:
+            for owner, name, value in [
+                (pilot, 'ROOT', fixture_root), (pilot, 'QUESTION_FILE', question_file),
+                (pilot, 'DEMAND_FILE', demand_file), (scorer, 'DEMAND_FILE', str(demand_file)),
+                (scorer, 'DEMAND_MANIFEST', None), (scorer, '_FIXED_DEMANDS', None)]:
+                stack.enter_context(patch.object(owner, name, value))
+            yield fixture_root
+    finally:
+        if not Path(temporary.name).resolve().is_relative_to(REPO.resolve()):
+            raise ValueError('Synthetic cleanup target escapes workspace')
+        temporary.cleanup()
+
+
 class PrepareAndImportTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
-        cls.temp = tempfile.TemporaryDirectory()
-        cls.study = Path(cls.temp.name) / 'study'
+        cls.fixtures = synthetic_archive()
+        cls.fixture_root = cls.fixtures.__enter__()
+        cls.addClassCleanup(cls.fixtures.__exit__, None, None, None)
+        cls.study = cls.fixture_root / 'study'
         with redirect_stdout(io.StringIO()):
             cls.plan = pilot.prepare(cls.study)
         cls.items = pilot.read_json(cls.study / 'private/items.json')
         cls.key = pilot.read_json(cls.study / 'private/blinding_key.json')
 
-    @classmethod
-    def tearDownClass(cls):
-        cls.temp.cleanup()
-
     def test_sample_has_matched_conditions_and_balanced_models(self):
         self.assertEqual(len({item['question_id'] for item in self.items}), 12)
+        self.assertTrue(all(item['protocol'].startswith('SYNTHETIC_ONLY:') for item in self.items))
+        self.assertEqual(pilot.read_json(self.study / 'private/human_archive_provenance.json')['records'], 0)
         self.assertEqual(len({item['tissue_tier'] for item in self.items}), 12)
         self.assertEqual(pilot.Counter(item['model'] for item in self.items), {model: 12 for model in pilot.MODELS})
         groups = pilot.defaultdict(list)
@@ -67,6 +150,9 @@ class PrepareAndImportTests(unittest.TestCase):
         with redirect_stdout(io.StringIO()):
             summary = pilot.analyze(self.study)
         self.assertEqual(summary['judge_attempts'], 0)
+        self.assertEqual(summary['judge_technical_complete_results'], 0)
+        self.assertEqual(summary['judge_complete_numeric_results'], 0)
+        self.assertIsNone(summary['scientific_accuracy'])
         self.assertEqual(summary['human_common_unique_protocols'], 0)
         self.assertIsNone(summary['pooled_within_protocol_sd_I_A_points'])
         self.assertIsNone(summary['human_quadratic_weighted_kappa_0_4'])
@@ -78,7 +164,7 @@ class PrepareAndImportTests(unittest.TestCase):
         self.assertEqual(pilot.Counter(row['status'] for row in audit), {'incomplete': 40})
 
     def test_changed_frozen_protocol_and_schedule_are_rejected(self):
-        with tempfile.TemporaryDirectory() as tmp, redirect_stdout(io.StringIO()):
+        with tempfile.TemporaryDirectory(prefix='judge-study-', dir=REPO) as tmp, redirect_stdout(io.StringIO()):
             study = Path(tmp)
             pilot.prepare(study)
             plan, items, schedule = pilot.load_validated_study(study)
@@ -120,6 +206,32 @@ class PrepareAndImportTests(unittest.TestCase):
 
 
 class StatisticsTests(unittest.TestCase):
+
+    def test_reader_keeps_archived_score_shape_as_descriptive(self):
+        observed = pilot.evaluation_observation(synthetic_score(1)['evaluation'])
+        self.assertTrue(observed['technical_complete'])
+        self.assertEqual(observed['numeric_scope'], 'ARCHIVED_SCORE_DESCRIPTIVE')
+        self.assertEqual(observed['indices']['I_A'], 1)
+
+    def test_nullable_numeric_diagnostic_is_complete_without_scientific_score(self):
+        scores = synthetic_score(1)['evaluation']['scores']
+        scores['effectiveness']['s_time']['score'] = None
+        observed = pilot.evaluation_observation({
+            'technical_status': 'VALID', 'scientific_status': 'UNRESOLVED',
+            'cce_eligible': False, 'official_scores': None, 'legacy_diagnostics': {'scores': scores}})
+        self.assertTrue(observed['technical_complete'])
+        self.assertEqual(observed['numeric_scope'], 'LEGACY_CONTINUOUS_DIAGNOSTIC')
+        self.assertEqual(observed['numeric_status'], 'UNKNOWN')
+        self.assertIsNone(observed['indices'])
+
+    def test_explicit_failure_is_separate_from_numeric_unknown(self):
+        observed = pilot.evaluation_observation({
+            '_error': 'Synthetic malformed response', 'technical_status': 'VALID',
+            'legacy_diagnostics': {'scores': synthetic_score(1)['evaluation']['scores']}})
+        self.assertFalse(observed['technical_complete'])
+        self.assertEqual(observed['numeric_status'], 'FAILED')
+        self.assertIsNone(observed['indices'])
+
     def test_rank_correlation_handles_ties_and_constants(self):
         self.assertEqual(pilot.rank([1, 1, 4]), [1.5, 1.5, 3])
         self.assertAlmostEqual(pilot.spearman([1, 2, 3], [3, 2, 1]), -1)
@@ -155,20 +267,39 @@ class RunTests(unittest.IsolatedAsyncioTestCase):
         original_questions, original_score_dir = scorer.QUESTION_FILE, scorer.OEQ_SCORE_DIR
         FixtureJudge.calls = 0
         try:
-            with tempfile.TemporaryDirectory() as tmp, patch.object(pilot, 'APIJudge', FixtureJudge), \
+            with synthetic_archive() as fixture_root, patch.object(pilot, 'APIJudge', FixtureJudge), \
                     patch.object(scorer, '_log_teacher_response'), redirect_stdout(io.StringIO()):
-                study, run = Path(tmp) / 'study', Path(tmp) / 'run'
+                study, run = fixture_root / 'study', fixture_root / 'run'
                 pilot.prepare(study)
                 config = {'model': 'synthetic-test-only', 'concurrency': 3}
                 self.assertEqual(await pilot.run_judge(study, run, config, max_calls=1), 0)
                 self.assertEqual(FixtureJudge.calls, 1)
+                canary_path = next(run.glob('repeat_*/*.json'))
+                canary = pilot.read_json(canary_path)
+                self.assertEqual(canary['evaluation']['technical_status'], 'VALID')
+                self.assertNotIn('scores', canary['evaluation'])
+                self.assertFalse(canary['evaluation']['cce_eligible'])
+                # Explicitly unavailable numeric detail must not repeat a completed call.
+                canary['evaluation']['legacy_diagnostics']['scores']['effectiveness']['s_time']['score'] = None
+                pilot.write_json(canary_path, canary)
                 self.assertEqual(await pilot.run_judge(study, run, config), 0)
                 self.assertEqual(FixtureJudge.calls, 108)
                 self.assertEqual(await pilot.run_judge(study, run, config), 0)
                 self.assertEqual(FixtureJudge.calls, 108)
+                # Numeric fixture imports exercise grouping only, never science validation.
                 summary = pilot.analyze(study, run)
                 self.assertEqual(summary['judge_protocols_with_all_3_repeats'], 36)
-                self.assertEqual(summary['pooled_within_protocol_sd_I_A_points'], 0)
+                self.assertEqual(summary['judge_technical_complete_results'], 108)
+                self.assertEqual(summary['judge_failed_results'], 0)
+                self.assertGreaterEqual(summary['judge_numeric_unknown_results'], 1)
+                self.assertEqual(summary['judge_complete_numeric_results'] + summary['judge_numeric_unknown_results'], 108)
+                self.assertLessEqual(summary['judge_protocols_with_all_3_numeric_repeats'], 35)
+                self.assertEqual(summary['numeric_scope'], 'LEGACY_CONTINUOUS_DIAGNOSTIC')
+                self.assertIsNone(summary['scientific_accuracy'])
+                if summary['judge_protocols_with_all_3_numeric_repeats']:
+                    self.assertEqual(summary['pooled_within_protocol_sd_I_A_points'], 0)
+                else:
+                    self.assertIsNone(summary['pooled_within_protocol_sd_I_A_points'])
                 # A copied result must not count as another independent observation.
                 first = next(run.glob('repeat_*/*.json'))
                 copied = first.with_name('unexpected.json')

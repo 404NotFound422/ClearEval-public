@@ -33,6 +33,33 @@ the output example. Extract only what the submitted protocol actually states.
 The final example defines the one combined output schema; section examples describe
 its components, and must not be returned as separate JSON objects.
 
+
+
+[ANSWER MATCHING AND ALTERNATIVES]
+Match QUESTION functions and necessary constraints, rather than reference wording.
+Distinguish selected components, optional substitutions, unselected discussion and
+unfinished drafts; a selected labeling panel is not an optional substitution.
+Bind conditions to their actual entity/action. A separately rejected or conditional
+method does not negate the selected method. Never borrow a requirement's support
+from another candidate. Necessary failures stay attached to their candidate;
+unknown support is not a detected error. An explicit local choice such as
+'I will choose **NAME**' does not certify finality after unfinished reconsideration.
+
+[UNCERTAINTY CONTRACT]
+For any sub-score in scores.completeness or scores.correctness, use the explicit
+JSON value "score": null when the submitted material and applicable evidence do
+not support a numeric judgment. Keep the sub-score object and provide a nonempty
+reasoning string explaining the unresolved parameter, identity, or applicability.
+Do not omit the score, invent a number, or replace uncertainty with 0 or full marks.
+A known failure satisfying a rubric failure criterion still receives 0; an explicit
+absence of a required function is different from insufficient evidence.
+If any sub-score in a group is null, every supplied total_* field in that group
+MUST also be null. Do not average only known sub-scores into a group total.
+Dependent overall scores and visualization values must likewise retain null where
+a numeric value cannot be computed. The numeric examples below illustrate known
+cases only; they do not override this uncertainty rule. Preserve reported values
+and explicit unknowns without silently correcting the candidate.
+
 [QUESTION] 
 {{question_text}} 
  

@@ -49,6 +49,26 @@ def load_oeq(filepath):
             if item.get('aggregation_version') != 'oeq-mean-of-protocol-minima-v2':
                 raise ValueError("OEQ stats use a legacy aggregation. Re-run results/aggregate_oeq.py; "
                                  "the mean protocol minimum cannot be recovered from dimension means.")
+            contract = item.get('scoring_contract')
+            workflow = item.get('workflow_diagnostics_summary')
+            automated = any(item.get('scoring_status_counts', {}).get(status, 0) for status in (
+                'AUTOMATED_BENCHMARK_ESTIMATE', 'BENCHMARK_UNRESOLVED'))
+            workflow_required = bool(isinstance(contract, dict) and contract.get('workflow_diagnostics_required') is True)
+            if automated or workflow_required or isinstance(workflow, dict) and workflow.get('required') is True:
+                import hashlib
+                digest = hashlib.sha256(json.dumps(contract, ensure_ascii=False, sort_keys=True,
+                    separators=(',', ':'), allow_nan=False).encode('utf-8')).hexdigest()
+                if not isinstance(contract, dict) or digest != item.get('scoring_contract_sha256'):
+                    raise ValueError('OEQ stats require a verified scoring contract manifest')
+            if workflow_required or isinstance(workflow, dict) and workflow.get('required') is True:
+                from benchmark_scoring import is_workflow_summary_complete
+                if not workflow_required or not is_workflow_summary_complete(workflow, item.get('total_items')):
+                    raise ValueError('OEQ stats require complete workflow diagnostic denominators')
+                sample, total = item.get('sample_count'), item.get('total_items')
+                if (type(sample) is not int or type(total) is not int
+                        or not 0 <= sample <= workflow['diagnostic_complete_count'] <= total
+                        or item.get('coverage') != (sample / total if total else 0)):
+                    raise ValueError('OEQ numerical coverage exceeds valid workflow diagnostics')
             if not item.get('sample_count'):
                 continue
             
@@ -67,12 +87,17 @@ def load_oeq(filepath):
                 'I_A_min_of_means': item['indices']['I_A_min_of_means'] * 100,
                 'sample_count': item['sample_count'],
                 'total_items': item['total_items'],
+                **{key: item.get(key) for key in (
+                    'scoring_contract_sha256', 'scoring_contract', 'provenance_status',
+                    'scoring_status_counts', 'score_interpretation_counts',
+                    'scientific_status_counts', 'reporting_note', 'workflow_diagnostics_summary', 'robustness_summary')},
             }
     return data
 
 def main(oeq_file='results/oeq_stats_scoring_v2.jsonl'):
     mcq_data = load_mcq('results/mcq_stats_20260222.jsonl')
     oeq_data = load_oeq(oeq_file)
+    print('OEQ scores summarize saved evaluations; automated estimates are not scientific certification.')
 
     # 模型名称映射（内部名称到展示名称）
     model_mapping = {

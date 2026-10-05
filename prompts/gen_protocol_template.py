@@ -53,8 +53,8 @@ Marker:{{c-fos, NeuN, GFAP, Iba1, CD31, MAP2}}
 **Example Output:**
 
 **Chosen Method:** MACS
-**Chosen Labeling:** [PI, CD31+Alexa Fluor 647] # means you choose PI and CD31+Alexa Fluor 647 as your labeling strategy, if you choose more dyes, please add them to the list.
-**Justification:** iDISCO+ provides good clearing for whole mouse brains, excellent fluorescence preservation (especially for robust reporters like mCherry), and uses relatively common reagents. The methanol-based approach is generally faster than aqueous methods like CUBIC. Labeling relies on the existing endogenous signal, simplifying the process.
+**Chosen Labeling:** [PI] (the tissue is already PI-labeled, as stated in the example problem).
+**Justification:** MACS is the single clearing method used in the protocol below, with sequential MACS-R0, MACS-R1, and MACS-R2 treatments based on MXDA and sorbitol. The labeling strategy uses the existing PI label specified in the problem statement; no additional marker or endogenous fluorescent protein signal is assumed.
 
 **Protocol Steps:**
 1 Tissue Optical Clearing

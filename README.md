@@ -202,6 +202,8 @@ python results/calculate_main_table_score.py
 # Recompute the inference-time grounding summary
 python results/aggregate_rag_baseline.py
 ```
+The default OEQ assessment mode is `benchmark`. It writes checked numerical estimates and retains scientific validation as `UNRESOLVED`; the current-question demand projection is explicitly uncalibrated. A valid explicit unknown becomes a completed `BENCHMARK_UNRESOLVED` record, contributes to the coverage denominator, and is not replaced with zero. Use `--assessment-mode grounded` for source-bound requirement diagnoses and `--assessment-mode legacy` for historical diagnostics. Fixed historical demand vectors require a matching question snapshot. Keep a new score directory when changing the assessment contract.
+
 
 ## Validation status
 

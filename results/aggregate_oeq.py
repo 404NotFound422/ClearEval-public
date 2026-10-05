@@ -1,84 +1,136 @@
+"""Aggregate saved scores without model calls or scientific certification."""
 import argparse
+from collections import Counter
+import hashlib
 import json
-import os
+from pathlib import Path
 import sys
+import re
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 try:
     from .oeq_metrics import aggregate_items
 except ImportError:
-    from oeq_metrics import aggregate_items
+    from results.oeq_metrics import aggregate_items
 
-"""
-本脚本用于聚合问答题（OEQ）的评分结果。
-主要功能：
-1. 遍历指定目录下的所有模型评分文件。
-2. 提取并归一化分数。
-3. 处理实验数据中的标签错误。
-4. 将统计结果保存为 JSONL 文件。
 
-更新：增加了路径自动搜索逻辑，支持不同运行环境。
-"""
+def _hash(value):
+    return hashlib.sha256(json.dumps(value, ensure_ascii=False, sort_keys=True,
+                                    separators=(",", ":"), allow_nan=False).encode("utf-8")).hexdigest()
 
-# 默认评分结果目录：使用随仓库发布的全部 253 个场景的机器评分结果，
-# 保证 oeq_stats 可由公开数据复现（主结果表 Table 2 的来源）。
-DEFAULT_OEQ_DIR = r'dataset/Q+AR/result'
-OUTPUT_FILE_NAME = 'oeq_stats_scoring_v2.jsonl'
 
-def find_dir(dirname):
-    """查找目录，尝试多种路径。"""
-    search_paths = [
-        dirname,
-        os.path.join('..', dirname),
-        os.path.join('results', dirname) # 针对误操作
-    ]
-    for path in search_paths:
-        if os.path.isdir(path):
-            return path
-    return None
+def aggregate_file(path, model_name=None):
+    path = Path(path)
+    items = json.loads(path.read_text(encoding="utf-8"))
+    if isinstance(items, dict):
+        items = [items]  # Historical single-record files remain inspectable.
+    if not isinstance(items, list) or any(not isinstance(item, dict) for item in items):
+        raise ValueError("OEQ result must be a list of result objects")
+    contracts = {item.get("scoring_contract_sha256") for item in items}
+    if len(contracts) > 1:
+        raise ValueError("Mixed scoring contracts in OEQ results")
+    digest = next(iter(contracts), None)
+    manifest_path = Path(str(path) + ".manifest.json")
+    manifest = None
+    if manifest_path.exists():
+        manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+        if (not isinstance(manifest, dict) or not isinstance(manifest.get("contract"), dict)
+                or manifest.get("contract_sha256") != _hash(manifest["contract"])
+                or (items and manifest["contract_sha256"] != digest)):
+            raise ValueError("Scoring contract manifest mismatch")
+        digest = manifest["contract_sha256"]
+    benchmark_contract = bool(manifest and manifest["contract"].get("assessment_mode") == "benchmark")
+    workflow_required = bool(manifest and manifest["contract"].get("workflow_diagnostics_required") is True)
+    from benchmark_scoring import is_workflow_obligation_complete, workflow_sources_match_contract, summarize_workflow_diagnostics
+    for item in items:
+        ev = item.get("evaluation") or {}
+        if not isinstance(ev, dict):
+            raise ValueError("Malformed evaluation")
+        requires_manifest = (ev.get("workflow_diagnostics_required") is True
+                             or ev.get("scoring_status") in {"AUTOMATED_BENCHMARK_ESTIMATE", "BENCHMARK_UNRESOLVED"})
+        if requires_manifest and not digest:
+            raise ValueError("Automated benchmark estimate requires scoring contract")
+        if requires_manifest and manifest is None:
+            raise ValueError("Automated benchmark estimate requires scoring contract manifest")
+        if workflow_required or ev.get("workflow_diagnostics_required") is True:
+            if (not workflow_required or not is_workflow_obligation_complete(ev, allow_failure=True)
+                    or not workflow_sources_match_contract(ev, manifest["contract"])):
+                raise ValueError("Invalid bound workflow diagnostics or source manifest")
+    for item in items:
+        ev = item.get("evaluation", {})
+        benchmark_candidate = isinstance(ev, dict) and (
+            ev.get("scoring_status") in {"AUTOMATED_BENCHMARK_ESTIMATE", "BENCHMARK_UNRESOLVED"}
+            or benchmark_contract and (ev.get("technical_status") == "VALID" or "scores" in ev))
+        if benchmark_candidate:
+            if not digest:
+                raise ValueError("Automated benchmark estimate requires scoring contract")
+            import sys
+            sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+            from benchmark_scoring import is_benchmark_record_complete
+            if not is_benchmark_record_complete(ev):
+                raise ValueError("Invalid automated benchmark estimate")
+    contract = manifest["contract"] if manifest else None
+    from oeq_robustness import sources_match_contract, summarize_reports
+    robustness_required = bool(contract and contract.get("robustness_diagnostics_required") is True)
+    if robustness_required:
+        for item in items:
+            ev = item.get("evaluation") or {}
+            if ev.get("_error"):
+                continue  # Technical failures remain in the planned denominator.
+            if not sources_match_contract(ev, contract):
+                raise ValueError("Invalid bound robustness diagnostics or numerical source manifest")
+    if model_name is None:
+        if contract and contract.get("model"):
+            model_name = contract["model"]
+        else:
+            stem = path.stem
+            match = re.fullmatch(r"(?:evaluation_results_|from_)(.+)_(\d+-shot(?:\+[^_]+)?)(?:_scoring)?", stem)
+            if not match:
+                raise ValueError("Cannot infer model name; provide model_name")
+            model_name = match.group(1)
+    states = {}
+    for field in ("scoring_status", "score_interpretation", "scientific_status"):
+        states[field + "_counts"] = dict(Counter(
+            (item.get("evaluation") or {}).get(field, "UNSPECIFIED_HISTORICAL")
+            if isinstance(item.get("evaluation"), dict) else "UNSPECIFIED_HISTORICAL"
+            for item in items))
+    return {"model_name": model_name, **aggregate_items(items),
+            "source_result_filename": path.name,
+            "scoring_contract_sha256": digest, "scoring_contract": contract,
+            "provenance_status": "VERSIONED" if digest else "UNVERSIONED_HISTORICAL",
+            **states,
+            "workflow_diagnostics_summary": summarize_workflow_diagnostics(items, required=workflow_required),
+            "robustness_summary": summarize_reports(items, required=robustness_required),
+            "reporting_note": "Aggregated saved scores; automated estimates are not scientific certification."}
 
-def aggregate_oeq(oeq_dir=None, output_file=None):
-    if oeq_dir is None:
-        oeq_dir = find_dir(DEFAULT_OEQ_DIR)
-    if not oeq_dir:
-        print(f"错误: 找不到评分结果目录 ({DEFAULT_OEQ_DIR})。")
-        sys.exit(1)
 
-    # 确定输出文件路径，默认存放在 results 目录下
-    if output_file is None:
-        output_dir = 'results'
-        if not os.path.exists(output_dir):
-            os.makedirs(output_dir)
-        output_file = os.path.join(output_dir, OUTPUT_FILE_NAME)
+def write_stats(paths, output):
+    rows = [aggregate_file(path) for path in sorted(map(Path, paths))]
+    names = [row["model_name"] for row in rows]
+    if len(names) != len(set(names)):
+        raise ValueError("Duplicate model: select one scoring run per model")
+    output = Path(output)
+    output.parent.mkdir(parents=True, exist_ok=True)
+    output.write_text("".join(json.dumps(row, ensure_ascii=False, allow_nan=False) + "\n"
+                              for row in rows), encoding="utf-8")
+    return rows
 
-    results = []
-    for filename in sorted(os.listdir(oeq_dir)):
-        # The base aggregate uses only the 13 one-shot runs. RAG and
-        # self-check variants are aggregated separately by aggregate_rag_baseline.py.
-        if filename.startswith('evaluation_results_') and filename.endswith('_1-shot.json'):
-            model_name = filename[len('evaluation_results_'):-len('.json')]
-            if model_name.endswith('_0-shot'):
-                model_name = model_name[:-len('_0-shot')]
-            elif model_name.endswith('_1-shot'):
-                model_name = model_name[:-len('_1-shot')]
-            
-            filepath = os.path.join(oeq_dir, filename)
-            try:
-                with open(filepath, 'r', encoding='utf-8') as f:
-                    data = json.loads(f.read())
-                
-                results.append({"model_name": model_name, **aggregate_items(data)})
-            except Exception as e:
-                raise ValueError(f"Failed to aggregate {filename}: {e}") from e
 
-    os.makedirs(os.path.dirname(os.path.abspath(output_file)), exist_ok=True)
-    with open(output_file, 'w', encoding='utf-8') as f:
-        for res in results:
-            f.write(json.dumps(res, ensure_ascii=False) + '\n')
-            
-    print(f"已将 {len(results)} 个模型的 OEQ 结果聚合至 {output_file}")
+def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--result-dir", default="dataset/Q+AR/result_scoring_v2")
+    parser.add_argument("--setting", default="1-shot", help="Saved runner shot setting, e.g. 0-shot or 1-shot+KB-RAG")
+    parser.add_argument("--output", default="results/oeq_stats_scoring_v2.jsonl")
+    args = parser.parse_args()
+    directory = Path(args.result_dir)
+    paths = list(directory.glob(f"evaluation_results_*_{args.setting}.json"))
+    paths.extend(directory.glob(f"from_*_{args.setting}_scoring.json"))
+    if not paths:
+        parser.error("No saved score results found for selected setting")
+    rows = write_stats(paths, args.output)
+    print(f"Wrote {len(rows)} rows -> {args.output}")
+    print("Automated estimates are not scientific certification.")
+
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="Aggregate OEQ evaluation results.")
-    parser.add_argument("--input-dir", default=None, help="Directory containing evaluation_results_*.json files")
-    parser.add_argument("--output", default=None, help="Output JSONL file path")
-    args = parser.parse_args()
-    aggregate_oeq(oeq_dir=args.input_dir, output_file=args.output)
+    main()
+

@@ -44,7 +44,237 @@ def _clean_text_for_time_parsing(text):
     return text
 
 
+_TIME_VALUE = r"\d+(?:\.\d+)?"
+_TIME_UNIT = r"(?:hours|hour|hr|h|小时|days|day|天|minutes|minute|min|分钟)(?![A-Za-z])"
+
+
+def _duration_item(match, value, unit):
+    return {"hours": convert_unit(float(value), unit),
+            "quote": match.group(0), "span": [match.start(), match.end()]}
+
+
+def _audit_product_duration(text):
+    """Finite source notation N × duration; preserve differing declared windows."""
+    pattern = rf"(?<![\d.])(\d+)\s*[×xX*]\s*({_TIME_VALUE})(?:\s*[-–—~至到]\s*({_TIME_VALUE}))?\s*({_TIME_UNIT})"
+    matches = list(re.finditer(pattern, text, re.I))
+    if not matches:
+        return None
+    out = {key: None for key in ('per_repeat','repeats','total','range','interval','metadata')}
+    out.update(status='AMBIGUOUS', ambiguity=[])
+    if len(matches) != 1:
+        out['ambiguity'].append('MULTIPLE_PRODUCT_DURATIONS_UNSUPPORTED')
+        return out
+    m=matches[0];count=int(m.group(1));unit=m.group(4)
+    low=convert_unit(float(m.group(2)),unit)
+    high=convert_unit(float(m.group(3) or m.group(2)),unit)
+    if count <= 0 or low > high:
+        out['ambiguity'].append('INVALID_SOURCE_REPEAT_OR_DURATION_RANGE')
+        return out
+    per=dict(quote=text[m.start(2):m.end(4)],span=[m.start(2),m.end(4)])
+    if low == high:per['hours']=low
+    else:per.update(min_h=low,max_h=high)
+    out['per_repeat']=per
+    out['repeats']=dict(count=count,quote=m.group(1),span=[m.start(1),m.end(1)])
+    bounds=[count*low,count*high]
+    total=dict(source='explicit_repeat_product',quote=m.group(0),span=[m.start(),m.end()])
+    if bounds[0] == bounds[1]:total['hours']=bounds[0]
+    else:
+        total.update(min_h=bounds[0],max_h=bounds[1])
+        out['range']=dict(min_h=bounds[0],max_h=bounds[1],quote=m.group(0),span=[m.start(),m.end()],
+                          scope='TOTAL_ELAPSED_DERIVED_FROM_EXPLICIT_REPEAT')
+    out['total']=total;out['status']='EXPLICIT'
+    out['quantity_role_supported']={'per_repeat_h':True,'repeat_count':True}
+    declared=re.search(rf'(?:总计|合计|total(?:\s+of)?\s*:?)[ \t]*({_TIME_VALUE})(?:\s*[-–—~至到]\s*({_TIME_VALUE}))?\s*({_TIME_UNIT})',text,re.I)
+    if declared:
+        lo=convert_unit(float(declared.group(1)),declared.group(3))
+        hi=convert_unit(float(declared.group(2) or declared.group(1)),declared.group(3))
+        out['declared_total_window']=dict(min_h=lo,max_h=hi,quote=declared.group(0),span=[declared.start(),declared.end()])
+        if lo > hi or bounds != [lo,hi]:
+            out['status']='AMBIGUOUS'
+            out['ambiguity'].append('PRODUCT_AND_DECLARED_TOTAL_BOUNDS_DIFFER_NOT_AUTOMATIC_SCIENTIFIC_CONTRADICTION')
+            out['total']=None
+            out['quantity_role_supported']['range_h']=True
+            out['range']=dict(out['declared_total_window'],scope='DECLARED_TOTAL_WINDOW_RELATION_TO_PRODUCT_UNRESOLVED')
+        out['product_declared_total_relation']=('EQUAL_BOUNDS' if bounds==[lo,hi] else
+            'OVERLAPPING_DIFFERENT_BOUNDS' if max(bounds[0],lo)<=min(bounds[1],hi) else 'DISJOINT_BOUNDS')
+    out['product_bounds_h']=bounds
+    masks=[[m.start(),m.end()]]
+    if declared:masks.append([declared.start(),declared.end()])
+    interval=re.search(rf'(?:every|每隔)\s*({_TIME_VALUE})\s*({_TIME_UNIT})',text,re.I)
+    if interval and not (m.start()<=interval.start()<interval.end()<=m.end()):
+        out['interval']=_duration_item(interval,interval.group(1),interval.group(2))
+        out['quantity_role_supported']['interval_h']=True
+        masks.append([interval.start(),interval.end()])
+        out['status']='AMBIGUOUS';out['total']=None
+        out['ambiguity'].append('PRODUCT_WITH_INTERVAL_ELAPSED_TOPOLOGY_UNRESOLVED')
+    metadata=re.search(rf'Time[:：]\s*({_TIME_VALUE})\s*({_TIME_UNIT})',text,re.I)
+    if metadata and not (m.start()<=metadata.start()<metadata.end()<=m.end()):
+        out['metadata']=_duration_item(metadata,metadata.group(1),metadata.group(2))
+        out['metadata']['scope_marker']=None
+        masks.append([metadata.start(),metadata.end()])
+        value=out['metadata']['hours']
+        if not (low<=value<=high or bounds[0]<=value<=bounds[1]):
+            out['status']='AMBIGUOUS';out['total']=None
+            out['ambiguity'].append('PRODUCT_METADATA_RELATION_UNRESOLVED')
+    other=[d for d in re.finditer(rf'({_TIME_VALUE})\s*({_TIME_UNIT})',text,re.I)
+           if not any(left<=d.start()<d.end()<=right for left,right in masks)]
+    if other:
+        out['status']='AMBIGUOUS';out['total']=None
+        out['ambiguity'].append('PRODUCT_WITH_ADDITIONAL_OPERATION_DURATION_UNSUPPORTED')
+    return out
+
+
+def audit_duration_scope(text):
+    """Bind explicit duration values to repeat, window, interval, and metadata roles."""
+    out = {key: None for key in
+           ("per_repeat", "repeats", "total", "range", "interval", "metadata")}
+    out.update(status="UNDER_SPECIFIED", ambiguity=[])
+    if not text:
+        return out
+    clean = text
+    product = _audit_product_duration(clean)
+    if product is not None:
+        return product
+    meta = re.search(rf"Time:\s*({_TIME_VALUE})\s*({_TIME_UNIT})(?:\s+(each))?",
+                     clean, re.I)
+    if meta:
+        out["metadata"] = _duration_item(meta, meta.group(1), meta.group(2))
+        out["metadata"]["scope_marker"] = meta.group(3)
+    rng = re.search(rf"({_TIME_VALUE})\s*[-–—~至到]\s*({_TIME_VALUE})\s*({_TIME_UNIT})",
+                    clean, re.I)
+    if rng:
+        out["range"] = {
+            "min_h": convert_unit(float(rng.group(1)), rng.group(3)),
+            "max_h": convert_unit(float(rng.group(2)), rng.group(3)),
+            "quote": rng.group(0), "span": [rng.start(), rng.end()]}
+    interval = re.search(
+        rf"(?:changing|change|replace)[^.()]*?every\s+({_TIME_VALUE})\s*({_TIME_UNIT})",
+        clean, re.I)
+    if interval:
+        out["interval"] = _duration_item(interval, interval.group(1), interval.group(2))
+    repeat = re.search(r"\b(twice|thrice|\d+\s+(?:times|cycles|washes|changes))\b",
+                       clean, re.I)
+    count = None
+    if repeat:
+        token = repeat.group(1).lower()
+        count = {"twice": 2, "thrice": 3}.get(token)
+        count = count or int(re.match(r"\d+", token).group(0))
+        out["repeats"] = {"count": count, "quote": repeat.group(0),
+                          "span": [repeat.start(), repeat.end()]}
+    narrative_matches = list(re.finditer(
+        rf"(?:each\s+)?for\s+({_TIME_VALUE})\s*({_TIME_UNIT})", clean, re.I))
+    if len(narrative_matches) > 1:
+        out.update(status="AMBIGUOUS")
+        out["ambiguity"].append("MULTIPLE_OPERATION_DURATIONS_UNSUPPORTED")
+        return out
+    narrative_match = narrative_matches[0] if narrative_matches else None
+    narrative = (_duration_item(narrative_match, narrative_match.group(1),
+                                narrative_match.group(2))
+                 if narrative_match else None)
+    metadata_h = out["metadata"]["hours"] if out["metadata"] else None
+    # Do not silently select the first component of a compound duration.
+    ancillary_regions = [item["span"] for item in
+                         (out["metadata"], out["interval"], out["range"]) if item]
+    operation_durations = [match for match in re.finditer(
+        rf"({_TIME_VALUE})\s*({_TIME_UNIT})", clean, re.I)
+        if not any(start <= match.start() < match.end() <= end
+                   for start, end in ancillary_regions)]
+    if len(operation_durations) > 1:
+        out.update(status="AMBIGUOUS")
+        out["ambiguity"].append("COMPOUND_OPERATION_DURATION_UNSUPPORTED")
+        return out
+    if out["range"] is not None:
+        lower, upper = out["range"]["min_h"], out["range"]["max_h"]
+        if lower > upper or (metadata_h is not None and not lower <= metadata_h <= upper):
+            out.update(status="AMBIGUOUS")
+            out["ambiguity"].append("METADATA_CONFLICTS_WITH_DURATION_RANGE")
+            return out
+    if count is None and (re.search(r"\brepeat(?:ed)?\b", clean, re.I)
+                          or (narrative_match and re.match(r"each\b", narrative_match.group(0), re.I))
+                          or (out["metadata"] and out["metadata"]["scope_marker"])):
+        out.update(status="AMBIGUOUS")
+        out["ambiguity"].append("REPETITION_COUNT_UNRESOLVED")
+        return out
+    total_match = re.search(
+        rf"(?:for\s+)?({_TIME_VALUE})\s*({_TIME_UNIT})\s*(?:in\s+)?total\b"
+        rf"|\btotal(?:\s+of)?\s*:?\s*({_TIME_VALUE})\s*({_TIME_UNIT})", clean, re.I)
+    if total_match:
+        value, unit = ((total_match.group(1), total_match.group(2))
+                       if total_match.group(1) else (total_match.group(3), total_match.group(4)))
+        total_item = _duration_item(total_match, value, unit)
+        explicit_each = narrative_match and re.match(r"each\b", narrative_match.group(0), re.I)
+        if (explicit_each and count is not None and abs(total_item["hours"] - count * narrative["hours"]) >= 1e-9
+                or metadata_h is not None and abs(total_item["hours"] - metadata_h) >= 1e-9
+                   and not (explicit_each and abs(metadata_h - narrative["hours"]) < 1e-9)):
+            out.update(status="AMBIGUOUS")
+            out["ambiguity"].append("EXPLICIT_TOTAL_CONFLICTS_WITH_OTHER_DURATION")
+            return out
+        if explicit_each:
+            out["per_repeat"] = narrative
+        out["total"] = dict(total_item, source="explicit_total_duration")
+        out["status"] = "EXPLICIT"
+        return out
+    if out["interval"] is not None:
+        total_h = narrative["hours"] if narrative else metadata_h
+        if total_h is None or (narrative and metadata_h is not None
+                               and abs(total_h - metadata_h) >= 1e-9):
+            out.update(status="AMBIGUOUS")
+            out["ambiguity"].append("INTERVAL_WITHOUT_CONSISTENT_TOTAL_WINDOW")
+            return out
+        witness = narrative or out["metadata"]
+        out["total"] = {"hours": total_h, "source": "explicit_total_window",
+                        "quote": witness["quote"], "span": witness["span"]}
+        out["status"] = "EXPLICIT"
+        return out
+    if count is not None:
+        if narrative is None:
+            if out["metadata"] and out["metadata"]["scope_marker"] == "each":
+                narrative = out["metadata"]
+                narrative_match = meta
+            else:
+                out.update(status="AMBIGUOUS")
+                out["ambiguity"].append("REPEAT_WITHOUT_EXPLICIT_PER_REPEAT_DURATION")
+                return out
+        out["per_repeat"] = narrative
+        total_h = count * narrative["hours"]
+        if metadata_h is not None and not (
+                abs(metadata_h - narrative["hours"]) < 1e-9
+                or abs(metadata_h - total_h) < 1e-9):
+            out.update(status="AMBIGUOUS")
+            out["ambiguity"].append("METADATA_CONFLICTS_WITH_REPEAT_DURATION")
+            return out
+        out["total"] = {"hours": total_h, "source": "repeats_x_per_repeat",
+                        "quote": text[min(repeat.start(), narrative_match.start()):max(repeat.end(), narrative_match.end())],
+                        "span": [min(repeat.start(), narrative_match.start()), max(repeat.end(), narrative_match.end())]}
+        out["status"] = "EXPLICIT"
+        return out
+    if metadata_h is not None:
+        if (narrative and abs(narrative["hours"] - metadata_h) >= 1e-9
+                and out["range"] is None):
+            out.update(status="AMBIGUOUS")
+            out["ambiguity"].append("METADATA_CONFLICTS_WITH_NARRATIVE_DURATION")
+            return out
+        out["total"] = {"hours": metadata_h,
+                        "source": "metadata_equivalent_or_authoritative",
+                        "quote": out["metadata"]["quote"],
+                        "span": out["metadata"]["span"]}
+        out["status"] = "EXPLICIT"
+        return out
+    if narrative:
+        out["total"] = dict(narrative, source="explicit_operation_duration")
+        out["status"] = "EXPLICIT"
+    return out
+
+
 def parse_time_to_hours(text):
+    audit = audit_duration_scope(text)
+    if audit["status"] == "EXPLICIT" and audit["total"]:
+        return audit["total"].get("hours")
+    if audit["status"] == "AMBIGUOUS":
+        return None
+    return _parse_time_to_hours_legacy(text)
+
+def _parse_time_to_hours_legacy(text):
     """从单个子步骤文本中提取所有时间并求和（小时）"""
     text = _clean_text_for_time_parsing(text)
     text_lower = text.lower()
@@ -310,3 +540,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+
