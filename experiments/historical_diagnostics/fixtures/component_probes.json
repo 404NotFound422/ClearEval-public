@@ -1,0 +1,259 @@
+{
+  "schema_version": 1,
+  "scope": "Deterministic historical scoring components; not a complete protocol assessment. Target AND/OR semantics require question-specific review.",
+  "records": [
+    {
+      "id": "A0",
+      "family": "dual_target",
+      "condition": "双靶点均提供",
+      "question_id": 3,
+      "method": "iDISCO+",
+      "markers": {
+        "Alexa Fluor 647": "C-FoS",
+        "Alexa Fluor 568": "Npas4 (IEGs)"
+      },
+      "quantitative_data": {
+        "method_name": "iDISCO+"
+      },
+      "s_target_match": 6.0,
+      "s_marker_fluor_compat": 6.0,
+      "s_method_fluor_compat": 5.1,
+      "s_label": 5.1,
+      "s_trans": 0.0,
+      "s_time": 0.0,
+      "target_requirement_scope": "recommended-target metadata; AND/OR requirements require question-specific review"
+    },
+    {
+      "id": "A1",
+      "family": "dual_target",
+      "condition": "仅删去第二个必需靶点",
+      "question_id": 3,
+      "method": "iDISCO+",
+      "markers": {
+        "Alexa Fluor 647": "C-FoS"
+      },
+      "quantitative_data": {
+        "method_name": "iDISCO+"
+      },
+      "s_target_match": 6.0,
+      "s_marker_fluor_compat": 6.0,
+      "s_method_fluor_compat": 5.4,
+      "s_label": 5.4,
+      "s_trans": 0.0,
+      "s_time": 0.0,
+      "target_requirement_scope": "recommended-target metadata; AND/OR requirements require question-specific review"
+    },
+    {
+      "id": "A2",
+      "family": "dual_target",
+      "condition": "在 A1 基础上换成未知荧光团",
+      "question_id": 3,
+      "method": "iDISCO+",
+      "markers": {
+        "synthetic_unknown_fluor": "C-FoS"
+      },
+      "quantitative_data": {
+        "method_name": "iDISCO+"
+      },
+      "s_target_match": 6.0,
+      "s_marker_fluor_compat": 6.0,
+      "s_method_fluor_compat": 6.0,
+      "s_label": 6.0,
+      "s_trans": 0.0,
+      "s_time": 0.0,
+      "target_requirement_scope": "recommended-target metadata; AND/OR requirements require question-specific review"
+    },
+    {
+      "id": "A3",
+      "family": "dual_target",
+      "condition": "在 A0 基础上增加 CD31 辅助标记",
+      "question_id": 3,
+      "method": "iDISCO+",
+      "markers": {
+        "Alexa Fluor 647": "C-FoS",
+        "Alexa Fluor 568": "Npas4 (IEGs)",
+        "Alexa Fluor 488": "CD31"
+      },
+      "quantitative_data": {
+        "method_name": "iDISCO+"
+      },
+      "s_target_match": 0.0,
+      "s_marker_fluor_compat": 6.0,
+      "s_method_fluor_compat": 5.1,
+      "s_label": 0.0,
+      "s_trans": 0.0,
+      "s_time": 0.0,
+      "target_requirement_scope": "recommended-target metadata; AND/OR requirements require question-specific review"
+    },
+    {
+      "id": "B0",
+      "family": "dye_representation",
+      "condition": "MACS；染料作为 key、靶标字段为空",
+      "question_id": 165,
+      "method": "MACS",
+      "markers": {
+        "DiI": "",
+        "DiD": ""
+      },
+      "quantitative_data": {
+        "method_name": "MACS"
+      },
+      "s_target_match": 0.0,
+      "s_marker_fluor_compat": 6.0,
+      "s_method_fluor_compat": 5.699999999999999,
+      "s_label": 0.0,
+      "s_trans": 0.0,
+      "s_time": 0.0,
+      "target_requirement_scope": "recommended-target metadata; AND/OR requirements require question-specific review"
+    },
+    {
+      "id": "B1",
+      "family": "dye_representation",
+      "condition": "MACS；染料名称同时填入靶标字段",
+      "question_id": 165,
+      "method": "MACS",
+      "markers": {
+        "DiI": "DiI",
+        "DiD": "DiD"
+      },
+      "quantitative_data": {
+        "method_name": "MACS"
+      },
+      "s_target_match": 6.0,
+      "s_marker_fluor_compat": 6.0,
+      "s_method_fluor_compat": 5.699999999999999,
+      "s_label": 5.699999999999999,
+      "s_trans": 0.0,
+      "s_time": 0.0,
+      "target_requirement_scope": "recommended-target metadata; AND/OR requirements require question-specific review"
+    },
+    {
+      "id": "B2",
+      "family": "dye_representation",
+      "condition": "FDISCO；染料作为 key、靶标字段为空",
+      "question_id": 165,
+      "method": "FDISCO",
+      "markers": {
+        "DiI": "",
+        "DiD": ""
+      },
+      "quantitative_data": {
+        "method_name": "FDISCO"
+      },
+      "s_target_match": 0.0,
+      "s_marker_fluor_compat": 6.0,
+      "s_method_fluor_compat": 2.0999999999999996,
+      "s_label": 0.0,
+      "s_trans": 0.0,
+      "s_time": 0.0,
+      "target_requirement_scope": "recommended-target metadata; AND/OR requirements require question-specific review"
+    },
+    {
+      "id": "B3",
+      "family": "dye_representation",
+      "condition": "FDISCO；染料名称同时填入靶标字段",
+      "question_id": 165,
+      "method": "FDISCO",
+      "markers": {
+        "DiI": "DiI",
+        "DiD": "DiD"
+      },
+      "quantitative_data": {
+        "method_name": "FDISCO"
+      },
+      "s_target_match": 6.0,
+      "s_marker_fluor_compat": 6.0,
+      "s_method_fluor_compat": 2.0999999999999996,
+      "s_label": 2.0999999999999996,
+      "s_trans": 0.0,
+      "s_time": 0.0,
+      "target_requirement_scope": "recommended-target metadata; AND/OR requirements require question-specific review"
+    },
+    {
+      "id": "C0",
+      "family": "unknown_method",
+      "condition": "已知方法对照；与 A1 相同输入",
+      "question_id": 3,
+      "method": "iDISCO+",
+      "markers": {
+        "Alexa Fluor 647": "C-FoS"
+      },
+      "quantitative_data": {
+        "method_name": "iDISCO+"
+      },
+      "s_target_match": 6.0,
+      "s_marker_fluor_compat": 6.0,
+      "s_method_fluor_compat": 5.4,
+      "s_label": 5.4,
+      "s_trans": 0.0,
+      "s_time": 0.0,
+      "target_requirement_scope": "recommended-target metadata; AND/OR requirements require question-specific review"
+    },
+    {
+      "id": "C1",
+      "family": "unknown_method",
+      "condition": "仅改为不存在的方法名称",
+      "question_id": 3,
+      "method": "unlisted_method_placeholder",
+      "markers": {
+        "Alexa Fluor 647": "C-FoS"
+      },
+      "quantitative_data": {
+        "method_name": "unlisted_method_placeholder"
+      },
+      "s_target_match": 6.0,
+      "s_marker_fluor_compat": 6.0,
+      "s_method_fluor_compat": 6.0,
+      "s_label": 6.0,
+      "s_trans": 0.0,
+      "s_time": 0.0,
+      "target_requirement_scope": "recommended-target metadata; AND/OR requirements require question-specific review"
+    },
+    {
+      "id": "D0",
+      "family": "removed_lookup",
+      "condition": "SOLID|T05_MOUSE_SOFT_ORGAN_5_20MM",
+      "question_id": 3,
+      "method": "SOLID",
+      "markers": {},
+      "quantitative_data": {
+        "method_name": "SOLID",
+        "sample_tier": "T05_MOUSE_SOFT_ORGAN_5_20MM",
+        "tissue_ri_value": 1.4,
+        "total_time_hours": 72
+      },
+      "s_target_match": 0.0,
+      "s_marker_fluor_compat": 6.0,
+      "s_method_fluor_compat": 6.0,
+      "s_label": 0.0,
+      "s_trans": 0.4060058497098366,
+      "s_time": 3.0,
+      "target_requirement_scope": "recommended-target metadata; AND/OR requirements require question-specific review",
+      "lookup_review_status": "removed_unsupported_or_insufficient_evidence",
+      "lookup_returns_record": true
+    },
+    {
+      "id": "D1",
+      "family": "removed_lookup",
+      "condition": "SOLID|T06_LONG_CNS_OR_TUBULAR_15_80MM",
+      "question_id": 3,
+      "method": "SOLID",
+      "markers": {},
+      "quantitative_data": {
+        "method_name": "SOLID",
+        "sample_tier": "T06_LONG_CNS_OR_TUBULAR_15_80MM",
+        "tissue_ri_value": 1.4,
+        "total_time_hours": 108
+      },
+      "s_target_match": 0.0,
+      "s_marker_fluor_compat": 6.0,
+      "s_method_fluor_compat": 6.0,
+      "s_label": 0.0,
+      "s_trans": 0.5744855850439876,
+      "s_time": 3.0,
+      "target_requirement_scope": "recommended-target metadata; AND/OR requirements require question-specific review",
+      "lookup_review_status": "removed_unsupported_or_insufficient_evidence",
+      "lookup_returns_record": true
+    }
+  ]
+}

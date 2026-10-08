@@ -4,9 +4,9 @@
 
 ## 开始人工审核
 
-本机已有完整审核表：
+完整审核表保存在本地未分发材料中；使用者配置审核材料目录后打开：
 
-    D:/Code/benchmark-reports/cleareval-domain-iterations-20261005/scientific_review_form.html
+    <本地审核材料目录>/scientific_review_form.html
 
 下载与源码分发不同：完整答案及机器审核记录继续保留在上述本机材料目录，本 Git 分支没有包含它们。审核表有 12 个问题、24 份完整真实答案，可保存草稿和导出 JSON。先独立阅读题目与完整答案，再打开机器辅助证据；表单会记录辅助暴露，机器输出不算独立专家标签。
 
@@ -31,7 +31,7 @@
 
 本分支包含来源注册信息及检查规则；原始文献全文、HTML 和 PDF 工件保留在本地来源包中。相对路径和 SHA-256 见 [外部来源工件清单](external_source_artifacts.json)。在新的 clone 中运行依赖实际来源的检查或正常 benchmark 前，先恢复匹配的 KnowledgeBase/primary_sources/ 工件。缺文件或哈希不匹配会失败；仅 clone 本源码分支不能声称已经复验上述完整工件结果。
 
-本机来源包：D:/Code/ClearEval-evaluator-worktree/KnowledgeBase/primary_sources/。恢复后核对工件清单的哈希。来源规则仍待专家审核；知识库补充由用户证据层完成。
+来源包是本地未分发材料。将匹配工件恢复到当前 checkout 的 `KnowledgeBase/primary_sources/`，并核对工件清单的哈希。来源规则仍待专家审核；知识库补充由用户证据层完成。
 
 固定需求向量绑定旧题快照。使用匹配版本预检：
 

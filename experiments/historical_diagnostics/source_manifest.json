@@ -1,0 +1,226 @@
+{
+  "schema_version": 1,
+  "package_id": "cleareval-historical-diagnostics-20261008",
+  "scope": "Historical saved-score diagnostics. Offline aggregation only, no new inference, current-evaluator rescoring, wet-lab validation or independent expert labels.",
+  "dates": {
+    "selfcheck_evaluations": "2026-09-23 (audited 2026-09-24)",
+    "component_execution": "2026-09-24",
+    "gen_metric_diagnostics": "2026-09-29",
+    "protocol_judgment_report": "2026-09-30"
+  },
+  "expected_counts": {
+    "selfcheck_pairs": 12,
+    "component_conditions": 12,
+    "component_unique_inputs": 11,
+    "gen_reference_ids": 60,
+    "gen_variants": 5,
+    "gen_scoring_inputs": 300,
+    "development_judge_attempts": 38,
+    "err_attempts": 28,
+    "total_protocol_calls": 66,
+    "protocol_cases_per_model": 19,
+    "matched_cases_per_model": 13,
+    "independent_expert_labels": 0
+  },
+  "protocol_source_references": [
+    {
+      "id": "E_MACS",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7175264/",
+      "locator": "Results 2.2, Figure 2d-f; Experimental Section"
+    },
+    {
+      "id": "E_FDISCO",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6357753/",
+      "locator": "Discussion; Materials and methods: Tissue clearing"
+    },
+    {
+      "id": "E_FRUIT",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4338786/",
+      "locator": "DiI labeling; Controllable tissue deformation; Figure 4B-C and Figure 6E-F"
+    }
+  ],
+  "original_sources": [
+    {
+      "source_id": "review_artifacts/experimental_validation_2026-09-24/paired_results.csv",
+      "sha256": "e5d4f417417ee63ff45bd4dd73974d0f5dd1d4e7f632644391661d5ad365f6b7",
+      "bytes": 1499,
+      "extracted_fields": [
+        "pair_id",
+        "question_id",
+        "historical_generator",
+        "IA_before",
+        "IA_after",
+        "change_points",
+        "same_protocol_sha256",
+        "actual_request_payloads_equal"
+      ]
+    },
+    {
+      "source_id": "review_artifacts/experimental_validation_2026-09-24/controlled_probes.json",
+      "sha256": "48727ee3b73addb594085d26ad95fb483fcd26cf6fce0b40c5dc6721997a5098",
+      "bytes": 31243,
+      "extracted_fields": [
+        "id",
+        "family",
+        "condition",
+        "question_id",
+        "method",
+        "markers",
+        "quantitative_data",
+        "s_target_match",
+        "s_marker_fluor_compat",
+        "s_method_fluor_compat",
+        "s_label",
+        "s_trans",
+        "s_time",
+        "coverage_audit.requirement_semantics"
+      ]
+    },
+    {
+      "source_id": "review_artifacts/bioprobench_2026-09-29/metric_controls/identity_step_metrics.json",
+      "sha256": "4c37e91347636f3fcc93955574b833b24199dca1f9d8a55df4608bbfadfce70b",
+      "bytes": 10044,
+      "extracted_fields": [
+        "summary",
+        "per_sample.id",
+        "per_sample.step_recall",
+        "per_sample.step_precision",
+        "per_sample.parameters_changed",
+        "per_sample.text_changed"
+      ]
+    },
+    {
+      "source_id": "review_artifacts/bioprobench_2026-09-29/metric_controls/reverse_steps_step_metrics.json",
+      "sha256": "0b11e55b46f390bee377cd5889f02f5c60eecb5f97a84c207828b0b2df081f4d",
+      "bytes": 10072,
+      "extracted_fields": [
+        "summary",
+        "per_sample.id",
+        "per_sample.step_recall",
+        "per_sample.step_precision",
+        "per_sample.parameters_changed",
+        "per_sample.text_changed"
+      ]
+    },
+    {
+      "source_id": "review_artifacts/bioprobench_2026-09-29/metric_controls/duplicate_steps_step_metrics.json",
+      "sha256": "0b11e55b46f390bee377cd5889f02f5c60eecb5f97a84c207828b0b2df081f4d",
+      "bytes": 10072,
+      "extracted_fields": [
+        "summary",
+        "per_sample.id",
+        "per_sample.step_recall",
+        "per_sample.step_precision",
+        "per_sample.parameters_changed",
+        "per_sample.text_changed"
+      ]
+    },
+    {
+      "source_id": "review_artifacts/bioprobench_2026-09-29/metric_controls/drop_alternating_steps_step_metrics.json",
+      "sha256": "7394d9482dfa6cd9e6f3e8f3505c7533f6f6a63d1e96741c307de5d433eb476e",
+      "bytes": 10516,
+      "extracted_fields": [
+        "summary",
+        "per_sample.id",
+        "per_sample.step_recall",
+        "per_sample.step_precision",
+        "per_sample.parameters_changed",
+        "per_sample.text_changed"
+      ]
+    },
+    {
+      "source_id": "review_artifacts/bioprobench_2026-09-29/metric_controls/multiply_parameters_by_10_step_metrics.json",
+      "sha256": "3d4768e26e9c0c389f9718e818fa1107662e9c81ed7549bb5498cdd45d09c423",
+      "bytes": 10095,
+      "extracted_fields": [
+        "summary",
+        "per_sample.id",
+        "per_sample.step_recall",
+        "per_sample.step_precision",
+        "per_sample.parameters_changed",
+        "per_sample.text_changed"
+      ]
+    },
+    {
+      "source_id": "review_artifacts/bioprobench_2026-09-29/source_manifest.json",
+      "sha256": "3c8d81084d8ee470e9581cfe66c46338c4d39317c8cdad7992033a3436bbdf27",
+      "bytes": 10162,
+      "extracted_fields": [
+        "commit"
+      ]
+    },
+    {
+      "source_id": "review_artifacts/bioprobench_2026-09-29/prepare_metric_controls.py",
+      "sha256": "52f733a931ea0e3c111eedc1886b2b98e43aa597fc992e7800efc3640a8c5466",
+      "bytes": 1799,
+      "extracted_fields": [
+        "deterministic transformation logic, extracted into mutations.py"
+      ]
+    },
+    {
+      "source_id": "review_artifacts/bioprobench_2026-09-29/score_step_controls_cached.py",
+      "sha256": "d31689f28af8b4b7e9d1d594139dc226a8851a192c7d30c1ab87c480b447cf3f",
+      "bytes": 4932,
+      "extracted_fields": [
+        "historical metric function, model revision and threshold provenance"
+      ]
+    },
+    {
+      "source_id": "review_artifacts/protocol_failure_2026-09-30/case_results.csv",
+      "sha256": "934315a8aec38a841edf987c1ab5ff396713f9074b8dc91eade51762da089370",
+      "bytes": 6357,
+      "extracted_fields": [
+        "model",
+        "id",
+        "family",
+        "kind",
+        "authored_status",
+        "technical_status",
+        "effective_status",
+        "err_status",
+        "err_prediction",
+        "primary_decisive_case"
+      ]
+    },
+    {
+      "source_id": "review_artifacts/protocol_failure_2026-09-30/cards.json",
+      "sha256": "ec5f96443d5a6dcc3f0d8224649bfa10733ca176669223ea4a2bf3e66f9d213a",
+      "bytes": 2047,
+      "extracted_fields": [
+        "id",
+        "url",
+        "locator"
+      ]
+    },
+    {
+      "source_id": "review_artifacts/protocol_failure_2026-09-30/analysis.json",
+      "sha256": "7d4a4afab3d206f08580ff39d446c6bd21f90e19bd4dd1f6db2c53f2ca243b49",
+      "bytes": 4411,
+      "extracted_fields": [
+        "primary_attempts",
+        "err_attempts",
+        "all_attempts",
+        "row_count_is_not_independent_source_count"
+      ]
+    }
+  ],
+  "fixtures": {
+    "fixtures/component_probes.json": {
+      "sha256": "cb18588e3d101ab97c6bc541203acb4a9713840d85d3db34130200937337d568",
+      "bytes": 8268
+    },
+    "fixtures/gen_step_metrics.json": {
+      "sha256": "e48dc9733c31995952267834aaf49bb390792d47aa39f2c1519c75474e985eef",
+      "bytes": 60211
+    },
+    "fixtures/protocol_judgments.csv": {
+      "sha256": "9895b0acc96fca86a53e3dbf6ce75c05f2206f01d11e93730c18a96629728119",
+      "bytes": 3937
+    },
+    "fixtures/selfcheck_pairs.csv": {
+      "sha256": "1357363eb2d44565b812bed88f17af0ef5ddcab38623abaabe8887a07269a6eb",
+      "bytes": 1147
+    }
+  },
+  "source_verification_note": "Original source files are not distributed. Their SHA-256 values record extraction provenance; this CLI verifies the distributed fixtures, not unavailable original files or scientific accuracy."
+}

@@ -54,3 +54,23 @@ s_label_s_trans_rescore_report_v1.md
 .pytest_cache/
 .coverage
 htmlcov/
+
+# Local documents, source-download artifacts, and execution environments.
+# Essential experiment fixtures live under experiments/ and remain tracked.
+*.pptx
+*.docx
+*.rar
+*.zip
+/.venv/
+/.vscode/
+/article/
+/CODEX_CLEAR_EVAL_EXPERIMENTS_PROMPT*.md
+/KnowledgeBase/primary_sources/*/
+/KnowledgeBase/primary_sources/*_summary.json
+/KnowledgeBase/primary_sources/integrity_check.json
+/experiments/evaluator_development/legacy_observations.json
+/evaluator-development-runs/
+/benchmark-reports/
+/experiment_figures_*/
+/progress_ppt_*/
+/cleareval_lab_ppt_*/

@@ -151,6 +151,17 @@ aggregation scripts against the included model outputs.
 
 Run commands from the repository root:
 
+The default assessment mode is `benchmark`: it writes checked numerical
+estimates and keeps scientific validation `UNRESOLVED`. Valid explicit unknowns
+remain completed `BENCHMARK_UNRESOLVED` records in the coverage denominator;
+they are not replaced with zero. The current-question demand projection is
+uncalibrated. Use `--assessment-mode grounded` for source-bound requirement
+diagnoses and `--assessment-mode legacy` for historical numerical diagnostics.
+These outputs do not certify that all scientific requirements are satisfied.
+Keep a new score directory when changing the assessment contract. See the
+[OEQ runbook](docs/oeq_development_runbook_zh.md) and
+[source-artifact prerequisites](docs/oeq_review_20261005/README_zh.md).
+
 ```bash
 # Generate protocols for the revised questions without grading
 python OEQ_run_grading_new.py --no-evaluation
@@ -202,14 +213,28 @@ python results/calculate_main_table_score.py
 # Recompute the inference-time grounding summary
 python results/aggregate_rag_baseline.py
 ```
-The default OEQ assessment mode is `benchmark`. It writes checked numerical estimates and retains scientific validation as `UNRESOLVED`; the current-question demand projection is explicitly uncalibrated. A valid explicit unknown becomes a completed `BENCHMARK_UNRESOLVED` record, contributes to the coverage denominator, and is not replaced with zero. Use `--assessment-mode grounded` for source-bound requirement diagnoses and `--assessment-mode legacy` for historical diagnostics. Fixed historical demand vectors require a matching question snapshot. Keep a new score directory when changing the assessment contract.
 
+## Historical experimental diagnostics
+
+The [historical diagnostics module](experiments/historical_diagnostics/) summarizes
+four saved experimental groups: self-check pairs, scoring-component controls,
+GEN metric sensitivity, and development-judge comparisons. From the repository
+root, run:
+
+```bash
+python -B -m experiments.historical_diagnostics
+```
+
+This is an offline summary of archived observations. It makes no model calls,
+does not rescore protocols, and adds no expert labels or wet-lab results.
+Development-label agreement and component diagnostics are not scientific
+accuracy estimates.
 
 ## Validation status
 
 The repeat-grading pilot and its collection safeguards are documented in
 [docs/judge_blind_pilot.md](docs/judge_blind_pilot.md). The current scoring contract
-is `cleareval-fixed-demand-v4-marker-identity`, which also records a source-backed
+is `cleareval-fixed-demand-v5-integrity`, which also records a source-backed
 MECA-79/PNAd target-recognition rule. Scoring versions and archived outputs remain
 separate; repeatability does not establish scientific validity.
 

@@ -51,11 +51,11 @@ replay 中 FAKE_CALL 只代表离线 adapter 调用，实际模型调用数应�
 
 开始实际开发运行前固定代码、材料、来源和适配器配置；每轮新目录/manifest。开发入口采用以下合同；是否已验证须查看实际 CLI help、逐case输出和 manifest，不以此命令示例充当执行证据。
 
-从仓库根目录运行（本机真实 Python 为 D:\Code\.tools\python312\python.exe）：
+从仓库根目录运行，使用当前环境的 Python；`--out` 可指定新的本地运行目录：
 
 ```powershell
-& D:\Code\.tools\python312\python.exe -B -m experiments.evaluator_development verify --fixtures experiments/evaluator_development/fixtures.json --out D:\Code\evaluator-development-runs\round01 --label round01 --max-cases 20 --max-seconds 600
-& D:\Code\.tools\python312\python.exe -B -m experiments.evaluator_development verify --fixtures experiments/evaluator_development/fixtures.json --out D:\Code\evaluator-development-runs\round01 --label round01 --resume
+python -B -m experiments.evaluator_development verify --fixtures experiments/evaluator_development/fixtures.json --out evaluator-development-runs/round01 --label round01 --max-cases 20 --max-seconds 600
+python -B -m experiments.evaluator_development verify --fixtures experiments/evaluator_development/fixtures.json --out evaluator-development-runs/round01 --label round01 --resume
 ```
 
 同一round只能在代码/fixture/来源和配置冻结的条件下继续；已完成case不重做。改变任一输入或实现使用新round目录。--max-seconds 是单次执行预算，可配置最长172800秒（48小时）作为运行上限，不强行消耗预算；本材料不宣称已运行48小时，离线工程回放不是科学验证完成。verify 默认不发送模型请求，实际模型调用数必须明确为0。正式benchmark入口保持关闭。
@@ -68,14 +68,14 @@ replay 中 FAKE_CALL 只代表离线 adapter 调用，实际模型调用数应�
 
 ## 已实际执行的开发验证（2026-10-02）
 
-每轮均完成 44 个新合成案例，模型调用为 0，科学验证仍为 PENDING_USER_EXPERT。完整输出保存在 `D:\Code\evaluator-development-runs\`，逐 case 的 observed 由核心 API 实际计算后再与隐藏工程合同比较。
+每轮均完成 44 个新合成案例，模型调用为 0，科学验证仍为 PENDING_USER_EXPERT。完整输出保存在本地未分发的 `evaluator-development-runs/` 档案中，逐 case 的 observed 由核心 API 实际计算后再与隐藏工程合同比较。下表保留历史档案标识；源码 clone 不包含这些旧运行记录，可用上面的命令在新的本地目录复现工程合同。
 
 | 实际轮次 | PASS / FAIL | 观察与改动 | 冻结 manifest / 原始摘要 |
 |---|---:|---|---|
-| round01-initial | 35 / 9 | 适配器把整个 task 对象传给 required_fields，9 个抽取案例均为 ADAPTER_ERROR；未得到核心抽取结论。 | [76bf243064fc…](../../../evaluator-development-runs/round01-initial/manifest.json) / [summary](../../../evaluator-development-runs/round01-initial/summary.16e73dd52e0b44cf851a81b2f3946489.json) |
-| round02-fixed | 44 / 0 | 修正参数为显式 required_fields 列表；该列表来自公开任务合同。7 项后恢复 37 项，首轮失败记录保留。 | [58ab31354821…](../../../evaluator-development-runs/round02-fixed/manifest.json) / [summary](../../../evaluator-development-runs/round02-fixed/summary.200cf7589870452fb10c29f549356e3d.json) |
-| round03-current | 44 / 0 | 冻结包含额外 fidelity 防护的源码；与 round02 使用相同材料。11 项后恢复 33 项，属于回归检查。 | [3efb3b9382d9…](../../../evaluator-development-runs/round03-current/manifest.json) / [summary](../../../evaluator-development-runs/round03-current/summary.f70fcb991443443caf4cd90c67316b0d.json) |
-| round04-integrity | 44 / 0 | 运行器 v2 增加完成记录校验和与存活进程检查；13 项后恢复 31 项。 | [52e6a09eb557…](../../../evaluator-development-runs/round04-integrity/manifest.json) / [summary](../../../evaluator-development-runs/round04-integrity/summary.e6ab14a8596c4178b5352be117217b19.json) |
+| round01-initial | 35 / 9 | 适配器把整个 task 对象传给 required_fields，9 个抽取案例均为 ADAPTER_ERROR；未得到核心抽取结论。 | 本地 `round01-initial/manifest.json`（76bf243064fc…）；`summary.16e73dd52e0b44cf851a81b2f3946489.json` |
+| round02-fixed | 44 / 0 | 修正参数为显式 required_fields 列表；该列表来自公开任务合同。7 项后恢复 37 项，首轮失败记录保留。 | 本地 `round02-fixed/manifest.json`（58ab31354821…）；`summary.200cf7589870452fb10c29f549356e3d.json` |
+| round03-current | 44 / 0 | 冻结包含额外 fidelity 防护的源码；与 round02 使用相同材料。11 项后恢复 33 项，属于回归检查。 | 本地 `round03-current/manifest.json`（3efb3b9382d9…）；`summary.f70fcb991443443caf4cd90c67316b0d.json` |
+| round04-integrity | 44 / 0 | 运行器 v2 增加完成记录校验和与存活进程检查；13 项后恢复 31 项。 | 本地 `round04-integrity/manifest.json`（52e6a09eb557…）；`summary.e6ab14a8596c4178b5352be117217b19.json` |
 
 round01→round02 修复的是接口映射错误，不能称为已发表工具或科学算法失效。round03 之前这些 44 例已经通过；新增防护的依据是独立工程反例和代码审查，这一轮只能证明回归未破坏原合同，不能据此量化算法提升。round04 的拒绝篡改检查确实修改了 observed 并保留旧校验和，恢复时拒绝；活进程锁测试使用实际存活 PID 并由第二个 CLI 拒绝重复启动。改变旧轮源码/输入后的恢复也被拒绝。
 
@@ -85,10 +85,10 @@ round01→round02 修复的是接口映射错误，不能称为已发表工具�
 
 ## 旧重复裁判入口的真实兼容性修复
 
-补充开发检查发现：新 OEQ scorer 的成功结果为技术 `VALID` 和 `legacy_diagnostics`，故意没有根 `scores`；旧 `judge_reliability.run_judge` 在成功 canary 后恢复时仍读取根分数，实际报 `missing_or_invalid:c_step`。这是已复现的生产接口失配。[首次失败日志](../../../evaluator-development-runs/pilot-compatibility-initial/unittest.log)保留，未以 mock scorer 隐藏问题。
+补充开发检查发现：新 OEQ scorer 的成功结果为技术 `VALID` 和 `legacy_diagnostics`，故意没有根 `scores`；旧 `judge_reliability.run_judge` 在成功 canary 后恢复时仍读取根分数，实际报 `missing_or_invalid:c_step`。这是已复现的生产接口失配。首次失败日志作为本地未分发档案 `pilot-compatibility-initial/unittest.log` 保留，未以 mock scorer 隐藏问题。
 
 修复仅增加统一的结果读取层并接到恢复/描述统计：技术完成与完整数字向量分别计数；合法 `VALID` 诊断里某个值为 `None` 时保留数值未知，恢复不重复调用。显式传输/解析失败仍保留并停止继续派发。完整 legacy 数值只经临时描述性视图计算，报告标记 `LEGACY_CONTINUOUS_DIAGNOSTIC`，不写回正式分数；旧归档根分数形状仍可读取为 `ARCHIVED_SCORE_DESCRIPTIVE`。科学准确率保持 `None`，没有值的聚合不填零。
 
 相关测试现在自足：在临时目录生成 12 个已有题目/需求向量同源配对的冻结子集、3 模型×3 设置的小型新合成回答和数字形状；回答与成绩均标 `SYNTHETIC_ONLY`，历史 human provenance 输入为空。未下载大型历史归档，也不新增专家标签。
 
-[定向日志](../../../evaluator-development-runs/pilot-compatibility-fixed/judge-tests.log)实际 16 PASS；[全套日志](../../../evaluator-development-runs/pilot-compatibility-fixed/full-tests.log)实际 226 PASS、0 FAIL/ERROR/SKIP。生产 scorer 与 collector 真实执行，仅 provider 固定返回合成响应。集成检查把成功 canary 的时间数值置为 `None` 后恢复：总计仍为 108 次假 provider 调用、108 技术完成、0 失败；数值未知另列，不成为重试理由。固定假响应得到零波动只说明夹具固定，不能证明真实裁判稳定性。
+本地未分发档案 `pilot-compatibility-fixed/judge-tests.log` 记录实际 16 PASS；`pilot-compatibility-fixed/full-tests.log` 记录实际 226 PASS、0 FAIL/ERROR/SKIP。生产 scorer 与 collector 真实执行，仅 provider 固定返回合成响应。集成检查把成功 canary 的时间数值置为 `None` 后恢复：总计仍为 108 次假 provider 调用、108 技术完成、0 失败；数值未知另列，不成为重试理由。固定假响应得到零波动只说明夹具固定，不能证明真实裁判稳定性。
