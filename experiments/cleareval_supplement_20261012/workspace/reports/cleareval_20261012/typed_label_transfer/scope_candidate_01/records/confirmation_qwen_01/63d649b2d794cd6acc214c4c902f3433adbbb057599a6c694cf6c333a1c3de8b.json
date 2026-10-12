@@ -1,0 +1,918 @@
+{
+  "cell_id": "R3C03__r0",
+  "cohort": "confirmation_qwen_01",
+  "question_id": 2,
+  "case_id": "round3_confirmation_03",
+  "anonymous_answer_id": "R3C03",
+  "repeat_index": 0,
+  "metrics": {
+    "c_param": 0,
+    "co_order": null,
+    "co_method": null,
+    "co_param": null,
+    "co_chem": 1,
+    "s_method": 2.425,
+    "s_label": 0.0,
+    "s_trans": 1.2333368715215602,
+    "s_time": null,
+    "sr": 0.0,
+    "sp": 0.0,
+    "Com": 0.0,
+    "Cor": null,
+    "Eff": null,
+    "IA": null,
+    "HV": null
+  },
+  "complete_numeric_CCE": false,
+  "original_status": "success",
+  "source_record": {
+    "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\optimizer_round3_20261011\\confirmation_qwen_01\\run\\attempts\\63d649b2d794cd6acc214c4c902f3433adbbb057599a6c694cf6c333a1c3de8b_1\\processing.json",
+    "sha256": "a4c628b4a40cd834cb0ba6904c6538362fd78892a9893aa6591afa117b2fcaba"
+  },
+  "source_document": {
+    "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\optimizer_round3_20261011\\confirmation_qwen_01\\source_documents\\51e41472244361bbe1e992e6.json",
+    "sha256": "b179d64ef629fbf45a285adbb88aab6b9c566484eaef9a16dbf12bb06f9fbd8e"
+  },
+  "answer_sha256": "c4dbdb716b75171abbd06f9632be9524f304f41f0431f18fa6ed7268a73ddef0",
+  "original_answer_sha256": "e9a4d50a00f0be6c9fbfd52f54fd0e0900026b1cc26dbb092fc562a1903da560",
+  "trial": {
+    "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\optimizer_round3_20261011\\confirmation_qwen_01\\run\\trials\\63d649b2d794cd6acc214c4c902f3433adbbb057599a6c694cf6c333a1c3de8b.json",
+    "sha256": "ec03f6435cc964e054e33ed4d0f8264cae10ad000e374dd92ffa5588726fd494"
+  },
+  "saved_trial_id": "63d649b2d794cd6acc214c4c902f3433adbbb057599a6c694cf6c333a1c3de8b",
+  "quantitative_data": {
+    "method_name": "uDISCO",
+    "tissue_ri_value": 1.46,
+    "total_time_hours": null,
+    "sample_tier": "T04_WHOLE_MOUSE_BRAIN_5_12MM",
+    "reagent_ri_value": null,
+    "protocol_time_hours": null
+  },
+  "time_derivation": {
+    "hours": null,
+    "issues": [
+      "no_complete_numeric_operation_set",
+      "reported_core_operation_coverage_incomplete",
+      "schedule_unknown",
+      "unresolved_phase_scope"
+    ],
+    "original_calculation": {
+      "total_hours": null,
+      "candidate_bounds_hours": null,
+      "issues": [
+        "no_complete_numeric_operation_set",
+        "reported_core_operation_coverage_incomplete",
+        "schedule_unknown",
+        "unresolved_phase_scope"
+      ],
+      "included_operation_ids": [],
+      "excluded_operations": [],
+      "claims": [],
+      "mode": "unknown",
+      "known_operation_contributions": [],
+      "initial_scope_candidate_bounds_hours": null,
+      "conditional_operations": [],
+      "timeline_derivation": {
+        "model_proposed_operation_ids": [
+          "OP01",
+          "OP02"
+        ],
+        "program_initial_operation_ids": [],
+        "excluded_from_proposal": [
+          "OP01",
+          "OP02"
+        ],
+        "added_from_declared_initial_operations": [],
+        "same_members_and_order": false,
+        "raw_proposal_preserved": true,
+        "phase_and_scope_semantics_verified": false
+      },
+      "model_precedence_audit": {
+        "cyclic_model_proposal": false,
+        "backward_document_order_edges": 0,
+        "unsupported_dependency_claims": 0,
+        "model_edges_used_for_aggregation": false,
+        "program_uses_declared_schedule_and_source_order_convention": true
+      },
+      "coverage_scopes": {
+        "whole_protocol_operations": "complete",
+        "core_time_operations": "partial",
+        "model_timeline_completeness": "partial",
+        "program_core_gate_independent_of_whole_protocol_completeness": true,
+        "action_recall_is_not_exhaustive_semantic_gold": true
+      },
+      "initial_plus_at_most_one_conditional_execution_envelope_hours": null,
+      "endpoint_scope": "The primary score covers the reported initial core processing. Conditional later operations and their time bounds are retained separately.",
+      "bounds_scope": "Conditional on supplied phase/schedule classification; null upper bound means no finite source-supported upper bound.",
+      "serial_convention": "Document-order operations are provisionally summed only if no branch/overlap cue is detected; semantic schedule is not certified.",
+      "overnight_policy": "Original rubric: overnight is eight hours by convention, not a measured duration.",
+      "scientific_total_confirmed": false,
+      "primary_time_scope": "initial_core_clearing_to_first_imaging_ready"
+    }
+  },
+  "version": "typed-label-fixed-rule-transfer-v1",
+  "primary_metrics": {
+    "c_param": 0,
+    "co_order": null,
+    "co_method": null,
+    "co_param": null,
+    "co_chem": 1,
+    "s_method": 2.425,
+    "s_label": 0.0,
+    "s_trans": 1.2333368715215602,
+    "s_time": null,
+    "sr": 0.0,
+    "sp": 0.0,
+    "Com": 0.0,
+    "Cor": null,
+    "Eff": null,
+    "IA": null,
+    "HV": null
+  },
+  "typed_label_metrics": {
+    "c_param": 0,
+    "co_order": null,
+    "co_method": null,
+    "co_param": null,
+    "co_chem": 1,
+    "s_method": 2.425,
+    "s_label": 0.0,
+    "s_trans": 1.2333368715215602,
+    "s_time": null,
+    "sr": 0.0,
+    "sp": 0.0,
+    "Com": 0.0,
+    "Cor": null,
+    "Eff": null,
+    "IA": null,
+    "HV": null
+  },
+  "typed_midpoint_metrics": {
+    "c_param": 0,
+    "co_order": null,
+    "co_method": null,
+    "co_param": null,
+    "co_chem": 1,
+    "s_method": 2.425,
+    "s_label": 0.0,
+    "s_trans": 1.2333368715215602,
+    "s_time": null,
+    "sr": 0.0,
+    "sp": 0.0,
+    "Com": 0.0,
+    "Cor": null,
+    "Eff": null,
+    "IA": null,
+    "HV": null
+  },
+  "label_replay_status": "replayed",
+  "label_derivation": {
+    "version": "cce-typed-label-scorer-v2.1",
+    "s_label": 0.0,
+    "channels": {
+      "s_target_match": 0.0,
+      "s_marker_fluor_compat": null,
+      "s_method_fluor_compat": 3.9000000000000004
+    },
+    "channel_applicability": {
+      "s_target_match": {
+        "applicable": true,
+        "value": 0.0,
+        "contributing_pairs": [
+          "relation:R01",
+          "relation:R02",
+          "relation:R03",
+          "relation:R04"
+        ]
+      },
+      "s_marker_fluor_compat": {
+        "applicable": true,
+        "value": null,
+        "contributing_pairs": [
+          "relation:R01",
+          "relation:R02",
+          "relation:R03",
+          "relation:R04"
+        ]
+      },
+      "s_method_fluor_compat": {
+        "applicable": true,
+        "value": 3.9000000000000004,
+        "contributing_pairs": [
+          "relation:R01",
+          "relation:R02",
+          "relation:R03",
+          "relation:R04",
+          "unresolved_entity:E07"
+        ]
+      }
+    },
+    "pair_results": [
+      {
+        "pair_id": "relation:R01",
+        "entity_id": "E03",
+        "fluorophore": "Alexa Fluor 647",
+        "reported_marker": "NeuN",
+        "reported_target_literal": "NeuN",
+        "label_type": "targeted_or_unclassified_reagent",
+        "original_function_input": {
+          "Alexa Fluor 647": "NeuN"
+        },
+        "applicable": {
+          "s_target_match": true,
+          "s_marker_fluor_compat": true,
+          "s_method_fluor_compat": true
+        },
+        "channels": {
+          "s_target_match": 3.0,
+          "s_marker_fluor_compat": 6.0,
+          "s_method_fluor_compat": 4.5
+        },
+        "not_applicable_reason": null,
+        "source_evidence": {
+          "unit_id": "L0002",
+          "start": 26,
+          "end": 126,
+          "quote": "**Chosen Labeling:** [NeuN (RBFOX3)+Alexa Fluor 647, beta-III Tubulin (TUJ1)+Alexa Fluor 488, DAPI]\n",
+          "answer_sha256": "c4dbdb716b75171abbd06f9632be9524f304f41f0431f18fa6ed7268a73ddef0"
+        },
+        "compatibility_audit": [
+          {
+            "kind": "marker_fluor",
+            "marker": "NeuN",
+            "fluorophore": "Alexa Fluor 647",
+            "source": "KnowledgeBase/tissue.json",
+            "value": true,
+            "status": "TABLE_REPORTED"
+          },
+          {
+            "kind": "method_fluor",
+            "method_name": "uDISCO",
+            "fluorophore": "Alexa Fluor 647",
+            "source": "KnowledgeBase/method_fluro_compati.json",
+            "value": 0.75,
+            "status": "TABLE_REPORTED"
+          }
+        ]
+      },
+      {
+        "pair_id": "relation:R02",
+        "entity_id": "E03",
+        "fluorophore": "Alexa Fluor 647",
+        "reported_marker": null,
+        "reported_target_literal": "RBFOX3",
+        "label_type": "targeted_or_unclassified_reagent",
+        "original_function_input": {
+          "Alexa Fluor 647": ""
+        },
+        "applicable": {
+          "s_target_match": true,
+          "s_marker_fluor_compat": true,
+          "s_method_fluor_compat": true
+        },
+        "channels": {
+          "s_target_match": null,
+          "s_marker_fluor_compat": null,
+          "s_method_fluor_compat": 4.5
+        },
+        "not_applicable_reason": null,
+        "source_evidence": {
+          "unit_id": "L0002",
+          "start": 26,
+          "end": 126,
+          "quote": "**Chosen Labeling:** [NeuN (RBFOX3)+Alexa Fluor 647, beta-III Tubulin (TUJ1)+Alexa Fluor 488, DAPI]\n",
+          "answer_sha256": "c4dbdb716b75171abbd06f9632be9524f304f41f0431f18fa6ed7268a73ddef0"
+        },
+        "compatibility_audit": [
+          {
+            "kind": "method_fluor",
+            "method_name": "uDISCO",
+            "fluorophore": "Alexa Fluor 647",
+            "source": "KnowledgeBase/method_fluro_compati.json",
+            "value": 0.75,
+            "status": "TABLE_REPORTED"
+          }
+        ]
+      },
+      {
+        "pair_id": "relation:R03",
+        "entity_id": "E06",
+        "fluorophore": "Alexa Fluor 488",
+        "reported_marker": "beta-III Tubulin",
+        "reported_target_literal": "beta-III Tubulin",
+        "label_type": "targeted_or_unclassified_reagent",
+        "original_function_input": {
+          "Alexa Fluor 488": "beta-III Tubulin"
+        },
+        "applicable": {
+          "s_target_match": true,
+          "s_marker_fluor_compat": true,
+          "s_method_fluor_compat": true
+        },
+        "channels": {
+          "s_target_match": 0.0,
+          "s_marker_fluor_compat": null,
+          "s_method_fluor_compat": 4.199999999999999
+        },
+        "not_applicable_reason": null,
+        "source_evidence": {
+          "unit_id": "L0002",
+          "start": 26,
+          "end": 126,
+          "quote": "**Chosen Labeling:** [NeuN (RBFOX3)+Alexa Fluor 647, beta-III Tubulin (TUJ1)+Alexa Fluor 488, DAPI]\n",
+          "answer_sha256": "c4dbdb716b75171abbd06f9632be9524f304f41f0431f18fa6ed7268a73ddef0"
+        },
+        "compatibility_audit": [
+          {
+            "kind": "marker_fluor",
+            "marker": "beta-III Tubulin",
+            "fluorophore": "Alexa Fluor 488",
+            "source": "KnowledgeBase/tissue.json",
+            "value": null,
+            "status": "UNKNOWN"
+          },
+          {
+            "kind": "method_fluor",
+            "method_name": "uDISCO",
+            "fluorophore": "Alexa Fluor 488",
+            "source": "KnowledgeBase/method_fluro_compati.json",
+            "value": 0.7,
+            "status": "TABLE_REPORTED"
+          }
+        ]
+      },
+      {
+        "pair_id": "relation:R04",
+        "entity_id": "E06",
+        "fluorophore": "Alexa Fluor 488",
+        "reported_marker": null,
+        "reported_target_literal": "TUJ1",
+        "label_type": "targeted_or_unclassified_reagent",
+        "original_function_input": {
+          "Alexa Fluor 488": ""
+        },
+        "applicable": {
+          "s_target_match": true,
+          "s_marker_fluor_compat": true,
+          "s_method_fluor_compat": true
+        },
+        "channels": {
+          "s_target_match": null,
+          "s_marker_fluor_compat": null,
+          "s_method_fluor_compat": 4.199999999999999
+        },
+        "not_applicable_reason": null,
+        "source_evidence": {
+          "unit_id": "L0002",
+          "start": 26,
+          "end": 126,
+          "quote": "**Chosen Labeling:** [NeuN (RBFOX3)+Alexa Fluor 647, beta-III Tubulin (TUJ1)+Alexa Fluor 488, DAPI]\n",
+          "answer_sha256": "c4dbdb716b75171abbd06f9632be9524f304f41f0431f18fa6ed7268a73ddef0"
+        },
+        "compatibility_audit": [
+          {
+            "kind": "method_fluor",
+            "method_name": "uDISCO",
+            "fluorophore": "Alexa Fluor 488",
+            "source": "KnowledgeBase/method_fluro_compati.json",
+            "value": 0.7,
+            "status": "TABLE_REPORTED"
+          }
+        ]
+      },
+      {
+        "pair_id": "unresolved_entity:E07",
+        "entity_id": "E07",
+        "fluorophore": "DAPI",
+        "reported_marker": null,
+        "reported_target_literal": null,
+        "label_type": "direct_stain",
+        "original_function_input": {
+          "DAPI": ""
+        },
+        "applicable": {
+          "s_target_match": false,
+          "s_marker_fluor_compat": false,
+          "s_method_fluor_compat": true
+        },
+        "channels": {
+          "s_target_match": null,
+          "s_marker_fluor_compat": null,
+          "s_method_fluor_compat": 3.9000000000000004
+        },
+        "not_applicable_reason": "standalone fluorescence has no antibody target-pair channel",
+        "source_evidence": {
+          "unit_id": "L0002",
+          "start": 120,
+          "end": 124,
+          "quote": "DAPI",
+          "answer_sha256": "c4dbdb716b75171abbd06f9632be9524f304f41f0431f18fa6ed7268a73ddef0"
+        },
+        "compatibility_audit": [
+          {
+            "kind": "method_fluor",
+            "method_name": "uDISCO",
+            "fluorophore": "DAPI",
+            "source": "KnowledgeBase/method_fluro_compati.json",
+            "value": 0.65,
+            "status": "TABLE_REPORTED"
+          }
+        ]
+      }
+    ],
+    "resolved_uncertainties": [],
+    "remaining_uncertainties": [
+      {
+        "kind": "reported_unresolved_relation",
+        "relation_id": "R02",
+        "entity_id": "E03"
+      },
+      {
+        "kind": "reported_unresolved_relation",
+        "relation_id": "R04",
+        "entity_id": "E06"
+      }
+    ],
+    "minimum_of_available_applicable_channels": 0.0,
+    "task_target_coverage": "native/direct task coverage remains separate from antibody-pair applicability",
+    "new_model_calls": 0,
+    "expert_validated": false
+  },
+  "compatibility_lookup_trace": [
+    {
+      "marker": "NeuN",
+      "fluorophore": "Alexa Fluor 647",
+      "status": "all_applicable_scopes_have_same_authored_value",
+      "value": true,
+      "column": "AlexaFluor 647/Cy5 ",
+      "matching_target_options": [],
+      "candidate_rows": [
+        {
+          "row_index": 1,
+          "matching_authored_names": [
+            {
+              "field": "推荐标志物 1",
+              "authored_name": "NeuN (RBFOX3)",
+              "option": "NeuN (RBFOX3)",
+              "option_split_applied": false
+            }
+          ],
+          "scope": {
+            "大类": "中枢神经",
+            "亚类": "神经元结构",
+            "结构/细胞类型": "成熟神经元"
+          },
+          "cell_value": 1
+        }
+      ],
+      "selected_row_indices": [
+        1
+      ],
+      "per_scope_evidence": [
+        {
+          "scope": {
+            "大类": "中枢神经",
+            "亚类": "神经元结构",
+            "结构/细胞类型": "成熟神经元"
+          },
+          "row_indices": [
+            1
+          ],
+          "all_cell_values": [
+            1
+          ],
+          "state": "consistent_authored_value",
+          "value": 1
+        }
+      ],
+      "row_selection_uses_scores": false,
+      "different_scopes_merged": false,
+      "new_alias_or_KB_value": false,
+      "declared_task_scope": null,
+      "exact_lookup_value": true,
+      "evidence_level": "existing_specific_table_value"
+    },
+    {
+      "marker": "beta-III Tubulin",
+      "fluorophore": "Alexa Fluor 488",
+      "status": "no_matching_authored_row_in_task_scope",
+      "value": null,
+      "column": "AlexaFluor 488",
+      "matching_target_options": [],
+      "candidate_rows": [],
+      "selected_row_indices": [],
+      "per_scope_evidence": [],
+      "row_selection_uses_scores": false,
+      "different_scopes_merged": false,
+      "new_alias_or_KB_value": false,
+      "declared_task_scope": null,
+      "exact_lookup_value": null,
+      "family_source_donors": [],
+      "family_donor_cells": [],
+      "family_rule": "AF-family-consensus-from-applicable-marker-rows-v1",
+      "evidence_level": "unresolved_family_evidence",
+      "family_issue": "no_known_donor_cells"
+    }
+  ],
+  "midpoint_time_derivation": {
+    "hours": null,
+    "bounds_hours": null,
+    "decision": "source_semantic_resolution_needed",
+    "issues": [
+      "no_complete_numeric_operation_set",
+      "reported_core_operation_coverage_incomplete",
+      "schedule_unknown",
+      "unresolved_phase_scope"
+    ]
+  },
+  "remaining_dependencies": {
+    "time": [
+      "no_complete_numeric_operation_set",
+      "reported_core_operation_coverage_incomplete",
+      "schedule_unknown",
+      "unresolved_phase_scope"
+    ],
+    "label_relations": [
+      {
+        "kind": "reported_unresolved_relation",
+        "relation_id": "R02",
+        "entity_id": "E03"
+      },
+      {
+        "kind": "reported_unresolved_relation",
+        "relation_id": "R04",
+        "entity_id": "E06"
+      }
+    ],
+    "compatibility": [
+      {
+        "marker": "beta-III Tubulin",
+        "fluorophore": "Alexa Fluor 488",
+        "status": "no_matching_authored_row_in_task_scope",
+        "value": null,
+        "column": "AlexaFluor 488",
+        "matching_target_options": [],
+        "candidate_rows": [],
+        "selected_row_indices": [],
+        "per_scope_evidence": [],
+        "row_selection_uses_scores": false,
+        "different_scopes_merged": false,
+        "new_alias_or_KB_value": false,
+        "declared_task_scope": null,
+        "exact_lookup_value": null,
+        "family_source_donors": [],
+        "family_donor_cells": [],
+        "family_rule": "AF-family-consensus-from-applicable-marker-rows-v1",
+        "evidence_level": "unresolved_family_evidence",
+        "family_issue": "no_known_donor_cells"
+      }
+    ]
+  },
+  "original_technical_status_preserved": true,
+  "new_model_calls": 0,
+  "new_author_annotations": 0,
+  "scope_candidate_metrics": {
+    "c_param": 0,
+    "co_order": null,
+    "co_method": null,
+    "co_param": null,
+    "co_chem": 1,
+    "s_method": 2.425,
+    "s_label": 0.0,
+    "s_trans": 1.2333368715215602,
+    "s_time": null,
+    "sr": 0.0,
+    "sp": 0.0,
+    "Com": 0.0,
+    "Cor": null,
+    "Eff": null,
+    "IA": null,
+    "HV": null
+  },
+  "scope_time_interpretation": {
+    "hours": null,
+    "bounds_hours": null,
+    "decision": "unresolved_source_input",
+    "scope": "reported_core_operations",
+    "original_issues": [
+      "no_complete_numeric_operation_set",
+      "reported_core_operation_coverage_incomplete",
+      "schedule_unknown",
+      "unresolved_phase_scope"
+    ],
+    "resolved_scope_issues": [
+      "reported_core_operation_coverage_incomplete_for_reported_duration_only"
+    ],
+    "issues": [
+      "no_complete_numeric_operation_set",
+      "schedule_unknown",
+      "unresolved_phase_scope"
+    ],
+    "phase_evidence": [],
+    "operation_contributions": [],
+    "workflow_completeness_not_inferred": true,
+    "complete_experimental_endpoint_duration": null,
+    "saved_coverage_judgment": {
+      "entities": "complete",
+      "time_operations": "complete",
+      "core_time_operations": "partial",
+      "unresolved": [
+        {
+          "evidence": {
+            "unit_id": "L0006",
+            "quote": "1.1 Incubation with\n",
+            "occurrence": 0,
+            "source_id": "SRC_ce4805acb4728e5413aa0eb7",
+            "start": 768,
+            "end": 788,
+            "answer_sha256": "c4dbdb716b75171abbd06f9632be9524f304f41f0431f18fa6ed7268a73ddef0",
+            "context_start": 768,
+            "context_end": 788,
+            "context": "1.1 Incubation with\n",
+            "unit_reference": {
+              "source_unit_sha256": "3991dc25dcb98533968b5b1ab4d718dbb5cd5ffc2a633df1dbe8ee5899303727",
+              "raw_unit_text_preserved": true,
+              "wide_evidence_not_atomic_identity": true
+            }
+          },
+          "reason": "Operation 'Incubation with' is truncated and lacks specific reagent/phase identification."
+        }
+      ]
+    }
+  },
+  "repeated_channel_resolution": [],
+  "scope_label_derivation": {
+    "version": "cce-typed-label-scorer-v2.1",
+    "s_label": 0.0,
+    "channels": {
+      "s_target_match": 0.0,
+      "s_marker_fluor_compat": null,
+      "s_method_fluor_compat": 3.9000000000000004
+    },
+    "channel_applicability": {
+      "s_target_match": {
+        "applicable": true,
+        "value": 0.0,
+        "contributing_pairs": [
+          "relation:R01",
+          "relation:R02",
+          "relation:R03",
+          "relation:R04"
+        ]
+      },
+      "s_marker_fluor_compat": {
+        "applicable": true,
+        "value": null,
+        "contributing_pairs": [
+          "relation:R01",
+          "relation:R02",
+          "relation:R03",
+          "relation:R04"
+        ]
+      },
+      "s_method_fluor_compat": {
+        "applicable": true,
+        "value": 3.9000000000000004,
+        "contributing_pairs": [
+          "relation:R01",
+          "relation:R02",
+          "relation:R03",
+          "relation:R04",
+          "unresolved_entity:E07"
+        ]
+      }
+    },
+    "pair_results": [
+      {
+        "pair_id": "relation:R01",
+        "entity_id": "E03",
+        "fluorophore": "Alexa Fluor 647",
+        "reported_marker": "NeuN",
+        "reported_target_literal": "NeuN",
+        "label_type": "targeted_or_unclassified_reagent",
+        "original_function_input": {
+          "Alexa Fluor 647": "NeuN"
+        },
+        "applicable": {
+          "s_target_match": true,
+          "s_marker_fluor_compat": true,
+          "s_method_fluor_compat": true
+        },
+        "channels": {
+          "s_target_match": 3.0,
+          "s_marker_fluor_compat": 6.0,
+          "s_method_fluor_compat": 4.5
+        },
+        "not_applicable_reason": null,
+        "source_evidence": {
+          "unit_id": "L0002",
+          "start": 26,
+          "end": 126,
+          "quote": "**Chosen Labeling:** [NeuN (RBFOX3)+Alexa Fluor 647, beta-III Tubulin (TUJ1)+Alexa Fluor 488, DAPI]\n",
+          "answer_sha256": "c4dbdb716b75171abbd06f9632be9524f304f41f0431f18fa6ed7268a73ddef0"
+        },
+        "compatibility_audit": [
+          {
+            "kind": "marker_fluor",
+            "marker": "NeuN",
+            "fluorophore": "Alexa Fluor 647",
+            "source": "KnowledgeBase/tissue.json",
+            "value": true,
+            "status": "TABLE_REPORTED"
+          },
+          {
+            "kind": "method_fluor",
+            "method_name": "uDISCO",
+            "fluorophore": "Alexa Fluor 647",
+            "source": "KnowledgeBase/method_fluro_compati.json",
+            "value": 0.75,
+            "status": "TABLE_REPORTED"
+          }
+        ]
+      },
+      {
+        "pair_id": "relation:R02",
+        "entity_id": "E03",
+        "fluorophore": "Alexa Fluor 647",
+        "reported_marker": null,
+        "reported_target_literal": "RBFOX3",
+        "label_type": "targeted_or_unclassified_reagent",
+        "original_function_input": {
+          "Alexa Fluor 647": ""
+        },
+        "applicable": {
+          "s_target_match": true,
+          "s_marker_fluor_compat": true,
+          "s_method_fluor_compat": true
+        },
+        "channels": {
+          "s_target_match": null,
+          "s_marker_fluor_compat": null,
+          "s_method_fluor_compat": 4.5
+        },
+        "not_applicable_reason": null,
+        "source_evidence": {
+          "unit_id": "L0002",
+          "start": 26,
+          "end": 126,
+          "quote": "**Chosen Labeling:** [NeuN (RBFOX3)+Alexa Fluor 647, beta-III Tubulin (TUJ1)+Alexa Fluor 488, DAPI]\n",
+          "answer_sha256": "c4dbdb716b75171abbd06f9632be9524f304f41f0431f18fa6ed7268a73ddef0"
+        },
+        "compatibility_audit": [
+          {
+            "kind": "method_fluor",
+            "method_name": "uDISCO",
+            "fluorophore": "Alexa Fluor 647",
+            "source": "KnowledgeBase/method_fluro_compati.json",
+            "value": 0.75,
+            "status": "TABLE_REPORTED"
+          }
+        ]
+      },
+      {
+        "pair_id": "relation:R03",
+        "entity_id": "E06",
+        "fluorophore": "Alexa Fluor 488",
+        "reported_marker": "beta-III Tubulin",
+        "reported_target_literal": "beta-III Tubulin",
+        "label_type": "targeted_or_unclassified_reagent",
+        "original_function_input": {
+          "Alexa Fluor 488": "beta-III Tubulin"
+        },
+        "applicable": {
+          "s_target_match": true,
+          "s_marker_fluor_compat": true,
+          "s_method_fluor_compat": true
+        },
+        "channels": {
+          "s_target_match": 0.0,
+          "s_marker_fluor_compat": null,
+          "s_method_fluor_compat": 4.199999999999999
+        },
+        "not_applicable_reason": null,
+        "source_evidence": {
+          "unit_id": "L0002",
+          "start": 26,
+          "end": 126,
+          "quote": "**Chosen Labeling:** [NeuN (RBFOX3)+Alexa Fluor 647, beta-III Tubulin (TUJ1)+Alexa Fluor 488, DAPI]\n",
+          "answer_sha256": "c4dbdb716b75171abbd06f9632be9524f304f41f0431f18fa6ed7268a73ddef0"
+        },
+        "compatibility_audit": [
+          {
+            "kind": "marker_fluor",
+            "marker": "beta-III Tubulin",
+            "fluorophore": "Alexa Fluor 488",
+            "source": "KnowledgeBase/tissue.json",
+            "value": null,
+            "status": "UNKNOWN"
+          },
+          {
+            "kind": "method_fluor",
+            "method_name": "uDISCO",
+            "fluorophore": "Alexa Fluor 488",
+            "source": "KnowledgeBase/method_fluro_compati.json",
+            "value": 0.7,
+            "status": "TABLE_REPORTED"
+          }
+        ]
+      },
+      {
+        "pair_id": "relation:R04",
+        "entity_id": "E06",
+        "fluorophore": "Alexa Fluor 488",
+        "reported_marker": null,
+        "reported_target_literal": "TUJ1",
+        "label_type": "targeted_or_unclassified_reagent",
+        "original_function_input": {
+          "Alexa Fluor 488": ""
+        },
+        "applicable": {
+          "s_target_match": true,
+          "s_marker_fluor_compat": true,
+          "s_method_fluor_compat": true
+        },
+        "channels": {
+          "s_target_match": null,
+          "s_marker_fluor_compat": null,
+          "s_method_fluor_compat": 4.199999999999999
+        },
+        "not_applicable_reason": null,
+        "source_evidence": {
+          "unit_id": "L0002",
+          "start": 26,
+          "end": 126,
+          "quote": "**Chosen Labeling:** [NeuN (RBFOX3)+Alexa Fluor 647, beta-III Tubulin (TUJ1)+Alexa Fluor 488, DAPI]\n",
+          "answer_sha256": "c4dbdb716b75171abbd06f9632be9524f304f41f0431f18fa6ed7268a73ddef0"
+        },
+        "compatibility_audit": [
+          {
+            "kind": "method_fluor",
+            "method_name": "uDISCO",
+            "fluorophore": "Alexa Fluor 488",
+            "source": "KnowledgeBase/method_fluro_compati.json",
+            "value": 0.7,
+            "status": "TABLE_REPORTED"
+          }
+        ]
+      },
+      {
+        "pair_id": "unresolved_entity:E07",
+        "entity_id": "E07",
+        "fluorophore": "DAPI",
+        "reported_marker": null,
+        "reported_target_literal": null,
+        "label_type": "direct_stain",
+        "original_function_input": {
+          "DAPI": ""
+        },
+        "applicable": {
+          "s_target_match": false,
+          "s_marker_fluor_compat": false,
+          "s_method_fluor_compat": true
+        },
+        "channels": {
+          "s_target_match": null,
+          "s_marker_fluor_compat": null,
+          "s_method_fluor_compat": 3.9000000000000004
+        },
+        "not_applicable_reason": "standalone fluorescence has no antibody target-pair channel",
+        "source_evidence": {
+          "unit_id": "L0002",
+          "start": 120,
+          "end": 124,
+          "quote": "DAPI",
+          "answer_sha256": "c4dbdb716b75171abbd06f9632be9524f304f41f0431f18fa6ed7268a73ddef0"
+        },
+        "compatibility_audit": [
+          {
+            "kind": "method_fluor",
+            "method_name": "uDISCO",
+            "fluorophore": "DAPI",
+            "source": "KnowledgeBase/method_fluro_compati.json",
+            "value": 0.65,
+            "status": "TABLE_REPORTED"
+          }
+        ]
+      }
+    ],
+    "resolved_uncertainties": [],
+    "remaining_uncertainties": [
+      {
+        "kind": "reported_unresolved_relation",
+        "relation_id": "R02",
+        "entity_id": "E03"
+      },
+      {
+        "kind": "reported_unresolved_relation",
+        "relation_id": "R04",
+        "entity_id": "E06"
+      }
+    ],
+    "minimum_of_available_applicable_channels": 0.0,
+    "task_target_coverage": "native/direct task coverage remains separate from antibody-pair applicability",
+    "new_model_calls": 0,
+    "expert_validated": false
+  },
+  "scope_changes": {},
+  "original_raw_untouched": true
+}

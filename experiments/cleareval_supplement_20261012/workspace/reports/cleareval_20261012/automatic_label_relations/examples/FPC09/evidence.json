@@ -1,0 +1,135 @@
+{
+  "cell_id": "FPC09",
+  "cohort": "secondary8_posthoc",
+  "question_id": 1,
+  "baseline_metrics": {
+    "c_param": 2,
+    "co_order": 1,
+    "co_method": 1,
+    "co_param": 0,
+    "co_chem": 1,
+    "s_method": 0.8409,
+    "s_label": null,
+    "s_trans": 2.814646787157323,
+    "s_time": 0.2539739658675898,
+    "sr": 0.6666666666666666,
+    "sp": 0.11764705882352941,
+    "Com": 0.6666666666666666,
+    "Cor": 0.4583333333333333,
+    "Eff": null,
+    "IA": null,
+    "HV": null
+  },
+  "metrics": {
+    "c_param": 2,
+    "co_order": 1,
+    "co_method": 1,
+    "co_param": 0,
+    "co_chem": 1,
+    "s_method": 0.8409,
+    "s_label": null,
+    "s_trans": 2.814646787157323,
+    "s_time": 0.2539739658675898,
+    "sr": 0.6666666666666666,
+    "sp": 0.11764705882352941,
+    "Com": 0.6666666666666666,
+    "Cor": 0.4583333333333333,
+    "Eff": null,
+    "IA": null,
+    "HV": null
+  },
+  "complete_numeric_CCE": false,
+  "source_document": {
+    "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\optimizer_round2_20261010\\secondary_E5_confirmation_v1\\source_documents\\FPC09.json",
+    "sha256": "285a9206a5ff0c2e67cc5aa619f3869d626e922b1da6524ab4771060b29da77e"
+  },
+  "post_record": {
+    "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\optimizer_round3_20261011\\uniform_v7\\actual_01\\cells\\secondary8_posthoc\\FPC09\\posthoc.json",
+    "sha256": "9323f2de8277d89fbe29fccaafb401a1b1665fba6920cd596f5a3183cf50b892"
+  },
+  "answer_sha256": "3a7986eb5d6e4a6503766c145d6aac1d93ae4b6d1d0cf9ab875c797b9ee88613",
+  "proposal": {
+    "version": "selected-label-source-v1.1",
+    "answer_sha256": "3a7986eb5d6e4a6503766c145d6aac1d93ae4b6d1d0cf9ab875c797b9ee88613",
+    "relations": [
+      {
+        "fluorophore": "DAPI",
+        "marker": "",
+        "source_spans": [
+          {
+            "unit_id": "L0002",
+            "start": 83,
+            "end": 88,
+            "quote": " DAPI",
+            "answer_sha256": "3a7986eb5d6e4a6503766c145d6aac1d93ae4b6d1d0cf9ab875c797b9ee88613"
+          }
+        ],
+        "basis": "explicit standalone signal in chosen list; external target-pair channel not applicable",
+        "source_fluor_literal": "DAPI",
+        "clone_identity_inferred": false,
+        "generic_AF": false
+      }
+    ],
+    "issues": [
+      {
+        "kind": "multiple_catalog_target_identities",
+        "source": {
+          "unit_id": "L0002",
+          "start": 51,
+          "end": 82,
+          "quote": "c-Fos (Npas4) + Alexa Fluor 647",
+          "answer_sha256": "3a7986eb5d6e4a6503766c145d6aac1d93ae4b6d1d0cf9ab875c797b9ee88613"
+        },
+        "outer_catalog_target": "C-FoS",
+        "inner_catalog_target": "Npas4 (IEGs)",
+        "reason": "two separate catalog target names are combined; no alias identity established"
+      }
+    ],
+    "header_candidates": 1,
+    "ready": false,
+    "new_model_calls": 0,
+    "new_per_answer_author_annotations": 0,
+    "independent_evaluator": false,
+    "expert_validated": false,
+    "scope": "explicit chosen-label list; no claim of universal biological relation extraction",
+    "header_source": {
+      "unit_id": "L0002",
+      "start": 29,
+      "end": 92,
+      "quote": "**Chosen Labeling:** [c-Fos (Npas4) + Alexa Fluor 647, DAPI]  \n",
+      "answer_sha256": "3a7986eb5d6e4a6503766c145d6aac1d93ae4b6d1d0cf9ab875c797b9ee88613"
+    },
+    "actual_AF_operation_evidence": [
+      {
+        "fluorophore": "Alexa Fluor 647",
+        "source": {
+          "unit_id": "L0016",
+          "start": 1163,
+          "end": 1289,
+          "quote": "2.2 Incubation with 1:500 Alexa Fluor 647-conjugated secondary antibody in 100% methanol (Temperature: 4 ℃, Time: 24 hours)  \n",
+          "answer_sha256": "3a7986eb5d6e4a6503766c145d6aac1d93ae4b6d1d0cf9ab875c797b9ee88613"
+        },
+        "literal": "Alexa Fluor 647"
+      }
+    ],
+    "selection_uses_achieved_score": false
+  },
+  "decision": "candidate_outside_declared_grammar",
+  "label_derivation": null,
+  "lookup_trace": [],
+  "changes": {},
+  "quantitative_data": {
+    "method_name": "iDISCO+",
+    "tissue_ri_value": 1.46,
+    "total_time_hours": 80.0,
+    "sample_tier": "T04_WHOLE_MOUSE_BRAIN_5_12MM",
+    "reagent_ri_value": null,
+    "protocol_time_hours": null
+  },
+  "new_model_calls": 0,
+  "new_per_answer_author_annotations": 0,
+  "original_source": {
+    "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\optimizer_round2_20261010\\secondary_E5_confirmation_v1\\source_documents\\FPC09.json",
+    "sha256": "285a9206a5ff0c2e67cc5aa619f3869d626e922b1da6524ab4771060b29da77e"
+  }
+}

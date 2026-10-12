@@ -1,0 +1,2444 @@
+{
+  "generator": "openai_claude-sonnet-4.6",
+  "question_id": 248,
+  "original_answer_sha256": "4b84fdc89feaa11f37599e9f3fe38336fecf418a499e8609ec08312f6cb78bd3",
+  "canonical_answer_sha256": "0bbe7be8c1a3eaabf163e5be1d6eac66d9e9ca9290d7ca7cfc20209acc6c5fef",
+  "sources": {
+    "case_file": {
+      "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\optimizer_round3_20261011\\confirmation_qwen_01\\cases.json",
+      "sha256": "b4e50ef0280f7450532e198c1c6cd85ec399de06f68007a848cae1ed0fb5a08f"
+    },
+    "original_dataset": {
+      "path": "C:\\ClearEval\\ClearEval-public\\dataset\\Q+AR\\model_response\\from_openai_claude-sonnet-4.6_1-shot.json",
+      "sha256": "dcd4ff283d201f541ce6cba49dcd98df10d53b012a1aa7c9fa69671fe7da1bbd"
+    },
+    "canonical_document": {
+      "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\optimizer_round3_20261011\\confirmation_qwen_01\\source_documents\\4dca84598051a5f58be13cde.json",
+      "sha256": "329fc6484fa59e7ed5d70a29a515c73bfa42f941bcedad6f57f0eb7961efd932"
+    },
+    "archived_judge_response": {
+      "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\optimizer_round3_20261011\\confirmation_qwen_01\\run\\attempts\\28a0bda1d0827541adf64b6f79363d4962708551accea33a538d504089303e2e_1\\raw_response.txt",
+      "sha256": "7282c18f643d2a3ec0a726c3da21b645224dca9d4a41f644d24fed80e8fc81ff"
+    },
+    "archived_processing": {
+      "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\optimizer_round3_20261011\\confirmation_qwen_01\\run\\attempts\\28a0bda1d0827541adf64b6f79363d4962708551accea33a538d504089303e2e_1\\processing.json",
+      "sha256": "c627f2575016c44a444b92b38edfacdc1fa7a061ca74a573c679d56fd41d001d"
+    },
+    "lexical_reparse": {
+      "path": "C:\\ClearEval\\reports\\cleareval_20261012\\typed_label_transfer\\lexical_candidate_02\\processing\\R3C07__r0.json",
+      "sha256": "c842b62378db9887ca4270e0b14a1937233bce553033ed3a93b4d3ae9b3bdf97"
+    }
+  },
+  "archived_metrics": {
+    "c_param": 3,
+    "co_order": 2,
+    "co_method": 1,
+    "co_param": 0,
+    "co_chem": 1,
+    "s_method": 0.1263,
+    "s_label": null,
+    "s_trans": 2.814646787157323,
+    "s_time": null,
+    "sr": 0.0,
+    "sp": 0.0,
+    "Com": 0.6,
+    "Cor": 0.5416666666666666,
+    "Eff": null,
+    "IA": null,
+    "HV": null
+  },
+  "automatic_candidate_metrics": {
+    "c_param": 3,
+    "co_order": 2,
+    "co_method": 1,
+    "co_param": 0,
+    "co_chem": 1,
+    "s_method": 0.1263,
+    "s_label": null,
+    "s_trans": 2.814646787157323,
+    "s_time": null,
+    "sr": 0.0,
+    "sp": 0.0,
+    "Com": 0.6,
+    "Cor": 0.5416666666666666,
+    "Eff": null,
+    "IA": null,
+    "HV": null
+  },
+  "source_assisted_metrics": {
+    "c_param": 3,
+    "co_order": 2,
+    "co_method": 1,
+    "co_param": 0,
+    "co_chem": 1,
+    "s_method": 0.1263,
+    "s_label": 5.1,
+    "s_trans": 2.814646787157323,
+    "s_time": 0.0696993280570204,
+    "sr": 0.0,
+    "sp": 0.0,
+    "Com": 0.6,
+    "Cor": 0.5416666666666666,
+    "Eff": 0.584177176267862,
+    "IA": 0.5416666666666666,
+    "HV": 0.18985758228705513
+  },
+  "annotation": {
+    "cell_id": "R3C07__r0",
+    "question_id": 248,
+    "answer_sha256": "0bbe7be8c1a3eaabf163e5be1d6eac66d9e9ca9290d7ca7cfc20209acc6c5fef",
+    "source_document": {
+      "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\optimizer_round3_20261011\\confirmation_qwen_01\\source_documents\\4dca84598051a5f58be13cde.json",
+      "sha256": "329fc6484fa59e7ed5d70a29a515c73bfa42f941bcedad6f57f0eb7961efd932"
+    },
+    "original_source_document": {
+      "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\optimizer_round3_20261011\\confirmation_qwen_01\\original_source_documents\\4dca84598051a5f58be13cde.json",
+      "sha256": "4f13d621a3f6cec8abba099ed59d9df208ee4628d56717b4bccabc794e51fc05"
+    },
+    "source_mapping": {
+      "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\optimizer_round3_20261011\\confirmation_qwen_01\\source_mappings\\4dca84598051a5f58be13cde.json",
+      "sha256": "5f4b86c5bd3391065a7bebfd667852e201e34f2cf7795ac54f7a595a96628b16"
+    },
+    "semantic_author": "current assistant / source-assisted author analysis",
+    "independent_evaluator": false,
+    "expert_validated": false,
+    "new_model_calls": 0,
+    "relations": [
+      {
+        "fluorophore": "tdTomato",
+        "marker": "",
+        "source_spans": [
+          {
+            "unit_id": "L0002",
+            "start": 26,
+            "end": 107,
+            "quote": "**Chosen Labeling:** [tdTomato (内源荧光), β-III Tubulin (TUJ1) + Alexa Fluor (647)]\n",
+            "answer_sha256": "0bbe7be8c1a3eaabf163e5be1d6eac66d9e9ca9290d7ca7cfc20209acc6c5fef"
+          },
+          {
+            "unit_id": "L0003",
+            "start": 107,
+            "end": 597,
+            "quote": "**Justification:** FDISCO（Fluorescence-preserved 3D Imaging of Solvent-Cleared Organs）是基于有机溶剂的快速透明方法，全脑透明可在约2天内完成，满足\"尽快成像\"的需求，且相比iDISCO+/uDISCO对荧光蛋白保护更佳（低温+碱性条件抑制荧光淬灭），已有文献证明可良好保留tdTomato内源信号。FDISCO使用THF脱水/脱脂后以BABB作为RI匹配液（RI≈1.56），与光片显微镜兼容，可接受一定程度的组织收缩（FDISCO收缩率约35–40%，均匀收缩不影响投射追踪）。标记策略：①保留tdTomato内源荧光追踪长程投射神经元；②在透明前对固定脑进行全脑免疫染色（iDISCO-style whole-mount），使用抗β-III Tubulin（TUJ1）抗体 + Alexa Fluor 647二抗标记轴突骨架结构，Alexa Fluor 647在有机溶剂中稳定性优异。两通道（tdTomato ~590 nm；AF647 ~647 nm）光谱分离良好，适合双通道光片成像。\n",
+            "answer_sha256": "0bbe7be8c1a3eaabf163e5be1d6eac66d9e9ca9290d7ca7cfc20209acc6c5fef"
+          }
+        ],
+        "basis": "Native fluorescent protein; no external marker pair.",
+        "roles": {}
+      },
+      {
+        "fluorophore": "Alexa Fluor 647",
+        "marker": "β-III Tubulin (TUJ1)",
+        "source_spans": [
+          {
+            "unit_id": "L0002",
+            "start": 26,
+            "end": 107,
+            "quote": "**Chosen Labeling:** [tdTomato (内源荧光), β-III Tubulin (TUJ1) + Alexa Fluor (647)]\n",
+            "answer_sha256": "0bbe7be8c1a3eaabf163e5be1d6eac66d9e9ca9290d7ca7cfc20209acc6c5fef"
+          },
+          {
+            "unit_id": "L0003",
+            "start": 107,
+            "end": 597,
+            "quote": "**Justification:** FDISCO（Fluorescence-preserved 3D Imaging of Solvent-Cleared Organs）是基于有机溶剂的快速透明方法，全脑透明可在约2天内完成，满足\"尽快成像\"的需求，且相比iDISCO+/uDISCO对荧光蛋白保护更佳（低温+碱性条件抑制荧光淬灭），已有文献证明可良好保留tdTomato内源信号。FDISCO使用THF脱水/脱脂后以BABB作为RI匹配液（RI≈1.56），与光片显微镜兼容，可接受一定程度的组织收缩（FDISCO收缩率约35–40%，均匀收缩不影响投射追踪）。标记策略：①保留tdTomato内源荧光追踪长程投射神经元；②在透明前对固定脑进行全脑免疫染色（iDISCO-style whole-mount），使用抗β-III Tubulin（TUJ1）抗体 + Alexa Fluor 647二抗标记轴突骨架结构，Alexa Fluor 647在有机溶剂中稳定性优异。两通道（tdTomato ~590 nm；AF647 ~647 nm）光谱分离良好，适合双通道光片成像。\n",
+            "answer_sha256": "0bbe7be8c1a3eaabf163e5be1d6eac66d9e9ca9290d7ca7cfc20209acc6c5fef"
+          },
+          {
+            "unit_id": "L0014",
+            "start": 1065,
+            "end": 1163,
+            "quote": "4.1 将脑组织置于含抗β-III Tubulin（TUJ1）兔多克隆抗体（1:500稀释于封闭液）的溶液中，轻柔振荡孵育。(Temperature: 37 ℃, Time: 48 hours)\n",
+            "answer_sha256": "0bbe7be8c1a3eaabf163e5be1d6eac66d9e9ca9290d7ca7cfc20209acc6c5fef"
+          },
+          {
+            "unit_id": "L0017",
+            "start": 1247,
+            "end": 1340,
+            "quote": "5.1 将脑组织置于含驴抗兔 Alexa Fluor 647二抗（1:500稀释于封闭液）的溶液中，避光振荡孵育。(Temperature: 37 ℃, Time: 48 hours)\n",
+            "answer_sha256": "0bbe7be8c1a3eaabf163e5be1d6eac66d9e9ca9290d7ca7cfc20209acc6c5fef"
+          }
+        ],
+        "basis": "The answer links the parenthesized TUJ1 designation to β-III Tubulin and supplies the exact AF647 secondary.",
+        "roles": {
+          "biological_target": "β-III Tubulin / TUBB3",
+          "parenthetical_designation": "TUJ1",
+          "confirmed_clone": null,
+          "source_antibody_claim": "rabbit polyclonal; retained literally. TUJ1 can be used as a target/marker shorthand, so parentheses alone do not identify or contradict a specific clone.",
+          "terminology_source": "https://www.ptglab.com/products/TUBB3-specific-Antibody-CL488-66375.htm"
+        }
+      }
+    ],
+    "operations": [
+      {
+        "operation_id": "L0007",
+        "role": "excluded",
+        "source_spans": [
+          {
+            "unit_id": "L0007",
+            "start": 653,
+            "end": 733,
+            "quote": "1.1 将已4% PFA固定的成年小鼠全脑置于1× PBS中充分漂洗，去除残余固定液。(Temperature: 4 ℃, Time: 3 × 1 hour)\n",
+            "answer_sha256": "0bbe7be8c1a3eaabf163e5be1d6eac66d9e9ca9290d7ca7cfc20209acc6c5fef"
+          }
+        ],
+        "interpretation": "Fixative-removal or label-preparation wash, permeabilization/blocking, antibody incubations and label washes.",
+        "duration_options": {}
+      },
+      {
+        "operation_id": "L0009",
+        "role": "excluded",
+        "source_spans": [
+          {
+            "unit_id": "L0009",
+            "start": 751,
+            "end": 844,
+            "quote": "2.1 将脑组织置于含0.2% (vol/vol) Triton X-100的1× PBS（PBST）中振荡渗透。(Temperature: 37 ℃, Time: 24 hours)\n",
+            "answer_sha256": "0bbe7be8c1a3eaabf163e5be1d6eac66d9e9ca9290d7ca7cfc20209acc6c5fef"
+          }
+        ],
+        "interpretation": "Fixative-removal or label-preparation wash, permeabilization/blocking, antibody incubations and label washes.",
+        "duration_options": {}
+      },
+      {
+        "operation_id": "L0010",
+        "role": "excluded",
+        "source_spans": [
+          {
+            "unit_id": "L0010",
+            "start": 844,
+            "end": 897,
+            "quote": "2.2 更换新鲜PBST继续渗透。(Temperature: 37 ℃, Time: 24 hours)\n",
+            "answer_sha256": "0bbe7be8c1a3eaabf163e5be1d6eac66d9e9ca9290d7ca7cfc20209acc6c5fef"
+          }
+        ],
+        "interpretation": "Fixative-removal or label-preparation wash, permeabilization/blocking, antibody incubations and label washes.",
+        "duration_options": {}
+      },
+      {
+        "operation_id": "L0012",
+        "role": "excluded",
+        "source_spans": [
+          {
+            "unit_id": "L0012",
+            "start": 906,
+            "end": 1032,
+            "quote": "3.1 将脑组织置于封闭液（5% (vol/vol) 正常驴血清 + 0.2% Triton X-100 + 0.1% (wt/vol) NaN₃ in 1× PBS）中振荡封闭。(Temperature: 37 ℃, Time: 24 hours)\n",
+            "answer_sha256": "0bbe7be8c1a3eaabf163e5be1d6eac66d9e9ca9290d7ca7cfc20209acc6c5fef"
+          }
+        ],
+        "interpretation": "Fixative-removal or label-preparation wash, permeabilization/blocking, antibody incubations and label washes.",
+        "duration_options": {}
+      },
+      {
+        "operation_id": "L0014",
+        "role": "excluded",
+        "source_spans": [
+          {
+            "unit_id": "L0014",
+            "start": 1065,
+            "end": 1163,
+            "quote": "4.1 将脑组织置于含抗β-III Tubulin（TUJ1）兔多克隆抗体（1:500稀释于封闭液）的溶液中，轻柔振荡孵育。(Temperature: 37 ℃, Time: 48 hours)\n",
+            "answer_sha256": "0bbe7be8c1a3eaabf163e5be1d6eac66d9e9ca9290d7ca7cfc20209acc6c5fef"
+          }
+        ],
+        "interpretation": "Fixative-removal or label-preparation wash, permeabilization/blocking, antibody incubations and label washes.",
+        "duration_options": {}
+      },
+      {
+        "operation_id": "L0015",
+        "role": "excluded",
+        "source_spans": [
+          {
+            "unit_id": "L0015",
+            "start": 1163,
+            "end": 1219,
+            "quote": "4.2 用PBST洗涤，去除未结合一抗。(Temperature: RT, Time: 5 × 1 hour)\n",
+            "answer_sha256": "0bbe7be8c1a3eaabf163e5be1d6eac66d9e9ca9290d7ca7cfc20209acc6c5fef"
+          }
+        ],
+        "interpretation": "Fixative-removal or label-preparation wash, permeabilization/blocking, antibody incubations and label washes.",
+        "duration_options": {}
+      },
+      {
+        "operation_id": "L0017",
+        "role": "excluded",
+        "source_spans": [
+          {
+            "unit_id": "L0017",
+            "start": 1247,
+            "end": 1340,
+            "quote": "5.1 将脑组织置于含驴抗兔 Alexa Fluor 647二抗（1:500稀释于封闭液）的溶液中，避光振荡孵育。(Temperature: 37 ℃, Time: 48 hours)\n",
+            "answer_sha256": "0bbe7be8c1a3eaabf163e5be1d6eac66d9e9ca9290d7ca7cfc20209acc6c5fef"
+          }
+        ],
+        "interpretation": "Fixative-removal or label-preparation wash, permeabilization/blocking, antibody incubations and label washes.",
+        "duration_options": {}
+      },
+      {
+        "operation_id": "L0018",
+        "role": "excluded",
+        "source_spans": [
+          {
+            "unit_id": "L0018",
+            "start": 1340,
+            "end": 1396,
+            "quote": "5.2 用PBST洗涤，去除未结合二抗。(Temperature: RT, Time: 5 × 1 hour)\n",
+            "answer_sha256": "0bbe7be8c1a3eaabf163e5be1d6eac66d9e9ca9290d7ca7cfc20209acc6c5fef"
+          }
+        ],
+        "interpretation": "Fixative-removal or label-preparation wash, permeabilization/blocking, antibody incubations and label washes.",
+        "duration_options": {}
+      },
+      {
+        "operation_id": "L0019",
+        "role": "excluded",
+        "source_spans": [
+          {
+            "unit_id": "L0019",
+            "start": 1396,
+            "end": 1446,
+            "quote": "5.3 用1× PBS终洗。(Temperature: RT, Time: 2 × 30 min)\n",
+            "answer_sha256": "0bbe7be8c1a3eaabf163e5be1d6eac66d9e9ca9290d7ca7cfc20209acc6c5fef"
+          }
+        ],
+        "interpretation": "Fixative-removal or label-preparation wash, permeabilization/blocking, antibody incubations and label washes.",
+        "duration_options": {}
+      },
+      {
+        "operation_id": "L0021",
+        "role": "core",
+        "source_spans": [
+          {
+            "unit_id": "L0021",
+            "start": 1464,
+            "end": 1562,
+            "quote": "6.1 将脑组织置于50% (vol/vol) THF（四氢呋喃）水溶液（用NaOH调pH至9–10，以保护荧光蛋白）中振荡脱水。(Temperature: 4 ℃, Time: 1 hour)\n",
+            "answer_sha256": "0bbe7be8c1a3eaabf163e5be1d6eac66d9e9ca9290d7ca7cfc20209acc6c5fef"
+          }
+        ],
+        "interpretation": "",
+        "duration_options": {
+          "reported": {
+            "bounds_hours": [
+              1,
+              1
+            ],
+            "count": 1,
+            "basis": "explicit source duration"
+          }
+        }
+      },
+      {
+        "operation_id": "L0022",
+        "role": "core",
+        "source_spans": [
+          {
+            "unit_id": "L0022",
+            "start": 1562,
+            "end": 1640,
+            "quote": "6.2 将脑组织置于70% (vol/vol) THF水溶液（pH 9–10）中振荡脱水。(Temperature: 4 ℃, Time: 1 hour)\n",
+            "answer_sha256": "0bbe7be8c1a3eaabf163e5be1d6eac66d9e9ca9290d7ca7cfc20209acc6c5fef"
+          }
+        ],
+        "interpretation": "",
+        "duration_options": {
+          "reported": {
+            "bounds_hours": [
+              1,
+              1
+            ],
+            "count": 1,
+            "basis": "explicit source duration"
+          }
+        }
+      },
+      {
+        "operation_id": "L0023",
+        "role": "core",
+        "source_spans": [
+          {
+            "unit_id": "L0023",
+            "start": 1640,
+            "end": 1718,
+            "quote": "6.3 将脑组织置于80% (vol/vol) THF水溶液（pH 9–10）中振荡脱水。(Temperature: 4 ℃, Time: 1 hour)\n",
+            "answer_sha256": "0bbe7be8c1a3eaabf163e5be1d6eac66d9e9ca9290d7ca7cfc20209acc6c5fef"
+          }
+        ],
+        "interpretation": "",
+        "duration_options": {
+          "reported": {
+            "bounds_hours": [
+              1,
+              1
+            ],
+            "count": 1,
+            "basis": "explicit source duration"
+          }
+        }
+      },
+      {
+        "operation_id": "L0024",
+        "role": "core",
+        "source_spans": [
+          {
+            "unit_id": "L0024",
+            "start": 1718,
+            "end": 1799,
+            "quote": "6.4 将脑组织置于100% THF（无水，pH 9–10，加少量NaOH）中振荡脱水，第一次。(Temperature: 4 ℃, Time: 1 hour)\n",
+            "answer_sha256": "0bbe7be8c1a3eaabf163e5be1d6eac66d9e9ca9290d7ca7cfc20209acc6c5fef"
+          }
+        ],
+        "interpretation": "",
+        "duration_options": {
+          "reported": {
+            "bounds_hours": [
+              1,
+              1
+            ],
+            "count": 1,
+            "basis": "explicit source duration"
+          }
+        }
+      },
+      {
+        "operation_id": "L0025",
+        "role": "core",
+        "source_spans": [
+          {
+            "unit_id": "L0025",
+            "start": 1799,
+            "end": 1881,
+            "quote": "6.5 将脑组织置于100% THF（无水，pH 9–10）中振荡脱水，第二次（更换新鲜THF）。(Temperature: 4 ℃, Time: 1 hour)\n",
+            "answer_sha256": "0bbe7be8c1a3eaabf163e5be1d6eac66d9e9ca9290d7ca7cfc20209acc6c5fef"
+          }
+        ],
+        "interpretation": "",
+        "duration_options": {
+          "reported": {
+            "bounds_hours": [
+              1,
+              1
+            ],
+            "count": 1,
+            "basis": "explicit source duration"
+          }
+        }
+      },
+      {
+        "operation_id": "L0027",
+        "role": "core",
+        "source_spans": [
+          {
+            "unit_id": "L0027",
+            "start": 1899,
+            "end": 2010,
+            "quote": "7.1 将脑组织置于BABB（苯甲醇:苯甲酸苄酯 = 1:2, vol/vol）中振荡，完成脱脂并开始RI匹配，直至组织完全透明（通常30–60 min）。(Temperature: 4 ℃, Time: 1 hour)\n",
+            "answer_sha256": "0bbe7be8c1a3eaabf163e5be1d6eac66d9e9ca9290d7ca7cfc20209acc6c5fef"
+          }
+        ],
+        "interpretation": "",
+        "duration_options": {
+          "explicit_setpoint": {
+            "bounds_hours": [
+              1,
+              1
+            ],
+            "count": 1,
+            "basis": "Explicit Time:1 hour lies within the prose usually 30–60 minute range."
+          },
+          "typical_range_sensitivity": {
+            "bounds_hours": [
+              0.5,
+              1
+            ],
+            "count": 1,
+            "basis": "Sensitivity using the stated typical range instead of the explicit setpoint."
+          }
+        }
+      },
+      {
+        "operation_id": "L0029",
+        "role": "core",
+        "source_spans": [
+          {
+            "unit_id": "L0029",
+            "start": 2035,
+            "end": 2121,
+            "quote": "8.1 将透明脑组织转移至新鲜BABB（RI ≈ 1.56）中，避光静置平衡，确保组织完全透明且无气泡。(Temperature: 4 ℃, Time: 2 hours)\n",
+            "answer_sha256": "0bbe7be8c1a3eaabf163e5be1d6eac66d9e9ca9290d7ca7cfc20209acc6c5fef"
+          }
+        ],
+        "interpretation": "",
+        "duration_options": {
+          "reported": {
+            "bounds_hours": [
+              2,
+              2
+            ],
+            "count": 1,
+            "basis": "explicit source duration"
+          }
+        }
+      },
+      {
+        "operation_id": "L0030",
+        "role": "core",
+        "source_spans": [
+          {
+            "unit_id": "L0030",
+            "start": 2121,
+            "end": 2183,
+            "quote": "8.2 再次更换新鲜BABB，确认组织完全透明，准备成像。(Temperature: 4 ℃, Time: 30 min)\n",
+            "answer_sha256": "0bbe7be8c1a3eaabf163e5be1d6eac66d9e9ca9290d7ca7cfc20209acc6c5fef"
+          }
+        ],
+        "interpretation": "",
+        "duration_options": {
+          "reported": {
+            "bounds_hours": [
+              0.5,
+              0.5
+            ],
+            "count": 1,
+            "basis": "explicit source duration"
+          }
+        }
+      },
+      {
+        "operation_id": "L0032",
+        "role": "excluded",
+        "source_spans": [
+          {
+            "unit_id": "L0032",
+            "start": 2198,
+            "end": 2293,
+            "quote": "9.1 将透明脑组织转移至适配光片显微镜样品槽的BABB中，使用折射率匹配的浸没介质（RI = 1.56）固定样品位置，避免气泡。(Temperature: RT, Time: 即刻成像)\n",
+            "answer_sha256": "0bbe7be8c1a3eaabf163e5be1d6eac66d9e9ca9290d7ca7cfc20209acc6c5fef"
+          }
+        ],
+        "interpretation": "Immediate imaging and optional storage are outside core incubation time.",
+        "duration_options": {}
+      },
+      {
+        "operation_id": "L0033",
+        "role": "excluded",
+        "source_spans": [
+          {
+            "unit_id": "L0033",
+            "start": 2293,
+            "end": 2380,
+            "quote": "9.2 若需短期保存，将样品密封于BABB中，避光、4 ℃保存（建议1周内完成成像，以防荧光信号衰减）。(Temperature: 4 ℃, Time: ≤ 7 days)\n",
+            "answer_sha256": "0bbe7be8c1a3eaabf163e5be1d6eac66d9e9ca9290d7ca7cfc20209acc6c5fef"
+          }
+        ],
+        "interpretation": "Immediate imaging and optional storage are outside core incubation time.",
+        "duration_options": {}
+      }
+    ],
+    "scenarios": [
+      {
+        "scenario_id": "explicit_setpoint",
+        "description": "Use the explicitly supplied Time field, consistent with the described typical range.",
+        "selected_operations": [
+          {
+            "operation_id": "L0021",
+            "duration_option": "reported"
+          },
+          {
+            "operation_id": "L0022",
+            "duration_option": "reported"
+          },
+          {
+            "operation_id": "L0023",
+            "duration_option": "reported"
+          },
+          {
+            "operation_id": "L0024",
+            "duration_option": "reported"
+          },
+          {
+            "operation_id": "L0025",
+            "duration_option": "reported"
+          },
+          {
+            "operation_id": "L0027",
+            "duration_option": "explicit_setpoint"
+          },
+          {
+            "operation_id": "L0029",
+            "duration_option": "reported"
+          },
+          {
+            "operation_id": "L0030",
+            "duration_option": "reported"
+          }
+        ],
+        "omitted_core_operations": [],
+        "selection_uses_achieved_score": false
+      },
+      {
+        "scenario_id": "typical_range_sensitivity",
+        "description": "Use the prose typical range midpoint as a sensitivity analysis.",
+        "selected_operations": [
+          {
+            "operation_id": "L0021",
+            "duration_option": "reported"
+          },
+          {
+            "operation_id": "L0022",
+            "duration_option": "reported"
+          },
+          {
+            "operation_id": "L0023",
+            "duration_option": "reported"
+          },
+          {
+            "operation_id": "L0024",
+            "duration_option": "reported"
+          },
+          {
+            "operation_id": "L0025",
+            "duration_option": "reported"
+          },
+          {
+            "operation_id": "L0027",
+            "duration_option": "typical_range_sensitivity"
+          },
+          {
+            "operation_id": "L0029",
+            "duration_option": "reported"
+          },
+          {
+            "operation_id": "L0030",
+            "duration_option": "reported"
+          }
+        ],
+        "omitted_core_operations": [],
+        "selection_uses_achieved_score": false
+      }
+    ],
+    "primary_scenario_id": "explicit_setpoint",
+    "source_findings": [
+      "TUJ1 is used in the same parenthetical β-III Tubulin description; it is not evidence for a second independent biological target.",
+      "TUJ1 can name a classic clone or be used as a TUBB3 marker shorthand. The manufacturer counterexample labels a TUBB3-specific/TUJ1 product with clone 1F8G10. Parentheses alone cannot establish clone identity or prove the source rabbit-polyclonal wording wrong.",
+      "BABB and FDISCO identity/route issues remain visible in the unchanged answer and stored Cor."
+    ],
+    "unit_review": [
+      {
+        "source": {
+          "unit_id": "L0001",
+          "start": 0,
+          "end": 26,
+          "quote": "**Chosen Method:** FDISCO\n",
+          "answer_sha256": "0bbe7be8c1a3eaabf163e5be1d6eac66d9e9ca9290d7ca7cfc20209acc6c5fef"
+        },
+        "disposition": "heading_label_or_explanatory_text"
+      },
+      {
+        "source": {
+          "unit_id": "L0002",
+          "start": 26,
+          "end": 107,
+          "quote": "**Chosen Labeling:** [tdTomato (内源荧光), β-III Tubulin (TUJ1) + Alexa Fluor (647)]\n",
+          "answer_sha256": "0bbe7be8c1a3eaabf163e5be1d6eac66d9e9ca9290d7ca7cfc20209acc6c5fef"
+        },
+        "disposition": "heading_label_or_explanatory_text"
+      },
+      {
+        "source": {
+          "unit_id": "L0003",
+          "start": 107,
+          "end": 597,
+          "quote": "**Justification:** FDISCO（Fluorescence-preserved 3D Imaging of Solvent-Cleared Organs）是基于有机溶剂的快速透明方法，全脑透明可在约2天内完成，满足\"尽快成像\"的需求，且相比iDISCO+/uDISCO对荧光蛋白保护更佳（低温+碱性条件抑制荧光淬灭），已有文献证明可良好保留tdTomato内源信号。FDISCO使用THF脱水/脱脂后以BABB作为RI匹配液（RI≈1.56），与光片显微镜兼容，可接受一定程度的组织收缩（FDISCO收缩率约35–40%，均匀收缩不影响投射追踪）。标记策略：①保留tdTomato内源荧光追踪长程投射神经元；②在透明前对固定脑进行全脑免疫染色（iDISCO-style whole-mount），使用抗β-III Tubulin（TUJ1）抗体 + Alexa Fluor 647二抗标记轴突骨架结构，Alexa Fluor 647在有机溶剂中稳定性优异。两通道（tdTomato ~590 nm；AF647 ~647 nm）光谱分离良好，适合双通道光片成像。\n",
+          "answer_sha256": "0bbe7be8c1a3eaabf163e5be1d6eac66d9e9ca9290d7ca7cfc20209acc6c5fef"
+        },
+        "disposition": "heading_label_or_explanatory_text"
+      },
+      {
+        "source": {
+          "unit_id": "L0004",
+          "start": 597,
+          "end": 601,
+          "quote": "---\n",
+          "answer_sha256": "0bbe7be8c1a3eaabf163e5be1d6eac66d9e9ca9290d7ca7cfc20209acc6c5fef"
+        },
+        "disposition": "heading_label_or_explanatory_text"
+      },
+      {
+        "source": {
+          "unit_id": "L0005",
+          "start": 601,
+          "end": 621,
+          "quote": "**Protocol Steps:**\n",
+          "answer_sha256": "0bbe7be8c1a3eaabf163e5be1d6eac66d9e9ca9290d7ca7cfc20209acc6c5fef"
+        },
+        "disposition": "heading_label_or_explanatory_text"
+      },
+      {
+        "source": {
+          "unit_id": "L0006",
+          "start": 621,
+          "end": 653,
+          "quote": "**1 样品预处理（Post-fixation wash）**\n",
+          "answer_sha256": "0bbe7be8c1a3eaabf163e5be1d6eac66d9e9ca9290d7ca7cfc20209acc6c5fef"
+        },
+        "disposition": "heading_label_or_explanatory_text"
+      },
+      {
+        "source": {
+          "unit_id": "L0007",
+          "start": 653,
+          "end": 733,
+          "quote": "1.1 将已4% PFA固定的成年小鼠全脑置于1× PBS中充分漂洗，去除残余固定液。(Temperature: 4 ℃, Time: 3 × 1 hour)\n",
+          "answer_sha256": "0bbe7be8c1a3eaabf163e5be1d6eac66d9e9ca9290d7ca7cfc20209acc6c5fef"
+        },
+        "disposition": "operation_or_scope_decision"
+      },
+      {
+        "source": {
+          "unit_id": "L0008",
+          "start": 733,
+          "end": 751,
+          "quote": "**2 全脑免疫染色前渗透处理**\n",
+          "answer_sha256": "0bbe7be8c1a3eaabf163e5be1d6eac66d9e9ca9290d7ca7cfc20209acc6c5fef"
+        },
+        "disposition": "heading_label_or_explanatory_text"
+      },
+      {
+        "source": {
+          "unit_id": "L0009",
+          "start": 751,
+          "end": 844,
+          "quote": "2.1 将脑组织置于含0.2% (vol/vol) Triton X-100的1× PBS（PBST）中振荡渗透。(Temperature: 37 ℃, Time: 24 hours)\n",
+          "answer_sha256": "0bbe7be8c1a3eaabf163e5be1d6eac66d9e9ca9290d7ca7cfc20209acc6c5fef"
+        },
+        "disposition": "operation_or_scope_decision"
+      },
+      {
+        "source": {
+          "unit_id": "L0010",
+          "start": 844,
+          "end": 897,
+          "quote": "2.2 更换新鲜PBST继续渗透。(Temperature: 37 ℃, Time: 24 hours)\n",
+          "answer_sha256": "0bbe7be8c1a3eaabf163e5be1d6eac66d9e9ca9290d7ca7cfc20209acc6c5fef"
+        },
+        "disposition": "operation_or_scope_decision"
+      },
+      {
+        "source": {
+          "unit_id": "L0011",
+          "start": 897,
+          "end": 906,
+          "quote": "**3 封闭**\n",
+          "answer_sha256": "0bbe7be8c1a3eaabf163e5be1d6eac66d9e9ca9290d7ca7cfc20209acc6c5fef"
+        },
+        "disposition": "heading_label_or_explanatory_text"
+      },
+      {
+        "source": {
+          "unit_id": "L0012",
+          "start": 906,
+          "end": 1032,
+          "quote": "3.1 将脑组织置于封闭液（5% (vol/vol) 正常驴血清 + 0.2% Triton X-100 + 0.1% (wt/vol) NaN₃ in 1× PBS）中振荡封闭。(Temperature: 37 ℃, Time: 24 hours)\n",
+          "answer_sha256": "0bbe7be8c1a3eaabf163e5be1d6eac66d9e9ca9290d7ca7cfc20209acc6c5fef"
+        },
+        "disposition": "operation_or_scope_decision"
+      },
+      {
+        "source": {
+          "unit_id": "L0013",
+          "start": 1032,
+          "end": 1065,
+          "quote": "**4 一抗孵育（β-III Tubulin / TUJ1）**\n",
+          "answer_sha256": "0bbe7be8c1a3eaabf163e5be1d6eac66d9e9ca9290d7ca7cfc20209acc6c5fef"
+        },
+        "disposition": "heading_label_or_explanatory_text"
+      },
+      {
+        "source": {
+          "unit_id": "L0014",
+          "start": 1065,
+          "end": 1163,
+          "quote": "4.1 将脑组织置于含抗β-III Tubulin（TUJ1）兔多克隆抗体（1:500稀释于封闭液）的溶液中，轻柔振荡孵育。(Temperature: 37 ℃, Time: 48 hours)\n",
+          "answer_sha256": "0bbe7be8c1a3eaabf163e5be1d6eac66d9e9ca9290d7ca7cfc20209acc6c5fef"
+        },
+        "disposition": "operation_or_scope_decision"
+      },
+      {
+        "source": {
+          "unit_id": "L0015",
+          "start": 1163,
+          "end": 1219,
+          "quote": "4.2 用PBST洗涤，去除未结合一抗。(Temperature: RT, Time: 5 × 1 hour)\n",
+          "answer_sha256": "0bbe7be8c1a3eaabf163e5be1d6eac66d9e9ca9290d7ca7cfc20209acc6c5fef"
+        },
+        "disposition": "operation_or_scope_decision"
+      },
+      {
+        "source": {
+          "unit_id": "L0016",
+          "start": 1219,
+          "end": 1247,
+          "quote": "**5 二抗孵育（Alexa Fluor 647）**\n",
+          "answer_sha256": "0bbe7be8c1a3eaabf163e5be1d6eac66d9e9ca9290d7ca7cfc20209acc6c5fef"
+        },
+        "disposition": "heading_label_or_explanatory_text"
+      },
+      {
+        "source": {
+          "unit_id": "L0017",
+          "start": 1247,
+          "end": 1340,
+          "quote": "5.1 将脑组织置于含驴抗兔 Alexa Fluor 647二抗（1:500稀释于封闭液）的溶液中，避光振荡孵育。(Temperature: 37 ℃, Time: 48 hours)\n",
+          "answer_sha256": "0bbe7be8c1a3eaabf163e5be1d6eac66d9e9ca9290d7ca7cfc20209acc6c5fef"
+        },
+        "disposition": "operation_or_scope_decision"
+      },
+      {
+        "source": {
+          "unit_id": "L0018",
+          "start": 1340,
+          "end": 1396,
+          "quote": "5.2 用PBST洗涤，去除未结合二抗。(Temperature: RT, Time: 5 × 1 hour)\n",
+          "answer_sha256": "0bbe7be8c1a3eaabf163e5be1d6eac66d9e9ca9290d7ca7cfc20209acc6c5fef"
+        },
+        "disposition": "operation_or_scope_decision"
+      },
+      {
+        "source": {
+          "unit_id": "L0019",
+          "start": 1396,
+          "end": 1446,
+          "quote": "5.3 用1× PBS终洗。(Temperature: RT, Time: 2 × 30 min)\n",
+          "answer_sha256": "0bbe7be8c1a3eaabf163e5be1d6eac66d9e9ca9290d7ca7cfc20209acc6c5fef"
+        },
+        "disposition": "operation_or_scope_decision"
+      },
+      {
+        "source": {
+          "unit_id": "L0020",
+          "start": 1446,
+          "end": 1464,
+          "quote": "**6 脱水（THF梯度脱水）**\n",
+          "answer_sha256": "0bbe7be8c1a3eaabf163e5be1d6eac66d9e9ca9290d7ca7cfc20209acc6c5fef"
+        },
+        "disposition": "heading_label_or_explanatory_text"
+      },
+      {
+        "source": {
+          "unit_id": "L0021",
+          "start": 1464,
+          "end": 1562,
+          "quote": "6.1 将脑组织置于50% (vol/vol) THF（四氢呋喃）水溶液（用NaOH调pH至9–10，以保护荧光蛋白）中振荡脱水。(Temperature: 4 ℃, Time: 1 hour)\n",
+          "answer_sha256": "0bbe7be8c1a3eaabf163e5be1d6eac66d9e9ca9290d7ca7cfc20209acc6c5fef"
+        },
+        "disposition": "operation_or_scope_decision"
+      },
+      {
+        "source": {
+          "unit_id": "L0022",
+          "start": 1562,
+          "end": 1640,
+          "quote": "6.2 将脑组织置于70% (vol/vol) THF水溶液（pH 9–10）中振荡脱水。(Temperature: 4 ℃, Time: 1 hour)\n",
+          "answer_sha256": "0bbe7be8c1a3eaabf163e5be1d6eac66d9e9ca9290d7ca7cfc20209acc6c5fef"
+        },
+        "disposition": "operation_or_scope_decision"
+      },
+      {
+        "source": {
+          "unit_id": "L0023",
+          "start": 1640,
+          "end": 1718,
+          "quote": "6.3 将脑组织置于80% (vol/vol) THF水溶液（pH 9–10）中振荡脱水。(Temperature: 4 ℃, Time: 1 hour)\n",
+          "answer_sha256": "0bbe7be8c1a3eaabf163e5be1d6eac66d9e9ca9290d7ca7cfc20209acc6c5fef"
+        },
+        "disposition": "operation_or_scope_decision"
+      },
+      {
+        "source": {
+          "unit_id": "L0024",
+          "start": 1718,
+          "end": 1799,
+          "quote": "6.4 将脑组织置于100% THF（无水，pH 9–10，加少量NaOH）中振荡脱水，第一次。(Temperature: 4 ℃, Time: 1 hour)\n",
+          "answer_sha256": "0bbe7be8c1a3eaabf163e5be1d6eac66d9e9ca9290d7ca7cfc20209acc6c5fef"
+        },
+        "disposition": "operation_or_scope_decision"
+      },
+      {
+        "source": {
+          "unit_id": "L0025",
+          "start": 1799,
+          "end": 1881,
+          "quote": "6.5 将脑组织置于100% THF（无水，pH 9–10）中振荡脱水，第二次（更换新鲜THF）。(Temperature: 4 ℃, Time: 1 hour)\n",
+          "answer_sha256": "0bbe7be8c1a3eaabf163e5be1d6eac66d9e9ca9290d7ca7cfc20209acc6c5fef"
+        },
+        "disposition": "operation_or_scope_decision"
+      },
+      {
+        "source": {
+          "unit_id": "L0026",
+          "start": 1881,
+          "end": 1899,
+          "quote": "**7 脱脂（BABB预处理）**\n",
+          "answer_sha256": "0bbe7be8c1a3eaabf163e5be1d6eac66d9e9ca9290d7ca7cfc20209acc6c5fef"
+        },
+        "disposition": "heading_label_or_explanatory_text"
+      },
+      {
+        "source": {
+          "unit_id": "L0027",
+          "start": 1899,
+          "end": 2010,
+          "quote": "7.1 将脑组织置于BABB（苯甲醇:苯甲酸苄酯 = 1:2, vol/vol）中振荡，完成脱脂并开始RI匹配，直至组织完全透明（通常30–60 min）。(Temperature: 4 ℃, Time: 1 hour)\n",
+          "answer_sha256": "0bbe7be8c1a3eaabf163e5be1d6eac66d9e9ca9290d7ca7cfc20209acc6c5fef"
+        },
+        "disposition": "operation_or_scope_decision"
+      },
+      {
+        "source": {
+          "unit_id": "L0028",
+          "start": 2010,
+          "end": 2035,
+          "quote": "**8 折射率匹配（RI Matching）**\n",
+          "answer_sha256": "0bbe7be8c1a3eaabf163e5be1d6eac66d9e9ca9290d7ca7cfc20209acc6c5fef"
+        },
+        "disposition": "heading_label_or_explanatory_text"
+      },
+      {
+        "source": {
+          "unit_id": "L0029",
+          "start": 2035,
+          "end": 2121,
+          "quote": "8.1 将透明脑组织转移至新鲜BABB（RI ≈ 1.56）中，避光静置平衡，确保组织完全透明且无气泡。(Temperature: 4 ℃, Time: 2 hours)\n",
+          "answer_sha256": "0bbe7be8c1a3eaabf163e5be1d6eac66d9e9ca9290d7ca7cfc20209acc6c5fef"
+        },
+        "disposition": "operation_or_scope_decision"
+      },
+      {
+        "source": {
+          "unit_id": "L0030",
+          "start": 2121,
+          "end": 2183,
+          "quote": "8.2 再次更换新鲜BABB，确认组织完全透明，准备成像。(Temperature: 4 ℃, Time: 30 min)\n",
+          "answer_sha256": "0bbe7be8c1a3eaabf163e5be1d6eac66d9e9ca9290d7ca7cfc20209acc6c5fef"
+        },
+        "disposition": "operation_or_scope_decision"
+      },
+      {
+        "source": {
+          "unit_id": "L0031",
+          "start": 2183,
+          "end": 2198,
+          "quote": "**9 成像前处理与保存**\n",
+          "answer_sha256": "0bbe7be8c1a3eaabf163e5be1d6eac66d9e9ca9290d7ca7cfc20209acc6c5fef"
+        },
+        "disposition": "heading_label_or_explanatory_text"
+      },
+      {
+        "source": {
+          "unit_id": "L0032",
+          "start": 2198,
+          "end": 2293,
+          "quote": "9.1 将透明脑组织转移至适配光片显微镜样品槽的BABB中，使用折射率匹配的浸没介质（RI = 1.56）固定样品位置，避免气泡。(Temperature: RT, Time: 即刻成像)\n",
+          "answer_sha256": "0bbe7be8c1a3eaabf163e5be1d6eac66d9e9ca9290d7ca7cfc20209acc6c5fef"
+        },
+        "disposition": "operation_or_scope_decision"
+      },
+      {
+        "source": {
+          "unit_id": "L0033",
+          "start": 2293,
+          "end": 2380,
+          "quote": "9.2 若需短期保存，将样品密封于BABB中，避光、4 ℃保存（建议1周内完成成像，以防荧光信号衰减）。(Temperature: 4 ℃, Time: ≤ 7 days)\n",
+          "answer_sha256": "0bbe7be8c1a3eaabf163e5be1d6eac66d9e9ca9290d7ca7cfc20209acc6c5fef"
+        },
+        "disposition": "operation_or_scope_decision"
+      }
+    ],
+    "annotation_scope": "All source units read; numerical scope is reported core incubation, not elapsed laboratory workflow."
+  },
+  "label_derivation": {
+    "version": "cce-typed-label-scorer-v2.1",
+    "s_label": 5.1,
+    "channels": {
+      "s_target_match": 6.0,
+      "s_marker_fluor_compat": 6.0,
+      "s_method_fluor_compat": 5.1
+    },
+    "channel_applicability": {
+      "s_target_match": {
+        "applicable": true,
+        "value": 6.0,
+        "contributing_pairs": [
+          "semantic:1"
+        ]
+      },
+      "s_marker_fluor_compat": {
+        "applicable": true,
+        "value": 6.0,
+        "contributing_pairs": [
+          "semantic:1"
+        ]
+      },
+      "s_method_fluor_compat": {
+        "applicable": true,
+        "value": 5.1,
+        "contributing_pairs": [
+          "semantic:0",
+          "semantic:1"
+        ]
+      }
+    },
+    "pair_results": [
+      {
+        "pair_id": "semantic:0",
+        "entity_id": null,
+        "fluorophore": "tdTomato",
+        "reported_marker": null,
+        "reported_target_literal": null,
+        "label_type": "native_fluorescent_protein",
+        "original_function_input": {
+          "tdTomato": ""
+        },
+        "applicable": {
+          "s_target_match": false,
+          "s_marker_fluor_compat": false,
+          "s_method_fluor_compat": true
+        },
+        "channels": {
+          "s_target_match": null,
+          "s_marker_fluor_compat": null,
+          "s_method_fluor_compat": 5.4
+        },
+        "not_applicable_reason": "standalone fluorescence has no antibody target-pair channel",
+        "source_evidence": [
+          {
+            "unit_id": "L0002",
+            "start": 26,
+            "end": 107,
+            "quote": "**Chosen Labeling:** [tdTomato (内源荧光), β-III Tubulin (TUJ1) + Alexa Fluor (647)]\n",
+            "answer_sha256": "0bbe7be8c1a3eaabf163e5be1d6eac66d9e9ca9290d7ca7cfc20209acc6c5fef"
+          },
+          {
+            "unit_id": "L0003",
+            "start": 107,
+            "end": 597,
+            "quote": "**Justification:** FDISCO（Fluorescence-preserved 3D Imaging of Solvent-Cleared Organs）是基于有机溶剂的快速透明方法，全脑透明可在约2天内完成，满足\"尽快成像\"的需求，且相比iDISCO+/uDISCO对荧光蛋白保护更佳（低温+碱性条件抑制荧光淬灭），已有文献证明可良好保留tdTomato内源信号。FDISCO使用THF脱水/脱脂后以BABB作为RI匹配液（RI≈1.56），与光片显微镜兼容，可接受一定程度的组织收缩（FDISCO收缩率约35–40%，均匀收缩不影响投射追踪）。标记策略：①保留tdTomato内源荧光追踪长程投射神经元；②在透明前对固定脑进行全脑免疫染色（iDISCO-style whole-mount），使用抗β-III Tubulin（TUJ1）抗体 + Alexa Fluor 647二抗标记轴突骨架结构，Alexa Fluor 647在有机溶剂中稳定性优异。两通道（tdTomato ~590 nm；AF647 ~647 nm）光谱分离良好，适合双通道光片成像。\n",
+            "answer_sha256": "0bbe7be8c1a3eaabf163e5be1d6eac66d9e9ca9290d7ca7cfc20209acc6c5fef"
+          }
+        ],
+        "compatibility_audit": [
+          {
+            "kind": "method_fluor",
+            "method_name": "FDISCO",
+            "fluorophore": "tdTomato",
+            "source": "KnowledgeBase/method_fluro_compati.json",
+            "value": 0.9,
+            "status": "TABLE_REPORTED"
+          }
+        ]
+      },
+      {
+        "pair_id": "semantic:1",
+        "entity_id": null,
+        "fluorophore": "Alexa Fluor 647",
+        "reported_marker": "β-III Tubulin (TUJ1)",
+        "reported_target_literal": null,
+        "label_type": "targeted_or_unclassified_reagent",
+        "original_function_input": {
+          "Alexa Fluor 647": "β-III Tubulin (TUJ1)"
+        },
+        "applicable": {
+          "s_target_match": true,
+          "s_marker_fluor_compat": true,
+          "s_method_fluor_compat": true
+        },
+        "channels": {
+          "s_target_match": 6.0,
+          "s_marker_fluor_compat": 6.0,
+          "s_method_fluor_compat": 5.1
+        },
+        "not_applicable_reason": null,
+        "source_evidence": [
+          {
+            "unit_id": "L0002",
+            "start": 26,
+            "end": 107,
+            "quote": "**Chosen Labeling:** [tdTomato (内源荧光), β-III Tubulin (TUJ1) + Alexa Fluor (647)]\n",
+            "answer_sha256": "0bbe7be8c1a3eaabf163e5be1d6eac66d9e9ca9290d7ca7cfc20209acc6c5fef"
+          },
+          {
+            "unit_id": "L0003",
+            "start": 107,
+            "end": 597,
+            "quote": "**Justification:** FDISCO（Fluorescence-preserved 3D Imaging of Solvent-Cleared Organs）是基于有机溶剂的快速透明方法，全脑透明可在约2天内完成，满足\"尽快成像\"的需求，且相比iDISCO+/uDISCO对荧光蛋白保护更佳（低温+碱性条件抑制荧光淬灭），已有文献证明可良好保留tdTomato内源信号。FDISCO使用THF脱水/脱脂后以BABB作为RI匹配液（RI≈1.56），与光片显微镜兼容，可接受一定程度的组织收缩（FDISCO收缩率约35–40%，均匀收缩不影响投射追踪）。标记策略：①保留tdTomato内源荧光追踪长程投射神经元；②在透明前对固定脑进行全脑免疫染色（iDISCO-style whole-mount），使用抗β-III Tubulin（TUJ1）抗体 + Alexa Fluor 647二抗标记轴突骨架结构，Alexa Fluor 647在有机溶剂中稳定性优异。两通道（tdTomato ~590 nm；AF647 ~647 nm）光谱分离良好，适合双通道光片成像。\n",
+            "answer_sha256": "0bbe7be8c1a3eaabf163e5be1d6eac66d9e9ca9290d7ca7cfc20209acc6c5fef"
+          },
+          {
+            "unit_id": "L0014",
+            "start": 1065,
+            "end": 1163,
+            "quote": "4.1 将脑组织置于含抗β-III Tubulin（TUJ1）兔多克隆抗体（1:500稀释于封闭液）的溶液中，轻柔振荡孵育。(Temperature: 37 ℃, Time: 48 hours)\n",
+            "answer_sha256": "0bbe7be8c1a3eaabf163e5be1d6eac66d9e9ca9290d7ca7cfc20209acc6c5fef"
+          },
+          {
+            "unit_id": "L0017",
+            "start": 1247,
+            "end": 1340,
+            "quote": "5.1 将脑组织置于含驴抗兔 Alexa Fluor 647二抗（1:500稀释于封闭液）的溶液中，避光振荡孵育。(Temperature: 37 ℃, Time: 48 hours)\n",
+            "answer_sha256": "0bbe7be8c1a3eaabf163e5be1d6eac66d9e9ca9290d7ca7cfc20209acc6c5fef"
+          }
+        ],
+        "compatibility_audit": [
+          {
+            "kind": "marker_fluor",
+            "marker": "β-III Tubulin (TUJ1)",
+            "fluorophore": "Alexa Fluor 647",
+            "source": "KnowledgeBase/tissue.json",
+            "value": true,
+            "status": "TABLE_REPORTED"
+          },
+          {
+            "kind": "method_fluor",
+            "method_name": "FDISCO",
+            "fluorophore": "Alexa Fluor 647",
+            "source": "KnowledgeBase/method_fluro_compati.json",
+            "value": 0.85,
+            "status": "TABLE_REPORTED"
+          }
+        ]
+      }
+    ],
+    "resolved_uncertainties": [],
+    "remaining_uncertainties": [],
+    "minimum_of_available_applicable_channels": 5.1,
+    "task_target_coverage": "native/direct task coverage remains separate from antibody-pair applicability",
+    "new_model_calls": 0,
+    "expert_validated": false
+  },
+  "time_scenarios": [
+    {
+      "scenario_id": "explicit_setpoint",
+      "description": "Use the explicitly supplied Time field, consistent with the described typical range.",
+      "time_derivation": {
+        "hours": 8.5,
+        "bounds_hours": [
+          8.5,
+          8.5
+        ],
+        "known_subtotal_bounds_hours": [
+          8.5,
+          8.5
+        ],
+        "unknown_duration_operations": [],
+        "contributions": [
+          {
+            "operation_id": "L0021",
+            "duration_option": "reported",
+            "reported_bounds_hours": [
+              1,
+              1
+            ],
+            "repeat_count": 1,
+            "duration_basis": "explicit source duration",
+            "source_spans": [
+              {
+                "unit_id": "L0021",
+                "start": 1464,
+                "end": 1562,
+                "quote": "6.1 将脑组织置于50% (vol/vol) THF（四氢呋喃）水溶液（用NaOH调pH至9–10，以保护荧光蛋白）中振荡脱水。(Temperature: 4 ℃, Time: 1 hour)\n",
+                "answer_sha256": "0bbe7be8c1a3eaabf163e5be1d6eac66d9e9ca9290d7ca7cfc20209acc6c5fef"
+              }
+            ],
+            "interpretation": "",
+            "contribution_hours": [
+              1,
+              1
+            ]
+          },
+          {
+            "operation_id": "L0022",
+            "duration_option": "reported",
+            "reported_bounds_hours": [
+              1,
+              1
+            ],
+            "repeat_count": 1,
+            "duration_basis": "explicit source duration",
+            "source_spans": [
+              {
+                "unit_id": "L0022",
+                "start": 1562,
+                "end": 1640,
+                "quote": "6.2 将脑组织置于70% (vol/vol) THF水溶液（pH 9–10）中振荡脱水。(Temperature: 4 ℃, Time: 1 hour)\n",
+                "answer_sha256": "0bbe7be8c1a3eaabf163e5be1d6eac66d9e9ca9290d7ca7cfc20209acc6c5fef"
+              }
+            ],
+            "interpretation": "",
+            "contribution_hours": [
+              1,
+              1
+            ]
+          },
+          {
+            "operation_id": "L0023",
+            "duration_option": "reported",
+            "reported_bounds_hours": [
+              1,
+              1
+            ],
+            "repeat_count": 1,
+            "duration_basis": "explicit source duration",
+            "source_spans": [
+              {
+                "unit_id": "L0023",
+                "start": 1640,
+                "end": 1718,
+                "quote": "6.3 将脑组织置于80% (vol/vol) THF水溶液（pH 9–10）中振荡脱水。(Temperature: 4 ℃, Time: 1 hour)\n",
+                "answer_sha256": "0bbe7be8c1a3eaabf163e5be1d6eac66d9e9ca9290d7ca7cfc20209acc6c5fef"
+              }
+            ],
+            "interpretation": "",
+            "contribution_hours": [
+              1,
+              1
+            ]
+          },
+          {
+            "operation_id": "L0024",
+            "duration_option": "reported",
+            "reported_bounds_hours": [
+              1,
+              1
+            ],
+            "repeat_count": 1,
+            "duration_basis": "explicit source duration",
+            "source_spans": [
+              {
+                "unit_id": "L0024",
+                "start": 1718,
+                "end": 1799,
+                "quote": "6.4 将脑组织置于100% THF（无水，pH 9–10，加少量NaOH）中振荡脱水，第一次。(Temperature: 4 ℃, Time: 1 hour)\n",
+                "answer_sha256": "0bbe7be8c1a3eaabf163e5be1d6eac66d9e9ca9290d7ca7cfc20209acc6c5fef"
+              }
+            ],
+            "interpretation": "",
+            "contribution_hours": [
+              1,
+              1
+            ]
+          },
+          {
+            "operation_id": "L0025",
+            "duration_option": "reported",
+            "reported_bounds_hours": [
+              1,
+              1
+            ],
+            "repeat_count": 1,
+            "duration_basis": "explicit source duration",
+            "source_spans": [
+              {
+                "unit_id": "L0025",
+                "start": 1799,
+                "end": 1881,
+                "quote": "6.5 将脑组织置于100% THF（无水，pH 9–10）中振荡脱水，第二次（更换新鲜THF）。(Temperature: 4 ℃, Time: 1 hour)\n",
+                "answer_sha256": "0bbe7be8c1a3eaabf163e5be1d6eac66d9e9ca9290d7ca7cfc20209acc6c5fef"
+              }
+            ],
+            "interpretation": "",
+            "contribution_hours": [
+              1,
+              1
+            ]
+          },
+          {
+            "operation_id": "L0027",
+            "duration_option": "explicit_setpoint",
+            "reported_bounds_hours": [
+              1,
+              1
+            ],
+            "repeat_count": 1,
+            "duration_basis": "Explicit Time:1 hour lies within the prose usually 30–60 minute range.",
+            "source_spans": [
+              {
+                "unit_id": "L0027",
+                "start": 1899,
+                "end": 2010,
+                "quote": "7.1 将脑组织置于BABB（苯甲醇:苯甲酸苄酯 = 1:2, vol/vol）中振荡，完成脱脂并开始RI匹配，直至组织完全透明（通常30–60 min）。(Temperature: 4 ℃, Time: 1 hour)\n",
+                "answer_sha256": "0bbe7be8c1a3eaabf163e5be1d6eac66d9e9ca9290d7ca7cfc20209acc6c5fef"
+              }
+            ],
+            "interpretation": "",
+            "contribution_hours": [
+              1,
+              1
+            ]
+          },
+          {
+            "operation_id": "L0029",
+            "duration_option": "reported",
+            "reported_bounds_hours": [
+              2,
+              2
+            ],
+            "repeat_count": 1,
+            "duration_basis": "explicit source duration",
+            "source_spans": [
+              {
+                "unit_id": "L0029",
+                "start": 2035,
+                "end": 2121,
+                "quote": "8.1 将透明脑组织转移至新鲜BABB（RI ≈ 1.56）中，避光静置平衡，确保组织完全透明且无气泡。(Temperature: 4 ℃, Time: 2 hours)\n",
+                "answer_sha256": "0bbe7be8c1a3eaabf163e5be1d6eac66d9e9ca9290d7ca7cfc20209acc6c5fef"
+              }
+            ],
+            "interpretation": "",
+            "contribution_hours": [
+              2,
+              2
+            ]
+          },
+          {
+            "operation_id": "L0030",
+            "duration_option": "reported",
+            "reported_bounds_hours": [
+              0.5,
+              0.5
+            ],
+            "repeat_count": 1,
+            "duration_basis": "explicit source duration",
+            "source_spans": [
+              {
+                "unit_id": "L0030",
+                "start": 2121,
+                "end": 2183,
+                "quote": "8.2 再次更换新鲜BABB，确认组织完全透明，准备成像。(Temperature: 4 ℃, Time: 30 min)\n",
+                "answer_sha256": "0bbe7be8c1a3eaabf163e5be1d6eac66d9e9ca9290d7ca7cfc20209acc6c5fef"
+              }
+            ],
+            "interpretation": "",
+            "contribution_hours": [
+              0.5,
+              0.5
+            ]
+          }
+        ],
+        "omitted_core_operations": [],
+        "decision": "finite_range_midpoint",
+        "complete_elapsed_laboratory_time": false,
+        "scope": "reported core incubations only"
+      },
+      "metrics": {
+        "c_param": 3,
+        "co_order": 2,
+        "co_method": 1,
+        "co_param": 0,
+        "co_chem": 1,
+        "s_method": 0.1263,
+        "s_label": 5.1,
+        "s_trans": 2.814646787157323,
+        "s_time": 0.0696993280570204,
+        "sr": 0.0,
+        "sp": 0.0,
+        "Com": 0.6,
+        "Cor": 0.5416666666666666,
+        "Eff": 0.584177176267862,
+        "IA": 0.5416666666666666,
+        "HV": 0.18985758228705513
+      },
+      "complete_CCE": true,
+      "original_time_computation": {
+        "policy": "kb-window-asymmetric-median-0.20-under-0.10-over-v1",
+        "source": "time_kb.json",
+        "requested_tier": "T04_WHOLE_MOUSE_BRAIN_5_12MM",
+        "actual_hours": 8.5,
+        "min_hours": 48.0,
+        "max_hours": 96.0,
+        "median_hours": 72.0,
+        "tau_hours": 14.4,
+        "delta_hours": 39.5,
+        "tau_under_fraction": 0.2,
+        "tau_over_fraction": 0.1,
+        "status": "scored",
+        "resolved_tier": "T04_WHOLE_MOUSE_BRAIN_5_12MM",
+        "method_key": "fdisco"
+      },
+      "endpoint_scores": [
+        {
+          "hours": 8.5,
+          "metrics": {
+            "c_param": 3,
+            "co_order": 2,
+            "co_method": 1,
+            "co_param": 0,
+            "co_chem": 1,
+            "s_method": 0.1263,
+            "s_label": 5.1,
+            "s_trans": 2.814646787157323,
+            "s_time": 0.0696993280570204,
+            "sr": 0.0,
+            "sp": 0.0,
+            "Com": 0.6,
+            "Cor": 0.5416666666666666,
+            "Eff": 0.584177176267862,
+            "IA": 0.5416666666666666,
+            "HV": 0.18985758228705513
+          },
+          "original_time_computation": {
+            "policy": "kb-window-asymmetric-median-0.20-under-0.10-over-v1",
+            "source": "time_kb.json",
+            "requested_tier": "T04_WHOLE_MOUSE_BRAIN_5_12MM",
+            "actual_hours": 8.5,
+            "min_hours": 48.0,
+            "max_hours": 96.0,
+            "median_hours": 72.0,
+            "tau_hours": 14.4,
+            "delta_hours": 39.5,
+            "tau_under_fraction": 0.2,
+            "tau_over_fraction": 0.1,
+            "status": "scored",
+            "resolved_tier": "T04_WHOLE_MOUSE_BRAIN_5_12MM",
+            "method_key": "fdisco"
+          }
+        }
+      ],
+      "endpoint_interpretation": "evaluations at reported endpoints, not a confidence interval or proof of full interior bounds",
+      "label_derivation": {
+        "version": "cce-typed-label-scorer-v2.1",
+        "s_label": 5.1,
+        "channels": {
+          "s_target_match": 6.0,
+          "s_marker_fluor_compat": 6.0,
+          "s_method_fluor_compat": 5.1
+        },
+        "channel_applicability": {
+          "s_target_match": {
+            "applicable": true,
+            "value": 6.0,
+            "contributing_pairs": [
+              "semantic:1"
+            ]
+          },
+          "s_marker_fluor_compat": {
+            "applicable": true,
+            "value": 6.0,
+            "contributing_pairs": [
+              "semantic:1"
+            ]
+          },
+          "s_method_fluor_compat": {
+            "applicable": true,
+            "value": 5.1,
+            "contributing_pairs": [
+              "semantic:0",
+              "semantic:1"
+            ]
+          }
+        },
+        "pair_results": [
+          {
+            "pair_id": "semantic:0",
+            "entity_id": null,
+            "fluorophore": "tdTomato",
+            "reported_marker": null,
+            "reported_target_literal": null,
+            "label_type": "native_fluorescent_protein",
+            "original_function_input": {
+              "tdTomato": ""
+            },
+            "applicable": {
+              "s_target_match": false,
+              "s_marker_fluor_compat": false,
+              "s_method_fluor_compat": true
+            },
+            "channels": {
+              "s_target_match": null,
+              "s_marker_fluor_compat": null,
+              "s_method_fluor_compat": 5.4
+            },
+            "not_applicable_reason": "standalone fluorescence has no antibody target-pair channel",
+            "source_evidence": [
+              {
+                "unit_id": "L0002",
+                "start": 26,
+                "end": 107,
+                "quote": "**Chosen Labeling:** [tdTomato (内源荧光), β-III Tubulin (TUJ1) + Alexa Fluor (647)]\n",
+                "answer_sha256": "0bbe7be8c1a3eaabf163e5be1d6eac66d9e9ca9290d7ca7cfc20209acc6c5fef"
+              },
+              {
+                "unit_id": "L0003",
+                "start": 107,
+                "end": 597,
+                "quote": "**Justification:** FDISCO（Fluorescence-preserved 3D Imaging of Solvent-Cleared Organs）是基于有机溶剂的快速透明方法，全脑透明可在约2天内完成，满足\"尽快成像\"的需求，且相比iDISCO+/uDISCO对荧光蛋白保护更佳（低温+碱性条件抑制荧光淬灭），已有文献证明可良好保留tdTomato内源信号。FDISCO使用THF脱水/脱脂后以BABB作为RI匹配液（RI≈1.56），与光片显微镜兼容，可接受一定程度的组织收缩（FDISCO收缩率约35–40%，均匀收缩不影响投射追踪）。标记策略：①保留tdTomato内源荧光追踪长程投射神经元；②在透明前对固定脑进行全脑免疫染色（iDISCO-style whole-mount），使用抗β-III Tubulin（TUJ1）抗体 + Alexa Fluor 647二抗标记轴突骨架结构，Alexa Fluor 647在有机溶剂中稳定性优异。两通道（tdTomato ~590 nm；AF647 ~647 nm）光谱分离良好，适合双通道光片成像。\n",
+                "answer_sha256": "0bbe7be8c1a3eaabf163e5be1d6eac66d9e9ca9290d7ca7cfc20209acc6c5fef"
+              }
+            ],
+            "compatibility_audit": [
+              {
+                "kind": "method_fluor",
+                "method_name": "FDISCO",
+                "fluorophore": "tdTomato",
+                "source": "KnowledgeBase/method_fluro_compati.json",
+                "value": 0.9,
+                "status": "TABLE_REPORTED"
+              }
+            ]
+          },
+          {
+            "pair_id": "semantic:1",
+            "entity_id": null,
+            "fluorophore": "Alexa Fluor 647",
+            "reported_marker": "β-III Tubulin (TUJ1)",
+            "reported_target_literal": null,
+            "label_type": "targeted_or_unclassified_reagent",
+            "original_function_input": {
+              "Alexa Fluor 647": "β-III Tubulin (TUJ1)"
+            },
+            "applicable": {
+              "s_target_match": true,
+              "s_marker_fluor_compat": true,
+              "s_method_fluor_compat": true
+            },
+            "channels": {
+              "s_target_match": 6.0,
+              "s_marker_fluor_compat": 6.0,
+              "s_method_fluor_compat": 5.1
+            },
+            "not_applicable_reason": null,
+            "source_evidence": [
+              {
+                "unit_id": "L0002",
+                "start": 26,
+                "end": 107,
+                "quote": "**Chosen Labeling:** [tdTomato (内源荧光), β-III Tubulin (TUJ1) + Alexa Fluor (647)]\n",
+                "answer_sha256": "0bbe7be8c1a3eaabf163e5be1d6eac66d9e9ca9290d7ca7cfc20209acc6c5fef"
+              },
+              {
+                "unit_id": "L0003",
+                "start": 107,
+                "end": 597,
+                "quote": "**Justification:** FDISCO（Fluorescence-preserved 3D Imaging of Solvent-Cleared Organs）是基于有机溶剂的快速透明方法，全脑透明可在约2天内完成，满足\"尽快成像\"的需求，且相比iDISCO+/uDISCO对荧光蛋白保护更佳（低温+碱性条件抑制荧光淬灭），已有文献证明可良好保留tdTomato内源信号。FDISCO使用THF脱水/脱脂后以BABB作为RI匹配液（RI≈1.56），与光片显微镜兼容，可接受一定程度的组织收缩（FDISCO收缩率约35–40%，均匀收缩不影响投射追踪）。标记策略：①保留tdTomato内源荧光追踪长程投射神经元；②在透明前对固定脑进行全脑免疫染色（iDISCO-style whole-mount），使用抗β-III Tubulin（TUJ1）抗体 + Alexa Fluor 647二抗标记轴突骨架结构，Alexa Fluor 647在有机溶剂中稳定性优异。两通道（tdTomato ~590 nm；AF647 ~647 nm）光谱分离良好，适合双通道光片成像。\n",
+                "answer_sha256": "0bbe7be8c1a3eaabf163e5be1d6eac66d9e9ca9290d7ca7cfc20209acc6c5fef"
+              },
+              {
+                "unit_id": "L0014",
+                "start": 1065,
+                "end": 1163,
+                "quote": "4.1 将脑组织置于含抗β-III Tubulin（TUJ1）兔多克隆抗体（1:500稀释于封闭液）的溶液中，轻柔振荡孵育。(Temperature: 37 ℃, Time: 48 hours)\n",
+                "answer_sha256": "0bbe7be8c1a3eaabf163e5be1d6eac66d9e9ca9290d7ca7cfc20209acc6c5fef"
+              },
+              {
+                "unit_id": "L0017",
+                "start": 1247,
+                "end": 1340,
+                "quote": "5.1 将脑组织置于含驴抗兔 Alexa Fluor 647二抗（1:500稀释于封闭液）的溶液中，避光振荡孵育。(Temperature: 37 ℃, Time: 48 hours)\n",
+                "answer_sha256": "0bbe7be8c1a3eaabf163e5be1d6eac66d9e9ca9290d7ca7cfc20209acc6c5fef"
+              }
+            ],
+            "compatibility_audit": [
+              {
+                "kind": "marker_fluor",
+                "marker": "β-III Tubulin (TUJ1)",
+                "fluorophore": "Alexa Fluor 647",
+                "source": "KnowledgeBase/tissue.json",
+                "value": true,
+                "status": "TABLE_REPORTED"
+              },
+              {
+                "kind": "method_fluor",
+                "method_name": "FDISCO",
+                "fluorophore": "Alexa Fluor 647",
+                "source": "KnowledgeBase/method_fluro_compati.json",
+                "value": 0.85,
+                "status": "TABLE_REPORTED"
+              }
+            ]
+          }
+        ],
+        "resolved_uncertainties": [],
+        "remaining_uncertainties": [],
+        "minimum_of_available_applicable_channels": 5.1,
+        "task_target_coverage": "native/direct task coverage remains separate from antibody-pair applicability",
+        "new_model_calls": 0,
+        "expert_validated": false
+      },
+      "selection_uses_achieved_score": false
+    },
+    {
+      "scenario_id": "typical_range_sensitivity",
+      "description": "Use the prose typical range midpoint as a sensitivity analysis.",
+      "time_derivation": {
+        "hours": 8.25,
+        "bounds_hours": [
+          8.0,
+          8.5
+        ],
+        "known_subtotal_bounds_hours": [
+          8.0,
+          8.5
+        ],
+        "unknown_duration_operations": [],
+        "contributions": [
+          {
+            "operation_id": "L0021",
+            "duration_option": "reported",
+            "reported_bounds_hours": [
+              1,
+              1
+            ],
+            "repeat_count": 1,
+            "duration_basis": "explicit source duration",
+            "source_spans": [
+              {
+                "unit_id": "L0021",
+                "start": 1464,
+                "end": 1562,
+                "quote": "6.1 将脑组织置于50% (vol/vol) THF（四氢呋喃）水溶液（用NaOH调pH至9–10，以保护荧光蛋白）中振荡脱水。(Temperature: 4 ℃, Time: 1 hour)\n",
+                "answer_sha256": "0bbe7be8c1a3eaabf163e5be1d6eac66d9e9ca9290d7ca7cfc20209acc6c5fef"
+              }
+            ],
+            "interpretation": "",
+            "contribution_hours": [
+              1,
+              1
+            ]
+          },
+          {
+            "operation_id": "L0022",
+            "duration_option": "reported",
+            "reported_bounds_hours": [
+              1,
+              1
+            ],
+            "repeat_count": 1,
+            "duration_basis": "explicit source duration",
+            "source_spans": [
+              {
+                "unit_id": "L0022",
+                "start": 1562,
+                "end": 1640,
+                "quote": "6.2 将脑组织置于70% (vol/vol) THF水溶液（pH 9–10）中振荡脱水。(Temperature: 4 ℃, Time: 1 hour)\n",
+                "answer_sha256": "0bbe7be8c1a3eaabf163e5be1d6eac66d9e9ca9290d7ca7cfc20209acc6c5fef"
+              }
+            ],
+            "interpretation": "",
+            "contribution_hours": [
+              1,
+              1
+            ]
+          },
+          {
+            "operation_id": "L0023",
+            "duration_option": "reported",
+            "reported_bounds_hours": [
+              1,
+              1
+            ],
+            "repeat_count": 1,
+            "duration_basis": "explicit source duration",
+            "source_spans": [
+              {
+                "unit_id": "L0023",
+                "start": 1640,
+                "end": 1718,
+                "quote": "6.3 将脑组织置于80% (vol/vol) THF水溶液（pH 9–10）中振荡脱水。(Temperature: 4 ℃, Time: 1 hour)\n",
+                "answer_sha256": "0bbe7be8c1a3eaabf163e5be1d6eac66d9e9ca9290d7ca7cfc20209acc6c5fef"
+              }
+            ],
+            "interpretation": "",
+            "contribution_hours": [
+              1,
+              1
+            ]
+          },
+          {
+            "operation_id": "L0024",
+            "duration_option": "reported",
+            "reported_bounds_hours": [
+              1,
+              1
+            ],
+            "repeat_count": 1,
+            "duration_basis": "explicit source duration",
+            "source_spans": [
+              {
+                "unit_id": "L0024",
+                "start": 1718,
+                "end": 1799,
+                "quote": "6.4 将脑组织置于100% THF（无水，pH 9–10，加少量NaOH）中振荡脱水，第一次。(Temperature: 4 ℃, Time: 1 hour)\n",
+                "answer_sha256": "0bbe7be8c1a3eaabf163e5be1d6eac66d9e9ca9290d7ca7cfc20209acc6c5fef"
+              }
+            ],
+            "interpretation": "",
+            "contribution_hours": [
+              1,
+              1
+            ]
+          },
+          {
+            "operation_id": "L0025",
+            "duration_option": "reported",
+            "reported_bounds_hours": [
+              1,
+              1
+            ],
+            "repeat_count": 1,
+            "duration_basis": "explicit source duration",
+            "source_spans": [
+              {
+                "unit_id": "L0025",
+                "start": 1799,
+                "end": 1881,
+                "quote": "6.5 将脑组织置于100% THF（无水，pH 9–10）中振荡脱水，第二次（更换新鲜THF）。(Temperature: 4 ℃, Time: 1 hour)\n",
+                "answer_sha256": "0bbe7be8c1a3eaabf163e5be1d6eac66d9e9ca9290d7ca7cfc20209acc6c5fef"
+              }
+            ],
+            "interpretation": "",
+            "contribution_hours": [
+              1,
+              1
+            ]
+          },
+          {
+            "operation_id": "L0027",
+            "duration_option": "typical_range_sensitivity",
+            "reported_bounds_hours": [
+              0.5,
+              1
+            ],
+            "repeat_count": 1,
+            "duration_basis": "Sensitivity using the stated typical range instead of the explicit setpoint.",
+            "source_spans": [
+              {
+                "unit_id": "L0027",
+                "start": 1899,
+                "end": 2010,
+                "quote": "7.1 将脑组织置于BABB（苯甲醇:苯甲酸苄酯 = 1:2, vol/vol）中振荡，完成脱脂并开始RI匹配，直至组织完全透明（通常30–60 min）。(Temperature: 4 ℃, Time: 1 hour)\n",
+                "answer_sha256": "0bbe7be8c1a3eaabf163e5be1d6eac66d9e9ca9290d7ca7cfc20209acc6c5fef"
+              }
+            ],
+            "interpretation": "",
+            "contribution_hours": [
+              0.5,
+              1
+            ]
+          },
+          {
+            "operation_id": "L0029",
+            "duration_option": "reported",
+            "reported_bounds_hours": [
+              2,
+              2
+            ],
+            "repeat_count": 1,
+            "duration_basis": "explicit source duration",
+            "source_spans": [
+              {
+                "unit_id": "L0029",
+                "start": 2035,
+                "end": 2121,
+                "quote": "8.1 将透明脑组织转移至新鲜BABB（RI ≈ 1.56）中，避光静置平衡，确保组织完全透明且无气泡。(Temperature: 4 ℃, Time: 2 hours)\n",
+                "answer_sha256": "0bbe7be8c1a3eaabf163e5be1d6eac66d9e9ca9290d7ca7cfc20209acc6c5fef"
+              }
+            ],
+            "interpretation": "",
+            "contribution_hours": [
+              2,
+              2
+            ]
+          },
+          {
+            "operation_id": "L0030",
+            "duration_option": "reported",
+            "reported_bounds_hours": [
+              0.5,
+              0.5
+            ],
+            "repeat_count": 1,
+            "duration_basis": "explicit source duration",
+            "source_spans": [
+              {
+                "unit_id": "L0030",
+                "start": 2121,
+                "end": 2183,
+                "quote": "8.2 再次更换新鲜BABB，确认组织完全透明，准备成像。(Temperature: 4 ℃, Time: 30 min)\n",
+                "answer_sha256": "0bbe7be8c1a3eaabf163e5be1d6eac66d9e9ca9290d7ca7cfc20209acc6c5fef"
+              }
+            ],
+            "interpretation": "",
+            "contribution_hours": [
+              0.5,
+              0.5
+            ]
+          }
+        ],
+        "omitted_core_operations": [],
+        "decision": "finite_range_midpoint",
+        "complete_elapsed_laboratory_time": false,
+        "scope": "reported core incubations only"
+      },
+      "metrics": {
+        "c_param": 3,
+        "co_order": 2,
+        "co_method": 1,
+        "co_param": 0,
+        "co_chem": 1,
+        "s_method": 0.1263,
+        "s_label": 5.1,
+        "s_trans": 2.814646787157323,
+        "s_time": 0.0664478534129695,
+        "sr": 0.0,
+        "sp": 0.0,
+        "Com": 0.6,
+        "Cor": 0.5416666666666666,
+        "Eff": 0.5839062200475243,
+        "IA": 0.5416666666666666,
+        "HV": 0.18976952151544538
+      },
+      "complete_CCE": true,
+      "original_time_computation": {
+        "policy": "kb-window-asymmetric-median-0.20-under-0.10-over-v1",
+        "source": "time_kb.json",
+        "requested_tier": "T04_WHOLE_MOUSE_BRAIN_5_12MM",
+        "actual_hours": 8.25,
+        "min_hours": 48.0,
+        "max_hours": 96.0,
+        "median_hours": 72.0,
+        "tau_hours": 14.4,
+        "delta_hours": 39.75,
+        "tau_under_fraction": 0.2,
+        "tau_over_fraction": 0.1,
+        "status": "scored",
+        "resolved_tier": "T04_WHOLE_MOUSE_BRAIN_5_12MM",
+        "method_key": "fdisco"
+      },
+      "endpoint_scores": [
+        {
+          "hours": 8.0,
+          "metrics": {
+            "c_param": 3,
+            "co_order": 2,
+            "co_method": 1,
+            "co_param": 0,
+            "co_chem": 1,
+            "s_method": 0.1263,
+            "s_label": 5.1,
+            "s_trans": 2.814646787157323,
+            "s_time": 0.06332896936101318,
+            "sr": 0.0,
+            "sp": 0.0,
+            "Com": 0.6,
+            "Cor": 0.5416666666666666,
+            "Eff": 0.5836463130431947,
+            "IA": 0.5416666666666666,
+            "HV": 0.18968505173903824
+          },
+          "original_time_computation": {
+            "policy": "kb-window-asymmetric-median-0.20-under-0.10-over-v1",
+            "source": "time_kb.json",
+            "requested_tier": "T04_WHOLE_MOUSE_BRAIN_5_12MM",
+            "actual_hours": 8.0,
+            "min_hours": 48.0,
+            "max_hours": 96.0,
+            "median_hours": 72.0,
+            "tau_hours": 14.4,
+            "delta_hours": 40.0,
+            "tau_under_fraction": 0.2,
+            "tau_over_fraction": 0.1,
+            "status": "scored",
+            "resolved_tier": "T04_WHOLE_MOUSE_BRAIN_5_12MM",
+            "method_key": "fdisco"
+          }
+        },
+        {
+          "hours": 8.5,
+          "metrics": {
+            "c_param": 3,
+            "co_order": 2,
+            "co_method": 1,
+            "co_param": 0,
+            "co_chem": 1,
+            "s_method": 0.1263,
+            "s_label": 5.1,
+            "s_trans": 2.814646787157323,
+            "s_time": 0.0696993280570204,
+            "sr": 0.0,
+            "sp": 0.0,
+            "Com": 0.6,
+            "Cor": 0.5416666666666666,
+            "Eff": 0.584177176267862,
+            "IA": 0.5416666666666666,
+            "HV": 0.18985758228705513
+          },
+          "original_time_computation": {
+            "policy": "kb-window-asymmetric-median-0.20-under-0.10-over-v1",
+            "source": "time_kb.json",
+            "requested_tier": "T04_WHOLE_MOUSE_BRAIN_5_12MM",
+            "actual_hours": 8.5,
+            "min_hours": 48.0,
+            "max_hours": 96.0,
+            "median_hours": 72.0,
+            "tau_hours": 14.4,
+            "delta_hours": 39.5,
+            "tau_under_fraction": 0.2,
+            "tau_over_fraction": 0.1,
+            "status": "scored",
+            "resolved_tier": "T04_WHOLE_MOUSE_BRAIN_5_12MM",
+            "method_key": "fdisco"
+          }
+        }
+      ],
+      "endpoint_interpretation": "evaluations at reported endpoints, not a confidence interval or proof of full interior bounds",
+      "label_derivation": {
+        "version": "cce-typed-label-scorer-v2.1",
+        "s_label": 5.1,
+        "channels": {
+          "s_target_match": 6.0,
+          "s_marker_fluor_compat": 6.0,
+          "s_method_fluor_compat": 5.1
+        },
+        "channel_applicability": {
+          "s_target_match": {
+            "applicable": true,
+            "value": 6.0,
+            "contributing_pairs": [
+              "semantic:1"
+            ]
+          },
+          "s_marker_fluor_compat": {
+            "applicable": true,
+            "value": 6.0,
+            "contributing_pairs": [
+              "semantic:1"
+            ]
+          },
+          "s_method_fluor_compat": {
+            "applicable": true,
+            "value": 5.1,
+            "contributing_pairs": [
+              "semantic:0",
+              "semantic:1"
+            ]
+          }
+        },
+        "pair_results": [
+          {
+            "pair_id": "semantic:0",
+            "entity_id": null,
+            "fluorophore": "tdTomato",
+            "reported_marker": null,
+            "reported_target_literal": null,
+            "label_type": "native_fluorescent_protein",
+            "original_function_input": {
+              "tdTomato": ""
+            },
+            "applicable": {
+              "s_target_match": false,
+              "s_marker_fluor_compat": false,
+              "s_method_fluor_compat": true
+            },
+            "channels": {
+              "s_target_match": null,
+              "s_marker_fluor_compat": null,
+              "s_method_fluor_compat": 5.4
+            },
+            "not_applicable_reason": "standalone fluorescence has no antibody target-pair channel",
+            "source_evidence": [
+              {
+                "unit_id": "L0002",
+                "start": 26,
+                "end": 107,
+                "quote": "**Chosen Labeling:** [tdTomato (内源荧光), β-III Tubulin (TUJ1) + Alexa Fluor (647)]\n",
+                "answer_sha256": "0bbe7be8c1a3eaabf163e5be1d6eac66d9e9ca9290d7ca7cfc20209acc6c5fef"
+              },
+              {
+                "unit_id": "L0003",
+                "start": 107,
+                "end": 597,
+                "quote": "**Justification:** FDISCO（Fluorescence-preserved 3D Imaging of Solvent-Cleared Organs）是基于有机溶剂的快速透明方法，全脑透明可在约2天内完成，满足\"尽快成像\"的需求，且相比iDISCO+/uDISCO对荧光蛋白保护更佳（低温+碱性条件抑制荧光淬灭），已有文献证明可良好保留tdTomato内源信号。FDISCO使用THF脱水/脱脂后以BABB作为RI匹配液（RI≈1.56），与光片显微镜兼容，可接受一定程度的组织收缩（FDISCO收缩率约35–40%，均匀收缩不影响投射追踪）。标记策略：①保留tdTomato内源荧光追踪长程投射神经元；②在透明前对固定脑进行全脑免疫染色（iDISCO-style whole-mount），使用抗β-III Tubulin（TUJ1）抗体 + Alexa Fluor 647二抗标记轴突骨架结构，Alexa Fluor 647在有机溶剂中稳定性优异。两通道（tdTomato ~590 nm；AF647 ~647 nm）光谱分离良好，适合双通道光片成像。\n",
+                "answer_sha256": "0bbe7be8c1a3eaabf163e5be1d6eac66d9e9ca9290d7ca7cfc20209acc6c5fef"
+              }
+            ],
+            "compatibility_audit": [
+              {
+                "kind": "method_fluor",
+                "method_name": "FDISCO",
+                "fluorophore": "tdTomato",
+                "source": "KnowledgeBase/method_fluro_compati.json",
+                "value": 0.9,
+                "status": "TABLE_REPORTED"
+              }
+            ]
+          },
+          {
+            "pair_id": "semantic:1",
+            "entity_id": null,
+            "fluorophore": "Alexa Fluor 647",
+            "reported_marker": "β-III Tubulin (TUJ1)",
+            "reported_target_literal": null,
+            "label_type": "targeted_or_unclassified_reagent",
+            "original_function_input": {
+              "Alexa Fluor 647": "β-III Tubulin (TUJ1)"
+            },
+            "applicable": {
+              "s_target_match": true,
+              "s_marker_fluor_compat": true,
+              "s_method_fluor_compat": true
+            },
+            "channels": {
+              "s_target_match": 6.0,
+              "s_marker_fluor_compat": 6.0,
+              "s_method_fluor_compat": 5.1
+            },
+            "not_applicable_reason": null,
+            "source_evidence": [
+              {
+                "unit_id": "L0002",
+                "start": 26,
+                "end": 107,
+                "quote": "**Chosen Labeling:** [tdTomato (内源荧光), β-III Tubulin (TUJ1) + Alexa Fluor (647)]\n",
+                "answer_sha256": "0bbe7be8c1a3eaabf163e5be1d6eac66d9e9ca9290d7ca7cfc20209acc6c5fef"
+              },
+              {
+                "unit_id": "L0003",
+                "start": 107,
+                "end": 597,
+                "quote": "**Justification:** FDISCO（Fluorescence-preserved 3D Imaging of Solvent-Cleared Organs）是基于有机溶剂的快速透明方法，全脑透明可在约2天内完成，满足\"尽快成像\"的需求，且相比iDISCO+/uDISCO对荧光蛋白保护更佳（低温+碱性条件抑制荧光淬灭），已有文献证明可良好保留tdTomato内源信号。FDISCO使用THF脱水/脱脂后以BABB作为RI匹配液（RI≈1.56），与光片显微镜兼容，可接受一定程度的组织收缩（FDISCO收缩率约35–40%，均匀收缩不影响投射追踪）。标记策略：①保留tdTomato内源荧光追踪长程投射神经元；②在透明前对固定脑进行全脑免疫染色（iDISCO-style whole-mount），使用抗β-III Tubulin（TUJ1）抗体 + Alexa Fluor 647二抗标记轴突骨架结构，Alexa Fluor 647在有机溶剂中稳定性优异。两通道（tdTomato ~590 nm；AF647 ~647 nm）光谱分离良好，适合双通道光片成像。\n",
+                "answer_sha256": "0bbe7be8c1a3eaabf163e5be1d6eac66d9e9ca9290d7ca7cfc20209acc6c5fef"
+              },
+              {
+                "unit_id": "L0014",
+                "start": 1065,
+                "end": 1163,
+                "quote": "4.1 将脑组织置于含抗β-III Tubulin（TUJ1）兔多克隆抗体（1:500稀释于封闭液）的溶液中，轻柔振荡孵育。(Temperature: 37 ℃, Time: 48 hours)\n",
+                "answer_sha256": "0bbe7be8c1a3eaabf163e5be1d6eac66d9e9ca9290d7ca7cfc20209acc6c5fef"
+              },
+              {
+                "unit_id": "L0017",
+                "start": 1247,
+                "end": 1340,
+                "quote": "5.1 将脑组织置于含驴抗兔 Alexa Fluor 647二抗（1:500稀释于封闭液）的溶液中，避光振荡孵育。(Temperature: 37 ℃, Time: 48 hours)\n",
+                "answer_sha256": "0bbe7be8c1a3eaabf163e5be1d6eac66d9e9ca9290d7ca7cfc20209acc6c5fef"
+              }
+            ],
+            "compatibility_audit": [
+              {
+                "kind": "marker_fluor",
+                "marker": "β-III Tubulin (TUJ1)",
+                "fluorophore": "Alexa Fluor 647",
+                "source": "KnowledgeBase/tissue.json",
+                "value": true,
+                "status": "TABLE_REPORTED"
+              },
+              {
+                "kind": "method_fluor",
+                "method_name": "FDISCO",
+                "fluorophore": "Alexa Fluor 647",
+                "source": "KnowledgeBase/method_fluro_compati.json",
+                "value": 0.85,
+                "status": "TABLE_REPORTED"
+              }
+            ]
+          }
+        ],
+        "resolved_uncertainties": [],
+        "remaining_uncertainties": [],
+        "minimum_of_available_applicable_channels": 5.1,
+        "task_target_coverage": "native/direct task coverage remains separate from antibody-pair applicability",
+        "new_model_calls": 0,
+        "expert_validated": false
+      },
+      "selection_uses_achieved_score": false
+    }
+  ],
+  "prior_time_interpretation": {
+    "hours": null,
+    "bounds_hours": [
+      7.5,
+      null
+    ],
+    "decision": "unresolved_source_input",
+    "scope": "reported_core_operations",
+    "original_issues": [
+      "initial_operation_contains_conditional_scope_cue",
+      "labeling_preparation_not_source_supported_or_possible_core_function",
+      "no_complete_numeric_operation_set",
+      "nonunique_duration_range",
+      "source_duration_candidates_not_all_classified",
+      "unknown_included_duration_or_repeat:O15"
+    ],
+    "resolved_scope_issues": [],
+    "issues": [
+      "initial_operation_contains_conditional_scope_cue",
+      "labeling_preparation_not_source_supported_or_possible_core_function",
+      "no_complete_numeric_operation_set",
+      "nonunique_duration_range",
+      "source_duration_candidates_not_all_classified",
+      "unknown_included_duration_or_repeat:O15"
+    ],
+    "phase_evidence": [
+      {
+        "operation_id": "O1",
+        "supported": false,
+        "reason": "source_heading_does_not_establish_excluded_phase",
+        "heading": {
+          "start": 621,
+          "end": 653,
+          "quote": "**1 样品预处理（Post-fixation wash）**\n",
+          "title": "样品预处理（Post-fixation wash）"
+        },
+        "operation": {
+          "unit_id": "L0007",
+          "quote": "1.1 将已4% PFA固定的成年小鼠全脑置于1× PBS中充分漂洗，去除残余固定液。(Temperature: 4 ℃, Time: 3 × 1 hour)\n",
+          "occurrence": 0,
+          "source_id": "SRC_b115dda7cb329868e4ab0d12",
+          "start": 653,
+          "end": 733,
+          "answer_sha256": "0bbe7be8c1a3eaabf163e5be1d6eac66d9e9ca9290d7ca7cfc20209acc6c5fef",
+          "context_start": 653,
+          "context_end": 733,
+          "context": "1.1 将已4% PFA固定的成年小鼠全脑置于1× PBS中充分漂洗，去除残余固定液。(Temperature: 4 ℃, Time: 3 × 1 hour)\n",
+          "unit_reference": {
+            "source_unit_sha256": "d42f48fab471a5060dd1ec28114f3a291429eeef7537e8d47ddb222ae44f4fb1",
+            "raw_unit_text_preserved": true,
+            "wide_evidence_not_atomic_identity": true
+          }
+        }
+      },
+      {
+        "operation_id": "O2",
+        "supported": true,
+        "reason": "explicit_labeling_phase_heading",
+        "heading": {
+          "start": 733,
+          "end": 751,
+          "quote": "**2 全脑免疫染色前渗透处理**\n",
+          "title": "全脑免疫染色前渗透处理"
+        },
+        "operation": {
+          "unit_id": "L0009",
+          "quote": "2.1 将脑组织置于含0.2% (vol/vol) Triton X-100的1× PBS（PBST）中振荡渗透。(Temperature: 37 ℃, Time: 24 hours)\n",
+          "occurrence": 0,
+          "source_id": "SRC_b115dda7cb329868e4ab0d12",
+          "start": 751,
+          "end": 844,
+          "answer_sha256": "0bbe7be8c1a3eaabf163e5be1d6eac66d9e9ca9290d7ca7cfc20209acc6c5fef",
+          "context_start": 751,
+          "context_end": 844,
+          "context": "2.1 将脑组织置于含0.2% (vol/vol) Triton X-100的1× PBS（PBST）中振荡渗透。(Temperature: 37 ℃, Time: 24 hours)\n",
+          "unit_reference": {
+            "source_unit_sha256": "25c1b06b3c0915536c3dd80e4ba6a6c2de04ca9383292142ab4e50dba24d5743",
+            "raw_unit_text_preserved": true,
+            "wide_evidence_not_atomic_identity": true
+          }
+        }
+      },
+      {
+        "operation_id": "O3",
+        "supported": true,
+        "reason": "explicit_labeling_phase_heading",
+        "heading": {
+          "start": 733,
+          "end": 751,
+          "quote": "**2 全脑免疫染色前渗透处理**\n",
+          "title": "全脑免疫染色前渗透处理"
+        },
+        "operation": {
+          "unit_id": "L0010",
+          "quote": "2.2 更换新鲜PBST继续渗透。(Temperature: 37 ℃, Time: 24 hours)\n",
+          "occurrence": 0,
+          "source_id": "SRC_b115dda7cb329868e4ab0d12",
+          "start": 844,
+          "end": 897,
+          "answer_sha256": "0bbe7be8c1a3eaabf163e5be1d6eac66d9e9ca9290d7ca7cfc20209acc6c5fef",
+          "context_start": 844,
+          "context_end": 897,
+          "context": "2.2 更换新鲜PBST继续渗透。(Temperature: 37 ℃, Time: 24 hours)\n",
+          "unit_reference": {
+            "source_unit_sha256": "25d114607ba7488b86de835550dd3f485d886de103454337dccec48cfdd10195",
+            "raw_unit_text_preserved": true,
+            "wide_evidence_not_atomic_identity": true
+          }
+        }
+      },
+      {
+        "operation_id": "O4",
+        "supported": true,
+        "reason": "explicit_labeling_phase_heading",
+        "heading": {
+          "start": 897,
+          "end": 906,
+          "quote": "**3 封闭**\n",
+          "title": "封闭"
+        },
+        "operation": {
+          "unit_id": "L0012",
+          "quote": "3.1 将脑组织置于封闭液（5% (vol/vol) 正常驴血清 + 0.2% Triton X-100 + 0.1% (wt/vol) NaN₃ in 1× PBS）中振荡封闭。(Temperature: 37 ℃, Time: 24 hours)\n",
+          "occurrence": 0,
+          "source_id": "SRC_b115dda7cb329868e4ab0d12",
+          "start": 906,
+          "end": 1032,
+          "answer_sha256": "0bbe7be8c1a3eaabf163e5be1d6eac66d9e9ca9290d7ca7cfc20209acc6c5fef",
+          "context_start": 906,
+          "context_end": 1032,
+          "context": "3.1 将脑组织置于封闭液（5% (vol/vol) 正常驴血清 + 0.2% Triton X-100 + 0.1% (wt/vol) NaN₃ in 1× PBS）中振荡封闭。(Temperature: 37 ℃, Time: 24 hours)\n",
+          "unit_reference": {
+            "source_unit_sha256": "3295cea9b05c20b3df74a0cbe53d63d4d548d1330b24c60c57b970697e26dfe9",
+            "raw_unit_text_preserved": true,
+            "wide_evidence_not_atomic_identity": true
+          }
+        }
+      },
+      {
+        "operation_id": "O5",
+        "supported": false,
+        "reason": "source_heading_does_not_establish_excluded_phase",
+        "heading": {
+          "start": 1032,
+          "end": 1065,
+          "quote": "**4 一抗孵育（β-III Tubulin / TUJ1）**\n",
+          "title": "一抗孵育（β-III Tubulin / TUJ1）"
+        },
+        "operation": {
+          "unit_id": "L0014",
+          "quote": "4.1 将脑组织置于含抗β-III Tubulin（TUJ1）兔多克隆抗体（1:500稀释于封闭液）的溶液中，轻柔振荡孵育。(Temperature: 37 ℃, Time: 48 hours)\n",
+          "occurrence": 0,
+          "source_id": "SRC_b115dda7cb329868e4ab0d12",
+          "start": 1065,
+          "end": 1163,
+          "answer_sha256": "0bbe7be8c1a3eaabf163e5be1d6eac66d9e9ca9290d7ca7cfc20209acc6c5fef",
+          "context_start": 1065,
+          "context_end": 1163,
+          "context": "4.1 将脑组织置于含抗β-III Tubulin（TUJ1）兔多克隆抗体（1:500稀释于封闭液）的溶液中，轻柔振荡孵育。(Temperature: 37 ℃, Time: 48 hours)\n",
+          "unit_reference": {
+            "source_unit_sha256": "eaa10b20ccecabbeadb741a7635c5e50e544c596715860381ef289871e037ac5",
+            "raw_unit_text_preserved": true,
+            "wide_evidence_not_atomic_identity": true
+          }
+        }
+      },
+      {
+        "operation_id": "O6",
+        "supported": false,
+        "reason": "source_heading_does_not_establish_excluded_phase",
+        "heading": {
+          "start": 1032,
+          "end": 1065,
+          "quote": "**4 一抗孵育（β-III Tubulin / TUJ1）**\n",
+          "title": "一抗孵育（β-III Tubulin / TUJ1）"
+        },
+        "operation": {
+          "unit_id": "L0015",
+          "quote": "4.2 用PBST洗涤，去除未结合一抗。(Temperature: RT, Time: 5 × 1 hour)\n",
+          "occurrence": 0,
+          "source_id": "SRC_b115dda7cb329868e4ab0d12",
+          "start": 1163,
+          "end": 1219,
+          "answer_sha256": "0bbe7be8c1a3eaabf163e5be1d6eac66d9e9ca9290d7ca7cfc20209acc6c5fef",
+          "context_start": 1163,
+          "context_end": 1219,
+          "context": "4.2 用PBST洗涤，去除未结合一抗。(Temperature: RT, Time: 5 × 1 hour)\n",
+          "unit_reference": {
+            "source_unit_sha256": "c2e6786792ca0f5e6f58c36cdc97ef920bbb5eec4fedefd1460614076d62cdeb",
+            "raw_unit_text_preserved": true,
+            "wide_evidence_not_atomic_identity": true
+          }
+        }
+      },
+      {
+        "operation_id": "O7",
+        "supported": false,
+        "reason": "source_heading_does_not_establish_excluded_phase",
+        "heading": {
+          "start": 1219,
+          "end": 1247,
+          "quote": "**5 二抗孵育（Alexa Fluor 647）**\n",
+          "title": "二抗孵育（Alexa Fluor 647）"
+        },
+        "operation": {
+          "unit_id": "L0017",
+          "quote": "5.1 将脑组织置于含驴抗兔 Alexa Fluor 647二抗（1:500稀释于封闭液）的溶液中，避光振荡孵育。(Temperature: 37 ℃, Time: 48 hours)\n",
+          "occurrence": 0,
+          "source_id": "SRC_b115dda7cb329868e4ab0d12",
+          "start": 1247,
+          "end": 1340,
+          "answer_sha256": "0bbe7be8c1a3eaabf163e5be1d6eac66d9e9ca9290d7ca7cfc20209acc6c5fef",
+          "context_start": 1247,
+          "context_end": 1340,
+          "context": "5.1 将脑组织置于含驴抗兔 Alexa Fluor 647二抗（1:500稀释于封闭液）的溶液中，避光振荡孵育。(Temperature: 37 ℃, Time: 48 hours)\n",
+          "unit_reference": {
+            "source_unit_sha256": "a257415c9429929055d21b9ef6df76164923185010cfa244f08c2609dd56d69e",
+            "raw_unit_text_preserved": true,
+            "wide_evidence_not_atomic_identity": true
+          }
+        }
+      },
+      {
+        "operation_id": "O8",
+        "supported": false,
+        "reason": "source_heading_does_not_establish_excluded_phase",
+        "heading": {
+          "start": 1219,
+          "end": 1247,
+          "quote": "**5 二抗孵育（Alexa Fluor 647）**\n",
+          "title": "二抗孵育（Alexa Fluor 647）"
+        },
+        "operation": {
+          "unit_id": "L0018",
+          "quote": "5.2 用PBST洗涤，去除未结合二抗。(Temperature: RT, Time: 5 × 1 hour)\n",
+          "occurrence": 0,
+          "source_id": "SRC_b115dda7cb329868e4ab0d12",
+          "start": 1340,
+          "end": 1396,
+          "answer_sha256": "0bbe7be8c1a3eaabf163e5be1d6eac66d9e9ca9290d7ca7cfc20209acc6c5fef",
+          "context_start": 1340,
+          "context_end": 1396,
+          "context": "5.2 用PBST洗涤，去除未结合二抗。(Temperature: RT, Time: 5 × 1 hour)\n",
+          "unit_reference": {
+            "source_unit_sha256": "fdecf512ca668c14680913a5c1f8e50d2dc88fd5847c41149c5a2cfcf602bc62",
+            "raw_unit_text_preserved": true,
+            "wide_evidence_not_atomic_identity": true
+          }
+        }
+      },
+      {
+        "operation_id": "O9",
+        "supported": false,
+        "reason": "source_heading_does_not_establish_excluded_phase",
+        "heading": {
+          "start": 1219,
+          "end": 1247,
+          "quote": "**5 二抗孵育（Alexa Fluor 647）**\n",
+          "title": "二抗孵育（Alexa Fluor 647）"
+        },
+        "operation": {
+          "unit_id": "L0019",
+          "quote": "5.3 用1× PBS终洗。(Temperature: RT, Time: 2 × 30 min)\n",
+          "occurrence": 0,
+          "source_id": "SRC_b115dda7cb329868e4ab0d12",
+          "start": 1396,
+          "end": 1446,
+          "answer_sha256": "0bbe7be8c1a3eaabf163e5be1d6eac66d9e9ca9290d7ca7cfc20209acc6c5fef",
+          "context_start": 1396,
+          "context_end": 1446,
+          "context": "5.3 用1× PBS终洗。(Temperature: RT, Time: 2 × 30 min)\n",
+          "unit_reference": {
+            "source_unit_sha256": "0071d8ba1fa9e7764dc00125284c86f2aeeb04b1c25e81c7b23a584305736b9c",
+            "raw_unit_text_preserved": true,
+            "wide_evidence_not_atomic_identity": true
+          }
+        }
+      }
+    ],
+    "operation_contributions": [
+      {
+        "operation_id": "O10",
+        "lower_hours": 1.0,
+        "upper_hours": 1.0,
+        "repeat_status": "source_exact_or_single"
+      },
+      {
+        "operation_id": "O11",
+        "lower_hours": 1.0,
+        "upper_hours": 1.0,
+        "repeat_status": "source_exact_or_single"
+      },
+      {
+        "operation_id": "O12",
+        "lower_hours": 1.0,
+        "upper_hours": 1.0,
+        "repeat_status": "source_exact_or_single"
+      },
+      {
+        "operation_id": "O13",
+        "lower_hours": 1.0,
+        "upper_hours": 1.0,
+        "repeat_status": "source_exact_or_single"
+      },
+      {
+        "operation_id": "O14",
+        "lower_hours": 1.0,
+        "upper_hours": 1.0,
+        "repeat_status": "source_exact_or_single"
+      },
+      {
+        "operation_id": "O16",
+        "lower_hours": 2.0,
+        "upper_hours": 2.0,
+        "repeat_status": "source_exact_or_single"
+      },
+      {
+        "operation_id": "O17",
+        "lower_hours": 0.5,
+        "upper_hours": 0.5,
+        "repeat_status": "source_exact_or_single"
+      }
+    ],
+    "workflow_completeness_not_inferred": true,
+    "complete_experimental_endpoint_duration": "not_separately_estimated",
+    "saved_coverage_judgment": {
+      "entities": "complete",
+      "time_operations": "complete",
+      "core_time_operations": "complete",
+      "unresolved": []
+    },
+    "heading_scope_candidate": {
+      "version": "time-heading-and-label-wash-scope-v1",
+      "original_issues": [
+        "initial_operation_contains_conditional_scope_cue",
+        "labeling_preparation_not_source_supported_or_possible_core_function",
+        "no_complete_numeric_operation_set",
+        "nonunique_duration_range",
+        "source_duration_candidates_not_all_classified",
+        "unknown_included_duration_or_repeat:O15"
+      ],
+      "changes": [],
+      "source_operations_not_modified": true,
+      "raw_phase_assignments_preserved": true
+    }
+  },
+  "quantitative_inputs": {
+    "quantitative_data": {
+      "method_name": "FDISCO",
+      "tissue_ri_value": 1.46,
+      "total_time_hours": null,
+      "sample_tier": "T04_WHOLE_MOUSE_BRAIN_5_12MM",
+      "reagent_ri_value": 1.56,
+      "protocol_time_hours": null
+    },
+    "user_preference_vector": {
+      "fluorescence_protein_preservation": {
+        "target": 1.0,
+        "weight": 1.0
+      },
+      "dye_permeability": {
+        "target": 0.7,
+        "weight": 1.0
+      },
+      "clearing_challenge": {
+        "target": 0.6,
+        "weight": 1.0
+      },
+      "geometry_preference": {
+        "target": 0.8,
+        "weight": 0.5
+      },
+      "operational_economy": {
+        "target": 1.0,
+        "weight": 1.0
+      },
+      "safety_compatibility": {
+        "target": 0.0,
+        "weight": 0.0
+      }
+    },
+    "basis": "saved quantitative inputs, including explicit method-header correction"
+  },
+  "original_full_conversion_success": false,
+  "original_judge_JSON_not_rewritten": true,
+  "new_model_calls": 0,
+  "expert_validated": false
+}

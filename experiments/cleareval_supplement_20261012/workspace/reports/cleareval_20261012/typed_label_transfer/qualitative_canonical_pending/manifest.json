@@ -1,0 +1,325 @@
+{
+  "version": "canonical-qualitative-correctness-v1",
+  "candidate": {
+    "path": "C:\\ClearEval\\ClearEval-public\\scripts\\cce_canonical_qualitative_candidate_v1.py",
+    "sha256": "297b1d60d14ad70e7bca8c2ce472e5ab028e6d88f7b04f03f76fe73f7fd164f7"
+  },
+  "control": {
+    "path": "C:\\ClearEval\\ClearEval-public\\scripts\\cce_canonical_source_candidate_v1.py",
+    "sha256": "43d4f7c9143580cba12b7da217216e9fd4bfb3ec48a95c652b74268d4c0b8764"
+  },
+  "scope_text": {
+    "path": "C:\\ClearEval\\ClearEval-public\\scripts\\cce_qualitative_correctness_candidate_v1.py",
+    "sha256": "0ab8956257e680c54791d7592858c93d0691d88a169200489deddc03d2673625"
+  },
+  "cases": {
+    "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\optimizer_round2_20261010\\grounded_development_v11\\cases.json",
+    "sha256": "2265ae4d1e1b40b39b205c782ae3ffb35689afc6c0f2d1f79fe389c0f0c70d81"
+  },
+  "public_model": {
+    "transport_kind": "ollama_loopback",
+    "model": "qwen3.8:27b-q8_0-local",
+    "host": "http://127.0.0.1:11434",
+    "model_digest": "ea6892d079c639acf4812dee100eca284199c3ae3fb4ffd9e5a5ae8641ae73ba",
+    "service_version": "0.40.1",
+    "model_details": {
+      "parent_model": "",
+      "format": "gguf",
+      "family": "qwen35",
+      "families": [
+        "qwen35"
+      ],
+      "parameter_size": "27.3B",
+      "quantization_level": "Q8_0",
+      "context_length": 262144,
+      "embedding_length": 5120,
+      "runner": "ggml"
+    },
+    "max_output_tokens": 8192,
+    "num_ctx": 98304,
+    "temperature": 0.0,
+    "enable_thinking": false,
+    "format": "json",
+    "timeout_seconds": 600
+  },
+  "observations": [
+    {
+      "case_id": "gemini-3-flash__q2__baseline__supplement_v2",
+      "anonymous_answer_id": "A01",
+      "question_id": 2,
+      "condition": "C0",
+      "status": "prepared_not_requested",
+      "development_exposed": true,
+      "source": {
+        "path": "C:\\ClearEval\\reports\\cleareval_20261012\\typed_label_transfer\\qualitative_canonical_pending\\A01\\evaluation_source_document.json",
+        "sha256": "e21d4ae55135da81559b569c9199dadaf651a9071f64c1f658a17b98df8ac1b2"
+      },
+      "mapping": {
+        "path": "C:\\ClearEval\\reports\\cleareval_20261012\\typed_label_transfer\\qualitative_canonical_pending\\A01\\source_mapping.json",
+        "sha256": "68d0f10240c49ad0f8ffc8b73f102338eba9d775c46b4df8f7f0d422142b8a9f"
+      },
+      "payload": {
+        "path": "C:\\ClearEval\\reports\\cleareval_20261012\\typed_label_transfer\\qualitative_canonical_pending\\A01\\C0_request_payload.json",
+        "sha256": "ab740a969cd502967b57fb3e5ad74baee8e164d6216b6981147b272e51c78327"
+      },
+      "schema": {
+        "path": "C:\\ClearEval\\reports\\cleareval_20261012\\typed_label_transfer\\qualitative_canonical_pending\\A01\\schema.json",
+        "sha256": "5f6d24ff0ac0aa808a722bc7b23fb55e113c51ffaa39b52f2437d03e3723e2fa"
+      },
+      "raw_SR_SP_source_unchanged": true,
+      "old_successful_return_exactly_reusable": false
+    },
+    {
+      "case_id": "gemini-3-flash__q2__baseline__supplement_v2",
+      "anonymous_answer_id": "A01",
+      "question_id": 2,
+      "condition": "C1",
+      "status": "prepared_not_requested",
+      "development_exposed": true,
+      "source": {
+        "path": "C:\\ClearEval\\reports\\cleareval_20261012\\typed_label_transfer\\qualitative_canonical_pending\\A01\\evaluation_source_document.json",
+        "sha256": "e21d4ae55135da81559b569c9199dadaf651a9071f64c1f658a17b98df8ac1b2"
+      },
+      "mapping": {
+        "path": "C:\\ClearEval\\reports\\cleareval_20261012\\typed_label_transfer\\qualitative_canonical_pending\\A01\\source_mapping.json",
+        "sha256": "68d0f10240c49ad0f8ffc8b73f102338eba9d775c46b4df8f7f0d422142b8a9f"
+      },
+      "payload": {
+        "path": "C:\\ClearEval\\reports\\cleareval_20261012\\typed_label_transfer\\qualitative_canonical_pending\\A01\\C1_request_payload.json",
+        "sha256": "6f7f6be455dc6a40387539ec47a782be8b6a5da3937647f69b1f9bbf786e1038"
+      },
+      "schema": {
+        "path": "C:\\ClearEval\\reports\\cleareval_20261012\\typed_label_transfer\\qualitative_canonical_pending\\A01\\schema.json",
+        "sha256": "5f6d24ff0ac0aa808a722bc7b23fb55e113c51ffaa39b52f2437d03e3723e2fa"
+      },
+      "raw_SR_SP_source_unchanged": true,
+      "old_successful_return_exactly_reusable": false
+    },
+    {
+      "case_id": "gemini-3-pro__q21__baseline__supplement_v2",
+      "anonymous_answer_id": "A02",
+      "question_id": 21,
+      "condition": "C0",
+      "status": "prepared_not_requested",
+      "development_exposed": true,
+      "source": {
+        "path": "C:\\ClearEval\\reports\\cleareval_20261012\\typed_label_transfer\\qualitative_canonical_pending\\A02\\evaluation_source_document.json",
+        "sha256": "dd4e3ffc8c0cb7039c1f9352d3c27c09823aa98cbdab4764994cc92c01f7e99f"
+      },
+      "mapping": {
+        "path": "C:\\ClearEval\\reports\\cleareval_20261012\\typed_label_transfer\\qualitative_canonical_pending\\A02\\source_mapping.json",
+        "sha256": "238f64a11b436aae36316f57e8e4fbc24f7c37861d2c146667eb4e84964baf73"
+      },
+      "payload": {
+        "path": "C:\\ClearEval\\reports\\cleareval_20261012\\typed_label_transfer\\qualitative_canonical_pending\\A02\\C0_request_payload.json",
+        "sha256": "5133b82e1f023b75d5575dde88796259f04608750821a6efdca6404ace751459"
+      },
+      "schema": {
+        "path": "C:\\ClearEval\\reports\\cleareval_20261012\\typed_label_transfer\\qualitative_canonical_pending\\A02\\schema.json",
+        "sha256": "c3707a9161787c97debb655637fb7c863196bed05ca05e6521617ba55552a5a6"
+      },
+      "raw_SR_SP_source_unchanged": true,
+      "old_successful_return_exactly_reusable": false
+    },
+    {
+      "case_id": "gemini-3-pro__q21__baseline__supplement_v2",
+      "anonymous_answer_id": "A02",
+      "question_id": 21,
+      "condition": "C1",
+      "status": "prepared_not_requested",
+      "development_exposed": true,
+      "source": {
+        "path": "C:\\ClearEval\\reports\\cleareval_20261012\\typed_label_transfer\\qualitative_canonical_pending\\A02\\evaluation_source_document.json",
+        "sha256": "dd4e3ffc8c0cb7039c1f9352d3c27c09823aa98cbdab4764994cc92c01f7e99f"
+      },
+      "mapping": {
+        "path": "C:\\ClearEval\\reports\\cleareval_20261012\\typed_label_transfer\\qualitative_canonical_pending\\A02\\source_mapping.json",
+        "sha256": "238f64a11b436aae36316f57e8e4fbc24f7c37861d2c146667eb4e84964baf73"
+      },
+      "payload": {
+        "path": "C:\\ClearEval\\reports\\cleareval_20261012\\typed_label_transfer\\qualitative_canonical_pending\\A02\\C1_request_payload.json",
+        "sha256": "19e15c623db572df1c93c4c11ef1f94faf7b8ae2b1cc3bc754d1874e879b492c"
+      },
+      "schema": {
+        "path": "C:\\ClearEval\\reports\\cleareval_20261012\\typed_label_transfer\\qualitative_canonical_pending\\A02\\schema.json",
+        "sha256": "c3707a9161787c97debb655637fb7c863196bed05ca05e6521617ba55552a5a6"
+      },
+      "raw_SR_SP_source_unchanged": true,
+      "old_successful_return_exactly_reusable": false
+    },
+    {
+      "case_id": "gemini-3-flash__q22__baseline__supplement_v2",
+      "anonymous_answer_id": "A03",
+      "question_id": 22,
+      "condition": "C0",
+      "status": "prepared_not_requested",
+      "development_exposed": true,
+      "source": {
+        "path": "C:\\ClearEval\\reports\\cleareval_20261012\\typed_label_transfer\\qualitative_canonical_pending\\A03\\evaluation_source_document.json",
+        "sha256": "5dc6b656ff7e27eaed6a1ece91fd8de20c0f4958cb073c877252f89b2135a35a"
+      },
+      "mapping": {
+        "path": "C:\\ClearEval\\reports\\cleareval_20261012\\typed_label_transfer\\qualitative_canonical_pending\\A03\\source_mapping.json",
+        "sha256": "94ab73222396a5cd0efbcca0db0ecb3e8c5354589527ec536f52c13ba6f52a25"
+      },
+      "payload": {
+        "path": "C:\\ClearEval\\reports\\cleareval_20261012\\typed_label_transfer\\qualitative_canonical_pending\\A03\\C0_request_payload.json",
+        "sha256": "92fbeec3a392b3a10e36639921d95694c321e5a0e08e0d8242bb84131933ec25"
+      },
+      "schema": {
+        "path": "C:\\ClearEval\\reports\\cleareval_20261012\\typed_label_transfer\\qualitative_canonical_pending\\A03\\schema.json",
+        "sha256": "7c7441c838a7abbf7c31646ae0dcd731b671304af4802c7986b8135fbf11ec6e"
+      },
+      "raw_SR_SP_source_unchanged": true,
+      "old_successful_return_exactly_reusable": false
+    },
+    {
+      "case_id": "gemini-3-flash__q22__baseline__supplement_v2",
+      "anonymous_answer_id": "A03",
+      "question_id": 22,
+      "condition": "C1",
+      "status": "prepared_not_requested",
+      "development_exposed": true,
+      "source": {
+        "path": "C:\\ClearEval\\reports\\cleareval_20261012\\typed_label_transfer\\qualitative_canonical_pending\\A03\\evaluation_source_document.json",
+        "sha256": "5dc6b656ff7e27eaed6a1ece91fd8de20c0f4958cb073c877252f89b2135a35a"
+      },
+      "mapping": {
+        "path": "C:\\ClearEval\\reports\\cleareval_20261012\\typed_label_transfer\\qualitative_canonical_pending\\A03\\source_mapping.json",
+        "sha256": "94ab73222396a5cd0efbcca0db0ecb3e8c5354589527ec536f52c13ba6f52a25"
+      },
+      "payload": {
+        "path": "C:\\ClearEval\\reports\\cleareval_20261012\\typed_label_transfer\\qualitative_canonical_pending\\A03\\C1_request_payload.json",
+        "sha256": "6d9c47de4660c281f751b853258675afa7eb523eb3aa29365b64218ecd86ae41"
+      },
+      "schema": {
+        "path": "C:\\ClearEval\\reports\\cleareval_20261012\\typed_label_transfer\\qualitative_canonical_pending\\A03\\schema.json",
+        "sha256": "7c7441c838a7abbf7c31646ae0dcd731b671304af4802c7986b8135fbf11ec6e"
+      },
+      "raw_SR_SP_source_unchanged": true,
+      "old_successful_return_exactly_reusable": false
+    },
+    {
+      "case_id": "gemini-3-pro__q23__baseline__supplement_v2",
+      "anonymous_answer_id": "A04",
+      "question_id": 23,
+      "condition": "C0",
+      "status": "prepared_not_requested",
+      "development_exposed": true,
+      "source": {
+        "path": "C:\\ClearEval\\reports\\cleareval_20261012\\typed_label_transfer\\qualitative_canonical_pending\\A04\\evaluation_source_document.json",
+        "sha256": "fc6f7c31b82589d5c9f79d09878e53e88fb3ee9a0d4b40d809d464d2f73e5782"
+      },
+      "mapping": {
+        "path": "C:\\ClearEval\\reports\\cleareval_20261012\\typed_label_transfer\\qualitative_canonical_pending\\A04\\source_mapping.json",
+        "sha256": "d271bab090534c5479f0a472924b239408fd2141c92cd04769aa6f058c23c25c"
+      },
+      "payload": {
+        "path": "C:\\ClearEval\\reports\\cleareval_20261012\\typed_label_transfer\\qualitative_canonical_pending\\A04\\C0_request_payload.json",
+        "sha256": "575dac85841217441694c2b6b919bbd631931dacc37e165ba01d9de898abcc14"
+      },
+      "schema": {
+        "path": "C:\\ClearEval\\reports\\cleareval_20261012\\typed_label_transfer\\qualitative_canonical_pending\\A04\\schema.json",
+        "sha256": "4bb958b5adfd6619916b82253d386362cdd7c0d6c37069b7b33f73c6f6e9a3e8"
+      },
+      "raw_SR_SP_source_unchanged": true,
+      "old_successful_return_exactly_reusable": false
+    },
+    {
+      "case_id": "gemini-3-pro__q23__baseline__supplement_v2",
+      "anonymous_answer_id": "A04",
+      "question_id": 23,
+      "condition": "C1",
+      "status": "prepared_not_requested",
+      "development_exposed": true,
+      "source": {
+        "path": "C:\\ClearEval\\reports\\cleareval_20261012\\typed_label_transfer\\qualitative_canonical_pending\\A04\\evaluation_source_document.json",
+        "sha256": "fc6f7c31b82589d5c9f79d09878e53e88fb3ee9a0d4b40d809d464d2f73e5782"
+      },
+      "mapping": {
+        "path": "C:\\ClearEval\\reports\\cleareval_20261012\\typed_label_transfer\\qualitative_canonical_pending\\A04\\source_mapping.json",
+        "sha256": "d271bab090534c5479f0a472924b239408fd2141c92cd04769aa6f058c23c25c"
+      },
+      "payload": {
+        "path": "C:\\ClearEval\\reports\\cleareval_20261012\\typed_label_transfer\\qualitative_canonical_pending\\A04\\C1_request_payload.json",
+        "sha256": "10f995172cdc7cdc0f725544cd8230c72db87cf96d778703b236152774d8c737"
+      },
+      "schema": {
+        "path": "C:\\ClearEval\\reports\\cleareval_20261012\\typed_label_transfer\\qualitative_canonical_pending\\A04\\schema.json",
+        "sha256": "4bb958b5adfd6619916b82253d386362cdd7c0d6c37069b7b33f73c6f6e9a3e8"
+      },
+      "raw_SR_SP_source_unchanged": true,
+      "old_successful_return_exactly_reusable": false
+    },
+    {
+      "case_id": "gemini-3-flash__q248__baseline__supplement_v2",
+      "anonymous_answer_id": "A05",
+      "question_id": 248,
+      "condition": "C0",
+      "status": "prepared_not_requested",
+      "development_exposed": true,
+      "source": {
+        "path": "C:\\ClearEval\\reports\\cleareval_20261012\\typed_label_transfer\\qualitative_canonical_pending\\A05\\evaluation_source_document.json",
+        "sha256": "36144bb69902428b9ee631aee1afdb51a3990dc1237cf02cb4623cee7315970d"
+      },
+      "mapping": {
+        "path": "C:\\ClearEval\\reports\\cleareval_20261012\\typed_label_transfer\\qualitative_canonical_pending\\A05\\source_mapping.json",
+        "sha256": "2da69982d56f950eade46661f815bfaa07d03934ea57b3bab6dd2f908459585c"
+      },
+      "payload": {
+        "path": "C:\\ClearEval\\reports\\cleareval_20261012\\typed_label_transfer\\qualitative_canonical_pending\\A05\\C0_request_payload.json",
+        "sha256": "9d0bb0e87aef9d6ac34cdaa39a321da02306b79fc5de82c417c730602df3097c"
+      },
+      "schema": {
+        "path": "C:\\ClearEval\\reports\\cleareval_20261012\\typed_label_transfer\\qualitative_canonical_pending\\A05\\schema.json",
+        "sha256": "3460c4e6ab09bca3a6e5a9238da7c3ed3058fd3bf6b19783dbebeb1472386b94"
+      },
+      "raw_SR_SP_source_unchanged": true,
+      "old_successful_return_exactly_reusable": false
+    },
+    {
+      "case_id": "gemini-3-flash__q248__baseline__supplement_v2",
+      "anonymous_answer_id": "A05",
+      "question_id": 248,
+      "condition": "C1",
+      "status": "prepared_not_requested",
+      "development_exposed": true,
+      "source": {
+        "path": "C:\\ClearEval\\reports\\cleareval_20261012\\typed_label_transfer\\qualitative_canonical_pending\\A05\\evaluation_source_document.json",
+        "sha256": "36144bb69902428b9ee631aee1afdb51a3990dc1237cf02cb4623cee7315970d"
+      },
+      "mapping": {
+        "path": "C:\\ClearEval\\reports\\cleareval_20261012\\typed_label_transfer\\qualitative_canonical_pending\\A05\\source_mapping.json",
+        "sha256": "2da69982d56f950eade46661f815bfaa07d03934ea57b3bab6dd2f908459585c"
+      },
+      "payload": {
+        "path": "C:\\ClearEval\\reports\\cleareval_20261012\\typed_label_transfer\\qualitative_canonical_pending\\A05\\C1_request_payload.json",
+        "sha256": "528fd4cd8802a90081adaad54ad35219b345e1a65a4d124c3d15219a62625c7f"
+      },
+      "schema": {
+        "path": "C:\\ClearEval\\reports\\cleareval_20261012\\typed_label_transfer\\qualitative_canonical_pending\\A05\\schema.json",
+        "sha256": "3460c4e6ab09bca3a6e5a9238da7c3ed3058fd3bf6b19783dbebeb1472386b94"
+      },
+      "raw_SR_SP_source_unchanged": true,
+      "old_successful_return_exactly_reusable": false
+    }
+  ],
+  "planned_development_requests": 10,
+  "new_model_requests": 0,
+  "existing_call_budget_remaining": 0,
+  "approval_for_new_requests_not_recorded": true,
+  "paired_input_conditions_fixed": true,
+  "prospective_confirmation": false,
+  "main_endpoint": "source-grounded qualitative criterion application and complete-score availability",
+  "no_predetermined_required_score": true,
+  "Cor_scales": [
+    3,
+    2,
+    2,
+    1
+  ],
+  "Cor_aggregation_unchanged": true,
+  "co_param_definition_changed": true,
+  "new_expert_budget": 0,
+  "known_limitation": "five exposed development answers; no new reliability or generalization estimate"
+}

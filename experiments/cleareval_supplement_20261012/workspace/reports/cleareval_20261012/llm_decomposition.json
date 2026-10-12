@@ -1,0 +1,1045 @@
+{
+  "scope": "current-assistant explicit reconstruction plus original-function conditional replay",
+  "not_a_new_frozen_Qwen_trial": true,
+  "new_local_or_API_model_requests": 0,
+  "new_expert_records": 0,
+  "current_assistant_semantic_readings": 2,
+  "code": {
+    "path": "C:\\ClearEval\\reports\\cleareval_20261012\\reconstruct_examples.py",
+    "sha256": "e46574964d3bcb1235138c83af39d22ac41cfd8bd07dee205084d42b2e87b5e8"
+  },
+  "original_scoring_function": {
+    "path": "C:\\ClearEval\\ClearEval-public\\OEQ_run_grading_new.py",
+    "sha256": "0d48d96bd53b8bcf3c8678cf3151679ee70dc0d7b6d7e110486d1d7a77f9ea0e"
+  },
+  "time_function": {
+    "path": "C:\\ClearEval\\ClearEval-public\\evaluation_contract.py",
+    "sha256": "9c04ce4f789e94c321df62b2b32bb57025b629b4d3c2a4fea79be3295ee010f5"
+  },
+  "knowledge_inputs": [
+    {
+      "path": "C:\\ClearEval\\ClearEval-public\\KnowledgeBase\\time_kb.json",
+      "sha256": "5a7c04e3bad4963bb07f11c5675b55f2281068ea88e925f15a41715149c4ab11"
+    },
+    {
+      "path": "C:\\ClearEval\\ClearEval-public\\KnowledgeBase\\tissue.json",
+      "sha256": "6786bb3b94cd9f07deea0f3fc3535cb6b566c0e9f3753be6ddd978dd1629c5e8"
+    },
+    {
+      "path": "C:\\ClearEval\\ClearEval-public\\KnowledgeBase\\method_fluro_compati.json",
+      "sha256": "3c1b66ad96eb46c6ab8fb01563b193ec5657fbb9b0b9de627d51b7d43b461aeb"
+    }
+  ],
+  "results": [
+    {
+      "id": "FPC03",
+      "question_id": 21,
+      "answer_sha256": "6fd95f2d91c4bb66314b7dae3522370a4046e9871fc9f875e9269a958fbf5f8d",
+      "source_document": {
+        "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\optimizer_round2_20261010\\generation_confirmation_v2\\source_documents\\FPC03.json",
+        "sha256": "96cc981f71ca6402297c04b9ef0353fee7642a361488a9dafcf04081fc111235"
+      },
+      "baseline_v7": {
+        "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\optimizer_round3_20261011\\uniform_v7\\actual_01\\cells\\first7_posthoc\\FPC03\\posthoc.json",
+        "sha256": "4eeab49c7748fff515e676bd061319480d960771cd3a1a210be60a98c63f2828"
+      },
+      "semantic_author": "current assistant; author decomposition, not independent expert",
+      "core_scope": "initial clearing and RI; exclude labeling and its local washes, storage, imaging",
+      "operations": [
+        {
+          "source": {
+            "line": 8,
+            "start": 728,
+            "end": 811,
+            "quote": "1.1 Incubation with 20% (vol/vol) methanol in PBS (Temperature: RT, Time: 1 hour)  "
+          },
+          "phase": "core",
+          "repeat_count": 1,
+          "hours_lower": 1,
+          "hours_upper": 1,
+          "included_in_core_time": true,
+          "decision": "Use each separately written operation once; no inferred repeats."
+        },
+        {
+          "source": {
+            "line": 9,
+            "start": 812,
+            "end": 895,
+            "quote": "1.2 Incubation with 40% (vol/vol) methanol in PBS (Temperature: RT, Time: 1 hour)  "
+          },
+          "phase": "core",
+          "repeat_count": 1,
+          "hours_lower": 1,
+          "hours_upper": 1,
+          "included_in_core_time": true,
+          "decision": "Use each separately written operation once; no inferred repeats."
+        },
+        {
+          "source": {
+            "line": 10,
+            "start": 896,
+            "end": 979,
+            "quote": "1.3 Incubation with 60% (vol/vol) methanol in PBS (Temperature: RT, Time: 1 hour)  "
+          },
+          "phase": "core",
+          "repeat_count": 1,
+          "hours_lower": 1,
+          "hours_upper": 1,
+          "included_in_core_time": true,
+          "decision": "Use each separately written operation once; no inferred repeats."
+        },
+        {
+          "source": {
+            "line": 11,
+            "start": 980,
+            "end": 1063,
+            "quote": "1.4 Incubation with 80% (vol/vol) methanol in PBS (Temperature: RT, Time: 1 hour)  "
+          },
+          "phase": "core",
+          "repeat_count": 1,
+          "hours_lower": 1,
+          "hours_upper": 1,
+          "included_in_core_time": true,
+          "decision": "Use each separately written operation once; no inferred repeats."
+        },
+        {
+          "source": {
+            "line": 12,
+            "start": 1064,
+            "end": 1141,
+            "quote": "1.5 Incubation with 100% (vol/vol) methanol (Temperature: RT, Time: 1 hour)  "
+          },
+          "phase": "core",
+          "repeat_count": 1,
+          "hours_lower": 1,
+          "hours_upper": 1,
+          "included_in_core_time": true,
+          "decision": "Use each separately written operation once; no inferred repeats."
+        },
+        {
+          "source": {
+            "line": 15,
+            "start": 1156,
+            "end": 1281,
+            "quote": "2.1 Incubation with 1:500 anti-MAP2 antibody (Alexa Fluor 647 conjugated) in 100% methanol (Temperature: RT, Time: 2 hours)  "
+          },
+          "phase": "labeling",
+          "repeat_count": 1,
+          "hours_lower": 2,
+          "hours_upper": 2,
+          "included_in_core_time": false,
+          "decision": "Use each separately written operation once; no inferred repeats."
+        },
+        {
+          "source": {
+            "line": 16,
+            "start": 1282,
+            "end": 1349,
+            "quote": "2.2 Incubation with 100% methanol (Temperature: RT, Time: 1 hour)  "
+          },
+          "phase": "labeling_wash",
+          "repeat_count": 1,
+          "hours_lower": 1,
+          "hours_upper": 1,
+          "included_in_core_time": false,
+          "decision": "Use each separately written operation once; no inferred repeats."
+        },
+        {
+          "source": {
+            "line": 17,
+            "start": 1350,
+            "end": 1417,
+            "quote": "2.3 Incubation with 100% methanol (Temperature: RT, Time: 1 hour)  "
+          },
+          "phase": "labeling_wash",
+          "repeat_count": 1,
+          "hours_lower": 1,
+          "hours_upper": 1,
+          "included_in_core_time": false,
+          "decision": "Use each separately written operation once; no inferred repeats."
+        },
+        {
+          "source": {
+            "line": 20,
+            "start": 1436,
+            "end": 1525,
+            "quote": "3.1 Incubation with 100% (vol/vol) dibenzyl ether (DBE) (Temperature: RT, Time: 1 hour)  "
+          },
+          "phase": "core",
+          "repeat_count": 1,
+          "hours_lower": 1,
+          "hours_upper": 1,
+          "included_in_core_time": true,
+          "decision": "Use each separately written operation once; no inferred repeats."
+        },
+        {
+          "source": {
+            "line": 21,
+            "start": 1526,
+            "end": 1598,
+            "quote": "3.2 Incubation with 100% (vol/vol) DBE (Temperature: RT, Time: 1 hour)  "
+          },
+          "phase": "core",
+          "repeat_count": 1,
+          "hours_lower": 1,
+          "hours_upper": 1,
+          "included_in_core_time": true,
+          "decision": "Use each separately written operation once; no inferred repeats."
+        },
+        {
+          "source": {
+            "line": 22,
+            "start": 1599,
+            "end": 1671,
+            "quote": "3.3 Incubation with 100% (vol/vol) DBE (Temperature: RT, Time: 1 hour)  "
+          },
+          "phase": "core",
+          "repeat_count": 1,
+          "hours_lower": 1,
+          "hours_upper": 1,
+          "included_in_core_time": true,
+          "decision": "Use each separately written operation once; no inferred repeats."
+        },
+        {
+          "source": {
+            "line": 25,
+            "start": 1703,
+            "end": 1822,
+            "quote": "4.1 Incubation with RI-matching solution (1.48, e.g., SeeDB2 or custom RI solution) (Temperature: RT, Time: 24 hours)  "
+          },
+          "phase": "core",
+          "repeat_count": 1,
+          "hours_lower": 24,
+          "hours_upper": 24,
+          "included_in_core_time": true,
+          "decision": "Use each separately written operation once; no inferred repeats."
+        },
+        {
+          "source": {
+            "line": 26,
+            "start": 1823,
+            "end": 1906,
+            "quote": "4.2 Incubation with RI-matching solution (1.48) (Temperature: RT, Time: 24 hours)  "
+          },
+          "phase": "core",
+          "repeat_count": 1,
+          "hours_lower": 24,
+          "hours_upper": 24,
+          "included_in_core_time": true,
+          "decision": "Use each separately written operation once; no inferred repeats."
+        },
+        {
+          "source": {
+            "line": 27,
+            "start": 1907,
+            "end": 1990,
+            "quote": "4.3 Incubation with RI-matching solution (1.48) (Temperature: RT, Time: 24 hours)  "
+          },
+          "phase": "core",
+          "repeat_count": 1,
+          "hours_lower": 24,
+          "hours_upper": 24,
+          "included_in_core_time": true,
+          "decision": "Use each separately written operation once; no inferred repeats."
+        }
+      ],
+      "other_claims": [
+        {
+          "source": {
+            "line": 3,
+            "start": 87,
+            "end": 677,
+            "quote": "**Justification:** iDISCO+ is well-suited for clearing thick brain tissue blocks (up to 3 mm) while preserving weak endogenous fluorescent signals like GFP. It uses organic solvents that are compatible with lipid-soluble dyes and allows for long-term storage in refractive index-matched media. The combination of endogenous GFP and a secondary antibody labeling with Alexa Fluor 647 provides dual-color imaging, enabling clear visualization of sparse neuronal structures (e.g., dendrites) and their spatial relationships in 3D. MAP2 labeling enhances the resolution of dendritic morphology."
+          },
+          "interpretation": "3D is a spatial expression, not a duration"
+        },
+        {
+          "source": {
+            "line": 30,
+            "start": 2024,
+            "end": 2122,
+            "quote": "5.1 Incubation with fresh RI-matching solution (1.48) (Temperature: 4 ℃, Time: 1 week or longer)  "
+          },
+          "interpretation": "storage lower bound one week, no finite upper bound"
+        },
+        {
+          "source": {
+            "line": 31,
+            "start": 2123,
+            "end": 2293,
+            "quote": "5.2 Imaging using light-sheet or confocal microscopy with appropriate excitation/emission settings for GFP (488 nm / 509–549 nm) and Alexa Fluor 647 (633 nm / 650–700 nm)"
+          },
+          "interpretation": "imaging procedure without a reported duration"
+        }
+      ],
+      "relations": [
+        {
+          "fluorophore": "GFP",
+          "marker": "",
+          "source_line": 2,
+          "basis": "Declared endogenous reporter; no self-target relation added.",
+          "source_spans": [
+            {
+              "line": 2,
+              "start": 29,
+              "end": 86,
+              "quote": "**Chosen Labeling:** [GFP (内源), MAP2 + Alexa Fluor 647]  "
+            }
+          ]
+        },
+        {
+          "fluorophore": "Alexa Fluor 647",
+          "marker": "MAP2",
+          "source_line": 15,
+          "basis": "The answer explicitly states anti-MAP2 antibody (Alexa Fluor 647 conjugated).",
+          "source_spans": [
+            {
+              "line": 15,
+              "start": 1156,
+              "end": 1281,
+              "quote": "2.1 Incubation with 1:500 anti-MAP2 antibody (Alexa Fluor 647 conjugated) in 100% methanol (Temperature: RT, Time: 2 hours)  "
+            }
+          ]
+        }
+      ],
+      "proposed_original_marker_dict": {
+        "GFP": "",
+        "Alexa Fluor 647": "MAP2"
+      },
+      "reported_core_hours": [
+        80,
+        80
+      ],
+      "reported_all_pre_storage_hours": [
+        84,
+        84
+      ],
+      "qualification": "Exact sum of reported core durations under the registered exclusion of labeling and storage.",
+      "old_saved_time_hours": 78.0,
+      "saved_v7_metrics": {
+        "c_param": 2,
+        "co_order": 1,
+        "co_method": 1,
+        "co_param": 1,
+        "co_chem": 1,
+        "s_method": -1.0625,
+        "s_label": null,
+        "s_trans": 2.6784375046866993,
+        "s_time": 0.0,
+        "sr": 0.1111111111111111,
+        "sp": 0.1875,
+        "Com": 0.4444444444444444,
+        "Cor": 0.5833333333333334,
+        "Eff": null,
+        "IA": null,
+        "HV": null
+      },
+      "endpoint_replays": [
+        {
+          "time_hours": 80,
+          "quantitative_data": {
+            "method_name": "iDISCO+",
+            "tissue_ri_value": 1.46,
+            "total_time_hours": 80,
+            "sample_tier": "T02_THICK_SLICE_0P5_3MM",
+            "reagent_ri_value": null,
+            "protocol_time_hours": null
+          },
+          "original_function_results": {
+            "s_method": -1.0625,
+            "s_label": null,
+            "s_trans": 2.6784375046866993,
+            "s_time": 0.0,
+            "total_effectiveness_score": null,
+            "s_target_match": 6.0,
+            "s_marker_fluor_compat": null,
+            "s_method_fluor_compat": 1.2000000000000002,
+            "method_identity": {
+              "status": "RESOLVED_SINGLE",
+              "resolved_key": "iDISCO (iDISCO+)",
+              "components": []
+            },
+            "compatibility_audit": [
+              {
+                "kind": "method_fluor",
+                "method_name": "iDISCO+",
+                "fluorophore": "GFP",
+                "source": "KnowledgeBase/method_fluro_compati.json",
+                "value": 0.2,
+                "status": "TABLE_REPORTED"
+              },
+              {
+                "kind": "marker_fluor",
+                "marker": "MAP2",
+                "fluorophore": "Alexa Fluor 647",
+                "source": "KnowledgeBase/tissue.json",
+                "value": null,
+                "status": "UNKNOWN"
+              },
+              {
+                "kind": "method_fluor",
+                "method_name": "iDISCO+",
+                "fluorophore": "Alexa Fluor 647",
+                "source": "KnowledgeBase/method_fluro_compati.json",
+                "value": 0.9,
+                "status": "TABLE_REPORTED"
+              }
+            ],
+            "marker_coverage_audit": {
+              "reference_targets": [
+                {
+                  "marker_name": "β-III Tubulin (TUJ1)",
+                  "matched": false,
+                  "status": "NOT_MATCHED",
+                  "scientific_satisfaction": null,
+                  "identity_issues": []
+                },
+                {
+                  "marker_name": "MAP2",
+                  "matched": true,
+                  "status": "LEXICAL_ALIAS_MATCH",
+                  "scientific_satisfaction": null,
+                  "identity_issues": []
+                },
+                {
+                  "marker_name": "MAP2",
+                  "matched": true,
+                  "status": "LEXICAL_ALIAS_MATCH",
+                  "scientific_satisfaction": null,
+                  "identity_issues": []
+                },
+                {
+                  "marker_name": "EGFP / DiO",
+                  "matched": false,
+                  "status": "NOT_MATCHED",
+                  "scientific_satisfaction": null,
+                  "identity_issues": []
+                }
+              ],
+              "requirement_semantics": "Lexical reference coverage only, not scientific satisfaction; reviewed AND/OR requirements remain necessary",
+              "unmatched_reported_markers": [
+                "GFP"
+              ]
+            },
+            "time_computation": {
+              "policy": "kb-window-asymmetric-median-0.20-under-0.10-over-v1",
+              "source": "time_kb.json",
+              "requested_tier": "T02_THICK_SLICE_0P5_3MM",
+              "actual_hours": 80,
+              "min_hours": 2.0,
+              "max_hours": 8.0,
+              "median_hours": 4.0,
+              "tau_hours": 0.4,
+              "delta_hours": 72.0,
+              "tau_under_fraction": 0.2,
+              "tau_over_fraction": 0.1,
+              "status": "scored",
+              "resolved_tier": "T02_THICK_SLICE_0P5_3MM",
+              "method_key": "idisco+"
+            },
+            "_s_time_ref_source": "time_kb.json",
+            "_s_time_t_min": 2.0,
+            "_s_time_t_max": 8.0,
+            "_s_time_tau": 0.4,
+            "_s_time_t_act": 80,
+            "_s_time_tier": "T02_THICK_SLICE_0P5_3MM",
+            "_s_trans_status": "legacy_proxy_scored",
+            "_s_trans_ri_tissue": 1.46,
+            "_s_trans_ri_method_ref": 1.47,
+            "_s_trans_sigma": 0.021
+          },
+          "derived_metrics": {
+            "c_param": 2,
+            "co_order": 1,
+            "co_method": 1,
+            "co_param": 1,
+            "co_chem": 1,
+            "s_method": -1.0625,
+            "s_label": null,
+            "s_trans": 2.6784375046866993,
+            "s_time": 0.0,
+            "sr": 0.1111111111111111,
+            "sp": 0.1875,
+            "Com": 0.4444444444444444,
+            "Cor": 0.5833333333333334,
+            "Eff": null,
+            "IA": null,
+            "HV": null
+          }
+        }
+      ],
+      "conditional_numeric_ranges": {
+        "s_method": [
+          -1.0625,
+          -1.0625
+        ],
+        "s_label": null,
+        "s_trans": [
+          2.6784375046866993,
+          2.6784375046866993
+        ],
+        "s_time": [
+          0.0,
+          0.0
+        ],
+        "Com": [
+          0.4444444444444444,
+          0.4444444444444444
+        ],
+        "Cor": [
+          0.5833333333333334,
+          0.5833333333333334
+        ],
+        "Eff": null,
+        "IA": null,
+        "HV": null
+      },
+      "direct_scores_rejudged": false,
+      "frozen_primary_modified": false,
+      "KB_or_formula_modified": false,
+      "scientific_accuracy_established": false
+    },
+    {
+      "id": "FPC07",
+      "question_id": 248,
+      "answer_sha256": "8176364b5f9396ab515e49a6f4a50366343f27fe7da00e0cb666a36796c423d2",
+      "source_document": {
+        "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\optimizer_round2_20261010\\generation_confirmation_v2\\source_documents\\FPC07.json",
+        "sha256": "74131c5bc1b22f0cbf0dce8532c30369bf038ebc18718b52579cbb105d6304fe"
+      },
+      "baseline_v7": {
+        "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\optimizer_round3_20261011\\uniform_v7\\actual_01\\cells\\first7_posthoc\\FPC07\\posthoc.json",
+        "sha256": "7e04fc84be368322a3e77e3d17a4d979d7b5316230f8cc16e6b5854f765cc93c"
+      },
+      "semantic_author": "current assistant; author decomposition, not independent expert",
+      "core_scope": "initial clearing and RI; exclude labeling and its local washes, storage, imaging",
+      "operations": [
+        {
+          "source": {
+            "line": 7,
+            "start": 649,
+            "end": 746,
+            "quote": "1.1 Incubation with 50% (vol/vol) methanol in distilled water. (Temperature: RT, Time: 3 hours)  "
+          },
+          "phase": "core",
+          "repeat_count": 1,
+          "hours_lower": 3,
+          "hours_upper": 3,
+          "included_in_core_time": true,
+          "decision": "Use each separately written operation once; no inferred repeats."
+        },
+        {
+          "source": {
+            "line": 8,
+            "start": 747,
+            "end": 844,
+            "quote": "1.2 Incubation with 80% (vol/vol) methanol in distilled water. (Temperature: RT, Time: 3 hours)  "
+          },
+          "phase": "core",
+          "repeat_count": 1,
+          "hours_lower": 3,
+          "hours_upper": 3,
+          "included_in_core_time": true,
+          "decision": "Use each separately written operation once; no inferred repeats."
+        },
+        {
+          "source": {
+            "line": 9,
+            "start": 845,
+            "end": 924,
+            "quote": "1.3 Incubation with 100% (vol/vol) methanol. (Temperature: RT, Time: 3 hours)  "
+          },
+          "phase": "core",
+          "repeat_count": 1,
+          "hours_lower": 3,
+          "hours_upper": 3,
+          "included_in_core_time": true,
+          "decision": "Use each separately written operation once; no inferred repeats."
+        },
+        {
+          "source": {
+            "line": 10,
+            "start": 925,
+            "end": 1004,
+            "quote": "1.4 Incubation with 100% (vol/vol) methanol. (Temperature: RT, Time: 3 hours)  "
+          },
+          "phase": "core",
+          "repeat_count": 1,
+          "hours_lower": 3,
+          "hours_upper": 3,
+          "included_in_core_time": true,
+          "decision": "Use each separately written operation once; no inferred repeats."
+        },
+        {
+          "source": {
+            "line": 11,
+            "start": 1005,
+            "end": 1100,
+            "quote": "1.5 Incubation with 100% (vol/vol) dichloromethane (DCM). (Temperature: RT, Time: 30 minutes)  "
+          },
+          "phase": "core",
+          "repeat_count": 1,
+          "hours_lower": 0.5,
+          "hours_upper": 0.5,
+          "included_in_core_time": true,
+          "decision": "Use each separately written operation once; no inferred repeats."
+        },
+        {
+          "source": {
+            "line": 14,
+            "start": 1133,
+            "end": 1288,
+            "quote": "2.1 Incubation with staining solution containing Phalloidin conjugated to Alexa Fluor 647 (1:200 dilution) in methanol. (Temperature: RT, Time: 24 hours)  "
+          },
+          "phase": "labeling",
+          "repeat_count": 1,
+          "hours_lower": 24,
+          "hours_upper": 24,
+          "included_in_core_time": false,
+          "decision": "Use each separately written operation once; no inferred repeats."
+        },
+        {
+          "source": {
+            "line": 15,
+            "start": 1289,
+            "end": 1361,
+            "quote": "2.2 Wash with 100% (vol/vol) methanol. (Temperature: RT, Time: 1 hour)  "
+          },
+          "phase": "labeling_wash",
+          "repeat_count": 1,
+          "hours_lower": 1,
+          "hours_upper": 1,
+          "included_in_core_time": false,
+          "decision": "Use each separately written operation once; no inferred repeats."
+        },
+        {
+          "source": {
+            "line": 16,
+            "start": 1362,
+            "end": 1434,
+            "quote": "2.3 Wash with 100% (vol/vol) methanol. (Temperature: RT, Time: 1 hour)  "
+          },
+          "phase": "labeling_wash",
+          "repeat_count": 1,
+          "hours_lower": 1,
+          "hours_upper": 1,
+          "included_in_core_time": false,
+          "decision": "Use each separately written operation once; no inferred repeats."
+        },
+        {
+          "source": {
+            "line": 19,
+            "start": 1477,
+            "end": 1614,
+            "quote": "3.1 Incubation with BABB-D (1 part Benzyl Alcohol, 2 parts Benzyl Benzoate, 0.04% w/v Diphenyl ether). (Temperature: RT, Time: 3 hours)  "
+          },
+          "phase": "core",
+          "repeat_count": 1,
+          "hours_lower": 3,
+          "hours_upper": 3,
+          "included_in_core_time": true,
+          "decision": "Use each separately written operation once; no inferred repeats."
+        },
+        {
+          "source": {
+            "line": 20,
+            "start": 1615,
+            "end": 1726,
+            "quote": "3.2 Incubation with fresh BABB-D. (Temperature: RT, Time: Until tissue is transparent, typically 12-24 hours)  "
+          },
+          "phase": "core_typical_window",
+          "repeat_count": 1,
+          "hours_lower": 12,
+          "hours_upper": 24,
+          "included_in_core_time": true,
+          "decision": "Use each separately written operation once; no inferred repeats."
+        }
+      ],
+      "other_claims": [
+        {
+          "source": {
+            "line": 3,
+            "start": 90,
+            "end": 609,
+            "quote": "**Justification:** uDISCO is selected for its rapid clearing speed (3-5 days for whole mouse brain) and high transparency, which meets the requirement to complete imaging as soon as possible. It is compatible with tdTomato fluorescence preservation and allows for some tissue shrinkage, which is acceptable per the problem statement. Phalloidin conjugated to Alexa Fluor 647 is chosen to label the axonal cytoskeleton (F-actin), providing the necessary structural contrast while being spectrally distinct from tdTomato."
+          },
+          "interpretation": "General method claim of 3-5 days, not an additional operation"
+        },
+        {
+          "source": {
+            "line": 23,
+            "start": 1762,
+            "end": 1873,
+            "quote": "4.1 Store sample in fresh BABB-D at 4°C protected from light until imaging. (Temperature: 4°C, Time: Long-term)"
+          },
+          "interpretation": "Long-term storage with no numerical duration"
+        }
+      ],
+      "relations": [
+        {
+          "fluorophore": "tdTomato",
+          "marker": "",
+          "source_line": 2,
+          "basis": "Selected fluorescence identity; no self-target relation added.",
+          "source_spans": [
+            {
+              "line": 2,
+              "start": 28,
+              "end": 89,
+              "quote": "**Chosen Labeling:** [tdTomato, Phalloidin+Alexa Fluor 647]  "
+            }
+          ]
+        },
+        {
+          "fluorophore": "Alexa Fluor 647",
+          "marker": "F-actin",
+          "source_lines": [
+            3,
+            14
+          ],
+          "basis": "Same answer explicitly describes Phalloidin conjugated to Alexa Fluor 647 and identifies its target as F-actin. Phalloidin is the labeling reagent, not a second independently selected fluorophore.",
+          "source_spans": [
+            {
+              "line": 3,
+              "start": 90,
+              "end": 609,
+              "quote": "**Justification:** uDISCO is selected for its rapid clearing speed (3-5 days for whole mouse brain) and high transparency, which meets the requirement to complete imaging as soon as possible. It is compatible with tdTomato fluorescence preservation and allows for some tissue shrinkage, which is acceptable per the problem statement. Phalloidin conjugated to Alexa Fluor 647 is chosen to label the axonal cytoskeleton (F-actin), providing the necessary structural contrast while being spectrally distinct from tdTomato."
+            },
+            {
+              "line": 14,
+              "start": 1133,
+              "end": 1288,
+              "quote": "2.1 Incubation with staining solution containing Phalloidin conjugated to Alexa Fluor 647 (1:200 dilution) in methanol. (Temperature: RT, Time: 24 hours)  "
+            }
+          ]
+        }
+      ],
+      "proposed_original_marker_dict": {
+        "tdTomato": "",
+        "Alexa Fluor 647": "F-actin"
+      },
+      "reported_core_hours": [
+        27.5,
+        39.5
+      ],
+      "reported_all_pre_storage_hours": [
+        53.5,
+        65.5
+      ],
+      "qualification": "Reported typical timing scenario only. Until-transparent stopping condition prevents interpreting 12-24 h as guaranteed actual bounds.",
+      "old_saved_time_hours": 21.0,
+      "saved_v7_metrics": {
+        "c_param": 3,
+        "co_order": 2,
+        "co_method": 1,
+        "co_param": 1,
+        "co_chem": 1,
+        "s_method": -0.38,
+        "s_label": null,
+        "s_trans": 1.2333368715215602,
+        "s_time": null,
+        "sr": 0.4444444444444444,
+        "sp": 0.2727272727272727,
+        "Com": 0.7777777777777778,
+        "Cor": 0.6666666666666666,
+        "Eff": null,
+        "IA": null,
+        "HV": null
+      },
+      "endpoint_replays": [
+        {
+          "time_hours": 27.5,
+          "quantitative_data": {
+            "method_name": "uDISCO",
+            "tissue_ri_value": 1.46,
+            "total_time_hours": 27.5,
+            "sample_tier": "T04_WHOLE_MOUSE_BRAIN_5_12MM",
+            "reagent_ri_value": null,
+            "protocol_time_hours": null
+          },
+          "original_function_results": {
+            "s_method": -0.38,
+            "s_label": 0.0,
+            "s_trans": 1.2333368715215602,
+            "s_time": 0.2044823387042352,
+            "total_effectiveness_score": 1.0578192102257955,
+            "s_target_match": 0.0,
+            "s_marker_fluor_compat": 6.0,
+            "s_method_fluor_compat": 4.5,
+            "method_identity": {
+              "status": "RESOLVED_SINGLE",
+              "resolved_key": "uDISCO",
+              "components": []
+            },
+            "compatibility_audit": [
+              {
+                "kind": "method_fluor",
+                "method_name": "uDISCO",
+                "fluorophore": "tdTomato",
+                "source": "KnowledgeBase/method_fluro_compati.json",
+                "value": 0.75,
+                "status": "TABLE_REPORTED"
+              },
+              {
+                "kind": "marker_fluor",
+                "marker": "F-actin",
+                "fluorophore": "Alexa Fluor 647",
+                "source": "KnowledgeBase/tissue.json",
+                "value": true,
+                "status": "TABLE_REPORTED"
+              },
+              {
+                "kind": "method_fluor",
+                "method_name": "uDISCO",
+                "fluorophore": "Alexa Fluor 647",
+                "source": "KnowledgeBase/method_fluro_compati.json",
+                "value": 0.75,
+                "status": "TABLE_REPORTED"
+              }
+            ],
+            "marker_coverage_audit": {
+              "reference_targets": [
+                {
+                  "marker_name": "β-III Tubulin (TUJ1)",
+                  "matched": false,
+                  "status": "NOT_MATCHED",
+                  "scientific_satisfaction": null,
+                  "identity_issues": []
+                },
+                {
+                  "marker_name": "MAP2",
+                  "matched": false,
+                  "status": "NOT_MATCHED",
+                  "scientific_satisfaction": null,
+                  "identity_issues": []
+                }
+              ],
+              "requirement_semantics": "Lexical reference coverage only, not scientific satisfaction; reviewed AND/OR requirements remain necessary",
+              "unmatched_reported_markers": [
+                "tdTomato",
+                "F-actin"
+              ]
+            },
+            "time_computation": {
+              "policy": "kb-window-asymmetric-median-0.20-under-0.10-over-v1",
+              "source": "time_kb.json",
+              "requested_tier": "T04_WHOLE_MOUSE_BRAIN_5_12MM",
+              "actual_hours": 27.5,
+              "min_hours": 72.0,
+              "max_hours": 120.0,
+              "median_hours": 96.0,
+              "tau_hours": 19.200000000000003,
+              "delta_hours": 44.5,
+              "tau_under_fraction": 0.2,
+              "tau_over_fraction": 0.1,
+              "status": "scored",
+              "resolved_tier": "T04_WHOLE_MOUSE_BRAIN_5_12MM",
+              "method_key": "udisco"
+            },
+            "_s_time_ref_source": "time_kb.json",
+            "_s_time_t_min": 72.0,
+            "_s_time_t_max": 120.0,
+            "_s_time_tau": 19.200000000000003,
+            "_s_time_t_act": 27.5,
+            "_s_time_tier": "T04_WHOLE_MOUSE_BRAIN_5_12MM",
+            "_s_trans_status": "legacy_proxy_scored",
+            "_s_trans_ri_tissue": 1.46,
+            "_s_trans_ri_method_ref": 1.5,
+            "_s_trans_sigma": 0.03
+          },
+          "derived_metrics": {
+            "c_param": 3,
+            "co_order": 2,
+            "co_method": 1,
+            "co_param": 1,
+            "co_chem": 1,
+            "s_method": -0.38,
+            "s_label": 0.0,
+            "s_trans": 1.2333368715215602,
+            "s_time": 0.2044823387042352,
+            "sr": 0.4444444444444444,
+            "sp": 0.2727272727272727,
+            "Com": 0.7777777777777778,
+            "Cor": 0.6666666666666666,
+            "Eff": 0.22581826751881628,
+            "IA": 0.22581826751881628,
+            "HV": 0.1170909535282751
+          }
+        },
+        {
+          "time_hours": 39.5,
+          "quantitative_data": {
+            "method_name": "uDISCO",
+            "tissue_ri_value": 1.46,
+            "total_time_hours": 39.5,
+            "sample_tier": "T04_WHOLE_MOUSE_BRAIN_5_12MM",
+            "reagent_ri_value": null,
+            "protocol_time_hours": null
+          },
+          "original_function_results": {
+            "s_method": -0.38,
+            "s_label": 0.0,
+            "s_trans": 1.2333368715215602,
+            "s_time": 0.716040562421143,
+            "total_effectiveness_score": 1.5693774339427033,
+            "s_target_match": 0.0,
+            "s_marker_fluor_compat": 6.0,
+            "s_method_fluor_compat": 4.5,
+            "method_identity": {
+              "status": "RESOLVED_SINGLE",
+              "resolved_key": "uDISCO",
+              "components": []
+            },
+            "compatibility_audit": [
+              {
+                "kind": "method_fluor",
+                "method_name": "uDISCO",
+                "fluorophore": "tdTomato",
+                "source": "KnowledgeBase/method_fluro_compati.json",
+                "value": 0.75,
+                "status": "TABLE_REPORTED"
+              },
+              {
+                "kind": "marker_fluor",
+                "marker": "F-actin",
+                "fluorophore": "Alexa Fluor 647",
+                "source": "KnowledgeBase/tissue.json",
+                "value": true,
+                "status": "TABLE_REPORTED"
+              },
+              {
+                "kind": "method_fluor",
+                "method_name": "uDISCO",
+                "fluorophore": "Alexa Fluor 647",
+                "source": "KnowledgeBase/method_fluro_compati.json",
+                "value": 0.75,
+                "status": "TABLE_REPORTED"
+              }
+            ],
+            "marker_coverage_audit": {
+              "reference_targets": [
+                {
+                  "marker_name": "β-III Tubulin (TUJ1)",
+                  "matched": false,
+                  "status": "NOT_MATCHED",
+                  "scientific_satisfaction": null,
+                  "identity_issues": []
+                },
+                {
+                  "marker_name": "MAP2",
+                  "matched": false,
+                  "status": "NOT_MATCHED",
+                  "scientific_satisfaction": null,
+                  "identity_issues": []
+                }
+              ],
+              "requirement_semantics": "Lexical reference coverage only, not scientific satisfaction; reviewed AND/OR requirements remain necessary",
+              "unmatched_reported_markers": [
+                "tdTomato",
+                "F-actin"
+              ]
+            },
+            "time_computation": {
+              "policy": "kb-window-asymmetric-median-0.20-under-0.10-over-v1",
+              "source": "time_kb.json",
+              "requested_tier": "T04_WHOLE_MOUSE_BRAIN_5_12MM",
+              "actual_hours": 39.5,
+              "min_hours": 72.0,
+              "max_hours": 120.0,
+              "median_hours": 96.0,
+              "tau_hours": 19.200000000000003,
+              "delta_hours": 32.5,
+              "tau_under_fraction": 0.2,
+              "tau_over_fraction": 0.1,
+              "status": "scored",
+              "resolved_tier": "T04_WHOLE_MOUSE_BRAIN_5_12MM",
+              "method_key": "udisco"
+            },
+            "_s_time_ref_source": "time_kb.json",
+            "_s_time_t_min": 72.0,
+            "_s_time_t_max": 120.0,
+            "_s_time_tau": 19.200000000000003,
+            "_s_time_t_act": 39.5,
+            "_s_time_tier": "T04_WHOLE_MOUSE_BRAIN_5_12MM",
+            "_s_trans_status": "legacy_proxy_scored",
+            "_s_trans_ri_tissue": 1.46,
+            "_s_trans_ri_method_ref": 1.5,
+            "_s_trans_sigma": 0.03
+          },
+          "derived_metrics": {
+            "c_param": 3,
+            "co_order": 2,
+            "co_method": 1,
+            "co_param": 1,
+            "co_chem": 1,
+            "s_method": -0.38,
+            "s_label": 0.0,
+            "s_trans": 1.2333368715215602,
+            "s_time": 0.716040562421143,
+            "sr": 0.4444444444444444,
+            "sp": 0.2727272727272727,
+            "Com": 0.7777777777777778,
+            "Cor": 0.6666666666666666,
+            "Eff": 0.2684481194952253,
+            "IA": 0.2684481194952253,
+            "HV": 0.13919532121974643
+          }
+        }
+      ],
+      "conditional_numeric_ranges": {
+        "s_method": [
+          -0.38,
+          -0.38
+        ],
+        "s_label": [
+          0.0,
+          0.0
+        ],
+        "s_trans": [
+          1.2333368715215602,
+          1.2333368715215602
+        ],
+        "s_time": [
+          0.2044823387042352,
+          0.716040562421143
+        ],
+        "Com": [
+          0.7777777777777778,
+          0.7777777777777778
+        ],
+        "Cor": [
+          0.6666666666666666,
+          0.6666666666666666
+        ],
+        "Eff": [
+          0.22581826751881628,
+          0.2684481194952253
+        ],
+        "IA": [
+          0.22581826751881628,
+          0.2684481194952253
+        ],
+        "HV": [
+          0.1170909535282751,
+          0.13919532121974643
+        ]
+      },
+      "direct_scores_rejudged": false,
+      "frozen_primary_modified": false,
+      "KB_or_formula_modified": false,
+      "scientific_accuracy_established": false
+    }
+  ],
+  "checks": [
+    {
+      "id": "FPC03",
+      "literal_operations": 14,
+      "all_span_and_sum_checks_passed": true
+    },
+    {
+      "id": "FPC07",
+      "literal_operations": 10,
+      "all_span_and_sum_checks_passed": true
+    }
+  ]
+}

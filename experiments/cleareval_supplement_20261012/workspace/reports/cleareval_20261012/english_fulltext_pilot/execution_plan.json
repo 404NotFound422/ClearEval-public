@@ -1,0 +1,57 @@
+{
+  "created_utc": "2026-10-12T11:09:55.020338+00:00",
+  "frozen_before_scores": true,
+  "conditions": [
+    "baseline",
+    "renumber_operations",
+    "merge_adjacent_operations",
+    "delete_reported_core_operations"
+  ],
+  "full_text_positions": 28,
+  "paired_differences": 12,
+  "natural_answer_n": 8,
+  "threshold": 0.7,
+  "route_resolver": "unchanged cce_method_family_steps_v1.resolve",
+  "segmentation": "unchanged cce_validation.segment on each edited full text",
+  "reference_policy": "all compatible complete versions; max SR, same-version SP, fixed order; additionally report baseline-reference-locked deltas",
+  "deletion_scope": "Author-defined reported core blocks, not newly expert-confirmed mandatory-operation adjudications",
+  "scientific_claims": "development diagnostic, not new full-CCE evaluation, not independent translation verification",
+  "new_generative_requests": 0,
+  "control_specs": {
+    "R3C04": {
+      "merge": [
+        47,
+        48
+      ],
+      "delete": [
+        47,
+        48,
+        49,
+        50,
+        51,
+        52
+      ],
+      "crossrefs": {
+        "29": "5.1",
+        "33": "6.1",
+        "40": "8.1"
+      },
+      "deletion_target": "Reported post-labeling dehydration sequence, steps 10.1–10.6; earlier pretreatment dehydration retained"
+    },
+    "R3C07": {
+      "merge": [
+        28,
+        29
+      ],
+      "delete": [
+        28,
+        29,
+        30,
+        31,
+        32
+      ],
+      "crossrefs": {},
+      "deletion_target": "Reported THF dehydration sequence, steps 6.1–6.5"
+    }
+  }
+}

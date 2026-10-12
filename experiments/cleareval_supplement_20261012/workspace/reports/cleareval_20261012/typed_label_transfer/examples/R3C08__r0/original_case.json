@@ -1,0 +1,822 @@
+{
+  "case_id": "round3_confirmation_08",
+  "anonymous_answer_id": "R3C08",
+  "question_id": 248,
+  "specific_question": "一只成年小鼠整脑已注射 AAV-tdTomato 用于逆行标记长程投射神经元并已固定，目标是在光片显微镜下尽快完成全脑成像，可接受一定程度的组织收缩。需根据以下科学目标选择兼容的荧光/标记策略：需要保留 tdTomato 内源示踪信号以追踪长程投射，并同时标记轴突骨架结构，并选择匹配的组织透明方法。请仅输出 protocol，第 1 行写明所选双靶点荧光/标记策略和组织透明方法，随后仅列出透明处理、RI 匹配和保存/成像前处理步骤的关键试剂、条件和时间。",
+  "model_response": "**Chosen Method:** iDISCO+  \n**Chosen Labeling:** [tdTomato (endogenous), β-III Tubulin (TUJ1) + Alexa Fluor 647]  \n**Justification:** iDISCO+ is ideal for whole adult mouse brains due to its rapid delipidation and strong compatibility with red-shifted fluorescent proteins like tdTomato, which is critical for preserving the AAV-driven retrograde labeling signal. It also allows effective immunolabeling of cytoskeletal targets such as β-III Tubulin (a pan-neuronal axon marker) using Alexa Fluor 647-conjugated secondary antibodies, which are highly stable under iDISCO+ organic solvent conditions. The method induces moderate tissue shrinkage (~20–30%), which is acceptable per the problem statement, and achieves high transparency within days—enabling fast light-sheet imaging.\n\n**Protocol Steps:**  \n1 Dehydration  \n1.1 Incubation with 20% (vol/vol) methanol in PBS.(Temperature: RT, Time: 1 hour)  \n1.2 Incubation with 40% (vol/vol) methanol in PBS.(Temperature: RT, Time: 1 hour)  \n1.3 Incubation with 60% (vol/vol) methanol in PBS.(Temperature: RT, Time: 1 hour)  \n1.4 Incubation with 80% (vol/vol) methanol in PBS.(Temperature: RT, Time: 1 hour)  \n1.5 Incubation with 100% (vol/vol) methanol.(Temperature: RT, Time: 1 hour)  \n1.6 Incubation with 100% (vol/vol) methanol.(Temperature: RT, Time: 1 hour)  \n\n2 Bleaching (optional but recommended for endogenous fluorescence preservation)  \n2.1 Incubation with chilled fresh 5% (vol/vol) H₂O₂ in methanol (1 volume 30% H₂O₂ to 5 volumes MeOH).(Temperature: 4 ℃, Time: 12 hours)  \n\n3 Rehydration  \n3.1 Incubation with 80% (vol/vol) methanol in PBS.(Temperature: RT, Time: 1 hour)  \n3.2 Incubation with 60% (vol/vol) methanol in PBS.(Temperature: RT, Time: 1 hour)  \n3.3 Incubation with 40% (vol/vol) methanol in PBS.(Temperature: RT, Time: 1 hour)  \n3.4 Incubation with 20% (vol/vol) methanol in PBS.(Temperature: RT, Time: 1 hour)  \n3.5 Incubation with PBS + 0.2% (vol/vol) Triton X-100 (PBT).(Temperature: RT, Time: 1 hour)  \n\n4 Permeabilization and Blocking  \n4.1 Incubation with PBT + 20% (vol/vol) DMSO + 0.3 M glycine.(Temperature: 37 ℃, Time: 24 hours)  \n4.2 Incubation with PBT + 10% (vol/vol) DMSO + 6% (wt/vol) donkey serum (blocking buffer).(Temperature: 37 ℃, Time: 24 hours)  \n\n5 Primary Antibody Staining  \n5.1 Incubation with anti-β-III Tubulin (TUJ1) primary antibody diluted 1:500 in blocking buffer.(Temperature: 37 ℃, Time: 72 hours)  \n\n6 Wash  \n6.1 Incubation with PBT.(Temperature: RT, Time: 6 hours)  \n6.2 Incubation with PBT.(Temperature: RT, Time: 6 hours)  \n6.3 Incubation with PBT.(Temperature: RT, Time: 6 hours)  \n6.4 Incubation with PBT.(Temperature: RT, Time: 6 hours)  \n\n7 Secondary Antibody Staining  \n7.1 Incubation with Alexa Fluor 647-conjugated donkey anti-mouse IgG (H+L) diluted 1:300 in blocking buffer.(Temperature: 37 ℃, Time: 48 hours)  \n\n8 Wash  \n8.1 Incubation with PBT.(Temperature: RT, Time: 6 hours)  \n8.2 Incubation with PBT.(Temperature: RT, Time: 6 hours)  \n8.3 Incubation with PBT.(Temperature: RT, Time: 6 hours)  \n\n9 Dehydration (post-immunostaining)  \n9.1 Incubation with 20% (vol/vol) methanol in PBS.(Temperature: RT, Time: 1 hour)  \n9.2 Incubation with 40% (vol/vol) methanol in PBS.(Temperature: RT, Time: 1 hour)  \n9.3 Incubation with 60% (vol/vol) methanol in PBS.(Temperature: RT, Time: 1 hour)  \n9.4 Incubation with 80% (vol/vol) methanol in PBS.(Temperature: RT, Time: 1 hour)  \n9.5 Incubation with 100% (vol/vol) methanol.(Temperature: RT, Time: 1 hour)  \n9.6 Incubation with 100% (vol/vol) methanol.(Temperature: RT, Time: 1 hour)  \n\n10 Delipidation  \n10.1 Incubation with dichloromethane (DCM).(Temperature: RT, Time: 30 minutes)  \n10.2 Incubation with dichloromethane (DCM).(Temperature: RT, Time: 30 minutes)  \n\n11 Refractive Index Matching  \n11.1 Incubation with 100% (vol/vol) dibenzyl ether (DBE, Sigma 108014-1KG) without shaking.(Temperature: RT, Time: 2 hours)  \n\n12 Storage and Imaging Preparation  \n12.1 Transfer brain to glass vial filled with fresh DBE and store at RT in the dark until light-sheet imaging.(Temperature: RT, Time: ≤7 days)",
+  "answer_sha256": "576f2a4e8f6878885c8559a568d55cebdde4abf5239cd611169eaef1ad8ee291",
+  "question_sha256": "63df38158aa3cb5cd1f907d21c426b65b9b6bd48096f98d0d0b11c530f1bf82f",
+  "references": [
+    {
+      "route_id": "iDISCO+",
+      "route_aliases": [
+        "iDISCO+",
+        "iDISCO +",
+        "iDISCO Plus",
+        "iDISCO-plus"
+      ],
+      "method_family_id": "iDISCO_plus_2016",
+      "method_family_name": "iDISCO+ (2016)",
+      "family_id": "Renier_Cell_2016_iDISCOplus_10.1016_j.cell.2016.05.007",
+      "true_multiversion_group": "IDISCO_PLUS_2016_POST_IMMUNOLABEL_CLEARING",
+      "question_ids": [
+        1,
+        2,
+        21,
+        22,
+        23,
+        248
+      ],
+      "task_scope_bindings": [
+        {
+          "question_id": 1,
+          "allowed_for_new_conditional_step_diagnostic": true,
+          "scope_status": "conditional_whole_brain_operation_coverage",
+          "source_task_applicability_confirmed": false,
+          "formal_eligible": false,
+          "main_v7_scores_unchanged": true,
+          "task_specific_parameters_validated": false,
+          "prerequisite": "Appropriate immunolabeling before this clearing branch is conditional, not asserted completed.",
+          "reason": "Adult whole brains are explicitly represented in both source workflows; target labels/outcomes remain unconfirmed."
+        },
+        {
+          "question_id": 2,
+          "allowed_for_new_conditional_step_diagnostic": true,
+          "scope_status": "conditional_whole_brain_operation_coverage",
+          "source_task_applicability_confirmed": false,
+          "formal_eligible": false,
+          "main_v7_scores_unchanged": true,
+          "task_specific_parameters_validated": false,
+          "prerequisite": "Appropriate immunolabeling before this clearing branch is conditional, not asserted completed.",
+          "reason": "Adult whole brains are explicitly represented in both source workflows; target labels/outcomes remain unconfirmed."
+        },
+        {
+          "question_id": 21,
+          "allowed_for_new_conditional_step_diagnostic": true,
+          "scope_status": "conditional_brain_block_operation_diagnostic_size_schedule_unverified",
+          "source_task_applicability_confirmed": false,
+          "formal_eligible": false,
+          "main_v7_scores_unchanged": true,
+          "task_specific_parameters_validated": false,
+          "prerequisite": "Appropriate immunolabeling before this clearing branch is conditional, not asserted completed.",
+          "reason": "The bench source allows trimming brain/organ to an appropriate size and uses a common clearing section. Neither author source reports a distinct 3 mm clearing action list or a validated 3 mm schedule; transfer is limited to a conditional operation diagnostic, not a claim of exact parameter or outcome support."
+        },
+        {
+          "question_id": 22,
+          "allowed_for_new_conditional_step_diagnostic": true,
+          "scope_status": "conditional_brain_block_operation_diagnostic_size_schedule_unverified",
+          "source_task_applicability_confirmed": false,
+          "formal_eligible": false,
+          "main_v7_scores_unchanged": true,
+          "task_specific_parameters_validated": false,
+          "prerequisite": "Appropriate immunolabeling before this clearing branch is conditional, not asserted completed.",
+          "reason": "The bench source allows trimming brain/organ to an appropriate size and uses a common clearing section. Neither author source reports a distinct 3 mm clearing action list or a validated 3 mm schedule; transfer is limited to a conditional operation diagnostic, not a claim of exact parameter or outcome support."
+        },
+        {
+          "question_id": 23,
+          "allowed_for_new_conditional_step_diagnostic": true,
+          "scope_status": "conditional_brain_block_operation_diagnostic_size_schedule_unverified",
+          "source_task_applicability_confirmed": false,
+          "formal_eligible": false,
+          "main_v7_scores_unchanged": true,
+          "task_specific_parameters_validated": false,
+          "prerequisite": "Appropriate immunolabeling before this clearing branch is conditional, not asserted completed.",
+          "reason": "The bench source allows trimming brain/organ to an appropriate size and uses a common clearing section. Neither author source reports a distinct 3 mm clearing action list or a validated 3 mm schedule; transfer is limited to a conditional operation diagnostic, not a claim of exact parameter or outcome support."
+        },
+        {
+          "question_id": 248,
+          "allowed_for_new_conditional_step_diagnostic": true,
+          "scope_status": "route_only_native_reporter_task_applicability_unconfirmed",
+          "source_task_applicability_confirmed": false,
+          "formal_eligible": false,
+          "main_v7_scores_unchanged": true,
+          "task_specific_parameters_validated": false,
+          "prerequisite": "Appropriate immunolabeling before this clearing branch is conditional, not asserted completed.",
+          "reason": "Original task requires native reporter fluorescence; immunolabel amplification is not equivalent. This is route-operation coverage only, not task-compatible CCE evidence."
+        }
+      ],
+      "full_action_scope": {
+        "scope_id": "IDISCO_PLUS_2016_POST_IMMUNOLABEL_CLEARING",
+        "start": "Fixed brain after an appropriate immunolabeling branch; no assertion that this prerequisite is already satisfied in the benchmark answer.",
+        "end": "Complete author clearing and RI sequence, including reported terminal storage or pre-imaging handling; excludes microscope-specific chamber construction and image acquisition.",
+        "included_modules": [
+          "post-immunolabel dehydration",
+          "clearing",
+          "RI matching",
+          "reported terminal handling"
+        ],
+        "excluded_modules": [
+          "initial fixation already supplied by the task",
+          "pretreatment and immunolabeling upstream of clearing",
+          "microscope-specific chamber construction",
+          "image acquisition",
+          "any vector engineering or delivery"
+        ],
+        "scope_completeness": "Every action in the selected author clearing section is retained; repeated treatments are retained as count-bearing operations, not truncated to a favorable shared prefix.",
+        "upstream_condition_is_not_established": true,
+        "upstream_workflow_not_reconstructed_in_this_package": true,
+        "action_granularity": "Same as existing supplement: individual concentration levels; repeated identical treatment is one operation retaining its repeat count; independently prescribed terminal handling is retained."
+      },
+      "source_path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\reference_recovery\\idisco_plus_2016\\publisher_attachments\\1-s2.0-S0092867416305554-mmc8.pdf",
+      "source_sha256": "8176ba46b6eb4bda5dfb3531c1fc108ea2271d6c382f8b5498ec33b78685b244",
+      "source_url": "https://ars.els-cdn.com/content/image/1-s2.0-S0092867416305554-mmc8.pdf",
+      "doi": "10.1016/j.cell.2016.05.007",
+      "status": "source_extracted",
+      "human_confirmation": null,
+      "formal_eligible": false,
+      "source_scope": "Complete selected author clearing procedure within the stated conditional start/end boundary; no biological necessity or task efficacy confirmation.",
+      "excluded_aliases": [
+        "iDISCO",
+        "iDISCO 2014",
+        "3DISCO"
+      ],
+      "explicit_version_priority": true,
+      "version_selection_rule": "An explicitly named author/date/version must restrict selection to that version; an unspecified iDISCO+ version may compare the two complete candidates. Do not infer version from a wrong parameter alone.",
+      "prerequisites": [
+        "Fixed brain after an appropriate immunolabeling branch; no assertion that this prerequisite is already satisfied in the benchmark answer."
+      ],
+      "exclusions": [
+        "initial fixation already supplied by the task",
+        "pretreatment and immunolabeling upstream of clearing",
+        "microscope-specific chamber construction",
+        "image acquisition",
+        "any vector engineering or delivery"
+      ],
+      "new_model_requests": 0,
+      "reference_id": "IDISCO_PLUS_2016_SUPPLEMENT_METHOD_FAMILY_V1",
+      "protocol_version": "Cell 2016 Supplemental Experimental Procedures, sample clearing",
+      "version_id": "IDISCO_PLUS_2016_ARTICLE_SUPPLEMENT",
+      "version_aliases": [
+        "2016 Supplemental Experimental Procedures",
+        "Renier 2016 supplement",
+        "Cell 2016 supplement"
+      ],
+      "source_pages": [
+        27
+      ],
+      "steps": [
+        {
+          "step_id": "IDP16-CLEAR-01",
+          "text": "After immunolabeling, dehydrate the brain in 20% methanol in water for 1 hour.",
+          "module": "clearing",
+          "source_anchor": "publisher mmc8 physical p27; extracted page text [1044:1217); Supplemental Experimental Procedures, iDISCO+",
+          "source_spans": [
+            {
+              "pdf_path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\reference_recovery\\idisco_plus_2016\\publisher_attachments\\1-s2.0-S0092867416305554-mmc8.pdf",
+              "pdf_sha256": "8176ba46b6eb4bda5dfb3531c1fc108ea2271d6c382f8b5498ec33b78685b244",
+              "pdf_page_one_based": 27,
+              "text_path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\reference_recovery\\idisco_plus_2016\\publisher_pages\\publisher_p027.txt",
+              "text_sha256": "c6c1326eacb2b1c844104ce4a480e62c734b36125187dd6d3c7b317d74590f90",
+              "offset_unit": "Unicode code points in UTF-8 decoded page text; end exclusive",
+              "start": 1044,
+              "end": 1217,
+              "quote": "Samples were dehydrated in 20% methanol (in \nddH2O) for 1h, 40% methanol / H2O for 1h, 60% methanol / H2O for 1h, 80% methanol \n/ H2O for 1h, and 100% Methanol for 1h twice.",
+              "quote_sha256": "acfb332deffd77241043c00b1ddd4d7260885f0dfa3017420c917823de14550a"
+            }
+          ],
+          "required": true,
+          "required_scope": "coverage of the selected author-reported procedure, not independently established biological necessity",
+          "timing_status": "author_reported",
+          "notes": [],
+          "source_workflow_step_id": "IDP16-F20"
+        },
+        {
+          "step_id": "IDP16-CLEAR-02",
+          "text": "After immunolabeling, dehydrate the brain in 40% methanol in water for 1 hour.",
+          "module": "clearing",
+          "source_anchor": "publisher mmc8 physical p27; extracted page text [1044:1217); Supplemental Experimental Procedures, iDISCO+",
+          "source_spans": [
+            {
+              "pdf_path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\reference_recovery\\idisco_plus_2016\\publisher_attachments\\1-s2.0-S0092867416305554-mmc8.pdf",
+              "pdf_sha256": "8176ba46b6eb4bda5dfb3531c1fc108ea2271d6c382f8b5498ec33b78685b244",
+              "pdf_page_one_based": 27,
+              "text_path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\reference_recovery\\idisco_plus_2016\\publisher_pages\\publisher_p027.txt",
+              "text_sha256": "c6c1326eacb2b1c844104ce4a480e62c734b36125187dd6d3c7b317d74590f90",
+              "offset_unit": "Unicode code points in UTF-8 decoded page text; end exclusive",
+              "start": 1044,
+              "end": 1217,
+              "quote": "Samples were dehydrated in 20% methanol (in \nddH2O) for 1h, 40% methanol / H2O for 1h, 60% methanol / H2O for 1h, 80% methanol \n/ H2O for 1h, and 100% Methanol for 1h twice.",
+              "quote_sha256": "acfb332deffd77241043c00b1ddd4d7260885f0dfa3017420c917823de14550a"
+            }
+          ],
+          "required": true,
+          "required_scope": "coverage of the selected author-reported procedure, not independently established biological necessity",
+          "timing_status": "author_reported",
+          "notes": [],
+          "source_workflow_step_id": "IDP16-F21"
+        },
+        {
+          "step_id": "IDP16-CLEAR-03",
+          "text": "After immunolabeling, dehydrate the brain in 60% methanol in water for 1 hour.",
+          "module": "clearing",
+          "source_anchor": "publisher mmc8 physical p27; extracted page text [1044:1217); Supplemental Experimental Procedures, iDISCO+",
+          "source_spans": [
+            {
+              "pdf_path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\reference_recovery\\idisco_plus_2016\\publisher_attachments\\1-s2.0-S0092867416305554-mmc8.pdf",
+              "pdf_sha256": "8176ba46b6eb4bda5dfb3531c1fc108ea2271d6c382f8b5498ec33b78685b244",
+              "pdf_page_one_based": 27,
+              "text_path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\reference_recovery\\idisco_plus_2016\\publisher_pages\\publisher_p027.txt",
+              "text_sha256": "c6c1326eacb2b1c844104ce4a480e62c734b36125187dd6d3c7b317d74590f90",
+              "offset_unit": "Unicode code points in UTF-8 decoded page text; end exclusive",
+              "start": 1044,
+              "end": 1217,
+              "quote": "Samples were dehydrated in 20% methanol (in \nddH2O) for 1h, 40% methanol / H2O for 1h, 60% methanol / H2O for 1h, 80% methanol \n/ H2O for 1h, and 100% Methanol for 1h twice.",
+              "quote_sha256": "acfb332deffd77241043c00b1ddd4d7260885f0dfa3017420c917823de14550a"
+            }
+          ],
+          "required": true,
+          "required_scope": "coverage of the selected author-reported procedure, not independently established biological necessity",
+          "timing_status": "author_reported",
+          "notes": [],
+          "source_workflow_step_id": "IDP16-F22"
+        },
+        {
+          "step_id": "IDP16-CLEAR-04",
+          "text": "After immunolabeling, dehydrate the brain in 80% methanol in water for 1 hour.",
+          "module": "clearing",
+          "source_anchor": "publisher mmc8 physical p27; extracted page text [1044:1217); Supplemental Experimental Procedures, iDISCO+",
+          "source_spans": [
+            {
+              "pdf_path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\reference_recovery\\idisco_plus_2016\\publisher_attachments\\1-s2.0-S0092867416305554-mmc8.pdf",
+              "pdf_sha256": "8176ba46b6eb4bda5dfb3531c1fc108ea2271d6c382f8b5498ec33b78685b244",
+              "pdf_page_one_based": 27,
+              "text_path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\reference_recovery\\idisco_plus_2016\\publisher_pages\\publisher_p027.txt",
+              "text_sha256": "c6c1326eacb2b1c844104ce4a480e62c734b36125187dd6d3c7b317d74590f90",
+              "offset_unit": "Unicode code points in UTF-8 decoded page text; end exclusive",
+              "start": 1044,
+              "end": 1217,
+              "quote": "Samples were dehydrated in 20% methanol (in \nddH2O) for 1h, 40% methanol / H2O for 1h, 60% methanol / H2O for 1h, 80% methanol \n/ H2O for 1h, and 100% Methanol for 1h twice.",
+              "quote_sha256": "acfb332deffd77241043c00b1ddd4d7260885f0dfa3017420c917823de14550a"
+            }
+          ],
+          "required": true,
+          "required_scope": "coverage of the selected author-reported procedure, not independently established biological necessity",
+          "timing_status": "author_reported",
+          "notes": [],
+          "source_workflow_step_id": "IDP16-F23"
+        },
+        {
+          "step_id": "IDP16-CLEAR-05",
+          "text": "After the methanol gradient, treat with 100% methanol for 1 hour twice.",
+          "module": "clearing",
+          "source_anchor": "publisher mmc8 physical p27; extracted page text [1044:1217); Supplemental Experimental Procedures, iDISCO+",
+          "source_spans": [
+            {
+              "pdf_path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\reference_recovery\\idisco_plus_2016\\publisher_attachments\\1-s2.0-S0092867416305554-mmc8.pdf",
+              "pdf_sha256": "8176ba46b6eb4bda5dfb3531c1fc108ea2271d6c382f8b5498ec33b78685b244",
+              "pdf_page_one_based": 27,
+              "text_path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\reference_recovery\\idisco_plus_2016\\publisher_pages\\publisher_p027.txt",
+              "text_sha256": "c6c1326eacb2b1c844104ce4a480e62c734b36125187dd6d3c7b317d74590f90",
+              "offset_unit": "Unicode code points in UTF-8 decoded page text; end exclusive",
+              "start": 1044,
+              "end": 1217,
+              "quote": "Samples were dehydrated in 20% methanol (in \nddH2O) for 1h, 40% methanol / H2O for 1h, 60% methanol / H2O for 1h, 80% methanol \n/ H2O for 1h, and 100% Methanol for 1h twice.",
+              "quote_sha256": "acfb332deffd77241043c00b1ddd4d7260885f0dfa3017420c917823de14550a"
+            }
+          ],
+          "required": true,
+          "required_scope": "coverage of the selected author-reported procedure, not independently established biological necessity",
+          "timing_status": "author_reported",
+          "notes": [],
+          "source_workflow_step_id": "IDP16-F24"
+        },
+        {
+          "step_id": "IDP16-CLEAR-06",
+          "text": "Incubate overnight in 1 volume methanol and 2 volumes dichloromethane (DCM), until the samples sink to the bottom of the vial.",
+          "module": "clearing",
+          "source_anchor": "publisher mmc8 physical p27; extracted page text [1218:1378); Supplemental Experimental Procedures, iDISCO+",
+          "source_spans": [
+            {
+              "pdf_path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\reference_recovery\\idisco_plus_2016\\publisher_attachments\\1-s2.0-S0092867416305554-mmc8.pdf",
+              "pdf_sha256": "8176ba46b6eb4bda5dfb3531c1fc108ea2271d6c382f8b5498ec33b78685b244",
+              "pdf_page_one_based": 27,
+              "text_path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\reference_recovery\\idisco_plus_2016\\publisher_pages\\publisher_p027.txt",
+              "text_sha256": "c6c1326eacb2b1c844104ce4a480e62c734b36125187dd6d3c7b317d74590f90",
+              "offset_unit": "Unicode code points in UTF-8 decoded page text; end exclusive",
+              "start": 1218,
+              "end": 1378,
+              "quote": "Samples were incubated overnight in 1 \nvolume of Methanol / 2 Volumes of Dichloromethane (DCM, Sigma 270997-12X100ML) \nuntil they sank at the bottom of the vial",
+              "quote_sha256": "cf2e72ac864e7fe28e348352f103df932ed62a6e97588f28b5c0b967af6db6a2"
+            }
+          ],
+          "required": true,
+          "required_scope": "coverage of the selected author-reported procedure, not independently established biological necessity",
+          "timing_status": "overnight_and_sink_endpoint_not_converted_to_hours",
+          "notes": [],
+          "source_workflow_step_id": "IDP16-F25"
+        },
+        {
+          "step_id": "IDP16-CLEAR-07",
+          "text": "Wash twice in 100% dichloromethane (DCM), 20 minutes each, to remove methanol.",
+          "module": "clearing",
+          "source_anchor": "publisher mmc8 physical p27; extracted page text [1439:1496); Supplemental Experimental Procedures, iDISCO+",
+          "source_spans": [
+            {
+              "pdf_path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\reference_recovery\\idisco_plus_2016\\publisher_attachments\\1-s2.0-S0092867416305554-mmc8.pdf",
+              "pdf_sha256": "8176ba46b6eb4bda5dfb3531c1fc108ea2271d6c382f8b5498ec33b78685b244",
+              "pdf_page_one_based": 27,
+              "text_path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\reference_recovery\\idisco_plus_2016\\publisher_pages\\publisher_p027.txt",
+              "text_sha256": "c6c1326eacb2b1c844104ce4a480e62c734b36125187dd6d3c7b317d74590f90",
+              "offset_unit": "Unicode code points in UTF-8 decoded page text; end exclusive",
+              "start": 1439,
+              "end": 1496,
+              "quote": "The methanol was then washed for 20min twice in 100% DCM.",
+              "quote_sha256": "f1b2047da69f1e54d5afc9088d360bed6fa945379792d77dac4a214e925874cb"
+            }
+          ],
+          "required": true,
+          "required_scope": "coverage of the selected author-reported procedure, not independently established biological necessity",
+          "timing_status": "author_reported",
+          "notes": [],
+          "source_workflow_step_id": "IDP16-F26"
+        },
+        {
+          "step_id": "IDP16-CLEAR-08",
+          "text": "Incubate in dibenzyl ether (DBE) without shaking until clear, reported as about 30 minutes.",
+          "module": "RI_matching",
+          "source_anchor": "publisher mmc8 physical p27; extracted page text [1497:1616); Supplemental Experimental Procedures, iDISCO+",
+          "source_spans": [
+            {
+              "pdf_path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\reference_recovery\\idisco_plus_2016\\publisher_attachments\\1-s2.0-S0092867416305554-mmc8.pdf",
+              "pdf_sha256": "8176ba46b6eb4bda5dfb3531c1fc108ea2271d6c382f8b5498ec33b78685b244",
+              "pdf_page_one_based": 27,
+              "text_path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\reference_recovery\\idisco_plus_2016\\publisher_pages\\publisher_p027.txt",
+              "text_sha256": "c6c1326eacb2b1c844104ce4a480e62c734b36125187dd6d3c7b317d74590f90",
+              "offset_unit": "Unicode code points in UTF-8 decoded page text; end exclusive",
+              "start": 1497,
+              "end": 1616,
+              "quote": "Finally, \nsamples were incubated (without shaking) in DiBenzyl Ether (DBE, Sigma 108014-1KG) \nuntil clear (about 30min)",
+              "quote_sha256": "97c48e7ffad5d1002fc72c97004bc5acdb9a83e1123be3d85a9c0bc3a63a4348"
+            }
+          ],
+          "required": true,
+          "required_scope": "coverage of the selected author-reported procedure, not independently established biological necessity",
+          "timing_status": "approximate_duration_and_clear_endpoint",
+          "notes": [],
+          "source_workflow_step_id": "IDP16-F27"
+        },
+        {
+          "step_id": "IDP16-CLEAR-09",
+          "text": "Store the cleared brain in DBE at room temperature.",
+          "module": "storage",
+          "source_anchor": "publisher mmc8 physical p27; extracted page text [1617:1660); Supplemental Experimental Procedures, iDISCO+",
+          "source_spans": [
+            {
+              "pdf_path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\reference_recovery\\idisco_plus_2016\\publisher_attachments\\1-s2.0-S0092867416305554-mmc8.pdf",
+              "pdf_sha256": "8176ba46b6eb4bda5dfb3531c1fc108ea2271d6c382f8b5498ec33b78685b244",
+              "pdf_page_one_based": 27,
+              "text_path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\reference_recovery\\idisco_plus_2016\\publisher_pages\\publisher_p027.txt",
+              "text_sha256": "c6c1326eacb2b1c844104ce4a480e62c734b36125187dd6d3c7b317d74590f90",
+              "offset_unit": "Unicode code points in UTF-8 decoded page text; end exclusive",
+              "start": 1617,
+              "end": 1660,
+              "quote": "and then stored in DBE at room temperature.",
+              "quote_sha256": "f84f7d68fa25e029bbeaab704b2f74f734ce9b54098ef949a5511901167d565d"
+            }
+          ],
+          "required": true,
+          "required_scope": "coverage of the selected author-reported procedure, not independently established biological necessity",
+          "timing_status": "storage_duration_not_reported",
+          "notes": [
+            "The source does not specify a retention period or demonstrate native tdTomato preservation."
+          ],
+          "source_workflow_step_id": "IDP16-F28"
+        }
+      ],
+      "continuous_conditions": [
+        {
+          "condition": "Plastic Eppendorf tubes are used throughout the clearing process.",
+          "scope": "Sample clearing paragraph only; not an extra operation and not generalized to other branches",
+          "source_span": {
+            "pdf_path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\reference_recovery\\idisco_plus_2016\\publisher_attachments\\1-s2.0-S0092867416305554-mmc8.pdf",
+            "pdf_sha256": "8176ba46b6eb4bda5dfb3531c1fc108ea2271d6c382f8b5498ec33b78685b244",
+            "pdf_page_one_based": 27,
+            "text_path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\reference_recovery\\idisco_plus_2016\\publisher_pages\\publisher_p027.txt",
+            "text_sha256": "c6c1326eacb2b1c844104ce4a480e62c734b36125187dd6d3c7b317d74590f90",
+            "offset_unit": "Unicode code points in UTF-8 decoded page text; end exclusive",
+            "start": 1380,
+            "end": 1436,
+            "quote": "Plastic Eppendorf tubes are used throughout the \nprocess",
+            "quote_sha256": "1bc4e7867441bb719147ea06ad3dd40ec8835321c6c8f0a47f9fc40c1a6a7631"
+          }
+        }
+      ],
+      "unknown_parameters": [
+        "main-supplement clearing temperatures except terminal storage",
+        "exact overnight duration",
+        "terminal storage duration and fluorescence retention"
+      ],
+      "completeness_status": "complete_author_reported_clearing_section_with_explicit_unknown_conditions",
+      "reuse": {
+        "parent_reference_id": "IDISCO_PLUS_2016_SUPPLEMENT_CLEARING_Q2_V1",
+        "parent_path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\reference_recovery\\idisco_plus_2016\\candidate.json",
+        "parent_sha256": "073afd16b49657c79882acd19483cb78056d8acb925ecb24986a44488105e7d3",
+        "steps_copied_without_change": true,
+        "original_steps_digest": "04aa39a39fb6bf858a0f9926cc32ed471d2cfdd0afaaf68e53393aa5fbff1fa8",
+        "not_counted_as_a_new_authored_protocol": true
+      },
+      "comparison_method_id": "iDISCO+"
+    },
+    {
+      "route_id": "iDISCO+",
+      "route_aliases": [
+        "iDISCO+",
+        "iDISCO +",
+        "iDISCO Plus",
+        "iDISCO-plus"
+      ],
+      "method_family_id": "iDISCO_plus_2016",
+      "method_family_name": "iDISCO+ (2016)",
+      "family_id": "Renier_Cell_2016_iDISCOplus_10.1016_j.cell.2016.05.007",
+      "true_multiversion_group": "IDISCO_PLUS_2016_POST_IMMUNOLABEL_CLEARING",
+      "question_ids": [
+        1,
+        2,
+        21,
+        22,
+        23,
+        248
+      ],
+      "task_scope_bindings": [
+        {
+          "question_id": 1,
+          "allowed_for_new_conditional_step_diagnostic": true,
+          "scope_status": "conditional_whole_brain_operation_coverage",
+          "source_task_applicability_confirmed": false,
+          "formal_eligible": false,
+          "main_v7_scores_unchanged": true,
+          "task_specific_parameters_validated": false,
+          "prerequisite": "Appropriate immunolabeling before this clearing branch is conditional, not asserted completed.",
+          "reason": "Adult whole brains are explicitly represented in both source workflows; target labels/outcomes remain unconfirmed."
+        },
+        {
+          "question_id": 2,
+          "allowed_for_new_conditional_step_diagnostic": true,
+          "scope_status": "conditional_whole_brain_operation_coverage",
+          "source_task_applicability_confirmed": false,
+          "formal_eligible": false,
+          "main_v7_scores_unchanged": true,
+          "task_specific_parameters_validated": false,
+          "prerequisite": "Appropriate immunolabeling before this clearing branch is conditional, not asserted completed.",
+          "reason": "Adult whole brains are explicitly represented in both source workflows; target labels/outcomes remain unconfirmed."
+        },
+        {
+          "question_id": 21,
+          "allowed_for_new_conditional_step_diagnostic": true,
+          "scope_status": "conditional_brain_block_operation_diagnostic_size_schedule_unverified",
+          "source_task_applicability_confirmed": false,
+          "formal_eligible": false,
+          "main_v7_scores_unchanged": true,
+          "task_specific_parameters_validated": false,
+          "prerequisite": "Appropriate immunolabeling before this clearing branch is conditional, not asserted completed.",
+          "reason": "The bench source allows trimming brain/organ to an appropriate size and uses a common clearing section. Neither author source reports a distinct 3 mm clearing action list or a validated 3 mm schedule; transfer is limited to a conditional operation diagnostic, not a claim of exact parameter or outcome support."
+        },
+        {
+          "question_id": 22,
+          "allowed_for_new_conditional_step_diagnostic": true,
+          "scope_status": "conditional_brain_block_operation_diagnostic_size_schedule_unverified",
+          "source_task_applicability_confirmed": false,
+          "formal_eligible": false,
+          "main_v7_scores_unchanged": true,
+          "task_specific_parameters_validated": false,
+          "prerequisite": "Appropriate immunolabeling before this clearing branch is conditional, not asserted completed.",
+          "reason": "The bench source allows trimming brain/organ to an appropriate size and uses a common clearing section. Neither author source reports a distinct 3 mm clearing action list or a validated 3 mm schedule; transfer is limited to a conditional operation diagnostic, not a claim of exact parameter or outcome support."
+        },
+        {
+          "question_id": 23,
+          "allowed_for_new_conditional_step_diagnostic": true,
+          "scope_status": "conditional_brain_block_operation_diagnostic_size_schedule_unverified",
+          "source_task_applicability_confirmed": false,
+          "formal_eligible": false,
+          "main_v7_scores_unchanged": true,
+          "task_specific_parameters_validated": false,
+          "prerequisite": "Appropriate immunolabeling before this clearing branch is conditional, not asserted completed.",
+          "reason": "The bench source allows trimming brain/organ to an appropriate size and uses a common clearing section. Neither author source reports a distinct 3 mm clearing action list or a validated 3 mm schedule; transfer is limited to a conditional operation diagnostic, not a claim of exact parameter or outcome support."
+        },
+        {
+          "question_id": 248,
+          "allowed_for_new_conditional_step_diagnostic": true,
+          "scope_status": "route_only_native_reporter_task_applicability_unconfirmed",
+          "source_task_applicability_confirmed": false,
+          "formal_eligible": false,
+          "main_v7_scores_unchanged": true,
+          "task_specific_parameters_validated": false,
+          "prerequisite": "Appropriate immunolabeling before this clearing branch is conditional, not asserted completed.",
+          "reason": "Original task requires native reporter fluorescence; immunolabel amplification is not equivalent. This is route-operation coverage only, not task-compatible CCE evidence."
+        }
+      ],
+      "full_action_scope": {
+        "scope_id": "IDISCO_PLUS_2016_POST_IMMUNOLABEL_CLEARING",
+        "start": "Fixed brain after an appropriate immunolabeling branch; no assertion that this prerequisite is already satisfied in the benchmark answer.",
+        "end": "Complete author clearing and RI sequence, including reported terminal storage or pre-imaging handling; excludes microscope-specific chamber construction and image acquisition.",
+        "included_modules": [
+          "post-immunolabel dehydration",
+          "clearing",
+          "RI matching",
+          "reported terminal handling"
+        ],
+        "excluded_modules": [
+          "initial fixation already supplied by the task",
+          "pretreatment and immunolabeling upstream of clearing",
+          "microscope-specific chamber construction",
+          "image acquisition",
+          "any vector engineering or delivery"
+        ],
+        "scope_completeness": "Every action in the selected author clearing section is retained; repeated treatments are retained as count-bearing operations, not truncated to a favorable shared prefix.",
+        "upstream_condition_is_not_established": true,
+        "upstream_workflow_not_reconstructed_in_this_package": true,
+        "action_granularity": "Same as existing supplement: individual concentration levels; repeated identical treatment is one operation retaining its repeat count; independently prescribed terminal handling is retained."
+      },
+      "source_path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\reference_recovery\\idisco_plus_2016\\publisher_attachments\\1-s2.0-S0092867416305554-mmc8.pdf",
+      "source_sha256": "8176ba46b6eb4bda5dfb3531c1fc108ea2271d6c382f8b5498ec33b78685b244",
+      "source_url": "https://ars.els-cdn.com/content/image/1-s2.0-S0092867416305554-mmc8.pdf",
+      "doi": "10.1016/j.cell.2016.05.007",
+      "status": "source_extracted",
+      "human_confirmation": null,
+      "formal_eligible": false,
+      "source_scope": "Complete selected author clearing procedure within the stated conditional start/end boundary; no biological necessity or task efficacy confirmation.",
+      "excluded_aliases": [
+        "iDISCO",
+        "iDISCO 2014",
+        "3DISCO"
+      ],
+      "explicit_version_priority": true,
+      "version_selection_rule": "An explicitly named author/date/version must restrict selection to that version; an unspecified iDISCO+ version may compare the two complete candidates. Do not infer version from a wrong parameter alone.",
+      "prerequisites": [
+        "Fixed brain after an appropriate immunolabeling branch; no assertion that this prerequisite is already satisfied in the benchmark answer."
+      ],
+      "exclusions": [
+        "initial fixation already supplied by the task",
+        "pretreatment and immunolabeling upstream of clearing",
+        "microscope-specific chamber construction",
+        "image acquisition",
+        "any vector engineering or delivery"
+      ],
+      "new_model_requests": 0,
+      "reference_id": "IDISCO_PLUS_2016_APRIL_BENCH_METHOD_FAMILY_V1",
+      "protocol_version": "iDISCO+ April 2016 Bench Protocol, Clearing section",
+      "version_id": "IDISCO_PLUS_2016_APRIL_BENCH",
+      "version_aliases": [
+        "April 2016 Bench Protocol",
+        "iDISCO+ April 2016",
+        "April 2016 iDISCO protocol"
+      ],
+      "source_pages": [
+        36,
+        37,
+        38
+      ],
+      "steps": [
+        {
+          "step_id": "IDP16-BENCH-CLEAR-01",
+          "text": "After immunolabeling, dehydrate the brain in 20% methanol in water for 1 hour at room temperature.",
+          "module": "clearing",
+          "source_anchor": "publisher mmc8 physical p38; April2016 Bench, Clearing; page text [40:180)",
+          "source_spans": [
+            {
+              "pdf_path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\reference_recovery\\idisco_plus_2016\\publisher_attachments\\1-s2.0-S0092867416305554-mmc8.pdf",
+              "pdf_sha256": "8176ba46b6eb4bda5dfb3531c1fc108ea2271d6c382f8b5498ec33b78685b244",
+              "pdf_page_one_based": 38,
+              "text_path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\reference_recovery\\idisco_plus_2016\\publisher_pages\\publisher_p038.txt",
+              "text_sha256": "d99bf16abd427e185301de7cb1748532d8b514d2e1c52683a13436a435bd78a2",
+              "offset_unit": "Unicode code points; end exclusive",
+              "start": 40,
+              "end": 180,
+              "quote": "1. Dehydrate'in'methanol/H2O'series:'20%,'40%,'60%,'80%,'100%,'100%;'1hr'each'at'\nRT.'Can'be'left'optionally'overnight'at'RT'at'this'point.'",
+              "quote_sha256": "1ea6beca5841626b6db5df1ad7038f24f055b29c98cb3ff0baf7f83671ccdf08"
+            }
+          ],
+          "required": true,
+          "required_scope": "coverage of the complete selected author procedure, not independently demonstrated biological necessity",
+          "optional_subcondition": null
+        },
+        {
+          "step_id": "IDP16-BENCH-CLEAR-02",
+          "text": "After immunolabeling, dehydrate the brain in 40% methanol in water for 1 hour at room temperature.",
+          "module": "clearing",
+          "source_anchor": "publisher mmc8 physical p38; April2016 Bench, Clearing; page text [40:180)",
+          "source_spans": [
+            {
+              "pdf_path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\reference_recovery\\idisco_plus_2016\\publisher_attachments\\1-s2.0-S0092867416305554-mmc8.pdf",
+              "pdf_sha256": "8176ba46b6eb4bda5dfb3531c1fc108ea2271d6c382f8b5498ec33b78685b244",
+              "pdf_page_one_based": 38,
+              "text_path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\reference_recovery\\idisco_plus_2016\\publisher_pages\\publisher_p038.txt",
+              "text_sha256": "d99bf16abd427e185301de7cb1748532d8b514d2e1c52683a13436a435bd78a2",
+              "offset_unit": "Unicode code points; end exclusive",
+              "start": 40,
+              "end": 180,
+              "quote": "1. Dehydrate'in'methanol/H2O'series:'20%,'40%,'60%,'80%,'100%,'100%;'1hr'each'at'\nRT.'Can'be'left'optionally'overnight'at'RT'at'this'point.'",
+              "quote_sha256": "1ea6beca5841626b6db5df1ad7038f24f055b29c98cb3ff0baf7f83671ccdf08"
+            }
+          ],
+          "required": true,
+          "required_scope": "coverage of the complete selected author procedure, not independently demonstrated biological necessity",
+          "optional_subcondition": null
+        },
+        {
+          "step_id": "IDP16-BENCH-CLEAR-03",
+          "text": "After immunolabeling, dehydrate the brain in 60% methanol in water for 1 hour at room temperature.",
+          "module": "clearing",
+          "source_anchor": "publisher mmc8 physical p38; April2016 Bench, Clearing; page text [40:180)",
+          "source_spans": [
+            {
+              "pdf_path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\reference_recovery\\idisco_plus_2016\\publisher_attachments\\1-s2.0-S0092867416305554-mmc8.pdf",
+              "pdf_sha256": "8176ba46b6eb4bda5dfb3531c1fc108ea2271d6c382f8b5498ec33b78685b244",
+              "pdf_page_one_based": 38,
+              "text_path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\reference_recovery\\idisco_plus_2016\\publisher_pages\\publisher_p038.txt",
+              "text_sha256": "d99bf16abd427e185301de7cb1748532d8b514d2e1c52683a13436a435bd78a2",
+              "offset_unit": "Unicode code points; end exclusive",
+              "start": 40,
+              "end": 180,
+              "quote": "1. Dehydrate'in'methanol/H2O'series:'20%,'40%,'60%,'80%,'100%,'100%;'1hr'each'at'\nRT.'Can'be'left'optionally'overnight'at'RT'at'this'point.'",
+              "quote_sha256": "1ea6beca5841626b6db5df1ad7038f24f055b29c98cb3ff0baf7f83671ccdf08"
+            }
+          ],
+          "required": true,
+          "required_scope": "coverage of the complete selected author procedure, not independently demonstrated biological necessity",
+          "optional_subcondition": null
+        },
+        {
+          "step_id": "IDP16-BENCH-CLEAR-04",
+          "text": "After immunolabeling, dehydrate the brain in 80% methanol in water for 1 hour at room temperature.",
+          "module": "clearing",
+          "source_anchor": "publisher mmc8 physical p38; April2016 Bench, Clearing; page text [40:180)",
+          "source_spans": [
+            {
+              "pdf_path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\reference_recovery\\idisco_plus_2016\\publisher_attachments\\1-s2.0-S0092867416305554-mmc8.pdf",
+              "pdf_sha256": "8176ba46b6eb4bda5dfb3531c1fc108ea2271d6c382f8b5498ec33b78685b244",
+              "pdf_page_one_based": 38,
+              "text_path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\reference_recovery\\idisco_plus_2016\\publisher_pages\\publisher_p038.txt",
+              "text_sha256": "d99bf16abd427e185301de7cb1748532d8b514d2e1c52683a13436a435bd78a2",
+              "offset_unit": "Unicode code points; end exclusive",
+              "start": 40,
+              "end": 180,
+              "quote": "1. Dehydrate'in'methanol/H2O'series:'20%,'40%,'60%,'80%,'100%,'100%;'1hr'each'at'\nRT.'Can'be'left'optionally'overnight'at'RT'at'this'point.'",
+              "quote_sha256": "1ea6beca5841626b6db5df1ad7038f24f055b29c98cb3ff0baf7f83671ccdf08"
+            }
+          ],
+          "required": true,
+          "required_scope": "coverage of the complete selected author procedure, not independently demonstrated biological necessity",
+          "optional_subcondition": null
+        },
+        {
+          "step_id": "IDP16-BENCH-CLEAR-05",
+          "text": "After the methanol gradient, treat with 100% methanol for 1 hour twice at room temperature. Leaving the sample overnight at room temperature at this point is explicitly optional.",
+          "module": "clearing",
+          "source_anchor": "publisher mmc8 physical p38; April2016 Bench, Clearing; page text [40:180)",
+          "source_spans": [
+            {
+              "pdf_path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\reference_recovery\\idisco_plus_2016\\publisher_attachments\\1-s2.0-S0092867416305554-mmc8.pdf",
+              "pdf_sha256": "8176ba46b6eb4bda5dfb3531c1fc108ea2271d6c382f8b5498ec33b78685b244",
+              "pdf_page_one_based": 38,
+              "text_path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\reference_recovery\\idisco_plus_2016\\publisher_pages\\publisher_p038.txt",
+              "text_sha256": "d99bf16abd427e185301de7cb1748532d8b514d2e1c52683a13436a435bd78a2",
+              "offset_unit": "Unicode code points; end exclusive",
+              "start": 40,
+              "end": 180,
+              "quote": "1. Dehydrate'in'methanol/H2O'series:'20%,'40%,'60%,'80%,'100%,'100%;'1hr'each'at'\nRT.'Can'be'left'optionally'overnight'at'RT'at'this'point.'",
+              "quote_sha256": "1ea6beca5841626b6db5df1ad7038f24f055b29c98cb3ff0baf7f83671ccdf08"
+            }
+          ],
+          "required": true,
+          "required_scope": "coverage of the complete selected author procedure, not independently demonstrated biological necessity",
+          "optional_subcondition": "Overnight pause is optional, not an additional required operation."
+        },
+        {
+          "step_id": "IDP16-BENCH-CLEAR-06",
+          "text": "Incubate in 66% dichloromethane (DCM) and 33% methanol for 3 hours at room temperature with shaking.",
+          "module": "clearing",
+          "source_anchor": "publisher mmc8 physical p38; April2016 Bench, Clearing; page text [181:245)",
+          "source_spans": [
+            {
+              "pdf_path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\reference_recovery\\idisco_plus_2016\\publisher_attachments\\1-s2.0-S0092867416305554-mmc8.pdf",
+              "pdf_sha256": "8176ba46b6eb4bda5dfb3531c1fc108ea2271d6c382f8b5498ec33b78685b244",
+              "pdf_page_one_based": 38,
+              "text_path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\reference_recovery\\idisco_plus_2016\\publisher_pages\\publisher_p038.txt",
+              "text_sha256": "d99bf16abd427e185301de7cb1748532d8b514d2e1c52683a13436a435bd78a2",
+              "offset_unit": "Unicode code points; end exclusive",
+              "start": 181,
+              "end": 245,
+              "quote": "2. 3H'incubation,'with'shaking,'in'66%'DCM'/'33%'Methanol'at'RT'",
+              "quote_sha256": "3857cba284f44a61cf1231d7c9160e63354e2eb0ec0314bc75b868f050cccb13"
+            }
+          ],
+          "required": true,
+          "required_scope": "coverage of the complete selected author procedure, not independently demonstrated biological necessity",
+          "optional_subcondition": null
+        },
+        {
+          "step_id": "IDP16-BENCH-CLEAR-07",
+          "text": "Wash twice in 100% dichloromethane (DCM), 15 minutes each, with shaking to remove methanol.",
+          "module": "clearing",
+          "source_anchor": "publisher mmc8 physical p38; April2016 Bench, Clearing; page text [246:345)",
+          "source_spans": [
+            {
+              "pdf_path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\reference_recovery\\idisco_plus_2016\\publisher_attachments\\1-s2.0-S0092867416305554-mmc8.pdf",
+              "pdf_sha256": "8176ba46b6eb4bda5dfb3531c1fc108ea2271d6c382f8b5498ec33b78685b244",
+              "pdf_page_one_based": 38,
+              "text_path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\reference_recovery\\idisco_plus_2016\\publisher_pages\\publisher_p038.txt",
+              "text_sha256": "d99bf16abd427e185301de7cb1748532d8b514d2e1c52683a13436a435bd78a2",
+              "offset_unit": "Unicode code points; end exclusive",
+              "start": 246,
+              "end": 345,
+              "quote": "3. Incubate'in'100%'DCM'(Sigma'270997H12X100ML)'15'minutes'twice'(with'shaking)'\nto'wash'the'MeOH.'",
+              "quote_sha256": "8b9a38b9add552fe7a8fd5ae090793c1a63e03ef9e827bf8825c3439f617b7f8"
+            }
+          ],
+          "required": true,
+          "required_scope": "coverage of the complete selected author procedure, not independently demonstrated biological necessity",
+          "optional_subcondition": null
+        },
+        {
+          "step_id": "IDP16-BENCH-CLEAR-08",
+          "text": "Incubate in dibenzyl ether (DBE) without shaking. Fill the tube almost completely with DBE to prevent air from oxidizing the sample.",
+          "module": "RI_matching",
+          "source_anchor": "publisher mmc8 physical p38; April2016 Bench, Clearing; page text [346:514)",
+          "source_spans": [
+            {
+              "pdf_path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\reference_recovery\\idisco_plus_2016\\publisher_attachments\\1-s2.0-S0092867416305554-mmc8.pdf",
+              "pdf_sha256": "8176ba46b6eb4bda5dfb3531c1fc108ea2271d6c382f8b5498ec33b78685b244",
+              "pdf_page_one_based": 38,
+              "text_path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\reference_recovery\\idisco_plus_2016\\publisher_pages\\publisher_p038.txt",
+              "text_sha256": "d99bf16abd427e185301de7cb1748532d8b514d2e1c52683a13436a435bd78a2",
+              "offset_unit": "Unicode code points; end exclusive",
+              "start": 346,
+              "end": 514,
+              "quote": "4. Incubate'in'DiBenzyl'Ether'(DBE,'Sigma'108014H1KG)'(no'shaking).'The'tube'should'\nbe'filled'almost'completely'with'DBE'to'prevent'the'air'from'oxidizing'the'sample.'",
+              "quote_sha256": "c1db05925d92d5d5a46a736e9056288ed400875f8e4cf42cb16580da87f87947"
+            }
+          ],
+          "required": true,
+          "required_scope": "coverage of the complete selected author procedure, not independently demonstrated biological necessity",
+          "optional_subcondition": null
+        },
+        {
+          "step_id": "IDP16-BENCH-CLEAR-09",
+          "text": "Before imaging, invert the tube a couple of times to finish mixing the solution.",
+          "module": "terminal_handling",
+          "source_anchor": "publisher mmc8 physical p38; April2016 Bench, Clearing; page text [515:595)",
+          "source_spans": [
+            {
+              "pdf_path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\reference_recovery\\idisco_plus_2016\\publisher_attachments\\1-s2.0-S0092867416305554-mmc8.pdf",
+              "pdf_sha256": "8176ba46b6eb4bda5dfb3531c1fc108ea2271d6c382f8b5498ec33b78685b244",
+              "pdf_page_one_based": 38,
+              "text_path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\reference_recovery\\idisco_plus_2016\\publisher_pages\\publisher_p038.txt",
+              "text_sha256": "d99bf16abd427e185301de7cb1748532d8b514d2e1c52683a13436a435bd78a2",
+              "offset_unit": "Unicode code points; end exclusive",
+              "start": 515,
+              "end": 595,
+              "quote": "Before'imaging,'invert'the'tube'a'couple'of'time'to'finish'mixing'the'solution.'",
+              "quote_sha256": "ac24bb667d659f4ec2b40c08b74979539f774448247400d82cb59917619244f5"
+            }
+          ],
+          "required": true,
+          "required_scope": "coverage of the complete selected author procedure, not independently demonstrated biological necessity",
+          "optional_subcondition": null
+        }
+      ],
+      "continuous_conditions": [
+        {
+          "condition": "Incubations and storage can be done in plastic Eppendorf tubes.",
+          "mandatory": false,
+          "source_spans": [
+            {
+              "pdf_path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\reference_recovery\\idisco_plus_2016\\publisher_attachments\\1-s2.0-S0092867416305554-mmc8.pdf",
+              "pdf_sha256": "8176ba46b6eb4bda5dfb3531c1fc108ea2271d6c382f8b5498ec33b78685b244",
+              "pdf_page_one_based": 38,
+              "text_path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\reference_recovery\\idisco_plus_2016\\publisher_pages\\publisher_p038.txt",
+              "text_sha256": "d99bf16abd427e185301de7cb1748532d8b514d2e1c52683a13436a435bd78a2",
+              "offset_unit": "Unicode code points; end exclusive",
+              "start": 2018,
+              "end": 2086,
+              "quote": "Incubations'and'\nstorage'can'be'done'\nin'plastic'Eppendorf'\ntubes.''",
+              "quote_sha256": "fab5979765f7c56b9cbf93c5eac0379e1ab6fba4d3d56b670b3866edfd836de6"
+            }
+          ]
+        }
+      ],
+      "unknown_parameters": [
+        "DBE incubation duration and numerical endpoint are not specified in this branch.",
+        "Pure DCM and DBE incubation temperatures are not explicitly stated in their local instructions; do not import the supplement values.",
+        "Storage duration and storage temperature are not specified by the Bench clearing section.",
+        "Exact 3 mm block schedule and task-specific marker/outcome compatibility have not been established."
+      ],
+      "completeness_status": "complete_author_clearing_section_through_preimaging_handling; storage-specific parameters unreported",
+      "reuse": {
+        "new_authored_version_recovery": true,
+        "same_document_different_author_protocol_section": true,
+        "not_a_renamed_copy": true
+      },
+      "comparison_method_id": "iDISCO+"
+    }
+  ],
+  "formal_eligible": false,
+  "expert_confirmation": null,
+  "generator_model": "openai_qwen3-max",
+  "original_answer_id": "openai_qwen3-max__q248",
+  "answer_source": "C:\\ClearEval\\ClearEval-public\\dataset\\Q+AR\\model_response\\from_openai_qwen3-max_1-shot.json",
+  "source_family": "frozen_method_family_conditional_reference_pool",
+  "reference_status": "source_extracted_conditional_task_applicability_not_expert_confirmed",
+  "scope": "round3_prospective_answer_level_confirmation_on_exposed_tasks_and_source_families",
+  "forbid_development_use": true
+}

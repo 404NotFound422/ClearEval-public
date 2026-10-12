@@ -1,0 +1,778 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>ClearEval 实验与评测报告</title><style>body{font:17px/1.85 "Microsoft YaHei","Noto Sans CJK SC",sans-serif;color:#172331;margin:0;background:#f6f8fa}main{max-width:1080px;margin:auto;padding:44px 52px;background:white}h1{font-size:30px;line-height:1.5}h2{font-size:23px;border-top:1px solid #dbe3ea;padding-top:30px;margin-top:44px}h3{font-size:20px;margin-top:32px}p{margin:16px 0}a{color:#175e9b;text-decoration:none}a:hover{text-decoration:underline}table{border-collapse:collapse;width:100%;font-size:14px;line-height:1.65;margin:24px 0}td,th{border:1px solid #d3dde7;padding:10px 12px;vertical-align:top}th{background:#eaf1f7;text-align:left}tr:nth-child(even){background:#f8fafc}pre{background:#f2f5f8;border:1px solid #dfe6ed;padding:18px;white-space:pre-wrap;overflow-wrap:anywhere;font:14px/1.7 Consolas,monospace}code{font-family:Consolas,monospace;overflow-wrap:anywhere}nav{background:#eef4f8;padding:20px 25px;border-radius:6px;margin:25px 0}nav a{display:block;font-size:15px}strong{color:#183d59}@media(max-width:700px){main{padding:22px 16px}body{font-size:16px}table{display:block;overflow-x:auto}}@media print{body{background:white;font-size:11pt}main{padding:0;max-width:none}nav{display:none}h2,h3{break-after:avoid}tr{break-inside:avoid}pre{font-size:9pt}a{color:inherit}}</style></head><body><main><p><a href="REPORT_zh.html">项目报告</a> · <a href="LLM_DECOMPOSITION_zh.html">重新分解实证</a> · <a href="QUALITY_CHECK_zh.html">核对范围</a></p><nav><a href="#section-1">1. 研究目标与没有改变的评分定义</a><a href="#section-2">2. 为什么原有 CCE 几乎都能评分，现在却出现很多缺项？</a><a href="#section-3">3. 一份答案怎样经过完整评测？</a><a href="#section-4">4. 起步实验：真实入口、参考建设与历史复用</a><a href="#section-5">5. E1：既有人评复用与局部步骤核查</a><a href="#section-6">6. E2：受控验证</a><a href="#section-7">7. E2 的合理替代路线与多版本参考</a><a href="#section-8">8. E3：局部提取保真与 EGES 输入修复</a><a href="#section-9">9. E4：重复稳定性与跨评价来源敏感性</a><a href="#section-10">10. E5：CCE 联合结果、帕累托与重采样</a><a href="#section-11">11. E6：湿实验准备</a><a href="#section-12">12. 后续八份确认与最后十次机制验证</a><a href="#section-13">13. 原因排查循环、可写结论与剩余实验</a><a href="#section-14">14. 实际命令、产物和本次复算范围</a><a href="#section-15">15. 五个真实示例：把评测走到终点，并标出出问题的位置</a></nav><h1>ClearEval 补充实验：目标、设计、改进、实际结果与评测全流程</h1>
+<p><strong>截至 2026 年 10 月 12 日；执行规格 r2。</strong> 本文汇总已保存的真实答案、模型返回和离线计算。它解释整个补充实验项目，不仅报告最后十次调用。新增评价请求累计 438/438；本次文档整理不发起模型请求。本文保留不同批次的版本和分母，不把历史结果、开发结果、确认结果相加充当独立样本。</p>
+<p>材料说明（Material Passport）：依据 academic-research-suite 的实验解释与核查流程；材料类型为研究进展报告与真实案例复算。科学解释为作者分析，未取得新专家金标准。数值与来源核对见同目录 <a href="verification.json">verification.json</a>，用于本文的结构化实值见 <a href="evidence.json">evidence.json</a>。针对用户随后提出的“直接重新用大模型分解”，另已完成<a href="LLM_DECOMPOSITION_zh.md">两份答案的逐项分解与原函数复算</a>：一份得到 80 h 核心时间，另一份得到典型时间情景下完整 CCE 区间。该新增作者分析与以下冻结主结果分开。</p>
+<p><strong>当前结论：最小评分入口、来源恢复、真实受控比较、重复调用、联合分析和图件已经运行；论文所需的评价有效性证据仍不完整。</strong> 尤其是原始 SR 对分段敏感、部分直接评分依据与量表不一致、标签和时间输入存在未决项、共同完整题集过小。专家核查尚未回传，但这些并非全部由专家缺席造成。</p>
+<table>
+<thead>
+<tr>
+<th>工作</th>
+<th>最初要回答的问题</th>
+<th>已得到的真实结果</th>
+<th>当前完成边界</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>起步与参考建设</td>
+<td>能否把有来源的完整路线接入真实答案？</td>
+<td>首次 q2、两个生成模型跑通；随后五题 65 份答案；更广来源批次为六题 77 份</td>
+<td>自动评分已完成；完整任务适用性仍待确认</td>
+</tr>
+<tr>
+<td>E1 人评复用与步骤核查</td>
+<td>SR 匹配和原分项能否获得可追溯人工支持？</td>
+<td>恢复 240 条旧标签，明确版本冲突；固定一位专家 5＋15 份材料</td>
+<td>新专家回传 0，不能给新人评一致性或步骤准确率</td>
+</tr>
+<tr>
+<td>E2 受控验证</td>
+<td>指标对删减、冲突有响应，对等义表示保持一致吗？</td>
+<td>新配置三题×四全文×两次，24/24 技术成功；删步 Com 在 2/3 题下降；编号直接评分一致</td>
+<td>主完整 CCE 0/24；合并步骤仍改变原 SR/SP；参数删除与顺序冲突仅有旧配置验证</td>
+</tr>
+<tr>
+<td>E2 合理替代路线</td>
+<td>不同完整路线能否按各自参考得到评价？</td>
+<td>历史九对、六题；别名恢复后 7/9 对双端数值完整；当前 Qwen 实例有 q22 两臂描述性比较</td>
+<td>不是九对当前配置重验；专家确认合理完整路线对为 0</td>
+</tr>
+<tr>
+<td>E3 提取保真</td>
+<td>错误来自答案，还是提取及映射？</td>
+<td>原定留出自动提取 7/15→14/15；多类软件误挡已定位；历史 67 返回完成统一回放</td>
+<td>无专家纠正对照；次级定义覆盖提升未在新确认中复现</td>
+</tr>
+<tr>
+<td>E4 稳定性</td>
+<td>同配置重复与不同评价来源分别有多大变化？</td>
+<td>新面板 108 组中 93 组双次有限、极差均 0；15 组双 NA</td>
+<td>仅三个基础任务；不证明准确性或跨领域稳定性</td>
+</tr>
+<tr>
+<td>E5 联合结果、帕累托与重采样</td>
+<td>多维取舍是否可比较，是否依赖任务组成？</td>
+<td>两模型五题 3/10 份完整，共同完整题仅 q22；五题部分信息界及精确枚举已计算</td>
+<td>不能给出完整五题前沿或全库排名；来源家族重采样未具备条件</td>
+</tr>
+<tr>
+<td>E6 湿实验</td>
+<td>分数所反映的取舍是否对应真实实验结果？</td>
+<td>42 个样本量假设情景、分组与分析入口已准备</td>
+<td>实测 0；最终任务、终点、方差、样本数未定</td>
+</tr>
+<tr>
+<td>后续确认与原因验证</td>
+<td>开发修复能否迁移，补证据能否改善判分？</td>
+<td>八份新确认主/次完整 CCE 均 0/8；最后十次来源干预完成，三条件各 1/5 完整</td>
+<td>有局部来源对齐改善，同时保留范围错误与落档问题</td>
+</tr>
+</tbody>
+</table>
+<h2 id="section-1">1. 研究目标与没有改变的评分定义</h2>
+<p>研究对象是固定样本、标记需求和实验目标下的组织光透明方案。需要区分三个问题：<strong>有没有表达必要操作和参数（Com）；具体选择与操作是否符合既有正确性量表（Cor）；这些选择在既有证据和任务需求下有多适配（Eff）</strong>。实验希望支持多条适用路线，展示它们的取舍，而不是要求所有答案复述唯一文本。</p>
+<p>SR/SP 保留 BioProBench 的原始定义。把一条完整参考分为参考步骤，把答案全文分为生成步骤，用 <code>all-mpnet-base-v2</code> 计算余弦相似度，主阈值固定为 0.7：</p>
+<pre><code class="language-text">SR = 达到阈值的参考步骤数 / 参考步骤总数
+     每个参考步骤独立取它与所有生成步骤的最大相似度。
+SP = 达到阈值的生成步骤数 / 生成步骤总数
+     每个生成步骤独立取它与所有参考步骤的最大相似度。
+</code></pre>
+<p>这两个量已经是 0–1 比例，直接报告，不再归一化，也没有换成平均余弦相似度。它们允许多个参考步骤命中同一个生成步骤，没有一对一约束，也不检查顺序。SP 衡量对选定参考的匹配，不等于科学正确率。</p>
+<p>当答案只给方法名而未给版本时，<strong>在已收录、与任务及实际路线相容的完整版本中逐个比较，选最大 SR；并列时取最大 SP，再按固定版本顺序</strong>。SR、SP 必须来自同一版本。错误参数留给正确性判项，不能先用错误参数把该路线过滤掉。“全部版本”指当前可追溯候选池，不表示已穷尽全球所有协议，更不能逐步骤拼接不同版本的最高分。</p>
+<pre><code class="language-text">Com = 0.4 × SR + 0.6 × c_param / 3
+Cor = (co_order/3 + co_method/2 + co_param/2 + co_chem) / 4
+Eff = ((s_method/2.5 + 1)/2 + s_label/6 + s_trans/3 + s_time/3) / 4
+IA  = min(Com, Cor, Eff)
+HV  = Com × Cor × Eff                 参考点为 (0,0,0)
+</code></pre>
+<p>IA/HV 先逐答案计算，再按共同题目平均。SP 单列，不进入 Com。旧 <code>c_step</code> 保留其历史等级，未改名为 SR。未知项保留 NA，同时保留其他可确定分项；真实规则零、数值下溢零与 NA 分开。原标签最小值规则遇到有依据的已知 0，可以在其他内部通道未知时确定为 0。</p>
+<p>依据：<a href="../../ClearEval_Codex_Experiments_v1_20261008/CODEX_CLEAR_EVAL_EXPERIMENTS_PROMPT.md">r2 总规格</a>、<a href="../../ClearEval-public/artifacts/cce_validation/optimizer_round3_20261011/delivery_completed_01/configuration/resolved_config.yaml">实际配置</a>、<a href="../../ClearEval-public/scripts/cce_validation.py">步骤实现</a>。当前主后处理为 v7；“适用通道”标签候选是次级分析，不能把其覆盖数字替换进主结果。</p>
+<h2 id="section-2">2. 为什么原有 CCE 几乎都能评分，现在却出现很多缺项？</h2>
+<p><strong>首先承认事实：旧队列实际保存了 3,287/3,288 份完整数值 CCE。</strong> 13 个生成模型中，Gemini Flash 少一份 q1 答案，已存在的 q29 是评价错误；其余旧评分有数值。这里的“完整”是数值字段齐全，不自动证明每个中间输入都有来源证据。原答案都对应历史题干，不能拼接到修订后题干当作同一实验。<a href="../../ClearEval-public/artifacts/cce_validation/inventory/REPORT.md">原始盘点</a></p>
+<p>现在少分有四类不同原因，不能只说“更严格所以更可靠”。</p>
+<table>
+<thead>
+<tr>
+<th>原因</th>
+<th>旧流程如何得到值</th>
+<th>新流程发生了什么</th>
+<th>应当怎样解释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>增加了完整步骤参考依赖</td>
+<td>旧 Com 使用评价器给出的 <code>c_step</code> 等级，不需要逐路线完整参考</td>
+<td>新 Com 使用 SR；未找到相容完整参考时 SR/Com 无法确定</td>
+<td>是新指标的资料覆盖要求，不意味着旧 Cor/EGES 失效</td>
+</tr>
+<tr>
+<td>提取输入和评价配置改变</td>
+<td>旧 EGES 接收一个总时长、一个标记字典和一个方法名称</td>
+<td>新返回显式列操作、阶段、关系、执行范围；可能发现区间、歧义，也可能漏提</td>
+<td>相同算式不保证不同输入给出相同数值；要对照输入而非只比较完成率</td>
+</tr>
+<tr>
+<td>新增软件误挡或错误映射</td>
+<td>某个有效数字或实体能够进入原函数</td>
+<td>新校验把普通词、名称边界或不同记录类型的同 ID 误判为错误</td>
+<td>属于本次实现问题，应修复；不能称为科学证据不足</td>
+</tr>
+<tr>
+<td>撤销不成立的中间值或额外门控</td>
+<td>一个具体值足以让聚合完整，某些中间版本还引入了不当的标签零</td>
+<td>修正映射后可能恢复值，也可能重新暴露真正未知；部分全局覆盖门还会误挡局部已知值</td>
+<td>每个变化需要依据；高覆盖、低覆盖都不能单独作为正确性的证明</td>
+</tr>
+</tbody>
+</table>
+<p><strong>最直接的同答案证据：首七份旧存档 7/7 完整，新冻结 fw3 最初 0/7 完整。</strong> 七份的题干、答案已做哈希对应；但旧评价未保存完整 judge/prompt 合同及逐操作提取链，所以这不是“只更换一处程序”的严格消融。<a href="../../ClearEval-public/artifacts/cce_validation/optimizer_round2_20261010/first7_historical_availability_audit_v1/README_zh.md">七份对照与来源</a></p>
+<table>
+<thead>
+<tr>
+<th>同一真实答案</th>
+<th style="text-align:right">旧时间输入</th>
+<th>当时新流程保存的信息</th>
+<th>已定位问题</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FPC03，Qwen-14B/q21</td>
+<td style="text-align:right">78 h</td>
+<td>条件性候选 80 h，时间未输出</td>
+<td>把空间描述 <code>in 3D</code> 当成一个未解析时长；软件误挡</td>
+</tr>
+<tr>
+<td>FPC06，Qwen-14B/q248</td>
+<td style="text-align:right">20 h</td>
+<td>条件性候选 22 h，时间未输出</td>
+<td>把 <code>imaging on …</code> 中的介词 <code>on</code> 当成时间；软件误挡</td>
+</tr>
+<tr>
+<td>FPC04，Claude/q22</td>
+<td style="text-align:right">17.25 h</td>
+<td>候选区间 20.5–22.75 h</td>
+<td>有不同类型 ID 冲突，也有原文真实时长区间；修复 ID 不会自动确定唯一时长</td>
+</tr>
+<tr>
+<td>FPC07，GLM/q248</td>
+<td style="text-align:right">21 h</td>
+<td>候选区间 27.5–39.5 h</td>
+<td>总历时概括被误作遗漏，同时原操作确有区间；两种机制并存</td>
+</tr>
+<tr>
+<td>FPC08，GLM/q23</td>
+<td style="text-align:right">120 h</td>
+<td>候选 120 h，但时间仍未定</td>
+<td>非核心准备阶段门控，以及 ScaleS 与知识库名称未对齐</td>
+</tr>
+</tbody>
+</table>
+<p>已保存的同 raw 后处理修复曾使首七份从 0/7 恢复 2/7；ScaleS 别名修复另外恢复其方法、RI 分项。这证明<strong>新增流程确实造成过可修复的退化</strong>。这些是对应历史版本的数字，不能冒称当前所有版本的最终完成率。</p>
+<p>旧记录的总时长也不能直接当金标准。例如这七份另外存在的 <code>clearing_time_stats.json</code> 时长与旧评分理由中的 Act <strong>0/7 相等</strong>；因此尚不能认定该统计器就是原 EGES 输入的生成过程。这表明来源链没有恢复完整，不等于已经证明旧时长全错。</p>
+<p>标签问题也有一个明确的实施责任：中间适配器曾把原生荧光 <code>GFP</code> 编成 <code>GFP→GFP</code>，引入原函数不要求的“自身就是靶标”关系，进而得到目标匹配零。后来撤销这种人为关系，保留原生荧光的方法兼容贡献。完整数值可能因此减少，但这不支持继续使用那个不当零。相反，A05 中真实存在的 <code>Alexa Fluor 647→TUJ1</code> 关系使主标签仍能得到 5.1，原生 tdTomato 的空靶标没有阻断整份数值。<a href="../../ClearEval-public/artifacts/cce_validation/optimizer_round2_20261010/four_hour_extension_20261010/delivery/REPORT_v5_zh.md">版本与真实例子</a></p>
+<p>还要区分<strong>数值可计算</strong>和<strong>正式研究资格</strong>：<code>formal_eligible=false</code> 是参考适用性尚未确认的状态，不应被当作所有已有分项都必须清空的理由。当前仍展示条件性数值；共同数值题集 <code>{q22}</code> 与正式资格题集为空分别报告。原 <code>results/oeq_metrics.py</code> 自身也会排除缺字段，并非一个天然“所有情况都给分”的函数。<a href="../../ClearEval-public/results/oeq_metrics.py">原聚合代码</a></p>
+<p>接下来应采用同答案的输入账本：旧输入、原文支持的新输入、映射变化、实际分项、证据状态并列。修复无关门控，让已明确的输入进入原函数；真实缺失则定位到相应分项。原数值基线保留，不能把新增审查条件悄悄变成另一套 CCE 定义。这是后续实施方向，本文件没有改变现有分值。</p>
+<h2 id="section-3">3. 一份答案怎样经过完整评测？</h2>
+<pre><code class="language-text">S0 绑定原题与原答案、生成条件
+  → S1 确定初始状态与要求输出的操作范围
+  → S2 识别实际方法，筛选相容完整参考版本
+  → S3 全文分段、相似度矩阵、原始 SR/SP 与选定版本
+  → S4 评价器输出：直接判分＋实体、关系、操作、时间等提取
+  → S5 JSON／字段解析、原文定位、类型与来源关系转换
+  → S6 固定需求与原知识库 → 四项 EGES
+  → S7 保留分项，计算 Com/Cor/Eff、逐答案 IA/HV
+  → S8 同配置配对、重复性、共同题集、帕累托与重采样
+  → S9 专家局部核查及真实实验验证
+</code></pre>
+<p>S3 与 S4 在实现上可分别运行；这张图表示依赖和核查顺序。<strong>S4 的直接评分由评价器判断，S6 的 EGES 主要由提取输入和原函数计算。</strong> 因此 JSON 格式不是全部难点：合法 JSON 可以含错误关系、错误比较基准或不符合档位的理由；也可以正确表达“目前未知”。</p>
+<table>
+<thead>
+<tr>
+<th>阶段</th>
+<th>已出现的实际问题</th>
+<th>影响范围</th>
+<th>当前状态</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>S0 版本绑定</td>
+<td>旧答案对应历史题干；旧分数缺答案哈希</td>
+<td>不能把修订题干与旧答案直接混用</td>
+<td>已绑定历史题干，保留旧连接局限</td>
+</tr>
+<tr>
+<td>S1 范围解释</td>
+<td>A05 被要求展开题目并未要求的染色步骤；长期储存与初次透明时间混杂</td>
+<td>参数完整性、顺序、时间</td>
+<td>有实证，范围与量表仍需校准</td>
+</tr>
+<tr>
+<td>S2 参考适用性</td>
+<td>全脑参考不能自动提供 3 mm 精确时长；通用 CUBIC 不等于已实现 CUBIC-HV</td>
+<td>SR 的参考身份、参数正确性、有效性解释</td>
+<td>条件性参考可算，科学适用性未全部解决</td>
+</tr>
+<tr>
+<td>S3 步骤表示</td>
+<td>只合并条目即可使 q21 SR 5/7→0、q22 5/7→1</td>
+<td>SR/SP、Com 及其联合量</td>
+<td>原值保留，尚未得到已验证的改进匹配器</td>
+</tr>
+<tr>
+<td>S4 直接判分</td>
+<td>超过 50% 的偏差却落入“50%以内”档；读到作者选项仍另加声明要求</td>
+<td>Cor，及 IA/HV</td>
+<td>最后十次仍出现，不是解析错误</td>
+</tr>
+<tr>
+<td>S5 技术转换</td>
+<td><code>3D</code>、<code>on</code>、名称数字后缀、Unicode 边界、跨类型同 ID</td>
+<td>局部字段被误挡，严重时影响完整转换</td>
+<td>多项已修；新确认三例按冻结配置保留原状态</td>
+</tr>
+<tr>
+<td>S5–S6 语义映射</td>
+<td>原生荧光被人为加自环；直接染料、抗体关系、可选项混淆</td>
+<td>标签分及 Eff/IA/HV</td>
+<td>自环已撤销；适用通道候选仍需验证</td>
+</tr>
+<tr>
+<td>S6 时间计算</td>
+<td>已报告小计、完整核心流程时间、条件性后续操作混为一谈</td>
+<td>s_time/Eff</td>
+<td>保留小计与阻断原因，构念边界仍有问题</td>
+</tr>
+<tr>
+<td>S6 知识证据</td>
+<td>特定标记—荧光团兼容记录缺失</td>
+<td>标签内部通道</td>
+<td>不能仅靠改 JSON 消除</td>
+</tr>
+<tr>
+<td>S8 汇总</td>
+<td>各模型可评分题不同；共同完整题仅一题；来源簇不足</td>
+<td>排名、前沿、区间解释</td>
+<td>已算能识别的取舍与外界，未填补假坐标</td>
+</tr>
+<tr>
+<td>S9 实证</td>
+<td>新专家、湿实验均未回传</td>
+<td>准确性、纠错收益、实验效果结论</td>
+<td>待定，不能以软件检查数代替</td>
+</tr>
+</tbody>
+</table>
+<h2 id="section-4">4. 起步实验：真实入口、参考建设与历史复用</h2>
+<p><strong>目标与安排。</strong> 按 r2 先找到一条有原文来源的完整路线和实际答案，计算原始 SR/SP，再保留旧参数、Cor 和 EGES，逐答案输出 CCE。此后扩大题目和生成模型。完整参考建设按路线和适用条件单独计账。</p>
+<p><strong>实际执行与结果。</strong> 第一条来源为 Qi 等的 FDISCO 论文，已有本地主文和后来恢复的作者补充材料。首次 q2 的 Gemini Flash、Gemini Pro 两份真实答案分别得到 SR=1/7、6/7，SP=.75、7/9；当时条件性 Com=.457143、.742857，Cor=.666667、.75，Eff 均 .724554。这一批复用历史非步骤分项，新 API 调用为 0。<a href="../../ClearEval-public/artifacts/cce_validation/first_route_per_answer.csv">首批逐答案</a></p>
+<p>随后五题 <code>{2,21,22,23,248}</code>×13 个生成模型共 65 份答案；最早来源池支持其中 14 份步骤评分。进一步扩至六题 77 份可用答案、10 个条件参考分支和 5 个来源家族；历史非步骤分数保留时，原分支池有 50/77 份条件性完整 CCE，同方法版本池扩展后为 66/77。固定 13 模型的数值共同题仍只有 q2。<strong>这组历史复用覆盖不能与当前重新评价的 3/10 混成一条改善曲线。</strong> <a href="../../ClearEval-public/artifacts/cce_validation/optimizer_round2_20261010/four_hour_extension_20261010/delivery/REPORT_v5_zh.md">历史交付</a>、<a href="../../ClearEval-public/artifacts/cce_validation/human_review/reference_construction_v5/summary.json">参考建设账本</a></p>
+<p><strong>改进及含义。</strong> 参考从只有正文扩充为作者补充表、完整分支、来源锚点和相容版本集合；参考变动后重算受影响步骤分数，输入不变的旧非步骤分项保留。首次 Flash 的 1/7 与后来开发 A01 的 5/7 所处参考/处理条件不同，不能说生成答案自身变好了。</p>
+<p><strong>问题与下一步。</strong> 21 条建设账目并非 21 条独立路线：含历史、未激活候选和一条单列留出分支。当前主参考 10 分支/5 家族，专家适用性确认 0，人时未知。完整来源存在与完整任务适用性已证实必须分别列出；尤其样本尺度、标记和长期保存目标不能由方法名一并推出。</p>
+<h2 id="section-5">5. E1：既有人评复用与局部步骤核查</h2>
+<p><strong>目标。</strong> 判断哪些历史人工分项可以比较，并检查局部步骤匹配是否符合原文和适用参考。它不要求专家重新给 20 份完整 CCE，也不把旧 <code>c_step</code> 当作人工 SR。</p>
+<p><strong>安排。</strong> 恢复 20 题×12 模型的逐答案标签及版本。新增仍为同一位专家：A01–A05 五份开发，A06–A20 十五份留出，步骤与提取共用。ASSISTED 模式先读原题、原答案，再查看自动建议；隐藏显式模型元数据和总分，但不称独立盲评。固定表为 160 行局部项目。</p>
+<p><strong>实际结果。</strong> 240 条旧标签全部恢复，另一个 UI 文件只有一条编辑记录，不追加为新答案。两份主要保存版本中，<code>co_method</code> 有 197/240 条不同，<code>co_chem</code> 214/240，<code>s_method</code> 218/240；<code>s_label</code>、<code>s_trans</code> 的历史汇总有机器调整介入记录。<code>c_param</code>、<code>co_order</code>、<code>co_param</code>、<code>s_time</code> 数值尺度较可对齐，但其来源独立性和当前配置等价性尚未建立。<a href="../../ClearEval-public/artifacts/cce_validation/human_review/ARCHIVE_FINDINGS.md">旧人评审计</a></p>
+<p><strong>改进。</strong> 不再因文件名写着 human 或 BAK 就当独立金标准；分项标为历史可描述、版本冲突或量表待恢复。审阅回执绑定具体自动建议版本，“核查无需修改”也需要真实回执。原人工 <code>s_method</code> 的操作值域线索已找到，但不能用机器迁移公式擅自给人工分数减 2.5。</p>
+<p><strong>问题与下一步。</strong> 目前真实专家回传 0/20、回执 0、纠正记录 0。开发步骤表只有十个候选局部条目，并非完整人工 SR。十五份留出中仅 A06/q146 有后来单列的条件性作者步骤附件，其余十四份缺完整参考；原提取请求并未使用这份后来附件。收到核查后，只对实际审阅的条目计算分母和影响，开发/留出分开。<a href="../../ClearEval-public/artifacts/cce_validation/human_review/CURRENT_REVIEW_ENTRY.md">现行专家入口</a></p>
+<h2 id="section-6">6. E2：受控验证</h2>
+<p><strong>目标。</strong> 检验指定错误的可检测性和等义表示的不变性。每种编辑都有自己的预期：删必要操作主要检验覆盖；删参数主要检验参数完整性；顺序冲突检验顺序项；编号应不改变内容评分；合并步骤用于诊断表示敏感性。不能要求所有编辑都使所有指标下降。</p>
+<p><strong>安排与已做改进。</strong> 每个变体有独立身份，从编辑后的全文重新分段、识别路线、选参考、提取与评分，基线和变体共用配置。旧面板为三题、21 份全文、15 个配对，包含五类编辑。最新面板为 q2/q21/q22，各基线、编号、合并、删除四份全文，每份两次真实请求，共 24 次。增加只处理已识别结构标记和空白的规范层，保存原文字符回映；SR/SP 仍按编辑后的原全文计算。</p>
+<p><strong>最新实际结果。</strong> 24/24 技术成功、无重试；9 个关系×两次=18 个配对观察，独立基础题仍为三个。编号、合并各 6/6 个含重复配对的五项直接分数相同。但规范后两类请求本来字节相同，这检验了规范系统的行为，不能解释成模型看到不同格式仍天然鲁棒。<a href="../../ClearEval-public/artifacts/cce_validation/optimizer_round3_20261011/E2_canonical_readout_complete_01/REPORT_zh.md">新 E2</a></p>
+<table>
+<thead>
+<tr>
+<th>编辑</th>
+<th>q2</th>
+<th>q21</th>
+<th>q22</th>
+<th>解释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>编号</td>
+<td>五项直接评分、SR/SP、Com 相同</td>
+<td>同左</td>
+<td>同左</td>
+<td>本规范层对这三个例子有效</td>
+</tr>
+<tr>
+<td>合并</td>
+<td>SR 仍 6/7，SP 7/9→4/5</td>
+<td>SR 5/7→0；Com .885714→.600000</td>
+<td>SR 5/7→1；Com .885714→1</td>
+<td>科学内容未改，原分段匹配仍显著变化</td>
+</tr>
+<tr>
+<td>删除终末模块：Com</td>
+<td>.742857→.685714</td>
+<td>.885714→.685714</td>
+<td>.885714→.885714</td>
+<td>2/3 题下降，一题无响应</td>
+</tr>
+<tr>
+<td>删除终末模块：Cor</td>
+<td>.791667→.833333</td>
+<td>.791667→.791667</td>
+<td>.875000→.791667</td>
+<td>分别上升、不变、下降，必须都报告</td>
+</tr>
+</tbody>
+</table>
+<p>旧配置的必要参数删除三对均 <code>c_param:3→1</code>，顺序冲突三对均 <code>co_order:3→0</code>、<code>Cor:.875→.625</code>。这些实际结果有效保留，但最新 24 次未重验这两类。旧参数删除只有 1/3 对两端原技术状态都成功；已保存的独立分项仍可比较，不能据后处理把原技术状态升级。两类主完整 CCE 配对均 0/3。<a href="../../ClearEval-public/artifacts/cce_validation/optimizer_round3_20261011/delivery_draft/interpretation_audit_01/FINDINGS_zh.md">五类覆盖审计</a></p>
+<p><strong>为什么有反常响应？</strong> q2 删除同时去掉终末操作和原来的参数争议：顺序分下降一级，参数正确性上升一级，按原公式净效应为 <code>(-1/3+1/2)/4=1/24</code>。这解释 Cor 上升的算术，不证明删后的完整方案更好。q21/q22 某些被删参考步骤在基线就未达到 0.7，删掉后仍未命中，SR 不会再下降；这也不证明步骤可有可无。</p>
+<p><strong>剩余问题。</strong> 主标签 0/24 可用，时间 18/24 可用，主完整 CCE 0/24。次级标签适用性候选得到标签 10/24、完整 CCE 6/24，六份全来自 q2 三个非删除条件的重复。该候选改变标签聚合的适用集合，不是主定义已经通过。步骤必要性、参数分母、顺序与遗漏的维度归属尚待校准。下一轮应冻结单一改动，补齐参数删除/顺序冲突的新配置成对验证，再看未曝光材料；不能只重复已通过编号对。</p>
+<h2 id="section-7">7. E2 的合理替代路线与多版本参考</h2>
+<p><strong>目标与安排。</strong> 允许同一任务采用不同、各自有依据的完整路线。两臂分别选其相容参考、报告必要步骤及参数覆盖，再计算 CCE；Eff 可以不同。自然答案的跨路线比较只能描述，只有控制其他差异才能估计“只换方法”的效应。</p>
+<p><strong>已做改进与结果。</strong> 历史有九对全文、涉及六个题号，其中八对自然存档、一对 q248 来源指导改写。恢复历史字段别名后 7/9 对双端完整数值 CCE。它们使用旧 <code>local_qwen3_8b</code>，不混入当前冻结 Qwen 实例确认。</p>
+<p>一个历史 q248 例子中，FDISCO 与 PEGASOS 候选的 SR 为 .714286 对 .875，Com .885714 对 .950，Cor 均 1；Eff .387033 对 .236215，HV .342801 对 .224404。更高参考覆盖没有带来更高有效性估计。这里的量都是旧配置真实保存值，不能当作当前新评价或实测组织效果。<a href="../../ClearEval-public/artifacts/cce_validation/optimizer_round2_20261010/four_hour_extension_20261010/delivery/REPORT_v5_zh.md">历史路线结果</a></p>
+<p>当前冻结本地 Qwen 已评价的 q22 两份自然答案也可比较：Qwen3-14B 生成 iDISCO+，Qwen3-32B 生成 CUBIC，分别得到 CCE=(.644444,.333333,.295078) 与 (.400000,.666667,.423610)。这是 E5 中同两行的复用，新增样本为 0。通用 CUBIC 投影到现有 HV 参考不证明答案完整实现了该版本。</p>
+<p><strong>问题与下一步。</strong> 尚无专家确认的合理完整路线对，来源指导改写又与参考同源。不能声称已证明“所有合理替代都不受惩罚”。应分别核对每条路线对具体尺度、信号与终点的支持；完整参考建设和额外替代臂审阅单列，不能塞入已固定的一位专家 5＋15。</p>
+<h2 id="section-8">8. E3：局部提取保真与 EGES 输入修复</h2>
+<p><strong>目标。</strong> 比较自动提取与“只忠实修正已核字段”的 EGES 结果，确认多少误差由提取造成。专家修正只修来源表达，不替原答案补科学步骤，不把区间改成想要的单值。</p>
+<p><strong>安排。</strong> 与 E1 共用 20 份答案。在相同评分函数、知识库和任务需求下，比较修正前后各分项及 NA 变化；真正的配对效果需要专家确认过的字段，空表不能充当“无需修改”。</p>
+<p><strong>已经完成的技术改进。</strong> 有真实依据的行间参数、累计时长、方法别名、同名记录覆盖和类型命名空间问题已经逐项处理；撤销 native 自环；将全流程未决与核心时间范围分开追踪。原定留出自动提取从 7/15 成功提高到 14/15，仍保留 A15 失败。这是技术可用性改善，不能叫提取准确率 93.3%。另一次 schema 约束开发只有 4/5 成功，后续十五次按计划未运行，不能挑另一个版本替失败格。<a href="../../ClearEval-public/artifacts/cce_validation/human_review/CURRENT_REVIEW_ENTRY.md">专家附件与版本</a></p>
+<p><strong>当前真实结果。</strong> 历史 67 份真实返回统一到主 v7，标签可用 9/67、完整 CCE 8/67。来源角色修复本身保持主数值。再叠加“只聚合适用通道”的次级定义，标签 28/67、完整 CCE 25/67；它是定义候选而非已验证准确性提升。固定五题 E5 子集仍为 3/10 完整。<a href="../../ClearEval-public/artifacts/cce_validation/optimizer_round3_20261011/delivery_draft/RESULTS_ESTABLISHED_EN.md">当前历史主结果</a></p>
+<p>随后八份新确认中，主/次完整 CCE 都是 0/8，标签反而由 3/8 降为 2/8，时间均 0/8 可用。R3C02 的 DAPI 来源未支持候选所要求的直接用途，次级不再给它有限标签；R3C03 的有效规则零仍保留。这一负结果已经保存，说明开发覆盖增加没有迁移成确认覆盖增加。<a href="../../ClearEval-public/artifacts/cce_validation/optimizer_round3_20261011/confirmation_readout_complete_01/REPORT_zh.md">八份确认</a></p>
+<p><strong>尚未完成。</strong> 专家提取准确性、忠实修正收益、留出纠错效应都待定。除了专家依赖，还要解决阶段与执行范围、关系角色、目录身份、知识库具体兼容项和量表覆盖。当前 130 条记录的局部诊断接口修复以及数百项机械检查，只证明被测程序和来源绑定，不是生物学验证数量。</p>
+<h2 id="section-9">9. E4：重复稳定性与跨评价来源敏感性</h2>
+<p><strong>目标与设计。</strong> 固定同一完整答案、同一评价器及采样设置，用真实新请求重复评价；另用同题同指标比较不同评价来源。SR/SP 是确定性计算，不能把它们的重复相同当评价器稳定性证据。</p>
+<p>用户之前问的“64 个重复组”来自早期两答案×两评价器×16 个指标=64 格，每格有三次返回；32 个跨评价器组是两答案×16 指标，每格比较两个评价器。16 项含 SR/SP、直接分、EGES 和衍生量，彼此有依赖。该批 12 次技术成功、64 组零极差、10/32 跨组有差异，但包含历史 Llama 评价；它只用于解释旧数字，<strong>不作为遵照当前模型要求的验证</strong>。<a href="../../ClearEval-public/artifacts/cce_validation/judges/stability_remediation_v2/analysis/README.md">旧 64 组来源</a></p>
+<p><strong>当前可用的两组证据。</strong></p>
+<table>
+<thead>
+<tr>
+<th>分析</th>
+<th>实际请求与分组</th>
+<th>结果</th>
+<th>限制</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>五份公开开发答案，Qwen 与 Codex 来源</td>
+<td>Qwen 原计划 15 格、14 返回、一格取消；Codex 12 返回；五项直接分各 25 组</td>
+<td>可算重复极差 Qwen 25/25、Codex 19/25，均 0；跨来源可比 21/25，三组均值不同</td>
+<td>Codex 精确后端和解码配置不可观测，不能称两个已证实独立模型家族</td>
+</tr>
+<tr>
+<td>新 E2 冻结本地 Qwen</td>
+<td>12 份全文×9 个模型相关分项=108 组，各两次</td>
+<td>93 组双次有限且极差/样本 SD 均 0；15 组双 NA，无缺失状态切换</td>
+<td>三个基础任务，重复数仅二；双 NA 不计数值一致</td>
+</tr>
+</tbody>
+</table>
+<p>三处跨来源直接差异是 A01 顺序、A05 参数完整性和顺序。Qwen/Codex 的 A01 <code>co_order</code> 为 2/2/2 对 3/3/3；两边各自稳定，彼此却不同。Codex 某些参数正确性直接返回 null，并非后处理丢失分数。应对照其理由和量表，不预设任一来源正确。<a href="../../ClearEval-public/artifacts/cce_validation/optimizer_round2_20261010/e4_cross_source_uniform_v5_v1/actual_execution_01/README_zh.md">公开重复对照</a></p>
+<p><strong>改进与结论。</strong> 现在明确列出计划次数、实际返回、有限值数、缺失变化、组内波动与跨来源差异；规范层消除了本面板编号直接评分漂移。但是旧 Qwen 有限直接分组已经全为零极差，因此<strong>不能说重复稳定性相对旧 Qwen 大幅提升</strong>。可主张的是这一冻结系统在本面板内可重复，格式处理有具体改善；准确性和域外稳定性仍待实证。</p>
+<h2 id="section-10">10. E5：CCE 联合结果、帕累托与重采样</h2>
+<p><strong>目标与安排。</strong> 同一批固定生成模型在同一共同题集比较。一个模型自己能评分的五题均值不能和另一个只剩三题的均值直接排名。逐答案先算 IA/HV，帕累托则用共同题集上的平均 Com/Cor/Eff。</p>
+<p><strong>当前主结果。</strong> 新评价的固定生成队列是 Qwen3-14B、Qwen3-32B；五题 <code>{1,2,21,22,248}</code> 共十份。主 v6/v7 数值相同：3/10 份完整，Com/Cor/SR/SP/time 均 10/10 可用；共同完整题仅 q22。两者的实际坐标如下：<a href="../../ClearEval-public/artifacts/cce_validation/optimizer_round2_20261010/secondary_E5_posthoc_analysis_v1/actual_v6_01/per_answer.csv">十份逐答案</a></p>
+<table>
+<thead>
+<tr>
+<th>生成模型；共同题仅 q22</th>
+<th style="text-align:right">Com</th>
+<th style="text-align:right">Cor</th>
+<th style="text-align:right">Eff</th>
+<th style="text-align:right">IA</th>
+<th style="text-align:right">HV</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Qwen3-14B</td>
+<td style="text-align:right">.644444</td>
+<td style="text-align:right">.333333</td>
+<td style="text-align:right">.295078</td>
+<td style="text-align:right">.295078</td>
+<td style="text-align:right">.063387</td>
+</tr>
+<tr>
+<td>Qwen3-32B</td>
+<td style="text-align:right">.400000</td>
+<td style="text-align:right">.666667</td>
+<td style="text-align:right">.423610</td>
+<td style="text-align:right">.400000</td>
+<td style="text-align:right">.112963</td>
+</tr>
+</tbody>
+</table>
+<p>14B 的 Com 较高，32B 的 Cor、Eff 较高，双方都不在三个维度同时不差于对方，所以都非支配。HV 较高也不等于三维支配成立。这是<strong>单题、两模型的经验取舍</strong>。</p>
+<p><strong>保留全部五题的改进。</strong> 不丢掉已知分项，也不猜未知分数：用原归一化定义域计算允许范围。五题平均 Com 为 .626667 对 .546667，Cor 为 .500000 对 .750000，两个已知维度方向相反，任何允许的 Eff 补齐都不能使其中一个完全支配另一个。</p>
+<table>
+<thead>
+<tr>
+<th>五题部分信息</th>
+<th>14B 外界</th>
+<th>32B 外界</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>平均 Eff</td>
+<td>[.463950,.613950]</td>
+<td>[.413022,.613022]</td>
+</tr>
+<tr>
+<td>平均逐答案 IA</td>
+<td>[.427584,.464571]</td>
+<td>[.403578,.535376]</td>
+</tr>
+<tr>
+<td>平均逐答案 HV</td>
+<td>[.155523,.203856]</td>
+<td>[.176930,.269662]</td>
+</tr>
+</tbody>
+</table>
+<p>这些是固定记录允许补全的外界，<strong>不是置信区间，也不保证所有端点可同时实现</strong>。它们保留可识别的取舍，但没有产生完整五题坐标。<a href="../../ClearEval-public/artifacts/cce_validation/optimizer_round2_20261010/partial_joint_identifiability_posthoc_v1/actual_v6_01/summary.json">部分信息原值</a></p>
+<p><strong>为什么 2,000 次？</strong> r2 事先指定这个计算次数，用于近似当前任务面板被重复抽样时的结果分布。每次所有模型、变体和重复一起按题抽走，SR/SP 原值不改，不重新请求模型。科学样本数仍是原来的题数。</p>
+<table>
+<thead>
+<tr>
+<th>分析对象</th>
+<th style="text-align:right">实际任务数</th>
+<th style="text-align:right">精确有序重抽组合</th>
+<th>真实结果与可解释范围</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>E5 完整共同题</td>
+<td style="text-align:right">1</td>
+<td style="text-align:right">1¹=1</td>
+<td>2,000 次都抽回 q22；非支配频率 1 是退化结果</td>
+</tr>
+<tr>
+<td>E5 五题部分信息</td>
+<td style="text-align:right">5</td>
+<td style="text-align:right">5⁵=3,125</td>
+<td>32B 保证非支配频率：Monte Carlo 1,996/2,000=.998；精确 3,119/3,125=.99808</td>
+</tr>
+<tr>
+<td>E2 删步 Com</td>
+<td style="text-align:right">3</td>
+<td style="text-align:right">3³=27</td>
+<td>平均差 −.085714；精确下降频率 26/27，Monte Carlo .964</td>
+</tr>
+<tr>
+<td>八份新确认的完整共同集</td>
+<td style="text-align:right">0</td>
+<td style="text-align:right">不可估计</td>
+<td>没有完整前沿，实际未生成其重采样结果</td>
+</tr>
+</tbody>
+</table>
+<p>E2 三题差值是 <code>[-.057143,-.2,0]</code>，离散 2.5%/97.5% 分位为 <code>[-.2,0]</code>。<code>.964</code> 不是“删除检测准确率”，<code>.99808</code> 也不是“32B 更优概率”。前者是任务组成下平均差方向，后者是部分未知允许补全下的非支配稳定性。小面板已全枚举，因此无需靠继续增加 Monte Carlo 次数假装增加证据。</p>
+<p><strong>实际修正。</strong> 精确离散重抽与抽样数组统一采用逆经验 CDF 分位，避免先前连续插值定义造成不一致；任务抽样、均值和方向计数保持不变。来源家族分支仍为 0 次：q22 两模型所选来源家族不一致，五题来源重叠又连成一个簇，不能把按题抽样改称来源家族 bootstrap。<a href="../../ClearEval-public/artifacts/cce_validation/optimizer_round3_20261011/E2_canonical_readout_complete_01/task_cluster_resampling.json">E2 重采样</a>、<a href="../../ClearEval-public/artifacts/cce_validation/optimizer_round3_20261011/delivery_draft/RESULTS_ESTABLISHED_EN.md">E5 已有解释</a></p>
+<p>阈值 0.6/0.7/0.8 的历史敏感性已运行，固定 13 模型共同 q2 的非支配集合大小为 6/5/4；这揭示依赖阈值，但属于历史复用配置。不能把它写成当前 v7 五任务新阈值实验，也不能事后挑最有利阈值。相关标准图件见<a href="../../ClearEval-public/artifacts/cce_validation/optimizer_round3_20261011/FIGURES_CURRENT.md">当前图件入口</a>。</p>
+<h2 id="section-11">11. E6：湿实验准备</h2>
+<p><strong>目标与安排。</strong> 一个成熟任务、两条完整路线、一个主要终点和主要比较；独立供体/来源作为生物学单位，视野和深度是内部重复。是否配对由保持原任务尺度的可行性决定。</p>
+<p><strong>实际完成。</strong> 样本量入口按非中心 t 分布、双侧 α=.05、功效 .80 计算；已给出 42 个效应量/损失率假设情景，并准备真实供体名单驱动的随机分组、测量模板、配对或 Welch 分析入口。它们是计划工具，未制造供体或实验数。<a href="../../ClearEval-public/artifacts/cce_validation/wetlab/WETLAB_PLAN.md">湿实验计划</a></p>
+<p><strong>问题与下一步。</strong> 实测行数 0、完成湿实验 0，最终 n 未定。需要任务尺度、可执行路线版本、主要终点、测量规则、有意义差异、相容真实方差及设备/供体信息。不能把假设效应量对应的 n 写成已经依据真实变异确定的样本量，也不能用单任务重复证明 EGES 的跨任务预测效度。</p>
+<h2 id="section-12">12. 后续八份确认与最后十次机制验证</h2>
+<p><strong>八份确认的目标和安排。</strong> 在开发后冻结输入与配置，观察候选在新增答案上的表现。实际为四题、四个生成模型、八答案；仅 Claude 与 Qwen Max 共享 q23/q248 两题，不能称两模型×四题。每份单次，属于已曝光任务/来源家族中的答案级确认。</p>
+<p><strong>结果。</strong> 八份均返回，五份技术成功、三份部分成功；主/次完整 CCE 均 0/8，time 均 0/8。三个部分成功例分别为 C-FoS 大小写绑定、TO-PRO-3 后接浓度范围被当名称后缀、汉字紧邻 BABB 的 Unicode 边界；这些均不能解释成原文没有该实体。全输入 token、字节和冻结身份已核对，没有输入截断；早先字节代理误报超上下文的准入判断已经修复。<a href="../../ClearEval-public/artifacts/cce_validation/optimizer_round3_20261011/confirmation_readout_complete_01/REPORT_zh.md">确认报告</a></p>
+<p>四份 SR/SP 双零也有不同原因：一份原存档止于操作残句；两份中文操作与英文参考存在表示线索；一份英文通用 CUBIC 与 HV 完整分支尚未确认同范围。四份都没有编码长度截断；没有证据把它们全归因于中文或全归因于答案错误。</p>
+<p><strong>最后十次验证的目标与安排。</strong> 对原五份开发答案做 K0/K1/K2 对比：K0 复用五份历史成功基线；K1 补作者时间限定；K2 再要求逐分项给来源和档位依据。新增十次均由同一冻结本地 Qwen 实例完成，每条件每答案一次，无重试。它是机制开发对比，不是新留出，也不是同提示重复实验。<a href="../../ClearEval-public/artifacts/cce_validation/optimizer_round3_20261011/source_context_validation_proposal_01/RESULTS_zh.md">完整最新结果</a></p>
+<table>
+<thead>
+<tr>
+<th>实际指标</th>
+<th style="text-align:right">K0</th>
+<th style="text-align:right">K1</th>
+<th style="text-align:right">K2</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>每条件观测数</td>
+<td style="text-align:right">5（复用）</td>
+<td style="text-align:right">5（新调用）</td>
+<td style="text-align:right">5（新调用）</td>
+</tr>
+<tr>
+<td>SR/SP、Com 与四项 EGES</td>
+<td style="text-align:right">基线</td>
+<td style="text-align:right">逐值不变</td>
+<td style="text-align:right">逐值不变</td>
+</tr>
+<tr>
+<td>完整 CCE</td>
+<td style="text-align:right">1/5</td>
+<td style="text-align:right">1/5</td>
+<td style="text-align:right">1/5</td>
+</tr>
+<tr>
+<td>A05 Cor</td>
+<td style="text-align:right">.666667</td>
+<td style="text-align:right">.708333</td>
+<td style="text-align:right">.708333</td>
+</tr>
+<tr>
+<td>A05 Eff / IA</td>
+<td style="text-align:right">.596463</td>
+<td style="text-align:right">.596463</td>
+<td style="text-align:right">.596463</td>
+</tr>
+<tr>
+<td>A05 HV</td>
+<td style="text-align:right">.272669</td>
+<td style="text-align:right">.289711</td>
+<td style="text-align:right">.289711</td>
+</tr>
+</tbody>
+</table>
+<p><strong>真正改善的地方。</strong> A05/K2 将两类操作分别与各自参考比较，纠正旧理由把它们混用同一时长的问题。<strong>仍存在的失败。</strong> A01 承认作者允许减半，但另要求答案声明使用该选项；A02 承认没有 3 mm 定量范围却继续按百分比档给分；A03/K2 同一理由“超过 50%”却落入“50%以内”档；A05/K1、K2 扣了题目未要求展开的染色步骤。分数上升本身不等于依据更充分。</p>
+<p>75 个直接分项的 375 处答案引用均可定位、797 项机械检查通过，但来源支持和档位问题仍在。作者针对预设八个问题的三条件记录及三项探索记录核查了 42 条选定命题：9 一致、8 冲突、24 当前来源未支持、1 未作该主张/未决。定向选取、命题相关、没有专家金标，不能换算整体错误率。十五条 <code>c_param</code> 理由均未明确枚举必要细节的分子/分母，这是可审计性缺口，不是十五个已证实错分。</p>
+<h2 id="section-13">13. 原因排查循环、可写结论与剩余实验</h2>
+<p>已按“形式化现象→查文献→提出单一方向→真实实验→保留失败与副作用”推进。例如：编号导致分数漂移，先证明正文不变，再规范模型输入；实际直接分一致，但原 SR 对合并仍敏感。来源限定遗漏，先绑定作者附表，再追加限定和证据账本；实际局部对齐改善，但档位与范围仍失败。完整 CCE 少，先逐项定位，不把所有问题归入 JSON。</p>
+<p>可借鉴的已发表方法与本项目的关系如下。最后一列是本项目推论，不是文献已经替 ClearEval 解决了问题。</p>
+<table>
+<thead>
+<tr>
+<th>文献</th>
+<th>支持的设计思想</th>
+<th>在 ClearEval 中的应用及边界</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://aclanthology.org/2020.acl-main.442/">CheckList，ACL 2020</a></td>
+<td>用行为测试系统检查模型能力与失败</td>
+<td>将不变性、方向性分开测试；不能替代步骤必要性的领域证据</td>
+</tr>
+<tr>
+<td><a href="https://aclanthology.org/2021.emnlp-main.575/">Perturbation CheckLists，EMNLP 2021</a></td>
+<td>针对具体评价维度设计扰动，检验评价指标</td>
+<td>不能要求删步同时降低全部指标；需明确每一维预期</td>
+</tr>
+<tr>
+<td><a href="https://aclanthology.org/2023.emnlp-main.398/">ALCE，EMNLP 2023</a></td>
+<td>把答案质量、事实正确性与引用质量分别评估</td>
+<td>引文可定位不等于支持评分理由；本次 375 处定位成功正需要进一步核内容</td>
+</tr>
+<tr>
+<td><a href="https://aclanthology.org/2024.findings-acl.838/">FRONT，Findings of ACL 2024</a></td>
+<td>细粒度、有依据的引文生成</td>
+<td>可设计先列适用证据再评分的候选；尚未在本项目证明效果</td>
+</tr>
+</tbody>
+</table>
+<p><strong>现在有依据写入论文的结果</strong>包括：真实接入与来源覆盖；指定编辑的响应、无响应和反常响应；局部技术修复；冻结小面板重复性及缺失分母；完整共同单题和五题部分信息下的多维取舍；次级候选未在新增确认中改善覆盖；具体来源/档位不一致案例。</p>
+<p><strong>仍有问题的论文主张与所需工作</strong>如下，按对结论影响排序。</p>
+<table>
+<thead>
+<tr>
+<th>尚不宜作出的主张</th>
+<th>对应缺口</th>
+<th>下一项可证伪工作；未执行部分明确待定</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>当前评价器科学准确、能可靠区分全部错误</td>
+<td>量表落档、范围解释、已知软件误挡与 KB 缺证混合</td>
+<td>在原五份开发材料列操作范围、逐项来源和原档位条件；分别验证映射与判分，不以完整率单指标选候选</td>
+</tr>
+<tr>
+<td>SR/SP 已具备本领域语义稳健性</td>
+<td>合并条目改变原分数；部分中文/版本匹配未明</td>
+<td>原算法保留主基线；若另提分段候选，固定后独立验证，不覆盖原 SR/SP</td>
+</tr>
+<tr>
+<td>已完成全部受控属性验证</td>
+<td>最新配置未覆盖参数删除、顺序冲突和完整替代九对</td>
+<td>固定同配置、两端全文真实评价；旧结果继续单列</td>
+</tr>
+<tr>
+<td>新提取准确率或专家纠正收益已得到</td>
+<td>一位专家 5＋15 尚无回传</td>
+<td>处理真实版本回执与字段核查，报告实际审阅范围；不扩充人工预算</td>
+</tr>
+<tr>
+<td>完整五题或全库模型排名稳定</td>
+<td>共同完整题过少，来源簇不够</td>
+<td>扩充真实共同可评分任务和独立来源；增加重采样次数不能补样本</td>
+</tr>
+<tr>
+<td>条件性参考就是正式金标准</td>
+<td>全文来源与全任务适用性尚未全部确认</td>
+<td>参考建设单列条件和人时，跨相同条件复用确认</td>
+</tr>
+<tr>
+<td>高 Eff 表示实测更好、长期储存已验证</td>
+<td>无真实湿实验数据</td>
+<td>完成已定范围的真实测量；在此之前仅解释证据规则分数</td>
+</tr>
+</tbody>
+</table>
+<p>现有 438 次计次上限已用完。继续整理、离线复算和接收既定专家核查无需新增生成请求；新模型实验需要另定额度。八份确认正文已经曝光，不能反复用于开发后再称新的前瞻确认。</p>
+<h2 id="section-14">14. 实际命令、产物和本次复算范围</h2>
+<p>以下两条是已有真实实验的<strong>执行记录</strong>，此文档任务未再次运行它们。原命令、原请求、返回和处理文件仍在对应目录，勿因阅读文档而重复启动。</p>
+<pre><code class="language-powershell"># 工作目录 C:\ClearEval\ClearEval-public；已完成的 24 次受控批次
+&amp; 'C:\ClearEval\review_artifacts\bioprobench_2026-09-29\python_portable\python.exe' -X utf8 scripts/cce_round3_runner_v2.py run --out artifacts/cce_validation/optimizer_round3_20261011/E2_canonical_qwen_01 --allow-local-calls --max-new-calls 24
+
+# 已完成的最后十次来源干预
+&amp; 'C:\ClearEval\review_artifacts\bioprobench_2026-09-29\python_portable\python.exe' -X utf8 scripts/cce_source_context_validation_runner_v1.py run --out artifacts/cce_validation/optimizer_round3_20261011/source_context_validation_proposal_01
+</code></pre>
+<p>当前实际参数为本地服务别名 <code>qwen3.8:27b-q8_0-local</code>，元数据 family=<code>qwen35</code>、27.3B、Q8_0；温度 0、上下文 98,304、输出预算 8,192、thinking=false。别名不独立证明公开发布的 Qwen3.8 身份；底层 llama.cpp 是引擎，不是采用 Llama 模型。完整 digest 及合同见<a href="../../ClearEval-public/artifacts/cce_validation/optimizer_round3_20261011/delivery_completed_01/configuration/resolved_config.yaml">配置</a>与<a href="../../ClearEval-public/artifacts/cce_validation/optimizer_round3_20261011/source_context_validation_proposal_01/RUN_COMMANDS_ACTUAL.md">最新实际命令</a>。</p>
+<p>本次报告的离线核对命令为：</p>
+<pre><code class="language-powershell">&amp; 'C:\ClearEval\review_artifacts\bioprobench_2026-09-29\python_portable\python.exe' -X utf8 'C:\ClearEval\reports\cleareval_20261012\verify_report.py'
+</code></pre>
+<p>此入口从真实结果读取原分项，独立核算聚合和配对差值、复核案例来源哈希及三题精确重采样，并检查本文本地链接。它不调用评价器、不新判直接分、不改原始返回。另一次用户要求的当前模型分解与原 EGES 函数复算见 <a href="LLM_DECOMPOSITION_zh.md">LLM_DECOMPOSITION_zh.md</a>。读取记录可跨批次重叠，验证次数不代表独立实验样本。实际退出状态和计数在 <a href="verification.json">verification.json</a>。</p>
+<h2 id="section-15">15. 五个真实示例：把评测走到终点，并标出出问题的位置</h2>
+<h3>示例一：A05/q248，完整计算得到一份 CCE，但评分理由仍有问题</h3>
+<p>这是原五份开发中的 Gemini Flash 答案，题目给定已固定样本，要求选标记策略，随后列透明、RI 和保存/成像前处理。选定 FDISCO，本文使用最新 <strong>A05_K2</strong> 的真实返回；完整原题、原答在<a href="../../ClearEval-public/artifacts/cce_validation/optimizer_round3_20261011/source_context_validation_proposal_01/cases.json">冻结案例</a>，原文字符及哈希在<a href="../../ClearEval-public/artifacts/cce_validation/optimizer_round3_20261011/source_context_validation_proposal_01/source_documents/A05.json">来源文档</a>，逐字段转换与原函数输入在<a href="../../ClearEval-public/artifacts/cce_validation/optimizer_round3_20261011/source_context_validation_proposal_01/run/attempts/e0bb0194c80016e3e68c0179f4a328ae4d59cbe64202232629896752f4c79e6f_1/processing.json">实际处理记录</a>。</p>
+<ol>
+<li><strong>S0–S2：身份、范围、参考。</strong> 使用原题原答和 <code>FDISCO_SUPPLEMENT_V2_WHOLE_BRAIN</code> 来源分支。已有初始状态不要求答案重写；候选参考不因参数有争议而移出方法池。</li>
+<li><strong>S3：原始步骤匹配。</strong> SR=5/7，SP=3/4。这是两种不同方向的阈值命中比例，不是把同一个匹配数除以两个分母。</li>
+<li><strong>S4：直接判分。</strong> 原返回为 <code>c_param=2, co_order=1, co_method=2, co_param=1, co_chem=1</code>。按既有规则保存，不依据本文看法自动改分。</li>
+<li><strong>S5：提取与范围。</strong> 程序保存六项首次核心处理贡献，加总为 15 h；储存和成像记录单列。标记声明有 tdTomato，以及 TUJ1 与 Alexa Fluor 647 的明确配对。原生 tdTomato 使用空 marker，不人为构造自环。时间是给定阶段/执行约定下的数值，不是已测实验完成时间。</li>
+<li><strong>S6：EGES。</strong> 方法 .1263；标签内部聚合为 target=6、marker=6、method=5.1，最小值得到标签 5.1；RI 分 2.814646787；时间分 .217130708。原生通道中未知的靶标字段仍保存，并未把它们补成满分。</li>
+<li><strong>S7：实际算术。</strong></li>
+</ol>
+<pre><code class="language-text">Com = .4×(5/7) + .6×(2/3) = .6857142857
+Cor = (1/3 + 2/2 + 1/2 + 1)/4 = .7083333333
+Eff = (.52526 + .85 + .9382155957 + .0723769026)/4
+    = .5964631246
+IA  = .5964631246
+HV  = .6857142857×.7083333333×.5964631246 = .2897106605
+</code></pre>
+<ol start="7">
+<li><strong>S8–S9：能报告到哪里。</strong> 完整数值已得到，但开发例不能混入新增模型排名。K0→K2 的 HV .272669→.289711 来自评价分数变化，原答案没变。该返回仍因未展开题目未要求的染色步骤而扣顺序分，参数理由还有档位问题：<strong>错误位置在 S1/S4，不在 JSON、加总公式或是否生成了 CCE。</strong> 专家判断仍待定。</li>
+</ol>
+<h3>示例二：q2 基线与删步版，完整性下降而正确性上升</h3>
+<p>这是最新 E2 的 Gemini Pro/q2 基础答案，与示例一及 A01 均不是同一条答案。输入为冻结基线及删除终末模块后的全文，两端都重新评价，同配置各两次，两次结果相同。<a href="../../ClearEval-public/artifacts/cce_validation/optimizer_round3_20261011/E2_canonical_qwen_01/cases.json">真实全文</a>、<a href="../../ClearEval-public/artifacts/cce_validation/optimizer_round3_20261011/E2_canonical_readout_complete_01/paired_results.json">逐配对实值</a></p>
+<table>
+<thead>
+<tr>
+<th>流程阶段</th>
+<th>基线</th>
+<th>删除版</th>
+<th>出现的问题或解释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>S3 步骤匹配</td>
+<td>SR=6/7，SP=7/9</td>
+<td>SR=5/7，SP=1</td>
+<td>SR 下降；删去低匹配步骤可使 SP 上升</td>
+</tr>
+<tr>
+<td>S4 参数完整性</td>
+<td>c_param=2</td>
+<td>c_param=2</td>
+<td>同一粗档不变；不能仅此认定没有遗漏</td>
+</tr>
+<tr>
+<td>S4 顺序/参数正确性</td>
+<td>co_order=2，co_param=1</td>
+<td>co_order=1，co_param=2</td>
+<td>两个分项方向相反</td>
+</tr>
+<tr>
+<td>S7 Com</td>
+<td>.742857</td>
+<td>.685714</td>
+<td>差值 −.057143 来自 SR</td>
+</tr>
+<tr>
+<td>S7 Cor</td>
+<td>.791667</td>
+<td>.833333</td>
+<td>差值 +.041667=1/24，来自原分项权重</td>
+</tr>
+<tr>
+<td>S6 标签/时间</td>
+<td>主 label 未定，time 有限</td>
+<td>主 label 未定，time 未定；保存核心小计 60 h</td>
+<td>小计与完整路线达到端点所需时间不能直接等同</td>
+</tr>
+<tr>
+<td>S7 完整 CCE</td>
+<td>未得到</td>
+<td>未得到</td>
+<td>其余分项、实际配对和变化全部保留</td>
+</tr>
+</tbody>
+</table>
+<p>走到 S8 后，把这题与 q21/q22 一起按基础任务分析：Com 三题差为 <code>[-2/35,-1/5,0]</code>，平均 <code>-3/35≈-.085714</code>。27 种精确重抽中只有三个位置都抽到 q22 的那个组合均值为 0，其余 26 个为负。<strong>这解释组成敏感性，不构成 96.3% 的错误检测准确率。</strong></p>
+<h3>示例三：q22 两个生成模型，算出完整联合结果与非支配关系</h3>
+<p>同一 q22 固定任务，两份真实存档分别为 FPC14/Qwen3-14B 与 FPC15/Qwen3-32B，由同一冻结本地 Qwen 配置评价。样本及需求相同，但生成模型、路线、标记和其他答案内容均不同，属于自然答案描述性比较。<a href="../../ClearEval-public/artifacts/cce_validation/optimizer_round2_20261010/secondary_E5_posthoc_analysis_v1/actual_v6_01/per_answer.csv">逐答案来源、原返回与分数</a></p>
+<table>
+<thead>
+<tr>
+<th>S2–S7 实际字段</th>
+<th style="text-align:right">FPC14</th>
+<th style="text-align:right">FPC15</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>声明方法／选定完整参考</td>
+<td style="text-align:right">iDISCO+／2016 April bench 分支</td>
+<td style="text-align:right">CUBIC／CUBIC-HV 2020 条件分支</td>
+</tr>
+<tr>
+<td>SR / SP</td>
+<td style="text-align:right">1/9 / .1</td>
+<td style="text-align:right">0 / 0</td>
+</tr>
+<tr>
+<td>c_param</td>
+<td style="text-align:right">3</td>
+<td style="text-align:right">2</td>
+</tr>
+<tr>
+<td>co_order, co_method, co_param, co_chem</td>
+<td style="text-align:right">1,1,1,0</td>
+<td style="text-align:right">2,1,1,1</td>
+</tr>
+<tr>
+<td>s_method</td>
+<td style="text-align:right">−1.0625</td>
+<td style="text-align:right">.9722</td>
+</tr>
+<tr>
+<td>s_label</td>
+<td style="text-align:right">0</td>
+<td style="text-align:right">0</td>
+</tr>
+<tr>
+<td>s_trans</td>
+<td style="text-align:right">2.678437505</td>
+<td style="text-align:right">3</td>
+</tr>
+<tr>
+<td>s_time</td>
+<td style="text-align:right">0</td>
+<td style="text-align:right">1.830581×10⁻¹²</td>
+</tr>
+<tr>
+<td>Com / Cor / Eff</td>
+<td style="text-align:right">.644444 / .333333 / .295078</td>
+<td style="text-align:right">.400000 / .666667 / .423610</td>
+</tr>
+<tr>
+<td>IA / HV</td>
+<td style="text-align:right">.295078 / .063387</td>
+<td style="text-align:right">.400000 / .112963</td>
+</tr>
+</tbody>
+</table>
+<p>S6 的标签零来自原规则处理已有明确关系，不是缺项默认零；时间零或极小值是原函数结果。FPC15 的 SR/SP 零也不等于“没有步骤”：其通用方法与现有完整版本的操作范围仍有待确认，数值表示固定阈值下未命中。</p>
+<p>到 S8，14B 的 Com 更高，32B 的 Cor/Eff 更高，双方非支配。两千次重抽共同完整题时只有 q22 可抽，每次相同，没有获得额外跨任务证据。FPC15 原请求状态仍为部分成功；后处理数值完整没有把该状态改为成功。<strong>这里的限制主要在 S2 的版本适用性、S6 的规则解释和 S8 的共同题数量；完整算术链已经成立。</strong></p>
+<h3>示例四：同一旧答案 FPC03，旧框架有分，新程序曾把它挡住</h3>
+<p>S0 先确认同一 Qwen3-14B/q21 原题和答案。旧评分理由保存 Act=78 h，s_time=0；新 fw3 从操作中保存候选 <code>[80,80]</code>，但 s_time 为 NA。沿 S5 的未决时间字段往回看，唯一时间 issue 是原文 <code>in 3D</code> 被识别成时长候选。它是空间表达，属于可定位的软件误挡。<a href="../../ClearEval-public/artifacts/cce_validation/optimizer_round2_20261010/first7_historical_availability_audit_v1/README_zh.md">七份同答案诊断</a></p>
+<p>后来的 fw5 在同 raw 上修复这个词法错误，这份与 FPC06 一起使首七份完整数值恢复 2/7。该修复没有新请求，没有改变答案。<strong>它证明新程序可以误伤可算项，不能拿 NA 增多说明科学更严谨。</strong></p>
+<p>同时，78 h 与新候选 80 h 的差异仍要追溯原输入；修复词法不证明旧值或新值天然正确。标签输入也曾改变，例如旧明确配对与新关系 unknown/native 表示不同；不能把旧标签分直接贴到新输入。完整比较必须继续到 S6 输入层，而不能只看最终都有一个数字。</p>
+<h3>示例五：A03_K2，所有技术步骤成功，理由与档位却不一致</h3>
+<p>S0–S3 使用既定开发答案和 3 mm 条件参考，SR/SP=5/7、3/7；S4 收到合法返回，全部直接分项有值；S5 引文可定位。直接分数为 <code>c_param=3, co_order=3, co_method=2, co_param=1, co_chem=1</code>，Com=.885714、Cor=.875。<a href="../../ClearEval-public/artifacts/cce_validation/optimizer_round3_20261011/source_context_validation_proposal_01/RESULTS_zh.md">最新逐答案与理由</a></p>
+<p>问题发生在 S4：同一参数理由先说比较偏差超过 50%，随后用“50%以内”的 1 分档解释。按它自行提出的比较值，条件算术也不满足该档。进一步查 S2，作者来源并没有建立该 3 mm 样本的精确时间，所以连比较基准也尚未得到适用支持。<a href="../../ClearEval-public/artifacts/cce_validation/optimizer_round3_20261011/source_context_validation_proposal_01/conditional_arithmetic_check_01.json">条件算术及原句</a></p>
+<p>S6 的方法、RI、时间仍可按原输入得到值，标签保持 NA，因此 Eff/IA/HV 不能给完整单值。这有两个不同问题：<strong>来源/档位不一致影响 Cor 的可信度；标签未知影响 Eff 的可计算性。</strong> 后者没有自动删除前者，也不能因为补齐标签就宣布 Cor 正确。最终报告应同时展示原分数、理由问题和未知原因，留待对应证据核查，不自动把 co_param 改成 0、2 或用重试挑选答案。</p>
+</main></body></html>

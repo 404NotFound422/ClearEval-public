@@ -1,0 +1,60 @@
+第1行（所选荧光/标记策略 + 透明方法）：**[NeuN + Alexa Fluor 647（胞体）, β-III Tubulin (TUJ1) + Alexa Fluor 647（轴突/树突）, TO-PRO-3（全脑核染）] + iDISCO+（DBE RI匹配）**  
+选择理由：iDISCO+ 适用于完整成年小鼠全脑（~10×8×6 mm）快速高透明化与光片成像；有机溶剂脱水/脱脂后透明度高、纤维束走行对比好；TO-PRO-3 与 Alexa Fluor 647 在iDISCO+流程中信号相对稳健，适合全脑三维神经元胞体与神经突起形态图谱构建。
+
+**Protocol Steps：**
+
+1 预处理与脱水（Dehydration）  
+1.1 20% (vol/vol) 甲醇/水溶液浸泡，轻摇。(Temperature: RT, Time: 2 hours)  
+1.2 40% (vol/vol) 甲醇/水溶液浸泡，轻摇。(Temperature: RT, Time: 2 hours)  
+1.3 60% (vol/vol) 甲醇/水溶液浸泡，轻摇。(Temperature: RT, Time: 2 hours)  
+1.4 80% (vol/vol) 甲醇/水溶液浸泡，轻摇。(Temperature: RT, Time: 2 hours)  
+1.5 100% (vol/vol) 甲醇浸泡，轻摇。(Temperature: RT, Time: 2 hours)  
+1.6 新鲜 100% (vol/vol) 甲醇再次浸泡。(Temperature: RT, Time: 2 hours)
+
+2 脱色/去血红素（Bleaching，可显著降低全脑背景）  
+2.1 5% H2O2 in 甲醇（体积比：30% H2O2 : 甲醇 = 1 : 5）避光浸泡。(Temperature: 4 ℃, Time: 12–16 hours)
+
+3 复水（Rehydration）  
+3.1 80% (vol/vol) 甲醇/水溶液浸泡。(Temperature: RT, Time: 1.5 hours)  
+3.2 60% (vol/vol) 甲醇/水溶液浸泡。(Temperature: RT, Time: 1.5 hours)  
+3.3 40% (vol/vol) 甲醇/水溶液浸泡。(Temperature: RT, Time: 1.5 hours)  
+3.4 20% (vol/vol) 甲醇/水溶液浸泡。(Temperature: RT, Time: 1.5 hours)  
+3.5 1×PBS 浸泡。(Temperature: RT, Time: 1.5 hours)
+
+4 渗透/封闭（Permeabilization & Blocking）  
+4.1 渗透液：PBS + 0.2% (vol/vol) Triton X-100 + 20% (vol/vol) DMSO + 0.3 M Glycine，轻摇。(Temperature: 37 ℃, Time: 24 hours)  
+4.2 封闭液：PBS + 0.2% Triton X-100 + 10% (vol/vol) DMSO + 6% (vol/vol) 正常驴血清（NDS），轻摇。(Temperature: 37 ℃, Time: 24 hours)
+
+5 一抗全脑免疫标记（Whole-brain immunolabeling, primary）  
+5.1 一抗孵育液：PBS + 0.2% Triton X-100 + 5% DMSO + 3% NDS + 0.01% (w/v) NaN3；加入 NeuN (RBFOX3) 一抗 1:200。(Temperature: 37 ℃, Time: 5–7 days)  
+5.2 同一孵育液中加入 β-III Tubulin (TUJ1) 一抗 1:300（与5.1可同管共孵育）。(Temperature: 37 ℃, Time: 5–7 days)
+
+6 洗涤（Wash after primary）  
+6.1 洗涤液：PBS + 0.2% Triton X-100 + 0.01% NaN3，轻摇换液。(Temperature: RT, Time: 6 hours)  
+6.2 重复 6.1 共 6 次（总洗涤约 36 hours）。(Temperature: RT, Time: 36 hours)
+
+7 二抗全脑免疫标记（Secondary, far-red）  
+7.1 二抗孵育液：PBS + 0.2% Triton X-100 + 3% NDS + 0.01% NaN3；加入驴抗鼠/兔（按一抗宿主匹配）Alexa Fluor 647 二抗 1:400（分别对应NeuN与TUJ1；若两一抗宿主不同可同管共孵育）。(Temperature: 37 ℃, Time: 5–7 days, Light: protected)  
+
+8 洗涤（Wash after secondary）  
+8.1 PBS + 0.2% Triton X-100 + 0.01% NaN3 洗涤，轻摇换液。(Temperature: RT, Time: 6 hours)  
+8.2 重复 8.1 共 6 次（总洗涤约 36 hours）。(Temperature: RT, Time: 36 hours)
+
+9 核染（TO-PRO-3，全脑核定位辅助配准/分区）  
+9.1 TO-PRO-3 1–2 µM（在PBS + 0.2% Triton X-100中），避光轻摇。(Temperature: RT, Time: 12–24 hours)  
+9.2 PBS 洗涤 3 次。(Temperature: RT, Time: 2 hours each)
+
+10 再次脱水（Dehydration before clearing）  
+
+11 脱脂/透明化前处理（Delipidation with DCM）  
+11.1 66% (vol/vol) 二氯甲烷(DCM)/33% 甲醇混合液浸泡。(Temperature: RT, Time: 3 hours)  
+11.2 100% DCM 浸泡。(Temperature: RT, Time: 2 × 1.5 hours)
+
+12 RI 匹配（Refractive index matching, DBE）  
+12.1 100% 二苄醚（DBE, RI≈1.56）预浸泡。(Temperature: RT, Time: 3 hours, Light: protected)  
+12.2 新鲜 100% DBE 继续浸泡至完全透明（全脑通常需要）。(Temperature: RT, Time: 12–24 hours, Light: protected)
+
+13 保存与成像前处理（Storage & pre-imaging）  
+13.1 样本全程浸没于新鲜 100% DBE，避光密封保存（尽量充满容器减少氧化）。(Temperature: RT or 4 ℃, Time: up to 1–2 weeks)  
+13.2 光片成像前更换一次新鲜 DBE 并静置脱气泡/沉降。(Temperature: RT, Time: 1–2 hours)  
+13.3 成像介质与物镜匹配：使用 RI≈1.56 的DBE兼容成像腔与密封材料；样本固定于支架后直接进行全脑光片扫描。(Temperature: RT, Time: per imaging session)

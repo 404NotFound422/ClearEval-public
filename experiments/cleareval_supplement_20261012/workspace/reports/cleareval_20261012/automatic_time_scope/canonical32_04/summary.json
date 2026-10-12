@@ -1,0 +1,68 @@
+{
+  "cohort": "canonical32",
+  "saved_returns": 32,
+  "unbranched_candidate_point_count": 28,
+  "s_time_available_before": 26,
+  "s_time_available_after": 29,
+  "complete_before": 26,
+  "complete_after": 29,
+  "changed": [
+    "R3C01__r0",
+    "R3C04__r0",
+    "R3C07__r0"
+  ],
+  "candidate_not_applied": [
+    {
+      "cell_id": "R3C02__r0",
+      "issues": [
+        {
+          "kind": "combined_labeling_and_core_transition_duration_unreported",
+          "operation_id": "OP034"
+        },
+        {
+          "kind": "missing_or_unbound_operation_duration",
+          "operation_id": "OP035"
+        },
+        {
+          "kind": "missing_or_unbound_operation_duration",
+          "operation_id": "OP036"
+        }
+      ],
+      "finite_scenarios": 1
+    },
+    {
+      "cell_id": "R3C03__r0",
+      "issues": [
+        {
+          "kind": "source_schedule_not_serial",
+          "mode": "unknown"
+        },
+        {
+          "kind": "unknown_operation_scope",
+          "operation_id": "OP01"
+        },
+        {
+          "kind": "unknown_operation_scope",
+          "operation_id": "OP02"
+        },
+        {
+          "kind": "no_reported_core_incubations"
+        }
+      ],
+      "finite_scenarios": 0
+    },
+    {
+      "cell_id": "R3C05__r0",
+      "issues": [],
+      "finite_scenarios": 4
+    },
+    {
+      "cell_id": "R3C08__r0",
+      "issues": [],
+      "finite_scenarios": 2
+    }
+  ],
+  "new_model_calls": 0,
+  "new_per_answer_author_annotations": 0,
+  "scientific_accuracy_claimed": false
+}

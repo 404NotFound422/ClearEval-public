@@ -1,0 +1,297 @@
+{
+  "cohort": "E2",
+  "cell_id": "E2_16__local_qwen27b_q8_development__r0",
+  "anonymous_answer_id": "E2_16",
+  "question_id": 21,
+  "original_status": "success",
+  "version": "cce-scoped-midpoint-scorer-v1",
+  "metrics": {
+    "c_param": 3,
+    "co_order": 0,
+    "co_method": 2,
+    "co_param": 1,
+    "co_chem": 1,
+    "s_method": -0.45,
+    "s_label": null,
+    "s_trans": 2.7055534759358473,
+    "s_time": 0.0,
+    "sr": 0.7142857142857143,
+    "sp": 0.5454545454545454,
+    "Com": 0.8857142857142857,
+    "Cor": 0.625,
+    "Eff": null,
+    "IA": null,
+    "HV": null
+  },
+  "complete_numeric_CCE": false,
+  "baseline_metrics": {
+    "c_param": 3,
+    "co_order": 0,
+    "co_method": 2,
+    "co_param": 1,
+    "co_chem": 1,
+    "s_method": -0.45,
+    "s_label": null,
+    "s_trans": 2.7055534759358473,
+    "s_time": 0.0,
+    "sr": 0.7142857142857143,
+    "sp": 0.5454545454545454,
+    "Com": 0.8857142857142857,
+    "Cor": 0.625,
+    "Eff": null,
+    "IA": null,
+    "HV": null
+  },
+  "quantitative_data": {
+    "method_name": "FDISCO",
+    "tissue_ri_value": 1.46,
+    "total_time_hours": 48.0,
+    "sample_tier": "T02_THICK_SLICE_0P5_3MM",
+    "reagent_ri_value": 1.56,
+    "protocol_time_hours": null
+  },
+  "time_derivation": {
+    "hours": 48.0,
+    "bounds_hours": [
+      48.0,
+      48.0
+    ],
+    "decision": "existing_source_bound_scalar",
+    "issues": []
+  },
+  "time_formula": {
+    "policy": "kb-window-asymmetric-median-0.20-under-0.10-over-v1",
+    "source": "time_kb.json",
+    "requested_tier": "T02_THICK_SLICE_0P5_3MM",
+    "actual_hours": 48.0,
+    "min_hours": 4.0,
+    "max_hours": 12.0,
+    "median_hours": 8.0,
+    "tau_hours": 0.8,
+    "delta_hours": 36.0,
+    "tau_under_fraction": 0.2,
+    "tau_over_fraction": 0.1,
+    "status": "scored",
+    "resolved_tier": "T02_THICK_SLICE_0P5_3MM",
+    "method_key": "fdisco"
+  },
+  "time_sensitivity": [
+    {
+      "time_hours": 48.0,
+      "s_time": 0.0,
+      "Eff": null
+    }
+  ],
+  "label_derivation": {
+    "version": "label-occurrence-projection-v1-posthoc",
+    "channels": {
+      "s_target_match": null,
+      "s_marker_fluor_compat": null,
+      "s_method_fluor_compat": 4.199999999999999
+    },
+    "s_label": null,
+    "original_occurrence_numeric_label": null,
+    "pair_results": [
+      {
+        "pair_id": "relation:R01",
+        "kind": "unresolved_relation",
+        "original_function_input": {
+          "GFP": ""
+        },
+        "channels": {
+          "s_target_match": null,
+          "s_marker_fluor_compat": null,
+          "s_method_fluor_compat": 5.4
+        },
+        "local_s_label": null,
+        "contribution_present": {
+          "s_target_match": false,
+          "s_marker_fluor_compat": false,
+          "s_method_fluor_compat": true
+        },
+        "marker_identity_conflict": false,
+        "compatibility_audit": [
+          {
+            "kind": "method_fluor",
+            "method_name": "FDISCO",
+            "fluorophore": "GFP",
+            "source": "KnowledgeBase/method_fluro_compati.json",
+            "value": 0.9,
+            "status": "TABLE_REPORTED"
+          }
+        ]
+      },
+      {
+        "pair_id": "native:IS01",
+        "kind": "source_native_fluor_key_only",
+        "original_function_input": {
+          "GFP": ""
+        },
+        "channels": {
+          "s_target_match": null,
+          "s_marker_fluor_compat": null,
+          "s_method_fluor_compat": 5.4
+        },
+        "local_s_label": null,
+        "contribution_present": {
+          "s_target_match": false,
+          "s_marker_fluor_compat": false,
+          "s_method_fluor_compat": true
+        },
+        "marker_identity_conflict": false,
+        "compatibility_audit": [
+          {
+            "kind": "method_fluor",
+            "method_name": "FDISCO",
+            "fluorophore": "GFP",
+            "source": "KnowledgeBase/method_fluro_compati.json",
+            "value": 0.9,
+            "status": "TABLE_REPORTED"
+          }
+        ]
+      },
+      {
+        "pair_id": "relation:R02",
+        "kind": "unresolved_relation",
+        "original_function_input": {
+          "DAPI": ""
+        },
+        "channels": {
+          "s_target_match": null,
+          "s_marker_fluor_compat": null,
+          "s_method_fluor_compat": 4.199999999999999
+        },
+        "local_s_label": null,
+        "contribution_present": {
+          "s_target_match": false,
+          "s_marker_fluor_compat": false,
+          "s_method_fluor_compat": true
+        },
+        "marker_identity_conflict": false,
+        "compatibility_audit": [
+          {
+            "kind": "method_fluor",
+            "method_name": "FDISCO",
+            "fluorophore": "DAPI",
+            "source": "KnowledgeBase/method_fluro_compati.json",
+            "value": 0.7,
+            "status": "TABLE_REPORTED"
+          }
+        ]
+      },
+      {
+        "pair_id": "unresolved_entity:E06",
+        "kind": "source_key_only",
+        "original_function_input": {
+          "DAPI": ""
+        },
+        "channels": {
+          "s_target_match": null,
+          "s_marker_fluor_compat": null,
+          "s_method_fluor_compat": 4.199999999999999
+        },
+        "local_s_label": null,
+        "contribution_present": {
+          "s_target_match": false,
+          "s_marker_fluor_compat": false,
+          "s_method_fluor_compat": true
+        },
+        "marker_identity_conflict": false,
+        "compatibility_audit": [
+          {
+            "kind": "method_fluor",
+            "method_name": "FDISCO",
+            "fluorophore": "DAPI",
+            "source": "KnowledgeBase/method_fluro_compati.json",
+            "value": 0.7,
+            "status": "TABLE_REPORTED"
+          }
+        ]
+      },
+      {
+        "pair_id": "unresolved_entity:E07",
+        "kind": "source_key_only",
+        "original_function_input": {
+          "DAPI": ""
+        },
+        "channels": {
+          "s_target_match": null,
+          "s_marker_fluor_compat": null,
+          "s_method_fluor_compat": 4.199999999999999
+        },
+        "local_s_label": null,
+        "contribution_present": {
+          "s_target_match": false,
+          "s_marker_fluor_compat": false,
+          "s_method_fluor_compat": true
+        },
+        "marker_identity_conflict": false,
+        "compatibility_audit": [
+          {
+            "kind": "method_fluor",
+            "method_name": "FDISCO",
+            "fluorophore": "DAPI",
+            "source": "KnowledgeBase/method_fluro_compati.json",
+            "value": 0.7,
+            "status": "TABLE_REPORTED"
+          }
+        ]
+      }
+    ],
+    "explicit_label_uncertainties": [
+      {
+        "kind": "reported_unresolved_relation",
+        "relation_id": "R01",
+        "entity_id": "E01"
+      },
+      {
+        "kind": "reported_unresolved_relation",
+        "relation_id": "R02",
+        "entity_id": "E02"
+      }
+    ],
+    "publication_note": null,
+    "original_identity_unresolved": false,
+    "zero_witnesses": [],
+    "nullable_min_original_AST_sha256": "b885e7e1d6118c52aed9e67773ab1cf762010c468ed1cab70a0be6b465f56d58",
+    "original_function_file": "C:\\ClearEval\\ClearEval-public\\OEQ_run_grading_new.py",
+    "original_function_file_sha256": "0d48d96bd53b8bcf3c8678cf3151679ee70dc0d7b6d7e110486d1d7a77f9ea0e",
+    "single_value_projection_complete": false,
+    "unknown_pairs_retained": 5,
+    "finite_zero_is_not_complete_graph": false,
+    "new_KB_values": false,
+    "biological_target_inferred": false,
+    "model_calls": 0
+  },
+  "compatibility_lookup_trace": [],
+  "semantic_decomposition_applied": false,
+  "semantic_author": "saved judge decomposition",
+  "remaining_dependencies": {
+    "time": [],
+    "label_relations": [
+      {
+        "kind": "reported_unresolved_relation",
+        "relation_id": "R01",
+        "entity_id": "E01"
+      },
+      {
+        "kind": "reported_unresolved_relation",
+        "relation_id": "R02",
+        "entity_id": "E02"
+      }
+    ],
+    "compatibility": []
+  },
+  "new_model_requests": 0,
+  "new_expert_records": 0,
+  "direct_scores_rejudged": false,
+  "SR_SP_changed": false,
+  "raw_judge_status_changed": false,
+  "status": "replayed",
+  "source_record": {
+    "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\optimizer_round3_20261011\\uniform_v7\\actual_01\\cells\\E2\\E2_16__local_qwen27b_q8_development__r0\\posthoc.json",
+    "sha256": "b5941cf78388788ef9c693d4988ef4667c3498af3f78d65dfdc03a88fb977347"
+  },
+  "answer_sha256": "5c5c455cfd6759829685e0264dfd2de134b62ab72cfea26d1afbfb22b80b648e",
+  "changes": {}
+}

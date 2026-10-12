@@ -1,0 +1,94 @@
+[
+  {
+    "case_id": "R3C04__r0",
+    "scenario_id": "S000",
+    "recomputed_hours": 72.0,
+    "bounds_hours": [
+      63.5,
+      80.5
+    ],
+    "source_document": {
+      "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\optimizer_round3_20261011\\confirmation_qwen_01\\source_documents\\c9a87206864ec2bf206ab190.json",
+      "sha256": "0ad57cb0dd306fa3e6aa7d926307e36c8a3b48888c2433a0f4d0ce24b85bdd9e"
+    },
+    "new_extraction": false,
+    "expert_validated": false
+  },
+  {
+    "case_id": "R3C08__r0",
+    "scenario_id": "S000",
+    "recomputed_hours": 20.0,
+    "bounds_hours": [
+      20.0,
+      20.0
+    ],
+    "source_document": {
+      "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\optimizer_round3_20261011\\confirmation_qwen_01\\source_documents\\a0be171b1e6430f37d04d331.json",
+      "sha256": "46be67488b98209906c6e4db078c7cc29f2b669307750c9f6b1d8841ec2840d1"
+    },
+    "new_extraction": false,
+    "expert_validated": false
+  },
+  {
+    "case_id": "R3C08__r0",
+    "scenario_id": "S001",
+    "recomputed_hours": 32.0,
+    "bounds_hours": [
+      32.0,
+      32.0
+    ],
+    "source_document": {
+      "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\optimizer_round3_20261011\\confirmation_qwen_01\\source_documents\\a0be171b1e6430f37d04d331.json",
+      "sha256": "46be67488b98209906c6e4db078c7cc29f2b669307750c9f6b1d8841ec2840d1"
+    },
+    "new_extraction": false,
+    "expert_validated": false
+  },
+  {
+    "case_id": "FPC07",
+    "scenario_id": "S000",
+    "recomputed_hours": 33.5,
+    "bounds_hours": [
+      27.5,
+      39.5
+    ],
+    "source_document": {
+      "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\optimizer_round2_20261010\\generation_confirmation_v2\\source_documents\\FPC07.json",
+      "sha256": "74131c5bc1b22f0cbf0dce8532c30369bf038ebc18718b52579cbb105d6304fe"
+    },
+    "new_extraction": false,
+    "expert_validated": false
+  },
+  {
+    "case_id": "FPC13",
+    "scenario_id": "S000",
+    "recomputed_hours": 158.0,
+    "bounds_hours": [
+      158.0,
+      158.0
+    ],
+    "source_document": {
+      "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\optimizer_round2_20261010\\secondary_E5_confirmation_v1\\source_documents\\FPC13.json",
+      "sha256": "f490fa00dfb5cca669e9ebb92c9a232459c642f0eff600b79ddd313a53fc0912"
+    },
+    "new_extraction": false,
+    "expert_validated": false
+  },
+  {
+    "case_id": "FPC13",
+    "ablation": "ignore_same_stage_cumulative_relation",
+    "initial_duration": 72.0,
+    "source_cumulative_hours": 72.0,
+    "with_relation_hours": 158.0,
+    "keep_initial_only_hours": 158.0,
+    "add_initial_and_total_hours": 230.0,
+    "source_evidence": {
+      "unit_id": "L0017",
+      "start": 1215,
+      "end": 1223,
+      "quote": "72 hours",
+      "answer_sha256": "d876ecbc180d5294cad36da3a6468dcd780db8d4764aa563aee10b2330f0e39f"
+    },
+    "new_extraction": false
+  }
+]

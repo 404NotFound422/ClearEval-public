@@ -1,0 +1,10 @@
+{
+  "stage": "counterfactual time analysis source audit",
+  "phenomenon": "Initial ablation used 72 as the original duration and reported 158/230 rather than source-grounded 134/206 alternatives",
+  "cause": "The ledger field raw_parsed_duration represents the incoming prior-stage value, which already contains cumulative replacement. It is not the pre-replacement source value.",
+  "evidence": "FPC13 operation OP0005 has source Time: 48 hours; duration.options.source_cumulative_duration retains original_duration_ref=48 hours, original_parsed_duration=48, derived_parsed_duration=72",
+  "correction": "Use the stored original provenance and independently check its original source span and numeric literal",
+  "prior_diagnostic_saved": "time_relation_checks_before_source_audit.json",
+  "historical_EGES_scores_modified": false,
+  "new_model_requests": 0
+}

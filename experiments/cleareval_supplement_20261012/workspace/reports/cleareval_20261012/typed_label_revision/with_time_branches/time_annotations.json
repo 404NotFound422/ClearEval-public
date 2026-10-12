@@ -1,0 +1,1538 @@
+{
+  "results": [
+    {
+      "cell_id": "FPC02",
+      "answer_sha256": "596cab7ca8570acb210e6715613b83f1afd73c3d1c08f16201a6cd194f03e2c8",
+      "source_document": {
+        "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\optimizer_round2_20261010\\generation_confirmation_v2\\source_documents\\FPC02.json",
+        "sha256": "93af5a4612133c9fa53850cfba0ee3a5cc97f91a23900b5288794020720853c3"
+      },
+      "semantic_author": "current_Codex_assistant_author_annotation",
+      "expert_validated": false,
+      "basis": "Original clearing-time scope includes dehydration, rehydration transitions, delipidation and RI matching. Bleaching is explicitly optional; retain both branches. Labeling preparation, staining, staining washes and storage are excluded.",
+      "new_model_calls": 0,
+      "scenarios": [
+        {
+          "scenario_id": "without_optional_bleaching",
+          "operation_ledger": [
+            {
+              "operation_id": "1.1",
+              "included_in_core": true,
+              "hours_lower_upper": [
+                1,
+                1
+              ],
+              "source": {
+                "start": 704,
+                "end": 787,
+                "quote": "1.1 Incubation with 20% (vol/vol) methanol in PBS.(Temperature: RT, Time: 1 hour)  "
+              },
+              "excluded_reason": null
+            },
+            {
+              "operation_id": "1.2",
+              "included_in_core": true,
+              "hours_lower_upper": [
+                1,
+                1
+              ],
+              "source": {
+                "start": 788,
+                "end": 871,
+                "quote": "1.2 Incubation with 40% (vol/vol) methanol in PBS.(Temperature: RT, Time: 1 hour)  "
+              },
+              "excluded_reason": null
+            },
+            {
+              "operation_id": "1.3",
+              "included_in_core": true,
+              "hours_lower_upper": [
+                1,
+                1
+              ],
+              "source": {
+                "start": 872,
+                "end": 955,
+                "quote": "1.3 Incubation with 60% (vol/vol) methanol in PBS.(Temperature: RT, Time: 1 hour)  "
+              },
+              "excluded_reason": null
+            },
+            {
+              "operation_id": "1.4",
+              "included_in_core": true,
+              "hours_lower_upper": [
+                1,
+                1
+              ],
+              "source": {
+                "start": 956,
+                "end": 1039,
+                "quote": "1.4 Incubation with 80% (vol/vol) methanol in PBS.(Temperature: RT, Time: 1 hour)  "
+              },
+              "excluded_reason": null
+            },
+            {
+              "operation_id": "1.5",
+              "included_in_core": true,
+              "hours_lower_upper": [
+                1,
+                1
+              ],
+              "source": {
+                "start": 1040,
+                "end": 1117,
+                "quote": "1.5 Incubation with 100% (vol/vol) methanol.(Temperature: RT, Time: 1 hour)  "
+              },
+              "excluded_reason": null
+            },
+            {
+              "operation_id": "1.6",
+              "included_in_core": true,
+              "hours_lower_upper": [
+                1,
+                1
+              ],
+              "source": {
+                "start": 1118,
+                "end": 1201,
+                "quote": "1.6 Incubation with fresh 100% (vol/vol) methanol.(Temperature: RT, Time: 1 hour)  "
+              },
+              "excluded_reason": null
+            },
+            {
+              "operation_id": "2.1",
+              "included_in_core": false,
+              "hours_lower_upper": null,
+              "source": {
+                "start": 1308,
+                "end": 1446,
+                "quote": "2.1 Incubation with chilled fresh 5% (vol/vol) H₂O₂ in methanol (1 volume 30% H₂O₂ to 5 volumes MeOH).(Temperature: 4 ℃, Time: 12 hours)  "
+              },
+              "excluded_reason": "outside this core-time scenario; see annotated phase basis"
+            },
+            {
+              "operation_id": "3.1",
+              "included_in_core": true,
+              "hours_lower_upper": [
+                1,
+                1
+              ],
+              "source": {
+                "start": 1464,
+                "end": 1547,
+                "quote": "3.1 Incubation with 80% (vol/vol) methanol in PBS.(Temperature: RT, Time: 1 hour)  "
+              },
+              "excluded_reason": null
+            },
+            {
+              "operation_id": "3.2",
+              "included_in_core": true,
+              "hours_lower_upper": [
+                1,
+                1
+              ],
+              "source": {
+                "start": 1548,
+                "end": 1631,
+                "quote": "3.2 Incubation with 60% (vol/vol) methanol in PBS.(Temperature: RT, Time: 1 hour)  "
+              },
+              "excluded_reason": null
+            },
+            {
+              "operation_id": "3.3",
+              "included_in_core": true,
+              "hours_lower_upper": [
+                1,
+                1
+              ],
+              "source": {
+                "start": 1632,
+                "end": 1715,
+                "quote": "3.3 Incubation with 40% (vol/vol) methanol in PBS.(Temperature: RT, Time: 1 hour)  "
+              },
+              "excluded_reason": null
+            },
+            {
+              "operation_id": "3.4",
+              "included_in_core": true,
+              "hours_lower_upper": [
+                1,
+                1
+              ],
+              "source": {
+                "start": 1716,
+                "end": 1799,
+                "quote": "3.4 Incubation with 20% (vol/vol) methanol in PBS.(Temperature: RT, Time: 1 hour)  "
+              },
+              "excluded_reason": null
+            },
+            {
+              "operation_id": "3.5",
+              "included_in_core": true,
+              "hours_lower_upper": [
+                1,
+                1
+              ],
+              "source": {
+                "start": 1800,
+                "end": 1862,
+                "quote": "3.5 Incubation with 100% PBS.(Temperature: RT, Time: 1 hour)  "
+              },
+              "excluded_reason": null
+            },
+            {
+              "operation_id": "4.1",
+              "included_in_core": false,
+              "hours_lower_upper": null,
+              "source": {
+                "start": 1898,
+                "end": 1991,
+                "quote": "4.1 Incubation with PBS + 0.2% (vol/vol) Triton X-100 (PBT).(Temperature: RT, Time: 1 hour)  "
+              },
+              "excluded_reason": "outside this core-time scenario; see annotated phase basis"
+            },
+            {
+              "operation_id": "4.2",
+              "included_in_core": false,
+              "hours_lower_upper": null,
+              "source": {
+                "start": 1992,
+                "end": 2090,
+                "quote": "4.2 Incubation with PBT + 20% (vol/vol) DMSO + 0.3 M glycine.(Temperature: 37 ℃, Time: 24 hours)  "
+              },
+              "excluded_reason": "outside this core-time scenario; see annotated phase basis"
+            },
+            {
+              "operation_id": "4.3",
+              "included_in_core": false,
+              "hours_lower_upper": null,
+              "source": {
+                "start": 2091,
+                "end": 2218,
+                "quote": "4.3 Incubation with PBT + 10% (vol/vol) DMSO + 6% (wt/vol) donkey serum (blocking buffer).(Temperature: 37 ℃, Time: 24 hours)  "
+              },
+              "excluded_reason": "outside this core-time scenario; see annotated phase basis"
+            },
+            {
+              "operation_id": "5.1",
+              "included_in_core": false,
+              "hours_lower_upper": null,
+              "source": {
+                "start": 2250,
+                "end": 2415,
+                "quote": "5.1 Incubation with primary antibodies: anti-NeuN (1:500) and anti-MAP2 (1:500) diluted in blocking buffer.(Temperature: 37 ℃, Time: 7 days, with gentle agitation)  "
+              },
+              "excluded_reason": "outside this core-time scenario; see annotated phase basis"
+            },
+            {
+              "operation_id": "6.1",
+              "included_in_core": false,
+              "hours_lower_upper": null,
+              "source": {
+                "start": 2426,
+                "end": 2505,
+                "quote": "6.1 Incubation with PBT.(Temperature: RT, Time: 1 day, with 4 buffer changes)  "
+              },
+              "excluded_reason": "outside this core-time scenario; see annotated phase basis"
+            },
+            {
+              "operation_id": "7.1",
+              "included_in_core": false,
+              "hours_lower_upper": null,
+              "source": {
+                "start": 2539,
+                "end": 2763,
+                "quote": "7.1 Incubation with secondary antibodies: Alexa Fluor 647–conjugated anti-mouse IgG (1:500) and Alexa Fluor 488–conjugated anti-rabbit IgG (1:500) in blocking buffer.(Temperature: 37 ℃, Time: 7 days, with gentle agitation)  "
+              },
+              "excluded_reason": "outside this core-time scenario; see annotated phase basis"
+            },
+            {
+              "operation_id": "8.1",
+              "included_in_core": false,
+              "hours_lower_upper": null,
+              "source": {
+                "start": 2788,
+                "end": 2867,
+                "quote": "8.1 Incubation with PBT.(Temperature: RT, Time: 1 day, with 4 buffer changes)  "
+              },
+              "excluded_reason": "outside this core-time scenario; see annotated phase basis"
+            },
+            {
+              "operation_id": "9.1",
+              "included_in_core": true,
+              "hours_lower_upper": [
+                1,
+                1
+              ],
+              "source": {
+                "start": 2907,
+                "end": 2990,
+                "quote": "9.1 Incubation with 20% (vol/vol) methanol in PBS.(Temperature: RT, Time: 1 hour)  "
+              },
+              "excluded_reason": null
+            },
+            {
+              "operation_id": "9.2",
+              "included_in_core": true,
+              "hours_lower_upper": [
+                1,
+                1
+              ],
+              "source": {
+                "start": 2991,
+                "end": 3074,
+                "quote": "9.2 Incubation with 40% (vol/vol) methanol in PBS.(Temperature: RT, Time: 1 hour)  "
+              },
+              "excluded_reason": null
+            },
+            {
+              "operation_id": "9.3",
+              "included_in_core": true,
+              "hours_lower_upper": [
+                1,
+                1
+              ],
+              "source": {
+                "start": 3075,
+                "end": 3158,
+                "quote": "9.3 Incubation with 60% (vol/vol) methanol in PBS.(Temperature: RT, Time: 1 hour)  "
+              },
+              "excluded_reason": null
+            },
+            {
+              "operation_id": "9.4",
+              "included_in_core": true,
+              "hours_lower_upper": [
+                1,
+                1
+              ],
+              "source": {
+                "start": 3159,
+                "end": 3242,
+                "quote": "9.4 Incubation with 80% (vol/vol) methanol in PBS.(Temperature: RT, Time: 1 hour)  "
+              },
+              "excluded_reason": null
+            },
+            {
+              "operation_id": "9.5",
+              "included_in_core": true,
+              "hours_lower_upper": [
+                1,
+                1
+              ],
+              "source": {
+                "start": 3243,
+                "end": 3320,
+                "quote": "9.5 Incubation with 100% (vol/vol) methanol.(Temperature: RT, Time: 1 hour)  "
+              },
+              "excluded_reason": null
+            },
+            {
+              "operation_id": "9.6",
+              "included_in_core": true,
+              "hours_lower_upper": [
+                1,
+                1
+              ],
+              "source": {
+                "start": 3321,
+                "end": 3404,
+                "quote": "9.6 Incubation with fresh 100% (vol/vol) methanol.(Temperature: RT, Time: 1 hour)  "
+              },
+              "excluded_reason": null
+            },
+            {
+              "operation_id": "10.1",
+              "included_in_core": true,
+              "hours_lower_upper": [
+                0.5,
+                0.5
+              ],
+              "source": {
+                "start": 3424,
+                "end": 3504,
+                "quote": "10.1 Incubation with dichloromethane (DCM).(Temperature: RT, Time: 30 minutes)  "
+              },
+              "excluded_reason": null
+            },
+            {
+              "operation_id": "10.2",
+              "included_in_core": true,
+              "hours_lower_upper": [
+                0.5,
+                0.5
+              ],
+              "source": {
+                "start": 3505,
+                "end": 3573,
+                "quote": "10.2 Incubation with fresh DCM.(Temperature: RT, Time: 30 minutes)  "
+              },
+              "excluded_reason": null
+            },
+            {
+              "operation_id": "11.1",
+              "included_in_core": true,
+              "hours_lower_upper": [
+                2,
+                2
+              ],
+              "source": {
+                "start": 3606,
+                "end": 3731,
+                "quote": "11.1 Incubation with 100% (vol/vol) dibenzyl ether (DBE, Sigma 108014-1KG) without shaking.(Temperature: RT, Time: 2 hours)  "
+              },
+              "excluded_reason": null
+            },
+            {
+              "operation_id": "11.2",
+              "included_in_core": true,
+              "hours_lower_upper": [
+                2,
+                2
+              ],
+              "source": {
+                "start": 3732,
+                "end": 3828,
+                "quote": "11.2 Incubation with fresh 100% (vol/vol) DBE without shaking.(Temperature: RT, Time: 2 hours)  "
+              },
+              "excluded_reason": null
+            },
+            {
+              "operation_id": "12.1",
+              "included_in_core": false,
+              "hours_lower_upper": null,
+              "source": {
+                "start": 3867,
+                "end": 4000,
+                "quote": "12.1 Store sample immersed in DBE in a sealed glass vial protected from light at RT until imaging.(Temperature: RT, Time: Indefinite)"
+              },
+              "excluded_reason": "outside this core-time scenario; see annotated phase basis"
+            }
+          ],
+          "core_hours_bounds": [
+            22.0,
+            22.0
+          ],
+          "core_hours_midpoint": 22.0
+        },
+        {
+          "scenario_id": "with_optional_bleaching",
+          "operation_ledger": [
+            {
+              "operation_id": "1.1",
+              "included_in_core": true,
+              "hours_lower_upper": [
+                1,
+                1
+              ],
+              "source": {
+                "start": 704,
+                "end": 787,
+                "quote": "1.1 Incubation with 20% (vol/vol) methanol in PBS.(Temperature: RT, Time: 1 hour)  "
+              },
+              "excluded_reason": null
+            },
+            {
+              "operation_id": "1.2",
+              "included_in_core": true,
+              "hours_lower_upper": [
+                1,
+                1
+              ],
+              "source": {
+                "start": 788,
+                "end": 871,
+                "quote": "1.2 Incubation with 40% (vol/vol) methanol in PBS.(Temperature: RT, Time: 1 hour)  "
+              },
+              "excluded_reason": null
+            },
+            {
+              "operation_id": "1.3",
+              "included_in_core": true,
+              "hours_lower_upper": [
+                1,
+                1
+              ],
+              "source": {
+                "start": 872,
+                "end": 955,
+                "quote": "1.3 Incubation with 60% (vol/vol) methanol in PBS.(Temperature: RT, Time: 1 hour)  "
+              },
+              "excluded_reason": null
+            },
+            {
+              "operation_id": "1.4",
+              "included_in_core": true,
+              "hours_lower_upper": [
+                1,
+                1
+              ],
+              "source": {
+                "start": 956,
+                "end": 1039,
+                "quote": "1.4 Incubation with 80% (vol/vol) methanol in PBS.(Temperature: RT, Time: 1 hour)  "
+              },
+              "excluded_reason": null
+            },
+            {
+              "operation_id": "1.5",
+              "included_in_core": true,
+              "hours_lower_upper": [
+                1,
+                1
+              ],
+              "source": {
+                "start": 1040,
+                "end": 1117,
+                "quote": "1.5 Incubation with 100% (vol/vol) methanol.(Temperature: RT, Time: 1 hour)  "
+              },
+              "excluded_reason": null
+            },
+            {
+              "operation_id": "1.6",
+              "included_in_core": true,
+              "hours_lower_upper": [
+                1,
+                1
+              ],
+              "source": {
+                "start": 1118,
+                "end": 1201,
+                "quote": "1.6 Incubation with fresh 100% (vol/vol) methanol.(Temperature: RT, Time: 1 hour)  "
+              },
+              "excluded_reason": null
+            },
+            {
+              "operation_id": "2.1",
+              "included_in_core": true,
+              "hours_lower_upper": [
+                12,
+                12
+              ],
+              "source": {
+                "start": 1308,
+                "end": 1446,
+                "quote": "2.1 Incubation with chilled fresh 5% (vol/vol) H₂O₂ in methanol (1 volume 30% H₂O₂ to 5 volumes MeOH).(Temperature: 4 ℃, Time: 12 hours)  "
+              },
+              "excluded_reason": null
+            },
+            {
+              "operation_id": "3.1",
+              "included_in_core": true,
+              "hours_lower_upper": [
+                1,
+                1
+              ],
+              "source": {
+                "start": 1464,
+                "end": 1547,
+                "quote": "3.1 Incubation with 80% (vol/vol) methanol in PBS.(Temperature: RT, Time: 1 hour)  "
+              },
+              "excluded_reason": null
+            },
+            {
+              "operation_id": "3.2",
+              "included_in_core": true,
+              "hours_lower_upper": [
+                1,
+                1
+              ],
+              "source": {
+                "start": 1548,
+                "end": 1631,
+                "quote": "3.2 Incubation with 60% (vol/vol) methanol in PBS.(Temperature: RT, Time: 1 hour)  "
+              },
+              "excluded_reason": null
+            },
+            {
+              "operation_id": "3.3",
+              "included_in_core": true,
+              "hours_lower_upper": [
+                1,
+                1
+              ],
+              "source": {
+                "start": 1632,
+                "end": 1715,
+                "quote": "3.3 Incubation with 40% (vol/vol) methanol in PBS.(Temperature: RT, Time: 1 hour)  "
+              },
+              "excluded_reason": null
+            },
+            {
+              "operation_id": "3.4",
+              "included_in_core": true,
+              "hours_lower_upper": [
+                1,
+                1
+              ],
+              "source": {
+                "start": 1716,
+                "end": 1799,
+                "quote": "3.4 Incubation with 20% (vol/vol) methanol in PBS.(Temperature: RT, Time: 1 hour)  "
+              },
+              "excluded_reason": null
+            },
+            {
+              "operation_id": "3.5",
+              "included_in_core": true,
+              "hours_lower_upper": [
+                1,
+                1
+              ],
+              "source": {
+                "start": 1800,
+                "end": 1862,
+                "quote": "3.5 Incubation with 100% PBS.(Temperature: RT, Time: 1 hour)  "
+              },
+              "excluded_reason": null
+            },
+            {
+              "operation_id": "4.1",
+              "included_in_core": false,
+              "hours_lower_upper": null,
+              "source": {
+                "start": 1898,
+                "end": 1991,
+                "quote": "4.1 Incubation with PBS + 0.2% (vol/vol) Triton X-100 (PBT).(Temperature: RT, Time: 1 hour)  "
+              },
+              "excluded_reason": "outside this core-time scenario; see annotated phase basis"
+            },
+            {
+              "operation_id": "4.2",
+              "included_in_core": false,
+              "hours_lower_upper": null,
+              "source": {
+                "start": 1992,
+                "end": 2090,
+                "quote": "4.2 Incubation with PBT + 20% (vol/vol) DMSO + 0.3 M glycine.(Temperature: 37 ℃, Time: 24 hours)  "
+              },
+              "excluded_reason": "outside this core-time scenario; see annotated phase basis"
+            },
+            {
+              "operation_id": "4.3",
+              "included_in_core": false,
+              "hours_lower_upper": null,
+              "source": {
+                "start": 2091,
+                "end": 2218,
+                "quote": "4.3 Incubation with PBT + 10% (vol/vol) DMSO + 6% (wt/vol) donkey serum (blocking buffer).(Temperature: 37 ℃, Time: 24 hours)  "
+              },
+              "excluded_reason": "outside this core-time scenario; see annotated phase basis"
+            },
+            {
+              "operation_id": "5.1",
+              "included_in_core": false,
+              "hours_lower_upper": null,
+              "source": {
+                "start": 2250,
+                "end": 2415,
+                "quote": "5.1 Incubation with primary antibodies: anti-NeuN (1:500) and anti-MAP2 (1:500) diluted in blocking buffer.(Temperature: 37 ℃, Time: 7 days, with gentle agitation)  "
+              },
+              "excluded_reason": "outside this core-time scenario; see annotated phase basis"
+            },
+            {
+              "operation_id": "6.1",
+              "included_in_core": false,
+              "hours_lower_upper": null,
+              "source": {
+                "start": 2426,
+                "end": 2505,
+                "quote": "6.1 Incubation with PBT.(Temperature: RT, Time: 1 day, with 4 buffer changes)  "
+              },
+              "excluded_reason": "outside this core-time scenario; see annotated phase basis"
+            },
+            {
+              "operation_id": "7.1",
+              "included_in_core": false,
+              "hours_lower_upper": null,
+              "source": {
+                "start": 2539,
+                "end": 2763,
+                "quote": "7.1 Incubation with secondary antibodies: Alexa Fluor 647–conjugated anti-mouse IgG (1:500) and Alexa Fluor 488–conjugated anti-rabbit IgG (1:500) in blocking buffer.(Temperature: 37 ℃, Time: 7 days, with gentle agitation)  "
+              },
+              "excluded_reason": "outside this core-time scenario; see annotated phase basis"
+            },
+            {
+              "operation_id": "8.1",
+              "included_in_core": false,
+              "hours_lower_upper": null,
+              "source": {
+                "start": 2788,
+                "end": 2867,
+                "quote": "8.1 Incubation with PBT.(Temperature: RT, Time: 1 day, with 4 buffer changes)  "
+              },
+              "excluded_reason": "outside this core-time scenario; see annotated phase basis"
+            },
+            {
+              "operation_id": "9.1",
+              "included_in_core": true,
+              "hours_lower_upper": [
+                1,
+                1
+              ],
+              "source": {
+                "start": 2907,
+                "end": 2990,
+                "quote": "9.1 Incubation with 20% (vol/vol) methanol in PBS.(Temperature: RT, Time: 1 hour)  "
+              },
+              "excluded_reason": null
+            },
+            {
+              "operation_id": "9.2",
+              "included_in_core": true,
+              "hours_lower_upper": [
+                1,
+                1
+              ],
+              "source": {
+                "start": 2991,
+                "end": 3074,
+                "quote": "9.2 Incubation with 40% (vol/vol) methanol in PBS.(Temperature: RT, Time: 1 hour)  "
+              },
+              "excluded_reason": null
+            },
+            {
+              "operation_id": "9.3",
+              "included_in_core": true,
+              "hours_lower_upper": [
+                1,
+                1
+              ],
+              "source": {
+                "start": 3075,
+                "end": 3158,
+                "quote": "9.3 Incubation with 60% (vol/vol) methanol in PBS.(Temperature: RT, Time: 1 hour)  "
+              },
+              "excluded_reason": null
+            },
+            {
+              "operation_id": "9.4",
+              "included_in_core": true,
+              "hours_lower_upper": [
+                1,
+                1
+              ],
+              "source": {
+                "start": 3159,
+                "end": 3242,
+                "quote": "9.4 Incubation with 80% (vol/vol) methanol in PBS.(Temperature: RT, Time: 1 hour)  "
+              },
+              "excluded_reason": null
+            },
+            {
+              "operation_id": "9.5",
+              "included_in_core": true,
+              "hours_lower_upper": [
+                1,
+                1
+              ],
+              "source": {
+                "start": 3243,
+                "end": 3320,
+                "quote": "9.5 Incubation with 100% (vol/vol) methanol.(Temperature: RT, Time: 1 hour)  "
+              },
+              "excluded_reason": null
+            },
+            {
+              "operation_id": "9.6",
+              "included_in_core": true,
+              "hours_lower_upper": [
+                1,
+                1
+              ],
+              "source": {
+                "start": 3321,
+                "end": 3404,
+                "quote": "9.6 Incubation with fresh 100% (vol/vol) methanol.(Temperature: RT, Time: 1 hour)  "
+              },
+              "excluded_reason": null
+            },
+            {
+              "operation_id": "10.1",
+              "included_in_core": true,
+              "hours_lower_upper": [
+                0.5,
+                0.5
+              ],
+              "source": {
+                "start": 3424,
+                "end": 3504,
+                "quote": "10.1 Incubation with dichloromethane (DCM).(Temperature: RT, Time: 30 minutes)  "
+              },
+              "excluded_reason": null
+            },
+            {
+              "operation_id": "10.2",
+              "included_in_core": true,
+              "hours_lower_upper": [
+                0.5,
+                0.5
+              ],
+              "source": {
+                "start": 3505,
+                "end": 3573,
+                "quote": "10.2 Incubation with fresh DCM.(Temperature: RT, Time: 30 minutes)  "
+              },
+              "excluded_reason": null
+            },
+            {
+              "operation_id": "11.1",
+              "included_in_core": true,
+              "hours_lower_upper": [
+                2,
+                2
+              ],
+              "source": {
+                "start": 3606,
+                "end": 3731,
+                "quote": "11.1 Incubation with 100% (vol/vol) dibenzyl ether (DBE, Sigma 108014-1KG) without shaking.(Temperature: RT, Time: 2 hours)  "
+              },
+              "excluded_reason": null
+            },
+            {
+              "operation_id": "11.2",
+              "included_in_core": true,
+              "hours_lower_upper": [
+                2,
+                2
+              ],
+              "source": {
+                "start": 3732,
+                "end": 3828,
+                "quote": "11.2 Incubation with fresh 100% (vol/vol) DBE without shaking.(Temperature: RT, Time: 2 hours)  "
+              },
+              "excluded_reason": null
+            },
+            {
+              "operation_id": "12.1",
+              "included_in_core": false,
+              "hours_lower_upper": null,
+              "source": {
+                "start": 3867,
+                "end": 4000,
+                "quote": "12.1 Store sample immersed in DBE in a sealed glass vial protected from light at RT until imaging.(Temperature: RT, Time: Indefinite)"
+              },
+              "excluded_reason": "outside this core-time scenario; see annotated phase basis"
+            }
+          ],
+          "core_hours_bounds": [
+            34.0,
+            34.0
+          ],
+          "core_hours_midpoint": 34.0
+        }
+      ]
+    },
+    {
+      "cell_id": "FPC04",
+      "answer_sha256": "20bf7476ecd4568af1a6d76c156281f45147409f9e7efb709d20c29f7a42bb13",
+      "source_document": {
+        "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\optimizer_round2_20261010\\generation_confirmation_v2\\source_documents\\FPC04.json",
+        "sha256": "f8403ec13cf03c391caa18c9ee88ebdc2a8b3eccfde17c1dafafe468d1e65fa3"
+      },
+      "semantic_author": "current_Codex_assistant_author_annotation",
+      "expert_validated": false,
+      "basis": "Sections 1–4 are explicitly permeabilization/blocking/immunostaining and their washes. Core clearing is sections 5–7. Section 8 is imaging preparation and 9 is storage/re-imaging. Do not count the six-month storage or imaging equilibration as first-pass core treatment.",
+      "new_model_calls": 0,
+      "scenarios": [
+        {
+          "scenario_id": "reported_core",
+          "operation_ledger": [
+            {
+              "operation_id": "1.1",
+              "included_in_core": false,
+              "hours_lower_upper": null,
+              "source": {
+                "start": 756,
+                "end": 850,
+                "quote": "1.1 将已完成 4% PFA 固定及后固定的 3 mm 脑组织块用 1× PBS 洗涤 3 次，每次充分振荡。（Temperature: 4 ℃, Time: 10 min × 3 次）"
+              },
+              "excluded_reason": "outside this core-time scenario; see annotated phase basis"
+            },
+            {
+              "operation_id": "1.2",
+              "included_in_core": false,
+              "hours_lower_upper": null,
+              "source": {
+                "start": 852,
+                "end": 974,
+                "quote": "1.2 将组织块置于含 0.2% Triton X-100 的 1× PBS（PTwH：0.2% Tween-20 + 10 µg/mL 肝素亦可替代）中进行渗透处理，轻摇。（Temperature: 37 ℃, Time: 24 hours）"
+              },
+              "excluded_reason": "outside this core-time scenario; see annotated phase basis"
+            },
+            {
+              "operation_id": "1.3",
+              "included_in_core": false,
+              "hours_lower_upper": null,
+              "source": {
+                "start": 976,
+                "end": 1041,
+                "quote": "1.3 用 1× PBS 洗涤组织块 3 次，每次轻摇。（Temperature: RT, Time: 10 min × 3 次）"
+              },
+              "excluded_reason": "outside this core-time scenario; see annotated phase basis"
+            },
+            {
+              "operation_id": "2.1",
+              "included_in_core": false,
+              "hours_lower_upper": null,
+              "source": {
+                "start": 1068,
+                "end": 1172,
+                "quote": "2.1 将组织块置于封闭液（含 5% 正常驴血清 + 0.3% Triton X-100 + 0.2% 叠氮化钠的 1× PBS）中孵育，轻摇。（Temperature: RT, Time: 4 hours）"
+              },
+              "excluded_reason": "outside this core-time scenario; see annotated phase basis"
+            },
+            {
+              "operation_id": "3.1",
+              "included_in_core": false,
+              "hours_lower_upper": null,
+              "source": {
+                "start": 1220,
+                "end": 1370,
+                "quote": "3.1 配制一抗工作液：抗 MAP2 抗体（兔源多克隆或鸡源，推荐 1:500 稀释）溶于含 2% 正常驴血清 + 0.3% Triton X-100 + 0.2% 叠氮化钠的 1× PBS 中。将组织块完全浸没于一抗工作液，轻摇。（Temperature: 4 ℃, Time: 5–7 days）"
+              },
+              "excluded_reason": "outside this core-time scenario; see annotated phase basis"
+            },
+            {
+              "operation_id": "3.2",
+              "included_in_core": false,
+              "hours_lower_upper": null,
+              "source": {
+                "start": 1372,
+                "end": 1476,
+                "quote": "3.2 用含 0.2% Tween-20 + 10 µg/mL 肝素的 1× PBS（PTwH）洗涤组织块，每次充分振荡，共 5 次。（Temperature: RT, Time: 1 hour × 5 次）"
+              },
+              "excluded_reason": "outside this core-time scenario; see annotated phase basis"
+            },
+            {
+              "operation_id": "4.1",
+              "included_in_core": false,
+              "hours_lower_upper": null,
+              "source": {
+                "start": 1526,
+                "end": 1700,
+                "quote": "4.1 配制二抗工作液：驴抗兔（或驴抗鸡）Alexa Fluor 546（或 Alexa Fluor 647）二抗（1:500 稀释）溶于含 2% 正常驴血清 + 0.3% Triton X-100 + 0.2% 叠氮化钠的 1× PBS 中，避光。将组织块完全浸没，轻摇，避光。（Temperature: 4 ℃, Time: 4–5 days）"
+              },
+              "excluded_reason": "outside this core-time scenario; see annotated phase basis"
+            },
+            {
+              "operation_id": "4.2",
+              "included_in_core": false,
+              "hours_lower_upper": null,
+              "source": {
+                "start": 1702,
+                "end": 1772,
+                "quote": "4.2 用 PTwH 洗涤组织块，避光，每次充分振荡，共 5 次。（Temperature: RT, Time: 1 hour × 5 次）"
+              },
+              "excluded_reason": "outside this core-time scenario; see annotated phase basis"
+            },
+            {
+              "operation_id": "4.3",
+              "included_in_core": false,
+              "hours_lower_upper": null,
+              "source": {
+                "start": 1774,
+                "end": 1834,
+                "quote": "4.3 用 1× PBS 终洗 2 次，避光。（Temperature: RT, Time: 30 min × 2 次）"
+              },
+              "excluded_reason": "outside this core-time scenario; see annotated phase basis"
+            },
+            {
+              "operation_id": "5.1",
+              "included_in_core": true,
+              "hours_lower_upper": [
+                1,
+                1
+              ],
+              "source": {
+                "start": 1927,
+                "end": 2056,
+                "quote": "5.1 将组织块置于 30%（vol/vol）四氢呋喃（THF）水溶液（用超纯水配制，pH 调至 9.0 以减少荧光淬灭，可加入 0.1% 叔丁基羟基甲苯 BHT 作为抗氧化剂）中，轻摇，避光。（Temperature: 4 ℃, Time: 1 hour）"
+              },
+              "excluded_reason": null
+            },
+            {
+              "operation_id": "5.2",
+              "included_in_core": true,
+              "hours_lower_upper": [
+                1,
+                1
+              ],
+              "source": {
+                "start": 2058,
+                "end": 2147,
+                "quote": "5.2 将组织块置于 50%（vol/vol）THF 水溶液（含 0.1% BHT，pH 9.0）中，轻摇，避光。（Temperature: 4 ℃, Time: 1 hour）"
+              },
+              "excluded_reason": null
+            },
+            {
+              "operation_id": "5.3",
+              "included_in_core": true,
+              "hours_lower_upper": [
+                1,
+                1
+              ],
+              "source": {
+                "start": 2149,
+                "end": 2238,
+                "quote": "5.3 将组织块置于 70%（vol/vol）THF 水溶液（含 0.1% BHT，pH 9.0）中，轻摇，避光。（Temperature: 4 ℃, Time: 1 hour）"
+              },
+              "excluded_reason": null
+            },
+            {
+              "operation_id": "5.4",
+              "included_in_core": true,
+              "hours_lower_upper": [
+                1,
+                1
+              ],
+              "source": {
+                "start": 2240,
+                "end": 2329,
+                "quote": "5.4 将组织块置于 80%（vol/vol）THF 水溶液（含 0.1% BHT，pH 9.0）中，轻摇，避光。（Temperature: 4 ℃, Time: 1 hour）"
+              },
+              "excluded_reason": null
+            },
+            {
+              "operation_id": "5.5",
+              "included_in_core": true,
+              "hours_lower_upper": [
+                1,
+                1
+              ],
+              "source": {
+                "start": 2331,
+                "end": 2413,
+                "quote": "5.5 将组织块置于 100%（vol/vol）THF（无水，含 0.1% BHT）中，轻摇，避光。（Temperature: 4 ℃, Time: 1 hour）"
+              },
+              "excluded_reason": null
+            },
+            {
+              "operation_id": "5.6",
+              "included_in_core": true,
+              "hours_lower_upper": [
+                1,
+                1
+              ],
+              "source": {
+                "start": 2415,
+                "end": 2494,
+                "quote": "5.6 更换新鲜 100%（vol/vol）THF（无水，含 0.1% BHT），轻摇，避光。（Temperature: 4 ℃, Time: 1 hour）"
+              },
+              "excluded_reason": null
+            },
+            {
+              "operation_id": "6.1",
+              "included_in_core": true,
+              "hours_lower_upper": [
+                0.5,
+                0.75
+              ],
+              "source": {
+                "start": 2540,
+                "end": 2654,
+                "quote": "6.1 将完全脱水的组织块转移至二氯甲烷（DCM，Sigma-Aldrich，≥99.9%）中，轻摇，避光。此步骤完成脱脂，组织应在数分钟内沉底并开始变透明。（Temperature: 4 ℃, Time: 30–45 min）"
+              },
+              "excluded_reason": null
+            },
+            {
+              "operation_id": "7.1",
+              "included_in_core": true,
+              "hours_lower_upper": [
+                2,
+                4
+              ],
+              "source": {
+                "start": 2701,
+                "end": 2879,
+                "quote": "7.1 将组织块从 DCM 中取出，用吸水纸轻轻吸去表面残余 DCM（勿过度干燥），立即转移至苯甲醇/苯甲酸苄酯混合液（BABB，苯甲醇:苯甲酸苄酯 = 1:2，vol/vol；RI ≈ 1.56；含 0.1% BHT 抗氧化）中，轻摇，避光。组织应完全透明。（Temperature: 4 ℃, Time: 2–4 hours，直至组织完全透明且无气泡）"
+              },
+              "excluded_reason": null
+            },
+            {
+              "operation_id": "7.2",
+              "included_in_core": true,
+              "hours_lower_upper": [
+                12,
+                12
+              ],
+              "source": {
+                "start": 2881,
+                "end": 2961,
+                "quote": "7.2 更换新鲜 BABB（含 0.1% BHT），确认组织完全透明，静置平衡折射率，避光。（Temperature: 4 ℃, Time: 12 hours）"
+              },
+              "excluded_reason": null
+            },
+            {
+              "operation_id": "8.1",
+              "included_in_core": false,
+              "hours_lower_upper": null,
+              "source": {
+                "start": 3006,
+                "end": 3153,
+                "quote": "8.1 将透明组织块转移至玻璃成像腔（glass imaging chamber）或自制玻璃底培养皿中，加入足量新鲜 BABB（含 0.1% BHT）完全浸没样本，用折射率匹配的光学胶或盖玻片密封，避免气泡，避光。（Temperature: 4 ℃, Time: 30 min 平衡后即可成像）"
+              },
+              "excluded_reason": "outside this core-time scenario; see annotated phase basis"
+            },
+            {
+              "operation_id": "8.2",
+              "included_in_core": false,
+              "hours_lower_upper": null,
+              "source": {
+                "start": 3155,
+                "end": 3343,
+                "quote": "8.2 使用光片显微镜（LSFM，推荐配备 RI = 1.56 浸液物镜）或长工作距离共聚焦显微镜进行三维成像。激发通道：EGFP（488 nm 激发/510–540 nm 发射）；MAP2-Alexa Fluor 546（561 nm 激发/570–620 nm 发射）或 MAP2-Alexa Fluor 647（633/647 nm 激发/660–720 nm 发射）。"
+              },
+              "excluded_reason": "outside this core-time scenario; see annotated phase basis"
+            },
+            {
+              "operation_id": "9.1",
+              "included_in_core": false,
+              "hours_lower_upper": null,
+              "source": {
+                "start": 3381,
+                "end": 3491,
+                "quote": "9.1 成像完成后，将样本密封于含新鲜 BABB（含 0.1% BHT）的棕色玻璃小瓶中，用 Parafilm 封口，置于避光密封盒内。（Temperature: 4 ℃, Time: 可稳定保存 ≥ 6 months）"
+              },
+              "excluded_reason": "outside this core-time scenario; see annotated phase basis"
+            },
+            {
+              "operation_id": "9.2",
+              "included_in_core": false,
+              "hours_lower_upper": null,
+              "source": {
+                "start": 3493,
+                "end": 3609,
+                "quote": "9.2 复查成像前，将样本从 4 ℃ 取出，在室温下平衡 30 min，确认 BABB 液面充足（如有挥发可补加新鲜 BABB），按步骤 8.1–8.2 重新成像。（Temperature: RT, Time: 30 min 平衡）"
+              },
+              "excluded_reason": "outside this core-time scenario; see annotated phase basis"
+            }
+          ],
+          "core_hours_bounds": [
+            20.5,
+            22.75
+          ],
+          "core_hours_midpoint": 21.625
+        }
+      ]
+    },
+    {
+      "cell_id": "FPC05",
+      "answer_sha256": "63035433f483517c0b758e3bbca7d42a612fcf0846bb32799ccfa882f9a42e74",
+      "source_document": {
+        "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\optimizer_round2_20261010\\generation_confirmation_v2\\source_documents\\FPC05.json",
+        "sha256": "22bfbafecbc696534b27934b47e41db3c1f36fa4d4e07619f78c884384df8889"
+      },
+      "semantic_author": "current_Codex_assistant_author_annotation",
+      "expert_validated": false,
+      "basis": "CUBIC-L steps 1.2/1.3 are serial; the stated 48–72 h is their combined duration, not an additional incubation. Step 1.4 is a wash removing the delipidation reagent before a different phase. Its two stated schedules remain separate. Sections 2–6 are labeling preparation/staining/washes. Sections 8–9 are storage and repeat imaging, excluded from initial core time.",
+      "new_model_calls": 0,
+      "scenarios": [
+        {
+          "scenario_id": "six_30min_transition_washes",
+          "operation_ledger": [
+            {
+              "operation_id": "1.1",
+              "included_in_core": false,
+              "hours_lower_upper": null,
+              "source": {
+                "start": 271,
+                "end": 320,
+                "quote": "1.1 PBS 漂洗去固定液（Temperature: RT, Time: 3×30 min）  "
+              },
+              "excluded_reason": "outside this core-time scenario; see annotated phase basis"
+            },
+            {
+              "operation_id": "1.2",
+              "included_in_core": true,
+              "hours_lower_upper": [
+                24,
+                24
+              ],
+              "source": {
+                "start": 321,
+                "end": 441,
+                "quote": "1.2 置于 CUBIC-L（常用配方：10 wt% N-Butyldiethanolamine + 10 wt% Triton X-100 于 ddH2O）轻摇孵育（Temperature: 37 ℃, Time: 24 hours）  "
+              },
+              "excluded_reason": null
+            },
+            {
+              "operation_id": "1.3",
+              "included_in_core": true,
+              "hours_lower_upper": [
+                24,
+                48
+              ],
+              "source": {
+                "start": 442,
+                "end": 535,
+                "quote": "1.3 更换新鲜 CUBIC-L 继续去脂（Temperature: 37 ℃, Time: 24–48 hours；3 mm 组织建议总计 48–72 hours，至组织明显变浅）  "
+              },
+              "excluded_reason": null
+            },
+            {
+              "operation_id": "1.4",
+              "included_in_core": true,
+              "hours_lower_upper": [
+                3,
+                3
+              ],
+              "source": {
+                "start": 536,
+                "end": 628,
+                "quote": "1.4 PBS-T（PBS + 0.1 vol% Triton X-100）充分洗涤去除去脂剂（Temperature: RT, Time: 6×30 min 或 2×6 hours）"
+              },
+              "excluded_reason": null
+            },
+            {
+              "operation_id": "2.1",
+              "included_in_core": false,
+              "hours_lower_upper": null,
+              "source": {
+                "start": 657,
+                "end": 753,
+                "quote": "2.1 渗透液孵育：PBS-T + 0.3–0.5 vol% Triton X-100 + 5 vol% DMSO（Temperature: 37 ℃, Time: 6–12 hours）  "
+              },
+              "excluded_reason": "outside this core-time scenario; see annotated phase basis"
+            },
+            {
+              "operation_id": "2.2",
+              "included_in_core": false,
+              "hours_lower_upper": null,
+              "source": {
+                "start": 754,
+                "end": 841,
+                "quote": "2.2 封闭液孵育：PBS-T + 5 vol% 正常驴血清(NDS) + 5 vol% DMSO（Temperature: 37 ℃, Time: 12–24 hours）"
+              },
+              "excluded_reason": "outside this core-time scenario; see annotated phase basis"
+            },
+            {
+              "operation_id": "3.1",
+              "included_in_core": false,
+              "hours_lower_upper": null,
+              "source": {
+                "start": 858,
+                "end": 978,
+                "quote": "3.1 一抗工作液：抗 MAP2（Marker: MAP2；建议 1:200–1:500）配于 PBS-T + 3 vol% NDS + 5 vol% DMSO（Temperature: 37 ℃, Time: 3–5 days；轻摇）  "
+              },
+              "excluded_reason": "outside this core-time scenario; see annotated phase basis"
+            },
+            {
+              "operation_id": "4.1",
+              "included_in_core": false,
+              "hours_lower_upper": null,
+              "source": {
+                "start": 995,
+                "end": 1060,
+                "quote": "4.1 PBS-T 洗涤（Temperature: 37 ℃, Time: 6×6 hours 或 2 days；期间换液≥6次）"
+              },
+              "excluded_reason": "outside this core-time scenario; see annotated phase basis"
+            },
+            {
+              "operation_id": "5.1",
+              "included_in_core": false,
+              "hours_lower_upper": null,
+              "source": {
+                "start": 1088,
+                "end": 1246,
+                "quote": "5.1 二抗工作液：驴抗（对应一抗宿主）Alexa Fluor 647（Dye_or_Fluorophore: Alexa Fluor；建议 1:300–1:500）配于 PBS-T + 3 vol% NDS + 5 vol% DMSO（Temperature: 37 ℃, Time: 2–4 days；避光轻摇）"
+              },
+              "excluded_reason": "outside this core-time scenario; see annotated phase basis"
+            },
+            {
+              "operation_id": "6.1",
+              "included_in_core": false,
+              "hours_lower_upper": null,
+              "source": {
+                "start": 1263,
+                "end": 1323,
+                "quote": "6.1 PBS-T 洗涤（Temperature: 37 ℃, Time: 6×6 hours 或 2 days；避光）"
+              },
+              "excluded_reason": "outside this core-time scenario; see annotated phase basis"
+            },
+            {
+              "operation_id": "7.1",
+              "included_in_core": true,
+              "hours_lower_upper": [
+                12,
+                24
+              ],
+              "source": {
+                "start": 1351,
+                "end": 1430,
+                "quote": "7.1 置于 CUBIC-R（常用：CUBIC-R1，RI≈1.49）预匹配（Temperature: RT, Time: 12–24 hours；避光）  "
+              },
+              "excluded_reason": null
+            },
+            {
+              "operation_id": "7.2",
+              "included_in_core": true,
+              "hours_lower_upper": [
+                24,
+                48
+              ],
+              "source": {
+                "start": 1431,
+                "end": 1552,
+                "quote": "7.2 转入 CUBIC-R（常用：CUBIC-R2，RI≈1.52）完全匹配至组织透明（Temperature: RT, Time: 24–48 hours；避光；3 mm 通常 24 hours 足够，若仍有雾感延长至 48 hours）"
+              },
+              "excluded_reason": null
+            },
+            {
+              "operation_id": "8.1",
+              "included_in_core": false,
+              "hours_lower_upper": null,
+              "source": {
+                "start": 1567,
+                "end": 1669,
+                "quote": "8.1 将样本长期浸泡于新鲜 CUBIC-R2（RI≈1.52）密封避光保存（Temperature: 4 ℃, Time: up to 6 months；建议加入 0.02 wt% NaN3 防腐）  "
+              },
+              "excluded_reason": "outside this core-time scenario; see annotated phase basis"
+            },
+            {
+              "operation_id": "8.2",
+              "included_in_core": false,
+              "hours_lower_upper": null,
+              "source": {
+                "start": 1670,
+                "end": 1728,
+                "quote": "8.2 每 4–8 周更换一次 CUBIC-R2（Temperature: 4 ℃, Time: 10 min/次）"
+              },
+              "excluded_reason": "outside this core-time scenario; see annotated phase basis"
+            },
+            {
+              "operation_id": "9.1",
+              "included_in_core": false,
+              "hours_lower_upper": null,
+              "source": {
+                "start": 1745,
+                "end": 1819,
+                "quote": "9.1 成像前将样本从 4 ℃回温并在新鲜 CUBIC-R2 中再平衡（Temperature: RT, Time: 2–6 hours；避光）  "
+              },
+              "excluded_reason": "outside this core-time scenario; see annotated phase basis"
+            },
+            {
+              "operation_id": "9.2",
+              "included_in_core": false,
+              "hours_lower_upper": null,
+              "source": {
+                "start": 1820,
+                "end": 1888,
+                "quote": "9.2 若需重复成像后再保存：成像结束直接回收至新鲜 CUBIC-R2 密封避光（Temperature: 4 ℃, Time: 长期）"
+              },
+              "excluded_reason": "outside this core-time scenario; see annotated phase basis"
+            }
+          ],
+          "core_hours_bounds": [
+            87,
+            147
+          ],
+          "core_hours_midpoint": 117.0
+        },
+        {
+          "scenario_id": "two_6h_transition_washes",
+          "operation_ledger": [
+            {
+              "operation_id": "1.1",
+              "included_in_core": false,
+              "hours_lower_upper": null,
+              "source": {
+                "start": 271,
+                "end": 320,
+                "quote": "1.1 PBS 漂洗去固定液（Temperature: RT, Time: 3×30 min）  "
+              },
+              "excluded_reason": "outside this core-time scenario; see annotated phase basis"
+            },
+            {
+              "operation_id": "1.2",
+              "included_in_core": true,
+              "hours_lower_upper": [
+                24,
+                24
+              ],
+              "source": {
+                "start": 321,
+                "end": 441,
+                "quote": "1.2 置于 CUBIC-L（常用配方：10 wt% N-Butyldiethanolamine + 10 wt% Triton X-100 于 ddH2O）轻摇孵育（Temperature: 37 ℃, Time: 24 hours）  "
+              },
+              "excluded_reason": null
+            },
+            {
+              "operation_id": "1.3",
+              "included_in_core": true,
+              "hours_lower_upper": [
+                24,
+                48
+              ],
+              "source": {
+                "start": 442,
+                "end": 535,
+                "quote": "1.3 更换新鲜 CUBIC-L 继续去脂（Temperature: 37 ℃, Time: 24–48 hours；3 mm 组织建议总计 48–72 hours，至组织明显变浅）  "
+              },
+              "excluded_reason": null
+            },
+            {
+              "operation_id": "1.4",
+              "included_in_core": true,
+              "hours_lower_upper": [
+                12,
+                12
+              ],
+              "source": {
+                "start": 536,
+                "end": 628,
+                "quote": "1.4 PBS-T（PBS + 0.1 vol% Triton X-100）充分洗涤去除去脂剂（Temperature: RT, Time: 6×30 min 或 2×6 hours）"
+              },
+              "excluded_reason": null
+            },
+            {
+              "operation_id": "2.1",
+              "included_in_core": false,
+              "hours_lower_upper": null,
+              "source": {
+                "start": 657,
+                "end": 753,
+                "quote": "2.1 渗透液孵育：PBS-T + 0.3–0.5 vol% Triton X-100 + 5 vol% DMSO（Temperature: 37 ℃, Time: 6–12 hours）  "
+              },
+              "excluded_reason": "outside this core-time scenario; see annotated phase basis"
+            },
+            {
+              "operation_id": "2.2",
+              "included_in_core": false,
+              "hours_lower_upper": null,
+              "source": {
+                "start": 754,
+                "end": 841,
+                "quote": "2.2 封闭液孵育：PBS-T + 5 vol% 正常驴血清(NDS) + 5 vol% DMSO（Temperature: 37 ℃, Time: 12–24 hours）"
+              },
+              "excluded_reason": "outside this core-time scenario; see annotated phase basis"
+            },
+            {
+              "operation_id": "3.1",
+              "included_in_core": false,
+              "hours_lower_upper": null,
+              "source": {
+                "start": 858,
+                "end": 978,
+                "quote": "3.1 一抗工作液：抗 MAP2（Marker: MAP2；建议 1:200–1:500）配于 PBS-T + 3 vol% NDS + 5 vol% DMSO（Temperature: 37 ℃, Time: 3–5 days；轻摇）  "
+              },
+              "excluded_reason": "outside this core-time scenario; see annotated phase basis"
+            },
+            {
+              "operation_id": "4.1",
+              "included_in_core": false,
+              "hours_lower_upper": null,
+              "source": {
+                "start": 995,
+                "end": 1060,
+                "quote": "4.1 PBS-T 洗涤（Temperature: 37 ℃, Time: 6×6 hours 或 2 days；期间换液≥6次）"
+              },
+              "excluded_reason": "outside this core-time scenario; see annotated phase basis"
+            },
+            {
+              "operation_id": "5.1",
+              "included_in_core": false,
+              "hours_lower_upper": null,
+              "source": {
+                "start": 1088,
+                "end": 1246,
+                "quote": "5.1 二抗工作液：驴抗（对应一抗宿主）Alexa Fluor 647（Dye_or_Fluorophore: Alexa Fluor；建议 1:300–1:500）配于 PBS-T + 3 vol% NDS + 5 vol% DMSO（Temperature: 37 ℃, Time: 2–4 days；避光轻摇）"
+              },
+              "excluded_reason": "outside this core-time scenario; see annotated phase basis"
+            },
+            {
+              "operation_id": "6.1",
+              "included_in_core": false,
+              "hours_lower_upper": null,
+              "source": {
+                "start": 1263,
+                "end": 1323,
+                "quote": "6.1 PBS-T 洗涤（Temperature: 37 ℃, Time: 6×6 hours 或 2 days；避光）"
+              },
+              "excluded_reason": "outside this core-time scenario; see annotated phase basis"
+            },
+            {
+              "operation_id": "7.1",
+              "included_in_core": true,
+              "hours_lower_upper": [
+                12,
+                24
+              ],
+              "source": {
+                "start": 1351,
+                "end": 1430,
+                "quote": "7.1 置于 CUBIC-R（常用：CUBIC-R1，RI≈1.49）预匹配（Temperature: RT, Time: 12–24 hours；避光）  "
+              },
+              "excluded_reason": null
+            },
+            {
+              "operation_id": "7.2",
+              "included_in_core": true,
+              "hours_lower_upper": [
+                24,
+                48
+              ],
+              "source": {
+                "start": 1431,
+                "end": 1552,
+                "quote": "7.2 转入 CUBIC-R（常用：CUBIC-R2，RI≈1.52）完全匹配至组织透明（Temperature: RT, Time: 24–48 hours；避光；3 mm 通常 24 hours 足够，若仍有雾感延长至 48 hours）"
+              },
+              "excluded_reason": null
+            },
+            {
+              "operation_id": "8.1",
+              "included_in_core": false,
+              "hours_lower_upper": null,
+              "source": {
+                "start": 1567,
+                "end": 1669,
+                "quote": "8.1 将样本长期浸泡于新鲜 CUBIC-R2（RI≈1.52）密封避光保存（Temperature: 4 ℃, Time: up to 6 months；建议加入 0.02 wt% NaN3 防腐）  "
+              },
+              "excluded_reason": "outside this core-time scenario; see annotated phase basis"
+            },
+            {
+              "operation_id": "8.2",
+              "included_in_core": false,
+              "hours_lower_upper": null,
+              "source": {
+                "start": 1670,
+                "end": 1728,
+                "quote": "8.2 每 4–8 周更换一次 CUBIC-R2（Temperature: 4 ℃, Time: 10 min/次）"
+              },
+              "excluded_reason": "outside this core-time scenario; see annotated phase basis"
+            },
+            {
+              "operation_id": "9.1",
+              "included_in_core": false,
+              "hours_lower_upper": null,
+              "source": {
+                "start": 1745,
+                "end": 1819,
+                "quote": "9.1 成像前将样本从 4 ℃回温并在新鲜 CUBIC-R2 中再平衡（Temperature: RT, Time: 2–6 hours；避光）  "
+              },
+              "excluded_reason": "outside this core-time scenario; see annotated phase basis"
+            },
+            {
+              "operation_id": "9.2",
+              "included_in_core": false,
+              "hours_lower_upper": null,
+              "source": {
+                "start": 1820,
+                "end": 1888,
+                "quote": "9.2 若需重复成像后再保存：成像结束直接回收至新鲜 CUBIC-R2 密封避光（Temperature: 4 ℃, Time: 长期）"
+              },
+              "excluded_reason": "outside this core-time scenario; see annotated phase basis"
+            }
+          ],
+          "core_hours_bounds": [
+            96,
+            156
+          ],
+          "core_hours_midpoint": 126.0
+        }
+      ]
+    }
+  ],
+  "new_model_requests": 0,
+  "expert_records": 0
+}

@@ -1,0 +1,46 @@
+{
+  "created_utc": "2026-10-12T11:16:59.649892+00:00",
+  "status": "prepared_awaiting_additional_request_authorization",
+  "task": "Two source answers times baseline/renumber/merge/delete; independently translate every edited full text with the same Qwen configuration",
+  "requested_additional_calls": 8,
+  "requested_max_hours": 2,
+  "proposed_package_limit": 446,
+  "package_attempts_before": 438,
+  "automatic_retries": false,
+  "retry_budget": 0,
+  "stop": "first of 8 started requests or 2 hours after authorization; do not refill failures",
+  "scope": "translation + unchanged full-text parser, method-family selection, encoder and threshold .7; no new Cor/EGES judgment",
+  "model_source": {
+    "path": "C:\\ClearEval\\reports\\cleareval_20261012\\qualitative_execution_03\\model_config.json",
+    "sha256": "9275c6105bd43cfc8b3bfed6af7a185299d7d193bd701d483d898a818cdf3a6d"
+  },
+  "model_alias": "qwen3.8:27b-q8_0-local",
+  "saved_model_digest": "ea6892d079c639acf4812dee100eca284199c3ae3fb4ffd9e5a5ae8641ae73ba",
+  "saved_runtime_family": "qwen35, 27.3B, Q8_0; local alias is not a verified public Qwen 3.8 base-model identity",
+  "current_model_preflight": "not run in this preparation; verify local digest without inference before execution",
+  "comparisons": [
+    "raw original versus frozen author English versus Qwen full-text English",
+    "paired renumber, merge and deletion responses under identical pipeline",
+    "numeric/unit/repeat/branch preservation plus source-aligned discrepancy review"
+  ],
+  "translation_acceptance": "Save raw response first. Report schema/translation defects locally; do not fill from author English, repair scientific content, silently retry, or clear unrelated known scores.",
+  "raw_unchecked_scores": "Any scorer output on a materially defective translation is labeled diagnostic only and excluded from translation-valid comparisons; original results remain available.",
+  "controls_are_independent_answers": false,
+  "repeated_translation_stability_test": false,
+  "human_budget": {
+    "experts": 1,
+    "development": 5,
+    "holdout": 15
+  },
+  "other_pending_batch": "qualitative_execution_03 remains unapproved and is not covered by this eight-call request",
+  "authorization_file_created": false,
+  "new_requests_sent": 0,
+  "budget_before": {
+    "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\budget.json",
+    "sha256": "c9ceef7d4dd0deebb047d848a74daff25e6b7b0aa9a3e1930d7aa3ec8acab6c8"
+  },
+  "ledger_before": {
+    "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\judges\\request_ledger.jsonl",
+    "sha256": "cbf7618d8586c208f8c49c1b44a15d94c974f5d9bc21d4e5fe20d523a47ed04f"
+  }
+}

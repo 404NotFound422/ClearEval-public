@@ -1,0 +1,65 @@
+{
+  "goal_complete": false,
+  "previous_goal_turn_classification": "progress",
+  "this_goal_turn_classification": "progress",
+  "new_model_calls": 0,
+  "actual_new_qualitative_pairs": 0,
+  "expert_records_added": 0,
+  "wetlab_rows_added": 0,
+  "new_results": {
+    "canonical32": {
+      "cohort": "canonical32",
+      "actual_saved_returns": 32,
+      "distinct_sources": 14,
+      "ready_source_lists": 31,
+      "automatically_applied": 31,
+      "label_available_before": 28,
+      "label_available_after": 32,
+      "complete_before": 26,
+      "complete_after": 26,
+      "changed_cells": [
+        "R3C01__r0",
+        "R3C03__r0",
+        "R3C04__r0",
+        "R3C05__r0",
+        "R3C07__r0"
+      ],
+      "complete_lost": [],
+      "new_model_calls": 0,
+      "new_per_answer_author_annotations": 0,
+      "interpretation": "development replay on exposed source texts; source rule agreement is not independent accuracy or new evaluator repeatability"
+    },
+    "archived67": {
+      "cohort": "archived67",
+      "actual_saved_returns": 67,
+      "distinct_sources": 40,
+      "ready_source_lists": 47,
+      "automatically_applied": 47,
+      "label_available_before": 55,
+      "label_available_after": 60,
+      "complete_before": 44,
+      "complete_after": 48,
+      "changed_cells": [
+        "E2_09__local_qwen27b_q8_development__r0",
+        "E2_11__local_qwen27b_q8_development__r0",
+        "E2_21__local_qwen27b_q8_development__r0",
+        "FPC08",
+        "FPC16"
+      ],
+      "complete_lost": [],
+      "new_model_calls": 0,
+      "new_per_answer_author_annotations": 0,
+      "interpretation": "development replay on exposed source texts; source rule agreement is not independent accuracy or new evaluator repeatability"
+    }
+  },
+  "remaining": [
+    "qualitative Correctness paired run",
+    "controlled deletion and step granularity anomalies",
+    "independent automatic extraction check",
+    "cross-evaluator repeats",
+    "expert 5+15",
+    "eligible complete alternative routes",
+    "independent source blocks for uncertainty",
+    "wetlab data only if claiming wetlab validation"
+  ]
+}

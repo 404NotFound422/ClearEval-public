@@ -1,0 +1,44 @@
+**Chosen Method:** FDISCO
+**Chosen Labeling:** [tdTomato (endogenous fluorescence), β-III Tubulin (TUJ1) + Alexa Fluor (647)]
+**Justification:** FDISCO (Fluorescence-preserved 3D Imaging of Solvent-Cleared Organs) is a rapid organic-solvent-based clearing method. Whole-brain clearing can be completed in approximately 2 days, meeting the requirement for "imaging as soon as possible". It preserves fluorescent proteins better than iDISCO+/uDISCO (low temperature and alkaline conditions suppress fluorescence quenching), and published studies have demonstrated good preservation of endogenous tdTomato signals. FDISCO uses THF for dehydration/delipidation followed by BABB as the RI-matching solution (RI≈1.56), is compatible with light-sheet microscopy, and permits some tissue shrinkage (FDISCO shrinkage is approximately 35–40%; uniform shrinkage does not affect projection tracing). Labeling strategy: ① preserve endogenous tdTomato fluorescence to trace long-range projection neurons; ② perform whole-brain immunostaining of the fixed brain before clearing (iDISCO-style whole-mount), using an anti-β-III Tubulin (TUJ1) antibody + Alexa Fluor 647 secondary antibody to label the axonal cytoskeleton. Alexa Fluor 647 has excellent stability in organic solvents. The two channels (tdTomato ~590 nm; AF647 ~647 nm) are well separated spectrally and are suitable for dual-channel light-sheet imaging.
+
+---
+
+**Protocol Steps:**
+
+**101 Sample pretreatment (Post-fixation wash)**
+101.1 Place the adult mouse whole brain already fixed in 4% PFA into 1× PBS and rinse thoroughly to remove residual fixative.(Temperature: 4 ℃, Time: 3 × 1 hour)
+
+**102 Permeabilization before whole-brain immunostaining**
+102.1 Place the brain tissue in 1× PBS containing 0.2% (vol/vol) Triton X-100 (PBST) and permeabilize with shaking.(Temperature: 37 ℃, Time: 24 hours)
+102.2 Replace with fresh PBST and continue permeabilization.(Temperature: 37 ℃, Time: 24 hours)
+
+**103 Blocking**
+103.1 Place the brain tissue in blocking solution (5% (vol/vol) normal donkey serum + 0.2% Triton X-100 + 0.1% (wt/vol) NaN₃ in 1× PBS) and block with shaking.(Temperature: 37 ℃, Time: 24 hours)
+
+**104 Primary antibody incubation (β-III Tubulin / TUJ1)**
+104.1 Place the brain tissue in a solution containing rabbit polyclonal anti-β-III Tubulin (TUJ1) antibody (1:500 diluted in blocking solution), and incubate with gentle shaking.(Temperature: 37 ℃, Time: 48 hours)
+104.2 Wash with PBST to remove unbound primary antibody.(Temperature: RT, Time: 5 × 1 hour)
+
+**105 Secondary antibody incubation (Alexa Fluor 647)**
+105.1 Place the brain tissue in a solution containing donkey anti-rabbit Alexa Fluor 647 secondary antibody (1:500 diluted in blocking solution), and incubate with shaking protected from light.(Temperature: 37 ℃, Time: 48 hours)
+105.2 Wash with PBST to remove unbound secondary antibody.(Temperature: RT, Time: 5 × 1 hour)
+105.3 Perform a final wash with 1× PBS.(Temperature: RT, Time: 2 × 30 min)
+
+**106 Dehydration (THF gradient dehydration)**
+106.1 Place the brain tissue in 50% (vol/vol) aqueous THF (tetrahydrofuran), adjusted with NaOH to pH 9–10 to protect fluorescent proteins, and dehydrate with shaking.(Temperature: 4 ℃, Time: 1 hour)
+106.2 Place the brain tissue in 70% (vol/vol) aqueous THF (pH 9–10), and dehydrate with shaking.(Temperature: 4 ℃, Time: 1 hour)
+106.3 Place the brain tissue in 80% (vol/vol) aqueous THF (pH 9–10), and dehydrate with shaking.(Temperature: 4 ℃, Time: 1 hour)
+106.4 Place the brain tissue in 100% THF (anhydrous, pH 9–10, with a small amount of NaOH), and dehydrate with shaking for the first time.(Temperature: 4 ℃, Time: 1 hour)
+106.5 Place the brain tissue in 100% THF (anhydrous, pH 9–10), and dehydrate with shaking for the second time (replacing with fresh THF).(Temperature: 4 ℃, Time: 1 hour)
+
+**107 Delipidation (BABB pretreatment)**
+107.1 Place the brain tissue in BABB (benzyl alcohol:benzyl benzoate = 1:2, vol/vol) with shaking to complete delipidation and begin RI matching, until completely transparent (usually 30–60 min).(Temperature: 4 ℃, Time: 1 hour)
+
+**108 Refractive index matching (RI Matching)**
+108.1 Transfer the transparent brain tissue into fresh BABB (RI ≈ 1.56) and let equilibrate without agitation, protected from light, ensuring that the tissue is completely transparent and free of bubbles.(Temperature: 4 ℃, Time: 2 hours)
+108.2 Replace with fresh BABB again, confirm complete tissue transparency, and prepare for imaging.(Temperature: 4 ℃, Time: 30 min)
+
+**109 Pre-imaging treatment and storage**
+109.1 Transfer the transparent brain tissue into BABB in a light-sheet microscope sample chamber, use a refractive-index-matched immersion medium (RI = 1.56) to secure the sample position, and avoid bubbles.(Temperature: RT, Time: image immediately)
+109.2 If short-term storage is needed, seal the sample in BABB and store at 4 ℃ protected from light (imaging within 1 week is recommended to avoid fluorescent signal decay).(Temperature: 4 ℃, Time: ≤ 7 days)

@@ -1,0 +1,765 @@
+{
+  "result": {
+    "cell_id": "R3C03__r0",
+    "cohort": "confirmation_qwen_01",
+    "question_id": 2,
+    "baseline_metrics": {
+      "c_param": 0,
+      "co_order": null,
+      "co_method": null,
+      "co_param": null,
+      "co_chem": 1,
+      "s_method": 2.425,
+      "s_label": 3.0,
+      "s_trans": 1.2333368715215602,
+      "s_time": null,
+      "sr": 0.0,
+      "sp": 0.0,
+      "Com": 0.0,
+      "Cor": null,
+      "Eff": null,
+      "IA": null,
+      "HV": null
+    },
+    "metrics": {
+      "c_param": 0,
+      "co_order": null,
+      "co_method": null,
+      "co_param": null,
+      "co_chem": 1,
+      "s_method": 2.425,
+      "s_label": 3.0,
+      "s_trans": 1.2333368715215602,
+      "s_time": null,
+      "sr": 0.0,
+      "sp": 0.0,
+      "Com": 0.0,
+      "Cor": null,
+      "Eff": null,
+      "IA": null,
+      "HV": null
+    },
+    "complete_numeric_CCE": false,
+    "source_document": {
+      "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\optimizer_round3_20261011\\confirmation_qwen_01\\source_documents\\51e41472244361bbe1e992e6.json",
+      "sha256": "b179d64ef629fbf45a285adbb88aab6b9c566484eaef9a16dbf12bb06f9fbd8e"
+    },
+    "post_record": {
+      "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\optimizer_round3_20261011\\confirmation_qwen_01\\run\\attempts\\63d649b2d794cd6acc214c4c902f3433adbbb057599a6c694cf6c333a1c3de8b_1\\processing.json",
+      "sha256": "a4c628b4a40cd834cb0ba6904c6538362fd78892a9893aa6591afa117b2fcaba"
+    },
+    "answer_sha256": "c4dbdb716b75171abbd06f9632be9524f304f41f0431f18fa6ed7268a73ddef0",
+    "proposal": {
+      "version": "selected-label-source-v1.1",
+      "answer_sha256": "c4dbdb716b75171abbd06f9632be9524f304f41f0431f18fa6ed7268a73ddef0",
+      "relations": [
+        {
+          "fluorophore": "Alexa Fluor 647",
+          "marker": "NeuN (RBFOX3)",
+          "source_spans": [
+            {
+              "unit_id": "L0002",
+              "start": 48,
+              "end": 77,
+              "quote": "NeuN (RBFOX3)+Alexa Fluor 647",
+              "answer_sha256": "c4dbdb716b75171abbd06f9632be9524f304f41f0431f18fa6ed7268a73ddef0"
+            }
+          ],
+          "basis": "explicit selected target + fluorophore; antibody carrier/clone not required",
+          "source_target_literal": "NeuN (RBFOX3)",
+          "target_role_qualifier": null,
+          "source_fluor_literal": "Alexa Fluor 647",
+          "clone_identity_inferred": false,
+          "generic_AF": false
+        },
+        {
+          "fluorophore": "Alexa Fluor 488",
+          "marker": "beta-III Tubulin (TUJ1)",
+          "source_spans": [
+            {
+              "unit_id": "L0002",
+              "start": 78,
+              "end": 118,
+              "quote": " beta-III Tubulin (TUJ1)+Alexa Fluor 488",
+              "answer_sha256": "c4dbdb716b75171abbd06f9632be9524f304f41f0431f18fa6ed7268a73ddef0"
+            }
+          ],
+          "basis": "explicit selected target + fluorophore; antibody carrier/clone not required",
+          "source_target_literal": "beta-III Tubulin (TUJ1)",
+          "target_role_qualifier": null,
+          "source_fluor_literal": "Alexa Fluor 488",
+          "clone_identity_inferred": false,
+          "generic_AF": false
+        },
+        {
+          "fluorophore": "DAPI",
+          "marker": "",
+          "source_spans": [
+            {
+              "unit_id": "L0002",
+              "start": 119,
+              "end": 124,
+              "quote": " DAPI",
+              "answer_sha256": "c4dbdb716b75171abbd06f9632be9524f304f41f0431f18fa6ed7268a73ddef0"
+            }
+          ],
+          "basis": "explicit standalone signal in chosen list; external target-pair channel not applicable",
+          "source_fluor_literal": "DAPI",
+          "clone_identity_inferred": false,
+          "generic_AF": false
+        }
+      ],
+      "issues": [],
+      "header_candidates": 1,
+      "ready": true,
+      "new_model_calls": 0,
+      "new_per_answer_author_annotations": 0,
+      "independent_evaluator": false,
+      "expert_validated": false,
+      "scope": "explicit chosen-label list; no claim of universal biological relation extraction",
+      "header_source": {
+        "unit_id": "L0002",
+        "start": 26,
+        "end": 126,
+        "quote": "**Chosen Labeling:** [NeuN (RBFOX3)+Alexa Fluor 647, beta-III Tubulin (TUJ1)+Alexa Fluor 488, DAPI]\n",
+        "answer_sha256": "c4dbdb716b75171abbd06f9632be9524f304f41f0431f18fa6ed7268a73ddef0"
+      },
+      "actual_AF_operation_evidence": [],
+      "selection_uses_achieved_score": false
+    },
+    "decision": "source_rule_applied",
+    "label_derivation": {
+      "version": "cce-typed-label-scorer-v2.1",
+      "s_label": 3.0,
+      "channels": {
+        "s_target_match": 3.0,
+        "s_marker_fluor_compat": 6.0,
+        "s_method_fluor_compat": 3.9000000000000004
+      },
+      "channel_applicability": {
+        "s_target_match": {
+          "applicable": true,
+          "value": 3.0,
+          "contributing_pairs": [
+            "semantic:0",
+            "semantic:1"
+          ]
+        },
+        "s_marker_fluor_compat": {
+          "applicable": true,
+          "value": 6.0,
+          "contributing_pairs": [
+            "semantic:0",
+            "semantic:1"
+          ]
+        },
+        "s_method_fluor_compat": {
+          "applicable": true,
+          "value": 3.9000000000000004,
+          "contributing_pairs": [
+            "semantic:0",
+            "semantic:1",
+            "semantic:2"
+          ]
+        }
+      },
+      "pair_results": [
+        {
+          "pair_id": "semantic:0",
+          "entity_id": null,
+          "fluorophore": "Alexa Fluor 647",
+          "reported_marker": "NeuN (RBFOX3)",
+          "reported_target_literal": null,
+          "label_type": "targeted_or_unclassified_reagent",
+          "original_function_input": {
+            "Alexa Fluor 647": "NeuN (RBFOX3)"
+          },
+          "applicable": {
+            "s_target_match": true,
+            "s_marker_fluor_compat": true,
+            "s_method_fluor_compat": true
+          },
+          "channels": {
+            "s_target_match": 3.0,
+            "s_marker_fluor_compat": 6.0,
+            "s_method_fluor_compat": 4.5
+          },
+          "not_applicable_reason": null,
+          "source_evidence": [
+            {
+              "unit_id": "L0002",
+              "start": 48,
+              "end": 77,
+              "quote": "NeuN (RBFOX3)+Alexa Fluor 647",
+              "answer_sha256": "c4dbdb716b75171abbd06f9632be9524f304f41f0431f18fa6ed7268a73ddef0"
+            }
+          ],
+          "compatibility_audit": [
+            {
+              "kind": "marker_fluor",
+              "marker": "NeuN (RBFOX3)",
+              "fluorophore": "Alexa Fluor 647",
+              "source": "KnowledgeBase/tissue.json",
+              "value": true,
+              "status": "TABLE_REPORTED"
+            },
+            {
+              "kind": "method_fluor",
+              "method_name": "uDISCO",
+              "fluorophore": "Alexa Fluor 647",
+              "source": "KnowledgeBase/method_fluro_compati.json",
+              "value": 0.75,
+              "status": "TABLE_REPORTED"
+            }
+          ]
+        },
+        {
+          "pair_id": "semantic:1",
+          "entity_id": null,
+          "fluorophore": "Alexa Fluor 488",
+          "reported_marker": "beta-III Tubulin (TUJ1)",
+          "reported_target_literal": null,
+          "label_type": "targeted_or_unclassified_reagent",
+          "original_function_input": {
+            "Alexa Fluor 488": "beta-III Tubulin (TUJ1)"
+          },
+          "applicable": {
+            "s_target_match": true,
+            "s_marker_fluor_compat": true,
+            "s_method_fluor_compat": true
+          },
+          "channels": {
+            "s_target_match": 6.0,
+            "s_marker_fluor_compat": 6.0,
+            "s_method_fluor_compat": 4.199999999999999
+          },
+          "not_applicable_reason": null,
+          "source_evidence": [
+            {
+              "unit_id": "L0002",
+              "start": 78,
+              "end": 118,
+              "quote": " beta-III Tubulin (TUJ1)+Alexa Fluor 488",
+              "answer_sha256": "c4dbdb716b75171abbd06f9632be9524f304f41f0431f18fa6ed7268a73ddef0"
+            }
+          ],
+          "compatibility_audit": [
+            {
+              "kind": "marker_fluor",
+              "marker": "beta-III Tubulin (TUJ1)",
+              "fluorophore": "Alexa Fluor 488",
+              "source": "KnowledgeBase/tissue.json",
+              "value": true,
+              "status": "TABLE_REPORTED"
+            },
+            {
+              "kind": "method_fluor",
+              "method_name": "uDISCO",
+              "fluorophore": "Alexa Fluor 488",
+              "source": "KnowledgeBase/method_fluro_compati.json",
+              "value": 0.7,
+              "status": "TABLE_REPORTED"
+            }
+          ]
+        },
+        {
+          "pair_id": "semantic:2",
+          "entity_id": null,
+          "fluorophore": "DAPI",
+          "reported_marker": null,
+          "reported_target_literal": null,
+          "label_type": "direct_stain",
+          "original_function_input": {
+            "DAPI": ""
+          },
+          "applicable": {
+            "s_target_match": false,
+            "s_marker_fluor_compat": false,
+            "s_method_fluor_compat": true
+          },
+          "channels": {
+            "s_target_match": null,
+            "s_marker_fluor_compat": null,
+            "s_method_fluor_compat": 3.9000000000000004
+          },
+          "not_applicable_reason": "standalone fluorescence has no antibody target-pair channel",
+          "source_evidence": [
+            {
+              "unit_id": "L0002",
+              "start": 119,
+              "end": 124,
+              "quote": " DAPI",
+              "answer_sha256": "c4dbdb716b75171abbd06f9632be9524f304f41f0431f18fa6ed7268a73ddef0"
+            }
+          ],
+          "compatibility_audit": [
+            {
+              "kind": "method_fluor",
+              "method_name": "uDISCO",
+              "fluorophore": "DAPI",
+              "source": "KnowledgeBase/method_fluro_compati.json",
+              "value": 0.65,
+              "status": "TABLE_REPORTED"
+            }
+          ]
+        }
+      ],
+      "resolved_uncertainties": [],
+      "remaining_uncertainties": [],
+      "minimum_of_available_applicable_channels": 3.0,
+      "task_target_coverage": "native/direct task coverage remains separate from antibody-pair applicability",
+      "new_model_calls": 0,
+      "expert_validated": false
+    },
+    "lookup_trace": [
+      {
+        "marker": "NeuN (RBFOX3)",
+        "fluorophore": "Alexa Fluor 647",
+        "status": "all_applicable_scopes_have_same_authored_value",
+        "value": true,
+        "column": "AlexaFluor 647/Cy5 ",
+        "matching_target_options": [],
+        "candidate_rows": [
+          {
+            "row_index": 1,
+            "matching_authored_names": [
+              {
+                "field": "推荐标志物 1",
+                "authored_name": "NeuN (RBFOX3)",
+                "option": "NeuN (RBFOX3)",
+                "option_split_applied": false
+              }
+            ],
+            "scope": {
+              "大类": "中枢神经",
+              "亚类": "神经元结构",
+              "结构/细胞类型": "成熟神经元"
+            },
+            "cell_value": 1
+          }
+        ],
+        "selected_row_indices": [
+          1
+        ],
+        "per_scope_evidence": [
+          {
+            "scope": {
+              "大类": "中枢神经",
+              "亚类": "神经元结构",
+              "结构/细胞类型": "成熟神经元"
+            },
+            "row_indices": [
+              1
+            ],
+            "all_cell_values": [
+              1
+            ],
+            "state": "consistent_authored_value",
+            "value": 1
+          }
+        ],
+        "row_selection_uses_scores": false,
+        "different_scopes_merged": false,
+        "new_alias_or_KB_value": false,
+        "declared_task_scope": null,
+        "exact_lookup_value": true,
+        "evidence_level": "existing_specific_table_value"
+      },
+      {
+        "marker": "beta-III Tubulin (TUJ1)",
+        "fluorophore": "Alexa Fluor 488",
+        "status": "all_applicable_scopes_have_same_authored_value",
+        "value": true,
+        "column": "AlexaFluor 488",
+        "matching_target_options": [
+          {
+            "target_index": 1,
+            "source_tissue_xlsx_row": 4,
+            "marker_slot": "recommended_marker_1",
+            "marker_name": "β-III Tubulin (TUJ1)",
+            "query_path": "中枢神经 > 神经元结构 > 神经元(通用)",
+            "major_category": "中枢神经",
+            "subcategory": "神经元结构",
+            "structure_or_cell_subtype": "神经元(通用)",
+            "authored_target_parent": {
+              "marker_name": "β-III Tubulin (TUJ1)",
+              "target_index": 1,
+              "source_tissue_xlsx_row": 4,
+              "query_path": "中枢神经 > 神经元结构 > 神经元(通用)",
+              "marker_slot": "recommended_marker_1"
+            },
+            "authored_option_index": 0,
+            "option_split_applied": false
+          }
+        ],
+        "candidate_rows": [
+          {
+            "row_index": 0,
+            "matching_authored_names": [
+              {
+                "field": "推荐标志物 1",
+                "authored_name": "β-III Tubulin (TUJ1)",
+                "option": "β-III Tubulin (TUJ1)",
+                "option_split_applied": false
+              }
+            ],
+            "scope": {
+              "大类": "中枢神经",
+              "亚类": "神经元结构",
+              "结构/细胞类型": "神经元(通用)"
+            },
+            "cell_value": 1
+          },
+          {
+            "row_index": 32,
+            "matching_authored_names": [
+              {
+                "field": "推荐标志物 2",
+                "authored_name": "β-III Tubulin",
+                "option": "β-III Tubulin",
+                "option_split_applied": false
+              }
+            ],
+            "scope": {
+              "大类": "呼吸系统",
+              "亚类": "神经系统",
+              "结构/细胞类型": "肺部迷走神经"
+            },
+            "cell_value": 1
+          },
+          {
+            "row_index": 55,
+            "matching_authored_names": [
+              {
+                "field": "推荐标志物 1",
+                "authored_name": "Tuj1",
+                "option": "Tuj1",
+                "option_split_applied": false
+              }
+            ],
+            "scope": {
+              "大类": "肠道系统",
+              "亚类": "肠神经",
+              "结构/细胞类型": "肠神经丛"
+            },
+            "cell_value": 1
+          },
+          {
+            "row_index": 76,
+            "matching_authored_names": [
+              {
+                "field": "推荐标志物 2",
+                "authored_name": "β-III Tubulin / TUJ1",
+                "option": "β-III Tubulin",
+                "option_split_applied": true
+              },
+              {
+                "field": "推荐标志物 2",
+                "authored_name": "β-III Tubulin / TUJ1",
+                "option": "TUJ1",
+                "option_split_applied": true
+              }
+            ],
+            "scope": {
+              "大类": "临床病理",
+              "亚类": "皮肤活检",
+              "结构/细胞类型": "表皮内神经纤维 IENF"
+            },
+            "cell_value": null
+          },
+          {
+            "row_index": 80,
+            "matching_authored_names": [
+              {
+                "field": "推荐标志物 1",
+                "authored_name": "β-III Tubulin / TUJ1",
+                "option": "β-III Tubulin",
+                "option_split_applied": true
+              },
+              {
+                "field": "推荐标志物 1",
+                "authored_name": "β-III Tubulin / TUJ1",
+                "option": "TUJ1",
+                "option_split_applied": true
+              }
+            ],
+            "scope": {
+              "大类": "斑马鱼系统",
+              "亚类": "侧线系统",
+              "结构/细胞类型": "侧线神经纤维"
+            },
+            "cell_value": null
+          },
+          {
+            "row_index": 84,
+            "matching_authored_names": [
+              {
+                "field": "推荐标志物 2",
+                "authored_name": "β-III Tubulin / PGP9.5",
+                "option": "β-III Tubulin",
+                "option_split_applied": true
+              }
+            ],
+            "scope": {
+              "大类": "骨骼肌系统",
+              "亚类": "神经肌肉接头",
+              "结构/细胞类型": "运动神经末梢/轴突骨架"
+            },
+            "cell_value": null
+          },
+          {
+            "row_index": 85,
+            "matching_authored_names": [
+              {
+                "field": "推荐标志物 2",
+                "authored_name": "β-III Tubulin / TUJ1",
+                "option": "β-III Tubulin",
+                "option_split_applied": true
+              },
+              {
+                "field": "推荐标志物 2",
+                "authored_name": "β-III Tubulin / TUJ1",
+                "option": "TUJ1",
+                "option_split_applied": true
+              }
+            ],
+            "scope": {
+              "大类": "消化系统",
+              "亚类": "胃壁神经系统",
+              "结构/细胞类型": "胃壁迷走神经/泛神经纤维网络"
+            },
+            "cell_value": null
+          },
+          {
+            "row_index": 90,
+            "matching_authored_names": [
+              {
+                "field": "推荐标志物 2",
+                "authored_name": "PGP9.5 / β-III Tubulin",
+                "option": "β-III Tubulin",
+                "option_split_applied": true
+              }
+            ],
+            "scope": {
+              "大类": "硬组织",
+              "亚类": "骨骼微环境",
+              "结构/细胞类型": "骨组织感觉神经与泛神经网络"
+            },
+            "cell_value": null
+          },
+          {
+            "row_index": 100,
+            "matching_authored_names": [
+              {
+                "field": "推荐标志物 1",
+                "authored_name": "PGP9.5 / β-III Tubulin",
+                "option": "β-III Tubulin",
+                "option_split_applied": true
+              }
+            ],
+            "scope": {
+              "大类": "硬组织",
+              "亚类": "内耳结构",
+              "结构/细胞类型": "耳蜗神经支配"
+            },
+            "cell_value": null
+          },
+          {
+            "row_index": 106,
+            "matching_authored_names": [
+              {
+                "field": "推荐标志物 2",
+                "authored_name": "β-III Tubulin / TUJ1",
+                "option": "β-III Tubulin",
+                "option_split_applied": true
+              },
+              {
+                "field": "推荐标志物 2",
+                "authored_name": "β-III Tubulin / TUJ1",
+                "option": "TUJ1",
+                "option_split_applied": true
+              }
+            ],
+            "scope": {
+              "大类": "发育生物学",
+              "亚类": "胚胎神经系统",
+              "结构/细胞类型": "胚胎颅/脊神经与外周神经"
+            },
+            "cell_value": null
+          }
+        ],
+        "selected_row_indices": [
+          0
+        ],
+        "per_scope_evidence": [
+          {
+            "scope": {
+              "大类": "中枢神经",
+              "亚类": "神经元结构",
+              "结构/细胞类型": "神经元(通用)"
+            },
+            "row_indices": [
+              0
+            ],
+            "all_cell_values": [
+              1
+            ],
+            "state": "consistent_authored_value",
+            "value": 1
+          }
+        ],
+        "row_selection_uses_scores": false,
+        "different_scopes_merged": false,
+        "new_alias_or_KB_value": false,
+        "declared_task_scope": null,
+        "exact_lookup_value": true,
+        "evidence_level": "existing_specific_table_value"
+      }
+    ],
+    "changes": {
+      "s_label": {
+        "before": 0.0,
+        "after": 3.0
+      }
+    },
+    "quantitative_data": {
+      "method_name": "uDISCO",
+      "tissue_ri_value": 1.46,
+      "total_time_hours": null,
+      "sample_tier": "T04_WHOLE_MOUSE_BRAIN_5_12MM",
+      "reagent_ri_value": null,
+      "protocol_time_hours": null
+    },
+    "new_model_calls": 0,
+    "new_per_answer_author_annotations": 0,
+    "candidate_point_metrics": null,
+    "time_candidate_ledger": {
+      "version": "source-time-ledger-v1.3",
+      "answer_sha256": "c4dbdb716b75171abbd06f9632be9524f304f41f0431f18fa6ed7268a73ddef0",
+      "operations": [
+        {
+          "operation_id": "OP01",
+          "source": {
+            "unit_id": "L0005",
+            "start": 758,
+            "end": 768,
+            "quote": "1 Washing\n",
+            "answer_sha256": "c4dbdb716b75171abbd06f9632be9524f304f41f0431f18fa6ed7268a73ddef0"
+          },
+          "raw_phase": "unknown",
+          "raw_execution_scope": "initial",
+          "raw_parsed_duration": {
+            "state": "missing",
+            "bounds_hours": null,
+            "unique_hours": null
+          },
+          "raw_repeat_count": 1,
+          "scope": {
+            "role": "unknown",
+            "basis": "source does not resolve saved unknown phase",
+            "heading": null
+          }
+        },
+        {
+          "operation_id": "OP02",
+          "source": {
+            "unit_id": "L0006",
+            "start": 768,
+            "end": 788,
+            "quote": "1.1 Incubation with\n",
+            "answer_sha256": "c4dbdb716b75171abbd06f9632be9524f304f41f0431f18fa6ed7268a73ddef0"
+          },
+          "raw_phase": "unknown",
+          "raw_execution_scope": "initial",
+          "raw_parsed_duration": {
+            "state": "missing",
+            "bounds_hours": null,
+            "unique_hours": null
+          },
+          "raw_repeat_count": 1,
+          "scope": {
+            "role": "unknown",
+            "basis": "source does not resolve saved unknown phase",
+            "heading": {
+              "start": 758,
+              "end": 768,
+              "quote": "1 Washing\n",
+              "title": "Washing"
+            }
+          }
+        }
+      ],
+      "issues": [
+        {
+          "kind": "source_schedule_not_serial",
+          "mode": "unknown"
+        },
+        {
+          "kind": "unknown_operation_scope",
+          "operation_id": "OP01"
+        },
+        {
+          "kind": "unknown_operation_scope",
+          "operation_id": "OP02"
+        },
+        {
+          "kind": "no_reported_core_incubations"
+        }
+      ],
+      "scenarios": [
+        {
+          "scenario_id": "S000",
+          "selection": {},
+          "contributions": [],
+          "omitted_core_operations": [],
+          "unknown_duration_operations": [],
+          "issues": [
+            {
+              "kind": "source_schedule_not_serial",
+              "mode": "unknown"
+            },
+            {
+              "kind": "unknown_operation_scope",
+              "operation_id": "OP01"
+            },
+            {
+              "kind": "unknown_operation_scope",
+              "operation_id": "OP02"
+            },
+            {
+              "kind": "no_reported_core_incubations"
+            }
+          ],
+          "known_subtotal_bounds_hours": [
+            0,
+            0
+          ],
+          "bounds_hours": null,
+          "hours": null
+        }
+      ],
+      "hours": null,
+      "single_unbranched_point": false,
+      "conditional_group_count": 0,
+      "schedule_convention": "sum reported serial core incubation durations",
+      "elapsed_laboratory_time_claimed": false,
+      "model_raw_modified": false,
+      "new_model_calls": 0,
+      "selection_uses_achieved_score": false,
+      "expert_validated": false
+    },
+    "time_formula": null,
+    "conditional_time_results": [],
+    "time_dependency_view_reconstructed": false,
+    "candidate_point_applied": false,
+    "time_changes": {}
+  },
+  "case_source": {
+    "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\optimizer_round3_20261011\\confirmation_qwen_01\\cases.json",
+    "sha256": "b4e50ef0280f7450532e198c1c6cd85ec399de06f68007a848cae1ed0fb5a08f"
+  },
+  "original_source": {
+    "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\optimizer_round3_20261011\\confirmation_qwen_01\\original_source_documents\\51e41472244361bbe1e992e6.json",
+    "sha256": "3f36078a175b98413167fcf0ce6889aaf416cb929b18a1b02fd73dd953cb0e8a"
+  }
+}

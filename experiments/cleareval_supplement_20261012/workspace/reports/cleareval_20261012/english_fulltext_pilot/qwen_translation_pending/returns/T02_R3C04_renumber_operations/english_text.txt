@@ -1,0 +1,66 @@
+Line 1 (Selected Fluorescence/Labeling Strategy + Clearing Method): **[NeuN + Alexa Fluor 647 (Soma), β-III Tubulin (TUJ1) + Alexa Fluor 647 (Axons/Dendrites), TO-PRO-3 (Whole-brain nuclear stain)] + iDISCO+ (DBE RI matching)**
+Rationale for selection: iDISCO+ is suitable for rapid high-transparency clearing and light-sheet imaging of whole adult mouse brains (~10×8×6 mm); after organic solvent dehydration/delipidation, transparency is high and fiber tract contrast is good; TO-PRO-3 and Alexa Fluor 647 signals are relatively robust in the iDISCO+ workflow, making them suitable for constructing 3D morphological maps of whole-brain neuronal somata and neurites.
+
+**Protocol Steps:**
+
+101 Pre-treatment and Dehydration
+101.1 Soak in 20% (vol/vol) methanol/water solution, gentle rocking. (Temperature: RT, Time: 2 hours)
+101.2 Soak in 40% (vol/vol) methanol/water solution, gentle rocking. (Temperature: RT, Time: 2 hours)
+101.3 Soak in 60% (vol/vol) methanol/water solution, gentle rocking. (Temperature: RT, Time: 2 hours)
+101.4 Soak in 80% (vol/vol) methanol/water solution, gentle rocking. (Temperature: RT, Time: 2 hours)
+101.5 Soak in 100% (vol/vol) methanol, gentle rocking. (Temperature: RT, Time: 2 hours)
+101.6 Soak again in fresh 100% (vol/vol) methanol. (Temperature: RT, Time: 2 hours)
+
+102 Bleaching/Dehemoglobinization (Bleaching, can significantly reduce whole-brain background)
+102.1 Soak in 5% H2O2 in methanol (Volume ratio: 30% H2O2 : methanol = 1 : 5), protected from light. (Temperature: 4 ℃, Time: 12–16 hours)
+
+103 Rehydration
+103.1 Soak in 80% (vol/vol) methanol/water solution. (Temperature: RT, Time: 1.5 hours)
+103.2 Soak in 60% (vol/vol) methanol/water solution. (Temperature: RT, Time: 1.5 hours)
+103.3 Soak in 40% (vol/vol) methanol/water solution. (Temperature: RT, Time: 1.5 hours)
+103.4 Soak in 20% (vol/vol) methanol/water solution. (Temperature: RT, Time: 1.5 hours)
+103.5 Soak in 1×PBS. (Temperature: RT, Time: 1.5 hours)
+
+104 Permeabilization & Blocking
+104.1 Permeabilization solution: PBS + 0.2% (vol/vol) Triton X-100 + 20% (vol/vol) DMSO + 0.3 M Glycine, gentle rocking. (Temperature: 37 ℃, Time: 24 hours)
+104.2 Blocking solution: PBS + 0.2% Triton X-100 + 10% (vol/vol) DMSO + 6% (vol/vol) Normal Donkey Serum (NDS), gentle rocking. (Temperature: 37 ℃, Time: 24 hours)
+
+105 Whole-brain immunolabeling, primary
+105.1 Primary antibody incubation solution: PBS + 0.2% Triton X-100 + 5% DMSO + 3% NDS + 0.01% (w/v) NaN3; add NeuN (RBFOX3) primary antibody at 1:200. (Temperature: 37 ℃, Time: 5–7 days)
+105.2 Add β-III Tubulin (TUJ1) primary antibody at 1:300 to the same incubation solution (can be co-incubated in the same tube as 105.1). (Temperature: 37 ℃, Time: 5–7 days)
+
+106 Wash after primary
+106.1 Wash solution: PBS + 0.2% Triton X-100 + 0.01% NaN3, gentle rocking with solution changes. (Temperature: RT, Time: 6 hours)
+106.2 Repeat 106.1 for a total of 6 times (total wash approximately 36 hours). (Temperature: RT, Time: 36 hours)
+
+107 Secondary, far-red
+107.1 Secondary antibody incubation solution: PBS + 0.2% Triton X-100 + 3% NDS + 0.01% NaN3; add Donkey anti-mouse/rabbit (matched to primary antibody host) Alexa Fluor 647 secondary antibody at 1:400 (corresponding to NeuN and TUJ1 respectively; if the two primary antibodies have different hosts, they can be co-incubated in the same tube). (Temperature: 37 ℃, Time: 5–7 days, Light: protected)
+
+108 Wash after secondary
+108.1 Wash with PBS + 0.2% Triton X-100 + 0.01% NaN3, gentle rocking with solution changes. (Temperature: RT, Time: 6 hours)
+108.2 Repeat 108.1 for a total of 6 times (total wash approximately 36 hours). (Temperature: RT, Time: 36 hours)
+
+109 Nuclear stain (TO-PRO-3, whole-brain nuclear localization for registration/segmentation assistance)
+109.1 TO-PRO-3 1–2 µM (in PBS + 0.2% Triton X-100), protected from light, gentle rocking. (Temperature: RT, Time: 12–24 hours)
+109.2 Wash with PBS 3 times. (Temperature: RT, Time: 2 hours each)
+
+110 Dehydration before clearing
+110.1 20% methanol/water. (Temperature: RT, Time: 1.5 hours)
+110.2 40% methanol/water. (Temperature: RT, Time: 1.5 hours)
+110.3 60% methanol/water. (Temperature: RT, Time: 1.5 hours)
+110.4 80% methanol/water. (Temperature: RT, Time: 1.5 hours)
+110.5 100% methanol. (Temperature: RT, Time: 2 hours)
+110.6 Fresh 100% methanol. (Temperature: RT, Time: 2 hours)
+
+111 Delipidation with DCM
+111.1 Soak in 66% (vol/vol) Dichloromethane (DCM)/33% methanol mixture. (Temperature: RT, Time: 3 hours)
+111.2 Soak in 100% DCM. (Temperature: RT, Time: 2 × 1.5 hours)
+
+112 Refractive index matching, DBE
+112.1 Pre-soak in 100% Dibenzyl Ether (DBE, RI≈1.56). (Temperature: RT, Time: 3 hours, Light: protected)
+112.2 Continue soaking in fresh 100% DBE until fully transparent (usually required for whole brain). (Temperature: RT, Time: 12–24 hours, Light: protected)
+
+113 Storage & pre-imaging
+113.1 Keep sample fully immersed in fresh 100% DBE, store sealed and protected from light (fill container as much as possible to reduce oxidation). (Temperature: RT or 4 ℃, Time: up to 1–2 weeks)
+113.2 Before light-sheet imaging, replace with fresh DBE once and let stand to remove bubbles/settle. (Temperature: RT, Time: 1–2 hours)
+113.3 Match imaging medium and objective: use DBE-compatible imaging chamber and sealing materials with RI≈1.56; after fixing sample to a mount, proceed directly to whole-brain light-sheet scanning. (Temperature: RT, Time: per imaging session)

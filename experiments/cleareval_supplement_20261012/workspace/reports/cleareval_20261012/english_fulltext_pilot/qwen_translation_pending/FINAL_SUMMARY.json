@@ -1,0 +1,35 @@
+{
+  "status": "eight_authorized_translation_requests_completed",
+  "requested": 8,
+  "started": 8,
+  "returned": 8,
+  "schema_valid": 8,
+  "normal_stop": 8,
+  "automatic_retries": 0,
+  "generation_wall_seconds_sum": 604.8750000000073,
+  "output_tokens_sum": 13457,
+  "full_texts_without_remaining_CJK": 7,
+  "operational_numeric_time_checks_pass": 8,
+  "actual_raw_pairs": 6,
+  "pairs_without_remaining_CJK_in_either_fulltext": 5,
+  "new_full_CCE_judgments": 0,
+  "new_expert_records": 0,
+  "fresh_repeat_trials": 0,
+  "reference_switches": 0,
+  "new_package_count": 446,
+  "main_formula_encoder_threshold_changed": false,
+  "fidelity_source_review": "current assistant, unblinded, not expert or independent validation",
+  "baseline_sr_reproduces_author_translation": [
+    0.3333333333333333,
+    0.5714285714285714
+  ],
+  "residual_failures": [
+    "C04 deleting late core operations leaves SR unchanged",
+    "C07 renumber then retranslate yields SR 4/7 to 0 through different wording crossing the .7 threshold",
+    "C04 three section titles are counted as operations by the unchanged parser",
+    "C07 one label is not fully translated",
+    "merged granularity changes SP numerator and denominator"
+  ],
+  "outputs_are_development_evidence": true,
+  "overall_paper_goal_complete": false
+}

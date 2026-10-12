@@ -1,0 +1,487 @@
+{
+  "finished_utc": "2026-10-12T13:20:20.792939+00:00",
+  "terminals": [
+    {
+      "request_id": "T01_R3C04_baseline",
+      "answer_id": "R3C04",
+      "condition": "baseline",
+      "request": {
+        "event": "request_started",
+        "request_id": "3894e2fc23e7eec85eb17c832570f73ebcd65caccc761a520598e4897293fc5f",
+        "trial_id": "9eb4d3102a5c2f4717c133708e234a1a6ef04b35e182a1c9fbe240172769cdc6",
+        "attempt": 1,
+        "model": "qwen3.8:27b-q8_0-local",
+        "started_utc": "2026-10-12T13:10:16.634925+00:00",
+        "package_request_index": 439,
+        "round_id": "fulltext_english_translation_20261012",
+        "phase": "fulltext_translation",
+        "observation_id": "T01_R3C04_baseline",
+        "authorization_sha256": "45034cc03e0d14699911292b5a0ef3992ce02f86c9d0a8cea8901ba535736e4b",
+        "payload_sha256": "36d0f3e5484f23fb3863dc9ce80d2fa5f8fa4b53cae66b446670248f9c307975"
+      },
+      "payload": {
+        "path": "C:\\ClearEval\\reports\\cleareval_20261012\\english_fulltext_pilot\\qwen_translation_pending\\T01_R3C04_baseline.json",
+        "sha256": "36d0f3e5484f23fb3863dc9ce80d2fa5f8fa4b53cae66b446670248f9c307975"
+      },
+      "source": {
+        "path": "C:\\ClearEval\\reports\\cleareval_20261012\\english_fulltext_pilot\\documents\\R3C04\\original.txt",
+        "sha256": "2b6db955429fd6f3b190ffd315fe36d59fb2b7955b27a7d6c37111b4ea660cf8"
+      },
+      "attempt": 1,
+      "actual_new_request": true,
+      "status": "returned_translation_pending_fidelity_review",
+      "translation": {
+        "path": "C:\\ClearEval\\reports\\cleareval_20261012\\english_fulltext_pilot\\qwen_translation_pending\\returns\\T01_R3C04_baseline\\english_text.txt",
+        "sha256": "b4126dfedc5774585356868c11b7318df490d8f1869708b3f2d92a81e58c07fa"
+      },
+      "raw_response": {
+        "path": "C:\\ClearEval\\reports\\cleareval_20261012\\english_fulltext_pilot\\qwen_translation_pending\\returns\\T01_R3C04_baseline\\http_response.json",
+        "sha256": "fdd2b37d54664c641951327c1eed0cbce949ea66e83f4d14039ddf161fc0f50e"
+      },
+      "response_content": {
+        "path": "C:\\ClearEval\\reports\\cleareval_20261012\\english_fulltext_pilot\\qwen_translation_pending\\returns\\T01_R3C04_baseline\\response_content.txt",
+        "sha256": "f611f3e1ff503f94e9ef24f8be45f58a70138689ed4480f1f31a0a68499e42dc"
+      },
+      "model_response_metadata": {
+        "model": "qwen3.8:27b-q8_0-local",
+        "created_at": "2026-10-12T13:12:06.5177571Z",
+        "done": true,
+        "done_reason": "stop",
+        "total_duration": 109573299000,
+        "load_duration": 28013917100,
+        "prompt_eval_count": 2246,
+        "prompt_eval_duration": 2016938000,
+        "eval_count": 1918,
+        "eval_duration": 79526875000
+      },
+      "fidelity_review_completed": false,
+      "finished_utc": "2026-10-12T13:12:06.591356+00:00",
+      "wall_seconds": 109.93700000000172
+    },
+    {
+      "request_id": "T02_R3C04_renumber_operations",
+      "answer_id": "R3C04",
+      "condition": "renumber_operations",
+      "request": {
+        "event": "request_started",
+        "request_id": "4460b209dda9d6f0bcbb6e48135e052842d5ab6f6de7b67dd5efa22d437ee356",
+        "trial_id": "0518b3e4cd95982c5e06d238bd58d7ec84dc1a475514aa582b1717477f4c37ac",
+        "attempt": 1,
+        "model": "qwen3.8:27b-q8_0-local",
+        "started_utc": "2026-10-12T13:12:06.633879+00:00",
+        "package_request_index": 440,
+        "round_id": "fulltext_english_translation_20261012",
+        "phase": "fulltext_translation",
+        "observation_id": "T02_R3C04_renumber_operations",
+        "authorization_sha256": "45034cc03e0d14699911292b5a0ef3992ce02f86c9d0a8cea8901ba535736e4b",
+        "payload_sha256": "94a2a99e2f58ddf98bea0123af97f17240ce288e7fe1522f952f7f7d5fff31d3"
+      },
+      "payload": {
+        "path": "C:\\ClearEval\\reports\\cleareval_20261012\\english_fulltext_pilot\\qwen_translation_pending\\T02_R3C04_renumber_operations.json",
+        "sha256": "94a2a99e2f58ddf98bea0123af97f17240ce288e7fe1522f952f7f7d5fff31d3"
+      },
+      "source": {
+        "path": "C:\\ClearEval\\reports\\cleareval_20261012\\english_fulltext_pilot\\controls\\R3C04\\original\\renumber_operations.txt",
+        "sha256": "bf7d26fd40ea9327bb744c485ac13526d6a134b056fb845c1d2ba4c1c2560780"
+      },
+      "attempt": 1,
+      "actual_new_request": true,
+      "status": "returned_translation_pending_fidelity_review",
+      "translation": {
+        "path": "C:\\ClearEval\\reports\\cleareval_20261012\\english_fulltext_pilot\\qwen_translation_pending\\returns\\T02_R3C04_renumber_operations\\english_text.txt",
+        "sha256": "252a33c93f396dd768619e21414cebc7baf18eff3ca204b17e1467735188811b"
+      },
+      "raw_response": {
+        "path": "C:\\ClearEval\\reports\\cleareval_20261012\\english_fulltext_pilot\\qwen_translation_pending\\returns\\T02_R3C04_renumber_operations\\http_response.json",
+        "sha256": "78856541550059da26f820a27be5e56eae7414424585ab5acb55bed2fde4c51f"
+      },
+      "response_content": {
+        "path": "C:\\ClearEval\\reports\\cleareval_20261012\\english_fulltext_pilot\\qwen_translation_pending\\returns\\T02_R3C04_renumber_operations\\response_content.txt",
+        "sha256": "9cf26cfc7c288681779284f78b93afcc7bfc376efa831eb911ef23a3fd12a74e"
+      },
+      "model_response_metadata": {
+        "model": "qwen3.8:27b-q8_0-local",
+        "created_at": "2026-10-12T13:13:32.9101041Z",
+        "done": true,
+        "done_reason": "stop",
+        "total_duration": 85960561000,
+        "load_duration": 18535200,
+        "prompt_eval_count": 2333,
+        "prompt_eval_duration": 1782787000,
+        "eval_count": 2003,
+        "eval_duration": 83758277000
+      },
+      "fidelity_review_completed": false,
+      "finished_utc": "2026-10-12T13:13:32.983160+00:00",
+      "wall_seconds": 86.32800000000134
+    },
+    {
+      "request_id": "T03_R3C04_merge_adjacent_operations",
+      "answer_id": "R3C04",
+      "condition": "merge_adjacent_operations",
+      "request": {
+        "event": "request_started",
+        "request_id": "212e27ed8632e6d96cf81f3dd8b6b5051f610a882834574c365f135cd21bf0d8",
+        "trial_id": "8643841308aabc07c8f70217b60e859952ffd271e8392f9471524ad15e7aee91",
+        "attempt": 1,
+        "model": "qwen3.8:27b-q8_0-local",
+        "started_utc": "2026-10-12T13:13:33.019715+00:00",
+        "package_request_index": 441,
+        "round_id": "fulltext_english_translation_20261012",
+        "phase": "fulltext_translation",
+        "observation_id": "T03_R3C04_merge_adjacent_operations",
+        "authorization_sha256": "45034cc03e0d14699911292b5a0ef3992ce02f86c9d0a8cea8901ba535736e4b",
+        "payload_sha256": "444156be1c1c959cbc5bc58fd13c21210dabe7cea6df6699ce862c7f5c855e06"
+      },
+      "payload": {
+        "path": "C:\\ClearEval\\reports\\cleareval_20261012\\english_fulltext_pilot\\qwen_translation_pending\\T03_R3C04_merge_adjacent_operations.json",
+        "sha256": "444156be1c1c959cbc5bc58fd13c21210dabe7cea6df6699ce862c7f5c855e06"
+      },
+      "source": {
+        "path": "C:\\ClearEval\\reports\\cleareval_20261012\\english_fulltext_pilot\\controls\\R3C04\\original\\merge_adjacent_operations.txt",
+        "sha256": "10cd8fa819acca2bbe346c6c395a6d5478f9be2040351b21bf685fd85cf75666"
+      },
+      "attempt": 1,
+      "actual_new_request": true,
+      "status": "returned_translation_pending_fidelity_review",
+      "translation": {
+        "path": "C:\\ClearEval\\reports\\cleareval_20261012\\english_fulltext_pilot\\qwen_translation_pending\\returns\\T03_R3C04_merge_adjacent_operations\\english_text.txt",
+        "sha256": "950be1ebd0afc65bd92b423f3b432c2590e1118231377ee3fac3143370d23d43"
+      },
+      "raw_response": {
+        "path": "C:\\ClearEval\\reports\\cleareval_20261012\\english_fulltext_pilot\\qwen_translation_pending\\returns\\T03_R3C04_merge_adjacent_operations\\http_response.json",
+        "sha256": "7d010c4c5dcc13132fe8e0e7b5c8841eada247674bbb233ec447d441b12be260"
+      },
+      "response_content": {
+        "path": "C:\\ClearEval\\reports\\cleareval_20261012\\english_fulltext_pilot\\qwen_translation_pending\\returns\\T03_R3C04_merge_adjacent_operations\\response_content.txt",
+        "sha256": "340381a933944b82452ca017640b9b58ebb767b634d502910e3a6dfbf91fc41b"
+      },
+      "model_response_metadata": {
+        "model": "qwen3.8:27b-q8_0-local",
+        "created_at": "2026-10-12T13:14:54.7408402Z",
+        "done": true,
+        "done_reason": "stop",
+        "total_duration": 81390093500,
+        "load_duration": 18566900,
+        "prompt_eval_count": 2241,
+        "prompt_eval_duration": 835429000,
+        "eval_count": 1915,
+        "eval_duration": 79970815000
+      },
+      "fidelity_review_completed": false,
+      "finished_utc": "2026-10-12T13:14:54.809629+00:00",
+      "wall_seconds": 81.76600000000326
+    },
+    {
+      "request_id": "T04_R3C04_delete_reported_core_operations",
+      "answer_id": "R3C04",
+      "condition": "delete_reported_core_operations",
+      "request": {
+        "event": "request_started",
+        "request_id": "567265dbc2a6d7fb71c93eb2bcf77c021a5a1e79677568da741aeba1f7408d32",
+        "trial_id": "098394e51de850ae4c9eef4dbd15342843541cd7d520a02c16f17680ad43d0c0",
+        "attempt": 1,
+        "model": "qwen3.8:27b-q8_0-local",
+        "started_utc": "2026-10-12T13:14:54.851111+00:00",
+        "package_request_index": 442,
+        "round_id": "fulltext_english_translation_20261012",
+        "phase": "fulltext_translation",
+        "observation_id": "T04_R3C04_delete_reported_core_operations",
+        "authorization_sha256": "45034cc03e0d14699911292b5a0ef3992ce02f86c9d0a8cea8901ba535736e4b",
+        "payload_sha256": "d74373e7de6905fc83ab765c5b858fe14faca083908929baa51506b35d27f9b8"
+      },
+      "payload": {
+        "path": "C:\\ClearEval\\reports\\cleareval_20261012\\english_fulltext_pilot\\qwen_translation_pending\\T04_R3C04_delete_reported_core_operations.json",
+        "sha256": "d74373e7de6905fc83ab765c5b858fe14faca083908929baa51506b35d27f9b8"
+      },
+      "source": {
+        "path": "C:\\ClearEval\\reports\\cleareval_20261012\\english_fulltext_pilot\\controls\\R3C04\\original\\delete_reported_core_operations.txt",
+        "sha256": "93d66c75ae980b490567a19e1673ab3049fd749b8b6f6e187fa5e79345f47d31"
+      },
+      "attempt": 1,
+      "actual_new_request": true,
+      "status": "returned_translation_pending_fidelity_review",
+      "translation": {
+        "path": "C:\\ClearEval\\reports\\cleareval_20261012\\english_fulltext_pilot\\qwen_translation_pending\\returns\\T04_R3C04_delete_reported_core_operations\\english_text.txt",
+        "sha256": "7804ba6653992f29d34efffb020606764c2379954ec566a2e46a66e4c09b4063"
+      },
+      "raw_response": {
+        "path": "C:\\ClearEval\\reports\\cleareval_20261012\\english_fulltext_pilot\\qwen_translation_pending\\returns\\T04_R3C04_delete_reported_core_operations\\http_response.json",
+        "sha256": "90eb8f8080d17543f8e69552d085587299bdee424949719ea7adbd2856c71960"
+      },
+      "response_content": {
+        "path": "C:\\ClearEval\\reports\\cleareval_20261012\\english_fulltext_pilot\\qwen_translation_pending\\returns\\T04_R3C04_delete_reported_core_operations\\response_content.txt",
+        "sha256": "fb0f4f4c6eba9e84b8b4a95dc5f5b870b109bf513fcc70c30e42e78cbaaeff1d"
+      },
+      "model_response_metadata": {
+        "model": "qwen3.8:27b-q8_0-local",
+        "created_at": "2026-10-12T13:16:09.7926Z",
+        "done": true,
+        "done_reason": "stop",
+        "total_duration": 74593453700,
+        "load_duration": 21992500,
+        "prompt_eval_count": 2094,
+        "prompt_eval_duration": 735720000,
+        "eval_count": 1759,
+        "eval_duration": 73419298000
+      },
+      "fidelity_review_completed": false,
+      "finished_utc": "2026-10-12T13:16:09.869095+00:00",
+      "wall_seconds": 75.0
+    },
+    {
+      "request_id": "T05_R3C07_baseline",
+      "answer_id": "R3C07",
+      "condition": "baseline",
+      "request": {
+        "event": "request_started",
+        "request_id": "f271e25ad0bc1e5e711c16ebf89176d09275518d1d2f84b0c7ac882546700083",
+        "trial_id": "8878ae29f56914fa0802e72a7a49db79dd79667fa1d10b78409062e9b8bd40b7",
+        "attempt": 1,
+        "model": "qwen3.8:27b-q8_0-local",
+        "started_utc": "2026-10-12T13:16:09.910354+00:00",
+        "package_request_index": 443,
+        "round_id": "fulltext_english_translation_20261012",
+        "phase": "fulltext_translation",
+        "observation_id": "T05_R3C07_baseline",
+        "authorization_sha256": "45034cc03e0d14699911292b5a0ef3992ce02f86c9d0a8cea8901ba535736e4b",
+        "payload_sha256": "f86ca68f5cf296f722eddbea9f121c48ab26274adf9fe5bf239bc75d35d6478d"
+      },
+      "payload": {
+        "path": "C:\\ClearEval\\reports\\cleareval_20261012\\english_fulltext_pilot\\qwen_translation_pending\\T05_R3C07_baseline.json",
+        "sha256": "f86ca68f5cf296f722eddbea9f121c48ab26274adf9fe5bf239bc75d35d6478d"
+      },
+      "source": {
+        "path": "C:\\ClearEval\\reports\\cleareval_20261012\\english_fulltext_pilot\\documents\\R3C07\\original.txt",
+        "sha256": "4b84fdc89feaa11f37599e9f3fe38336fecf418a499e8609ec08312f6cb78bd3"
+      },
+      "attempt": 1,
+      "actual_new_request": true,
+      "status": "returned_translation_pending_fidelity_review",
+      "translation": {
+        "path": "C:\\ClearEval\\reports\\cleareval_20261012\\english_fulltext_pilot\\qwen_translation_pending\\returns\\T05_R3C07_baseline\\english_text.txt",
+        "sha256": "d31f4b22e2870a9b17259a2a79a971435335c313ccc5d0c3464e2933ac2130ab"
+      },
+      "raw_response": {
+        "path": "C:\\ClearEval\\reports\\cleareval_20261012\\english_fulltext_pilot\\qwen_translation_pending\\returns\\T05_R3C07_baseline\\http_response.json",
+        "sha256": "a4f65b493ca4e1bd6b74a988ac64109d0744062442624c546ec386918bf642ea"
+      },
+      "response_content": {
+        "path": "C:\\ClearEval\\reports\\cleareval_20261012\\english_fulltext_pilot\\qwen_translation_pending\\returns\\T05_R3C07_baseline\\response_content.txt",
+        "sha256": "b58eacfd34f2460856522b42584d753ba1837740b2aa7921d5d2f2cf2f44a626"
+      },
+      "model_response_metadata": {
+        "model": "qwen3.8:27b-q8_0-local",
+        "created_at": "2026-10-12T13:17:15.4673147Z",
+        "done": true,
+        "done_reason": "stop",
+        "total_duration": 65220978000,
+        "load_duration": 18257900,
+        "prompt_eval_count": 1713,
+        "prompt_eval_duration": 1495807000,
+        "eval_count": 1524,
+        "eval_duration": 63284510000
+      },
+      "fidelity_review_completed": false,
+      "finished_utc": "2026-10-12T13:17:15.539703+00:00",
+      "wall_seconds": 65.60899999999674
+    },
+    {
+      "request_id": "T06_R3C07_renumber_operations",
+      "answer_id": "R3C07",
+      "condition": "renumber_operations",
+      "request": {
+        "event": "request_started",
+        "request_id": "90d749f5af1aa6e479009abd63c6035cf17d269a6f59fc4f0168a00883a1df95",
+        "trial_id": "516f4eae8cb078bf88b98c27a651ef346cdf804e024e3fc09fa38f66e695163e",
+        "attempt": 1,
+        "model": "qwen3.8:27b-q8_0-local",
+        "started_utc": "2026-10-12T13:17:15.581896+00:00",
+        "package_request_index": 444,
+        "round_id": "fulltext_english_translation_20261012",
+        "phase": "fulltext_translation",
+        "observation_id": "T06_R3C07_renumber_operations",
+        "authorization_sha256": "45034cc03e0d14699911292b5a0ef3992ce02f86c9d0a8cea8901ba535736e4b",
+        "payload_sha256": "d8d11740d4fc4d62c4bc0aabf497acdf60f84e4e01ad7485633bf064569e4eba"
+      },
+      "payload": {
+        "path": "C:\\ClearEval\\reports\\cleareval_20261012\\english_fulltext_pilot\\qwen_translation_pending\\T06_R3C07_renumber_operations.json",
+        "sha256": "d8d11740d4fc4d62c4bc0aabf497acdf60f84e4e01ad7485633bf064569e4eba"
+      },
+      "source": {
+        "path": "C:\\ClearEval\\reports\\cleareval_20261012\\english_fulltext_pilot\\controls\\R3C07\\original\\renumber_operations.txt",
+        "sha256": "75d519c778e67a35792196aad81811891c8619a69685f6d7c2a80d78a8e42ffa"
+      },
+      "attempt": 1,
+      "actual_new_request": true,
+      "status": "returned_translation_pending_fidelity_review",
+      "translation": {
+        "path": "C:\\ClearEval\\reports\\cleareval_20261012\\english_fulltext_pilot\\qwen_translation_pending\\returns\\T06_R3C07_renumber_operations\\english_text.txt",
+        "sha256": "b3efb36b14b0c453f6135e826611e5bad54705cff507bfa41cc8c7e042b007e9"
+      },
+      "raw_response": {
+        "path": "C:\\ClearEval\\reports\\cleareval_20261012\\english_fulltext_pilot\\qwen_translation_pending\\returns\\T06_R3C07_renumber_operations\\http_response.json",
+        "sha256": "03a59503be6d23f1db370e7286401072907444f2a2a0f4935563609084b3591a"
+      },
+      "response_content": {
+        "path": "C:\\ClearEval\\reports\\cleareval_20261012\\english_fulltext_pilot\\qwen_translation_pending\\returns\\T06_R3C07_renumber_operations\\response_content.txt",
+        "sha256": "b053681890ea3ab19bb0240a3250f222a98e18cfa2ce4ac51e122eb3ac5ff471"
+      },
+      "model_response_metadata": {
+        "model": "qwen3.8:27b-q8_0-local",
+        "created_at": "2026-10-12T13:18:23.6169556Z",
+        "done": true,
+        "done_reason": "stop",
+        "total_duration": 67682191000,
+        "load_duration": 21166600,
+        "prompt_eval_count": 1769,
+        "prompt_eval_duration": 1505992000,
+        "eval_count": 1584,
+        "eval_duration": 65786344000
+      },
+      "fidelity_review_completed": false,
+      "finished_utc": "2026-10-12T13:18:23.689000+00:00",
+      "wall_seconds": 68.09400000000096
+    },
+    {
+      "request_id": "T07_R3C07_merge_adjacent_operations",
+      "answer_id": "R3C07",
+      "condition": "merge_adjacent_operations",
+      "request": {
+        "event": "request_started",
+        "request_id": "855c31c4ea5090739e18424527cb8745a2ede65968fc38bb71833b2c87a84a1b",
+        "trial_id": "350af7a1055e935881bdd21440437d28a7f06cc39b605680a8b78a7db62d7b4d",
+        "attempt": 1,
+        "model": "qwen3.8:27b-q8_0-local",
+        "started_utc": "2026-10-12T13:18:23.726917+00:00",
+        "package_request_index": 445,
+        "round_id": "fulltext_english_translation_20261012",
+        "phase": "fulltext_translation",
+        "observation_id": "T07_R3C07_merge_adjacent_operations",
+        "authorization_sha256": "45034cc03e0d14699911292b5a0ef3992ce02f86c9d0a8cea8901ba535736e4b",
+        "payload_sha256": "e4c5589ea2d7d760e95b6cfac8431d3620ed3dfdb6d547a171085533b4969dca"
+      },
+      "payload": {
+        "path": "C:\\ClearEval\\reports\\cleareval_20261012\\english_fulltext_pilot\\qwen_translation_pending\\T07_R3C07_merge_adjacent_operations.json",
+        "sha256": "e4c5589ea2d7d760e95b6cfac8431d3620ed3dfdb6d547a171085533b4969dca"
+      },
+      "source": {
+        "path": "C:\\ClearEval\\reports\\cleareval_20261012\\english_fulltext_pilot\\controls\\R3C07\\original\\merge_adjacent_operations.txt",
+        "sha256": "f6d307513fbc5b42832601b29d5c0c0450e486d149647d9510fe5cc577f1bb4d"
+      },
+      "attempt": 1,
+      "actual_new_request": true,
+      "status": "returned_translation_pending_fidelity_review",
+      "translation": {
+        "path": "C:\\ClearEval\\reports\\cleareval_20261012\\english_fulltext_pilot\\qwen_translation_pending\\returns\\T07_R3C07_merge_adjacent_operations\\english_text.txt",
+        "sha256": "065d9873a374e20150bd8a137be49f79cb5c754be9f26e06a8598d8a36445d7b"
+      },
+      "raw_response": {
+        "path": "C:\\ClearEval\\reports\\cleareval_20261012\\english_fulltext_pilot\\qwen_translation_pending\\returns\\T07_R3C07_merge_adjacent_operations\\http_response.json",
+        "sha256": "ce19149327a97177b477a4b53a288d06aa2b59a350bafbc74f02d9c840f439c3"
+      },
+      "response_content": {
+        "path": "C:\\ClearEval\\reports\\cleareval_20261012\\english_fulltext_pilot\\qwen_translation_pending\\returns\\T07_R3C07_merge_adjacent_operations\\response_content.txt",
+        "sha256": "5560fd23cb1a3da72e118d5b90eda23921115ae2f0ec3db6c39db152650a00e1"
+      },
+      "model_response_metadata": {
+        "model": "qwen3.8:27b-q8_0-local",
+        "created_at": "2026-10-12T13:19:28.3747241Z",
+        "done": true,
+        "done_reason": "stop",
+        "total_duration": 64348320000,
+        "load_duration": 16614800,
+        "prompt_eval_count": 1709,
+        "prompt_eval_duration": 823768000,
+        "eval_count": 1517,
+        "eval_duration": 62972556000
+      },
+      "fidelity_review_completed": false,
+      "finished_utc": "2026-10-12T13:19:28.442325+00:00",
+      "wall_seconds": 64.70300000000134
+    },
+    {
+      "request_id": "T08_R3C07_delete_reported_core_operations",
+      "answer_id": "R3C07",
+      "condition": "delete_reported_core_operations",
+      "request": {
+        "event": "request_started",
+        "request_id": "05a1faaa8a2ef9817c512ee6854ca37902cd3db59ee6a6cc5007b49f62d73b8f",
+        "trial_id": "901d7b352ce3d6b5ec24f5a6a8c3ae80a5c82e95c151f5010c63224bfbba5ae6",
+        "attempt": 1,
+        "model": "qwen3.8:27b-q8_0-local",
+        "started_utc": "2026-10-12T13:19:28.481482+00:00",
+        "package_request_index": 446,
+        "round_id": "fulltext_english_translation_20261012",
+        "phase": "fulltext_translation",
+        "observation_id": "T08_R3C07_delete_reported_core_operations",
+        "authorization_sha256": "45034cc03e0d14699911292b5a0ef3992ce02f86c9d0a8cea8901ba535736e4b",
+        "payload_sha256": "c9594d3025e2a3ff32f9218236b40774f71581f3be11a6cff9949ba72afd72df"
+      },
+      "payload": {
+        "path": "C:\\ClearEval\\reports\\cleareval_20261012\\english_fulltext_pilot\\qwen_translation_pending\\T08_R3C07_delete_reported_core_operations.json",
+        "sha256": "c9594d3025e2a3ff32f9218236b40774f71581f3be11a6cff9949ba72afd72df"
+      },
+      "source": {
+        "path": "C:\\ClearEval\\reports\\cleareval_20261012\\english_fulltext_pilot\\controls\\R3C07\\original\\delete_reported_core_operations.txt",
+        "sha256": "e64d7052b6a3b5cfdf5cfbb8d12ed8be736e9f0808e71de70a586d52ed3c4cdb"
+      },
+      "attempt": 1,
+      "actual_new_request": true,
+      "status": "returned_translation_pending_fidelity_review",
+      "translation": {
+        "path": "C:\\ClearEval\\reports\\cleareval_20261012\\english_fulltext_pilot\\qwen_translation_pending\\returns\\T08_R3C07_delete_reported_core_operations\\english_text.txt",
+        "sha256": "f699903a9e66c6285f694e001dad8f2a6c703aaac885fb6d26ee6e54b5b6e570"
+      },
+      "raw_response": {
+        "path": "C:\\ClearEval\\reports\\cleareval_20261012\\english_fulltext_pilot\\qwen_translation_pending\\returns\\T08_R3C07_delete_reported_core_operations\\http_response.json",
+        "sha256": "1517e9acf14b2158598b435b94be6935786ca73641ec8eda066bab682c23b465"
+      },
+      "response_content": {
+        "path": "C:\\ClearEval\\reports\\cleareval_20261012\\english_fulltext_pilot\\qwen_translation_pending\\returns\\T08_R3C07_delete_reported_core_operations\\response_content.txt",
+        "sha256": "401f55ad2e064721e1bc508deaf0d3b084e24307855c4035148c8991a5c192ec"
+      },
+      "model_response_metadata": {
+        "model": "qwen3.8:27b-q8_0-local",
+        "created_at": "2026-10-12T13:20:20.7054323Z",
+        "done": true,
+        "done_reason": "stop",
+        "total_duration": 53096728700,
+        "load_duration": 16664500,
+        "prompt_eval_count": 1455,
+        "prompt_eval_duration": 1353305000,
+        "eval_count": 1237,
+        "eval_duration": 51373739000
+      },
+      "fidelity_review_completed": false,
+      "finished_utc": "2026-10-12T13:20:20.778183+00:00",
+      "wall_seconds": 53.43800000000192
+    }
+  ],
+  "budget": {
+    "round_id": "fulltext_english_translation_20261012",
+    "attempts_recorded": 446,
+    "package_limit": 446,
+    "round_attempts": 8,
+    "round_limit": 8,
+    "remaining_request_capacity": 0,
+    "authorization": {
+      "path": "C:\\ClearEval\\reports\\cleareval_20261012\\english_fulltext_pilot\\qwen_translation_pending\\authorization.json",
+      "sha256": "45034cc03e0d14699911292b5a0ef3992ce02f86c9d0a8cea8901ba535736e4b"
+    },
+    "ledger": {
+      "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\judges\\request_ledger.jsonl",
+      "sha256": "6d8a98c4ec8cafedaf7ab5b893f4c97c82255301a70a2cd24e56c3bb7b2cdfbd"
+    },
+    "deadline_utc": "2026-10-12T15:03:22+00:00",
+    "automatic_retries": false,
+    "human_budget": {
+      "experts": 1,
+      "development": 5,
+      "holdout": 15
+    }
+  },
+  "fresh_fidelity_reviews": 0,
+  "new_full_CCE_judgments": 0,
+  "automatic_retries": false
+}

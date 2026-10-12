@@ -1,0 +1,253 @@
+{
+  "scores": {
+    "completeness": {
+      "c_step": {
+        "score": 0,
+        "reasoning": "The protocol is truncated after '1.1 Incubation with'. It completely lacks the core functional modules required for uDISCO: gradient dehydration (tert-butanol), delipidation (DCM), and refractive index matching (BABB/DPE). It also lacks the required mounting/sealing step for organic solvent methods."
+      },
+      "c_param": {
+        "score": 0,
+        "reasoning": "The protocol provides no executable parameters. It lists a step name 'Washing' and an incomplete step 'Incubation with' but provides no reagents, concentrations, temperatures, or durations."
+      }
+    },
+    "correctness": {
+      "co_order": {
+        "score": null,
+        "reasoning": "The protocol is incomplete and truncated. While the initial 'Washing' step is consistent with the start of the uDISCO SOP, the absence of subsequent steps prevents a full evaluation of the logical order and sequence integrity."
+      },
+      "co_method": {
+        "score": null,
+        "reasoning": "The protocol names uDISCO but does not list the specific reagents (tert-butanol, DCM, BABB) required to verify method-reagent consistency. The incomplete 'Incubation with' step does not specify the chemical, making it impossible to confirm if the correct method-specific reagents are being used."
+      },
+      "co_param": {
+        "score": null,
+        "reasoning": "No numerical parameters (time, temperature, concentration) are provided in the protocol steps. Therefore, physical plausibility and adherence to Fick's law cannot be evaluated."
+      },
+      "co_chem": {
+        "score": 1,
+        "reasoning": "The protocol does not introduce any dangerous chemicals or operations. It only lists 'Washing' and an incomplete 'Incubation with' step without specifying hazardous reagents or unsafe handling conditions."
+      }
+    }
+  },
+  "score_evidence": [
+    {
+      "m": "c_param",
+      "u": [
+        "L0005",
+        "L0006"
+      ],
+      "b": "absence",
+      "r": "No parameters provided in the truncated protocol steps."
+    },
+    {
+      "m": "co_order",
+      "u": [
+        "L0005",
+        "L0006"
+      ],
+      "b": "mixed",
+      "r": "Protocol is truncated; only initial washing step is present, preventing full sequence evaluation."
+    },
+    {
+      "m": "co_method",
+      "u": [
+        "L0001",
+        "L0006"
+      ],
+      "b": "mixed",
+      "r": "Method uDISCO is named, but specific reagents are not listed in the steps to verify consistency."
+    },
+    {
+      "m": "co_param",
+      "u": [
+        "L0005",
+        "L0006"
+      ],
+      "b": "absence",
+      "r": "No numerical parameters are present to evaluate physical plausibility."
+    },
+    {
+      "m": "co_chem",
+      "u": [
+        "L0005",
+        "L0006"
+      ],
+      "b": "observed",
+      "r": "No dangerous chemicals or operations are explicitly introduced in the provided text."
+    }
+  ],
+  "grounded_extraction": {
+    "schema_version": "source_bound_extraction_v11",
+    "source_id": "SRC_ce4805acb4728e5413aa0eb7",
+    "method_mentions": [
+      {
+        "i": "MM01",
+        "n": "uDISCO",
+        "a": 0,
+        "u": "L0001",
+        "s": "selected"
+      },
+      {
+        "i": "MM02",
+        "n": "uDISCO",
+        "a": 0,
+        "u": "L0003",
+        "s": "mentioned"
+      }
+    ],
+    "entities": [
+      {
+        "i": "E01",
+        "n": "NeuN",
+        "a": 0,
+        "u": "L0002",
+        "k": "target",
+        "s": "mentioned"
+      },
+      {
+        "i": "E02",
+        "n": "RBFOX3",
+        "a": 0,
+        "u": "L0002",
+        "k": "target",
+        "s": "mentioned"
+      },
+      {
+        "i": "E03",
+        "n": "Alexa Fluor 647",
+        "a": 0,
+        "u": "L0002",
+        "k": "fluorophore",
+        "s": "mentioned"
+      },
+      {
+        "i": "E04",
+        "n": "beta-III Tubulin",
+        "a": 0,
+        "u": "L0002",
+        "k": "target",
+        "s": "mentioned"
+      },
+      {
+        "i": "E05",
+        "n": "TUJ1",
+        "a": 0,
+        "u": "L0002",
+        "k": "target",
+        "s": "mentioned"
+      },
+      {
+        "i": "E06",
+        "n": "Alexa Fluor 488",
+        "a": 0,
+        "u": "L0002",
+        "k": "fluorophore",
+        "s": "mentioned"
+      },
+      {
+        "i": "E07",
+        "n": "DAPI",
+        "a": 0,
+        "u": "L0002",
+        "k": "fluorophore",
+        "s": "mentioned"
+      },
+      {
+        "i": "E08",
+        "n": "DAPI",
+        "a": 0,
+        "u": "L0003",
+        "k": "fluorophore",
+        "s": "mentioned"
+      }
+    ],
+    "relations": [
+      {
+        "i": "R01",
+        "f": "E03",
+        "e": "L0002",
+        "t": "E01",
+        "s": "explicit",
+        "fo": 0,
+        "to": 0
+      },
+      {
+        "i": "R02",
+        "f": "E03",
+        "e": "L0002",
+        "t": "E02",
+        "s": "explicit",
+        "fo": 0,
+        "to": 0
+      },
+      {
+        "i": "R03",
+        "f": "E06",
+        "e": "L0002",
+        "t": "E04",
+        "s": "explicit",
+        "fo": 0,
+        "to": 0
+      },
+      {
+        "i": "R04",
+        "f": "E06",
+        "e": "L0002",
+        "t": "E05",
+        "s": "explicit",
+        "fo": 0,
+        "to": 0
+      }
+    ],
+    "intrinsic_signals": [],
+    "operations": [
+      {
+        "i": "OP01",
+        "o": "O0001",
+        "p": "unknown",
+        "d": null,
+        "r": null,
+        "s": "initial",
+        "c": null
+      },
+      {
+        "i": "OP02",
+        "o": "O0002",
+        "p": "unknown",
+        "d": null,
+        "r": null,
+        "s": "initial",
+        "c": null
+      }
+    ],
+    "timeline": {
+      "m": "unknown",
+      "o": [
+        "OP01",
+        "OP02"
+      ],
+      "e": null,
+      "c": "partial"
+    },
+    "precedence_edges": [],
+    "total_time_claims": [],
+    "ri_mentions": [
+      {
+        "i": "RI01",
+        "v": "R0007",
+        "r": "unknown"
+      }
+    ],
+    "coverage": {
+      "e": "complete",
+      "t": "complete",
+      "c": "partial",
+      "u": [
+        {
+          "e": "L0006",
+          "r": "Operation 'Incubation with' is truncated and lacks specific reagent/phase identification."
+        }
+      ]
+    }
+  }
+}

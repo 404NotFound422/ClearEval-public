@@ -1,0 +1,177 @@
+{
+  "references": [
+    {
+      "title": "Beyond Accuracy: Behavioral Testing of NLP Models with CheckList",
+      "url": "https://aclanthology.org/2020.acl-main.442/",
+      "supports": "behavior-focused invariance/negative tests, not biological truth"
+    },
+    {
+      "title": "WNUT-2020 Task 1 Overview: Extracting Entities and Relations from Wet Lab Protocols",
+      "url": "https://aclanthology.org/2020.wnut-1.33/",
+      "supports": "separately assess entities and relations in procedural text"
+    }
+  ],
+  "iterations": [
+    {
+      "stage": 1,
+      "canonical32": {
+        "cohort": "canonical32",
+        "actual_saved_returns": 32,
+        "distinct_sources": 14,
+        "ready_source_lists": 31,
+        "automatically_applied": 31,
+        "label_available_before": 28,
+        "label_available_after": 32,
+        "complete_before": 26,
+        "complete_after": 26,
+        "changed_cells": [
+          "R3C01__r0",
+          "R3C03__r0",
+          "R3C04__r0",
+          "R3C05__r0",
+          "R3C07__r0"
+        ],
+        "complete_lost": [],
+        "new_model_calls": 0,
+        "new_per_answer_author_annotations": 0,
+        "interpretation": "development replay on exposed source texts; source rule agreement is not independent accuracy or new evaluator repeatability"
+      },
+      "archived67": {
+        "cohort": "archived67",
+        "actual_saved_returns": 67,
+        "distinct_sources": 40,
+        "ready_source_lists": 48,
+        "automatically_applied": 48,
+        "label_available_before": 55,
+        "label_available_after": 55,
+        "complete_before": 44,
+        "complete_after": 45,
+        "changed_cells": [
+          "A03",
+          "E2_09__local_qwen27b_q8_development__r0",
+          "E2_11__local_qwen27b_q8_development__r0",
+          "E2_21__local_qwen27b_q8_development__r0",
+          "A03__local_qwen27b_q8_development__r0",
+          "A03__local_qwen27b_q8_development__r1",
+          "A03__local_qwen27b_q8_development__r2",
+          "A03__codex_unobserved__r0",
+          "A03__codex_unobserved__r1",
+          "FPC08",
+          "FPC09",
+          "FPC16"
+        ],
+        "complete_lost": [
+          "A03",
+          "A03__local_qwen27b_q8_development__r0",
+          "A03__local_qwen27b_q8_development__r1",
+          "A03__local_qwen27b_q8_development__r2"
+        ],
+        "new_model_calls": 0,
+        "new_per_answer_author_annotations": 0,
+        "interpretation": "development replay on exposed source texts; source rule agreement is not independent accuracy or new evaluator repeatability"
+      }
+    },
+    {
+      "stage": 2,
+      "canonical32": {
+        "cohort": "canonical32",
+        "actual_saved_returns": 32,
+        "distinct_sources": 14,
+        "ready_source_lists": 28,
+        "automatically_applied": 28,
+        "label_available_before": 28,
+        "label_available_after": 30,
+        "complete_before": 26,
+        "complete_after": 26,
+        "changed_cells": [
+          "R3C01__r0",
+          "R3C03__r0",
+          "R3C05__r0"
+        ],
+        "complete_lost": [],
+        "new_model_calls": 0,
+        "new_per_answer_author_annotations": 0,
+        "interpretation": "development replay on exposed source texts; source rule agreement is not independent accuracy or new evaluator repeatability"
+      },
+      "archived67": {
+        "cohort": "archived67",
+        "actual_saved_returns": 67,
+        "distinct_sources": 40,
+        "ready_source_lists": 41,
+        "automatically_applied": 41,
+        "label_available_before": 55,
+        "label_available_after": 60,
+        "complete_before": 44,
+        "complete_after": 48,
+        "changed_cells": [
+          "E2_09__local_qwen27b_q8_development__r0",
+          "E2_11__local_qwen27b_q8_development__r0",
+          "E2_21__local_qwen27b_q8_development__r0",
+          "FPC08",
+          "FPC16"
+        ],
+        "complete_lost": [],
+        "new_model_calls": 0,
+        "new_per_answer_author_annotations": 0,
+        "interpretation": "development replay on exposed source texts; source rule agreement is not independent accuracy or new evaluator repeatability"
+      }
+    },
+    {
+      "stage": 3,
+      "canonical32": {
+        "cohort": "canonical32",
+        "actual_saved_returns": 32,
+        "distinct_sources": 14,
+        "ready_source_lists": 31,
+        "automatically_applied": 31,
+        "label_available_before": 28,
+        "label_available_after": 32,
+        "complete_before": 26,
+        "complete_after": 26,
+        "changed_cells": [
+          "R3C01__r0",
+          "R3C03__r0",
+          "R3C04__r0",
+          "R3C05__r0",
+          "R3C07__r0"
+        ],
+        "complete_lost": [],
+        "new_model_calls": 0,
+        "new_per_answer_author_annotations": 0,
+        "interpretation": "development replay on exposed source texts; source rule agreement is not independent accuracy or new evaluator repeatability"
+      },
+      "archived67": {
+        "cohort": "archived67",
+        "actual_saved_returns": 67,
+        "distinct_sources": 40,
+        "ready_source_lists": 47,
+        "automatically_applied": 47,
+        "label_available_before": 55,
+        "label_available_after": 60,
+        "complete_before": 44,
+        "complete_after": 48,
+        "changed_cells": [
+          "E2_09__local_qwen27b_q8_development__r0",
+          "E2_11__local_qwen27b_q8_development__r0",
+          "E2_21__local_qwen27b_q8_development__r0",
+          "FPC08",
+          "FPC16"
+        ],
+        "complete_lost": [],
+        "new_model_calls": 0,
+        "new_per_answer_author_annotations": 0,
+        "interpretation": "development replay on exposed source texts; source rule agreement is not independent accuracy or new evaluator repeatability"
+      }
+    }
+  ],
+  "rejected_directions": [
+    "Treat full native-signal description as target identity",
+    "Reject every parenthetical pair whose inner token has another catalog occurrence",
+    "Use the legacy metrics key as the prior source-assisted comparator"
+  ],
+  "final_validation": {
+    "path": "C:\\ClearEval\\reports\\cleareval_20261012\\automatic_label_relations\\validation.json",
+    "sha256": "a93e0b89c2f477afc5b1cbcb45c9c01db534f04a0ab208b2efdf9718ede97e86"
+  },
+  "no_new_knowledge_base_numbers": true
+}

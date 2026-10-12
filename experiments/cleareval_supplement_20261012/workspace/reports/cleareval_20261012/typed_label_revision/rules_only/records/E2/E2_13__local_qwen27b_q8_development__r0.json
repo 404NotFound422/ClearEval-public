@@ -1,0 +1,222 @@
+{
+  "cohort": "E2",
+  "cell_id": "E2_13__local_qwen27b_q8_development__r0",
+  "anonymous_answer_id": "E2_13",
+  "question_id": 2,
+  "original_status": "success",
+  "version": "cce-typed-label-scorer-v2",
+  "metrics": {
+    "c_param": 2,
+    "co_order": 3,
+    "co_method": 2,
+    "co_param": 1,
+    "co_chem": 1,
+    "s_method": 2.3,
+    "s_label": 5.4,
+    "s_trans": 2.814646787157323,
+    "s_time": 3.0,
+    "sr": 0.8571428571428571,
+    "sp": 0.7777777777777778,
+    "Com": 0.7428571428571429,
+    "Cor": 0.875,
+    "Eff": 0.9495538989297769,
+    "IA": 0.7428571428571429,
+    "HV": 0.6172100343043551
+  },
+  "complete_numeric_CCE": true,
+  "baseline_metrics": {
+    "c_param": 2,
+    "co_order": 3,
+    "co_method": 2,
+    "co_param": 1,
+    "co_chem": 1,
+    "s_method": 2.3,
+    "s_label": null,
+    "s_trans": 2.814646787157323,
+    "s_time": 3.0,
+    "sr": 0.8571428571428571,
+    "sp": 0.7777777777777778,
+    "Com": 0.7428571428571429,
+    "Cor": 0.875,
+    "Eff": null,
+    "IA": null,
+    "HV": null
+  },
+  "quantitative_data": {
+    "method_name": "FDISCO",
+    "tissue_ri_value": 1.46,
+    "total_time_hours": 84.0,
+    "sample_tier": "T04_WHOLE_MOUSE_BRAIN_5_12MM",
+    "reagent_ri_value": 1.562,
+    "protocol_time_hours": null
+  },
+  "time_derivation": {
+    "hours": 84.0,
+    "bounds_hours": [
+      84.0,
+      84.0
+    ],
+    "decision": "existing_source_bound_scalar",
+    "issues": []
+  },
+  "time_formula": {
+    "policy": "kb-window-asymmetric-median-0.20-under-0.10-over-v1",
+    "source": "time_kb.json",
+    "requested_tier": "T04_WHOLE_MOUSE_BRAIN_5_12MM",
+    "actual_hours": 84.0,
+    "min_hours": 48.0,
+    "max_hours": 96.0,
+    "median_hours": 72.0,
+    "tau_hours": 14.4,
+    "delta_hours": 0.0,
+    "tau_under_fraction": 0.2,
+    "tau_over_fraction": 0.1,
+    "status": "scored",
+    "resolved_tier": "T04_WHOLE_MOUSE_BRAIN_5_12MM",
+    "method_key": "fdisco"
+  },
+  "time_sensitivity": [
+    {
+      "time_hours": 84.0,
+      "s_time": 3.0,
+      "Eff": null
+    }
+  ],
+  "label_derivation": {
+    "version": "cce-typed-label-scorer-v2",
+    "s_label": 5.4,
+    "channels": {
+      "s_target_match": null,
+      "s_marker_fluor_compat": null,
+      "s_method_fluor_compat": 5.4
+    },
+    "channel_applicability": {
+      "s_target_match": {
+        "applicable": false,
+        "value": null,
+        "contributing_pairs": []
+      },
+      "s_marker_fluor_compat": {
+        "applicable": false,
+        "value": null,
+        "contributing_pairs": []
+      },
+      "s_method_fluor_compat": {
+        "applicable": true,
+        "value": 5.4,
+        "contributing_pairs": [
+          "native:IS001"
+        ]
+      }
+    },
+    "pair_results": [
+      {
+        "pair_id": "native:IS001",
+        "entity_id": "E001",
+        "fluorophore": "GFP",
+        "reported_marker": null,
+        "reported_target_literal": null,
+        "label_type": "native_fluorescent_protein",
+        "original_function_input": {
+          "GFP": ""
+        },
+        "applicable": {
+          "s_target_match": false,
+          "s_marker_fluor_compat": false,
+          "s_method_fluor_compat": true
+        },
+        "channels": {
+          "s_target_match": null,
+          "s_marker_fluor_compat": null,
+          "s_method_fluor_compat": 5.4
+        },
+        "not_applicable_reason": "standalone fluorescence has no antibody target-pair channel",
+        "source_evidence": {
+          "unit_id": "L0002",
+          "start": 26,
+          "end": 58,
+          "quote": "**Chosen Labeling:** [GFP (内源)]\n",
+          "answer_sha256": "d33c7495e488c58b1798e9104277fedf516b2b1c90816f109034ac596bd28f0b"
+        },
+        "compatibility_audit": [
+          {
+            "kind": "method_fluor",
+            "method_name": "FDISCO",
+            "fluorophore": "GFP",
+            "source": "KnowledgeBase/method_fluro_compati.json",
+            "value": 0.9,
+            "status": "TABLE_REPORTED"
+          }
+        ]
+      }
+    ],
+    "resolved_uncertainties": [],
+    "remaining_uncertainties": [],
+    "minimum_of_available_applicable_channels": 5.4,
+    "task_target_coverage": "native/direct task coverage remains separate from antibody-pair applicability",
+    "new_model_calls": 0,
+    "expert_validated": false
+  },
+  "compatibility_lookup_trace": [],
+  "semantic_decomposition_applied": false,
+  "semantic_author": "saved judge decomposition",
+  "remaining_dependencies": {
+    "time": [],
+    "label_relations": [],
+    "compatibility": []
+  },
+  "new_model_requests": 0,
+  "new_expert_records": 0,
+  "direct_scores_rejudged": false,
+  "SR_SP_changed": false,
+  "raw_judge_status_changed": false,
+  "status": "replayed",
+  "source_record": {
+    "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\optimizer_round3_20261011\\uniform_v7\\actual_01\\cells\\E2\\E2_13__local_qwen27b_q8_development__r0\\posthoc.json",
+    "sha256": "01505101d241ae5bf7385f690cce10a924f14ae06541c69ae29b1e6119aefd1d"
+  },
+  "answer_sha256": "d33c7495e488c58b1798e9104277fedf516b2b1c90816f109034ac596bd28f0b",
+  "changes": {},
+  "comparison_metrics": {
+    "c_param": 2,
+    "co_order": 3,
+    "co_method": 2,
+    "co_param": 1,
+    "co_chem": 1,
+    "s_method": 2.3,
+    "s_label": null,
+    "s_trans": 2.814646787157323,
+    "s_time": 3.0,
+    "sr": 0.8571428571428571,
+    "sp": 0.7777777777777778,
+    "Com": 0.7428571428571429,
+    "Cor": 0.875,
+    "Eff": null,
+    "IA": null,
+    "HV": null
+  },
+  "typed_replay_status": "replayed",
+  "typed_semantic_annotation": false,
+  "typed_changes": {
+    "s_label": {
+      "before": null,
+      "after": 5.4
+    },
+    "Eff": {
+      "before": null,
+      "after": 0.9495538989297769
+    },
+    "IA": {
+      "before": null,
+      "after": 0.7428571428571429
+    },
+    "HV": {
+      "before": null,
+      "after": 0.6172100343043551
+    }
+  },
+  "source_document": {
+    "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\optimizer_round2_20261010\\grounded_controls_v11\\source_documents\\E2_13.json",
+    "sha256": "d9b871658ca014f0b2ba6fe7f0600d75b2a88811b86795410c4c440e6f55a8cd"
+  }
+}

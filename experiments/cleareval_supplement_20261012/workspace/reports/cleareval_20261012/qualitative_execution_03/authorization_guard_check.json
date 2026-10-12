@@ -1,0 +1,18 @@
+{
+  "command": [
+    "C:\\ClearEval\\review_artifacts\\bioprobench_2026-09-29\\python_portable\\python.exe",
+    "-X",
+    "utf8",
+    "C:\\ClearEval\\ClearEval-public\\scripts\\cce_qualitative_pair_runner_v1.py",
+    "run",
+    "--out",
+    "C:\\ClearEval\\reports\\cleareval_20261012\\qualitative_execution_03",
+    "--max-new-calls",
+    "0"
+  ],
+  "exit_code": 1,
+  "authorization_check_precedes_generation": true,
+  "ledger_sha256": "cbf7618d8586c208f8c49c1b44a15d94c974f5d9bc21d4e5fe20d523a47ed04f",
+  "new_model_calls": 0,
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\ClearEval\\ClearEval-public\\scripts\\cce_qualitative_pair_runner_v1.py\", line 250, in <module>\n    if __name__=='__main__':main()\n                            ^^^^^^\n  File \"C:\\ClearEval\\ClearEval-public\\scripts\\cce_qualitative_pair_runner_v1.py\", line 246, in main\n    else:result=asyncio.run(run(out,a.max_new_calls))\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"asyncio\\runners.py\", line 195, in run\n  File \"asyncio\\runners.py\", line 118, in run\n  File \"asyncio\\base_events.py\", line 691, in run_until_complete\n  File \"C:\\ClearEval\\ClearEval-public\\scripts\\cce_qualitative_pair_runner_v1.py\", line 183, in run\n    budget.authorization()  # No provider query, attempt write or request before approval.\n    ^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\ClearEval\\ClearEval-public\\scripts\\cce_qualitative_pair_runner_v1.py\", line 48, in authorization\n    if not self.path.exists():raise ValueError('RENEWED_TEN_CALL_TWO_HOUR_AUTHORIZATION_REQUIRED; no generation request made')\n                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nValueError: RENEWED_TEN_CALL_TWO_HOUR_AUTHORIZATION_REQUIRED; no generation request made\n"
+}

@@ -1,0 +1,322 @@
+{
+  "cohort": "first7_posthoc",
+  "cell_id": "FPC04",
+  "anonymous_answer_id": "FPC04",
+  "question_id": 22,
+  "original_status": "partial_components",
+  "version": "cce-typed-label-scorer-v2",
+  "metrics": {
+    "c_param": 3,
+    "co_order": 3,
+    "co_method": 2,
+    "co_param": 2,
+    "co_chem": 1,
+    "s_method": -0.45,
+    "s_label": null,
+    "s_trans": 2.7055534759358473,
+    "s_time": null,
+    "sr": 0.0,
+    "sp": 0.0,
+    "Com": 0.6,
+    "Cor": 1.0,
+    "Eff": null,
+    "IA": null,
+    "HV": null
+  },
+  "complete_numeric_CCE": false,
+  "baseline_metrics": {
+    "c_param": 3,
+    "co_order": 3,
+    "co_method": 2,
+    "co_param": 2,
+    "co_chem": 1,
+    "s_method": -0.45,
+    "s_label": null,
+    "s_trans": 2.7055534759358473,
+    "s_time": null,
+    "sr": 0.0,
+    "sp": 0.0,
+    "Com": 0.6,
+    "Cor": 1.0,
+    "Eff": null,
+    "IA": null,
+    "HV": null
+  },
+  "quantitative_data": {
+    "method_name": "FDISCO",
+    "tissue_ri_value": 1.46,
+    "total_time_hours": null,
+    "sample_tier": "T02_THICK_SLICE_0P5_3MM",
+    "reagent_ri_value": null,
+    "protocol_time_hours": null
+  },
+  "time_derivation": {
+    "hours": null,
+    "bounds_hours": [
+      20.5,
+      22.75
+    ],
+    "decision": "source_semantic_resolution_needed",
+    "issues": [
+      "labeling_preparation_not_source_supported_or_possible_core_function",
+      "nonunique_duration_range",
+      "source_duration_candidates_not_all_classified"
+    ]
+  },
+  "time_formula": {
+    "policy": "kb-window-asymmetric-median-0.20-under-0.10-over-v1",
+    "source": "time_kb.json",
+    "requested_tier": "T02_THICK_SLICE_0P5_3MM",
+    "actual_hours": null,
+    "min_hours": 4.0,
+    "max_hours": 12.0,
+    "median_hours": 8.0,
+    "tau_hours": null,
+    "delta_hours": null,
+    "tau_under_fraction": 0.2,
+    "tau_over_fraction": 0.1,
+    "status": "missing_or_invalid_time",
+    "resolved_tier": "T02_THICK_SLICE_0P5_3MM",
+    "method_key": "fdisco"
+  },
+  "time_sensitivity": [],
+  "label_derivation": {
+    "version": "cce-typed-label-scorer-v2",
+    "s_label": null,
+    "channels": {
+      "s_target_match": null,
+      "s_marker_fluor_compat": null,
+      "s_method_fluor_compat": 4.800000000000001
+    },
+    "channel_applicability": {
+      "s_target_match": {
+        "applicable": true,
+        "value": null,
+        "contributing_pairs": [
+          "relation:R1",
+          "relation:R2"
+        ]
+      },
+      "s_marker_fluor_compat": {
+        "applicable": true,
+        "value": null,
+        "contributing_pairs": [
+          "relation:R1",
+          "relation:R2"
+        ]
+      },
+      "s_method_fluor_compat": {
+        "applicable": true,
+        "value": 4.800000000000001,
+        "contributing_pairs": [
+          "unresolved_entity:E1",
+          "relation:R1",
+          "relation:R2"
+        ]
+      }
+    },
+    "pair_results": [
+      {
+        "pair_id": "unresolved_entity:E1",
+        "entity_id": "E1",
+        "fluorophore": "EGFP",
+        "reported_marker": null,
+        "reported_target_literal": null,
+        "label_type": "native_fluorescent_protein",
+        "original_function_input": {
+          "EGFP": ""
+        },
+        "applicable": {
+          "s_target_match": false,
+          "s_marker_fluor_compat": false,
+          "s_method_fluor_compat": true
+        },
+        "channels": {
+          "s_target_match": null,
+          "s_marker_fluor_compat": null,
+          "s_method_fluor_compat": 5.4
+        },
+        "not_applicable_reason": "standalone fluorescence has no antibody target-pair channel",
+        "source_evidence": {
+          "unit_id": "L0002",
+          "start": 48,
+          "end": 52,
+          "quote": "EGFP",
+          "answer_sha256": "20bf7476ecd4568af1a6d76c156281f45147409f9e7efb709d20c29f7a42bb13"
+        },
+        "compatibility_audit": [
+          {
+            "kind": "method_fluor",
+            "method_name": "FDISCO",
+            "fluorophore": "EGFP",
+            "source": "KnowledgeBase/method_fluro_compati.json",
+            "value": 0.9,
+            "status": "TABLE_REPORTED"
+          }
+        ]
+      },
+      {
+        "pair_id": "relation:R1",
+        "entity_id": "E3",
+        "fluorophore": "Alexa Fluor 546",
+        "reported_marker": null,
+        "reported_target_literal": "MAP2",
+        "label_type": "targeted_or_unclassified_reagent",
+        "original_function_input": {
+          "Alexa Fluor 546": ""
+        },
+        "applicable": {
+          "s_target_match": true,
+          "s_marker_fluor_compat": true,
+          "s_method_fluor_compat": true
+        },
+        "channels": {
+          "s_target_match": null,
+          "s_marker_fluor_compat": null,
+          "s_method_fluor_compat": 4.800000000000001
+        },
+        "not_applicable_reason": null,
+        "source_evidence": {
+          "unit_id": "L0002",
+          "start": 26,
+          "end": 125,
+          "quote": "**Chosen Labeling:** [EGFP (内源荧光), MAP2 + Alexa Fluor (树突标记，推荐 Alexa Fluor 546 或 Alexa Fluor 647)]\n",
+          "answer_sha256": "20bf7476ecd4568af1a6d76c156281f45147409f9e7efb709d20c29f7a42bb13"
+        },
+        "compatibility_audit": [
+          {
+            "kind": "method_fluor",
+            "method_name": "FDISCO",
+            "fluorophore": "Alexa Fluor 546",
+            "source": "KnowledgeBase/method_fluro_compati.json",
+            "value": 0.8,
+            "status": "TABLE_REPORTED"
+          }
+        ]
+      },
+      {
+        "pair_id": "relation:R2",
+        "entity_id": "E4",
+        "fluorophore": "Alexa Fluor 647",
+        "reported_marker": null,
+        "reported_target_literal": "MAP2",
+        "label_type": "targeted_or_unclassified_reagent",
+        "original_function_input": {
+          "Alexa Fluor 647": ""
+        },
+        "applicable": {
+          "s_target_match": true,
+          "s_marker_fluor_compat": true,
+          "s_method_fluor_compat": true
+        },
+        "channels": {
+          "s_target_match": null,
+          "s_marker_fluor_compat": null,
+          "s_method_fluor_compat": 5.1
+        },
+        "not_applicable_reason": null,
+        "source_evidence": {
+          "unit_id": "L0002",
+          "start": 26,
+          "end": 125,
+          "quote": "**Chosen Labeling:** [EGFP (内源荧光), MAP2 + Alexa Fluor (树突标记，推荐 Alexa Fluor 546 或 Alexa Fluor 647)]\n",
+          "answer_sha256": "20bf7476ecd4568af1a6d76c156281f45147409f9e7efb709d20c29f7a42bb13"
+        },
+        "compatibility_audit": [
+          {
+            "kind": "method_fluor",
+            "method_name": "FDISCO",
+            "fluorophore": "Alexa Fluor 647",
+            "source": "KnowledgeBase/method_fluro_compati.json",
+            "value": 0.85,
+            "status": "TABLE_REPORTED"
+          }
+        ]
+      }
+    ],
+    "resolved_uncertainties": [
+      {
+        "kind": "reported_unresolved_native_record",
+        "record_id": "I1",
+        "entity_id": "E1",
+        "resolution": "antibody relation is not applicable to this standalone signal"
+      }
+    ],
+    "remaining_uncertainties": [
+      {
+        "kind": "reported_unresolved_relation",
+        "relation_id": "R1",
+        "entity_id": "E3"
+      },
+      {
+        "kind": "reported_unresolved_relation",
+        "relation_id": "R2",
+        "entity_id": "E4"
+      }
+    ],
+    "minimum_of_available_applicable_channels": null,
+    "task_target_coverage": "native/direct task coverage remains separate from antibody-pair applicability",
+    "new_model_calls": 0,
+    "expert_validated": false
+  },
+  "compatibility_lookup_trace": [],
+  "semantic_decomposition_applied": false,
+  "semantic_author": "saved judge decomposition",
+  "remaining_dependencies": {
+    "time": [
+      "labeling_preparation_not_source_supported_or_possible_core_function",
+      "nonunique_duration_range",
+      "source_duration_candidates_not_all_classified"
+    ],
+    "label_relations": [
+      {
+        "kind": "reported_unresolved_relation",
+        "relation_id": "R1",
+        "entity_id": "E3"
+      },
+      {
+        "kind": "reported_unresolved_relation",
+        "relation_id": "R2",
+        "entity_id": "E4"
+      }
+    ],
+    "compatibility": []
+  },
+  "new_model_requests": 0,
+  "new_expert_records": 0,
+  "direct_scores_rejudged": false,
+  "SR_SP_changed": false,
+  "raw_judge_status_changed": false,
+  "status": "replayed",
+  "source_record": {
+    "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\optimizer_round3_20261011\\uniform_v7\\actual_01\\cells\\first7_posthoc\\FPC04\\posthoc.json",
+    "sha256": "cbab355d025dff9b0bb4c8f578f0be0b1b8e23715a05c338f289f8d5f53cf00e"
+  },
+  "answer_sha256": "20bf7476ecd4568af1a6d76c156281f45147409f9e7efb709d20c29f7a42bb13",
+  "changes": {},
+  "comparison_metrics": {
+    "c_param": 3,
+    "co_order": 3,
+    "co_method": 2,
+    "co_param": 2,
+    "co_chem": 1,
+    "s_method": -0.45,
+    "s_label": null,
+    "s_trans": 2.7055534759358473,
+    "s_time": null,
+    "sr": 0.0,
+    "sp": 0.0,
+    "Com": 0.6,
+    "Cor": 1.0,
+    "Eff": null,
+    "IA": null,
+    "HV": null
+  },
+  "typed_replay_status": "replayed",
+  "typed_semantic_annotation": false,
+  "typed_changes": {},
+  "source_document": {
+    "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\optimizer_round2_20261010\\generation_confirmation_v2\\source_documents\\FPC04.json",
+    "sha256": "f8403ec13cf03c391caa18c9ee88ebdc2a8b3eccfde17c1dafafe468d1e65fa3"
+  }
+}

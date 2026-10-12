@@ -1,0 +1,48 @@
+{
+  "status": "PASS",
+  "checks": [
+    "rules_only: all saved-score inputs and original code/KB hashes verified",
+    "rules_only: all 11 reused components unchanged in every slot",
+    "rules_only: all 8 previously complete score vectors exactly preserved",
+    "rules_only: coverage counts independently recomputed",
+    "with_decomposition: all saved-score inputs and original code/KB hashes verified",
+    "with_decomposition: all 11 reused components unchanged in every slot",
+    "with_decomposition: all 8 previously complete score vectors exactly preserved",
+    "with_decomposition: coverage counts independently recomputed",
+    "general scorer exactly reproduces both earlier manually explained examples"
+  ],
+  "results": {
+    "rules_only": {
+      "planned_slots": 68,
+      "saved_returns": 67,
+      "complete_before": 8,
+      "complete_after": 9,
+      "missing_components": {
+        "Com": 0,
+        "Cor": 11,
+        "Eff": 57,
+        "s_method": 0,
+        "s_label": 57,
+        "s_trans": 0,
+        "s_time": 6
+      }
+    },
+    "with_decomposition": {
+      "planned_slots": 68,
+      "saved_returns": 67,
+      "complete_before": 8,
+      "complete_after": 10,
+      "missing_components": {
+        "Com": 0,
+        "Cor": 11,
+        "Eff": 56,
+        "s_method": 0,
+        "s_label": 56,
+        "s_trans": 0,
+        "s_time": 6
+      }
+    }
+  },
+  "new_model_requests": 0,
+  "scope": "hashes, numerical reproducibility and regression coverage; not expert scientific validation"
+}

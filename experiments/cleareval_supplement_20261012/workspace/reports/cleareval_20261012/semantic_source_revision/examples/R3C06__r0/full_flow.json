@@ -1,0 +1,595 @@
+{
+  "generator": "openai_qwen3-max",
+  "question_id": 23,
+  "original_answer_sha256": "708712095799859bf19d0936e9efe89e88f3c956370cda796dc03fea5d27ecc9",
+  "canonical_answer_sha256": "cf836ce1bb0e3772d0657b086860494e863cc935732959ef08f12fac64059fa5",
+  "sources": {
+    "case_file": {
+      "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\optimizer_round3_20261011\\confirmation_qwen_01\\cases.json",
+      "sha256": "b4e50ef0280f7450532e198c1c6cd85ec399de06f68007a848cae1ed0fb5a08f"
+    },
+    "original_dataset": {
+      "path": "C:\\ClearEval\\ClearEval-public\\dataset\\Q+AR\\model_response\\from_openai_qwen3-max_1-shot.json",
+      "sha256": "66f980f6758fe4e125e3ccdf22c074b4eb1d8ae4f62c22b34e8c8b969d507371"
+    },
+    "canonical_document": {
+      "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\optimizer_round3_20261011\\confirmation_qwen_01\\source_documents\\41b7a3ac9a48575c62a97db9.json",
+      "sha256": "f6542e9d4fcffa8bf533657613e68543ff4ea88900df7d54bf56219b662922df"
+    },
+    "archived_judge_response": {
+      "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\optimizer_round3_20261011\\confirmation_qwen_01\\run\\attempts\\2eb2e84dab26e22cb530351a74d646d5d0bcb5196c100014755d05e8917c2711_1\\raw_response.txt",
+      "sha256": "684020aea37fc83e5e801d980cd3883d5e9fecb0c6340651d89461ceeed740f4"
+    },
+    "archived_processing": {
+      "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\optimizer_round3_20261011\\confirmation_qwen_01\\run\\attempts\\2eb2e84dab26e22cb530351a74d646d5d0bcb5196c100014755d05e8917c2711_1\\processing.json",
+      "sha256": "c3cb10ffb55ed5f611aeeae385821bca82e31aa3384598366dc3266af5c19b62"
+    },
+    "lexical_reparse": null
+  },
+  "archived_metrics": {
+    "c_param": 3,
+    "co_order": 2,
+    "co_method": 1,
+    "co_param": 1,
+    "co_chem": 1,
+    "s_method": 0.9722,
+    "s_label": null,
+    "s_trans": 3.0,
+    "s_time": null,
+    "sr": 0.0,
+    "sp": 0.0,
+    "Com": 0.6,
+    "Cor": 0.6666666666666666,
+    "Eff": null,
+    "IA": null,
+    "HV": null
+  },
+  "automatic_candidate_metrics": {
+    "c_param": 3,
+    "co_order": 2,
+    "co_method": 1,
+    "co_param": 1,
+    "co_chem": 1,
+    "s_method": 0.9722,
+    "s_label": 4.5,
+    "s_trans": 3.0,
+    "s_time": 0.011597760418418434,
+    "sr": 0.0,
+    "sp": 0.0,
+    "Com": 0.6,
+    "Cor": 0.6666666666666666,
+    "Eff": 0.6120764800348683,
+    "IA": 0.6,
+    "HV": 0.24483059201394727
+  },
+  "source_assisted_metrics": {
+    "c_param": 3,
+    "co_order": 2,
+    "co_method": 1,
+    "co_param": 1,
+    "co_chem": 1,
+    "s_method": 0.9722,
+    "s_label": 4.5,
+    "s_trans": 3.0,
+    "s_time": 0.011597760418418434,
+    "sr": 0.0,
+    "sp": 0.0,
+    "Com": 0.6,
+    "Cor": 0.6666666666666666,
+    "Eff": 0.6120764800348683,
+    "IA": 0.6,
+    "HV": 0.24483059201394727
+  },
+  "annotation": null,
+  "label_derivation": {
+    "version": "cce-typed-label-scorer-v2.1",
+    "s_label": 4.5,
+    "channels": {
+      "s_target_match": 6.0,
+      "s_marker_fluor_compat": 6.0,
+      "s_method_fluor_compat": 4.5
+    },
+    "channel_applicability": {
+      "s_target_match": {
+        "applicable": true,
+        "value": 6.0,
+        "contributing_pairs": [
+          "relation:R01"
+        ]
+      },
+      "s_marker_fluor_compat": {
+        "applicable": true,
+        "value": 6.0,
+        "contributing_pairs": [
+          "relation:R01"
+        ]
+      },
+      "s_method_fluor_compat": {
+        "applicable": true,
+        "value": 4.5,
+        "contributing_pairs": [
+          "relation:R02",
+          "native:IS01",
+          "relation:R01",
+          "unresolved_entity:E04"
+        ]
+      }
+    },
+    "pair_results": [
+      {
+        "pair_id": "relation:R02",
+        "entity_id": "E01",
+        "fluorophore": "GFP",
+        "reported_marker": null,
+        "reported_target_literal": null,
+        "label_type": "native_fluorescent_protein",
+        "original_function_input": {
+          "GFP": ""
+        },
+        "applicable": {
+          "s_target_match": false,
+          "s_marker_fluor_compat": false,
+          "s_method_fluor_compat": true
+        },
+        "channels": {
+          "s_target_match": null,
+          "s_marker_fluor_compat": null,
+          "s_method_fluor_compat": 5.1
+        },
+        "not_applicable_reason": "standalone fluorescence has no antibody target-pair channel",
+        "source_evidence": {
+          "unit_id": "L0002",
+          "start": 25,
+          "end": 87,
+          "quote": "**Chosen Labeling:** [GFP (内源), MAP2 + Alexa Fluor 488, DAPI]\n",
+          "answer_sha256": "cf836ce1bb0e3772d0657b086860494e863cc935732959ef08f12fac64059fa5"
+        },
+        "compatibility_audit": [
+          {
+            "kind": "method_fluor",
+            "method_name": "CUBIC",
+            "fluorophore": "GFP",
+            "source": "KnowledgeBase/method_fluro_compati.json",
+            "value": 0.85,
+            "status": "TABLE_REPORTED"
+          }
+        ]
+      },
+      {
+        "pair_id": "native:IS01",
+        "entity_id": "E01",
+        "fluorophore": "GFP",
+        "reported_marker": null,
+        "reported_target_literal": null,
+        "label_type": "native_fluorescent_protein",
+        "original_function_input": {
+          "GFP": ""
+        },
+        "applicable": {
+          "s_target_match": false,
+          "s_marker_fluor_compat": false,
+          "s_method_fluor_compat": true
+        },
+        "channels": {
+          "s_target_match": null,
+          "s_marker_fluor_compat": null,
+          "s_method_fluor_compat": 5.1
+        },
+        "not_applicable_reason": "standalone fluorescence has no antibody target-pair channel",
+        "source_evidence": {
+          "unit_id": "L0002",
+          "start": 25,
+          "end": 87,
+          "quote": "**Chosen Labeling:** [GFP (内源), MAP2 + Alexa Fluor 488, DAPI]\n",
+          "answer_sha256": "cf836ce1bb0e3772d0657b086860494e863cc935732959ef08f12fac64059fa5"
+        },
+        "compatibility_audit": [
+          {
+            "kind": "method_fluor",
+            "method_name": "CUBIC",
+            "fluorophore": "GFP",
+            "source": "KnowledgeBase/method_fluro_compati.json",
+            "value": 0.85,
+            "status": "TABLE_REPORTED"
+          }
+        ]
+      },
+      {
+        "pair_id": "relation:R01",
+        "entity_id": "E03",
+        "fluorophore": "Alexa Fluor 488",
+        "reported_marker": "MAP2",
+        "reported_target_literal": "MAP2",
+        "label_type": "targeted_or_unclassified_reagent",
+        "original_function_input": {
+          "Alexa Fluor 488": "MAP2"
+        },
+        "applicable": {
+          "s_target_match": true,
+          "s_marker_fluor_compat": true,
+          "s_method_fluor_compat": true
+        },
+        "channels": {
+          "s_target_match": 6.0,
+          "s_marker_fluor_compat": 6.0,
+          "s_method_fluor_compat": 4.800000000000001
+        },
+        "not_applicable_reason": null,
+        "source_evidence": {
+          "unit_id": "L0002",
+          "start": 25,
+          "end": 87,
+          "quote": "**Chosen Labeling:** [GFP (内源), MAP2 + Alexa Fluor 488, DAPI]\n",
+          "answer_sha256": "cf836ce1bb0e3772d0657b086860494e863cc935732959ef08f12fac64059fa5"
+        },
+        "compatibility_audit": [
+          {
+            "kind": "marker_fluor",
+            "marker": "MAP2",
+            "fluorophore": "Alexa Fluor 488",
+            "source": "KnowledgeBase/tissue.json",
+            "value": true,
+            "status": "TABLE_REPORTED"
+          },
+          {
+            "kind": "method_fluor",
+            "method_name": "CUBIC",
+            "fluorophore": "Alexa Fluor 488",
+            "source": "KnowledgeBase/method_fluro_compati.json",
+            "value": 0.8,
+            "status": "TABLE_REPORTED"
+          }
+        ]
+      },
+      {
+        "pair_id": "unresolved_entity:E04",
+        "entity_id": "E04",
+        "fluorophore": "DAPI",
+        "reported_marker": null,
+        "reported_target_literal": null,
+        "label_type": "direct_stain",
+        "original_function_input": {
+          "DAPI": ""
+        },
+        "applicable": {
+          "s_target_match": false,
+          "s_marker_fluor_compat": false,
+          "s_method_fluor_compat": true
+        },
+        "channels": {
+          "s_target_match": null,
+          "s_marker_fluor_compat": null,
+          "s_method_fluor_compat": 4.5
+        },
+        "not_applicable_reason": "standalone fluorescence has no antibody target-pair channel",
+        "source_evidence": {
+          "unit_id": "L0002",
+          "start": 81,
+          "end": 85,
+          "quote": "DAPI",
+          "answer_sha256": "cf836ce1bb0e3772d0657b086860494e863cc935732959ef08f12fac64059fa5"
+        },
+        "compatibility_audit": [
+          {
+            "kind": "method_fluor",
+            "method_name": "CUBIC",
+            "fluorophore": "DAPI",
+            "source": "KnowledgeBase/method_fluro_compati.json",
+            "value": 0.75,
+            "status": "TABLE_REPORTED"
+          }
+        ]
+      }
+    ],
+    "resolved_uncertainties": [
+      {
+        "kind": "reported_unresolved_relation",
+        "relation_id": "R02",
+        "entity_id": "E01",
+        "resolution": "antibody relation is not applicable to this standalone signal"
+      }
+    ],
+    "remaining_uncertainties": [],
+    "minimum_of_available_applicable_channels": 4.5,
+    "task_target_coverage": "native/direct task coverage remains separate from antibody-pair applicability",
+    "new_model_calls": 0,
+    "expert_validated": false
+  },
+  "time_scenarios": [],
+  "prior_time_interpretation": {
+    "hours": 144.0,
+    "bounds_hours": [
+      144.0,
+      144.0
+    ],
+    "decision": "source_scoped_reported_core_duration",
+    "scope": "reported_core_operations",
+    "original_issues": [
+      "labeling_preparation_not_source_supported_or_possible_core_function"
+    ],
+    "resolved_scope_issues": [
+      "labeling_preparation_not_source_supported_or_possible_core_function"
+    ],
+    "issues": [],
+    "phase_evidence": [
+      {
+        "operation_id": "OP02",
+        "supported": true,
+        "reason": "explicit_labeling_phase_heading",
+        "heading": {
+          "start": 1249,
+          "end": 1281,
+          "quote": "2 Permeabilization and Blocking\n",
+          "title": "Permeabilization and Blocking"
+        },
+        "operation": {
+          "unit_id": "L0008",
+          "quote": "2.1 Incubation with CUBIC-P1 (10 vol% Triton X-100, 10 vol% Tween-20, 10 wt% sucrose in PBS).(Temperature: 37 ℃, Time: 24 hours)",
+          "occurrence": 0,
+          "source_id": "SRC_4c9306a9a2141d9acad956b8",
+          "start": 1281,
+          "end": 1409,
+          "answer_sha256": "cf836ce1bb0e3772d0657b086860494e863cc935732959ef08f12fac64059fa5",
+          "context_start": 1281,
+          "context_end": 1410,
+          "context": "2.1 Incubation with CUBIC-P1 (10 vol% Triton X-100, 10 vol% Tween-20, 10 wt% sucrose in PBS).(Temperature: 37 ℃, Time: 24 hours)\n",
+          "candidate_reference": {
+            "candidate_id": "O0002",
+            "kind": "operation_span",
+            "registry_sha256": "c551c2b0611b7c63f24e44e59b608dc72e4f4f4bfae1e4f6b9d8e0b633545316",
+            "enumerator_version": "source_bound_extraction_v11",
+            "selection_is_not_semantic_confirmation": true
+          }
+        }
+      },
+      {
+        "operation_id": "OP03",
+        "supported": true,
+        "reason": "explicit_labeling_phase_heading",
+        "heading": {
+          "start": 1249,
+          "end": 1281,
+          "quote": "2 Permeabilization and Blocking\n",
+          "title": "Permeabilization and Blocking"
+        },
+        "operation": {
+          "unit_id": "L0009",
+          "quote": "2.2 Incubation with CUBIC-B (10 vol% DMSO, 5 vol% normal goat serum, 0.5 wt% sodium azide in PBS).(Temperature: 37 ℃, Time: 12 hours)",
+          "occurrence": 0,
+          "source_id": "SRC_4c9306a9a2141d9acad956b8",
+          "start": 1410,
+          "end": 1543,
+          "answer_sha256": "cf836ce1bb0e3772d0657b086860494e863cc935732959ef08f12fac64059fa5",
+          "context_start": 1410,
+          "context_end": 1544,
+          "context": "2.2 Incubation with CUBIC-B (10 vol% DMSO, 5 vol% normal goat serum, 0.5 wt% sodium azide in PBS).(Temperature: 37 ℃, Time: 12 hours)\n",
+          "candidate_reference": {
+            "candidate_id": "O0003",
+            "kind": "operation_span",
+            "registry_sha256": "c551c2b0611b7c63f24e44e59b608dc72e4f4f4bfae1e4f6b9d8e0b633545316",
+            "enumerator_version": "source_bound_extraction_v11",
+            "selection_is_not_semantic_confirmation": true
+          }
+        }
+      },
+      {
+        "operation_id": "OP04",
+        "supported": true,
+        "reason": "explicit_labeling_phase_heading",
+        "heading": {
+          "start": 1544,
+          "end": 1572,
+          "quote": "3 Primary Antibody Labeling\n",
+          "title": "Primary Antibody Labeling"
+        },
+        "operation": {
+          "unit_id": "L0011",
+          "quote": "3.1 Incubation with mouse anti-MAP2 primary antibody (1:500 dilution in CUBIC-B).(Temperature: 37 ℃, Time: 72 hours)",
+          "occurrence": 0,
+          "source_id": "SRC_4c9306a9a2141d9acad956b8",
+          "start": 1572,
+          "end": 1688,
+          "answer_sha256": "cf836ce1bb0e3772d0657b086860494e863cc935732959ef08f12fac64059fa5",
+          "context_start": 1572,
+          "context_end": 1689,
+          "context": "3.1 Incubation with mouse anti-MAP2 primary antibody (1:500 dilution in CUBIC-B).(Temperature: 37 ℃, Time: 72 hours)\n",
+          "candidate_reference": {
+            "candidate_id": "O0004",
+            "kind": "operation_span",
+            "registry_sha256": "c551c2b0611b7c63f24e44e59b608dc72e4f4f4bfae1e4f6b9d8e0b633545316",
+            "enumerator_version": "source_bound_extraction_v11",
+            "selection_is_not_semantic_confirmation": true
+          }
+        }
+      },
+      {
+        "operation_id": "OP06",
+        "supported": true,
+        "reason": "wash_within_explicit_labeling_sequence",
+        "heading": {
+          "start": 1689,
+          "end": 1699,
+          "quote": "4 Washing\n",
+          "title": "Washing"
+        },
+        "preceding_phase_heading": {
+          "start": 1544,
+          "end": 1572,
+          "quote": "3 Primary Antibody Labeling\n",
+          "title": "Primary Antibody Labeling"
+        },
+        "operation": {
+          "unit_id": "L0014",
+          "quote": "4.2 Repeat step 4.1 two additional times, changing solution every 8 hours.(Temperature: 37 ℃, Time: 24 hours total)\n",
+          "occurrence": 0,
+          "source_id": "SRC_4c9306a9a2141d9acad956b8",
+          "start": 1814,
+          "end": 1930,
+          "answer_sha256": "cf836ce1bb0e3772d0657b086860494e863cc935732959ef08f12fac64059fa5",
+          "context_start": 1814,
+          "context_end": 1930,
+          "context": "4.2 Repeat step 4.1 two additional times, changing solution every 8 hours.(Temperature: 37 ℃, Time: 24 hours total)\n",
+          "unit_reference": {
+            "source_unit_sha256": "860bf817edb378ec1368adedc93494d2850024e123ca4d2a5b9553c4d392b594",
+            "raw_unit_text_preserved": true,
+            "wide_evidence_not_atomic_identity": true
+          }
+        }
+      },
+      {
+        "operation_id": "OP07",
+        "supported": true,
+        "reason": "explicit_labeling_phase_heading",
+        "heading": {
+          "start": 1930,
+          "end": 1960,
+          "quote": "5 Secondary Antibody Labeling\n",
+          "title": "Secondary Antibody Labeling"
+        },
+        "operation": {
+          "unit_id": "L0016",
+          "quote": "5.1 Incubation with goat anti-mouse IgG conjugated to Alexa Fluor 488 (1:300 dilution in CUBIC-B).(Temperature: 37 ℃, Time: 48 hours)",
+          "occurrence": 0,
+          "source_id": "SRC_4c9306a9a2141d9acad956b8",
+          "start": 1960,
+          "end": 2093,
+          "answer_sha256": "cf836ce1bb0e3772d0657b086860494e863cc935732959ef08f12fac64059fa5",
+          "context_start": 1960,
+          "context_end": 2094,
+          "context": "5.1 Incubation with goat anti-mouse IgG conjugated to Alexa Fluor 488 (1:300 dilution in CUBIC-B).(Temperature: 37 ℃, Time: 48 hours)\n",
+          "candidate_reference": {
+            "candidate_id": "O0007",
+            "kind": "operation_span",
+            "registry_sha256": "c551c2b0611b7c63f24e44e59b608dc72e4f4f4bfae1e4f6b9d8e0b633545316",
+            "enumerator_version": "source_bound_extraction_v11",
+            "selection_is_not_semantic_confirmation": true
+          }
+        }
+      },
+      {
+        "operation_id": "OP08",
+        "supported": true,
+        "reason": "explicit_labeling_phase_heading",
+        "heading": {
+          "start": 2094,
+          "end": 2120,
+          "quote": "6 Nuclear Counterstaining\n",
+          "title": "Nuclear Counterstaining"
+        },
+        "operation": {
+          "unit_id": "L0018",
+          "quote": "6.1 Incubation with DAPI (1 µg/mL in CUBIC-W).(Temperature: RT, Time: 12 hours)",
+          "occurrence": 0,
+          "source_id": "SRC_4c9306a9a2141d9acad956b8",
+          "start": 2120,
+          "end": 2199,
+          "answer_sha256": "cf836ce1bb0e3772d0657b086860494e863cc935732959ef08f12fac64059fa5",
+          "context_start": 2120,
+          "context_end": 2200,
+          "context": "6.1 Incubation with DAPI (1 µg/mL in CUBIC-W).(Temperature: RT, Time: 12 hours)\n",
+          "candidate_reference": {
+            "candidate_id": "O0008",
+            "kind": "operation_span",
+            "registry_sha256": "c551c2b0611b7c63f24e44e59b608dc72e4f4f4bfae1e4f6b9d8e0b633545316",
+            "enumerator_version": "source_bound_extraction_v11",
+            "selection_is_not_semantic_confirmation": true
+          }
+        }
+      },
+      {
+        "operation_id": "OP09",
+        "supported": true,
+        "reason": "wash_within_explicit_labeling_sequence",
+        "heading": {
+          "start": 2200,
+          "end": 2228,
+          "quote": "7 Washing Prior to Clearing\n",
+          "title": "Washing Prior to Clearing"
+        },
+        "preceding_phase_heading": {
+          "start": 2094,
+          "end": 2120,
+          "quote": "6 Nuclear Counterstaining\n",
+          "title": "Nuclear Counterstaining"
+        },
+        "operation": {
+          "unit_id": "L0020",
+          "quote": "7.1 Incubation with CUBIC-W.(Temperature: 37 ℃, Time: 24 hours)",
+          "occurrence": 0,
+          "source_id": "SRC_4c9306a9a2141d9acad956b8",
+          "start": 2228,
+          "end": 2291,
+          "answer_sha256": "cf836ce1bb0e3772d0657b086860494e863cc935732959ef08f12fac64059fa5",
+          "context_start": 2228,
+          "context_end": 2292,
+          "context": "7.1 Incubation with CUBIC-W.(Temperature: 37 ℃, Time: 24 hours)\n",
+          "candidate_reference": {
+            "candidate_id": "O0010",
+            "kind": "operation_span",
+            "registry_sha256": "c551c2b0611b7c63f24e44e59b608dc72e4f4f4bfae1e4f6b9d8e0b633545316",
+            "enumerator_version": "source_bound_extraction_v11",
+            "selection_is_not_semantic_confirmation": true
+          }
+        }
+      }
+    ],
+    "operation_contributions": [
+      {
+        "operation_id": "OP10",
+        "lower_hours": 72.0,
+        "upper_hours": 72.0,
+        "repeat_status": "source_exact_or_single"
+      },
+      {
+        "operation_id": "OP11",
+        "lower_hours": 48.0,
+        "upper_hours": 48.0,
+        "repeat_status": "source_exact_or_single"
+      },
+      {
+        "operation_id": "OP12",
+        "lower_hours": 24.0,
+        "upper_hours": 24.0,
+        "repeat_status": "source_exact_or_single"
+      }
+    ],
+    "workflow_completeness_not_inferred": true,
+    "complete_experimental_endpoint_duration": "not_separately_estimated",
+    "saved_coverage_judgment": {
+      "entities": "complete",
+      "time_operations": "complete",
+      "core_time_operations": "complete",
+      "unresolved": []
+    },
+    "heading_scope_candidate": {
+      "version": "time-heading-and-label-wash-scope-v1",
+      "original_issues": [
+        "labeling_preparation_not_source_supported_or_possible_core_function"
+      ],
+      "changes": [],
+      "source_operations_not_modified": true,
+      "raw_phase_assignments_preserved": true
+    },
+    "original_numeric_time_computation": {
+      "policy": "kb-window-asymmetric-median-0.20-under-0.10-over-v1",
+      "source": "time_kb.json",
+      "requested_tier": "T02_THICK_SLICE_0P5_3MM",
+      "actual_hours": 144.0,
+      "min_hours": 24.0,
+      "max_hours": 120.0,
+      "median_hours": 72.0,
+      "tau_hours": 7.2,
+      "delta_hours": 24.0,
+      "tau_under_fraction": 0.2,
+      "tau_over_fraction": 0.1,
+      "status": "scored",
+      "resolved_tier": "T02_THICK_SLICE_0P5_3MM",
+      "method_key": "cubic"
+    }
+  },
+  "quantitative_inputs": null,
+  "original_full_conversion_success": true,
+  "original_judge_JSON_not_rewritten": true,
+  "new_model_calls": 0,
+  "expert_validated": false
+}

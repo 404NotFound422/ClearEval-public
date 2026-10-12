@@ -1,5 +1,10 @@
 # ClearEval
 
+The [October 12 supplementary research checkpoint](experiments/cleareval_supplement_20261012/README.md)
+contains current diagnostic results, implementation snapshots, a portable offline
+replay, and [the unresolved research questions](experiments/cleareval_supplement_20261012/CURRENT_STATE_zh.md).
+These development findings do not replace the released benchmark scores.
+
 ClearEval is a database-grounded benchmark for evaluating large language
 models on tissue optical clearing (TOC). It measures static domain knowledge
 with multiple-choice questions (MCQs) and the feasibility of generated wet-lab

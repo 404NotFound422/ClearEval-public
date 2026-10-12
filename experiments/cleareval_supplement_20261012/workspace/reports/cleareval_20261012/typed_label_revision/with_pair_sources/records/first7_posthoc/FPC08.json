@@ -1,0 +1,452 @@
+{
+  "cohort": "first7_posthoc",
+  "cell_id": "FPC08",
+  "anonymous_answer_id": "FPC08",
+  "question_id": 23,
+  "original_status": "success",
+  "version": "cce-typed-label-scorer-v2.1",
+  "metrics": {
+    "c_param": 3,
+    "co_order": 2,
+    "co_method": 2,
+    "co_param": 2,
+    "co_chem": 1,
+    "s_method": 1.5278,
+    "s_label": null,
+    "s_trans": 3.0,
+    "s_time": 3.7992496647282527e-14,
+    "sr": 0.5714285714285714,
+    "sp": 0.36363636363636365,
+    "Com": 0.8285714285714285,
+    "Cor": 0.9166666666666666,
+    "Eff": null,
+    "IA": null,
+    "HV": null
+  },
+  "complete_numeric_CCE": false,
+  "baseline_metrics": {
+    "c_param": 3,
+    "co_order": 2,
+    "co_method": 2,
+    "co_param": 2,
+    "co_chem": 1,
+    "s_method": 1.5278,
+    "s_label": null,
+    "s_trans": 3.0,
+    "s_time": 3.7992496647282527e-14,
+    "sr": 0.5714285714285714,
+    "sp": 0.36363636363636365,
+    "Com": 0.8285714285714285,
+    "Cor": 0.9166666666666666,
+    "Eff": null,
+    "IA": null,
+    "HV": null
+  },
+  "quantitative_data": {
+    "method_name": "ScaleS",
+    "tissue_ri_value": 1.46,
+    "total_time_hours": 120.0,
+    "sample_tier": "T02_THICK_SLICE_0P5_3MM",
+    "reagent_ri_value": null,
+    "protocol_time_hours": null
+  },
+  "time_derivation": {
+    "hours": 120.0,
+    "bounds_hours": [
+      120.0,
+      120.0
+    ],
+    "decision": "existing_source_bound_scalar",
+    "issues": []
+  },
+  "time_formula": {
+    "policy": "kb-window-asymmetric-median-0.20-under-0.10-over-v1",
+    "source": "time_kb.json",
+    "requested_tier": "T02_THICK_SLICE_0P5_3MM",
+    "actual_hours": 120.0,
+    "min_hours": 48.0,
+    "max_hours": 72.0,
+    "median_hours": 60.0,
+    "tau_hours": 6.0,
+    "delta_hours": 48.0,
+    "tau_under_fraction": 0.2,
+    "tau_over_fraction": 0.1,
+    "status": "scored",
+    "resolved_tier": "T02_THICK_SLICE_0P5_3MM",
+    "method_key": "scales"
+  },
+  "time_sensitivity": [
+    {
+      "time_hours": 120.0,
+      "s_time": 3.7992496647282527e-14,
+      "Eff": null
+    }
+  ],
+  "label_derivation": {
+    "version": "cce-typed-label-scorer-v2.1",
+    "s_label": null,
+    "channels": {
+      "s_target_match": null,
+      "s_marker_fluor_compat": null,
+      "s_method_fluor_compat": 4.199999999999999
+    },
+    "channel_applicability": {
+      "s_target_match": {
+        "applicable": true,
+        "value": null,
+        "contributing_pairs": [
+          "relation:R02",
+          "relation:R03",
+          "relation:R04"
+        ]
+      },
+      "s_marker_fluor_compat": {
+        "applicable": true,
+        "value": null,
+        "contributing_pairs": [
+          "relation:R02",
+          "relation:R03",
+          "relation:R04"
+        ]
+      },
+      "s_method_fluor_compat": {
+        "applicable": true,
+        "value": 4.199999999999999,
+        "contributing_pairs": [
+          "relation:R01",
+          "native:IS01",
+          "relation:R02",
+          "relation:R03",
+          "relation:R04",
+          "unresolved_entity:E07"
+        ]
+      }
+    },
+    "pair_results": [
+      {
+        "pair_id": "relation:R01",
+        "entity_id": "E01",
+        "fluorophore": "GFP",
+        "reported_marker": null,
+        "reported_target_literal": null,
+        "label_type": "native_fluorescent_protein",
+        "original_function_input": {
+          "GFP": ""
+        },
+        "applicable": {
+          "s_target_match": false,
+          "s_marker_fluor_compat": false,
+          "s_method_fluor_compat": true
+        },
+        "channels": {
+          "s_target_match": null,
+          "s_marker_fluor_compat": null,
+          "s_method_fluor_compat": 5.4
+        },
+        "not_applicable_reason": "standalone fluorescence has no antibody target-pair channel",
+        "source_evidence": {
+          "unit_id": "L0002",
+          "start": 26,
+          "end": 106,
+          "quote": "**Chosen Labeling:** [GFP (内源) + Alexa Fluor 488, Phalloidin + Alexa Fluor 568]\n",
+          "answer_sha256": "648ad06628502e65a2c7c6bb22c9482eb077554d4327133aa5600d37dbd98965"
+        },
+        "compatibility_audit": [
+          {
+            "kind": "method_fluor",
+            "method_name": "ScaleS",
+            "fluorophore": "GFP",
+            "source": "KnowledgeBase/method_fluro_compati.json",
+            "value": 0.9,
+            "status": "TABLE_REPORTED"
+          }
+        ]
+      },
+      {
+        "pair_id": "native:IS01",
+        "entity_id": "E01",
+        "fluorophore": "GFP",
+        "reported_marker": null,
+        "reported_target_literal": null,
+        "label_type": "native_fluorescent_protein",
+        "original_function_input": {
+          "GFP": ""
+        },
+        "applicable": {
+          "s_target_match": false,
+          "s_marker_fluor_compat": false,
+          "s_method_fluor_compat": true
+        },
+        "channels": {
+          "s_target_match": null,
+          "s_marker_fluor_compat": null,
+          "s_method_fluor_compat": 5.4
+        },
+        "not_applicable_reason": "standalone fluorescence has no antibody target-pair channel",
+        "source_evidence": {
+          "unit_id": "L0002",
+          "start": 26,
+          "end": 106,
+          "quote": "**Chosen Labeling:** [GFP (内源) + Alexa Fluor 488, Phalloidin + Alexa Fluor 568]\n",
+          "answer_sha256": "648ad06628502e65a2c7c6bb22c9482eb077554d4327133aa5600d37dbd98965"
+        },
+        "compatibility_audit": [
+          {
+            "kind": "method_fluor",
+            "method_name": "ScaleS",
+            "fluorophore": "GFP",
+            "source": "KnowledgeBase/method_fluro_compati.json",
+            "value": 0.9,
+            "status": "TABLE_REPORTED"
+          }
+        ]
+      },
+      {
+        "pair_id": "relation:R02",
+        "entity_id": "E02",
+        "fluorophore": "Alexa Fluor 488",
+        "reported_marker": null,
+        "reported_target_literal": null,
+        "label_type": "targeted_or_unclassified_reagent",
+        "original_function_input": {
+          "Alexa Fluor 488": ""
+        },
+        "applicable": {
+          "s_target_match": true,
+          "s_marker_fluor_compat": true,
+          "s_method_fluor_compat": true
+        },
+        "channels": {
+          "s_target_match": null,
+          "s_marker_fluor_compat": null,
+          "s_method_fluor_compat": 5.1
+        },
+        "not_applicable_reason": null,
+        "source_evidence": {
+          "unit_id": "L0002",
+          "start": 26,
+          "end": 106,
+          "quote": "**Chosen Labeling:** [GFP (内源) + Alexa Fluor 488, Phalloidin + Alexa Fluor 568]\n",
+          "answer_sha256": "648ad06628502e65a2c7c6bb22c9482eb077554d4327133aa5600d37dbd98965"
+        },
+        "compatibility_audit": [
+          {
+            "kind": "method_fluor",
+            "method_name": "ScaleS",
+            "fluorophore": "Alexa Fluor 488",
+            "source": "KnowledgeBase/method_fluro_compati.json",
+            "value": 0.85,
+            "status": "TABLE_REPORTED"
+          }
+        ]
+      },
+      {
+        "pair_id": "relation:R03",
+        "entity_id": "E03",
+        "fluorophore": "Phalloidin",
+        "reported_marker": null,
+        "reported_target_literal": null,
+        "label_type": "targeted_or_unclassified_reagent",
+        "original_function_input": {
+          "Phalloidin": ""
+        },
+        "applicable": {
+          "s_target_match": true,
+          "s_marker_fluor_compat": true,
+          "s_method_fluor_compat": true
+        },
+        "channels": {
+          "s_target_match": null,
+          "s_marker_fluor_compat": null,
+          "s_method_fluor_compat": 4.199999999999999
+        },
+        "not_applicable_reason": null,
+        "source_evidence": {
+          "unit_id": "L0002",
+          "start": 26,
+          "end": 106,
+          "quote": "**Chosen Labeling:** [GFP (内源) + Alexa Fluor 488, Phalloidin + Alexa Fluor 568]\n",
+          "answer_sha256": "648ad06628502e65a2c7c6bb22c9482eb077554d4327133aa5600d37dbd98965"
+        },
+        "compatibility_audit": [
+          {
+            "kind": "method_fluor",
+            "method_name": "ScaleS",
+            "fluorophore": "Phalloidin",
+            "source": "KnowledgeBase/method_fluro_compati.json",
+            "value": 0.7,
+            "status": "TABLE_REPORTED"
+          }
+        ]
+      },
+      {
+        "pair_id": "relation:R04",
+        "entity_id": "E04",
+        "fluorophore": "Alexa Fluor 568",
+        "reported_marker": null,
+        "reported_target_literal": null,
+        "label_type": "targeted_or_unclassified_reagent",
+        "original_function_input": {
+          "Alexa Fluor 568": ""
+        },
+        "applicable": {
+          "s_target_match": true,
+          "s_marker_fluor_compat": true,
+          "s_method_fluor_compat": true
+        },
+        "channels": {
+          "s_target_match": null,
+          "s_marker_fluor_compat": null,
+          "s_method_fluor_compat": 4.800000000000001
+        },
+        "not_applicable_reason": null,
+        "source_evidence": {
+          "unit_id": "L0002",
+          "start": 26,
+          "end": 106,
+          "quote": "**Chosen Labeling:** [GFP (内源) + Alexa Fluor 488, Phalloidin + Alexa Fluor 568]\n",
+          "answer_sha256": "648ad06628502e65a2c7c6bb22c9482eb077554d4327133aa5600d37dbd98965"
+        },
+        "compatibility_audit": [
+          {
+            "kind": "method_fluor",
+            "method_name": "ScaleS",
+            "fluorophore": "Alexa Fluor 568",
+            "source": "KnowledgeBase/method_fluro_compati.json",
+            "value": 0.8,
+            "status": "TABLE_REPORTED"
+          }
+        ]
+      },
+      {
+        "pair_id": "unresolved_entity:E07",
+        "entity_id": "E07",
+        "fluorophore": "Alexa Fluor 488",
+        "reported_marker": null,
+        "reported_target_literal": null,
+        "label_type": "targeted_or_unclassified_reagent",
+        "original_function_input": {
+          "Alexa Fluor 488": ""
+        },
+        "applicable": {
+          "s_target_match": false,
+          "s_marker_fluor_compat": false,
+          "s_method_fluor_compat": true
+        },
+        "channels": {
+          "s_target_match": null,
+          "s_marker_fluor_compat": null,
+          "s_method_fluor_compat": 5.1
+        },
+        "not_applicable_reason": null,
+        "source_evidence": {
+          "unit_id": "L0024",
+          "start": 1943,
+          "end": 1958,
+          "quote": "Alexa Fluor 488",
+          "answer_sha256": "648ad06628502e65a2c7c6bb22c9482eb077554d4327133aa5600d37dbd98965"
+        },
+        "compatibility_audit": [
+          {
+            "kind": "method_fluor",
+            "method_name": "ScaleS",
+            "fluorophore": "Alexa Fluor 488",
+            "source": "KnowledgeBase/method_fluro_compati.json",
+            "value": 0.85,
+            "status": "TABLE_REPORTED"
+          }
+        ]
+      }
+    ],
+    "resolved_uncertainties": [
+      {
+        "kind": "reported_unresolved_relation",
+        "relation_id": "R01",
+        "entity_id": "E01",
+        "resolution": "antibody relation is not applicable to this standalone signal"
+      }
+    ],
+    "remaining_uncertainties": [
+      {
+        "kind": "reported_unresolved_relation",
+        "relation_id": "R02",
+        "entity_id": "E02"
+      },
+      {
+        "kind": "reported_unresolved_relation",
+        "relation_id": "R03",
+        "entity_id": "E03"
+      },
+      {
+        "kind": "reported_unresolved_relation",
+        "relation_id": "R04",
+        "entity_id": "E04"
+      }
+    ],
+    "minimum_of_available_applicable_channels": null,
+    "task_target_coverage": "native/direct task coverage remains separate from antibody-pair applicability",
+    "new_model_calls": 0,
+    "expert_validated": false
+  },
+  "compatibility_lookup_trace": [],
+  "semantic_decomposition_applied": false,
+  "semantic_author": "saved judge decomposition",
+  "remaining_dependencies": {
+    "time": [],
+    "label_relations": [
+      {
+        "kind": "reported_unresolved_relation",
+        "relation_id": "R02",
+        "entity_id": "E02"
+      },
+      {
+        "kind": "reported_unresolved_relation",
+        "relation_id": "R03",
+        "entity_id": "E03"
+      },
+      {
+        "kind": "reported_unresolved_relation",
+        "relation_id": "R04",
+        "entity_id": "E04"
+      }
+    ],
+    "compatibility": []
+  },
+  "new_model_requests": 0,
+  "new_expert_records": 0,
+  "direct_scores_rejudged": false,
+  "SR_SP_changed": false,
+  "raw_judge_status_changed": false,
+  "status": "replayed",
+  "source_record": {
+    "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\optimizer_round3_20261011\\uniform_v7\\actual_01\\cells\\first7_posthoc\\FPC08\\posthoc.json",
+    "sha256": "db416273ad76ee57379d1fa6cbe4c2516e55ca21095cc9b42b740dcf39630b85"
+  },
+  "answer_sha256": "648ad06628502e65a2c7c6bb22c9482eb077554d4327133aa5600d37dbd98965",
+  "changes": {},
+  "comparison_metrics": {
+    "c_param": 3,
+    "co_order": 2,
+    "co_method": 2,
+    "co_param": 2,
+    "co_chem": 1,
+    "s_method": 1.5278,
+    "s_label": null,
+    "s_trans": 3.0,
+    "s_time": 3.7992496647282527e-14,
+    "sr": 0.5714285714285714,
+    "sp": 0.36363636363636365,
+    "Com": 0.8285714285714285,
+    "Cor": 0.9166666666666666,
+    "Eff": null,
+    "IA": null,
+    "HV": null
+  },
+  "typed_replay_status": "replayed",
+  "typed_semantic_annotation": false,
+  "typed_changes": {},
+  "source_document": {
+    "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\optimizer_round2_20261010\\generation_confirmation_v2\\source_documents\\FPC08.json",
+    "sha256": "31764f149737e8eaca22c59211bfaf336e4a94e06142a8a7dfc8dba6679aed3b"
+  }
+}

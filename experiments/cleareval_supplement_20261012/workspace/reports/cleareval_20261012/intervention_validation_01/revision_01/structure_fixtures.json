@@ -1,0 +1,65 @@
+[
+  {
+    "name": "standalone_decimal_quantity",
+    "source_a": "Protocol Steps:\n3.1 % reagent\n",
+    "source_b": "Protocol Steps:\n4.1 % reagent\n",
+    "expected_same": false,
+    "actual_same": false,
+    "passed": true,
+    "basis": "explicitly constructed engineering contrast; not natural-answer or expert evidence"
+  },
+  {
+    "name": "flat_reference_renumber",
+    "source_a": "Protocol Steps:\n1. Wash item.\n2. Repeat step 1.\n",
+    "source_b": "Protocol Steps:\n101. Wash item.\n102. Repeat step 101.\n",
+    "expected_same": true,
+    "actual_same": true,
+    "passed": true,
+    "basis": "explicitly constructed engineering contrast; not natural-answer or expert evidence"
+  },
+  {
+    "name": "reference_target_changes",
+    "source_a": "Protocol Steps:\n1. Wash item.\n2. Transfer item.\n3. Repeat step 1.\n",
+    "source_b": "Protocol Steps:\n1. Wash item.\n2. Transfer item.\n3. Repeat step 2.\n",
+    "expected_same": false,
+    "actual_same": false,
+    "passed": true,
+    "basis": "explicitly constructed engineering contrast; not natural-answer or expert evidence"
+  },
+  {
+    "name": "actual_quantity_after_label",
+    "source_a": "Protocol Steps:\n1 Stage\n1.1 Add 3.1 mL material.\n",
+    "source_b": "Protocol Steps:\n101 Stage\n101.1 Add 3.1 mL material.\n",
+    "expected_same": true,
+    "actual_same": true,
+    "passed": true,
+    "basis": "explicitly constructed engineering contrast; not natural-answer or expert evidence"
+  },
+  {
+    "name": "repeat_count_changes",
+    "source_a": "Protocol Steps:\n1 Stage\n1.1 Repeat 2 times.\n",
+    "source_b": "Protocol Steps:\n101 Stage\n101.1 Repeat 3 times.\n",
+    "expected_same": false,
+    "actual_same": false,
+    "passed": true,
+    "basis": "explicitly constructed engineering contrast; not natural-answer or expert evidence"
+  },
+  {
+    "name": "negation_changes",
+    "source_a": "Protocol Steps:\n1 Stage\n1.1 Do not wash.\n",
+    "source_b": "Protocol Steps:\n101 Stage\n101.1 Wash.\n",
+    "expected_same": false,
+    "actual_same": false,
+    "passed": true,
+    "basis": "explicitly constructed engineering contrast; not natural-answer or expert evidence"
+  },
+  {
+    "name": "incomplete_remains_incomplete",
+    "source_a": "Protocol Steps:\n1 Washing\n1.1 Incubation with\n",
+    "source_b": "Protocol Steps:\n101 Washing\n101.1 Incubation with\n",
+    "expected_same": true,
+    "actual_same": true,
+    "passed": true,
+    "basis": "explicitly constructed engineering contrast; not natural-answer or expert evidence"
+  }
+]

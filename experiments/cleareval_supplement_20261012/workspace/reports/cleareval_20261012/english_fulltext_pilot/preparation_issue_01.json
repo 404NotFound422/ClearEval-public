@@ -1,0 +1,15 @@
+{
+  "stage": "full-document construction before scoring",
+  "observed_failure": "No-untranslated-CJK check stopped preparation at R3C04",
+  "causes": [
+    "Shorter saved operation source matched inside the longer fresh-reagent operation before the longer source was considered",
+    "The earlier step-only probe intentionally retained a Chinese immediate-imaging Time metadata value"
+  ],
+  "correction": [
+    "Match longest source first and require exact coverage of saved step indices",
+    "Translate the remaining nonnumeric metadata phrase while retaining source alignment and numeric tokens"
+  ],
+  "new_model_calls": 0,
+  "scoring_had_started": false,
+  "scientific_results_inferred_from_this_check": false
+}

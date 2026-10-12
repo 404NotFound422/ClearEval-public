@@ -1,0 +1,480 @@
+{
+  "cell_id": "R3C05__r0",
+  "cohort": "confirmation_qwen_01",
+  "question_id": 23,
+  "baseline_metrics": {
+    "c_param": 3,
+    "co_order": 3,
+    "co_method": 2,
+    "co_param": 1,
+    "co_chem": 1,
+    "s_method": -0.45,
+    "s_label": null,
+    "s_trans": 2.7055534759358473,
+    "s_time": null,
+    "sr": 1.0,
+    "sp": 0.27586206896551724,
+    "Com": 1.0,
+    "Cor": 0.875,
+    "Eff": null,
+    "IA": null,
+    "HV": null
+  },
+  "metrics": {
+    "c_param": 3,
+    "co_order": 3,
+    "co_method": 2,
+    "co_param": 1,
+    "co_chem": 1,
+    "s_method": -0.45,
+    "s_label": 5.1,
+    "s_trans": 2.7055534759358473,
+    "s_time": null,
+    "sr": 1.0,
+    "sp": 0.27586206896551724,
+    "Com": 1.0,
+    "Cor": 0.875,
+    "Eff": null,
+    "IA": null,
+    "HV": null
+  },
+  "complete_numeric_CCE": false,
+  "source_document": {
+    "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\optimizer_round3_20261011\\confirmation_qwen_01\\source_documents\\5f8fcf1226c974435e2393be.json",
+    "sha256": "bce5bca25c677dfd6ed01de7e2c2aaac721eaefcc2bdb904e00c59c35989a4dd"
+  },
+  "post_record": {
+    "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\optimizer_round3_20261011\\confirmation_qwen_01\\run\\attempts\\f0b0e2eb7fece9c21556c0926cded22c36952b36758b8bff4cd711eae7c2d14e_1\\processing.json",
+    "sha256": "f0a37609c4669cc59e1ba9fb08f8e207dfdea8c12a43686c7b288f675f136e41"
+  },
+  "answer_sha256": "cc1fe1e633dae5d4152c8f44f671575c7cce8fd4e14b209fc6046886e8559c4c",
+  "proposal": {
+    "version": "selected-label-source-v1.1",
+    "answer_sha256": "cc1fe1e633dae5d4152c8f44f671575c7cce8fd4e14b209fc6046886e8559c4c",
+    "relations": [
+      {
+        "fluorophore": "EGFP",
+        "marker": "",
+        "source_spans": [
+          {
+            "unit_id": "L0002",
+            "start": 48,
+            "end": 65,
+            "quote": "EGFP (endogenous)",
+            "answer_sha256": "cc1fe1e633dae5d4152c8f44f671575c7cce8fd4e14b209fc6046886e8559c4c"
+          }
+        ],
+        "basis": "explicit standalone signal in chosen list; external target-pair channel not applicable",
+        "source_fluor_literal": "EGFP (endogenous)",
+        "clone_identity_inferred": false,
+        "generic_AF": false
+      },
+      {
+        "fluorophore": "Alexa Fluor 647",
+        "marker": "MAP2",
+        "source_spans": [
+          {
+            "unit_id": "L0002",
+            "start": 66,
+            "end": 107,
+            "quote": " MAP2 + Alexa Fluor (secondary conjugate)",
+            "answer_sha256": "cc1fe1e633dae5d4152c8f44f671575c7cce8fd4e14b209fc6046886e8559c4c"
+          },
+          {
+            "unit_id": "L0019",
+            "start": 2765,
+            "end": 3012,
+            "quote": "1.5 Secondary antibody incubation: incubate with donkey anti-rabbit Alexa Fluor 647-conjugated secondary antibody [1:500 dilution in antibody diluent as in step 1.3]. (Temperature: 37 °C, Time: 48 hours, with gentle shaking, protected from light)\n",
+            "answer_sha256": "cc1fe1e633dae5d4152c8f44f671575c7cce8fd4e14b209fc6046886e8559c4c"
+          }
+        ],
+        "basis": "explicit selected target + fluorophore; antibody carrier/clone not required; single generic AF channel refined by uniquely selected operational dye",
+        "source_target_literal": "MAP2",
+        "target_role_qualifier": null,
+        "source_fluor_literal": "Alexa Fluor",
+        "clone_identity_inferred": false,
+        "generic_AF": true,
+        "generic_AF_refined": true
+      }
+    ],
+    "issues": [],
+    "header_candidates": 1,
+    "ready": true,
+    "new_model_calls": 0,
+    "new_per_answer_author_annotations": 0,
+    "independent_evaluator": false,
+    "expert_validated": false,
+    "scope": "explicit chosen-label list; no claim of universal biological relation extraction",
+    "header_source": {
+      "unit_id": "L0002",
+      "start": 26,
+      "end": 109,
+      "quote": "**Chosen Labeling:** [EGFP (endogenous), MAP2 + Alexa Fluor (secondary conjugate)]\n",
+      "answer_sha256": "cc1fe1e633dae5d4152c8f44f671575c7cce8fd4e14b209fc6046886e8559c4c"
+    },
+    "actual_AF_operation_evidence": [
+      {
+        "fluorophore": "Alexa Fluor 647",
+        "source": {
+          "unit_id": "L0019",
+          "start": 2765,
+          "end": 3012,
+          "quote": "1.5 Secondary antibody incubation: incubate with donkey anti-rabbit Alexa Fluor 647-conjugated secondary antibody [1:500 dilution in antibody diluent as in step 1.3]. (Temperature: 37 °C, Time: 48 hours, with gentle shaking, protected from light)\n",
+          "answer_sha256": "cc1fe1e633dae5d4152c8f44f671575c7cce8fd4e14b209fc6046886e8559c4c"
+        },
+        "literal": "Alexa Fluor 647"
+      }
+    ],
+    "selection_uses_achieved_score": false
+  },
+  "decision": "source_rule_applied",
+  "label_derivation": {
+    "version": "cce-typed-label-scorer-v2.1",
+    "s_label": 5.1,
+    "channels": {
+      "s_target_match": 6.0,
+      "s_marker_fluor_compat": 6.0,
+      "s_method_fluor_compat": 5.1
+    },
+    "channel_applicability": {
+      "s_target_match": {
+        "applicable": true,
+        "value": 6.0,
+        "contributing_pairs": [
+          "semantic:1"
+        ]
+      },
+      "s_marker_fluor_compat": {
+        "applicable": true,
+        "value": 6.0,
+        "contributing_pairs": [
+          "semantic:1"
+        ]
+      },
+      "s_method_fluor_compat": {
+        "applicable": true,
+        "value": 5.1,
+        "contributing_pairs": [
+          "semantic:0",
+          "semantic:1"
+        ]
+      }
+    },
+    "pair_results": [
+      {
+        "pair_id": "semantic:0",
+        "entity_id": null,
+        "fluorophore": "EGFP",
+        "reported_marker": null,
+        "reported_target_literal": null,
+        "label_type": "native_fluorescent_protein",
+        "original_function_input": {
+          "EGFP": ""
+        },
+        "applicable": {
+          "s_target_match": false,
+          "s_marker_fluor_compat": false,
+          "s_method_fluor_compat": true
+        },
+        "channels": {
+          "s_target_match": null,
+          "s_marker_fluor_compat": null,
+          "s_method_fluor_compat": 5.4
+        },
+        "not_applicable_reason": "standalone fluorescence has no antibody target-pair channel",
+        "source_evidence": [
+          {
+            "unit_id": "L0002",
+            "start": 48,
+            "end": 65,
+            "quote": "EGFP (endogenous)",
+            "answer_sha256": "cc1fe1e633dae5d4152c8f44f671575c7cce8fd4e14b209fc6046886e8559c4c"
+          }
+        ],
+        "compatibility_audit": [
+          {
+            "kind": "method_fluor",
+            "method_name": "FDISCO",
+            "fluorophore": "EGFP",
+            "source": "KnowledgeBase/method_fluro_compati.json",
+            "value": 0.9,
+            "status": "TABLE_REPORTED"
+          }
+        ]
+      },
+      {
+        "pair_id": "semantic:1",
+        "entity_id": null,
+        "fluorophore": "Alexa Fluor 647",
+        "reported_marker": "MAP2",
+        "reported_target_literal": null,
+        "label_type": "targeted_or_unclassified_reagent",
+        "original_function_input": {
+          "Alexa Fluor 647": "MAP2"
+        },
+        "applicable": {
+          "s_target_match": true,
+          "s_marker_fluor_compat": true,
+          "s_method_fluor_compat": true
+        },
+        "channels": {
+          "s_target_match": 6.0,
+          "s_marker_fluor_compat": 6.0,
+          "s_method_fluor_compat": 5.1
+        },
+        "not_applicable_reason": null,
+        "source_evidence": [
+          {
+            "unit_id": "L0002",
+            "start": 66,
+            "end": 107,
+            "quote": " MAP2 + Alexa Fluor (secondary conjugate)",
+            "answer_sha256": "cc1fe1e633dae5d4152c8f44f671575c7cce8fd4e14b209fc6046886e8559c4c"
+          },
+          {
+            "unit_id": "L0019",
+            "start": 2765,
+            "end": 3012,
+            "quote": "1.5 Secondary antibody incubation: incubate with donkey anti-rabbit Alexa Fluor 647-conjugated secondary antibody [1:500 dilution in antibody diluent as in step 1.3]. (Temperature: 37 °C, Time: 48 hours, with gentle shaking, protected from light)\n",
+            "answer_sha256": "cc1fe1e633dae5d4152c8f44f671575c7cce8fd4e14b209fc6046886e8559c4c"
+          }
+        ],
+        "compatibility_audit": [
+          {
+            "kind": "marker_fluor",
+            "marker": "MAP2",
+            "fluorophore": "Alexa Fluor 647",
+            "source": "KnowledgeBase/tissue.json",
+            "value": true,
+            "status": "TABLE_REPORTED"
+          },
+          {
+            "kind": "method_fluor",
+            "method_name": "FDISCO",
+            "fluorophore": "Alexa Fluor 647",
+            "source": "KnowledgeBase/method_fluro_compati.json",
+            "value": 0.85,
+            "status": "TABLE_REPORTED"
+          }
+        ]
+      }
+    ],
+    "resolved_uncertainties": [],
+    "remaining_uncertainties": [],
+    "minimum_of_available_applicable_channels": 5.1,
+    "task_target_coverage": "native/direct task coverage remains separate from antibody-pair applicability",
+    "new_model_calls": 0,
+    "expert_validated": false
+  },
+  "lookup_trace": [
+    {
+      "marker": "MAP2",
+      "fluorophore": "Alexa Fluor 647",
+      "status": "AF_family_consensus_approximation",
+      "value": true,
+      "column": "AlexaFluor 647/Cy5 ",
+      "matching_target_options": [
+        {
+          "target_index": 2,
+          "source_tissue_xlsx_row": 4,
+          "marker_slot": "recommended_marker_2",
+          "marker_name": "MAP2",
+          "query_path": "中枢神经 > 神经元结构 > 神经元(通用)",
+          "major_category": "中枢神经",
+          "subcategory": "神经元结构",
+          "structure_or_cell_subtype": "神经元(通用)",
+          "authored_target_parent": {
+            "marker_name": "MAP2",
+            "target_index": 2,
+            "source_tissue_xlsx_row": 4,
+            "query_path": "中枢神经 > 神经元结构 > 神经元(通用)",
+            "marker_slot": "recommended_marker_2"
+          },
+          "authored_option_index": 0,
+          "option_split_applied": false
+        },
+        {
+          "target_index": 3,
+          "source_tissue_xlsx_row": 97,
+          "marker_slot": "recommended_marker_1",
+          "marker_name": "MAP2",
+          "query_path": "中枢神经 > 神经元结构 > CA1 树突/树突棘结构辅助",
+          "major_category": "中枢神经",
+          "subcategory": "神经元结构",
+          "structure_or_cell_subtype": "CA1 树突/树突棘结构辅助",
+          "authored_target_parent": {
+            "marker_name": "MAP2",
+            "target_index": 3,
+            "source_tissue_xlsx_row": 97,
+            "query_path": "中枢神经 > 神经元结构 > CA1 树突/树突棘结构辅助",
+            "marker_slot": "recommended_marker_1"
+          },
+          "authored_option_index": 0,
+          "option_split_applied": false
+        }
+      ],
+      "candidate_rows": [
+        {
+          "row_index": 0,
+          "matching_authored_names": [
+            {
+              "field": "推荐标志物 2",
+              "authored_name": "MAP2",
+              "option": "MAP2",
+              "option_split_applied": false
+            }
+          ],
+          "scope": {
+            "大类": "中枢神经",
+            "亚类": "神经元结构",
+            "结构/细胞类型": "神经元(通用)"
+          },
+          "cell_value": 1
+        },
+        {
+          "row_index": 63,
+          "matching_authored_names": [
+            {
+              "field": "推荐标志物 2",
+              "authored_name": "MAP2 / Nestin",
+              "option": "MAP2",
+              "option_split_applied": true
+            }
+          ],
+          "scope": {
+            "大类": "通用结构",
+            "亚类": "类器官",
+            "结构/细胞类型": "大脑类器官整体"
+          },
+          "cell_value": 1
+        },
+        {
+          "row_index": 93,
+          "matching_authored_names": [
+            {
+              "field": "推荐标志物 1",
+              "authored_name": "MAP2",
+              "option": "MAP2",
+              "option_split_applied": false
+            }
+          ],
+          "scope": {
+            "大类": "中枢神经",
+            "亚类": "神经元结构",
+            "结构/细胞类型": "CA1 树突/树突棘结构辅助"
+          },
+          "cell_value": null
+        }
+      ],
+      "selected_row_indices": [
+        0,
+        93
+      ],
+      "per_scope_evidence": [
+        {
+          "scope": {
+            "大类": "中枢神经",
+            "亚类": "神经元结构",
+            "结构/细胞类型": "CA1 树突/树突棘结构辅助"
+          },
+          "row_indices": [
+            93
+          ],
+          "all_cell_values": [
+            null
+          ],
+          "state": "authored_unknown",
+          "value": null
+        },
+        {
+          "scope": {
+            "大类": "中枢神经",
+            "亚类": "神经元结构",
+            "结构/细胞类型": "神经元(通用)"
+          },
+          "row_indices": [
+            0
+          ],
+          "all_cell_values": [
+            1
+          ],
+          "state": "consistent_authored_value",
+          "value": 1
+        }
+      ],
+      "row_selection_uses_scores": false,
+      "different_scopes_merged": false,
+      "new_alias_or_KB_value": false,
+      "declared_task_scope": null,
+      "exact_lookup_value": null,
+      "family_source_donors": [
+        {
+          "marker": "MAP2",
+          "fluorophore": "Alexa Fluor 594",
+          "compatible": true,
+          "source_url": "https://www.abcam.com/en-us/products/primary-antibodies/alexa-fluor-594-map2-antibody-epr19691-neuronal-marker-ab302832",
+          "catalogue_ids": [
+            "ab302832"
+          ],
+          "accessed": "2026-10-12",
+          "supported_claim": "MAP2 antibody EPR19691 conjugated to AF594 has reported mouse/rat neuron IF use.",
+          "scope_limit": "General target-fluor pairing only; not tissue-clearing retention or penetration validation."
+        }
+      ],
+      "family_donor_cells": [
+        {
+          "row_index": 0,
+          "column": "AlexaFluor 488",
+          "value": 1,
+          "scope": {
+            "大类": "中枢神经",
+            "亚类": "神经元结构",
+            "结构/细胞类型": "神经元(通用)"
+          }
+        },
+        {
+          "row_index": 0,
+          "column": "AlexaFluor 568/Cy3",
+          "value": 1,
+          "scope": {
+            "大类": "中枢神经",
+            "亚类": "神经元结构",
+            "结构/细胞类型": "神经元(通用)"
+          }
+        },
+        {
+          "row_index": 0,
+          "column": "AlexaFluor 647/Cy5 ",
+          "value": 1,
+          "scope": {
+            "大类": "中枢神经",
+            "亚类": "神经元结构",
+            "结构/细胞类型": "神经元(通用)"
+          }
+        }
+      ],
+      "family_rule": "AF-family-consensus-from-applicable-marker-rows-v1",
+      "evidence_level": "user_authorized_family_approximation"
+    }
+  ],
+  "changes": {
+    "s_label": {
+      "before": null,
+      "after": 5.1
+    }
+  },
+  "quantitative_data": {
+    "method_name": "FDISCO",
+    "tissue_ri_value": 1.46,
+    "total_time_hours": null,
+    "sample_tier": "T02_THICK_SLICE_0P5_3MM",
+    "reagent_ri_value": 1.56,
+    "protocol_time_hours": null
+  },
+  "new_model_calls": 0,
+  "new_per_answer_author_annotations": 0,
+  "original_source": {
+    "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\optimizer_round3_20261011\\confirmation_qwen_01\\original_source_documents\\5f8fcf1226c974435e2393be.json",
+    "sha256": "c5513f940ae6c470fd34b60f6d31a10c7e92d071d184b7d6528c84b8f70f9b96"
+  }
+}

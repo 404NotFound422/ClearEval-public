@@ -1,0 +1,1050 @@
+{
+  "version": "source-scoped-label-lookup-and-time-midpoint-v1",
+  "new_local_or_API_model_requests": 0,
+  "source_bindings": [
+    {
+      "path": "C:\\ClearEval\\reports\\cleareval_20261012\\llm_decomposition.json",
+      "sha256": "f99604bd64e54a1504ae390ea0ff395c879158216ea094b9e14b7c6d51efaa48"
+    },
+    {
+      "path": "C:\\ClearEval\\ClearEval-public\\OEQ_run_grading_new.py",
+      "sha256": "0d48d96bd53b8bcf3c8678cf3151679ee70dc0d7b6d7e110486d1d7a77f9ea0e"
+    },
+    {
+      "path": "C:\\ClearEval\\ClearEval-public\\evaluation_contract.py",
+      "sha256": "9c04ce4f789e94c321df62b2b32bb57025b629b4d3c2a4fea79be3295ee010f5"
+    },
+    {
+      "path": "C:\\ClearEval\\ClearEval-public\\KnowledgeBase\\tissue.json",
+      "sha256": "6786bb3b94cd9f07deea0f3fc3535cb6b566c0e9f3753be6ddd978dd1629c5e8"
+    },
+    {
+      "path": "C:\\ClearEval\\ClearEval-public\\KnowledgeBase\\time_kb.json",
+      "sha256": "5a7c04e3bad4963bb07f11c5675b55f2281068ea88e925f15a41715149c4ab11"
+    },
+    {
+      "path": "C:\\ClearEval\\ClearEval-public\\KnowledgeBase\\method_fluro_compati.json",
+      "sha256": "3c1b66ad96eb46c6ab8fb01563b193ec5657fbb9b0b9de627d51b7d43b461aeb"
+    },
+    {
+      "path": "C:\\ClearEval\\reports\\cleareval_20261012\\REPORT_zh.md",
+      "sha256": "62301956e095a1743b936695c99e632884721efca94ad15fe0e0d85eca67497b"
+    },
+    {
+      "path": "C:\\ClearEval\\reports\\cleareval_20261012\\LLM_DECOMPOSITION_zh.md",
+      "sha256": "6bb45dd4691c5b8d47dca86ae5eabc9d137cdeff21369ebd0d39960560743d2c"
+    },
+    {
+      "path": "C:\\ClearEval\\reports\\cleareval_20261012\\verification.json",
+      "sha256": "d70deab94893d805b4e18114abb3f7cbc404a86d408b043a1c6c1c5c5f700d29"
+    },
+    {
+      "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\optimizer_round2_20261010\\generation_confirmation_v2\\source_documents\\FPC03.json",
+      "sha256": "96cc981f71ca6402297c04b9ef0353fee7642a361488a9dafcf04081fc111235"
+    },
+    {
+      "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\optimizer_round3_20261011\\uniform_v7\\actual_01\\cells\\first7_posthoc\\FPC03\\posthoc.json",
+      "sha256": "4eeab49c7748fff515e676bd061319480d960771cd3a1a210be60a98c63f2828"
+    },
+    {
+      "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\optimizer_round2_20261010\\generation_confirmation_v2\\source_documents\\FPC07.json",
+      "sha256": "74131c5bc1b22f0cbf0dce8532c30369bf038ebc18718b52579cbb105d6304fe"
+    },
+    {
+      "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\optimizer_round3_20261011\\uniform_v7\\actual_01\\cells\\first7_posthoc\\FPC07\\posthoc.json",
+      "sha256": "7e04fc84be368322a3e77e3d17a4d979d7b5316230f8cc16e6b5854f765cc93c"
+    }
+  ],
+  "entrypoint": {
+    "path": "C:\\ClearEval\\reports\\cleareval_20261012\\label_lookup_midpoint_v1.py",
+    "sha256": "263407a178fa0e77c703678404fa87f83560a56645b1a9d3db097e74b21f6b12"
+  },
+  "results": [
+    {
+      "id": "FPC03",
+      "question_id": 21,
+      "answer_sha256": "6fd95f2d91c4bb66314b7dae3522370a4046e9871fc9f875e9269a958fbf5f8d",
+      "source_document": {
+        "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\optimizer_round2_20261010\\generation_confirmation_v2\\source_documents\\FPC03.json",
+        "sha256": "96cc981f71ca6402297c04b9ef0353fee7642a361488a9dafcf04081fc111235"
+      },
+      "baseline_v7": {
+        "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\optimizer_round3_20261011\\uniform_v7\\actual_01\\cells\\first7_posthoc\\FPC03\\posthoc.json",
+        "sha256": "4eeab49c7748fff515e676bd061319480d960771cd3a1a210be60a98c63f2828"
+      },
+      "fixed_question": {
+        "question_id": 21,
+        "question": "我需要对稀疏荧光报告小鼠脑组织进行透明化处理，用于观察少量标记神经元的三维形态，并进行长期保存后再次成像。样本为小鼠脑组织块，厚度约 3 mm，已完成固定和后固定，内源荧光报告信号较弱。科学目标是在透明化和保存过程中尽量保留稀疏报告神经元的微弱内源荧光，同时显示神经元树突结构和局部形态细节，以便在三维空间中分析神经元胞体、树突分支、树突长度和局部投射模式。\n\n请根据该科学问题自行选择合适的双靶点荧光/标记策略，并基于所选标记样本选择匹配的组织透明方法。请仅输出 protocol，第 1 行写明所选双靶点荧光/标记策略和组织透明方法，随后仅列出透明处理、RI 匹配和保存/成像前处理步骤的关键试剂、条件和时间。",
+        "tissue_hierarchy_from_tissue_xlsx": {
+          "tissue_inferred": "脑",
+          "tissue_tier_code": "T02_THICK_SLICE_0P5_3MM",
+          "tissue_tier_label": "厚切片/小组织块0.5-3mm"
+        },
+        "marker_query_targets": [
+          {
+            "target_index": 1,
+            "source_tissue_xlsx_row": 4,
+            "marker_slot": "recommended_marker_1",
+            "marker_name": "β-III Tubulin (TUJ1)",
+            "query_path": "中枢神经 > 神经元结构 > 神经元(通用)",
+            "major_category": "中枢神经",
+            "subcategory": "神经元结构",
+            "structure_or_cell_subtype": "神经元(通用)"
+          },
+          {
+            "target_index": 2,
+            "source_tissue_xlsx_row": 4,
+            "marker_slot": "recommended_marker_2",
+            "marker_name": "MAP2",
+            "query_path": "中枢神经 > 神经元结构 > 神经元(通用)",
+            "major_category": "中枢神经",
+            "subcategory": "神经元结构",
+            "structure_or_cell_subtype": "神经元(通用)"
+          },
+          {
+            "target_index": 3,
+            "source_tissue_xlsx_row": 97,
+            "marker_slot": "recommended_marker_1",
+            "marker_name": "MAP2",
+            "query_path": "中枢神经 > 神经元结构 > CA1 树突/树突棘结构辅助",
+            "major_category": "中枢神经",
+            "subcategory": "神经元结构",
+            "structure_or_cell_subtype": "CA1 树突/树突棘结构辅助"
+          },
+          {
+            "target_index": 4,
+            "source_tissue_xlsx_row": 97,
+            "marker_slot": "recommended_marker_2",
+            "marker_name": "EGFP / DiO",
+            "query_path": "中枢神经 > 神经元结构 > CA1 树突/树突棘结构辅助",
+            "major_category": "中枢神经",
+            "subcategory": "神经元结构",
+            "structure_or_cell_subtype": "CA1 树突/树突棘结构辅助"
+          }
+        ]
+      },
+      "scope_selection": {
+        "scope": {
+          "大类": "中枢神经",
+          "亚类": "神经元结构",
+          "结构/细胞类型": "神经元(通用)"
+        },
+        "fixed_question_target": {
+          "target_index": 2,
+          "source_tissue_xlsx_row": 4,
+          "marker_slot": "recommended_marker_2",
+          "marker_name": "MAP2",
+          "query_path": "中枢神经 > 神经元结构 > 神经元(通用)",
+          "major_category": "中枢神经",
+          "subcategory": "神经元结构",
+          "structure_or_cell_subtype": "神经元(通用)"
+        },
+        "basis": "The fixed question requests sparse brain-neuron morphology and dendrites, without a CA1-specific requirement. Its registered targets explicitly include the generic-neuron MAP2 row.",
+        "author": "current assistant scope annotation, not independent expert",
+        "lookup": {
+          "marker": "MAP2",
+          "fluorophore": "Alexa Fluor 647",
+          "requested_scope": {
+            "大类": "中枢神经",
+            "亚类": "神经元结构",
+            "结构/细胞类型": "神经元(通用)"
+          },
+          "matching_rows": [
+            {
+              "row_index_zero_based": 0,
+              "scope": {
+                "大类": "中枢神经",
+                "亚类": "神经元结构",
+                "结构/细胞类型": "神经元(通用)"
+              },
+              "markers": {
+                "推荐标志物 1": "β-III Tubulin (TUJ1)",
+                "推荐标志物 2": "MAP2"
+              },
+              "column": "AlexaFluor 647/Cy5 ",
+              "cell": 1
+            },
+            {
+              "row_index_zero_based": 93,
+              "scope": {
+                "大类": "中枢神经",
+                "亚类": "神经元结构",
+                "结构/细胞类型": "CA1 树突/树突棘结构辅助"
+              },
+              "markers": {
+                "推荐标志物 1": "MAP2",
+                "推荐标志物 2": "EGFP / DiO"
+              },
+              "column": "AlexaFluor 647/Cy5 ",
+              "cell": null
+            }
+          ],
+          "selected_rows": [
+            {
+              "row_index_zero_based": 0,
+              "scope": {
+                "大类": "中枢神经",
+                "亚类": "神经元结构",
+                "结构/细胞类型": "神经元(通用)"
+              },
+              "markers": {
+                "推荐标志物 1": "β-III Tubulin (TUJ1)",
+                "推荐标志物 2": "MAP2"
+              },
+              "column": "AlexaFluor 647/Cy5 ",
+              "cell": 1
+            }
+          ],
+          "policy": "select declared scope before reading cell; no max-value or last-row selection",
+          "value": true,
+          "status": "TABLE_REPORTED"
+        }
+      },
+      "marker_dict": {
+        "GFP": "",
+        "Alexa Fluor 647": "MAP2"
+      },
+      "time_policy": "arithmetic midpoint of each explicit closed duration range before nonlinear scoring",
+      "time_source_qualification": "Exact sum of reported core durations under the registered exclusion of labeling and storage.",
+      "core_time_interval": [
+        80,
+        80
+      ],
+      "point_core_time_hours": 80.0,
+      "point_result": {
+        "time_hours": 80,
+        "quantitative_data": {
+          "method_name": "iDISCO+",
+          "tissue_ri_value": 1.46,
+          "total_time_hours": 80,
+          "sample_tier": "T02_THICK_SLICE_0P5_3MM",
+          "reagent_ri_value": null,
+          "protocol_time_hours": null
+        },
+        "original_equation_results": {
+          "s_method": -1.0625,
+          "s_label": 1.2000000000000002,
+          "s_trans": 2.6784375046866993,
+          "s_time": 0.0,
+          "total_effectiveness_score": 2.8159375046866995,
+          "s_target_match": 6.0,
+          "s_marker_fluor_compat": 6.0,
+          "s_method_fluor_compat": 1.2000000000000002,
+          "method_identity": {
+            "status": "RESOLVED_SINGLE",
+            "resolved_key": "iDISCO (iDISCO+)",
+            "components": []
+          },
+          "compatibility_audit": [
+            {
+              "kind": "method_fluor",
+              "method_name": "iDISCO+",
+              "fluorophore": "GFP",
+              "source": "KnowledgeBase/method_fluro_compati.json",
+              "value": 0.2,
+              "status": "TABLE_REPORTED"
+            },
+            {
+              "kind": "marker_fluor",
+              "marker": "MAP2",
+              "fluorophore": "Alexa Fluor 647",
+              "source": "KnowledgeBase/tissue.json",
+              "value": true,
+              "status": "TABLE_REPORTED"
+            },
+            {
+              "kind": "method_fluor",
+              "method_name": "iDISCO+",
+              "fluorophore": "Alexa Fluor 647",
+              "source": "KnowledgeBase/method_fluro_compati.json",
+              "value": 0.9,
+              "status": "TABLE_REPORTED"
+            }
+          ],
+          "marker_coverage_audit": {
+            "reference_targets": [
+              {
+                "marker_name": "β-III Tubulin (TUJ1)",
+                "matched": false,
+                "status": "NOT_MATCHED",
+                "scientific_satisfaction": null,
+                "identity_issues": []
+              },
+              {
+                "marker_name": "MAP2",
+                "matched": true,
+                "status": "LEXICAL_ALIAS_MATCH",
+                "scientific_satisfaction": null,
+                "identity_issues": []
+              },
+              {
+                "marker_name": "MAP2",
+                "matched": true,
+                "status": "LEXICAL_ALIAS_MATCH",
+                "scientific_satisfaction": null,
+                "identity_issues": []
+              },
+              {
+                "marker_name": "EGFP / DiO",
+                "matched": false,
+                "status": "NOT_MATCHED",
+                "scientific_satisfaction": null,
+                "identity_issues": []
+              }
+            ],
+            "requirement_semantics": "Lexical reference coverage only, not scientific satisfaction; reviewed AND/OR requirements remain necessary",
+            "unmatched_reported_markers": [
+              "GFP"
+            ]
+          },
+          "time_computation": {
+            "policy": "kb-window-asymmetric-median-0.20-under-0.10-over-v1",
+            "source": "time_kb.json",
+            "requested_tier": "T02_THICK_SLICE_0P5_3MM",
+            "actual_hours": 80,
+            "min_hours": 2.0,
+            "max_hours": 8.0,
+            "median_hours": 4.0,
+            "tau_hours": 0.4,
+            "delta_hours": 72.0,
+            "tau_under_fraction": 0.2,
+            "tau_over_fraction": 0.1,
+            "status": "scored",
+            "resolved_tier": "T02_THICK_SLICE_0P5_3MM",
+            "method_key": "idisco+"
+          },
+          "_s_time_ref_source": "time_kb.json",
+          "_s_time_t_min": 2.0,
+          "_s_time_t_max": 8.0,
+          "_s_time_tau": 0.4,
+          "_s_time_t_act": 80,
+          "_s_time_tier": "T02_THICK_SLICE_0P5_3MM",
+          "_s_trans_status": "legacy_proxy_scored",
+          "_s_trans_ri_tissue": 1.46,
+          "_s_trans_ri_method_ref": 1.47,
+          "_s_trans_sigma": 0.021
+        },
+        "metrics": {
+          "c_param": 2,
+          "co_order": 1,
+          "co_method": 1,
+          "co_param": 1,
+          "co_chem": 1,
+          "s_method": -1.0625,
+          "s_label": 1.2000000000000002,
+          "s_trans": 2.6784375046866993,
+          "s_time": 0.0,
+          "sr": 0.1111111111111111,
+          "sp": 0.1875,
+          "Com": 0.4444444444444444,
+          "Cor": 0.5833333333333334,
+          "Eff": 0.34507812539055827,
+          "IA": 0.34507812539055827,
+          "HV": 0.08946469917532991
+        }
+      },
+      "all_replays": [
+        {
+          "time_hours": 80,
+          "quantitative_data": {
+            "method_name": "iDISCO+",
+            "tissue_ri_value": 1.46,
+            "total_time_hours": 80,
+            "sample_tier": "T02_THICK_SLICE_0P5_3MM",
+            "reagent_ri_value": null,
+            "protocol_time_hours": null
+          },
+          "original_equation_results": {
+            "s_method": -1.0625,
+            "s_label": 1.2000000000000002,
+            "s_trans": 2.6784375046866993,
+            "s_time": 0.0,
+            "total_effectiveness_score": 2.8159375046866995,
+            "s_target_match": 6.0,
+            "s_marker_fluor_compat": 6.0,
+            "s_method_fluor_compat": 1.2000000000000002,
+            "method_identity": {
+              "status": "RESOLVED_SINGLE",
+              "resolved_key": "iDISCO (iDISCO+)",
+              "components": []
+            },
+            "compatibility_audit": [
+              {
+                "kind": "method_fluor",
+                "method_name": "iDISCO+",
+                "fluorophore": "GFP",
+                "source": "KnowledgeBase/method_fluro_compati.json",
+                "value": 0.2,
+                "status": "TABLE_REPORTED"
+              },
+              {
+                "kind": "marker_fluor",
+                "marker": "MAP2",
+                "fluorophore": "Alexa Fluor 647",
+                "source": "KnowledgeBase/tissue.json",
+                "value": true,
+                "status": "TABLE_REPORTED"
+              },
+              {
+                "kind": "method_fluor",
+                "method_name": "iDISCO+",
+                "fluorophore": "Alexa Fluor 647",
+                "source": "KnowledgeBase/method_fluro_compati.json",
+                "value": 0.9,
+                "status": "TABLE_REPORTED"
+              }
+            ],
+            "marker_coverage_audit": {
+              "reference_targets": [
+                {
+                  "marker_name": "β-III Tubulin (TUJ1)",
+                  "matched": false,
+                  "status": "NOT_MATCHED",
+                  "scientific_satisfaction": null,
+                  "identity_issues": []
+                },
+                {
+                  "marker_name": "MAP2",
+                  "matched": true,
+                  "status": "LEXICAL_ALIAS_MATCH",
+                  "scientific_satisfaction": null,
+                  "identity_issues": []
+                },
+                {
+                  "marker_name": "MAP2",
+                  "matched": true,
+                  "status": "LEXICAL_ALIAS_MATCH",
+                  "scientific_satisfaction": null,
+                  "identity_issues": []
+                },
+                {
+                  "marker_name": "EGFP / DiO",
+                  "matched": false,
+                  "status": "NOT_MATCHED",
+                  "scientific_satisfaction": null,
+                  "identity_issues": []
+                }
+              ],
+              "requirement_semantics": "Lexical reference coverage only, not scientific satisfaction; reviewed AND/OR requirements remain necessary",
+              "unmatched_reported_markers": [
+                "GFP"
+              ]
+            },
+            "time_computation": {
+              "policy": "kb-window-asymmetric-median-0.20-under-0.10-over-v1",
+              "source": "time_kb.json",
+              "requested_tier": "T02_THICK_SLICE_0P5_3MM",
+              "actual_hours": 80,
+              "min_hours": 2.0,
+              "max_hours": 8.0,
+              "median_hours": 4.0,
+              "tau_hours": 0.4,
+              "delta_hours": 72.0,
+              "tau_under_fraction": 0.2,
+              "tau_over_fraction": 0.1,
+              "status": "scored",
+              "resolved_tier": "T02_THICK_SLICE_0P5_3MM",
+              "method_key": "idisco+"
+            },
+            "_s_time_ref_source": "time_kb.json",
+            "_s_time_t_min": 2.0,
+            "_s_time_t_max": 8.0,
+            "_s_time_tau": 0.4,
+            "_s_time_t_act": 80,
+            "_s_time_tier": "T02_THICK_SLICE_0P5_3MM",
+            "_s_trans_status": "legacy_proxy_scored",
+            "_s_trans_ri_tissue": 1.46,
+            "_s_trans_ri_method_ref": 1.47,
+            "_s_trans_sigma": 0.021
+          },
+          "metrics": {
+            "c_param": 2,
+            "co_order": 1,
+            "co_method": 1,
+            "co_param": 1,
+            "co_chem": 1,
+            "s_method": -1.0625,
+            "s_label": 1.2000000000000002,
+            "s_trans": 2.6784375046866993,
+            "s_time": 0.0,
+            "sr": 0.1111111111111111,
+            "sp": 0.1875,
+            "Com": 0.4444444444444444,
+            "Cor": 0.5833333333333334,
+            "Eff": 0.34507812539055827,
+            "IA": 0.34507812539055827,
+            "HV": 0.08946469917532991
+          }
+        }
+      ],
+      "Eff_interval": [
+        0.34507812539055827,
+        0.34507812539055827
+      ],
+      "direct_scores_rejudged": false,
+      "SR_SP_changed": false,
+      "is_new_independent_evaluator_trial": false,
+      "expert_confirmed": false
+    },
+    {
+      "id": "FPC07",
+      "question_id": 248,
+      "answer_sha256": "8176364b5f9396ab515e49a6f4a50366343f27fe7da00e0cb666a36796c423d2",
+      "source_document": {
+        "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\optimizer_round2_20261010\\generation_confirmation_v2\\source_documents\\FPC07.json",
+        "sha256": "74131c5bc1b22f0cbf0dce8532c30369bf038ebc18718b52579cbb105d6304fe"
+      },
+      "baseline_v7": {
+        "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\optimizer_round3_20261011\\uniform_v7\\actual_01\\cells\\first7_posthoc\\FPC07\\posthoc.json",
+        "sha256": "7e04fc84be368322a3e77e3d17a4d979d7b5316230f8cc16e6b5854f765cc93c"
+      },
+      "fixed_question": {
+        "question_id": 248,
+        "question": "一只成年小鼠整脑已注射 AAV-tdTomato 用于逆行标记长程投射神经元并已固定，目标是在光片显微镜下尽快完成全脑成像，可接受一定程度的组织收缩。需根据以下科学目标选择兼容的荧光/标记策略：需要保留 tdTomato 内源示踪信号以追踪长程投射，并同时标记轴突骨架结构，并选择匹配的组织透明方法。请仅输出 protocol，第 1 行写明所选双靶点荧光/标记策略和组织透明方法，随后仅列出透明处理、RI 匹配和保存/成像前处理步骤的关键试剂、条件和时间。",
+        "tissue_hierarchy_from_tissue_xlsx": {
+          "tissue_inferred": "全脑/脑",
+          "tissue_tier_code": "T04_WHOLE_MOUSE_BRAIN_5_12MM",
+          "tissue_tier_label": "成年小鼠全脑/脑块5-12mm"
+        },
+        "marker_query_targets": [
+          {
+            "target_index": 1,
+            "source_tissue_xlsx_row": 4,
+            "marker_slot": "recommended_marker_1",
+            "marker_name": "β-III Tubulin (TUJ1)",
+            "query_path": "中枢神经 > 神经元结构 > 神经元(通用)",
+            "major_category": "中枢神经",
+            "subcategory": "神经元结构",
+            "structure_or_cell_subtype": "神经元(通用)"
+          },
+          {
+            "target_index": 2,
+            "source_tissue_xlsx_row": 4,
+            "marker_slot": "recommended_marker_2",
+            "marker_name": "MAP2",
+            "query_path": "中枢神经 > 神经元结构 > 神经元(通用)",
+            "major_category": "中枢神经",
+            "subcategory": "神经元结构",
+            "structure_or_cell_subtype": "神经元(通用)"
+          }
+        ]
+      },
+      "scope_selection": null,
+      "marker_dict": {
+        "tdTomato": "",
+        "Alexa Fluor 647": "F-actin"
+      },
+      "time_policy": "arithmetic midpoint of each explicit closed duration range before nonlinear scoring",
+      "time_source_qualification": "Reported typical timing scenario only. Until-transparent stopping condition prevents interpreting 12-24 h as guaranteed actual bounds.",
+      "core_time_interval": [
+        27.5,
+        39.5
+      ],
+      "point_core_time_hours": 33.5,
+      "point_result": {
+        "time_hours": 33.5,
+        "quantitative_data": {
+          "method_name": "uDISCO",
+          "tissue_ri_value": 1.46,
+          "total_time_hours": 33.5,
+          "sample_tier": "T04_WHOLE_MOUSE_BRAIN_5_12MM",
+          "reagent_ri_value": null,
+          "protocol_time_hours": null
+        },
+        "original_equation_results": {
+          "s_method": -0.38,
+          "s_label": 0.0,
+          "s_trans": 1.2333368715215602,
+          "s_time": 0.40179312334614525,
+          "total_effectiveness_score": 1.2551299948677055,
+          "s_target_match": 0.0,
+          "s_marker_fluor_compat": 6.0,
+          "s_method_fluor_compat": 4.5,
+          "method_identity": {
+            "status": "RESOLVED_SINGLE",
+            "resolved_key": "uDISCO",
+            "components": []
+          },
+          "compatibility_audit": [
+            {
+              "kind": "method_fluor",
+              "method_name": "uDISCO",
+              "fluorophore": "tdTomato",
+              "source": "KnowledgeBase/method_fluro_compati.json",
+              "value": 0.75,
+              "status": "TABLE_REPORTED"
+            },
+            {
+              "kind": "marker_fluor",
+              "marker": "F-actin",
+              "fluorophore": "Alexa Fluor 647",
+              "source": "KnowledgeBase/tissue.json",
+              "value": true,
+              "status": "TABLE_REPORTED"
+            },
+            {
+              "kind": "method_fluor",
+              "method_name": "uDISCO",
+              "fluorophore": "Alexa Fluor 647",
+              "source": "KnowledgeBase/method_fluro_compati.json",
+              "value": 0.75,
+              "status": "TABLE_REPORTED"
+            }
+          ],
+          "marker_coverage_audit": {
+            "reference_targets": [
+              {
+                "marker_name": "β-III Tubulin (TUJ1)",
+                "matched": false,
+                "status": "NOT_MATCHED",
+                "scientific_satisfaction": null,
+                "identity_issues": []
+              },
+              {
+                "marker_name": "MAP2",
+                "matched": false,
+                "status": "NOT_MATCHED",
+                "scientific_satisfaction": null,
+                "identity_issues": []
+              }
+            ],
+            "requirement_semantics": "Lexical reference coverage only, not scientific satisfaction; reviewed AND/OR requirements remain necessary",
+            "unmatched_reported_markers": [
+              "tdTomato",
+              "F-actin"
+            ]
+          },
+          "time_computation": {
+            "policy": "kb-window-asymmetric-median-0.20-under-0.10-over-v1",
+            "source": "time_kb.json",
+            "requested_tier": "T04_WHOLE_MOUSE_BRAIN_5_12MM",
+            "actual_hours": 33.5,
+            "min_hours": 72.0,
+            "max_hours": 120.0,
+            "median_hours": 96.0,
+            "tau_hours": 19.200000000000003,
+            "delta_hours": 38.5,
+            "tau_under_fraction": 0.2,
+            "tau_over_fraction": 0.1,
+            "status": "scored",
+            "resolved_tier": "T04_WHOLE_MOUSE_BRAIN_5_12MM",
+            "method_key": "udisco"
+          },
+          "_s_time_ref_source": "time_kb.json",
+          "_s_time_t_min": 72.0,
+          "_s_time_t_max": 120.0,
+          "_s_time_tau": 19.200000000000003,
+          "_s_time_t_act": 33.5,
+          "_s_time_tier": "T04_WHOLE_MOUSE_BRAIN_5_12MM",
+          "_s_trans_status": "legacy_proxy_scored",
+          "_s_trans_ri_tissue": 1.46,
+          "_s_trans_ri_method_ref": 1.5,
+          "_s_trans_sigma": 0.03
+        },
+        "metrics": {
+          "c_param": 3,
+          "co_order": 2,
+          "co_method": 1,
+          "co_param": 1,
+          "co_chem": 1,
+          "s_method": -0.38,
+          "s_label": 0.0,
+          "s_trans": 1.2333368715215602,
+          "s_time": 0.40179312334614525,
+          "sr": 0.4444444444444444,
+          "sp": 0.2727272727272727,
+          "Com": 0.7777777777777778,
+          "Cor": 0.6666666666666666,
+          "Eff": 0.24226083290564213,
+          "IA": 0.24226083290564213,
+          "HV": 0.12561672817329592
+        }
+      },
+      "all_replays": [
+        {
+          "time_hours": 27.5,
+          "quantitative_data": {
+            "method_name": "uDISCO",
+            "tissue_ri_value": 1.46,
+            "total_time_hours": 27.5,
+            "sample_tier": "T04_WHOLE_MOUSE_BRAIN_5_12MM",
+            "reagent_ri_value": null,
+            "protocol_time_hours": null
+          },
+          "original_equation_results": {
+            "s_method": -0.38,
+            "s_label": 0.0,
+            "s_trans": 1.2333368715215602,
+            "s_time": 0.2044823387042352,
+            "total_effectiveness_score": 1.0578192102257955,
+            "s_target_match": 0.0,
+            "s_marker_fluor_compat": 6.0,
+            "s_method_fluor_compat": 4.5,
+            "method_identity": {
+              "status": "RESOLVED_SINGLE",
+              "resolved_key": "uDISCO",
+              "components": []
+            },
+            "compatibility_audit": [
+              {
+                "kind": "method_fluor",
+                "method_name": "uDISCO",
+                "fluorophore": "tdTomato",
+                "source": "KnowledgeBase/method_fluro_compati.json",
+                "value": 0.75,
+                "status": "TABLE_REPORTED"
+              },
+              {
+                "kind": "marker_fluor",
+                "marker": "F-actin",
+                "fluorophore": "Alexa Fluor 647",
+                "source": "KnowledgeBase/tissue.json",
+                "value": true,
+                "status": "TABLE_REPORTED"
+              },
+              {
+                "kind": "method_fluor",
+                "method_name": "uDISCO",
+                "fluorophore": "Alexa Fluor 647",
+                "source": "KnowledgeBase/method_fluro_compati.json",
+                "value": 0.75,
+                "status": "TABLE_REPORTED"
+              }
+            ],
+            "marker_coverage_audit": {
+              "reference_targets": [
+                {
+                  "marker_name": "β-III Tubulin (TUJ1)",
+                  "matched": false,
+                  "status": "NOT_MATCHED",
+                  "scientific_satisfaction": null,
+                  "identity_issues": []
+                },
+                {
+                  "marker_name": "MAP2",
+                  "matched": false,
+                  "status": "NOT_MATCHED",
+                  "scientific_satisfaction": null,
+                  "identity_issues": []
+                }
+              ],
+              "requirement_semantics": "Lexical reference coverage only, not scientific satisfaction; reviewed AND/OR requirements remain necessary",
+              "unmatched_reported_markers": [
+                "tdTomato",
+                "F-actin"
+              ]
+            },
+            "time_computation": {
+              "policy": "kb-window-asymmetric-median-0.20-under-0.10-over-v1",
+              "source": "time_kb.json",
+              "requested_tier": "T04_WHOLE_MOUSE_BRAIN_5_12MM",
+              "actual_hours": 27.5,
+              "min_hours": 72.0,
+              "max_hours": 120.0,
+              "median_hours": 96.0,
+              "tau_hours": 19.200000000000003,
+              "delta_hours": 44.5,
+              "tau_under_fraction": 0.2,
+              "tau_over_fraction": 0.1,
+              "status": "scored",
+              "resolved_tier": "T04_WHOLE_MOUSE_BRAIN_5_12MM",
+              "method_key": "udisco"
+            },
+            "_s_time_ref_source": "time_kb.json",
+            "_s_time_t_min": 72.0,
+            "_s_time_t_max": 120.0,
+            "_s_time_tau": 19.200000000000003,
+            "_s_time_t_act": 27.5,
+            "_s_time_tier": "T04_WHOLE_MOUSE_BRAIN_5_12MM",
+            "_s_trans_status": "legacy_proxy_scored",
+            "_s_trans_ri_tissue": 1.46,
+            "_s_trans_ri_method_ref": 1.5,
+            "_s_trans_sigma": 0.03
+          },
+          "metrics": {
+            "c_param": 3,
+            "co_order": 2,
+            "co_method": 1,
+            "co_param": 1,
+            "co_chem": 1,
+            "s_method": -0.38,
+            "s_label": 0.0,
+            "s_trans": 1.2333368715215602,
+            "s_time": 0.2044823387042352,
+            "sr": 0.4444444444444444,
+            "sp": 0.2727272727272727,
+            "Com": 0.7777777777777778,
+            "Cor": 0.6666666666666666,
+            "Eff": 0.22581826751881628,
+            "IA": 0.22581826751881628,
+            "HV": 0.1170909535282751
+          }
+        },
+        {
+          "time_hours": 33.5,
+          "quantitative_data": {
+            "method_name": "uDISCO",
+            "tissue_ri_value": 1.46,
+            "total_time_hours": 33.5,
+            "sample_tier": "T04_WHOLE_MOUSE_BRAIN_5_12MM",
+            "reagent_ri_value": null,
+            "protocol_time_hours": null
+          },
+          "original_equation_results": {
+            "s_method": -0.38,
+            "s_label": 0.0,
+            "s_trans": 1.2333368715215602,
+            "s_time": 0.40179312334614525,
+            "total_effectiveness_score": 1.2551299948677055,
+            "s_target_match": 0.0,
+            "s_marker_fluor_compat": 6.0,
+            "s_method_fluor_compat": 4.5,
+            "method_identity": {
+              "status": "RESOLVED_SINGLE",
+              "resolved_key": "uDISCO",
+              "components": []
+            },
+            "compatibility_audit": [
+              {
+                "kind": "method_fluor",
+                "method_name": "uDISCO",
+                "fluorophore": "tdTomato",
+                "source": "KnowledgeBase/method_fluro_compati.json",
+                "value": 0.75,
+                "status": "TABLE_REPORTED"
+              },
+              {
+                "kind": "marker_fluor",
+                "marker": "F-actin",
+                "fluorophore": "Alexa Fluor 647",
+                "source": "KnowledgeBase/tissue.json",
+                "value": true,
+                "status": "TABLE_REPORTED"
+              },
+              {
+                "kind": "method_fluor",
+                "method_name": "uDISCO",
+                "fluorophore": "Alexa Fluor 647",
+                "source": "KnowledgeBase/method_fluro_compati.json",
+                "value": 0.75,
+                "status": "TABLE_REPORTED"
+              }
+            ],
+            "marker_coverage_audit": {
+              "reference_targets": [
+                {
+                  "marker_name": "β-III Tubulin (TUJ1)",
+                  "matched": false,
+                  "status": "NOT_MATCHED",
+                  "scientific_satisfaction": null,
+                  "identity_issues": []
+                },
+                {
+                  "marker_name": "MAP2",
+                  "matched": false,
+                  "status": "NOT_MATCHED",
+                  "scientific_satisfaction": null,
+                  "identity_issues": []
+                }
+              ],
+              "requirement_semantics": "Lexical reference coverage only, not scientific satisfaction; reviewed AND/OR requirements remain necessary",
+              "unmatched_reported_markers": [
+                "tdTomato",
+                "F-actin"
+              ]
+            },
+            "time_computation": {
+              "policy": "kb-window-asymmetric-median-0.20-under-0.10-over-v1",
+              "source": "time_kb.json",
+              "requested_tier": "T04_WHOLE_MOUSE_BRAIN_5_12MM",
+              "actual_hours": 33.5,
+              "min_hours": 72.0,
+              "max_hours": 120.0,
+              "median_hours": 96.0,
+              "tau_hours": 19.200000000000003,
+              "delta_hours": 38.5,
+              "tau_under_fraction": 0.2,
+              "tau_over_fraction": 0.1,
+              "status": "scored",
+              "resolved_tier": "T04_WHOLE_MOUSE_BRAIN_5_12MM",
+              "method_key": "udisco"
+            },
+            "_s_time_ref_source": "time_kb.json",
+            "_s_time_t_min": 72.0,
+            "_s_time_t_max": 120.0,
+            "_s_time_tau": 19.200000000000003,
+            "_s_time_t_act": 33.5,
+            "_s_time_tier": "T04_WHOLE_MOUSE_BRAIN_5_12MM",
+            "_s_trans_status": "legacy_proxy_scored",
+            "_s_trans_ri_tissue": 1.46,
+            "_s_trans_ri_method_ref": 1.5,
+            "_s_trans_sigma": 0.03
+          },
+          "metrics": {
+            "c_param": 3,
+            "co_order": 2,
+            "co_method": 1,
+            "co_param": 1,
+            "co_chem": 1,
+            "s_method": -0.38,
+            "s_label": 0.0,
+            "s_trans": 1.2333368715215602,
+            "s_time": 0.40179312334614525,
+            "sr": 0.4444444444444444,
+            "sp": 0.2727272727272727,
+            "Com": 0.7777777777777778,
+            "Cor": 0.6666666666666666,
+            "Eff": 0.24226083290564213,
+            "IA": 0.24226083290564213,
+            "HV": 0.12561672817329592
+          }
+        },
+        {
+          "time_hours": 39.5,
+          "quantitative_data": {
+            "method_name": "uDISCO",
+            "tissue_ri_value": 1.46,
+            "total_time_hours": 39.5,
+            "sample_tier": "T04_WHOLE_MOUSE_BRAIN_5_12MM",
+            "reagent_ri_value": null,
+            "protocol_time_hours": null
+          },
+          "original_equation_results": {
+            "s_method": -0.38,
+            "s_label": 0.0,
+            "s_trans": 1.2333368715215602,
+            "s_time": 0.716040562421143,
+            "total_effectiveness_score": 1.5693774339427033,
+            "s_target_match": 0.0,
+            "s_marker_fluor_compat": 6.0,
+            "s_method_fluor_compat": 4.5,
+            "method_identity": {
+              "status": "RESOLVED_SINGLE",
+              "resolved_key": "uDISCO",
+              "components": []
+            },
+            "compatibility_audit": [
+              {
+                "kind": "method_fluor",
+                "method_name": "uDISCO",
+                "fluorophore": "tdTomato",
+                "source": "KnowledgeBase/method_fluro_compati.json",
+                "value": 0.75,
+                "status": "TABLE_REPORTED"
+              },
+              {
+                "kind": "marker_fluor",
+                "marker": "F-actin",
+                "fluorophore": "Alexa Fluor 647",
+                "source": "KnowledgeBase/tissue.json",
+                "value": true,
+                "status": "TABLE_REPORTED"
+              },
+              {
+                "kind": "method_fluor",
+                "method_name": "uDISCO",
+                "fluorophore": "Alexa Fluor 647",
+                "source": "KnowledgeBase/method_fluro_compati.json",
+                "value": 0.75,
+                "status": "TABLE_REPORTED"
+              }
+            ],
+            "marker_coverage_audit": {
+              "reference_targets": [
+                {
+                  "marker_name": "β-III Tubulin (TUJ1)",
+                  "matched": false,
+                  "status": "NOT_MATCHED",
+                  "scientific_satisfaction": null,
+                  "identity_issues": []
+                },
+                {
+                  "marker_name": "MAP2",
+                  "matched": false,
+                  "status": "NOT_MATCHED",
+                  "scientific_satisfaction": null,
+                  "identity_issues": []
+                }
+              ],
+              "requirement_semantics": "Lexical reference coverage only, not scientific satisfaction; reviewed AND/OR requirements remain necessary",
+              "unmatched_reported_markers": [
+                "tdTomato",
+                "F-actin"
+              ]
+            },
+            "time_computation": {
+              "policy": "kb-window-asymmetric-median-0.20-under-0.10-over-v1",
+              "source": "time_kb.json",
+              "requested_tier": "T04_WHOLE_MOUSE_BRAIN_5_12MM",
+              "actual_hours": 39.5,
+              "min_hours": 72.0,
+              "max_hours": 120.0,
+              "median_hours": 96.0,
+              "tau_hours": 19.200000000000003,
+              "delta_hours": 32.5,
+              "tau_under_fraction": 0.2,
+              "tau_over_fraction": 0.1,
+              "status": "scored",
+              "resolved_tier": "T04_WHOLE_MOUSE_BRAIN_5_12MM",
+              "method_key": "udisco"
+            },
+            "_s_time_ref_source": "time_kb.json",
+            "_s_time_t_min": 72.0,
+            "_s_time_t_max": 120.0,
+            "_s_time_tau": 19.200000000000003,
+            "_s_time_t_act": 39.5,
+            "_s_time_tier": "T04_WHOLE_MOUSE_BRAIN_5_12MM",
+            "_s_trans_status": "legacy_proxy_scored",
+            "_s_trans_ri_tissue": 1.46,
+            "_s_trans_ri_method_ref": 1.5,
+            "_s_trans_sigma": 0.03
+          },
+          "metrics": {
+            "c_param": 3,
+            "co_order": 2,
+            "co_method": 1,
+            "co_param": 1,
+            "co_chem": 1,
+            "s_method": -0.38,
+            "s_label": 0.0,
+            "s_trans": 1.2333368715215602,
+            "s_time": 0.716040562421143,
+            "sr": 0.4444444444444444,
+            "sp": 0.2727272727272727,
+            "Com": 0.7777777777777778,
+            "Cor": 0.6666666666666666,
+            "Eff": 0.2684481194952253,
+            "IA": 0.2684481194952253,
+            "HV": 0.13919532121974643
+          }
+        }
+      ],
+      "Eff_interval": [
+        0.22581826751881628,
+        0.2684481194952253
+      ],
+      "direct_scores_rejudged": false,
+      "SR_SP_changed": false,
+      "is_new_independent_evaluator_trial": false,
+      "expert_confirmed": false
+    }
+  ],
+  "checks_passed": [
+    "old MAP2 lookup reproduces None",
+    "selected generic-neuron row returns true",
+    "row reversal preserves selected result",
+    "undeclared conflicting scopes are exposed",
+    "synthetic known-zero, known-one and unknown cells retain their meanings",
+    "contradictory values are reported, never maximized",
+    "FPC03: saved direct scores, original SR/SP, Com and Cor preserved",
+    "FPC07: saved direct scores, original SR/SP, Com and Cor preserved",
+    "FPC07 endpoint replay exactly reproduces previous values",
+    "all bound original inputs, code, KB and frozen results remain unchanged",
+    "both reconstructed examples have complete numerical point scores"
+  ],
+  "scope": "Two existing answers; current-assistant source decomposition plus declared lookup scope and midpoint convention. No new model/expert trial or global rescore.",
+  "lookup_policy_change": "FPC03 selects the generic-neuron MAP2 row by declared scope instead of the accidental last-row index.",
+  "midpoint_is_empirical_median": false,
+  "score_equations_changed": false,
+  "complete_point_CCE_count": 2
+}

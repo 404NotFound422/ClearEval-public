@@ -1,0 +1,680 @@
+{
+  "scores": {
+    "completeness": {
+      "c_step": {
+        "score": 2,
+        "reasoning": "The protocol includes all required modules for the iDISCO+ workflow: pre-clearing dehydration, peroxidase quenching, rehydration, permeabilization/blocking, immunostaining (primary/secondary with washes), post-staining dehydration, delipidation, RI matching, and imaging preparation/mounting. No critical steps are missing."
+      },
+      "c_param": {
+        "score": 3,
+        "reasoning": "The protocol provides detailed parameters for every step, including specific concentrations (e.g., 20% methanol, 5% H2O2, 1:500 antibodies), temperatures (RT, 4°C, 37°C), and durations (1 hour, 12 hours, 7 days). This level of detail meets the criteria for a supplementary material standard."
+      }
+    },
+    "correctness": {
+      "co_order": {
+        "score": 3,
+        "reasoning": "The sequence follows the standard iDISCO+ 'sandwich' structure: Dehydration -> Quenching -> Rehydration -> Immunostaining -> Dehydration -> Delipidation -> RI Matching. The optional DAPI step is correctly placed as a conditional re-entry into the clearing process, maintaining logical flow."
+      },
+      "co_method": {
+        "score": 2,
+        "reasoning": "The reagents used (Methanol, DCM, DBE, H2O2) are consistent with the iDISCO+ method. There is no mixing of incompatible reagents from other clearing methods (e.g., no BABB or CUBIC reagents)."
+      },
+      "co_param": {
+        "score": 1,
+        "reasoning": "While the dehydration and immunostaining times are reasonable, the delipidation and RI matching times are significantly shorter than the reference standards for a whole adult mouse brain (10mm x 8mm x 6mm). The reference (Renier 2016) suggests overnight DCM incubation and ~30min DBE for smaller samples or specific conditions, but for a whole brain, 30 minutes of DCM and 2 hours of DBE are likely insufficient for complete clearing and RI equilibration, violating the time-size law for passive diffusion in large volumes. The deviation is significant but not a physical impossibility like 10 minutes, hence 1 point."
+      },
+      "co_chem": {
+        "score": 1,
+        "reasoning": "The protocol uses standard iDISCO+ reagents (DCM, DBE, H2O2, Methanol). No dangerous extra chemicals or unsafe operations (like heating DCM in a closed container) are introduced. The use of H2O2 is standard for autofluorescence quenching in this method."
+      }
+    }
+  },
+  "score_evidence": [
+    {
+      "m": "c_param",
+      "u": [
+        "L0006",
+        "L0013",
+        "L0024",
+        "L0043",
+        "L0047"
+      ],
+      "b": "mixed",
+      "r": "Protocol specifies concentrations, temperatures, and times for all major steps."
+    },
+    {
+      "m": "co_order",
+      "u": [
+        "L0005",
+        "L0012",
+        "L0014",
+        "L0020",
+        "L0035",
+        "L0042",
+        "L0046"
+      ],
+      "b": "observed",
+      "r": "Steps follow the standard iDISCO+ sequence: Dehydration -> Quench -> Rehydrate -> Stain -> Dehydrate -> Delipidate -> RI Match."
+    },
+    {
+      "m": "co_method",
+      "u": [
+        "L0001",
+        "L0043",
+        "L0047"
+      ],
+      "b": "observed",
+      "r": "Method declared as iDISCO+; reagents DCM and DBE are consistent with this method."
+    },
+    {
+      "m": "co_param",
+      "u": [
+        "L0043",
+        "L0044",
+        "L0045",
+        "L0047",
+        "L0048"
+      ],
+      "b": "mixed",
+      "r": "Delipidation (30 min x 3) and RI matching (2 hr x 2) are shorter than typical reference values for whole mouse brains, suggesting potential under-clearing."
+    },
+    {
+      "m": "co_chem",
+      "u": [
+        "L0013",
+        "L0043",
+        "L0047"
+      ],
+      "b": "observed",
+      "r": "Standard reagents used; no hazardous deviations from standard iDISCO+ protocol."
+    }
+  ],
+  "grounded_extraction": {
+    "schema_version": "source_bound_extraction_v11",
+    "source_id": "SRC_dbd68fc10bb267463a0ce21c",
+    "method_mentions": [
+      {
+        "i": "M001",
+        "n": "iDISCO+",
+        "a": 0,
+        "u": "L0001",
+        "s": "selected"
+      },
+      {
+        "i": "M002",
+        "n": "iDISCO+",
+        "a": 0,
+        "u": "L0003",
+        "s": "mentioned"
+      }
+    ],
+    "entities": [
+      {
+        "i": "E001",
+        "n": "c-Fos",
+        "a": 0,
+        "u": "L0002",
+        "k": "target",
+        "s": "used"
+      },
+      {
+        "i": "E002",
+        "n": "NeuN",
+        "a": 0,
+        "u": "L0002",
+        "k": "target",
+        "s": "used"
+      },
+      {
+        "i": "E003",
+        "n": "RBFOX3",
+        "a": 0,
+        "u": "L0002",
+        "k": "target",
+        "s": "mentioned"
+      },
+      {
+        "i": "E004",
+        "n": "DAPI",
+        "a": 0,
+        "u": "L0002",
+        "k": "fluorophore",
+        "s": "used"
+      },
+      {
+        "i": "E005",
+        "n": "Alexa Fluor 488",
+        "a": 0,
+        "u": "L0030",
+        "k": "fluorophore",
+        "s": "used"
+      },
+      {
+        "i": "E006",
+        "n": "Alexa Fluor 647",
+        "a": 0,
+        "u": "L0030",
+        "k": "fluorophore",
+        "s": "used"
+      },
+      {
+        "i": "E007",
+        "n": "methanol",
+        "a": 0,
+        "u": "L0006",
+        "k": "target",
+        "s": "used"
+      },
+      {
+        "i": "E008",
+        "n": "H₂O₂",
+        "a": 0,
+        "u": "L0013",
+        "k": "target",
+        "s": "used"
+      },
+      {
+        "i": "E009",
+        "n": "Triton X-100",
+        "a": 0,
+        "u": "L0019",
+        "k": "target",
+        "s": "used"
+      },
+      {
+        "i": "E010",
+        "n": "DMSO",
+        "a": 0,
+        "u": "L0021",
+        "k": "target",
+        "s": "used"
+      },
+      {
+        "i": "E011",
+        "n": "glycine",
+        "a": 0,
+        "u": "L0021",
+        "k": "target",
+        "s": "used"
+      },
+      {
+        "i": "E012",
+        "n": "donkey serum",
+        "a": 0,
+        "u": "L0022",
+        "k": "target",
+        "s": "used"
+      },
+      {
+        "i": "E013",
+        "n": "anti-c-Fos",
+        "a": 0,
+        "u": "L0024",
+        "k": "antibody",
+        "s": "used"
+      },
+      {
+        "i": "E014",
+        "n": "anti-NeuN",
+        "a": 0,
+        "u": "L0024",
+        "k": "antibody",
+        "s": "used"
+      },
+      {
+        "i": "E015",
+        "n": "anti-rabbit Alexa Fluor 488",
+        "a": 0,
+        "u": "L0030",
+        "k": "antibody",
+        "s": "used"
+      },
+      {
+        "i": "E016",
+        "n": "anti-mouse Alexa Fluor 647",
+        "a": 0,
+        "u": "L0030",
+        "k": "antibody",
+        "s": "used"
+      },
+      {
+        "i": "E017",
+        "n": "dichloromethane",
+        "a": 0,
+        "u": "L0043",
+        "k": "target",
+        "s": "used"
+      },
+      {
+        "i": "E018",
+        "n": "DCM",
+        "a": 0,
+        "u": "L0044",
+        "k": "target",
+        "s": "used"
+      },
+      {
+        "i": "E019",
+        "n": "dibenzyl ether",
+        "a": 0,
+        "u": "L0047",
+        "k": "target",
+        "s": "used"
+      },
+      {
+        "i": "E020",
+        "n": "DBE",
+        "a": 0,
+        "u": "L0048",
+        "k": "target",
+        "s": "used"
+      }
+    ],
+    "relations": [
+      {
+        "i": "R001",
+        "f": "E005",
+        "e": "L0030",
+        "t": "E001",
+        "s": "explicit",
+        "fo": 0,
+        "to": 0
+      },
+      {
+        "i": "R002",
+        "f": "E006",
+        "e": "L0030",
+        "t": "E002",
+        "s": "explicit",
+        "fo": 0,
+        "to": 0
+      }
+    ],
+    "intrinsic_signals": [],
+    "operations": [
+      {
+        "i": "OP001",
+        "o": "O0002",
+        "p": "decolorization",
+        "d": "D0001",
+        "r": null,
+        "s": "initial",
+        "c": "L0006"
+      },
+      {
+        "i": "OP002",
+        "o": "O0003",
+        "p": "decolorization",
+        "d": "D0002",
+        "r": null,
+        "s": "initial",
+        "c": "L0007"
+      },
+      {
+        "i": "OP003",
+        "o": "O0004",
+        "p": "decolorization",
+        "d": "D0003",
+        "r": null,
+        "s": "initial",
+        "c": "L0008"
+      },
+      {
+        "i": "OP004",
+        "o": "O0005",
+        "p": "decolorization",
+        "d": "D0004",
+        "r": null,
+        "s": "initial",
+        "c": "L0009"
+      },
+      {
+        "i": "OP005",
+        "o": "O0006",
+        "p": "decolorization",
+        "d": "D0005",
+        "r": null,
+        "s": "initial",
+        "c": "L0010"
+      },
+      {
+        "i": "OP006",
+        "o": "O0007",
+        "p": "decolorization",
+        "d": "D0006",
+        "r": null,
+        "s": "initial",
+        "c": "L0011"
+      },
+      {
+        "i": "OP007",
+        "o": "O0008",
+        "p": "decolorization",
+        "d": "D0007",
+        "r": null,
+        "s": "initial",
+        "c": "L0013"
+      },
+      {
+        "i": "OP008",
+        "o": "O0009",
+        "p": "reagent_transition_wash",
+        "d": "D0008",
+        "r": null,
+        "s": "initial",
+        "c": "L0015"
+      },
+      {
+        "i": "OP009",
+        "o": "O0010",
+        "p": "reagent_transition_wash",
+        "d": "D0009",
+        "r": null,
+        "s": "initial",
+        "c": "L0016"
+      },
+      {
+        "i": "OP010",
+        "o": "O0011",
+        "p": "reagent_transition_wash",
+        "d": "D0010",
+        "r": null,
+        "s": "initial",
+        "c": "L0017"
+      },
+      {
+        "i": "OP011",
+        "o": "O0012",
+        "p": "reagent_transition_wash",
+        "d": "D0011",
+        "r": null,
+        "s": "initial",
+        "c": "L0018"
+      },
+      {
+        "i": "OP012",
+        "o": "O0013",
+        "p": "reagent_transition_wash",
+        "d": "D0012",
+        "r": null,
+        "s": "initial",
+        "c": "L0019"
+      },
+      {
+        "i": "OP013",
+        "o": "O0014",
+        "p": "labeling_preparation",
+        "d": "D0013",
+        "r": null,
+        "s": "initial",
+        "c": "L0021"
+      },
+      {
+        "i": "OP014",
+        "o": "O0015",
+        "p": "labeling_preparation",
+        "d": "D0014",
+        "r": null,
+        "s": "initial",
+        "c": "L0022"
+      },
+      {
+        "i": "OP015",
+        "o": "O0016",
+        "p": "labeling_preparation",
+        "d": "D0015",
+        "r": null,
+        "s": "initial",
+        "c": "L0024"
+      },
+      {
+        "i": "OP016",
+        "o": "O0017",
+        "p": "reagent_transition_wash",
+        "d": "D0016",
+        "r": null,
+        "s": "initial",
+        "c": "L0026"
+      },
+      {
+        "i": "OP017",
+        "o": "O0018",
+        "p": "reagent_transition_wash",
+        "d": "D0017",
+        "r": null,
+        "s": "initial",
+        "c": "L0027"
+      },
+      {
+        "i": "OP018",
+        "o": "O0019",
+        "p": "reagent_transition_wash",
+        "d": "D0018",
+        "r": null,
+        "s": "initial",
+        "c": "L0028"
+      },
+      {
+        "i": "OP019",
+        "o": "O0020",
+        "p": "labeling_preparation",
+        "d": "D0019",
+        "r": null,
+        "s": "initial",
+        "c": "L0030"
+      },
+      {
+        "i": "OP020",
+        "o": "O0021",
+        "p": "reagent_transition_wash",
+        "d": "D0020",
+        "r": null,
+        "s": "initial",
+        "c": "L0032"
+      },
+      {
+        "i": "OP021",
+        "o": "O0022",
+        "p": "reagent_transition_wash",
+        "d": "D0021",
+        "r": null,
+        "s": "initial",
+        "c": "L0033"
+      },
+      {
+        "i": "OP022",
+        "o": "O0023",
+        "p": "reagent_transition_wash",
+        "d": "D0022",
+        "r": null,
+        "s": "initial",
+        "c": "L0034"
+      },
+      {
+        "i": "OP023",
+        "o": "O0025",
+        "p": "decolorization",
+        "d": "D0023",
+        "r": null,
+        "s": "initial",
+        "c": "L0036"
+      },
+      {
+        "i": "OP024",
+        "o": "O0026",
+        "p": "decolorization",
+        "d": "D0024",
+        "r": null,
+        "s": "initial",
+        "c": "L0037"
+      },
+      {
+        "i": "OP025",
+        "o": "O0027",
+        "p": "decolorization",
+        "d": "D0025",
+        "r": null,
+        "s": "initial",
+        "c": "L0038"
+      },
+      {
+        "i": "OP026",
+        "o": "O0028",
+        "p": "decolorization",
+        "d": "D0026",
+        "r": null,
+        "s": "initial",
+        "c": "L0039"
+      },
+      {
+        "i": "OP027",
+        "o": "O0029",
+        "p": "decolorization",
+        "d": "D0027",
+        "r": null,
+        "s": "initial",
+        "c": "L0040"
+      },
+      {
+        "i": "OP028",
+        "o": "O0030",
+        "p": "decolorization",
+        "d": "D0028",
+        "r": null,
+        "s": "initial",
+        "c": "L0041"
+      },
+      {
+        "i": "OP029",
+        "o": "O0031",
+        "p": "delipidation",
+        "d": "D0029",
+        "r": null,
+        "s": "initial",
+        "c": "L0043"
+      },
+      {
+        "i": "OP030",
+        "o": "O0032",
+        "p": "delipidation",
+        "d": "D0030",
+        "r": null,
+        "s": "initial",
+        "c": "L0044"
+      },
+      {
+        "i": "OP031",
+        "o": "O0033",
+        "p": "delipidation",
+        "d": "D0031",
+        "r": null,
+        "s": "initial",
+        "c": "L0045"
+      },
+      {
+        "i": "OP032",
+        "o": "O0034",
+        "p": "ri_matching",
+        "d": "D0032",
+        "r": null,
+        "s": "initial",
+        "c": "L0047"
+      },
+      {
+        "i": "OP033",
+        "o": "O0035",
+        "p": "ri_matching",
+        "d": "D0033",
+        "r": null,
+        "s": "initial",
+        "c": "L0048"
+      },
+      {
+        "i": "OP034",
+        "o": "O0036",
+        "p": "labeling_preparation",
+        "d": "D0034",
+        "r": null,
+        "s": "conditional_or_future",
+        "c": "L0050"
+      },
+      {
+        "i": "OP035",
+        "o": "L0051",
+        "p": "delipidation",
+        "d": null,
+        "r": null,
+        "s": "conditional_or_future",
+        "c": "L0051"
+      },
+      {
+        "i": "OP036",
+        "o": "L0051",
+        "p": "ri_matching",
+        "d": null,
+        "r": null,
+        "s": "conditional_or_future",
+        "c": "L0051"
+      },
+      {
+        "i": "OP037",
+        "o": "O0037",
+        "p": "imaging",
+        "d": null,
+        "r": null,
+        "s": "initial",
+        "c": "L0053"
+      }
+    ],
+    "timeline": {
+      "m": "serial",
+      "o": [
+        "OP001",
+        "OP002",
+        "OP003",
+        "OP004",
+        "OP005",
+        "OP006",
+        "OP007",
+        "OP008",
+        "OP009",
+        "OP010",
+        "OP011",
+        "OP012",
+        "OP013",
+        "OP014",
+        "OP015",
+        "OP016",
+        "OP017",
+        "OP018",
+        "OP019",
+        "OP020",
+        "OP021",
+        "OP022",
+        "OP023",
+        "OP024",
+        "OP025",
+        "OP026",
+        "OP027",
+        "OP028",
+        "OP029",
+        "OP030",
+        "OP031",
+        "OP032",
+        "OP033",
+        "OP037"
+      ],
+      "e": null,
+      "c": "complete"
+    },
+    "precedence_edges": [],
+    "total_time_claims": [],
+    "ri_mentions": [],
+    "coverage": {
+      "e": "complete",
+      "t": "complete",
+      "c": "complete",
+      "u": []
+    }
+  }
+}

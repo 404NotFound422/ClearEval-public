@@ -1,0 +1,413 @@
+{
+  "entrypoint": {
+    "path": "C:\\ClearEval\\reports\\cleareval_20261012\\typed_label_transfer\\diagnose_conversion.py",
+    "sha256": "20a343324483826de145e677423b4290a77c484f7b5b7075a63de1445e97b6c2"
+  },
+  "auditor": {
+    "path": "C:\\ClearEval\\ClearEval-public\\scripts\\cce_record_diagnostics_v2.py",
+    "sha256": "51f0ee4540ff585b4a682cdcf18b50252f98d42a6ba019cc6cbf9b11f4ae0594"
+  },
+  "results": [
+    {
+      "cell_id": "R3C01__r0",
+      "raw": {
+        "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\optimizer_round3_20261011\\confirmation_qwen_01\\run\\attempts\\8c1c6afe44eb6e4d12dc33447aa374fcacb70add787412ab82c7157e399692d7_1\\raw_response.txt",
+        "sha256": "e82b22cfcd8c075364b490ac935fe3837c3108a40b72c84344c2ebb844a09f3d"
+      },
+      "source_document": {
+        "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\optimizer_round3_20261011\\confirmation_qwen_01\\source_documents\\033ec2142ac6e35807661f81.json",
+        "sha256": "86e5dcd9dcbc163fc215255c9ec293a71dfe3530fea69cc3cc4af2b6b850e102"
+      },
+      "records": 45,
+      "valid_local_records": 44,
+      "failures": [
+        {
+          "pointer": "/grounded_extraction/entities/2",
+          "raw_record": {
+            "i": "E003",
+            "n": "c-Fos",
+            "a": 0,
+            "u": "L0002",
+            "k": "target",
+            "s": "used"
+          },
+          "errors": [
+            {
+              "pointer": "/grounded_extraction/entities/2",
+              "code": "NAME_OCCURRENCE_NOT_FOUND",
+              "raw_record": {
+                "i": "E003",
+                "n": "c-Fos",
+                "a": 0,
+                "u": "L0002",
+                "k": "target",
+                "s": "used"
+              },
+              "affected_scope": [
+                "entities"
+              ],
+              "record_removed_from_original": false,
+              "scientific_error_proven": false
+            }
+          ],
+          "inventory": {
+            "all_exact_occurrences": [],
+            "complete_occurrences": [],
+            "rejected_substring_occurrences": [],
+            "exact_occurrence_count": 0,
+            "complete_occurrence_count": 0,
+            "index_basis": "complete_literal_occurrences_after_original_identity_boundary_guards",
+            "relationship_pairing_not_inferred": true,
+            "boundary_rules_relaxed": false
+          },
+          "support": {
+            "unit_id": "L0002",
+            "quote": "**Chosen Labeling:** [C-FoS + Alexa Fluor 647, DAPI]\n",
+            "occurrence": 0,
+            "source_id": "SRC_3cc949997d5763efa4762e2b",
+            "start": 27,
+            "end": 80,
+            "answer_sha256": "e77c6c264eda4a4dfe5e0c7318ff7fc72798d287612913c50ca29ecf4942fdfc",
+            "context_start": 27,
+            "context_end": 80,
+            "context": "**Chosen Labeling:** [C-FoS + Alexa Fluor 647, DAPI]\n",
+            "unit_reference": {
+              "source_unit_sha256": "70fd49a535cdcf930d86216a1b1f91be45d6d93fc598b637347ebc534462f686",
+              "raw_unit_text_preserved": true,
+              "wide_evidence_not_atomic_identity": true
+            }
+          }
+        }
+      ],
+      "duplicate_ids": {},
+      "source_role_interpretation_not_validated": true,
+      "new_model_calls": 0,
+      "score_changed": false
+    },
+    {
+      "cell_id": "R3C04__r0",
+      "raw": {
+        "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\optimizer_round3_20261011\\confirmation_qwen_01\\run\\attempts\\2185687de9aabf8356fae9fb1d26f3f9fa39e7b532b175038f433c66f72b2886_1\\raw_response.txt",
+        "sha256": "0c8f5348803c5fae3b43a23e66b58932efa92804c9c1fa77deb35c28c091abcf"
+      },
+      "source_document": {
+        "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\optimizer_round3_20261011\\confirmation_qwen_01\\source_documents\\c9a87206864ec2bf206ab190.json",
+        "sha256": "0ad57cb0dd306fa3e6aa7d926307e36c8a3b48888c2433a0f4d0ce24b85bdd9e"
+      },
+      "records": 53,
+      "valid_local_records": 48,
+      "failures": [
+        {
+          "pointer": "/grounded_extraction/entities/8",
+          "raw_record": {
+            "i": "E9",
+            "n": "TO-PRO-3",
+            "a": 0,
+            "u": "L0034",
+            "k": "fluorophore",
+            "s": "mentioned"
+          },
+          "errors": [
+            {
+              "pointer": "/grounded_extraction/entities/8",
+              "code": "NAME_OCCURRENCE_NOT_FOUND",
+              "raw_record": {
+                "i": "E9",
+                "n": "TO-PRO-3",
+                "a": 0,
+                "u": "L0034",
+                "k": "fluorophore",
+                "s": "mentioned"
+              },
+              "affected_scope": [
+                "entities"
+              ],
+              "record_removed_from_original": false,
+              "scientific_error_proven": false
+            }
+          ],
+          "inventory": {
+            "all_exact_occurrences": [
+              {
+                "raw_substring_ordinal": 0,
+                "start": 2266,
+                "end": 2274,
+                "quote": "TO-PRO-3",
+                "complete_name_ordinal": null,
+                "boundary_accepted": false,
+                "reasons": [
+                  "OMITTED_DISTINGUISHING_NUMERIC_SUFFIX"
+                ]
+              }
+            ],
+            "complete_occurrences": [],
+            "rejected_substring_occurrences": [
+              {
+                "raw_substring_ordinal": 0,
+                "start": 2266,
+                "end": 2274,
+                "quote": "TO-PRO-3",
+                "complete_name_ordinal": null,
+                "boundary_accepted": false,
+                "reasons": [
+                  "OMITTED_DISTINGUISHING_NUMERIC_SUFFIX"
+                ]
+              }
+            ],
+            "exact_occurrence_count": 1,
+            "complete_occurrence_count": 0,
+            "index_basis": "complete_literal_occurrences_after_original_identity_boundary_guards",
+            "relationship_pairing_not_inferred": true,
+            "boundary_rules_relaxed": false
+          },
+          "support": {
+            "unit_id": "L0034",
+            "quote": "9.1 TO-PRO-3 1–2 µM（在PBS + 0.2% Triton X-100中），避光轻摇。(Temperature: RT, Time: 12–24 hours)\n",
+            "occurrence": 0,
+            "source_id": "SRC_e67d873f5bb97be1487ff200",
+            "start": 2262,
+            "end": 2351,
+            "answer_sha256": "4d3909623a64bdd7ccbd45f024b263f94cfddb3b8cf2bb32dc5d376d999b77a1",
+            "context_start": 2262,
+            "context_end": 2351,
+            "context": "9.1 TO-PRO-3 1–2 µM（在PBS + 0.2% Triton X-100中），避光轻摇。(Temperature: RT, Time: 12–24 hours)\n",
+            "unit_reference": {
+              "source_unit_sha256": "b30de4c2434e3bcd2bfd41a60e5b8bcf1690521432e2ea32a70ad70b6f122758",
+              "raw_unit_text_preserved": true,
+              "wide_evidence_not_atomic_identity": true
+            }
+          }
+        },
+        {
+          "pointer": "/grounded_extraction/relations/0",
+          "raw_record": {
+            "i": "R1",
+            "f": "E2",
+            "e": "L0001",
+            "t": "E1",
+            "s": "explicit",
+            "fo": 0,
+            "to": 0
+          },
+          "errors": [
+            {
+              "pointer": "/grounded_extraction/relations/0",
+              "code": "DUPLICATE_GLOBAL_RECORD_ID",
+              "raw_record": {
+                "i": "R1",
+                "f": "E2",
+                "e": "L0001",
+                "t": "E1",
+                "s": "explicit",
+                "fo": 0,
+                "to": 0
+              },
+              "affected_scope": [
+                "relations"
+              ],
+              "record_removed_from_original": false,
+              "scientific_error_proven": false
+            }
+          ]
+        },
+        {
+          "pointer": "/grounded_extraction/relations/1",
+          "raw_record": {
+            "i": "R2",
+            "f": "E2",
+            "e": "L0001",
+            "t": "E3",
+            "s": "explicit",
+            "fo": 1,
+            "to": 0
+          },
+          "errors": [
+            {
+              "pointer": "/grounded_extraction/relations/1",
+              "code": "DUPLICATE_GLOBAL_RECORD_ID",
+              "raw_record": {
+                "i": "R2",
+                "f": "E2",
+                "e": "L0001",
+                "t": "E3",
+                "s": "explicit",
+                "fo": 1,
+                "to": 0
+              },
+              "affected_scope": [
+                "relations"
+              ],
+              "record_removed_from_original": false,
+              "scientific_error_proven": false
+            }
+          ]
+        },
+        {
+          "pointer": "/grounded_extraction/ri_mentions/0",
+          "raw_record": {
+            "i": "R1",
+            "v": "R0217",
+            "r": "sample_target"
+          },
+          "errors": [
+            {
+              "pointer": "/grounded_extraction/ri_mentions/0",
+              "code": "DUPLICATE_GLOBAL_RECORD_ID",
+              "raw_record": {
+                "i": "R1",
+                "v": "R0217",
+                "r": "sample_target"
+              },
+              "affected_scope": [
+                "ri_mentions"
+              ],
+              "record_removed_from_original": false,
+              "scientific_error_proven": false
+            }
+          ]
+        },
+        {
+          "pointer": "/grounded_extraction/ri_mentions/1",
+          "raw_record": {
+            "i": "R2",
+            "v": "R0218",
+            "r": "sample_target"
+          },
+          "errors": [
+            {
+              "pointer": "/grounded_extraction/ri_mentions/1",
+              "code": "DUPLICATE_GLOBAL_RECORD_ID",
+              "raw_record": {
+                "i": "R2",
+                "v": "R0218",
+                "r": "sample_target"
+              },
+              "affected_scope": [
+                "ri_mentions"
+              ],
+              "record_removed_from_original": false,
+              "scientific_error_proven": false
+            }
+          ]
+        }
+      ],
+      "duplicate_ids": {
+        "R1": [
+          "/grounded_extraction/relations/0",
+          "/grounded_extraction/ri_mentions/0"
+        ],
+        "R2": [
+          "/grounded_extraction/relations/1",
+          "/grounded_extraction/ri_mentions/1"
+        ]
+      },
+      "source_role_interpretation_not_validated": true,
+      "new_model_calls": 0,
+      "score_changed": false
+    },
+    {
+      "cell_id": "R3C07__r0",
+      "raw": {
+        "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\optimizer_round3_20261011\\confirmation_qwen_01\\run\\attempts\\28a0bda1d0827541adf64b6f79363d4962708551accea33a538d504089303e2e_1\\raw_response.txt",
+        "sha256": "7282c18f643d2a3ec0a726c3da21b645224dca9d4a41f644d24fed80e8fc81ff"
+      },
+      "source_document": {
+        "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\optimizer_round3_20261011\\confirmation_qwen_01\\source_documents\\4dca84598051a5f58be13cde.json",
+        "sha256": "329fc6484fa59e7ed5d70a29a515c73bfa42f941bcedad6f57f0eb7961efd932"
+      },
+      "records": 34,
+      "valid_local_records": 33,
+      "failures": [
+        {
+          "pointer": "/grounded_extraction/entities/5",
+          "raw_record": {
+            "i": "E6",
+            "n": "BABB",
+            "a": 0,
+            "u": "L0027",
+            "k": "target",
+            "s": "used"
+          },
+          "errors": [
+            {
+              "pointer": "/grounded_extraction/entities/5",
+              "code": "NAME_OCCURRENCE_NOT_FOUND",
+              "raw_record": {
+                "i": "E6",
+                "n": "BABB",
+                "a": 0,
+                "u": "L0027",
+                "k": "target",
+                "s": "used"
+              },
+              "affected_scope": [
+                "entities"
+              ],
+              "record_removed_from_original": false,
+              "scientific_error_proven": false
+            }
+          ],
+          "inventory": {
+            "all_exact_occurrences": [
+              {
+                "raw_substring_ordinal": 0,
+                "start": 1909,
+                "end": 1913,
+                "quote": "BABB",
+                "complete_name_ordinal": null,
+                "boundary_accepted": false,
+                "reasons": [
+                  "CLIPPED_NAME_START"
+                ]
+              }
+            ],
+            "complete_occurrences": [],
+            "rejected_substring_occurrences": [
+              {
+                "raw_substring_ordinal": 0,
+                "start": 1909,
+                "end": 1913,
+                "quote": "BABB",
+                "complete_name_ordinal": null,
+                "boundary_accepted": false,
+                "reasons": [
+                  "CLIPPED_NAME_START"
+                ]
+              }
+            ],
+            "exact_occurrence_count": 1,
+            "complete_occurrence_count": 0,
+            "index_basis": "complete_literal_occurrences_after_original_identity_boundary_guards",
+            "relationship_pairing_not_inferred": true,
+            "boundary_rules_relaxed": false
+          },
+          "support": {
+            "unit_id": "L0027",
+            "quote": "7.1 将脑组织置于BABB（苯甲醇:苯甲酸苄酯 = 1:2, vol/vol）中振荡，完成脱脂并开始RI匹配，直至组织完全透明（通常30–60 min）。(Temperature: 4 ℃, Time: 1 hour)\n",
+            "occurrence": 0,
+            "source_id": "SRC_b115dda7cb329868e4ab0d12",
+            "start": 1899,
+            "end": 2010,
+            "answer_sha256": "0bbe7be8c1a3eaabf163e5be1d6eac66d9e9ca9290d7ca7cfc20209acc6c5fef",
+            "context_start": 1899,
+            "context_end": 2010,
+            "context": "7.1 将脑组织置于BABB（苯甲醇:苯甲酸苄酯 = 1:2, vol/vol）中振荡，完成脱脂并开始RI匹配，直至组织完全透明（通常30–60 min）。(Temperature: 4 ℃, Time: 1 hour)\n",
+            "unit_reference": {
+              "source_unit_sha256": "546400222c0351fc94625113db6f77bf7aa582223945c3e931bd91a2f939f4b1",
+              "raw_unit_text_preserved": true,
+              "wide_evidence_not_atomic_identity": true
+            }
+          }
+        }
+      ],
+      "duplicate_ids": {},
+      "source_role_interpretation_not_validated": true,
+      "new_model_calls": 0,
+      "score_changed": false
+    }
+  ],
+  "execution": [
+    "C:\\ClearEval\\review_artifacts\\bioprobench_2026-09-29\\python_portable\\python.exe",
+    "C:\\ClearEval\\reports\\cleareval_20261012\\typed_label_transfer\\diagnose_conversion.py"
+  ]
+}

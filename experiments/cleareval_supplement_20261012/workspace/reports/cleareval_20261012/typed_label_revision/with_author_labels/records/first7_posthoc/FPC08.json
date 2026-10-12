@@ -1,0 +1,729 @@
+{
+  "cohort": "first7_posthoc",
+  "cell_id": "FPC08",
+  "anonymous_answer_id": "FPC08",
+  "question_id": 23,
+  "original_status": "success",
+  "version": "cce-typed-label-scorer-v2.1",
+  "metrics": {
+    "c_param": 3,
+    "co_order": 2,
+    "co_method": 2,
+    "co_param": 2,
+    "co_chem": 1,
+    "s_method": 1.5278,
+    "s_label": 0.0,
+    "s_trans": 3.0,
+    "s_time": 3.7992496647282527e-14,
+    "sr": 0.5714285714285714,
+    "sp": 0.36363636363636365,
+    "Com": 0.8285714285714285,
+    "Cor": 0.9166666666666666,
+    "Eff": 0.4513900000000032,
+    "IA": 0.4513900000000032,
+    "HV": 0.34284145238095476
+  },
+  "complete_numeric_CCE": true,
+  "baseline_metrics": {
+    "c_param": 3,
+    "co_order": 2,
+    "co_method": 2,
+    "co_param": 2,
+    "co_chem": 1,
+    "s_method": 1.5278,
+    "s_label": null,
+    "s_trans": 3.0,
+    "s_time": 3.7992496647282527e-14,
+    "sr": 0.5714285714285714,
+    "sp": 0.36363636363636365,
+    "Com": 0.8285714285714285,
+    "Cor": 0.9166666666666666,
+    "Eff": null,
+    "IA": null,
+    "HV": null
+  },
+  "quantitative_data": {
+    "method_name": "ScaleS",
+    "tissue_ri_value": 1.46,
+    "total_time_hours": 120.0,
+    "sample_tier": "T02_THICK_SLICE_0P5_3MM",
+    "reagent_ri_value": null,
+    "protocol_time_hours": null
+  },
+  "time_derivation": {
+    "hours": 120.0,
+    "bounds_hours": [
+      120.0,
+      120.0
+    ],
+    "decision": "existing_source_bound_scalar",
+    "issues": []
+  },
+  "time_formula": {
+    "policy": "kb-window-asymmetric-median-0.20-under-0.10-over-v1",
+    "source": "time_kb.json",
+    "requested_tier": "T02_THICK_SLICE_0P5_3MM",
+    "actual_hours": 120.0,
+    "min_hours": 48.0,
+    "max_hours": 72.0,
+    "median_hours": 60.0,
+    "tau_hours": 6.0,
+    "delta_hours": 48.0,
+    "tau_under_fraction": 0.2,
+    "tau_over_fraction": 0.1,
+    "status": "scored",
+    "resolved_tier": "T02_THICK_SLICE_0P5_3MM",
+    "method_key": "scales"
+  },
+  "time_sensitivity": [
+    {
+      "time_hours": 120.0,
+      "s_time": 3.7992496647282527e-14,
+      "Eff": null
+    }
+  ],
+  "label_derivation": {
+    "version": "cce-typed-label-scorer-v2.1",
+    "s_label": 0.0,
+    "channels": {
+      "s_target_match": 0.0,
+      "s_marker_fluor_compat": 6.0,
+      "s_method_fluor_compat": 4.800000000000001
+    },
+    "channel_applicability": {
+      "s_target_match": {
+        "applicable": true,
+        "value": 0.0,
+        "contributing_pairs": [
+          "semantic:1",
+          "semantic:2"
+        ]
+      },
+      "s_marker_fluor_compat": {
+        "applicable": true,
+        "value": 6.0,
+        "contributing_pairs": [
+          "semantic:1",
+          "semantic:2"
+        ]
+      },
+      "s_method_fluor_compat": {
+        "applicable": true,
+        "value": 4.800000000000001,
+        "contributing_pairs": [
+          "semantic:0",
+          "semantic:1",
+          "semantic:2"
+        ]
+      }
+    },
+    "pair_results": [
+      {
+        "pair_id": "semantic:0",
+        "entity_id": null,
+        "fluorophore": "GFP",
+        "reported_marker": null,
+        "reported_target_literal": null,
+        "label_type": "native_fluorescent_protein",
+        "original_function_input": {
+          "GFP": ""
+        },
+        "applicable": {
+          "s_target_match": false,
+          "s_marker_fluor_compat": false,
+          "s_method_fluor_compat": true
+        },
+        "channels": {
+          "s_target_match": null,
+          "s_marker_fluor_compat": null,
+          "s_method_fluor_compat": 5.4
+        },
+        "not_applicable_reason": "standalone fluorescence has no antibody target-pair channel",
+        "source_evidence": [
+          {
+            "start": 26,
+            "end": 105,
+            "quote": "**Chosen Labeling:** [GFP (内源) + Alexa Fluor 488, Phalloidin + Alexa Fluor 568]",
+            "answer_sha256": "648ad06628502e65a2c7c6bb22c9482eb077554d4327133aa5600d37dbd98965"
+          }
+        ],
+        "compatibility_audit": [
+          {
+            "kind": "method_fluor",
+            "method_name": "ScaleS",
+            "fluorophore": "GFP",
+            "source": "KnowledgeBase/method_fluro_compati.json",
+            "value": 0.9,
+            "status": "TABLE_REPORTED"
+          }
+        ]
+      },
+      {
+        "pair_id": "semantic:1",
+        "entity_id": null,
+        "fluorophore": "Alexa Fluor 488",
+        "reported_marker": "GFP",
+        "reported_target_literal": null,
+        "label_type": "targeted_or_unclassified_reagent",
+        "original_function_input": {
+          "Alexa Fluor 488": "GFP"
+        },
+        "applicable": {
+          "s_target_match": true,
+          "s_marker_fluor_compat": true,
+          "s_method_fluor_compat": true
+        },
+        "channels": {
+          "s_target_match": 6.0,
+          "s_marker_fluor_compat": 6.0,
+          "s_method_fluor_compat": 5.1
+        },
+        "not_applicable_reason": null,
+        "source_evidence": [
+          {
+            "start": 26,
+            "end": 105,
+            "quote": "**Chosen Labeling:** [GFP (内源) + Alexa Fluor 488, Phalloidin + Alexa Fluor 568]",
+            "answer_sha256": "648ad06628502e65a2c7c6bb22c9482eb077554d4327133aa5600d37dbd98965"
+          },
+          {
+            "start": 1420,
+            "end": 1607,
+            "quote": "4.1 Incubation with Primary Antibody solution (Rabbit anti-GFP diluted 1:500 in Blocking Buffer) with gentle shaking to enhance weak endogenous signal.(Temperature: 37 ℃, Time: 168 hours)",
+            "answer_sha256": "648ad06628502e65a2c7c6bb22c9482eb077554d4327133aa5600d37dbd98965"
+          },
+          {
+            "start": 1887,
+            "end": 2116,
+            "quote": "6.1 Incubation with Staining solution (Goat anti-Rabbit Alexa Fluor 488 diluted 1:500 and Phalloidin-Alexa Fluor 568 diluted 1:200 in Blocking Buffer) with gentle shaking, protected from light.(Temperature: 37 ℃, Time: 120 hours)",
+            "answer_sha256": "648ad06628502e65a2c7c6bb22c9482eb077554d4327133aa5600d37dbd98965"
+          }
+        ],
+        "compatibility_audit": [
+          {
+            "kind": "marker_fluor",
+            "marker": "GFP",
+            "fluorophore": "Alexa Fluor 488",
+            "source": "KnowledgeBase/tissue.json",
+            "value": true,
+            "status": "TABLE_REPORTED"
+          },
+          {
+            "kind": "method_fluor",
+            "method_name": "ScaleS",
+            "fluorophore": "Alexa Fluor 488",
+            "source": "KnowledgeBase/method_fluro_compati.json",
+            "value": 0.85,
+            "status": "TABLE_REPORTED"
+          }
+        ]
+      },
+      {
+        "pair_id": "semantic:2",
+        "entity_id": null,
+        "fluorophore": "Alexa Fluor 568",
+        "reported_marker": "Phalloidin",
+        "reported_target_literal": null,
+        "label_type": "targeted_or_unclassified_reagent",
+        "original_function_input": {
+          "Alexa Fluor 568": "Phalloidin"
+        },
+        "applicable": {
+          "s_target_match": true,
+          "s_marker_fluor_compat": true,
+          "s_method_fluor_compat": true
+        },
+        "channels": {
+          "s_target_match": 0.0,
+          "s_marker_fluor_compat": 6.0,
+          "s_method_fluor_compat": 4.800000000000001
+        },
+        "not_applicable_reason": null,
+        "source_evidence": [
+          {
+            "start": 26,
+            "end": 105,
+            "quote": "**Chosen Labeling:** [GFP (内源) + Alexa Fluor 488, Phalloidin + Alexa Fluor 568]",
+            "answer_sha256": "648ad06628502e65a2c7c6bb22c9482eb077554d4327133aa5600d37dbd98965"
+          },
+          {
+            "start": 1887,
+            "end": 2116,
+            "quote": "6.1 Incubation with Staining solution (Goat anti-Rabbit Alexa Fluor 488 diluted 1:500 and Phalloidin-Alexa Fluor 568 diluted 1:200 in Blocking Buffer) with gentle shaking, protected from light.(Temperature: 37 ℃, Time: 120 hours)",
+            "answer_sha256": "648ad06628502e65a2c7c6bb22c9482eb077554d4327133aa5600d37dbd98965"
+          }
+        ],
+        "compatibility_audit": [
+          {
+            "kind": "marker_fluor",
+            "marker": "Phalloidin",
+            "fluorophore": "Alexa Fluor 568",
+            "source": "KnowledgeBase/tissue.json",
+            "value": true,
+            "status": "TABLE_REPORTED"
+          },
+          {
+            "kind": "method_fluor",
+            "method_name": "ScaleS",
+            "fluorophore": "Alexa Fluor 568",
+            "source": "KnowledgeBase/method_fluro_compati.json",
+            "value": 0.8,
+            "status": "TABLE_REPORTED"
+          }
+        ]
+      }
+    ],
+    "resolved_uncertainties": [],
+    "remaining_uncertainties": [],
+    "minimum_of_available_applicable_channels": 0.0,
+    "task_target_coverage": "native/direct task coverage remains separate from antibody-pair applicability",
+    "new_model_calls": 0,
+    "expert_validated": false
+  },
+  "compatibility_lookup_trace": [
+    {
+      "marker": "GFP",
+      "fluorophore": "Alexa Fluor 488",
+      "status": "source_supported_target_fluor_pair",
+      "value": true,
+      "column": "AlexaFluor 488",
+      "matching_target_options": [
+        {
+          "target_index": 4,
+          "source_tissue_xlsx_row": 97,
+          "marker_slot": "recommended_marker_2",
+          "marker_name": "EGFP",
+          "query_path": "中枢神经 > 神经元结构 > CA1 树突/树突棘结构辅助",
+          "major_category": "中枢神经",
+          "subcategory": "神经元结构",
+          "structure_or_cell_subtype": "CA1 树突/树突棘结构辅助",
+          "authored_target_parent": {
+            "marker_name": "EGFP / DiO",
+            "target_index": 4,
+            "source_tissue_xlsx_row": 97,
+            "query_path": "中枢神经 > 神经元结构 > CA1 树突/树突棘结构辅助",
+            "marker_slot": "recommended_marker_2"
+          },
+          "authored_option_index": 0,
+          "option_split_applied": true
+        }
+      ],
+      "candidate_rows": [
+        {
+          "row_index": 48,
+          "matching_authored_names": [
+            {
+              "field": "推荐标志物 1",
+              "authored_name": "GFP (内源)",
+              "option": "GFP (内源)",
+              "option_split_applied": false
+            }
+          ],
+          "scope": {
+            "大类": "肿瘤学",
+            "亚类": "转移研究",
+            "结构/细胞类型": "微转移病灶"
+          },
+          "cell_value": 1
+        },
+        {
+          "row_index": 93,
+          "matching_authored_names": [
+            {
+              "field": "推荐标志物 2",
+              "authored_name": "EGFP / DiO",
+              "option": "EGFP",
+              "option_split_applied": true
+            }
+          ],
+          "scope": {
+            "大类": "中枢神经",
+            "亚类": "神经元结构",
+            "结构/细胞类型": "CA1 树突/树突棘结构辅助"
+          },
+          "cell_value": null
+        }
+      ],
+      "selected_row_indices": [
+        93
+      ],
+      "per_scope_evidence": [
+        {
+          "scope": {
+            "大类": "中枢神经",
+            "亚类": "神经元结构",
+            "结构/细胞类型": "CA1 树突/树突棘结构辅助"
+          },
+          "row_indices": [
+            93
+          ],
+          "all_cell_values": [
+            null
+          ],
+          "state": "authored_unknown",
+          "value": null
+        }
+      ],
+      "row_selection_uses_scores": false,
+      "different_scopes_merged": false,
+      "new_alias_or_KB_value": false,
+      "declared_task_scope": null,
+      "exact_lookup_value": null,
+      "evidence_level": "general_pair_feasibility_primary_source",
+      "pair_sources": [
+        {
+          "marker": "GFP",
+          "fluorophore": "Alexa Fluor 488",
+          "compatible": true,
+          "source_url": "https://www.thermofisher.com/antibody/product/A-21311.html?CID=AFLBC-A-21311",
+          "corroborating_url": "https://www.abcam.com/en-us/products/primary-antibodies/alexa-fluor-488-gfp-antibody-epr14104-gfp-booster-ab225314",
+          "catalogue_ids": [
+            "A-21311",
+            "ab225314"
+          ],
+          "accessed": "2026-10-12",
+          "supported_claim": "A GFP-targeting antibody conjugated to AF488 exists and has reported IF use.",
+          "scope_limit": "General target-fluor pairing only; does not validate this answer, clone, sample depth or clearing method."
+        }
+      ],
+      "tissue_specific_validation": false
+    },
+    {
+      "marker": "Phalloidin",
+      "fluorophore": "Alexa Fluor 568",
+      "status": "AF_family_consensus_approximation",
+      "value": true,
+      "column": "AlexaFluor 568/Cy3",
+      "matching_target_options": [],
+      "candidate_rows": [
+        {
+          "row_index": 63,
+          "matching_authored_names": [
+            {
+              "field": "推荐标志物 1",
+              "authored_name": "F-Actin",
+              "option": "F-Actin",
+              "option_split_applied": false
+            }
+          ],
+          "scope": {
+            "大类": "通用结构",
+            "亚类": "类器官",
+            "结构/细胞类型": "大脑类器官整体"
+          },
+          "cell_value": 1
+        },
+        {
+          "row_index": 79,
+          "matching_authored_names": [
+            {
+              "field": "推荐标志物 2",
+              "authored_name": "Phalloidin / F-actin",
+              "option": "Phalloidin",
+              "option_split_applied": true
+            },
+            {
+              "field": "推荐标志物 2",
+              "authored_name": "Phalloidin / F-actin",
+              "option": "F-actin",
+              "option_split_applied": true
+            }
+          ],
+          "scope": {
+            "大类": "斑马鱼系统",
+            "亚类": "侧线系统",
+            "结构/细胞类型": "侧线毛细胞"
+          },
+          "cell_value": null
+        },
+        {
+          "row_index": 83,
+          "matching_authored_names": [
+            {
+              "field": "推荐标志物 2",
+              "authored_name": "Phalloidin / F-actin",
+              "option": "Phalloidin",
+              "option_split_applied": true
+            },
+            {
+              "field": "推荐标志物 2",
+              "authored_name": "Phalloidin / F-actin",
+              "option": "F-actin",
+              "option_split_applied": true
+            }
+          ],
+          "scope": {
+            "大类": "骨骼肌系统",
+            "亚类": "神经肌肉接头",
+            "结构/细胞类型": "突触后膜/AChR 聚集"
+          },
+          "cell_value": null
+        },
+        {
+          "row_index": 96,
+          "matching_authored_names": [
+            {
+              "field": "推荐标志物 1",
+              "authored_name": "Phalloidin / F-actin",
+              "option": "Phalloidin",
+              "option_split_applied": true
+            },
+            {
+              "field": "推荐标志物 1",
+              "authored_name": "Phalloidin / F-actin",
+              "option": "F-actin",
+              "option_split_applied": true
+            }
+          ],
+          "scope": {
+            "大类": "心脏系统",
+            "亚类": "实质细胞",
+            "结构/细胞类型": "心肌纤维取向辅助"
+          },
+          "cell_value": null
+        },
+        {
+          "row_index": 99,
+          "matching_authored_names": [
+            {
+              "field": "推荐标志物 2",
+              "authored_name": "Phalloidin / F-actin",
+              "option": "Phalloidin",
+              "option_split_applied": true
+            },
+            {
+              "field": "推荐标志物 2",
+              "authored_name": "Phalloidin / F-actin",
+              "option": "F-actin",
+              "option_split_applied": true
+            }
+          ],
+          "scope": {
+            "大类": "硬组织",
+            "亚类": "内耳结构",
+            "结构/细胞类型": "耳蜗毛细胞/静纤毛束"
+          },
+          "cell_value": null
+        },
+        {
+          "row_index": 102,
+          "matching_authored_names": [
+            {
+              "field": "推荐标志物 2",
+              "authored_name": "Phalloidin",
+              "option": "Phalloidin",
+              "option_split_applied": false
+            }
+          ],
+          "scope": {
+            "大类": "心脏系统",
+            "亚类": "神经系统",
+            "结构/细胞类型": "心脏神经-心肌结构关系"
+          },
+          "cell_value": null
+        }
+      ],
+      "selected_row_indices": [
+        63,
+        79,
+        83,
+        96,
+        99,
+        102
+      ],
+      "per_scope_evidence": [
+        {
+          "scope": {
+            "大类": "心脏系统",
+            "亚类": "实质细胞",
+            "结构/细胞类型": "心肌纤维取向辅助"
+          },
+          "row_indices": [
+            96
+          ],
+          "all_cell_values": [
+            null
+          ],
+          "state": "authored_unknown",
+          "value": null
+        },
+        {
+          "scope": {
+            "大类": "心脏系统",
+            "亚类": "神经系统",
+            "结构/细胞类型": "心脏神经-心肌结构关系"
+          },
+          "row_indices": [
+            102
+          ],
+          "all_cell_values": [
+            null
+          ],
+          "state": "authored_unknown",
+          "value": null
+        },
+        {
+          "scope": {
+            "大类": "斑马鱼系统",
+            "亚类": "侧线系统",
+            "结构/细胞类型": "侧线毛细胞"
+          },
+          "row_indices": [
+            79
+          ],
+          "all_cell_values": [
+            null
+          ],
+          "state": "authored_unknown",
+          "value": null
+        },
+        {
+          "scope": {
+            "大类": "硬组织",
+            "亚类": "内耳结构",
+            "结构/细胞类型": "耳蜗毛细胞/静纤毛束"
+          },
+          "row_indices": [
+            99
+          ],
+          "all_cell_values": [
+            null
+          ],
+          "state": "authored_unknown",
+          "value": null
+        },
+        {
+          "scope": {
+            "大类": "通用结构",
+            "亚类": "类器官",
+            "结构/细胞类型": "大脑类器官整体"
+          },
+          "row_indices": [
+            63
+          ],
+          "all_cell_values": [
+            1
+          ],
+          "state": "consistent_authored_value",
+          "value": 1
+        },
+        {
+          "scope": {
+            "大类": "骨骼肌系统",
+            "亚类": "神经肌肉接头",
+            "结构/细胞类型": "突触后膜/AChR 聚集"
+          },
+          "row_indices": [
+            83
+          ],
+          "all_cell_values": [
+            null
+          ],
+          "state": "authored_unknown",
+          "value": null
+        }
+      ],
+      "row_selection_uses_scores": false,
+      "different_scopes_merged": false,
+      "new_alias_or_KB_value": false,
+      "declared_task_scope": null,
+      "exact_lookup_value": null,
+      "family_source_donors": [],
+      "family_donor_cells": [
+        {
+          "row_index": 63,
+          "column": "AlexaFluor 488",
+          "value": 1,
+          "scope": {
+            "大类": "通用结构",
+            "亚类": "类器官",
+            "结构/细胞类型": "大脑类器官整体"
+          }
+        },
+        {
+          "row_index": 63,
+          "column": "AlexaFluor 568/Cy3",
+          "value": 1,
+          "scope": {
+            "大类": "通用结构",
+            "亚类": "类器官",
+            "结构/细胞类型": "大脑类器官整体"
+          }
+        },
+        {
+          "row_index": 63,
+          "column": "AlexaFluor 647/Cy5 ",
+          "value": 1,
+          "scope": {
+            "大类": "通用结构",
+            "亚类": "类器官",
+            "结构/细胞类型": "大脑类器官整体"
+          }
+        }
+      ],
+      "family_rule": "AF-family-consensus-from-applicable-marker-rows-v1",
+      "evidence_level": "user_authorized_family_approximation"
+    }
+  ],
+  "semantic_decomposition_applied": false,
+  "semantic_author": "saved judge decomposition",
+  "remaining_dependencies": {
+    "time": [],
+    "label_relations": [],
+    "compatibility": []
+  },
+  "new_model_requests": 0,
+  "new_expert_records": 0,
+  "direct_scores_rejudged": false,
+  "SR_SP_changed": false,
+  "raw_judge_status_changed": false,
+  "status": "replayed",
+  "source_record": {
+    "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\optimizer_round3_20261011\\uniform_v7\\actual_01\\cells\\first7_posthoc\\FPC08\\posthoc.json",
+    "sha256": "db416273ad76ee57379d1fa6cbe4c2516e55ca21095cc9b42b740dcf39630b85"
+  },
+  "answer_sha256": "648ad06628502e65a2c7c6bb22c9482eb077554d4327133aa5600d37dbd98965",
+  "changes": {},
+  "comparison_metrics": {
+    "c_param": 3,
+    "co_order": 2,
+    "co_method": 2,
+    "co_param": 2,
+    "co_chem": 1,
+    "s_method": 1.5278,
+    "s_label": null,
+    "s_trans": 3.0,
+    "s_time": 3.7992496647282527e-14,
+    "sr": 0.5714285714285714,
+    "sp": 0.36363636363636365,
+    "Com": 0.8285714285714285,
+    "Cor": 0.9166666666666666,
+    "Eff": null,
+    "IA": null,
+    "HV": null
+  },
+  "typed_replay_status": "replayed",
+  "typed_semantic_annotation": true,
+  "typed_changes": {
+    "s_label": {
+      "before": null,
+      "after": 0.0
+    },
+    "Eff": {
+      "before": null,
+      "after": 0.4513900000000032
+    },
+    "IA": {
+      "before": null,
+      "after": 0.4513900000000032
+    },
+    "HV": {
+      "before": null,
+      "after": 0.34284145238095476
+    }
+  },
+  "source_document": {
+    "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\optimizer_round2_20261010\\generation_confirmation_v2\\source_documents\\FPC08.json",
+    "sha256": "31764f149737e8eaca22c59211bfaf336e4a94e06142a8a7dfc8dba6679aed3b"
+  }
+}

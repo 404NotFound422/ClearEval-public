@@ -1,0 +1,95 @@
+--- archived_rubric_scope
++++ qualitative-correctness-scope-v1
+@@ -26,20 +26,22 @@
+ protocol actually states. The final structure-only schema defines the combined
+ output shape and supplies no evaluated scores, reasons, or extracted facts.
+ 
+-[UNCERTAINTY CONTRACT]
+-For any sub-score in scores.completeness or scores.correctness, use the explicit
+-JSON value "score": null when the submitted material and applicable evidence do
+-not support a numeric judgment. Keep the sub-score object and provide a nonempty
+-reasoning string explaining the unresolved parameter, identity, or applicability.
+-Do not omit the score, invent a number, or replace uncertainty with 0 or full marks.
+-A known failure satisfying a rubric failure criterion still receives 0; an explicit
+-absence of a required function is different from insufficient evidence.
+-If any sub-score in a group is null, every supplied total_* field in that group
+-MUST also be null. Do not average only known sub-scores into a group total.
+-Dependent overall scores and visualization values must likewise retain null where
+-a numeric value cannot be computed. The rubric criteria do not override this
+-uncertainty rule. Preserve reported values and explicit unknowns without silently
+-correcting the candidate.
++[JUDGMENT SCOPE AND MISSING EVIDENCE]
++Judge the protocol as submitted, under the QUESTION's stated initial conditions.
++The LLM evaluates required structure, ordering, method-reagent coherence, and
++explicit common-sense physical or chemical errors. EGES calculates numerical
++method suitability, fluorescence compatibility, RI matching and time suitability.
++Do not repeat EGES numerical optimization, invent an applicable reference value,
++or demand wet-lab proof before applying this qualitative rubric.
++For every direct score, give a concise source-grounded reason: relevant answer
++Unit, criterion, observed issue or absence of a criterion-defined issue, score.
++The lack of a numerical duration reference alone does not make qualitative
++co_param unknown. Use the criteria below. Do not award full marks automatically
++just because a parser succeeded or a method name is recognized.
++If a true source contradiction or uninterpretable identity prevents the relevant
++criterion from being judged, keep only that sub-score null and state the exact
++obstacle. A rubric-defined omission or failure receives its defined score.
++Preserve other assessable components. Missing totals must not be imputed.
+ 
+ [QUESTION] 
+ 我需要对完整成年小鼠全脑进行透明化处理，以构建神经元胞体、轴突和树突结构的三维形态图谱，用于观察全脑神经元结构分布和主要神经纤维走行。我的样本是完整的成年小鼠大脑，尺寸约 10 mm × 8 mm × 6 mm，已完成 4% PFA 灌流固定和后固定。请根据该科学问题自行选择合适的荧光/标记策略，并基于所选标记样本选择匹配的组织透明方法。请仅输出 protocol，第1行写明所选荧光/标记策略和所选组织透明方法，随后仅列出透明处理、RI 匹配和保存/成像前处理步骤的关键试剂、条件和时间 
+@@ -175,17 +177,23 @@
+ 
+ 0分: 混用了完全不兼容的试剂（例如：在水性 CUBIC 中使用了疏水性 DCM 脱脂）。
+ 
+-2.3 参数范围物理合理性 (co_param, 0–2分)
+-
+-2分: 参数符合菲克扩散定律 (Fick's Diffusion Law) 和经验值。
+-
+-参考: 成年小鼠脑 -> CUBIC-1 (5-7天), iDISCO 透化 (1-2天)。
+-
+-参考: 1mm 切片 -> CUBIC-1 (1天), iDISCO 透化 (1小时)。
+-
+-1分: 时间/浓度偏差在 50% 以内。
+-
+-0分: 违反物理常识。例如：建议用 100°C 孵育（会导致蛋白变性/组织煮熟），或者建议全脑扩散时间仅为 10 分钟。
++2.3 参数的常识性物理合理性 (Co_param, 0–2分)
++
++本项仅作定性审查；数值时间适配、折射率匹配、方法及荧光兼容性由 EGES 计算。
++不以相对文献时长或浓度的百分比偏差落档，不臆造组织厚度对应的标准时间。
++
++2分：在题干范围和答案已述条件下，未发现明确的物理常识违背或相互冲突的参数要求。
++这一分数表示未识别出本判项的定性错误，不代表参数经过湿实验验证或达到最佳有效性。
++
++1分：原文存在可具体定位、非致命的参数要求矛盾或常识性不合理处；说明涉及的两个条件、
++为什么冲突以及为什么未达到0分。不能仅因“缺少标准参考数值”或“可能不够理想”给1分。
++
++0分：原文明示的条件违反基本物理常识，导致所述操作明显不可执行或直接破坏所需样本。
++判断必须指出实际条件及其物理后果，不能只依据与某篇 protocol 数值不同。
++
++必要参数未写出由 C_param 评价；在 EGES 中保留无法计算的相应分项，
++不要把“没有写出”改写成一个假想的错误数值，也不要重复扣成 Co_param=0。
++
+ 
+ 2.4 化学安全性 (co_chem, 0–1分)
+ 
+@@ -240,3 +248,20 @@
+ [SUPPLIED REFERENCE EVIDENCE]
+ [{"applicability":{"endpoint_scope":"clearing/RI matching/storage only; labeling preparation excluded","exact_3mm_schedule_supported":null,"initial_fixation_complete":true,"outcomes_pending":["task-specific chosen labels","weak sparse signal retention","long-term reimaging","six-month preservation","morphology/distortion targets"],"question_ids":[2,248],"remaining_review":["Shortened timings in the table note are an author option, not a mandatory extra step.","Long-storage re-clearing is conditional and is not added to every initial-imaging sequence.","No direct 3 mm timing interpolation from 1 mm FDISCO or 1-2 mm PEGASOS slice schedules.","Expert granularity/applicability confirmation remains pending."],"source_sample_class_support":"direct adult-brain class in author table","species":"mouse","timing_policy":"author_table_whole_brain","tissue":"fixed adult whole brain","unknown_timing_is_not_a_missing_step":true},"completeness_status":"supplement-bound author-procedure development candidate; expert confirmation pending","evidence_ids":["FDISCO_TABLE_S1_P12","FDISCO_MAIN_CLEARING_P1","FDISCO_MAIN_STORAGE_P3"],"evidence_manifest_path":"C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\reference_recovery\\supplement_bound\\evidence_manifest.json","family_id":"FDISCO_QI2019_MOUSE_BRAIN","formal_eligible":false,"freeze_scope":"independent supplement-derived v2 development candidate; preserve v1 historical scores","frozen":true,"human_confirmation":null,"question_ids":[2,248],"reference_id":"FDISCO_SUPPLEMENT_V2_WHOLE_BRAIN","route_aliases":["FDISCO","F-DISCO"],"route_id":"FDISCO","source_pages":[{"evidence_id":"FDISCO_TABLE_S1_P12","pdf_page_one_based":12,"source_anchor":null},{"evidence_id":"FDISCO_MAIN_CLEARING_P1","pdf_page_one_based":null,"source_anchor":"sec[title='FDISCO clearing procedure']/p[1]"},{"evidence_id":"FDISCO_MAIN_STORAGE_P3","pdf_page_one_based":null,"source_anchor":"sec[title='FDISCO clearing procedure']/p[3], first sentence"}],"source_path":"C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\reference_recovery\\recovered_supplements\\aau8355_SM.pdf","source_scope":"author-reported post-fixation procedure coverage, not validated biological necessity","source_sha256":"f3a7cff9c400786f418a64e91b1781f7370fcbf55a821635cdf2eafa1fb87339","source_url":"https://doi.org/10.1126/sciadv.aau8355","status":"source_extracted","steps":[{"module":"dehydration","required":true,"required_scope":"author-reported branch coverage; biological necessity not validated","source_anchor":"FDISCO_TABLE_S1_P12 + FDISCO_MAIN_CLEARING_P1","step_id":"FDISCO-V2-WHOLE_BRAIN-01","text":"Incubate the fixed tissue in 50% (vol/vol) THF in water, adjusted to pH 9.0 with triethylamine, at 4 degrees C for 12 hours with gentle shaking in the dark.","timing_status":"author_table_whole_brain"},{"module":"dehydration","required":true,"required_scope":"author-reported branch coverage; biological necessity not validated","source_anchor":"FDISCO_TABLE_S1_P12 + FDISCO_MAIN_CLEARING_P1","step_id":"FDISCO-V2-WHOLE_BRAIN-02","text":"Incubate the fixed tissue in 70% (vol/vol) THF in water, adjusted to pH 9.0 with triethylamine, at 4 degrees C for 12 hours with gentle shaking in the dark.","timing_status":"author_table_whole_brain"},{"module":"dehydration","required":true,"required_scope":"author-reported branch coverage; biological necessity not validated","source_anchor":"FDISCO_TABLE_S1_P12 + FDISCO_MAIN_CLEARING_P1","step_id":"FDISCO-V2-WHOLE_BRAIN-03","text":"Incubate the fixed tissue in 80% (vol/vol) THF in water, adjusted to pH 9.0 with triethylamine, at 4 degrees C for 12 hours with gentle shaking in the dark.","timing_status":"author_table_whole_brain"},{"module":"dehydration","required":true,"required_scope":"author-reported branch coverage; biological necessity not validated","source_anchor":"FDISCO_TABLE_S1_P12 + FDISCO_MAIN_CLEARING_P1","step_id":"FDISCO-V2-WHOLE_BRAIN-04","text":"Incubate the fixed tissue in 100% (vol/vol) THF in water, adjusted to pH 9.0 with triethylamine, at 4 degrees C for 12 hours with gentle shaking in the dark.","timing_status":"author_table_whole_brain"},{"module":"dehydration","required":true,"required_scope":"author-reported branch coverage; biological necessity not validated","source_anchor":"FDISCO_TABLE_S1_P12 + FDISCO_MAIN_CLEARING_P1","step_id":"FDISCO-V2-WHOLE_BRAIN-05","text":"Repeat incubation in fresh 100% THF twice more, 12 hours each, for three incubations in total, at 4 degrees C with gentle shaking in the dark.","timing_status":"author_table_whole_brain"},{"module":"ri_matching","required":true,"required_scope":"author-reported branch coverage; biological necessity not validated","source_anchor":"FDISCO_TABLE_S1_P12 + FDISCO_MAIN_CLEARING_P1","step_id":"FDISCO-V2-WHOLE_BRAIN-06","text":"Transfer the dehydrated tissue to pure DBE for refractive index matching and clearing at 4 degrees C for 3 hours with gentle shaking in the dark.","timing_status":"author_table_whole_brain"},{"module":"storage","required":true,"required_scope":"author-reported branch coverage; biological necessity not validated","source_anchor":"FDISCO_MAIN_STORAGE_P3","step_id":"FDISCO-V2-WHOLE_BRAIN-07","text":"Store the cleared tissue in DBE in an airtight glass chamber at 4 degrees C in the dark until imaging.","timing_status":"no_fixed_storage_duration"}],"supplement_url":"https://pmc-oa-opendata.s3.amazonaws.com/PMC6357753.1/aau8355_SM.pdf","unknown_parameters":[],"v1_reference_id":"FDISCO_QI2019_FIXED_MOUSE_BRAIN_V1","v1_step_count":7}]
+ Use only evidence applicable to the question and declared route; preserve uncertainty.
++
++[LABEL ROLE CLARIFICATION]
++Extract fluorophore -> target/probe relationships at the original marker_dict
++level. MAP2 is the target; anti-MAP2 is the antibody; Alexa Fluor 488 is the dye.
++An explicit MAP2 + Alexa Fluor 488 statement supports that relationship without
++requiring a clone or an entire antibody chain. Preserve explicit uncertainty
++when the relationship is actually absent or contradictory.
++Native GFP/EGFP/tdTomato and direct stains such as DAPI/DiI do not require an
++external antibody marker. Record their source-declared standalone signal role;
++do not create a missing antibody relationship for them. This does not by itself
++establish coverage of every biological structure requested by the task.
++Distinguish alternatives in a heading from the reagent selected in the actual
++operation. When two assignments remain possible, retain that ambiguity. A
++generic Alexa Fluor mention can refer to the same channel as a named dye later
++in the source; do not invent another independent label. Keep exact dye names;
++AF-family approximation is performed by the versioned numerical scorer, not by
++rewriting the submitted answer or claiming identical retention for all AF dyes.

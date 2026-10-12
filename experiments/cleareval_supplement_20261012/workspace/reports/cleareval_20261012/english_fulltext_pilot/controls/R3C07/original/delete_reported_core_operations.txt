@@ -1,0 +1,39 @@
+**Chosen Method:** FDISCO
+**Chosen Labeling:** [tdTomato (内源荧光), β-III Tubulin (TUJ1) + Alexa Fluor (647)]
+**Justification:** FDISCO（Fluorescence-preserved 3D Imaging of Solvent-Cleared Organs）是基于有机溶剂的快速透明方法，全脑透明可在约2天内完成，满足"尽快成像"的需求，且相比iDISCO+/uDISCO对荧光蛋白保护更佳（低温+碱性条件抑制荧光淬灭），已有文献证明可良好保留tdTomato内源信号。FDISCO使用THF脱水/脱脂后以BABB作为RI匹配液（RI≈1.56），与光片显微镜兼容，可接受一定程度的组织收缩（FDISCO收缩率约35–40%，均匀收缩不影响投射追踪）。标记策略：①保留tdTomato内源荧光追踪长程投射神经元；②在透明前对固定脑进行全脑免疫染色（iDISCO-style whole-mount），使用抗β-III Tubulin（TUJ1）抗体 + Alexa Fluor 647二抗标记轴突骨架结构，Alexa Fluor 647在有机溶剂中稳定性优异。两通道（tdTomato ~590 nm；AF647 ~647 nm）光谱分离良好，适合双通道光片成像。
+
+---
+
+**Protocol Steps:**
+
+**1 样品预处理（Post-fixation wash）**
+1.1 将已4% PFA固定的成年小鼠全脑置于1× PBS中充分漂洗，去除残余固定液。(Temperature: 4 ℃, Time: 3 × 1 hour)
+
+**2 全脑免疫染色前渗透处理**
+2.1 将脑组织置于含0.2% (vol/vol) Triton X-100的1× PBS（PBST）中振荡渗透。(Temperature: 37 ℃, Time: 24 hours)
+2.2 更换新鲜PBST继续渗透。(Temperature: 37 ℃, Time: 24 hours)
+
+**3 封闭**
+3.1 将脑组织置于封闭液（5% (vol/vol) 正常驴血清 + 0.2% Triton X-100 + 0.1% (wt/vol) NaN₃ in 1× PBS）中振荡封闭。(Temperature: 37 ℃, Time: 24 hours)
+
+**4 一抗孵育（β-III Tubulin / TUJ1）**
+4.1 将脑组织置于含抗β-III Tubulin（TUJ1）兔多克隆抗体（1:500稀释于封闭液）的溶液中，轻柔振荡孵育。(Temperature: 37 ℃, Time: 48 hours)
+4.2 用PBST洗涤，去除未结合一抗。(Temperature: RT, Time: 5 × 1 hour)
+
+**5 二抗孵育（Alexa Fluor 647）**
+5.1 将脑组织置于含驴抗兔 Alexa Fluor 647二抗（1:500稀释于封闭液）的溶液中，避光振荡孵育。(Temperature: 37 ℃, Time: 48 hours)
+5.2 用PBST洗涤，去除未结合二抗。(Temperature: RT, Time: 5 × 1 hour)
+5.3 用1× PBS终洗。(Temperature: RT, Time: 2 × 30 min)
+
+**6 脱水（THF梯度脱水）**
+
+**7 脱脂（BABB预处理）**
+7.1 将脑组织置于BABB（苯甲醇:苯甲酸苄酯 = 1:2, vol/vol）中振荡，完成脱脂并开始RI匹配，直至组织完全透明（通常30–60 min）。(Temperature: 4 ℃, Time: 1 hour)
+
+**8 折射率匹配（RI Matching）**
+8.1 将透明脑组织转移至新鲜BABB（RI ≈ 1.56）中，避光静置平衡，确保组织完全透明且无气泡。(Temperature: 4 ℃, Time: 2 hours)
+8.2 再次更换新鲜BABB，确认组织完全透明，准备成像。(Temperature: 4 ℃, Time: 30 min)
+
+**9 成像前处理与保存**
+9.1 将透明脑组织转移至适配光片显微镜样品槽的BABB中，使用折射率匹配的浸没介质（RI = 1.56）固定样品位置，避免气泡。(Temperature: RT, Time: 即刻成像)
+9.2 若需短期保存，将样品密封于BABB中，避光、4 ℃保存（建议1周内完成成像，以防荧光信号衰减）。(Temperature: 4 ℃, Time: ≤ 7 days)

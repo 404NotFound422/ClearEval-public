@@ -1,0 +1,101 @@
+{
+  "version": "cce-scoped-midpoint-scorer-v1",
+  "planned_cells": 68,
+  "archived_returns_processed": 67,
+  "replayed_returns": 65,
+  "partial_saved_components_retained": 2,
+  "no_saved_return": 1,
+  "complete_before": 8,
+  "complete_after": 10,
+  "previous_complete_lost": [],
+  "changed_cells": [
+    {
+      "cohort": "first7_posthoc",
+      "id": "FPC03",
+      "changes": {
+        "s_label": {
+          "before": null,
+          "after": 1.2000000000000002
+        },
+        "Eff": {
+          "before": null,
+          "after": 0.34507812539055827
+        },
+        "IA": {
+          "before": null,
+          "after": 0.34507812539055827
+        },
+        "HV": {
+          "before": null,
+          "after": 0.08946469917532991
+        }
+      }
+    },
+    {
+      "cohort": "first7_posthoc",
+      "id": "FPC07",
+      "changes": {
+        "s_label": {
+          "before": null,
+          "after": 0.0
+        },
+        "s_time": {
+          "before": null,
+          "after": 0.40179312334614525
+        },
+        "Eff": {
+          "before": null,
+          "after": 0.24226083290564213
+        },
+        "IA": {
+          "before": null,
+          "after": 0.24226083290564213
+        },
+        "HV": {
+          "before": null,
+          "after": 0.12561672817329592
+        }
+      }
+    }
+  ],
+  "time_midpoint_cells": [],
+  "semantic_decomposition_cells": [
+    "FPC03",
+    "FPC07"
+  ],
+  "cohorts": {
+    "Codex": {
+      "cells": 12,
+      "before": 1,
+      "after": 1
+    },
+    "E2": {
+      "cells": 21,
+      "before": 0,
+      "after": 0
+    },
+    "Qwen_repeats": {
+      "cells": 15,
+      "before": 3,
+      "after": 3
+    },
+    "development": {
+      "cells": 5,
+      "before": 1,
+      "after": 1
+    },
+    "first7_posthoc": {
+      "cells": 7,
+      "before": 1,
+      "after": 3
+    },
+    "secondary8_posthoc": {
+      "cells": 8,
+      "before": 2,
+      "after": 2
+    }
+  },
+  "new_model_requests": 0,
+  "new_expert_records": 0,
+  "validation_claim": "engineering replay; not a new evaluator stability/generalization trial"
+}

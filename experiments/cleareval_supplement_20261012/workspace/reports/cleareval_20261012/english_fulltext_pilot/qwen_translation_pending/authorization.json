@@ -1,0 +1,24 @@
+{
+  "status": "explicit_user_approval_recorded",
+  "user_reply": "好的，继续",
+  "reply_interpreted_against": "Previous turn explicitly requested eight Qwen full-text translation calls, at most two hours, package cap 438 to 446. User approved continuation.",
+  "starting_package_requests": 438,
+  "authorized_new_requests": 8,
+  "new_package_limit": 446,
+  "max_attempts": 1,
+  "automatic_retries": false,
+  "start_utc": "2026-10-12T13:03:22+00:00",
+  "deadline_utc": "2026-10-12T15:03:22+00:00",
+  "prepared_freeze": {
+    "path": "C:\\ClearEval\\reports\\cleareval_20261012\\english_fulltext_pilot\\qwen_translation_pending\\freeze.json",
+    "sha256": "78363db1c7da54f29059c042b4db1a0bcb50108b78bc535e8fa335bbd5504152"
+  },
+  "scope": "Only eight prepared full-text translation payloads and offline same-configuration SR/SP readout; no qualitative Cor calls",
+  "human_budget": {
+    "experts": 1,
+    "development": 5,
+    "holdout": 15
+  },
+  "approval_recorded_utc": "2026-10-12T13:08:06.620132+00:00",
+  "authorization_record_encoding_correction": "PowerShell stdin replaced literal Chinese with question marks; restored exact visible user reply using Unicode escapes before any model request."
+}

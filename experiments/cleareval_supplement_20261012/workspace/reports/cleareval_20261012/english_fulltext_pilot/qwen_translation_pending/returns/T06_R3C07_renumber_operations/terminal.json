@@ -1,0 +1,57 @@
+{
+  "request_id": "T06_R3C07_renumber_operations",
+  "answer_id": "R3C07",
+  "condition": "renumber_operations",
+  "request": {
+    "event": "request_started",
+    "request_id": "90d749f5af1aa6e479009abd63c6035cf17d269a6f59fc4f0168a00883a1df95",
+    "trial_id": "516f4eae8cb078bf88b98c27a651ef346cdf804e024e3fc09fa38f66e695163e",
+    "attempt": 1,
+    "model": "qwen3.8:27b-q8_0-local",
+    "started_utc": "2026-10-12T13:17:15.581896+00:00",
+    "package_request_index": 444,
+    "round_id": "fulltext_english_translation_20261012",
+    "phase": "fulltext_translation",
+    "observation_id": "T06_R3C07_renumber_operations",
+    "authorization_sha256": "45034cc03e0d14699911292b5a0ef3992ce02f86c9d0a8cea8901ba535736e4b",
+    "payload_sha256": "d8d11740d4fc4d62c4bc0aabf497acdf60f84e4e01ad7485633bf064569e4eba"
+  },
+  "payload": {
+    "path": "C:\\ClearEval\\reports\\cleareval_20261012\\english_fulltext_pilot\\qwen_translation_pending\\T06_R3C07_renumber_operations.json",
+    "sha256": "d8d11740d4fc4d62c4bc0aabf497acdf60f84e4e01ad7485633bf064569e4eba"
+  },
+  "source": {
+    "path": "C:\\ClearEval\\reports\\cleareval_20261012\\english_fulltext_pilot\\controls\\R3C07\\original\\renumber_operations.txt",
+    "sha256": "75d519c778e67a35792196aad81811891c8619a69685f6d7c2a80d78a8e42ffa"
+  },
+  "attempt": 1,
+  "actual_new_request": true,
+  "status": "returned_translation_pending_fidelity_review",
+  "translation": {
+    "path": "C:\\ClearEval\\reports\\cleareval_20261012\\english_fulltext_pilot\\qwen_translation_pending\\returns\\T06_R3C07_renumber_operations\\english_text.txt",
+    "sha256": "b3efb36b14b0c453f6135e826611e5bad54705cff507bfa41cc8c7e042b007e9"
+  },
+  "raw_response": {
+    "path": "C:\\ClearEval\\reports\\cleareval_20261012\\english_fulltext_pilot\\qwen_translation_pending\\returns\\T06_R3C07_renumber_operations\\http_response.json",
+    "sha256": "03a59503be6d23f1db370e7286401072907444f2a2a0f4935563609084b3591a"
+  },
+  "response_content": {
+    "path": "C:\\ClearEval\\reports\\cleareval_20261012\\english_fulltext_pilot\\qwen_translation_pending\\returns\\T06_R3C07_renumber_operations\\response_content.txt",
+    "sha256": "b053681890ea3ab19bb0240a3250f222a98e18cfa2ce4ac51e122eb3ac5ff471"
+  },
+  "model_response_metadata": {
+    "model": "qwen3.8:27b-q8_0-local",
+    "created_at": "2026-10-12T13:18:23.6169556Z",
+    "done": true,
+    "done_reason": "stop",
+    "total_duration": 67682191000,
+    "load_duration": 21166600,
+    "prompt_eval_count": 1769,
+    "prompt_eval_duration": 1505992000,
+    "eval_count": 1584,
+    "eval_duration": 65786344000
+  },
+  "fidelity_review_completed": false,
+  "finished_utc": "2026-10-12T13:18:23.689000+00:00",
+  "wall_seconds": 68.09400000000096
+}

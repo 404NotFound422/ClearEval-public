@@ -1,0 +1,55 @@
+{
+  "scope": "post-hoc source-assisted conditional comparison, not new prospective confirmation",
+  "generators": [
+    "openai_claude-sonnet-4.6",
+    "openai_qwen3-max"
+  ],
+  "shared_tasks": [
+    "23",
+    "248"
+  ],
+  "automatic_complete_common_tasks_before": [],
+  "single_value_common_tasks_after": [
+    "248"
+  ],
+  "conditional_complete_common_tasks": [
+    "23",
+    "248"
+  ],
+  "main_timing_scenarios": 4,
+  "all_scope_and_setpoint_scenarios": 16,
+  "exact_draws_per_scenario": 4,
+  "draws_are_not_new_observations": true,
+  "aggregate_definition": "mean of per-question IA=min(Com,Cor,Eff) and HV=Com*Cor*Eff",
+  "Qwen_mean_HV": 0.3351242344136104,
+  "Claude_main_scope_mean_HV_values": [
+    {
+      "scenario": "finite_range__extra_0__with_preimaging",
+      "value": 0.3361868637354155,
+      "delta_from_Qwen": 0.0010626293218051197
+    },
+    {
+      "scenario": "finite_range__extra_1__with_preimaging",
+      "value": 0.33138126162042203,
+      "delta_from_Qwen": -0.0037429727931883594
+    },
+    {
+      "scenario": "overnight_default__extra_0__with_preimaging",
+      "value": 0.3313812619806053,
+      "delta_from_Qwen": -0.0037429724330050873
+    },
+    {
+      "scenario": "overnight_default__extra_1__with_preimaging",
+      "value": 0.3313812616203553,
+      "delta_from_Qwen": -0.003742972793255084
+    }
+  ],
+  "pareto_result": "both generators nondominated in all 16 declared scenarios",
+  "exact_nondominance_frequency": {
+    "openai_claude-sonnet-4.6": 0.75,
+    "openai_qwen3-max": 1.0
+  },
+  "family_independence_established": false,
+  "population_confidence_interval_claimed": false,
+  "new_model_calls": 0
+}

@@ -1,0 +1,650 @@
+{
+  "cell_id": "R3C04__r0",
+  "cohort": "confirmation_qwen_01",
+  "question_id": 2,
+  "baseline_metrics": {
+    "c_param": 3,
+    "co_order": 3,
+    "co_method": 2,
+    "co_param": 2,
+    "co_chem": 1,
+    "s_method": 2.375,
+    "s_label": null,
+    "s_trans": 2.814646787157323,
+    "s_time": null,
+    "sr": 0.0,
+    "sp": 0.0,
+    "Com": 0.6,
+    "Cor": 1.0,
+    "Eff": null,
+    "IA": null,
+    "HV": null
+  },
+  "metrics": {
+    "c_param": 3,
+    "co_order": 3,
+    "co_method": 2,
+    "co_param": 2,
+    "co_chem": 1,
+    "s_method": 2.375,
+    "s_label": 3.0,
+    "s_trans": 2.814646787157323,
+    "s_time": null,
+    "sr": 0.0,
+    "sp": 0.0,
+    "Com": 0.6,
+    "Cor": 1.0,
+    "Eff": null,
+    "IA": null,
+    "HV": null
+  },
+  "complete_numeric_CCE": false,
+  "source_document": {
+    "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\optimizer_round3_20261011\\confirmation_qwen_01\\source_documents\\c9a87206864ec2bf206ab190.json",
+    "sha256": "0ad57cb0dd306fa3e6aa7d926307e36c8a3b48888c2433a0f4d0ce24b85bdd9e"
+  },
+  "post_record": {
+    "path": "C:\\ClearEval\\reports\\cleareval_20261012\\typed_label_transfer\\lexical_candidate_02\\processing\\R3C04__r0.json",
+    "sha256": "eba5989bfba8b873788ee0ed19c6de5950e2bb63630eabc2d9d9660ea96e1170"
+  },
+  "answer_sha256": "4d3909623a64bdd7ccbd45f024b263f94cfddb3b8cf2bb32dc5d376d999b77a1",
+  "proposal": {
+    "version": "selected-label-source-v1.1",
+    "answer_sha256": "4d3909623a64bdd7ccbd45f024b263f94cfddb3b8cf2bb32dc5d376d999b77a1",
+    "relations": [
+      {
+        "fluorophore": "Alexa Fluor 647",
+        "marker": "NeuN",
+        "source_spans": [
+          {
+            "unit_id": "L0001",
+            "start": 25,
+            "end": 51,
+            "quote": "NeuN + Alexa Fluor 647（胞体）",
+            "answer_sha256": "4d3909623a64bdd7ccbd45f024b263f94cfddb3b8cf2bb32dc5d376d999b77a1"
+          }
+        ],
+        "basis": "explicit selected target + fluorophore; antibody carrier/clone not required",
+        "source_target_literal": "NeuN",
+        "target_role_qualifier": null,
+        "source_fluor_literal": "Alexa Fluor 647",
+        "clone_identity_inferred": false,
+        "generic_AF": false
+      },
+      {
+        "fluorophore": "Alexa Fluor 647",
+        "marker": "β-III Tubulin (TUJ1)",
+        "source_spans": [
+          {
+            "unit_id": "L0001",
+            "start": 52,
+            "end": 98,
+            "quote": " β-III Tubulin (TUJ1) + Alexa Fluor 647（轴突/树突）",
+            "answer_sha256": "4d3909623a64bdd7ccbd45f024b263f94cfddb3b8cf2bb32dc5d376d999b77a1"
+          }
+        ],
+        "basis": "explicit selected target + fluorophore; antibody carrier/clone not required",
+        "source_target_literal": "β-III Tubulin (TUJ1)",
+        "target_role_qualifier": null,
+        "source_fluor_literal": "Alexa Fluor 647",
+        "clone_identity_inferred": false,
+        "generic_AF": false
+      },
+      {
+        "fluorophore": "TO-PRO-3",
+        "marker": "",
+        "source_spans": [
+          {
+            "unit_id": "L0001",
+            "start": 99,
+            "end": 114,
+            "quote": " TO-PRO-3（全脑核染）",
+            "answer_sha256": "4d3909623a64bdd7ccbd45f024b263f94cfddb3b8cf2bb32dc5d376d999b77a1"
+          }
+        ],
+        "basis": "explicit standalone signal in chosen list; external target-pair channel not applicable",
+        "source_fluor_literal": "TO-PRO-3（全脑核染）",
+        "clone_identity_inferred": false,
+        "generic_AF": false
+      }
+    ],
+    "issues": [],
+    "header_candidates": 1,
+    "ready": true,
+    "new_model_calls": 0,
+    "new_per_answer_author_annotations": 0,
+    "independent_evaluator": false,
+    "expert_validated": false,
+    "scope": "explicit chosen-label list; no claim of universal biological relation extraction",
+    "header_source": {
+      "unit_id": "L0001",
+      "start": 0,
+      "end": 138,
+      "quote": "第1行（所选荧光/标记策略 + 透明方法）：**[NeuN + Alexa Fluor 647（胞体）, β-III Tubulin (TUJ1) + Alexa Fluor 647（轴突/树突）, TO-PRO-3（全脑核染）] + iDISCO+（DBE RI匹配）**\n",
+      "answer_sha256": "4d3909623a64bdd7ccbd45f024b263f94cfddb3b8cf2bb32dc5d376d999b77a1"
+    },
+    "actual_AF_operation_evidence": [
+      {
+        "fluorophore": "Alexa Fluor 647",
+        "source": {
+          "unit_id": "L0029",
+          "start": 1878,
+          "end": 2059,
+          "quote": "7.1 二抗孵育液：PBS + 0.2% Triton X-100 + 3% NDS + 0.01% NaN3；加入驴抗鼠/兔（按一抗宿主匹配）Alexa Fluor 647 二抗 1:400（分别对应NeuN与TUJ1；若两一抗宿主不同可同管共孵育）。(Temperature: 37 ℃, Time: 5–7 days, Light: protected)\n",
+          "answer_sha256": "4d3909623a64bdd7ccbd45f024b263f94cfddb3b8cf2bb32dc5d376d999b77a1"
+        },
+        "literal": "Alexa Fluor 647"
+      }
+    ],
+    "selection_uses_achieved_score": false
+  },
+  "decision": "source_rule_applied",
+  "label_derivation": {
+    "version": "cce-typed-label-scorer-v2.1",
+    "s_label": 3.0,
+    "channels": {
+      "s_target_match": 3.0,
+      "s_marker_fluor_compat": 6.0,
+      "s_method_fluor_compat": 3.9000000000000004
+    },
+    "channel_applicability": {
+      "s_target_match": {
+        "applicable": true,
+        "value": 3.0,
+        "contributing_pairs": [
+          "semantic:0",
+          "semantic:1"
+        ]
+      },
+      "s_marker_fluor_compat": {
+        "applicable": true,
+        "value": 6.0,
+        "contributing_pairs": [
+          "semantic:0",
+          "semantic:1"
+        ]
+      },
+      "s_method_fluor_compat": {
+        "applicable": true,
+        "value": 3.9000000000000004,
+        "contributing_pairs": [
+          "semantic:0",
+          "semantic:1",
+          "semantic:2"
+        ]
+      }
+    },
+    "pair_results": [
+      {
+        "pair_id": "semantic:0",
+        "entity_id": null,
+        "fluorophore": "Alexa Fluor 647",
+        "reported_marker": "NeuN",
+        "reported_target_literal": null,
+        "label_type": "targeted_or_unclassified_reagent",
+        "original_function_input": {
+          "Alexa Fluor 647": "NeuN"
+        },
+        "applicable": {
+          "s_target_match": true,
+          "s_marker_fluor_compat": true,
+          "s_method_fluor_compat": true
+        },
+        "channels": {
+          "s_target_match": 3.0,
+          "s_marker_fluor_compat": 6.0,
+          "s_method_fluor_compat": 5.4
+        },
+        "not_applicable_reason": null,
+        "source_evidence": [
+          {
+            "unit_id": "L0001",
+            "start": 25,
+            "end": 51,
+            "quote": "NeuN + Alexa Fluor 647（胞体）",
+            "answer_sha256": "4d3909623a64bdd7ccbd45f024b263f94cfddb3b8cf2bb32dc5d376d999b77a1"
+          }
+        ],
+        "compatibility_audit": [
+          {
+            "kind": "marker_fluor",
+            "marker": "NeuN",
+            "fluorophore": "Alexa Fluor 647",
+            "source": "KnowledgeBase/tissue.json",
+            "value": true,
+            "status": "TABLE_REPORTED"
+          },
+          {
+            "kind": "method_fluor",
+            "method_name": "iDISCO+",
+            "fluorophore": "Alexa Fluor 647",
+            "source": "KnowledgeBase/method_fluro_compati.json",
+            "value": 0.9,
+            "status": "TABLE_REPORTED"
+          }
+        ]
+      },
+      {
+        "pair_id": "semantic:1",
+        "entity_id": null,
+        "fluorophore": "Alexa Fluor 647",
+        "reported_marker": "β-III Tubulin (TUJ1)",
+        "reported_target_literal": null,
+        "label_type": "targeted_or_unclassified_reagent",
+        "original_function_input": {
+          "Alexa Fluor 647": "β-III Tubulin (TUJ1)"
+        },
+        "applicable": {
+          "s_target_match": true,
+          "s_marker_fluor_compat": true,
+          "s_method_fluor_compat": true
+        },
+        "channels": {
+          "s_target_match": 6.0,
+          "s_marker_fluor_compat": 6.0,
+          "s_method_fluor_compat": 5.4
+        },
+        "not_applicable_reason": null,
+        "source_evidence": [
+          {
+            "unit_id": "L0001",
+            "start": 52,
+            "end": 98,
+            "quote": " β-III Tubulin (TUJ1) + Alexa Fluor 647（轴突/树突）",
+            "answer_sha256": "4d3909623a64bdd7ccbd45f024b263f94cfddb3b8cf2bb32dc5d376d999b77a1"
+          }
+        ],
+        "compatibility_audit": [
+          {
+            "kind": "marker_fluor",
+            "marker": "β-III Tubulin (TUJ1)",
+            "fluorophore": "Alexa Fluor 647",
+            "source": "KnowledgeBase/tissue.json",
+            "value": true,
+            "status": "TABLE_REPORTED"
+          },
+          {
+            "kind": "method_fluor",
+            "method_name": "iDISCO+",
+            "fluorophore": "Alexa Fluor 647",
+            "source": "KnowledgeBase/method_fluro_compati.json",
+            "value": 0.9,
+            "status": "TABLE_REPORTED"
+          }
+        ]
+      },
+      {
+        "pair_id": "semantic:2",
+        "entity_id": null,
+        "fluorophore": "TO-PRO-3",
+        "reported_marker": null,
+        "reported_target_literal": null,
+        "label_type": "direct_stain",
+        "original_function_input": {
+          "TO-PRO-3": ""
+        },
+        "applicable": {
+          "s_target_match": false,
+          "s_marker_fluor_compat": false,
+          "s_method_fluor_compat": true
+        },
+        "channels": {
+          "s_target_match": null,
+          "s_marker_fluor_compat": null,
+          "s_method_fluor_compat": 3.9000000000000004
+        },
+        "not_applicable_reason": "standalone fluorescence has no antibody target-pair channel",
+        "source_evidence": [
+          {
+            "unit_id": "L0001",
+            "start": 99,
+            "end": 114,
+            "quote": " TO-PRO-3（全脑核染）",
+            "answer_sha256": "4d3909623a64bdd7ccbd45f024b263f94cfddb3b8cf2bb32dc5d376d999b77a1"
+          }
+        ],
+        "compatibility_audit": [
+          {
+            "kind": "method_fluor",
+            "method_name": "iDISCO+",
+            "fluorophore": "TO-PRO-3",
+            "source": "KnowledgeBase/method_fluro_compati.json",
+            "value": 0.65,
+            "status": "TABLE_REPORTED"
+          }
+        ]
+      }
+    ],
+    "resolved_uncertainties": [],
+    "remaining_uncertainties": [],
+    "minimum_of_available_applicable_channels": 3.0,
+    "task_target_coverage": "native/direct task coverage remains separate from antibody-pair applicability",
+    "new_model_calls": 0,
+    "expert_validated": false
+  },
+  "lookup_trace": [
+    {
+      "marker": "NeuN",
+      "fluorophore": "Alexa Fluor 647",
+      "status": "all_applicable_scopes_have_same_authored_value",
+      "value": true,
+      "column": "AlexaFluor 647/Cy5 ",
+      "matching_target_options": [],
+      "candidate_rows": [
+        {
+          "row_index": 1,
+          "matching_authored_names": [
+            {
+              "field": "推荐标志物 1",
+              "authored_name": "NeuN (RBFOX3)",
+              "option": "NeuN (RBFOX3)",
+              "option_split_applied": false
+            }
+          ],
+          "scope": {
+            "大类": "中枢神经",
+            "亚类": "神经元结构",
+            "结构/细胞类型": "成熟神经元"
+          },
+          "cell_value": 1
+        }
+      ],
+      "selected_row_indices": [
+        1
+      ],
+      "per_scope_evidence": [
+        {
+          "scope": {
+            "大类": "中枢神经",
+            "亚类": "神经元结构",
+            "结构/细胞类型": "成熟神经元"
+          },
+          "row_indices": [
+            1
+          ],
+          "all_cell_values": [
+            1
+          ],
+          "state": "consistent_authored_value",
+          "value": 1
+        }
+      ],
+      "row_selection_uses_scores": false,
+      "different_scopes_merged": false,
+      "new_alias_or_KB_value": false,
+      "declared_task_scope": null,
+      "exact_lookup_value": true,
+      "evidence_level": "existing_specific_table_value"
+    },
+    {
+      "marker": "β-III Tubulin (TUJ1)",
+      "fluorophore": "Alexa Fluor 647",
+      "status": "all_applicable_scopes_have_same_authored_value",
+      "value": true,
+      "column": "AlexaFluor 647/Cy5 ",
+      "matching_target_options": [
+        {
+          "target_index": 1,
+          "source_tissue_xlsx_row": 4,
+          "marker_slot": "recommended_marker_1",
+          "marker_name": "β-III Tubulin (TUJ1)",
+          "query_path": "中枢神经 > 神经元结构 > 神经元(通用)",
+          "major_category": "中枢神经",
+          "subcategory": "神经元结构",
+          "structure_or_cell_subtype": "神经元(通用)",
+          "authored_target_parent": {
+            "marker_name": "β-III Tubulin (TUJ1)",
+            "target_index": 1,
+            "source_tissue_xlsx_row": 4,
+            "query_path": "中枢神经 > 神经元结构 > 神经元(通用)",
+            "marker_slot": "recommended_marker_1"
+          },
+          "authored_option_index": 0,
+          "option_split_applied": false
+        }
+      ],
+      "candidate_rows": [
+        {
+          "row_index": 0,
+          "matching_authored_names": [
+            {
+              "field": "推荐标志物 1",
+              "authored_name": "β-III Tubulin (TUJ1)",
+              "option": "β-III Tubulin (TUJ1)",
+              "option_split_applied": false
+            }
+          ],
+          "scope": {
+            "大类": "中枢神经",
+            "亚类": "神经元结构",
+            "结构/细胞类型": "神经元(通用)"
+          },
+          "cell_value": 1
+        },
+        {
+          "row_index": 32,
+          "matching_authored_names": [
+            {
+              "field": "推荐标志物 2",
+              "authored_name": "β-III Tubulin",
+              "option": "β-III Tubulin",
+              "option_split_applied": false
+            }
+          ],
+          "scope": {
+            "大类": "呼吸系统",
+            "亚类": "神经系统",
+            "结构/细胞类型": "肺部迷走神经"
+          },
+          "cell_value": 1
+        },
+        {
+          "row_index": 55,
+          "matching_authored_names": [
+            {
+              "field": "推荐标志物 1",
+              "authored_name": "Tuj1",
+              "option": "Tuj1",
+              "option_split_applied": false
+            }
+          ],
+          "scope": {
+            "大类": "肠道系统",
+            "亚类": "肠神经",
+            "结构/细胞类型": "肠神经丛"
+          },
+          "cell_value": 1
+        },
+        {
+          "row_index": 76,
+          "matching_authored_names": [
+            {
+              "field": "推荐标志物 2",
+              "authored_name": "β-III Tubulin / TUJ1",
+              "option": "β-III Tubulin",
+              "option_split_applied": true
+            },
+            {
+              "field": "推荐标志物 2",
+              "authored_name": "β-III Tubulin / TUJ1",
+              "option": "TUJ1",
+              "option_split_applied": true
+            }
+          ],
+          "scope": {
+            "大类": "临床病理",
+            "亚类": "皮肤活检",
+            "结构/细胞类型": "表皮内神经纤维 IENF"
+          },
+          "cell_value": null
+        },
+        {
+          "row_index": 80,
+          "matching_authored_names": [
+            {
+              "field": "推荐标志物 1",
+              "authored_name": "β-III Tubulin / TUJ1",
+              "option": "β-III Tubulin",
+              "option_split_applied": true
+            },
+            {
+              "field": "推荐标志物 1",
+              "authored_name": "β-III Tubulin / TUJ1",
+              "option": "TUJ1",
+              "option_split_applied": true
+            }
+          ],
+          "scope": {
+            "大类": "斑马鱼系统",
+            "亚类": "侧线系统",
+            "结构/细胞类型": "侧线神经纤维"
+          },
+          "cell_value": null
+        },
+        {
+          "row_index": 84,
+          "matching_authored_names": [
+            {
+              "field": "推荐标志物 2",
+              "authored_name": "β-III Tubulin / PGP9.5",
+              "option": "β-III Tubulin",
+              "option_split_applied": true
+            }
+          ],
+          "scope": {
+            "大类": "骨骼肌系统",
+            "亚类": "神经肌肉接头",
+            "结构/细胞类型": "运动神经末梢/轴突骨架"
+          },
+          "cell_value": null
+        },
+        {
+          "row_index": 85,
+          "matching_authored_names": [
+            {
+              "field": "推荐标志物 2",
+              "authored_name": "β-III Tubulin / TUJ1",
+              "option": "β-III Tubulin",
+              "option_split_applied": true
+            },
+            {
+              "field": "推荐标志物 2",
+              "authored_name": "β-III Tubulin / TUJ1",
+              "option": "TUJ1",
+              "option_split_applied": true
+            }
+          ],
+          "scope": {
+            "大类": "消化系统",
+            "亚类": "胃壁神经系统",
+            "结构/细胞类型": "胃壁迷走神经/泛神经纤维网络"
+          },
+          "cell_value": null
+        },
+        {
+          "row_index": 90,
+          "matching_authored_names": [
+            {
+              "field": "推荐标志物 2",
+              "authored_name": "PGP9.5 / β-III Tubulin",
+              "option": "β-III Tubulin",
+              "option_split_applied": true
+            }
+          ],
+          "scope": {
+            "大类": "硬组织",
+            "亚类": "骨骼微环境",
+            "结构/细胞类型": "骨组织感觉神经与泛神经网络"
+          },
+          "cell_value": null
+        },
+        {
+          "row_index": 100,
+          "matching_authored_names": [
+            {
+              "field": "推荐标志物 1",
+              "authored_name": "PGP9.5 / β-III Tubulin",
+              "option": "β-III Tubulin",
+              "option_split_applied": true
+            }
+          ],
+          "scope": {
+            "大类": "硬组织",
+            "亚类": "内耳结构",
+            "结构/细胞类型": "耳蜗神经支配"
+          },
+          "cell_value": null
+        },
+        {
+          "row_index": 106,
+          "matching_authored_names": [
+            {
+              "field": "推荐标志物 2",
+              "authored_name": "β-III Tubulin / TUJ1",
+              "option": "β-III Tubulin",
+              "option_split_applied": true
+            },
+            {
+              "field": "推荐标志物 2",
+              "authored_name": "β-III Tubulin / TUJ1",
+              "option": "TUJ1",
+              "option_split_applied": true
+            }
+          ],
+          "scope": {
+            "大类": "发育生物学",
+            "亚类": "胚胎神经系统",
+            "结构/细胞类型": "胚胎颅/脊神经与外周神经"
+          },
+          "cell_value": null
+        }
+      ],
+      "selected_row_indices": [
+        0
+      ],
+      "per_scope_evidence": [
+        {
+          "scope": {
+            "大类": "中枢神经",
+            "亚类": "神经元结构",
+            "结构/细胞类型": "神经元(通用)"
+          },
+          "row_indices": [
+            0
+          ],
+          "all_cell_values": [
+            1
+          ],
+          "state": "consistent_authored_value",
+          "value": 1
+        }
+      ],
+      "row_selection_uses_scores": false,
+      "different_scopes_merged": false,
+      "new_alias_or_KB_value": false,
+      "declared_task_scope": null,
+      "exact_lookup_value": true,
+      "evidence_level": "existing_specific_table_value"
+    }
+  ],
+  "changes": {
+    "s_label": {
+      "before": null,
+      "after": 3.0
+    }
+  },
+  "quantitative_data": {
+    "method_name": "iDISCO+",
+    "tissue_ri_value": 1.46,
+    "total_time_hours": null,
+    "sample_tier": "T04_WHOLE_MOUSE_BRAIN_5_12MM",
+    "reagent_ri_value": null,
+    "protocol_time_hours": null
+  },
+  "new_model_calls": 0,
+  "new_per_answer_author_annotations": 0,
+  "original_source": {
+    "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\optimizer_round3_20261011\\confirmation_qwen_01\\original_source_documents\\c9a87206864ec2bf206ab190.json",
+    "sha256": "2b2ea754443f6fa5c3c0c21d1b8cd7ec39b65e7962a3310eeb39e78cbacd2eb6"
+  }
+}

@@ -1,0 +1,987 @@
+[
+  {
+    "condition": "baseline_wording_base_numbers",
+    "document": {
+      "path": "C:\\ClearEval\\reports\\cleareval_20261012\\english_fulltext_pilot\\qwen_translation_pending\\mechanism_checks\\baseline_wording_base_numbers.txt",
+      "sha256": "d31f4b22e2870a9b17259a2a79a971435335c313ccc5d0c3464e2933ac2130ab"
+    },
+    "origin_translation": {
+      "path": "C:\\ClearEval\\reports\\cleareval_20261012\\english_fulltext_pilot\\qwen_translation_pending\\returns\\T05_R3C07_baseline\\english_text.txt",
+      "sha256": "d31f4b22e2870a9b17259a2a79a971435335c313ccc5d0c3464e2933ac2130ab"
+    },
+    "synthetic_offline_intervention": false,
+    "score": {
+      "sr": 0.5714285714285714,
+      "sp": 0.05263157894736842,
+      "reference_n": 7,
+      "generated_n": 19,
+      "matches": [
+        {
+          "reference_index": 0,
+          "reference_text": "Incubate the fixed tissue in 50% (vol/vol) THF in water, adjusted to pH 9.0 with triethylamine, at 4 degrees C for 12 hours with gentle shaking in the dark.",
+          "generated_index": 13,
+          "generated_text": "Place the brain tissue in 100% THF (anhydrous, pH 9–10) for oscillating dehydration, second time (replace with fresh THF). (Temperature: 4 ℃, Time: 1 hour)",
+          "similarity": 0.7037748694419861,
+          "matched": true
+        },
+        {
+          "reference_index": 1,
+          "reference_text": "Incubate the fixed tissue in 70% (vol/vol) THF in water, adjusted to pH 9.0 with triethylamine, at 4 degrees C for 12 hours with gentle shaking in the dark.",
+          "generated_index": 13,
+          "generated_text": "Place the brain tissue in 100% THF (anhydrous, pH 9–10) for oscillating dehydration, second time (replace with fresh THF). (Temperature: 4 ℃, Time: 1 hour)",
+          "similarity": 0.704083263874054,
+          "matched": true
+        },
+        {
+          "reference_index": 2,
+          "reference_text": "Incubate the fixed tissue in 80% (vol/vol) THF in water, adjusted to pH 9.0 with triethylamine, at 4 degrees C for 12 hours with gentle shaking in the dark.",
+          "generated_index": 13,
+          "generated_text": "Place the brain tissue in 100% THF (anhydrous, pH 9–10) for oscillating dehydration, second time (replace with fresh THF). (Temperature: 4 ℃, Time: 1 hour)",
+          "similarity": 0.7052682042121887,
+          "matched": true
+        },
+        {
+          "reference_index": 3,
+          "reference_text": "Incubate the fixed tissue in 100% (vol/vol) THF in water, adjusted to pH 9.0 with triethylamine, at 4 degrees C for 12 hours with gentle shaking in the dark.",
+          "generated_index": 13,
+          "generated_text": "Place the brain tissue in 100% THF (anhydrous, pH 9–10) for oscillating dehydration, second time (replace with fresh THF). (Temperature: 4 ℃, Time: 1 hour)",
+          "similarity": 0.7051258683204651,
+          "matched": true
+        },
+        {
+          "reference_index": 4,
+          "reference_text": "Repeat incubation in fresh 100% THF twice more, 12 hours each, for three incubations in total, at 4 degrees C with gentle shaking in the dark.",
+          "generated_index": 7,
+          "generated_text": "Wash with PBST to remove unbound secondary antibody. (Temperature: RT, Time: 5 × 1 hour)",
+          "similarity": 0.5305786728858948,
+          "matched": false
+        },
+        {
+          "reference_index": 5,
+          "reference_text": "Transfer the dehydrated tissue to pure DBE for refractive index matching and clearing at 4 degrees C for 3 hours with gentle shaking in the dark.",
+          "generated_index": 16,
+          "generated_text": "Replace with fresh BABB again, confirm the tissue is completely transparent, and prepare for imaging. (Temperature: 4 ℃, Time: 30 min)",
+          "similarity": 0.658495306968689,
+          "matched": false
+        },
+        {
+          "reference_index": 6,
+          "reference_text": "Store the cleared tissue in DBE in an airtight glass chamber at 4 degrees C in the dark until imaging.",
+          "generated_index": 16,
+          "generated_text": "Replace with fresh BABB again, confirm the tissue is completely transparent, and prepare for imaging. (Temperature: 4 ℃, Time: 30 min)",
+          "similarity": 0.699491024017334,
+          "matched": false
+        }
+      ],
+      "generated_max_similarity": [
+        0.4389820098876953,
+        0.5411130785942078,
+        0.5020041465759277,
+        0.5230021476745605,
+        0.4878103733062744,
+        0.588676929473877,
+        0.49631381034851074,
+        0.5818532705307007,
+        0.449798047542572,
+        0.616998553276062,
+        0.5892513990402222,
+        0.5878981351852417,
+        0.6565274000167847,
+        0.7052682042121887,
+        0.6290395855903625,
+        0.6088365316390991,
+        0.699491024017334,
+        0.6147299408912659,
+        0.5848643779754639
+      ],
+      "reference_truncated": 0,
+      "generated_truncated": 0,
+      "generated_cjk_steps": 0
+    },
+    "generated_steps": [
+      {
+        "text": "Place the adult mouse whole brain, already fixed in 4% PFA, in 1× PBS for thorough washing to remove residual fixative. (Temperature: 4 ℃, Time: 3 × 1 hour)",
+        "start": 1507,
+        "end": 1668
+      },
+      {
+        "text": "Place the brain tissue in 1× PBS containing 0.2% (vol/vol) Triton X-100 (PBST) for oscillating permeabilization. (Temperature: 37 ℃, Time: 24 hours)",
+        "start": 1727,
+        "end": 1880
+      },
+      {
+        "text": "Replace with fresh PBST and continue permeabilization. (Temperature: 37 ℃, Time: 24 hours)",
+        "start": 1880,
+        "end": 1975
+      },
+      {
+        "text": "Place the brain tissue in blocking solution (5% (vol/vol) normal donkey serum + 0.2% Triton X-100 + 0.1% (wt/vol) NaN₃ in 1× PBS) for oscillating blocking. (Temperature: 37 ℃, Time: 24 hours)",
+        "start": 1991,
+        "end": 2187
+      },
+      {
+        "text": "Place the brain tissue in a solution containing anti-β-III Tubulin (TUJ1) rabbit polyclonal antibody (diluted 1:500 in blocking solution) and incubate with gentle oscillation. (Temperature: 37 ℃, Time: 48 hours)",
+        "start": 2245,
+        "end": 2461
+      },
+      {
+        "text": "Wash with PBST to remove unbound primary antibody. (Temperature: RT, Time: 5 × 1 hour)",
+        "start": 2461,
+        "end": 2552
+      },
+      {
+        "text": "Place the brain tissue in a solution containing donkey anti-rabbit Alexa Fluor 647 secondary antibody (diluted 1:500 in blocking solution) and incubate with oscillation protected from light. (Temperature: 37 ℃, Time: 48 hours)",
+        "start": 2607,
+        "end": 2838
+      },
+      {
+        "text": "Wash with PBST to remove unbound secondary antibody. (Temperature: RT, Time: 5 × 1 hour)",
+        "start": 2838,
+        "end": 2931
+      },
+      {
+        "text": "Final wash with 1× PBS. (Temperature: RT, Time: 2 × 30 min)",
+        "start": 2931,
+        "end": 2995
+      },
+      {
+        "text": "Place the brain tissue in 50% (vol/vol) THF (tetrahydrofuran) aqueous solution (adjusted to pH 9–10 with NaOH to protect fluorescent proteins) for oscillating dehydration. (Temperature: 4 ℃, Time: 1 hour)",
+        "start": 3041,
+        "end": 3250
+      },
+      {
+        "text": "Place the brain tissue in 70% (vol/vol) THF aqueous solution (pH 9–10) for oscillating dehydration. (Temperature: 4 ℃, Time: 1 hour)",
+        "start": 3250,
+        "end": 3387
+      },
+      {
+        "text": "Place the brain tissue in 80% (vol/vol) THF aqueous solution (pH 9–10) for oscillating dehydration. (Temperature: 4 ℃, Time: 1 hour)",
+        "start": 3387,
+        "end": 3524
+      },
+      {
+        "text": "Place the brain tissue in 100% THF (anhydrous, pH 9–10, with a small amount of NaOH added) for oscillating dehydration, first time. (Temperature: 4 ℃, Time: 1 hour)",
+        "start": 3524,
+        "end": 3693
+      },
+      {
+        "text": "Place the brain tissue in 100% THF (anhydrous, pH 9–10) for oscillating dehydration, second time (replace with fresh THF). (Temperature: 4 ℃, Time: 1 hour)",
+        "start": 3693,
+        "end": 3853
+      },
+      {
+        "text": "Place the brain tissue in BABB (benzyl alcohol:benzyl benzoate = 1:2, vol/vol) with oscillation to complete de-lipidation and begin RI matching, until the tissue is completely transparent (usually 30–60 min). (Temperature: 4 ℃, Time: 1 hour)",
+        "start": 3895,
+        "end": 4141
+      },
+      {
+        "text": "Transfer the transparent brain tissue to fresh BABB (RI ≈ 1.56), let it stand protected from light to equilibrate, ensuring the tissue is completely transparent and free of bubbles. (Temperature: 4 ℃, Time: 2 hours)",
+        "start": 4188,
+        "end": 4408
+      },
+      {
+        "text": "Replace with fresh BABB again, confirm the tissue is completely transparent, and prepare for imaging. (Temperature: 4 ℃, Time: 30 min)",
+        "start": 4408,
+        "end": 4547
+      },
+      {
+        "text": "Transfer the transparent brain tissue to BABB in a sample holder compatible with the light-sheet microscope sample slot, use a refractive index-matched immersion medium (RI = 1.56) to fix the sample position, and avoid bubbles. (Temperature: RT, Time: Immediate imaging)",
+        "start": 4589,
+        "end": 4864
+      },
+      {
+        "text": "If short-term storage is required, seal the sample in BABB and store protected from light at 4 ℃ (imaging is recommended to be completed within 1 week to prevent fluorescence signal decay). (Temperature: 4 ℃, Time: ≤ 7 days)",
+        "start": 4864,
+        "end": 5092
+      }
+    ]
+  },
+  {
+    "condition": "baseline_wording_shifted_numbers",
+    "document": {
+      "path": "C:\\ClearEval\\reports\\cleareval_20261012\\english_fulltext_pilot\\qwen_translation_pending\\mechanism_checks\\baseline_wording_shifted_numbers.txt",
+      "sha256": "7e88af53aa4af11b7718cdd793e0f1b7f7c61238df15b481747e3ad4a6885302"
+    },
+    "origin_translation": {
+      "path": "C:\\ClearEval\\reports\\cleareval_20261012\\english_fulltext_pilot\\qwen_translation_pending\\returns\\T05_R3C07_baseline\\english_text.txt",
+      "sha256": "d31f4b22e2870a9b17259a2a79a971435335c313ccc5d0c3464e2933ac2130ab"
+    },
+    "synthetic_offline_intervention": true,
+    "score": {
+      "sr": 0.5714285714285714,
+      "sp": 0.05263157894736842,
+      "reference_n": 7,
+      "generated_n": 19,
+      "matches": [
+        {
+          "reference_index": 0,
+          "reference_text": "Incubate the fixed tissue in 50% (vol/vol) THF in water, adjusted to pH 9.0 with triethylamine, at 4 degrees C for 12 hours with gentle shaking in the dark.",
+          "generated_index": 13,
+          "generated_text": "Place the brain tissue in 100% THF (anhydrous, pH 9–10) for oscillating dehydration, second time (replace with fresh THF). (Temperature: 4 ℃, Time: 1 hour)",
+          "similarity": 0.7037748694419861,
+          "matched": true
+        },
+        {
+          "reference_index": 1,
+          "reference_text": "Incubate the fixed tissue in 70% (vol/vol) THF in water, adjusted to pH 9.0 with triethylamine, at 4 degrees C for 12 hours with gentle shaking in the dark.",
+          "generated_index": 13,
+          "generated_text": "Place the brain tissue in 100% THF (anhydrous, pH 9–10) for oscillating dehydration, second time (replace with fresh THF). (Temperature: 4 ℃, Time: 1 hour)",
+          "similarity": 0.704083263874054,
+          "matched": true
+        },
+        {
+          "reference_index": 2,
+          "reference_text": "Incubate the fixed tissue in 80% (vol/vol) THF in water, adjusted to pH 9.0 with triethylamine, at 4 degrees C for 12 hours with gentle shaking in the dark.",
+          "generated_index": 13,
+          "generated_text": "Place the brain tissue in 100% THF (anhydrous, pH 9–10) for oscillating dehydration, second time (replace with fresh THF). (Temperature: 4 ℃, Time: 1 hour)",
+          "similarity": 0.7052682042121887,
+          "matched": true
+        },
+        {
+          "reference_index": 3,
+          "reference_text": "Incubate the fixed tissue in 100% (vol/vol) THF in water, adjusted to pH 9.0 with triethylamine, at 4 degrees C for 12 hours with gentle shaking in the dark.",
+          "generated_index": 13,
+          "generated_text": "Place the brain tissue in 100% THF (anhydrous, pH 9–10) for oscillating dehydration, second time (replace with fresh THF). (Temperature: 4 ℃, Time: 1 hour)",
+          "similarity": 0.7051258683204651,
+          "matched": true
+        },
+        {
+          "reference_index": 4,
+          "reference_text": "Repeat incubation in fresh 100% THF twice more, 12 hours each, for three incubations in total, at 4 degrees C with gentle shaking in the dark.",
+          "generated_index": 7,
+          "generated_text": "Wash with PBST to remove unbound secondary antibody. (Temperature: RT, Time: 5 × 1 hour)",
+          "similarity": 0.5305786728858948,
+          "matched": false
+        },
+        {
+          "reference_index": 5,
+          "reference_text": "Transfer the dehydrated tissue to pure DBE for refractive index matching and clearing at 4 degrees C for 3 hours with gentle shaking in the dark.",
+          "generated_index": 16,
+          "generated_text": "Replace with fresh BABB again, confirm the tissue is completely transparent, and prepare for imaging. (Temperature: 4 ℃, Time: 30 min)",
+          "similarity": 0.658495306968689,
+          "matched": false
+        },
+        {
+          "reference_index": 6,
+          "reference_text": "Store the cleared tissue in DBE in an airtight glass chamber at 4 degrees C in the dark until imaging.",
+          "generated_index": 16,
+          "generated_text": "Replace with fresh BABB again, confirm the tissue is completely transparent, and prepare for imaging. (Temperature: 4 ℃, Time: 30 min)",
+          "similarity": 0.699491024017334,
+          "matched": false
+        }
+      ],
+      "generated_max_similarity": [
+        0.4389820098876953,
+        0.5411130785942078,
+        0.5020041465759277,
+        0.5230021476745605,
+        0.4878103733062744,
+        0.588676929473877,
+        0.49631381034851074,
+        0.5818532705307007,
+        0.449798047542572,
+        0.616998553276062,
+        0.5892513990402222,
+        0.5878981351852417,
+        0.6565274000167847,
+        0.7052682042121887,
+        0.6290395855903625,
+        0.6088365316390991,
+        0.699491024017334,
+        0.6147299408912659,
+        0.5848643779754639
+      ],
+      "reference_truncated": 0,
+      "generated_truncated": 0,
+      "generated_cjk_steps": 0
+    },
+    "generated_steps": [
+      {
+        "text": "Place the adult mouse whole brain, already fixed in 4% PFA, in 1× PBS for thorough washing to remove residual fixative. (Temperature: 4 ℃, Time: 3 × 1 hour)",
+        "start": 1509,
+        "end": 1672
+      },
+      {
+        "text": "Place the brain tissue in 1× PBS containing 0.2% (vol/vol) Triton X-100 (PBST) for oscillating permeabilization. (Temperature: 37 ℃, Time: 24 hours)",
+        "start": 1733,
+        "end": 1888
+      },
+      {
+        "text": "Replace with fresh PBST and continue permeabilization. (Temperature: 37 ℃, Time: 24 hours)",
+        "start": 1888,
+        "end": 1985
+      },
+      {
+        "text": "Place the brain tissue in blocking solution (5% (vol/vol) normal donkey serum + 0.2% Triton X-100 + 0.1% (wt/vol) NaN₃ in 1× PBS) for oscillating blocking. (Temperature: 37 ℃, Time: 24 hours)",
+        "start": 2003,
+        "end": 2201
+      },
+      {
+        "text": "Place the brain tissue in a solution containing anti-β-III Tubulin (TUJ1) rabbit polyclonal antibody (diluted 1:500 in blocking solution) and incubate with gentle oscillation. (Temperature: 37 ℃, Time: 48 hours)",
+        "start": 2261,
+        "end": 2479
+      },
+      {
+        "text": "Wash with PBST to remove unbound primary antibody. (Temperature: RT, Time: 5 × 1 hour)",
+        "start": 2479,
+        "end": 2572
+      },
+      {
+        "text": "Place the brain tissue in a solution containing donkey anti-rabbit Alexa Fluor 647 secondary antibody (diluted 1:500 in blocking solution) and incubate with oscillation protected from light. (Temperature: 37 ℃, Time: 48 hours)",
+        "start": 2629,
+        "end": 2862
+      },
+      {
+        "text": "Wash with PBST to remove unbound secondary antibody. (Temperature: RT, Time: 5 × 1 hour)",
+        "start": 2862,
+        "end": 2957
+      },
+      {
+        "text": "Final wash with 1× PBS. (Temperature: RT, Time: 2 × 30 min)",
+        "start": 2957,
+        "end": 3023
+      },
+      {
+        "text": "Place the brain tissue in 50% (vol/vol) THF (tetrahydrofuran) aqueous solution (adjusted to pH 9–10 with NaOH to protect fluorescent proteins) for oscillating dehydration. (Temperature: 4 ℃, Time: 1 hour)",
+        "start": 3071,
+        "end": 3282
+      },
+      {
+        "text": "Place the brain tissue in 70% (vol/vol) THF aqueous solution (pH 9–10) for oscillating dehydration. (Temperature: 4 ℃, Time: 1 hour)",
+        "start": 3282,
+        "end": 3421
+      },
+      {
+        "text": "Place the brain tissue in 80% (vol/vol) THF aqueous solution (pH 9–10) for oscillating dehydration. (Temperature: 4 ℃, Time: 1 hour)",
+        "start": 3421,
+        "end": 3560
+      },
+      {
+        "text": "Place the brain tissue in 100% THF (anhydrous, pH 9–10, with a small amount of NaOH added) for oscillating dehydration, first time. (Temperature: 4 ℃, Time: 1 hour)",
+        "start": 3560,
+        "end": 3731
+      },
+      {
+        "text": "Place the brain tissue in 100% THF (anhydrous, pH 9–10) for oscillating dehydration, second time (replace with fresh THF). (Temperature: 4 ℃, Time: 1 hour)",
+        "start": 3731,
+        "end": 3893
+      },
+      {
+        "text": "Place the brain tissue in BABB (benzyl alcohol:benzyl benzoate = 1:2, vol/vol) with oscillation to complete de-lipidation and begin RI matching, until the tissue is completely transparent (usually 30–60 min). (Temperature: 4 ℃, Time: 1 hour)",
+        "start": 3937,
+        "end": 4185
+      },
+      {
+        "text": "Transfer the transparent brain tissue to fresh BABB (RI ≈ 1.56), let it stand protected from light to equilibrate, ensuring the tissue is completely transparent and free of bubbles. (Temperature: 4 ℃, Time: 2 hours)",
+        "start": 4234,
+        "end": 4456
+      },
+      {
+        "text": "Replace with fresh BABB again, confirm the tissue is completely transparent, and prepare for imaging. (Temperature: 4 ℃, Time: 30 min)",
+        "start": 4456,
+        "end": 4597
+      },
+      {
+        "text": "Transfer the transparent brain tissue to BABB in a sample holder compatible with the light-sheet microscope sample slot, use a refractive index-matched immersion medium (RI = 1.56) to fix the sample position, and avoid bubbles. (Temperature: RT, Time: Immediate imaging)",
+        "start": 4641,
+        "end": 4918
+      },
+      {
+        "text": "If short-term storage is required, seal the sample in BABB and store protected from light at 4 ℃ (imaging is recommended to be completed within 1 week to prevent fluorescence signal decay). (Temperature: 4 ℃, Time: ≤ 7 days)",
+        "start": 4918,
+        "end": 5148
+      }
+    ]
+  },
+  {
+    "condition": "renumber_wording_base_numbers",
+    "document": {
+      "path": "C:\\ClearEval\\reports\\cleareval_20261012\\english_fulltext_pilot\\qwen_translation_pending\\mechanism_checks\\renumber_wording_base_numbers.txt",
+      "sha256": "209c2074eb803155685bc7002f094830baa3cb6ab0b031d46be906f3f6c7c524"
+    },
+    "origin_translation": {
+      "path": "C:\\ClearEval\\reports\\cleareval_20261012\\english_fulltext_pilot\\qwen_translation_pending\\returns\\T06_R3C07_renumber_operations\\english_text.txt",
+      "sha256": "b3efb36b14b0c453f6135e826611e5bad54705cff507bfa41cc8c7e042b007e9"
+    },
+    "synthetic_offline_intervention": true,
+    "score": {
+      "sr": 0.0,
+      "sp": 0.0,
+      "reference_n": 7,
+      "generated_n": 19,
+      "matches": [
+        {
+          "reference_index": 0,
+          "reference_text": "Incubate the fixed tissue in 50% (vol/vol) THF in water, adjusted to pH 9.0 with triethylamine, at 4 degrees C for 12 hours with gentle shaking in the dark.",
+          "generated_index": 13,
+          "generated_text": "Place the brain tissue in 100% THF (anhydrous, pH 9–10) and agitate for dehydration, second time (replace with fresh THF). (Temperature: 4 ℃, Time: 1 hour)",
+          "similarity": 0.6905732154846191,
+          "matched": false
+        },
+        {
+          "reference_index": 1,
+          "reference_text": "Incubate the fixed tissue in 70% (vol/vol) THF in water, adjusted to pH 9.0 with triethylamine, at 4 degrees C for 12 hours with gentle shaking in the dark.",
+          "generated_index": 13,
+          "generated_text": "Place the brain tissue in 100% THF (anhydrous, pH 9–10) and agitate for dehydration, second time (replace with fresh THF). (Temperature: 4 ℃, Time: 1 hour)",
+          "similarity": 0.6915405988693237,
+          "matched": false
+        },
+        {
+          "reference_index": 2,
+          "reference_text": "Incubate the fixed tissue in 80% (vol/vol) THF in water, adjusted to pH 9.0 with triethylamine, at 4 degrees C for 12 hours with gentle shaking in the dark.",
+          "generated_index": 13,
+          "generated_text": "Place the brain tissue in 100% THF (anhydrous, pH 9–10) and agitate for dehydration, second time (replace with fresh THF). (Temperature: 4 ℃, Time: 1 hour)",
+          "similarity": 0.6930760145187378,
+          "matched": false
+        },
+        {
+          "reference_index": 3,
+          "reference_text": "Incubate the fixed tissue in 100% (vol/vol) THF in water, adjusted to pH 9.0 with triethylamine, at 4 degrees C for 12 hours with gentle shaking in the dark.",
+          "generated_index": 13,
+          "generated_text": "Place the brain tissue in 100% THF (anhydrous, pH 9–10) and agitate for dehydration, second time (replace with fresh THF). (Temperature: 4 ℃, Time: 1 hour)",
+          "similarity": 0.6922850012779236,
+          "matched": false
+        },
+        {
+          "reference_index": 4,
+          "reference_text": "Repeat incubation in fresh 100% THF twice more, 12 hours each, for three incubations in total, at 4 degrees C with gentle shaking in the dark.",
+          "generated_index": 7,
+          "generated_text": "Wash with PBST to remove unbound secondary antibody. (Temperature: RT, Time: 5 × 1 hour)",
+          "similarity": 0.5305786728858948,
+          "matched": false
+        },
+        {
+          "reference_index": 5,
+          "reference_text": "Transfer the dehydrated tissue to pure DBE for refractive index matching and clearing at 4 degrees C for 3 hours with gentle shaking in the dark.",
+          "generated_index": 16,
+          "generated_text": "Replace with fresh BABB again, confirm the tissue is completely transparent, and prepare for imaging. (Temperature: 4 ℃, Time: 30 min)",
+          "similarity": 0.658495306968689,
+          "matched": false
+        },
+        {
+          "reference_index": 6,
+          "reference_text": "Store the cleared tissue in DBE in an airtight glass chamber at 4 degrees C in the dark until imaging.",
+          "generated_index": 16,
+          "generated_text": "Replace with fresh BABB again, confirm the tissue is completely transparent, and prepare for imaging. (Temperature: 4 ℃, Time: 30 min)",
+          "similarity": 0.699491024017334,
+          "matched": false
+        }
+      ],
+      "generated_max_similarity": [
+        0.4389820098876953,
+        0.5702420473098755,
+        0.5020041465759277,
+        0.5390206575393677,
+        0.5033882856369019,
+        0.588676929473877,
+        0.5154228806495667,
+        0.5818532705307007,
+        0.449798047542572,
+        0.6180201768875122,
+        0.604557454586029,
+        0.6040148138999939,
+        0.6472419500350952,
+        0.6930760145187378,
+        0.6520307660102844,
+        0.6097702980041504,
+        0.699491024017334,
+        0.6245390772819519,
+        0.5848643779754639
+      ],
+      "reference_truncated": 0,
+      "generated_truncated": 0,
+      "generated_cjk_steps": 0
+    },
+    "generated_steps": [
+      {
+        "text": "Place the adult mouse whole brain, already fixed in 4% PFA, in 1× PBS for thorough washing to remove residual fixative. (Temperature: 4 ℃, Time: 3 × 1 hour)",
+        "start": 1488,
+        "end": 1649
+      },
+      {
+        "text": "Place the brain tissue in 1× PBS containing 0.2% (vol/vol) Triton X-100 (PBST) and agitate for permeabilization. (Temperature: 37 ℃, Time: 24 hours)",
+        "start": 1708,
+        "end": 1861
+      },
+      {
+        "text": "Replace with fresh PBST and continue permeabilization. (Temperature: 37 ℃, Time: 24 hours)",
+        "start": 1861,
+        "end": 1956
+      },
+      {
+        "text": "Place the brain tissue in blocking solution (5% (vol/vol) normal donkey serum + 0.2% Triton X-100 + 0.1% (wt/vol) NaN₃ in 1× PBS) and agitate for blocking. (Temperature: 37 ℃, Time: 24 hours)",
+        "start": 1972,
+        "end": 2168
+      },
+      {
+        "text": "Place the brain tissue in a solution containing anti-β-III Tubulin (TUJ1) rabbit polyclonal antibody (diluted 1:500 in blocking solution) and incubate with gentle agitation. (Temperature: 37 ℃, Time: 48 hours)",
+        "start": 2226,
+        "end": 2440
+      },
+      {
+        "text": "Wash with PBST to remove unbound primary antibody. (Temperature: RT, Time: 5 × 1 hour)",
+        "start": 2440,
+        "end": 2531
+      },
+      {
+        "text": "Place the brain tissue in a solution containing donkey anti-rabbit Alexa Fluor 647 secondary antibody (diluted 1:500 in blocking solution) and incubate with agitation protected from light. (Temperature: 37 ℃, Time: 48 hours)",
+        "start": 2586,
+        "end": 2815
+      },
+      {
+        "text": "Wash with PBST to remove unbound secondary antibody. (Temperature: RT, Time: 5 × 1 hour)",
+        "start": 2815,
+        "end": 2908
+      },
+      {
+        "text": "Final wash with 1× PBS. (Temperature: RT, Time: 2 × 30 min)",
+        "start": 2908,
+        "end": 2972
+      },
+      {
+        "text": "Place the brain tissue in 50% (vol/vol) THF (tetrahydrofuran) aqueous solution (adjust pH to 9–10 with NaOH to protect fluorescent proteins) and agitate for dehydration. (Temperature: 4 ℃, Time: 1 hour)",
+        "start": 3018,
+        "end": 3225
+      },
+      {
+        "text": "Place the brain tissue in 70% (vol/vol) THF aqueous solution (pH 9–10) and agitate for dehydration. (Temperature: 4 ℃, Time: 1 hour)",
+        "start": 3225,
+        "end": 3362
+      },
+      {
+        "text": "Place the brain tissue in 80% (vol/vol) THF aqueous solution (pH 9–10) and agitate for dehydration. (Temperature: 4 ℃, Time: 1 hour)",
+        "start": 3362,
+        "end": 3499
+      },
+      {
+        "text": "Place the brain tissue in 100% THF (anhydrous, pH 9–10, add a small amount of NaOH) and agitate for dehydration, first time. (Temperature: 4 ℃, Time: 1 hour)",
+        "start": 3499,
+        "end": 3661
+      },
+      {
+        "text": "Place the brain tissue in 100% THF (anhydrous, pH 9–10) and agitate for dehydration, second time (replace with fresh THF). (Temperature: 4 ℃, Time: 1 hour)",
+        "start": 3661,
+        "end": 3821
+      },
+      {
+        "text": "Place the brain tissue in BABB (benzyl alcohol:benzyl benzoate = 1:2, vol/vol) and agitate to complete delipidation and begin RI matching, until the tissue is completely transparent (usually 30–60 min). (Temperature: 4 ℃, Time: 1 hour)",
+        "start": 3862,
+        "end": 4102
+      },
+      {
+        "text": "Transfer the transparent brain tissue to fresh BABB (RI ≈ 1.56) and let it stand protected from light to equilibrate, ensuring the tissue is completely transparent and free of bubbles. (Temperature: 4 ℃, Time: 2 hours)",
+        "start": 4149,
+        "end": 4372
+      },
+      {
+        "text": "Replace with fresh BABB again, confirm the tissue is completely transparent, and prepare for imaging. (Temperature: 4 ℃, Time: 30 min)",
+        "start": 4372,
+        "end": 4511
+      },
+      {
+        "text": "Transfer the transparent brain tissue to BABB in a sample holder compatible with the light-sheet microscope sample slot. Use a refractive index-matched immersion medium (RI = 1.56) to fix the sample position, avoiding bubbles. (Temperature: RT, Time: Immediate imaging)",
+        "start": 4553,
+        "end": 4827
+      },
+      {
+        "text": "If short-term storage is required, seal the sample in BABB and store protected from light at 4 ℃ (imaging is recommended to be completed within 1 week to prevent fluorescence signal decay). (Temperature: 4 ℃, Time: ≤ 7 days)",
+        "start": 4827,
+        "end": 5055
+      }
+    ]
+  },
+  {
+    "condition": "renumber_wording_shifted_numbers",
+    "document": {
+      "path": "C:\\ClearEval\\reports\\cleareval_20261012\\english_fulltext_pilot\\qwen_translation_pending\\mechanism_checks\\renumber_wording_shifted_numbers.txt",
+      "sha256": "b3efb36b14b0c453f6135e826611e5bad54705cff507bfa41cc8c7e042b007e9"
+    },
+    "origin_translation": {
+      "path": "C:\\ClearEval\\reports\\cleareval_20261012\\english_fulltext_pilot\\qwen_translation_pending\\returns\\T06_R3C07_renumber_operations\\english_text.txt",
+      "sha256": "b3efb36b14b0c453f6135e826611e5bad54705cff507bfa41cc8c7e042b007e9"
+    },
+    "synthetic_offline_intervention": false,
+    "score": {
+      "sr": 0.0,
+      "sp": 0.0,
+      "reference_n": 7,
+      "generated_n": 19,
+      "matches": [
+        {
+          "reference_index": 0,
+          "reference_text": "Incubate the fixed tissue in 50% (vol/vol) THF in water, adjusted to pH 9.0 with triethylamine, at 4 degrees C for 12 hours with gentle shaking in the dark.",
+          "generated_index": 13,
+          "generated_text": "Place the brain tissue in 100% THF (anhydrous, pH 9–10) and agitate for dehydration, second time (replace with fresh THF). (Temperature: 4 ℃, Time: 1 hour)",
+          "similarity": 0.6905732154846191,
+          "matched": false
+        },
+        {
+          "reference_index": 1,
+          "reference_text": "Incubate the fixed tissue in 70% (vol/vol) THF in water, adjusted to pH 9.0 with triethylamine, at 4 degrees C for 12 hours with gentle shaking in the dark.",
+          "generated_index": 13,
+          "generated_text": "Place the brain tissue in 100% THF (anhydrous, pH 9–10) and agitate for dehydration, second time (replace with fresh THF). (Temperature: 4 ℃, Time: 1 hour)",
+          "similarity": 0.6915405988693237,
+          "matched": false
+        },
+        {
+          "reference_index": 2,
+          "reference_text": "Incubate the fixed tissue in 80% (vol/vol) THF in water, adjusted to pH 9.0 with triethylamine, at 4 degrees C for 12 hours with gentle shaking in the dark.",
+          "generated_index": 13,
+          "generated_text": "Place the brain tissue in 100% THF (anhydrous, pH 9–10) and agitate for dehydration, second time (replace with fresh THF). (Temperature: 4 ℃, Time: 1 hour)",
+          "similarity": 0.6930760145187378,
+          "matched": false
+        },
+        {
+          "reference_index": 3,
+          "reference_text": "Incubate the fixed tissue in 100% (vol/vol) THF in water, adjusted to pH 9.0 with triethylamine, at 4 degrees C for 12 hours with gentle shaking in the dark.",
+          "generated_index": 13,
+          "generated_text": "Place the brain tissue in 100% THF (anhydrous, pH 9–10) and agitate for dehydration, second time (replace with fresh THF). (Temperature: 4 ℃, Time: 1 hour)",
+          "similarity": 0.6922850012779236,
+          "matched": false
+        },
+        {
+          "reference_index": 4,
+          "reference_text": "Repeat incubation in fresh 100% THF twice more, 12 hours each, for three incubations in total, at 4 degrees C with gentle shaking in the dark.",
+          "generated_index": 7,
+          "generated_text": "Wash with PBST to remove unbound secondary antibody. (Temperature: RT, Time: 5 × 1 hour)",
+          "similarity": 0.5305786728858948,
+          "matched": false
+        },
+        {
+          "reference_index": 5,
+          "reference_text": "Transfer the dehydrated tissue to pure DBE for refractive index matching and clearing at 4 degrees C for 3 hours with gentle shaking in the dark.",
+          "generated_index": 16,
+          "generated_text": "Replace with fresh BABB again, confirm the tissue is completely transparent, and prepare for imaging. (Temperature: 4 ℃, Time: 30 min)",
+          "similarity": 0.658495306968689,
+          "matched": false
+        },
+        {
+          "reference_index": 6,
+          "reference_text": "Store the cleared tissue in DBE in an airtight glass chamber at 4 degrees C in the dark until imaging.",
+          "generated_index": 16,
+          "generated_text": "Replace with fresh BABB again, confirm the tissue is completely transparent, and prepare for imaging. (Temperature: 4 ℃, Time: 30 min)",
+          "similarity": 0.699491024017334,
+          "matched": false
+        }
+      ],
+      "generated_max_similarity": [
+        0.4389820098876953,
+        0.5702420473098755,
+        0.5020041465759277,
+        0.5390206575393677,
+        0.5033882856369019,
+        0.588676929473877,
+        0.5154228806495667,
+        0.5818532705307007,
+        0.449798047542572,
+        0.6180201768875122,
+        0.604557454586029,
+        0.6040148138999939,
+        0.6472419500350952,
+        0.6930760145187378,
+        0.6520307660102844,
+        0.6097702980041504,
+        0.699491024017334,
+        0.6245390772819519,
+        0.5848643779754639
+      ],
+      "reference_truncated": 0,
+      "generated_truncated": 0,
+      "generated_cjk_steps": 0
+    },
+    "generated_steps": [
+      {
+        "text": "Place the adult mouse whole brain, already fixed in 4% PFA, in 1× PBS for thorough washing to remove residual fixative. (Temperature: 4 ℃, Time: 3 × 1 hour)",
+        "start": 1490,
+        "end": 1653
+      },
+      {
+        "text": "Place the brain tissue in 1× PBS containing 0.2% (vol/vol) Triton X-100 (PBST) and agitate for permeabilization. (Temperature: 37 ℃, Time: 24 hours)",
+        "start": 1714,
+        "end": 1869
+      },
+      {
+        "text": "Replace with fresh PBST and continue permeabilization. (Temperature: 37 ℃, Time: 24 hours)",
+        "start": 1869,
+        "end": 1966
+      },
+      {
+        "text": "Place the brain tissue in blocking solution (5% (vol/vol) normal donkey serum + 0.2% Triton X-100 + 0.1% (wt/vol) NaN₃ in 1× PBS) and agitate for blocking. (Temperature: 37 ℃, Time: 24 hours)",
+        "start": 1984,
+        "end": 2182
+      },
+      {
+        "text": "Place the brain tissue in a solution containing anti-β-III Tubulin (TUJ1) rabbit polyclonal antibody (diluted 1:500 in blocking solution) and incubate with gentle agitation. (Temperature: 37 ℃, Time: 48 hours)",
+        "start": 2242,
+        "end": 2458
+      },
+      {
+        "text": "Wash with PBST to remove unbound primary antibody. (Temperature: RT, Time: 5 × 1 hour)",
+        "start": 2458,
+        "end": 2551
+      },
+      {
+        "text": "Place the brain tissue in a solution containing donkey anti-rabbit Alexa Fluor 647 secondary antibody (diluted 1:500 in blocking solution) and incubate with agitation protected from light. (Temperature: 37 ℃, Time: 48 hours)",
+        "start": 2608,
+        "end": 2839
+      },
+      {
+        "text": "Wash with PBST to remove unbound secondary antibody. (Temperature: RT, Time: 5 × 1 hour)",
+        "start": 2839,
+        "end": 2934
+      },
+      {
+        "text": "Final wash with 1× PBS. (Temperature: RT, Time: 2 × 30 min)",
+        "start": 2934,
+        "end": 3000
+      },
+      {
+        "text": "Place the brain tissue in 50% (vol/vol) THF (tetrahydrofuran) aqueous solution (adjust pH to 9–10 with NaOH to protect fluorescent proteins) and agitate for dehydration. (Temperature: 4 ℃, Time: 1 hour)",
+        "start": 3048,
+        "end": 3257
+      },
+      {
+        "text": "Place the brain tissue in 70% (vol/vol) THF aqueous solution (pH 9–10) and agitate for dehydration. (Temperature: 4 ℃, Time: 1 hour)",
+        "start": 3257,
+        "end": 3396
+      },
+      {
+        "text": "Place the brain tissue in 80% (vol/vol) THF aqueous solution (pH 9–10) and agitate for dehydration. (Temperature: 4 ℃, Time: 1 hour)",
+        "start": 3396,
+        "end": 3535
+      },
+      {
+        "text": "Place the brain tissue in 100% THF (anhydrous, pH 9–10, add a small amount of NaOH) and agitate for dehydration, first time. (Temperature: 4 ℃, Time: 1 hour)",
+        "start": 3535,
+        "end": 3699
+      },
+      {
+        "text": "Place the brain tissue in 100% THF (anhydrous, pH 9–10) and agitate for dehydration, second time (replace with fresh THF). (Temperature: 4 ℃, Time: 1 hour)",
+        "start": 3699,
+        "end": 3861
+      },
+      {
+        "text": "Place the brain tissue in BABB (benzyl alcohol:benzyl benzoate = 1:2, vol/vol) and agitate to complete delipidation and begin RI matching, until the tissue is completely transparent (usually 30–60 min). (Temperature: 4 ℃, Time: 1 hour)",
+        "start": 3904,
+        "end": 4146
+      },
+      {
+        "text": "Transfer the transparent brain tissue to fresh BABB (RI ≈ 1.56) and let it stand protected from light to equilibrate, ensuring the tissue is completely transparent and free of bubbles. (Temperature: 4 ℃, Time: 2 hours)",
+        "start": 4195,
+        "end": 4420
+      },
+      {
+        "text": "Replace with fresh BABB again, confirm the tissue is completely transparent, and prepare for imaging. (Temperature: 4 ℃, Time: 30 min)",
+        "start": 4420,
+        "end": 4561
+      },
+      {
+        "text": "Transfer the transparent brain tissue to BABB in a sample holder compatible with the light-sheet microscope sample slot. Use a refractive index-matched immersion medium (RI = 1.56) to fix the sample position, avoiding bubbles. (Temperature: RT, Time: Immediate imaging)",
+        "start": 4605,
+        "end": 4881
+      },
+      {
+        "text": "If short-term storage is required, seal the sample in BABB and store protected from light at 4 ℃ (imaging is recommended to be completed within 1 week to prevent fluorescence signal decay). (Temperature: 4 ℃, Time: ≤ 7 days)",
+        "start": 4881,
+        "end": 5111
+      }
+    ]
+  },
+  {
+    "condition": "renumber_wording_label_translation_only",
+    "document": {
+      "path": "C:\\ClearEval\\reports\\cleareval_20261012\\english_fulltext_pilot\\qwen_translation_pending\\mechanism_checks\\renumber_wording_label_translation_only.txt",
+      "sha256": "ad57be0523b5eb1ab815ec5762b64669b03326683ae6f63078b48d0baed4c0b5"
+    },
+    "origin_translation": {
+      "path": "C:\\ClearEval\\reports\\cleareval_20261012\\english_fulltext_pilot\\qwen_translation_pending\\returns\\T06_R3C07_renumber_operations\\english_text.txt",
+      "sha256": "b3efb36b14b0c453f6135e826611e5bad54705cff507bfa41cc8c7e042b007e9"
+    },
+    "synthetic_offline_intervention": true,
+    "score": {
+      "sr": 0.0,
+      "sp": 0.0,
+      "reference_n": 7,
+      "generated_n": 19,
+      "matches": [
+        {
+          "reference_index": 0,
+          "reference_text": "Incubate the fixed tissue in 50% (vol/vol) THF in water, adjusted to pH 9.0 with triethylamine, at 4 degrees C for 12 hours with gentle shaking in the dark.",
+          "generated_index": 13,
+          "generated_text": "Place the brain tissue in 100% THF (anhydrous, pH 9–10) and agitate for dehydration, second time (replace with fresh THF). (Temperature: 4 ℃, Time: 1 hour)",
+          "similarity": 0.6905732154846191,
+          "matched": false
+        },
+        {
+          "reference_index": 1,
+          "reference_text": "Incubate the fixed tissue in 70% (vol/vol) THF in water, adjusted to pH 9.0 with triethylamine, at 4 degrees C for 12 hours with gentle shaking in the dark.",
+          "generated_index": 13,
+          "generated_text": "Place the brain tissue in 100% THF (anhydrous, pH 9–10) and agitate for dehydration, second time (replace with fresh THF). (Temperature: 4 ℃, Time: 1 hour)",
+          "similarity": 0.6915405988693237,
+          "matched": false
+        },
+        {
+          "reference_index": 2,
+          "reference_text": "Incubate the fixed tissue in 80% (vol/vol) THF in water, adjusted to pH 9.0 with triethylamine, at 4 degrees C for 12 hours with gentle shaking in the dark.",
+          "generated_index": 13,
+          "generated_text": "Place the brain tissue in 100% THF (anhydrous, pH 9–10) and agitate for dehydration, second time (replace with fresh THF). (Temperature: 4 ℃, Time: 1 hour)",
+          "similarity": 0.6930760145187378,
+          "matched": false
+        },
+        {
+          "reference_index": 3,
+          "reference_text": "Incubate the fixed tissue in 100% (vol/vol) THF in water, adjusted to pH 9.0 with triethylamine, at 4 degrees C for 12 hours with gentle shaking in the dark.",
+          "generated_index": 13,
+          "generated_text": "Place the brain tissue in 100% THF (anhydrous, pH 9–10) and agitate for dehydration, second time (replace with fresh THF). (Temperature: 4 ℃, Time: 1 hour)",
+          "similarity": 0.6922850012779236,
+          "matched": false
+        },
+        {
+          "reference_index": 4,
+          "reference_text": "Repeat incubation in fresh 100% THF twice more, 12 hours each, for three incubations in total, at 4 degrees C with gentle shaking in the dark.",
+          "generated_index": 7,
+          "generated_text": "Wash with PBST to remove unbound secondary antibody. (Temperature: RT, Time: 5 × 1 hour)",
+          "similarity": 0.5305786728858948,
+          "matched": false
+        },
+        {
+          "reference_index": 5,
+          "reference_text": "Transfer the dehydrated tissue to pure DBE for refractive index matching and clearing at 4 degrees C for 3 hours with gentle shaking in the dark.",
+          "generated_index": 16,
+          "generated_text": "Replace with fresh BABB again, confirm the tissue is completely transparent, and prepare for imaging. (Temperature: 4 ℃, Time: 30 min)",
+          "similarity": 0.658495306968689,
+          "matched": false
+        },
+        {
+          "reference_index": 6,
+          "reference_text": "Store the cleared tissue in DBE in an airtight glass chamber at 4 degrees C in the dark until imaging.",
+          "generated_index": 16,
+          "generated_text": "Replace with fresh BABB again, confirm the tissue is completely transparent, and prepare for imaging. (Temperature: 4 ℃, Time: 30 min)",
+          "similarity": 0.699491024017334,
+          "matched": false
+        }
+      ],
+      "generated_max_similarity": [
+        0.4389820098876953,
+        0.5702420473098755,
+        0.5020041465759277,
+        0.5390206575393677,
+        0.5033882856369019,
+        0.588676929473877,
+        0.5154228806495667,
+        0.5818532705307007,
+        0.449798047542572,
+        0.6180201768875122,
+        0.604557454586029,
+        0.6040148138999939,
+        0.6472419500350952,
+        0.6930760145187378,
+        0.6520307660102844,
+        0.6097702980041504,
+        0.699491024017334,
+        0.6245390772819519,
+        0.5848643779754639
+      ],
+      "reference_truncated": 0,
+      "generated_truncated": 0,
+      "generated_cjk_steps": 0
+    },
+    "generated_steps": [
+      {
+        "text": "Place the adult mouse whole brain, already fixed in 4% PFA, in 1× PBS for thorough washing to remove residual fixative. (Temperature: 4 ℃, Time: 3 × 1 hour)",
+        "start": 1509,
+        "end": 1672
+      },
+      {
+        "text": "Place the brain tissue in 1× PBS containing 0.2% (vol/vol) Triton X-100 (PBST) and agitate for permeabilization. (Temperature: 37 ℃, Time: 24 hours)",
+        "start": 1733,
+        "end": 1888
+      },
+      {
+        "text": "Replace with fresh PBST and continue permeabilization. (Temperature: 37 ℃, Time: 24 hours)",
+        "start": 1888,
+        "end": 1985
+      },
+      {
+        "text": "Place the brain tissue in blocking solution (5% (vol/vol) normal donkey serum + 0.2% Triton X-100 + 0.1% (wt/vol) NaN₃ in 1× PBS) and agitate for blocking. (Temperature: 37 ℃, Time: 24 hours)",
+        "start": 2003,
+        "end": 2201
+      },
+      {
+        "text": "Place the brain tissue in a solution containing anti-β-III Tubulin (TUJ1) rabbit polyclonal antibody (diluted 1:500 in blocking solution) and incubate with gentle agitation. (Temperature: 37 ℃, Time: 48 hours)",
+        "start": 2261,
+        "end": 2477
+      },
+      {
+        "text": "Wash with PBST to remove unbound primary antibody. (Temperature: RT, Time: 5 × 1 hour)",
+        "start": 2477,
+        "end": 2570
+      },
+      {
+        "text": "Place the brain tissue in a solution containing donkey anti-rabbit Alexa Fluor 647 secondary antibody (diluted 1:500 in blocking solution) and incubate with agitation protected from light. (Temperature: 37 ℃, Time: 48 hours)",
+        "start": 2627,
+        "end": 2858
+      },
+      {
+        "text": "Wash with PBST to remove unbound secondary antibody. (Temperature: RT, Time: 5 × 1 hour)",
+        "start": 2858,
+        "end": 2953
+      },
+      {
+        "text": "Final wash with 1× PBS. (Temperature: RT, Time: 2 × 30 min)",
+        "start": 2953,
+        "end": 3019
+      },
+      {
+        "text": "Place the brain tissue in 50% (vol/vol) THF (tetrahydrofuran) aqueous solution (adjust pH to 9–10 with NaOH to protect fluorescent proteins) and agitate for dehydration. (Temperature: 4 ℃, Time: 1 hour)",
+        "start": 3067,
+        "end": 3276
+      },
+      {
+        "text": "Place the brain tissue in 70% (vol/vol) THF aqueous solution (pH 9–10) and agitate for dehydration. (Temperature: 4 ℃, Time: 1 hour)",
+        "start": 3276,
+        "end": 3415
+      },
+      {
+        "text": "Place the brain tissue in 80% (vol/vol) THF aqueous solution (pH 9–10) and agitate for dehydration. (Temperature: 4 ℃, Time: 1 hour)",
+        "start": 3415,
+        "end": 3554
+      },
+      {
+        "text": "Place the brain tissue in 100% THF (anhydrous, pH 9–10, add a small amount of NaOH) and agitate for dehydration, first time. (Temperature: 4 ℃, Time: 1 hour)",
+        "start": 3554,
+        "end": 3718
+      },
+      {
+        "text": "Place the brain tissue in 100% THF (anhydrous, pH 9–10) and agitate for dehydration, second time (replace with fresh THF). (Temperature: 4 ℃, Time: 1 hour)",
+        "start": 3718,
+        "end": 3880
+      },
+      {
+        "text": "Place the brain tissue in BABB (benzyl alcohol:benzyl benzoate = 1:2, vol/vol) and agitate to complete delipidation and begin RI matching, until the tissue is completely transparent (usually 30–60 min). (Temperature: 4 ℃, Time: 1 hour)",
+        "start": 3923,
+        "end": 4165
+      },
+      {
+        "text": "Transfer the transparent brain tissue to fresh BABB (RI ≈ 1.56) and let it stand protected from light to equilibrate, ensuring the tissue is completely transparent and free of bubbles. (Temperature: 4 ℃, Time: 2 hours)",
+        "start": 4214,
+        "end": 4439
+      },
+      {
+        "text": "Replace with fresh BABB again, confirm the tissue is completely transparent, and prepare for imaging. (Temperature: 4 ℃, Time: 30 min)",
+        "start": 4439,
+        "end": 4580
+      },
+      {
+        "text": "Transfer the transparent brain tissue to BABB in a sample holder compatible with the light-sheet microscope sample slot. Use a refractive index-matched immersion medium (RI = 1.56) to fix the sample position, avoiding bubbles. (Temperature: RT, Time: Immediate imaging)",
+        "start": 4624,
+        "end": 4900
+      },
+      {
+        "text": "If short-term storage is required, seal the sample in BABB and store protected from light at 4 ℃ (imaging is recommended to be completed within 1 week to prevent fluorescence signal decay). (Temperature: 4 ℃, Time: ≤ 7 days)",
+        "start": 4900,
+        "end": 5130
+      }
+    ]
+  }
+]

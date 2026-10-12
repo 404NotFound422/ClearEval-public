@@ -1,0 +1,28 @@
+**Chosen Method:** CUBIC
+**Chosen Labeling:** [GFP (内源), MAP2 + Alexa Fluor 488, DAPI]
+**Justification:** CUBIC is an aqueous-based, non-denaturing clearing method that excels at preserving weak endogenous fluorescent proteins (e.g., GFP) over long-term storage, unlike organic solvent–based methods (e.g., iDISCO+, uDISCO) which often quench or irreversibly damage such signals. It provides excellent transparency for 3 mm tissue blocks within days and enables stable refractive index (RI ≈ 1.49) matching compatible with light-sheet and confocal microscopy. The dual-labeling strategy leverages the sparse endogenous GFP reporter to identify individual neurons, while immunolabeling against MAP2 (a dendritic cytoskeletal marker) with Alexa Fluor 488 reinforces dendritic arborization and structural integrity; DAPI provides nuclear counterstain for spatial registration and cell density context. All fluorophores used are known to be well-preserved in CUBIC, and the cleared samples can be stored in CUBIC-R+ for ≥6 months without significant signal decay.
+**Protocol Steps:**
+1 Post-fixation Stabilization
+1.1 Incubation with 4% (wt/vol) paraformaldehyde (PFA) in PBS (pH 7.4) to confirm fixation completeness.(Temperature: 4 ℃, Time: 12 hours)
+2 Permeabilization and Blocking
+2.1 Incubation with CUBIC-P1 (10 vol% Triton X-100, 10 vol% Tween-20, 10 wt% sucrose in PBS).(Temperature: 37 ℃, Time: 24 hours)
+2.2 Incubation with CUBIC-B (10 vol% DMSO, 5 vol% normal goat serum, 0.5 wt% sodium azide in PBS).(Temperature: 37 ℃, Time: 12 hours)
+3 Primary Antibody Labeling
+3.1 Incubation with mouse anti-MAP2 primary antibody (1:500 dilution in CUBIC-B).(Temperature: 37 ℃, Time: 72 hours)
+4 Washing
+4.1 Incubation with CUBIC-W (0.5 vol% Triton X-100 in PBS) with gentle shaking.(Temperature: 37 ℃, Time: 24 hours)
+4.2 Repeat step 4.1 two additional times, changing solution every 8 hours.(Temperature: 37 ℃, Time: 24 hours total)
+5 Secondary Antibody Labeling
+5.1 Incubation with goat anti-mouse IgG conjugated to Alexa Fluor 488 (1:300 dilution in CUBIC-B).(Temperature: 37 ℃, Time: 48 hours)
+6 Nuclear Counterstaining
+6.1 Incubation with DAPI (1 µg/mL in CUBIC-W).(Temperature: RT, Time: 12 hours)
+7 Washing Prior to Clearing
+7.1 Incubation with CUBIC-W.(Temperature: 37 ℃, Time: 24 hours)
+8 Tissue Clearing (Delipidation & Decolorization)
+8.1 Incubation with CUBIC-L (25 wt% Quadrol, 25 wt% urea, 15 wt% sucrose, 10 vol% Triton X-100 in H₂O, pH 9.0–9.5).(Temperature: 37 ℃, Time: 72 hours)
+8.2 Replace with fresh CUBIC-L.(Temperature: 37 ℃, Time: 48 hours)
+9 Refractive Index Matching
+9.1 Incubation with CUBIC-R+ (50 wt% sucrose, 25 wt% urea, 10 wt% triethanolamine, 0.5 vol% Triton X-100 in H₂O, RI = 1.49).(Temperature: RT, Time: 24 hours)
+9.2 Replace with fresh CUBIC-R+ for final storage and imaging.(Temperature: RT, Time: ≥6 months)
+10 Imaging Preparation
+10.1 Transfer sample to glass-bottom imaging chamber filled with fresh CUBIC-R+ immediately before imaging.(Temperature: RT, Time: <1 hour prior to acquisition)

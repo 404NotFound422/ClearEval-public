@@ -1,0 +1,93 @@
+**Chosen Method:** FDISCO
+
+**Chosen Labeling:** [EGFP (endogenous), MAP2 + Alexa Fluor (secondary conjugate)]
+
+**Justification:**
+FDISCO (Fluorescence-preserved Delipidation with Isopropanol and Solvent-based Clearing) is selected for the following reasons specific to this problem statement:
+1. **Weak endogenous fluorescence preservation:** FDISCO operates at low temperature (4 °C) throughout the organic-solvent dehydration and clearing steps, which critically preserves weak GFP-family fluorescence signals (here EGFP from sparse reporter neurons) far better than room-temperature solvent methods such as standard iDISCO+ or uDISCO.
+2. **3 mm tissue block compatibility:** FDISCO achieves excellent clearing of thick (≥3 mm) brain blocks within a practical timeframe without requiring perfusion-based whole-organ processing.
+3. **Long-term storage compatibility:** FDISCO-cleared samples stored in DBE (dibenzyl ether, RI ≈ 1.56) are stable for months at 4 °C in the dark, meeting the 6-month storage requirement.
+4. **Dual-target labeling rationale:**
+   - **Target 1 – Sparse reporter neurons (EGFP, endogenous):** Directly exploits the existing fluorescent reporter signal; no additional antibody amplification is needed for sparse labeling, reducing background.
+   - **Target 2 – MAP2 + Alexa Fluor secondary:** MAP2 immunolabeling (performed before clearing via a pre-clearing immunostaining step compatible with FDISCO) provides a pan-dendritic structural counterstain that enables dendritic skeleton reconstruction, branching complexity analysis, and local circuit morphology independent of reporter expression level. A far-red secondary (e.g., Alexa Fluor 647) is chosen to spectrally separate from EGFP and to minimize tissue autofluorescence overlap.
+5. **RI matching:** DBE (RI = 1.56) provides excellent RI matching for light-sheet or confocal imaging of solvent-cleared samples and is compatible with long-term immersion storage.
+
+---
+
+**Protocol Steps:**
+
+**N0001 Pre-clearing Immunostaining (MAP2 labeling before organic solvent steps)**
+
+N0002 Wash fixed 3 mm brain blocks (post-fixed in 4% PFA) 3× with 1× PBS. (Temperature: RT, Time: 10 min per wash)
+
+N0003 Permeabilization and blocking: incubate tissue in blocking/permeabilization buffer [0.5% (vol/vol) Triton X-100, 10% (vol/vol) normal donkey serum, 0.1% (wt/vol) sodium azide in 1× PBS]. (Temperature: 37 °C, Time: 24 hours, with gentle shaking)
+
+N0004 Primary antibody incubation: incubate with anti-MAP2 rabbit polyclonal antibody [1:500 dilution in antibody diluent: 0.5% Triton X-100, 5% normal donkey serum, 0.1% sodium azide in 1× PBS]. (Temperature: 37 °C, Time: 48 hours, with gentle shaking)
+
+N0005 Wash 5× with 1× PBS containing 0.1% (vol/vol) Tween-20 (PBST). (Temperature: RT, Time: 1 hour per wash)
+
+N0006 Secondary antibody incubation: incubate with donkey anti-rabbit Alexa Fluor 647-conjugated secondary antibody [1:500 dilution in antibody diluent as in step N0004]. (Temperature: 37 °C, Time: 48 hours, with gentle shaking, protected from light)
+
+N0007 Wash 5× with PBST. (Temperature: RT, Time: 1 hour per wash)
+
+N0008 Post-immunostaining fixation: incubate in 4% (wt/vol) PFA in 1× PBS to crosslink antibodies in place. (Temperature: RT, Time: 2 hours, with gentle shaking)
+
+N0009 Wash 3× with 1× PBS. (Temperature: RT, Time: 10 min per wash)
+
+---
+
+**N0010 Dehydration (FDISCO — all steps at 4 °C, protected from light)**
+
+N0011 Incubation with 30% (vol/vol) tetrahydrofuran (THF) in ddH₂O (freshly prepared, stabilizer-free THF). (Temperature: 4 °C, Time: 1 hour, with gentle shaking)
+
+N0012 Incubation with 50% (vol/vol) THF in ddH₂O. (Temperature: 4 °C, Time: 1 hour, with gentle shaking)
+
+N0013 Incubation with 70% (vol/vol) THF in ddH₂O. (Temperature: 4 °C, Time: 1 hour, with gentle shaking)
+
+N0014 Incubation with 80% (vol/vol) THF in ddH₂O. (Temperature: 4 °C, Time: 1 hour, with gentle shaking)
+
+N0015 Incubation with 100% (vol/vol) THF (anhydrous). (Temperature: 4 °C, Time: 1 hour, with gentle shaking)
+
+N0016 Repeat incubation with fresh 100% (vol/vol) THF (anhydrous). (Temperature: 4 °C, Time: 1 hour, with gentle shaking)
+
+---
+
+**N0017 Delipidation and Clearing**
+
+N0018 Incubation with dichloromethane (DCM, 100%, anhydrous) for delipidation. (Temperature: 4 °C, Time: 30 min, with gentle shaking; use glass vials, fume hood)
+
+N0019 Remove DCM completely by aspiration; do not allow tissue to dry.
+
+---
+
+**N0020 Refractive Index Matching and Clearing in DBE**
+
+N0021 Incubation with dibenzyl ether (DBE, 100%, Sigma-Aldrich 108014) — first exchange. (Temperature: 4 °C, Time: 2 hours, with gentle shaking, protected from light)
+
+N0022 Incubation with fresh DBE (100%) — second exchange until tissue is fully transparent. (Temperature: 4 °C, Time: 4–6 hours or overnight, with gentle shaking, protected from light)
+
+N0023 Verify optical transparency visually; tissue should appear fully clear. If residual opacity remains, replace with fresh DBE and continue incubation for an additional 4 hours at 4 °C.
+
+---
+
+**N0024 Long-term Storage**
+
+N0025 Transfer cleared tissue to a sealed glass vial filled with fresh 100% DBE (RI = 1.56). Ensure complete submersion and absence of air bubbles. (Temperature: 4 °C, protected from light, Time: up to 6 months)
+
+N0026 Label vials with sample ID, clearing date, and antibody/fluorophore information. Store upright in a light-tight container at 4 °C.
+
+N0027 Inspect samples every 4–6 weeks for clarity and potential DBE evaporation; replenish DBE if volume decreases.
+
+---
+
+**N0028 Pre-imaging Preparation (at time of imaging, including after long-term storage)**
+
+N0029 Remove sample from storage DBE; transfer to a fresh glass vial with 100% DBE for equilibration. (Temperature: RT, Time: 30 min, protected from light)
+
+N0030 Mount sample in a custom imaging chamber (e.g., FEP tube or glass-bottom dish) filled with 100% DBE (RI = 1.56) compatible with the objective immersion medium.
+
+N0031 For light-sheet fluorescence microscopy (LSFM): use a long-working-distance objective corrected for RI = 1.56 (e.g., CLARITY/CUBIC-compatible objective or a custom-dipping objective with DBE-compatible immersion). Imaging channels: 488 nm excitation / 510–540 nm emission (EGFP, sparse reporter neurons); 633/647 nm excitation / 660–720 nm emission (Alexa Fluor 647, MAP2 dendritic counterstain).
+
+N0032 For confocal imaging: use an oil-immersion or RI-matched objective; apply a coverslip with DBE as mounting medium and seal edges with two-component epoxy to prevent evaporation during long imaging sessions.
+
+N0033 After imaging, return sample to sealed glass vial with fresh DBE for continued storage at 4 °C if repeat imaging is planned. (Temperature: 4 °C, protected from light)

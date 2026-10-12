@@ -1,0 +1,64 @@
+{
+  "numeric_scope": "prior_scoped_midpoint_same_cohort",
+  "model_cohort": [
+    "openai_qwen3-14b",
+    "openai_qwen3-32b"
+  ],
+  "cohort_size": 2,
+  "question_denominator": 5,
+  "common_question_ids": [
+    "22"
+  ],
+  "evaluated_question_ids": [
+    "1",
+    "2",
+    "21",
+    "22",
+    "248"
+  ],
+  "evaluated_question_n": 5,
+  "common_fraction_of_evaluated_questions": 0.2,
+  "common_n": 1,
+  "common_coverage": 0.2,
+  "per_model_eligible_n": {
+    "openai_qwen3-14b": 3,
+    "openai_qwen3-32b": 1
+  },
+  "excluded_counts": {
+    "incomplete_CCE": 6,
+    "cross_model_question_hash_mismatch": 0
+  },
+  "means": {
+    "openai_qwen3-14b": {
+      "Com": 0.6444444444444444,
+      "Cor": 0.3333333333333333,
+      "Eff": 0.2950781253905583,
+      "IA": 0.2950781253905583,
+      "HV": 0.06338715286167547
+    },
+    "openai_qwen3-32b": {
+      "Com": 0.39999999999999997,
+      "Cor": 0.6666666666666666,
+      "Eff": 0.42361000000015253,
+      "IA": 0.39999999999999997,
+      "HV": 0.11296266666670732
+    }
+  },
+  "dominance_matrix": {
+    "openai_qwen3-14b": {
+      "openai_qwen3-14b": false,
+      "openai_qwen3-32b": false
+    },
+    "openai_qwen3-32b": {
+      "openai_qwen3-14b": false,
+      "openai_qwen3-32b": false
+    }
+  },
+  "empirical_nondominated": [
+    "openai_qwen3-14b",
+    "openai_qwen3-32b"
+  ],
+  "dominance_tolerance": 1e-12,
+  "aggregation": "mean of per-question IA=min(Com,Cor,Eff) and HV=Com*Cor*Eff",
+  "formal_result": false
+}

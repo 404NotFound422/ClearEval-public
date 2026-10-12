@@ -1,0 +1,18 @@
+{
+  "version": "scoped-midpoint-config-v1",
+  "time_policy": "arithmetic_midpoint_of_explicit_finite_duration_ranges_before_scoring",
+  "task_marker_scopes": {
+    "21": {
+      "map2": {
+        "scope": {"大类": "中枢神经", "亚类": "神经元结构", "结构/细胞类型": "神经元(通用)"},
+        "basis": "题干要求稀疏脑神经元形态与树突结构，没有指定 CA1；固定题目参考路径含通用神经元 MAP2 行。对该题所有模型与变体使用同一范围。",
+        "decision_author": "current assistant, development-stage task interpretation",
+        "source": "fixed demand registry question 21 and marker_query_targets; label_lookup_midpoint.json"
+      }
+    }
+  },
+  "formulas": "original SR/SP, direct scales and EGES equations unchanged",
+  "model_policy": "offline reuse only; no new model call; no Llama evaluator",
+  "run_selection": "all 68 cells in existing uniform_v7/actual_01/cells.json; retain cancelled slot",
+  "scope": "engineering replay with separately labeled source-bound author decomposition"
+}

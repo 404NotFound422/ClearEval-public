@@ -1,0 +1,725 @@
+{
+  "version": "source-bound-label-author-annotations-20261012",
+  "new_model_requests": 0,
+  "expert_records": 0,
+  "source_index": {
+    "path": "C:\\ClearEval\\reports\\cleareval_20261012\\missing_score_diagnosis\\evidence.json",
+    "sha256": "78fed5eaa4558ae4b4d11670195bc34783ad5132aa5adf070c7257359ff7412c"
+  },
+  "development_exposed": true,
+  "results": [
+    {
+      "cell_id_at_annotation": "A01",
+      "answer_sha256": "963230e5722093771be058ec61e609d7865721d2c597162bea482eec3275e3cb",
+      "question_id": 2,
+      "source_document": {
+        "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\optimizer_round2_20261010\\grounded_development_v11\\source_documents\\A01.json",
+        "sha256": "6f58113ff2bce16852bc0dd27f047ad88ae7c062e72bf1792294ef96b3cf35d0"
+      },
+      "semantic_author": "current_Codex_assistant_author_annotation",
+      "qualification": "source-bound post-hoc label interpretation; not expert truth, independent judge repeat or prospective confirmation",
+      "review_scope": "label identities, selected versus alternative usage and target-fluor relationships",
+      "remaining_uncertainties": [],
+      "relations": [
+        {
+          "fluorophore": "GFP",
+          "marker": "",
+          "source_spans": [
+            {
+              "start": 26,
+              "end": 78,
+              "quote": "**Chosen Labeling:** [GFP (内源), DAPI / Hoechst / PI]",
+              "answer_sha256": "963230e5722093771be058ec61e609d7865721d2c597162bea482eec3275e3cb"
+            }
+          ],
+          "basis": "原文指定内源 GFP，自身是荧光信号。"
+        },
+        {
+          "fluorophore": "DAPI",
+          "marker": "",
+          "source_spans": [
+            {
+              "start": 676,
+              "end": 795,
+              "quote": "1.1 Incubation with DAPI (10 μg/ml) in 0.01M PBS for nuclear labeling of cell bodies.(Temperature: 4 ℃, Time: 72 hours)",
+              "answer_sha256": "963230e5722093771be058ec61e609d7865721d2c597162bea482eec3275e3cb"
+            }
+          ],
+          "basis": "标题给出核染料备选，实际操作明确执行 DAPI；Hoechst/PI 不作为另行使用的染料。"
+        }
+      ],
+      "selection_basis": "Actual DAPI operation resolves the slash-separated heading alternatives; no choice by compatibility score."
+    },
+    {
+      "cell_id_at_annotation": "A04",
+      "answer_sha256": "458548a020a812c77caeec41d1c816a140a35ff92e9bed7e5effc744340cbb69",
+      "question_id": 23,
+      "source_document": {
+        "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\optimizer_round2_20261010\\grounded_development_v11\\source_documents\\A04.json",
+        "sha256": "77519ff9668ec8a6ea1f92ba5f273419a13259e2b046fd9b8c633f0f0af47d45"
+      },
+      "semantic_author": "current_Codex_assistant_author_annotation",
+      "qualification": "source-bound post-hoc label interpretation; not expert truth, independent judge repeat or prospective confirmation",
+      "review_scope": "label identities, selected versus alternative usage and target-fluor relationships",
+      "remaining_uncertainties": [],
+      "scenario_basis": "Two targets and two different AF dyes are stated, but the assignment is unspecified. Enumerate both bijections; publish a scalar only when both scores coincide. Generic AF is refined by the named dyes, not counted as a third channel.",
+      "relation_scenarios": [
+        {
+          "scenario_id": "GFP488_MAP2647",
+          "relations": [
+            {
+              "fluorophore": "GFP",
+              "marker": "",
+              "source_spans": [
+                {
+                  "start": 26,
+                  "end": 91,
+                  "quote": "**Chosen Labeling:** [GFP (内源) + Alexa Fluor, MAP2 + Alexa Fluor]",
+                  "answer_sha256": "458548a020a812c77caeec41d1c816a140a35ff92e9bed7e5effc744340cbb69"
+                }
+              ],
+              "basis": "Explicit native GFP remains a signal."
+            },
+            {
+              "fluorophore": "Alexa Fluor 488",
+              "marker": "GFP",
+              "source_spans": [
+                {
+                  "start": 26,
+                  "end": 91,
+                  "quote": "**Chosen Labeling:** [GFP (内源) + Alexa Fluor, MAP2 + Alexa Fluor]",
+                  "answer_sha256": "458548a020a812c77caeec41d1c816a140a35ff92e9bed7e5effc744340cbb69"
+                },
+                {
+                  "start": 1274,
+                  "end": 1492,
+                  "quote": "2.1 Incubation with primary antibodies (anti-GFP and anti-MAP2) diluted in antibody buffer (0.2% vol/vol Tween-20, 10 mg/ml heparin, 5% vol/vol DMSO, 3% vol/vol donkey serum in PBS). (Temperature: 37 ℃, Time: 72 hours)",
+                  "answer_sha256": "458548a020a812c77caeec41d1c816a140a35ff92e9bed7e5effc744340cbb69"
+                },
+                {
+                  "start": 1643,
+                  "end": 1859,
+                  "quote": "2.3 Incubation with secondary antibodies (Alexa Fluor 488 and Alexa Fluor 647) diluted in antibody buffer (0.2% vol/vol Tween-20, 10 mg/ml heparin, 3% vol/vol donkey serum in PBS). (Temperature: 37 ℃, Time: 72 hours)",
+                  "answer_sha256": "458548a020a812c77caeec41d1c816a140a35ff92e9bed7e5effc744340cbb69"
+                }
+              ],
+              "basis": "One admissible pairing, not a uniquely extracted source fact."
+            },
+            {
+              "fluorophore": "Alexa Fluor 647",
+              "marker": "MAP2",
+              "source_spans": [
+                {
+                  "start": 26,
+                  "end": 91,
+                  "quote": "**Chosen Labeling:** [GFP (内源) + Alexa Fluor, MAP2 + Alexa Fluor]",
+                  "answer_sha256": "458548a020a812c77caeec41d1c816a140a35ff92e9bed7e5effc744340cbb69"
+                },
+                {
+                  "start": 1274,
+                  "end": 1492,
+                  "quote": "2.1 Incubation with primary antibodies (anti-GFP and anti-MAP2) diluted in antibody buffer (0.2% vol/vol Tween-20, 10 mg/ml heparin, 5% vol/vol DMSO, 3% vol/vol donkey serum in PBS). (Temperature: 37 ℃, Time: 72 hours)",
+                  "answer_sha256": "458548a020a812c77caeec41d1c816a140a35ff92e9bed7e5effc744340cbb69"
+                },
+                {
+                  "start": 1643,
+                  "end": 1859,
+                  "quote": "2.3 Incubation with secondary antibodies (Alexa Fluor 488 and Alexa Fluor 647) diluted in antibody buffer (0.2% vol/vol Tween-20, 10 mg/ml heparin, 3% vol/vol donkey serum in PBS). (Temperature: 37 ℃, Time: 72 hours)",
+                  "answer_sha256": "458548a020a812c77caeec41d1c816a140a35ff92e9bed7e5effc744340cbb69"
+                }
+              ],
+              "basis": "Complementary pairing in the same admissible scenario."
+            }
+          ]
+        },
+        {
+          "scenario_id": "GFP647_MAP2488",
+          "relations": [
+            {
+              "fluorophore": "GFP",
+              "marker": "",
+              "source_spans": [
+                {
+                  "start": 26,
+                  "end": 91,
+                  "quote": "**Chosen Labeling:** [GFP (内源) + Alexa Fluor, MAP2 + Alexa Fluor]",
+                  "answer_sha256": "458548a020a812c77caeec41d1c816a140a35ff92e9bed7e5effc744340cbb69"
+                }
+              ],
+              "basis": "Explicit native GFP remains a signal."
+            },
+            {
+              "fluorophore": "Alexa Fluor 647",
+              "marker": "GFP",
+              "source_spans": [
+                {
+                  "start": 26,
+                  "end": 91,
+                  "quote": "**Chosen Labeling:** [GFP (内源) + Alexa Fluor, MAP2 + Alexa Fluor]",
+                  "answer_sha256": "458548a020a812c77caeec41d1c816a140a35ff92e9bed7e5effc744340cbb69"
+                },
+                {
+                  "start": 1274,
+                  "end": 1492,
+                  "quote": "2.1 Incubation with primary antibodies (anti-GFP and anti-MAP2) diluted in antibody buffer (0.2% vol/vol Tween-20, 10 mg/ml heparin, 5% vol/vol DMSO, 3% vol/vol donkey serum in PBS). (Temperature: 37 ℃, Time: 72 hours)",
+                  "answer_sha256": "458548a020a812c77caeec41d1c816a140a35ff92e9bed7e5effc744340cbb69"
+                },
+                {
+                  "start": 1643,
+                  "end": 1859,
+                  "quote": "2.3 Incubation with secondary antibodies (Alexa Fluor 488 and Alexa Fluor 647) diluted in antibody buffer (0.2% vol/vol Tween-20, 10 mg/ml heparin, 3% vol/vol donkey serum in PBS). (Temperature: 37 ℃, Time: 72 hours)",
+                  "answer_sha256": "458548a020a812c77caeec41d1c816a140a35ff92e9bed7e5effc744340cbb69"
+                }
+              ],
+              "basis": "One admissible pairing, not a uniquely extracted source fact."
+            },
+            {
+              "fluorophore": "Alexa Fluor 488",
+              "marker": "MAP2",
+              "source_spans": [
+                {
+                  "start": 26,
+                  "end": 91,
+                  "quote": "**Chosen Labeling:** [GFP (内源) + Alexa Fluor, MAP2 + Alexa Fluor]",
+                  "answer_sha256": "458548a020a812c77caeec41d1c816a140a35ff92e9bed7e5effc744340cbb69"
+                },
+                {
+                  "start": 1274,
+                  "end": 1492,
+                  "quote": "2.1 Incubation with primary antibodies (anti-GFP and anti-MAP2) diluted in antibody buffer (0.2% vol/vol Tween-20, 10 mg/ml heparin, 5% vol/vol DMSO, 3% vol/vol donkey serum in PBS). (Temperature: 37 ℃, Time: 72 hours)",
+                  "answer_sha256": "458548a020a812c77caeec41d1c816a140a35ff92e9bed7e5effc744340cbb69"
+                },
+                {
+                  "start": 1643,
+                  "end": 1859,
+                  "quote": "2.3 Incubation with secondary antibodies (Alexa Fluor 488 and Alexa Fluor 647) diluted in antibody buffer (0.2% vol/vol Tween-20, 10 mg/ml heparin, 3% vol/vol donkey serum in PBS). (Temperature: 37 ℃, Time: 72 hours)",
+                  "answer_sha256": "458548a020a812c77caeec41d1c816a140a35ff92e9bed7e5effc744340cbb69"
+                }
+              ],
+              "basis": "Complementary pairing in the same admissible scenario."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cell_id_at_annotation": "E2_09__local_qwen27b_q8_development__r0",
+      "answer_sha256": "a21cc5f9fc533172fbc2eace29b8990c93cbcaac76ef712319e60e2ee1a6febf",
+      "question_id": 22,
+      "source_document": {
+        "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\optimizer_round2_20261010\\grounded_controls_v11\\source_documents\\E2_09.json",
+        "sha256": "0f56c6756fa9088618a5c2c24388c0921d0dc14a93595d07afad91ad7a32b922"
+      },
+      "semantic_author": "current_Codex_assistant_author_annotation",
+      "qualification": "source-bound post-hoc label interpretation; not expert truth, independent judge repeat or prospective confirmation",
+      "review_scope": "label identities, selected versus alternative usage and target-fluor relationships",
+      "remaining_uncertainties": [],
+      "relations": [
+        {
+          "fluorophore": "GFP",
+          "marker": "",
+          "source_spans": [
+            {
+              "start": 26,
+              "end": 77,
+              "quote": "**Chosen Labeling:** [GFP (内源), MAP2 + Alexa Fluor]",
+              "answer_sha256": "a21cc5f9fc533172fbc2eace29b8990c93cbcaac76ef712319e60e2ee1a6febf"
+            }
+          ],
+          "basis": "Explicit native GFP, no external marker required."
+        },
+        {
+          "fluorophore": "Alexa Fluor",
+          "marker": "MAP2",
+          "source_spans": [
+            {
+              "start": 26,
+              "end": 77,
+              "quote": "**Chosen Labeling:** [GFP (内源), MAP2 + Alexa Fluor]",
+              "answer_sha256": "a21cc5f9fc533172fbc2eace29b8990c93cbcaac76ef712319e60e2ee1a6febf"
+            }
+          ],
+          "basis": "Header explicitly states the target-fluor relation; repeated AF mentions describe the same channel."
+        }
+      ]
+    },
+    {
+      "cell_id_at_annotation": "E2_10__local_qwen27b_q8_development__r0",
+      "answer_sha256": "4886107221907d6acb7cacbda88d14927371e29a15de664134c99afc31ef2cff",
+      "question_id": 22,
+      "source_document": {
+        "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\optimizer_round2_20261010\\grounded_controls_v11\\source_documents\\E2_10.json",
+        "sha256": "effef2d5c3142a33718710e694d25411d116fcaad436adc42de449e682269a5b"
+      },
+      "semantic_author": "current_Codex_assistant_author_annotation",
+      "qualification": "source-bound post-hoc label interpretation; not expert truth, independent judge repeat or prospective confirmation",
+      "review_scope": "label identities, selected versus alternative usage and target-fluor relationships",
+      "remaining_uncertainties": [],
+      "relations": [
+        {
+          "fluorophore": "GFP",
+          "marker": "",
+          "source_spans": [
+            {
+              "start": 26,
+              "end": 77,
+              "quote": "**Chosen Labeling:** [GFP (内源), MAP2 + Alexa Fluor]",
+              "answer_sha256": "4886107221907d6acb7cacbda88d14927371e29a15de664134c99afc31ef2cff"
+            }
+          ],
+          "basis": "Explicit native GFP, no external marker required."
+        },
+        {
+          "fluorophore": "Alexa Fluor",
+          "marker": "MAP2",
+          "source_spans": [
+            {
+              "start": 26,
+              "end": 77,
+              "quote": "**Chosen Labeling:** [GFP (内源), MAP2 + Alexa Fluor]",
+              "answer_sha256": "4886107221907d6acb7cacbda88d14927371e29a15de664134c99afc31ef2cff"
+            }
+          ],
+          "basis": "Header explicitly states the target-fluor relation; repeated AF mentions describe the same channel."
+        }
+      ]
+    },
+    {
+      "cell_id_at_annotation": "E2_11__local_qwen27b_q8_development__r0",
+      "answer_sha256": "3d035f5b7391029cd4a4abf3fb6f3d644b411a82548d9e4caa4ebd0673f33007",
+      "question_id": 22,
+      "source_document": {
+        "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\optimizer_round2_20261010\\grounded_controls_v11\\source_documents\\E2_11.json",
+        "sha256": "3e3e8aae00c129fdabc71db2900e1a59a617ce3a7fd88e186dbab001baf4069b"
+      },
+      "semantic_author": "current_Codex_assistant_author_annotation",
+      "qualification": "source-bound post-hoc label interpretation; not expert truth, independent judge repeat or prospective confirmation",
+      "review_scope": "label identities, selected versus alternative usage and target-fluor relationships",
+      "remaining_uncertainties": [],
+      "relations": [
+        {
+          "fluorophore": "GFP",
+          "marker": "",
+          "source_spans": [
+            {
+              "start": 26,
+              "end": 77,
+              "quote": "**Chosen Labeling:** [GFP (内源), MAP2 + Alexa Fluor]",
+              "answer_sha256": "3d035f5b7391029cd4a4abf3fb6f3d644b411a82548d9e4caa4ebd0673f33007"
+            }
+          ],
+          "basis": "Explicit native GFP, no external marker required."
+        },
+        {
+          "fluorophore": "Alexa Fluor",
+          "marker": "MAP2",
+          "source_spans": [
+            {
+              "start": 26,
+              "end": 77,
+              "quote": "**Chosen Labeling:** [GFP (内源), MAP2 + Alexa Fluor]",
+              "answer_sha256": "3d035f5b7391029cd4a4abf3fb6f3d644b411a82548d9e4caa4ebd0673f33007"
+            }
+          ],
+          "basis": "Header explicitly states the target-fluor relation; repeated AF mentions describe the same channel."
+        }
+      ]
+    },
+    {
+      "cell_id_at_annotation": "E2_12__local_qwen27b_q8_development__r0",
+      "answer_sha256": "ca09929a1a96847c8eb1408c83563718d3349bc17df658ee8774e35e7cbdf52e",
+      "question_id": 22,
+      "source_document": {
+        "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\optimizer_round2_20261010\\grounded_controls_v11\\source_documents\\E2_12.json",
+        "sha256": "c304fa0306c5c57ffe52c02ecb856fa594a3bdb4a8f0ab50e67f38a49feb9422"
+      },
+      "semantic_author": "current_Codex_assistant_author_annotation",
+      "qualification": "source-bound post-hoc label interpretation; not expert truth, independent judge repeat or prospective confirmation",
+      "review_scope": "label identities, selected versus alternative usage and target-fluor relationships",
+      "remaining_uncertainties": [],
+      "relations": [
+        {
+          "fluorophore": "GFP",
+          "marker": "",
+          "source_spans": [
+            {
+              "start": 26,
+              "end": 77,
+              "quote": "**Chosen Labeling:** [GFP (内源), MAP2 + Alexa Fluor]",
+              "answer_sha256": "ca09929a1a96847c8eb1408c83563718d3349bc17df658ee8774e35e7cbdf52e"
+            }
+          ],
+          "basis": "Explicit native GFP, no external marker required."
+        },
+        {
+          "fluorophore": "Alexa Fluor",
+          "marker": "MAP2",
+          "source_spans": [
+            {
+              "start": 26,
+              "end": 77,
+              "quote": "**Chosen Labeling:** [GFP (内源), MAP2 + Alexa Fluor]",
+              "answer_sha256": "ca09929a1a96847c8eb1408c83563718d3349bc17df658ee8774e35e7cbdf52e"
+            }
+          ],
+          "basis": "Header explicitly states the target-fluor relation; repeated AF mentions describe the same channel."
+        }
+      ]
+    },
+    {
+      "cell_id_at_annotation": "E2_17__local_qwen27b_q8_development__r0",
+      "answer_sha256": "29ddf657b97f5ce4efe937491f6fb4dd9cba6115ef3e3227c8e5394c75d234a0",
+      "question_id": 22,
+      "source_document": {
+        "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\optimizer_round2_20261010\\grounded_controls_v11\\source_documents\\E2_17.json",
+        "sha256": "e288f1c67b078c01bc5a84127edd525998cecfb5a95f2c7e943c6fa736cd610b"
+      },
+      "semantic_author": "current_Codex_assistant_author_annotation",
+      "qualification": "source-bound post-hoc label interpretation; not expert truth, independent judge repeat or prospective confirmation",
+      "review_scope": "label identities, selected versus alternative usage and target-fluor relationships",
+      "remaining_uncertainties": [],
+      "relations": [
+        {
+          "fluorophore": "GFP",
+          "marker": "",
+          "source_spans": [
+            {
+              "start": 26,
+              "end": 77,
+              "quote": "**Chosen Labeling:** [GFP (内源), MAP2 + Alexa Fluor]",
+              "answer_sha256": "29ddf657b97f5ce4efe937491f6fb4dd9cba6115ef3e3227c8e5394c75d234a0"
+            }
+          ],
+          "basis": "Explicit native GFP, no external marker required."
+        },
+        {
+          "fluorophore": "Alexa Fluor",
+          "marker": "MAP2",
+          "source_spans": [
+            {
+              "start": 26,
+              "end": 77,
+              "quote": "**Chosen Labeling:** [GFP (内源), MAP2 + Alexa Fluor]",
+              "answer_sha256": "29ddf657b97f5ce4efe937491f6fb4dd9cba6115ef3e3227c8e5394c75d234a0"
+            }
+          ],
+          "basis": "Header explicitly states the target-fluor relation; repeated AF mentions describe the same channel."
+        }
+      ]
+    },
+    {
+      "cell_id_at_annotation": "E2_18__local_qwen27b_q8_development__r0",
+      "answer_sha256": "cb1177a626b0a82a0e7b118224d0b922232d28a11ec8a6760179d81eb7abbbc3",
+      "question_id": 22,
+      "source_document": {
+        "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\optimizer_round2_20261010\\grounded_controls_v11\\source_documents\\E2_18.json",
+        "sha256": "360a2094b8da5c467c508421bc469495fe045e62de7fe88a7e4bd4c04cede7f2"
+      },
+      "semantic_author": "current_Codex_assistant_author_annotation",
+      "qualification": "source-bound post-hoc label interpretation; not expert truth, independent judge repeat or prospective confirmation",
+      "review_scope": "label identities, selected versus alternative usage and target-fluor relationships",
+      "remaining_uncertainties": [],
+      "relations": [
+        {
+          "fluorophore": "GFP",
+          "marker": "",
+          "source_spans": [
+            {
+              "start": 26,
+              "end": 77,
+              "quote": "**Chosen Labeling:** [GFP (内源), MAP2 + Alexa Fluor]",
+              "answer_sha256": "cb1177a626b0a82a0e7b118224d0b922232d28a11ec8a6760179d81eb7abbbc3"
+            }
+          ],
+          "basis": "Explicit native GFP, no external marker required."
+        },
+        {
+          "fluorophore": "Alexa Fluor",
+          "marker": "MAP2",
+          "source_spans": [
+            {
+              "start": 26,
+              "end": 77,
+              "quote": "**Chosen Labeling:** [GFP (内源), MAP2 + Alexa Fluor]",
+              "answer_sha256": "cb1177a626b0a82a0e7b118224d0b922232d28a11ec8a6760179d81eb7abbbc3"
+            }
+          ],
+          "basis": "Header explicitly states the target-fluor relation; repeated AF mentions describe the same channel."
+        }
+      ]
+    },
+    {
+      "cell_id_at_annotation": "E2_21__local_qwen27b_q8_development__r0",
+      "answer_sha256": "2a9b41092911f85b102908026dcb077d41731a59ef2d853ad4aa54b29fef1e4d",
+      "question_id": 22,
+      "source_document": {
+        "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\optimizer_round2_20261010\\grounded_controls_v11\\source_documents\\E2_21.json",
+        "sha256": "4e24dc29bab0d48168ca26d66d5b1a2997250a4a47d1de446f216072fa3bc161"
+      },
+      "semantic_author": "current_Codex_assistant_author_annotation",
+      "qualification": "source-bound post-hoc label interpretation; not expert truth, independent judge repeat or prospective confirmation",
+      "review_scope": "label identities, selected versus alternative usage and target-fluor relationships",
+      "remaining_uncertainties": [],
+      "relations": [
+        {
+          "fluorophore": "GFP",
+          "marker": "",
+          "source_spans": [
+            {
+              "start": 26,
+              "end": 77,
+              "quote": "**Chosen Labeling:** [GFP (内源), MAP2 + Alexa Fluor]",
+              "answer_sha256": "2a9b41092911f85b102908026dcb077d41731a59ef2d853ad4aa54b29fef1e4d"
+            }
+          ],
+          "basis": "Explicit native GFP, no external marker required."
+        },
+        {
+          "fluorophore": "Alexa Fluor",
+          "marker": "MAP2",
+          "source_spans": [
+            {
+              "start": 26,
+              "end": 77,
+              "quote": "**Chosen Labeling:** [GFP (内源), MAP2 + Alexa Fluor]",
+              "answer_sha256": "2a9b41092911f85b102908026dcb077d41731a59ef2d853ad4aa54b29fef1e4d"
+            }
+          ],
+          "basis": "Header explicitly states the target-fluor relation; repeated AF mentions describe the same channel."
+        }
+      ]
+    },
+    {
+      "cell_id_at_annotation": "FPC05",
+      "answer_sha256": "63035433f483517c0b758e3bbca7d42a612fcf0846bb32799ccfa882f9a42e74",
+      "question_id": 23,
+      "source_document": {
+        "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\optimizer_round2_20261010\\generation_confirmation_v2\\source_documents\\FPC05.json",
+        "sha256": "22bfbafecbc696534b27934b47e41db3c1f36fa4d4e07619f78c884384df8889"
+      },
+      "semantic_author": "current_Codex_assistant_author_annotation",
+      "qualification": "source-bound post-hoc label interpretation; not expert truth, independent judge repeat or prospective confirmation",
+      "review_scope": "label identities, selected versus alternative usage and target-fluor relationships",
+      "remaining_uncertainties": [],
+      "relations": [
+        {
+          "fluorophore": "GFP",
+          "marker": "",
+          "source_spans": [
+            {
+              "start": 0,
+              "end": 82,
+              "quote": "**所选双靶点荧光/标记策略与透明方法：**[GFP(内源) + MAP2+Alexa Fluor 647]；ClearingMethod: **CUBIC**  ",
+              "answer_sha256": "63035433f483517c0b758e3bbca7d42a612fcf0846bb32799ccfa882f9a42e74"
+            }
+          ],
+          "basis": "明确内源 GFP。"
+        },
+        {
+          "fluorophore": "Alexa Fluor 647",
+          "marker": "MAP2",
+          "source_spans": [
+            {
+              "start": 0,
+              "end": 82,
+              "quote": "**所选双靶点荧光/标记策略与透明方法：**[GFP(内源) + MAP2+Alexa Fluor 647]；ClearingMethod: **CUBIC**  ",
+              "answer_sha256": "63035433f483517c0b758e3bbca7d42a612fcf0846bb32799ccfa882f9a42e74"
+            }
+          ],
+          "basis": "标题明确 MAP2+AF647；正文一抗和二抗步骤一致。"
+        }
+      ]
+    },
+    {
+      "cell_id_at_annotation": "FPC08",
+      "answer_sha256": "648ad06628502e65a2c7c6bb22c9482eb077554d4327133aa5600d37dbd98965",
+      "question_id": 23,
+      "source_document": {
+        "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\optimizer_round2_20261010\\generation_confirmation_v2\\source_documents\\FPC08.json",
+        "sha256": "31764f149737e8eaca22c59211bfaf336e4a94e06142a8a7dfc8dba6679aed3b"
+      },
+      "semantic_author": "current_Codex_assistant_author_annotation",
+      "qualification": "source-bound post-hoc label interpretation; not expert truth, independent judge repeat or prospective confirmation",
+      "review_scope": "label identities, selected versus alternative usage and target-fluor relationships",
+      "remaining_uncertainties": [],
+      "relations": [
+        {
+          "fluorophore": "GFP",
+          "marker": "",
+          "source_spans": [
+            {
+              "start": 26,
+              "end": 105,
+              "quote": "**Chosen Labeling:** [GFP (内源) + Alexa Fluor 488, Phalloidin + Alexa Fluor 568]",
+              "answer_sha256": "648ad06628502e65a2c7c6bb22c9482eb077554d4327133aa5600d37dbd98965"
+            }
+          ],
+          "basis": "Native signal explicitly stated."
+        },
+        {
+          "fluorophore": "Alexa Fluor 488",
+          "marker": "GFP",
+          "source_spans": [
+            {
+              "start": 26,
+              "end": 105,
+              "quote": "**Chosen Labeling:** [GFP (内源) + Alexa Fluor 488, Phalloidin + Alexa Fluor 568]",
+              "answer_sha256": "648ad06628502e65a2c7c6bb22c9482eb077554d4327133aa5600d37dbd98965"
+            },
+            {
+              "start": 1420,
+              "end": 1607,
+              "quote": "4.1 Incubation with Primary Antibody solution (Rabbit anti-GFP diluted 1:500 in Blocking Buffer) with gentle shaking to enhance weak endogenous signal.(Temperature: 37 ℃, Time: 168 hours)",
+              "answer_sha256": "648ad06628502e65a2c7c6bb22c9482eb077554d4327133aa5600d37dbd98965"
+            },
+            {
+              "start": 1887,
+              "end": 2116,
+              "quote": "6.1 Incubation with Staining solution (Goat anti-Rabbit Alexa Fluor 488 diluted 1:500 and Phalloidin-Alexa Fluor 568 diluted 1:200 in Blocking Buffer) with gentle shaking, protected from light.(Temperature: 37 ℃, Time: 120 hours)",
+              "answer_sha256": "648ad06628502e65a2c7c6bb22c9482eb077554d4327133aa5600d37dbd98965"
+            }
+          ],
+          "basis": "Anti-GFP plus matching fluorescent secondary is explicit."
+        },
+        {
+          "fluorophore": "Alexa Fluor 568",
+          "marker": "Phalloidin",
+          "source_spans": [
+            {
+              "start": 26,
+              "end": 105,
+              "quote": "**Chosen Labeling:** [GFP (内源) + Alexa Fluor 488, Phalloidin + Alexa Fluor 568]",
+              "answer_sha256": "648ad06628502e65a2c7c6bb22c9482eb077554d4327133aa5600d37dbd98965"
+            },
+            {
+              "start": 1887,
+              "end": 2116,
+              "quote": "6.1 Incubation with Staining solution (Goat anti-Rabbit Alexa Fluor 488 diluted 1:500 and Phalloidin-Alexa Fluor 568 diluted 1:200 in Blocking Buffer) with gentle shaking, protected from light.(Temperature: 37 ℃, Time: 120 hours)",
+              "answer_sha256": "648ad06628502e65a2c7c6bb22c9482eb077554d4327133aa5600d37dbd98965"
+            }
+          ],
+          "basis": "Explicit conjugated phalloidin probe; marker key follows the existing authored dictionary convention."
+        }
+      ]
+    },
+    {
+      "cell_id_at_annotation": "FPC16",
+      "answer_sha256": "6f7f9d32004a9457ad473c8e9db98c6750965619afda4758836bba5d5e99c286",
+      "question_id": 248,
+      "source_document": {
+        "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\optimizer_round2_20261010\\secondary_E5_confirmation_v1\\source_documents\\FPC16.json",
+        "sha256": "9455fa0cfa30831b42d5be1451db1d78ad33b3e96207a39945402577878edabf"
+      },
+      "semantic_author": "current_Codex_assistant_author_annotation",
+      "qualification": "source-bound post-hoc label interpretation; not expert truth, independent judge repeat or prospective confirmation",
+      "review_scope": "label identities, selected versus alternative usage and target-fluor relationships",
+      "remaining_uncertainties": [],
+      "relations": [
+        {
+          "fluorophore": "tdTomato",
+          "marker": "",
+          "source_spans": [
+            {
+              "start": 29,
+              "end": 78,
+              "quote": "**Chosen Labeling:** [tdTomato (endogenous), DiI]",
+              "answer_sha256": "6f7f9d32004a9457ad473c8e9db98c6750965619afda4758836bba5d5e99c286"
+            }
+          ],
+          "basis": "Native reporter is explicit."
+        },
+        {
+          "fluorophore": "DiI",
+          "marker": "",
+          "source_spans": [
+            {
+              "start": 29,
+              "end": 78,
+              "quote": "**Chosen Labeling:** [tdTomato (endogenous), DiI]",
+              "answer_sha256": "6f7f9d32004a9457ad473c8e9db98c6750965619afda4758836bba5d5e99c286"
+            }
+          ],
+          "basis": "Direct lipophilic stain; do not turn the word axonal into an antibody-target entity ID."
+        }
+      ]
+    },
+    {
+      "cell_id_at_annotation": "FPC04",
+      "answer_sha256": "20bf7476ecd4568af1a6d76c156281f45147409f9e7efb709d20c29f7a42bb13",
+      "question_id": 22,
+      "source_document": {
+        "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\optimizer_round2_20261010\\generation_confirmation_v2\\source_documents\\FPC04.json",
+        "sha256": "f8403ec13cf03c391caa18c9ee88ebdc2a8b3eccfde17c1dafafe468d1e65fa3"
+      },
+      "semantic_author": "current_Codex_assistant_author_annotation",
+      "qualification": "source-bound post-hoc label interpretation; not expert truth, independent judge repeat or prospective confirmation",
+      "review_scope": "label identities, selected versus alternative usage and target-fluor relationships",
+      "remaining_uncertainties": [],
+      "scenario_basis": "The submitted answer explicitly offers AF546 or AF647. Keep both, without substituting their average or choosing the higher score.",
+      "relation_scenarios": [
+        {
+          "scenario_id": "MAP2_AF546",
+          "relations": [
+            {
+              "fluorophore": "EGFP",
+              "marker": "",
+              "source_spans": [
+                {
+                  "start": 26,
+                  "end": 124,
+                  "quote": "**Chosen Labeling:** [EGFP (内源荧光), MAP2 + Alexa Fluor (树突标记，推荐 Alexa Fluor 546 或 Alexa Fluor 647)]",
+                  "answer_sha256": "20bf7476ecd4568af1a6d76c156281f45147409f9e7efb709d20c29f7a42bb13"
+                }
+              ],
+              "basis": "Source-declared native protein."
+            },
+            {
+              "fluorophore": "Alexa Fluor 546",
+              "marker": "MAP2",
+              "source_spans": [
+                {
+                  "start": 26,
+                  "end": 124,
+                  "quote": "**Chosen Labeling:** [EGFP (内源荧光), MAP2 + Alexa Fluor (树突标记，推荐 Alexa Fluor 546 或 Alexa Fluor 647)]",
+                  "answer_sha256": "20bf7476ecd4568af1a6d76c156281f45147409f9e7efb709d20c29f7a42bb13"
+                }
+              ],
+              "basis": "One explicitly offered alternative in the source."
+            }
+          ]
+        },
+        {
+          "scenario_id": "MAP2_AF647",
+          "relations": [
+            {
+              "fluorophore": "EGFP",
+              "marker": "",
+              "source_spans": [
+                {
+                  "start": 26,
+                  "end": 124,
+                  "quote": "**Chosen Labeling:** [EGFP (内源荧光), MAP2 + Alexa Fluor (树突标记，推荐 Alexa Fluor 546 或 Alexa Fluor 647)]",
+                  "answer_sha256": "20bf7476ecd4568af1a6d76c156281f45147409f9e7efb709d20c29f7a42bb13"
+                }
+              ],
+              "basis": "Source-declared native protein."
+            },
+            {
+              "fluorophore": "Alexa Fluor 647",
+              "marker": "MAP2",
+              "source_spans": [
+                {
+                  "start": 26,
+                  "end": 124,
+                  "quote": "**Chosen Labeling:** [EGFP (内源荧光), MAP2 + Alexa Fluor (树突标记，推荐 Alexa Fluor 546 或 Alexa Fluor 647)]",
+                  "answer_sha256": "20bf7476ecd4568af1a6d76c156281f45147409f9e7efb709d20c29f7a42bb13"
+                }
+              ],
+              "basis": "One explicitly offered alternative in the source."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

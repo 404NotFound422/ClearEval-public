@@ -1,0 +1,102 @@
+[
+  {
+    "case_id": "R3C04__r0",
+    "scenario_id": "S000",
+    "kind": "lower_endpoint",
+    "hours": 63.5,
+    "s_time": 3.0,
+    "Eff": 0.853303898929777,
+    "IA": 0.6,
+    "HV": 0.5119823393578662,
+    "formula": {
+      "policy": "kb-window-asymmetric-median-0.20-under-0.10-over-v1",
+      "source": "time_kb.json",
+      "requested_tier": "T04_WHOLE_MOUSE_BRAIN_5_12MM",
+      "actual_hours": 63.5,
+      "min_hours": 24.0,
+      "max_hours": 72.0,
+      "median_hours": 36.0,
+      "tau_hours": 7.2,
+      "delta_hours": 0.0,
+      "tau_under_fraction": 0.2,
+      "tau_over_fraction": 0.1,
+      "status": "scored"
+    },
+    "interpretation": "range sensitivity; not an additional observation"
+  },
+  {
+    "case_id": "R3C04__r0",
+    "scenario_id": "S000",
+    "kind": "upper_endpoint",
+    "hours": 80.5,
+    "s_time": 0.1847391311660562,
+    "Eff": 0.6186988265269483,
+    "IA": 0.6,
+    "HV": 0.371219295916169,
+    "formula": {
+      "policy": "kb-window-asymmetric-median-0.20-under-0.10-over-v1",
+      "source": "time_kb.json",
+      "requested_tier": "T04_WHOLE_MOUSE_BRAIN_5_12MM",
+      "actual_hours": 80.5,
+      "min_hours": 24.0,
+      "max_hours": 72.0,
+      "median_hours": 36.0,
+      "tau_hours": 3.6,
+      "delta_hours": 8.5,
+      "tau_under_fraction": 0.2,
+      "tau_over_fraction": 0.1,
+      "status": "scored"
+    },
+    "interpretation": "range sensitivity; not an additional observation"
+  },
+  {
+    "case_id": "FPC07",
+    "scenario_id": "S000",
+    "kind": "lower_endpoint",
+    "hours": 27.5,
+    "s_time": 0.2044823387042352,
+    "Eff": 0.22581826751881628,
+    "IA": 0.22581826751881628,
+    "HV": 0.1170909535282751,
+    "formula": {
+      "policy": "kb-window-asymmetric-median-0.20-under-0.10-over-v1",
+      "source": "time_kb.json",
+      "requested_tier": "T04_WHOLE_MOUSE_BRAIN_5_12MM",
+      "actual_hours": 27.5,
+      "min_hours": 72.0,
+      "max_hours": 120.0,
+      "median_hours": 96.0,
+      "tau_hours": 19.200000000000003,
+      "delta_hours": 44.5,
+      "tau_under_fraction": 0.2,
+      "tau_over_fraction": 0.1,
+      "status": "scored"
+    },
+    "interpretation": "range sensitivity; not an additional observation"
+  },
+  {
+    "case_id": "FPC07",
+    "scenario_id": "S000",
+    "kind": "upper_endpoint",
+    "hours": 39.5,
+    "s_time": 0.716040562421143,
+    "Eff": 0.2684481194952253,
+    "IA": 0.2684481194952253,
+    "HV": 0.13919532121974643,
+    "formula": {
+      "policy": "kb-window-asymmetric-median-0.20-under-0.10-over-v1",
+      "source": "time_kb.json",
+      "requested_tier": "T04_WHOLE_MOUSE_BRAIN_5_12MM",
+      "actual_hours": 39.5,
+      "min_hours": 72.0,
+      "max_hours": 120.0,
+      "median_hours": 96.0,
+      "tau_hours": 19.200000000000003,
+      "delta_hours": 32.5,
+      "tau_under_fraction": 0.2,
+      "tau_over_fraction": 0.1,
+      "status": "scored"
+    },
+    "interpretation": "range sensitivity; not an additional observation"
+  }
+]

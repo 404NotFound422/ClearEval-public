@@ -1,0 +1,180 @@
+{
+  "question_id": 21,
+  "specific_question": "我需要对稀疏荧光报告小鼠脑组织进行透明化处理，用于观察少量标记神经元的三维形态，并进行长期保存后再次成像。样本为小鼠脑组织块，厚度约 3 mm，已完成固定和后固定，内源荧光报告信号较弱。科学目标是在透明化和保存过程中尽量保留稀疏报告神经元的微弱内源荧光，同时显示神经元树突结构和局部形态细节，以便在三维空间中分析神经元胞体、树突分支、树突长度和局部投射模式。\n\n请根据该科学问题自行选择合适的双靶点荧光/标记策略，并基于所选标记样本选择匹配的组织透明方法。请仅输出 protocol，第 1 行写明所选双靶点荧光/标记策略和组织透明方法，随后仅列出透明处理、RI 匹配和保存/成像前处理步骤的关键试剂、条件和时间。",
+  "generator_model": "gemini-3-pro",
+  "base_id": "gemini-3-pro__q21",
+  "references": [
+    {
+      "reference_id": "FDISCO_SUPPLEMENT_V2_BLOCK_3MM_UNTIMED",
+      "route_id": "FDISCO",
+      "route_aliases": [
+        "FDISCO",
+        "F-DISCO"
+      ],
+      "question_ids": [
+        21,
+        22,
+        23
+      ],
+      "steps": [
+        {
+          "step_id": "FDISCO-V2-BLOCK_3MM_UNTIMED-01",
+          "text": "Incubate the fixed tissue in 50% (vol/vol) THF in water, adjusted to pH 9.0 with triethylamine, at 4 degrees C with gentle shaking in the dark.",
+          "source_anchor": "FDISCO_TABLE_S1_P12 + FDISCO_MAIN_CLEARING_P1",
+          "module": "dehydration",
+          "required": true,
+          "required_scope": "author-reported branch coverage; biological necessity not validated",
+          "timing_status": "not_reported_for_3mm_no_interpolation"
+        },
+        {
+          "step_id": "FDISCO-V2-BLOCK_3MM_UNTIMED-02",
+          "text": "Incubate the fixed tissue in 70% (vol/vol) THF in water, adjusted to pH 9.0 with triethylamine, at 4 degrees C with gentle shaking in the dark.",
+          "source_anchor": "FDISCO_TABLE_S1_P12 + FDISCO_MAIN_CLEARING_P1",
+          "module": "dehydration",
+          "required": true,
+          "required_scope": "author-reported branch coverage; biological necessity not validated",
+          "timing_status": "not_reported_for_3mm_no_interpolation"
+        },
+        {
+          "step_id": "FDISCO-V2-BLOCK_3MM_UNTIMED-03",
+          "text": "Incubate the fixed tissue in 80% (vol/vol) THF in water, adjusted to pH 9.0 with triethylamine, at 4 degrees C with gentle shaking in the dark.",
+          "source_anchor": "FDISCO_TABLE_S1_P12 + FDISCO_MAIN_CLEARING_P1",
+          "module": "dehydration",
+          "required": true,
+          "required_scope": "author-reported branch coverage; biological necessity not validated",
+          "timing_status": "not_reported_for_3mm_no_interpolation"
+        },
+        {
+          "step_id": "FDISCO-V2-BLOCK_3MM_UNTIMED-04",
+          "text": "Incubate the fixed tissue in 100% (vol/vol) THF in water, adjusted to pH 9.0 with triethylamine, at 4 degrees C with gentle shaking in the dark.",
+          "source_anchor": "FDISCO_TABLE_S1_P12 + FDISCO_MAIN_CLEARING_P1",
+          "module": "dehydration",
+          "required": true,
+          "required_scope": "author-reported branch coverage; biological necessity not validated",
+          "timing_status": "not_reported_for_3mm_no_interpolation"
+        },
+        {
+          "step_id": "FDISCO-V2-BLOCK_3MM_UNTIMED-05",
+          "text": "Repeat incubation in fresh 100% THF at 4 degrees C with gentle shaking in the dark to complete dehydration.",
+          "source_anchor": "FDISCO_TABLE_S1_P12 + FDISCO_MAIN_CLEARING_P1",
+          "module": "dehydration",
+          "required": true,
+          "required_scope": "author-reported branch coverage; biological necessity not validated",
+          "timing_status": "not_reported_for_3mm_no_interpolation"
+        },
+        {
+          "step_id": "FDISCO-V2-BLOCK_3MM_UNTIMED-06",
+          "text": "Transfer the dehydrated tissue to pure DBE for refractive index matching and clearing at 4 degrees C with gentle shaking in the dark.",
+          "source_anchor": "FDISCO_TABLE_S1_P12 + FDISCO_MAIN_CLEARING_P1",
+          "module": "ri_matching",
+          "required": true,
+          "required_scope": "author-reported branch coverage; biological necessity not validated",
+          "timing_status": "not_reported_for_3mm_no_interpolation"
+        },
+        {
+          "step_id": "FDISCO-V2-BLOCK_3MM_UNTIMED-07",
+          "text": "Store the cleared tissue in DBE in an airtight glass chamber at 4 degrees C in the dark until imaging.",
+          "source_anchor": "FDISCO_MAIN_STORAGE_P3",
+          "module": "storage",
+          "required": true,
+          "required_scope": "author-reported branch coverage; biological necessity not validated",
+          "timing_status": "no_fixed_storage_duration"
+        }
+      ],
+      "source_path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\reference_recovery\\recovered_supplements\\aau8355_SM.pdf",
+      "source_sha256": "f3a7cff9c400786f418a64e91b1781f7370fcbf55a821635cdf2eafa1fb87339",
+      "source_url": "https://doi.org/10.1126/sciadv.aau8355",
+      "supplement_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC6357753.1/aau8355_SM.pdf",
+      "family_id": "FDISCO_QI2019_MOUSE_BRAIN",
+      "status": "source_extracted",
+      "human_confirmation": null,
+      "formal_eligible": false,
+      "source_scope": "author-reported post-fixation procedure coverage, not validated biological necessity",
+      "completeness_status": "supplement-bound author-procedure development candidate; expert confirmation pending",
+      "evidence_manifest_path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\reference_recovery\\supplement_bound\\evidence_manifest.json",
+      "evidence_ids": [
+        "FDISCO_TABLE_S1_P12",
+        "FDISCO_MAIN_CLEARING_P1",
+        "FDISCO_MAIN_STORAGE_P3"
+      ],
+      "source_pages": [
+        {
+          "evidence_id": "FDISCO_TABLE_S1_P12",
+          "pdf_page_one_based": 12,
+          "source_anchor": null
+        },
+        {
+          "evidence_id": "FDISCO_MAIN_CLEARING_P1",
+          "pdf_page_one_based": null,
+          "source_anchor": "sec[title='FDISCO clearing procedure']/p[1]"
+        },
+        {
+          "evidence_id": "FDISCO_MAIN_STORAGE_P3",
+          "pdf_page_one_based": null,
+          "source_anchor": "sec[title='FDISCO clearing procedure']/p[3], first sentence"
+        }
+      ],
+      "v1_reference_id": "FDISCO_QI2019_FIXED_MOUSE_BRAIN_V1",
+      "v1_step_count": 7,
+      "applicability": {
+        "species": "mouse",
+        "tissue": "fixed brain block, approximately 3 mm",
+        "question_ids": [
+          21,
+          22,
+          23
+        ],
+        "initial_fixation_complete": true,
+        "source_sample_class_support": "general fixed brain/soft-tissue procedure; exact 3 mm applicability pending",
+        "exact_3mm_schedule_supported": false,
+        "timing_policy": "not_reported_for_3mm_no_interpolation",
+        "unknown_timing_is_not_a_missing_step": true,
+        "endpoint_scope": "clearing/RI matching/storage only; labeling preparation excluded",
+        "outcomes_pending": [
+          "task-specific chosen labels",
+          "weak sparse signal retention",
+          "long-term reimaging",
+          "six-month preservation",
+          "morphology/distortion targets"
+        ],
+        "remaining_review": [
+          "The 3 mm block-specific number of 100% THF incubations is unreported; absence of a number is not a missing operation.",
+          "Shortened timings in the table note are an author option, not a mandatory extra step.",
+          "Long-storage re-clearing is conditional and is not added to every initial-imaging sequence.",
+          "No direct 3 mm timing interpolation from 1 mm FDISCO or 1-2 mm PEGASOS slice schedules.",
+          "Expert granularity/applicability confirmation remains pending."
+        ]
+      },
+      "unknown_parameters": [
+        "3mm-specific dwell times",
+        "3mm-specific repeat count"
+      ],
+      "frozen": true,
+      "freeze_scope": "independent supplement-derived v2 development candidate; preserve v1 historical scores"
+    }
+  ],
+  "reference_status": "source_extracted_not_expert_confirmed",
+  "source_family": "FDISCO_QI2019_MOUSE_BRAIN",
+  "scope": "supplement_v2_full_text_control_development_pending_expert",
+  "case_id": "round3_control_q021_merge_v1",
+  "condition": "merge",
+  "model_response": "**Chosen Method:** FDISCO\n**Chosen Labeling:** [GFP (内源), DAPI]\n**Justification:** FDISCO is specifically selected because it is a solvent-based clearing method that provides excellent transparency for 3 mm brain blocks while uniquely utilizing low temperature (4 ℃) and alkaline pH adjustment (pH 9.0 via TEA) during dehydration. This specifically prevents the quenching of weak endogenous fluorescent proteins (like GFP), allowing for high-resolution 3D morphological analysis of fine dendritic structures and long-term storage (months) without signal loss. The dual-target strategy utilizes the preserved endogenous GFP to trace sparse neurons, while DAPI serves as a nuclear counterstain to provide essential 3D anatomical context without requiring complex immunolabeling that might damage the tissue.\n\n**Protocol Steps:**\n\n1. Incubation with 1x PBS to remove residual fixative.(Temperature: RT, Time: 3 hours) Incubation with DAPI (10 µg/mL) in 1x PBS containing 0.2% (vol/vol) Triton X-100.(Temperature: RT, Time: 48 hours)\n2. Incubation with 1x PBS to wash out excess DAPI dye.(Temperature: RT, Time: 6 hours) Incubation with 50% (vol/vol) THF aqueous solution (pH adjusted to 9.0 with TEA).(Temperature: 4 ℃, Time: 6 hours)\n3. Incubation with 70% (vol/vol) THF aqueous solution (pH adjusted to 9.0 with TEA).(Temperature: 4 ℃, Time: 6 hours) Incubation with 80% (vol/vol) THF aqueous solution (pH adjusted to 9.0 with TEA).(Temperature: 4 ℃, Time: 6 hours)\n4. Incubation with 100% (vol/vol) THF (pH adjusted to 9.0 with TEA).(Temperature: 4 ℃, Time: 6 hours) Incubation with fresh 100% (vol/vol) THF (pH adjusted to 9.0 with TEA).(Temperature: 4 ℃, Time: 12 hours)\n5. Incubation with 100% (vol/vol) DBE (Refractive Index = 1.56) without shaking.(Temperature: RT, Time: 12 hours) Store the cleared sample immersed in 100% (vol/vol) DBE in a dark, airtight glass vial to maintain transparency and preserve endogenous fluorescence.(Temperature: 4 ℃, Time: Long-term)\n6. Mount the sample in 100% (vol/vol) DBE for 3D light-sheet or confocal imaging.(Temperature: RT, Time: 1 hours)\n",
+  "natural_answer_source_case_id": "gemini-3-pro__q21__baseline",
+  "canonicalized_not_unedited_natural_answer": true,
+  "conflict_status": "source_extracted_development_not_expert_confirmed",
+  "source_case_id": "gemini-3-pro__q21__order_canonical_baseline__supplement_v2",
+  "source_case_file": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\optimizer_round2_20261010\\grounded_controls_v11\\cases.json",
+  "source_scope": "previously_exposed_development_task_same_canonical_fulltext_baseline",
+  "answer_source": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\controls\\order_conflict_cases.json",
+  "answer_sha256": "db1e92df39a3ec1b12be6c046edf94903e037d0a2b6dbb39d0b54e8cd07155bc",
+  "question_sha256": "9047f083b9442e342dcc315ef43050bd20ef91852ba06366b46107b9b473e14d",
+  "formal_eligible": false,
+  "expert_confirmation": null,
+  "anonymous_answer_id": "R3E2_Q021_merge",
+  "round3_provenance": {
+    "baseline_anonymous_answer_id": "E2_15",
+    "merge_anonymous_answer_id": "E2_20",
+    "same_baseline_for_all_three_variants": true,
+    "new_case_id_does_not_change_identical_source_content_hash": true
+  }
+}

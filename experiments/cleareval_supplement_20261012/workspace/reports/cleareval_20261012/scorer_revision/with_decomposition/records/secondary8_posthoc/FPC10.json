@@ -1,0 +1,550 @@
+{
+  "cohort": "secondary8_posthoc",
+  "cell_id": "FPC10",
+  "anonymous_answer_id": "FPC10",
+  "question_id": 1,
+  "original_status": "partial_components",
+  "version": "cce-scoped-midpoint-scorer-v1",
+  "metrics": {
+    "c_param": 3,
+    "co_order": 3,
+    "co_method": 2,
+    "co_param": 1,
+    "co_chem": 1,
+    "s_method": 0.8409,
+    "s_label": null,
+    "s_trans": 2.814646787157323,
+    "s_time": 0.0,
+    "sr": 0.1111111111111111,
+    "sp": 0.14285714285714285,
+    "Com": 0.6444444444444444,
+    "Cor": 0.875,
+    "Eff": null,
+    "IA": null,
+    "HV": null
+  },
+  "complete_numeric_CCE": false,
+  "baseline_metrics": {
+    "c_param": 3,
+    "co_order": 3,
+    "co_method": 2,
+    "co_param": 1,
+    "co_chem": 1,
+    "s_method": 0.8409,
+    "s_label": null,
+    "s_trans": 2.814646787157323,
+    "s_time": 0.0,
+    "sr": 0.1111111111111111,
+    "sp": 0.14285714285714285,
+    "Com": 0.6444444444444444,
+    "Cor": 0.875,
+    "Eff": null,
+    "IA": null,
+    "HV": null
+  },
+  "quantitative_data": {
+    "method_name": "iDISCO+",
+    "tissue_ri_value": 1.46,
+    "total_time_hours": 231.0,
+    "sample_tier": "T04_WHOLE_MOUSE_BRAIN_5_12MM",
+    "reagent_ri_value": null,
+    "protocol_time_hours": null
+  },
+  "time_derivation": {
+    "hours": 231.0,
+    "bounds_hours": [
+      231.0,
+      231.0
+    ],
+    "decision": "existing_source_bound_scalar",
+    "issues": []
+  },
+  "time_formula": {
+    "policy": "kb-window-asymmetric-median-0.20-under-0.10-over-v1",
+    "source": "time_kb.json",
+    "requested_tier": "T04_WHOLE_MOUSE_BRAIN_5_12MM",
+    "actual_hours": 231.0,
+    "min_hours": 24.0,
+    "max_hours": 72.0,
+    "median_hours": 36.0,
+    "tau_hours": 3.6,
+    "delta_hours": 159.0,
+    "tau_under_fraction": 0.2,
+    "tau_over_fraction": 0.1,
+    "status": "scored",
+    "resolved_tier": "T04_WHOLE_MOUSE_BRAIN_5_12MM",
+    "method_key": "idisco+"
+  },
+  "time_sensitivity": [
+    {
+      "time_hours": 231.0,
+      "s_time": 0.0,
+      "Eff": null
+    }
+  ],
+  "label_derivation": {
+    "version": "label-occurrence-projection-v1-posthoc",
+    "channels": {
+      "s_target_match": 3.0,
+      "s_marker_fluor_compat": null,
+      "s_method_fluor_compat": 5.1
+    },
+    "s_label": null,
+    "original_occurrence_numeric_label": null,
+    "pair_results": [
+      {
+        "pair_id": "relation:R01",
+        "kind": "supported_relation",
+        "original_function_input": {
+          "Alexa Fluor 488": "C-Fos"
+        },
+        "channels": {
+          "s_target_match": 6.0,
+          "s_marker_fluor_compat": 6.0,
+          "s_method_fluor_compat": 5.1
+        },
+        "local_s_label": 5.1,
+        "contribution_present": {
+          "s_target_match": true,
+          "s_marker_fluor_compat": true,
+          "s_method_fluor_compat": true
+        },
+        "marker_identity_conflict": false,
+        "compatibility_audit": [
+          {
+            "kind": "marker_fluor",
+            "marker": "C-Fos",
+            "fluorophore": "Alexa Fluor 488",
+            "source": "KnowledgeBase/tissue.json",
+            "value": true,
+            "status": "TABLE_REPORTED"
+          },
+          {
+            "kind": "method_fluor",
+            "method_name": "iDISCO+",
+            "fluorophore": "Alexa Fluor 488",
+            "source": "KnowledgeBase/method_fluro_compati.json",
+            "value": 0.85,
+            "status": "TABLE_REPORTED"
+          }
+        ]
+      },
+      {
+        "pair_id": "relation:R02",
+        "kind": "supported_relation",
+        "original_function_input": {
+          "Alexa Fluor 594": "NeuN"
+        },
+        "channels": {
+          "s_target_match": 3.0,
+          "s_marker_fluor_compat": null,
+          "s_method_fluor_compat": 5.4
+        },
+        "local_s_label": null,
+        "contribution_present": {
+          "s_target_match": true,
+          "s_marker_fluor_compat": true,
+          "s_method_fluor_compat": true
+        },
+        "marker_identity_conflict": false,
+        "compatibility_audit": [
+          {
+            "kind": "marker_fluor",
+            "marker": "NeuN",
+            "fluorophore": "Alexa Fluor 594",
+            "source": "KnowledgeBase/tissue.json",
+            "value": null,
+            "status": "UNKNOWN"
+          },
+          {
+            "kind": "method_fluor",
+            "method_name": "iDISCO+",
+            "fluorophore": "Alexa Fluor 594",
+            "source": "KnowledgeBase/method_fluro_compati.json",
+            "value": 0.9,
+            "status": "TABLE_REPORTED"
+          }
+        ]
+      }
+    ],
+    "explicit_label_uncertainties": [],
+    "publication_note": null,
+    "original_identity_unresolved": false,
+    "zero_witnesses": [],
+    "nullable_min_original_AST_sha256": "b885e7e1d6118c52aed9e67773ab1cf762010c468ed1cab70a0be6b465f56d58",
+    "original_function_file": "C:\\ClearEval\\ClearEval-public\\OEQ_run_grading_new.py",
+    "original_function_file_sha256": "0d48d96bd53b8bcf3c8678cf3151679ee70dc0d7b6d7e110486d1d7a77f9ea0e",
+    "single_value_projection_complete": true,
+    "unknown_pairs_retained": 0,
+    "finite_zero_is_not_complete_graph": false,
+    "new_KB_values": false,
+    "biological_target_inferred": false,
+    "model_calls": 0
+  },
+  "compatibility_lookup_trace": [
+    {
+      "marker": "C-Fos",
+      "fluorophore": "Alexa Fluor 488",
+      "status": "all_applicable_scopes_have_same_authored_value",
+      "value": true,
+      "column": "AlexaFluor 488",
+      "matching_target_options": [
+        {
+          "target_index": 1,
+          "source_tissue_xlsx_row": 6,
+          "marker_slot": "recommended_marker_1",
+          "marker_name": "C-FoS",
+          "query_path": "中枢神经 > 神经元功能 > 活化神经元",
+          "major_category": "中枢神经",
+          "subcategory": "神经元功能",
+          "structure_or_cell_subtype": "活化神经元",
+          "authored_target_parent": {
+            "marker_name": "C-FoS",
+            "target_index": 1,
+            "source_tissue_xlsx_row": 6,
+            "query_path": "中枢神经 > 神经元功能 > 活化神经元",
+            "marker_slot": "recommended_marker_1"
+          },
+          "authored_option_index": 0,
+          "option_split_applied": false
+        }
+      ],
+      "candidate_rows": [
+        {
+          "row_index": 2,
+          "matching_authored_names": [
+            {
+              "field": "推荐标志物 1",
+              "authored_name": "C-FoS",
+              "option": "C-FoS",
+              "option_split_applied": false
+            }
+          ],
+          "scope": {
+            "大类": "中枢神经",
+            "亚类": "神经元功能",
+            "结构/细胞类型": "活化神经元"
+          },
+          "cell_value": 1
+        }
+      ],
+      "selected_row_indices": [
+        2
+      ],
+      "per_scope_evidence": [
+        {
+          "scope": {
+            "大类": "中枢神经",
+            "亚类": "神经元功能",
+            "结构/细胞类型": "活化神经元"
+          },
+          "row_indices": [
+            2
+          ],
+          "all_cell_values": [
+            1
+          ],
+          "state": "consistent_authored_value",
+          "value": 1
+        }
+      ],
+      "row_selection_uses_scores": false,
+      "different_scopes_merged": false,
+      "new_alias_or_KB_value": false,
+      "declared_task_scope": null,
+      "legacy_last_row_value": true
+    },
+    {
+      "marker": "NeuN",
+      "fluorophore": "Alexa Fluor 594",
+      "status": "unmapped_authored_fluor_column",
+      "value": null,
+      "column": null,
+      "matching_target_options": [],
+      "candidate_rows": [
+        {
+          "row_index": 1,
+          "matching_authored_names": [
+            {
+              "field": "推荐标志物 1",
+              "authored_name": "NeuN (RBFOX3)",
+              "option": "NeuN (RBFOX3)",
+              "option_split_applied": false
+            }
+          ],
+          "scope": {
+            "大类": "中枢神经",
+            "亚类": "神经元结构",
+            "结构/细胞类型": "成熟神经元"
+          },
+          "cell_value": null
+        }
+      ],
+      "selected_row_indices": [
+        1
+      ],
+      "per_scope_evidence": [
+        {
+          "scope": {
+            "大类": "中枢神经",
+            "亚类": "神经元结构",
+            "结构/细胞类型": "成熟神经元"
+          },
+          "row_indices": [
+            1
+          ],
+          "all_cell_values": [],
+          "state": "authored_unknown",
+          "value": null
+        }
+      ],
+      "row_selection_uses_scores": false,
+      "different_scopes_merged": false,
+      "new_alias_or_KB_value": false,
+      "declared_task_scope": null,
+      "legacy_last_row_value": null
+    },
+    {
+      "marker": "C-Fos",
+      "fluorophore": "Alexa Fluor 488",
+      "status": "all_applicable_scopes_have_same_authored_value",
+      "value": true,
+      "column": "AlexaFluor 488",
+      "matching_target_options": [
+        {
+          "target_index": 1,
+          "source_tissue_xlsx_row": 6,
+          "marker_slot": "recommended_marker_1",
+          "marker_name": "C-FoS",
+          "query_path": "中枢神经 > 神经元功能 > 活化神经元",
+          "major_category": "中枢神经",
+          "subcategory": "神经元功能",
+          "structure_or_cell_subtype": "活化神经元",
+          "authored_target_parent": {
+            "marker_name": "C-FoS",
+            "target_index": 1,
+            "source_tissue_xlsx_row": 6,
+            "query_path": "中枢神经 > 神经元功能 > 活化神经元",
+            "marker_slot": "recommended_marker_1"
+          },
+          "authored_option_index": 0,
+          "option_split_applied": false
+        }
+      ],
+      "candidate_rows": [
+        {
+          "row_index": 2,
+          "matching_authored_names": [
+            {
+              "field": "推荐标志物 1",
+              "authored_name": "C-FoS",
+              "option": "C-FoS",
+              "option_split_applied": false
+            }
+          ],
+          "scope": {
+            "大类": "中枢神经",
+            "亚类": "神经元功能",
+            "结构/细胞类型": "活化神经元"
+          },
+          "cell_value": 1
+        }
+      ],
+      "selected_row_indices": [
+        2
+      ],
+      "per_scope_evidence": [
+        {
+          "scope": {
+            "大类": "中枢神经",
+            "亚类": "神经元功能",
+            "结构/细胞类型": "活化神经元"
+          },
+          "row_indices": [
+            2
+          ],
+          "all_cell_values": [
+            1
+          ],
+          "state": "consistent_authored_value",
+          "value": 1
+        }
+      ],
+      "row_selection_uses_scores": false,
+      "different_scopes_merged": false,
+      "new_alias_or_KB_value": false,
+      "declared_task_scope": null,
+      "legacy_last_row_value": true
+    },
+    {
+      "marker": "NeuN",
+      "fluorophore": "Alexa Fluor 594",
+      "status": "unmapped_authored_fluor_column",
+      "value": null,
+      "column": null,
+      "matching_target_options": [],
+      "candidate_rows": [
+        {
+          "row_index": 1,
+          "matching_authored_names": [
+            {
+              "field": "推荐标志物 1",
+              "authored_name": "NeuN (RBFOX3)",
+              "option": "NeuN (RBFOX3)",
+              "option_split_applied": false
+            }
+          ],
+          "scope": {
+            "大类": "中枢神经",
+            "亚类": "神经元结构",
+            "结构/细胞类型": "成熟神经元"
+          },
+          "cell_value": null
+        }
+      ],
+      "selected_row_indices": [
+        1
+      ],
+      "per_scope_evidence": [
+        {
+          "scope": {
+            "大类": "中枢神经",
+            "亚类": "神经元结构",
+            "结构/细胞类型": "成熟神经元"
+          },
+          "row_indices": [
+            1
+          ],
+          "all_cell_values": [],
+          "state": "authored_unknown",
+          "value": null
+        }
+      ],
+      "row_selection_uses_scores": false,
+      "different_scopes_merged": false,
+      "new_alias_or_KB_value": false,
+      "declared_task_scope": null,
+      "legacy_last_row_value": null
+    }
+  ],
+  "semantic_decomposition_applied": false,
+  "semantic_author": "saved judge decomposition",
+  "remaining_dependencies": {
+    "time": [],
+    "label_relations": [],
+    "compatibility": [
+      {
+        "marker": "NeuN",
+        "fluorophore": "Alexa Fluor 594",
+        "status": "unmapped_authored_fluor_column",
+        "value": null,
+        "column": null,
+        "matching_target_options": [],
+        "candidate_rows": [
+          {
+            "row_index": 1,
+            "matching_authored_names": [
+              {
+                "field": "推荐标志物 1",
+                "authored_name": "NeuN (RBFOX3)",
+                "option": "NeuN (RBFOX3)",
+                "option_split_applied": false
+              }
+            ],
+            "scope": {
+              "大类": "中枢神经",
+              "亚类": "神经元结构",
+              "结构/细胞类型": "成熟神经元"
+            },
+            "cell_value": null
+          }
+        ],
+        "selected_row_indices": [
+          1
+        ],
+        "per_scope_evidence": [
+          {
+            "scope": {
+              "大类": "中枢神经",
+              "亚类": "神经元结构",
+              "结构/细胞类型": "成熟神经元"
+            },
+            "row_indices": [
+              1
+            ],
+            "all_cell_values": [],
+            "state": "authored_unknown",
+            "value": null
+          }
+        ],
+        "row_selection_uses_scores": false,
+        "different_scopes_merged": false,
+        "new_alias_or_KB_value": false,
+        "declared_task_scope": null,
+        "legacy_last_row_value": null
+      },
+      {
+        "marker": "NeuN",
+        "fluorophore": "Alexa Fluor 594",
+        "status": "unmapped_authored_fluor_column",
+        "value": null,
+        "column": null,
+        "matching_target_options": [],
+        "candidate_rows": [
+          {
+            "row_index": 1,
+            "matching_authored_names": [
+              {
+                "field": "推荐标志物 1",
+                "authored_name": "NeuN (RBFOX3)",
+                "option": "NeuN (RBFOX3)",
+                "option_split_applied": false
+              }
+            ],
+            "scope": {
+              "大类": "中枢神经",
+              "亚类": "神经元结构",
+              "结构/细胞类型": "成熟神经元"
+            },
+            "cell_value": null
+          }
+        ],
+        "selected_row_indices": [
+          1
+        ],
+        "per_scope_evidence": [
+          {
+            "scope": {
+              "大类": "中枢神经",
+              "亚类": "神经元结构",
+              "结构/细胞类型": "成熟神经元"
+            },
+            "row_indices": [
+              1
+            ],
+            "all_cell_values": [],
+            "state": "authored_unknown",
+            "value": null
+          }
+        ],
+        "row_selection_uses_scores": false,
+        "different_scopes_merged": false,
+        "new_alias_or_KB_value": false,
+        "declared_task_scope": null,
+        "legacy_last_row_value": null
+      }
+    ]
+  },
+  "new_model_requests": 0,
+  "new_expert_records": 0,
+  "direct_scores_rejudged": false,
+  "SR_SP_changed": false,
+  "raw_judge_status_changed": false,
+  "status": "replayed",
+  "source_record": {
+    "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\optimizer_round3_20261011\\uniform_v7\\actual_01\\cells\\secondary8_posthoc\\FPC10\\posthoc.json",
+    "sha256": "ef1bfbf1ea813fc23504da4993ec6e4066781882cb49eb3b35be730a7582a9ba"
+  },
+  "answer_sha256": "dbd37930bdfb5a689b8b22e312d81f6379982cf2e94f619646b730a94287a40a",
+  "changes": {}
+}

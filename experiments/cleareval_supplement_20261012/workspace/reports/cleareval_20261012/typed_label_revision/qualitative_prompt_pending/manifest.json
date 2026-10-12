@@ -1,0 +1,136 @@
+{
+  "version": "qualitative-correctness-scope-v1",
+  "cases": {
+    "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\optimizer_round2_20261010\\grounded_development_v11\\cases.json",
+    "sha256": "2265ae4d1e1b40b39b205c782ae3ffb35689afc6c0f2d1f79fe389c0f0c70d81"
+  },
+  "candidate": {
+    "path": "C:\\ClearEval\\ClearEval-public\\scripts\\cce_qualitative_correctness_candidate_v1.py",
+    "sha256": "0ab8956257e680c54791d7592858c93d0691d88a169200489deddc03d2673625"
+  },
+  "grounded_builder": {
+    "path": "C:\\ClearEval\\ClearEval-public\\scripts\\cce_grounded_extraction_v11.py",
+    "sha256": "6a5f83143ae77d25eb56dd91f0a94bba717ef340c8e3b14077db9da85d70dadf"
+  },
+  "original_prompt": {
+    "path": "C:\\ClearEval\\ClearEval-public\\prompts\\eval_oeq_teacher_rubric.txt",
+    "sha256": "a8e5f82f0551c7e23ba391744b0ea88ad5cd14f7f4aa44867cffe620e985c1c0"
+  },
+  "new_model_requests": 0,
+  "historical_scores_replaced": false,
+  "Cor_scales": [
+    3,
+    2,
+    2,
+    1
+  ],
+  "co_param_definition_changed": true,
+  "SR_SP_EGES_redefined": false,
+  "observations": [
+    {
+      "case_id": "gemini-3-flash__q2__baseline__supplement_v2",
+      "anonymous_answer_id": "A01",
+      "question_id": 2,
+      "source_document": {
+        "path": "C:\\ClearEval\\reports\\cleareval_20261012\\typed_label_revision\\qualitative_prompt_pending\\A01\\source_document.json",
+        "sha256": "6f58113ff2bce16852bc0dd27f047ad88ae7c062e72bf1792294ef96b3cf35d0"
+      },
+      "prompt": {
+        "path": "C:\\ClearEval\\reports\\cleareval_20261012\\typed_label_revision\\qualitative_prompt_pending\\A01\\prompt.txt",
+        "sha256": "91bb2e94e5fcdaa88862f052a54378ed8a31eefa1907097ac607284299e7c070"
+      },
+      "schema": {
+        "path": "C:\\ClearEval\\reports\\cleareval_20261012\\typed_label_revision\\qualitative_prompt_pending\\A01\\schema.json",
+        "sha256": "dd91bee07c7f85475dc119960f3f57d96877b2739f3a26b365c9dc690e477249"
+      },
+      "status": "prepared_not_requested",
+      "required_judge_family": "Qwen3.8_or_explicitly_authorized_Codex",
+      "prospective_confirmation": false,
+      "development_exposed": true
+    },
+    {
+      "case_id": "gemini-3-pro__q21__baseline__supplement_v2",
+      "anonymous_answer_id": "A02",
+      "question_id": 21,
+      "source_document": {
+        "path": "C:\\ClearEval\\reports\\cleareval_20261012\\typed_label_revision\\qualitative_prompt_pending\\A02\\source_document.json",
+        "sha256": "8933d05df2b709b57303858d7158c6b6580c18e1a1ffc569a19b5e88f007a112"
+      },
+      "prompt": {
+        "path": "C:\\ClearEval\\reports\\cleareval_20261012\\typed_label_revision\\qualitative_prompt_pending\\A02\\prompt.txt",
+        "sha256": "4d70a36cd112724d415c71b661bbad2fb6535e6131108b2ca2221405acd614bf"
+      },
+      "schema": {
+        "path": "C:\\ClearEval\\reports\\cleareval_20261012\\typed_label_revision\\qualitative_prompt_pending\\A02\\schema.json",
+        "sha256": "2bd5824ce8b8f20d6bf1e559d16ad167a756604b578a8853e436acdd72c16c3c"
+      },
+      "status": "prepared_not_requested",
+      "required_judge_family": "Qwen3.8_or_explicitly_authorized_Codex",
+      "prospective_confirmation": false,
+      "development_exposed": true
+    },
+    {
+      "case_id": "gemini-3-flash__q22__baseline__supplement_v2",
+      "anonymous_answer_id": "A03",
+      "question_id": 22,
+      "source_document": {
+        "path": "C:\\ClearEval\\reports\\cleareval_20261012\\typed_label_revision\\qualitative_prompt_pending\\A03\\source_document.json",
+        "sha256": "a46bd3345a687d2b143ce168636862a85f31c48ec8e9faf8e3793515ac70048a"
+      },
+      "prompt": {
+        "path": "C:\\ClearEval\\reports\\cleareval_20261012\\typed_label_revision\\qualitative_prompt_pending\\A03\\prompt.txt",
+        "sha256": "efaba180c85e1af8b223ff8d773d9c86e238c8ed622edd76d05775a87607abdf"
+      },
+      "schema": {
+        "path": "C:\\ClearEval\\reports\\cleareval_20261012\\typed_label_revision\\qualitative_prompt_pending\\A03\\schema.json",
+        "sha256": "02781b8040f04bc6218693ed6b799e1681e6db998f7a39cef107851baa0a82b4"
+      },
+      "status": "prepared_not_requested",
+      "required_judge_family": "Qwen3.8_or_explicitly_authorized_Codex",
+      "prospective_confirmation": false,
+      "development_exposed": true
+    },
+    {
+      "case_id": "gemini-3-pro__q23__baseline__supplement_v2",
+      "anonymous_answer_id": "A04",
+      "question_id": 23,
+      "source_document": {
+        "path": "C:\\ClearEval\\reports\\cleareval_20261012\\typed_label_revision\\qualitative_prompt_pending\\A04\\source_document.json",
+        "sha256": "77519ff9668ec8a6ea1f92ba5f273419a13259e2b046fd9b8c633f0f0af47d45"
+      },
+      "prompt": {
+        "path": "C:\\ClearEval\\reports\\cleareval_20261012\\typed_label_revision\\qualitative_prompt_pending\\A04\\prompt.txt",
+        "sha256": "f90e9c2a92123b43d9d7b74529a34b516422f6c93e76b7b1ab94ddbc28936bfc"
+      },
+      "schema": {
+        "path": "C:\\ClearEval\\reports\\cleareval_20261012\\typed_label_revision\\qualitative_prompt_pending\\A04\\schema.json",
+        "sha256": "7cda9b21603b76e781c32d38ba5ec679fef72c17e0963a645d6e7086a86cebad"
+      },
+      "status": "prepared_not_requested",
+      "required_judge_family": "Qwen3.8_or_explicitly_authorized_Codex",
+      "prospective_confirmation": false,
+      "development_exposed": true
+    },
+    {
+      "case_id": "gemini-3-flash__q248__baseline__supplement_v2",
+      "anonymous_answer_id": "A05",
+      "question_id": 248,
+      "source_document": {
+        "path": "C:\\ClearEval\\reports\\cleareval_20261012\\typed_label_revision\\qualitative_prompt_pending\\A05\\source_document.json",
+        "sha256": "0f959ac0f80bfa017bab851a75ea7507544b03d0cda64f20584d461adf2bb6fc"
+      },
+      "prompt": {
+        "path": "C:\\ClearEval\\reports\\cleareval_20261012\\typed_label_revision\\qualitative_prompt_pending\\A05\\prompt.txt",
+        "sha256": "7b567449e003f34b0cda2d5f47be022253254687462107cae4eed306c134c9e1"
+      },
+      "schema": {
+        "path": "C:\\ClearEval\\reports\\cleareval_20261012\\typed_label_revision\\qualitative_prompt_pending\\A05\\schema.json",
+        "sha256": "1295f5e60fb319986ee29a24e1b4f1ac26b9a0d8e804be23a588c283d296b7aa"
+      },
+      "status": "prepared_not_requested",
+      "required_judge_family": "Qwen3.8_or_explicitly_authorized_Codex",
+      "prospective_confirmation": false,
+      "development_exposed": true
+    }
+  ]
+}

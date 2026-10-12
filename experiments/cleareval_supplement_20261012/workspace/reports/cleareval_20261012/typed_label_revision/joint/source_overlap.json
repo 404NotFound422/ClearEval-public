@@ -1,0 +1,56 @@
+{
+  "status": "degenerate_single_overlap_block",
+  "fixed_task_allowed_source_families": {
+    "1": [
+      "CUBIC_HV_SUSAKI_2020",
+      "PAN_2016_UDISCO_NMETH3964",
+      "Renier_Cell_2016_iDISCOplus_10.1016_j.cell.2016.05.007"
+    ],
+    "2": [
+      "CUBIC_HV_SUSAKI_2020",
+      "FDISCO_QI2019_MOUSE_BRAIN",
+      "PAN_2016_UDISCO_NMETH3964",
+      "PEGASOS_JING2018_MOUSE_BRAIN",
+      "Renier_Cell_2016_iDISCOplus_10.1016_j.cell.2016.05.007"
+    ],
+    "21": [
+      "CUBIC_HV_SUSAKI_2020",
+      "FDISCO_QI2019_MOUSE_BRAIN",
+      "PEGASOS_JING2018_MOUSE_BRAIN",
+      "Renier_Cell_2016_iDISCOplus_10.1016_j.cell.2016.05.007",
+      "SCALES_HAMA2015_FIXED_MOUSE_BRAIN"
+    ],
+    "22": [
+      "CUBIC_HV_SUSAKI_2020",
+      "FDISCO_QI2019_MOUSE_BRAIN",
+      "PEGASOS_JING2018_MOUSE_BRAIN",
+      "Renier_Cell_2016_iDISCOplus_10.1016_j.cell.2016.05.007",
+      "SCALES_HAMA2015_FIXED_MOUSE_BRAIN"
+    ],
+    "248": [
+      "CUBIC_HV_SUSAKI_2020",
+      "FDISCO_QI2019_MOUSE_BRAIN",
+      "PAN_2016_UDISCO_NMETH3964",
+      "PEGASOS_JING2018_MOUSE_BRAIN",
+      "Renier_Cell_2016_iDISCOplus_10.1016_j.cell.2016.05.007"
+    ]
+  },
+  "fixed_task_components": [
+    [
+      "1",
+      "2",
+      "21",
+      "22",
+      "248"
+    ]
+  ],
+  "common_set_components": [
+    [
+      "21",
+      "22",
+      "248"
+    ]
+  ],
+  "resampling_performed": false,
+  "definition": "Connect tasks sharing any source family in the frozen full catalog question_ids; connected components are a conservative overlap diagnostic, not a claimed unique source-family mapping or scientific applicability."
+}

@@ -1,0 +1,75 @@
+{
+  "date": "2026-10-12",
+  "purpose": "Correction of label semantics and evaluator responsibilities",
+  "git_head": "ea9975260ef3b42eecb61239bb17c78250e60af3",
+  "original_prompt": {
+    "git_path": "ea9975260ef3b42eecb61239bb17c78250e60af3:prompts/eval_oeq_teacher_rubric.txt",
+    "sha256": "1d998a4280340ec3fc8ffe72cb7acf28ab87c7f7f722c8c809a45500d4011b1d",
+    "uncertainty_contract": false
+  },
+  "initial_prompt": {
+    "git_path": "025f43f:prompts/eval_oeq_teacher_rubric.txt",
+    "sha256": "277ee42b80853befb5410dce2559ef5f33991dbe40ce7a17f5e58977f41208de",
+    "uncertainty_contract": false
+  },
+  "current_prompt": {
+    "path": "C:\\ClearEval\\ClearEval-public\\prompts\\eval_oeq_teacher_rubric.txt",
+    "sha256": "a8e5f82f0551c7e23ba391744b0ea88ad5cd14f7f4aa44867cffe620e985c1c0",
+    "uncertainty_contract": true
+  },
+  "original_marker_extraction": {
+    "first_line": 226,
+    "last_line": 232,
+    "text": "3.1 荧光标记字典 (marker_dict)\n- 提取该方案中使用的所有荧光标记信息。\n- 输出格式必须为 JSON 对象，键为荧光染料/荧光蛋白名称，值为对应的标记位点/靶标名称，用于拆分抗体标记时的靶点和荧光团，如果是小分子则只返回key值。\n- 提取逻辑: {\"荧光\": \"标记位点\"}\n- 示例: {\"Alexa fluor 647\": \"c-fos\",  \"DAPI\": \"\"}\n- 如果方案中未明确提及任何荧光标记，请输出空对象 {}。\n"
+  },
+  "original_co_param": {
+    "first_line": 178,
+    "last_line": 189,
+    "text": "2.3 参数范围物理合理性 (Co_param, 0–2分)\n\n2分: 参数符合菲克扩散定律 (Fick's Diffusion Law) 和经验值。\n\n参考: 成年小鼠脑 -> CUBIC-1 (5-7天), iDISCO 透化 (1-2天)。\n\n参考: 1mm 切片 -> CUBIC-1 (1天), iDISCO 透化 (1小时)。\n\n1分: 时间/浓度偏差在 50% 以内。\n\n0分: 违反物理常识。例如：建议用 100°C 孵育（会导致蛋白变性/组织煮熟），或者建议全脑扩散时间仅为 10 分钟。\n"
+  },
+  "original_label_scoring": {
+    "first_line": 1113,
+    "last_line": 1189,
+    "text": "    # 2. S_label: 标记与方法兼容性评分 (Python 规则计算)\n    # Preprocess: fluorophore keys that are actually markers get moved to marker side,\n    # and detect imbalanced entries (marker without fluorophore or vice versa).\n    marker_pairs, has_marker_without_fluor, has_fluor_without_marker = _preprocess_marker_dict(marker_dict)\n\n    # 步骤2.1: s_target_match — 标记位点与 question 要求的匹配度\n    target_match_scores = []\n    for fluor_str, marker_str in marker_pairs:\n        # Preserve original behavior: entries without an explicit marker value are not scored.\n        if not marker_str:\n            continue\n        if _match_marker_to_targets(marker_str, marker_query_targets, fluor_name=fluor_str):\n            target_match_scores.append(6.0)\n        else:\n            # Determine specificity tier: 0 = vague/descriptive, 3 = incomplete but inferable, 6 = specific marker\n            specificity = _classify_marker_specificity(marker_str, fluor_str, marker_query_targets)\n            if specificity == 0:\n                target_match_scores.append(0.0)\n            elif specificity == 3:\n                # Incomplete but reasonable -> half credit\n                target_match_scores.append(3.0)\n            else:\n                # Specific marker: check tissue.json major_category for partial credit\n                marker_major = _get_tissue_major_category(marker_str)\n                question_major = \"\"\n                if marker_query_targets:\n                    question_major = marker_query_targets[0].get(\"major_category\", \"\")\n                if marker_major and question_major and marker_major == question_major:\n                    target_match_scores.append(3.0)\n                else:\n                    target_match_scores.append(0.0)\n    s_target_match = min(target_match_scores) if target_match_scores else 0.0\n\n    # 步骤2.2: s_marker_fluor_compat — 标记位点与荧光团兼容性 (tissue.json)\n    marker_fluor_scores = []\n    for fluor_str, marker_str in marker_pairs:\n        if not marker_str:\n            continue\n        if _is_penalty_fluor(fluor_str):\n            marker_fluor_scores.append(0.0)\n            continue\n        compat = _get_marker_fluor_compat(marker_str, fluor_str)\n        if compat is False:\n            marker_fluor_scores.append(0.0)\n        else:\n            # 兼容或未知均给满分（未知时不应 penalize）\n            marker_fluor_scores.append(6.0)\n    s_marker_fluor_compat = min(marker_fluor_scores) if marker_fluor_scores else 6.0\n\n    # 步骤2.3: s_method_fluor_compat — 荧光团与透明方法兼容性 (method_fluro_compati.json)\n    method_fluor_scores = []\n    for fluor_str, marker_str in marker_pairs:\n        if _is_penalty_fluor(fluor_str):\n            method_fluor_scores.append(0.0)\n            continue\n        compat_val = _get_method_fluor_compat(method_name, fluor_str)\n        if compat_val is None:\n            method_fluor_scores.append(6.0)  # 未知时不 penalize\n        else:\n            method_fluor_scores.append(compat_val * 6.0)\n    s_method_fluor_compat = min(method_fluor_scores) if method_fluor_scores else 6.0\n\n    s_label = min(s_target_match, s_marker_fluor_compat, s_method_fluor_compat)\n    s_label = max(0.0, min(6.0, s_label)) # Clamp to [0, 6]\n    # The source table calls these recommended markers, not universally required\n    # targets. Expose coverage without silently converting alternatives to AND.\n    marker_coverage_audit = {\n        'reference_targets': [\n            {'marker_name': target.get('marker_name', ''),\n             'matched': any(_match_marker_to_targets(marker, [target], fluor_name=fluor)\n                            for fluor, marker in marker_pairs)}\n            for target in marker_query_targets],\n        'requirement_semantics': 'recommended-target metadata; AND/OR requirements require question-specific review',\n        'unmatched_reported_markers': [marker or fluor for fluor, marker in marker_pairs\n                                     if not _match_marker_to_targets(marker, marker_query_targets, fluor_name=fluor)],\n    }\n"
+  },
+  "existing_AF594_method_values": {
+    "path": "C:\\ClearEval\\ClearEval-public\\KnowledgeBase\\method_fluro_compati.json",
+    "sha256": "3c1b66ad96eb46c6ab8fb01563b193ec5657fbb9b0b9de627d51b7d43b461aeb",
+    "values": {
+      "CUBIC": 0.75,
+      "ScaleS": 0.8,
+      "MACS": 0.8,
+      "iDISCO+": 0.9,
+      "FDISCO": 0.85,
+      "SOLID": 0.8,
+      "SeeDB2": 0.85,
+      "PEGASOS": 0.75,
+      "BoneClear": 0.85,
+      "Ce3D": 0.9,
+      "TDE": 0.85,
+      "ClearT2": 0.85,
+      "ClearSee": 0.75,
+      "EyeCi": 0.8,
+      "FOCM": 0.8,
+      "SWITCH": 0.85,
+      "uDISCO": 0.75
+    }
+  },
+  "primary_sources": [
+    {
+      "url": "https://www.abcam.com/en-us/products/primary-antibodies/alexa-fluor-488-map2-antibody-epr19691-neuronal-marker-ab225316",
+      "supports": "An anti-MAP2 primary antibody directly conjugated to AF488 exists."
+    },
+    {
+      "url": "https://www.abcam.com/en-us/products/primary-antibodies/alexa-fluor-594-map2-antibody-epr19691-neuronal-marker-ab302832",
+      "supports": "An anti-MAP2 primary antibody directly conjugated to AF594 exists; this is not a clearing-method preservation measurement."
+    },
+    {
+      "url": "https://www.thermofisher.com/us/en/home/references/molecular-probes-the-handbook/fluorophores-and-their-amine-reactive-derivatives/alexa-fluor-dyes-spanning-the-visible-and-infrared-spectrum.html",
+      "supports": "AF dyes support protein conjugation, while individual members have distinct spectral and fluorescence properties."
+    }
+  ],
+  "new_model_calls": 0,
+  "scores_recomputed": false,
+  "scorer_modified": false
+}

@@ -1,0 +1,38 @@
+**Chosen Method:** CUBIC  
+**Chosen Labeling:** [GFP (内源), MAP2 + Alexa Fluor 488, DAPI]  
+**Justification:** CUBIC is an aqueous-based, non-denaturing clearing method that excels at preserving weak endogenous fluorescent proteins (e.g., GFP) over long-term storage, unlike organic solvent–based methods (e.g., iDISCO+, uDISCO) which often quench or irreversibly damage such signals. It provides excellent transparency for 3 mm tissue blocks within days and enables stable refractive index (RI ≈ 1.49) matching compatible with light-sheet and confocal microscopy. The dual-labeling strategy leverages the sparse endogenous GFP reporter to identify individual neurons, while immunolabeling against MAP2 (a dendritic cytoskeletal marker) with Alexa Fluor 488 reinforces dendritic arborization and structural integrity; DAPI provides nuclear counterstain for spatial registration and cell density context. All fluorophores used are known to be well-preserved in CUBIC, and the cleared samples can be stored in CUBIC-R+ for ≥6 months without significant signal decay.
+
+**Protocol Steps:**  
+N0001 Post-fixation Stabilization  
+N0002 Incubation with 4% (wt/vol) paraformaldehyde (PFA) in PBS (pH 7.4) to confirm fixation completeness.(Temperature: 4 ℃, Time: 12 hours)  
+
+N0003 Permeabilization and Blocking  
+N0004 Incubation with CUBIC-P1 (10 vol% Triton X-100, 10 vol% Tween-20, 10 wt% sucrose in PBS).(Temperature: 37 ℃, Time: 24 hours)  
+N0005 Incubation with CUBIC-B (10 vol% DMSO, 5 vol% normal goat serum, 0.5 wt% sodium azide in PBS).(Temperature: 37 ℃, Time: 12 hours)  
+
+N0006 Primary Antibody Labeling  
+N0007 Incubation with mouse anti-MAP2 primary antibody (1:500 dilution in CUBIC-B).(Temperature: 37 ℃, Time: 72 hours)  
+
+N0008 Washing  
+N0009 Incubation with CUBIC-W (0.5 vol% Triton X-100 in PBS) with gentle shaking.(Temperature: 37 ℃, Time: 24 hours)  
+N0010 Repeat step N0009 two additional times, changing solution every 8 hours.(Temperature: 37 ℃, Time: 24 hours total)  
+
+N0011 Secondary Antibody Labeling  
+N0012 Incubation with goat anti-mouse IgG conjugated to Alexa Fluor 488 (1:300 dilution in CUBIC-B).(Temperature: 37 ℃, Time: 48 hours)  
+
+N0013 Nuclear Counterstaining  
+N0014 Incubation with DAPI (1 µg/mL in CUBIC-W).(Temperature: RT, Time: 12 hours)  
+
+N0015 Washing Prior to Clearing  
+N0016 Incubation with CUBIC-W.(Temperature: 37 ℃, Time: 24 hours)  
+
+N0017 Tissue Clearing (Delipidation & Decolorization)  
+N0018 Incubation with CUBIC-L (25 wt% Quadrol, 25 wt% urea, 15 wt% sucrose, 10 vol% Triton X-100 in H₂O, pH 9.0–9.5).(Temperature: 37 ℃, Time: 72 hours)  
+N0019 Replace with fresh CUBIC-L.(Temperature: 37 ℃, Time: 48 hours)  
+
+N0020 Refractive Index Matching  
+N0021 Incubation with CUBIC-R+ (50 wt% sucrose, 25 wt% urea, 10 wt% triethanolamine, 0.5 vol% Triton X-100 in H₂O, RI = 1.49).(Temperature: RT, Time: 24 hours)  
+N0022 Replace with fresh CUBIC-R+ for final storage and imaging.(Temperature: RT, Time: ≥6 months)  
+
+N0023 Imaging Preparation  
+N0024 Transfer sample to glass-bottom imaging chamber filled with fresh CUBIC-R+ immediately before imaging.(Temperature: RT, Time: <1 hour prior to acquisition)

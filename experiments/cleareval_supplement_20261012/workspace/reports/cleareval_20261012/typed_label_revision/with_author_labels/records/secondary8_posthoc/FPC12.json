@@ -1,0 +1,557 @@
+{
+  "cohort": "secondary8_posthoc",
+  "cell_id": "FPC12",
+  "anonymous_answer_id": "FPC12",
+  "question_id": 2,
+  "original_status": "success",
+  "version": "cce-typed-label-scorer-v2.1",
+  "metrics": {
+    "c_param": 3,
+    "co_order": 3,
+    "co_method": 2,
+    "co_param": 2,
+    "co_chem": 1,
+    "s_method": 2.375,
+    "s_label": 1.2000000000000002,
+    "s_trans": 2.814646787157323,
+    "s_time": 0.0,
+    "sr": 0.1111111111111111,
+    "sp": 0.1724137931034483,
+    "Com": 0.6444444444444444,
+    "Cor": 1.0,
+    "Eff": 0.5283038989297769,
+    "IA": 0.5283038989297769,
+    "HV": 0.340462512643634
+  },
+  "complete_numeric_CCE": true,
+  "baseline_metrics": {
+    "c_param": 3,
+    "co_order": 3,
+    "co_method": 2,
+    "co_param": 2,
+    "co_chem": 1,
+    "s_method": 2.375,
+    "s_label": null,
+    "s_trans": 2.814646787157323,
+    "s_time": 0.0,
+    "sr": 0.1111111111111111,
+    "sp": 0.1724137931034483,
+    "Com": 0.6444444444444444,
+    "Cor": 1.0,
+    "Eff": null,
+    "IA": null,
+    "HV": null
+  },
+  "quantitative_data": {
+    "method_name": "iDISCO+",
+    "tissue_ri_value": 1.46,
+    "total_time_hours": 306.0,
+    "sample_tier": "T04_WHOLE_MOUSE_BRAIN_5_12MM",
+    "reagent_ri_value": null,
+    "protocol_time_hours": null
+  },
+  "time_derivation": {
+    "hours": 306.0,
+    "bounds_hours": [
+      306.0,
+      306.0
+    ],
+    "decision": "existing_source_bound_scalar",
+    "issues": []
+  },
+  "time_formula": {
+    "policy": "kb-window-asymmetric-median-0.20-under-0.10-over-v1",
+    "source": "time_kb.json",
+    "requested_tier": "T04_WHOLE_MOUSE_BRAIN_5_12MM",
+    "actual_hours": 306.0,
+    "min_hours": 24.0,
+    "max_hours": 72.0,
+    "median_hours": 36.0,
+    "tau_hours": 3.6,
+    "delta_hours": 234.0,
+    "tau_under_fraction": 0.2,
+    "tau_over_fraction": 0.1,
+    "status": "scored",
+    "resolved_tier": "T04_WHOLE_MOUSE_BRAIN_5_12MM",
+    "method_key": "idisco+"
+  },
+  "time_sensitivity": [
+    {
+      "time_hours": 306.0,
+      "s_time": 0.0,
+      "Eff": null
+    }
+  ],
+  "label_derivation": {
+    "version": "cce-typed-label-scorer-v2.1",
+    "s_label": 1.2000000000000002,
+    "channels": {
+      "s_target_match": 3.0,
+      "s_marker_fluor_compat": 6.0,
+      "s_method_fluor_compat": 1.2000000000000002
+    },
+    "channel_applicability": {
+      "s_target_match": {
+        "applicable": true,
+        "value": 3.0,
+        "contributing_pairs": [
+          "relation:R01",
+          "relation:R02"
+        ]
+      },
+      "s_marker_fluor_compat": {
+        "applicable": true,
+        "value": 6.0,
+        "contributing_pairs": [
+          "relation:R01",
+          "relation:R02"
+        ]
+      },
+      "s_method_fluor_compat": {
+        "applicable": true,
+        "value": 1.2000000000000002,
+        "contributing_pairs": [
+          "unresolved_entity:E01",
+          "unresolved_entity:E02",
+          "relation:R01",
+          "relation:R02"
+        ]
+      }
+    },
+    "pair_results": [
+      {
+        "pair_id": "unresolved_entity:E01",
+        "entity_id": "E01",
+        "fluorophore": "GFP",
+        "reported_marker": null,
+        "reported_target_literal": null,
+        "label_type": "native_fluorescent_protein",
+        "original_function_input": {
+          "GFP": ""
+        },
+        "applicable": {
+          "s_target_match": false,
+          "s_marker_fluor_compat": false,
+          "s_method_fluor_compat": true
+        },
+        "channels": {
+          "s_target_match": null,
+          "s_marker_fluor_compat": null,
+          "s_method_fluor_compat": 1.2000000000000002
+        },
+        "not_applicable_reason": "standalone fluorescence has no antibody target-pair channel",
+        "source_evidence": {
+          "unit_id": "L0002",
+          "start": 51,
+          "end": 54,
+          "quote": "GFP",
+          "answer_sha256": "3bf63222e63d321fe1cb4e30a415bacf7bc528e1821bd928827b66065202a46b"
+        },
+        "compatibility_audit": [
+          {
+            "kind": "method_fluor",
+            "method_name": "iDISCO+",
+            "fluorophore": "GFP",
+            "source": "KnowledgeBase/method_fluro_compati.json",
+            "value": 0.2,
+            "status": "TABLE_REPORTED"
+          }
+        ]
+      },
+      {
+        "pair_id": "unresolved_entity:E02",
+        "entity_id": "E02",
+        "fluorophore": "mCherry",
+        "reported_marker": null,
+        "reported_target_literal": null,
+        "label_type": "native_fluorescent_protein",
+        "original_function_input": {
+          "mCherry": ""
+        },
+        "applicable": {
+          "s_target_match": false,
+          "s_marker_fluor_compat": false,
+          "s_method_fluor_compat": true
+        },
+        "channels": {
+          "s_target_match": null,
+          "s_marker_fluor_compat": null,
+          "s_method_fluor_compat": 1.7999999999999998
+        },
+        "not_applicable_reason": "standalone fluorescence has no antibody target-pair channel",
+        "source_evidence": {
+          "unit_id": "L0002",
+          "start": 56,
+          "end": 63,
+          "quote": "mCherry",
+          "answer_sha256": "3bf63222e63d321fe1cb4e30a415bacf7bc528e1821bd928827b66065202a46b"
+        },
+        "compatibility_audit": [
+          {
+            "kind": "method_fluor",
+            "method_name": "iDISCO+",
+            "fluorophore": "mCherry",
+            "source": "KnowledgeBase/method_fluro_compati.json",
+            "value": 0.3,
+            "status": "TABLE_REPORTED"
+          }
+        ]
+      },
+      {
+        "pair_id": "relation:R01",
+        "entity_id": "E04",
+        "fluorophore": "Alexa Fluor 488",
+        "reported_marker": "MAP2",
+        "reported_target_literal": "MAP2",
+        "label_type": "targeted_or_unclassified_reagent",
+        "original_function_input": {
+          "Alexa Fluor 488": "MAP2"
+        },
+        "applicable": {
+          "s_target_match": true,
+          "s_marker_fluor_compat": true,
+          "s_method_fluor_compat": true
+        },
+        "channels": {
+          "s_target_match": 6.0,
+          "s_marker_fluor_compat": 6.0,
+          "s_method_fluor_compat": 5.1
+        },
+        "not_applicable_reason": null,
+        "source_evidence": {
+          "unit_id": "L0002",
+          "start": 29,
+          "end": 115,
+          "quote": "**Chosen Labeling:** [GFP, mCherry, MAP2 + Alexa Fluor 488, NeuN + Alexa Fluor 594]  \n",
+          "answer_sha256": "3bf63222e63d321fe1cb4e30a415bacf7bc528e1821bd928827b66065202a46b"
+        },
+        "compatibility_audit": [
+          {
+            "kind": "marker_fluor",
+            "marker": "MAP2",
+            "fluorophore": "Alexa Fluor 488",
+            "source": "KnowledgeBase/tissue.json",
+            "value": true,
+            "status": "TABLE_REPORTED"
+          },
+          {
+            "kind": "method_fluor",
+            "method_name": "iDISCO+",
+            "fluorophore": "Alexa Fluor 488",
+            "source": "KnowledgeBase/method_fluro_compati.json",
+            "value": 0.85,
+            "status": "TABLE_REPORTED"
+          }
+        ]
+      },
+      {
+        "pair_id": "relation:R02",
+        "entity_id": "E06",
+        "fluorophore": "Alexa Fluor 594",
+        "reported_marker": "NeuN",
+        "reported_target_literal": "NeuN",
+        "label_type": "targeted_or_unclassified_reagent",
+        "original_function_input": {
+          "Alexa Fluor 594": "NeuN"
+        },
+        "applicable": {
+          "s_target_match": true,
+          "s_marker_fluor_compat": true,
+          "s_method_fluor_compat": true
+        },
+        "channels": {
+          "s_target_match": 3.0,
+          "s_marker_fluor_compat": 6.0,
+          "s_method_fluor_compat": 5.4
+        },
+        "not_applicable_reason": null,
+        "source_evidence": {
+          "unit_id": "L0002",
+          "start": 29,
+          "end": 115,
+          "quote": "**Chosen Labeling:** [GFP, mCherry, MAP2 + Alexa Fluor 488, NeuN + Alexa Fluor 594]  \n",
+          "answer_sha256": "3bf63222e63d321fe1cb4e30a415bacf7bc528e1821bd928827b66065202a46b"
+        },
+        "compatibility_audit": [
+          {
+            "kind": "marker_fluor",
+            "marker": "NeuN",
+            "fluorophore": "Alexa Fluor 594",
+            "source": "KnowledgeBase/tissue.json",
+            "value": true,
+            "status": "TABLE_REPORTED"
+          },
+          {
+            "kind": "method_fluor",
+            "method_name": "iDISCO+",
+            "fluorophore": "Alexa Fluor 594",
+            "source": "KnowledgeBase/method_fluro_compati.json",
+            "value": 0.9,
+            "status": "TABLE_REPORTED"
+          }
+        ]
+      }
+    ],
+    "resolved_uncertainties": [],
+    "remaining_uncertainties": [],
+    "minimum_of_available_applicable_channels": 1.2000000000000002,
+    "task_target_coverage": "native/direct task coverage remains separate from antibody-pair applicability",
+    "new_model_calls": 0,
+    "expert_validated": false
+  },
+  "compatibility_lookup_trace": [
+    {
+      "marker": "MAP2",
+      "fluorophore": "Alexa Fluor 488",
+      "status": "all_applicable_scopes_have_same_authored_value",
+      "value": true,
+      "column": "AlexaFluor 488",
+      "matching_target_options": [
+        {
+          "target_index": 2,
+          "source_tissue_xlsx_row": 4,
+          "marker_slot": "recommended_marker_2",
+          "marker_name": "MAP2",
+          "query_path": "中枢神经 > 神经元结构 > 神经元(通用)",
+          "major_category": "中枢神经",
+          "subcategory": "神经元结构",
+          "structure_or_cell_subtype": "神经元(通用)",
+          "authored_target_parent": {
+            "marker_name": "MAP2",
+            "target_index": 2,
+            "source_tissue_xlsx_row": 4,
+            "query_path": "中枢神经 > 神经元结构 > 神经元(通用)",
+            "marker_slot": "recommended_marker_2"
+          },
+          "authored_option_index": 0,
+          "option_split_applied": false
+        }
+      ],
+      "candidate_rows": [
+        {
+          "row_index": 0,
+          "matching_authored_names": [
+            {
+              "field": "推荐标志物 2",
+              "authored_name": "MAP2",
+              "option": "MAP2",
+              "option_split_applied": false
+            }
+          ],
+          "scope": {
+            "大类": "中枢神经",
+            "亚类": "神经元结构",
+            "结构/细胞类型": "神经元(通用)"
+          },
+          "cell_value": 1
+        },
+        {
+          "row_index": 63,
+          "matching_authored_names": [
+            {
+              "field": "推荐标志物 2",
+              "authored_name": "MAP2 / Nestin",
+              "option": "MAP2",
+              "option_split_applied": true
+            }
+          ],
+          "scope": {
+            "大类": "通用结构",
+            "亚类": "类器官",
+            "结构/细胞类型": "大脑类器官整体"
+          },
+          "cell_value": 1
+        },
+        {
+          "row_index": 93,
+          "matching_authored_names": [
+            {
+              "field": "推荐标志物 1",
+              "authored_name": "MAP2",
+              "option": "MAP2",
+              "option_split_applied": false
+            }
+          ],
+          "scope": {
+            "大类": "中枢神经",
+            "亚类": "神经元结构",
+            "结构/细胞类型": "CA1 树突/树突棘结构辅助"
+          },
+          "cell_value": null
+        }
+      ],
+      "selected_row_indices": [
+        0
+      ],
+      "per_scope_evidence": [
+        {
+          "scope": {
+            "大类": "中枢神经",
+            "亚类": "神经元结构",
+            "结构/细胞类型": "神经元(通用)"
+          },
+          "row_indices": [
+            0
+          ],
+          "all_cell_values": [
+            1
+          ],
+          "state": "consistent_authored_value",
+          "value": 1
+        }
+      ],
+      "row_selection_uses_scores": false,
+      "different_scopes_merged": false,
+      "new_alias_or_KB_value": false,
+      "declared_task_scope": null,
+      "exact_lookup_value": true,
+      "evidence_level": "existing_specific_table_value"
+    },
+    {
+      "marker": "NeuN",
+      "fluorophore": "Alexa Fluor 594",
+      "status": "AF_family_consensus_approximation",
+      "value": true,
+      "column": null,
+      "matching_target_options": [],
+      "candidate_rows": [
+        {
+          "row_index": 1,
+          "matching_authored_names": [
+            {
+              "field": "推荐标志物 1",
+              "authored_name": "NeuN (RBFOX3)",
+              "option": "NeuN (RBFOX3)",
+              "option_split_applied": false
+            }
+          ],
+          "scope": {
+            "大类": "中枢神经",
+            "亚类": "神经元结构",
+            "结构/细胞类型": "成熟神经元"
+          },
+          "cell_value": null
+        }
+      ],
+      "selected_row_indices": [
+        1
+      ],
+      "per_scope_evidence": [
+        {
+          "scope": {
+            "大类": "中枢神经",
+            "亚类": "神经元结构",
+            "结构/细胞类型": "成熟神经元"
+          },
+          "row_indices": [
+            1
+          ],
+          "all_cell_values": [],
+          "state": "authored_unknown",
+          "value": null
+        }
+      ],
+      "row_selection_uses_scores": false,
+      "different_scopes_merged": false,
+      "new_alias_or_KB_value": false,
+      "declared_task_scope": null,
+      "exact_lookup_value": null,
+      "family_source_donors": [],
+      "family_donor_cells": [
+        {
+          "row_index": 1,
+          "column": "AlexaFluor 488",
+          "value": 1,
+          "scope": {
+            "大类": "中枢神经",
+            "亚类": "神经元结构",
+            "结构/细胞类型": "成熟神经元"
+          }
+        },
+        {
+          "row_index": 1,
+          "column": "AlexaFluor 568/Cy3",
+          "value": 1,
+          "scope": {
+            "大类": "中枢神经",
+            "亚类": "神经元结构",
+            "结构/细胞类型": "成熟神经元"
+          }
+        },
+        {
+          "row_index": 1,
+          "column": "AlexaFluor 647/Cy5 ",
+          "value": 1,
+          "scope": {
+            "大类": "中枢神经",
+            "亚类": "神经元结构",
+            "结构/细胞类型": "成熟神经元"
+          }
+        }
+      ],
+      "family_rule": "AF-family-consensus-from-applicable-marker-rows-v1",
+      "evidence_level": "user_authorized_family_approximation"
+    }
+  ],
+  "semantic_decomposition_applied": false,
+  "semantic_author": "saved judge decomposition",
+  "remaining_dependencies": {
+    "time": [],
+    "label_relations": [],
+    "compatibility": []
+  },
+  "new_model_requests": 0,
+  "new_expert_records": 0,
+  "direct_scores_rejudged": false,
+  "SR_SP_changed": false,
+  "raw_judge_status_changed": false,
+  "status": "replayed",
+  "source_record": {
+    "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\optimizer_round3_20261011\\uniform_v7\\actual_01\\cells\\secondary8_posthoc\\FPC12\\posthoc.json",
+    "sha256": "74b07c85a6a84c987b943b719efde53a95977c1fbaa4749d5b94d3f25e764b75"
+  },
+  "answer_sha256": "3bf63222e63d321fe1cb4e30a415bacf7bc528e1821bd928827b66065202a46b",
+  "changes": {},
+  "comparison_metrics": {
+    "c_param": 3,
+    "co_order": 3,
+    "co_method": 2,
+    "co_param": 2,
+    "co_chem": 1,
+    "s_method": 2.375,
+    "s_label": null,
+    "s_trans": 2.814646787157323,
+    "s_time": 0.0,
+    "sr": 0.1111111111111111,
+    "sp": 0.1724137931034483,
+    "Com": 0.6444444444444444,
+    "Cor": 1.0,
+    "Eff": null,
+    "IA": null,
+    "HV": null
+  },
+  "typed_replay_status": "replayed",
+  "typed_semantic_annotation": false,
+  "typed_changes": {
+    "s_label": {
+      "before": null,
+      "after": 1.2000000000000002
+    },
+    "Eff": {
+      "before": null,
+      "after": 0.5283038989297769
+    },
+    "IA": {
+      "before": null,
+      "after": 0.5283038989297769
+    },
+    "HV": {
+      "before": null,
+      "after": 0.340462512643634
+    }
+  },
+  "source_document": {
+    "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\optimizer_round2_20261010\\secondary_E5_confirmation_v1\\source_documents\\FPC12.json",
+    "sha256": "593214eadf1737e177a8e7c0d5c9b924a075258d1c44f23e38fee1a48f0d59f6"
+  }
+}

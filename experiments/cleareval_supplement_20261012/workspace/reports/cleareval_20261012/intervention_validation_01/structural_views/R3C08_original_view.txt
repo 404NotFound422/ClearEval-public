@@ -1,0 +1,61 @@
+**Chosen Method:** iDISCO+  
+**Chosen Labeling:** [tdTomato (endogenous), β-III Tubulin (TUJ1) + Alexa Fluor 647]  
+**Justification:** iDISCO+ is ideal for whole adult mouse brains due to its rapid delipidation and strong compatibility with red-shifted fluorescent proteins like tdTomato, which is critical for preserving the AAV-driven retrograde labeling signal. It also allows effective immunolabeling of cytoskeletal targets such as β-III Tubulin (a pan-neuronal axon marker) using Alexa Fluor 647-conjugated secondary antibodies, which are highly stable under iDISCO+ organic solvent conditions. The method induces moderate tissue shrinkage (~20–30%), which is acceptable per the problem statement, and achieves high transparency within days—enabling fast light-sheet imaging.
+
+**Protocol Steps:**  
+N0001 Dehydration  
+N0002 Incubation with 20% (vol/vol) methanol in PBS.(Temperature: RT, Time: 1 hour)  
+N0003 Incubation with 40% (vol/vol) methanol in PBS.(Temperature: RT, Time: 1 hour)  
+N0004 Incubation with 60% (vol/vol) methanol in PBS.(Temperature: RT, Time: 1 hour)  
+N0005 Incubation with 80% (vol/vol) methanol in PBS.(Temperature: RT, Time: 1 hour)  
+N0006 Incubation with 100% (vol/vol) methanol.(Temperature: RT, Time: 1 hour)  
+N0007 Incubation with 100% (vol/vol) methanol.(Temperature: RT, Time: 1 hour)  
+
+N0008 Bleaching (optional but recommended for endogenous fluorescence preservation)  
+N0009 Incubation with chilled fresh 5% (vol/vol) H₂O₂ in methanol (1 volume 30% H₂O₂ to 5 volumes MeOH).(Temperature: 4 ℃, Time: 12 hours)  
+
+N0010 Rehydration  
+N0011 Incubation with 80% (vol/vol) methanol in PBS.(Temperature: RT, Time: 1 hour)  
+N0012 Incubation with 60% (vol/vol) methanol in PBS.(Temperature: RT, Time: 1 hour)  
+N0013 Incubation with 40% (vol/vol) methanol in PBS.(Temperature: RT, Time: 1 hour)  
+N0014 Incubation with 20% (vol/vol) methanol in PBS.(Temperature: RT, Time: 1 hour)  
+N0015 Incubation with PBS + 0.2% (vol/vol) Triton X-100 (PBT).(Temperature: RT, Time: 1 hour)  
+
+N0016 Permeabilization and Blocking  
+N0017 Incubation with PBT + 20% (vol/vol) DMSO + 0.3 M glycine.(Temperature: 37 ℃, Time: 24 hours)  
+N0018 Incubation with PBT + 10% (vol/vol) DMSO + 6% (wt/vol) donkey serum (blocking buffer).(Temperature: 37 ℃, Time: 24 hours)  
+
+N0019 Primary Antibody Staining  
+N0020 Incubation with anti-β-III Tubulin (TUJ1) primary antibody diluted 1:500 in blocking buffer.(Temperature: 37 ℃, Time: 72 hours)  
+
+N0021 Wash  
+N0022 Incubation with PBT.(Temperature: RT, Time: 6 hours)  
+N0023 Incubation with PBT.(Temperature: RT, Time: 6 hours)  
+N0024 Incubation with PBT.(Temperature: RT, Time: 6 hours)  
+N0025 Incubation with PBT.(Temperature: RT, Time: 6 hours)  
+
+N0026 Secondary Antibody Staining  
+N0027 Incubation with Alexa Fluor 647-conjugated donkey anti-mouse IgG (H+L) diluted 1:300 in blocking buffer.(Temperature: 37 ℃, Time: 48 hours)  
+
+N0028 Wash  
+N0029 Incubation with PBT.(Temperature: RT, Time: 6 hours)  
+N0030 Incubation with PBT.(Temperature: RT, Time: 6 hours)  
+N0031 Incubation with PBT.(Temperature: RT, Time: 6 hours)  
+
+N0032 Dehydration (post-immunostaining)  
+N0033 Incubation with 20% (vol/vol) methanol in PBS.(Temperature: RT, Time: 1 hour)  
+N0034 Incubation with 40% (vol/vol) methanol in PBS.(Temperature: RT, Time: 1 hour)  
+N0035 Incubation with 60% (vol/vol) methanol in PBS.(Temperature: RT, Time: 1 hour)  
+N0036 Incubation with 80% (vol/vol) methanol in PBS.(Temperature: RT, Time: 1 hour)  
+N0037 Incubation with 100% (vol/vol) methanol.(Temperature: RT, Time: 1 hour)  
+N0038 Incubation with 100% (vol/vol) methanol.(Temperature: RT, Time: 1 hour)  
+
+N0039 Delipidation  
+N0040 Incubation with dichloromethane (DCM).(Temperature: RT, Time: 30 minutes)  
+N0041 Incubation with dichloromethane (DCM).(Temperature: RT, Time: 30 minutes)  
+
+N0042 Refractive Index Matching  
+N0043 Incubation with 100% (vol/vol) dibenzyl ether (DBE, Sigma 108014-1KG) without shaking.(Temperature: RT, Time: 2 hours)  
+
+N0044 Storage and Imaging Preparation  
+N0045 Transfer brain to glass vial filled with fresh DBE and store at RT in the dark until light-sheet imaging.(Temperature: RT, Time: ≤7 days)

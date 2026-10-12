@@ -1,0 +1,57 @@
+{
+  "request_id": "T03_R3C04_merge_adjacent_operations",
+  "answer_id": "R3C04",
+  "condition": "merge_adjacent_operations",
+  "request": {
+    "event": "request_started",
+    "request_id": "212e27ed8632e6d96cf81f3dd8b6b5051f610a882834574c365f135cd21bf0d8",
+    "trial_id": "8643841308aabc07c8f70217b60e859952ffd271e8392f9471524ad15e7aee91",
+    "attempt": 1,
+    "model": "qwen3.8:27b-q8_0-local",
+    "started_utc": "2026-10-12T13:13:33.019715+00:00",
+    "package_request_index": 441,
+    "round_id": "fulltext_english_translation_20261012",
+    "phase": "fulltext_translation",
+    "observation_id": "T03_R3C04_merge_adjacent_operations",
+    "authorization_sha256": "45034cc03e0d14699911292b5a0ef3992ce02f86c9d0a8cea8901ba535736e4b",
+    "payload_sha256": "444156be1c1c959cbc5bc58fd13c21210dabe7cea6df6699ce862c7f5c855e06"
+  },
+  "payload": {
+    "path": "C:\\ClearEval\\reports\\cleareval_20261012\\english_fulltext_pilot\\qwen_translation_pending\\T03_R3C04_merge_adjacent_operations.json",
+    "sha256": "444156be1c1c959cbc5bc58fd13c21210dabe7cea6df6699ce862c7f5c855e06"
+  },
+  "source": {
+    "path": "C:\\ClearEval\\reports\\cleareval_20261012\\english_fulltext_pilot\\controls\\R3C04\\original\\merge_adjacent_operations.txt",
+    "sha256": "10cd8fa819acca2bbe346c6c395a6d5478f9be2040351b21bf685fd85cf75666"
+  },
+  "attempt": 1,
+  "actual_new_request": true,
+  "status": "returned_translation_pending_fidelity_review",
+  "translation": {
+    "path": "C:\\ClearEval\\reports\\cleareval_20261012\\english_fulltext_pilot\\qwen_translation_pending\\returns\\T03_R3C04_merge_adjacent_operations\\english_text.txt",
+    "sha256": "950be1ebd0afc65bd92b423f3b432c2590e1118231377ee3fac3143370d23d43"
+  },
+  "raw_response": {
+    "path": "C:\\ClearEval\\reports\\cleareval_20261012\\english_fulltext_pilot\\qwen_translation_pending\\returns\\T03_R3C04_merge_adjacent_operations\\http_response.json",
+    "sha256": "7d010c4c5dcc13132fe8e0e7b5c8841eada247674bbb233ec447d441b12be260"
+  },
+  "response_content": {
+    "path": "C:\\ClearEval\\reports\\cleareval_20261012\\english_fulltext_pilot\\qwen_translation_pending\\returns\\T03_R3C04_merge_adjacent_operations\\response_content.txt",
+    "sha256": "340381a933944b82452ca017640b9b58ebb767b634d502910e3a6dfbf91fc41b"
+  },
+  "model_response_metadata": {
+    "model": "qwen3.8:27b-q8_0-local",
+    "created_at": "2026-10-12T13:14:54.7408402Z",
+    "done": true,
+    "done_reason": "stop",
+    "total_duration": 81390093500,
+    "load_duration": 18566900,
+    "prompt_eval_count": 2241,
+    "prompt_eval_duration": 835429000,
+    "eval_count": 1915,
+    "eval_duration": 79970815000
+  },
+  "fidelity_review_completed": false,
+  "finished_utc": "2026-10-12T13:14:54.809629+00:00",
+  "wall_seconds": 81.76600000000326
+}

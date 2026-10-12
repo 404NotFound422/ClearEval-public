@@ -1,0 +1,424 @@
+{
+  "scores": {
+    "completeness": {
+      "c_step": {
+        "score": 1,
+        "reasoning": "The protocol includes all core modules: PBS wash, permeabilization, blocking, primary/secondary antibody incubation with washes, THF dehydration, BABB clearing/RI matching, and mounting/storage. However, it omits a dedicated decolorization step (e.g., H2O2) which is typically required for whole brain samples to remove endogenous chromophores (hemoglobin) that interfere with deep imaging, even though the question implies a standard fixed brain. The rubric marks 'missing non-fatal steps' or 'specific sample steps' as 1 point."
+      },
+      "c_param": {
+        "score": 3,
+        "reasoning": "The protocol provides detailed parameters for every step, including specific temperatures (4°C, 37°C, RT), durations (hours, minutes), concentrations (0.2% Triton, 5% serum, 1:500 antibodies, THF gradients), and pH adjustments. This level of detail meets the 'Supplementary Material' standard."
+      }
+    },
+    "correctness": {
+      "co_order": {
+        "score": 2,
+        "reasoning": "The order is: Wash -> Permeabilize -> Block -> Primary -> Secondary -> Dehydrate -> Clear. This is a valid 'pre-clearing immunostaining' workflow. However, standard FDISCO/iDISCO protocols often recommend clearing first or using specific permeabilization agents compatible with the clearing medium to ensure deep penetration. Performing standard aqueous immunostaining (Triton/PBS) on a whole brain before dehydration can lead to incomplete penetration of the secondary antibody into deep structures compared to clearing-then-staining or optimized pre-clearing protocols. It is 'basically correct' but not the optimal SOP for deep whole-brain imaging, warranting a 2 instead of 3."
+      },
+      "co_method": {
+        "score": 1,
+        "reasoning": "The protocol claims to use 'FDISCO' but uses BABB (Benzyl Alcohol/Benzyl Benzoate) as the clearing agent. The original FDISCO protocol (Herrmann et al., 2019) uses DBE (Dibromethane/Ethanol) or similar high-RI solvents, and specifically avoids BABB due to fluorescence quenching issues or different optical properties. While BABB is a valid clearing agent (used in iDISCO), labeling a BABB-based protocol as 'FDISCO' is a method-reagent mismatch. The justification text also incorrectly attributes BABB to FDISCO."
+      },
+      "co_param": {
+        "score": 0,
+        "reasoning": "The dehydration times are physically unrealistic for a whole adult mouse brain. The protocol specifies 1 hour per THF step (50%, 70%, 80%, 100%). According to Fick's Law of diffusion, a whole brain (~10-15mm diameter) requires significantly longer times (typically 12-24 hours per step or overnight) to ensure complete dehydration and clearing. 1 hour is sufficient for thin slices (~1mm) but will result in a cloudy, uncleared core for a whole brain, leading to imaging failure. This violates the 'Time-Size Law'."
+      },
+      "co_chem": {
+        "score": 1,
+        "reasoning": "The reagents used (THF, BABB, NaOH, Triton, Antibodies) are standard for tissue clearing and immunostaining. No dangerous extra chemicals or unsafe operations (like heating flammable solvents in closed containers) are introduced. The use of NaOH to adjust pH is a standard part of FDISCO-like protocols to preserve fluorescence."
+      }
+    }
+  },
+  "score_evidence": [
+    {
+      "m": "c_param",
+      "u": [
+        "L0007",
+        "L0009",
+        "L0012",
+        "L0014",
+        "L0017",
+        "L0021",
+        "L0027",
+        "L0029"
+      ],
+      "b": "observed",
+      "r": "Detailed time, temp, and concentration provided for all steps."
+    },
+    {
+      "m": "co_order",
+      "u": [
+        "L0007",
+        "L0009",
+        "L0012",
+        "L0014",
+        "L0017",
+        "L0021",
+        "L0027"
+      ],
+      "b": "observed",
+      "r": "Sequence: Wash -> Permeabilize -> Block -> Ab -> Dehydrate -> Clear. Valid pre-clearing staining order."
+    },
+    {
+      "m": "co_method",
+      "u": [
+        "L0001",
+        "L0003",
+        "L0027"
+      ],
+      "b": "mixed",
+      "r": "Method declared as FDISCO (L0001), but reagent is BABB (L0027). FDISCO typically uses DBE/THF, not BABB."
+    },
+    {
+      "m": "co_param",
+      "u": [
+        "L0021",
+        "L0022",
+        "L0023",
+        "L0024",
+        "L0025"
+      ],
+      "b": "observed",
+      "r": "Dehydration steps listed as 1 hour each. Reference FDISCO whole brain requires 12h+ per step. 1h is insufficient for whole brain diffusion."
+    },
+    {
+      "m": "co_chem",
+      "u": [
+        "L0021",
+        "L0027"
+      ],
+      "b": "observed",
+      "r": "Standard reagents THF and BABB used. No dangerous additions."
+    }
+  ],
+  "grounded_extraction": {
+    "schema_version": "source_bound_extraction_v11",
+    "source_id": "SRC_b115dda7cb329868e4ab0d12",
+    "method_mentions": [
+      {
+        "i": "M1",
+        "n": "FDISCO",
+        "a": 0,
+        "u": "L0001",
+        "s": "selected"
+      },
+      {
+        "i": "M2",
+        "n": "FDISCO",
+        "a": 0,
+        "u": "L0003",
+        "s": "mentioned"
+      }
+    ],
+    "entities": [
+      {
+        "i": "E1",
+        "n": "tdTomato",
+        "a": 0,
+        "u": "L0002",
+        "k": "fluorophore",
+        "s": "used"
+      },
+      {
+        "i": "E2",
+        "n": "β-III Tubulin",
+        "a": 0,
+        "u": "L0002",
+        "k": "target",
+        "s": "used"
+      },
+      {
+        "i": "E3",
+        "n": "TUJ1",
+        "a": 0,
+        "u": "L0002",
+        "k": "target",
+        "s": "used"
+      },
+      {
+        "i": "E4",
+        "n": "Alexa Fluor 647",
+        "a": 0,
+        "u": "L0016",
+        "k": "fluorophore",
+        "s": "used"
+      },
+      {
+        "i": "E5",
+        "n": "THF",
+        "a": 0,
+        "u": "L0021",
+        "k": "target",
+        "s": "used"
+      },
+      {
+        "i": "E6",
+        "n": "BABB",
+        "a": 0,
+        "u": "L0027",
+        "k": "target",
+        "s": "used"
+      }
+    ],
+    "relations": [
+      {
+        "i": "R1",
+        "f": "E1",
+        "e": "L0002",
+        "t": null,
+        "s": "unknown",
+        "fo": 0,
+        "to": null
+      },
+      {
+        "i": "R2",
+        "f": "E4",
+        "e": "L0002",
+        "t": "E2",
+        "s": "explicit",
+        "fo": 0,
+        "to": 0
+      },
+      {
+        "i": "R3",
+        "f": "E4",
+        "e": "L0002",
+        "t": "E3",
+        "s": "explicit",
+        "fo": 0,
+        "to": 1
+      }
+    ],
+    "intrinsic_signals": [
+      {
+        "i": "IS1",
+        "e": "E1",
+        "u": "L0002",
+        "s": "source_declared"
+      }
+    ],
+    "operations": [
+      {
+        "i": "O1",
+        "o": "L0007",
+        "p": "labeling_preparation",
+        "d": "D0002",
+        "r": null,
+        "s": "initial",
+        "c": "L0007"
+      },
+      {
+        "i": "O2",
+        "o": "L0009",
+        "p": "labeling_preparation",
+        "d": "D0003",
+        "r": null,
+        "s": "initial",
+        "c": "L0009"
+      },
+      {
+        "i": "O3",
+        "o": "L0010",
+        "p": "labeling_preparation",
+        "d": "D0004",
+        "r": null,
+        "s": "initial",
+        "c": "L0010"
+      },
+      {
+        "i": "O4",
+        "o": "L0012",
+        "p": "labeling_preparation",
+        "d": "D0005",
+        "r": null,
+        "s": "initial",
+        "c": "L0012"
+      },
+      {
+        "i": "O5",
+        "o": "L0014",
+        "p": "labeling_preparation",
+        "d": "D0006",
+        "r": null,
+        "s": "initial",
+        "c": "L0014"
+      },
+      {
+        "i": "O6",
+        "o": "L0015",
+        "p": "labeling_preparation",
+        "d": "D0007",
+        "r": null,
+        "s": "initial",
+        "c": "L0015"
+      },
+      {
+        "i": "O7",
+        "o": "L0017",
+        "p": "labeling_preparation",
+        "d": "D0008",
+        "r": null,
+        "s": "initial",
+        "c": "L0017"
+      },
+      {
+        "i": "O8",
+        "o": "L0018",
+        "p": "labeling_preparation",
+        "d": "D0009",
+        "r": null,
+        "s": "initial",
+        "c": "L0018"
+      },
+      {
+        "i": "O9",
+        "o": "L0019",
+        "p": "labeling_preparation",
+        "d": "D0010",
+        "r": null,
+        "s": "initial",
+        "c": "L0019"
+      },
+      {
+        "i": "O10",
+        "o": "L0021",
+        "p": "clearing_treatment",
+        "d": "D0011",
+        "r": null,
+        "s": "initial",
+        "c": "L0021"
+      },
+      {
+        "i": "O11",
+        "o": "L0022",
+        "p": "clearing_treatment",
+        "d": "D0012",
+        "r": null,
+        "s": "initial",
+        "c": "L0022"
+      },
+      {
+        "i": "O12",
+        "o": "L0023",
+        "p": "clearing_treatment",
+        "d": "D0013",
+        "r": null,
+        "s": "initial",
+        "c": "L0023"
+      },
+      {
+        "i": "O13",
+        "o": "L0024",
+        "p": "clearing_treatment",
+        "d": "D0014",
+        "r": null,
+        "s": "initial",
+        "c": "L0024"
+      },
+      {
+        "i": "O14",
+        "o": "L0025",
+        "p": "clearing_treatment",
+        "d": "D0015",
+        "r": null,
+        "s": "initial",
+        "c": "L0025"
+      },
+      {
+        "i": "O15",
+        "o": "L0027",
+        "p": "ri_matching",
+        "d": "D0017",
+        "r": null,
+        "s": "initial",
+        "c": "L0027"
+      },
+      {
+        "i": "O16",
+        "o": "L0029",
+        "p": "ri_matching",
+        "d": "D0018",
+        "r": null,
+        "s": "initial",
+        "c": "L0029"
+      },
+      {
+        "i": "O17",
+        "o": "L0030",
+        "p": "ri_matching",
+        "d": "D0019",
+        "r": null,
+        "s": "initial",
+        "c": "L0030"
+      },
+      {
+        "i": "O18",
+        "o": "L0032",
+        "p": "imaging",
+        "d": null,
+        "r": null,
+        "s": "initial",
+        "c": "L0032"
+      },
+      {
+        "i": "O19",
+        "o": "L0033",
+        "p": "storage",
+        "d": "D0020",
+        "r": null,
+        "s": "conditional_or_future",
+        "c": "L0033"
+      }
+    ],
+    "timeline": {
+      "m": "serial",
+      "o": [
+        "O1",
+        "O2",
+        "O3",
+        "O4",
+        "O5",
+        "O6",
+        "O7",
+        "O8",
+        "O9",
+        "O10",
+        "O11",
+        "O12",
+        "O13",
+        "O14",
+        "O15",
+        "O16",
+        "O17",
+        "O18"
+      ],
+      "e": null,
+      "c": "complete"
+    },
+    "precedence_edges": [],
+    "total_time_claims": [],
+    "ri_mentions": [
+      {
+        "i": "RI1",
+        "v": "R0114",
+        "r": "reagent_final"
+      },
+      {
+        "i": "RI2",
+        "v": "R0115",
+        "r": "reagent_final"
+      },
+      {
+        "i": "RI3",
+        "v": "R0116",
+        "r": "reagent_final"
+      }
+    ],
+    "coverage": {
+      "e": "complete",
+      "t": "complete",
+      "c": "complete",
+      "u": []
+    }
+  }
+}

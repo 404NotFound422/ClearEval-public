@@ -1,0 +1,38 @@
+{
+  "previous_goal_turn_classification": "progress",
+  "this_goal_turn_classification": "progress",
+  "goal_complete": false,
+  "new_model_calls": 0,
+  "evidence": [
+    "method_candidate_02/results.json",
+    "semantic_04/summary.json",
+    "joint_with_optional_bleach/summary.json",
+    "joint/source_dependency_audit.json",
+    "REPORT_zh.md"
+  ],
+  "achieved_in_this_stage": [
+    "generic Chinese method-header correction",
+    "explicit source semantic ledger and three new point CCE records",
+    "two additional answers with conditional complete CCE",
+    "optional-branch counterexample and paired joint readout",
+    "source-dependence representation",
+    "exact two-task reweighting",
+    "eight full-flow examples"
+  ],
+  "remaining_explicit_requirements": [
+    "actual evaluation of the qualitative Correctness candidate",
+    "unexposed automatic extraction validation",
+    "controlled deletion and raw SR/SP granularity anomalies",
+    "updated cross-evaluator stability",
+    "expert 5+15 review",
+    "enough independent source blocks for uncertainty",
+    "wet-lab empirical data if that validation claim is pursued"
+  ],
+  "not_counted_as_complete": [
+    "all controlled expected effects",
+    "automatic 5/8 coverage",
+    "independent scientific accuracy",
+    "all task-package goals",
+    "stable scalar model ranking"
+  ]
+}

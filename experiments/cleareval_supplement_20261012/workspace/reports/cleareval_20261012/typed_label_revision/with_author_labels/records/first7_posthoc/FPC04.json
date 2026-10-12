@@ -1,0 +1,839 @@
+{
+  "cohort": "first7_posthoc",
+  "cell_id": "FPC04",
+  "anonymous_answer_id": "FPC04",
+  "question_id": 22,
+  "original_status": "partial_components",
+  "version": "cce-typed-label-scorer-v2.1",
+  "metrics": {
+    "c_param": 3,
+    "co_order": 3,
+    "co_method": 2,
+    "co_param": 2,
+    "co_chem": 1,
+    "s_method": -0.45,
+    "s_label": null,
+    "s_trans": 2.7055534759358473,
+    "s_time": null,
+    "sr": 0.0,
+    "sp": 0.0,
+    "Com": 0.6,
+    "Cor": 1.0,
+    "Eff": null,
+    "IA": null,
+    "HV": null
+  },
+  "complete_numeric_CCE": false,
+  "baseline_metrics": {
+    "c_param": 3,
+    "co_order": 3,
+    "co_method": 2,
+    "co_param": 2,
+    "co_chem": 1,
+    "s_method": -0.45,
+    "s_label": null,
+    "s_trans": 2.7055534759358473,
+    "s_time": null,
+    "sr": 0.0,
+    "sp": 0.0,
+    "Com": 0.6,
+    "Cor": 1.0,
+    "Eff": null,
+    "IA": null,
+    "HV": null
+  },
+  "quantitative_data": {
+    "method_name": "FDISCO",
+    "tissue_ri_value": 1.46,
+    "total_time_hours": null,
+    "sample_tier": "T02_THICK_SLICE_0P5_3MM",
+    "reagent_ri_value": null,
+    "protocol_time_hours": null
+  },
+  "time_derivation": {
+    "hours": null,
+    "bounds_hours": [
+      20.5,
+      22.75
+    ],
+    "decision": "source_semantic_resolution_needed",
+    "issues": [
+      "labeling_preparation_not_source_supported_or_possible_core_function",
+      "nonunique_duration_range",
+      "source_duration_candidates_not_all_classified"
+    ]
+  },
+  "time_formula": {
+    "policy": "kb-window-asymmetric-median-0.20-under-0.10-over-v1",
+    "source": "time_kb.json",
+    "requested_tier": "T02_THICK_SLICE_0P5_3MM",
+    "actual_hours": null,
+    "min_hours": 4.0,
+    "max_hours": 12.0,
+    "median_hours": 8.0,
+    "tau_hours": null,
+    "delta_hours": null,
+    "tau_under_fraction": 0.2,
+    "tau_over_fraction": 0.1,
+    "status": "missing_or_invalid_time",
+    "resolved_tier": "T02_THICK_SLICE_0P5_3MM",
+    "method_key": "fdisco"
+  },
+  "time_sensitivity": [],
+  "label_derivation": {
+    "version": "cce-typed-label-scorer-v2.1",
+    "s_label": null,
+    "relation_scenarios": [
+      {
+        "scenario_id": "MAP2_AF546",
+        "result": {
+          "version": "cce-typed-label-scorer-v2.1",
+          "s_label": 4.800000000000001,
+          "channels": {
+            "s_target_match": 6.0,
+            "s_marker_fluor_compat": 6.0,
+            "s_method_fluor_compat": 4.800000000000001
+          },
+          "channel_applicability": {
+            "s_target_match": {
+              "applicable": true,
+              "value": 6.0,
+              "contributing_pairs": [
+                "semantic:1"
+              ]
+            },
+            "s_marker_fluor_compat": {
+              "applicable": true,
+              "value": 6.0,
+              "contributing_pairs": [
+                "semantic:1"
+              ]
+            },
+            "s_method_fluor_compat": {
+              "applicable": true,
+              "value": 4.800000000000001,
+              "contributing_pairs": [
+                "semantic:0",
+                "semantic:1"
+              ]
+            }
+          },
+          "pair_results": [
+            {
+              "pair_id": "semantic:0",
+              "entity_id": null,
+              "fluorophore": "EGFP",
+              "reported_marker": null,
+              "reported_target_literal": null,
+              "label_type": "native_fluorescent_protein",
+              "original_function_input": {
+                "EGFP": ""
+              },
+              "applicable": {
+                "s_target_match": false,
+                "s_marker_fluor_compat": false,
+                "s_method_fluor_compat": true
+              },
+              "channels": {
+                "s_target_match": null,
+                "s_marker_fluor_compat": null,
+                "s_method_fluor_compat": 5.4
+              },
+              "not_applicable_reason": "standalone fluorescence has no antibody target-pair channel",
+              "source_evidence": [
+                {
+                  "start": 26,
+                  "end": 124,
+                  "quote": "**Chosen Labeling:** [EGFP (内源荧光), MAP2 + Alexa Fluor (树突标记，推荐 Alexa Fluor 546 或 Alexa Fluor 647)]",
+                  "answer_sha256": "20bf7476ecd4568af1a6d76c156281f45147409f9e7efb709d20c29f7a42bb13"
+                }
+              ],
+              "compatibility_audit": [
+                {
+                  "kind": "method_fluor",
+                  "method_name": "FDISCO",
+                  "fluorophore": "EGFP",
+                  "source": "KnowledgeBase/method_fluro_compati.json",
+                  "value": 0.9,
+                  "status": "TABLE_REPORTED"
+                }
+              ]
+            },
+            {
+              "pair_id": "semantic:1",
+              "entity_id": null,
+              "fluorophore": "Alexa Fluor 546",
+              "reported_marker": "MAP2",
+              "reported_target_literal": null,
+              "label_type": "targeted_or_unclassified_reagent",
+              "original_function_input": {
+                "Alexa Fluor 546": "MAP2"
+              },
+              "applicable": {
+                "s_target_match": true,
+                "s_marker_fluor_compat": true,
+                "s_method_fluor_compat": true
+              },
+              "channels": {
+                "s_target_match": 6.0,
+                "s_marker_fluor_compat": 6.0,
+                "s_method_fluor_compat": 4.800000000000001
+              },
+              "not_applicable_reason": null,
+              "source_evidence": [
+                {
+                  "start": 26,
+                  "end": 124,
+                  "quote": "**Chosen Labeling:** [EGFP (内源荧光), MAP2 + Alexa Fluor (树突标记，推荐 Alexa Fluor 546 或 Alexa Fluor 647)]",
+                  "answer_sha256": "20bf7476ecd4568af1a6d76c156281f45147409f9e7efb709d20c29f7a42bb13"
+                }
+              ],
+              "compatibility_audit": [
+                {
+                  "kind": "marker_fluor",
+                  "marker": "MAP2",
+                  "fluorophore": "Alexa Fluor 546",
+                  "source": "KnowledgeBase/tissue.json",
+                  "value": true,
+                  "status": "TABLE_REPORTED"
+                },
+                {
+                  "kind": "method_fluor",
+                  "method_name": "FDISCO",
+                  "fluorophore": "Alexa Fluor 546",
+                  "source": "KnowledgeBase/method_fluro_compati.json",
+                  "value": 0.8,
+                  "status": "TABLE_REPORTED"
+                }
+              ]
+            }
+          ],
+          "resolved_uncertainties": [],
+          "remaining_uncertainties": [],
+          "minimum_of_available_applicable_channels": 4.800000000000001,
+          "task_target_coverage": "native/direct task coverage remains separate from antibody-pair applicability",
+          "new_model_calls": 0,
+          "expert_validated": false
+        }
+      },
+      {
+        "scenario_id": "MAP2_AF647",
+        "result": {
+          "version": "cce-typed-label-scorer-v2.1",
+          "s_label": 5.1,
+          "channels": {
+            "s_target_match": 6.0,
+            "s_marker_fluor_compat": 6.0,
+            "s_method_fluor_compat": 5.1
+          },
+          "channel_applicability": {
+            "s_target_match": {
+              "applicable": true,
+              "value": 6.0,
+              "contributing_pairs": [
+                "semantic:1"
+              ]
+            },
+            "s_marker_fluor_compat": {
+              "applicable": true,
+              "value": 6.0,
+              "contributing_pairs": [
+                "semantic:1"
+              ]
+            },
+            "s_method_fluor_compat": {
+              "applicable": true,
+              "value": 5.1,
+              "contributing_pairs": [
+                "semantic:0",
+                "semantic:1"
+              ]
+            }
+          },
+          "pair_results": [
+            {
+              "pair_id": "semantic:0",
+              "entity_id": null,
+              "fluorophore": "EGFP",
+              "reported_marker": null,
+              "reported_target_literal": null,
+              "label_type": "native_fluorescent_protein",
+              "original_function_input": {
+                "EGFP": ""
+              },
+              "applicable": {
+                "s_target_match": false,
+                "s_marker_fluor_compat": false,
+                "s_method_fluor_compat": true
+              },
+              "channels": {
+                "s_target_match": null,
+                "s_marker_fluor_compat": null,
+                "s_method_fluor_compat": 5.4
+              },
+              "not_applicable_reason": "standalone fluorescence has no antibody target-pair channel",
+              "source_evidence": [
+                {
+                  "start": 26,
+                  "end": 124,
+                  "quote": "**Chosen Labeling:** [EGFP (内源荧光), MAP2 + Alexa Fluor (树突标记，推荐 Alexa Fluor 546 或 Alexa Fluor 647)]",
+                  "answer_sha256": "20bf7476ecd4568af1a6d76c156281f45147409f9e7efb709d20c29f7a42bb13"
+                }
+              ],
+              "compatibility_audit": [
+                {
+                  "kind": "method_fluor",
+                  "method_name": "FDISCO",
+                  "fluorophore": "EGFP",
+                  "source": "KnowledgeBase/method_fluro_compati.json",
+                  "value": 0.9,
+                  "status": "TABLE_REPORTED"
+                }
+              ]
+            },
+            {
+              "pair_id": "semantic:1",
+              "entity_id": null,
+              "fluorophore": "Alexa Fluor 647",
+              "reported_marker": "MAP2",
+              "reported_target_literal": null,
+              "label_type": "targeted_or_unclassified_reagent",
+              "original_function_input": {
+                "Alexa Fluor 647": "MAP2"
+              },
+              "applicable": {
+                "s_target_match": true,
+                "s_marker_fluor_compat": true,
+                "s_method_fluor_compat": true
+              },
+              "channels": {
+                "s_target_match": 6.0,
+                "s_marker_fluor_compat": 6.0,
+                "s_method_fluor_compat": 5.1
+              },
+              "not_applicable_reason": null,
+              "source_evidence": [
+                {
+                  "start": 26,
+                  "end": 124,
+                  "quote": "**Chosen Labeling:** [EGFP (内源荧光), MAP2 + Alexa Fluor (树突标记，推荐 Alexa Fluor 546 或 Alexa Fluor 647)]",
+                  "answer_sha256": "20bf7476ecd4568af1a6d76c156281f45147409f9e7efb709d20c29f7a42bb13"
+                }
+              ],
+              "compatibility_audit": [
+                {
+                  "kind": "marker_fluor",
+                  "marker": "MAP2",
+                  "fluorophore": "Alexa Fluor 647",
+                  "source": "KnowledgeBase/tissue.json",
+                  "value": true,
+                  "status": "TABLE_REPORTED"
+                },
+                {
+                  "kind": "method_fluor",
+                  "method_name": "FDISCO",
+                  "fluorophore": "Alexa Fluor 647",
+                  "source": "KnowledgeBase/method_fluro_compati.json",
+                  "value": 0.85,
+                  "status": "TABLE_REPORTED"
+                }
+              ]
+            }
+          ],
+          "resolved_uncertainties": [],
+          "remaining_uncertainties": [],
+          "minimum_of_available_applicable_channels": 5.1,
+          "task_target_coverage": "native/direct task coverage remains separate from antibody-pair applicability",
+          "new_model_calls": 0,
+          "expert_validated": false
+        }
+      }
+    ],
+    "score_invariant_across_declared_scenarios": false,
+    "selection_uses_achieved_score": false,
+    "conditional_s_label_bounds": [
+      4.800000000000001,
+      5.1
+    ],
+    "remaining_uncertainties": [
+      {
+        "kind": "source_declared_alternative_changes_score"
+      }
+    ],
+    "semantic_basis": "The submitted answer explicitly offers AF546 or AF647. Keep both, without substituting their average or choosing the higher score.",
+    "new_model_calls": 0,
+    "expert_validated": false
+  },
+  "compatibility_lookup_trace": [
+    {
+      "marker": "MAP2",
+      "fluorophore": "Alexa Fluor 546",
+      "status": "AF_family_consensus_approximation",
+      "value": true,
+      "column": null,
+      "matching_target_options": [
+        {
+          "target_index": 2,
+          "source_tissue_xlsx_row": 4,
+          "marker_slot": "recommended_marker_2",
+          "marker_name": "MAP2",
+          "query_path": "中枢神经 > 神经元结构 > 神经元(通用)",
+          "major_category": "中枢神经",
+          "subcategory": "神经元结构",
+          "structure_or_cell_subtype": "神经元(通用)",
+          "authored_target_parent": {
+            "marker_name": "MAP2",
+            "target_index": 2,
+            "source_tissue_xlsx_row": 4,
+            "query_path": "中枢神经 > 神经元结构 > 神经元(通用)",
+            "marker_slot": "recommended_marker_2"
+          },
+          "authored_option_index": 0,
+          "option_split_applied": false
+        },
+        {
+          "target_index": 3,
+          "source_tissue_xlsx_row": 97,
+          "marker_slot": "recommended_marker_1",
+          "marker_name": "MAP2",
+          "query_path": "中枢神经 > 神经元结构 > CA1 树突/树突棘结构辅助",
+          "major_category": "中枢神经",
+          "subcategory": "神经元结构",
+          "structure_or_cell_subtype": "CA1 树突/树突棘结构辅助",
+          "authored_target_parent": {
+            "marker_name": "MAP2",
+            "target_index": 3,
+            "source_tissue_xlsx_row": 97,
+            "query_path": "中枢神经 > 神经元结构 > CA1 树突/树突棘结构辅助",
+            "marker_slot": "recommended_marker_1"
+          },
+          "authored_option_index": 0,
+          "option_split_applied": false
+        }
+      ],
+      "candidate_rows": [
+        {
+          "row_index": 0,
+          "matching_authored_names": [
+            {
+              "field": "推荐标志物 2",
+              "authored_name": "MAP2",
+              "option": "MAP2",
+              "option_split_applied": false
+            }
+          ],
+          "scope": {
+            "大类": "中枢神经",
+            "亚类": "神经元结构",
+            "结构/细胞类型": "神经元(通用)"
+          },
+          "cell_value": null
+        },
+        {
+          "row_index": 63,
+          "matching_authored_names": [
+            {
+              "field": "推荐标志物 2",
+              "authored_name": "MAP2 / Nestin",
+              "option": "MAP2",
+              "option_split_applied": true
+            }
+          ],
+          "scope": {
+            "大类": "通用结构",
+            "亚类": "类器官",
+            "结构/细胞类型": "大脑类器官整体"
+          },
+          "cell_value": null
+        },
+        {
+          "row_index": 93,
+          "matching_authored_names": [
+            {
+              "field": "推荐标志物 1",
+              "authored_name": "MAP2",
+              "option": "MAP2",
+              "option_split_applied": false
+            }
+          ],
+          "scope": {
+            "大类": "中枢神经",
+            "亚类": "神经元结构",
+            "结构/细胞类型": "CA1 树突/树突棘结构辅助"
+          },
+          "cell_value": null
+        }
+      ],
+      "selected_row_indices": [
+        0,
+        93
+      ],
+      "per_scope_evidence": [
+        {
+          "scope": {
+            "大类": "中枢神经",
+            "亚类": "神经元结构",
+            "结构/细胞类型": "CA1 树突/树突棘结构辅助"
+          },
+          "row_indices": [
+            93
+          ],
+          "all_cell_values": [],
+          "state": "authored_unknown",
+          "value": null
+        },
+        {
+          "scope": {
+            "大类": "中枢神经",
+            "亚类": "神经元结构",
+            "结构/细胞类型": "神经元(通用)"
+          },
+          "row_indices": [
+            0
+          ],
+          "all_cell_values": [],
+          "state": "authored_unknown",
+          "value": null
+        }
+      ],
+      "row_selection_uses_scores": false,
+      "different_scopes_merged": false,
+      "new_alias_or_KB_value": false,
+      "declared_task_scope": null,
+      "exact_lookup_value": null,
+      "family_source_donors": [
+        {
+          "marker": "MAP2",
+          "fluorophore": "Alexa Fluor 594",
+          "compatible": true,
+          "source_url": "https://www.abcam.com/en-us/products/primary-antibodies/alexa-fluor-594-map2-antibody-epr19691-neuronal-marker-ab302832",
+          "catalogue_ids": [
+            "ab302832"
+          ],
+          "accessed": "2026-10-12",
+          "supported_claim": "MAP2 antibody EPR19691 conjugated to AF594 has reported mouse/rat neuron IF use.",
+          "scope_limit": "General target-fluor pairing only; not tissue-clearing retention or penetration validation."
+        }
+      ],
+      "family_donor_cells": [
+        {
+          "row_index": 0,
+          "column": "AlexaFluor 488",
+          "value": 1,
+          "scope": {
+            "大类": "中枢神经",
+            "亚类": "神经元结构",
+            "结构/细胞类型": "神经元(通用)"
+          }
+        },
+        {
+          "row_index": 0,
+          "column": "AlexaFluor 568/Cy3",
+          "value": 1,
+          "scope": {
+            "大类": "中枢神经",
+            "亚类": "神经元结构",
+            "结构/细胞类型": "神经元(通用)"
+          }
+        },
+        {
+          "row_index": 0,
+          "column": "AlexaFluor 647/Cy5 ",
+          "value": 1,
+          "scope": {
+            "大类": "中枢神经",
+            "亚类": "神经元结构",
+            "结构/细胞类型": "神经元(通用)"
+          }
+        }
+      ],
+      "family_rule": "AF-family-consensus-from-applicable-marker-rows-v1",
+      "evidence_level": "user_authorized_family_approximation"
+    },
+    {
+      "marker": "MAP2",
+      "fluorophore": "Alexa Fluor 647",
+      "status": "AF_family_consensus_approximation",
+      "value": true,
+      "column": "AlexaFluor 647/Cy5 ",
+      "matching_target_options": [
+        {
+          "target_index": 2,
+          "source_tissue_xlsx_row": 4,
+          "marker_slot": "recommended_marker_2",
+          "marker_name": "MAP2",
+          "query_path": "中枢神经 > 神经元结构 > 神经元(通用)",
+          "major_category": "中枢神经",
+          "subcategory": "神经元结构",
+          "structure_or_cell_subtype": "神经元(通用)",
+          "authored_target_parent": {
+            "marker_name": "MAP2",
+            "target_index": 2,
+            "source_tissue_xlsx_row": 4,
+            "query_path": "中枢神经 > 神经元结构 > 神经元(通用)",
+            "marker_slot": "recommended_marker_2"
+          },
+          "authored_option_index": 0,
+          "option_split_applied": false
+        },
+        {
+          "target_index": 3,
+          "source_tissue_xlsx_row": 97,
+          "marker_slot": "recommended_marker_1",
+          "marker_name": "MAP2",
+          "query_path": "中枢神经 > 神经元结构 > CA1 树突/树突棘结构辅助",
+          "major_category": "中枢神经",
+          "subcategory": "神经元结构",
+          "structure_or_cell_subtype": "CA1 树突/树突棘结构辅助",
+          "authored_target_parent": {
+            "marker_name": "MAP2",
+            "target_index": 3,
+            "source_tissue_xlsx_row": 97,
+            "query_path": "中枢神经 > 神经元结构 > CA1 树突/树突棘结构辅助",
+            "marker_slot": "recommended_marker_1"
+          },
+          "authored_option_index": 0,
+          "option_split_applied": false
+        }
+      ],
+      "candidate_rows": [
+        {
+          "row_index": 0,
+          "matching_authored_names": [
+            {
+              "field": "推荐标志物 2",
+              "authored_name": "MAP2",
+              "option": "MAP2",
+              "option_split_applied": false
+            }
+          ],
+          "scope": {
+            "大类": "中枢神经",
+            "亚类": "神经元结构",
+            "结构/细胞类型": "神经元(通用)"
+          },
+          "cell_value": 1
+        },
+        {
+          "row_index": 63,
+          "matching_authored_names": [
+            {
+              "field": "推荐标志物 2",
+              "authored_name": "MAP2 / Nestin",
+              "option": "MAP2",
+              "option_split_applied": true
+            }
+          ],
+          "scope": {
+            "大类": "通用结构",
+            "亚类": "类器官",
+            "结构/细胞类型": "大脑类器官整体"
+          },
+          "cell_value": 1
+        },
+        {
+          "row_index": 93,
+          "matching_authored_names": [
+            {
+              "field": "推荐标志物 1",
+              "authored_name": "MAP2",
+              "option": "MAP2",
+              "option_split_applied": false
+            }
+          ],
+          "scope": {
+            "大类": "中枢神经",
+            "亚类": "神经元结构",
+            "结构/细胞类型": "CA1 树突/树突棘结构辅助"
+          },
+          "cell_value": null
+        }
+      ],
+      "selected_row_indices": [
+        0,
+        93
+      ],
+      "per_scope_evidence": [
+        {
+          "scope": {
+            "大类": "中枢神经",
+            "亚类": "神经元结构",
+            "结构/细胞类型": "CA1 树突/树突棘结构辅助"
+          },
+          "row_indices": [
+            93
+          ],
+          "all_cell_values": [
+            null
+          ],
+          "state": "authored_unknown",
+          "value": null
+        },
+        {
+          "scope": {
+            "大类": "中枢神经",
+            "亚类": "神经元结构",
+            "结构/细胞类型": "神经元(通用)"
+          },
+          "row_indices": [
+            0
+          ],
+          "all_cell_values": [
+            1
+          ],
+          "state": "consistent_authored_value",
+          "value": 1
+        }
+      ],
+      "row_selection_uses_scores": false,
+      "different_scopes_merged": false,
+      "new_alias_or_KB_value": false,
+      "declared_task_scope": null,
+      "exact_lookup_value": null,
+      "family_source_donors": [
+        {
+          "marker": "MAP2",
+          "fluorophore": "Alexa Fluor 594",
+          "compatible": true,
+          "source_url": "https://www.abcam.com/en-us/products/primary-antibodies/alexa-fluor-594-map2-antibody-epr19691-neuronal-marker-ab302832",
+          "catalogue_ids": [
+            "ab302832"
+          ],
+          "accessed": "2026-10-12",
+          "supported_claim": "MAP2 antibody EPR19691 conjugated to AF594 has reported mouse/rat neuron IF use.",
+          "scope_limit": "General target-fluor pairing only; not tissue-clearing retention or penetration validation."
+        }
+      ],
+      "family_donor_cells": [
+        {
+          "row_index": 0,
+          "column": "AlexaFluor 488",
+          "value": 1,
+          "scope": {
+            "大类": "中枢神经",
+            "亚类": "神经元结构",
+            "结构/细胞类型": "神经元(通用)"
+          }
+        },
+        {
+          "row_index": 0,
+          "column": "AlexaFluor 568/Cy3",
+          "value": 1,
+          "scope": {
+            "大类": "中枢神经",
+            "亚类": "神经元结构",
+            "结构/细胞类型": "神经元(通用)"
+          }
+        },
+        {
+          "row_index": 0,
+          "column": "AlexaFluor 647/Cy5 ",
+          "value": 1,
+          "scope": {
+            "大类": "中枢神经",
+            "亚类": "神经元结构",
+            "结构/细胞类型": "神经元(通用)"
+          }
+        }
+      ],
+      "family_rule": "AF-family-consensus-from-applicable-marker-rows-v1",
+      "evidence_level": "user_authorized_family_approximation"
+    }
+  ],
+  "semantic_decomposition_applied": false,
+  "semantic_author": "saved judge decomposition",
+  "remaining_dependencies": {
+    "time": [
+      "labeling_preparation_not_source_supported_or_possible_core_function",
+      "nonunique_duration_range",
+      "source_duration_candidates_not_all_classified"
+    ],
+    "label_relations": [
+      {
+        "kind": "source_declared_alternative_changes_score"
+      }
+    ],
+    "compatibility": []
+  },
+  "new_model_requests": 0,
+  "new_expert_records": 0,
+  "direct_scores_rejudged": false,
+  "SR_SP_changed": false,
+  "raw_judge_status_changed": false,
+  "status": "replayed",
+  "source_record": {
+    "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\optimizer_round3_20261011\\uniform_v7\\actual_01\\cells\\first7_posthoc\\FPC04\\posthoc.json",
+    "sha256": "cbab355d025dff9b0bb4c8f578f0be0b1b8e23715a05c338f289f8d5f53cf00e"
+  },
+  "answer_sha256": "20bf7476ecd4568af1a6d76c156281f45147409f9e7efb709d20c29f7a42bb13",
+  "changes": {},
+  "comparison_metrics": {
+    "c_param": 3,
+    "co_order": 3,
+    "co_method": 2,
+    "co_param": 2,
+    "co_chem": 1,
+    "s_method": -0.45,
+    "s_label": null,
+    "s_trans": 2.7055534759358473,
+    "s_time": null,
+    "sr": 0.0,
+    "sp": 0.0,
+    "Com": 0.6,
+    "Cor": 1.0,
+    "Eff": null,
+    "IA": null,
+    "HV": null
+  },
+  "typed_replay_status": "replayed",
+  "typed_semantic_annotation": true,
+  "typed_changes": {},
+  "conditional_CCE": [
+    {
+      "scenario_id": "MAP2_AF546",
+      "metrics": {
+        "c_param": 3,
+        "co_order": 3,
+        "co_method": 2,
+        "co_param": 2,
+        "co_chem": 1,
+        "s_method": -0.45,
+        "s_label": 4.800000000000001,
+        "s_trans": 2.7055534759358473,
+        "s_time": null,
+        "sr": 0.0,
+        "sp": 0.0,
+        "Com": 0.6,
+        "Cor": 1.0,
+        "Eff": null,
+        "IA": null,
+        "HV": null
+      }
+    },
+    {
+      "scenario_id": "MAP2_AF647",
+      "metrics": {
+        "c_param": 3,
+        "co_order": 3,
+        "co_method": 2,
+        "co_param": 2,
+        "co_chem": 1,
+        "s_method": -0.45,
+        "s_label": 5.1,
+        "s_trans": 2.7055534759358473,
+        "s_time": null,
+        "sr": 0.0,
+        "sp": 0.0,
+        "Com": 0.6,
+        "Cor": 1.0,
+        "Eff": null,
+        "IA": null,
+        "HV": null
+      }
+    }
+  ],
+  "source_document": {
+    "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\optimizer_round2_20261010\\generation_confirmation_v2\\source_documents\\FPC04.json",
+    "sha256": "f8403ec13cf03c391caa18c9ee88ebdc2a8b3eccfde17c1dafafe468d1e65fa3"
+  }
+}

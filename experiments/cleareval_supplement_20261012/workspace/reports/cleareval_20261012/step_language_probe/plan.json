@@ -1,0 +1,67 @@
+{
+  "created_utc": "2026-10-12T08:52:42.408376+00:00",
+  "representation_conditions": [
+    "original",
+    "english_body_original_metadata"
+  ],
+  "translated_answers": [
+    "R3C04",
+    "R3C07"
+  ],
+  "translated_steps": 55,
+  "negative_answer": "R3C03",
+  "negative_step": {
+    "text": "Incubation with",
+    "start": 769,
+    "end": 788
+  },
+  "thresholds": [
+    0.6,
+    0.7,
+    0.8
+  ],
+  "primary_threshold": 0.7,
+  "reference_pool": "exact original task/method-compatible whole-reference candidates",
+  "selection": "maximum SR, same-reference SP, fixed order",
+  "encoder": "exact original local all-mpnet-base-v2",
+  "new_evaluator_requests_allowed": 0,
+  "new_local_embedding_vectors": "only the 55 frozen translated steps if absent in cache",
+  "no_threshold_selection": true,
+  "scientific_errors_preserved": [
+    "C07 BABB retained, not replaced with reference DBE",
+    "C07 NaOH and pH 9–10 retained, not changed to triethylamine pH 9.0",
+    "original durations retained, not corrected to reference"
+  ],
+  "fidelity_checks": [
+    "55 numeric-token multisets",
+    "55 exact Temperature/Time metadata suffixes",
+    "55 original source spans"
+  ],
+  "primary_outcomes": [
+    "per-reference maximum and best matching source text",
+    "SR/SP and reference selection",
+    "UNK counts and truncation",
+    "changed reference hits with explicit solvent/duration conflicts retained for inspection"
+  ],
+  "hypotheses": {
+    "H_language": "English re-expression may alter matching without changing scientific choices; direction and magnitude reported unscreened",
+    "H_not_sufficient": "Improved match coverage does not prove solvent/parameter discrimination or correct ordering",
+    "H_negative": "Lowering threshold can give positive coverage to the already truncated generic clause; reproduce existing scores"
+  },
+  "success_criteria": "source-faithful intervention and falsifiable mechanism evidence; no requirement that all translated scores improve",
+  "exposure": "already exposed development answers; no independent accuracy claim",
+  "expert_review_budget_unchanged": "one expert 5+15",
+  "evaluation_scope": "step representation only; no fresh full-pipeline judge or revised Cor",
+  "literature": [
+    {
+      "title": "Making Monolingual Sentence Embeddings Multilingual using Knowledge Distillation",
+      "url": "https://aclanthology.org/2020.emnlp-main.365/",
+      "use": "motivates cross-language alignment; no multilingual model installed or trained here"
+    },
+    {
+      "title": "Beyond Accuracy: Behavioral Testing of NLP Models with CheckList",
+      "url": "https://aclanthology.org/2020.acl-main.442/",
+      "use": "same-content language intervention plus incomplete-clause negative example"
+    }
+  ]
+}

@@ -1,0 +1,217 @@
+{
+  "cohort": "secondary8_posthoc",
+  "cell_id": "FPC16",
+  "anonymous_answer_id": "FPC16",
+  "question_id": 248,
+  "original_status": "partial_components",
+  "status": "partial_saved_components_retained",
+  "source_record": {
+    "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\optimizer_round3_20261011\\uniform_v7\\actual_01\\cells\\secondary8_posthoc\\FPC16\\posthoc.json",
+    "sha256": "2a9a1d68a7de99e4f819e3668195593be48e51d957144284f057a7763a928946"
+  },
+  "baseline_metrics": {
+    "c_param": 3,
+    "co_order": 2,
+    "co_method": 1,
+    "co_param": 1,
+    "co_chem": 1,
+    "s_method": -0.4313,
+    "s_label": null,
+    "s_trans": 2.814646787157323,
+    "s_time": 0.0,
+    "sr": 0.1111111111111111,
+    "sp": 0.11764705882352941,
+    "Com": 0.6444444444444444,
+    "Cor": 0.6666666666666666,
+    "Eff": null,
+    "IA": null,
+    "HV": null
+  },
+  "metrics": {
+    "c_param": 3,
+    "co_order": 2,
+    "co_method": 1,
+    "co_param": 1,
+    "co_chem": 1,
+    "s_method": -0.4313,
+    "s_label": 1.2000000000000002,
+    "s_trans": 2.814646787157323,
+    "s_time": 0.0,
+    "sr": 0.1111111111111111,
+    "sp": 0.11764705882352941,
+    "Com": 0.6444444444444444,
+    "Cor": 0.6666666666666666,
+    "Eff": 0.38798889892977695,
+    "IA": 0.38798889892977695,
+    "HV": 0.16669152694760786
+  },
+  "complete_numeric_CCE": true,
+  "remaining_dependencies": {
+    "time": [],
+    "label_relations": [],
+    "compatibility": []
+  },
+  "changes": {},
+  "version": "cce-typed-label-scorer-v2.1",
+  "comparison_metrics": {
+    "c_param": 3,
+    "co_order": 2,
+    "co_method": 1,
+    "co_param": 1,
+    "co_chem": 1,
+    "s_method": -0.4313,
+    "s_label": null,
+    "s_trans": 2.814646787157323,
+    "s_time": 0.0,
+    "sr": 0.1111111111111111,
+    "sp": 0.11764705882352941,
+    "Com": 0.6444444444444444,
+    "Cor": 0.6666666666666666,
+    "Eff": null,
+    "IA": null,
+    "HV": null
+  },
+  "typed_replay_status": "replayed",
+  "label_derivation": {
+    "version": "cce-typed-label-scorer-v2.1",
+    "s_label": 1.2000000000000002,
+    "channels": {
+      "s_target_match": null,
+      "s_marker_fluor_compat": null,
+      "s_method_fluor_compat": 1.2000000000000002
+    },
+    "channel_applicability": {
+      "s_target_match": {
+        "applicable": false,
+        "value": null,
+        "contributing_pairs": []
+      },
+      "s_marker_fluor_compat": {
+        "applicable": false,
+        "value": null,
+        "contributing_pairs": []
+      },
+      "s_method_fluor_compat": {
+        "applicable": true,
+        "value": 1.2000000000000002,
+        "contributing_pairs": [
+          "semantic:0",
+          "semantic:1"
+        ]
+      }
+    },
+    "pair_results": [
+      {
+        "pair_id": "semantic:0",
+        "entity_id": null,
+        "fluorophore": "tdTomato",
+        "reported_marker": null,
+        "reported_target_literal": null,
+        "label_type": "native_fluorescent_protein",
+        "original_function_input": {
+          "tdTomato": ""
+        },
+        "applicable": {
+          "s_target_match": false,
+          "s_marker_fluor_compat": false,
+          "s_method_fluor_compat": true
+        },
+        "channels": {
+          "s_target_match": null,
+          "s_marker_fluor_compat": null,
+          "s_method_fluor_compat": 1.7999999999999998
+        },
+        "not_applicable_reason": "standalone fluorescence has no antibody target-pair channel",
+        "source_evidence": [
+          {
+            "start": 29,
+            "end": 78,
+            "quote": "**Chosen Labeling:** [tdTomato (endogenous), DiI]",
+            "answer_sha256": "6f7f9d32004a9457ad473c8e9db98c6750965619afda4758836bba5d5e99c286"
+          }
+        ],
+        "compatibility_audit": [
+          {
+            "kind": "method_fluor",
+            "method_name": "iDISCO+",
+            "fluorophore": "tdTomato",
+            "source": "KnowledgeBase/method_fluro_compati.json",
+            "value": 0.3,
+            "status": "TABLE_REPORTED"
+          }
+        ]
+      },
+      {
+        "pair_id": "semantic:1",
+        "entity_id": null,
+        "fluorophore": "DiI",
+        "reported_marker": null,
+        "reported_target_literal": null,
+        "label_type": "direct_stain",
+        "original_function_input": {
+          "DiI": ""
+        },
+        "applicable": {
+          "s_target_match": false,
+          "s_marker_fluor_compat": false,
+          "s_method_fluor_compat": true
+        },
+        "channels": {
+          "s_target_match": null,
+          "s_marker_fluor_compat": null,
+          "s_method_fluor_compat": 1.2000000000000002
+        },
+        "not_applicable_reason": "standalone fluorescence has no antibody target-pair channel",
+        "source_evidence": [
+          {
+            "start": 29,
+            "end": 78,
+            "quote": "**Chosen Labeling:** [tdTomato (endogenous), DiI]",
+            "answer_sha256": "6f7f9d32004a9457ad473c8e9db98c6750965619afda4758836bba5d5e99c286"
+          }
+        ],
+        "compatibility_audit": [
+          {
+            "kind": "method_fluor",
+            "method_name": "iDISCO+",
+            "fluorophore": "DiI",
+            "source": "KnowledgeBase/method_fluro_compati.json",
+            "value": 0.2,
+            "status": "TABLE_REPORTED"
+          }
+        ]
+      }
+    ],
+    "resolved_uncertainties": [],
+    "remaining_uncertainties": [],
+    "minimum_of_available_applicable_channels": 1.2000000000000002,
+    "task_target_coverage": "native/direct task coverage remains separate from antibody-pair applicability",
+    "new_model_calls": 0,
+    "expert_validated": false
+  },
+  "compatibility_lookup_trace": [],
+  "typed_semantic_annotation": true,
+  "typed_changes": {
+    "s_label": {
+      "before": null,
+      "after": 1.2000000000000002
+    },
+    "Eff": {
+      "before": null,
+      "after": 0.38798889892977695
+    },
+    "IA": {
+      "before": null,
+      "after": 0.38798889892977695
+    },
+    "HV": {
+      "before": null,
+      "after": 0.16669152694760786
+    }
+  },
+  "source_document": {
+    "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\optimizer_round2_20261010\\secondary_E5_confirmation_v1\\source_documents\\FPC16.json",
+    "sha256": "9455fa0cfa30831b42d5be1451db1d78ad33b3e96207a39945402577878edabf"
+  },
+  "answer_sha256": "6f7f9d32004a9457ad473c8e9db98c6750965619afda4758836bba5d5e99c286"
+}

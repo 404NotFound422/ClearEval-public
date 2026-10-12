@@ -1,0 +1,9 @@
+{
+  "stage": "read archived operation records",
+  "error": "KeyError: id",
+  "cause": "Raw wire schema uses field i for the operation identifier; resolved records use id",
+  "correction": "Read the actual archived wire field i, then join to the existing resolved id",
+  "raw_record_rewritten": false,
+  "new_model_requests": 0,
+  "scores_cleared_or_replaced": false
+}

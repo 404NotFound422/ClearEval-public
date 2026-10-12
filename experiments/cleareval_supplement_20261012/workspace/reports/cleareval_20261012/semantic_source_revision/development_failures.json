@@ -1,0 +1,8 @@
+{
+  "new_model_calls": 0,
+  "failures": [
+    {"stage":"annotation-builder first invocation","error":"SyntaxError at dictionary key operation_id","action":"Corrected the quoted key; no annotation or score result had been emitted."},
+    {"stage":"semantic replay first invocation","error":"ModuleNotFoundError under the isolated portable Python installation","action":"Added the explicit repository script import path; no score result had been emitted."},
+    {"stage":"semantic_01","error":"KeyError: numeric on R3C01's partial full-object conversion","action":"Preserved semantic_01 plan and code snapshot; semantic_02 uses the saved validated method view and fixed question metadata for that partial record, without inventing model JSON."}
+  ]
+}

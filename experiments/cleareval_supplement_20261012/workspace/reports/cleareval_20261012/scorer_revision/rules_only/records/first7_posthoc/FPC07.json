@@ -1,0 +1,301 @@
+{
+  "cohort": "first7_posthoc",
+  "cell_id": "FPC07",
+  "anonymous_answer_id": "FPC07",
+  "question_id": 248,
+  "original_status": "success",
+  "version": "cce-scoped-midpoint-scorer-v1",
+  "metrics": {
+    "c_param": 3,
+    "co_order": 2,
+    "co_method": 1,
+    "co_param": 1,
+    "co_chem": 1,
+    "s_method": -0.38,
+    "s_label": null,
+    "s_trans": 1.2333368715215602,
+    "s_time": 0.40179312334614525,
+    "sr": 0.4444444444444444,
+    "sp": 0.2727272727272727,
+    "Com": 0.7777777777777778,
+    "Cor": 0.6666666666666666,
+    "Eff": null,
+    "IA": null,
+    "HV": null
+  },
+  "complete_numeric_CCE": false,
+  "baseline_metrics": {
+    "c_param": 3,
+    "co_order": 2,
+    "co_method": 1,
+    "co_param": 1,
+    "co_chem": 1,
+    "s_method": -0.38,
+    "s_label": null,
+    "s_trans": 1.2333368715215602,
+    "s_time": null,
+    "sr": 0.4444444444444444,
+    "sp": 0.2727272727272727,
+    "Com": 0.7777777777777778,
+    "Cor": 0.6666666666666666,
+    "Eff": null,
+    "IA": null,
+    "HV": null
+  },
+  "quantitative_data": {
+    "method_name": "uDISCO",
+    "tissue_ri_value": 1.46,
+    "total_time_hours": 33.5,
+    "sample_tier": "T04_WHOLE_MOUSE_BRAIN_5_12MM",
+    "reagent_ri_value": null,
+    "protocol_time_hours": null
+  },
+  "time_derivation": {
+    "hours": 33.5,
+    "bounds_hours": [
+      27.5,
+      39.5
+    ],
+    "decision": "explicit_duration_range_midpoint",
+    "resolved_issues": [
+      "nonunique_duration_range"
+    ],
+    "issues": [],
+    "operation_contributions": [
+      {
+        "operation_id": "OP01",
+        "lower_hours": 3.0,
+        "upper_hours": 3.0,
+        "repeat_status": "source_exact_or_single"
+      },
+      {
+        "operation_id": "OP02",
+        "lower_hours": 3.0,
+        "upper_hours": 3.0,
+        "repeat_status": "source_exact_or_single"
+      },
+      {
+        "operation_id": "OP03",
+        "lower_hours": 3.0,
+        "upper_hours": 3.0,
+        "repeat_status": "source_exact_or_single"
+      },
+      {
+        "operation_id": "OP04",
+        "lower_hours": 3.0,
+        "upper_hours": 3.0,
+        "repeat_status": "source_exact_or_single"
+      },
+      {
+        "operation_id": "OP05",
+        "lower_hours": 0.5,
+        "upper_hours": 0.5,
+        "repeat_status": "source_exact_or_single"
+      },
+      {
+        "operation_id": "OP09",
+        "lower_hours": 3.0,
+        "upper_hours": 3.0,
+        "repeat_status": "source_exact_or_single"
+      },
+      {
+        "operation_id": "OP10",
+        "lower_hours": 12.0,
+        "upper_hours": 24.0,
+        "repeat_status": "source_exact_or_single"
+      }
+    ]
+  },
+  "time_formula": {
+    "policy": "kb-window-asymmetric-median-0.20-under-0.10-over-v1",
+    "source": "time_kb.json",
+    "requested_tier": "T04_WHOLE_MOUSE_BRAIN_5_12MM",
+    "actual_hours": 33.5,
+    "min_hours": 72.0,
+    "max_hours": 120.0,
+    "median_hours": 96.0,
+    "tau_hours": 19.200000000000003,
+    "delta_hours": 38.5,
+    "tau_under_fraction": 0.2,
+    "tau_over_fraction": 0.1,
+    "status": "scored",
+    "resolved_tier": "T04_WHOLE_MOUSE_BRAIN_5_12MM",
+    "method_key": "udisco"
+  },
+  "time_sensitivity": [
+    {
+      "time_hours": 27.5,
+      "s_time": 0.2044823387042352,
+      "Eff": null
+    },
+    {
+      "time_hours": 33.5,
+      "s_time": 0.40179312334614525,
+      "Eff": null
+    },
+    {
+      "time_hours": 39.5,
+      "s_time": 0.716040562421143,
+      "Eff": null
+    }
+  ],
+  "label_derivation": {
+    "version": "label-occurrence-projection-v1-posthoc",
+    "channels": {
+      "s_target_match": null,
+      "s_marker_fluor_compat": null,
+      "s_method_fluor_compat": 3.5999999999999996
+    },
+    "s_label": null,
+    "original_occurrence_numeric_label": null,
+    "pair_results": [
+      {
+        "pair_id": "native:IS01",
+        "kind": "source_native_fluor_key_only",
+        "original_function_input": {
+          "tdTomato": ""
+        },
+        "channels": {
+          "s_target_match": null,
+          "s_marker_fluor_compat": null,
+          "s_method_fluor_compat": 4.5
+        },
+        "local_s_label": null,
+        "contribution_present": {
+          "s_target_match": false,
+          "s_marker_fluor_compat": false,
+          "s_method_fluor_compat": true
+        },
+        "marker_identity_conflict": false,
+        "compatibility_audit": [
+          {
+            "kind": "method_fluor",
+            "method_name": "uDISCO",
+            "fluorophore": "tdTomato",
+            "source": "KnowledgeBase/method_fluro_compati.json",
+            "value": 0.75,
+            "status": "TABLE_REPORTED"
+          }
+        ]
+      },
+      {
+        "pair_id": "relation:R01",
+        "kind": "unresolved_relation",
+        "original_function_input": {
+          "Phalloidin": ""
+        },
+        "channels": {
+          "s_target_match": null,
+          "s_marker_fluor_compat": null,
+          "s_method_fluor_compat": 3.5999999999999996
+        },
+        "local_s_label": null,
+        "contribution_present": {
+          "s_target_match": false,
+          "s_marker_fluor_compat": false,
+          "s_method_fluor_compat": true
+        },
+        "marker_identity_conflict": false,
+        "compatibility_audit": [
+          {
+            "kind": "method_fluor",
+            "method_name": "uDISCO",
+            "fluorophore": "Phalloidin",
+            "source": "KnowledgeBase/method_fluro_compati.json",
+            "value": 0.6,
+            "status": "TABLE_REPORTED"
+          }
+        ]
+      },
+      {
+        "pair_id": "relation:R02",
+        "kind": "unresolved_relation",
+        "original_function_input": {
+          "Alexa Fluor 647": ""
+        },
+        "channels": {
+          "s_target_match": null,
+          "s_marker_fluor_compat": null,
+          "s_method_fluor_compat": 4.5
+        },
+        "local_s_label": null,
+        "contribution_present": {
+          "s_target_match": false,
+          "s_marker_fluor_compat": false,
+          "s_method_fluor_compat": true
+        },
+        "marker_identity_conflict": false,
+        "compatibility_audit": [
+          {
+            "kind": "method_fluor",
+            "method_name": "uDISCO",
+            "fluorophore": "Alexa Fluor 647",
+            "source": "KnowledgeBase/method_fluro_compati.json",
+            "value": 0.75,
+            "status": "TABLE_REPORTED"
+          }
+        ]
+      }
+    ],
+    "explicit_label_uncertainties": [
+      {
+        "kind": "reported_unresolved_relation",
+        "relation_id": "R01",
+        "entity_id": "E02"
+      },
+      {
+        "kind": "reported_unresolved_relation",
+        "relation_id": "R02",
+        "entity_id": "E03"
+      }
+    ],
+    "publication_note": null,
+    "original_identity_unresolved": false,
+    "zero_witnesses": [],
+    "nullable_min_original_AST_sha256": "b885e7e1d6118c52aed9e67773ab1cf762010c468ed1cab70a0be6b465f56d58",
+    "original_function_file": "C:\\ClearEval\\ClearEval-public\\OEQ_run_grading_new.py",
+    "original_function_file_sha256": "0d48d96bd53b8bcf3c8678cf3151679ee70dc0d7b6d7e110486d1d7a77f9ea0e",
+    "single_value_projection_complete": false,
+    "unknown_pairs_retained": 3,
+    "finite_zero_is_not_complete_graph": false,
+    "new_KB_values": false,
+    "biological_target_inferred": false,
+    "model_calls": 0
+  },
+  "compatibility_lookup_trace": [],
+  "semantic_decomposition_applied": false,
+  "semantic_author": "saved judge decomposition",
+  "remaining_dependencies": {
+    "time": [],
+    "label_relations": [
+      {
+        "kind": "reported_unresolved_relation",
+        "relation_id": "R01",
+        "entity_id": "E02"
+      },
+      {
+        "kind": "reported_unresolved_relation",
+        "relation_id": "R02",
+        "entity_id": "E03"
+      }
+    ],
+    "compatibility": []
+  },
+  "new_model_requests": 0,
+  "new_expert_records": 0,
+  "direct_scores_rejudged": false,
+  "SR_SP_changed": false,
+  "raw_judge_status_changed": false,
+  "status": "replayed",
+  "source_record": {
+    "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\optimizer_round3_20261011\\uniform_v7\\actual_01\\cells\\first7_posthoc\\FPC07\\posthoc.json",
+    "sha256": "7e04fc84be368322a3e77e3d17a4d979d7b5316230f8cc16e6b5854f765cc93c"
+  },
+  "answer_sha256": "8176364b5f9396ab515e49a6f4a50366343f27fe7da00e0cb666a36796c423d2",
+  "changes": {
+    "s_time": {
+      "before": null,
+      "after": 0.40179312334614525
+    }
+  }
+}

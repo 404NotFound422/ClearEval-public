@@ -1,0 +1,1140 @@
+{
+  "case_id": "round3_confirmation_06",
+  "anonymous_answer_id": "R3C06",
+  "question_id": 23,
+  "specific_question": "我需要对一批稀疏荧光报告小鼠脑组织进行透明化处理，用于建立可长期保存的神经元三维形态数据集。样本为厚度约 3 mm 的小鼠脑组织块，已完成固定和后固定，内源荧光信号较弱，计划保存约 6 个月后进行重复成像或补充分析。科学目标是在保存前后都能够识别稀疏报告神经元，并同时获得神经元树突骨架或局部神经元结构信息，用于分析树突分支复杂度、局部神经环路投射和单细胞形态完整性。\n\n请根据该科学问题自行选择合适的双靶点荧光/标记策略，并匹配适合弱荧光报告样本和长期保存需求的组织透明方法。请仅输出 protocol，第 1 行写明所选双靶点荧光/标记策略和组织透明方法，随后仅列出透明处理、RI 匹配和保存/成像前处理步骤的关键试剂、条件和时间。",
+  "model_response": "**Chosen Method:** CUBIC  \n**Chosen Labeling:** [GFP (内源), MAP2 + Alexa Fluor 488, DAPI]  \n**Justification:** CUBIC is an aqueous-based, non-denaturing clearing method that excels at preserving weak endogenous fluorescent proteins (e.g., GFP) over long-term storage, unlike organic solvent–based methods (e.g., iDISCO+, uDISCO) which often quench or irreversibly damage such signals. It provides excellent transparency for 3 mm tissue blocks within days and enables stable refractive index (RI ≈ 1.49) matching compatible with light-sheet and confocal microscopy. The dual-labeling strategy leverages the sparse endogenous GFP reporter to identify individual neurons, while immunolabeling against MAP2 (a dendritic cytoskeletal marker) with Alexa Fluor 488 reinforces dendritic arborization and structural integrity; DAPI provides nuclear counterstain for spatial registration and cell density context. All fluorophores used are known to be well-preserved in CUBIC, and the cleared samples can be stored in CUBIC-R+ for ≥6 months without significant signal decay.\n\n**Protocol Steps:**  \n1 Post-fixation Stabilization  \n1.1 Incubation with 4% (wt/vol) paraformaldehyde (PFA) in PBS (pH 7.4) to confirm fixation completeness.(Temperature: 4 ℃, Time: 12 hours)  \n\n2 Permeabilization and Blocking  \n2.1 Incubation with CUBIC-P1 (10 vol% Triton X-100, 10 vol% Tween-20, 10 wt% sucrose in PBS).(Temperature: 37 ℃, Time: 24 hours)  \n2.2 Incubation with CUBIC-B (10 vol% DMSO, 5 vol% normal goat serum, 0.5 wt% sodium azide in PBS).(Temperature: 37 ℃, Time: 12 hours)  \n\n3 Primary Antibody Labeling  \n3.1 Incubation with mouse anti-MAP2 primary antibody (1:500 dilution in CUBIC-B).(Temperature: 37 ℃, Time: 72 hours)  \n\n4 Washing  \n4.1 Incubation with CUBIC-W (0.5 vol% Triton X-100 in PBS) with gentle shaking.(Temperature: 37 ℃, Time: 24 hours)  \n4.2 Repeat step 4.1 two additional times, changing solution every 8 hours.(Temperature: 37 ℃, Time: 24 hours total)  \n\n5 Secondary Antibody Labeling  \n5.1 Incubation with goat anti-mouse IgG conjugated to Alexa Fluor 488 (1:300 dilution in CUBIC-B).(Temperature: 37 ℃, Time: 48 hours)  \n\n6 Nuclear Counterstaining  \n6.1 Incubation with DAPI (1 µg/mL in CUBIC-W).(Temperature: RT, Time: 12 hours)  \n\n7 Washing Prior to Clearing  \n7.1 Incubation with CUBIC-W.(Temperature: 37 ℃, Time: 24 hours)  \n\n8 Tissue Clearing (Delipidation & Decolorization)  \n8.1 Incubation with CUBIC-L (25 wt% Quadrol, 25 wt% urea, 15 wt% sucrose, 10 vol% Triton X-100 in H₂O, pH 9.0–9.5).(Temperature: 37 ℃, Time: 72 hours)  \n8.2 Replace with fresh CUBIC-L.(Temperature: 37 ℃, Time: 48 hours)  \n\n9 Refractive Index Matching  \n9.1 Incubation with CUBIC-R+ (50 wt% sucrose, 25 wt% urea, 10 wt% triethanolamine, 0.5 vol% Triton X-100 in H₂O, RI = 1.49).(Temperature: RT, Time: 24 hours)  \n9.2 Replace with fresh CUBIC-R+ for final storage and imaging.(Temperature: RT, Time: ≥6 months)  \n\n10 Imaging Preparation  \n10.1 Transfer sample to glass-bottom imaging chamber filled with fresh CUBIC-R+ immediately before imaging.(Temperature: RT, Time: <1 hour prior to acquisition)",
+  "answer_sha256": "708712095799859bf19d0936e9efe89e88f3c956370cda796dc03fea5d27ecc9",
+  "question_sha256": "fb1a828382a1a470c9b298ed9bda10bc27fa39b6a7547f3db7ab52c5e6f32db2",
+  "references": [
+    {
+      "reference_id": "CUBIC_HV_2020_AUTHOR_FULL20_METHOD_FAMILY_CONDITIONAL_V1",
+      "route_id": "CUBIC-HV",
+      "route_aliases": [
+        "CUBIC-HV",
+        "CUBIC HistoVIsion",
+        "CUBIC-HistoVIsion",
+        "CUBIC-HistoVIsion1.0"
+      ],
+      "question_ids": [
+        1,
+        2,
+        21,
+        22,
+        23,
+        248
+      ],
+      "requires_explicit_task_binding": false,
+      "steps": [
+        {
+          "step_id": "CUBHV20-CLEAR-01",
+          "source_group": "COL",
+          "source_number": 6,
+          "module": "fixed_sample_preparation",
+          "text": "Wash the sample in PBS for 3 h x 3 times at room temperature with gentle shaking.",
+          "source_spans": [
+            {
+              "pdf": {
+                "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\reference_recovery\\cubic_hv_2020\\official_attachments\\41467_2020_15906_MOESM1_ESM.pdf",
+                "bytes": 45550044,
+                "sha256": "0a563518a57a643639de9ae08803675d86e4d4f18698baa817f9b88c3a91de09",
+                "md5": "c8bbc10a74792c021b2ce1697cf86327"
+              },
+              "pdf_page_one_based": 34,
+              "text": {
+                "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\reference_recovery\\cubic_hv_2020\\source_pages\\supp_p34.txt",
+                "bytes": 1728,
+                "sha256": "3fc01b653f2ea5453a2e6d25226535f30d0850555c1d1d43dadf027724386cb8",
+                "md5": "c88b800cceafc55a8b10a9af02cf5057"
+              },
+              "start": 443,
+              "end": 565,
+              "offset_unit": "Unicode code points in LF-normalized PDFium page text; end exclusive",
+              "quote": "Wash the sample in PBS for 3 h x 3 times at room temperature with gentle shaking.\n*Refer to Susaki et al.\n26 for details.\n",
+              "quote_sha256": "970a36827762b6446327f9267e1a3ff252686f05804567bfd5cc581577b7b3ee"
+            }
+          ],
+          "optional_in_author_protocol": false,
+          "included_in_clearing_candidate": true,
+          "required_for_selected_scope": true,
+          "source_workflow_step_id": "CUBHV20-COL-06",
+          "display_edits": [
+            "Remove the bibliographic footnote from operation display text; preserve it in the source quotation."
+          ],
+          "required": true,
+          "required_scope": "Coverage of this selected author-reported developmental branch, not independently established biological necessity.",
+          "source_anchor": "supplement physical p34 text [443:565)"
+        },
+        {
+          "step_id": "CUBHV20-CLEAR-02",
+          "source_group": "DL",
+          "source_number": 2,
+          "module": "delipidation",
+          "text": "Replace to 10-15 mL of 1x CUBIC-L in the 30 mL tube and delipidate for 3-5 days at 37°C with gentle shaking.",
+          "source_spans": [
+            {
+              "pdf": {
+                "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\reference_recovery\\cubic_hv_2020\\official_attachments\\41467_2020_15906_MOESM1_ESM.pdf",
+                "bytes": 45550044,
+                "sha256": "0a563518a57a643639de9ae08803675d86e4d4f18698baa817f9b88c3a91de09",
+                "md5": "c8bbc10a74792c021b2ce1697cf86327"
+              },
+              "pdf_page_one_based": 34,
+              "text": {
+                "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\reference_recovery\\cubic_hv_2020\\source_pages\\supp_p34.txt",
+                "bytes": 1728,
+                "sha256": "3fc01b653f2ea5453a2e6d25226535f30d0850555c1d1d43dadf027724386cb8",
+                "md5": "c88b800cceafc55a8b10a9af02cf5057"
+              },
+              "start": 803,
+              "end": 913,
+              "offset_unit": "Unicode code points in LF-normalized PDFium page text; end exclusive",
+              "quote": "Replace to 10-15 mL of 1x CUBIC-L in the 30 mL tube and delipidate for 3-5 days at \n37°C with gentle shaking.\n",
+              "quote_sha256": "22599095c4a8e887f6746a2a8e47e69e07fab9b0f5143738ea360d9355142924"
+            }
+          ],
+          "optional_in_author_protocol": false,
+          "included_in_clearing_candidate": true,
+          "required_for_selected_scope": true,
+          "source_workflow_step_id": "CUBHV20-DL-02",
+          "display_edits": [],
+          "required": true,
+          "required_scope": "Coverage of this selected author-reported developmental branch, not independently established biological necessity.",
+          "source_anchor": "supplement physical p34 text [803:913)"
+        },
+        {
+          "step_id": "CUBHV20-CLEAR-03",
+          "source_group": "DL",
+          "source_number": 3,
+          "module": "delipidation",
+          "text": "Wash the sample in PBS for 2 h x 3 times at 37°C with gentle shaking. The washing tube should be replaced with a new one every time to remove Triton X-100 intensively.",
+          "source_spans": [
+            {
+              "pdf": {
+                "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\reference_recovery\\cubic_hv_2020\\official_attachments\\41467_2020_15906_MOESM1_ESM.pdf",
+                "bytes": 45550044,
+                "sha256": "0a563518a57a643639de9ae08803675d86e4d4f18698baa817f9b88c3a91de09",
+                "md5": "c8bbc10a74792c021b2ce1697cf86327"
+              },
+              "pdf_page_one_based": 34,
+              "text": {
+                "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\reference_recovery\\cubic_hv_2020\\source_pages\\supp_p34.txt",
+                "bytes": 1728,
+                "sha256": "3fc01b653f2ea5453a2e6d25226535f30d0850555c1d1d43dadf027724386cb8",
+                "md5": "c88b800cceafc55a8b10a9af02cf5057"
+              },
+              "start": 916,
+              "end": 1120,
+              "offset_unit": "Unicode code points in LF-normalized PDFium page text; end exclusive",
+              "quote": "Wash the sample in PBS for 2 h x 3 times (or 2 h x1, overnight x1, 2 h x1) at 37°C \nwith gentle shaking. The washing tube should be replaced with a new one every \ntime to remove Triton X-100 intensively.\n",
+              "quote_sha256": "4f89f131b53b7a2242c2c7b8b41080e35438fe1d22d9d5bf05fb547e3cd9b703"
+            }
+          ],
+          "optional_in_author_protocol": false,
+          "included_in_clearing_candidate": true,
+          "required_for_selected_scope": true,
+          "source_workflow_step_id": "CUBHV20-DL-03",
+          "display_edits": [
+            "Select the first author-reported wash alternative; do not combine schedules."
+          ],
+          "required": true,
+          "required_scope": "Coverage of this selected author-reported developmental branch, not independently established biological necessity.",
+          "source_anchor": "supplement physical p34 text [916:1120)"
+        },
+        {
+          "step_id": "CUBHV20-CLEAR-04",
+          "source_group": "IMM",
+          "source_number": 6,
+          "module": "labeling_and_post_label_preparation",
+          "text": "Wash the sample in 15 mL of 0.1 M PBT in the 30 mL tube for 30 min x 2 times at the incubated temperature with gentle shaking.",
+          "source_spans": [
+            {
+              "pdf": {
+                "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\reference_recovery\\cubic_hv_2020\\official_attachments\\41467_2020_15906_MOESM1_ESM.pdf",
+                "bytes": 45550044,
+                "sha256": "0a563518a57a643639de9ae08803675d86e4d4f18698baa817f9b88c3a91de09",
+                "md5": "c8bbc10a74792c021b2ce1697cf86327"
+              },
+              "pdf_page_one_based": 36,
+              "text": {
+                "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\reference_recovery\\cubic_hv_2020\\source_pages\\supp_p36.txt",
+                "bytes": 1519,
+                "sha256": "cc11add9e3dd6deab159a76d57b0a22cb44263aeffd5fbb191c29321e409719e",
+                "md5": "d16b5eeaed482ea5bd2561b2f95b3c1f"
+              },
+              "start": 1020,
+              "end": 1148,
+              "offset_unit": "Unicode code points in LF-normalized PDFium page text; end exclusive",
+              "quote": "Wash the sample in 15 mL of 0.1 M PBT in the 30 mL tube for 30 min x 2 times at the \nincubated temperature with gentle shaking.\n",
+              "quote_sha256": "27442c801a475b13b094b853cb05c8a4cccced4b5070df4f4ee6d8103622381b"
+            }
+          ],
+          "optional_in_author_protocol": false,
+          "included_in_clearing_candidate": true,
+          "required_for_selected_scope": true,
+          "source_workflow_step_id": "CUBHV20-IMM-06",
+          "display_edits": [],
+          "required": true,
+          "required_scope": "Coverage of this selected author-reported developmental branch, not independently established biological necessity.",
+          "source_anchor": "supplement physical p36 text [1020:1148)"
+        },
+        {
+          "step_id": "CUBHV20-CLEAR-05",
+          "source_group": "IMM",
+          "source_number": 7,
+          "module": "labeling_and_post_label_preparation",
+          "text": "Wash the sample in 15 mL of 0.1 M PB in the 30 mL tube for 1 h at the same temperature with gentle shaking.",
+          "source_spans": [
+            {
+              "pdf": {
+                "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\reference_recovery\\cubic_hv_2020\\official_attachments\\41467_2020_15906_MOESM1_ESM.pdf",
+                "bytes": 45550044,
+                "sha256": "0a563518a57a643639de9ae08803675d86e4d4f18698baa817f9b88c3a91de09",
+                "md5": "c8bbc10a74792c021b2ce1697cf86327"
+              },
+              "pdf_page_one_based": 36,
+              "text": {
+                "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\reference_recovery\\cubic_hv_2020\\source_pages\\supp_p36.txt",
+                "bytes": 1519,
+                "sha256": "cc11add9e3dd6deab159a76d57b0a22cb44263aeffd5fbb191c29321e409719e",
+                "md5": "d16b5eeaed482ea5bd2561b2f95b3c1f"
+              },
+              "start": 1151,
+              "end": 1260,
+              "offset_unit": "Unicode code points in LF-normalized PDFium page text; end exclusive",
+              "quote": "Wash the sample in 15 mL of 0.1 M PB in the 30 mL tube for 1 h at the same \ntemperature with gentle shaking.\n",
+              "quote_sha256": "e3c7fa3ac0ad1a5431dc89e0e6b4ef05e27e8ef206510e464b9e608f3cd9e174"
+            }
+          ],
+          "optional_in_author_protocol": false,
+          "included_in_clearing_candidate": true,
+          "required_for_selected_scope": true,
+          "source_workflow_step_id": "CUBHV20-IMM-07",
+          "display_edits": [],
+          "required": true,
+          "required_scope": "Coverage of this selected author-reported developmental branch, not independently established biological necessity.",
+          "source_anchor": "supplement physical p36 text [1151:1260)"
+        },
+        {
+          "step_id": "CUBHV20-CLEAR-06",
+          "source_group": "FIX",
+          "source_number": 1,
+          "module": "post_label_preparation",
+          "text": "Immerse the stained whole mouse brain in 1% FA in 0.1 M PB (8 mL in the 15 mL standing tube) for 24 h at 25°C with gentle shaking.",
+          "source_spans": [
+            {
+              "pdf": {
+                "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\reference_recovery\\cubic_hv_2020\\official_attachments\\41467_2020_15906_MOESM1_ESM.pdf",
+                "bytes": 45550044,
+                "sha256": "0a563518a57a643639de9ae08803675d86e4d4f18698baa817f9b88c3a91de09",
+                "md5": "c8bbc10a74792c021b2ce1697cf86327"
+              },
+              "pdf_page_one_based": 36,
+              "text": {
+                "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\reference_recovery\\cubic_hv_2020\\source_pages\\supp_p36.txt",
+                "bytes": 1519,
+                "sha256": "cc11add9e3dd6deab159a76d57b0a22cb44263aeffd5fbb191c29321e409719e",
+                "md5": "d16b5eeaed482ea5bd2561b2f95b3c1f"
+              },
+              "start": 1282,
+              "end": 1414,
+              "offset_unit": "Unicode code points in LF-normalized PDFium page text; end exclusive",
+              "quote": "Immerse the stained whole mouse brain in 1% FA in 0.1 M PB (8 mL in the 15 mL \nstanding tube) for 24 h at 25°C with gentle shaking.\n",
+              "quote_sha256": "ad9158b64a6c9e824853df274ccfa78fb3651323713b291224c3b7fa3041426c"
+            }
+          ],
+          "optional_in_author_protocol": false,
+          "included_in_clearing_candidate": true,
+          "required_for_selected_scope": true,
+          "source_workflow_step_id": "CUBHV20-FIX-01",
+          "display_edits": [],
+          "required": true,
+          "required_scope": "Coverage of this selected author-reported developmental branch, not independently established biological necessity.",
+          "source_anchor": "supplement physical p36 text [1282:1414)"
+        },
+        {
+          "step_id": "CUBHV20-CLEAR-07",
+          "source_group": "FIX",
+          "source_number": 2,
+          "module": "post_label_preparation",
+          "text": "Wash the sample in 15 mL of 0.1M PB in a 30 mL tube for 2 h at 25°C with gentle shaking.",
+          "source_spans": [
+            {
+              "pdf": {
+                "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\reference_recovery\\cubic_hv_2020\\official_attachments\\41467_2020_15906_MOESM1_ESM.pdf",
+                "bytes": 45550044,
+                "sha256": "0a563518a57a643639de9ae08803675d86e4d4f18698baa817f9b88c3a91de09",
+                "md5": "c8bbc10a74792c021b2ce1697cf86327"
+              },
+              "pdf_page_one_based": 36,
+              "text": {
+                "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\reference_recovery\\cubic_hv_2020\\source_pages\\supp_p36.txt",
+                "bytes": 1519,
+                "sha256": "cc11add9e3dd6deab159a76d57b0a22cb44263aeffd5fbb191c29321e409719e",
+                "md5": "d16b5eeaed482ea5bd2561b2f95b3c1f"
+              },
+              "start": 1417,
+              "end": 1506,
+              "offset_unit": "Unicode code points in LF-normalized PDFium page text; end exclusive",
+              "quote": "Wash the sample in 15 mL of 0.1M PB in a 30 mL tube for 2 h at 25°C with gentle \nshaking.",
+              "quote_sha256": "4091c0b81cda6eaad10fc362ab4a7e2a2a0b2cdb577b82fe9d13e240c1bbab72"
+            }
+          ],
+          "optional_in_author_protocol": false,
+          "included_in_clearing_candidate": true,
+          "required_for_selected_scope": true,
+          "source_workflow_step_id": "CUBHV20-FIX-02",
+          "display_edits": [],
+          "required": true,
+          "required_scope": "Coverage of this selected author-reported developmental branch, not independently established biological necessity.",
+          "source_anchor": "supplement physical p36 text [1417:1506)"
+        },
+        {
+          "step_id": "CUBHV20-CLEAR-08",
+          "source_group": "RI",
+          "source_number": 1,
+          "module": "ri_matching_embedding_storage",
+          "text": "Immerse the whole mouse brain in 15 mL of 0.5x CUBIC-R+(N) (1:1 dilution with water) in a 30 mL tube for 24 h at 25°C with shaking.",
+          "source_spans": [
+            {
+              "pdf": {
+                "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\reference_recovery\\cubic_hv_2020\\official_attachments\\41467_2020_15906_MOESM1_ESM.pdf",
+                "bytes": 45550044,
+                "sha256": "0a563518a57a643639de9ae08803675d86e4d4f18698baa817f9b88c3a91de09",
+                "md5": "c8bbc10a74792c021b2ce1697cf86327"
+              },
+              "pdf_page_one_based": 37,
+              "text": {
+                "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\reference_recovery\\cubic_hv_2020\\source_pages\\supp_p37.txt",
+                "bytes": 2471,
+                "sha256": "36bd579bca7a18b5f938e83e73fa254dba24badeec296b6df605e351abb85ef7",
+                "md5": "4d7b37fd028bdda8d63e253902a7ea6e"
+              },
+              "start": 43,
+              "end": 172,
+              "offset_unit": "Unicode code points in LF-normalized PDFium page text; end exclusive",
+              "quote": "Immerse the whole mouse brain in 15 mL of 0.5x CUBIC-R+ (1:1 dilution with water)\nin a 30 mL tube for 24 h at 25°C with shaking.\n",
+              "quote_sha256": "d6d95b6cc109c7ebf7add84d3c4477478cd42269742dffdc9f87d540301f608c"
+            }
+          ],
+          "optional_in_author_protocol": false,
+          "included_in_clearing_candidate": true,
+          "required_for_selected_scope": true,
+          "source_workflow_step_id": "CUBHV20-RI-01",
+          "display_edits": [
+            "Specialize the author-listed RI reagent option to CUBIC-R+(N)."
+          ],
+          "required": true,
+          "required_scope": "Coverage of this selected author-reported developmental branch, not independently established biological necessity.",
+          "source_anchor": "supplement physical p37 text [43:172)"
+        },
+        {
+          "step_id": "CUBHV20-CLEAR-09",
+          "source_group": "RI",
+          "source_number": 2,
+          "module": "ri_matching_embedding_storage",
+          "text": "Immerse a whole mouse brain in 30 mL of non-diluted CUBIC-R+(N) in 50 mL tube for 3 days at 25°C with gentle shaking.",
+          "source_spans": [
+            {
+              "pdf": {
+                "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\reference_recovery\\cubic_hv_2020\\official_attachments\\41467_2020_15906_MOESM1_ESM.pdf",
+                "bytes": 45550044,
+                "sha256": "0a563518a57a643639de9ae08803675d86e4d4f18698baa817f9b88c3a91de09",
+                "md5": "c8bbc10a74792c021b2ce1697cf86327"
+              },
+              "pdf_page_one_based": 37,
+              "text": {
+                "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\reference_recovery\\cubic_hv_2020\\source_pages\\supp_p37.txt",
+                "bytes": 2471,
+                "sha256": "36bd579bca7a18b5f938e83e73fa254dba24badeec296b6df605e351abb85ef7",
+                "md5": "4d7b37fd028bdda8d63e253902a7ea6e"
+              },
+              "start": 175,
+              "end": 291,
+              "offset_unit": "Unicode code points in LF-normalized PDFium page text; end exclusive",
+              "quote": "Immerse a whole mouse brain in 30 mL of non-diluted CUBIC-R+ in 50 mL tube for \n3 days at 25°C with gentle shaking.\n",
+              "quote_sha256": "54b161e0dbc9d5963083fea490c18bc70c78f48d108cab6e6daeee9bb40a611f"
+            }
+          ],
+          "optional_in_author_protocol": false,
+          "included_in_clearing_candidate": true,
+          "required_for_selected_scope": true,
+          "source_workflow_step_id": "CUBHV20-RI-02",
+          "display_edits": [
+            "Specialize the author-listed RI reagent option to CUBIC-R+(N)."
+          ],
+          "required": true,
+          "required_scope": "Coverage of this selected author-reported developmental branch, not independently established biological necessity.",
+          "source_anchor": "supplement physical p37 text [175:291)"
+        },
+        {
+          "step_id": "CUBHV20-CLEAR-10",
+          "source_group": "RI",
+          "source_number": 3,
+          "module": "ri_matching_embedding_storage",
+          "text": "After RI matching is completed, filtrate 15 mL of the used CUBIC-R+(N) with 5 μm filter (Millipore, #SLSVJ25LS). Store the brain sample in the remaining CUBIC-R+(N). Add 300 mg [2% (w/v)] of agar powder (nacalai tesque, #01163-76) into the filtrated CUBIC-R+(N). Completely disperse the agar powder in the reagent with a vortex.",
+          "source_spans": [
+            {
+              "pdf": {
+                "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\reference_recovery\\cubic_hv_2020\\official_attachments\\41467_2020_15906_MOESM1_ESM.pdf",
+                "bytes": 45550044,
+                "sha256": "0a563518a57a643639de9ae08803675d86e4d4f18698baa817f9b88c3a91de09",
+                "md5": "c8bbc10a74792c021b2ce1697cf86327"
+              },
+              "pdf_page_one_based": 37,
+              "text": {
+                "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\reference_recovery\\cubic_hv_2020\\source_pages\\supp_p37.txt",
+                "bytes": 2471,
+                "sha256": "36bd579bca7a18b5f938e83e73fa254dba24badeec296b6df605e351abb85ef7",
+                "md5": "4d7b37fd028bdda8d63e253902a7ea6e"
+              },
+              "start": 294,
+              "end": 617,
+              "offset_unit": "Unicode code points in LF-normalized PDFium page text; end exclusive",
+              "quote": "After RI matching is completed, filtrate 15 mL of the used CUBIC-R+ with 5 μm filter \n(Millipore, #SLSVJ25LS). Store the brain sample in the remaining CUBIC-R+. Add \n300 mg [2% (w/v)] of agar powder (nacalai tesque, #01163-76) into the filtrated \nCUBIC-R+. Completely disperse the agar powder in the reagent with a vortex.\n",
+              "quote_sha256": "eafe1a873e136e2f92a1eb66101a58cc27d7f53ed8219ba3ffca3914f95fe7a0"
+            }
+          ],
+          "optional_in_author_protocol": false,
+          "included_in_clearing_candidate": true,
+          "required_for_selected_scope": true,
+          "source_workflow_step_id": "CUBHV20-RI-03",
+          "display_edits": [
+            "Specialize the author-listed RI reagent option to CUBIC-R+(N)."
+          ],
+          "required": true,
+          "required_scope": "Coverage of this selected author-reported developmental branch, not independently established biological necessity.",
+          "source_anchor": "supplement physical p37 text [294:617)"
+        },
+        {
+          "step_id": "CUBHV20-CLEAR-11",
+          "source_group": "RI",
+          "source_number": 4,
+          "module": "ri_matching_embedding_storage",
+          "text": "Dissolve the ager by microwave. Repeat heating and mixing with vortex until the agar is completely dissolved.",
+          "source_spans": [
+            {
+              "pdf": {
+                "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\reference_recovery\\cubic_hv_2020\\official_attachments\\41467_2020_15906_MOESM1_ESM.pdf",
+                "bytes": 45550044,
+                "sha256": "0a563518a57a643639de9ae08803675d86e4d4f18698baa817f9b88c3a91de09",
+                "md5": "c8bbc10a74792c021b2ce1697cf86327"
+              },
+              "pdf_page_one_based": 37,
+              "text": {
+                "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\reference_recovery\\cubic_hv_2020\\source_pages\\supp_p37.txt",
+                "bytes": 2471,
+                "sha256": "36bd579bca7a18b5f938e83e73fa254dba24badeec296b6df605e351abb85ef7",
+                "md5": "4d7b37fd028bdda8d63e253902a7ea6e"
+              },
+              "start": 620,
+              "end": 731,
+              "offset_unit": "Unicode code points in LF-normalized PDFium page text; end exclusive",
+              "quote": "Dissolve the ager by microwave. Repeat heating and mixing with vortex until the agar \nis completely dissolved.\n",
+              "quote_sha256": "859aa8519ab957dfbd093b6ff4e60fb13c897a48d212d88bd88373c407b27f2f"
+            }
+          ],
+          "optional_in_author_protocol": false,
+          "included_in_clearing_candidate": true,
+          "required_for_selected_scope": true,
+          "source_workflow_step_id": "CUBHV20-RI-04",
+          "display_edits": [],
+          "required": true,
+          "required_scope": "Coverage of this selected author-reported developmental branch, not independently established biological necessity.",
+          "source_anchor": "supplement physical p37 text [620:731)"
+        },
+        {
+          "step_id": "CUBHV20-CLEAR-12",
+          "source_group": "RI",
+          "source_number": 6,
+          "module": "ri_matching_embedding_storage",
+          "text": "Remove bubbles in 2% agar/CUBIC-R+(N) solution by incubation in a water bath for 5 min at 65°C.",
+          "source_spans": [
+            {
+              "pdf": {
+                "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\reference_recovery\\cubic_hv_2020\\official_attachments\\41467_2020_15906_MOESM1_ESM.pdf",
+                "bytes": 45550044,
+                "sha256": "0a563518a57a643639de9ae08803675d86e4d4f18698baa817f9b88c3a91de09",
+                "md5": "c8bbc10a74792c021b2ce1697cf86327"
+              },
+              "pdf_page_one_based": 37,
+              "text": {
+                "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\reference_recovery\\cubic_hv_2020\\source_pages\\supp_p37.txt",
+                "bytes": 2471,
+                "sha256": "36bd579bca7a18b5f938e83e73fa254dba24badeec296b6df605e351abb85ef7",
+                "md5": "4d7b37fd028bdda8d63e253902a7ea6e"
+              },
+              "start": 734,
+              "end": 828,
+              "offset_unit": "Unicode code points in LF-normalized PDFium page text; end exclusive",
+              "quote": "Remove bubbles in 2% agar/CUBIC-R+ solution by incubation in a water bath for 5 \nmin at 65°C.\n",
+              "quote_sha256": "3741eda65f6eaae184c1e0fece02f52224b19713e30ddf848be9d33cc0721143"
+            }
+          ],
+          "optional_in_author_protocol": false,
+          "included_in_clearing_candidate": true,
+          "required_for_selected_scope": true,
+          "source_workflow_step_id": "CUBHV20-RI-06",
+          "display_edits": [
+            "Specialize the author-listed RI reagent option to CUBIC-R+(N)."
+          ],
+          "required": true,
+          "required_scope": "Coverage of this selected author-reported developmental branch, not independently established biological necessity.",
+          "source_anchor": "supplement physical p37 text [734:828)"
+        },
+        {
+          "step_id": "CUBHV20-CLEAR-13",
+          "source_group": "RI",
+          "source_number": 7,
+          "module": "ri_matching_embedding_storage",
+          "text": "For embedding the sample into a cleared gel, we use a Teflon mold (inside: W22 x D30 x H15 mm) of which the bottom is sealed with parafilm. Pre-heat the mold on a temperature-controlled plate (JUJI Field, LABOPAD C (COOL/HEAT), used with a custom-made black metal plate) at 45°C during source RI step 6. Then, to make the bottom layer (approximately 2 mm thick), pour 2.5 mL of the agar solution into the pre-heated mold. Carefully remove bubbles at the surface of the gel by using a micropipette (the custom-made black metal plate and a strong light illumination help detect such small bubbles). The remaining gels should be kept in the water bath at 65°C.",
+          "source_spans": [
+            {
+              "pdf": {
+                "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\reference_recovery\\cubic_hv_2020\\official_attachments\\41467_2020_15906_MOESM1_ESM.pdf",
+                "bytes": 45550044,
+                "sha256": "0a563518a57a643639de9ae08803675d86e4d4f18698baa817f9b88c3a91de09",
+                "md5": "c8bbc10a74792c021b2ce1697cf86327"
+              },
+              "pdf_page_one_based": 37,
+              "text": {
+                "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\reference_recovery\\cubic_hv_2020\\source_pages\\supp_p37.txt",
+                "bytes": 2471,
+                "sha256": "36bd579bca7a18b5f938e83e73fa254dba24badeec296b6df605e351abb85ef7",
+                "md5": "4d7b37fd028bdda8d63e253902a7ea6e"
+              },
+              "start": 831,
+              "end": 1486,
+              "offset_unit": "Unicode code points in LF-normalized PDFium page text; end exclusive",
+              "quote": "For embedding the sample into a cleared gel, we use a Teflon mold (inside: W22 x \nD30 x H15 mm) of which the bottom is sealed with parafilm. Pre-heat the mold on a \ntemperature-controlled plate (JUJI Field, LABOPAD C (COOL/HEAT), used with a \ncustom-made black metal plate) at 45°C during step 6. Then, to make the bottom \nlayer (approximately 2 mm thick), pour 2.5 mL of the agar solution into the pre-heated \nmold. Carefully remove bubbles at the surface of the gel by using a micropipette (the \ncustom-made black metal plate and a strong light illumination help detect such small \nbubbles). The remaining gels should be kept in the water bath at 65°C.\n",
+              "quote_sha256": "dc404b9a513e9bbfb216c6a259da34b659ca9552b01c9d3ac3cf48172d4f299e"
+            }
+          ],
+          "optional_in_author_protocol": false,
+          "included_in_clearing_candidate": true,
+          "required_for_selected_scope": true,
+          "source_workflow_step_id": "CUBHV20-RI-07",
+          "display_edits": [
+            "Qualify the cross-reference as original source RI numbering, not candidate numbering."
+          ],
+          "required": true,
+          "required_scope": "Coverage of this selected author-reported developmental branch, not independently established biological necessity.",
+          "source_anchor": "supplement physical p37 text [831:1486)"
+        },
+        {
+          "step_id": "CUBHV20-CLEAR-14",
+          "source_group": "RI",
+          "source_number": 8,
+          "module": "ri_matching_embedding_storage",
+          "text": "Cool the plate for gelation for 15 min at 4°C. Then, warm the plate again for 5 min at 45°C.",
+          "source_spans": [
+            {
+              "pdf": {
+                "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\reference_recovery\\cubic_hv_2020\\official_attachments\\41467_2020_15906_MOESM1_ESM.pdf",
+                "bytes": 45550044,
+                "sha256": "0a563518a57a643639de9ae08803675d86e4d4f18698baa817f9b88c3a91de09",
+                "md5": "c8bbc10a74792c021b2ce1697cf86327"
+              },
+              "pdf_page_one_based": 37,
+              "text": {
+                "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\reference_recovery\\cubic_hv_2020\\source_pages\\supp_p37.txt",
+                "bytes": 2471,
+                "sha256": "36bd579bca7a18b5f938e83e73fa254dba24badeec296b6df605e351abb85ef7",
+                "md5": "4d7b37fd028bdda8d63e253902a7ea6e"
+              },
+              "start": 1489,
+              "end": 1583,
+              "offset_unit": "Unicode code points in LF-normalized PDFium page text; end exclusive",
+              "quote": "Cool the plate for gelation for 15 min at 4°C. Then, warm the plate again for 5 min at \n45°C.\n",
+              "quote_sha256": "69d33c5e26eb216d0d6ba7d20e1fb669040ff66801d4145b7450679b57a25047"
+            }
+          ],
+          "optional_in_author_protocol": false,
+          "included_in_clearing_candidate": true,
+          "required_for_selected_scope": true,
+          "source_workflow_step_id": "CUBHV20-RI-08",
+          "display_edits": [],
+          "required": true,
+          "required_scope": "Coverage of this selected author-reported developmental branch, not independently established biological necessity.",
+          "source_anchor": "supplement physical p37 text [1489:1583)"
+        },
+        {
+          "step_id": "CUBHV20-CLEAR-15",
+          "source_group": "RI",
+          "source_number": 9,
+          "module": "ri_matching_embedding_storage",
+          "text": "Take out the RI-matched brain from the CUBIC-R+(N) and put it on a pre-heated (45°C) petri dish. Coat the brain with 1.5 mL of the agar solution.",
+          "source_spans": [
+            {
+              "pdf": {
+                "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\reference_recovery\\cubic_hv_2020\\official_attachments\\41467_2020_15906_MOESM1_ESM.pdf",
+                "bytes": 45550044,
+                "sha256": "0a563518a57a643639de9ae08803675d86e4d4f18698baa817f9b88c3a91de09",
+                "md5": "c8bbc10a74792c021b2ce1697cf86327"
+              },
+              "pdf_page_one_based": 37,
+              "text": {
+                "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\reference_recovery\\cubic_hv_2020\\source_pages\\supp_p37.txt",
+                "bytes": 2471,
+                "sha256": "36bd579bca7a18b5f938e83e73fa254dba24badeec296b6df605e351abb85ef7",
+                "md5": "4d7b37fd028bdda8d63e253902a7ea6e"
+              },
+              "start": 1586,
+              "end": 1730,
+              "offset_unit": "Unicode code points in LF-normalized PDFium page text; end exclusive",
+              "quote": "Take out the RI-matched brain from the CUBIC-R+ and put it on a pre-heated (45°C) \npetri dish. Coat the brain with 1.5 mL of the agar solution.\n",
+              "quote_sha256": "4f3e37b80ddf2f7c6047270d738560c5dde9af54e3a7ec0726445e52abdafa9b"
+            }
+          ],
+          "optional_in_author_protocol": false,
+          "included_in_clearing_candidate": true,
+          "required_for_selected_scope": true,
+          "source_workflow_step_id": "CUBHV20-RI-09",
+          "display_edits": [
+            "Specialize the author-listed RI reagent option to CUBIC-R+(N)."
+          ],
+          "required": true,
+          "required_scope": "Coverage of this selected author-reported developmental branch, not independently established biological necessity.",
+          "source_anchor": "supplement physical p37 text [1586:1730)"
+        },
+        {
+          "step_id": "CUBHV20-CLEAR-16",
+          "source_group": "RI",
+          "source_number": 10,
+          "module": "ri_matching_embedding_storage",
+          "text": "Put the brain sample on the bottom layer of the gel so that the ventral side comes to the bottom. Pour the agar solution into the mold to almost cover the sample*. Remove bubbles by using a micropipette. The remaining gels should be kept in the water bath at 65°C. *An excess volume may cause the sample to float.",
+          "source_spans": [
+            {
+              "pdf": {
+                "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\reference_recovery\\cubic_hv_2020\\official_attachments\\41467_2020_15906_MOESM1_ESM.pdf",
+                "bytes": 45550044,
+                "sha256": "0a563518a57a643639de9ae08803675d86e4d4f18698baa817f9b88c3a91de09",
+                "md5": "c8bbc10a74792c021b2ce1697cf86327"
+              },
+              "pdf_page_one_based": 37,
+              "text": {
+                "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\reference_recovery\\cubic_hv_2020\\source_pages\\supp_p37.txt",
+                "bytes": 2471,
+                "sha256": "36bd579bca7a18b5f938e83e73fa254dba24badeec296b6df605e351abb85ef7",
+                "md5": "4d7b37fd028bdda8d63e253902a7ea6e"
+              },
+              "start": 1734,
+              "end": 2050,
+              "offset_unit": "Unicode code points in LF-normalized PDFium page text; end exclusive",
+              "quote": "Put the brain sample on the bottom layer of the gel so that the ventral side comes \nto the bottom. Pour the agar solution into the mold to almost cover the sample*.\nRemove bubbles by using a micropipette. The remaining gels should be kept in the \nwater bath at 65°C.\n*An excess volume may cause the sample to float.\n",
+              "quote_sha256": "3402dec79dbade57e7d8aac7d6ae1bc31f0f530e1437787163a3c0a3cbfbc70a"
+            }
+          ],
+          "optional_in_author_protocol": false,
+          "included_in_clearing_candidate": true,
+          "required_for_selected_scope": true,
+          "source_workflow_step_id": "CUBHV20-RI-10",
+          "display_edits": [],
+          "required": true,
+          "required_scope": "Coverage of this selected author-reported developmental branch, not independently established biological necessity.",
+          "source_anchor": "supplement physical p37 text [1734:2050)"
+        },
+        {
+          "step_id": "CUBHV20-CLEAR-17",
+          "source_group": "RI",
+          "source_number": 11,
+          "module": "ri_matching_embedding_storage",
+          "text": "Cool the plate for gelation for 30 min at 4°C. Then, warm the plate again for 5 min at 45°C.",
+          "source_spans": [
+            {
+              "pdf": {
+                "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\reference_recovery\\cubic_hv_2020\\official_attachments\\41467_2020_15906_MOESM1_ESM.pdf",
+                "bytes": 45550044,
+                "sha256": "0a563518a57a643639de9ae08803675d86e4d4f18698baa817f9b88c3a91de09",
+                "md5": "c8bbc10a74792c021b2ce1697cf86327"
+              },
+              "pdf_page_one_based": 37,
+              "text": {
+                "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\reference_recovery\\cubic_hv_2020\\source_pages\\supp_p37.txt",
+                "bytes": 2471,
+                "sha256": "36bd579bca7a18b5f938e83e73fa254dba24badeec296b6df605e351abb85ef7",
+                "md5": "4d7b37fd028bdda8d63e253902a7ea6e"
+              },
+              "start": 2054,
+              "end": 2148,
+              "offset_unit": "Unicode code points in LF-normalized PDFium page text; end exclusive",
+              "quote": "Cool the plate for gelation for 30 min at 4°C. Then, warm the plate again for 5 min \nat 45°C.\n",
+              "quote_sha256": "6b9e13a3e5cefcce6a66b9861e3c20a9231a3bcba99c618959ba8f0b2ef27582"
+            }
+          ],
+          "optional_in_author_protocol": false,
+          "included_in_clearing_candidate": true,
+          "required_for_selected_scope": true,
+          "source_workflow_step_id": "CUBHV20-RI-11",
+          "display_edits": [],
+          "required": true,
+          "required_scope": "Coverage of this selected author-reported developmental branch, not independently established biological necessity.",
+          "source_anchor": "supplement physical p37 text [2054:2148)"
+        },
+        {
+          "step_id": "CUBHV20-CLEAR-18",
+          "source_group": "RI",
+          "source_number": 12,
+          "module": "ri_matching_embedding_storage",
+          "text": "Pour a bit excess volume of the agar solution to make the top layer. Remove bubbles by using a micropipette. Then, seal the top layer of gel with a glass slide. Avoid making bubbles between the top layer of the gel and the glass slide.",
+          "source_spans": [
+            {
+              "pdf": {
+                "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\reference_recovery\\cubic_hv_2020\\official_attachments\\41467_2020_15906_MOESM1_ESM.pdf",
+                "bytes": 45550044,
+                "sha256": "0a563518a57a643639de9ae08803675d86e4d4f18698baa817f9b88c3a91de09",
+                "md5": "c8bbc10a74792c021b2ce1697cf86327"
+              },
+              "pdf_page_one_based": 37,
+              "text": {
+                "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\reference_recovery\\cubic_hv_2020\\source_pages\\supp_p37.txt",
+                "bytes": 2471,
+                "sha256": "36bd579bca7a18b5f938e83e73fa254dba24badeec296b6df605e351abb85ef7",
+                "md5": "4d7b37fd028bdda8d63e253902a7ea6e"
+              },
+              "start": 2152,
+              "end": 2390,
+              "offset_unit": "Unicode code points in LF-normalized PDFium page text; end exclusive",
+              "quote": "Pour a bit excess volume of the agar solution to make the top layer. Remove \nbubbles by using a micropipette. Then, seal the top layer of gel with a glass slide. \nAvoid making bubbles between the top layer of the gel and the glass slide.\n",
+              "quote_sha256": "a9630f88d5ebcdf680e5d87929b6509fac1e47e09428678c2ce5e86e3557f946"
+            }
+          ],
+          "optional_in_author_protocol": false,
+          "included_in_clearing_candidate": true,
+          "required_for_selected_scope": true,
+          "source_workflow_step_id": "CUBHV20-RI-12",
+          "display_edits": [],
+          "required": true,
+          "required_scope": "Coverage of this selected author-reported developmental branch, not independently established biological necessity.",
+          "source_anchor": "supplement physical p37 text [2152:2390)"
+        },
+        {
+          "step_id": "CUBHV20-CLEAR-19",
+          "source_group": "RI",
+          "source_number": 13,
+          "module": "ri_matching_embedding_storage",
+          "text": "Maintain the gel at 4°C for the complete gelation for about 1 h.",
+          "source_spans": [
+            {
+              "pdf": {
+                "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\reference_recovery\\cubic_hv_2020\\official_attachments\\41467_2020_15906_MOESM1_ESM.pdf",
+                "bytes": 45550044,
+                "sha256": "0a563518a57a643639de9ae08803675d86e4d4f18698baa817f9b88c3a91de09",
+                "md5": "c8bbc10a74792c021b2ce1697cf86327"
+              },
+              "pdf_page_one_based": 37,
+              "text": {
+                "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\reference_recovery\\cubic_hv_2020\\source_pages\\supp_p37.txt",
+                "bytes": 2471,
+                "sha256": "36bd579bca7a18b5f938e83e73fa254dba24badeec296b6df605e351abb85ef7",
+                "md5": "4d7b37fd028bdda8d63e253902a7ea6e"
+              },
+              "start": 2394,
+              "end": 2458,
+              "offset_unit": "Unicode code points in LF-normalized PDFium page text; end exclusive",
+              "quote": "Maintain the gel at 4°C for the complete gelation for about 1 h.",
+              "quote_sha256": "8fea083583a81390889a9403bc0b12dbdd1d4d3fb0c73a4b466badb67380b209"
+            }
+          ],
+          "optional_in_author_protocol": false,
+          "included_in_clearing_candidate": true,
+          "required_for_selected_scope": true,
+          "source_workflow_step_id": "CUBHV20-RI-13",
+          "display_edits": [],
+          "required": true,
+          "required_scope": "Coverage of this selected author-reported developmental branch, not independently established biological necessity.",
+          "source_anchor": "supplement physical p37 text [2394:2458)"
+        },
+        {
+          "step_id": "CUBHV20-CLEAR-20",
+          "source_group": "RI",
+          "source_number": 14,
+          "module": "ri_matching_embedding_storage",
+          "text": "Unmold the sample-embedding gel at room temperature and immerse it in fresh CUBIC-R+(N) solution. Store it in the light-shielding container.",
+          "source_spans": [
+            {
+              "pdf": {
+                "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\reference_recovery\\cubic_hv_2020\\official_attachments\\41467_2020_15906_MOESM1_ESM.pdf",
+                "bytes": 45550044,
+                "sha256": "0a563518a57a643639de9ae08803675d86e4d4f18698baa817f9b88c3a91de09",
+                "md5": "c8bbc10a74792c021b2ce1697cf86327"
+              },
+              "pdf_page_one_based": 38,
+              "text": {
+                "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\reference_recovery\\cubic_hv_2020\\source_pages\\supp_p38.txt",
+                "bytes": 142,
+                "sha256": "130d8231d44dcbd6fa5de92dbf7df60cb5b6503060ee2ca6209e41aef8b3ca77",
+                "md5": "2a315f84f56cc99ce5e37d3e5c4b9b31"
+              },
+              "start": 4,
+              "end": 142,
+              "offset_unit": "Unicode code points in LF-normalized PDFium page text; end exclusive",
+              "quote": "Unmold the sample-embedding gel at room temperature and immerse it in fresh \nCUBIC-R+ solution. Store it in the light-shielding container.",
+              "quote_sha256": "9f6f49adbd5840c8d1014c32900b91715b81b211f2f289ff16af4ddd7ad73837"
+            }
+          ],
+          "optional_in_author_protocol": false,
+          "included_in_clearing_candidate": true,
+          "required_for_selected_scope": true,
+          "source_workflow_step_id": "CUBHV20-RI-14",
+          "display_edits": [
+            "Specialize the author-listed RI reagent option to CUBIC-R+(N)."
+          ],
+          "required": true,
+          "required_scope": "Coverage of this selected author-reported developmental branch, not independently established biological necessity.",
+          "source_anchor": "supplement physical p38 text [4:142)"
+        }
+      ],
+      "task_scope": "Fixed/post-fixed adult whole mouse brain: author-supported washing, delipidation, post-label preparation, RI matching, gel embedding and final storage.",
+      "source_status": "source_extracted",
+      "expert_confirmed": false,
+      "formal_eligible": false,
+      "status": "source_extracted",
+      "family_id": "CUBIC_HV_SUSAKI_2020",
+      "doi": "10.1038/s41467-020-15906-5",
+      "source_path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\reference_recovery\\cubic_hv_2020\\official_attachments\\41467_2020_15906_MOESM1_ESM.pdf",
+      "source_sha256": "0a563518a57a643639de9ae08803675d86e4d4f18698baa817f9b88c3a91de09",
+      "source_url": "https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41467-020-15906-5/MediaObjects/41467_2020_15906_MOESM1_ESM.pdf",
+      "source_pages": [
+        31,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38
+      ],
+      "evidence_manifest_path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\reference_recovery\\cubic_hv_2020\\source_manifest.json",
+      "conditional_scope_complete": true,
+      "fully_parameterized": false,
+      "initial_sample_state": "Adult intact mouse brain, fixed and post-fixed; collection-stage PBS wash remains to be performed.",
+      "branch_choices": {
+        "detailed_version": "Supplementary Methods CUBIC-HistoVIsion version 1.0",
+        "optional_half_strength_delipidation": "omitted as explicitly allowed by the author",
+        "post_delipidation_wash": "the first author alternative: 2 h × 3",
+        "ri_formulation": "CUBIC-R+(N), one author-listed formulation; not asserted to be the exact Fig. 8b formulation"
+      },
+      "display_text_normalization": "Whitespace folded, original source numbering removed; generic CUBIC-R+ explicitly specialized to the author-listed N formulation. Source-workflow quotations remain verbatim.",
+      "ri_group_scope": {
+        "author_numbered_operations": 13,
+        "includes_initial_ri_operations": [
+          1,
+          2
+        ],
+        "gel_preparation_embedding_and_final_storage_start_at_source_number": 3,
+        "universality": "This is the selected author imaging-preparation branch; no claim that every CUBIC-HV application requires every embedding operation."
+      },
+      "intervening_condition": {
+        "after_candidate_step": "CUBHV20-CLEAR-03",
+        "before_candidate_step": "CUBHV20-CLEAR-04",
+        "meaning": "An appropriate labeling branch, including its applicable nuclear/enzyme/immunostaining choices, must occur after delipidation and before post-label washes.",
+        "already_labeled_at_initial_state": false,
+        "included_in_candidate_denominator": false,
+        "functional_compatibility_confirmed": false
+      },
+      "not_claimed": [
+        "A 5XFAD-specific double-amyloid protocol",
+        "Congo red or 4G8 compatibility",
+        "Equivalence of SYTOX-G/SMA to a second amyloid marker",
+        "Preservation of any task-specific native fluorophore",
+        "A qualified alternative-route experiment"
+      ],
+      "unknowns": [
+        {
+          "field": "final_storage_duration",
+          "value": null,
+          "reason": "Not reported in final storage step; not unlimited stability evidence."
+        },
+        {
+          "field": "final_storage_temperature",
+          "value": null,
+          "reason": "Room temperature modifies unmolding; the next storage sentence gives no temperature."
+        },
+        {
+          "field": "general_candidate_antibody_identity_and_duration",
+          "value": null,
+          "reason": "The intervening labeling branch is an explicit external condition and is not selected by this clearing-only candidate."
+        },
+        {
+          "field": "post_label_wash_temperature_numeric",
+          "value": null,
+          "reason": "Source says the incubation/staining temperature; no antibody branch is bound."
+        },
+        {
+          "field": "delipidation_reagent_refresh_frequency",
+          "value": null,
+          "reason": "The selected generic supplement paragraph does not supply an exchange frequency."
+        },
+        {
+          "field": "total_protocol_hours",
+          "value": null,
+          "reason": "Unknown durations and the unselected labeling interval prevent an exact end-to-end total."
+        }
+      ],
+      "source_files": [
+        {
+          "path": "C:\\ClearEval\\literature\\tissue_optical_clearing\\pdf\\040_TOC_43686fb63cfa_2020_Versatile_whole_organ_body_staining_and_imaging_based_on_electrolyte_gel_propert.pdf",
+          "bytes": 31374812,
+          "sha256": "d531210c1b629c38fe760e9e1de54a6f51da324f9a26d985e57c2e1ccd03b094",
+          "md5": "d3687fa8f3da13df0ee224a3ceff400f"
+        },
+        {
+          "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\reference_recovery\\cubic_hv_2020\\official_attachments\\41467_2020_15906_MOESM1_ESM.pdf",
+          "bytes": 45550044,
+          "sha256": "0a563518a57a643639de9ae08803675d86e4d4f18698baa817f9b88c3a91de09",
+          "md5": "c8bbc10a74792c021b2ce1697cf86327"
+        },
+        {
+          "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\reference_recovery\\cubic_hv_2020\\official_attachments\\41467_2020_15906_MOESM4_ESM.xlsx",
+          "bytes": 18807,
+          "sha256": "aa4a960cc3ff336f840fd47f1f0348a3bc9121f38383b3ef9919474bc926923c",
+          "md5": "e47c51aba1914f58dfe016816ffa939a"
+        },
+        {
+          "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\reference_recovery\\cubic_hv_2020\\official_attachments\\41467_2020_15906_MOESM5_ESM.xlsx",
+          "bytes": 17056,
+          "sha256": "f5e09d027ad22143cb533d0a3c60abb5ccb252efbf2685c2072358a68ecf0640",
+          "md5": "e2a24e134d57c6d88f77d4952fa50735"
+        }
+      ],
+      "reagent_definitions": {
+        "CUBIC-L": {
+          "source": {
+            "pdf": {
+              "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\reference_recovery\\cubic_hv_2020\\official_attachments\\41467_2020_15906_MOESM1_ESM.pdf",
+              "bytes": 45550044,
+              "sha256": "0a563518a57a643639de9ae08803675d86e4d4f18698baa817f9b88c3a91de09",
+              "md5": "c8bbc10a74792c021b2ce1697cf86327"
+            },
+            "pdf_page_one_based": 31,
+            "text": {
+              "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\reference_recovery\\cubic_hv_2020\\source_pages\\supp_p31.txt",
+              "bytes": 1211,
+              "sha256": "ae94b2329ad971d0147bfdc550c9968c5cea6dacaf36d51dda8075fe12cab086",
+              "md5": "e46134627862d1fa698a9d06b1dc0f0b"
+            },
+            "start": 260,
+            "end": 373,
+            "offset_unit": "Unicode code points in LF-normalized PDFium page text; end exclusive",
+            "quote": "CUBIC-L\n10 wt% N-Butyldiethanolamine (TCI #B0725)\n10 wt% Triton X-100 (nacalai tesque #12967-45)\nDissolve in DDW\n",
+            "quote_sha256": "9de3d4bafe0016245397c403426364453ae9006795ed72867ed6b006b220ac5e"
+          },
+          "selected_composition": "10 wt% N-butyldiethanolamine and 10 wt% Triton X-100 in water"
+        },
+        "PBT_and_postfix": {
+          "source": {
+            "pdf": {
+              "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\reference_recovery\\cubic_hv_2020\\official_attachments\\41467_2020_15906_MOESM1_ESM.pdf",
+              "bytes": 45550044,
+              "sha256": "0a563518a57a643639de9ae08803675d86e4d4f18698baa817f9b88c3a91de09",
+              "md5": "c8bbc10a74792c021b2ce1697cf86327"
+            },
+            "pdf_page_one_based": 33,
+            "text": {
+              "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\reference_recovery\\cubic_hv_2020\\source_pages\\supp_p33.txt",
+              "bytes": 1003,
+              "sha256": "032247ddf89bc2e504f3ae4e26334ba3a2e9dc5685339dd692991b8bde863d1e",
+              "md5": "36c30119a663746fdd429b11b6b4528b"
+            },
+            "start": 591,
+            "end": 810,
+            "offset_unit": "Unicode code points in LF-normalized PDFium page text; end exclusive",
+            "quote": "0.1 M PBT\n0.1 M PB (pH 7.5)\n10%(v/v) Triton X-100\n0.05% NaN3\nDissolve in DDW\n1% Formaldehyde (FA)\n0.1 M PB (pH 7.5)\n1% Formaldehyde (nacalai tesque #16222-65, 37% saturated formaldehyde)\nDilute 1:37 formaldehyde in PB.\n",
+            "quote_sha256": "073ec3b27ddfd45debcbe02619971400da58fa41f57f33ebfe7ffd878ea63446"
+          }
+        },
+        "CUBIC-R+(N)": {
+          "source": {
+            "pdf": {
+              "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\reference_recovery\\cubic_hv_2020\\official_attachments\\41467_2020_15906_MOESM1_ESM.pdf",
+              "bytes": 45550044,
+              "sha256": "0a563518a57a643639de9ae08803675d86e4d4f18698baa817f9b88c3a91de09",
+              "md5": "c8bbc10a74792c021b2ce1697cf86327"
+            },
+            "pdf_page_one_based": 33,
+            "text": {
+              "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\reference_recovery\\cubic_hv_2020\\source_pages\\supp_p33.txt",
+              "bytes": 1003,
+              "sha256": "032247ddf89bc2e504f3ae4e26334ba3a2e9dc5685339dd692991b8bde863d1e",
+              "md5": "36c30119a663746fdd429b11b6b4528b"
+            },
+            "start": 810,
+            "end": 1003,
+            "offset_unit": "Unicode code points in LF-normalized PDFium page text; end exclusive",
+            "quote": "CUBIC-R+\n45 wt% 2,3-Dimethyl-1-phenyl-5-pyrazolone (Antipyrine, TCI #D1876)\n30 wt% Nicotinamide (TCI #N0078) or N-Methylnicotinamide (TCI #M0374)\n0.5%(v/v) N-Butyldiethanolamine\nDissolve in DDW",
+            "quote_sha256": "0386a054537bab3754a2522d2e152cd57cfbdb76846e8927006d01d6e126925b"
+          },
+          "selected_composition": "45 wt% antipyrine, 30 wt% nicotinamide, 0.5% (v/v) N-butyldiethanolamine in water",
+          "alternative_not_selected": "N-methylnicotinamide option, CUBIC-R+(M)"
+        }
+      },
+      "source_family_id": "CUBIC_HV_SUSAKI_2020",
+      "construction_source": "author step-by-step supplement, not a protocol assembled from model answers",
+      "method_family_id": "CUBIC",
+      "method_family_name": "CUBIC method family",
+      "method_family_aliases": [
+        "CUBIC"
+      ],
+      "authored_method_id": "CUBIC-HV",
+      "version_id": "CUBIC_HV_2020_SUPPLEMENT_VERSION_1_0_N_GEL",
+      "protocol_version": "Susaki2020 Supplementary Methods CUBIC-HistoVIsion version1.0, author N-formulation gel/storage branch",
+      "version_aliases": [
+        "CUBIC-HV",
+        "CUBIC HistoVIsion",
+        "CUBIC-HistoVIsion",
+        "CUBIC-HistoVIsion1.0",
+        "CUBIC-HistoVIsion 1.0",
+        "CUBIC-HV 2020"
+      ],
+      "true_multiversion_group": null,
+      "complete_authored_versions_in_this_family_package": 1,
+      "task_scope_bindings": [
+        {
+          "question_id": 1,
+          "scope_status": "conditional_whole_brain_author_branch_operation_coverage",
+          "allowed_for_new_conditional_step_diagnostic": true,
+          "source_task_applicability_confirmed": false,
+          "formal_eligible": false,
+          "full20_author_operations_retained": true,
+          "task_specific_parameters_validated": false,
+          "condition": "Appropriate intermediate labeling after delipidation is unselected; full source N-formulation/gel branch is a candidate, not a requirement proved for every CUBIC application.",
+          "unknowns": [
+            "Exact task specimen/3 mm schedule where applicable",
+            "Task-specific native signal and marker compatibility",
+            "Required task storage outcomes",
+            "Whether this imaging-preparation gel branch is actually appropriate for the requested implementation"
+          ]
+        },
+        {
+          "question_id": 2,
+          "scope_status": "conditional_whole_brain_author_branch_operation_coverage",
+          "allowed_for_new_conditional_step_diagnostic": true,
+          "source_task_applicability_confirmed": false,
+          "formal_eligible": false,
+          "full20_author_operations_retained": true,
+          "task_specific_parameters_validated": false,
+          "condition": "Appropriate intermediate labeling after delipidation is unselected; full source N-formulation/gel branch is a candidate, not a requirement proved for every CUBIC application.",
+          "unknowns": [
+            "Exact task specimen/3 mm schedule where applicable",
+            "Task-specific native signal and marker compatibility",
+            "Required task storage outcomes",
+            "Whether this imaging-preparation gel branch is actually appropriate for the requested implementation"
+          ]
+        },
+        {
+          "question_id": 21,
+          "scope_status": "conditional_brain_block_author_branch_operation_diagnostic_size_unverified",
+          "allowed_for_new_conditional_step_diagnostic": true,
+          "source_task_applicability_confirmed": false,
+          "formal_eligible": false,
+          "full20_author_operations_retained": true,
+          "task_specific_parameters_validated": false,
+          "condition": "Appropriate intermediate labeling after delipidation is unselected; full source N-formulation/gel branch is a candidate, not a requirement proved for every CUBIC application.",
+          "unknowns": [
+            "Exact task specimen/3 mm schedule where applicable",
+            "Task-specific native signal and marker compatibility",
+            "Required task storage outcomes",
+            "Whether this imaging-preparation gel branch is actually appropriate for the requested implementation"
+          ]
+        },
+        {
+          "question_id": 22,
+          "scope_status": "conditional_brain_block_author_branch_operation_diagnostic_size_unverified",
+          "allowed_for_new_conditional_step_diagnostic": true,
+          "source_task_applicability_confirmed": false,
+          "formal_eligible": false,
+          "full20_author_operations_retained": true,
+          "task_specific_parameters_validated": false,
+          "condition": "Appropriate intermediate labeling after delipidation is unselected; full source N-formulation/gel branch is a candidate, not a requirement proved for every CUBIC application.",
+          "unknowns": [
+            "Exact task specimen/3 mm schedule where applicable",
+            "Task-specific native signal and marker compatibility",
+            "Required task storage outcomes",
+            "Whether this imaging-preparation gel branch is actually appropriate for the requested implementation"
+          ]
+        },
+        {
+          "question_id": 23,
+          "scope_status": "conditional_brain_block_author_branch_operation_diagnostic_size_unverified",
+          "allowed_for_new_conditional_step_diagnostic": true,
+          "source_task_applicability_confirmed": false,
+          "formal_eligible": false,
+          "full20_author_operations_retained": true,
+          "task_specific_parameters_validated": false,
+          "condition": "Appropriate intermediate labeling after delipidation is unselected; full source N-formulation/gel branch is a candidate, not a requirement proved for every CUBIC application.",
+          "unknowns": [
+            "Exact task specimen/3 mm schedule where applicable",
+            "Task-specific native signal and marker compatibility",
+            "Required task storage outcomes",
+            "Whether this imaging-preparation gel branch is actually appropriate for the requested implementation"
+          ]
+        },
+        {
+          "question_id": 248,
+          "scope_status": "route_only_native_reporter_task_fit_unconfirmed",
+          "allowed_for_new_conditional_step_diagnostic": true,
+          "source_task_applicability_confirmed": false,
+          "formal_eligible": false,
+          "full20_author_operations_retained": true,
+          "task_specific_parameters_validated": false,
+          "condition": "Appropriate intermediate labeling after delipidation is unselected; full source N-formulation/gel branch is a candidate, not a requirement proved for every CUBIC application.",
+          "unknowns": [
+            "Exact task specimen/3 mm schedule where applicable",
+            "Task-specific native signal and marker compatibility",
+            "Required task storage outcomes",
+            "Whether this imaging-preparation gel branch is actually appropriate for the requested implementation"
+          ]
+        }
+      ],
+      "source_candidate_selection_interpretation": "candidate_CUBIC_HV2020_for_unspecified_CUBIC_family; not a claim that the answer actually selected HistoVIsion or these task parameters.",
+      "full_action_scope": {
+        "scope_id": "CUBIC_HV_2020_FIXED_BRAIN_FULL_CLEAR_RI_GEL_STORAGE",
+        "start": "Adult intact mouse brain, fixed and post-fixed; collection-stage PBS wash remains to be performed.",
+        "end": "Complete selected author terminal gel embedding and storage branch.",
+        "scope_completeness": "All20 operations of the independently reviewed source candidate retained without editing or truncation.",
+        "intervening_condition": {
+          "after_candidate_step": "CUBHV20-CLEAR-03",
+          "before_candidate_step": "CUBHV20-CLEAR-04",
+          "meaning": "An appropriate labeling branch, including its applicable nuclear/enzyme/immunostaining choices, must occur after delipidation and before post-label washes.",
+          "already_labeled_at_initial_state": false,
+          "included_in_candidate_denominator": false,
+          "functional_compatibility_confirmed": false
+        },
+        "optional_gel_branch_issue": "Gel preparation/embedding is part of this complete author branch, not established as universal to CUBIC or necessary for every task. Do not truncate the branch to optimize SR.",
+        "excluded_modules": [
+          "Initial fixation already completed by the tasks",
+          "Unselected intermediate marker/labeling procedure, retained as prerequisite",
+          "Optional author enzyme/half-strength delipidation branches",
+          "Vector engineering or delivery"
+        ]
+      },
+      "human_confirmation": null,
+      "explicit_version_priority": true,
+      "version_selection_rule": "Generic CUBIC without an identified version may use this conditional family candidate; explicit unmatched versions remain NA. Source-specific wrong or invented reagent/time labels are not by themselves version selectors.",
+      "known_unmatched_versions": [
+        "CUBIC2014",
+        "CUBIC2015",
+        "CUBIC protocol using the named paired CUBIC-1/CUBIC-2 legacy reagents"
+      ],
+      "legacy_pair_identity_rule": "A clearly named CUBIC-1 AND CUBIC-2 (or Reagent1 AND Reagent2) protocol pair is a legacy branch identity. An isolated number or arbitrary R1/R2, L1-L3, D1-D4, B/P/W label is not automatically this version. Keep the original declaration and a precise version-evidence tag.",
+      "reuse": {
+        "parent_reference_id": "CUBIC_HV_2020_SUPP_V1_ADULT_WHOLE_BRAIN_CLEAR_RN",
+        "parent_path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\reference_recovery\\cubic_hv_2020\\candidate.json",
+        "parent_sha256": "4b2e37bc92f3332f8b2b19a2ce001093d95f0f79e17939a9716c8ea8cdd42b5b",
+        "steps_copied_without_change": true,
+        "new_authored_protocol_constructed": false
+      },
+      "old_main_scoring_unchanged": true,
+      "comparison_method_id": "CUBIC"
+    }
+  ],
+  "formal_eligible": false,
+  "expert_confirmation": null,
+  "generator_model": "openai_qwen3-max",
+  "original_answer_id": "openai_qwen3-max__q23",
+  "answer_source": "C:\\ClearEval\\ClearEval-public\\dataset\\Q+AR\\model_response\\from_openai_qwen3-max_1-shot.json",
+  "source_family": "frozen_method_family_conditional_reference_pool",
+  "reference_status": "source_extracted_conditional_task_applicability_not_expert_confirmed",
+  "scope": "round3_prospective_answer_level_confirmation_on_exposed_tasks_and_source_families",
+  "forbid_development_use": true
+}

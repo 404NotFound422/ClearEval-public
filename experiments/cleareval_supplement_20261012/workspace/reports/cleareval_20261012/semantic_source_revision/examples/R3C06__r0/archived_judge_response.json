@@ -1,0 +1,456 @@
+{
+  "scores": {
+    "completeness": {
+      "c_step": {
+        "score": 1,
+        "reasoning": "The protocol includes all core functional modules for CUBIC: fixation, permeabilization, immunolabeling (primary/secondary), washing, delipidation (CUBIC-L), and RI matching (CUBIC-R+). However, it omits the specific 'mounting' or 'sealing' step required for long-term storage stability in aqueous methods (e.g., gel embedding or parafilm sealing) to prevent evaporation and contamination, which is a non-fatal but significant omission for a 6-month storage goal."
+      },
+      "c_param": {
+        "score": 3,
+        "reasoning": "The protocol provides detailed parameters for every step, including specific reagent concentrations (e.g., 4% PFA, 10 vol% Triton X-100), temperatures (4°C, 37°C, RT), and precise durations (12 hours, 72 hours, etc.). This level of detail meets the 'Supplementary Material' standard."
+      }
+    },
+    "correctness": {
+      "co_order": {
+        "score": 2,
+        "reasoning": "The general flow (Fixation -> Permeabilization -> Labeling -> Clearing -> RI) is logical. However, the protocol places immunolabeling *before* delipidation (CUBIC-L). Standard CUBIC protocols (e.g., Susaki 2020) typically perform delipidation *before* immunolabeling to ensure better antibody penetration and reduce background, or use specific pre-clearing steps. While labeling before clearing is possible in some variants, it is less optimal for 3mm blocks and deviates from the standard 'sandwich' or pre-clearing SOPs for CUBIC, warranting a deduction for sub-optimal ordering."
+      },
+      "co_method": {
+        "score": 1,
+        "reasoning": "The protocol uses reagents named 'CUBIC-L' and 'CUBIC-R+', but the compositions provided (e.g., CUBIC-L with Quadrol/Urea/Sucrose; CUBIC-R+ with Sucrose/Urea/Triethanolamine) do not match the standard CUBIC formulations (CUBIC-L: N-butyldiethanolamine/Triton; CUBIC-R+: Antipyrine/Nicotinamide). These compositions resemble other aqueous clearing methods (like SeeDB or custom variants) but are mislabeled as CUBIC. This is a mix of compatible aqueous chemistry with incorrect method-specific reagent identities."
+      },
+      "co_param": {
+        "score": 1,
+        "reasoning": "The delipidation time (72h + 48h = 120h total) is shorter than the standard 3-5 days (72-120h) for whole brain, but acceptable for 3mm blocks. However, the RI matching time (24h) is significantly shorter than the standard 3 days for full equilibration in CUBIC-R+, which may lead to incomplete clearing and instability. The parameters are within a plausible range but deviate from standard optimized values for long-term stability."
+      },
+      "co_chem": {
+        "score": 1,
+        "reasoning": "The protocol uses standard aqueous clearing reagents (PFA, Triton, Urea, Sucrose, etc.) and does not introduce dangerous chemicals or operations. Sodium azide is used in blocking, which is standard but requires care; however, it is not an 'active danger' introduced by the protocol design itself in the context of the rubric's 0-score criteria (which target exotic/toxic additions or dangerous operations like heating flammables in closed containers)."
+      }
+    }
+  },
+  "score_evidence": [
+    {
+      "m": "c_param",
+      "u": [
+        "L0006",
+        "L0008",
+        "L0009",
+        "L0011",
+        "L0013",
+        "L0016",
+        "L0018",
+        "L0020",
+        "L0022",
+        "L0023",
+        "L0025",
+        "L0028"
+      ],
+      "b": "observed",
+      "r": "Detailed time, temperature, and concentration provided for all steps."
+    },
+    {
+      "m": "co_order",
+      "u": [
+        "L0006",
+        "L0008",
+        "L0011",
+        "L0022",
+        "L0025"
+      ],
+      "b": "observed",
+      "r": "Labeling (L0011) occurs before Delipidation (L0022), deviating from standard CUBIC pre-clearing SOP."
+    },
+    {
+      "m": "co_method",
+      "u": [
+        "L0022",
+        "L0025"
+      ],
+      "b": "observed",
+      "r": "Reagent compositions for CUBIC-L and CUBIC-R+ do not match standard CUBIC formulations (Antipyrine/Nicotinamide)."
+    },
+    {
+      "m": "co_param",
+      "u": [
+        "L0022",
+        "L0023",
+        "L0025"
+      ],
+      "b": "observed",
+      "r": "Delipidation (120h) and RI (24h) times are shorter than standard whole-brain CUBIC references (3-5 days delipidation, 3 days RI)."
+    },
+    {
+      "m": "co_chem",
+      "u": [
+        "L0006",
+        "L0008",
+        "L0022",
+        "L0025"
+      ],
+      "b": "observed",
+      "r": "Standard aqueous reagents used; no dangerous operations or exotic toxic chemicals introduced."
+    }
+  ],
+  "grounded_extraction": {
+    "schema_version": "source_bound_extraction_v11",
+    "source_id": "SRC_4c9306a9a2141d9acad956b8",
+    "method_mentions": [
+      {
+        "i": "MM01",
+        "n": "CUBIC",
+        "a": 0,
+        "u": "L0001",
+        "s": "selected"
+      },
+      {
+        "i": "MM02",
+        "n": "CUBIC",
+        "a": 0,
+        "u": "L0003",
+        "s": "mentioned"
+      },
+      {
+        "i": "MM03",
+        "n": "iDISCO+",
+        "a": 0,
+        "u": "L0003",
+        "s": "mentioned"
+      },
+      {
+        "i": "MM04",
+        "n": "uDISCO",
+        "a": 0,
+        "u": "L0003",
+        "s": "mentioned"
+      }
+    ],
+    "entities": [
+      {
+        "i": "E01",
+        "n": "GFP",
+        "a": 0,
+        "u": "L0002",
+        "k": "fluorophore",
+        "s": "used"
+      },
+      {
+        "i": "E02",
+        "n": "MAP2",
+        "a": 0,
+        "u": "L0002",
+        "k": "target",
+        "s": "used"
+      },
+      {
+        "i": "E03",
+        "n": "Alexa Fluor 488",
+        "a": 0,
+        "u": "L0002",
+        "k": "fluorophore",
+        "s": "used"
+      },
+      {
+        "i": "E04",
+        "n": "DAPI",
+        "a": 0,
+        "u": "L0002",
+        "k": "fluorophore",
+        "s": "used"
+      },
+      {
+        "i": "E05",
+        "n": "paraformaldehyde",
+        "a": 0,
+        "u": "L0006",
+        "k": "target",
+        "s": "used"
+      },
+      {
+        "i": "E06",
+        "n": "Triton X-100",
+        "a": 0,
+        "u": "L0008",
+        "k": "target",
+        "s": "used"
+      },
+      {
+        "i": "E07",
+        "n": "Tween-20",
+        "a": 0,
+        "u": "L0008",
+        "k": "target",
+        "s": "used"
+      },
+      {
+        "i": "E08",
+        "n": "sucrose",
+        "a": 0,
+        "u": "L0008",
+        "k": "target",
+        "s": "used"
+      },
+      {
+        "i": "E09",
+        "n": "DMSO",
+        "a": 0,
+        "u": "L0009",
+        "k": "target",
+        "s": "used"
+      },
+      {
+        "i": "E10",
+        "n": "normal goat serum",
+        "a": 0,
+        "u": "L0009",
+        "k": "target",
+        "s": "used"
+      },
+      {
+        "i": "E11",
+        "n": "sodium azide",
+        "a": 0,
+        "u": "L0009",
+        "k": "target",
+        "s": "used"
+      },
+      {
+        "i": "E12",
+        "n": "mouse anti-MAP2 primary antibody",
+        "a": 0,
+        "u": "L0011",
+        "k": "target",
+        "s": "used"
+      },
+      {
+        "i": "E13",
+        "n": "goat anti-mouse IgG conjugated to Alexa Fluor 488",
+        "a": 0,
+        "u": "L0016",
+        "k": "target",
+        "s": "used"
+      },
+      {
+        "i": "E14",
+        "n": "Quadrol",
+        "a": 0,
+        "u": "L0022",
+        "k": "target",
+        "s": "used"
+      },
+      {
+        "i": "E15",
+        "n": "urea",
+        "a": 0,
+        "u": "L0022",
+        "k": "target",
+        "s": "used"
+      },
+      {
+        "i": "E16",
+        "n": "triethanolamine",
+        "a": 0,
+        "u": "L0025",
+        "k": "target",
+        "s": "used"
+      }
+    ],
+    "relations": [
+      {
+        "i": "R01",
+        "f": "E03",
+        "e": "L0002",
+        "t": "E02",
+        "s": "explicit",
+        "fo": 0,
+        "to": 0
+      },
+      {
+        "i": "R02",
+        "f": "E01",
+        "e": "L0002",
+        "t": null,
+        "s": "ambiguous",
+        "fo": 0,
+        "to": null
+      }
+    ],
+    "intrinsic_signals": [
+      {
+        "i": "IS01",
+        "e": "E01",
+        "u": "L0002",
+        "s": "source_declared"
+      }
+    ],
+    "operations": [
+      {
+        "i": "OP01",
+        "o": "O0001",
+        "p": "fixation",
+        "d": "D0001",
+        "r": null,
+        "s": "initial",
+        "c": "L0006"
+      },
+      {
+        "i": "OP02",
+        "o": "O0002",
+        "p": "labeling_preparation",
+        "d": "D0002",
+        "r": null,
+        "s": "initial",
+        "c": "L0008"
+      },
+      {
+        "i": "OP03",
+        "o": "O0003",
+        "p": "labeling_preparation",
+        "d": "D0003",
+        "r": null,
+        "s": "initial",
+        "c": "L0009"
+      },
+      {
+        "i": "OP04",
+        "o": "O0004",
+        "p": "labeling_preparation",
+        "d": "D0004",
+        "r": null,
+        "s": "initial",
+        "c": "L0011"
+      },
+      {
+        "i": "OP05",
+        "o": "O0006",
+        "p": "labeling_preparation",
+        "d": "D0005",
+        "r": null,
+        "s": "initial",
+        "c": "L0013"
+      },
+      {
+        "i": "OP06",
+        "o": "L0014",
+        "p": "labeling_preparation",
+        "d": "D0007",
+        "r": null,
+        "s": "initial",
+        "c": "L0014"
+      },
+      {
+        "i": "OP07",
+        "o": "O0007",
+        "p": "labeling_preparation",
+        "d": "D0008",
+        "r": null,
+        "s": "initial",
+        "c": "L0016"
+      },
+      {
+        "i": "OP08",
+        "o": "O0008",
+        "p": "labeling_preparation",
+        "d": "D0009",
+        "r": null,
+        "s": "initial",
+        "c": "L0018"
+      },
+      {
+        "i": "OP09",
+        "o": "O0010",
+        "p": "labeling_preparation",
+        "d": "D0010",
+        "r": null,
+        "s": "initial",
+        "c": "L0020"
+      },
+      {
+        "i": "OP10",
+        "o": "O0011",
+        "p": "clearing_treatment",
+        "d": "D0011",
+        "r": null,
+        "s": "initial",
+        "c": "L0022"
+      },
+      {
+        "i": "OP11",
+        "o": "L0023",
+        "p": "clearing_treatment",
+        "d": "D0012",
+        "r": null,
+        "s": "initial",
+        "c": "L0023"
+      },
+      {
+        "i": "OP12",
+        "o": "O0012",
+        "p": "ri_matching",
+        "d": "D0013",
+        "r": null,
+        "s": "initial",
+        "c": "L0025"
+      },
+      {
+        "i": "OP13",
+        "o": "L0026",
+        "p": "storage",
+        "d": null,
+        "r": null,
+        "s": "initial",
+        "c": "L0026"
+      },
+      {
+        "i": "OP14",
+        "o": "O0013",
+        "p": "imaging",
+        "d": "D0014",
+        "r": null,
+        "s": "initial",
+        "c": "L0028"
+      }
+    ],
+    "timeline": {
+      "m": "serial",
+      "o": [
+        "OP01",
+        "OP02",
+        "OP03",
+        "OP04",
+        "OP05",
+        "OP06",
+        "OP07",
+        "OP08",
+        "OP09",
+        "OP10",
+        "OP11",
+        "OP12",
+        "OP13",
+        "OP14"
+      ],
+      "e": null,
+      "c": "complete"
+    },
+    "precedence_edges": [],
+    "total_time_claims": [],
+    "ri_mentions": [
+      {
+        "i": "RI01",
+        "v": "R0101",
+        "r": "reagent_final"
+      },
+      {
+        "i": "RI02",
+        "v": "R0102",
+        "r": "reagent_final"
+      }
+    ],
+    "coverage": {
+      "e": "complete",
+      "t": "complete",
+      "c": "complete",
+      "u": []
+    }
+  }
+}

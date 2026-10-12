@@ -1,0 +1,69 @@
+{
+  "scope": "exposed development sensitivity, no threshold chosen from outcomes",
+  "primary_threshold_preserved": 0.7,
+  "thresholds": [
+    0.6,
+    0.7,
+    0.8
+  ],
+  "coverage": [
+    {
+      "threshold": 0.6,
+      "answers": 8,
+      "sr_sp_available": 8,
+      "numeric_CCE_with_inherited_branch_points": 5,
+      "unbranched_numeric_CCE": 4,
+      "reference_changes": 0
+    },
+    {
+      "threshold": 0.7,
+      "answers": 8,
+      "sr_sp_available": 8,
+      "numeric_CCE_with_inherited_branch_points": 5,
+      "unbranched_numeric_CCE": 4,
+      "reference_changes": 0
+    },
+    {
+      "threshold": 0.8,
+      "answers": 8,
+      "sr_sp_available": 8,
+      "numeric_CCE_with_inherited_branch_points": 5,
+      "unbranched_numeric_CCE": 4,
+      "reference_changes": 3
+    }
+  ],
+  "actual_confirmation_answers": 8,
+  "controlled_return_rows": 24,
+  "derived_confirmation_settings": 24,
+  "derived_control_settings": 72,
+  "derived_control_pairs": 54,
+  "joint_scenarios": 24,
+  "same_joint_tasks_across_all_settings": [
+    "23",
+    "248"
+  ],
+  "two_generators_nondominated_at_each_threshold": {
+    "0.6": false,
+    "0.7": true,
+    "0.8": true
+  },
+  "HV_delta_range_by_threshold": {
+    "0.6": [
+      -0.08044175645656965,
+      -0.06069034334221046
+    ],
+    "0.7": [
+      -0.003742972793255084,
+      0.012532670321267092
+    ],
+    "0.8": [
+      -0.05902948961740634,
+      -0.04579178951369667
+    ]
+  },
+  "new_model_calls": 0,
+  "new_embeddings": 0,
+  "new_pairwise_similarities": 0,
+  "source_family_blocks": 1,
+  "independent_accuracy_claimed": false
+}

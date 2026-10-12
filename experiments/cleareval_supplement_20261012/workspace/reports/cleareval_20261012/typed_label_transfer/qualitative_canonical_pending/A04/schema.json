@@ -1,0 +1,1248 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "scores",
+    "score_evidence",
+    "grounded_extraction"
+  ],
+  "properties": {
+    "scores": {
+      "type": "object",
+      "required": [
+        "completeness",
+        "correctness"
+      ],
+      "properties": {
+        "completeness": {
+          "type": "object",
+          "required": [
+            "c_step",
+            "c_param"
+          ],
+          "properties": {
+            "c_step": {
+              "type": "object",
+              "required": [
+                "score"
+              ],
+              "properties": {
+                "score": {
+                  "type": [
+                    "number",
+                    "null"
+                  ],
+                  "minimum": 0,
+                  "maximum": 2
+                },
+                "max_score": {},
+                "description": {},
+                "reasoning": {}
+              },
+              "allOf": [
+                {
+                  "if": {
+                    "properties": {
+                      "score": {
+                        "type": "null"
+                      }
+                    }
+                  },
+                  "then": {
+                    "required": [
+                      "reasoning"
+                    ],
+                    "properties": {
+                      "reasoning": {
+                        "type": "string",
+                        "pattern": "\\S"
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            "c_param": {
+              "type": "object",
+              "required": [
+                "score"
+              ],
+              "properties": {
+                "score": {
+                  "type": [
+                    "number",
+                    "null"
+                  ],
+                  "minimum": 0,
+                  "maximum": 3
+                },
+                "max_score": {},
+                "description": {},
+                "reasoning": {}
+              },
+              "allOf": [
+                {
+                  "if": {
+                    "properties": {
+                      "score": {
+                        "type": "null"
+                      }
+                    }
+                  },
+                  "then": {
+                    "required": [
+                      "reasoning"
+                    ],
+                    "properties": {
+                      "reasoning": {
+                        "type": "string",
+                        "pattern": "\\S"
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            "total_weighted_score": {
+              "type": [
+                "number",
+                "null"
+              ],
+              "minimum": 0
+            }
+          }
+        },
+        "correctness": {
+          "type": "object",
+          "required": [
+            "co_order",
+            "co_method",
+            "co_param",
+            "co_chem"
+          ],
+          "properties": {
+            "co_order": {
+              "type": "object",
+              "required": [
+                "score"
+              ],
+              "properties": {
+                "score": {
+                  "type": [
+                    "number",
+                    "null"
+                  ],
+                  "minimum": 0,
+                  "maximum": 3
+                },
+                "max_score": {},
+                "description": {},
+                "reasoning": {}
+              },
+              "allOf": [
+                {
+                  "if": {
+                    "properties": {
+                      "score": {
+                        "type": "null"
+                      }
+                    }
+                  },
+                  "then": {
+                    "required": [
+                      "reasoning"
+                    ],
+                    "properties": {
+                      "reasoning": {
+                        "type": "string",
+                        "pattern": "\\S"
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            "co_method": {
+              "type": "object",
+              "required": [
+                "score"
+              ],
+              "properties": {
+                "score": {
+                  "type": [
+                    "number",
+                    "null"
+                  ],
+                  "minimum": 0,
+                  "maximum": 2
+                },
+                "max_score": {},
+                "description": {},
+                "reasoning": {}
+              },
+              "allOf": [
+                {
+                  "if": {
+                    "properties": {
+                      "score": {
+                        "type": "null"
+                      }
+                    }
+                  },
+                  "then": {
+                    "required": [
+                      "reasoning"
+                    ],
+                    "properties": {
+                      "reasoning": {
+                        "type": "string",
+                        "pattern": "\\S"
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            "co_param": {
+              "type": "object",
+              "required": [
+                "score"
+              ],
+              "properties": {
+                "score": {
+                  "type": [
+                    "number",
+                    "null"
+                  ],
+                  "minimum": 0,
+                  "maximum": 2
+                },
+                "max_score": {},
+                "description": {},
+                "reasoning": {}
+              },
+              "allOf": [
+                {
+                  "if": {
+                    "properties": {
+                      "score": {
+                        "type": "null"
+                      }
+                    }
+                  },
+                  "then": {
+                    "required": [
+                      "reasoning"
+                    ],
+                    "properties": {
+                      "reasoning": {
+                        "type": "string",
+                        "pattern": "\\S"
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            "co_chem": {
+              "type": "object",
+              "required": [
+                "score"
+              ],
+              "properties": {
+                "score": {
+                  "type": [
+                    "number",
+                    "null"
+                  ],
+                  "minimum": 0,
+                  "maximum": 1
+                },
+                "max_score": {},
+                "description": {},
+                "reasoning": {}
+              },
+              "allOf": [
+                {
+                  "if": {
+                    "properties": {
+                      "score": {
+                        "type": "null"
+                      }
+                    }
+                  },
+                  "then": {
+                    "required": [
+                      "reasoning"
+                    ],
+                    "properties": {
+                      "reasoning": {
+                        "type": "string",
+                        "pattern": "\\S"
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            "critical_warnings": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "total_weighted_score": {
+              "type": [
+                "number",
+                "null"
+              ],
+              "minimum": 0
+            }
+          }
+        }
+      }
+    },
+    "score_evidence": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "m",
+          "u",
+          "b",
+          "r"
+        ],
+        "properties": {
+          "m": {
+            "type": "string",
+            "enum": [
+              "c_param",
+              "co_order",
+              "co_method",
+              "co_param",
+              "co_chem"
+            ]
+          },
+          "u": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": [
+                "L0001",
+                "L0002",
+                "L0003",
+                "L0004",
+                "L0005",
+                "L0006",
+                "L0007",
+                "L0008",
+                "L0009",
+                "L0010",
+                "L0011",
+                "L0012",
+                "L0013",
+                "L0014",
+                "L0015",
+                "L0016",
+                "L0017",
+                "L0018",
+                "L0019",
+                "L0020",
+                "L0021",
+                "L0022",
+                "L0023",
+                "L0024"
+              ]
+            }
+          },
+          "b": {
+            "type": "string",
+            "enum": [
+              "observed",
+              "absence",
+              "insufficient",
+              "mixed"
+            ]
+          },
+          "r": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    },
+    "grounded_extraction": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "schema_version",
+        "source_id",
+        "method_mentions",
+        "entities",
+        "relations",
+        "intrinsic_signals",
+        "operations",
+        "timeline",
+        "precedence_edges",
+        "total_time_claims",
+        "ri_mentions",
+        "coverage"
+      ],
+      "properties": {
+        "schema_version": {
+          "const": "source_bound_extraction_v11"
+        },
+        "source_id": {
+          "const": "SRC_9a28b3487c35ef666787854c"
+        },
+        "method_mentions": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "i",
+              "n",
+              "a",
+              "u",
+              "s"
+            ],
+            "properties": {
+              "i": {
+                "type": "string",
+                "pattern": "^[A-Za-z][A-Za-z0-9_-]*$"
+              },
+              "n": {
+                "type": "string",
+                "minLength": 1
+              },
+              "a": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "u": {
+                "type": "string",
+                "enum": [
+                  "L0001",
+                  "L0002",
+                  "L0003",
+                  "L0004",
+                  "L0005",
+                  "L0006",
+                  "L0007",
+                  "L0008",
+                  "L0009",
+                  "L0010",
+                  "L0011",
+                  "L0012",
+                  "L0013",
+                  "L0014",
+                  "L0015",
+                  "L0016",
+                  "L0017",
+                  "L0018",
+                  "L0019",
+                  "L0020",
+                  "L0021",
+                  "L0022",
+                  "L0023",
+                  "L0024"
+                ]
+              },
+              "s": {
+                "type": "string",
+                "enum": [
+                  "selected",
+                  "mentioned",
+                  "alternative",
+                  "negated",
+                  "unknown"
+                ]
+              }
+            }
+          }
+        },
+        "entities": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "i",
+              "n",
+              "a",
+              "u",
+              "k",
+              "s"
+            ],
+            "properties": {
+              "i": {
+                "type": "string",
+                "pattern": "^[A-Za-z][A-Za-z0-9_-]*$"
+              },
+              "n": {
+                "type": "string",
+                "minLength": 1
+              },
+              "a": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "u": {
+                "type": "string",
+                "enum": [
+                  "L0001",
+                  "L0002",
+                  "L0003",
+                  "L0004",
+                  "L0005",
+                  "L0006",
+                  "L0007",
+                  "L0008",
+                  "L0009",
+                  "L0010",
+                  "L0011",
+                  "L0012",
+                  "L0013",
+                  "L0014",
+                  "L0015",
+                  "L0016",
+                  "L0017",
+                  "L0018",
+                  "L0019",
+                  "L0020",
+                  "L0021",
+                  "L0022",
+                  "L0023",
+                  "L0024"
+                ]
+              },
+              "k": {
+                "type": "string",
+                "enum": [
+                  "fluorophore",
+                  "fluorescent_protein",
+                  "target",
+                  "antibody",
+                  "unknown"
+                ]
+              },
+              "s": {
+                "type": "string",
+                "enum": [
+                  "used",
+                  "mentioned",
+                  "alternative",
+                  "negated",
+                  "unknown"
+                ]
+              }
+            }
+          }
+        },
+        "relations": {
+          "type": "array",
+          "items": {
+            "anyOf": [
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "i",
+                  "f",
+                  "e",
+                  "t",
+                  "s",
+                  "fo",
+                  "to"
+                ],
+                "properties": {
+                  "i": {
+                    "type": "string",
+                    "pattern": "^[A-Za-z][A-Za-z0-9_-]*$"
+                  },
+                  "f": {
+                    "type": "string",
+                    "pattern": "^[A-Za-z][A-Za-z0-9_-]*$"
+                  },
+                  "e": {
+                    "type": "string",
+                    "enum": [
+                      "L0001",
+                      "L0002",
+                      "L0003",
+                      "L0004",
+                      "L0005",
+                      "L0006",
+                      "L0007",
+                      "L0008",
+                      "L0009",
+                      "L0010",
+                      "L0011",
+                      "L0012",
+                      "L0013",
+                      "L0014",
+                      "L0015",
+                      "L0016",
+                      "L0017",
+                      "L0018",
+                      "L0019",
+                      "L0020",
+                      "L0021",
+                      "L0022",
+                      "L0023",
+                      "L0024",
+                      "Q0001",
+                      "Q0002",
+                      "Q0003",
+                      "Q0004",
+                      "Q0005",
+                      "Q0006",
+                      "Q0007",
+                      "Q0008",
+                      "Q0009",
+                      "Q0010",
+                      "Q0011",
+                      "Q0012",
+                      "Q0013",
+                      "Q0014",
+                      "Q0015",
+                      "Q0016",
+                      "Q0017",
+                      "Q0018",
+                      "Q0019",
+                      "Q0020",
+                      "Q0021",
+                      "Q0022",
+                      "Q0023",
+                      "Q0024",
+                      "Q0025"
+                    ]
+                  },
+                  "t": {
+                    "type": "string",
+                    "pattern": "^[A-Za-z][A-Za-z0-9_-]*$"
+                  },
+                  "s": {
+                    "const": "explicit"
+                  },
+                  "fo": {
+                    "type": "integer",
+                    "minimum": 0
+                  },
+                  "to": {
+                    "type": "integer",
+                    "minimum": 0
+                  }
+                }
+              },
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "i",
+                  "f",
+                  "e",
+                  "t",
+                  "s",
+                  "fo",
+                  "to"
+                ],
+                "properties": {
+                  "i": {
+                    "type": "string",
+                    "pattern": "^[A-Za-z][A-Za-z0-9_-]*$"
+                  },
+                  "f": {
+                    "type": "string",
+                    "pattern": "^[A-Za-z][A-Za-z0-9_-]*$"
+                  },
+                  "e": {
+                    "type": "string",
+                    "enum": [
+                      "L0001",
+                      "L0002",
+                      "L0003",
+                      "L0004",
+                      "L0005",
+                      "L0006",
+                      "L0007",
+                      "L0008",
+                      "L0009",
+                      "L0010",
+                      "L0011",
+                      "L0012",
+                      "L0013",
+                      "L0014",
+                      "L0015",
+                      "L0016",
+                      "L0017",
+                      "L0018",
+                      "L0019",
+                      "L0020",
+                      "L0021",
+                      "L0022",
+                      "L0023",
+                      "L0024",
+                      "Q0001",
+                      "Q0002",
+                      "Q0003",
+                      "Q0004",
+                      "Q0005",
+                      "Q0006",
+                      "Q0007",
+                      "Q0008",
+                      "Q0009",
+                      "Q0010",
+                      "Q0011",
+                      "Q0012",
+                      "Q0013",
+                      "Q0014",
+                      "Q0015",
+                      "Q0016",
+                      "Q0017",
+                      "Q0018",
+                      "Q0019",
+                      "Q0020",
+                      "Q0021",
+                      "Q0022",
+                      "Q0023",
+                      "Q0024",
+                      "Q0025"
+                    ]
+                  },
+                  "t": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "pattern": "^[A-Za-z][A-Za-z0-9_-]*$"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "s": {
+                    "type": "string",
+                    "enum": [
+                      "ambiguous",
+                      "unknown"
+                    ]
+                  },
+                  "fo": {
+                    "anyOf": [
+                      {
+                        "type": "integer",
+                        "minimum": 0
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "to": {
+                    "anyOf": [
+                      {
+                        "type": "integer",
+                        "minimum": 0
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
+          }
+        },
+        "intrinsic_signals": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "i",
+              "e",
+              "u",
+              "s"
+            ],
+            "properties": {
+              "i": {
+                "type": "string",
+                "pattern": "^[A-Za-z][A-Za-z0-9_-]*$"
+              },
+              "e": {
+                "type": "string",
+                "pattern": "^[A-Za-z][A-Za-z0-9_-]*$"
+              },
+              "u": {
+                "type": "string",
+                "enum": [
+                  "L0001",
+                  "L0002",
+                  "L0003",
+                  "L0004",
+                  "L0005",
+                  "L0006",
+                  "L0007",
+                  "L0008",
+                  "L0009",
+                  "L0010",
+                  "L0011",
+                  "L0012",
+                  "L0013",
+                  "L0014",
+                  "L0015",
+                  "L0016",
+                  "L0017",
+                  "L0018",
+                  "L0019",
+                  "L0020",
+                  "L0021",
+                  "L0022",
+                  "L0023",
+                  "L0024"
+                ]
+              },
+              "s": {
+                "type": "string",
+                "enum": [
+                  "source_declared",
+                  "ambiguous",
+                  "unknown"
+                ]
+              }
+            }
+          }
+        },
+        "operations": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "i",
+              "o",
+              "p",
+              "d",
+              "r",
+              "s",
+              "c"
+            ],
+            "properties": {
+              "i": {
+                "type": "string",
+                "pattern": "^[A-Za-z][A-Za-z0-9_-]*$"
+              },
+              "o": {
+                "type": "string",
+                "enum": [
+                  "O0001",
+                  "O0002",
+                  "O0003",
+                  "O0004",
+                  "O0005",
+                  "O0006",
+                  "O0007",
+                  "O0008",
+                  "O0009",
+                  "O0010",
+                  "O0011",
+                  "O0012",
+                  "O0013",
+                  "O0014",
+                  "O0015",
+                  "L0001",
+                  "L0002",
+                  "L0003",
+                  "L0004",
+                  "L0005",
+                  "L0009",
+                  "L0014",
+                  "L0020",
+                  "L0022"
+                ]
+              },
+              "p": {
+                "type": "string",
+                "enum": [
+                  "antibody_incubation",
+                  "clearing_treatment",
+                  "decalcification",
+                  "decolorization",
+                  "delipidation",
+                  "fixation",
+                  "imaging",
+                  "labeling_preparation",
+                  "reagent_transition_wash",
+                  "ri_matching",
+                  "routine_wash",
+                  "staining",
+                  "storage",
+                  "unknown"
+                ]
+              },
+              "d": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "enum": [
+                      "D0001",
+                      "D0002",
+                      "D0003",
+                      "D0004",
+                      "D0006",
+                      "D0007",
+                      "D0009",
+                      "D0010",
+                      "D0011",
+                      "D0012",
+                      "D0013",
+                      "D0014",
+                      "D0015",
+                      "D0016"
+                    ]
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "r": {
+                "type": "null"
+              },
+              "s": {
+                "type": "string",
+                "enum": [
+                  "initial",
+                  "conditional_or_future",
+                  "unknown"
+                ]
+              },
+              "c": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "enum": [
+                      "L0001",
+                      "L0002",
+                      "L0003",
+                      "L0004",
+                      "L0005",
+                      "L0006",
+                      "L0007",
+                      "L0008",
+                      "L0009",
+                      "L0010",
+                      "L0011",
+                      "L0012",
+                      "L0013",
+                      "L0014",
+                      "L0015",
+                      "L0016",
+                      "L0017",
+                      "L0018",
+                      "L0019",
+                      "L0020",
+                      "L0021",
+                      "L0022",
+                      "L0023",
+                      "L0024"
+                    ]
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        "timeline": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "m",
+            "o",
+            "e",
+            "c"
+          ],
+          "properties": {
+            "m": {
+              "type": "string",
+              "enum": [
+                "serial",
+                "parallel",
+                "alternative",
+                "unknown"
+              ]
+            },
+            "o": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "pattern": "^[A-Za-z][A-Za-z0-9_-]*$"
+              }
+            },
+            "e": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "enum": [
+                    "L0001",
+                    "L0002",
+                    "L0003",
+                    "L0004",
+                    "L0005",
+                    "L0006",
+                    "L0007",
+                    "L0008",
+                    "L0009",
+                    "L0010",
+                    "L0011",
+                    "L0012",
+                    "L0013",
+                    "L0014",
+                    "L0015",
+                    "L0016",
+                    "L0017",
+                    "L0018",
+                    "L0019",
+                    "L0020",
+                    "L0021",
+                    "L0022",
+                    "L0023",
+                    "L0024"
+                  ]
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "c": {
+              "type": "string",
+              "enum": [
+                "complete",
+                "partial",
+                "unknown"
+              ]
+            }
+          }
+        },
+        "precedence_edges": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "b",
+              "a",
+              "e"
+            ],
+            "properties": {
+              "b": {
+                "type": "string",
+                "pattern": "^[A-Za-z][A-Za-z0-9_-]*$"
+              },
+              "a": {
+                "type": "string",
+                "pattern": "^[A-Za-z][A-Za-z0-9_-]*$"
+              },
+              "e": {
+                "type": "string",
+                "enum": [
+                  "L0001",
+                  "L0002",
+                  "L0003",
+                  "L0004",
+                  "L0005",
+                  "L0006",
+                  "L0007",
+                  "L0008",
+                  "L0009",
+                  "L0010",
+                  "L0011",
+                  "L0012",
+                  "L0013",
+                  "L0014",
+                  "L0015",
+                  "L0016",
+                  "L0017",
+                  "L0018",
+                  "L0019",
+                  "L0020",
+                  "L0021",
+                  "L0022",
+                  "L0023",
+                  "L0024"
+                ]
+              }
+            }
+          }
+        },
+        "total_time_claims": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "i",
+              "d",
+              "s"
+            ],
+            "properties": {
+              "i": {
+                "type": "string",
+                "pattern": "^[A-Za-z][A-Za-z0-9_-]*$"
+              },
+              "d": {
+                "type": "string",
+                "enum": [
+                  "D0001",
+                  "D0002",
+                  "D0003",
+                  "D0004",
+                  "D0006",
+                  "D0007",
+                  "D0009",
+                  "D0010",
+                  "D0011",
+                  "D0012",
+                  "D0013",
+                  "D0014",
+                  "D0015",
+                  "D0016"
+                ]
+              },
+              "s": {
+                "type": "string",
+                "enum": [
+                  "clearing_total",
+                  "whole_protocol",
+                  "unknown"
+                ]
+              }
+            }
+          }
+        },
+        "ri_mentions": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "i",
+              "v",
+              "r"
+            ],
+            "properties": {
+              "i": {
+                "type": "string",
+                "pattern": "^[A-Za-z][A-Za-z0-9_-]*$"
+              },
+              "v": {
+                "type": "string",
+                "enum": [
+                  "R0089"
+                ]
+              },
+              "r": {
+                "type": "string",
+                "enum": [
+                  "reagent_final",
+                  "sample_target",
+                  "unknown"
+                ]
+              }
+            }
+          }
+        },
+        "coverage": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "e",
+            "t",
+            "c",
+            "u"
+          ],
+          "properties": {
+            "e": {
+              "type": "string",
+              "enum": [
+                "complete",
+                "partial",
+                "unknown"
+              ]
+            },
+            "t": {
+              "type": "string",
+              "enum": [
+                "complete",
+                "partial",
+                "unknown"
+              ]
+            },
+            "c": {
+              "type": "string",
+              "enum": [
+                "complete",
+                "partial",
+                "unknown"
+              ]
+            },
+            "u": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "e",
+                  "r"
+                ],
+                "properties": {
+                  "e": {
+                    "type": "string",
+                    "enum": [
+                      "L0001",
+                      "L0002",
+                      "L0003",
+                      "L0004",
+                      "L0005",
+                      "L0006",
+                      "L0007",
+                      "L0008",
+                      "L0009",
+                      "L0010",
+                      "L0011",
+                      "L0012",
+                      "L0013",
+                      "L0014",
+                      "L0015",
+                      "L0016",
+                      "L0017",
+                      "L0018",
+                      "L0019",
+                      "L0020",
+                      "L0021",
+                      "L0022",
+                      "L0023",
+                      "L0024"
+                    ]
+                  },
+                  "r": {
+                    "type": "string",
+                    "minLength": 1
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

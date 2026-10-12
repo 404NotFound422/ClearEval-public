@@ -1,0 +1,88 @@
+{
+  "scope": "automatic development replay; archived direct Cor retained; conditional, not prospective confirmation",
+  "actual_generator_answers": 4,
+  "paired_tasks": [
+    "23",
+    "248"
+  ],
+  "generators": [
+    "openai_claude-sonnet-4.6",
+    "openai_qwen3-max"
+  ],
+  "unbranched_common_tasks": [],
+  "inherited_C08_point_common_tasks": [
+    "248"
+  ],
+  "conditional_common_tasks": [
+    "23",
+    "248"
+  ],
+  "automatic_timing_scenarios": 8,
+  "exact_question_draws_per_scenario": 4,
+  "total_derived_draws": 32,
+  "new_observations": 0,
+  "independent_source_blocks": 1,
+  "population_confidence_interval_claimed": false,
+  "both_models_nondominated_in_all_scenarios": true,
+  "new_model_calls": 0,
+  "prior_source_assisted_main_scenarios_numerically_reproduced": 8,
+  "aggregation": "mean of per-question IA=min(Com,Cor,Eff) and HV=Com*Cor*Eff",
+  "values": [
+    {
+      "C05_hours": 14.0,
+      "C08_hours": 20.0,
+      "Claude_mean_HV": 0.3361868637354155,
+      "Qwen_mean_HV": 0.3236541934141484,
+      "delta_HV": 0.012532670321267092
+    },
+    {
+      "C05_hours": 14.0,
+      "C08_hours": 32.0,
+      "Claude_mean_HV": 0.3361868637354155,
+      "Qwen_mean_HV": 0.3351242344136104,
+      "delta_HV": 0.0010626293218051197
+    },
+    {
+      "C05_hours": 17.0,
+      "C08_hours": 20.0,
+      "Claude_mean_HV": 0.3313812619806053,
+      "Qwen_mean_HV": 0.3236541934141484,
+      "delta_HV": 0.007727068566456885
+    },
+    {
+      "C05_hours": 17.0,
+      "C08_hours": 32.0,
+      "Claude_mean_HV": 0.3313812619806053,
+      "Qwen_mean_HV": 0.3351242344136104,
+      "delta_HV": -0.0037429724330050873
+    },
+    {
+      "C05_hours": 18.0,
+      "C08_hours": 20.0,
+      "Claude_mean_HV": 0.33138126162042203,
+      "Qwen_mean_HV": 0.3236541934141484,
+      "delta_HV": 0.007727068206273613
+    },
+    {
+      "C05_hours": 18.0,
+      "C08_hours": 32.0,
+      "Claude_mean_HV": 0.33138126162042203,
+      "Qwen_mean_HV": 0.3351242344136104,
+      "delta_HV": -0.0037429727931883594
+    },
+    {
+      "C05_hours": 21.0,
+      "C08_hours": 20.0,
+      "Claude_mean_HV": 0.3313812616203553,
+      "Qwen_mean_HV": 0.3236541934141484,
+      "delta_HV": 0.0077270682062068885
+    },
+    {
+      "C05_hours": 21.0,
+      "C08_hours": 32.0,
+      "Claude_mean_HV": 0.3313812616203553,
+      "Qwen_mean_HV": 0.3351242344136104,
+      "delta_HV": -0.003742972793255084
+    }
+  ]
+}

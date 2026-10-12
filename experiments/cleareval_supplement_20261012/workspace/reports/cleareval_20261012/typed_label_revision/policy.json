@@ -1,0 +1,18 @@
+{
+  "version": "typed-label-applicability-and-AF-consensus-v2",
+  "authorization": "User clarified MAP2/AF roles, native GFP requires no external marker, and allowed AF-family approximation on 2026-10-12; then instructed continuation.",
+  "standalone_types": {
+    "native_fluorescent_protein": ["GFP", "EGFP", "YFP", "EYFP", "tdTomato", "RFP", "mCherry", "mRFP"],
+    "direct_stain": ["DAPI", "Hoechst", "Hoechst 33342", "Hoechst 33258", "PI", "Propidium iodide", "TO-PRO-3", "DiI", "DiO", "DiD", "NeuroTrace 500", "NeuroTrace 530/615"]
+  },
+  "applicability": "Standalone signals contribute method-fluor compatibility without an external antibody-marker channel; do not replace an inapplicable channel with zero or a fabricated biological target.",
+  "af_family_approximation": {
+    "version": "AF-family-consensus-from-applicable-marker-rows-v1",
+    "donor_columns": ["AlexaFluor 488", "AlexaFluor 568/Cy3", "AlexaFluor 647/Cy5 "],
+    "rule": "Use unanimous known AF-family cells for the same marker in selected rows when the specific query is unresolved. Preserve direct specific values and conflicts; no maximum selection.",
+    "scope": "general target-fluor pairing; method-fluor numerical values remain dye-specific",
+    "source": "User-authorized approximation; existing tissue table donor cells retained for each query"
+  },
+  "secondary_carrier_rule": "An explicitly reported fluor-target pair is sufficient for marker_dict; a source-declared secondary carrier using that fluor does not require a separate biological target to score the same pair.",
+  "unaffected": "Original SR/SP, c_param, stored Correctness values, s_method, s_trans, s_time and CCE aggregation equations are retained; new qualitative prompt is evaluated separately."
+}

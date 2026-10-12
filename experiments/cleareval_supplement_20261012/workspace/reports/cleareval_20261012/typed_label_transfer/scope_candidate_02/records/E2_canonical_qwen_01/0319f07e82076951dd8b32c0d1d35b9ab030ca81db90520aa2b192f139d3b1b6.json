@@ -1,0 +1,439 @@
+{
+  "cell_id": "R3E2_Q002_merge__r1",
+  "cohort": "E2_canonical_qwen_01",
+  "question_id": 2,
+  "case_id": "round3_control_q002_merge_v1",
+  "anonymous_answer_id": "R3E2_Q002_merge",
+  "repeat_index": 1,
+  "metrics": {
+    "c_param": 2,
+    "co_order": 2,
+    "co_method": 2,
+    "co_param": 1,
+    "co_chem": 1,
+    "s_method": 2.3,
+    "s_label": null,
+    "s_trans": 2.814646787157323,
+    "s_time": 3.0,
+    "sr": 0.8571428571428571,
+    "sp": 0.8,
+    "Com": 0.7428571428571429,
+    "Cor": 0.7916666666666666,
+    "Eff": null,
+    "IA": null,
+    "HV": null
+  },
+  "complete_numeric_CCE": false,
+  "original_status": "success",
+  "source_record": {
+    "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\optimizer_round3_20261011\\E2_canonical_qwen_01\\run\\attempts\\0319f07e82076951dd8b32c0d1d35b9ab030ca81db90520aa2b192f139d3b1b6_1\\processing.json",
+    "sha256": "d35378d0f881b44d9cc5d2b9de841d35b1d3b497a7e3e7bab3e2285d58c6b191"
+  },
+  "source_document": {
+    "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\optimizer_round3_20261011\\E2_canonical_qwen_01\\source_documents\\dbfd59557800eb70fbfa4329.json",
+    "sha256": "2963dcc4352ac39824930eb2cc5e01a338ce62387c17f899dffc6608bbc55c7d"
+  },
+  "answer_sha256": "9f6a4b4ed1dd670a8bccd485824857cf760b402e367280a48c8318b75ef5d916",
+  "original_answer_sha256": "bbc79ffe716c77f28c927b05868a9b20e78c2f181e5574b993edabb8587e171a",
+  "trial": {
+    "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\optimizer_round3_20261011\\E2_canonical_qwen_01\\run\\trials\\0319f07e82076951dd8b32c0d1d35b9ab030ca81db90520aa2b192f139d3b1b6.json",
+    "sha256": "f89f913792127dcdcc12e6e0fba3b9474df12a07aadf353aefc8cb6afd343b8f"
+  },
+  "saved_trial_id": "0319f07e82076951dd8b32c0d1d35b9ab030ca81db90520aa2b192f139d3b1b6",
+  "quantitative_data": {
+    "method_name": "FDISCO",
+    "tissue_ri_value": 1.46,
+    "total_time_hours": 84.0,
+    "sample_tier": "T04_WHOLE_MOUSE_BRAIN_5_12MM",
+    "reagent_ri_value": 1.562,
+    "protocol_time_hours": null
+  },
+  "time_derivation": {
+    "hours": 84.0,
+    "issues": [],
+    "original_calculation": {
+      "total_hours": 84.0,
+      "candidate_bounds_hours": [
+        84.0,
+        84.0
+      ],
+      "issues": [],
+      "included_operation_ids": [
+        "OP001",
+        "OP002",
+        "OP003",
+        "OP004",
+        "OP005",
+        "OP006",
+        "OP007"
+      ],
+      "excluded_operations": [
+        {
+          "id": "OP008",
+          "phase": "storage"
+        },
+        {
+          "id": "OP009",
+          "phase": "imaging"
+        }
+      ],
+      "claims": [],
+      "mode": "serial",
+      "known_operation_contributions": [
+        {
+          "operation_id": "OP001",
+          "lower_hours": 12.0,
+          "upper_hours": 12.0,
+          "repeat_status": "source_exact_or_single"
+        },
+        {
+          "operation_id": "OP002",
+          "lower_hours": 12.0,
+          "upper_hours": 12.0,
+          "repeat_status": "source_exact_or_single"
+        },
+        {
+          "operation_id": "OP003",
+          "lower_hours": 12.0,
+          "upper_hours": 12.0,
+          "repeat_status": "source_exact_or_single"
+        },
+        {
+          "operation_id": "OP004",
+          "lower_hours": 12.0,
+          "upper_hours": 12.0,
+          "repeat_status": "source_exact_or_single"
+        },
+        {
+          "operation_id": "OP005",
+          "lower_hours": 12.0,
+          "upper_hours": 12.0,
+          "repeat_status": "source_exact_or_single"
+        },
+        {
+          "operation_id": "OP006",
+          "lower_hours": 12.0,
+          "upper_hours": 12.0,
+          "repeat_status": "source_exact_or_single"
+        },
+        {
+          "operation_id": "OP007",
+          "lower_hours": 12.0,
+          "upper_hours": 12.0,
+          "repeat_status": "source_exact_or_single"
+        }
+      ],
+      "initial_scope_candidate_bounds_hours": [
+        84.0,
+        84.0
+      ],
+      "conditional_operations": [],
+      "timeline_derivation": {
+        "model_proposed_operation_ids": [
+          "OP001",
+          "OP002",
+          "OP003",
+          "OP004",
+          "OP005",
+          "OP006",
+          "OP007",
+          "OP008",
+          "OP009"
+        ],
+        "program_initial_operation_ids": [
+          "OP001",
+          "OP002",
+          "OP003",
+          "OP004",
+          "OP005",
+          "OP006",
+          "OP007"
+        ],
+        "excluded_from_proposal": [
+          "OP008",
+          "OP009"
+        ],
+        "added_from_declared_initial_operations": [],
+        "same_members_and_order": false,
+        "raw_proposal_preserved": true,
+        "phase_and_scope_semantics_verified": false
+      },
+      "model_precedence_audit": {
+        "cyclic_model_proposal": false,
+        "backward_document_order_edges": 0,
+        "unsupported_dependency_claims": 0,
+        "model_edges_used_for_aggregation": false,
+        "program_uses_declared_schedule_and_source_order_convention": true
+      },
+      "coverage_scopes": {
+        "whole_protocol_operations": "complete",
+        "core_time_operations": "complete",
+        "model_timeline_completeness": "complete",
+        "program_core_gate_independent_of_whole_protocol_completeness": true,
+        "action_recall_is_not_exhaustive_semantic_gold": true
+      },
+      "initial_plus_at_most_one_conditional_execution_envelope_hours": null,
+      "endpoint_scope": "The primary score covers the reported initial core processing. Conditional later operations and their time bounds are retained separately.",
+      "bounds_scope": "Conditional on supplied phase/schedule classification; null upper bound means no finite source-supported upper bound.",
+      "serial_convention": "Document-order operations are provisionally summed only if no branch/overlap cue is detected; semantic schedule is not certified.",
+      "overnight_policy": "Original rubric: overnight is eight hours by convention, not a measured duration.",
+      "scientific_total_confirmed": false,
+      "primary_time_scope": "initial_core_clearing_to_first_imaging_ready"
+    }
+  },
+  "version": "typed-label-fixed-rule-transfer-v1",
+  "primary_metrics": {
+    "c_param": 2,
+    "co_order": 2,
+    "co_method": 2,
+    "co_param": 1,
+    "co_chem": 1,
+    "s_method": 2.3,
+    "s_label": null,
+    "s_trans": 2.814646787157323,
+    "s_time": 3.0,
+    "sr": 0.8571428571428571,
+    "sp": 0.8,
+    "Com": 0.7428571428571429,
+    "Cor": 0.7916666666666666,
+    "Eff": null,
+    "IA": null,
+    "HV": null
+  },
+  "typed_label_metrics": {
+    "c_param": 2,
+    "co_order": 2,
+    "co_method": 2,
+    "co_param": 1,
+    "co_chem": 1,
+    "s_method": 2.3,
+    "s_label": 5.4,
+    "s_trans": 2.814646787157323,
+    "s_time": 3.0,
+    "sr": 0.8571428571428571,
+    "sp": 0.8,
+    "Com": 0.7428571428571429,
+    "Cor": 0.7916666666666666,
+    "Eff": 0.9495538989297769,
+    "IA": 0.7428571428571429,
+    "HV": 0.5584281262753689
+  },
+  "typed_midpoint_metrics": {
+    "c_param": 2,
+    "co_order": 2,
+    "co_method": 2,
+    "co_param": 1,
+    "co_chem": 1,
+    "s_method": 2.3,
+    "s_label": 5.4,
+    "s_trans": 2.814646787157323,
+    "s_time": 3.0,
+    "sr": 0.8571428571428571,
+    "sp": 0.8,
+    "Com": 0.7428571428571429,
+    "Cor": 0.7916666666666666,
+    "Eff": 0.9495538989297769,
+    "IA": 0.7428571428571429,
+    "HV": 0.5584281262753689
+  },
+  "label_replay_status": "replayed",
+  "label_derivation": {
+    "version": "cce-typed-label-scorer-v2.1",
+    "s_label": 5.4,
+    "channels": {
+      "s_target_match": null,
+      "s_marker_fluor_compat": null,
+      "s_method_fluor_compat": 5.4
+    },
+    "channel_applicability": {
+      "s_target_match": {
+        "applicable": false,
+        "value": null,
+        "contributing_pairs": []
+      },
+      "s_marker_fluor_compat": {
+        "applicable": false,
+        "value": null,
+        "contributing_pairs": []
+      },
+      "s_method_fluor_compat": {
+        "applicable": true,
+        "value": 5.4,
+        "contributing_pairs": [
+          "native:IS001"
+        ]
+      }
+    },
+    "pair_results": [
+      {
+        "pair_id": "native:IS001",
+        "entity_id": "E001",
+        "fluorophore": "GFP",
+        "reported_marker": null,
+        "reported_target_literal": null,
+        "label_type": "native_fluorescent_protein",
+        "original_function_input": {
+          "GFP": ""
+        },
+        "applicable": {
+          "s_target_match": false,
+          "s_marker_fluor_compat": false,
+          "s_method_fluor_compat": true
+        },
+        "channels": {
+          "s_target_match": null,
+          "s_marker_fluor_compat": null,
+          "s_method_fluor_compat": 5.4
+        },
+        "not_applicable_reason": "standalone fluorescence has no antibody target-pair channel",
+        "source_evidence": {
+          "unit_id": "L0002",
+          "start": 26,
+          "end": 58,
+          "quote": "**Chosen Labeling:** [GFP (内源)]\n",
+          "answer_sha256": "9f6a4b4ed1dd670a8bccd485824857cf760b402e367280a48c8318b75ef5d916"
+        },
+        "compatibility_audit": [
+          {
+            "kind": "method_fluor",
+            "method_name": "FDISCO",
+            "fluorophore": "GFP",
+            "source": "KnowledgeBase/method_fluro_compati.json",
+            "value": 0.9,
+            "status": "TABLE_REPORTED"
+          }
+        ]
+      }
+    ],
+    "resolved_uncertainties": [],
+    "remaining_uncertainties": [],
+    "minimum_of_available_applicable_channels": 5.4,
+    "task_target_coverage": "native/direct task coverage remains separate from antibody-pair applicability",
+    "new_model_calls": 0,
+    "expert_validated": false
+  },
+  "compatibility_lookup_trace": [],
+  "midpoint_time_derivation": {
+    "hours": 84.0,
+    "bounds_hours": [
+      84.0,
+      84.0
+    ],
+    "decision": "existing_source_bound_scalar",
+    "issues": []
+  },
+  "remaining_dependencies": {
+    "time": [],
+    "label_relations": [],
+    "compatibility": []
+  },
+  "original_technical_status_preserved": true,
+  "new_model_calls": 0,
+  "new_author_annotations": 0,
+  "scope_candidate_metrics": {
+    "c_param": 2,
+    "co_order": 2,
+    "co_method": 2,
+    "co_param": 1,
+    "co_chem": 1,
+    "s_method": 2.3,
+    "s_label": 5.4,
+    "s_trans": 2.814646787157323,
+    "s_time": 3.0,
+    "sr": 0.8571428571428571,
+    "sp": 0.8,
+    "Com": 0.7428571428571429,
+    "Cor": 0.7916666666666666,
+    "Eff": 0.9495538989297769,
+    "IA": 0.7428571428571429,
+    "HV": 0.5584281262753689
+  },
+  "scope_time_interpretation": {
+    "hours": 84.0,
+    "bounds_hours": [
+      84.0,
+      84.0
+    ],
+    "decision": "existing_source_bound_scalar",
+    "issues": [],
+    "scope": "reported_core_operations"
+  },
+  "repeated_channel_resolution": [],
+  "scope_label_derivation": {
+    "version": "cce-typed-label-scorer-v2.1",
+    "s_label": 5.4,
+    "channels": {
+      "s_target_match": null,
+      "s_marker_fluor_compat": null,
+      "s_method_fluor_compat": 5.4
+    },
+    "channel_applicability": {
+      "s_target_match": {
+        "applicable": false,
+        "value": null,
+        "contributing_pairs": []
+      },
+      "s_marker_fluor_compat": {
+        "applicable": false,
+        "value": null,
+        "contributing_pairs": []
+      },
+      "s_method_fluor_compat": {
+        "applicable": true,
+        "value": 5.4,
+        "contributing_pairs": [
+          "native:IS001"
+        ]
+      }
+    },
+    "pair_results": [
+      {
+        "pair_id": "native:IS001",
+        "entity_id": "E001",
+        "fluorophore": "GFP",
+        "reported_marker": null,
+        "reported_target_literal": null,
+        "label_type": "native_fluorescent_protein",
+        "original_function_input": {
+          "GFP": ""
+        },
+        "applicable": {
+          "s_target_match": false,
+          "s_marker_fluor_compat": false,
+          "s_method_fluor_compat": true
+        },
+        "channels": {
+          "s_target_match": null,
+          "s_marker_fluor_compat": null,
+          "s_method_fluor_compat": 5.4
+        },
+        "not_applicable_reason": "standalone fluorescence has no antibody target-pair channel",
+        "source_evidence": {
+          "unit_id": "L0002",
+          "start": 26,
+          "end": 58,
+          "quote": "**Chosen Labeling:** [GFP (内源)]\n",
+          "answer_sha256": "9f6a4b4ed1dd670a8bccd485824857cf760b402e367280a48c8318b75ef5d916"
+        },
+        "compatibility_audit": [
+          {
+            "kind": "method_fluor",
+            "method_name": "FDISCO",
+            "fluorophore": "GFP",
+            "source": "KnowledgeBase/method_fluro_compati.json",
+            "value": 0.9,
+            "status": "TABLE_REPORTED"
+          }
+        ]
+      }
+    ],
+    "resolved_uncertainties": [],
+    "remaining_uncertainties": [],
+    "minimum_of_available_applicable_channels": 5.4,
+    "task_target_coverage": "native/direct task coverage remains separate from antibody-pair applicability",
+    "new_model_calls": 0,
+    "expert_validated": false
+  },
+  "scope_changes": {},
+  "original_raw_untouched": true
+}

@@ -1,0 +1,34 @@
+{
+  "created_utc": "2026-10-12T13:34:39.647960+00:00",
+  "stage": "posthoc_development_mechanism_isolation",
+  "not_prospective_confirmation": true,
+  "freeze_before_counterfactual_scores": true,
+  "interventions": [
+    "C07 two actual translation wordings crossed with two numbering schemes",
+    "C07 translate only the residual pre-Protocol label word, leaving scoring text fixed",
+    "Eight returned full texts: compare unchanged parser with explicit parameter-free parent-heading filter"
+  ],
+  "threshold": 0.7,
+  "new_generative_calls": 0,
+  "raw_Qwen_results_modified": false,
+  "hierarchy_candidate_scope": "Only parent numbered lines followed by numbered child entries, with no bound time/temperature/numerical parameters; retain source spans",
+  "candidate_not_main_scoring": true,
+  "inputs": [
+    {
+      "path": "C:\\ClearEval\\reports\\cleareval_20261012\\english_fulltext_pilot\\qwen_translation_pending\\scoring\\results.json",
+      "sha256": "fd86ae4a39cc63a3b2418be6a6287728e100ebb41fc847bc3acb12d530e17404"
+    },
+    {
+      "path": "C:\\ClearEval\\reports\\cleareval_20261012\\english_fulltext_pilot\\qwen_translation_pending\\mechanism_checks.py",
+      "sha256": "fc5787315b931e5ef4fb270bc94677b078f4a1fe157a3d1fe7098293262884bd"
+    },
+    {
+      "path": "C:\\ClearEval\\reports\\cleareval_20261012\\english_fulltext_pilot\\qwen_translation_pending\\score_translations.py",
+      "sha256": "394e05f567535f101bb0451cacfa8a2884626fe8e70a28a7f6d59ae582141c7c"
+    }
+  ],
+  "ledger_before": {
+    "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\judges\\request_ledger.jsonl",
+    "sha256": "6d8a98c4ec8cafedaf7ab5b893f4c97c82255301a70a2cd24e56c3bb7b2cdfbd"
+  }
+}

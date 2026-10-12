@@ -1,0 +1,2742 @@
+{
+  "cell_id": "R3C08__r0",
+  "cohort": "confirmation_qwen_01",
+  "question_id": 248,
+  "case_id": "round3_confirmation_08",
+  "anonymous_answer_id": "R3C08",
+  "repeat_index": 0,
+  "metrics": {
+    "c_param": 3,
+    "co_order": 3,
+    "co_method": 2,
+    "co_param": 1,
+    "co_chem": 1,
+    "s_method": -0.4313,
+    "s_label": 1.7999999999999998,
+    "s_trans": 2.814646787157323,
+    "s_time": null,
+    "sr": 0.3333333333333333,
+    "sp": 0.11428571428571428,
+    "Com": 0.7333333333333333,
+    "Cor": 0.875,
+    "Eff": null,
+    "IA": null,
+    "HV": null
+  },
+  "complete_numeric_CCE": false,
+  "original_status": "success",
+  "source_record": {
+    "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\optimizer_round3_20261011\\confirmation_qwen_01\\run\\attempts\\0b141ce2a9d2aaf5c4a8a565c784aec2ae4df43a763021f315b541fb2e5885ee_1\\processing.json",
+    "sha256": "1fc73006aca04043203e1b41ba403bf987dddad3c11922773aa245efe905d67b"
+  },
+  "source_document": {
+    "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\optimizer_round3_20261011\\confirmation_qwen_01\\source_documents\\a0be171b1e6430f37d04d331.json",
+    "sha256": "46be67488b98209906c6e4db078c7cc29f2b669307750c9f6b1d8841ec2840d1"
+  },
+  "answer_sha256": "dd2b2f24deba09da0fa5c6496d98b313f5648329345b250f58c4fa7fcb04e7dc",
+  "original_answer_sha256": "576f2a4e8f6878885c8559a568d55cebdde4abf5239cd611169eaef1ad8ee291",
+  "trial": {
+    "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\optimizer_round3_20261011\\confirmation_qwen_01\\run\\trials\\0b141ce2a9d2aaf5c4a8a565c784aec2ae4df43a763021f315b541fb2e5885ee.json",
+    "sha256": "c8a9b49db2cdf60c6e36c9a91b9f2e849b0385dc83d6400a051c12f06514ad7a"
+  },
+  "saved_trial_id": "0b141ce2a9d2aaf5c4a8a565c784aec2ae4df43a763021f315b541fb2e5885ee",
+  "quantitative_data": {
+    "method_name": "iDISCO+",
+    "tissue_ri_value": 1.46,
+    "total_time_hours": null,
+    "sample_tier": "T04_WHOLE_MOUSE_BRAIN_5_12MM",
+    "reagent_ri_value": null,
+    "protocol_time_hours": null
+  },
+  "time_derivation": {
+    "hours": null,
+    "issues": [
+      "labeling_preparation_not_source_supported_or_possible_core_function",
+      "source_action_records_not_all_classified"
+    ],
+    "original_calculation": {
+      "total_hours": null,
+      "candidate_bounds_hours": [
+        74.0,
+        74.0
+      ],
+      "issues": [
+        "labeling_preparation_not_source_supported_or_possible_core_function",
+        "source_action_records_not_all_classified"
+      ],
+      "included_operation_ids": [
+        "OP1",
+        "OP2",
+        "OP3",
+        "OP4",
+        "OP5",
+        "OP6",
+        "OP7",
+        "OP8",
+        "OP9",
+        "OP10",
+        "OP11",
+        "OP12",
+        "OP16",
+        "OP17",
+        "OP18",
+        "OP19",
+        "OP21",
+        "OP22",
+        "OP23",
+        "OP24",
+        "OP25",
+        "OP26",
+        "OP27",
+        "OP28",
+        "OP29",
+        "OP30",
+        "OP31",
+        "OP32"
+      ],
+      "excluded_operations": [
+        {
+          "id": "OP13",
+          "phase": "labeling_preparation"
+        },
+        {
+          "id": "OP14",
+          "phase": "labeling_preparation"
+        },
+        {
+          "id": "OP15",
+          "phase": "labeling_preparation"
+        },
+        {
+          "id": "OP20",
+          "phase": "labeling_preparation"
+        },
+        {
+          "id": "OP33",
+          "phase": "storage"
+        }
+      ],
+      "claims": [],
+      "mode": "serial",
+      "known_operation_contributions": [
+        {
+          "operation_id": "OP1",
+          "lower_hours": 1.0,
+          "upper_hours": 1.0,
+          "repeat_status": "source_exact_or_single"
+        },
+        {
+          "operation_id": "OP2",
+          "lower_hours": 1.0,
+          "upper_hours": 1.0,
+          "repeat_status": "source_exact_or_single"
+        },
+        {
+          "operation_id": "OP3",
+          "lower_hours": 1.0,
+          "upper_hours": 1.0,
+          "repeat_status": "source_exact_or_single"
+        },
+        {
+          "operation_id": "OP4",
+          "lower_hours": 1.0,
+          "upper_hours": 1.0,
+          "repeat_status": "source_exact_or_single"
+        },
+        {
+          "operation_id": "OP5",
+          "lower_hours": 1.0,
+          "upper_hours": 1.0,
+          "repeat_status": "source_exact_or_single"
+        },
+        {
+          "operation_id": "OP6",
+          "lower_hours": 1.0,
+          "upper_hours": 1.0,
+          "repeat_status": "source_exact_or_single"
+        },
+        {
+          "operation_id": "OP7",
+          "lower_hours": 12.0,
+          "upper_hours": 12.0,
+          "repeat_status": "source_exact_or_single"
+        },
+        {
+          "operation_id": "OP8",
+          "lower_hours": 1.0,
+          "upper_hours": 1.0,
+          "repeat_status": "source_exact_or_single"
+        },
+        {
+          "operation_id": "OP9",
+          "lower_hours": 1.0,
+          "upper_hours": 1.0,
+          "repeat_status": "source_exact_or_single"
+        },
+        {
+          "operation_id": "OP10",
+          "lower_hours": 1.0,
+          "upper_hours": 1.0,
+          "repeat_status": "source_exact_or_single"
+        },
+        {
+          "operation_id": "OP11",
+          "lower_hours": 1.0,
+          "upper_hours": 1.0,
+          "repeat_status": "source_exact_or_single"
+        },
+        {
+          "operation_id": "OP12",
+          "lower_hours": 1.0,
+          "upper_hours": 1.0,
+          "repeat_status": "source_exact_or_single"
+        },
+        {
+          "operation_id": "OP16",
+          "lower_hours": 6.0,
+          "upper_hours": 6.0,
+          "repeat_status": "source_exact_or_single"
+        },
+        {
+          "operation_id": "OP17",
+          "lower_hours": 6.0,
+          "upper_hours": 6.0,
+          "repeat_status": "source_exact_or_single"
+        },
+        {
+          "operation_id": "OP18",
+          "lower_hours": 6.0,
+          "upper_hours": 6.0,
+          "repeat_status": "source_exact_or_single"
+        },
+        {
+          "operation_id": "OP19",
+          "lower_hours": 6.0,
+          "upper_hours": 6.0,
+          "repeat_status": "source_exact_or_single"
+        },
+        {
+          "operation_id": "OP21",
+          "lower_hours": 6.0,
+          "upper_hours": 6.0,
+          "repeat_status": "source_exact_or_single"
+        },
+        {
+          "operation_id": "OP22",
+          "lower_hours": 6.0,
+          "upper_hours": 6.0,
+          "repeat_status": "source_exact_or_single"
+        },
+        {
+          "operation_id": "OP23",
+          "lower_hours": 6.0,
+          "upper_hours": 6.0,
+          "repeat_status": "source_exact_or_single"
+        },
+        {
+          "operation_id": "OP24",
+          "lower_hours": 1.0,
+          "upper_hours": 1.0,
+          "repeat_status": "source_exact_or_single"
+        },
+        {
+          "operation_id": "OP25",
+          "lower_hours": 1.0,
+          "upper_hours": 1.0,
+          "repeat_status": "source_exact_or_single"
+        },
+        {
+          "operation_id": "OP26",
+          "lower_hours": 1.0,
+          "upper_hours": 1.0,
+          "repeat_status": "source_exact_or_single"
+        },
+        {
+          "operation_id": "OP27",
+          "lower_hours": 1.0,
+          "upper_hours": 1.0,
+          "repeat_status": "source_exact_or_single"
+        },
+        {
+          "operation_id": "OP28",
+          "lower_hours": 1.0,
+          "upper_hours": 1.0,
+          "repeat_status": "source_exact_or_single"
+        },
+        {
+          "operation_id": "OP29",
+          "lower_hours": 1.0,
+          "upper_hours": 1.0,
+          "repeat_status": "source_exact_or_single"
+        },
+        {
+          "operation_id": "OP30",
+          "lower_hours": 0.5,
+          "upper_hours": 0.5,
+          "repeat_status": "source_exact_or_single"
+        },
+        {
+          "operation_id": "OP31",
+          "lower_hours": 0.5,
+          "upper_hours": 0.5,
+          "repeat_status": "source_exact_or_single"
+        },
+        {
+          "operation_id": "OP32",
+          "lower_hours": 2.0,
+          "upper_hours": 2.0,
+          "repeat_status": "source_exact_or_single"
+        }
+      ],
+      "initial_scope_candidate_bounds_hours": [
+        74.0,
+        74.0
+      ],
+      "conditional_operations": [],
+      "timeline_derivation": {
+        "model_proposed_operation_ids": [
+          "OP1",
+          "OP2",
+          "OP3",
+          "OP4",
+          "OP5",
+          "OP6",
+          "OP7",
+          "OP8",
+          "OP9",
+          "OP10",
+          "OP11",
+          "OP12",
+          "OP13",
+          "OP14",
+          "OP15",
+          "OP16",
+          "OP17",
+          "OP18",
+          "OP19",
+          "OP20",
+          "OP21",
+          "OP22",
+          "OP23",
+          "OP24",
+          "OP25",
+          "OP26",
+          "OP27",
+          "OP28",
+          "OP29",
+          "OP30",
+          "OP31",
+          "OP32",
+          "OP33"
+        ],
+        "program_initial_operation_ids": [
+          "OP1",
+          "OP2",
+          "OP3",
+          "OP4",
+          "OP5",
+          "OP6",
+          "OP7",
+          "OP8",
+          "OP9",
+          "OP10",
+          "OP11",
+          "OP12",
+          "OP16",
+          "OP17",
+          "OP18",
+          "OP19",
+          "OP21",
+          "OP22",
+          "OP23",
+          "OP24",
+          "OP25",
+          "OP26",
+          "OP27",
+          "OP28",
+          "OP29",
+          "OP30",
+          "OP31",
+          "OP32"
+        ],
+        "excluded_from_proposal": [
+          "OP13",
+          "OP14",
+          "OP15",
+          "OP20",
+          "OP33"
+        ],
+        "added_from_declared_initial_operations": [],
+        "same_members_and_order": false,
+        "raw_proposal_preserved": true,
+        "phase_and_scope_semantics_verified": false
+      },
+      "model_precedence_audit": {
+        "cyclic_model_proposal": false,
+        "backward_document_order_edges": 0,
+        "unsupported_dependency_claims": 0,
+        "model_edges_used_for_aggregation": false,
+        "program_uses_declared_schedule_and_source_order_convention": true
+      },
+      "coverage_scopes": {
+        "whole_protocol_operations": "complete",
+        "core_time_operations": "complete",
+        "model_timeline_completeness": "complete",
+        "program_core_gate_independent_of_whole_protocol_completeness": true,
+        "action_recall_is_not_exhaustive_semantic_gold": true
+      },
+      "initial_plus_at_most_one_conditional_execution_envelope_hours": null,
+      "endpoint_scope": "The primary score covers the reported initial core processing. Conditional later operations and their time bounds are retained separately.",
+      "bounds_scope": "Conditional on supplied phase/schedule classification; null upper bound means no finite source-supported upper bound.",
+      "serial_convention": "Document-order operations are provisionally summed only if no branch/overlap cue is detected; semantic schedule is not certified.",
+      "overnight_policy": "Original rubric: overnight is eight hours by convention, not a measured duration.",
+      "scientific_total_confirmed": false,
+      "primary_time_scope": "initial_core_clearing_to_first_imaging_ready"
+    }
+  },
+  "version": "typed-label-fixed-rule-transfer-v1",
+  "primary_metrics": {
+    "c_param": 3,
+    "co_order": 3,
+    "co_method": 2,
+    "co_param": 1,
+    "co_chem": 1,
+    "s_method": -0.4313,
+    "s_label": 1.7999999999999998,
+    "s_trans": 2.814646787157323,
+    "s_time": null,
+    "sr": 0.3333333333333333,
+    "sp": 0.11428571428571428,
+    "Com": 0.7333333333333333,
+    "Cor": 0.875,
+    "Eff": null,
+    "IA": null,
+    "HV": null
+  },
+  "typed_label_metrics": {
+    "c_param": 3,
+    "co_order": 3,
+    "co_method": 2,
+    "co_param": 1,
+    "co_chem": 1,
+    "s_method": -0.4313,
+    "s_label": 1.7999999999999998,
+    "s_trans": 2.814646787157323,
+    "s_time": null,
+    "sr": 0.3333333333333333,
+    "sp": 0.11428571428571428,
+    "Com": 0.7333333333333333,
+    "Cor": 0.875,
+    "Eff": null,
+    "IA": null,
+    "HV": null
+  },
+  "typed_midpoint_metrics": {
+    "c_param": 3,
+    "co_order": 3,
+    "co_method": 2,
+    "co_param": 1,
+    "co_chem": 1,
+    "s_method": -0.4313,
+    "s_label": 1.7999999999999998,
+    "s_trans": 2.814646787157323,
+    "s_time": null,
+    "sr": 0.3333333333333333,
+    "sp": 0.11428571428571428,
+    "Com": 0.7333333333333333,
+    "Cor": 0.875,
+    "Eff": null,
+    "IA": null,
+    "HV": null
+  },
+  "label_replay_status": "replayed",
+  "label_derivation": {
+    "version": "cce-typed-label-scorer-v2.1",
+    "s_label": 1.7999999999999998,
+    "channels": {
+      "s_target_match": 6.0,
+      "s_marker_fluor_compat": 6.0,
+      "s_method_fluor_compat": 1.7999999999999998
+    },
+    "channel_applicability": {
+      "s_target_match": {
+        "applicable": true,
+        "value": 6.0,
+        "contributing_pairs": [
+          "relation:R1"
+        ]
+      },
+      "s_marker_fluor_compat": {
+        "applicable": true,
+        "value": 6.0,
+        "contributing_pairs": [
+          "relation:R1"
+        ]
+      },
+      "s_method_fluor_compat": {
+        "applicable": true,
+        "value": 1.7999999999999998,
+        "contributing_pairs": [
+          "native:IS1",
+          "relation:R1"
+        ]
+      }
+    },
+    "pair_results": [
+      {
+        "pair_id": "native:IS1",
+        "entity_id": "E1",
+        "fluorophore": "tdTomato",
+        "reported_marker": null,
+        "reported_target_literal": null,
+        "label_type": "native_fluorescent_protein",
+        "original_function_input": {
+          "tdTomato": ""
+        },
+        "applicable": {
+          "s_target_match": false,
+          "s_marker_fluor_compat": false,
+          "s_method_fluor_compat": true
+        },
+        "channels": {
+          "s_target_match": null,
+          "s_marker_fluor_compat": null,
+          "s_method_fluor_compat": 1.7999999999999998
+        },
+        "not_applicable_reason": "standalone fluorescence has no antibody target-pair channel",
+        "source_evidence": {
+          "unit_id": "L0002",
+          "start": 27,
+          "end": 112,
+          "quote": "**Chosen Labeling:** [tdTomato (endogenous), β-III Tubulin (TUJ1) + Alexa Fluor 647]\n",
+          "answer_sha256": "dd2b2f24deba09da0fa5c6496d98b313f5648329345b250f58c4fa7fcb04e7dc"
+        },
+        "compatibility_audit": [
+          {
+            "kind": "method_fluor",
+            "method_name": "iDISCO+",
+            "fluorophore": "tdTomato",
+            "source": "KnowledgeBase/method_fluro_compati.json",
+            "value": 0.3,
+            "status": "TABLE_REPORTED"
+          }
+        ]
+      },
+      {
+        "pair_id": "relation:R1",
+        "entity_id": "E3",
+        "fluorophore": "Alexa Fluor 647",
+        "reported_marker": "β-III Tubulin",
+        "reported_target_literal": "β-III Tubulin",
+        "label_type": "targeted_or_unclassified_reagent",
+        "original_function_input": {
+          "Alexa Fluor 647": "β-III Tubulin"
+        },
+        "applicable": {
+          "s_target_match": true,
+          "s_marker_fluor_compat": true,
+          "s_method_fluor_compat": true
+        },
+        "channels": {
+          "s_target_match": 6.0,
+          "s_marker_fluor_compat": 6.0,
+          "s_method_fluor_compat": 5.4
+        },
+        "not_applicable_reason": null,
+        "source_evidence": {
+          "unit_id": "L0002",
+          "start": 27,
+          "end": 112,
+          "quote": "**Chosen Labeling:** [tdTomato (endogenous), β-III Tubulin (TUJ1) + Alexa Fluor 647]\n",
+          "answer_sha256": "dd2b2f24deba09da0fa5c6496d98b313f5648329345b250f58c4fa7fcb04e7dc"
+        },
+        "compatibility_audit": [
+          {
+            "kind": "marker_fluor",
+            "marker": "β-III Tubulin",
+            "fluorophore": "Alexa Fluor 647",
+            "source": "KnowledgeBase/tissue.json",
+            "value": true,
+            "status": "TABLE_REPORTED"
+          },
+          {
+            "kind": "method_fluor",
+            "method_name": "iDISCO+",
+            "fluorophore": "Alexa Fluor 647",
+            "source": "KnowledgeBase/method_fluro_compati.json",
+            "value": 0.9,
+            "status": "TABLE_REPORTED"
+          }
+        ]
+      }
+    ],
+    "resolved_uncertainties": [],
+    "remaining_uncertainties": [],
+    "minimum_of_available_applicable_channels": 1.7999999999999998,
+    "task_target_coverage": "native/direct task coverage remains separate from antibody-pair applicability",
+    "new_model_calls": 0,
+    "expert_validated": false
+  },
+  "compatibility_lookup_trace": [
+    {
+      "marker": "β-III Tubulin",
+      "fluorophore": "Alexa Fluor 647",
+      "status": "all_applicable_scopes_have_same_authored_value",
+      "value": true,
+      "column": "AlexaFluor 647/Cy5 ",
+      "matching_target_options": [
+        {
+          "target_index": 1,
+          "source_tissue_xlsx_row": 4,
+          "marker_slot": "recommended_marker_1",
+          "marker_name": "β-III Tubulin (TUJ1)",
+          "query_path": "中枢神经 > 神经元结构 > 神经元(通用)",
+          "major_category": "中枢神经",
+          "subcategory": "神经元结构",
+          "structure_or_cell_subtype": "神经元(通用)",
+          "authored_target_parent": {
+            "marker_name": "β-III Tubulin (TUJ1)",
+            "target_index": 1,
+            "source_tissue_xlsx_row": 4,
+            "query_path": "中枢神经 > 神经元结构 > 神经元(通用)",
+            "marker_slot": "recommended_marker_1"
+          },
+          "authored_option_index": 0,
+          "option_split_applied": false
+        }
+      ],
+      "candidate_rows": [
+        {
+          "row_index": 0,
+          "matching_authored_names": [
+            {
+              "field": "推荐标志物 1",
+              "authored_name": "β-III Tubulin (TUJ1)",
+              "option": "β-III Tubulin (TUJ1)",
+              "option_split_applied": false
+            }
+          ],
+          "scope": {
+            "大类": "中枢神经",
+            "亚类": "神经元结构",
+            "结构/细胞类型": "神经元(通用)"
+          },
+          "cell_value": 1
+        },
+        {
+          "row_index": 32,
+          "matching_authored_names": [
+            {
+              "field": "推荐标志物 2",
+              "authored_name": "β-III Tubulin",
+              "option": "β-III Tubulin",
+              "option_split_applied": false
+            }
+          ],
+          "scope": {
+            "大类": "呼吸系统",
+            "亚类": "神经系统",
+            "结构/细胞类型": "肺部迷走神经"
+          },
+          "cell_value": 1
+        },
+        {
+          "row_index": 55,
+          "matching_authored_names": [
+            {
+              "field": "推荐标志物 1",
+              "authored_name": "Tuj1",
+              "option": "Tuj1",
+              "option_split_applied": false
+            }
+          ],
+          "scope": {
+            "大类": "肠道系统",
+            "亚类": "肠神经",
+            "结构/细胞类型": "肠神经丛"
+          },
+          "cell_value": 1
+        },
+        {
+          "row_index": 76,
+          "matching_authored_names": [
+            {
+              "field": "推荐标志物 2",
+              "authored_name": "β-III Tubulin / TUJ1",
+              "option": "β-III Tubulin",
+              "option_split_applied": true
+            },
+            {
+              "field": "推荐标志物 2",
+              "authored_name": "β-III Tubulin / TUJ1",
+              "option": "TUJ1",
+              "option_split_applied": true
+            }
+          ],
+          "scope": {
+            "大类": "临床病理",
+            "亚类": "皮肤活检",
+            "结构/细胞类型": "表皮内神经纤维 IENF"
+          },
+          "cell_value": null
+        },
+        {
+          "row_index": 80,
+          "matching_authored_names": [
+            {
+              "field": "推荐标志物 1",
+              "authored_name": "β-III Tubulin / TUJ1",
+              "option": "β-III Tubulin",
+              "option_split_applied": true
+            },
+            {
+              "field": "推荐标志物 1",
+              "authored_name": "β-III Tubulin / TUJ1",
+              "option": "TUJ1",
+              "option_split_applied": true
+            }
+          ],
+          "scope": {
+            "大类": "斑马鱼系统",
+            "亚类": "侧线系统",
+            "结构/细胞类型": "侧线神经纤维"
+          },
+          "cell_value": null
+        },
+        {
+          "row_index": 84,
+          "matching_authored_names": [
+            {
+              "field": "推荐标志物 2",
+              "authored_name": "β-III Tubulin / PGP9.5",
+              "option": "β-III Tubulin",
+              "option_split_applied": true
+            }
+          ],
+          "scope": {
+            "大类": "骨骼肌系统",
+            "亚类": "神经肌肉接头",
+            "结构/细胞类型": "运动神经末梢/轴突骨架"
+          },
+          "cell_value": null
+        },
+        {
+          "row_index": 85,
+          "matching_authored_names": [
+            {
+              "field": "推荐标志物 2",
+              "authored_name": "β-III Tubulin / TUJ1",
+              "option": "β-III Tubulin",
+              "option_split_applied": true
+            },
+            {
+              "field": "推荐标志物 2",
+              "authored_name": "β-III Tubulin / TUJ1",
+              "option": "TUJ1",
+              "option_split_applied": true
+            }
+          ],
+          "scope": {
+            "大类": "消化系统",
+            "亚类": "胃壁神经系统",
+            "结构/细胞类型": "胃壁迷走神经/泛神经纤维网络"
+          },
+          "cell_value": null
+        },
+        {
+          "row_index": 90,
+          "matching_authored_names": [
+            {
+              "field": "推荐标志物 2",
+              "authored_name": "PGP9.5 / β-III Tubulin",
+              "option": "β-III Tubulin",
+              "option_split_applied": true
+            }
+          ],
+          "scope": {
+            "大类": "硬组织",
+            "亚类": "骨骼微环境",
+            "结构/细胞类型": "骨组织感觉神经与泛神经网络"
+          },
+          "cell_value": null
+        },
+        {
+          "row_index": 100,
+          "matching_authored_names": [
+            {
+              "field": "推荐标志物 1",
+              "authored_name": "PGP9.5 / β-III Tubulin",
+              "option": "β-III Tubulin",
+              "option_split_applied": true
+            }
+          ],
+          "scope": {
+            "大类": "硬组织",
+            "亚类": "内耳结构",
+            "结构/细胞类型": "耳蜗神经支配"
+          },
+          "cell_value": null
+        },
+        {
+          "row_index": 106,
+          "matching_authored_names": [
+            {
+              "field": "推荐标志物 2",
+              "authored_name": "β-III Tubulin / TUJ1",
+              "option": "β-III Tubulin",
+              "option_split_applied": true
+            },
+            {
+              "field": "推荐标志物 2",
+              "authored_name": "β-III Tubulin / TUJ1",
+              "option": "TUJ1",
+              "option_split_applied": true
+            }
+          ],
+          "scope": {
+            "大类": "发育生物学",
+            "亚类": "胚胎神经系统",
+            "结构/细胞类型": "胚胎颅/脊神经与外周神经"
+          },
+          "cell_value": null
+        }
+      ],
+      "selected_row_indices": [
+        0
+      ],
+      "per_scope_evidence": [
+        {
+          "scope": {
+            "大类": "中枢神经",
+            "亚类": "神经元结构",
+            "结构/细胞类型": "神经元(通用)"
+          },
+          "row_indices": [
+            0
+          ],
+          "all_cell_values": [
+            1
+          ],
+          "state": "consistent_authored_value",
+          "value": 1
+        }
+      ],
+      "row_selection_uses_scores": false,
+      "different_scopes_merged": false,
+      "new_alias_or_KB_value": false,
+      "declared_task_scope": null,
+      "exact_lookup_value": true,
+      "evidence_level": "existing_specific_table_value"
+    }
+  ],
+  "midpoint_time_derivation": {
+    "hours": null,
+    "bounds_hours": [
+      74.0,
+      74.0
+    ],
+    "decision": "source_semantic_resolution_needed",
+    "issues": [
+      "labeling_preparation_not_source_supported_or_possible_core_function",
+      "source_action_records_not_all_classified"
+    ]
+  },
+  "remaining_dependencies": {
+    "time": [
+      "labeling_preparation_not_source_supported_or_possible_core_function",
+      "source_action_records_not_all_classified"
+    ],
+    "label_relations": [],
+    "compatibility": []
+  },
+  "original_technical_status_preserved": true,
+  "new_model_calls": 0,
+  "new_author_annotations": 0,
+  "scope_candidate_metrics": {
+    "c_param": 3,
+    "co_order": 3,
+    "co_method": 2,
+    "co_param": 1,
+    "co_chem": 1,
+    "s_method": -0.4313,
+    "s_label": 1.7999999999999998,
+    "s_trans": 2.814646787157323,
+    "s_time": null,
+    "sr": 0.3333333333333333,
+    "sp": 0.11428571428571428,
+    "Com": 0.7333333333333333,
+    "Cor": 0.875,
+    "Eff": null,
+    "IA": null,
+    "HV": null
+  },
+  "scope_time_interpretation": {
+    "hours": null,
+    "bounds_hours": [
+      74.0,
+      74.0
+    ],
+    "decision": "unresolved_source_input",
+    "scope": "reported_core_operations",
+    "original_issues": [
+      "labeling_preparation_not_source_supported_or_possible_core_function",
+      "source_action_records_not_all_classified"
+    ],
+    "resolved_scope_issues": [
+      "labeling_preparation_not_source_supported_or_possible_core_function"
+    ],
+    "issues": [
+      "source_action_records_not_all_classified"
+    ],
+    "phase_evidence": [
+      {
+        "operation_id": "OP13",
+        "supported": true,
+        "reason": "explicit_labeling_phase_heading",
+        "heading": {
+          "start": 1893,
+          "end": 1923,
+          "quote": "Permeabilization and Blocking\n",
+          "title": "Permeabilization and Blocking"
+        },
+        "operation": {
+          "unit_id": "L0021",
+          "quote": "Incubation with PBT + 20% (vol/vol) DMSO + 0.3 M glycine.(Temperature: 37 ℃, Time: 24 hours)",
+          "occurrence": 0,
+          "source_id": "SRC_2f08ef9bcc6aa5a557b56c68",
+          "start": 1923,
+          "end": 2015,
+          "answer_sha256": "dd2b2f24deba09da0fa5c6496d98b313f5648329345b250f58c4fa7fcb04e7dc",
+          "context_start": 1923,
+          "context_end": 2016,
+          "context": "Incubation with PBT + 20% (vol/vol) DMSO + 0.3 M glycine.(Temperature: 37 ℃, Time: 24 hours)\n",
+          "candidate_reference": {
+            "candidate_id": "O0014",
+            "kind": "operation_span",
+            "registry_sha256": "9cb03ef6915884ffad45bb88f06e06060b5a797760e51b1e252c218302f92381",
+            "enumerator_version": "source_bound_extraction_v11",
+            "selection_is_not_semantic_confirmation": true
+          }
+        }
+      },
+      {
+        "operation_id": "OP14",
+        "supported": true,
+        "reason": "explicit_labeling_phase_heading",
+        "heading": {
+          "start": 1893,
+          "end": 1923,
+          "quote": "Permeabilization and Blocking\n",
+          "title": "Permeabilization and Blocking"
+        },
+        "operation": {
+          "unit_id": "L0022",
+          "quote": "Incubation with PBT + 10% (vol/vol) DMSO + 6% (wt/vol) donkey serum (blocking buffer).(Temperature: 37 ℃, Time: 24 hours)",
+          "occurrence": 0,
+          "source_id": "SRC_2f08ef9bcc6aa5a557b56c68",
+          "start": 2016,
+          "end": 2137,
+          "answer_sha256": "dd2b2f24deba09da0fa5c6496d98b313f5648329345b250f58c4fa7fcb04e7dc",
+          "context_start": 2016,
+          "context_end": 2138,
+          "context": "Incubation with PBT + 10% (vol/vol) DMSO + 6% (wt/vol) donkey serum (blocking buffer).(Temperature: 37 ℃, Time: 24 hours)\n",
+          "candidate_reference": {
+            "candidate_id": "O0015",
+            "kind": "operation_span",
+            "registry_sha256": "9cb03ef6915884ffad45bb88f06e06060b5a797760e51b1e252c218302f92381",
+            "enumerator_version": "source_bound_extraction_v11",
+            "selection_is_not_semantic_confirmation": true
+          }
+        }
+      },
+      {
+        "operation_id": "OP15",
+        "supported": true,
+        "reason": "explicit_labeling_phase_heading",
+        "heading": {
+          "start": 2138,
+          "end": 2166,
+          "quote": "5 Primary Antibody Staining\n",
+          "title": "Primary Antibody Staining"
+        },
+        "operation": {
+          "unit_id": "L0024",
+          "quote": "Incubation with anti-β-III Tubulin (TUJ1) primary antibody diluted 1:500 in blocking buffer.(Temperature: 37 ℃, Time: 72 hours)",
+          "occurrence": 0,
+          "source_id": "SRC_2f08ef9bcc6aa5a557b56c68",
+          "start": 2166,
+          "end": 2293,
+          "answer_sha256": "dd2b2f24deba09da0fa5c6496d98b313f5648329345b250f58c4fa7fcb04e7dc",
+          "context_start": 2166,
+          "context_end": 2294,
+          "context": "Incubation with anti-β-III Tubulin (TUJ1) primary antibody diluted 1:500 in blocking buffer.(Temperature: 37 ℃, Time: 72 hours)\n",
+          "candidate_reference": {
+            "candidate_id": "O0016",
+            "kind": "operation_span",
+            "registry_sha256": "9cb03ef6915884ffad45bb88f06e06060b5a797760e51b1e252c218302f92381",
+            "enumerator_version": "source_bound_extraction_v11",
+            "selection_is_not_semantic_confirmation": true
+          }
+        }
+      },
+      {
+        "operation_id": "OP20",
+        "supported": true,
+        "reason": "explicit_labeling_phase_heading",
+        "heading": {
+          "start": 2513,
+          "end": 2543,
+          "quote": "7 Secondary Antibody Staining\n",
+          "title": "Secondary Antibody Staining"
+        },
+        "operation": {
+          "unit_id": "L0031",
+          "quote": "Incubation with Alexa Fluor 647-conjugated donkey anti-mouse IgG (H+L) diluted 1:300 in blocking buffer.(Temperature: 37 ℃, Time: 48 hours)",
+          "occurrence": 0,
+          "source_id": "SRC_2f08ef9bcc6aa5a557b56c68",
+          "start": 2543,
+          "end": 2682,
+          "answer_sha256": "dd2b2f24deba09da0fa5c6496d98b313f5648329345b250f58c4fa7fcb04e7dc",
+          "context_start": 2543,
+          "context_end": 2683,
+          "context": "Incubation with Alexa Fluor 647-conjugated donkey anti-mouse IgG (H+L) diluted 1:300 in blocking buffer.(Temperature: 37 ℃, Time: 48 hours)\n",
+          "candidate_reference": {
+            "candidate_id": "O0022",
+            "kind": "operation_span",
+            "registry_sha256": "9cb03ef6915884ffad45bb88f06e06060b5a797760e51b1e252c218302f92381",
+            "enumerator_version": "source_bound_extraction_v11",
+            "selection_is_not_semantic_confirmation": true
+          }
+        }
+      }
+    ],
+    "operation_contributions": [
+      {
+        "operation_id": "OP1",
+        "lower_hours": 1.0,
+        "upper_hours": 1.0,
+        "repeat_status": "source_exact_or_single"
+      },
+      {
+        "operation_id": "OP2",
+        "lower_hours": 1.0,
+        "upper_hours": 1.0,
+        "repeat_status": "source_exact_or_single"
+      },
+      {
+        "operation_id": "OP3",
+        "lower_hours": 1.0,
+        "upper_hours": 1.0,
+        "repeat_status": "source_exact_or_single"
+      },
+      {
+        "operation_id": "OP4",
+        "lower_hours": 1.0,
+        "upper_hours": 1.0,
+        "repeat_status": "source_exact_or_single"
+      },
+      {
+        "operation_id": "OP5",
+        "lower_hours": 1.0,
+        "upper_hours": 1.0,
+        "repeat_status": "source_exact_or_single"
+      },
+      {
+        "operation_id": "OP6",
+        "lower_hours": 1.0,
+        "upper_hours": 1.0,
+        "repeat_status": "source_exact_or_single"
+      },
+      {
+        "operation_id": "OP7",
+        "lower_hours": 12.0,
+        "upper_hours": 12.0,
+        "repeat_status": "source_exact_or_single"
+      },
+      {
+        "operation_id": "OP8",
+        "lower_hours": 1.0,
+        "upper_hours": 1.0,
+        "repeat_status": "source_exact_or_single"
+      },
+      {
+        "operation_id": "OP9",
+        "lower_hours": 1.0,
+        "upper_hours": 1.0,
+        "repeat_status": "source_exact_or_single"
+      },
+      {
+        "operation_id": "OP10",
+        "lower_hours": 1.0,
+        "upper_hours": 1.0,
+        "repeat_status": "source_exact_or_single"
+      },
+      {
+        "operation_id": "OP11",
+        "lower_hours": 1.0,
+        "upper_hours": 1.0,
+        "repeat_status": "source_exact_or_single"
+      },
+      {
+        "operation_id": "OP12",
+        "lower_hours": 1.0,
+        "upper_hours": 1.0,
+        "repeat_status": "source_exact_or_single"
+      },
+      {
+        "operation_id": "OP16",
+        "lower_hours": 6.0,
+        "upper_hours": 6.0,
+        "repeat_status": "source_exact_or_single"
+      },
+      {
+        "operation_id": "OP17",
+        "lower_hours": 6.0,
+        "upper_hours": 6.0,
+        "repeat_status": "source_exact_or_single"
+      },
+      {
+        "operation_id": "OP18",
+        "lower_hours": 6.0,
+        "upper_hours": 6.0,
+        "repeat_status": "source_exact_or_single"
+      },
+      {
+        "operation_id": "OP19",
+        "lower_hours": 6.0,
+        "upper_hours": 6.0,
+        "repeat_status": "source_exact_or_single"
+      },
+      {
+        "operation_id": "OP21",
+        "lower_hours": 6.0,
+        "upper_hours": 6.0,
+        "repeat_status": "source_exact_or_single"
+      },
+      {
+        "operation_id": "OP22",
+        "lower_hours": 6.0,
+        "upper_hours": 6.0,
+        "repeat_status": "source_exact_or_single"
+      },
+      {
+        "operation_id": "OP23",
+        "lower_hours": 6.0,
+        "upper_hours": 6.0,
+        "repeat_status": "source_exact_or_single"
+      },
+      {
+        "operation_id": "OP24",
+        "lower_hours": 1.0,
+        "upper_hours": 1.0,
+        "repeat_status": "source_exact_or_single"
+      },
+      {
+        "operation_id": "OP25",
+        "lower_hours": 1.0,
+        "upper_hours": 1.0,
+        "repeat_status": "source_exact_or_single"
+      },
+      {
+        "operation_id": "OP26",
+        "lower_hours": 1.0,
+        "upper_hours": 1.0,
+        "repeat_status": "source_exact_or_single"
+      },
+      {
+        "operation_id": "OP27",
+        "lower_hours": 1.0,
+        "upper_hours": 1.0,
+        "repeat_status": "source_exact_or_single"
+      },
+      {
+        "operation_id": "OP28",
+        "lower_hours": 1.0,
+        "upper_hours": 1.0,
+        "repeat_status": "source_exact_or_single"
+      },
+      {
+        "operation_id": "OP29",
+        "lower_hours": 1.0,
+        "upper_hours": 1.0,
+        "repeat_status": "source_exact_or_single"
+      },
+      {
+        "operation_id": "OP30",
+        "lower_hours": 0.5,
+        "upper_hours": 0.5,
+        "repeat_status": "source_exact_or_single"
+      },
+      {
+        "operation_id": "OP31",
+        "lower_hours": 0.5,
+        "upper_hours": 0.5,
+        "repeat_status": "source_exact_or_single"
+      },
+      {
+        "operation_id": "OP32",
+        "lower_hours": 2.0,
+        "upper_hours": 2.0,
+        "repeat_status": "source_exact_or_single"
+      }
+    ],
+    "workflow_completeness_not_inferred": true,
+    "complete_experimental_endpoint_duration": "not_separately_estimated",
+    "saved_coverage_judgment": {
+      "entities": "complete",
+      "time_operations": "complete",
+      "core_time_operations": "complete",
+      "unresolved": []
+    }
+  },
+  "repeated_channel_resolution": [],
+  "scope_label_derivation": {
+    "version": "cce-typed-label-scorer-v2.1",
+    "s_label": 1.7999999999999998,
+    "channels": {
+      "s_target_match": 6.0,
+      "s_marker_fluor_compat": 6.0,
+      "s_method_fluor_compat": 1.7999999999999998
+    },
+    "channel_applicability": {
+      "s_target_match": {
+        "applicable": true,
+        "value": 6.0,
+        "contributing_pairs": [
+          "relation:R1"
+        ]
+      },
+      "s_marker_fluor_compat": {
+        "applicable": true,
+        "value": 6.0,
+        "contributing_pairs": [
+          "relation:R1"
+        ]
+      },
+      "s_method_fluor_compat": {
+        "applicable": true,
+        "value": 1.7999999999999998,
+        "contributing_pairs": [
+          "native:IS1",
+          "relation:R1"
+        ]
+      }
+    },
+    "pair_results": [
+      {
+        "pair_id": "native:IS1",
+        "entity_id": "E1",
+        "fluorophore": "tdTomato",
+        "reported_marker": null,
+        "reported_target_literal": null,
+        "label_type": "native_fluorescent_protein",
+        "original_function_input": {
+          "tdTomato": ""
+        },
+        "applicable": {
+          "s_target_match": false,
+          "s_marker_fluor_compat": false,
+          "s_method_fluor_compat": true
+        },
+        "channels": {
+          "s_target_match": null,
+          "s_marker_fluor_compat": null,
+          "s_method_fluor_compat": 1.7999999999999998
+        },
+        "not_applicable_reason": "standalone fluorescence has no antibody target-pair channel",
+        "source_evidence": {
+          "unit_id": "L0002",
+          "start": 27,
+          "end": 112,
+          "quote": "**Chosen Labeling:** [tdTomato (endogenous), β-III Tubulin (TUJ1) + Alexa Fluor 647]\n",
+          "answer_sha256": "dd2b2f24deba09da0fa5c6496d98b313f5648329345b250f58c4fa7fcb04e7dc"
+        },
+        "compatibility_audit": [
+          {
+            "kind": "method_fluor",
+            "method_name": "iDISCO+",
+            "fluorophore": "tdTomato",
+            "source": "KnowledgeBase/method_fluro_compati.json",
+            "value": 0.3,
+            "status": "TABLE_REPORTED"
+          }
+        ]
+      },
+      {
+        "pair_id": "relation:R1",
+        "entity_id": "E3",
+        "fluorophore": "Alexa Fluor 647",
+        "reported_marker": "β-III Tubulin",
+        "reported_target_literal": "β-III Tubulin",
+        "label_type": "targeted_or_unclassified_reagent",
+        "original_function_input": {
+          "Alexa Fluor 647": "β-III Tubulin"
+        },
+        "applicable": {
+          "s_target_match": true,
+          "s_marker_fluor_compat": true,
+          "s_method_fluor_compat": true
+        },
+        "channels": {
+          "s_target_match": 6.0,
+          "s_marker_fluor_compat": 6.0,
+          "s_method_fluor_compat": 5.4
+        },
+        "not_applicable_reason": null,
+        "source_evidence": {
+          "unit_id": "L0002",
+          "start": 27,
+          "end": 112,
+          "quote": "**Chosen Labeling:** [tdTomato (endogenous), β-III Tubulin (TUJ1) + Alexa Fluor 647]\n",
+          "answer_sha256": "dd2b2f24deba09da0fa5c6496d98b313f5648329345b250f58c4fa7fcb04e7dc"
+        },
+        "compatibility_audit": [
+          {
+            "kind": "marker_fluor",
+            "marker": "β-III Tubulin",
+            "fluorophore": "Alexa Fluor 647",
+            "source": "KnowledgeBase/tissue.json",
+            "value": true,
+            "status": "TABLE_REPORTED"
+          },
+          {
+            "kind": "method_fluor",
+            "method_name": "iDISCO+",
+            "fluorophore": "Alexa Fluor 647",
+            "source": "KnowledgeBase/method_fluro_compati.json",
+            "value": 0.9,
+            "status": "TABLE_REPORTED"
+          }
+        ]
+      }
+    ],
+    "resolved_uncertainties": [],
+    "remaining_uncertainties": [],
+    "minimum_of_available_applicable_channels": 1.7999999999999998,
+    "task_target_coverage": "native/direct task coverage remains separate from antibody-pair applicability",
+    "new_model_calls": 0,
+    "expert_validated": false
+  },
+  "scope_changes": {},
+  "original_raw_untouched": true,
+  "lexical_candidate_metrics": {
+    "c_param": 3,
+    "co_order": 3,
+    "co_method": 2,
+    "co_param": 1,
+    "co_chem": 1,
+    "s_method": -0.4313,
+    "s_label": 1.7999999999999998,
+    "s_trans": 2.814646787157323,
+    "s_time": null,
+    "sr": 0.3333333333333333,
+    "sp": 0.11428571428571428,
+    "Com": 0.7333333333333333,
+    "Cor": 0.875,
+    "Eff": null,
+    "IA": null,
+    "HV": null
+  },
+  "lexical_full_conversion": true,
+  "lexical_post": null,
+  "lexical_label_derivation": {
+    "version": "cce-typed-label-scorer-v2.1",
+    "s_label": 1.7999999999999998,
+    "channels": {
+      "s_target_match": 6.0,
+      "s_marker_fluor_compat": 6.0,
+      "s_method_fluor_compat": 1.7999999999999998
+    },
+    "channel_applicability": {
+      "s_target_match": {
+        "applicable": true,
+        "value": 6.0,
+        "contributing_pairs": [
+          "relation:R1"
+        ]
+      },
+      "s_marker_fluor_compat": {
+        "applicable": true,
+        "value": 6.0,
+        "contributing_pairs": [
+          "relation:R1"
+        ]
+      },
+      "s_method_fluor_compat": {
+        "applicable": true,
+        "value": 1.7999999999999998,
+        "contributing_pairs": [
+          "native:IS1",
+          "relation:R1"
+        ]
+      }
+    },
+    "pair_results": [
+      {
+        "pair_id": "native:IS1",
+        "entity_id": "E1",
+        "fluorophore": "tdTomato",
+        "reported_marker": null,
+        "reported_target_literal": null,
+        "label_type": "native_fluorescent_protein",
+        "original_function_input": {
+          "tdTomato": ""
+        },
+        "applicable": {
+          "s_target_match": false,
+          "s_marker_fluor_compat": false,
+          "s_method_fluor_compat": true
+        },
+        "channels": {
+          "s_target_match": null,
+          "s_marker_fluor_compat": null,
+          "s_method_fluor_compat": 1.7999999999999998
+        },
+        "not_applicable_reason": "standalone fluorescence has no antibody target-pair channel",
+        "source_evidence": {
+          "unit_id": "L0002",
+          "start": 27,
+          "end": 112,
+          "quote": "**Chosen Labeling:** [tdTomato (endogenous), β-III Tubulin (TUJ1) + Alexa Fluor 647]\n",
+          "answer_sha256": "dd2b2f24deba09da0fa5c6496d98b313f5648329345b250f58c4fa7fcb04e7dc"
+        },
+        "compatibility_audit": [
+          {
+            "kind": "method_fluor",
+            "method_name": "iDISCO+",
+            "fluorophore": "tdTomato",
+            "source": "KnowledgeBase/method_fluro_compati.json",
+            "value": 0.3,
+            "status": "TABLE_REPORTED"
+          }
+        ]
+      },
+      {
+        "pair_id": "relation:R1",
+        "entity_id": "E3",
+        "fluorophore": "Alexa Fluor 647",
+        "reported_marker": "β-III Tubulin",
+        "reported_target_literal": "β-III Tubulin",
+        "label_type": "targeted_or_unclassified_reagent",
+        "original_function_input": {
+          "Alexa Fluor 647": "β-III Tubulin"
+        },
+        "applicable": {
+          "s_target_match": true,
+          "s_marker_fluor_compat": true,
+          "s_method_fluor_compat": true
+        },
+        "channels": {
+          "s_target_match": 6.0,
+          "s_marker_fluor_compat": 6.0,
+          "s_method_fluor_compat": 5.4
+        },
+        "not_applicable_reason": null,
+        "source_evidence": {
+          "unit_id": "L0002",
+          "start": 27,
+          "end": 112,
+          "quote": "**Chosen Labeling:** [tdTomato (endogenous), β-III Tubulin (TUJ1) + Alexa Fluor 647]\n",
+          "answer_sha256": "dd2b2f24deba09da0fa5c6496d98b313f5648329345b250f58c4fa7fcb04e7dc"
+        },
+        "compatibility_audit": [
+          {
+            "kind": "marker_fluor",
+            "marker": "β-III Tubulin",
+            "fluorophore": "Alexa Fluor 647",
+            "source": "KnowledgeBase/tissue.json",
+            "value": true,
+            "status": "TABLE_REPORTED"
+          },
+          {
+            "kind": "method_fluor",
+            "method_name": "iDISCO+",
+            "fluorophore": "Alexa Fluor 647",
+            "source": "KnowledgeBase/method_fluro_compati.json",
+            "value": 0.9,
+            "status": "TABLE_REPORTED"
+          }
+        ]
+      }
+    ],
+    "resolved_uncertainties": [],
+    "remaining_uncertainties": [],
+    "minimum_of_available_applicable_channels": 1.7999999999999998,
+    "task_target_coverage": "native/direct task coverage remains separate from antibody-pair applicability",
+    "new_model_calls": 0,
+    "expert_validated": false
+  },
+  "lexical_time_interpretation": {
+    "hours": null,
+    "bounds_hours": [
+      74.0,
+      74.0
+    ],
+    "decision": "unresolved_source_input",
+    "scope": "reported_core_operations",
+    "original_issues": [
+      "labeling_preparation_not_source_supported_or_possible_core_function",
+      "source_action_records_not_all_classified"
+    ],
+    "resolved_scope_issues": [
+      "labeling_preparation_not_source_supported_or_possible_core_function"
+    ],
+    "issues": [
+      "source_action_records_not_all_classified"
+    ],
+    "phase_evidence": [
+      {
+        "operation_id": "OP13",
+        "supported": true,
+        "reason": "explicit_labeling_phase_heading",
+        "heading": {
+          "start": 1893,
+          "end": 1923,
+          "quote": "Permeabilization and Blocking\n",
+          "title": "Permeabilization and Blocking"
+        },
+        "operation": {
+          "unit_id": "L0021",
+          "quote": "Incubation with PBT + 20% (vol/vol) DMSO + 0.3 M glycine.(Temperature: 37 ℃, Time: 24 hours)",
+          "occurrence": 0,
+          "source_id": "SRC_2f08ef9bcc6aa5a557b56c68",
+          "start": 1923,
+          "end": 2015,
+          "answer_sha256": "dd2b2f24deba09da0fa5c6496d98b313f5648329345b250f58c4fa7fcb04e7dc",
+          "context_start": 1923,
+          "context_end": 2016,
+          "context": "Incubation with PBT + 20% (vol/vol) DMSO + 0.3 M glycine.(Temperature: 37 ℃, Time: 24 hours)\n",
+          "candidate_reference": {
+            "candidate_id": "O0014",
+            "kind": "operation_span",
+            "registry_sha256": "9cb03ef6915884ffad45bb88f06e06060b5a797760e51b1e252c218302f92381",
+            "enumerator_version": "source_bound_extraction_v11",
+            "selection_is_not_semantic_confirmation": true
+          }
+        }
+      },
+      {
+        "operation_id": "OP14",
+        "supported": true,
+        "reason": "explicit_labeling_phase_heading",
+        "heading": {
+          "start": 1893,
+          "end": 1923,
+          "quote": "Permeabilization and Blocking\n",
+          "title": "Permeabilization and Blocking"
+        },
+        "operation": {
+          "unit_id": "L0022",
+          "quote": "Incubation with PBT + 10% (vol/vol) DMSO + 6% (wt/vol) donkey serum (blocking buffer).(Temperature: 37 ℃, Time: 24 hours)",
+          "occurrence": 0,
+          "source_id": "SRC_2f08ef9bcc6aa5a557b56c68",
+          "start": 2016,
+          "end": 2137,
+          "answer_sha256": "dd2b2f24deba09da0fa5c6496d98b313f5648329345b250f58c4fa7fcb04e7dc",
+          "context_start": 2016,
+          "context_end": 2138,
+          "context": "Incubation with PBT + 10% (vol/vol) DMSO + 6% (wt/vol) donkey serum (blocking buffer).(Temperature: 37 ℃, Time: 24 hours)\n",
+          "candidate_reference": {
+            "candidate_id": "O0015",
+            "kind": "operation_span",
+            "registry_sha256": "9cb03ef6915884ffad45bb88f06e06060b5a797760e51b1e252c218302f92381",
+            "enumerator_version": "source_bound_extraction_v11",
+            "selection_is_not_semantic_confirmation": true
+          }
+        }
+      },
+      {
+        "operation_id": "OP15",
+        "supported": true,
+        "reason": "explicit_labeling_phase_heading",
+        "heading": {
+          "start": 2138,
+          "end": 2166,
+          "quote": "5 Primary Antibody Staining\n",
+          "title": "Primary Antibody Staining"
+        },
+        "operation": {
+          "unit_id": "L0024",
+          "quote": "Incubation with anti-β-III Tubulin (TUJ1) primary antibody diluted 1:500 in blocking buffer.(Temperature: 37 ℃, Time: 72 hours)",
+          "occurrence": 0,
+          "source_id": "SRC_2f08ef9bcc6aa5a557b56c68",
+          "start": 2166,
+          "end": 2293,
+          "answer_sha256": "dd2b2f24deba09da0fa5c6496d98b313f5648329345b250f58c4fa7fcb04e7dc",
+          "context_start": 2166,
+          "context_end": 2294,
+          "context": "Incubation with anti-β-III Tubulin (TUJ1) primary antibody diluted 1:500 in blocking buffer.(Temperature: 37 ℃, Time: 72 hours)\n",
+          "candidate_reference": {
+            "candidate_id": "O0016",
+            "kind": "operation_span",
+            "registry_sha256": "9cb03ef6915884ffad45bb88f06e06060b5a797760e51b1e252c218302f92381",
+            "enumerator_version": "source_bound_extraction_v11",
+            "selection_is_not_semantic_confirmation": true
+          }
+        }
+      },
+      {
+        "operation_id": "OP20",
+        "supported": true,
+        "reason": "explicit_labeling_phase_heading",
+        "heading": {
+          "start": 2513,
+          "end": 2543,
+          "quote": "7 Secondary Antibody Staining\n",
+          "title": "Secondary Antibody Staining"
+        },
+        "operation": {
+          "unit_id": "L0031",
+          "quote": "Incubation with Alexa Fluor 647-conjugated donkey anti-mouse IgG (H+L) diluted 1:300 in blocking buffer.(Temperature: 37 ℃, Time: 48 hours)",
+          "occurrence": 0,
+          "source_id": "SRC_2f08ef9bcc6aa5a557b56c68",
+          "start": 2543,
+          "end": 2682,
+          "answer_sha256": "dd2b2f24deba09da0fa5c6496d98b313f5648329345b250f58c4fa7fcb04e7dc",
+          "context_start": 2543,
+          "context_end": 2683,
+          "context": "Incubation with Alexa Fluor 647-conjugated donkey anti-mouse IgG (H+L) diluted 1:300 in blocking buffer.(Temperature: 37 ℃, Time: 48 hours)\n",
+          "candidate_reference": {
+            "candidate_id": "O0022",
+            "kind": "operation_span",
+            "registry_sha256": "9cb03ef6915884ffad45bb88f06e06060b5a797760e51b1e252c218302f92381",
+            "enumerator_version": "source_bound_extraction_v11",
+            "selection_is_not_semantic_confirmation": true
+          }
+        }
+      }
+    ],
+    "operation_contributions": [
+      {
+        "operation_id": "OP1",
+        "lower_hours": 1.0,
+        "upper_hours": 1.0,
+        "repeat_status": "source_exact_or_single"
+      },
+      {
+        "operation_id": "OP2",
+        "lower_hours": 1.0,
+        "upper_hours": 1.0,
+        "repeat_status": "source_exact_or_single"
+      },
+      {
+        "operation_id": "OP3",
+        "lower_hours": 1.0,
+        "upper_hours": 1.0,
+        "repeat_status": "source_exact_or_single"
+      },
+      {
+        "operation_id": "OP4",
+        "lower_hours": 1.0,
+        "upper_hours": 1.0,
+        "repeat_status": "source_exact_or_single"
+      },
+      {
+        "operation_id": "OP5",
+        "lower_hours": 1.0,
+        "upper_hours": 1.0,
+        "repeat_status": "source_exact_or_single"
+      },
+      {
+        "operation_id": "OP6",
+        "lower_hours": 1.0,
+        "upper_hours": 1.0,
+        "repeat_status": "source_exact_or_single"
+      },
+      {
+        "operation_id": "OP7",
+        "lower_hours": 12.0,
+        "upper_hours": 12.0,
+        "repeat_status": "source_exact_or_single"
+      },
+      {
+        "operation_id": "OP8",
+        "lower_hours": 1.0,
+        "upper_hours": 1.0,
+        "repeat_status": "source_exact_or_single"
+      },
+      {
+        "operation_id": "OP9",
+        "lower_hours": 1.0,
+        "upper_hours": 1.0,
+        "repeat_status": "source_exact_or_single"
+      },
+      {
+        "operation_id": "OP10",
+        "lower_hours": 1.0,
+        "upper_hours": 1.0,
+        "repeat_status": "source_exact_or_single"
+      },
+      {
+        "operation_id": "OP11",
+        "lower_hours": 1.0,
+        "upper_hours": 1.0,
+        "repeat_status": "source_exact_or_single"
+      },
+      {
+        "operation_id": "OP12",
+        "lower_hours": 1.0,
+        "upper_hours": 1.0,
+        "repeat_status": "source_exact_or_single"
+      },
+      {
+        "operation_id": "OP16",
+        "lower_hours": 6.0,
+        "upper_hours": 6.0,
+        "repeat_status": "source_exact_or_single"
+      },
+      {
+        "operation_id": "OP17",
+        "lower_hours": 6.0,
+        "upper_hours": 6.0,
+        "repeat_status": "source_exact_or_single"
+      },
+      {
+        "operation_id": "OP18",
+        "lower_hours": 6.0,
+        "upper_hours": 6.0,
+        "repeat_status": "source_exact_or_single"
+      },
+      {
+        "operation_id": "OP19",
+        "lower_hours": 6.0,
+        "upper_hours": 6.0,
+        "repeat_status": "source_exact_or_single"
+      },
+      {
+        "operation_id": "OP21",
+        "lower_hours": 6.0,
+        "upper_hours": 6.0,
+        "repeat_status": "source_exact_or_single"
+      },
+      {
+        "operation_id": "OP22",
+        "lower_hours": 6.0,
+        "upper_hours": 6.0,
+        "repeat_status": "source_exact_or_single"
+      },
+      {
+        "operation_id": "OP23",
+        "lower_hours": 6.0,
+        "upper_hours": 6.0,
+        "repeat_status": "source_exact_or_single"
+      },
+      {
+        "operation_id": "OP24",
+        "lower_hours": 1.0,
+        "upper_hours": 1.0,
+        "repeat_status": "source_exact_or_single"
+      },
+      {
+        "operation_id": "OP25",
+        "lower_hours": 1.0,
+        "upper_hours": 1.0,
+        "repeat_status": "source_exact_or_single"
+      },
+      {
+        "operation_id": "OP26",
+        "lower_hours": 1.0,
+        "upper_hours": 1.0,
+        "repeat_status": "source_exact_or_single"
+      },
+      {
+        "operation_id": "OP27",
+        "lower_hours": 1.0,
+        "upper_hours": 1.0,
+        "repeat_status": "source_exact_or_single"
+      },
+      {
+        "operation_id": "OP28",
+        "lower_hours": 1.0,
+        "upper_hours": 1.0,
+        "repeat_status": "source_exact_or_single"
+      },
+      {
+        "operation_id": "OP29",
+        "lower_hours": 1.0,
+        "upper_hours": 1.0,
+        "repeat_status": "source_exact_or_single"
+      },
+      {
+        "operation_id": "OP30",
+        "lower_hours": 0.5,
+        "upper_hours": 0.5,
+        "repeat_status": "source_exact_or_single"
+      },
+      {
+        "operation_id": "OP31",
+        "lower_hours": 0.5,
+        "upper_hours": 0.5,
+        "repeat_status": "source_exact_or_single"
+      },
+      {
+        "operation_id": "OP32",
+        "lower_hours": 2.0,
+        "upper_hours": 2.0,
+        "repeat_status": "source_exact_or_single"
+      }
+    ],
+    "workflow_completeness_not_inferred": true,
+    "complete_experimental_endpoint_duration": "not_separately_estimated",
+    "saved_coverage_judgment": {
+      "entities": "complete",
+      "time_operations": "complete",
+      "core_time_operations": "complete",
+      "unresolved": []
+    }
+  },
+  "lexical_relation_resolution": [],
+  "lexical_failure": null,
+  "lexical_wiring": {
+    "version": "multilingual-name-boundary-v1",
+    "rebound_environments": 2
+  },
+  "lexical_changes": {},
+  "raw_source": {
+    "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\optimizer_round3_20261011\\confirmation_qwen_01\\run\\attempts\\0b141ce2a9d2aaf5c4a8a565c784aec2ae4df43a763021f315b541fb2e5885ee_1\\raw_response.txt",
+    "sha256": "fd0d1d776b01f9cba8824510d3456687ff66ceb92d1dc9caa4faead7dd228e5a"
+  },
+  "final_candidate_metrics": {
+    "c_param": 3,
+    "co_order": 3,
+    "co_method": 2,
+    "co_param": 1,
+    "co_chem": 1,
+    "s_method": -0.4313,
+    "s_label": 1.7999999999999998,
+    "s_trans": 2.814646787157323,
+    "s_time": 3.0,
+    "sr": 0.3333333333333333,
+    "sp": 0.11428571428571428,
+    "Com": 0.7333333333333333,
+    "Cor": 0.875,
+    "Eff": 0.662988898929777,
+    "IA": 0.662988898929777,
+    "HV": 0.42541787681327353
+  },
+  "final_time_interpretation": {
+    "hours": 32.0,
+    "bounds_hours": [
+      32.0,
+      32.0
+    ],
+    "decision": "source_scoped_reported_core_duration",
+    "scope": "reported_core_operations",
+    "original_issues": [
+      "labeling_preparation_not_source_supported_or_possible_core_function"
+    ],
+    "resolved_scope_issues": [
+      "labeling_preparation_not_source_supported_or_possible_core_function"
+    ],
+    "issues": [],
+    "phase_evidence": [
+      {
+        "operation_id": "OP13",
+        "supported": true,
+        "reason": "explicit_labeling_phase_heading",
+        "heading": {
+          "start": 1893,
+          "end": 1923,
+          "quote": "Permeabilization and Blocking\n",
+          "title": "Permeabilization and Blocking"
+        },
+        "operation": {
+          "unit_id": "L0021",
+          "quote": "Incubation with PBT + 20% (vol/vol) DMSO + 0.3 M glycine.(Temperature: 37 ℃, Time: 24 hours)",
+          "occurrence": 0,
+          "source_id": "SRC_2f08ef9bcc6aa5a557b56c68",
+          "start": 1923,
+          "end": 2015,
+          "answer_sha256": "dd2b2f24deba09da0fa5c6496d98b313f5648329345b250f58c4fa7fcb04e7dc",
+          "context_start": 1923,
+          "context_end": 2016,
+          "context": "Incubation with PBT + 20% (vol/vol) DMSO + 0.3 M glycine.(Temperature: 37 ℃, Time: 24 hours)\n",
+          "candidate_reference": {
+            "candidate_id": "O0014",
+            "kind": "operation_span",
+            "registry_sha256": "9cb03ef6915884ffad45bb88f06e06060b5a797760e51b1e252c218302f92381",
+            "enumerator_version": "source_bound_extraction_v11",
+            "selection_is_not_semantic_confirmation": true
+          }
+        }
+      },
+      {
+        "operation_id": "OP14",
+        "supported": true,
+        "reason": "explicit_labeling_phase_heading",
+        "heading": {
+          "start": 1893,
+          "end": 1923,
+          "quote": "Permeabilization and Blocking\n",
+          "title": "Permeabilization and Blocking"
+        },
+        "operation": {
+          "unit_id": "L0022",
+          "quote": "Incubation with PBT + 10% (vol/vol) DMSO + 6% (wt/vol) donkey serum (blocking buffer).(Temperature: 37 ℃, Time: 24 hours)",
+          "occurrence": 0,
+          "source_id": "SRC_2f08ef9bcc6aa5a557b56c68",
+          "start": 2016,
+          "end": 2137,
+          "answer_sha256": "dd2b2f24deba09da0fa5c6496d98b313f5648329345b250f58c4fa7fcb04e7dc",
+          "context_start": 2016,
+          "context_end": 2138,
+          "context": "Incubation with PBT + 10% (vol/vol) DMSO + 6% (wt/vol) donkey serum (blocking buffer).(Temperature: 37 ℃, Time: 24 hours)\n",
+          "candidate_reference": {
+            "candidate_id": "O0015",
+            "kind": "operation_span",
+            "registry_sha256": "9cb03ef6915884ffad45bb88f06e06060b5a797760e51b1e252c218302f92381",
+            "enumerator_version": "source_bound_extraction_v11",
+            "selection_is_not_semantic_confirmation": true
+          }
+        }
+      },
+      {
+        "operation_id": "OP15",
+        "supported": true,
+        "reason": "explicit_labeling_phase_heading",
+        "heading": {
+          "start": 2138,
+          "end": 2166,
+          "quote": "5 Primary Antibody Staining\n",
+          "title": "Primary Antibody Staining"
+        },
+        "operation": {
+          "unit_id": "L0024",
+          "quote": "Incubation with anti-β-III Tubulin (TUJ1) primary antibody diluted 1:500 in blocking buffer.(Temperature: 37 ℃, Time: 72 hours)",
+          "occurrence": 0,
+          "source_id": "SRC_2f08ef9bcc6aa5a557b56c68",
+          "start": 2166,
+          "end": 2293,
+          "answer_sha256": "dd2b2f24deba09da0fa5c6496d98b313f5648329345b250f58c4fa7fcb04e7dc",
+          "context_start": 2166,
+          "context_end": 2294,
+          "context": "Incubation with anti-β-III Tubulin (TUJ1) primary antibody diluted 1:500 in blocking buffer.(Temperature: 37 ℃, Time: 72 hours)\n",
+          "candidate_reference": {
+            "candidate_id": "O0016",
+            "kind": "operation_span",
+            "registry_sha256": "9cb03ef6915884ffad45bb88f06e06060b5a797760e51b1e252c218302f92381",
+            "enumerator_version": "source_bound_extraction_v11",
+            "selection_is_not_semantic_confirmation": true
+          }
+        }
+      },
+      {
+        "operation_id": "OP20",
+        "supported": true,
+        "reason": "explicit_labeling_phase_heading",
+        "heading": {
+          "start": 2513,
+          "end": 2543,
+          "quote": "7 Secondary Antibody Staining\n",
+          "title": "Secondary Antibody Staining"
+        },
+        "operation": {
+          "unit_id": "L0031",
+          "quote": "Incubation with Alexa Fluor 647-conjugated donkey anti-mouse IgG (H+L) diluted 1:300 in blocking buffer.(Temperature: 37 ℃, Time: 48 hours)",
+          "occurrence": 0,
+          "source_id": "SRC_2f08ef9bcc6aa5a557b56c68",
+          "start": 2543,
+          "end": 2682,
+          "answer_sha256": "dd2b2f24deba09da0fa5c6496d98b313f5648329345b250f58c4fa7fcb04e7dc",
+          "context_start": 2543,
+          "context_end": 2683,
+          "context": "Incubation with Alexa Fluor 647-conjugated donkey anti-mouse IgG (H+L) diluted 1:300 in blocking buffer.(Temperature: 37 ℃, Time: 48 hours)\n",
+          "candidate_reference": {
+            "candidate_id": "O0022",
+            "kind": "operation_span",
+            "registry_sha256": "9cb03ef6915884ffad45bb88f06e06060b5a797760e51b1e252c218302f92381",
+            "enumerator_version": "source_bound_extraction_v11",
+            "selection_is_not_semantic_confirmation": true
+          }
+        }
+      }
+    ],
+    "operation_contributions": [
+      {
+        "operation_id": "OP1",
+        "lower_hours": 1.0,
+        "upper_hours": 1.0,
+        "repeat_status": "source_exact_or_single"
+      },
+      {
+        "operation_id": "OP2",
+        "lower_hours": 1.0,
+        "upper_hours": 1.0,
+        "repeat_status": "source_exact_or_single"
+      },
+      {
+        "operation_id": "OP3",
+        "lower_hours": 1.0,
+        "upper_hours": 1.0,
+        "repeat_status": "source_exact_or_single"
+      },
+      {
+        "operation_id": "OP4",
+        "lower_hours": 1.0,
+        "upper_hours": 1.0,
+        "repeat_status": "source_exact_or_single"
+      },
+      {
+        "operation_id": "OP5",
+        "lower_hours": 1.0,
+        "upper_hours": 1.0,
+        "repeat_status": "source_exact_or_single"
+      },
+      {
+        "operation_id": "OP6",
+        "lower_hours": 1.0,
+        "upper_hours": 1.0,
+        "repeat_status": "source_exact_or_single"
+      },
+      {
+        "operation_id": "OP7",
+        "lower_hours": 12.0,
+        "upper_hours": 12.0,
+        "repeat_status": "source_exact_or_single"
+      },
+      {
+        "operation_id": "OP8",
+        "lower_hours": 1.0,
+        "upper_hours": 1.0,
+        "repeat_status": "source_exact_or_single"
+      },
+      {
+        "operation_id": "OP9",
+        "lower_hours": 1.0,
+        "upper_hours": 1.0,
+        "repeat_status": "source_exact_or_single"
+      },
+      {
+        "operation_id": "OP10",
+        "lower_hours": 1.0,
+        "upper_hours": 1.0,
+        "repeat_status": "source_exact_or_single"
+      },
+      {
+        "operation_id": "OP11",
+        "lower_hours": 1.0,
+        "upper_hours": 1.0,
+        "repeat_status": "source_exact_or_single"
+      },
+      {
+        "operation_id": "OP12",
+        "lower_hours": 1.0,
+        "upper_hours": 1.0,
+        "repeat_status": "source_exact_or_single"
+      },
+      {
+        "operation_id": "OP24",
+        "lower_hours": 1.0,
+        "upper_hours": 1.0,
+        "repeat_status": "source_exact_or_single"
+      },
+      {
+        "operation_id": "OP25",
+        "lower_hours": 1.0,
+        "upper_hours": 1.0,
+        "repeat_status": "source_exact_or_single"
+      },
+      {
+        "operation_id": "OP26",
+        "lower_hours": 1.0,
+        "upper_hours": 1.0,
+        "repeat_status": "source_exact_or_single"
+      },
+      {
+        "operation_id": "OP27",
+        "lower_hours": 1.0,
+        "upper_hours": 1.0,
+        "repeat_status": "source_exact_or_single"
+      },
+      {
+        "operation_id": "OP28",
+        "lower_hours": 1.0,
+        "upper_hours": 1.0,
+        "repeat_status": "source_exact_or_single"
+      },
+      {
+        "operation_id": "OP29",
+        "lower_hours": 1.0,
+        "upper_hours": 1.0,
+        "repeat_status": "source_exact_or_single"
+      },
+      {
+        "operation_id": "OP30",
+        "lower_hours": 0.5,
+        "upper_hours": 0.5,
+        "repeat_status": "source_exact_or_single"
+      },
+      {
+        "operation_id": "OP31",
+        "lower_hours": 0.5,
+        "upper_hours": 0.5,
+        "repeat_status": "source_exact_or_single"
+      },
+      {
+        "operation_id": "OP32",
+        "lower_hours": 2.0,
+        "upper_hours": 2.0,
+        "repeat_status": "source_exact_or_single"
+      }
+    ],
+    "workflow_completeness_not_inferred": true,
+    "complete_experimental_endpoint_duration": "not_separately_estimated",
+    "saved_coverage_judgment": {
+      "entities": "complete",
+      "time_operations": "complete",
+      "core_time_operations": "complete",
+      "unresolved": []
+    },
+    "heading_scope_candidate": {
+      "version": "time-heading-and-label-wash-scope-v1",
+      "original_issues": [
+        "labeling_preparation_not_source_supported_or_possible_core_function",
+        "source_action_records_not_all_classified"
+      ],
+      "changes": [
+        {
+          "rule": "phase_titles_are_not_additional_unclassified_operations",
+          "evidence": [
+            {
+              "supported": true,
+              "reason": "section_title_with_explicit_recorded_children",
+              "source": {
+                "unit_id": "L0005",
+                "quote": "Dehydration",
+                "occurrence": 0,
+                "source_id": "SRC_2f08ef9bcc6aa5a557b56c68",
+                "start": 798,
+                "end": 809,
+                "answer_sha256": "dd2b2f24deba09da0fa5c6496d98b313f5648329345b250f58c4fa7fcb04e7dc",
+                "context_start": 798,
+                "context_end": 810,
+                "context": "Dehydration\n"
+              },
+              "section_end": 1266,
+              "child_operation_ids": [
+                "OP1",
+                "OP2",
+                "OP3",
+                "OP4",
+                "OP5",
+                "OP6"
+              ],
+              "action_candidate_ids": [
+                "C0140",
+                "C0141",
+                "C0142",
+                "C0143",
+                "C0144",
+                "C0145"
+              ]
+            },
+            {
+              "supported": true,
+              "reason": "section_title_with_explicit_recorded_children",
+              "source": {
+                "unit_id": "L0025",
+                "quote": "6 Wash",
+                "occurrence": 0,
+                "source_id": "SRC_2f08ef9bcc6aa5a557b56c68",
+                "start": 2294,
+                "end": 2300,
+                "answer_sha256": "dd2b2f24deba09da0fa5c6496d98b313f5648329345b250f58c4fa7fcb04e7dc",
+                "context_start": 2294,
+                "context_end": 2301,
+                "context": "6 Wash\n"
+              },
+              "section_end": 2513,
+              "child_operation_ids": [
+                "OP16",
+                "OP17",
+                "OP18",
+                "OP19"
+              ],
+              "action_candidate_ids": [
+                "C0156",
+                "C0157",
+                "C0158",
+                "C0159"
+              ]
+            },
+            {
+              "supported": true,
+              "reason": "section_title_with_explicit_recorded_children",
+              "source": {
+                "unit_id": "L0032",
+                "quote": "8 Wash",
+                "occurrence": 0,
+                "source_id": "SRC_2f08ef9bcc6aa5a557b56c68",
+                "start": 2683,
+                "end": 2689,
+                "answer_sha256": "dd2b2f24deba09da0fa5c6496d98b313f5648329345b250f58c4fa7fcb04e7dc",
+                "context_start": 2683,
+                "context_end": 2690,
+                "context": "8 Wash\n"
+              },
+              "section_end": 2849,
+              "child_operation_ids": [
+                "OP21",
+                "OP22",
+                "OP23"
+              ],
+              "action_candidate_ids": [
+                "C0162",
+                "C0163",
+                "C0164"
+              ]
+            },
+            {
+              "supported": true,
+              "reason": "section_title_with_explicit_recorded_children",
+              "source": {
+                "unit_id": "L0036",
+                "quote": "9 Dehydration (post-immunostaining)",
+                "occurrence": 0,
+                "source_id": "SRC_2f08ef9bcc6aa5a557b56c68",
+                "start": 2849,
+                "end": 2884,
+                "answer_sha256": "dd2b2f24deba09da0fa5c6496d98b313f5648329345b250f58c4fa7fcb04e7dc",
+                "context_start": 2849,
+                "context_end": 2885,
+                "context": "9 Dehydration (post-immunostaining)\n"
+              },
+              "section_end": 3341,
+              "child_operation_ids": [
+                "OP24",
+                "OP25",
+                "OP26",
+                "OP27",
+                "OP28",
+                "OP29"
+              ],
+              "action_candidate_ids": [
+                "C0166",
+                "C0167",
+                "C0168",
+                "C0169",
+                "C0170",
+                "C0171"
+              ]
+            },
+            {
+              "supported": true,
+              "reason": "section_title_with_explicit_recorded_children",
+              "source": {
+                "unit_id": "L0048",
+                "quote": "12 Storage and Imaging Preparation",
+                "occurrence": 0,
+                "source_id": "SRC_2f08ef9bcc6aa5a557b56c68",
+                "start": 3647,
+                "end": 3681,
+                "answer_sha256": "dd2b2f24deba09da0fa5c6496d98b313f5648329345b250f58c4fa7fcb04e7dc",
+                "context_start": 3647,
+                "context_end": 3682,
+                "context": "12 Storage and Imaging Preparation\n"
+              },
+              "section_end": 3820,
+              "child_operation_ids": [
+                "OP33"
+              ],
+              "action_candidate_ids": [
+                "C0176"
+              ]
+            }
+          ]
+        },
+        {
+          "rule": "exclude_routine_antibody_labeling_washes_per_original_rubric",
+          "evidence": [
+            {
+              "operation_id": "OP16",
+              "raw_phase": "reagent_transition_wash",
+              "interpreted_phase": "routine_wash_after_antibody_labeling",
+              "source": {
+                "unit_id": "L0026",
+                "quote": "Incubation with PBT.(Temperature: RT, Time: 6 hours)",
+                "occurrence": 0,
+                "source_id": "SRC_2f08ef9bcc6aa5a557b56c68",
+                "start": 2301,
+                "end": 2353,
+                "answer_sha256": "dd2b2f24deba09da0fa5c6496d98b313f5648329345b250f58c4fa7fcb04e7dc",
+                "context_start": 2301,
+                "context_end": 2354,
+                "context": "Incubation with PBT.(Temperature: RT, Time: 6 hours)\n",
+                "candidate_reference": {
+                  "candidate_id": "O0018",
+                  "kind": "operation_span",
+                  "registry_sha256": "9cb03ef6915884ffad45bb88f06e06060b5a797760e51b1e252c218302f92381",
+                  "enumerator_version": "source_bound_extraction_v11",
+                  "selection_is_not_semantic_confirmation": true
+                }
+              },
+              "supported": true,
+              "reason": "wash_within_explicit_labeling_sequence",
+              "heading": {
+                "start": 2294,
+                "end": 2301,
+                "quote": "6 Wash\n",
+                "title": "Wash"
+              },
+              "preceding_phase_heading": {
+                "start": 2138,
+                "end": 2166,
+                "quote": "5 Primary Antibody Staining\n",
+                "title": "Primary Antibody Staining"
+              },
+              "operation": {
+                "unit_id": "L0026",
+                "quote": "Incubation with PBT.(Temperature: RT, Time: 6 hours)",
+                "occurrence": 0,
+                "source_id": "SRC_2f08ef9bcc6aa5a557b56c68",
+                "start": 2301,
+                "end": 2353,
+                "answer_sha256": "dd2b2f24deba09da0fa5c6496d98b313f5648329345b250f58c4fa7fcb04e7dc",
+                "context_start": 2301,
+                "context_end": 2354,
+                "context": "Incubation with PBT.(Temperature: RT, Time: 6 hours)\n",
+                "candidate_reference": {
+                  "candidate_id": "O0018",
+                  "kind": "operation_span",
+                  "registry_sha256": "9cb03ef6915884ffad45bb88f06e06060b5a797760e51b1e252c218302f92381",
+                  "enumerator_version": "source_bound_extraction_v11",
+                  "selection_is_not_semantic_confirmation": true
+                }
+              }
+            },
+            {
+              "operation_id": "OP17",
+              "raw_phase": "reagent_transition_wash",
+              "interpreted_phase": "routine_wash_after_antibody_labeling",
+              "source": {
+                "unit_id": "L0027",
+                "quote": "Incubation with PBT.(Temperature: RT, Time: 6 hours)",
+                "occurrence": 0,
+                "source_id": "SRC_2f08ef9bcc6aa5a557b56c68",
+                "start": 2354,
+                "end": 2406,
+                "answer_sha256": "dd2b2f24deba09da0fa5c6496d98b313f5648329345b250f58c4fa7fcb04e7dc",
+                "context_start": 2354,
+                "context_end": 2407,
+                "context": "Incubation with PBT.(Temperature: RT, Time: 6 hours)\n",
+                "candidate_reference": {
+                  "candidate_id": "O0019",
+                  "kind": "operation_span",
+                  "registry_sha256": "9cb03ef6915884ffad45bb88f06e06060b5a797760e51b1e252c218302f92381",
+                  "enumerator_version": "source_bound_extraction_v11",
+                  "selection_is_not_semantic_confirmation": true
+                }
+              },
+              "supported": true,
+              "reason": "wash_within_explicit_labeling_sequence",
+              "heading": {
+                "start": 2294,
+                "end": 2301,
+                "quote": "6 Wash\n",
+                "title": "Wash"
+              },
+              "preceding_phase_heading": {
+                "start": 2138,
+                "end": 2166,
+                "quote": "5 Primary Antibody Staining\n",
+                "title": "Primary Antibody Staining"
+              },
+              "operation": {
+                "unit_id": "L0027",
+                "quote": "Incubation with PBT.(Temperature: RT, Time: 6 hours)",
+                "occurrence": 0,
+                "source_id": "SRC_2f08ef9bcc6aa5a557b56c68",
+                "start": 2354,
+                "end": 2406,
+                "answer_sha256": "dd2b2f24deba09da0fa5c6496d98b313f5648329345b250f58c4fa7fcb04e7dc",
+                "context_start": 2354,
+                "context_end": 2407,
+                "context": "Incubation with PBT.(Temperature: RT, Time: 6 hours)\n",
+                "candidate_reference": {
+                  "candidate_id": "O0019",
+                  "kind": "operation_span",
+                  "registry_sha256": "9cb03ef6915884ffad45bb88f06e06060b5a797760e51b1e252c218302f92381",
+                  "enumerator_version": "source_bound_extraction_v11",
+                  "selection_is_not_semantic_confirmation": true
+                }
+              }
+            },
+            {
+              "operation_id": "OP18",
+              "raw_phase": "reagent_transition_wash",
+              "interpreted_phase": "routine_wash_after_antibody_labeling",
+              "source": {
+                "unit_id": "L0028",
+                "quote": "Incubation with PBT.(Temperature: RT, Time: 6 hours)",
+                "occurrence": 0,
+                "source_id": "SRC_2f08ef9bcc6aa5a557b56c68",
+                "start": 2407,
+                "end": 2459,
+                "answer_sha256": "dd2b2f24deba09da0fa5c6496d98b313f5648329345b250f58c4fa7fcb04e7dc",
+                "context_start": 2407,
+                "context_end": 2460,
+                "context": "Incubation with PBT.(Temperature: RT, Time: 6 hours)\n",
+                "candidate_reference": {
+                  "candidate_id": "O0020",
+                  "kind": "operation_span",
+                  "registry_sha256": "9cb03ef6915884ffad45bb88f06e06060b5a797760e51b1e252c218302f92381",
+                  "enumerator_version": "source_bound_extraction_v11",
+                  "selection_is_not_semantic_confirmation": true
+                }
+              },
+              "supported": true,
+              "reason": "wash_within_explicit_labeling_sequence",
+              "heading": {
+                "start": 2294,
+                "end": 2301,
+                "quote": "6 Wash\n",
+                "title": "Wash"
+              },
+              "preceding_phase_heading": {
+                "start": 2138,
+                "end": 2166,
+                "quote": "5 Primary Antibody Staining\n",
+                "title": "Primary Antibody Staining"
+              },
+              "operation": {
+                "unit_id": "L0028",
+                "quote": "Incubation with PBT.(Temperature: RT, Time: 6 hours)",
+                "occurrence": 0,
+                "source_id": "SRC_2f08ef9bcc6aa5a557b56c68",
+                "start": 2407,
+                "end": 2459,
+                "answer_sha256": "dd2b2f24deba09da0fa5c6496d98b313f5648329345b250f58c4fa7fcb04e7dc",
+                "context_start": 2407,
+                "context_end": 2460,
+                "context": "Incubation with PBT.(Temperature: RT, Time: 6 hours)\n",
+                "candidate_reference": {
+                  "candidate_id": "O0020",
+                  "kind": "operation_span",
+                  "registry_sha256": "9cb03ef6915884ffad45bb88f06e06060b5a797760e51b1e252c218302f92381",
+                  "enumerator_version": "source_bound_extraction_v11",
+                  "selection_is_not_semantic_confirmation": true
+                }
+              }
+            },
+            {
+              "operation_id": "OP19",
+              "raw_phase": "reagent_transition_wash",
+              "interpreted_phase": "routine_wash_after_antibody_labeling",
+              "source": {
+                "unit_id": "L0029",
+                "quote": "Incubation with PBT.(Temperature: RT, Time: 6 hours)",
+                "occurrence": 0,
+                "source_id": "SRC_2f08ef9bcc6aa5a557b56c68",
+                "start": 2460,
+                "end": 2512,
+                "answer_sha256": "dd2b2f24deba09da0fa5c6496d98b313f5648329345b250f58c4fa7fcb04e7dc",
+                "context_start": 2460,
+                "context_end": 2513,
+                "context": "Incubation with PBT.(Temperature: RT, Time: 6 hours)\n",
+                "candidate_reference": {
+                  "candidate_id": "O0021",
+                  "kind": "operation_span",
+                  "registry_sha256": "9cb03ef6915884ffad45bb88f06e06060b5a797760e51b1e252c218302f92381",
+                  "enumerator_version": "source_bound_extraction_v11",
+                  "selection_is_not_semantic_confirmation": true
+                }
+              },
+              "supported": true,
+              "reason": "wash_within_explicit_labeling_sequence",
+              "heading": {
+                "start": 2294,
+                "end": 2301,
+                "quote": "6 Wash\n",
+                "title": "Wash"
+              },
+              "preceding_phase_heading": {
+                "start": 2138,
+                "end": 2166,
+                "quote": "5 Primary Antibody Staining\n",
+                "title": "Primary Antibody Staining"
+              },
+              "operation": {
+                "unit_id": "L0029",
+                "quote": "Incubation with PBT.(Temperature: RT, Time: 6 hours)",
+                "occurrence": 0,
+                "source_id": "SRC_2f08ef9bcc6aa5a557b56c68",
+                "start": 2460,
+                "end": 2512,
+                "answer_sha256": "dd2b2f24deba09da0fa5c6496d98b313f5648329345b250f58c4fa7fcb04e7dc",
+                "context_start": 2460,
+                "context_end": 2513,
+                "context": "Incubation with PBT.(Temperature: RT, Time: 6 hours)\n",
+                "candidate_reference": {
+                  "candidate_id": "O0021",
+                  "kind": "operation_span",
+                  "registry_sha256": "9cb03ef6915884ffad45bb88f06e06060b5a797760e51b1e252c218302f92381",
+                  "enumerator_version": "source_bound_extraction_v11",
+                  "selection_is_not_semantic_confirmation": true
+                }
+              }
+            },
+            {
+              "operation_id": "OP21",
+              "raw_phase": "reagent_transition_wash",
+              "interpreted_phase": "routine_wash_after_antibody_labeling",
+              "source": {
+                "unit_id": "L0033",
+                "quote": "Incubation with PBT.(Temperature: RT, Time: 6 hours)",
+                "occurrence": 0,
+                "source_id": "SRC_2f08ef9bcc6aa5a557b56c68",
+                "start": 2690,
+                "end": 2742,
+                "answer_sha256": "dd2b2f24deba09da0fa5c6496d98b313f5648329345b250f58c4fa7fcb04e7dc",
+                "context_start": 2690,
+                "context_end": 2743,
+                "context": "Incubation with PBT.(Temperature: RT, Time: 6 hours)\n",
+                "candidate_reference": {
+                  "candidate_id": "O0024",
+                  "kind": "operation_span",
+                  "registry_sha256": "9cb03ef6915884ffad45bb88f06e06060b5a797760e51b1e252c218302f92381",
+                  "enumerator_version": "source_bound_extraction_v11",
+                  "selection_is_not_semantic_confirmation": true
+                }
+              },
+              "supported": true,
+              "reason": "wash_within_explicit_labeling_sequence",
+              "heading": {
+                "start": 2683,
+                "end": 2690,
+                "quote": "8 Wash\n",
+                "title": "Wash"
+              },
+              "preceding_phase_heading": {
+                "start": 2513,
+                "end": 2543,
+                "quote": "7 Secondary Antibody Staining\n",
+                "title": "Secondary Antibody Staining"
+              },
+              "operation": {
+                "unit_id": "L0033",
+                "quote": "Incubation with PBT.(Temperature: RT, Time: 6 hours)",
+                "occurrence": 0,
+                "source_id": "SRC_2f08ef9bcc6aa5a557b56c68",
+                "start": 2690,
+                "end": 2742,
+                "answer_sha256": "dd2b2f24deba09da0fa5c6496d98b313f5648329345b250f58c4fa7fcb04e7dc",
+                "context_start": 2690,
+                "context_end": 2743,
+                "context": "Incubation with PBT.(Temperature: RT, Time: 6 hours)\n",
+                "candidate_reference": {
+                  "candidate_id": "O0024",
+                  "kind": "operation_span",
+                  "registry_sha256": "9cb03ef6915884ffad45bb88f06e06060b5a797760e51b1e252c218302f92381",
+                  "enumerator_version": "source_bound_extraction_v11",
+                  "selection_is_not_semantic_confirmation": true
+                }
+              }
+            },
+            {
+              "operation_id": "OP22",
+              "raw_phase": "reagent_transition_wash",
+              "interpreted_phase": "routine_wash_after_antibody_labeling",
+              "source": {
+                "unit_id": "L0034",
+                "quote": "Incubation with PBT.(Temperature: RT, Time: 6 hours)",
+                "occurrence": 0,
+                "source_id": "SRC_2f08ef9bcc6aa5a557b56c68",
+                "start": 2743,
+                "end": 2795,
+                "answer_sha256": "dd2b2f24deba09da0fa5c6496d98b313f5648329345b250f58c4fa7fcb04e7dc",
+                "context_start": 2743,
+                "context_end": 2796,
+                "context": "Incubation with PBT.(Temperature: RT, Time: 6 hours)\n",
+                "candidate_reference": {
+                  "candidate_id": "O0025",
+                  "kind": "operation_span",
+                  "registry_sha256": "9cb03ef6915884ffad45bb88f06e06060b5a797760e51b1e252c218302f92381",
+                  "enumerator_version": "source_bound_extraction_v11",
+                  "selection_is_not_semantic_confirmation": true
+                }
+              },
+              "supported": true,
+              "reason": "wash_within_explicit_labeling_sequence",
+              "heading": {
+                "start": 2683,
+                "end": 2690,
+                "quote": "8 Wash\n",
+                "title": "Wash"
+              },
+              "preceding_phase_heading": {
+                "start": 2513,
+                "end": 2543,
+                "quote": "7 Secondary Antibody Staining\n",
+                "title": "Secondary Antibody Staining"
+              },
+              "operation": {
+                "unit_id": "L0034",
+                "quote": "Incubation with PBT.(Temperature: RT, Time: 6 hours)",
+                "occurrence": 0,
+                "source_id": "SRC_2f08ef9bcc6aa5a557b56c68",
+                "start": 2743,
+                "end": 2795,
+                "answer_sha256": "dd2b2f24deba09da0fa5c6496d98b313f5648329345b250f58c4fa7fcb04e7dc",
+                "context_start": 2743,
+                "context_end": 2796,
+                "context": "Incubation with PBT.(Temperature: RT, Time: 6 hours)\n",
+                "candidate_reference": {
+                  "candidate_id": "O0025",
+                  "kind": "operation_span",
+                  "registry_sha256": "9cb03ef6915884ffad45bb88f06e06060b5a797760e51b1e252c218302f92381",
+                  "enumerator_version": "source_bound_extraction_v11",
+                  "selection_is_not_semantic_confirmation": true
+                }
+              }
+            },
+            {
+              "operation_id": "OP23",
+              "raw_phase": "reagent_transition_wash",
+              "interpreted_phase": "routine_wash_after_antibody_labeling",
+              "source": {
+                "unit_id": "L0035",
+                "quote": "Incubation with PBT.(Temperature: RT, Time: 6 hours)",
+                "occurrence": 0,
+                "source_id": "SRC_2f08ef9bcc6aa5a557b56c68",
+                "start": 2796,
+                "end": 2848,
+                "answer_sha256": "dd2b2f24deba09da0fa5c6496d98b313f5648329345b250f58c4fa7fcb04e7dc",
+                "context_start": 2796,
+                "context_end": 2849,
+                "context": "Incubation with PBT.(Temperature: RT, Time: 6 hours)\n",
+                "candidate_reference": {
+                  "candidate_id": "O0026",
+                  "kind": "operation_span",
+                  "registry_sha256": "9cb03ef6915884ffad45bb88f06e06060b5a797760e51b1e252c218302f92381",
+                  "enumerator_version": "source_bound_extraction_v11",
+                  "selection_is_not_semantic_confirmation": true
+                }
+              },
+              "supported": true,
+              "reason": "wash_within_explicit_labeling_sequence",
+              "heading": {
+                "start": 2683,
+                "end": 2690,
+                "quote": "8 Wash\n",
+                "title": "Wash"
+              },
+              "preceding_phase_heading": {
+                "start": 2513,
+                "end": 2543,
+                "quote": "7 Secondary Antibody Staining\n",
+                "title": "Secondary Antibody Staining"
+              },
+              "operation": {
+                "unit_id": "L0035",
+                "quote": "Incubation with PBT.(Temperature: RT, Time: 6 hours)",
+                "occurrence": 0,
+                "source_id": "SRC_2f08ef9bcc6aa5a557b56c68",
+                "start": 2796,
+                "end": 2848,
+                "answer_sha256": "dd2b2f24deba09da0fa5c6496d98b313f5648329345b250f58c4fa7fcb04e7dc",
+                "context_start": 2796,
+                "context_end": 2849,
+                "context": "Incubation with PBT.(Temperature: RT, Time: 6 hours)\n",
+                "candidate_reference": {
+                  "candidate_id": "O0026",
+                  "kind": "operation_span",
+                  "registry_sha256": "9cb03ef6915884ffad45bb88f06e06060b5a797760e51b1e252c218302f92381",
+                  "enumerator_version": "source_bound_extraction_v11",
+                  "selection_is_not_semantic_confirmation": true
+                }
+              }
+            }
+          ],
+          "removed_contributions": [
+            {
+              "operation_id": "OP16",
+              "lower_hours": 6.0,
+              "upper_hours": 6.0,
+              "repeat_status": "source_exact_or_single"
+            },
+            {
+              "operation_id": "OP17",
+              "lower_hours": 6.0,
+              "upper_hours": 6.0,
+              "repeat_status": "source_exact_or_single"
+            },
+            {
+              "operation_id": "OP18",
+              "lower_hours": 6.0,
+              "upper_hours": 6.0,
+              "repeat_status": "source_exact_or_single"
+            },
+            {
+              "operation_id": "OP19",
+              "lower_hours": 6.0,
+              "upper_hours": 6.0,
+              "repeat_status": "source_exact_or_single"
+            },
+            {
+              "operation_id": "OP21",
+              "lower_hours": 6.0,
+              "upper_hours": 6.0,
+              "repeat_status": "source_exact_or_single"
+            },
+            {
+              "operation_id": "OP22",
+              "lower_hours": 6.0,
+              "upper_hours": 6.0,
+              "repeat_status": "source_exact_or_single"
+            },
+            {
+              "operation_id": "OP23",
+              "lower_hours": 6.0,
+              "upper_hours": 6.0,
+              "repeat_status": "source_exact_or_single"
+            }
+          ],
+          "bounds_before": [
+            74.0,
+            74.0
+          ],
+          "bounds_after": [
+            32.0,
+            32.0
+          ]
+        }
+      ],
+      "source_operations_not_modified": true,
+      "raw_phase_assignments_preserved": true
+    },
+    "original_numeric_time_computation": {
+      "policy": "kb-window-asymmetric-median-0.20-under-0.10-over-v1",
+      "source": "time_kb.json",
+      "requested_tier": "T04_WHOLE_MOUSE_BRAIN_5_12MM",
+      "actual_hours": 32.0,
+      "min_hours": 24.0,
+      "max_hours": 72.0,
+      "median_hours": 36.0,
+      "tau_hours": 7.2,
+      "delta_hours": 0.0,
+      "tau_under_fraction": 0.2,
+      "tau_over_fraction": 0.1,
+      "status": "scored",
+      "resolved_tier": "T04_WHOLE_MOUSE_BRAIN_5_12MM",
+      "method_key": "idisco+"
+    }
+  },
+  "time_heading_changes": {
+    "s_time": {
+      "before": null,
+      "after": 3.0
+    },
+    "Eff": {
+      "before": null,
+      "after": 0.662988898929777
+    },
+    "IA": {
+      "before": null,
+      "after": 0.662988898929777
+    },
+    "HV": {
+      "before": null,
+      "after": 0.42541787681327353
+    }
+  }
+}

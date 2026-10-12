@@ -1,0 +1,254 @@
+{
+  "unit": "synchronized task",
+  "repeats_requested": 2000,
+  "seed": 20261010,
+  "question_ids": [
+    "21",
+    "22",
+    "248"
+  ],
+  "task_count": 3,
+  "new_model_requests": 0,
+  "exact_enumeration_count": 27,
+  "status": "descriptive_small_fixed_task_set",
+  "limitation": "Coverage-selected, exposed tasks and provisional references; exact enumeration only audits Monte Carlo approximation, not scientific accuracy or generalization.",
+  "monte_carlo": {
+    "draw_count": 2000,
+    "percentile_intervals": {
+      "openai_qwen3-14b": {
+        "Com": [
+          0.4444444444444444,
+          0.6888888888888888
+        ],
+        "Cor": [
+          0.3333333333333333,
+          0.5833333333333334
+        ],
+        "Eff": [
+          0.2950781253905583,
+          0.5785275218581414
+        ],
+        "IA": [
+          0.2950781253905583,
+          0.5416666666666666
+        ],
+        "HV": [
+          0.06338715286167547,
+          0.21587647343410274
+        ]
+      },
+      "openai_qwen3-32b": {
+        "Com": [
+          0.39999999999999997,
+          0.6444444444444444
+        ],
+        "Cor": [
+          0.5416666666666666,
+          0.6666666666666666
+        ],
+        "Eff": [
+          0.387988898929777,
+          0.6236102235203229
+        ],
+        "IA": [
+          0.387988898929777,
+          0.39999999999999997
+        ],
+        "HV": [
+          0.11296266666670733,
+          0.16669152694760783
+        ]
+      }
+    },
+    "bootstrap_means": {
+      "openai_qwen3-14b": {
+        "Com": 0.5914518518518519,
+        "Cor": 0.48590972222222223,
+        "Eff": 0.4046966529348692,
+        "IA": 0.39263700981139177,
+        "HV": 0.12208209371419858
+      },
+      "openai_qwen3-32b": {
+        "Com": 0.479974074074074,
+        "Cor": 0.6244583333333333,
+        "Eff": 0.4794893719086055,
+        "IA": 0.3960703680998587,
+        "HV": 0.13802124853047895
+      }
+    },
+    "nondominance_frequency": {
+      "openai_qwen3-14b": 1.0,
+      "openai_qwen3-32b": 1.0
+    },
+    "dominance_frequency": {
+      "openai_qwen3-14b": {
+        "openai_qwen3-14b": 0.0,
+        "openai_qwen3-32b": 0.0
+      },
+      "openai_qwen3-32b": {
+        "openai_qwen3-14b": 0.0,
+        "openai_qwen3-32b": 0.0
+      }
+    }
+  },
+  "exact": {
+    "draw_count": 27,
+    "percentile_intervals": {
+      "openai_qwen3-14b": {
+        "Com": [
+          0.48777777777777775,
+          0.6792592592592591
+        ],
+        "Cor": [
+          0.3784722222222222,
+          0.5743055555555556
+        ],
+        "Eff": [
+          0.3059114587238916,
+          0.527946819290165
+        ],
+        "IA": [
+          0.3059114587238916,
+          0.4990724827235097
+        ],
+        "HV": [
+          0.0690372878963006,
+          0.1884872556780352
+        ]
+      },
+      "openai_qwen3-32b": {
+        "Com": [
+          0.39999999999999997,
+          0.5914814814814813
+        ],
+        "Cor": [
+          0.56875,
+          0.6666666666666666
+        ],
+        "Eff": [
+          0.3957068041616917,
+          0.5802768417576192
+        ],
+        "IA": [
+          0.3905913041616586,
+          0.39999999999999997
+        ],
+        "HV": [
+          0.11776245771529144,
+          0.15985006493533016
+        ]
+      }
+    },
+    "bootstrap_means": {
+      "openai_qwen3-14b": {
+        "Com": 0.5925925925925926,
+        "Cor": 0.4861111111111111,
+        "Eff": 0.40622792421308596,
+        "IA": 0.39394097248259435,
+        "HV": 0.12290944182370271
+      },
+      "openai_qwen3-32b": {
+        "Com": 0.4814814814814814,
+        "Cor": 0.625,
+        "Eff": 0.4784030408167508,
+        "IA": 0.39599629964325894,
+        "HV": 0.1382565806812395
+      }
+    },
+    "nondominance_frequency": {
+      "openai_qwen3-14b": 1.0,
+      "openai_qwen3-32b": 1.0
+    },
+    "dominance_frequency": {
+      "openai_qwen3-14b": {
+        "openai_qwen3-14b": 0.0,
+        "openai_qwen3-32b": 0.0
+      },
+      "openai_qwen3-32b": {
+        "openai_qwen3-14b": 0.0,
+        "openai_qwen3-32b": 0.0
+      }
+    }
+  },
+  "monte_carlo_vs_exact": {
+    "percentile_endpoint_absolute_error": {
+      "openai_qwen3-14b": {
+        "Com": [
+          0.043333333333333335,
+          0.009629629629629655
+        ],
+        "Cor": [
+          0.045138888888888895,
+          0.009027777777777746
+        ],
+        "Eff": [
+          0.010833333333333306,
+          0.05058070256797642
+        ],
+        "IA": [
+          0.010833333333333306,
+          0.04259418394315695
+        ],
+        "HV": [
+          0.005650135034625137,
+          0.027389217756067535
+        ]
+      },
+      "openai_qwen3-32b": {
+        "Com": [
+          0.0,
+          0.0529629629629631
+        ],
+        "Cor": [
+          0.027083333333333348,
+          0.0
+        ],
+        "Eff": [
+          0.007717905231914679,
+          0.04333338176270374
+        ],
+        "IA": [
+          0.0026024052318815993,
+          0.0
+        ],
+        "HV": [
+          0.004799791048584107,
+          0.0068414620122776715
+        ]
+      }
+    },
+    "bootstrap_mean_absolute_error": {
+      "openai_qwen3-14b": {
+        "Com": 0.0011407407407406644,
+        "Cor": 0.00020138888888887596,
+        "Eff": 0.0015312712782167281,
+        "IA": 0.0013039626712025854,
+        "HV": 0.0008273481095041335
+      },
+      "openai_qwen3-32b": {
+        "Com": 0.0015074074074074018,
+        "Cor": 0.0005416666666666625,
+        "Eff": 0.001086331091854742,
+        "IA": 7.40684565997407e-05,
+        "HV": 0.0002353321507605477
+      }
+    },
+    "nondominance_frequency_absolute_error": {
+      "openai_qwen3-14b": 0.0,
+      "openai_qwen3-32b": 0.0
+    },
+    "dominance_frequency_absolute_error": {
+      "openai_qwen3-14b": {
+        "openai_qwen3-14b": 0.0,
+        "openai_qwen3-32b": 0.0
+      },
+      "openai_qwen3-32b": {
+        "openai_qwen3-14b": 0.0,
+        "openai_qwen3-32b": 0.0
+      }
+    }
+  },
+  "exact_probability_per_ordered_draw": 0.037037037037037035,
+  "percentile_definition": "numpy.quantile linear, matching original family bootstrap",
+  "convergence_acceptance_test_performed": false
+}

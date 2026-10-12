@@ -1,0 +1,23 @@
+{
+  "command": [
+    "C:\\ClearEval\\review_artifacts\\bioprobench_2026-09-29\\python_portable\\python.exe",
+    "scripts\\cce_typed_label_transfer_v1.py",
+    "--batches",
+    "artifacts\\cce_validation\\optimizer_round3_20261011\\E2_canonical_qwen_01",
+    "artifacts\\cce_validation\\optimizer_round3_20261011\\confirmation_qwen_01",
+    "--config",
+    "C:\\ClearEval\\reports\\cleareval_20261012\\scorer_revision\\config.json",
+    "--policy",
+    "C:\\ClearEval\\reports\\cleareval_20261012\\typed_label_revision\\policy_with_sources.json",
+    "--out",
+    "C:\\ClearEval\\reports\\cleareval_20261012\\typed_label_transfer\\actual_01"
+  ],
+  "plan": {
+    "path": "C:\\ClearEval\\reports\\cleareval_20261012\\typed_label_transfer\\actual_01\\plan.json",
+    "sha256": "e27a883921ed62f0d9ee1ee4ea0a672c79cd7d339ee411225a9b621c27814eea"
+  },
+  "returns": 32,
+  "source_files_verified": 304,
+  "new_model_calls": 0,
+  "new_author_annotations": 0
+}

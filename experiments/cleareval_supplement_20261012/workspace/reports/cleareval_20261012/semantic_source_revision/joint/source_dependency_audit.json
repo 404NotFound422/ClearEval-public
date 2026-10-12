@@ -1,0 +1,85 @@
+{
+  "scope": "same two-task joint cohort; reference-dependence sensitivity, not a measured correlation model",
+  "question_pair_is_the_minimum_unit": true,
+  "answer_reference_membership": [
+    {
+      "cell_id": "R3C05",
+      "question_id": "23",
+      "generator": "openai_claude-sonnet-4.6",
+      "reference_id": "FDISCO_SUPPLEMENT_V2_BLOCK_3MM_UNTIMED",
+      "selected_reference_family": "FDISCO_QI2019_MOUSE_BRAIN",
+      "reference_status": "source_extracted_conditional_task_applicability_not_expert_confirmed"
+    },
+    {
+      "cell_id": "R3C06",
+      "question_id": "23",
+      "generator": "openai_qwen3-max",
+      "reference_id": "CUBIC_HV_2020_AUTHOR_FULL20_METHOD_FAMILY_CONDITIONAL_V1",
+      "selected_reference_family": "CUBIC_HV_SUSAKI_2020",
+      "reference_status": "source_extracted_conditional_task_applicability_not_expert_confirmed"
+    },
+    {
+      "cell_id": "R3C07",
+      "question_id": "248",
+      "generator": "openai_claude-sonnet-4.6",
+      "reference_id": "FDISCO_SUPPLEMENT_V2_WHOLE_BRAIN",
+      "selected_reference_family": "FDISCO_QI2019_MOUSE_BRAIN",
+      "reference_status": "source_extracted_conditional_task_applicability_not_expert_confirmed"
+    },
+    {
+      "cell_id": "R3C08",
+      "question_id": "248",
+      "generator": "openai_qwen3-max",
+      "reference_id": "IDISCO_PLUS_2016_SUPPLEMENT_METHOD_FAMILY_V1",
+      "selected_reference_family": "Renier_Cell_2016_iDISCOplus_10.1016_j.cell.2016.05.007",
+      "reference_status": "source_extracted_conditional_task_applicability_not_expert_confirmed"
+    }
+  ],
+  "question_family_sets": {
+    "23": [
+      "CUBIC_HV_SUSAKI_2020",
+      "FDISCO_QI2019_MOUSE_BRAIN"
+    ],
+    "248": [
+      "FDISCO_QI2019_MOUSE_BRAIN",
+      "Renier_Cell_2016_iDISCOplus_10.1016_j.cell.2016.05.007"
+    ]
+  },
+  "edges": [
+    {
+      "tasks": [
+        "23",
+        "248"
+      ],
+      "shared_selected_reference_families": [
+        "FDISCO_QI2019_MOUSE_BRAIN"
+      ]
+    }
+  ],
+  "conservative_connected_components": [
+    [
+      "23",
+      "248"
+    ]
+  ],
+  "component_n": 1,
+  "cluster_uncertainty_estimable": false,
+  "result": "One connected component spans both paired tasks through the shared FDISCO source. A family-block bootstrap has no independent block variation to estimate.",
+  "task_exact_resampling_remains": "descriptive reweighting of the observed two questions, not family-independent population uncertainty",
+  "not_claimed": "A shared reference does not itself prove that observed answer errors are correlated.",
+  "source_bindings": [
+    {
+      "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\optimizer_round3_20261011\\confirmation_qwen_01\\cases.json",
+      "sha256": "b4e50ef0280f7450532e198c1c6cd85ec399de06f68007a848cae1ed0fb5a08f"
+    },
+    {
+      "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\optimizer_round3_20261011\\confirmation_qwen_01\\matrix.json",
+      "sha256": "76f022f698f8379c3244cb9320007618d2357c2b9c3f020ce0de8974e5af3690"
+    }
+  ],
+  "command": [
+    "C:\\ClearEval\\review_artifacts\\bioprobench_2026-09-29\\python_portable\\python.exe",
+    "C:\\ClearEval\\reports\\cleareval_20261012\\semantic_source_revision\\audit_source_dependencies.py"
+  ],
+  "new_model_calls": 0
+}

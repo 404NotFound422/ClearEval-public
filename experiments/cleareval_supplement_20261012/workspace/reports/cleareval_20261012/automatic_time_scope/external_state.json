@@ -1,0 +1,58 @@
+{
+  "budget": {
+    "round_id": "source_context_validation_20261012",
+    "attempts_recorded": 438,
+    "package_limit": 438,
+    "round_attempts": 10,
+    "round_limit": 10,
+    "remaining_request_capacity": 0,
+    "authorization": {
+      "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\optimizer_round3_20261011\\source_context_validation_proposal_01\\additional_authorization.json",
+      "sha256": "f0d41fca2d0a893b044b032c9e6353c675a9296aaa83b41e712880bf4e77be34"
+    },
+    "ledger": {
+      "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\judges\\request_ledger.jsonl",
+      "sha256": "cbf7618d8586c208f8c49c1b44a15d94c974f5d9bc21d4e5fe20d523a47ed04f"
+    },
+    "deadline_utc": "2026-10-12T02:25:25+00:00",
+    "automatic_retries": false,
+    "human_budget": {
+      "experts": 1,
+      "development": 5,
+      "holdout": 15
+    }
+  },
+  "ledger_unchanged": true,
+  "new_model_calls": 0,
+  "expert_rows": 160,
+  "expert_nonempty_fields": {
+    "expert_decision": 0,
+    "source_location": 0,
+    "correction_or_basis": 0,
+    "error_type": 0,
+    "reviewer_id": 0,
+    "review_date": 0
+  },
+  "human_inputs": [
+    {
+      "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\human_review\\reviewer\\review_items.csv",
+      "sha256": "7ae708d91938b7e60737298261234e483caee4b50475ee20219cb188667ff5aa"
+    },
+    {
+      "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\human_review\\expert_extraction_corrections.json",
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+    },
+    {
+      "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\human_review\\versioned_review_v1\\received_receipts.json",
+      "sha256": "c226f7db47b65db8f5dc35f171b2ef4e1d03ce228e10589182a47637461a477a"
+    }
+  ],
+  "wetlab_data_rows": 0,
+  "wetlab_source": {
+    "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\wetlab\\measurements.csv",
+    "sha256": "edc12d464c6d77c74748afde36a673ccca33fed2f0e777bff21d2d9f04b3535b"
+  },
+  "verification_this_stage": "ledger, expert input and wet-lab file hashes checked; unchanged values reused",
+  "checked_utc": "2026-10-12T08:40:53.367489+00:00",
+  "authorization_for_new_pairs": "requested_but_not_received"
+}

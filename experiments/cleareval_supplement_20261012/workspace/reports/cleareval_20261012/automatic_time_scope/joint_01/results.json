@@ -1,0 +1,1434 @@
+[
+  {
+    "scenario_id": "C05_S000__C08_S000",
+    "C05_scenario": "S000",
+    "C08_scenario": "S000",
+    "C05_hours": 14.0,
+    "C08_hours": 20.0,
+    "C07_hours": 8.5,
+    "per_answer": [
+      {
+        "cell_id": "R3C05__r0",
+        "model": "openai_claude-sonnet-4.6",
+        "question_id": "23",
+        "question_sha256": "fb1a828382a1a470c9b298ed9bda10bc27fa39b6a7547f3db7ab52c5e6f32db2",
+        "answer_sha256": "5635b58bca905e8a848c015f1823e33c7011e69dcfa6f7c787ef4eab8b7c2c1c",
+        "identity_eligible": true,
+        "formal_eligible": false,
+        "c_param": 3,
+        "co_order": 3,
+        "co_method": 2,
+        "co_param": 1,
+        "co_chem": 1,
+        "s_method": -0.45,
+        "s_label": 5.1,
+        "s_trans": 2.7055534759358473,
+        "s_time": 0.13181080087022226,
+        "sr": 1.0,
+        "sp": 0.27586206896551724,
+        "Com": 1.0,
+        "Cor": 0.875,
+        "Eff": 0.5514470230671724,
+        "IA": 0.5514470230671724,
+        "HV": 0.48251614518377584
+      },
+      {
+        "cell_id": "R3C06__r0",
+        "model": "openai_qwen3-max",
+        "question_id": "23",
+        "question_sha256": "fb1a828382a1a470c9b298ed9bda10bc27fa39b6a7547f3db7ab52c5e6f32db2",
+        "answer_sha256": "708712095799859bf19d0936e9efe89e88f3c956370cda796dc03fea5d27ecc9",
+        "identity_eligible": true,
+        "formal_eligible": false,
+        "c_param": 3,
+        "co_order": 2,
+        "co_method": 1,
+        "co_param": 1,
+        "co_chem": 1,
+        "s_method": 0.9722,
+        "s_label": 4.5,
+        "s_trans": 3.0,
+        "s_time": 0.011597760418418434,
+        "sr": 0.0,
+        "sp": 0.0,
+        "Com": 0.6,
+        "Cor": 0.6666666666666666,
+        "Eff": 0.6120764800348683,
+        "IA": 0.6,
+        "HV": 0.24483059201394727
+      },
+      {
+        "cell_id": "R3C07__r0",
+        "model": "openai_claude-sonnet-4.6",
+        "question_id": "248",
+        "question_sha256": "63df38158aa3cb5cd1f907d21c426b65b9b6bd48096f98d0d0b11c530f1bf82f",
+        "answer_sha256": "4b84fdc89feaa11f37599e9f3fe38336fecf418a499e8609ec08312f6cb78bd3",
+        "identity_eligible": true,
+        "formal_eligible": false,
+        "c_param": 3,
+        "co_order": 2,
+        "co_method": 1,
+        "co_param": 0,
+        "co_chem": 1,
+        "s_method": 0.1263,
+        "s_label": 5.1,
+        "s_trans": 2.814646787157323,
+        "s_time": 0.0696993280570204,
+        "sr": 0.0,
+        "sp": 0.0,
+        "Com": 0.6,
+        "Cor": 0.5416666666666666,
+        "Eff": 0.584177176267862,
+        "IA": 0.5416666666666666,
+        "HV": 0.18985758228705513
+      },
+      {
+        "cell_id": "R3C08__r0",
+        "model": "openai_qwen3-max",
+        "question_id": "248",
+        "question_sha256": "63df38158aa3cb5cd1f907d21c426b65b9b6bd48096f98d0d0b11c530f1bf82f",
+        "answer_sha256": "576f2a4e8f6878885c8559a568d55cebdde4abf5239cd611169eaef1ad8ee291",
+        "identity_eligible": true,
+        "formal_eligible": false,
+        "c_param": 3,
+        "co_order": 3,
+        "co_method": 2,
+        "co_param": 1,
+        "co_chem": 1,
+        "s_method": -0.4313,
+        "s_label": 1.7999999999999998,
+        "s_trans": 2.814646787157323,
+        "s_time": 2.5709906743058366,
+        "sr": 0.3333333333333333,
+        "sp": 0.11428571428571428,
+        "Com": 0.7333333333333333,
+        "Cor": 0.875,
+        "Eff": 0.6272381217885967,
+        "IA": 0.6272381217885967,
+        "HV": 0.40247779481434953
+      }
+    ],
+    "joint": {
+      "numeric_scope": "automatic_development_conditional",
+      "model_cohort": [
+        "openai_claude-sonnet-4.6",
+        "openai_qwen3-max"
+      ],
+      "cohort_size": 2,
+      "question_denominator": 2,
+      "common_question_ids": [
+        "23",
+        "248"
+      ],
+      "evaluated_question_ids": [
+        "23",
+        "248"
+      ],
+      "evaluated_question_n": 2,
+      "common_fraction_of_evaluated_questions": 1.0,
+      "common_n": 2,
+      "common_coverage": 1.0,
+      "per_model_eligible_n": {
+        "openai_claude-sonnet-4.6": 2,
+        "openai_qwen3-max": 2
+      },
+      "excluded_counts": {
+        "cross_model_question_hash_mismatch": 0
+      },
+      "means": {
+        "openai_claude-sonnet-4.6": {
+          "Com": 0.8,
+          "Cor": 0.7083333333333333,
+          "Eff": 0.5678120996675172,
+          "IA": 0.5465568448669196,
+          "HV": 0.3361868637354155
+        },
+        "openai_qwen3-max": {
+          "Com": 0.6666666666666666,
+          "Cor": 0.7708333333333333,
+          "Eff": 0.6196573009117325,
+          "IA": 0.6136190608942984,
+          "HV": 0.3236541934141484
+        }
+      },
+      "dominance_matrix": {
+        "openai_claude-sonnet-4.6": {
+          "openai_claude-sonnet-4.6": false,
+          "openai_qwen3-max": false
+        },
+        "openai_qwen3-max": {
+          "openai_claude-sonnet-4.6": false,
+          "openai_qwen3-max": false
+        }
+      },
+      "empirical_nondominated": [
+        "openai_claude-sonnet-4.6",
+        "openai_qwen3-max"
+      ],
+      "dominance_tolerance": 1e-12,
+      "aggregation": "mean of per-question IA=min(Com,Cor,Eff) and HV=Com*Cor*Eff",
+      "formal_result": false
+    },
+    "exact_nondominance_frequency": {
+      "openai_claude-sonnet-4.6": 0.75,
+      "openai_qwen3-max": 1.0
+    },
+    "delta_mean_HV_Claude_minus_Qwen": 0.012532670321267092,
+    "source_assisted_comparator_scenario": "finite_range__extra_0__with_preimaging___explicit_setpoint___omit_optional_bleach",
+    "formal_result": false,
+    "family_independence_established": false
+  },
+  {
+    "scenario_id": "C05_S000__C08_S001",
+    "C05_scenario": "S000",
+    "C08_scenario": "S001",
+    "C05_hours": 14.0,
+    "C08_hours": 32.0,
+    "C07_hours": 8.5,
+    "per_answer": [
+      {
+        "cell_id": "R3C05__r0",
+        "model": "openai_claude-sonnet-4.6",
+        "question_id": "23",
+        "question_sha256": "fb1a828382a1a470c9b298ed9bda10bc27fa39b6a7547f3db7ab52c5e6f32db2",
+        "answer_sha256": "5635b58bca905e8a848c015f1823e33c7011e69dcfa6f7c787ef4eab8b7c2c1c",
+        "identity_eligible": true,
+        "formal_eligible": false,
+        "c_param": 3,
+        "co_order": 3,
+        "co_method": 2,
+        "co_param": 1,
+        "co_chem": 1,
+        "s_method": -0.45,
+        "s_label": 5.1,
+        "s_trans": 2.7055534759358473,
+        "s_time": 0.13181080087022226,
+        "sr": 1.0,
+        "sp": 0.27586206896551724,
+        "Com": 1.0,
+        "Cor": 0.875,
+        "Eff": 0.5514470230671724,
+        "IA": 0.5514470230671724,
+        "HV": 0.48251614518377584
+      },
+      {
+        "cell_id": "R3C06__r0",
+        "model": "openai_qwen3-max",
+        "question_id": "23",
+        "question_sha256": "fb1a828382a1a470c9b298ed9bda10bc27fa39b6a7547f3db7ab52c5e6f32db2",
+        "answer_sha256": "708712095799859bf19d0936e9efe89e88f3c956370cda796dc03fea5d27ecc9",
+        "identity_eligible": true,
+        "formal_eligible": false,
+        "c_param": 3,
+        "co_order": 2,
+        "co_method": 1,
+        "co_param": 1,
+        "co_chem": 1,
+        "s_method": 0.9722,
+        "s_label": 4.5,
+        "s_trans": 3.0,
+        "s_time": 0.011597760418418434,
+        "sr": 0.0,
+        "sp": 0.0,
+        "Com": 0.6,
+        "Cor": 0.6666666666666666,
+        "Eff": 0.6120764800348683,
+        "IA": 0.6,
+        "HV": 0.24483059201394727
+      },
+      {
+        "cell_id": "R3C07__r0",
+        "model": "openai_claude-sonnet-4.6",
+        "question_id": "248",
+        "question_sha256": "63df38158aa3cb5cd1f907d21c426b65b9b6bd48096f98d0d0b11c530f1bf82f",
+        "answer_sha256": "4b84fdc89feaa11f37599e9f3fe38336fecf418a499e8609ec08312f6cb78bd3",
+        "identity_eligible": true,
+        "formal_eligible": false,
+        "c_param": 3,
+        "co_order": 2,
+        "co_method": 1,
+        "co_param": 0,
+        "co_chem": 1,
+        "s_method": 0.1263,
+        "s_label": 5.1,
+        "s_trans": 2.814646787157323,
+        "s_time": 0.0696993280570204,
+        "sr": 0.0,
+        "sp": 0.0,
+        "Com": 0.6,
+        "Cor": 0.5416666666666666,
+        "Eff": 0.584177176267862,
+        "IA": 0.5416666666666666,
+        "HV": 0.18985758228705513
+      },
+      {
+        "cell_id": "R3C08__r0",
+        "model": "openai_qwen3-max",
+        "question_id": "248",
+        "question_sha256": "63df38158aa3cb5cd1f907d21c426b65b9b6bd48096f98d0d0b11c530f1bf82f",
+        "answer_sha256": "576f2a4e8f6878885c8559a568d55cebdde4abf5239cd611169eaef1ad8ee291",
+        "identity_eligible": true,
+        "formal_eligible": false,
+        "c_param": 3,
+        "co_order": 3,
+        "co_method": 2,
+        "co_param": 1,
+        "co_chem": 1,
+        "s_method": -0.4313,
+        "s_label": 1.7999999999999998,
+        "s_trans": 2.814646787157323,
+        "s_time": 3.0,
+        "sr": 0.3333333333333333,
+        "sp": 0.11428571428571428,
+        "Com": 0.7333333333333333,
+        "Cor": 0.875,
+        "Eff": 0.662988898929777,
+        "IA": 0.662988898929777,
+        "HV": 0.42541787681327353
+      }
+    ],
+    "joint": {
+      "numeric_scope": "automatic_development_conditional",
+      "model_cohort": [
+        "openai_claude-sonnet-4.6",
+        "openai_qwen3-max"
+      ],
+      "cohort_size": 2,
+      "question_denominator": 2,
+      "common_question_ids": [
+        "23",
+        "248"
+      ],
+      "evaluated_question_ids": [
+        "23",
+        "248"
+      ],
+      "evaluated_question_n": 2,
+      "common_fraction_of_evaluated_questions": 1.0,
+      "common_n": 2,
+      "common_coverage": 1.0,
+      "per_model_eligible_n": {
+        "openai_claude-sonnet-4.6": 2,
+        "openai_qwen3-max": 2
+      },
+      "excluded_counts": {
+        "cross_model_question_hash_mismatch": 0
+      },
+      "means": {
+        "openai_claude-sonnet-4.6": {
+          "Com": 0.8,
+          "Cor": 0.7083333333333333,
+          "Eff": 0.5678120996675172,
+          "IA": 0.5465568448669196,
+          "HV": 0.3361868637354155
+        },
+        "openai_qwen3-max": {
+          "Com": 0.6666666666666666,
+          "Cor": 0.7708333333333333,
+          "Eff": 0.6375326894823226,
+          "IA": 0.6314944494648884,
+          "HV": 0.3351242344136104
+        }
+      },
+      "dominance_matrix": {
+        "openai_claude-sonnet-4.6": {
+          "openai_claude-sonnet-4.6": false,
+          "openai_qwen3-max": false
+        },
+        "openai_qwen3-max": {
+          "openai_claude-sonnet-4.6": false,
+          "openai_qwen3-max": false
+        }
+      },
+      "empirical_nondominated": [
+        "openai_claude-sonnet-4.6",
+        "openai_qwen3-max"
+      ],
+      "dominance_tolerance": 1e-12,
+      "aggregation": "mean of per-question IA=min(Com,Cor,Eff) and HV=Com*Cor*Eff",
+      "formal_result": false
+    },
+    "exact_nondominance_frequency": {
+      "openai_claude-sonnet-4.6": 0.75,
+      "openai_qwen3-max": 1.0
+    },
+    "delta_mean_HV_Claude_minus_Qwen": 0.0010626293218051197,
+    "source_assisted_comparator_scenario": "finite_range__extra_0__with_preimaging___explicit_setpoint___include_optional_bleach",
+    "formal_result": false,
+    "family_independence_established": false
+  },
+  {
+    "scenario_id": "C05_S001__C08_S000",
+    "C05_scenario": "S001",
+    "C08_scenario": "S000",
+    "C05_hours": 17.0,
+    "C08_hours": 20.0,
+    "C07_hours": 8.5,
+    "per_answer": [
+      {
+        "cell_id": "R3C05__r0",
+        "model": "openai_claude-sonnet-4.6",
+        "question_id": "23",
+        "question_sha256": "fb1a828382a1a470c9b298ed9bda10bc27fa39b6a7547f3db7ab52c5e6f32db2",
+        "answer_sha256": "5635b58bca905e8a848c015f1823e33c7011e69dcfa6f7c787ef4eab8b7c2c1c",
+        "identity_eligible": true,
+        "formal_eligible": false,
+        "c_param": 3,
+        "co_order": 3,
+        "co_method": 2,
+        "co_param": 1,
+        "co_chem": 1,
+        "s_method": -0.45,
+        "s_label": 5.1,
+        "s_trans": 2.7055534759358473,
+        "s_time": 9.881142330918243e-09,
+        "sr": 1.0,
+        "sp": 0.27586206896551724,
+        "Com": 1.0,
+        "Cor": 0.875,
+        "Eff": 0.5404627904847491,
+        "IA": 0.5404627904847491,
+        "HV": 0.4729049416741555
+      },
+      {
+        "cell_id": "R3C06__r0",
+        "model": "openai_qwen3-max",
+        "question_id": "23",
+        "question_sha256": "fb1a828382a1a470c9b298ed9bda10bc27fa39b6a7547f3db7ab52c5e6f32db2",
+        "answer_sha256": "708712095799859bf19d0936e9efe89e88f3c956370cda796dc03fea5d27ecc9",
+        "identity_eligible": true,
+        "formal_eligible": false,
+        "c_param": 3,
+        "co_order": 2,
+        "co_method": 1,
+        "co_param": 1,
+        "co_chem": 1,
+        "s_method": 0.9722,
+        "s_label": 4.5,
+        "s_trans": 3.0,
+        "s_time": 0.011597760418418434,
+        "sr": 0.0,
+        "sp": 0.0,
+        "Com": 0.6,
+        "Cor": 0.6666666666666666,
+        "Eff": 0.6120764800348683,
+        "IA": 0.6,
+        "HV": 0.24483059201394727
+      },
+      {
+        "cell_id": "R3C07__r0",
+        "model": "openai_claude-sonnet-4.6",
+        "question_id": "248",
+        "question_sha256": "63df38158aa3cb5cd1f907d21c426b65b9b6bd48096f98d0d0b11c530f1bf82f",
+        "answer_sha256": "4b84fdc89feaa11f37599e9f3fe38336fecf418a499e8609ec08312f6cb78bd3",
+        "identity_eligible": true,
+        "formal_eligible": false,
+        "c_param": 3,
+        "co_order": 2,
+        "co_method": 1,
+        "co_param": 0,
+        "co_chem": 1,
+        "s_method": 0.1263,
+        "s_label": 5.1,
+        "s_trans": 2.814646787157323,
+        "s_time": 0.0696993280570204,
+        "sr": 0.0,
+        "sp": 0.0,
+        "Com": 0.6,
+        "Cor": 0.5416666666666666,
+        "Eff": 0.584177176267862,
+        "IA": 0.5416666666666666,
+        "HV": 0.18985758228705513
+      },
+      {
+        "cell_id": "R3C08__r0",
+        "model": "openai_qwen3-max",
+        "question_id": "248",
+        "question_sha256": "63df38158aa3cb5cd1f907d21c426b65b9b6bd48096f98d0d0b11c530f1bf82f",
+        "answer_sha256": "576f2a4e8f6878885c8559a568d55cebdde4abf5239cd611169eaef1ad8ee291",
+        "identity_eligible": true,
+        "formal_eligible": false,
+        "c_param": 3,
+        "co_order": 3,
+        "co_method": 2,
+        "co_param": 1,
+        "co_chem": 1,
+        "s_method": -0.4313,
+        "s_label": 1.7999999999999998,
+        "s_trans": 2.814646787157323,
+        "s_time": 2.5709906743058366,
+        "sr": 0.3333333333333333,
+        "sp": 0.11428571428571428,
+        "Com": 0.7333333333333333,
+        "Cor": 0.875,
+        "Eff": 0.6272381217885967,
+        "IA": 0.6272381217885967,
+        "HV": 0.40247779481434953
+      }
+    ],
+    "joint": {
+      "numeric_scope": "automatic_development_conditional",
+      "model_cohort": [
+        "openai_claude-sonnet-4.6",
+        "openai_qwen3-max"
+      ],
+      "cohort_size": 2,
+      "question_denominator": 2,
+      "common_question_ids": [
+        "23",
+        "248"
+      ],
+      "evaluated_question_ids": [
+        "23",
+        "248"
+      ],
+      "evaluated_question_n": 2,
+      "common_fraction_of_evaluated_questions": 1.0,
+      "common_n": 2,
+      "common_coverage": 1.0,
+      "per_model_eligible_n": {
+        "openai_claude-sonnet-4.6": 2,
+        "openai_qwen3-max": 2
+      },
+      "excluded_counts": {
+        "cross_model_question_hash_mismatch": 0
+      },
+      "means": {
+        "openai_claude-sonnet-4.6": {
+          "Com": 0.8,
+          "Cor": 0.7083333333333333,
+          "Eff": 0.5623199833763055,
+          "IA": 0.5410647285757079,
+          "HV": 0.3313812619806053
+        },
+        "openai_qwen3-max": {
+          "Com": 0.6666666666666666,
+          "Cor": 0.7708333333333333,
+          "Eff": 0.6196573009117325,
+          "IA": 0.6136190608942984,
+          "HV": 0.3236541934141484
+        }
+      },
+      "dominance_matrix": {
+        "openai_claude-sonnet-4.6": {
+          "openai_claude-sonnet-4.6": false,
+          "openai_qwen3-max": false
+        },
+        "openai_qwen3-max": {
+          "openai_claude-sonnet-4.6": false,
+          "openai_qwen3-max": false
+        }
+      },
+      "empirical_nondominated": [
+        "openai_claude-sonnet-4.6",
+        "openai_qwen3-max"
+      ],
+      "dominance_tolerance": 1e-12,
+      "aggregation": "mean of per-question IA=min(Com,Cor,Eff) and HV=Com*Cor*Eff",
+      "formal_result": false
+    },
+    "exact_nondominance_frequency": {
+      "openai_claude-sonnet-4.6": 0.75,
+      "openai_qwen3-max": 1.0
+    },
+    "delta_mean_HV_Claude_minus_Qwen": 0.007727068566456885,
+    "source_assisted_comparator_scenario": "overnight_default__extra_0__with_preimaging___explicit_setpoint___omit_optional_bleach",
+    "formal_result": false,
+    "family_independence_established": false
+  },
+  {
+    "scenario_id": "C05_S001__C08_S001",
+    "C05_scenario": "S001",
+    "C08_scenario": "S001",
+    "C05_hours": 17.0,
+    "C08_hours": 32.0,
+    "C07_hours": 8.5,
+    "per_answer": [
+      {
+        "cell_id": "R3C05__r0",
+        "model": "openai_claude-sonnet-4.6",
+        "question_id": "23",
+        "question_sha256": "fb1a828382a1a470c9b298ed9bda10bc27fa39b6a7547f3db7ab52c5e6f32db2",
+        "answer_sha256": "5635b58bca905e8a848c015f1823e33c7011e69dcfa6f7c787ef4eab8b7c2c1c",
+        "identity_eligible": true,
+        "formal_eligible": false,
+        "c_param": 3,
+        "co_order": 3,
+        "co_method": 2,
+        "co_param": 1,
+        "co_chem": 1,
+        "s_method": -0.45,
+        "s_label": 5.1,
+        "s_trans": 2.7055534759358473,
+        "s_time": 9.881142330918243e-09,
+        "sr": 1.0,
+        "sp": 0.27586206896551724,
+        "Com": 1.0,
+        "Cor": 0.875,
+        "Eff": 0.5404627904847491,
+        "IA": 0.5404627904847491,
+        "HV": 0.4729049416741555
+      },
+      {
+        "cell_id": "R3C06__r0",
+        "model": "openai_qwen3-max",
+        "question_id": "23",
+        "question_sha256": "fb1a828382a1a470c9b298ed9bda10bc27fa39b6a7547f3db7ab52c5e6f32db2",
+        "answer_sha256": "708712095799859bf19d0936e9efe89e88f3c956370cda796dc03fea5d27ecc9",
+        "identity_eligible": true,
+        "formal_eligible": false,
+        "c_param": 3,
+        "co_order": 2,
+        "co_method": 1,
+        "co_param": 1,
+        "co_chem": 1,
+        "s_method": 0.9722,
+        "s_label": 4.5,
+        "s_trans": 3.0,
+        "s_time": 0.011597760418418434,
+        "sr": 0.0,
+        "sp": 0.0,
+        "Com": 0.6,
+        "Cor": 0.6666666666666666,
+        "Eff": 0.6120764800348683,
+        "IA": 0.6,
+        "HV": 0.24483059201394727
+      },
+      {
+        "cell_id": "R3C07__r0",
+        "model": "openai_claude-sonnet-4.6",
+        "question_id": "248",
+        "question_sha256": "63df38158aa3cb5cd1f907d21c426b65b9b6bd48096f98d0d0b11c530f1bf82f",
+        "answer_sha256": "4b84fdc89feaa11f37599e9f3fe38336fecf418a499e8609ec08312f6cb78bd3",
+        "identity_eligible": true,
+        "formal_eligible": false,
+        "c_param": 3,
+        "co_order": 2,
+        "co_method": 1,
+        "co_param": 0,
+        "co_chem": 1,
+        "s_method": 0.1263,
+        "s_label": 5.1,
+        "s_trans": 2.814646787157323,
+        "s_time": 0.0696993280570204,
+        "sr": 0.0,
+        "sp": 0.0,
+        "Com": 0.6,
+        "Cor": 0.5416666666666666,
+        "Eff": 0.584177176267862,
+        "IA": 0.5416666666666666,
+        "HV": 0.18985758228705513
+      },
+      {
+        "cell_id": "R3C08__r0",
+        "model": "openai_qwen3-max",
+        "question_id": "248",
+        "question_sha256": "63df38158aa3cb5cd1f907d21c426b65b9b6bd48096f98d0d0b11c530f1bf82f",
+        "answer_sha256": "576f2a4e8f6878885c8559a568d55cebdde4abf5239cd611169eaef1ad8ee291",
+        "identity_eligible": true,
+        "formal_eligible": false,
+        "c_param": 3,
+        "co_order": 3,
+        "co_method": 2,
+        "co_param": 1,
+        "co_chem": 1,
+        "s_method": -0.4313,
+        "s_label": 1.7999999999999998,
+        "s_trans": 2.814646787157323,
+        "s_time": 3.0,
+        "sr": 0.3333333333333333,
+        "sp": 0.11428571428571428,
+        "Com": 0.7333333333333333,
+        "Cor": 0.875,
+        "Eff": 0.662988898929777,
+        "IA": 0.662988898929777,
+        "HV": 0.42541787681327353
+      }
+    ],
+    "joint": {
+      "numeric_scope": "automatic_development_conditional",
+      "model_cohort": [
+        "openai_claude-sonnet-4.6",
+        "openai_qwen3-max"
+      ],
+      "cohort_size": 2,
+      "question_denominator": 2,
+      "common_question_ids": [
+        "23",
+        "248"
+      ],
+      "evaluated_question_ids": [
+        "23",
+        "248"
+      ],
+      "evaluated_question_n": 2,
+      "common_fraction_of_evaluated_questions": 1.0,
+      "common_n": 2,
+      "common_coverage": 1.0,
+      "per_model_eligible_n": {
+        "openai_claude-sonnet-4.6": 2,
+        "openai_qwen3-max": 2
+      },
+      "excluded_counts": {
+        "cross_model_question_hash_mismatch": 0
+      },
+      "means": {
+        "openai_claude-sonnet-4.6": {
+          "Com": 0.8,
+          "Cor": 0.7083333333333333,
+          "Eff": 0.5623199833763055,
+          "IA": 0.5410647285757079,
+          "HV": 0.3313812619806053
+        },
+        "openai_qwen3-max": {
+          "Com": 0.6666666666666666,
+          "Cor": 0.7708333333333333,
+          "Eff": 0.6375326894823226,
+          "IA": 0.6314944494648884,
+          "HV": 0.3351242344136104
+        }
+      },
+      "dominance_matrix": {
+        "openai_claude-sonnet-4.6": {
+          "openai_claude-sonnet-4.6": false,
+          "openai_qwen3-max": false
+        },
+        "openai_qwen3-max": {
+          "openai_claude-sonnet-4.6": false,
+          "openai_qwen3-max": false
+        }
+      },
+      "empirical_nondominated": [
+        "openai_claude-sonnet-4.6",
+        "openai_qwen3-max"
+      ],
+      "dominance_tolerance": 1e-12,
+      "aggregation": "mean of per-question IA=min(Com,Cor,Eff) and HV=Com*Cor*Eff",
+      "formal_result": false
+    },
+    "exact_nondominance_frequency": {
+      "openai_claude-sonnet-4.6": 0.75,
+      "openai_qwen3-max": 1.0
+    },
+    "delta_mean_HV_Claude_minus_Qwen": -0.0037429724330050873,
+    "source_assisted_comparator_scenario": "overnight_default__extra_0__with_preimaging___explicit_setpoint___include_optional_bleach",
+    "formal_result": false,
+    "family_independence_established": false
+  },
+  {
+    "scenario_id": "C05_S002__C08_S000",
+    "C05_scenario": "S002",
+    "C08_scenario": "S000",
+    "C05_hours": 18.0,
+    "C08_hours": 20.0,
+    "C07_hours": 8.5,
+    "per_answer": [
+      {
+        "cell_id": "R3C05__r0",
+        "model": "openai_claude-sonnet-4.6",
+        "question_id": "23",
+        "question_sha256": "fb1a828382a1a470c9b298ed9bda10bc27fa39b6a7547f3db7ab52c5e6f32db2",
+        "answer_sha256": "5635b58bca905e8a848c015f1823e33c7011e69dcfa6f7c787ef4eab8b7c2c1c",
+        "identity_eligible": true,
+        "formal_eligible": false,
+        "c_param": 3,
+        "co_order": 3,
+        "co_method": 2,
+        "co_param": 1,
+        "co_chem": 1,
+        "s_method": -0.45,
+        "s_label": 5.1,
+        "s_trans": 2.7055534759358473,
+        "s_time": 1.830581003281597e-12,
+        "sr": 1.0,
+        "sp": 0.27586206896551724,
+        "Com": 1.0,
+        "Cor": 0.875,
+        "Eff": 0.5404627896614731,
+        "IA": 0.5404627896614731,
+        "HV": 0.472904940953789
+      },
+      {
+        "cell_id": "R3C06__r0",
+        "model": "openai_qwen3-max",
+        "question_id": "23",
+        "question_sha256": "fb1a828382a1a470c9b298ed9bda10bc27fa39b6a7547f3db7ab52c5e6f32db2",
+        "answer_sha256": "708712095799859bf19d0936e9efe89e88f3c956370cda796dc03fea5d27ecc9",
+        "identity_eligible": true,
+        "formal_eligible": false,
+        "c_param": 3,
+        "co_order": 2,
+        "co_method": 1,
+        "co_param": 1,
+        "co_chem": 1,
+        "s_method": 0.9722,
+        "s_label": 4.5,
+        "s_trans": 3.0,
+        "s_time": 0.011597760418418434,
+        "sr": 0.0,
+        "sp": 0.0,
+        "Com": 0.6,
+        "Cor": 0.6666666666666666,
+        "Eff": 0.6120764800348683,
+        "IA": 0.6,
+        "HV": 0.24483059201394727
+      },
+      {
+        "cell_id": "R3C07__r0",
+        "model": "openai_claude-sonnet-4.6",
+        "question_id": "248",
+        "question_sha256": "63df38158aa3cb5cd1f907d21c426b65b9b6bd48096f98d0d0b11c530f1bf82f",
+        "answer_sha256": "4b84fdc89feaa11f37599e9f3fe38336fecf418a499e8609ec08312f6cb78bd3",
+        "identity_eligible": true,
+        "formal_eligible": false,
+        "c_param": 3,
+        "co_order": 2,
+        "co_method": 1,
+        "co_param": 0,
+        "co_chem": 1,
+        "s_method": 0.1263,
+        "s_label": 5.1,
+        "s_trans": 2.814646787157323,
+        "s_time": 0.0696993280570204,
+        "sr": 0.0,
+        "sp": 0.0,
+        "Com": 0.6,
+        "Cor": 0.5416666666666666,
+        "Eff": 0.584177176267862,
+        "IA": 0.5416666666666666,
+        "HV": 0.18985758228705513
+      },
+      {
+        "cell_id": "R3C08__r0",
+        "model": "openai_qwen3-max",
+        "question_id": "248",
+        "question_sha256": "63df38158aa3cb5cd1f907d21c426b65b9b6bd48096f98d0d0b11c530f1bf82f",
+        "answer_sha256": "576f2a4e8f6878885c8559a568d55cebdde4abf5239cd611169eaef1ad8ee291",
+        "identity_eligible": true,
+        "formal_eligible": false,
+        "c_param": 3,
+        "co_order": 3,
+        "co_method": 2,
+        "co_param": 1,
+        "co_chem": 1,
+        "s_method": -0.4313,
+        "s_label": 1.7999999999999998,
+        "s_trans": 2.814646787157323,
+        "s_time": 2.5709906743058366,
+        "sr": 0.3333333333333333,
+        "sp": 0.11428571428571428,
+        "Com": 0.7333333333333333,
+        "Cor": 0.875,
+        "Eff": 0.6272381217885967,
+        "IA": 0.6272381217885967,
+        "HV": 0.40247779481434953
+      }
+    ],
+    "joint": {
+      "numeric_scope": "automatic_development_conditional",
+      "model_cohort": [
+        "openai_claude-sonnet-4.6",
+        "openai_qwen3-max"
+      ],
+      "cohort_size": 2,
+      "question_denominator": 2,
+      "common_question_ids": [
+        "23",
+        "248"
+      ],
+      "evaluated_question_ids": [
+        "23",
+        "248"
+      ],
+      "evaluated_question_n": 2,
+      "common_fraction_of_evaluated_questions": 1.0,
+      "common_n": 2,
+      "common_coverage": 1.0,
+      "per_model_eligible_n": {
+        "openai_claude-sonnet-4.6": 2,
+        "openai_qwen3-max": 2
+      },
+      "excluded_counts": {
+        "cross_model_question_hash_mismatch": 0
+      },
+      "means": {
+        "openai_claude-sonnet-4.6": {
+          "Com": 0.8,
+          "Cor": 0.7083333333333333,
+          "Eff": 0.5623199829646676,
+          "IA": 0.5410647281640699,
+          "HV": 0.33138126162042203
+        },
+        "openai_qwen3-max": {
+          "Com": 0.6666666666666666,
+          "Cor": 0.7708333333333333,
+          "Eff": 0.6196573009117325,
+          "IA": 0.6136190608942984,
+          "HV": 0.3236541934141484
+        }
+      },
+      "dominance_matrix": {
+        "openai_claude-sonnet-4.6": {
+          "openai_claude-sonnet-4.6": false,
+          "openai_qwen3-max": false
+        },
+        "openai_qwen3-max": {
+          "openai_claude-sonnet-4.6": false,
+          "openai_qwen3-max": false
+        }
+      },
+      "empirical_nondominated": [
+        "openai_claude-sonnet-4.6",
+        "openai_qwen3-max"
+      ],
+      "dominance_tolerance": 1e-12,
+      "aggregation": "mean of per-question IA=min(Com,Cor,Eff) and HV=Com*Cor*Eff",
+      "formal_result": false
+    },
+    "exact_nondominance_frequency": {
+      "openai_claude-sonnet-4.6": 0.75,
+      "openai_qwen3-max": 1.0
+    },
+    "delta_mean_HV_Claude_minus_Qwen": 0.007727068206273613,
+    "source_assisted_comparator_scenario": "finite_range__extra_1__with_preimaging___explicit_setpoint___omit_optional_bleach",
+    "formal_result": false,
+    "family_independence_established": false
+  },
+  {
+    "scenario_id": "C05_S002__C08_S001",
+    "C05_scenario": "S002",
+    "C08_scenario": "S001",
+    "C05_hours": 18.0,
+    "C08_hours": 32.0,
+    "C07_hours": 8.5,
+    "per_answer": [
+      {
+        "cell_id": "R3C05__r0",
+        "model": "openai_claude-sonnet-4.6",
+        "question_id": "23",
+        "question_sha256": "fb1a828382a1a470c9b298ed9bda10bc27fa39b6a7547f3db7ab52c5e6f32db2",
+        "answer_sha256": "5635b58bca905e8a848c015f1823e33c7011e69dcfa6f7c787ef4eab8b7c2c1c",
+        "identity_eligible": true,
+        "formal_eligible": false,
+        "c_param": 3,
+        "co_order": 3,
+        "co_method": 2,
+        "co_param": 1,
+        "co_chem": 1,
+        "s_method": -0.45,
+        "s_label": 5.1,
+        "s_trans": 2.7055534759358473,
+        "s_time": 1.830581003281597e-12,
+        "sr": 1.0,
+        "sp": 0.27586206896551724,
+        "Com": 1.0,
+        "Cor": 0.875,
+        "Eff": 0.5404627896614731,
+        "IA": 0.5404627896614731,
+        "HV": 0.472904940953789
+      },
+      {
+        "cell_id": "R3C06__r0",
+        "model": "openai_qwen3-max",
+        "question_id": "23",
+        "question_sha256": "fb1a828382a1a470c9b298ed9bda10bc27fa39b6a7547f3db7ab52c5e6f32db2",
+        "answer_sha256": "708712095799859bf19d0936e9efe89e88f3c956370cda796dc03fea5d27ecc9",
+        "identity_eligible": true,
+        "formal_eligible": false,
+        "c_param": 3,
+        "co_order": 2,
+        "co_method": 1,
+        "co_param": 1,
+        "co_chem": 1,
+        "s_method": 0.9722,
+        "s_label": 4.5,
+        "s_trans": 3.0,
+        "s_time": 0.011597760418418434,
+        "sr": 0.0,
+        "sp": 0.0,
+        "Com": 0.6,
+        "Cor": 0.6666666666666666,
+        "Eff": 0.6120764800348683,
+        "IA": 0.6,
+        "HV": 0.24483059201394727
+      },
+      {
+        "cell_id": "R3C07__r0",
+        "model": "openai_claude-sonnet-4.6",
+        "question_id": "248",
+        "question_sha256": "63df38158aa3cb5cd1f907d21c426b65b9b6bd48096f98d0d0b11c530f1bf82f",
+        "answer_sha256": "4b84fdc89feaa11f37599e9f3fe38336fecf418a499e8609ec08312f6cb78bd3",
+        "identity_eligible": true,
+        "formal_eligible": false,
+        "c_param": 3,
+        "co_order": 2,
+        "co_method": 1,
+        "co_param": 0,
+        "co_chem": 1,
+        "s_method": 0.1263,
+        "s_label": 5.1,
+        "s_trans": 2.814646787157323,
+        "s_time": 0.0696993280570204,
+        "sr": 0.0,
+        "sp": 0.0,
+        "Com": 0.6,
+        "Cor": 0.5416666666666666,
+        "Eff": 0.584177176267862,
+        "IA": 0.5416666666666666,
+        "HV": 0.18985758228705513
+      },
+      {
+        "cell_id": "R3C08__r0",
+        "model": "openai_qwen3-max",
+        "question_id": "248",
+        "question_sha256": "63df38158aa3cb5cd1f907d21c426b65b9b6bd48096f98d0d0b11c530f1bf82f",
+        "answer_sha256": "576f2a4e8f6878885c8559a568d55cebdde4abf5239cd611169eaef1ad8ee291",
+        "identity_eligible": true,
+        "formal_eligible": false,
+        "c_param": 3,
+        "co_order": 3,
+        "co_method": 2,
+        "co_param": 1,
+        "co_chem": 1,
+        "s_method": -0.4313,
+        "s_label": 1.7999999999999998,
+        "s_trans": 2.814646787157323,
+        "s_time": 3.0,
+        "sr": 0.3333333333333333,
+        "sp": 0.11428571428571428,
+        "Com": 0.7333333333333333,
+        "Cor": 0.875,
+        "Eff": 0.662988898929777,
+        "IA": 0.662988898929777,
+        "HV": 0.42541787681327353
+      }
+    ],
+    "joint": {
+      "numeric_scope": "automatic_development_conditional",
+      "model_cohort": [
+        "openai_claude-sonnet-4.6",
+        "openai_qwen3-max"
+      ],
+      "cohort_size": 2,
+      "question_denominator": 2,
+      "common_question_ids": [
+        "23",
+        "248"
+      ],
+      "evaluated_question_ids": [
+        "23",
+        "248"
+      ],
+      "evaluated_question_n": 2,
+      "common_fraction_of_evaluated_questions": 1.0,
+      "common_n": 2,
+      "common_coverage": 1.0,
+      "per_model_eligible_n": {
+        "openai_claude-sonnet-4.6": 2,
+        "openai_qwen3-max": 2
+      },
+      "excluded_counts": {
+        "cross_model_question_hash_mismatch": 0
+      },
+      "means": {
+        "openai_claude-sonnet-4.6": {
+          "Com": 0.8,
+          "Cor": 0.7083333333333333,
+          "Eff": 0.5623199829646676,
+          "IA": 0.5410647281640699,
+          "HV": 0.33138126162042203
+        },
+        "openai_qwen3-max": {
+          "Com": 0.6666666666666666,
+          "Cor": 0.7708333333333333,
+          "Eff": 0.6375326894823226,
+          "IA": 0.6314944494648884,
+          "HV": 0.3351242344136104
+        }
+      },
+      "dominance_matrix": {
+        "openai_claude-sonnet-4.6": {
+          "openai_claude-sonnet-4.6": false,
+          "openai_qwen3-max": false
+        },
+        "openai_qwen3-max": {
+          "openai_claude-sonnet-4.6": false,
+          "openai_qwen3-max": false
+        }
+      },
+      "empirical_nondominated": [
+        "openai_claude-sonnet-4.6",
+        "openai_qwen3-max"
+      ],
+      "dominance_tolerance": 1e-12,
+      "aggregation": "mean of per-question IA=min(Com,Cor,Eff) and HV=Com*Cor*Eff",
+      "formal_result": false
+    },
+    "exact_nondominance_frequency": {
+      "openai_claude-sonnet-4.6": 0.75,
+      "openai_qwen3-max": 1.0
+    },
+    "delta_mean_HV_Claude_minus_Qwen": -0.0037429727931883594,
+    "source_assisted_comparator_scenario": "finite_range__extra_1__with_preimaging___explicit_setpoint___include_optional_bleach",
+    "formal_result": false,
+    "family_independence_established": false
+  },
+  {
+    "scenario_id": "C05_S003__C08_S000",
+    "C05_scenario": "S003",
+    "C08_scenario": "S000",
+    "C05_hours": 21.0,
+    "C08_hours": 20.0,
+    "C07_hours": 8.5,
+    "per_answer": [
+      {
+        "cell_id": "R3C05__r0",
+        "model": "openai_claude-sonnet-4.6",
+        "question_id": "23",
+        "question_sha256": "fb1a828382a1a470c9b298ed9bda10bc27fa39b6a7547f3db7ab52c5e6f32db2",
+        "answer_sha256": "5635b58bca905e8a848c015f1823e33c7011e69dcfa6f7c787ef4eab8b7c2c1c",
+        "identity_eligible": true,
+        "formal_eligible": false,
+        "c_param": 3,
+        "co_order": 3,
+        "co_method": 2,
+        "co_param": 1,
+        "co_chem": 1,
+        "s_method": -0.45,
+        "s_label": 5.1,
+        "s_trans": 2.7055534759358473,
+        "s_time": 9.872418831824737e-28,
+        "sr": 1.0,
+        "sp": 0.27586206896551724,
+        "Com": 1.0,
+        "Cor": 0.875,
+        "Eff": 0.5404627896613206,
+        "IA": 0.5404627896613206,
+        "HV": 0.4729049409536555
+      },
+      {
+        "cell_id": "R3C06__r0",
+        "model": "openai_qwen3-max",
+        "question_id": "23",
+        "question_sha256": "fb1a828382a1a470c9b298ed9bda10bc27fa39b6a7547f3db7ab52c5e6f32db2",
+        "answer_sha256": "708712095799859bf19d0936e9efe89e88f3c956370cda796dc03fea5d27ecc9",
+        "identity_eligible": true,
+        "formal_eligible": false,
+        "c_param": 3,
+        "co_order": 2,
+        "co_method": 1,
+        "co_param": 1,
+        "co_chem": 1,
+        "s_method": 0.9722,
+        "s_label": 4.5,
+        "s_trans": 3.0,
+        "s_time": 0.011597760418418434,
+        "sr": 0.0,
+        "sp": 0.0,
+        "Com": 0.6,
+        "Cor": 0.6666666666666666,
+        "Eff": 0.6120764800348683,
+        "IA": 0.6,
+        "HV": 0.24483059201394727
+      },
+      {
+        "cell_id": "R3C07__r0",
+        "model": "openai_claude-sonnet-4.6",
+        "question_id": "248",
+        "question_sha256": "63df38158aa3cb5cd1f907d21c426b65b9b6bd48096f98d0d0b11c530f1bf82f",
+        "answer_sha256": "4b84fdc89feaa11f37599e9f3fe38336fecf418a499e8609ec08312f6cb78bd3",
+        "identity_eligible": true,
+        "formal_eligible": false,
+        "c_param": 3,
+        "co_order": 2,
+        "co_method": 1,
+        "co_param": 0,
+        "co_chem": 1,
+        "s_method": 0.1263,
+        "s_label": 5.1,
+        "s_trans": 2.814646787157323,
+        "s_time": 0.0696993280570204,
+        "sr": 0.0,
+        "sp": 0.0,
+        "Com": 0.6,
+        "Cor": 0.5416666666666666,
+        "Eff": 0.584177176267862,
+        "IA": 0.5416666666666666,
+        "HV": 0.18985758228705513
+      },
+      {
+        "cell_id": "R3C08__r0",
+        "model": "openai_qwen3-max",
+        "question_id": "248",
+        "question_sha256": "63df38158aa3cb5cd1f907d21c426b65b9b6bd48096f98d0d0b11c530f1bf82f",
+        "answer_sha256": "576f2a4e8f6878885c8559a568d55cebdde4abf5239cd611169eaef1ad8ee291",
+        "identity_eligible": true,
+        "formal_eligible": false,
+        "c_param": 3,
+        "co_order": 3,
+        "co_method": 2,
+        "co_param": 1,
+        "co_chem": 1,
+        "s_method": -0.4313,
+        "s_label": 1.7999999999999998,
+        "s_trans": 2.814646787157323,
+        "s_time": 2.5709906743058366,
+        "sr": 0.3333333333333333,
+        "sp": 0.11428571428571428,
+        "Com": 0.7333333333333333,
+        "Cor": 0.875,
+        "Eff": 0.6272381217885967,
+        "IA": 0.6272381217885967,
+        "HV": 0.40247779481434953
+      }
+    ],
+    "joint": {
+      "numeric_scope": "automatic_development_conditional",
+      "model_cohort": [
+        "openai_claude-sonnet-4.6",
+        "openai_qwen3-max"
+      ],
+      "cohort_size": 2,
+      "question_denominator": 2,
+      "common_question_ids": [
+        "23",
+        "248"
+      ],
+      "evaluated_question_ids": [
+        "23",
+        "248"
+      ],
+      "evaluated_question_n": 2,
+      "common_fraction_of_evaluated_questions": 1.0,
+      "common_n": 2,
+      "common_coverage": 1.0,
+      "per_model_eligible_n": {
+        "openai_claude-sonnet-4.6": 2,
+        "openai_qwen3-max": 2
+      },
+      "excluded_counts": {
+        "cross_model_question_hash_mismatch": 0
+      },
+      "means": {
+        "openai_claude-sonnet-4.6": {
+          "Com": 0.8,
+          "Cor": 0.7083333333333333,
+          "Eff": 0.5623199829645913,
+          "IA": 0.5410647281639935,
+          "HV": 0.3313812616203553
+        },
+        "openai_qwen3-max": {
+          "Com": 0.6666666666666666,
+          "Cor": 0.7708333333333333,
+          "Eff": 0.6196573009117325,
+          "IA": 0.6136190608942984,
+          "HV": 0.3236541934141484
+        }
+      },
+      "dominance_matrix": {
+        "openai_claude-sonnet-4.6": {
+          "openai_claude-sonnet-4.6": false,
+          "openai_qwen3-max": false
+        },
+        "openai_qwen3-max": {
+          "openai_claude-sonnet-4.6": false,
+          "openai_qwen3-max": false
+        }
+      },
+      "empirical_nondominated": [
+        "openai_claude-sonnet-4.6",
+        "openai_qwen3-max"
+      ],
+      "dominance_tolerance": 1e-12,
+      "aggregation": "mean of per-question IA=min(Com,Cor,Eff) and HV=Com*Cor*Eff",
+      "formal_result": false
+    },
+    "exact_nondominance_frequency": {
+      "openai_claude-sonnet-4.6": 0.75,
+      "openai_qwen3-max": 1.0
+    },
+    "delta_mean_HV_Claude_minus_Qwen": 0.0077270682062068885,
+    "source_assisted_comparator_scenario": "overnight_default__extra_1__with_preimaging___explicit_setpoint___omit_optional_bleach",
+    "formal_result": false,
+    "family_independence_established": false
+  },
+  {
+    "scenario_id": "C05_S003__C08_S001",
+    "C05_scenario": "S003",
+    "C08_scenario": "S001",
+    "C05_hours": 21.0,
+    "C08_hours": 32.0,
+    "C07_hours": 8.5,
+    "per_answer": [
+      {
+        "cell_id": "R3C05__r0",
+        "model": "openai_claude-sonnet-4.6",
+        "question_id": "23",
+        "question_sha256": "fb1a828382a1a470c9b298ed9bda10bc27fa39b6a7547f3db7ab52c5e6f32db2",
+        "answer_sha256": "5635b58bca905e8a848c015f1823e33c7011e69dcfa6f7c787ef4eab8b7c2c1c",
+        "identity_eligible": true,
+        "formal_eligible": false,
+        "c_param": 3,
+        "co_order": 3,
+        "co_method": 2,
+        "co_param": 1,
+        "co_chem": 1,
+        "s_method": -0.45,
+        "s_label": 5.1,
+        "s_trans": 2.7055534759358473,
+        "s_time": 9.872418831824737e-28,
+        "sr": 1.0,
+        "sp": 0.27586206896551724,
+        "Com": 1.0,
+        "Cor": 0.875,
+        "Eff": 0.5404627896613206,
+        "IA": 0.5404627896613206,
+        "HV": 0.4729049409536555
+      },
+      {
+        "cell_id": "R3C06__r0",
+        "model": "openai_qwen3-max",
+        "question_id": "23",
+        "question_sha256": "fb1a828382a1a470c9b298ed9bda10bc27fa39b6a7547f3db7ab52c5e6f32db2",
+        "answer_sha256": "708712095799859bf19d0936e9efe89e88f3c956370cda796dc03fea5d27ecc9",
+        "identity_eligible": true,
+        "formal_eligible": false,
+        "c_param": 3,
+        "co_order": 2,
+        "co_method": 1,
+        "co_param": 1,
+        "co_chem": 1,
+        "s_method": 0.9722,
+        "s_label": 4.5,
+        "s_trans": 3.0,
+        "s_time": 0.011597760418418434,
+        "sr": 0.0,
+        "sp": 0.0,
+        "Com": 0.6,
+        "Cor": 0.6666666666666666,
+        "Eff": 0.6120764800348683,
+        "IA": 0.6,
+        "HV": 0.24483059201394727
+      },
+      {
+        "cell_id": "R3C07__r0",
+        "model": "openai_claude-sonnet-4.6",
+        "question_id": "248",
+        "question_sha256": "63df38158aa3cb5cd1f907d21c426b65b9b6bd48096f98d0d0b11c530f1bf82f",
+        "answer_sha256": "4b84fdc89feaa11f37599e9f3fe38336fecf418a499e8609ec08312f6cb78bd3",
+        "identity_eligible": true,
+        "formal_eligible": false,
+        "c_param": 3,
+        "co_order": 2,
+        "co_method": 1,
+        "co_param": 0,
+        "co_chem": 1,
+        "s_method": 0.1263,
+        "s_label": 5.1,
+        "s_trans": 2.814646787157323,
+        "s_time": 0.0696993280570204,
+        "sr": 0.0,
+        "sp": 0.0,
+        "Com": 0.6,
+        "Cor": 0.5416666666666666,
+        "Eff": 0.584177176267862,
+        "IA": 0.5416666666666666,
+        "HV": 0.18985758228705513
+      },
+      {
+        "cell_id": "R3C08__r0",
+        "model": "openai_qwen3-max",
+        "question_id": "248",
+        "question_sha256": "63df38158aa3cb5cd1f907d21c426b65b9b6bd48096f98d0d0b11c530f1bf82f",
+        "answer_sha256": "576f2a4e8f6878885c8559a568d55cebdde4abf5239cd611169eaef1ad8ee291",
+        "identity_eligible": true,
+        "formal_eligible": false,
+        "c_param": 3,
+        "co_order": 3,
+        "co_method": 2,
+        "co_param": 1,
+        "co_chem": 1,
+        "s_method": -0.4313,
+        "s_label": 1.7999999999999998,
+        "s_trans": 2.814646787157323,
+        "s_time": 3.0,
+        "sr": 0.3333333333333333,
+        "sp": 0.11428571428571428,
+        "Com": 0.7333333333333333,
+        "Cor": 0.875,
+        "Eff": 0.662988898929777,
+        "IA": 0.662988898929777,
+        "HV": 0.42541787681327353
+      }
+    ],
+    "joint": {
+      "numeric_scope": "automatic_development_conditional",
+      "model_cohort": [
+        "openai_claude-sonnet-4.6",
+        "openai_qwen3-max"
+      ],
+      "cohort_size": 2,
+      "question_denominator": 2,
+      "common_question_ids": [
+        "23",
+        "248"
+      ],
+      "evaluated_question_ids": [
+        "23",
+        "248"
+      ],
+      "evaluated_question_n": 2,
+      "common_fraction_of_evaluated_questions": 1.0,
+      "common_n": 2,
+      "common_coverage": 1.0,
+      "per_model_eligible_n": {
+        "openai_claude-sonnet-4.6": 2,
+        "openai_qwen3-max": 2
+      },
+      "excluded_counts": {
+        "cross_model_question_hash_mismatch": 0
+      },
+      "means": {
+        "openai_claude-sonnet-4.6": {
+          "Com": 0.8,
+          "Cor": 0.7083333333333333,
+          "Eff": 0.5623199829645913,
+          "IA": 0.5410647281639935,
+          "HV": 0.3313812616203553
+        },
+        "openai_qwen3-max": {
+          "Com": 0.6666666666666666,
+          "Cor": 0.7708333333333333,
+          "Eff": 0.6375326894823226,
+          "IA": 0.6314944494648884,
+          "HV": 0.3351242344136104
+        }
+      },
+      "dominance_matrix": {
+        "openai_claude-sonnet-4.6": {
+          "openai_claude-sonnet-4.6": false,
+          "openai_qwen3-max": false
+        },
+        "openai_qwen3-max": {
+          "openai_claude-sonnet-4.6": false,
+          "openai_qwen3-max": false
+        }
+      },
+      "empirical_nondominated": [
+        "openai_claude-sonnet-4.6",
+        "openai_qwen3-max"
+      ],
+      "dominance_tolerance": 1e-12,
+      "aggregation": "mean of per-question IA=min(Com,Cor,Eff) and HV=Com*Cor*Eff",
+      "formal_result": false
+    },
+    "exact_nondominance_frequency": {
+      "openai_claude-sonnet-4.6": 0.75,
+      "openai_qwen3-max": 1.0
+    },
+    "delta_mean_HV_Claude_minus_Qwen": -0.003742972793255084,
+    "source_assisted_comparator_scenario": "overnight_default__extra_1__with_preimaging___explicit_setpoint___include_optional_bleach",
+    "formal_result": false,
+    "family_independence_established": false
+  }
+]

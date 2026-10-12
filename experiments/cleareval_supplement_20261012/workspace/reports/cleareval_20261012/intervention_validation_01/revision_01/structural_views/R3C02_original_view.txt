@@ -1,0 +1,66 @@
+**Chosen Method:** iDISCO+  
+**Chosen Labeling:** [c-Fos, NeuN (RBFOX3), DAPI]  
+**Justification:** The scientific goal requires mapping behaviorally activated neurons across the entire adult mouse brain at single-cell resolution. c-Fos is a canonical immediate-early gene marker for neuronal activation and must be immunolabeled due to lack of endogenous fluorescence. NeuN provides pan-neuronal nuclear labeling to contextualize c-Fos+ cells within the total neuronal population, while DAPI offers general nuclear counterstaining for anatomical registration. iDISCO+ is selected because it enables whole-brain immunolabeling with excellent antibody penetration, strong autofluorescence quenching, high transparency, and compatibility with standard fluorophores (e.g., Alexa Fluor conjugates). Its organic solvent-based protocol preserves protein epitopes better than some aqueous methods for c-Fos and supports long-term sample stability—critical for large-volume imaging.
+
+**Protocol Steps:**  
+N0001 Dehydration  
+N0002 Incubation with 20% (vol/vol) methanol in PBS.(Temperature: RT, Time: 1 hour)  
+N0003 Incubation with 40% (vol/vol) methanol in PBS.(Temperature: RT, Time: 1 hour)  
+N0004 Incubation with 60% (vol/vol) methanol in PBS.(Temperature: RT, Time: 1 hour)  
+N0005 Incubation with 80% (vol/vol) methanol in PBS.(Temperature: RT, Time: 1 hour)  
+N0006 Incubation with 100% methanol.(Temperature: RT, Time: 1 hour)  
+N0007 Incubation with 100% methanol.(Temperature: RT, Time: 1 hour)  
+
+N0008 Endogenous Peroxidase Quenching and Lipid Peroxidation  
+N0009 Incubation with chilled fresh 5% (vol/vol) H₂O₂ in methanol (1 volume 30% H₂O₂ + 5 volumes methanol).(Temperature: 4 ℃, Time: 12 hours)  
+
+N0010 Rehydration  
+N0011 Incubation with 80% (vol/vol) methanol in PBS.(Temperature: RT, Time: 1 hour)  
+N0012 Incubation with 60% (vol/vol) methanol in PBS.(Temperature: RT, Time: 1 hour)  
+N0013 Incubation with 40% (vol/vol) methanol in PBS.(Temperature: RT, Time: 1 hour)  
+N0014 Incubation with 20% (vol/vol) methanol in PBS.(Temperature: RT, Time: 1 hour)  
+N0015 Incubation with PBS + 0.2% (vol/vol) Triton X-100 (PBST).(Temperature: RT, Time: 1 hour)  
+
+N0016 Permeabilization and Blocking  
+N0017 Incubation with PBST + 20% (vol/vol) DMSO + 0.3 M glycine.(Temperature: 37 ℃, Time: 24 hours)  
+N0018 Incubation with PBST + 10% (vol/vol) DMSO + 6% (wt/vol) donkey serum.(Temperature: 37 ℃, Time: 24 hours)  
+
+N0019 Primary Antibody Incubation  
+N0020 Incubation with primary antibodies diluted in PBST + 5% (vol/vol) DMSO + 3% (wt/vol) donkey serum: anti-c-Fos (rabbit, 1:500), anti-NeuN (mouse, 1:500).(Temperature: 37 ℃, Time: 7 days, with gentle shaking)  
+
+N0021 Washes Post Primary Antibody  
+N0022 Incubation with PBST.(Temperature: 37 ℃, Time: 24 hours)  
+N0023 Incubation with PBST.(Temperature: 37 ℃, Time: 24 hours)  
+N0024 Incubation with PBST.(Temperature: 37 ℃, Time: 24 hours)  
+
+N0025 Secondary Antibody Incubation  
+N0026 Incubation with species-specific secondary antibodies conjugated to Alexa Fluor dyes (e.g., anti-rabbit Alexa Fluor 488 for c-Fos, anti-mouse Alexa Fluor 647 for NeuN; 1:500) in PBST + 5% (vol/vol) DMSO + 3% (wt/vol) donkey serum.(Temperature: 37 ℃, Time: 7 days, with gentle shaking)  
+
+N0027 Washes Post Secondary Antibody  
+N0028 Incubation with PBST.(Temperature: 37 ℃, Time: 24 hours)  
+N0029 Incubation with PBST.(Temperature: 37 ℃, Time: 24 hours)  
+N0030 Incubation with PBST.(Temperature: 37 ℃, Time: 24 hours)  
+
+N0031 Dehydration (Post-Immunostaining)  
+N0032 Incubation with 20% (vol/vol) methanol in PBS.(Temperature: RT, Time: 1 hour)  
+N0033 Incubation with 40% (vol/vol) methanol in PBS.(Temperature: RT, Time: 1 hour)  
+N0034 Incubation with 60% (vol/vol) methanol in PBS.(Temperature: RT, Time: 1 hour)  
+N0035 Incubation with 80% (vol/vol) methanol in PBS.(Temperature: RT, Time: 1 hour)  
+N0036 Incubation with 100% methanol.(Temperature: RT, Time: 1 hour)  
+N0037 Incubation with 100% methanol.(Temperature: RT, Time: 1 hour)  
+
+N0038 Delipidation  
+N0039 Incubation with 1:2 (vol/vol) dichloromethane (DCM) : methanol.(Temperature: RT, Time: 30 minutes)  
+N0040 Incubation with 100% DCM.(Temperature: RT, Time: 30 minutes)  
+N0041 Incubation with 100% DCM.(Temperature: RT, Time: 30 minutes)  
+
+N0042 Refractive Index Matching  
+N0043 Incubation with 100% (vol/vol) dibenzyl ether (DBE, Sigma 108014-1KG).(Temperature: RT, Time: 2 hours)  
+N0044 Incubation with fresh 100% DBE.(Temperature: RT, Time: 2 hours)  
+
+N0045 Nuclear Counterstaining (Optional but recommended for registration)  
+N0046 Prior to final DBE step, rehydrate briefly through methanol series to 80% methanol, then incubate with DAPI (1 µg/mL in PBST).(Temperature: RT, Time: 24 hours)  
+N0047 Re-dehydrate through methanol series (80% → 100%) and repeat steps N0039–11.2.  
+
+N0048 Imaging Preparation  
+N0049 Mount cleared brain in glass-bottom dish or custom chamber filled with DBE for light-sheet or confocal microscopy.(Temperature: RT, Time: immediate imaging or storage at RT in dark)

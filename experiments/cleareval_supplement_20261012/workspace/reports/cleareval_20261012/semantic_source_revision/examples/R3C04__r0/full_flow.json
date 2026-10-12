@@ -1,0 +1,4191 @@
+{
+  "generator": "openai_gpt-5.2-thinking",
+  "question_id": 2,
+  "original_answer_sha256": "2b6db955429fd6f3b190ffd315fe36d59fb2b7955b27a7d6c37111b4ea660cf8",
+  "canonical_answer_sha256": "4d3909623a64bdd7ccbd45f024b263f94cfddb3b8cf2bb32dc5d376d999b77a1",
+  "sources": {
+    "case_file": {
+      "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\optimizer_round3_20261011\\confirmation_qwen_01\\cases.json",
+      "sha256": "b4e50ef0280f7450532e198c1c6cd85ec399de06f68007a848cae1ed0fb5a08f"
+    },
+    "original_dataset": {
+      "path": "C:\\ClearEval\\ClearEval-public\\dataset\\Q+AR\\model_response\\from_openai_gpt-5.2-thinking_1-shot.json",
+      "sha256": "30ea221c31d9d4d5010716b8ac42e23baf5610e41da050d045bb1944b6883846"
+    },
+    "canonical_document": {
+      "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\optimizer_round3_20261011\\confirmation_qwen_01\\source_documents\\c9a87206864ec2bf206ab190.json",
+      "sha256": "0ad57cb0dd306fa3e6aa7d926307e36c8a3b48888c2433a0f4d0ce24b85bdd9e"
+    },
+    "archived_judge_response": {
+      "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\optimizer_round3_20261011\\confirmation_qwen_01\\run\\attempts\\2185687de9aabf8356fae9fb1d26f3f9fa39e7b532b175038f433c66f72b2886_1\\raw_response.txt",
+      "sha256": "0c8f5348803c5fae3b43a23e66b58932efa92804c9c1fa77deb35c28c091abcf"
+    },
+    "archived_processing": {
+      "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\optimizer_round3_20261011\\confirmation_qwen_01\\run\\attempts\\2185687de9aabf8356fae9fb1d26f3f9fa39e7b532b175038f433c66f72b2886_1\\processing.json",
+      "sha256": "679d3cf6d55b563bb9aa1887cde875098bb7255b233751f512e82d2f8c2f6db8"
+    },
+    "lexical_reparse": {
+      "path": "C:\\ClearEval\\reports\\cleareval_20261012\\typed_label_transfer\\lexical_candidate_02\\processing\\R3C04__r0.json",
+      "sha256": "eba5989bfba8b873788ee0ed19c6de5950e2bb63630eabc2d9d9660ea96e1170"
+    }
+  },
+  "archived_metrics": {
+    "c_param": 3,
+    "co_order": 3,
+    "co_method": 2,
+    "co_param": 2,
+    "co_chem": 1,
+    "s_method": null,
+    "s_label": null,
+    "s_trans": null,
+    "s_time": null,
+    "sr": 0.0,
+    "sp": 0.0,
+    "Com": 0.6,
+    "Cor": 1.0,
+    "Eff": null,
+    "IA": null,
+    "HV": null
+  },
+  "automatic_candidate_metrics": {
+    "c_param": 3,
+    "co_order": 3,
+    "co_method": 2,
+    "co_param": 2,
+    "co_chem": 1,
+    "s_method": 2.375,
+    "s_label": null,
+    "s_trans": 2.814646787157323,
+    "s_time": null,
+    "sr": 0.0,
+    "sp": 0.0,
+    "Com": 0.6,
+    "Cor": 1.0,
+    "Eff": null,
+    "IA": null,
+    "HV": null
+  },
+  "source_assisted_metrics": {
+    "c_param": 3,
+    "co_order": 3,
+    "co_method": 2,
+    "co_param": 2,
+    "co_chem": 1,
+    "s_method": 2.375,
+    "s_label": 3.0,
+    "s_trans": 2.814646787157323,
+    "s_time": 3.0,
+    "sr": 0.0,
+    "sp": 0.0,
+    "Com": 0.6,
+    "Cor": 1.0,
+    "Eff": 0.853303898929777,
+    "IA": 0.6,
+    "HV": 0.5119823393578662
+  },
+  "annotation": {
+    "cell_id": "R3C04__r0",
+    "question_id": 2,
+    "answer_sha256": "4d3909623a64bdd7ccbd45f024b263f94cfddb3b8cf2bb32dc5d376d999b77a1",
+    "source_document": {
+      "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\optimizer_round3_20261011\\confirmation_qwen_01\\source_documents\\c9a87206864ec2bf206ab190.json",
+      "sha256": "0ad57cb0dd306fa3e6aa7d926307e36c8a3b48888c2433a0f4d0ce24b85bdd9e"
+    },
+    "original_source_document": {
+      "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\optimizer_round3_20261011\\confirmation_qwen_01\\original_source_documents\\c9a87206864ec2bf206ab190.json",
+      "sha256": "2b2ea754443f6fa5c3c0c21d1b8cd7ec39b65e7962a3310eeb39e78cbacd2eb6"
+    },
+    "source_mapping": {
+      "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\optimizer_round3_20261011\\confirmation_qwen_01\\source_mappings\\c9a87206864ec2bf206ab190.json",
+      "sha256": "68ed648aeb7d62e86c9d0267aaa1ee25bb6a88d8bbbe7528dbd20b1cab7fcc8b"
+    },
+    "semantic_author": "current assistant / source-assisted author analysis",
+    "independent_evaluator": false,
+    "expert_validated": false,
+    "new_model_calls": 0,
+    "relations": [
+      {
+        "fluorophore": "Alexa Fluor 647",
+        "marker": "NeuN (RBFOX3)",
+        "source_spans": [
+          {
+            "unit_id": "L0001",
+            "start": 0,
+            "end": 138,
+            "quote": "第1行（所选荧光/标记策略 + 透明方法）：**[NeuN + Alexa Fluor 647（胞体）, β-III Tubulin (TUJ1) + Alexa Fluor 647（轴突/树突）, TO-PRO-3（全脑核染）] + iDISCO+（DBE RI匹配）**\n",
+            "answer_sha256": "4d3909623a64bdd7ccbd45f024b263f94cfddb3b8cf2bb32dc5d376d999b77a1"
+          },
+          {
+            "unit_id": "L0023",
+            "start": 1448,
+            "end": 1582,
+            "quote": "5.1 一抗孵育液：PBS + 0.2% Triton X-100 + 5% DMSO + 3% NDS + 0.01% (w/v) NaN3；加入 NeuN (RBFOX3) 一抗 1:200。(Temperature: 37 ℃, Time: 5–7 days)\n",
+            "answer_sha256": "4d3909623a64bdd7ccbd45f024b263f94cfddb3b8cf2bb32dc5d376d999b77a1"
+          },
+          {
+            "unit_id": "L0029",
+            "start": 1878,
+            "end": 2059,
+            "quote": "7.1 二抗孵育液：PBS + 0.2% Triton X-100 + 3% NDS + 0.01% NaN3；加入驴抗鼠/兔（按一抗宿主匹配）Alexa Fluor 647 二抗 1:400（分别对应NeuN与TUJ1；若两一抗宿主不同可同管共孵育）。(Temperature: 37 ℃, Time: 5–7 days, Light: protected)\n",
+            "answer_sha256": "4d3909623a64bdd7ccbd45f024b263f94cfddb3b8cf2bb32dc5d376d999b77a1"
+          }
+        ],
+        "basis": "Explicit chosen pair and matching primary/secondary context.",
+        "roles": {}
+      },
+      {
+        "fluorophore": "Alexa Fluor 647",
+        "marker": "β-III Tubulin (TUJ1)",
+        "source_spans": [
+          {
+            "unit_id": "L0001",
+            "start": 0,
+            "end": 138,
+            "quote": "第1行（所选荧光/标记策略 + 透明方法）：**[NeuN + Alexa Fluor 647（胞体）, β-III Tubulin (TUJ1) + Alexa Fluor 647（轴突/树突）, TO-PRO-3（全脑核染）] + iDISCO+（DBE RI匹配）**\n",
+            "answer_sha256": "4d3909623a64bdd7ccbd45f024b263f94cfddb3b8cf2bb32dc5d376d999b77a1"
+          },
+          {
+            "unit_id": "L0024",
+            "start": 1582,
+            "end": 1673,
+            "quote": "5.2 同一孵育液中加入 β-III Tubulin (TUJ1) 一抗 1:300（与5.1可同管共孵育）。(Temperature: 37 ℃, Time: 5–7 days)\n",
+            "answer_sha256": "4d3909623a64bdd7ccbd45f024b263f94cfddb3b8cf2bb32dc5d376d999b77a1"
+          },
+          {
+            "unit_id": "L0029",
+            "start": 1878,
+            "end": 2059,
+            "quote": "7.1 二抗孵育液：PBS + 0.2% Triton X-100 + 3% NDS + 0.01% NaN3；加入驴抗鼠/兔（按一抗宿主匹配）Alexa Fluor 647 二抗 1:400（分别对应NeuN与TUJ1；若两一抗宿主不同可同管共孵育）。(Temperature: 37 ℃, Time: 5–7 days, Light: protected)\n",
+            "answer_sha256": "4d3909623a64bdd7ccbd45f024b263f94cfddb3b8cf2bb32dc5d376d999b77a1"
+          }
+        ],
+        "basis": "Second explicitly chosen target sharing AF647; retained as another relation.",
+        "roles": {}
+      },
+      {
+        "fluorophore": "TO-PRO-3",
+        "marker": "",
+        "source_spans": [
+          {
+            "unit_id": "L0001",
+            "start": 0,
+            "end": 138,
+            "quote": "第1行（所选荧光/标记策略 + 透明方法）：**[NeuN + Alexa Fluor 647（胞体）, β-III Tubulin (TUJ1) + Alexa Fluor 647（轴突/树突）, TO-PRO-3（全脑核染）] + iDISCO+（DBE RI匹配）**\n",
+            "answer_sha256": "4d3909623a64bdd7ccbd45f024b263f94cfddb3b8cf2bb32dc5d376d999b77a1"
+          },
+          {
+            "unit_id": "L0034",
+            "start": 2262,
+            "end": 2351,
+            "quote": "9.1 TO-PRO-3 1–2 µM（在PBS + 0.2% Triton X-100中），避光轻摇。(Temperature: RT, Time: 12–24 hours)\n",
+            "answer_sha256": "4d3909623a64bdd7ccbd45f024b263f94cfddb3b8cf2bb32dc5d376d999b77a1"
+          }
+        ],
+        "basis": "Direct nuclear stain; external antibody marker is inapplicable.",
+        "roles": {}
+      }
+    ],
+    "operations": [
+      {
+        "operation_id": "L0005",
+        "role": "core",
+        "source_spans": [
+          {
+            "unit_id": "L0005",
+            "start": 321,
+            "end": 384,
+            "quote": "1.1 20% (vol/vol) 甲醇/水溶液浸泡，轻摇。(Temperature: RT, Time: 2 hours)\n",
+            "answer_sha256": "4d3909623a64bdd7ccbd45f024b263f94cfddb3b8cf2bb32dc5d376d999b77a1"
+          }
+        ],
+        "interpretation": "",
+        "duration_options": {
+          "reported": {
+            "bounds_hours": [
+              2,
+              2
+            ],
+            "count": 1,
+            "basis": "explicit source duration"
+          }
+        }
+      },
+      {
+        "operation_id": "L0006",
+        "role": "core",
+        "source_spans": [
+          {
+            "unit_id": "L0006",
+            "start": 384,
+            "end": 447,
+            "quote": "1.2 40% (vol/vol) 甲醇/水溶液浸泡，轻摇。(Temperature: RT, Time: 2 hours)\n",
+            "answer_sha256": "4d3909623a64bdd7ccbd45f024b263f94cfddb3b8cf2bb32dc5d376d999b77a1"
+          }
+        ],
+        "interpretation": "",
+        "duration_options": {
+          "reported": {
+            "bounds_hours": [
+              2,
+              2
+            ],
+            "count": 1,
+            "basis": "explicit source duration"
+          }
+        }
+      },
+      {
+        "operation_id": "L0007",
+        "role": "core",
+        "source_spans": [
+          {
+            "unit_id": "L0007",
+            "start": 447,
+            "end": 510,
+            "quote": "1.3 60% (vol/vol) 甲醇/水溶液浸泡，轻摇。(Temperature: RT, Time: 2 hours)\n",
+            "answer_sha256": "4d3909623a64bdd7ccbd45f024b263f94cfddb3b8cf2bb32dc5d376d999b77a1"
+          }
+        ],
+        "interpretation": "",
+        "duration_options": {
+          "reported": {
+            "bounds_hours": [
+              2,
+              2
+            ],
+            "count": 1,
+            "basis": "explicit source duration"
+          }
+        }
+      },
+      {
+        "operation_id": "L0008",
+        "role": "core",
+        "source_spans": [
+          {
+            "unit_id": "L0008",
+            "start": 510,
+            "end": 573,
+            "quote": "1.4 80% (vol/vol) 甲醇/水溶液浸泡，轻摇。(Temperature: RT, Time: 2 hours)\n",
+            "answer_sha256": "4d3909623a64bdd7ccbd45f024b263f94cfddb3b8cf2bb32dc5d376d999b77a1"
+          }
+        ],
+        "interpretation": "",
+        "duration_options": {
+          "reported": {
+            "bounds_hours": [
+              2,
+              2
+            ],
+            "count": 1,
+            "basis": "explicit source duration"
+          }
+        }
+      },
+      {
+        "operation_id": "L0009",
+        "role": "core",
+        "source_spans": [
+          {
+            "unit_id": "L0009",
+            "start": 573,
+            "end": 633,
+            "quote": "1.5 100% (vol/vol) 甲醇浸泡，轻摇。(Temperature: RT, Time: 2 hours)\n",
+            "answer_sha256": "4d3909623a64bdd7ccbd45f024b263f94cfddb3b8cf2bb32dc5d376d999b77a1"
+          }
+        ],
+        "interpretation": "",
+        "duration_options": {
+          "reported": {
+            "bounds_hours": [
+              2,
+              2
+            ],
+            "count": 1,
+            "basis": "explicit source duration"
+          }
+        }
+      },
+      {
+        "operation_id": "L0010",
+        "role": "core",
+        "source_spans": [
+          {
+            "unit_id": "L0010",
+            "start": 633,
+            "end": 695,
+            "quote": "1.6 新鲜 100% (vol/vol) 甲醇再次浸泡。(Temperature: RT, Time: 2 hours)\n",
+            "answer_sha256": "4d3909623a64bdd7ccbd45f024b263f94cfddb3b8cf2bb32dc5d376d999b77a1"
+          }
+        ],
+        "interpretation": "",
+        "duration_options": {
+          "reported": {
+            "bounds_hours": [
+              2,
+              2
+            ],
+            "count": 1,
+            "basis": "explicit source duration"
+          }
+        }
+      },
+      {
+        "operation_id": "L0012",
+        "role": "core",
+        "source_spans": [
+          {
+            "unit_id": "L0012",
+            "start": 726,
+            "end": 813,
+            "quote": "2.1 5% H2O2 in 甲醇（体积比：30% H2O2 : 甲醇 = 1 : 5）避光浸泡。(Temperature: 4 ℃, Time: 12–16 hours)\n",
+            "answer_sha256": "4d3909623a64bdd7ccbd45f024b263f94cfddb3b8cf2bb32dc5d376d999b77a1"
+          }
+        ],
+        "interpretation": "",
+        "duration_options": {
+          "reported": {
+            "bounds_hours": [
+              12,
+              16
+            ],
+            "count": 1,
+            "basis": "explicit source duration"
+          }
+        }
+      },
+      {
+        "operation_id": "L0014",
+        "role": "core",
+        "source_spans": [
+          {
+            "unit_id": "L0014",
+            "start": 831,
+            "end": 893,
+            "quote": "3.1 80% (vol/vol) 甲醇/水溶液浸泡。(Temperature: RT, Time: 1.5 hours)\n",
+            "answer_sha256": "4d3909623a64bdd7ccbd45f024b263f94cfddb3b8cf2bb32dc5d376d999b77a1"
+          }
+        ],
+        "interpretation": "",
+        "duration_options": {
+          "reported": {
+            "bounds_hours": [
+              1.5,
+              1.5
+            ],
+            "count": 1,
+            "basis": "explicit source duration"
+          }
+        }
+      },
+      {
+        "operation_id": "L0015",
+        "role": "core",
+        "source_spans": [
+          {
+            "unit_id": "L0015",
+            "start": 893,
+            "end": 955,
+            "quote": "3.2 60% (vol/vol) 甲醇/水溶液浸泡。(Temperature: RT, Time: 1.5 hours)\n",
+            "answer_sha256": "4d3909623a64bdd7ccbd45f024b263f94cfddb3b8cf2bb32dc5d376d999b77a1"
+          }
+        ],
+        "interpretation": "",
+        "duration_options": {
+          "reported": {
+            "bounds_hours": [
+              1.5,
+              1.5
+            ],
+            "count": 1,
+            "basis": "explicit source duration"
+          }
+        }
+      },
+      {
+        "operation_id": "L0016",
+        "role": "core",
+        "source_spans": [
+          {
+            "unit_id": "L0016",
+            "start": 955,
+            "end": 1017,
+            "quote": "3.3 40% (vol/vol) 甲醇/水溶液浸泡。(Temperature: RT, Time: 1.5 hours)\n",
+            "answer_sha256": "4d3909623a64bdd7ccbd45f024b263f94cfddb3b8cf2bb32dc5d376d999b77a1"
+          }
+        ],
+        "interpretation": "",
+        "duration_options": {
+          "reported": {
+            "bounds_hours": [
+              1.5,
+              1.5
+            ],
+            "count": 1,
+            "basis": "explicit source duration"
+          }
+        }
+      },
+      {
+        "operation_id": "L0017",
+        "role": "core",
+        "source_spans": [
+          {
+            "unit_id": "L0017",
+            "start": 1017,
+            "end": 1079,
+            "quote": "3.4 20% (vol/vol) 甲醇/水溶液浸泡。(Temperature: RT, Time: 1.5 hours)\n",
+            "answer_sha256": "4d3909623a64bdd7ccbd45f024b263f94cfddb3b8cf2bb32dc5d376d999b77a1"
+          }
+        ],
+        "interpretation": "",
+        "duration_options": {
+          "reported": {
+            "bounds_hours": [
+              1.5,
+              1.5
+            ],
+            "count": 1,
+            "basis": "explicit source duration"
+          }
+        }
+      },
+      {
+        "operation_id": "L0018",
+        "role": "core",
+        "source_spans": [
+          {
+            "unit_id": "L0018",
+            "start": 1079,
+            "end": 1127,
+            "quote": "3.5 1×PBS 浸泡。(Temperature: RT, Time: 1.5 hours)\n",
+            "answer_sha256": "4d3909623a64bdd7ccbd45f024b263f94cfddb3b8cf2bb32dc5d376d999b77a1"
+          }
+        ],
+        "interpretation": "",
+        "duration_options": {
+          "reported": {
+            "bounds_hours": [
+              1.5,
+              1.5
+            ],
+            "count": 1,
+            "basis": "explicit source duration"
+          }
+        }
+      },
+      {
+        "operation_id": "L0020",
+        "role": "excluded",
+        "source_spans": [
+          {
+            "unit_id": "L0020",
+            "start": 1164,
+            "end": 1282,
+            "quote": "4.1 渗透液：PBS + 0.2% (vol/vol) Triton X-100 + 20% (vol/vol) DMSO + 0.3 M Glycine，轻摇。(Temperature: 37 ℃, Time: 24 hours)\n",
+            "answer_sha256": "4d3909623a64bdd7ccbd45f024b263f94cfddb3b8cf2bb32dc5d376d999b77a1"
+          }
+        ],
+        "interpretation": "Immunolabeling preparation, incubation, stain or associated wash.",
+        "duration_options": {}
+      },
+      {
+        "operation_id": "L0021",
+        "role": "excluded",
+        "source_spans": [
+          {
+            "unit_id": "L0021",
+            "start": 1282,
+            "end": 1400,
+            "quote": "4.2 封闭液：PBS + 0.2% Triton X-100 + 10% (vol/vol) DMSO + 6% (vol/vol) 正常驴血清（NDS），轻摇。(Temperature: 37 ℃, Time: 24 hours)\n",
+            "answer_sha256": "4d3909623a64bdd7ccbd45f024b263f94cfddb3b8cf2bb32dc5d376d999b77a1"
+          }
+        ],
+        "interpretation": "Immunolabeling preparation, incubation, stain or associated wash.",
+        "duration_options": {}
+      },
+      {
+        "operation_id": "L0023",
+        "role": "excluded",
+        "source_spans": [
+          {
+            "unit_id": "L0023",
+            "start": 1448,
+            "end": 1582,
+            "quote": "5.1 一抗孵育液：PBS + 0.2% Triton X-100 + 5% DMSO + 3% NDS + 0.01% (w/v) NaN3；加入 NeuN (RBFOX3) 一抗 1:200。(Temperature: 37 ℃, Time: 5–7 days)\n",
+            "answer_sha256": "4d3909623a64bdd7ccbd45f024b263f94cfddb3b8cf2bb32dc5d376d999b77a1"
+          }
+        ],
+        "interpretation": "Immunolabeling preparation, incubation, stain or associated wash.",
+        "duration_options": {}
+      },
+      {
+        "operation_id": "L0024",
+        "role": "excluded",
+        "source_spans": [
+          {
+            "unit_id": "L0024",
+            "start": 1582,
+            "end": 1673,
+            "quote": "5.2 同一孵育液中加入 β-III Tubulin (TUJ1) 一抗 1:300（与5.1可同管共孵育）。(Temperature: 37 ℃, Time: 5–7 days)\n",
+            "answer_sha256": "4d3909623a64bdd7ccbd45f024b263f94cfddb3b8cf2bb32dc5d376d999b77a1"
+          }
+        ],
+        "interpretation": "Immunolabeling preparation, incubation, stain or associated wash.",
+        "duration_options": {}
+      },
+      {
+        "operation_id": "L0026",
+        "role": "excluded",
+        "source_spans": [
+          {
+            "unit_id": "L0026",
+            "start": 1698,
+            "end": 1781,
+            "quote": "6.1 洗涤液：PBS + 0.2% Triton X-100 + 0.01% NaN3，轻摇换液。(Temperature: RT, Time: 6 hours)\n",
+            "answer_sha256": "4d3909623a64bdd7ccbd45f024b263f94cfddb3b8cf2bb32dc5d376d999b77a1"
+          }
+        ],
+        "interpretation": "Immunolabeling preparation, incubation, stain or associated wash.",
+        "duration_options": {}
+      },
+      {
+        "operation_id": "L0027",
+        "role": "excluded",
+        "source_spans": [
+          {
+            "unit_id": "L0027",
+            "start": 1781,
+            "end": 1847,
+            "quote": "6.2 重复 6.1 共 6 次（总洗涤约 36 hours）。(Temperature: RT, Time: 36 hours)\n",
+            "answer_sha256": "4d3909623a64bdd7ccbd45f024b263f94cfddb3b8cf2bb32dc5d376d999b77a1"
+          }
+        ],
+        "interpretation": "Immunolabeling preparation, incubation, stain or associated wash.",
+        "duration_options": {}
+      },
+      {
+        "operation_id": "L0029",
+        "role": "excluded",
+        "source_spans": [
+          {
+            "unit_id": "L0029",
+            "start": 1878,
+            "end": 2059,
+            "quote": "7.1 二抗孵育液：PBS + 0.2% Triton X-100 + 3% NDS + 0.01% NaN3；加入驴抗鼠/兔（按一抗宿主匹配）Alexa Fluor 647 二抗 1:400（分别对应NeuN与TUJ1；若两一抗宿主不同可同管共孵育）。(Temperature: 37 ℃, Time: 5–7 days, Light: protected)\n",
+            "answer_sha256": "4d3909623a64bdd7ccbd45f024b263f94cfddb3b8cf2bb32dc5d376d999b77a1"
+          }
+        ],
+        "interpretation": "Immunolabeling preparation, incubation, stain or associated wash.",
+        "duration_options": {}
+      },
+      {
+        "operation_id": "L0031",
+        "role": "excluded",
+        "source_spans": [
+          {
+            "unit_id": "L0031",
+            "start": 2086,
+            "end": 2168,
+            "quote": "8.1 PBS + 0.2% Triton X-100 + 0.01% NaN3 洗涤，轻摇换液。(Temperature: RT, Time: 6 hours)\n",
+            "answer_sha256": "4d3909623a64bdd7ccbd45f024b263f94cfddb3b8cf2bb32dc5d376d999b77a1"
+          }
+        ],
+        "interpretation": "Immunolabeling preparation, incubation, stain or associated wash.",
+        "duration_options": {}
+      },
+      {
+        "operation_id": "L0032",
+        "role": "excluded",
+        "source_spans": [
+          {
+            "unit_id": "L0032",
+            "start": 2168,
+            "end": 2234,
+            "quote": "8.2 重复 8.1 共 6 次（总洗涤约 36 hours）。(Temperature: RT, Time: 36 hours)\n",
+            "answer_sha256": "4d3909623a64bdd7ccbd45f024b263f94cfddb3b8cf2bb32dc5d376d999b77a1"
+          }
+        ],
+        "interpretation": "Immunolabeling preparation, incubation, stain or associated wash.",
+        "duration_options": {}
+      },
+      {
+        "operation_id": "L0034",
+        "role": "excluded",
+        "source_spans": [
+          {
+            "unit_id": "L0034",
+            "start": 2262,
+            "end": 2351,
+            "quote": "9.1 TO-PRO-3 1–2 µM（在PBS + 0.2% Triton X-100中），避光轻摇。(Temperature: RT, Time: 12–24 hours)\n",
+            "answer_sha256": "4d3909623a64bdd7ccbd45f024b263f94cfddb3b8cf2bb32dc5d376d999b77a1"
+          }
+        ],
+        "interpretation": "Immunolabeling preparation, incubation, stain or associated wash.",
+        "duration_options": {}
+      },
+      {
+        "operation_id": "L0035",
+        "role": "excluded",
+        "source_spans": [
+          {
+            "unit_id": "L0035",
+            "start": 2351,
+            "end": 2404,
+            "quote": "9.2 PBS 洗涤 3 次。(Temperature: RT, Time: 2 hours each)\n",
+            "answer_sha256": "4d3909623a64bdd7ccbd45f024b263f94cfddb3b8cf2bb32dc5d376d999b77a1"
+          }
+        ],
+        "interpretation": "Immunolabeling preparation, incubation, stain or associated wash.",
+        "duration_options": {}
+      },
+      {
+        "operation_id": "L0037",
+        "role": "core",
+        "source_spans": [
+          {
+            "unit_id": "L0037",
+            "start": 2441,
+            "end": 2490,
+            "quote": "10.1 20% 甲醇/水。(Temperature: RT, Time: 1.5 hours)\n",
+            "answer_sha256": "4d3909623a64bdd7ccbd45f024b263f94cfddb3b8cf2bb32dc5d376d999b77a1"
+          }
+        ],
+        "interpretation": "",
+        "duration_options": {
+          "reported": {
+            "bounds_hours": [
+              1.5,
+              1.5
+            ],
+            "count": 1,
+            "basis": "explicit source duration"
+          }
+        }
+      },
+      {
+        "operation_id": "L0038",
+        "role": "core",
+        "source_spans": [
+          {
+            "unit_id": "L0038",
+            "start": 2490,
+            "end": 2539,
+            "quote": "10.2 40% 甲醇/水。(Temperature: RT, Time: 1.5 hours)\n",
+            "answer_sha256": "4d3909623a64bdd7ccbd45f024b263f94cfddb3b8cf2bb32dc5d376d999b77a1"
+          }
+        ],
+        "interpretation": "",
+        "duration_options": {
+          "reported": {
+            "bounds_hours": [
+              1.5,
+              1.5
+            ],
+            "count": 1,
+            "basis": "explicit source duration"
+          }
+        }
+      },
+      {
+        "operation_id": "L0039",
+        "role": "core",
+        "source_spans": [
+          {
+            "unit_id": "L0039",
+            "start": 2539,
+            "end": 2588,
+            "quote": "10.3 60% 甲醇/水。(Temperature: RT, Time: 1.5 hours)\n",
+            "answer_sha256": "4d3909623a64bdd7ccbd45f024b263f94cfddb3b8cf2bb32dc5d376d999b77a1"
+          }
+        ],
+        "interpretation": "",
+        "duration_options": {
+          "reported": {
+            "bounds_hours": [
+              1.5,
+              1.5
+            ],
+            "count": 1,
+            "basis": "explicit source duration"
+          }
+        }
+      },
+      {
+        "operation_id": "L0040",
+        "role": "core",
+        "source_spans": [
+          {
+            "unit_id": "L0040",
+            "start": 2588,
+            "end": 2637,
+            "quote": "10.4 80% 甲醇/水。(Temperature: RT, Time: 1.5 hours)\n",
+            "answer_sha256": "4d3909623a64bdd7ccbd45f024b263f94cfddb3b8cf2bb32dc5d376d999b77a1"
+          }
+        ],
+        "interpretation": "",
+        "duration_options": {
+          "reported": {
+            "bounds_hours": [
+              1.5,
+              1.5
+            ],
+            "count": 1,
+            "basis": "explicit source duration"
+          }
+        }
+      },
+      {
+        "operation_id": "L0041",
+        "role": "core",
+        "source_spans": [
+          {
+            "unit_id": "L0041",
+            "start": 2637,
+            "end": 2683,
+            "quote": "10.5 100% 甲醇。(Temperature: RT, Time: 2 hours)\n",
+            "answer_sha256": "4d3909623a64bdd7ccbd45f024b263f94cfddb3b8cf2bb32dc5d376d999b77a1"
+          }
+        ],
+        "interpretation": "",
+        "duration_options": {
+          "reported": {
+            "bounds_hours": [
+              2,
+              2
+            ],
+            "count": 1,
+            "basis": "explicit source duration"
+          }
+        }
+      },
+      {
+        "operation_id": "L0042",
+        "role": "core",
+        "source_spans": [
+          {
+            "unit_id": "L0042",
+            "start": 2683,
+            "end": 2732,
+            "quote": "10.6 新鲜 100% 甲醇。(Temperature: RT, Time: 2 hours)\n",
+            "answer_sha256": "4d3909623a64bdd7ccbd45f024b263f94cfddb3b8cf2bb32dc5d376d999b77a1"
+          }
+        ],
+        "interpretation": "",
+        "duration_options": {
+          "reported": {
+            "bounds_hours": [
+              2,
+              2
+            ],
+            "count": 1,
+            "basis": "explicit source duration"
+          }
+        }
+      },
+      {
+        "operation_id": "L0044",
+        "role": "core",
+        "source_spans": [
+          {
+            "unit_id": "L0044",
+            "start": 2768,
+            "end": 2842,
+            "quote": "11.1 66% (vol/vol) 二氯甲烷(DCM)/33% 甲醇混合液浸泡。(Temperature: RT, Time: 3 hours)\n",
+            "answer_sha256": "4d3909623a64bdd7ccbd45f024b263f94cfddb3b8cf2bb32dc5d376d999b77a1"
+          }
+        ],
+        "interpretation": "",
+        "duration_options": {
+          "reported": {
+            "bounds_hours": [
+              3,
+              3
+            ],
+            "count": 1,
+            "basis": "explicit source duration"
+          }
+        }
+      },
+      {
+        "operation_id": "L0045",
+        "role": "core",
+        "source_spans": [
+          {
+            "unit_id": "L0045",
+            "start": 2842,
+            "end": 2898,
+            "quote": "11.2 100% DCM 浸泡。(Temperature: RT, Time: 2 × 1.5 hours)\n",
+            "answer_sha256": "4d3909623a64bdd7ccbd45f024b263f94cfddb3b8cf2bb32dc5d376d999b77a1"
+          }
+        ],
+        "interpretation": "",
+        "duration_options": {
+          "reported": {
+            "bounds_hours": [
+              1.5,
+              1.5
+            ],
+            "count": 2,
+            "basis": "explicit source duration"
+          }
+        }
+      },
+      {
+        "operation_id": "L0047",
+        "role": "core",
+        "source_spans": [
+          {
+            "unit_id": "L0047",
+            "start": 2939,
+            "end": 3021,
+            "quote": "12.1 100% 二苄醚（DBE, RI≈1.56）预浸泡。(Temperature: RT, Time: 3 hours, Light: protected)\n",
+            "answer_sha256": "4d3909623a64bdd7ccbd45f024b263f94cfddb3b8cf2bb32dc5d376d999b77a1"
+          }
+        ],
+        "interpretation": "",
+        "duration_options": {
+          "reported": {
+            "bounds_hours": [
+              3,
+              3
+            ],
+            "count": 1,
+            "basis": "explicit source duration"
+          }
+        }
+      },
+      {
+        "operation_id": "L0048",
+        "role": "core",
+        "source_spans": [
+          {
+            "unit_id": "L0048",
+            "start": 3021,
+            "end": 3111,
+            "quote": "12.2 新鲜 100% DBE 继续浸泡至完全透明（全脑通常需要）。(Temperature: RT, Time: 12–24 hours, Light: protected)\n",
+            "answer_sha256": "4d3909623a64bdd7ccbd45f024b263f94cfddb3b8cf2bb32dc5d376d999b77a1"
+          }
+        ],
+        "interpretation": "",
+        "duration_options": {
+          "reported": {
+            "bounds_hours": [
+              12,
+              24
+            ],
+            "count": 1,
+            "basis": "explicit source duration"
+          }
+        }
+      },
+      {
+        "operation_id": "L0050",
+        "role": "excluded",
+        "source_spans": [
+          {
+            "unit_id": "L0050",
+            "start": 3146,
+            "end": 3237,
+            "quote": "13.1 样本全程浸没于新鲜 100% DBE，避光密封保存（尽量充满容器减少氧化）。(Temperature: RT or 4 ℃, Time: up to 1–2 weeks)\n",
+            "answer_sha256": "4d3909623a64bdd7ccbd45f024b263f94cfddb3b8cf2bb32dc5d376d999b77a1"
+          }
+        ],
+        "interpretation": "Storage up to 1–2 weeks is retained as a continuing condition, not an initial clearing incubation.",
+        "duration_options": {}
+      },
+      {
+        "operation_id": "L0051",
+        "role": "core",
+        "source_spans": [
+          {
+            "unit_id": "L0051",
+            "start": 3237,
+            "end": 3303,
+            "quote": "13.2 光片成像前更换一次新鲜 DBE 并静置脱气泡/沉降。(Temperature: RT, Time: 1–2 hours)\n",
+            "answer_sha256": "4d3909623a64bdd7ccbd45f024b263f94cfddb3b8cf2bb32dc5d376d999b77a1"
+          }
+        ],
+        "interpretation": "Fresh DBE exchange with prescribed 1–2 h equilibration before imaging is a real timed RI-conditioning operation.",
+        "duration_options": {
+          "reported": {
+            "bounds_hours": [
+              1,
+              2
+            ],
+            "count": 1,
+            "basis": "Fresh DBE exchange with prescribed 1–2 h equilibration before imaging is a real timed RI-conditioning operation."
+          }
+        }
+      },
+      {
+        "operation_id": "L0052",
+        "role": "excluded",
+        "source_spans": [
+          {
+            "unit_id": "L0052",
+            "start": 3303,
+            "end": 3408,
+            "quote": "13.3 成像介质与物镜匹配：使用 RI≈1.56 的DBE兼容成像腔与密封材料；样本固定于支架后直接进行全脑光片扫描。(Temperature: RT, Time: per imaging session)\n",
+            "answer_sha256": "4d3909623a64bdd7ccbd45f024b263f94cfddb3b8cf2bb32dc5d376d999b77a1"
+          }
+        ],
+        "interpretation": "Image acquisition is excluded.",
+        "duration_options": {}
+      }
+    ],
+    "scenarios": [
+      {
+        "scenario_id": "with_prescribed_preimaging_conditioning",
+        "description": "All explicitly timed core treatments including the prescribed final fresh DBE equilibration.",
+        "selected_operations": [
+          {
+            "operation_id": "L0005",
+            "duration_option": "reported"
+          },
+          {
+            "operation_id": "L0006",
+            "duration_option": "reported"
+          },
+          {
+            "operation_id": "L0007",
+            "duration_option": "reported"
+          },
+          {
+            "operation_id": "L0008",
+            "duration_option": "reported"
+          },
+          {
+            "operation_id": "L0009",
+            "duration_option": "reported"
+          },
+          {
+            "operation_id": "L0010",
+            "duration_option": "reported"
+          },
+          {
+            "operation_id": "L0012",
+            "duration_option": "reported"
+          },
+          {
+            "operation_id": "L0014",
+            "duration_option": "reported"
+          },
+          {
+            "operation_id": "L0015",
+            "duration_option": "reported"
+          },
+          {
+            "operation_id": "L0016",
+            "duration_option": "reported"
+          },
+          {
+            "operation_id": "L0017",
+            "duration_option": "reported"
+          },
+          {
+            "operation_id": "L0018",
+            "duration_option": "reported"
+          },
+          {
+            "operation_id": "L0037",
+            "duration_option": "reported"
+          },
+          {
+            "operation_id": "L0038",
+            "duration_option": "reported"
+          },
+          {
+            "operation_id": "L0039",
+            "duration_option": "reported"
+          },
+          {
+            "operation_id": "L0040",
+            "duration_option": "reported"
+          },
+          {
+            "operation_id": "L0041",
+            "duration_option": "reported"
+          },
+          {
+            "operation_id": "L0042",
+            "duration_option": "reported"
+          },
+          {
+            "operation_id": "L0044",
+            "duration_option": "reported"
+          },
+          {
+            "operation_id": "L0045",
+            "duration_option": "reported"
+          },
+          {
+            "operation_id": "L0047",
+            "duration_option": "reported"
+          },
+          {
+            "operation_id": "L0048",
+            "duration_option": "reported"
+          },
+          {
+            "operation_id": "L0051",
+            "duration_option": "reported"
+          }
+        ],
+        "omitted_core_operations": [],
+        "selection_uses_achieved_score": false
+      },
+      {
+        "scenario_id": "initial_RI_ready_scope",
+        "description": "Scope sensitivity stopping at initial RI-ready endpoint, before the later pre-imaging equilibration.",
+        "selected_operations": [
+          {
+            "operation_id": "L0005",
+            "duration_option": "reported"
+          },
+          {
+            "operation_id": "L0006",
+            "duration_option": "reported"
+          },
+          {
+            "operation_id": "L0007",
+            "duration_option": "reported"
+          },
+          {
+            "operation_id": "L0008",
+            "duration_option": "reported"
+          },
+          {
+            "operation_id": "L0009",
+            "duration_option": "reported"
+          },
+          {
+            "operation_id": "L0010",
+            "duration_option": "reported"
+          },
+          {
+            "operation_id": "L0012",
+            "duration_option": "reported"
+          },
+          {
+            "operation_id": "L0014",
+            "duration_option": "reported"
+          },
+          {
+            "operation_id": "L0015",
+            "duration_option": "reported"
+          },
+          {
+            "operation_id": "L0016",
+            "duration_option": "reported"
+          },
+          {
+            "operation_id": "L0017",
+            "duration_option": "reported"
+          },
+          {
+            "operation_id": "L0018",
+            "duration_option": "reported"
+          },
+          {
+            "operation_id": "L0037",
+            "duration_option": "reported"
+          },
+          {
+            "operation_id": "L0038",
+            "duration_option": "reported"
+          },
+          {
+            "operation_id": "L0039",
+            "duration_option": "reported"
+          },
+          {
+            "operation_id": "L0040",
+            "duration_option": "reported"
+          },
+          {
+            "operation_id": "L0041",
+            "duration_option": "reported"
+          },
+          {
+            "operation_id": "L0042",
+            "duration_option": "reported"
+          },
+          {
+            "operation_id": "L0044",
+            "duration_option": "reported"
+          },
+          {
+            "operation_id": "L0045",
+            "duration_option": "reported"
+          },
+          {
+            "operation_id": "L0047",
+            "duration_option": "reported"
+          },
+          {
+            "operation_id": "L0048",
+            "duration_option": "reported"
+          }
+        ],
+        "omitted_core_operations": [
+          "L0051"
+        ],
+        "selection_uses_achieved_score": false
+      }
+    ],
+    "primary_scenario_id": "with_prescribed_preimaging_conditioning",
+    "source_findings": [
+      "The chosen-method header is already repaired by the generic Chinese-header candidate.",
+      "Reagent RI≈1.56 was mislabeled as sample-target RI in the saved extraction; original s_trans is a KB-based proxy and does not use this answer field.",
+      "Labels specify target-fluor pairs; this does not validate clone identity, same-color separation, penetration or the old Cor=1."
+    ],
+    "unit_review": [
+      {
+        "source": {
+          "unit_id": "L0001",
+          "start": 0,
+          "end": 138,
+          "quote": "第1行（所选荧光/标记策略 + 透明方法）：**[NeuN + Alexa Fluor 647（胞体）, β-III Tubulin (TUJ1) + Alexa Fluor 647（轴突/树突）, TO-PRO-3（全脑核染）] + iDISCO+（DBE RI匹配）**\n",
+          "answer_sha256": "4d3909623a64bdd7ccbd45f024b263f94cfddb3b8cf2bb32dc5d376d999b77a1"
+        },
+        "disposition": "heading_label_or_explanatory_text"
+      },
+      {
+        "source": {
+          "unit_id": "L0002",
+          "start": 138,
+          "end": 279,
+          "quote": "选择理由：iDISCO+ 适用于完整成年小鼠全脑（~10×8×6 mm）快速高透明化与光片成像；有机溶剂脱水/脱脂后透明度高、纤维束走行对比好；TO-PRO-3 与 Alexa Fluor 647 在iDISCO+流程中信号相对稳健，适合全脑三维神经元胞体与神经突起形态图谱构建。\n",
+          "answer_sha256": "4d3909623a64bdd7ccbd45f024b263f94cfddb3b8cf2bb32dc5d376d999b77a1"
+        },
+        "disposition": "heading_label_or_explanatory_text"
+      },
+      {
+        "source": {
+          "unit_id": "L0003",
+          "start": 279,
+          "end": 299,
+          "quote": "**Protocol Steps：**\n",
+          "answer_sha256": "4d3909623a64bdd7ccbd45f024b263f94cfddb3b8cf2bb32dc5d376d999b77a1"
+        },
+        "disposition": "heading_label_or_explanatory_text"
+      },
+      {
+        "source": {
+          "unit_id": "L0004",
+          "start": 299,
+          "end": 321,
+          "quote": "1 预处理与脱水（Dehydration）\n",
+          "answer_sha256": "4d3909623a64bdd7ccbd45f024b263f94cfddb3b8cf2bb32dc5d376d999b77a1"
+        },
+        "disposition": "heading_label_or_explanatory_text"
+      },
+      {
+        "source": {
+          "unit_id": "L0005",
+          "start": 321,
+          "end": 384,
+          "quote": "1.1 20% (vol/vol) 甲醇/水溶液浸泡，轻摇。(Temperature: RT, Time: 2 hours)\n",
+          "answer_sha256": "4d3909623a64bdd7ccbd45f024b263f94cfddb3b8cf2bb32dc5d376d999b77a1"
+        },
+        "disposition": "operation_or_scope_decision"
+      },
+      {
+        "source": {
+          "unit_id": "L0006",
+          "start": 384,
+          "end": 447,
+          "quote": "1.2 40% (vol/vol) 甲醇/水溶液浸泡，轻摇。(Temperature: RT, Time: 2 hours)\n",
+          "answer_sha256": "4d3909623a64bdd7ccbd45f024b263f94cfddb3b8cf2bb32dc5d376d999b77a1"
+        },
+        "disposition": "operation_or_scope_decision"
+      },
+      {
+        "source": {
+          "unit_id": "L0007",
+          "start": 447,
+          "end": 510,
+          "quote": "1.3 60% (vol/vol) 甲醇/水溶液浸泡，轻摇。(Temperature: RT, Time: 2 hours)\n",
+          "answer_sha256": "4d3909623a64bdd7ccbd45f024b263f94cfddb3b8cf2bb32dc5d376d999b77a1"
+        },
+        "disposition": "operation_or_scope_decision"
+      },
+      {
+        "source": {
+          "unit_id": "L0008",
+          "start": 510,
+          "end": 573,
+          "quote": "1.4 80% (vol/vol) 甲醇/水溶液浸泡，轻摇。(Temperature: RT, Time: 2 hours)\n",
+          "answer_sha256": "4d3909623a64bdd7ccbd45f024b263f94cfddb3b8cf2bb32dc5d376d999b77a1"
+        },
+        "disposition": "operation_or_scope_decision"
+      },
+      {
+        "source": {
+          "unit_id": "L0009",
+          "start": 573,
+          "end": 633,
+          "quote": "1.5 100% (vol/vol) 甲醇浸泡，轻摇。(Temperature: RT, Time: 2 hours)\n",
+          "answer_sha256": "4d3909623a64bdd7ccbd45f024b263f94cfddb3b8cf2bb32dc5d376d999b77a1"
+        },
+        "disposition": "operation_or_scope_decision"
+      },
+      {
+        "source": {
+          "unit_id": "L0010",
+          "start": 633,
+          "end": 695,
+          "quote": "1.6 新鲜 100% (vol/vol) 甲醇再次浸泡。(Temperature: RT, Time: 2 hours)\n",
+          "answer_sha256": "4d3909623a64bdd7ccbd45f024b263f94cfddb3b8cf2bb32dc5d376d999b77a1"
+        },
+        "disposition": "operation_or_scope_decision"
+      },
+      {
+        "source": {
+          "unit_id": "L0011",
+          "start": 695,
+          "end": 726,
+          "quote": "2 脱色/去血红素（Bleaching，可显著降低全脑背景）\n",
+          "answer_sha256": "4d3909623a64bdd7ccbd45f024b263f94cfddb3b8cf2bb32dc5d376d999b77a1"
+        },
+        "disposition": "heading_label_or_explanatory_text"
+      },
+      {
+        "source": {
+          "unit_id": "L0012",
+          "start": 726,
+          "end": 813,
+          "quote": "2.1 5% H2O2 in 甲醇（体积比：30% H2O2 : 甲醇 = 1 : 5）避光浸泡。(Temperature: 4 ℃, Time: 12–16 hours)\n",
+          "answer_sha256": "4d3909623a64bdd7ccbd45f024b263f94cfddb3b8cf2bb32dc5d376d999b77a1"
+        },
+        "disposition": "operation_or_scope_decision"
+      },
+      {
+        "source": {
+          "unit_id": "L0013",
+          "start": 813,
+          "end": 831,
+          "quote": "3 复水（Rehydration）\n",
+          "answer_sha256": "4d3909623a64bdd7ccbd45f024b263f94cfddb3b8cf2bb32dc5d376d999b77a1"
+        },
+        "disposition": "heading_label_or_explanatory_text"
+      },
+      {
+        "source": {
+          "unit_id": "L0014",
+          "start": 831,
+          "end": 893,
+          "quote": "3.1 80% (vol/vol) 甲醇/水溶液浸泡。(Temperature: RT, Time: 1.5 hours)\n",
+          "answer_sha256": "4d3909623a64bdd7ccbd45f024b263f94cfddb3b8cf2bb32dc5d376d999b77a1"
+        },
+        "disposition": "operation_or_scope_decision"
+      },
+      {
+        "source": {
+          "unit_id": "L0015",
+          "start": 893,
+          "end": 955,
+          "quote": "3.2 60% (vol/vol) 甲醇/水溶液浸泡。(Temperature: RT, Time: 1.5 hours)\n",
+          "answer_sha256": "4d3909623a64bdd7ccbd45f024b263f94cfddb3b8cf2bb32dc5d376d999b77a1"
+        },
+        "disposition": "operation_or_scope_decision"
+      },
+      {
+        "source": {
+          "unit_id": "L0016",
+          "start": 955,
+          "end": 1017,
+          "quote": "3.3 40% (vol/vol) 甲醇/水溶液浸泡。(Temperature: RT, Time: 1.5 hours)\n",
+          "answer_sha256": "4d3909623a64bdd7ccbd45f024b263f94cfddb3b8cf2bb32dc5d376d999b77a1"
+        },
+        "disposition": "operation_or_scope_decision"
+      },
+      {
+        "source": {
+          "unit_id": "L0017",
+          "start": 1017,
+          "end": 1079,
+          "quote": "3.4 20% (vol/vol) 甲醇/水溶液浸泡。(Temperature: RT, Time: 1.5 hours)\n",
+          "answer_sha256": "4d3909623a64bdd7ccbd45f024b263f94cfddb3b8cf2bb32dc5d376d999b77a1"
+        },
+        "disposition": "operation_or_scope_decision"
+      },
+      {
+        "source": {
+          "unit_id": "L0018",
+          "start": 1079,
+          "end": 1127,
+          "quote": "3.5 1×PBS 浸泡。(Temperature: RT, Time: 1.5 hours)\n",
+          "answer_sha256": "4d3909623a64bdd7ccbd45f024b263f94cfddb3b8cf2bb32dc5d376d999b77a1"
+        },
+        "disposition": "operation_or_scope_decision"
+      },
+      {
+        "source": {
+          "unit_id": "L0019",
+          "start": 1127,
+          "end": 1164,
+          "quote": "4 渗透/封闭（Permeabilization & Blocking）\n",
+          "answer_sha256": "4d3909623a64bdd7ccbd45f024b263f94cfddb3b8cf2bb32dc5d376d999b77a1"
+        },
+        "disposition": "heading_label_or_explanatory_text"
+      },
+      {
+        "source": {
+          "unit_id": "L0020",
+          "start": 1164,
+          "end": 1282,
+          "quote": "4.1 渗透液：PBS + 0.2% (vol/vol) Triton X-100 + 20% (vol/vol) DMSO + 0.3 M Glycine，轻摇。(Temperature: 37 ℃, Time: 24 hours)\n",
+          "answer_sha256": "4d3909623a64bdd7ccbd45f024b263f94cfddb3b8cf2bb32dc5d376d999b77a1"
+        },
+        "disposition": "operation_or_scope_decision"
+      },
+      {
+        "source": {
+          "unit_id": "L0021",
+          "start": 1282,
+          "end": 1400,
+          "quote": "4.2 封闭液：PBS + 0.2% Triton X-100 + 10% (vol/vol) DMSO + 6% (vol/vol) 正常驴血清（NDS），轻摇。(Temperature: 37 ℃, Time: 24 hours)\n",
+          "answer_sha256": "4d3909623a64bdd7ccbd45f024b263f94cfddb3b8cf2bb32dc5d376d999b77a1"
+        },
+        "disposition": "operation_or_scope_decision"
+      },
+      {
+        "source": {
+          "unit_id": "L0022",
+          "start": 1400,
+          "end": 1448,
+          "quote": "5 一抗全脑免疫标记（Whole-brain immunolabeling, primary）\n",
+          "answer_sha256": "4d3909623a64bdd7ccbd45f024b263f94cfddb3b8cf2bb32dc5d376d999b77a1"
+        },
+        "disposition": "heading_label_or_explanatory_text"
+      },
+      {
+        "source": {
+          "unit_id": "L0023",
+          "start": 1448,
+          "end": 1582,
+          "quote": "5.1 一抗孵育液：PBS + 0.2% Triton X-100 + 5% DMSO + 3% NDS + 0.01% (w/v) NaN3；加入 NeuN (RBFOX3) 一抗 1:200。(Temperature: 37 ℃, Time: 5–7 days)\n",
+          "answer_sha256": "4d3909623a64bdd7ccbd45f024b263f94cfddb3b8cf2bb32dc5d376d999b77a1"
+        },
+        "disposition": "operation_or_scope_decision"
+      },
+      {
+        "source": {
+          "unit_id": "L0024",
+          "start": 1582,
+          "end": 1673,
+          "quote": "5.2 同一孵育液中加入 β-III Tubulin (TUJ1) 一抗 1:300（与5.1可同管共孵育）。(Temperature: 37 ℃, Time: 5–7 days)\n",
+          "answer_sha256": "4d3909623a64bdd7ccbd45f024b263f94cfddb3b8cf2bb32dc5d376d999b77a1"
+        },
+        "disposition": "operation_or_scope_decision"
+      },
+      {
+        "source": {
+          "unit_id": "L0025",
+          "start": 1673,
+          "end": 1698,
+          "quote": "6 洗涤（Wash after primary）\n",
+          "answer_sha256": "4d3909623a64bdd7ccbd45f024b263f94cfddb3b8cf2bb32dc5d376d999b77a1"
+        },
+        "disposition": "heading_label_or_explanatory_text"
+      },
+      {
+        "source": {
+          "unit_id": "L0026",
+          "start": 1698,
+          "end": 1781,
+          "quote": "6.1 洗涤液：PBS + 0.2% Triton X-100 + 0.01% NaN3，轻摇换液。(Temperature: RT, Time: 6 hours)\n",
+          "answer_sha256": "4d3909623a64bdd7ccbd45f024b263f94cfddb3b8cf2bb32dc5d376d999b77a1"
+        },
+        "disposition": "operation_or_scope_decision"
+      },
+      {
+        "source": {
+          "unit_id": "L0027",
+          "start": 1781,
+          "end": 1847,
+          "quote": "6.2 重复 6.1 共 6 次（总洗涤约 36 hours）。(Temperature: RT, Time: 36 hours)\n",
+          "answer_sha256": "4d3909623a64bdd7ccbd45f024b263f94cfddb3b8cf2bb32dc5d376d999b77a1"
+        },
+        "disposition": "operation_or_scope_decision"
+      },
+      {
+        "source": {
+          "unit_id": "L0028",
+          "start": 1847,
+          "end": 1878,
+          "quote": "7 二抗全脑免疫标记（Secondary, far-red）\n",
+          "answer_sha256": "4d3909623a64bdd7ccbd45f024b263f94cfddb3b8cf2bb32dc5d376d999b77a1"
+        },
+        "disposition": "heading_label_or_explanatory_text"
+      },
+      {
+        "source": {
+          "unit_id": "L0029",
+          "start": 1878,
+          "end": 2059,
+          "quote": "7.1 二抗孵育液：PBS + 0.2% Triton X-100 + 3% NDS + 0.01% NaN3；加入驴抗鼠/兔（按一抗宿主匹配）Alexa Fluor 647 二抗 1:400（分别对应NeuN与TUJ1；若两一抗宿主不同可同管共孵育）。(Temperature: 37 ℃, Time: 5–7 days, Light: protected)\n",
+          "answer_sha256": "4d3909623a64bdd7ccbd45f024b263f94cfddb3b8cf2bb32dc5d376d999b77a1"
+        },
+        "disposition": "operation_or_scope_decision"
+      },
+      {
+        "source": {
+          "unit_id": "L0030",
+          "start": 2059,
+          "end": 2086,
+          "quote": "8 洗涤（Wash after secondary）\n",
+          "answer_sha256": "4d3909623a64bdd7ccbd45f024b263f94cfddb3b8cf2bb32dc5d376d999b77a1"
+        },
+        "disposition": "heading_label_or_explanatory_text"
+      },
+      {
+        "source": {
+          "unit_id": "L0031",
+          "start": 2086,
+          "end": 2168,
+          "quote": "8.1 PBS + 0.2% Triton X-100 + 0.01% NaN3 洗涤，轻摇换液。(Temperature: RT, Time: 6 hours)\n",
+          "answer_sha256": "4d3909623a64bdd7ccbd45f024b263f94cfddb3b8cf2bb32dc5d376d999b77a1"
+        },
+        "disposition": "operation_or_scope_decision"
+      },
+      {
+        "source": {
+          "unit_id": "L0032",
+          "start": 2168,
+          "end": 2234,
+          "quote": "8.2 重复 8.1 共 6 次（总洗涤约 36 hours）。(Temperature: RT, Time: 36 hours)\n",
+          "answer_sha256": "4d3909623a64bdd7ccbd45f024b263f94cfddb3b8cf2bb32dc5d376d999b77a1"
+        },
+        "disposition": "operation_or_scope_decision"
+      },
+      {
+        "source": {
+          "unit_id": "L0033",
+          "start": 2234,
+          "end": 2262,
+          "quote": "9 核染（TO-PRO-3，全脑核定位辅助配准/分区）\n",
+          "answer_sha256": "4d3909623a64bdd7ccbd45f024b263f94cfddb3b8cf2bb32dc5d376d999b77a1"
+        },
+        "disposition": "heading_label_or_explanatory_text"
+      },
+      {
+        "source": {
+          "unit_id": "L0034",
+          "start": 2262,
+          "end": 2351,
+          "quote": "9.1 TO-PRO-3 1–2 µM（在PBS + 0.2% Triton X-100中），避光轻摇。(Temperature: RT, Time: 12–24 hours)\n",
+          "answer_sha256": "4d3909623a64bdd7ccbd45f024b263f94cfddb3b8cf2bb32dc5d376d999b77a1"
+        },
+        "disposition": "operation_or_scope_decision"
+      },
+      {
+        "source": {
+          "unit_id": "L0035",
+          "start": 2351,
+          "end": 2404,
+          "quote": "9.2 PBS 洗涤 3 次。(Temperature: RT, Time: 2 hours each)\n",
+          "answer_sha256": "4d3909623a64bdd7ccbd45f024b263f94cfddb3b8cf2bb32dc5d376d999b77a1"
+        },
+        "disposition": "operation_or_scope_decision"
+      },
+      {
+        "source": {
+          "unit_id": "L0036",
+          "start": 2404,
+          "end": 2441,
+          "quote": "10 再次脱水（Dehydration before clearing）\n",
+          "answer_sha256": "4d3909623a64bdd7ccbd45f024b263f94cfddb3b8cf2bb32dc5d376d999b77a1"
+        },
+        "disposition": "heading_label_or_explanatory_text"
+      },
+      {
+        "source": {
+          "unit_id": "L0037",
+          "start": 2441,
+          "end": 2490,
+          "quote": "10.1 20% 甲醇/水。(Temperature: RT, Time: 1.5 hours)\n",
+          "answer_sha256": "4d3909623a64bdd7ccbd45f024b263f94cfddb3b8cf2bb32dc5d376d999b77a1"
+        },
+        "disposition": "operation_or_scope_decision"
+      },
+      {
+        "source": {
+          "unit_id": "L0038",
+          "start": 2490,
+          "end": 2539,
+          "quote": "10.2 40% 甲醇/水。(Temperature: RT, Time: 1.5 hours)\n",
+          "answer_sha256": "4d3909623a64bdd7ccbd45f024b263f94cfddb3b8cf2bb32dc5d376d999b77a1"
+        },
+        "disposition": "operation_or_scope_decision"
+      },
+      {
+        "source": {
+          "unit_id": "L0039",
+          "start": 2539,
+          "end": 2588,
+          "quote": "10.3 60% 甲醇/水。(Temperature: RT, Time: 1.5 hours)\n",
+          "answer_sha256": "4d3909623a64bdd7ccbd45f024b263f94cfddb3b8cf2bb32dc5d376d999b77a1"
+        },
+        "disposition": "operation_or_scope_decision"
+      },
+      {
+        "source": {
+          "unit_id": "L0040",
+          "start": 2588,
+          "end": 2637,
+          "quote": "10.4 80% 甲醇/水。(Temperature: RT, Time: 1.5 hours)\n",
+          "answer_sha256": "4d3909623a64bdd7ccbd45f024b263f94cfddb3b8cf2bb32dc5d376d999b77a1"
+        },
+        "disposition": "operation_or_scope_decision"
+      },
+      {
+        "source": {
+          "unit_id": "L0041",
+          "start": 2637,
+          "end": 2683,
+          "quote": "10.5 100% 甲醇。(Temperature: RT, Time: 2 hours)\n",
+          "answer_sha256": "4d3909623a64bdd7ccbd45f024b263f94cfddb3b8cf2bb32dc5d376d999b77a1"
+        },
+        "disposition": "operation_or_scope_decision"
+      },
+      {
+        "source": {
+          "unit_id": "L0042",
+          "start": 2683,
+          "end": 2732,
+          "quote": "10.6 新鲜 100% 甲醇。(Temperature: RT, Time: 2 hours)\n",
+          "answer_sha256": "4d3909623a64bdd7ccbd45f024b263f94cfddb3b8cf2bb32dc5d376d999b77a1"
+        },
+        "disposition": "operation_or_scope_decision"
+      },
+      {
+        "source": {
+          "unit_id": "L0043",
+          "start": 2732,
+          "end": 2768,
+          "quote": "11 脱脂/透明化前处理（Delipidation with DCM）\n",
+          "answer_sha256": "4d3909623a64bdd7ccbd45f024b263f94cfddb3b8cf2bb32dc5d376d999b77a1"
+        },
+        "disposition": "heading_label_or_explanatory_text"
+      },
+      {
+        "source": {
+          "unit_id": "L0044",
+          "start": 2768,
+          "end": 2842,
+          "quote": "11.1 66% (vol/vol) 二氯甲烷(DCM)/33% 甲醇混合液浸泡。(Temperature: RT, Time: 3 hours)\n",
+          "answer_sha256": "4d3909623a64bdd7ccbd45f024b263f94cfddb3b8cf2bb32dc5d376d999b77a1"
+        },
+        "disposition": "operation_or_scope_decision"
+      },
+      {
+        "source": {
+          "unit_id": "L0045",
+          "start": 2842,
+          "end": 2898,
+          "quote": "11.2 100% DCM 浸泡。(Temperature: RT, Time: 2 × 1.5 hours)\n",
+          "answer_sha256": "4d3909623a64bdd7ccbd45f024b263f94cfddb3b8cf2bb32dc5d376d999b77a1"
+        },
+        "disposition": "operation_or_scope_decision"
+      },
+      {
+        "source": {
+          "unit_id": "L0046",
+          "start": 2898,
+          "end": 2939,
+          "quote": "12 RI 匹配（Refractive index matching, DBE）\n",
+          "answer_sha256": "4d3909623a64bdd7ccbd45f024b263f94cfddb3b8cf2bb32dc5d376d999b77a1"
+        },
+        "disposition": "heading_label_or_explanatory_text"
+      },
+      {
+        "source": {
+          "unit_id": "L0047",
+          "start": 2939,
+          "end": 3021,
+          "quote": "12.1 100% 二苄醚（DBE, RI≈1.56）预浸泡。(Temperature: RT, Time: 3 hours, Light: protected)\n",
+          "answer_sha256": "4d3909623a64bdd7ccbd45f024b263f94cfddb3b8cf2bb32dc5d376d999b77a1"
+        },
+        "disposition": "operation_or_scope_decision"
+      },
+      {
+        "source": {
+          "unit_id": "L0048",
+          "start": 3021,
+          "end": 3111,
+          "quote": "12.2 新鲜 100% DBE 继续浸泡至完全透明（全脑通常需要）。(Temperature: RT, Time: 12–24 hours, Light: protected)\n",
+          "answer_sha256": "4d3909623a64bdd7ccbd45f024b263f94cfddb3b8cf2bb32dc5d376d999b77a1"
+        },
+        "disposition": "operation_or_scope_decision"
+      },
+      {
+        "source": {
+          "unit_id": "L0049",
+          "start": 3111,
+          "end": 3146,
+          "quote": "13 保存与成像前处理（Storage & pre-imaging）\n",
+          "answer_sha256": "4d3909623a64bdd7ccbd45f024b263f94cfddb3b8cf2bb32dc5d376d999b77a1"
+        },
+        "disposition": "heading_label_or_explanatory_text"
+      },
+      {
+        "source": {
+          "unit_id": "L0050",
+          "start": 3146,
+          "end": 3237,
+          "quote": "13.1 样本全程浸没于新鲜 100% DBE，避光密封保存（尽量充满容器减少氧化）。(Temperature: RT or 4 ℃, Time: up to 1–2 weeks)\n",
+          "answer_sha256": "4d3909623a64bdd7ccbd45f024b263f94cfddb3b8cf2bb32dc5d376d999b77a1"
+        },
+        "disposition": "operation_or_scope_decision"
+      },
+      {
+        "source": {
+          "unit_id": "L0051",
+          "start": 3237,
+          "end": 3303,
+          "quote": "13.2 光片成像前更换一次新鲜 DBE 并静置脱气泡/沉降。(Temperature: RT, Time: 1–2 hours)\n",
+          "answer_sha256": "4d3909623a64bdd7ccbd45f024b263f94cfddb3b8cf2bb32dc5d376d999b77a1"
+        },
+        "disposition": "operation_or_scope_decision"
+      },
+      {
+        "source": {
+          "unit_id": "L0052",
+          "start": 3303,
+          "end": 3408,
+          "quote": "13.3 成像介质与物镜匹配：使用 RI≈1.56 的DBE兼容成像腔与密封材料；样本固定于支架后直接进行全脑光片扫描。(Temperature: RT, Time: per imaging session)\n",
+          "answer_sha256": "4d3909623a64bdd7ccbd45f024b263f94cfddb3b8cf2bb32dc5d376d999b77a1"
+        },
+        "disposition": "operation_or_scope_decision"
+      }
+    ],
+    "annotation_scope": "All source units read; numerical scope is reported core incubation, not elapsed laboratory workflow."
+  },
+  "label_derivation": {
+    "version": "cce-typed-label-scorer-v2.1",
+    "s_label": 3.0,
+    "channels": {
+      "s_target_match": 3.0,
+      "s_marker_fluor_compat": 6.0,
+      "s_method_fluor_compat": 3.9000000000000004
+    },
+    "channel_applicability": {
+      "s_target_match": {
+        "applicable": true,
+        "value": 3.0,
+        "contributing_pairs": [
+          "semantic:0",
+          "semantic:1"
+        ]
+      },
+      "s_marker_fluor_compat": {
+        "applicable": true,
+        "value": 6.0,
+        "contributing_pairs": [
+          "semantic:0",
+          "semantic:1"
+        ]
+      },
+      "s_method_fluor_compat": {
+        "applicable": true,
+        "value": 3.9000000000000004,
+        "contributing_pairs": [
+          "semantic:0",
+          "semantic:1",
+          "semantic:2"
+        ]
+      }
+    },
+    "pair_results": [
+      {
+        "pair_id": "semantic:0",
+        "entity_id": null,
+        "fluorophore": "Alexa Fluor 647",
+        "reported_marker": "NeuN (RBFOX3)",
+        "reported_target_literal": null,
+        "label_type": "targeted_or_unclassified_reagent",
+        "original_function_input": {
+          "Alexa Fluor 647": "NeuN (RBFOX3)"
+        },
+        "applicable": {
+          "s_target_match": true,
+          "s_marker_fluor_compat": true,
+          "s_method_fluor_compat": true
+        },
+        "channels": {
+          "s_target_match": 3.0,
+          "s_marker_fluor_compat": 6.0,
+          "s_method_fluor_compat": 5.4
+        },
+        "not_applicable_reason": null,
+        "source_evidence": [
+          {
+            "unit_id": "L0001",
+            "start": 0,
+            "end": 138,
+            "quote": "第1行（所选荧光/标记策略 + 透明方法）：**[NeuN + Alexa Fluor 647（胞体）, β-III Tubulin (TUJ1) + Alexa Fluor 647（轴突/树突）, TO-PRO-3（全脑核染）] + iDISCO+（DBE RI匹配）**\n",
+            "answer_sha256": "4d3909623a64bdd7ccbd45f024b263f94cfddb3b8cf2bb32dc5d376d999b77a1"
+          },
+          {
+            "unit_id": "L0023",
+            "start": 1448,
+            "end": 1582,
+            "quote": "5.1 一抗孵育液：PBS + 0.2% Triton X-100 + 5% DMSO + 3% NDS + 0.01% (w/v) NaN3；加入 NeuN (RBFOX3) 一抗 1:200。(Temperature: 37 ℃, Time: 5–7 days)\n",
+            "answer_sha256": "4d3909623a64bdd7ccbd45f024b263f94cfddb3b8cf2bb32dc5d376d999b77a1"
+          },
+          {
+            "unit_id": "L0029",
+            "start": 1878,
+            "end": 2059,
+            "quote": "7.1 二抗孵育液：PBS + 0.2% Triton X-100 + 3% NDS + 0.01% NaN3；加入驴抗鼠/兔（按一抗宿主匹配）Alexa Fluor 647 二抗 1:400（分别对应NeuN与TUJ1；若两一抗宿主不同可同管共孵育）。(Temperature: 37 ℃, Time: 5–7 days, Light: protected)\n",
+            "answer_sha256": "4d3909623a64bdd7ccbd45f024b263f94cfddb3b8cf2bb32dc5d376d999b77a1"
+          }
+        ],
+        "compatibility_audit": [
+          {
+            "kind": "marker_fluor",
+            "marker": "NeuN (RBFOX3)",
+            "fluorophore": "Alexa Fluor 647",
+            "source": "KnowledgeBase/tissue.json",
+            "value": true,
+            "status": "TABLE_REPORTED"
+          },
+          {
+            "kind": "method_fluor",
+            "method_name": "iDISCO+",
+            "fluorophore": "Alexa Fluor 647",
+            "source": "KnowledgeBase/method_fluro_compati.json",
+            "value": 0.9,
+            "status": "TABLE_REPORTED"
+          }
+        ]
+      },
+      {
+        "pair_id": "semantic:1",
+        "entity_id": null,
+        "fluorophore": "Alexa Fluor 647",
+        "reported_marker": "β-III Tubulin (TUJ1)",
+        "reported_target_literal": null,
+        "label_type": "targeted_or_unclassified_reagent",
+        "original_function_input": {
+          "Alexa Fluor 647": "β-III Tubulin (TUJ1)"
+        },
+        "applicable": {
+          "s_target_match": true,
+          "s_marker_fluor_compat": true,
+          "s_method_fluor_compat": true
+        },
+        "channels": {
+          "s_target_match": 6.0,
+          "s_marker_fluor_compat": 6.0,
+          "s_method_fluor_compat": 5.4
+        },
+        "not_applicable_reason": null,
+        "source_evidence": [
+          {
+            "unit_id": "L0001",
+            "start": 0,
+            "end": 138,
+            "quote": "第1行（所选荧光/标记策略 + 透明方法）：**[NeuN + Alexa Fluor 647（胞体）, β-III Tubulin (TUJ1) + Alexa Fluor 647（轴突/树突）, TO-PRO-3（全脑核染）] + iDISCO+（DBE RI匹配）**\n",
+            "answer_sha256": "4d3909623a64bdd7ccbd45f024b263f94cfddb3b8cf2bb32dc5d376d999b77a1"
+          },
+          {
+            "unit_id": "L0024",
+            "start": 1582,
+            "end": 1673,
+            "quote": "5.2 同一孵育液中加入 β-III Tubulin (TUJ1) 一抗 1:300（与5.1可同管共孵育）。(Temperature: 37 ℃, Time: 5–7 days)\n",
+            "answer_sha256": "4d3909623a64bdd7ccbd45f024b263f94cfddb3b8cf2bb32dc5d376d999b77a1"
+          },
+          {
+            "unit_id": "L0029",
+            "start": 1878,
+            "end": 2059,
+            "quote": "7.1 二抗孵育液：PBS + 0.2% Triton X-100 + 3% NDS + 0.01% NaN3；加入驴抗鼠/兔（按一抗宿主匹配）Alexa Fluor 647 二抗 1:400（分别对应NeuN与TUJ1；若两一抗宿主不同可同管共孵育）。(Temperature: 37 ℃, Time: 5–7 days, Light: protected)\n",
+            "answer_sha256": "4d3909623a64bdd7ccbd45f024b263f94cfddb3b8cf2bb32dc5d376d999b77a1"
+          }
+        ],
+        "compatibility_audit": [
+          {
+            "kind": "marker_fluor",
+            "marker": "β-III Tubulin (TUJ1)",
+            "fluorophore": "Alexa Fluor 647",
+            "source": "KnowledgeBase/tissue.json",
+            "value": true,
+            "status": "TABLE_REPORTED"
+          },
+          {
+            "kind": "method_fluor",
+            "method_name": "iDISCO+",
+            "fluorophore": "Alexa Fluor 647",
+            "source": "KnowledgeBase/method_fluro_compati.json",
+            "value": 0.9,
+            "status": "TABLE_REPORTED"
+          }
+        ]
+      },
+      {
+        "pair_id": "semantic:2",
+        "entity_id": null,
+        "fluorophore": "TO-PRO-3",
+        "reported_marker": null,
+        "reported_target_literal": null,
+        "label_type": "direct_stain",
+        "original_function_input": {
+          "TO-PRO-3": ""
+        },
+        "applicable": {
+          "s_target_match": false,
+          "s_marker_fluor_compat": false,
+          "s_method_fluor_compat": true
+        },
+        "channels": {
+          "s_target_match": null,
+          "s_marker_fluor_compat": null,
+          "s_method_fluor_compat": 3.9000000000000004
+        },
+        "not_applicable_reason": "standalone fluorescence has no antibody target-pair channel",
+        "source_evidence": [
+          {
+            "unit_id": "L0001",
+            "start": 0,
+            "end": 138,
+            "quote": "第1行（所选荧光/标记策略 + 透明方法）：**[NeuN + Alexa Fluor 647（胞体）, β-III Tubulin (TUJ1) + Alexa Fluor 647（轴突/树突）, TO-PRO-3（全脑核染）] + iDISCO+（DBE RI匹配）**\n",
+            "answer_sha256": "4d3909623a64bdd7ccbd45f024b263f94cfddb3b8cf2bb32dc5d376d999b77a1"
+          },
+          {
+            "unit_id": "L0034",
+            "start": 2262,
+            "end": 2351,
+            "quote": "9.1 TO-PRO-3 1–2 µM（在PBS + 0.2% Triton X-100中），避光轻摇。(Temperature: RT, Time: 12–24 hours)\n",
+            "answer_sha256": "4d3909623a64bdd7ccbd45f024b263f94cfddb3b8cf2bb32dc5d376d999b77a1"
+          }
+        ],
+        "compatibility_audit": [
+          {
+            "kind": "method_fluor",
+            "method_name": "iDISCO+",
+            "fluorophore": "TO-PRO-3",
+            "source": "KnowledgeBase/method_fluro_compati.json",
+            "value": 0.65,
+            "status": "TABLE_REPORTED"
+          }
+        ]
+      }
+    ],
+    "resolved_uncertainties": [],
+    "remaining_uncertainties": [],
+    "minimum_of_available_applicable_channels": 3.0,
+    "task_target_coverage": "native/direct task coverage remains separate from antibody-pair applicability",
+    "new_model_calls": 0,
+    "expert_validated": false
+  },
+  "time_scenarios": [
+    {
+      "scenario_id": "with_prescribed_preimaging_conditioning",
+      "description": "All explicitly timed core treatments including the prescribed final fresh DBE equilibration.",
+      "time_derivation": {
+        "hours": 72.0,
+        "bounds_hours": [
+          63.5,
+          80.5
+        ],
+        "known_subtotal_bounds_hours": [
+          63.5,
+          80.5
+        ],
+        "unknown_duration_operations": [],
+        "contributions": [
+          {
+            "operation_id": "L0005",
+            "duration_option": "reported",
+            "reported_bounds_hours": [
+              2,
+              2
+            ],
+            "repeat_count": 1,
+            "duration_basis": "explicit source duration",
+            "source_spans": [
+              {
+                "unit_id": "L0005",
+                "start": 321,
+                "end": 384,
+                "quote": "1.1 20% (vol/vol) 甲醇/水溶液浸泡，轻摇。(Temperature: RT, Time: 2 hours)\n",
+                "answer_sha256": "4d3909623a64bdd7ccbd45f024b263f94cfddb3b8cf2bb32dc5d376d999b77a1"
+              }
+            ],
+            "interpretation": "",
+            "contribution_hours": [
+              2,
+              2
+            ]
+          },
+          {
+            "operation_id": "L0006",
+            "duration_option": "reported",
+            "reported_bounds_hours": [
+              2,
+              2
+            ],
+            "repeat_count": 1,
+            "duration_basis": "explicit source duration",
+            "source_spans": [
+              {
+                "unit_id": "L0006",
+                "start": 384,
+                "end": 447,
+                "quote": "1.2 40% (vol/vol) 甲醇/水溶液浸泡，轻摇。(Temperature: RT, Time: 2 hours)\n",
+                "answer_sha256": "4d3909623a64bdd7ccbd45f024b263f94cfddb3b8cf2bb32dc5d376d999b77a1"
+              }
+            ],
+            "interpretation": "",
+            "contribution_hours": [
+              2,
+              2
+            ]
+          },
+          {
+            "operation_id": "L0007",
+            "duration_option": "reported",
+            "reported_bounds_hours": [
+              2,
+              2
+            ],
+            "repeat_count": 1,
+            "duration_basis": "explicit source duration",
+            "source_spans": [
+              {
+                "unit_id": "L0007",
+                "start": 447,
+                "end": 510,
+                "quote": "1.3 60% (vol/vol) 甲醇/水溶液浸泡，轻摇。(Temperature: RT, Time: 2 hours)\n",
+                "answer_sha256": "4d3909623a64bdd7ccbd45f024b263f94cfddb3b8cf2bb32dc5d376d999b77a1"
+              }
+            ],
+            "interpretation": "",
+            "contribution_hours": [
+              2,
+              2
+            ]
+          },
+          {
+            "operation_id": "L0008",
+            "duration_option": "reported",
+            "reported_bounds_hours": [
+              2,
+              2
+            ],
+            "repeat_count": 1,
+            "duration_basis": "explicit source duration",
+            "source_spans": [
+              {
+                "unit_id": "L0008",
+                "start": 510,
+                "end": 573,
+                "quote": "1.4 80% (vol/vol) 甲醇/水溶液浸泡，轻摇。(Temperature: RT, Time: 2 hours)\n",
+                "answer_sha256": "4d3909623a64bdd7ccbd45f024b263f94cfddb3b8cf2bb32dc5d376d999b77a1"
+              }
+            ],
+            "interpretation": "",
+            "contribution_hours": [
+              2,
+              2
+            ]
+          },
+          {
+            "operation_id": "L0009",
+            "duration_option": "reported",
+            "reported_bounds_hours": [
+              2,
+              2
+            ],
+            "repeat_count": 1,
+            "duration_basis": "explicit source duration",
+            "source_spans": [
+              {
+                "unit_id": "L0009",
+                "start": 573,
+                "end": 633,
+                "quote": "1.5 100% (vol/vol) 甲醇浸泡，轻摇。(Temperature: RT, Time: 2 hours)\n",
+                "answer_sha256": "4d3909623a64bdd7ccbd45f024b263f94cfddb3b8cf2bb32dc5d376d999b77a1"
+              }
+            ],
+            "interpretation": "",
+            "contribution_hours": [
+              2,
+              2
+            ]
+          },
+          {
+            "operation_id": "L0010",
+            "duration_option": "reported",
+            "reported_bounds_hours": [
+              2,
+              2
+            ],
+            "repeat_count": 1,
+            "duration_basis": "explicit source duration",
+            "source_spans": [
+              {
+                "unit_id": "L0010",
+                "start": 633,
+                "end": 695,
+                "quote": "1.6 新鲜 100% (vol/vol) 甲醇再次浸泡。(Temperature: RT, Time: 2 hours)\n",
+                "answer_sha256": "4d3909623a64bdd7ccbd45f024b263f94cfddb3b8cf2bb32dc5d376d999b77a1"
+              }
+            ],
+            "interpretation": "",
+            "contribution_hours": [
+              2,
+              2
+            ]
+          },
+          {
+            "operation_id": "L0012",
+            "duration_option": "reported",
+            "reported_bounds_hours": [
+              12,
+              16
+            ],
+            "repeat_count": 1,
+            "duration_basis": "explicit source duration",
+            "source_spans": [
+              {
+                "unit_id": "L0012",
+                "start": 726,
+                "end": 813,
+                "quote": "2.1 5% H2O2 in 甲醇（体积比：30% H2O2 : 甲醇 = 1 : 5）避光浸泡。(Temperature: 4 ℃, Time: 12–16 hours)\n",
+                "answer_sha256": "4d3909623a64bdd7ccbd45f024b263f94cfddb3b8cf2bb32dc5d376d999b77a1"
+              }
+            ],
+            "interpretation": "",
+            "contribution_hours": [
+              12,
+              16
+            ]
+          },
+          {
+            "operation_id": "L0014",
+            "duration_option": "reported",
+            "reported_bounds_hours": [
+              1.5,
+              1.5
+            ],
+            "repeat_count": 1,
+            "duration_basis": "explicit source duration",
+            "source_spans": [
+              {
+                "unit_id": "L0014",
+                "start": 831,
+                "end": 893,
+                "quote": "3.1 80% (vol/vol) 甲醇/水溶液浸泡。(Temperature: RT, Time: 1.5 hours)\n",
+                "answer_sha256": "4d3909623a64bdd7ccbd45f024b263f94cfddb3b8cf2bb32dc5d376d999b77a1"
+              }
+            ],
+            "interpretation": "",
+            "contribution_hours": [
+              1.5,
+              1.5
+            ]
+          },
+          {
+            "operation_id": "L0015",
+            "duration_option": "reported",
+            "reported_bounds_hours": [
+              1.5,
+              1.5
+            ],
+            "repeat_count": 1,
+            "duration_basis": "explicit source duration",
+            "source_spans": [
+              {
+                "unit_id": "L0015",
+                "start": 893,
+                "end": 955,
+                "quote": "3.2 60% (vol/vol) 甲醇/水溶液浸泡。(Temperature: RT, Time: 1.5 hours)\n",
+                "answer_sha256": "4d3909623a64bdd7ccbd45f024b263f94cfddb3b8cf2bb32dc5d376d999b77a1"
+              }
+            ],
+            "interpretation": "",
+            "contribution_hours": [
+              1.5,
+              1.5
+            ]
+          },
+          {
+            "operation_id": "L0016",
+            "duration_option": "reported",
+            "reported_bounds_hours": [
+              1.5,
+              1.5
+            ],
+            "repeat_count": 1,
+            "duration_basis": "explicit source duration",
+            "source_spans": [
+              {
+                "unit_id": "L0016",
+                "start": 955,
+                "end": 1017,
+                "quote": "3.3 40% (vol/vol) 甲醇/水溶液浸泡。(Temperature: RT, Time: 1.5 hours)\n",
+                "answer_sha256": "4d3909623a64bdd7ccbd45f024b263f94cfddb3b8cf2bb32dc5d376d999b77a1"
+              }
+            ],
+            "interpretation": "",
+            "contribution_hours": [
+              1.5,
+              1.5
+            ]
+          },
+          {
+            "operation_id": "L0017",
+            "duration_option": "reported",
+            "reported_bounds_hours": [
+              1.5,
+              1.5
+            ],
+            "repeat_count": 1,
+            "duration_basis": "explicit source duration",
+            "source_spans": [
+              {
+                "unit_id": "L0017",
+                "start": 1017,
+                "end": 1079,
+                "quote": "3.4 20% (vol/vol) 甲醇/水溶液浸泡。(Temperature: RT, Time: 1.5 hours)\n",
+                "answer_sha256": "4d3909623a64bdd7ccbd45f024b263f94cfddb3b8cf2bb32dc5d376d999b77a1"
+              }
+            ],
+            "interpretation": "",
+            "contribution_hours": [
+              1.5,
+              1.5
+            ]
+          },
+          {
+            "operation_id": "L0018",
+            "duration_option": "reported",
+            "reported_bounds_hours": [
+              1.5,
+              1.5
+            ],
+            "repeat_count": 1,
+            "duration_basis": "explicit source duration",
+            "source_spans": [
+              {
+                "unit_id": "L0018",
+                "start": 1079,
+                "end": 1127,
+                "quote": "3.5 1×PBS 浸泡。(Temperature: RT, Time: 1.5 hours)\n",
+                "answer_sha256": "4d3909623a64bdd7ccbd45f024b263f94cfddb3b8cf2bb32dc5d376d999b77a1"
+              }
+            ],
+            "interpretation": "",
+            "contribution_hours": [
+              1.5,
+              1.5
+            ]
+          },
+          {
+            "operation_id": "L0037",
+            "duration_option": "reported",
+            "reported_bounds_hours": [
+              1.5,
+              1.5
+            ],
+            "repeat_count": 1,
+            "duration_basis": "explicit source duration",
+            "source_spans": [
+              {
+                "unit_id": "L0037",
+                "start": 2441,
+                "end": 2490,
+                "quote": "10.1 20% 甲醇/水。(Temperature: RT, Time: 1.5 hours)\n",
+                "answer_sha256": "4d3909623a64bdd7ccbd45f024b263f94cfddb3b8cf2bb32dc5d376d999b77a1"
+              }
+            ],
+            "interpretation": "",
+            "contribution_hours": [
+              1.5,
+              1.5
+            ]
+          },
+          {
+            "operation_id": "L0038",
+            "duration_option": "reported",
+            "reported_bounds_hours": [
+              1.5,
+              1.5
+            ],
+            "repeat_count": 1,
+            "duration_basis": "explicit source duration",
+            "source_spans": [
+              {
+                "unit_id": "L0038",
+                "start": 2490,
+                "end": 2539,
+                "quote": "10.2 40% 甲醇/水。(Temperature: RT, Time: 1.5 hours)\n",
+                "answer_sha256": "4d3909623a64bdd7ccbd45f024b263f94cfddb3b8cf2bb32dc5d376d999b77a1"
+              }
+            ],
+            "interpretation": "",
+            "contribution_hours": [
+              1.5,
+              1.5
+            ]
+          },
+          {
+            "operation_id": "L0039",
+            "duration_option": "reported",
+            "reported_bounds_hours": [
+              1.5,
+              1.5
+            ],
+            "repeat_count": 1,
+            "duration_basis": "explicit source duration",
+            "source_spans": [
+              {
+                "unit_id": "L0039",
+                "start": 2539,
+                "end": 2588,
+                "quote": "10.3 60% 甲醇/水。(Temperature: RT, Time: 1.5 hours)\n",
+                "answer_sha256": "4d3909623a64bdd7ccbd45f024b263f94cfddb3b8cf2bb32dc5d376d999b77a1"
+              }
+            ],
+            "interpretation": "",
+            "contribution_hours": [
+              1.5,
+              1.5
+            ]
+          },
+          {
+            "operation_id": "L0040",
+            "duration_option": "reported",
+            "reported_bounds_hours": [
+              1.5,
+              1.5
+            ],
+            "repeat_count": 1,
+            "duration_basis": "explicit source duration",
+            "source_spans": [
+              {
+                "unit_id": "L0040",
+                "start": 2588,
+                "end": 2637,
+                "quote": "10.4 80% 甲醇/水。(Temperature: RT, Time: 1.5 hours)\n",
+                "answer_sha256": "4d3909623a64bdd7ccbd45f024b263f94cfddb3b8cf2bb32dc5d376d999b77a1"
+              }
+            ],
+            "interpretation": "",
+            "contribution_hours": [
+              1.5,
+              1.5
+            ]
+          },
+          {
+            "operation_id": "L0041",
+            "duration_option": "reported",
+            "reported_bounds_hours": [
+              2,
+              2
+            ],
+            "repeat_count": 1,
+            "duration_basis": "explicit source duration",
+            "source_spans": [
+              {
+                "unit_id": "L0041",
+                "start": 2637,
+                "end": 2683,
+                "quote": "10.5 100% 甲醇。(Temperature: RT, Time: 2 hours)\n",
+                "answer_sha256": "4d3909623a64bdd7ccbd45f024b263f94cfddb3b8cf2bb32dc5d376d999b77a1"
+              }
+            ],
+            "interpretation": "",
+            "contribution_hours": [
+              2,
+              2
+            ]
+          },
+          {
+            "operation_id": "L0042",
+            "duration_option": "reported",
+            "reported_bounds_hours": [
+              2,
+              2
+            ],
+            "repeat_count": 1,
+            "duration_basis": "explicit source duration",
+            "source_spans": [
+              {
+                "unit_id": "L0042",
+                "start": 2683,
+                "end": 2732,
+                "quote": "10.6 新鲜 100% 甲醇。(Temperature: RT, Time: 2 hours)\n",
+                "answer_sha256": "4d3909623a64bdd7ccbd45f024b263f94cfddb3b8cf2bb32dc5d376d999b77a1"
+              }
+            ],
+            "interpretation": "",
+            "contribution_hours": [
+              2,
+              2
+            ]
+          },
+          {
+            "operation_id": "L0044",
+            "duration_option": "reported",
+            "reported_bounds_hours": [
+              3,
+              3
+            ],
+            "repeat_count": 1,
+            "duration_basis": "explicit source duration",
+            "source_spans": [
+              {
+                "unit_id": "L0044",
+                "start": 2768,
+                "end": 2842,
+                "quote": "11.1 66% (vol/vol) 二氯甲烷(DCM)/33% 甲醇混合液浸泡。(Temperature: RT, Time: 3 hours)\n",
+                "answer_sha256": "4d3909623a64bdd7ccbd45f024b263f94cfddb3b8cf2bb32dc5d376d999b77a1"
+              }
+            ],
+            "interpretation": "",
+            "contribution_hours": [
+              3,
+              3
+            ]
+          },
+          {
+            "operation_id": "L0045",
+            "duration_option": "reported",
+            "reported_bounds_hours": [
+              1.5,
+              1.5
+            ],
+            "repeat_count": 2,
+            "duration_basis": "explicit source duration",
+            "source_spans": [
+              {
+                "unit_id": "L0045",
+                "start": 2842,
+                "end": 2898,
+                "quote": "11.2 100% DCM 浸泡。(Temperature: RT, Time: 2 × 1.5 hours)\n",
+                "answer_sha256": "4d3909623a64bdd7ccbd45f024b263f94cfddb3b8cf2bb32dc5d376d999b77a1"
+              }
+            ],
+            "interpretation": "",
+            "contribution_hours": [
+              3.0,
+              3.0
+            ]
+          },
+          {
+            "operation_id": "L0047",
+            "duration_option": "reported",
+            "reported_bounds_hours": [
+              3,
+              3
+            ],
+            "repeat_count": 1,
+            "duration_basis": "explicit source duration",
+            "source_spans": [
+              {
+                "unit_id": "L0047",
+                "start": 2939,
+                "end": 3021,
+                "quote": "12.1 100% 二苄醚（DBE, RI≈1.56）预浸泡。(Temperature: RT, Time: 3 hours, Light: protected)\n",
+                "answer_sha256": "4d3909623a64bdd7ccbd45f024b263f94cfddb3b8cf2bb32dc5d376d999b77a1"
+              }
+            ],
+            "interpretation": "",
+            "contribution_hours": [
+              3,
+              3
+            ]
+          },
+          {
+            "operation_id": "L0048",
+            "duration_option": "reported",
+            "reported_bounds_hours": [
+              12,
+              24
+            ],
+            "repeat_count": 1,
+            "duration_basis": "explicit source duration",
+            "source_spans": [
+              {
+                "unit_id": "L0048",
+                "start": 3021,
+                "end": 3111,
+                "quote": "12.2 新鲜 100% DBE 继续浸泡至完全透明（全脑通常需要）。(Temperature: RT, Time: 12–24 hours, Light: protected)\n",
+                "answer_sha256": "4d3909623a64bdd7ccbd45f024b263f94cfddb3b8cf2bb32dc5d376d999b77a1"
+              }
+            ],
+            "interpretation": "",
+            "contribution_hours": [
+              12,
+              24
+            ]
+          },
+          {
+            "operation_id": "L0051",
+            "duration_option": "reported",
+            "reported_bounds_hours": [
+              1,
+              2
+            ],
+            "repeat_count": 1,
+            "duration_basis": "Fresh DBE exchange with prescribed 1–2 h equilibration before imaging is a real timed RI-conditioning operation.",
+            "source_spans": [
+              {
+                "unit_id": "L0051",
+                "start": 3237,
+                "end": 3303,
+                "quote": "13.2 光片成像前更换一次新鲜 DBE 并静置脱气泡/沉降。(Temperature: RT, Time: 1–2 hours)\n",
+                "answer_sha256": "4d3909623a64bdd7ccbd45f024b263f94cfddb3b8cf2bb32dc5d376d999b77a1"
+              }
+            ],
+            "interpretation": "Fresh DBE exchange with prescribed 1–2 h equilibration before imaging is a real timed RI-conditioning operation.",
+            "contribution_hours": [
+              1,
+              2
+            ]
+          }
+        ],
+        "omitted_core_operations": [],
+        "decision": "finite_range_midpoint",
+        "complete_elapsed_laboratory_time": false,
+        "scope": "reported core incubations only"
+      },
+      "metrics": {
+        "c_param": 3,
+        "co_order": 3,
+        "co_method": 2,
+        "co_param": 2,
+        "co_chem": 1,
+        "s_method": 2.375,
+        "s_label": 3.0,
+        "s_trans": 2.814646787157323,
+        "s_time": 3.0,
+        "sr": 0.0,
+        "sp": 0.0,
+        "Com": 0.6,
+        "Cor": 1.0,
+        "Eff": 0.853303898929777,
+        "IA": 0.6,
+        "HV": 0.5119823393578662
+      },
+      "complete_CCE": true,
+      "original_time_computation": {
+        "policy": "kb-window-asymmetric-median-0.20-under-0.10-over-v1",
+        "source": "time_kb.json",
+        "requested_tier": "T04_WHOLE_MOUSE_BRAIN_5_12MM",
+        "actual_hours": 72.0,
+        "min_hours": 24.0,
+        "max_hours": 72.0,
+        "median_hours": 36.0,
+        "tau_hours": 7.2,
+        "delta_hours": 0.0,
+        "tau_under_fraction": 0.2,
+        "tau_over_fraction": 0.1,
+        "status": "scored",
+        "resolved_tier": "T04_WHOLE_MOUSE_BRAIN_5_12MM",
+        "method_key": "idisco+"
+      },
+      "endpoint_scores": [
+        {
+          "hours": 63.5,
+          "metrics": {
+            "c_param": 3,
+            "co_order": 3,
+            "co_method": 2,
+            "co_param": 2,
+            "co_chem": 1,
+            "s_method": 2.375,
+            "s_label": 3.0,
+            "s_trans": 2.814646787157323,
+            "s_time": 3.0,
+            "sr": 0.0,
+            "sp": 0.0,
+            "Com": 0.6,
+            "Cor": 1.0,
+            "Eff": 0.853303898929777,
+            "IA": 0.6,
+            "HV": 0.5119823393578662
+          },
+          "original_time_computation": {
+            "policy": "kb-window-asymmetric-median-0.20-under-0.10-over-v1",
+            "source": "time_kb.json",
+            "requested_tier": "T04_WHOLE_MOUSE_BRAIN_5_12MM",
+            "actual_hours": 63.5,
+            "min_hours": 24.0,
+            "max_hours": 72.0,
+            "median_hours": 36.0,
+            "tau_hours": 7.2,
+            "delta_hours": 0.0,
+            "tau_under_fraction": 0.2,
+            "tau_over_fraction": 0.1,
+            "status": "scored",
+            "resolved_tier": "T04_WHOLE_MOUSE_BRAIN_5_12MM",
+            "method_key": "idisco+"
+          }
+        },
+        {
+          "hours": 80.5,
+          "metrics": {
+            "c_param": 3,
+            "co_order": 3,
+            "co_method": 2,
+            "co_param": 2,
+            "co_chem": 1,
+            "s_method": 2.375,
+            "s_label": 3.0,
+            "s_trans": 2.814646787157323,
+            "s_time": 0.1847391311660562,
+            "sr": 0.0,
+            "sp": 0.0,
+            "Com": 0.6,
+            "Cor": 1.0,
+            "Eff": 0.6186988265269483,
+            "IA": 0.6,
+            "HV": 0.371219295916169
+          },
+          "original_time_computation": {
+            "policy": "kb-window-asymmetric-median-0.20-under-0.10-over-v1",
+            "source": "time_kb.json",
+            "requested_tier": "T04_WHOLE_MOUSE_BRAIN_5_12MM",
+            "actual_hours": 80.5,
+            "min_hours": 24.0,
+            "max_hours": 72.0,
+            "median_hours": 36.0,
+            "tau_hours": 3.6,
+            "delta_hours": 8.5,
+            "tau_under_fraction": 0.2,
+            "tau_over_fraction": 0.1,
+            "status": "scored",
+            "resolved_tier": "T04_WHOLE_MOUSE_BRAIN_5_12MM",
+            "method_key": "idisco+"
+          }
+        }
+      ],
+      "endpoint_interpretation": "evaluations at reported endpoints, not a confidence interval or proof of full interior bounds",
+      "label_derivation": {
+        "version": "cce-typed-label-scorer-v2.1",
+        "s_label": 3.0,
+        "channels": {
+          "s_target_match": 3.0,
+          "s_marker_fluor_compat": 6.0,
+          "s_method_fluor_compat": 3.9000000000000004
+        },
+        "channel_applicability": {
+          "s_target_match": {
+            "applicable": true,
+            "value": 3.0,
+            "contributing_pairs": [
+              "semantic:0",
+              "semantic:1"
+            ]
+          },
+          "s_marker_fluor_compat": {
+            "applicable": true,
+            "value": 6.0,
+            "contributing_pairs": [
+              "semantic:0",
+              "semantic:1"
+            ]
+          },
+          "s_method_fluor_compat": {
+            "applicable": true,
+            "value": 3.9000000000000004,
+            "contributing_pairs": [
+              "semantic:0",
+              "semantic:1",
+              "semantic:2"
+            ]
+          }
+        },
+        "pair_results": [
+          {
+            "pair_id": "semantic:0",
+            "entity_id": null,
+            "fluorophore": "Alexa Fluor 647",
+            "reported_marker": "NeuN (RBFOX3)",
+            "reported_target_literal": null,
+            "label_type": "targeted_or_unclassified_reagent",
+            "original_function_input": {
+              "Alexa Fluor 647": "NeuN (RBFOX3)"
+            },
+            "applicable": {
+              "s_target_match": true,
+              "s_marker_fluor_compat": true,
+              "s_method_fluor_compat": true
+            },
+            "channels": {
+              "s_target_match": 3.0,
+              "s_marker_fluor_compat": 6.0,
+              "s_method_fluor_compat": 5.4
+            },
+            "not_applicable_reason": null,
+            "source_evidence": [
+              {
+                "unit_id": "L0001",
+                "start": 0,
+                "end": 138,
+                "quote": "第1行（所选荧光/标记策略 + 透明方法）：**[NeuN + Alexa Fluor 647（胞体）, β-III Tubulin (TUJ1) + Alexa Fluor 647（轴突/树突）, TO-PRO-3（全脑核染）] + iDISCO+（DBE RI匹配）**\n",
+                "answer_sha256": "4d3909623a64bdd7ccbd45f024b263f94cfddb3b8cf2bb32dc5d376d999b77a1"
+              },
+              {
+                "unit_id": "L0023",
+                "start": 1448,
+                "end": 1582,
+                "quote": "5.1 一抗孵育液：PBS + 0.2% Triton X-100 + 5% DMSO + 3% NDS + 0.01% (w/v) NaN3；加入 NeuN (RBFOX3) 一抗 1:200。(Temperature: 37 ℃, Time: 5–7 days)\n",
+                "answer_sha256": "4d3909623a64bdd7ccbd45f024b263f94cfddb3b8cf2bb32dc5d376d999b77a1"
+              },
+              {
+                "unit_id": "L0029",
+                "start": 1878,
+                "end": 2059,
+                "quote": "7.1 二抗孵育液：PBS + 0.2% Triton X-100 + 3% NDS + 0.01% NaN3；加入驴抗鼠/兔（按一抗宿主匹配）Alexa Fluor 647 二抗 1:400（分别对应NeuN与TUJ1；若两一抗宿主不同可同管共孵育）。(Temperature: 37 ℃, Time: 5–7 days, Light: protected)\n",
+                "answer_sha256": "4d3909623a64bdd7ccbd45f024b263f94cfddb3b8cf2bb32dc5d376d999b77a1"
+              }
+            ],
+            "compatibility_audit": [
+              {
+                "kind": "marker_fluor",
+                "marker": "NeuN (RBFOX3)",
+                "fluorophore": "Alexa Fluor 647",
+                "source": "KnowledgeBase/tissue.json",
+                "value": true,
+                "status": "TABLE_REPORTED"
+              },
+              {
+                "kind": "method_fluor",
+                "method_name": "iDISCO+",
+                "fluorophore": "Alexa Fluor 647",
+                "source": "KnowledgeBase/method_fluro_compati.json",
+                "value": 0.9,
+                "status": "TABLE_REPORTED"
+              }
+            ]
+          },
+          {
+            "pair_id": "semantic:1",
+            "entity_id": null,
+            "fluorophore": "Alexa Fluor 647",
+            "reported_marker": "β-III Tubulin (TUJ1)",
+            "reported_target_literal": null,
+            "label_type": "targeted_or_unclassified_reagent",
+            "original_function_input": {
+              "Alexa Fluor 647": "β-III Tubulin (TUJ1)"
+            },
+            "applicable": {
+              "s_target_match": true,
+              "s_marker_fluor_compat": true,
+              "s_method_fluor_compat": true
+            },
+            "channels": {
+              "s_target_match": 6.0,
+              "s_marker_fluor_compat": 6.0,
+              "s_method_fluor_compat": 5.4
+            },
+            "not_applicable_reason": null,
+            "source_evidence": [
+              {
+                "unit_id": "L0001",
+                "start": 0,
+                "end": 138,
+                "quote": "第1行（所选荧光/标记策略 + 透明方法）：**[NeuN + Alexa Fluor 647（胞体）, β-III Tubulin (TUJ1) + Alexa Fluor 647（轴突/树突）, TO-PRO-3（全脑核染）] + iDISCO+（DBE RI匹配）**\n",
+                "answer_sha256": "4d3909623a64bdd7ccbd45f024b263f94cfddb3b8cf2bb32dc5d376d999b77a1"
+              },
+              {
+                "unit_id": "L0024",
+                "start": 1582,
+                "end": 1673,
+                "quote": "5.2 同一孵育液中加入 β-III Tubulin (TUJ1) 一抗 1:300（与5.1可同管共孵育）。(Temperature: 37 ℃, Time: 5–7 days)\n",
+                "answer_sha256": "4d3909623a64bdd7ccbd45f024b263f94cfddb3b8cf2bb32dc5d376d999b77a1"
+              },
+              {
+                "unit_id": "L0029",
+                "start": 1878,
+                "end": 2059,
+                "quote": "7.1 二抗孵育液：PBS + 0.2% Triton X-100 + 3% NDS + 0.01% NaN3；加入驴抗鼠/兔（按一抗宿主匹配）Alexa Fluor 647 二抗 1:400（分别对应NeuN与TUJ1；若两一抗宿主不同可同管共孵育）。(Temperature: 37 ℃, Time: 5–7 days, Light: protected)\n",
+                "answer_sha256": "4d3909623a64bdd7ccbd45f024b263f94cfddb3b8cf2bb32dc5d376d999b77a1"
+              }
+            ],
+            "compatibility_audit": [
+              {
+                "kind": "marker_fluor",
+                "marker": "β-III Tubulin (TUJ1)",
+                "fluorophore": "Alexa Fluor 647",
+                "source": "KnowledgeBase/tissue.json",
+                "value": true,
+                "status": "TABLE_REPORTED"
+              },
+              {
+                "kind": "method_fluor",
+                "method_name": "iDISCO+",
+                "fluorophore": "Alexa Fluor 647",
+                "source": "KnowledgeBase/method_fluro_compati.json",
+                "value": 0.9,
+                "status": "TABLE_REPORTED"
+              }
+            ]
+          },
+          {
+            "pair_id": "semantic:2",
+            "entity_id": null,
+            "fluorophore": "TO-PRO-3",
+            "reported_marker": null,
+            "reported_target_literal": null,
+            "label_type": "direct_stain",
+            "original_function_input": {
+              "TO-PRO-3": ""
+            },
+            "applicable": {
+              "s_target_match": false,
+              "s_marker_fluor_compat": false,
+              "s_method_fluor_compat": true
+            },
+            "channels": {
+              "s_target_match": null,
+              "s_marker_fluor_compat": null,
+              "s_method_fluor_compat": 3.9000000000000004
+            },
+            "not_applicable_reason": "standalone fluorescence has no antibody target-pair channel",
+            "source_evidence": [
+              {
+                "unit_id": "L0001",
+                "start": 0,
+                "end": 138,
+                "quote": "第1行（所选荧光/标记策略 + 透明方法）：**[NeuN + Alexa Fluor 647（胞体）, β-III Tubulin (TUJ1) + Alexa Fluor 647（轴突/树突）, TO-PRO-3（全脑核染）] + iDISCO+（DBE RI匹配）**\n",
+                "answer_sha256": "4d3909623a64bdd7ccbd45f024b263f94cfddb3b8cf2bb32dc5d376d999b77a1"
+              },
+              {
+                "unit_id": "L0034",
+                "start": 2262,
+                "end": 2351,
+                "quote": "9.1 TO-PRO-3 1–2 µM（在PBS + 0.2% Triton X-100中），避光轻摇。(Temperature: RT, Time: 12–24 hours)\n",
+                "answer_sha256": "4d3909623a64bdd7ccbd45f024b263f94cfddb3b8cf2bb32dc5d376d999b77a1"
+              }
+            ],
+            "compatibility_audit": [
+              {
+                "kind": "method_fluor",
+                "method_name": "iDISCO+",
+                "fluorophore": "TO-PRO-3",
+                "source": "KnowledgeBase/method_fluro_compati.json",
+                "value": 0.65,
+                "status": "TABLE_REPORTED"
+              }
+            ]
+          }
+        ],
+        "resolved_uncertainties": [],
+        "remaining_uncertainties": [],
+        "minimum_of_available_applicable_channels": 3.0,
+        "task_target_coverage": "native/direct task coverage remains separate from antibody-pair applicability",
+        "new_model_calls": 0,
+        "expert_validated": false
+      },
+      "selection_uses_achieved_score": false
+    },
+    {
+      "scenario_id": "initial_RI_ready_scope",
+      "description": "Scope sensitivity stopping at initial RI-ready endpoint, before the later pre-imaging equilibration.",
+      "time_derivation": {
+        "hours": 70.5,
+        "bounds_hours": [
+          62.5,
+          78.5
+        ],
+        "known_subtotal_bounds_hours": [
+          62.5,
+          78.5
+        ],
+        "unknown_duration_operations": [],
+        "contributions": [
+          {
+            "operation_id": "L0005",
+            "duration_option": "reported",
+            "reported_bounds_hours": [
+              2,
+              2
+            ],
+            "repeat_count": 1,
+            "duration_basis": "explicit source duration",
+            "source_spans": [
+              {
+                "unit_id": "L0005",
+                "start": 321,
+                "end": 384,
+                "quote": "1.1 20% (vol/vol) 甲醇/水溶液浸泡，轻摇。(Temperature: RT, Time: 2 hours)\n",
+                "answer_sha256": "4d3909623a64bdd7ccbd45f024b263f94cfddb3b8cf2bb32dc5d376d999b77a1"
+              }
+            ],
+            "interpretation": "",
+            "contribution_hours": [
+              2,
+              2
+            ]
+          },
+          {
+            "operation_id": "L0006",
+            "duration_option": "reported",
+            "reported_bounds_hours": [
+              2,
+              2
+            ],
+            "repeat_count": 1,
+            "duration_basis": "explicit source duration",
+            "source_spans": [
+              {
+                "unit_id": "L0006",
+                "start": 384,
+                "end": 447,
+                "quote": "1.2 40% (vol/vol) 甲醇/水溶液浸泡，轻摇。(Temperature: RT, Time: 2 hours)\n",
+                "answer_sha256": "4d3909623a64bdd7ccbd45f024b263f94cfddb3b8cf2bb32dc5d376d999b77a1"
+              }
+            ],
+            "interpretation": "",
+            "contribution_hours": [
+              2,
+              2
+            ]
+          },
+          {
+            "operation_id": "L0007",
+            "duration_option": "reported",
+            "reported_bounds_hours": [
+              2,
+              2
+            ],
+            "repeat_count": 1,
+            "duration_basis": "explicit source duration",
+            "source_spans": [
+              {
+                "unit_id": "L0007",
+                "start": 447,
+                "end": 510,
+                "quote": "1.3 60% (vol/vol) 甲醇/水溶液浸泡，轻摇。(Temperature: RT, Time: 2 hours)\n",
+                "answer_sha256": "4d3909623a64bdd7ccbd45f024b263f94cfddb3b8cf2bb32dc5d376d999b77a1"
+              }
+            ],
+            "interpretation": "",
+            "contribution_hours": [
+              2,
+              2
+            ]
+          },
+          {
+            "operation_id": "L0008",
+            "duration_option": "reported",
+            "reported_bounds_hours": [
+              2,
+              2
+            ],
+            "repeat_count": 1,
+            "duration_basis": "explicit source duration",
+            "source_spans": [
+              {
+                "unit_id": "L0008",
+                "start": 510,
+                "end": 573,
+                "quote": "1.4 80% (vol/vol) 甲醇/水溶液浸泡，轻摇。(Temperature: RT, Time: 2 hours)\n",
+                "answer_sha256": "4d3909623a64bdd7ccbd45f024b263f94cfddb3b8cf2bb32dc5d376d999b77a1"
+              }
+            ],
+            "interpretation": "",
+            "contribution_hours": [
+              2,
+              2
+            ]
+          },
+          {
+            "operation_id": "L0009",
+            "duration_option": "reported",
+            "reported_bounds_hours": [
+              2,
+              2
+            ],
+            "repeat_count": 1,
+            "duration_basis": "explicit source duration",
+            "source_spans": [
+              {
+                "unit_id": "L0009",
+                "start": 573,
+                "end": 633,
+                "quote": "1.5 100% (vol/vol) 甲醇浸泡，轻摇。(Temperature: RT, Time: 2 hours)\n",
+                "answer_sha256": "4d3909623a64bdd7ccbd45f024b263f94cfddb3b8cf2bb32dc5d376d999b77a1"
+              }
+            ],
+            "interpretation": "",
+            "contribution_hours": [
+              2,
+              2
+            ]
+          },
+          {
+            "operation_id": "L0010",
+            "duration_option": "reported",
+            "reported_bounds_hours": [
+              2,
+              2
+            ],
+            "repeat_count": 1,
+            "duration_basis": "explicit source duration",
+            "source_spans": [
+              {
+                "unit_id": "L0010",
+                "start": 633,
+                "end": 695,
+                "quote": "1.6 新鲜 100% (vol/vol) 甲醇再次浸泡。(Temperature: RT, Time: 2 hours)\n",
+                "answer_sha256": "4d3909623a64bdd7ccbd45f024b263f94cfddb3b8cf2bb32dc5d376d999b77a1"
+              }
+            ],
+            "interpretation": "",
+            "contribution_hours": [
+              2,
+              2
+            ]
+          },
+          {
+            "operation_id": "L0012",
+            "duration_option": "reported",
+            "reported_bounds_hours": [
+              12,
+              16
+            ],
+            "repeat_count": 1,
+            "duration_basis": "explicit source duration",
+            "source_spans": [
+              {
+                "unit_id": "L0012",
+                "start": 726,
+                "end": 813,
+                "quote": "2.1 5% H2O2 in 甲醇（体积比：30% H2O2 : 甲醇 = 1 : 5）避光浸泡。(Temperature: 4 ℃, Time: 12–16 hours)\n",
+                "answer_sha256": "4d3909623a64bdd7ccbd45f024b263f94cfddb3b8cf2bb32dc5d376d999b77a1"
+              }
+            ],
+            "interpretation": "",
+            "contribution_hours": [
+              12,
+              16
+            ]
+          },
+          {
+            "operation_id": "L0014",
+            "duration_option": "reported",
+            "reported_bounds_hours": [
+              1.5,
+              1.5
+            ],
+            "repeat_count": 1,
+            "duration_basis": "explicit source duration",
+            "source_spans": [
+              {
+                "unit_id": "L0014",
+                "start": 831,
+                "end": 893,
+                "quote": "3.1 80% (vol/vol) 甲醇/水溶液浸泡。(Temperature: RT, Time: 1.5 hours)\n",
+                "answer_sha256": "4d3909623a64bdd7ccbd45f024b263f94cfddb3b8cf2bb32dc5d376d999b77a1"
+              }
+            ],
+            "interpretation": "",
+            "contribution_hours": [
+              1.5,
+              1.5
+            ]
+          },
+          {
+            "operation_id": "L0015",
+            "duration_option": "reported",
+            "reported_bounds_hours": [
+              1.5,
+              1.5
+            ],
+            "repeat_count": 1,
+            "duration_basis": "explicit source duration",
+            "source_spans": [
+              {
+                "unit_id": "L0015",
+                "start": 893,
+                "end": 955,
+                "quote": "3.2 60% (vol/vol) 甲醇/水溶液浸泡。(Temperature: RT, Time: 1.5 hours)\n",
+                "answer_sha256": "4d3909623a64bdd7ccbd45f024b263f94cfddb3b8cf2bb32dc5d376d999b77a1"
+              }
+            ],
+            "interpretation": "",
+            "contribution_hours": [
+              1.5,
+              1.5
+            ]
+          },
+          {
+            "operation_id": "L0016",
+            "duration_option": "reported",
+            "reported_bounds_hours": [
+              1.5,
+              1.5
+            ],
+            "repeat_count": 1,
+            "duration_basis": "explicit source duration",
+            "source_spans": [
+              {
+                "unit_id": "L0016",
+                "start": 955,
+                "end": 1017,
+                "quote": "3.3 40% (vol/vol) 甲醇/水溶液浸泡。(Temperature: RT, Time: 1.5 hours)\n",
+                "answer_sha256": "4d3909623a64bdd7ccbd45f024b263f94cfddb3b8cf2bb32dc5d376d999b77a1"
+              }
+            ],
+            "interpretation": "",
+            "contribution_hours": [
+              1.5,
+              1.5
+            ]
+          },
+          {
+            "operation_id": "L0017",
+            "duration_option": "reported",
+            "reported_bounds_hours": [
+              1.5,
+              1.5
+            ],
+            "repeat_count": 1,
+            "duration_basis": "explicit source duration",
+            "source_spans": [
+              {
+                "unit_id": "L0017",
+                "start": 1017,
+                "end": 1079,
+                "quote": "3.4 20% (vol/vol) 甲醇/水溶液浸泡。(Temperature: RT, Time: 1.5 hours)\n",
+                "answer_sha256": "4d3909623a64bdd7ccbd45f024b263f94cfddb3b8cf2bb32dc5d376d999b77a1"
+              }
+            ],
+            "interpretation": "",
+            "contribution_hours": [
+              1.5,
+              1.5
+            ]
+          },
+          {
+            "operation_id": "L0018",
+            "duration_option": "reported",
+            "reported_bounds_hours": [
+              1.5,
+              1.5
+            ],
+            "repeat_count": 1,
+            "duration_basis": "explicit source duration",
+            "source_spans": [
+              {
+                "unit_id": "L0018",
+                "start": 1079,
+                "end": 1127,
+                "quote": "3.5 1×PBS 浸泡。(Temperature: RT, Time: 1.5 hours)\n",
+                "answer_sha256": "4d3909623a64bdd7ccbd45f024b263f94cfddb3b8cf2bb32dc5d376d999b77a1"
+              }
+            ],
+            "interpretation": "",
+            "contribution_hours": [
+              1.5,
+              1.5
+            ]
+          },
+          {
+            "operation_id": "L0037",
+            "duration_option": "reported",
+            "reported_bounds_hours": [
+              1.5,
+              1.5
+            ],
+            "repeat_count": 1,
+            "duration_basis": "explicit source duration",
+            "source_spans": [
+              {
+                "unit_id": "L0037",
+                "start": 2441,
+                "end": 2490,
+                "quote": "10.1 20% 甲醇/水。(Temperature: RT, Time: 1.5 hours)\n",
+                "answer_sha256": "4d3909623a64bdd7ccbd45f024b263f94cfddb3b8cf2bb32dc5d376d999b77a1"
+              }
+            ],
+            "interpretation": "",
+            "contribution_hours": [
+              1.5,
+              1.5
+            ]
+          },
+          {
+            "operation_id": "L0038",
+            "duration_option": "reported",
+            "reported_bounds_hours": [
+              1.5,
+              1.5
+            ],
+            "repeat_count": 1,
+            "duration_basis": "explicit source duration",
+            "source_spans": [
+              {
+                "unit_id": "L0038",
+                "start": 2490,
+                "end": 2539,
+                "quote": "10.2 40% 甲醇/水。(Temperature: RT, Time: 1.5 hours)\n",
+                "answer_sha256": "4d3909623a64bdd7ccbd45f024b263f94cfddb3b8cf2bb32dc5d376d999b77a1"
+              }
+            ],
+            "interpretation": "",
+            "contribution_hours": [
+              1.5,
+              1.5
+            ]
+          },
+          {
+            "operation_id": "L0039",
+            "duration_option": "reported",
+            "reported_bounds_hours": [
+              1.5,
+              1.5
+            ],
+            "repeat_count": 1,
+            "duration_basis": "explicit source duration",
+            "source_spans": [
+              {
+                "unit_id": "L0039",
+                "start": 2539,
+                "end": 2588,
+                "quote": "10.3 60% 甲醇/水。(Temperature: RT, Time: 1.5 hours)\n",
+                "answer_sha256": "4d3909623a64bdd7ccbd45f024b263f94cfddb3b8cf2bb32dc5d376d999b77a1"
+              }
+            ],
+            "interpretation": "",
+            "contribution_hours": [
+              1.5,
+              1.5
+            ]
+          },
+          {
+            "operation_id": "L0040",
+            "duration_option": "reported",
+            "reported_bounds_hours": [
+              1.5,
+              1.5
+            ],
+            "repeat_count": 1,
+            "duration_basis": "explicit source duration",
+            "source_spans": [
+              {
+                "unit_id": "L0040",
+                "start": 2588,
+                "end": 2637,
+                "quote": "10.4 80% 甲醇/水。(Temperature: RT, Time: 1.5 hours)\n",
+                "answer_sha256": "4d3909623a64bdd7ccbd45f024b263f94cfddb3b8cf2bb32dc5d376d999b77a1"
+              }
+            ],
+            "interpretation": "",
+            "contribution_hours": [
+              1.5,
+              1.5
+            ]
+          },
+          {
+            "operation_id": "L0041",
+            "duration_option": "reported",
+            "reported_bounds_hours": [
+              2,
+              2
+            ],
+            "repeat_count": 1,
+            "duration_basis": "explicit source duration",
+            "source_spans": [
+              {
+                "unit_id": "L0041",
+                "start": 2637,
+                "end": 2683,
+                "quote": "10.5 100% 甲醇。(Temperature: RT, Time: 2 hours)\n",
+                "answer_sha256": "4d3909623a64bdd7ccbd45f024b263f94cfddb3b8cf2bb32dc5d376d999b77a1"
+              }
+            ],
+            "interpretation": "",
+            "contribution_hours": [
+              2,
+              2
+            ]
+          },
+          {
+            "operation_id": "L0042",
+            "duration_option": "reported",
+            "reported_bounds_hours": [
+              2,
+              2
+            ],
+            "repeat_count": 1,
+            "duration_basis": "explicit source duration",
+            "source_spans": [
+              {
+                "unit_id": "L0042",
+                "start": 2683,
+                "end": 2732,
+                "quote": "10.6 新鲜 100% 甲醇。(Temperature: RT, Time: 2 hours)\n",
+                "answer_sha256": "4d3909623a64bdd7ccbd45f024b263f94cfddb3b8cf2bb32dc5d376d999b77a1"
+              }
+            ],
+            "interpretation": "",
+            "contribution_hours": [
+              2,
+              2
+            ]
+          },
+          {
+            "operation_id": "L0044",
+            "duration_option": "reported",
+            "reported_bounds_hours": [
+              3,
+              3
+            ],
+            "repeat_count": 1,
+            "duration_basis": "explicit source duration",
+            "source_spans": [
+              {
+                "unit_id": "L0044",
+                "start": 2768,
+                "end": 2842,
+                "quote": "11.1 66% (vol/vol) 二氯甲烷(DCM)/33% 甲醇混合液浸泡。(Temperature: RT, Time: 3 hours)\n",
+                "answer_sha256": "4d3909623a64bdd7ccbd45f024b263f94cfddb3b8cf2bb32dc5d376d999b77a1"
+              }
+            ],
+            "interpretation": "",
+            "contribution_hours": [
+              3,
+              3
+            ]
+          },
+          {
+            "operation_id": "L0045",
+            "duration_option": "reported",
+            "reported_bounds_hours": [
+              1.5,
+              1.5
+            ],
+            "repeat_count": 2,
+            "duration_basis": "explicit source duration",
+            "source_spans": [
+              {
+                "unit_id": "L0045",
+                "start": 2842,
+                "end": 2898,
+                "quote": "11.2 100% DCM 浸泡。(Temperature: RT, Time: 2 × 1.5 hours)\n",
+                "answer_sha256": "4d3909623a64bdd7ccbd45f024b263f94cfddb3b8cf2bb32dc5d376d999b77a1"
+              }
+            ],
+            "interpretation": "",
+            "contribution_hours": [
+              3.0,
+              3.0
+            ]
+          },
+          {
+            "operation_id": "L0047",
+            "duration_option": "reported",
+            "reported_bounds_hours": [
+              3,
+              3
+            ],
+            "repeat_count": 1,
+            "duration_basis": "explicit source duration",
+            "source_spans": [
+              {
+                "unit_id": "L0047",
+                "start": 2939,
+                "end": 3021,
+                "quote": "12.1 100% 二苄醚（DBE, RI≈1.56）预浸泡。(Temperature: RT, Time: 3 hours, Light: protected)\n",
+                "answer_sha256": "4d3909623a64bdd7ccbd45f024b263f94cfddb3b8cf2bb32dc5d376d999b77a1"
+              }
+            ],
+            "interpretation": "",
+            "contribution_hours": [
+              3,
+              3
+            ]
+          },
+          {
+            "operation_id": "L0048",
+            "duration_option": "reported",
+            "reported_bounds_hours": [
+              12,
+              24
+            ],
+            "repeat_count": 1,
+            "duration_basis": "explicit source duration",
+            "source_spans": [
+              {
+                "unit_id": "L0048",
+                "start": 3021,
+                "end": 3111,
+                "quote": "12.2 新鲜 100% DBE 继续浸泡至完全透明（全脑通常需要）。(Temperature: RT, Time: 12–24 hours, Light: protected)\n",
+                "answer_sha256": "4d3909623a64bdd7ccbd45f024b263f94cfddb3b8cf2bb32dc5d376d999b77a1"
+              }
+            ],
+            "interpretation": "",
+            "contribution_hours": [
+              12,
+              24
+            ]
+          }
+        ],
+        "omitted_core_operations": [
+          "L0051"
+        ],
+        "decision": "finite_range_midpoint",
+        "complete_elapsed_laboratory_time": false,
+        "scope": "reported core incubations only"
+      },
+      "metrics": {
+        "c_param": 3,
+        "co_order": 3,
+        "co_method": 2,
+        "co_param": 2,
+        "co_chem": 1,
+        "s_method": 2.375,
+        "s_label": 3.0,
+        "s_trans": 2.814646787157323,
+        "s_time": 3.0,
+        "sr": 0.0,
+        "sp": 0.0,
+        "Com": 0.6,
+        "Cor": 1.0,
+        "Eff": 0.853303898929777,
+        "IA": 0.6,
+        "HV": 0.5119823393578662
+      },
+      "complete_CCE": true,
+      "original_time_computation": {
+        "policy": "kb-window-asymmetric-median-0.20-under-0.10-over-v1",
+        "source": "time_kb.json",
+        "requested_tier": "T04_WHOLE_MOUSE_BRAIN_5_12MM",
+        "actual_hours": 70.5,
+        "min_hours": 24.0,
+        "max_hours": 72.0,
+        "median_hours": 36.0,
+        "tau_hours": 7.2,
+        "delta_hours": 0.0,
+        "tau_under_fraction": 0.2,
+        "tau_over_fraction": 0.1,
+        "status": "scored",
+        "resolved_tier": "T04_WHOLE_MOUSE_BRAIN_5_12MM",
+        "method_key": "idisco+"
+      },
+      "endpoint_scores": [
+        {
+          "hours": 62.5,
+          "metrics": {
+            "c_param": 3,
+            "co_order": 3,
+            "co_method": 2,
+            "co_param": 2,
+            "co_chem": 1,
+            "s_method": 2.375,
+            "s_label": 3.0,
+            "s_trans": 2.814646787157323,
+            "s_time": 3.0,
+            "sr": 0.0,
+            "sp": 0.0,
+            "Com": 0.6,
+            "Cor": 1.0,
+            "Eff": 0.853303898929777,
+            "IA": 0.6,
+            "HV": 0.5119823393578662
+          },
+          "original_time_computation": {
+            "policy": "kb-window-asymmetric-median-0.20-under-0.10-over-v1",
+            "source": "time_kb.json",
+            "requested_tier": "T04_WHOLE_MOUSE_BRAIN_5_12MM",
+            "actual_hours": 62.5,
+            "min_hours": 24.0,
+            "max_hours": 72.0,
+            "median_hours": 36.0,
+            "tau_hours": 7.2,
+            "delta_hours": 0.0,
+            "tau_under_fraction": 0.2,
+            "tau_over_fraction": 0.1,
+            "status": "scored",
+            "resolved_tier": "T04_WHOLE_MOUSE_BRAIN_5_12MM",
+            "method_key": "idisco+"
+          }
+        },
+        {
+          "hours": 78.5,
+          "metrics": {
+            "c_param": 3,
+            "co_order": 3,
+            "co_method": 2,
+            "co_param": 2,
+            "co_chem": 1,
+            "s_method": 2.375,
+            "s_label": 3.0,
+            "s_trans": 2.814646787157323,
+            "s_time": 0.5877796516371016,
+            "sr": 0.0,
+            "sp": 0.0,
+            "Com": 0.6,
+            "Cor": 1.0,
+            "Eff": 0.6522855365662021,
+            "IA": 0.6,
+            "HV": 0.3913713219397213
+          },
+          "original_time_computation": {
+            "policy": "kb-window-asymmetric-median-0.20-under-0.10-over-v1",
+            "source": "time_kb.json",
+            "requested_tier": "T04_WHOLE_MOUSE_BRAIN_5_12MM",
+            "actual_hours": 78.5,
+            "min_hours": 24.0,
+            "max_hours": 72.0,
+            "median_hours": 36.0,
+            "tau_hours": 3.6,
+            "delta_hours": 6.5,
+            "tau_under_fraction": 0.2,
+            "tau_over_fraction": 0.1,
+            "status": "scored",
+            "resolved_tier": "T04_WHOLE_MOUSE_BRAIN_5_12MM",
+            "method_key": "idisco+"
+          }
+        }
+      ],
+      "endpoint_interpretation": "evaluations at reported endpoints, not a confidence interval or proof of full interior bounds",
+      "label_derivation": {
+        "version": "cce-typed-label-scorer-v2.1",
+        "s_label": 3.0,
+        "channels": {
+          "s_target_match": 3.0,
+          "s_marker_fluor_compat": 6.0,
+          "s_method_fluor_compat": 3.9000000000000004
+        },
+        "channel_applicability": {
+          "s_target_match": {
+            "applicable": true,
+            "value": 3.0,
+            "contributing_pairs": [
+              "semantic:0",
+              "semantic:1"
+            ]
+          },
+          "s_marker_fluor_compat": {
+            "applicable": true,
+            "value": 6.0,
+            "contributing_pairs": [
+              "semantic:0",
+              "semantic:1"
+            ]
+          },
+          "s_method_fluor_compat": {
+            "applicable": true,
+            "value": 3.9000000000000004,
+            "contributing_pairs": [
+              "semantic:0",
+              "semantic:1",
+              "semantic:2"
+            ]
+          }
+        },
+        "pair_results": [
+          {
+            "pair_id": "semantic:0",
+            "entity_id": null,
+            "fluorophore": "Alexa Fluor 647",
+            "reported_marker": "NeuN (RBFOX3)",
+            "reported_target_literal": null,
+            "label_type": "targeted_or_unclassified_reagent",
+            "original_function_input": {
+              "Alexa Fluor 647": "NeuN (RBFOX3)"
+            },
+            "applicable": {
+              "s_target_match": true,
+              "s_marker_fluor_compat": true,
+              "s_method_fluor_compat": true
+            },
+            "channels": {
+              "s_target_match": 3.0,
+              "s_marker_fluor_compat": 6.0,
+              "s_method_fluor_compat": 5.4
+            },
+            "not_applicable_reason": null,
+            "source_evidence": [
+              {
+                "unit_id": "L0001",
+                "start": 0,
+                "end": 138,
+                "quote": "第1行（所选荧光/标记策略 + 透明方法）：**[NeuN + Alexa Fluor 647（胞体）, β-III Tubulin (TUJ1) + Alexa Fluor 647（轴突/树突）, TO-PRO-3（全脑核染）] + iDISCO+（DBE RI匹配）**\n",
+                "answer_sha256": "4d3909623a64bdd7ccbd45f024b263f94cfddb3b8cf2bb32dc5d376d999b77a1"
+              },
+              {
+                "unit_id": "L0023",
+                "start": 1448,
+                "end": 1582,
+                "quote": "5.1 一抗孵育液：PBS + 0.2% Triton X-100 + 5% DMSO + 3% NDS + 0.01% (w/v) NaN3；加入 NeuN (RBFOX3) 一抗 1:200。(Temperature: 37 ℃, Time: 5–7 days)\n",
+                "answer_sha256": "4d3909623a64bdd7ccbd45f024b263f94cfddb3b8cf2bb32dc5d376d999b77a1"
+              },
+              {
+                "unit_id": "L0029",
+                "start": 1878,
+                "end": 2059,
+                "quote": "7.1 二抗孵育液：PBS + 0.2% Triton X-100 + 3% NDS + 0.01% NaN3；加入驴抗鼠/兔（按一抗宿主匹配）Alexa Fluor 647 二抗 1:400（分别对应NeuN与TUJ1；若两一抗宿主不同可同管共孵育）。(Temperature: 37 ℃, Time: 5–7 days, Light: protected)\n",
+                "answer_sha256": "4d3909623a64bdd7ccbd45f024b263f94cfddb3b8cf2bb32dc5d376d999b77a1"
+              }
+            ],
+            "compatibility_audit": [
+              {
+                "kind": "marker_fluor",
+                "marker": "NeuN (RBFOX3)",
+                "fluorophore": "Alexa Fluor 647",
+                "source": "KnowledgeBase/tissue.json",
+                "value": true,
+                "status": "TABLE_REPORTED"
+              },
+              {
+                "kind": "method_fluor",
+                "method_name": "iDISCO+",
+                "fluorophore": "Alexa Fluor 647",
+                "source": "KnowledgeBase/method_fluro_compati.json",
+                "value": 0.9,
+                "status": "TABLE_REPORTED"
+              }
+            ]
+          },
+          {
+            "pair_id": "semantic:1",
+            "entity_id": null,
+            "fluorophore": "Alexa Fluor 647",
+            "reported_marker": "β-III Tubulin (TUJ1)",
+            "reported_target_literal": null,
+            "label_type": "targeted_or_unclassified_reagent",
+            "original_function_input": {
+              "Alexa Fluor 647": "β-III Tubulin (TUJ1)"
+            },
+            "applicable": {
+              "s_target_match": true,
+              "s_marker_fluor_compat": true,
+              "s_method_fluor_compat": true
+            },
+            "channels": {
+              "s_target_match": 6.0,
+              "s_marker_fluor_compat": 6.0,
+              "s_method_fluor_compat": 5.4
+            },
+            "not_applicable_reason": null,
+            "source_evidence": [
+              {
+                "unit_id": "L0001",
+                "start": 0,
+                "end": 138,
+                "quote": "第1行（所选荧光/标记策略 + 透明方法）：**[NeuN + Alexa Fluor 647（胞体）, β-III Tubulin (TUJ1) + Alexa Fluor 647（轴突/树突）, TO-PRO-3（全脑核染）] + iDISCO+（DBE RI匹配）**\n",
+                "answer_sha256": "4d3909623a64bdd7ccbd45f024b263f94cfddb3b8cf2bb32dc5d376d999b77a1"
+              },
+              {
+                "unit_id": "L0024",
+                "start": 1582,
+                "end": 1673,
+                "quote": "5.2 同一孵育液中加入 β-III Tubulin (TUJ1) 一抗 1:300（与5.1可同管共孵育）。(Temperature: 37 ℃, Time: 5–7 days)\n",
+                "answer_sha256": "4d3909623a64bdd7ccbd45f024b263f94cfddb3b8cf2bb32dc5d376d999b77a1"
+              },
+              {
+                "unit_id": "L0029",
+                "start": 1878,
+                "end": 2059,
+                "quote": "7.1 二抗孵育液：PBS + 0.2% Triton X-100 + 3% NDS + 0.01% NaN3；加入驴抗鼠/兔（按一抗宿主匹配）Alexa Fluor 647 二抗 1:400（分别对应NeuN与TUJ1；若两一抗宿主不同可同管共孵育）。(Temperature: 37 ℃, Time: 5–7 days, Light: protected)\n",
+                "answer_sha256": "4d3909623a64bdd7ccbd45f024b263f94cfddb3b8cf2bb32dc5d376d999b77a1"
+              }
+            ],
+            "compatibility_audit": [
+              {
+                "kind": "marker_fluor",
+                "marker": "β-III Tubulin (TUJ1)",
+                "fluorophore": "Alexa Fluor 647",
+                "source": "KnowledgeBase/tissue.json",
+                "value": true,
+                "status": "TABLE_REPORTED"
+              },
+              {
+                "kind": "method_fluor",
+                "method_name": "iDISCO+",
+                "fluorophore": "Alexa Fluor 647",
+                "source": "KnowledgeBase/method_fluro_compati.json",
+                "value": 0.9,
+                "status": "TABLE_REPORTED"
+              }
+            ]
+          },
+          {
+            "pair_id": "semantic:2",
+            "entity_id": null,
+            "fluorophore": "TO-PRO-3",
+            "reported_marker": null,
+            "reported_target_literal": null,
+            "label_type": "direct_stain",
+            "original_function_input": {
+              "TO-PRO-3": ""
+            },
+            "applicable": {
+              "s_target_match": false,
+              "s_marker_fluor_compat": false,
+              "s_method_fluor_compat": true
+            },
+            "channels": {
+              "s_target_match": null,
+              "s_marker_fluor_compat": null,
+              "s_method_fluor_compat": 3.9000000000000004
+            },
+            "not_applicable_reason": "standalone fluorescence has no antibody target-pair channel",
+            "source_evidence": [
+              {
+                "unit_id": "L0001",
+                "start": 0,
+                "end": 138,
+                "quote": "第1行（所选荧光/标记策略 + 透明方法）：**[NeuN + Alexa Fluor 647（胞体）, β-III Tubulin (TUJ1) + Alexa Fluor 647（轴突/树突）, TO-PRO-3（全脑核染）] + iDISCO+（DBE RI匹配）**\n",
+                "answer_sha256": "4d3909623a64bdd7ccbd45f024b263f94cfddb3b8cf2bb32dc5d376d999b77a1"
+              },
+              {
+                "unit_id": "L0034",
+                "start": 2262,
+                "end": 2351,
+                "quote": "9.1 TO-PRO-3 1–2 µM（在PBS + 0.2% Triton X-100中），避光轻摇。(Temperature: RT, Time: 12–24 hours)\n",
+                "answer_sha256": "4d3909623a64bdd7ccbd45f024b263f94cfddb3b8cf2bb32dc5d376d999b77a1"
+              }
+            ],
+            "compatibility_audit": [
+              {
+                "kind": "method_fluor",
+                "method_name": "iDISCO+",
+                "fluorophore": "TO-PRO-3",
+                "source": "KnowledgeBase/method_fluro_compati.json",
+                "value": 0.65,
+                "status": "TABLE_REPORTED"
+              }
+            ]
+          }
+        ],
+        "resolved_uncertainties": [],
+        "remaining_uncertainties": [],
+        "minimum_of_available_applicable_channels": 3.0,
+        "task_target_coverage": "native/direct task coverage remains separate from antibody-pair applicability",
+        "new_model_calls": 0,
+        "expert_validated": false
+      },
+      "selection_uses_achieved_score": false
+    }
+  ],
+  "prior_time_interpretation": {
+    "hours": null,
+    "bounds_hours": [
+      75.0,
+      null
+    ],
+    "decision": "unresolved_source_input",
+    "scope": "reported_core_operations",
+    "original_issues": [
+      "conditional_scope_lacks_explicit_source_evidence",
+      "initial_operation_contains_conditional_scope_cue",
+      "labeling_preparation_not_source_supported_or_possible_core_function",
+      "no_complete_numeric_operation_set",
+      "nonunique_duration_range",
+      "source_duration_candidates_not_all_classified",
+      "unknown_included_duration_or_repeat:O18",
+      "unknown_included_duration_or_repeat:O21",
+      "unknown_included_duration_or_repeat:O23"
+    ],
+    "resolved_scope_issues": [],
+    "issues": [
+      "conditional_scope_lacks_explicit_source_evidence",
+      "initial_operation_contains_conditional_scope_cue",
+      "labeling_preparation_not_source_supported_or_possible_core_function",
+      "no_complete_numeric_operation_set",
+      "nonunique_duration_range",
+      "source_duration_candidates_not_all_classified",
+      "unknown_included_duration_or_repeat:O18",
+      "unknown_included_duration_or_repeat:O21",
+      "unknown_included_duration_or_repeat:O23"
+    ],
+    "phase_evidence": [
+      {
+        "operation_id": "O13",
+        "supported": true,
+        "reason": "explicit_labeling_phase_heading",
+        "heading": {
+          "start": 1127,
+          "end": 1164,
+          "quote": "4 渗透/封闭（Permeabilization & Blocking）\n",
+          "title": "渗透/封闭（Permeabilization & Blocking）"
+        },
+        "operation": {
+          "unit_id": "L0020",
+          "quote": "4.1 渗透液：PBS + 0.2% (vol/vol) Triton X-100 + 20% (vol/vol) DMSO + 0.3 M Glycine，轻摇。(Temperature: 37 ℃, Time: 24 hours)\n",
+          "occurrence": 0,
+          "source_id": "SRC_e67d873f5bb97be1487ff200",
+          "start": 1164,
+          "end": 1282,
+          "answer_sha256": "4d3909623a64bdd7ccbd45f024b263f94cfddb3b8cf2bb32dc5d376d999b77a1",
+          "context_start": 1164,
+          "context_end": 1282,
+          "context": "4.1 渗透液：PBS + 0.2% (vol/vol) Triton X-100 + 20% (vol/vol) DMSO + 0.3 M Glycine，轻摇。(Temperature: 37 ℃, Time: 24 hours)\n",
+          "unit_reference": {
+            "source_unit_sha256": "d09409391b4426559fe36efb2d392d3b0df1d3b49681aade1e89d9be5ac9141c",
+            "raw_unit_text_preserved": true,
+            "wide_evidence_not_atomic_identity": true
+          }
+        }
+      },
+      {
+        "operation_id": "O14",
+        "supported": true,
+        "reason": "explicit_labeling_phase_heading",
+        "heading": {
+          "start": 1127,
+          "end": 1164,
+          "quote": "4 渗透/封闭（Permeabilization & Blocking）\n",
+          "title": "渗透/封闭（Permeabilization & Blocking）"
+        },
+        "operation": {
+          "unit_id": "L0021",
+          "quote": "4.2 封闭液：PBS + 0.2% Triton X-100 + 10% (vol/vol) DMSO + 6% (vol/vol) 正常驴血清（NDS），轻摇。(Temperature: 37 ℃, Time: 24 hours)\n",
+          "occurrence": 0,
+          "source_id": "SRC_e67d873f5bb97be1487ff200",
+          "start": 1282,
+          "end": 1400,
+          "answer_sha256": "4d3909623a64bdd7ccbd45f024b263f94cfddb3b8cf2bb32dc5d376d999b77a1",
+          "context_start": 1282,
+          "context_end": 1400,
+          "context": "4.2 封闭液：PBS + 0.2% Triton X-100 + 10% (vol/vol) DMSO + 6% (vol/vol) 正常驴血清（NDS），轻摇。(Temperature: 37 ℃, Time: 24 hours)\n",
+          "unit_reference": {
+            "source_unit_sha256": "88a73b08dbad38014d00bbd3da7b67d1713a8cd93178c81046512799c7f8c43e",
+            "raw_unit_text_preserved": true,
+            "wide_evidence_not_atomic_identity": true
+          }
+        }
+      },
+      {
+        "operation_id": "O15",
+        "supported": true,
+        "reason": "explicit_labeling_phase_heading",
+        "heading": {
+          "start": 1400,
+          "end": 1448,
+          "quote": "5 一抗全脑免疫标记（Whole-brain immunolabeling, primary）\n",
+          "title": "一抗全脑免疫标记（Whole-brain immunolabeling, primary）"
+        },
+        "operation": {
+          "unit_id": "L0023",
+          "quote": "5.1 一抗孵育液：PBS + 0.2% Triton X-100 + 5% DMSO + 3% NDS + 0.01% (w/v) NaN3；加入 NeuN (RBFOX3) 一抗 1:200。(Temperature: 37 ℃, Time: 5–7 days)\n",
+          "occurrence": 0,
+          "source_id": "SRC_e67d873f5bb97be1487ff200",
+          "start": 1448,
+          "end": 1582,
+          "answer_sha256": "4d3909623a64bdd7ccbd45f024b263f94cfddb3b8cf2bb32dc5d376d999b77a1",
+          "context_start": 1448,
+          "context_end": 1582,
+          "context": "5.1 一抗孵育液：PBS + 0.2% Triton X-100 + 5% DMSO + 3% NDS + 0.01% (w/v) NaN3；加入 NeuN (RBFOX3) 一抗 1:200。(Temperature: 37 ℃, Time: 5–7 days)\n",
+          "unit_reference": {
+            "source_unit_sha256": "877155ca0e2a11f9059ac3d3da1f8b4d9dd788862d6863d3705ca265bb269da9",
+            "raw_unit_text_preserved": true,
+            "wide_evidence_not_atomic_identity": true
+          }
+        }
+      },
+      {
+        "operation_id": "O16",
+        "supported": true,
+        "reason": "explicit_labeling_phase_heading",
+        "heading": {
+          "start": 1400,
+          "end": 1448,
+          "quote": "5 一抗全脑免疫标记（Whole-brain immunolabeling, primary）\n",
+          "title": "一抗全脑免疫标记（Whole-brain immunolabeling, primary）"
+        },
+        "operation": {
+          "unit_id": "L0024",
+          "quote": "5.2 同一孵育液中加入 β-III Tubulin (TUJ1) 一抗 1:300（与5.1可同管共孵育）。(Temperature: 37 ℃, Time: 5–7 days)\n",
+          "occurrence": 0,
+          "source_id": "SRC_e67d873f5bb97be1487ff200",
+          "start": 1582,
+          "end": 1673,
+          "answer_sha256": "4d3909623a64bdd7ccbd45f024b263f94cfddb3b8cf2bb32dc5d376d999b77a1",
+          "context_start": 1582,
+          "context_end": 1673,
+          "context": "5.2 同一孵育液中加入 β-III Tubulin (TUJ1) 一抗 1:300（与5.1可同管共孵育）。(Temperature: 37 ℃, Time: 5–7 days)\n",
+          "unit_reference": {
+            "source_unit_sha256": "7e49a93965e0dd8a2df687a42f1f6144c5815fdcbedf32ac63544210d1deb505",
+            "raw_unit_text_preserved": true,
+            "wide_evidence_not_atomic_identity": true
+          }
+        }
+      },
+      {
+        "operation_id": "O19",
+        "supported": true,
+        "reason": "explicit_labeling_phase_heading",
+        "heading": {
+          "start": 1847,
+          "end": 1878,
+          "quote": "7 二抗全脑免疫标记（Secondary, far-red）\n",
+          "title": "二抗全脑免疫标记（Secondary, far-red）"
+        },
+        "operation": {
+          "unit_id": "L0029",
+          "quote": "7.1 二抗孵育液：PBS + 0.2% Triton X-100 + 3% NDS + 0.01% NaN3；加入驴抗鼠/兔（按一抗宿主匹配）Alexa Fluor 647 二抗 1:400（分别对应NeuN与TUJ1；若两一抗宿主不同可同管共孵育）。(Temperature: 37 ℃, Time: 5–7 days, Light: protected)\n",
+          "occurrence": 0,
+          "source_id": "SRC_e67d873f5bb97be1487ff200",
+          "start": 1878,
+          "end": 2059,
+          "answer_sha256": "4d3909623a64bdd7ccbd45f024b263f94cfddb3b8cf2bb32dc5d376d999b77a1",
+          "context_start": 1878,
+          "context_end": 2059,
+          "context": "7.1 二抗孵育液：PBS + 0.2% Triton X-100 + 3% NDS + 0.01% NaN3；加入驴抗鼠/兔（按一抗宿主匹配）Alexa Fluor 647 二抗 1:400（分别对应NeuN与TUJ1；若两一抗宿主不同可同管共孵育）。(Temperature: 37 ℃, Time: 5–7 days, Light: protected)\n",
+          "unit_reference": {
+            "source_unit_sha256": "81d44e8d4baee55f2c7483c9c4f651e2b3ba4d5b8544536cd129e7d2b9342dc6",
+            "raw_unit_text_preserved": true,
+            "wide_evidence_not_atomic_identity": true
+          }
+        }
+      },
+      {
+        "operation_id": "O22",
+        "supported": false,
+        "reason": "source_heading_does_not_establish_excluded_phase",
+        "heading": {
+          "start": 2234,
+          "end": 2262,
+          "quote": "9 核染（TO-PRO-3，全脑核定位辅助配准/分区）\n",
+          "title": "核染（TO-PRO-3，全脑核定位辅助配准/分区）"
+        },
+        "operation": {
+          "unit_id": "L0034",
+          "quote": "9.1 TO-PRO-3 1–2 µM（在PBS + 0.2% Triton X-100中），避光轻摇。(Temperature: RT, Time: 12–24 hours)\n",
+          "occurrence": 0,
+          "source_id": "SRC_e67d873f5bb97be1487ff200",
+          "start": 2262,
+          "end": 2351,
+          "answer_sha256": "4d3909623a64bdd7ccbd45f024b263f94cfddb3b8cf2bb32dc5d376d999b77a1",
+          "context_start": 2262,
+          "context_end": 2351,
+          "context": "9.1 TO-PRO-3 1–2 µM（在PBS + 0.2% Triton X-100中），避光轻摇。(Temperature: RT, Time: 12–24 hours)\n",
+          "unit_reference": {
+            "source_unit_sha256": "b30de4c2434e3bcd2bfd41a60e5b8bcf1690521432e2ea32a70ad70b6f122758",
+            "raw_unit_text_preserved": true,
+            "wide_evidence_not_atomic_identity": true
+          }
+        }
+      }
+    ],
+    "operation_contributions": [
+      {
+        "operation_id": "O1",
+        "lower_hours": 2.0,
+        "upper_hours": 2.0,
+        "repeat_status": "source_exact_or_single"
+      },
+      {
+        "operation_id": "O2",
+        "lower_hours": 2.0,
+        "upper_hours": 2.0,
+        "repeat_status": "source_exact_or_single"
+      },
+      {
+        "operation_id": "O3",
+        "lower_hours": 2.0,
+        "upper_hours": 2.0,
+        "repeat_status": "source_exact_or_single"
+      },
+      {
+        "operation_id": "O4",
+        "lower_hours": 2.0,
+        "upper_hours": 2.0,
+        "repeat_status": "source_exact_or_single"
+      },
+      {
+        "operation_id": "O5",
+        "lower_hours": 2.0,
+        "upper_hours": 2.0,
+        "repeat_status": "source_exact_or_single"
+      },
+      {
+        "operation_id": "O6",
+        "lower_hours": 2.0,
+        "upper_hours": 2.0,
+        "repeat_status": "source_exact_or_single"
+      },
+      {
+        "operation_id": "O7",
+        "lower_hours": 12.0,
+        "upper_hours": 16.0,
+        "repeat_status": "source_exact_or_single"
+      },
+      {
+        "operation_id": "O8",
+        "lower_hours": 1.5,
+        "upper_hours": 1.5,
+        "repeat_status": "source_exact_or_single"
+      },
+      {
+        "operation_id": "O9",
+        "lower_hours": 1.5,
+        "upper_hours": 1.5,
+        "repeat_status": "source_exact_or_single"
+      },
+      {
+        "operation_id": "O10",
+        "lower_hours": 1.5,
+        "upper_hours": 1.5,
+        "repeat_status": "source_exact_or_single"
+      },
+      {
+        "operation_id": "O11",
+        "lower_hours": 1.5,
+        "upper_hours": 1.5,
+        "repeat_status": "source_exact_or_single"
+      },
+      {
+        "operation_id": "O12",
+        "lower_hours": 1.5,
+        "upper_hours": 1.5,
+        "repeat_status": "source_exact_or_single"
+      },
+      {
+        "operation_id": "O17",
+        "lower_hours": 6.0,
+        "upper_hours": 6.0,
+        "repeat_status": "source_exact_or_single"
+      },
+      {
+        "operation_id": "O20",
+        "lower_hours": 6.0,
+        "upper_hours": 6.0,
+        "repeat_status": "source_exact_or_single"
+      },
+      {
+        "operation_id": "O23",
+        "lower_hours": 2.0,
+        "upper_hours": null,
+        "repeat_status": "unknown_at_least_one"
+      },
+      {
+        "operation_id": "O24",
+        "lower_hours": 1.5,
+        "upper_hours": 1.5,
+        "repeat_status": "source_exact_or_single"
+      },
+      {
+        "operation_id": "O25",
+        "lower_hours": 1.5,
+        "upper_hours": 1.5,
+        "repeat_status": "source_exact_or_single"
+      },
+      {
+        "operation_id": "O26",
+        "lower_hours": 1.5,
+        "upper_hours": 1.5,
+        "repeat_status": "source_exact_or_single"
+      },
+      {
+        "operation_id": "O27",
+        "lower_hours": 1.5,
+        "upper_hours": 1.5,
+        "repeat_status": "source_exact_or_single"
+      },
+      {
+        "operation_id": "O28",
+        "lower_hours": 2.0,
+        "upper_hours": 2.0,
+        "repeat_status": "source_exact_or_single"
+      },
+      {
+        "operation_id": "O29",
+        "lower_hours": 2.0,
+        "upper_hours": 2.0,
+        "repeat_status": "source_exact_or_single"
+      },
+      {
+        "operation_id": "O30",
+        "lower_hours": 3.0,
+        "upper_hours": 3.0,
+        "repeat_status": "source_exact_or_single"
+      },
+      {
+        "operation_id": "O31",
+        "lower_hours": 1.5,
+        "upper_hours": 1.5,
+        "repeat_status": "source_exact_or_single"
+      },
+      {
+        "operation_id": "O32",
+        "lower_hours": 3.0,
+        "upper_hours": 3.0,
+        "repeat_status": "source_exact_or_single"
+      },
+      {
+        "operation_id": "O33",
+        "lower_hours": 12.0,
+        "upper_hours": 24.0,
+        "repeat_status": "source_exact_or_single"
+      }
+    ],
+    "workflow_completeness_not_inferred": true,
+    "complete_experimental_endpoint_duration": "not_separately_estimated",
+    "saved_coverage_judgment": {
+      "entities": "complete",
+      "time_operations": "complete",
+      "core_time_operations": "complete",
+      "unresolved": []
+    },
+    "heading_scope_candidate": {
+      "version": "time-heading-and-label-wash-scope-v1",
+      "unapplied_wash_evidence": [
+        {
+          "operation_id": "O17",
+          "raw_phase": "reagent_transition_wash",
+          "interpreted_phase": "routine_wash_after_antibody_labeling",
+          "source": {
+            "unit_id": "L0026",
+            "quote": "6.1 洗涤液：PBS + 0.2% Triton X-100 + 0.01% NaN3，轻摇换液。(Temperature: RT, Time: 6 hours)\n",
+            "occurrence": 0,
+            "source_id": "SRC_e67d873f5bb97be1487ff200",
+            "start": 1698,
+            "end": 1781,
+            "answer_sha256": "4d3909623a64bdd7ccbd45f024b263f94cfddb3b8cf2bb32dc5d376d999b77a1",
+            "context_start": 1698,
+            "context_end": 1781,
+            "context": "6.1 洗涤液：PBS + 0.2% Triton X-100 + 0.01% NaN3，轻摇换液。(Temperature: RT, Time: 6 hours)\n",
+            "unit_reference": {
+              "source_unit_sha256": "e20b1941fe7081edb06432a85e0a92f6750386127d8d0a3450f9aca2db03c28f",
+              "raw_unit_text_preserved": true,
+              "wide_evidence_not_atomic_identity": true
+            }
+          },
+          "supported": true,
+          "reason": "wash_within_explicit_labeling_sequence",
+          "heading": {
+            "start": 1673,
+            "end": 1698,
+            "quote": "6 洗涤（Wash after primary）\n",
+            "title": "洗涤（Wash after primary）"
+          },
+          "preceding_phase_heading": {
+            "start": 1400,
+            "end": 1448,
+            "quote": "5 一抗全脑免疫标记（Whole-brain immunolabeling, primary）\n",
+            "title": "一抗全脑免疫标记（Whole-brain immunolabeling, primary）"
+          },
+          "operation": {
+            "unit_id": "L0026",
+            "quote": "6.1 洗涤液：PBS + 0.2% Triton X-100 + 0.01% NaN3，轻摇换液。(Temperature: RT, Time: 6 hours)\n",
+            "occurrence": 0,
+            "source_id": "SRC_e67d873f5bb97be1487ff200",
+            "start": 1698,
+            "end": 1781,
+            "answer_sha256": "4d3909623a64bdd7ccbd45f024b263f94cfddb3b8cf2bb32dc5d376d999b77a1",
+            "context_start": 1698,
+            "context_end": 1781,
+            "context": "6.1 洗涤液：PBS + 0.2% Triton X-100 + 0.01% NaN3，轻摇换液。(Temperature: RT, Time: 6 hours)\n",
+            "unit_reference": {
+              "source_unit_sha256": "e20b1941fe7081edb06432a85e0a92f6750386127d8d0a3450f9aca2db03c28f",
+              "raw_unit_text_preserved": true,
+              "wide_evidence_not_atomic_identity": true
+            }
+          }
+        },
+        {
+          "operation_id": "O20",
+          "raw_phase": "reagent_transition_wash",
+          "interpreted_phase": "routine_wash_after_antibody_labeling",
+          "source": {
+            "unit_id": "L0031",
+            "quote": "8.1 PBS + 0.2% Triton X-100 + 0.01% NaN3 洗涤，轻摇换液。(Temperature: RT, Time: 6 hours)\n",
+            "occurrence": 0,
+            "source_id": "SRC_e67d873f5bb97be1487ff200",
+            "start": 2086,
+            "end": 2168,
+            "answer_sha256": "4d3909623a64bdd7ccbd45f024b263f94cfddb3b8cf2bb32dc5d376d999b77a1",
+            "context_start": 2086,
+            "context_end": 2168,
+            "context": "8.1 PBS + 0.2% Triton X-100 + 0.01% NaN3 洗涤，轻摇换液。(Temperature: RT, Time: 6 hours)\n",
+            "unit_reference": {
+              "source_unit_sha256": "7143b9d8ce8fb2ed048dc78118249c237e90a60a3e0f92b177e452dbe8a54496",
+              "raw_unit_text_preserved": true,
+              "wide_evidence_not_atomic_identity": true
+            }
+          },
+          "supported": true,
+          "reason": "wash_within_explicit_labeling_sequence",
+          "heading": {
+            "start": 2059,
+            "end": 2086,
+            "quote": "8 洗涤（Wash after secondary）\n",
+            "title": "洗涤（Wash after secondary）"
+          },
+          "preceding_phase_heading": {
+            "start": 1847,
+            "end": 1878,
+            "quote": "7 二抗全脑免疫标记（Secondary, far-red）\n",
+            "title": "二抗全脑免疫标记（Secondary, far-red）"
+          },
+          "operation": {
+            "unit_id": "L0031",
+            "quote": "8.1 PBS + 0.2% Triton X-100 + 0.01% NaN3 洗涤，轻摇换液。(Temperature: RT, Time: 6 hours)\n",
+            "occurrence": 0,
+            "source_id": "SRC_e67d873f5bb97be1487ff200",
+            "start": 2086,
+            "end": 2168,
+            "answer_sha256": "4d3909623a64bdd7ccbd45f024b263f94cfddb3b8cf2bb32dc5d376d999b77a1",
+            "context_start": 2086,
+            "context_end": 2168,
+            "context": "8.1 PBS + 0.2% Triton X-100 + 0.01% NaN3 洗涤，轻摇换液。(Temperature: RT, Time: 6 hours)\n",
+            "unit_reference": {
+              "source_unit_sha256": "7143b9d8ce8fb2ed048dc78118249c237e90a60a3e0f92b177e452dbe8a54496",
+              "raw_unit_text_preserved": true,
+              "wide_evidence_not_atomic_identity": true
+            }
+          }
+        }
+      ],
+      "reason": "original_core_time_ledger_has_open_bounds",
+      "title_changes": []
+    }
+  },
+  "quantitative_inputs": {
+    "quantitative_data": {
+      "method_name": "iDISCO+",
+      "tissue_ri_value": 1.46,
+      "total_time_hours": null,
+      "sample_tier": "T04_WHOLE_MOUSE_BRAIN_5_12MM",
+      "reagent_ri_value": null,
+      "protocol_time_hours": null
+    },
+    "user_preference_vector": {
+      "fluorescence_protein_preservation": {
+        "target": 0.0,
+        "weight": 0.0
+      },
+      "dye_permeability": {
+        "target": 0.0,
+        "weight": 0.0
+      },
+      "clearing_challenge": {
+        "target": 0.6,
+        "weight": 1.0
+      },
+      "geometry_preference": {
+        "target": 1.0,
+        "weight": 0.0
+      },
+      "operational_economy": {
+        "target": 0.0,
+        "weight": 0.0
+      },
+      "safety_compatibility": {
+        "target": 0.0,
+        "weight": 0.0
+      }
+    },
+    "basis": "saved quantitative inputs, including explicit method-header correction"
+  },
+  "original_full_conversion_success": false,
+  "original_judge_JSON_not_rewritten": true,
+  "new_model_calls": 0,
+  "expert_validated": false
+}

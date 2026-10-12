@@ -1,0 +1,55 @@
+**Chosen Method:** iDISCO+
+**Chosen Labeling:** [C-FoS + Alexa Fluor 647, DAPI]
+**Justification:** iDISCO+ is selected because it is specifically optimized for whole-brain immunolabeling with superior antibody penetration, which is critical for detecting endogenous c-Fos expression (a marker for neuronal activation) throughout the entire 10 mm adult mouse brain. It achieves high transparency and is compatible with light-sheet microscopy, allowing for the reconstruction of single-cell resolution 3D maps. The use of Alexa Fluor 647 provides deep tissue penetration and minimal autofluorescence, while DAPI serves as a nuclear counterstain for anatomical registration.
+
+**Protocol Steps:**
+101 Dehydration
+101.1 Incubation with 20% (vol/vol) methanol in distilled water for 1 hour.(Temperature: RT, Time: 1 hours)
+101.2 Incubation with 40% (vol/vol) methanol in distilled water for 1 hour.(Temperature: RT, Time: 1 hours)
+101.3 Incubation with 60% (vol/vol) methanol in distilled water for 1 hour.(Temperature: RT, Time: 1 hours)
+101.4 Incubation with 80% (vol/vol) methanol in distilled water for 1 hour.(Temperature: RT, Time: 1 hours)
+101.5 Incubation with 100% (vol/vol) methanol for 1 hour, repeat twice.(Temperature: RT, Time: 1 hours)
+
+102 Bleaching
+102.1 Incubation with chilled fresh 5% H2O2 in methanol (1 volume 30% H2O2 to 5 volumes MeOH) overnight.(Temperature: 4 ℃, Time: 12 hours)
+
+103 Rehydration
+103.1 Incubation with 80% (vol/vol) methanol in distilled water for 1 hour.(Temperature: RT, Time: 1 hours)
+103.2 Incubation with 60% (vol/vol) methanol in distilled water for 1 hour.(Temperature: RT, Time: 1 hours)
+103.3 Incubation with 40% (vol/vol) methanol in distilled water for 1 hour.(Temperature: RT, Time: 1 hours)
+103.4 Incubation with 20% (vol/vol) methanol in distilled water for 1 hour.(Temperature: RT, Time: 1 hours)
+103.5 Incubation with PBS (Phosphate Buffered Saline) for 1 hour, repeat twice.(Temperature: RT, Time: 1 hours)
+
+104 Permeabilization
+104.1 Incubation with 0.2% Triton X-100, 20% DMSO, 0.3M Glycine in PBS for 24 hours.(Temperature: RT, Time: 24 hours)
+
+105 Blocking
+105.1 Incubation with 0.2% Triton X-100, 10% DMSO, 6% Normal Donkey Serum in PBS for 24 hours.(Temperature: RT, Time: 24 hours)
+
+106 Primary Antibody Incubation
+106.1 Incubation with Rabbit anti-c-Fos antibody (1:1000) in PTwH (0.2% Tween-20, 10 mg/ml Heparin, 0.1% Sodium Azide in PBS) with 5% DMSO and 3% Normal Donkey Serum for 7-14 days with gentle shaking.(Temperature: 37 ℃, Time: 336 hours)
+
+107 Washes
+107.1 Wash with PTwH for 1 day, changing solution at least 3 times.(Temperature: RT, Time: 24 hours)
+
+108 Secondary Antibody Incubation
+108.1 Incubation with Donkey anti-Rabbit Alexa Fluor 647 (1:500) in PTwH with 3% Normal Donkey Serum for 7-14 days with gentle shaking.(Temperature: 37 ℃, Time: 336 hours)
+
+109 Washes
+109.1 Wash with PTwH for 1 day, changing solution at least 3 times.(Temperature: RT, Time: 24 hours)
+
+110 Nuclear Staining
+110.1 Incubation with DAPI (1 µg/ml) in PTwH for 2 days.(Temperature: RT, Time: 48 hours)
+
+111 Dehydration (Pre-clearing)
+111.1 Incubation with 20% (vol/vol) methanol in distilled water for 1 hour.(Temperature: RT, Time: 1 hours)
+111.2 Incubation with 40% (vol/vol) methanol in distilled water for 1 hour.(Temperature: RT, Time: 1 hours)
+111.3 Incubation with 60% (vol/vol) methanol in distilled water for 1 hour.(Temperature: RT, Time: 1 hours)
+111.4 Incubation with 80% (vol/vol) methanol in distilled water for 1 hour.(Temperature: RT, Time: 1 hours)
+111.5 Incubation with 100% (vol/vol) methanol for 1 hour, repeat twice.(Temperature: RT, Time: 1 hours)
+
+112 Delipidation
+112.1 Incubation with Dichloromethane (DCM) for 30 minutes to clear until tissue is transparent, repeat once with fresh DCM.(Temperature: RT, Time: 0.5 hours)
+
+113 Refractive Index Matching
+113.1 Incubation with 100% (vol/vol) Dibenzyl Ether (DBE) until the tissue sinks and is fully transparent (approx. 15-30 minutes). Store in DBE for imaging.(Temperature: RT, Time: 0.5 hours)

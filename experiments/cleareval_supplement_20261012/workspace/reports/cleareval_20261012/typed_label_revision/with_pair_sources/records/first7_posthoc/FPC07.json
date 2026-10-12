@@ -1,0 +1,717 @@
+{
+  "cohort": "first7_posthoc",
+  "cell_id": "FPC07",
+  "anonymous_answer_id": "FPC07",
+  "question_id": 248,
+  "original_status": "success",
+  "version": "cce-typed-label-scorer-v2.1",
+  "metrics": {
+    "c_param": 3,
+    "co_order": 2,
+    "co_method": 1,
+    "co_param": 1,
+    "co_chem": 1,
+    "s_method": -0.38,
+    "s_label": 0.0,
+    "s_trans": 1.2333368715215602,
+    "s_time": 0.40179312334614525,
+    "sr": 0.4444444444444444,
+    "sp": 0.2727272727272727,
+    "Com": 0.7777777777777778,
+    "Cor": 0.6666666666666666,
+    "Eff": 0.24226083290564213,
+    "IA": 0.24226083290564213,
+    "HV": 0.12561672817329592
+  },
+  "complete_numeric_CCE": true,
+  "baseline_metrics": {
+    "c_param": 3,
+    "co_order": 2,
+    "co_method": 1,
+    "co_param": 1,
+    "co_chem": 1,
+    "s_method": -0.38,
+    "s_label": null,
+    "s_trans": 1.2333368715215602,
+    "s_time": null,
+    "sr": 0.4444444444444444,
+    "sp": 0.2727272727272727,
+    "Com": 0.7777777777777778,
+    "Cor": 0.6666666666666666,
+    "Eff": null,
+    "IA": null,
+    "HV": null
+  },
+  "quantitative_data": {
+    "method_name": "uDISCO",
+    "tissue_ri_value": 1.46,
+    "total_time_hours": 33.5,
+    "sample_tier": "T04_WHOLE_MOUSE_BRAIN_5_12MM",
+    "reagent_ri_value": null,
+    "protocol_time_hours": null
+  },
+  "time_derivation": {
+    "hours": 33.5,
+    "bounds_hours": [
+      27.5,
+      39.5
+    ],
+    "decision": "source_bound_semantic_operation_ledger",
+    "qualification": "Reported typical timing scenario only. Until-transparent stopping condition prevents interpreting 12-24 h as guaranteed actual bounds.",
+    "operations": [
+      {
+        "source": {
+          "line": 7,
+          "start": 649,
+          "end": 746,
+          "quote": "1.1 Incubation with 50% (vol/vol) methanol in distilled water. (Temperature: RT, Time: 3 hours)  "
+        },
+        "phase": "core",
+        "repeat_count": 1,
+        "hours_lower": 3,
+        "hours_upper": 3,
+        "included_in_core_time": true,
+        "decision": "Use each separately written operation once; no inferred repeats."
+      },
+      {
+        "source": {
+          "line": 8,
+          "start": 747,
+          "end": 844,
+          "quote": "1.2 Incubation with 80% (vol/vol) methanol in distilled water. (Temperature: RT, Time: 3 hours)  "
+        },
+        "phase": "core",
+        "repeat_count": 1,
+        "hours_lower": 3,
+        "hours_upper": 3,
+        "included_in_core_time": true,
+        "decision": "Use each separately written operation once; no inferred repeats."
+      },
+      {
+        "source": {
+          "line": 9,
+          "start": 845,
+          "end": 924,
+          "quote": "1.3 Incubation with 100% (vol/vol) methanol. (Temperature: RT, Time: 3 hours)  "
+        },
+        "phase": "core",
+        "repeat_count": 1,
+        "hours_lower": 3,
+        "hours_upper": 3,
+        "included_in_core_time": true,
+        "decision": "Use each separately written operation once; no inferred repeats."
+      },
+      {
+        "source": {
+          "line": 10,
+          "start": 925,
+          "end": 1004,
+          "quote": "1.4 Incubation with 100% (vol/vol) methanol. (Temperature: RT, Time: 3 hours)  "
+        },
+        "phase": "core",
+        "repeat_count": 1,
+        "hours_lower": 3,
+        "hours_upper": 3,
+        "included_in_core_time": true,
+        "decision": "Use each separately written operation once; no inferred repeats."
+      },
+      {
+        "source": {
+          "line": 11,
+          "start": 1005,
+          "end": 1100,
+          "quote": "1.5 Incubation with 100% (vol/vol) dichloromethane (DCM). (Temperature: RT, Time: 30 minutes)  "
+        },
+        "phase": "core",
+        "repeat_count": 1,
+        "hours_lower": 0.5,
+        "hours_upper": 0.5,
+        "included_in_core_time": true,
+        "decision": "Use each separately written operation once; no inferred repeats."
+      },
+      {
+        "source": {
+          "line": 14,
+          "start": 1133,
+          "end": 1288,
+          "quote": "2.1 Incubation with staining solution containing Phalloidin conjugated to Alexa Fluor 647 (1:200 dilution) in methanol. (Temperature: RT, Time: 24 hours)  "
+        },
+        "phase": "labeling",
+        "repeat_count": 1,
+        "hours_lower": 24,
+        "hours_upper": 24,
+        "included_in_core_time": false,
+        "decision": "Use each separately written operation once; no inferred repeats."
+      },
+      {
+        "source": {
+          "line": 15,
+          "start": 1289,
+          "end": 1361,
+          "quote": "2.2 Wash with 100% (vol/vol) methanol. (Temperature: RT, Time: 1 hour)  "
+        },
+        "phase": "labeling_wash",
+        "repeat_count": 1,
+        "hours_lower": 1,
+        "hours_upper": 1,
+        "included_in_core_time": false,
+        "decision": "Use each separately written operation once; no inferred repeats."
+      },
+      {
+        "source": {
+          "line": 16,
+          "start": 1362,
+          "end": 1434,
+          "quote": "2.3 Wash with 100% (vol/vol) methanol. (Temperature: RT, Time: 1 hour)  "
+        },
+        "phase": "labeling_wash",
+        "repeat_count": 1,
+        "hours_lower": 1,
+        "hours_upper": 1,
+        "included_in_core_time": false,
+        "decision": "Use each separately written operation once; no inferred repeats."
+      },
+      {
+        "source": {
+          "line": 19,
+          "start": 1477,
+          "end": 1614,
+          "quote": "3.1 Incubation with BABB-D (1 part Benzyl Alcohol, 2 parts Benzyl Benzoate, 0.04% w/v Diphenyl ether). (Temperature: RT, Time: 3 hours)  "
+        },
+        "phase": "core",
+        "repeat_count": 1,
+        "hours_lower": 3,
+        "hours_upper": 3,
+        "included_in_core_time": true,
+        "decision": "Use each separately written operation once; no inferred repeats."
+      },
+      {
+        "source": {
+          "line": 20,
+          "start": 1615,
+          "end": 1726,
+          "quote": "3.2 Incubation with fresh BABB-D. (Temperature: RT, Time: Until tissue is transparent, typically 12-24 hours)  "
+        },
+        "phase": "core_typical_window",
+        "repeat_count": 1,
+        "hours_lower": 12,
+        "hours_upper": 24,
+        "included_in_core_time": true,
+        "decision": "Use each separately written operation once; no inferred repeats."
+      }
+    ],
+    "semantic_author": "current assistant; author decomposition, not independent expert",
+    "issues": []
+  },
+  "time_formula": {
+    "policy": "kb-window-asymmetric-median-0.20-under-0.10-over-v1",
+    "source": "time_kb.json",
+    "requested_tier": "T04_WHOLE_MOUSE_BRAIN_5_12MM",
+    "actual_hours": 33.5,
+    "min_hours": 72.0,
+    "max_hours": 120.0,
+    "median_hours": 96.0,
+    "tau_hours": 19.200000000000003,
+    "delta_hours": 38.5,
+    "tau_under_fraction": 0.2,
+    "tau_over_fraction": 0.1,
+    "status": "scored",
+    "resolved_tier": "T04_WHOLE_MOUSE_BRAIN_5_12MM",
+    "method_key": "udisco"
+  },
+  "time_sensitivity": [
+    {
+      "time_hours": 27.5,
+      "s_time": 0.2044823387042352,
+      "Eff": 0.22581826751881628
+    },
+    {
+      "time_hours": 33.5,
+      "s_time": 0.40179312334614525,
+      "Eff": 0.24226083290564213
+    },
+    {
+      "time_hours": 39.5,
+      "s_time": 0.716040562421143,
+      "Eff": 0.2684481194952253
+    }
+  ],
+  "label_derivation": {
+    "version": "cce-typed-label-scorer-v2.1",
+    "s_label": 0.0,
+    "channels": {
+      "s_target_match": 0.0,
+      "s_marker_fluor_compat": 6.0,
+      "s_method_fluor_compat": 4.5
+    },
+    "channel_applicability": {
+      "s_target_match": {
+        "applicable": true,
+        "value": 0.0,
+        "contributing_pairs": [
+          "semantic:1"
+        ]
+      },
+      "s_marker_fluor_compat": {
+        "applicable": true,
+        "value": 6.0,
+        "contributing_pairs": [
+          "semantic:1"
+        ]
+      },
+      "s_method_fluor_compat": {
+        "applicable": true,
+        "value": 4.5,
+        "contributing_pairs": [
+          "semantic:0",
+          "semantic:1"
+        ]
+      }
+    },
+    "pair_results": [
+      {
+        "pair_id": "semantic:0",
+        "entity_id": null,
+        "fluorophore": "tdTomato",
+        "reported_marker": null,
+        "reported_target_literal": null,
+        "label_type": "native_fluorescent_protein",
+        "original_function_input": {
+          "tdTomato": ""
+        },
+        "applicable": {
+          "s_target_match": false,
+          "s_marker_fluor_compat": false,
+          "s_method_fluor_compat": true
+        },
+        "channels": {
+          "s_target_match": null,
+          "s_marker_fluor_compat": null,
+          "s_method_fluor_compat": 4.5
+        },
+        "not_applicable_reason": "standalone fluorescence has no antibody target-pair channel",
+        "source_evidence": [
+          {
+            "line": 2,
+            "start": 28,
+            "end": 89,
+            "quote": "**Chosen Labeling:** [tdTomato, Phalloidin+Alexa Fluor 647]  "
+          }
+        ],
+        "compatibility_audit": [
+          {
+            "kind": "method_fluor",
+            "method_name": "uDISCO",
+            "fluorophore": "tdTomato",
+            "source": "KnowledgeBase/method_fluro_compati.json",
+            "value": 0.75,
+            "status": "TABLE_REPORTED"
+          }
+        ]
+      },
+      {
+        "pair_id": "semantic:1",
+        "entity_id": null,
+        "fluorophore": "Alexa Fluor 647",
+        "reported_marker": "F-actin",
+        "reported_target_literal": null,
+        "label_type": "targeted_or_unclassified_reagent",
+        "original_function_input": {
+          "Alexa Fluor 647": "F-actin"
+        },
+        "applicable": {
+          "s_target_match": true,
+          "s_marker_fluor_compat": true,
+          "s_method_fluor_compat": true
+        },
+        "channels": {
+          "s_target_match": 0.0,
+          "s_marker_fluor_compat": 6.0,
+          "s_method_fluor_compat": 4.5
+        },
+        "not_applicable_reason": null,
+        "source_evidence": [
+          {
+            "line": 3,
+            "start": 90,
+            "end": 609,
+            "quote": "**Justification:** uDISCO is selected for its rapid clearing speed (3-5 days for whole mouse brain) and high transparency, which meets the requirement to complete imaging as soon as possible. It is compatible with tdTomato fluorescence preservation and allows for some tissue shrinkage, which is acceptable per the problem statement. Phalloidin conjugated to Alexa Fluor 647 is chosen to label the axonal cytoskeleton (F-actin), providing the necessary structural contrast while being spectrally distinct from tdTomato."
+          },
+          {
+            "line": 14,
+            "start": 1133,
+            "end": 1288,
+            "quote": "2.1 Incubation with staining solution containing Phalloidin conjugated to Alexa Fluor 647 (1:200 dilution) in methanol. (Temperature: RT, Time: 24 hours)  "
+          }
+        ],
+        "compatibility_audit": [
+          {
+            "kind": "marker_fluor",
+            "marker": "F-actin",
+            "fluorophore": "Alexa Fluor 647",
+            "source": "KnowledgeBase/tissue.json",
+            "value": true,
+            "status": "TABLE_REPORTED"
+          },
+          {
+            "kind": "method_fluor",
+            "method_name": "uDISCO",
+            "fluorophore": "Alexa Fluor 647",
+            "source": "KnowledgeBase/method_fluro_compati.json",
+            "value": 0.75,
+            "status": "TABLE_REPORTED"
+          }
+        ]
+      }
+    ],
+    "resolved_uncertainties": [],
+    "remaining_uncertainties": [],
+    "minimum_of_available_applicable_channels": 0.0,
+    "task_target_coverage": "native/direct task coverage remains separate from antibody-pair applicability",
+    "new_model_calls": 0,
+    "expert_validated": false
+  },
+  "compatibility_lookup_trace": [
+    {
+      "marker": "F-actin",
+      "fluorophore": "Alexa Fluor 647",
+      "status": "AF_family_consensus_approximation",
+      "value": true,
+      "column": "AlexaFluor 647/Cy5 ",
+      "matching_target_options": [],
+      "candidate_rows": [
+        {
+          "row_index": 63,
+          "matching_authored_names": [
+            {
+              "field": "推荐标志物 1",
+              "authored_name": "F-Actin",
+              "option": "F-Actin",
+              "option_split_applied": false
+            }
+          ],
+          "scope": {
+            "大类": "通用结构",
+            "亚类": "类器官",
+            "结构/细胞类型": "大脑类器官整体"
+          },
+          "cell_value": 1
+        },
+        {
+          "row_index": 79,
+          "matching_authored_names": [
+            {
+              "field": "推荐标志物 2",
+              "authored_name": "Phalloidin / F-actin",
+              "option": "Phalloidin",
+              "option_split_applied": true
+            },
+            {
+              "field": "推荐标志物 2",
+              "authored_name": "Phalloidin / F-actin",
+              "option": "F-actin",
+              "option_split_applied": true
+            }
+          ],
+          "scope": {
+            "大类": "斑马鱼系统",
+            "亚类": "侧线系统",
+            "结构/细胞类型": "侧线毛细胞"
+          },
+          "cell_value": null
+        },
+        {
+          "row_index": 83,
+          "matching_authored_names": [
+            {
+              "field": "推荐标志物 2",
+              "authored_name": "Phalloidin / F-actin",
+              "option": "Phalloidin",
+              "option_split_applied": true
+            },
+            {
+              "field": "推荐标志物 2",
+              "authored_name": "Phalloidin / F-actin",
+              "option": "F-actin",
+              "option_split_applied": true
+            }
+          ],
+          "scope": {
+            "大类": "骨骼肌系统",
+            "亚类": "神经肌肉接头",
+            "结构/细胞类型": "突触后膜/AChR 聚集"
+          },
+          "cell_value": null
+        },
+        {
+          "row_index": 96,
+          "matching_authored_names": [
+            {
+              "field": "推荐标志物 1",
+              "authored_name": "Phalloidin / F-actin",
+              "option": "Phalloidin",
+              "option_split_applied": true
+            },
+            {
+              "field": "推荐标志物 1",
+              "authored_name": "Phalloidin / F-actin",
+              "option": "F-actin",
+              "option_split_applied": true
+            }
+          ],
+          "scope": {
+            "大类": "心脏系统",
+            "亚类": "实质细胞",
+            "结构/细胞类型": "心肌纤维取向辅助"
+          },
+          "cell_value": null
+        },
+        {
+          "row_index": 99,
+          "matching_authored_names": [
+            {
+              "field": "推荐标志物 2",
+              "authored_name": "Phalloidin / F-actin",
+              "option": "Phalloidin",
+              "option_split_applied": true
+            },
+            {
+              "field": "推荐标志物 2",
+              "authored_name": "Phalloidin / F-actin",
+              "option": "F-actin",
+              "option_split_applied": true
+            }
+          ],
+          "scope": {
+            "大类": "硬组织",
+            "亚类": "内耳结构",
+            "结构/细胞类型": "耳蜗毛细胞/静纤毛束"
+          },
+          "cell_value": null
+        },
+        {
+          "row_index": 102,
+          "matching_authored_names": [
+            {
+              "field": "推荐标志物 2",
+              "authored_name": "Phalloidin",
+              "option": "Phalloidin",
+              "option_split_applied": false
+            }
+          ],
+          "scope": {
+            "大类": "心脏系统",
+            "亚类": "神经系统",
+            "结构/细胞类型": "心脏神经-心肌结构关系"
+          },
+          "cell_value": null
+        }
+      ],
+      "selected_row_indices": [
+        63,
+        79,
+        83,
+        96,
+        99,
+        102
+      ],
+      "per_scope_evidence": [
+        {
+          "scope": {
+            "大类": "心脏系统",
+            "亚类": "实质细胞",
+            "结构/细胞类型": "心肌纤维取向辅助"
+          },
+          "row_indices": [
+            96
+          ],
+          "all_cell_values": [
+            null
+          ],
+          "state": "authored_unknown",
+          "value": null
+        },
+        {
+          "scope": {
+            "大类": "心脏系统",
+            "亚类": "神经系统",
+            "结构/细胞类型": "心脏神经-心肌结构关系"
+          },
+          "row_indices": [
+            102
+          ],
+          "all_cell_values": [
+            null
+          ],
+          "state": "authored_unknown",
+          "value": null
+        },
+        {
+          "scope": {
+            "大类": "斑马鱼系统",
+            "亚类": "侧线系统",
+            "结构/细胞类型": "侧线毛细胞"
+          },
+          "row_indices": [
+            79
+          ],
+          "all_cell_values": [
+            null
+          ],
+          "state": "authored_unknown",
+          "value": null
+        },
+        {
+          "scope": {
+            "大类": "硬组织",
+            "亚类": "内耳结构",
+            "结构/细胞类型": "耳蜗毛细胞/静纤毛束"
+          },
+          "row_indices": [
+            99
+          ],
+          "all_cell_values": [
+            null
+          ],
+          "state": "authored_unknown",
+          "value": null
+        },
+        {
+          "scope": {
+            "大类": "通用结构",
+            "亚类": "类器官",
+            "结构/细胞类型": "大脑类器官整体"
+          },
+          "row_indices": [
+            63
+          ],
+          "all_cell_values": [
+            1
+          ],
+          "state": "consistent_authored_value",
+          "value": 1
+        },
+        {
+          "scope": {
+            "大类": "骨骼肌系统",
+            "亚类": "神经肌肉接头",
+            "结构/细胞类型": "突触后膜/AChR 聚集"
+          },
+          "row_indices": [
+            83
+          ],
+          "all_cell_values": [
+            null
+          ],
+          "state": "authored_unknown",
+          "value": null
+        }
+      ],
+      "row_selection_uses_scores": false,
+      "different_scopes_merged": false,
+      "new_alias_or_KB_value": false,
+      "declared_task_scope": null,
+      "exact_lookup_value": null,
+      "family_source_donors": [],
+      "family_donor_cells": [
+        {
+          "row_index": 63,
+          "column": "AlexaFluor 488",
+          "value": 1,
+          "scope": {
+            "大类": "通用结构",
+            "亚类": "类器官",
+            "结构/细胞类型": "大脑类器官整体"
+          }
+        },
+        {
+          "row_index": 63,
+          "column": "AlexaFluor 568/Cy3",
+          "value": 1,
+          "scope": {
+            "大类": "通用结构",
+            "亚类": "类器官",
+            "结构/细胞类型": "大脑类器官整体"
+          }
+        },
+        {
+          "row_index": 63,
+          "column": "AlexaFluor 647/Cy5 ",
+          "value": 1,
+          "scope": {
+            "大类": "通用结构",
+            "亚类": "类器官",
+            "结构/细胞类型": "大脑类器官整体"
+          }
+        }
+      ],
+      "family_rule": "AF-family-consensus-from-applicable-marker-rows-v1",
+      "evidence_level": "user_authorized_family_approximation"
+    }
+  ],
+  "semantic_decomposition_applied": true,
+  "semantic_author": "current assistant; author decomposition, not independent expert",
+  "remaining_dependencies": {
+    "time": [],
+    "label_relations": [],
+    "compatibility": []
+  },
+  "new_model_requests": 0,
+  "new_expert_records": 0,
+  "direct_scores_rejudged": false,
+  "SR_SP_changed": false,
+  "raw_judge_status_changed": false,
+  "status": "replayed",
+  "source_record": {
+    "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\optimizer_round3_20261011\\uniform_v7\\actual_01\\cells\\first7_posthoc\\FPC07\\posthoc.json",
+    "sha256": "7e04fc84be368322a3e77e3d17a4d979d7b5316230f8cc16e6b5854f765cc93c"
+  },
+  "answer_sha256": "8176364b5f9396ab515e49a6f4a50366343f27fe7da00e0cb666a36796c423d2",
+  "changes": {
+    "s_label": {
+      "before": null,
+      "after": 0.0
+    },
+    "s_time": {
+      "before": null,
+      "after": 0.40179312334614525
+    },
+    "Eff": {
+      "before": null,
+      "after": 0.24226083290564213
+    },
+    "IA": {
+      "before": null,
+      "after": 0.24226083290564213
+    },
+    "HV": {
+      "before": null,
+      "after": 0.12561672817329592
+    }
+  },
+  "comparison_metrics": {
+    "c_param": 3,
+    "co_order": 2,
+    "co_method": 1,
+    "co_param": 1,
+    "co_chem": 1,
+    "s_method": -0.38,
+    "s_label": 0.0,
+    "s_trans": 1.2333368715215602,
+    "s_time": 0.40179312334614525,
+    "sr": 0.4444444444444444,
+    "sp": 0.2727272727272727,
+    "Com": 0.7777777777777778,
+    "Cor": 0.6666666666666666,
+    "Eff": 0.24226083290564213,
+    "IA": 0.24226083290564213,
+    "HV": 0.12561672817329592
+  },
+  "typed_replay_status": "replayed",
+  "typed_semantic_annotation": true,
+  "typed_changes": {},
+  "source_document": {
+    "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\optimizer_round2_20261010\\generation_confirmation_v2\\source_documents\\FPC07.json",
+    "sha256": "74131c5bc1b22f0cbf0dce8532c30369bf038ebc18718b52579cbb105d6304fe"
+  }
+}

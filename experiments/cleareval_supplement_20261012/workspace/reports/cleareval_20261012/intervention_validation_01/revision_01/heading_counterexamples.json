@@ -1,0 +1,50 @@
+[
+  {
+    "case": "true_heading",
+    "source": "1 Wash after primary\n1.1 Wash the sample in fresh buffer.\n",
+    "expected_parent_is_heading": true,
+    "old_filter_removes_parent": true,
+    "passes": true,
+    "basis": "constructed structure challenge, not independent scientific ground truth"
+  },
+  {
+    "case": "parent_is_operation",
+    "source": "1 Wash the sample thoroughly.\n1.1 Transfer it into fresh buffer.\n",
+    "expected_parent_is_heading": false,
+    "old_filter_removes_parent": true,
+    "passes": false,
+    "basis": "constructed structure challenge, not independent scientific ground truth"
+  },
+  {
+    "case": "parent_has_volume",
+    "source": "1 Add 5 mL buffer.\n1.1 Mix gently.\n",
+    "expected_parent_is_heading": false,
+    "old_filter_removes_parent": true,
+    "passes": false,
+    "basis": "constructed structure challenge, not independent scientific ground truth"
+  },
+  {
+    "case": "parent_has_non_numeric_duration",
+    "source": "1 Incubate the sample overnight.\n1.1 Wash the sample.\n",
+    "expected_parent_is_heading": false,
+    "old_filter_removes_parent": true,
+    "passes": false,
+    "basis": "constructed structure challenge, not independent scientific ground truth"
+  },
+  {
+    "case": "explicit_time_field",
+    "source": "1 Incubate the sample. (Time: 2 hours)\n1.1 Wash the sample.\n",
+    "expected_parent_is_heading": false,
+    "old_filter_removes_parent": false,
+    "passes": true,
+    "basis": "constructed structure challenge, not independent scientific ground truth"
+  },
+  {
+    "case": "parent_contains_negation",
+    "source": "1 Do not agitate the sample.\n1.1 Store it in the chamber.\n",
+    "expected_parent_is_heading": false,
+    "old_filter_removes_parent": true,
+    "passes": false,
+    "basis": "constructed structure challenge, not independent scientific ground truth"
+  }
+]

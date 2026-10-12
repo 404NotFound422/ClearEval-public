@@ -1,0 +1,61 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>核对范围与统计解释</title><style>body{font:17px/1.85 "Microsoft YaHei","Noto Sans CJK SC",sans-serif;color:#172331;margin:0;background:#f6f8fa}main{max-width:1080px;margin:auto;padding:44px 52px;background:white}h1{font-size:30px;line-height:1.5}h2{font-size:23px;border-top:1px solid #dbe3ea;padding-top:30px;margin-top:44px}h3{font-size:20px;margin-top:32px}p{margin:16px 0}a{color:#175e9b;text-decoration:none}a:hover{text-decoration:underline}table{border-collapse:collapse;width:100%;font-size:14px;line-height:1.65;margin:24px 0}td,th{border:1px solid #d3dde7;padding:10px 12px;vertical-align:top}th{background:#eaf1f7;text-align:left}tr:nth-child(even){background:#f8fafc}pre{background:#f2f5f8;border:1px solid #dfe6ed;padding:18px;white-space:pre-wrap;overflow-wrap:anywhere;font:14px/1.7 Consolas,monospace}code{font-family:Consolas,monospace;overflow-wrap:anywhere}nav{background:#eef4f8;padding:20px 25px;border-radius:6px;margin:25px 0}nav a{display:block;font-size:15px}strong{color:#183d59}@media(max-width:700px){main{padding:22px 16px}body{font-size:16px}table{display:block;overflow-x:auto}}@media print{body{background:white;font-size:11pt}main{padding:0;max-width:none}nav{display:none}h2,h3{break-after:avoid}tr{break-inside:avoid}pre{font-size:9pt}a{color:inherit}}</style></head><body><main><p><a href="REPORT_zh.html">项目报告</a> · <a href="LLM_DECOMPOSITION_zh.html">重新分解实证</a> · <a href="QUALITY_CHECK_zh.html">核对范围</a></p><nav></nav><h1>文档核对范围与统计解释</h1>
+<p>本次采用 academic-research-suite 的实验解释流程，对下列 11 类统计与解释问题逐项检查。核对对象是报告的论断和保存数据；未进行新的显著性检验，也未获得独立专家结论。<a href="verification.json">实值与检查记录</a></p>
+<table>
+<thead>
+<tr>
+<th>检查项</th>
+<th>本文的处理与仍有的限制</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1. 分层与总体方向反转（Simpson）</td>
+<td>E2 先报告三题各自升/不变/降，再报告平均；不把总体平均替代逐题差异。未估计全库总体方向。</td>
+</tr>
+<tr>
+<td>2. 群体到个体推断（ecological）</td>
+<td>模型平均仅解释相同题集；不据均值断言每份答案更好。</td>
+</tr>
+<tr>
+<td>3. 筛选人群偏差（Berkson）</td>
+<td>参考覆盖选出的开发面板、完整共同集不代表全部题库；定向作者命题审计不给总体错误率。</td>
+</tr>
+<tr>
+<td>4. 碰撞变量选择（collider）</td>
+<td>不基于“完整 CCE”筛选后推断评价准确率；完整子集与全部可用分项分别展示。</td>
+</tr>
+<tr>
+<td>5. 忽略基础比例</td>
+<td>93 个有限重复组的零极差不计成 108 个组全通过；重复组与独立题目分母分开。未估计真实错误流行率。</td>
+</tr>
+<tr>
+<td>6. 均值回归</td>
+<td>预选难例上的改善只记开发现象，不据其判断总体提升；真实新确认的负结果保留。</td>
+</tr>
+<tr>
+<td>7. 幸存者偏差</td>
+<td>失败、取消、单侧未知、双未知保留；没有只汇报能产生完整 CCE 的样本。</td>
+</tr>
+<tr>
+<td>8. 多重尝试与择优报告</td>
+<td>旧、新、主、次级配置分别标记；合并步骤的升降、删除 Cor 的异常方向都展示，未只选有利变化。</td>
+</tr>
+<tr>
+<td>9. 分析路径自由度</td>
+<td>输入规范化、标签适用性、参考版本、主阈值及后验修复标版本；本次再分解明确为已曝光材料上的作者分析。</td>
+</tr>
+<tr>
+<td>10. 相关与因果</td>
+<td>自然替代路线、不同生成模型不称单因素路线因果实验；HV 变化不称实测效果改善。</td>
+</tr>
+<tr>
+<td>11. 因果方向倒置</td>
+<td>评分与实验效果无新增实测对应，未声称评分预测或导致生物学效果。</td>
+</tr>
+</tbody>
+</table>
+<p>精确重采样检查只针对保存的三个 E2 任务：枚举 27 个有序组合，独立核算平均差、方向频率及逆经验 CDF 分位。五题 E5 的既有 3,125 个组合及 2,000 次结果按原完成报告引用，本文不冒称重新运行全套实验。来源家族抽样仍未具备条件。</p>
+<p>本次新的两份分解由当前会话模型逐文阅读并固定注释，程序核对字面引用、范围、加总与原函数结果。这不是冻结 Qwen 的新重复，也不是独立盲审。FPC07 的区间是原文典型时长情景的条件结果，不是实际时长置信区间。FPC03 的知识表缺项继续保留。</p>
+<p><code>verify_report.py</code> 的 PASS 仅表示被检查的来源身份、文字位置、公式、配对差和链接相符。科学解释、参考适用性和专家一致性不由这个 PASS 认证。原分数、原请求和封存状态文件未被覆盖。</p>
+<p><a href="REPORT_zh.md">项目报告</a> · <a href="LLM_DECOMPOSITION_zh.md">重新分解的实际结果</a> · <a href="verification.json">完整核对记录</a></p>
+</main></body></html>

@@ -1,0 +1,648 @@
+{
+  "command": [
+    "C:\\ClearEval\\review_artifacts\\bioprobench_2026-09-29\\python_portable\\python.exe",
+    "C:\\ClearEval\\reports\\cleareval_20261012\\step_language_probe\\run.py"
+  ],
+  "completed_utc": "2026-10-12T09:04:42.221018+00:00",
+  "inputs": [
+    {
+      "path": "C:\\ClearEval\\reports\\cleareval_20261012\\step_language_probe\\run.py",
+      "sha256": "9987a2573e7df9b7fdafeabb73bbd152ba4db88145acd54596b5d763cbe5f42a"
+    },
+    {
+      "path": "C:\\ClearEval\\reports\\cleareval_20261012\\step_language_probe\\frozen_inputs.json",
+      "sha256": "2188eaf2971b09ad23048b32f329f13270d020b2c2f0c3186f56cce4746a8c9b"
+    },
+    {
+      "path": "C:\\ClearEval\\reports\\cleareval_20261012\\step_language_probe\\reference_cache_amendment.json",
+      "sha256": "ebbaaa078dcf1cb48e22178904b6cff38de4cc17760ead41a9af90379aa4d966"
+    },
+    {
+      "path": "C:\\ClearEval\\reports\\cleareval_20261012\\step_language_probe\\prepare.py",
+      "sha256": "c9103d8b8e289219e31941c6bb0ad2ad7c8615b012c92c100d77b5e691e49e78"
+    },
+    {
+      "path": "C:\\ClearEval\\reports\\cleareval_20261012\\step_language_probe\\translations.json",
+      "sha256": "7a97fcba10b7dec72c0db4b1da01c812159dceccfbe5c2dcd6dc46a267a6276c"
+    },
+    {
+      "path": "C:\\ClearEval\\reports\\cleareval_20261012\\step_language_probe\\plan.json",
+      "sha256": "b07d778327047222412624949ecb59f5bf38c89aa4caf96a03b9ffde1f18370e"
+    },
+    {
+      "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\optimizer_round3_20261011\\confirmation_inputs_01\\selected_step_details.json",
+      "sha256": "4f89549f3afefe933f0fd5d014ae73ae506f01b3d0bf9eb3ee173cd61a5d1583"
+    },
+    {
+      "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\optimizer_round3_20261011\\confirmation_qwen_01\\cases.json",
+      "sha256": "b4e50ef0280f7450532e198c1c6cd85ec399de06f68007a848cae1ed0fb5a08f"
+    },
+    {
+      "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\optimizer_round3_20261011\\confirmation_qwen_01\\steps.json",
+      "sha256": "a7c26f23df7880ca7ac55a45b496478cc8cf5cb2924ec9c319877fe99b3676aa"
+    },
+    {
+      "path": "C:\\ClearEval\\ClearEval-public\\scripts\\cce_validation.py",
+      "sha256": "d272393ecbba84495e0430d01c0b52c4f69a6d9502147bdb071371dfed2bdc20"
+    },
+    {
+      "path": "C:\\ClearEval\\reports\\cleareval_20261012\\automatic_time_scope\\threshold_01\\confirmation.json",
+      "sha256": "28e62e9832d11d358e4d6d37b1ca500527c7ffaf3073379e262136a94cf2e7b7"
+    }
+  ],
+  "encoder_identity": {
+    "model": "all-mpnet-base-v2",
+    "weights_sha256": "78c0197b6159d92658e319bc1d72e4c73a9a03dd03815e70e555c5ef05615658",
+    "max_seq_length": 384
+  },
+  "used_vectors": [
+    {
+      "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\embedding_cache\\672a90021e9cbb98317fbd494f9698c3fbae5a20eb09f98f216bb853578c8a4d.npy",
+      "sha256": "03138d59e4bf5c71b8cd3dc67da9e019c40ccffc384b238273c0a59d6a4d924d"
+    },
+    {
+      "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\embedding_cache\\6dcedbc22f539451f60505aaa9c9b716e4f0d3099f0ef4ba6f20d1b0fdc89aa1.npy",
+      "sha256": "d55314b4a2a10bc21bb74698200d68b3dd8d93569cc6b3fd4f690cca3fb6341f"
+    },
+    {
+      "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\embedding_cache\\4df6ae235d87b332b2a8a0c5aee86eb70be272b13baef42747a30fd5ce53b686.npy",
+      "sha256": "4036627be8861dbce36ebaf84defaa78f9f840d9a0a2bed8fe414ac0533d046d"
+    },
+    {
+      "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\embedding_cache\\7448e019d0b3cf63a13ebf373a17b1b5095936e3dbd15a8bc13662acf8cdb400.npy",
+      "sha256": "66088aaa9358b68ede419ab17d3cb03d96bbd5effc9dbd3c3d3b14449b4c5485"
+    },
+    {
+      "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\embedding_cache\\5352a8f91944c15fc25d23ccc51f48083dd6b6f9f62da1b30c15ed53026df561.npy",
+      "sha256": "1febde551f7c2103817580863c738ea5283c60a5b2c59da9a9d0b6fdd048c7cf"
+    },
+    {
+      "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\embedding_cache\\989b13cc1e3dfc9102bdbbfecdd7fcd5d4e7dd1200c823e11c666ff3d233ccf5.npy",
+      "sha256": "7e3851eda16a3d4aac18f363942769f8ee27a9a57faa5d7c99e8c58ee8f41128"
+    },
+    {
+      "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\embedding_cache\\087dc9a5a7310f08fde9bf7981f807b1519cc62142ae4f8f504b713f71861465.npy",
+      "sha256": "37287087d1337ab48ce3e31146f01cf6668f1cf73615c55f0a2f600e8cc74c75"
+    },
+    {
+      "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\embedding_cache\\acdd9fdf286ffafc98d93d745443bcb91dfa80a80fb1dc66631d40de89d35c7a.npy",
+      "sha256": "0197b0675c5bfc7b0d9dd3daa9676191be7c7a4c026309c93ef8445e0ade20db"
+    },
+    {
+      "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\embedding_cache\\0e889aac026947d097c81d1267f26aa7ffe18c778552ef25311694223a897ce5.npy",
+      "sha256": "8fefb10c01fe34533144f1ee04c1f3c43451918cc97922553a8de75366595378"
+    },
+    {
+      "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\embedding_cache\\147b4daab123028843c4324371ebc0f8a27ee162f15a5f91201b8fb4e28a2623.npy",
+      "sha256": "18ce46012c9eaf336d8121a809dc7706f464b6e47f53fde17ad5e28a61ac4d5e"
+    },
+    {
+      "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\embedding_cache\\041ad27d498ff320799d2a8cf22d1a8a79c0d01774963290a6b3246ca1348940.npy",
+      "sha256": "a9b5112292f1fcaf3d120e2eb9dc8698e5fe31c179187c6793f2d38138aba72a"
+    },
+    {
+      "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\embedding_cache\\09de0439b0e4ff706d8c07fb2ddb4c3e4daa10d3f0bf5e97b5a518f0021676b1.npy",
+      "sha256": "d1cb93e4ce4f18af6b5a9af8f3131f44258983aadac2189c2c5fb2063390ee34"
+    },
+    {
+      "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\embedding_cache\\36ea0dafe4466a00e2f536472e5a2afbc66d1524f63ce6f0f59cfaacfccb6f35.npy",
+      "sha256": "79c41b6b85444022365e493732dd56b11059a0a46d0fc847fc483fe8e4842487"
+    },
+    {
+      "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\embedding_cache\\2f7f1b3e1e9bef9f0869bf202f00a2820ff0e3ffcaadb2a4ffc3fefa5aa3bb2e.npy",
+      "sha256": "f69c7fe412ccae2b4fc6a3432b51c18ea261a873684ef564c2869123ed79da6c"
+    },
+    {
+      "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\embedding_cache\\e679bfef06aacd7d102f940bbf3070236fdb77ac410cb5ff5ae1bfe3e97d11b3.npy",
+      "sha256": "2d5a98421a33f5bf5fe725ee64238230209700b662a727ea03307beb8a895844"
+    },
+    {
+      "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\embedding_cache\\457f7df751671465aa29312f04f3483048b482cc0bbdaf08e299a1e7519fc10f.npy",
+      "sha256": "2e35d6ac98e5c6d7d3b1465215515069a8e3780cb9ae525d3939e9d68858a650"
+    },
+    {
+      "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\embedding_cache\\b678f33fca9b134c74f863e30c382af0afd11e7fa164f93dfb4b026e7eec0fe9.npy",
+      "sha256": "0c60238fd3dfc0602e30fa61d66e02882a189a150cef145021a97b8620c2dff4"
+    },
+    {
+      "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\embedding_cache\\fb87874aa36ade953958f86eeb923a3b51b1d09d086267c26e851cdbce14ae6e.npy",
+      "sha256": "d781220c4f244b0f6fc83dfa7a056e1b2fac36988a12df490678b5a9bece433e"
+    },
+    {
+      "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\embedding_cache\\27e59efb0ae8aa78b08b5489768080c613a8a1b0f04166fdf81fe3d39aea564c.npy",
+      "sha256": "655a0c27484f52791ce383442205578b6da914d8ddace6144d23029e908f4bff"
+    },
+    {
+      "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\embedding_cache\\15cbc24def0d3e353a67be8b17a88ac9e42c2bdbc46664fed5c55a1a1c5029c5.npy",
+      "sha256": "f82d919e194587a743fb2ed028fab5844de93bd1dfcb7a6adebac42ce335a0dd"
+    },
+    {
+      "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\embedding_cache\\3cb3fbf1472015ed544e823fca36c33f1afe4e7bfcb942f818c5b9236f8ce314.npy",
+      "sha256": "39dd92d4ed9fa56850325b21460c0840fcf8bda8c7ce7a85f3ab3d60a5cfcf3e"
+    },
+    {
+      "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\embedding_cache\\0dbd00c0ea83e6596aa05428559e62ceec512a7a35518f2c97afdd8a17663c4c.npy",
+      "sha256": "12f0fb206c29becaf87090a8d0515ef9c11b1cdca5045cfec9e7ee144b9e691c"
+    },
+    {
+      "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\embedding_cache\\087939953cdbb79aef21e6649e1af08d6637c2edf273147035ec181d88d29d5f.npy",
+      "sha256": "319c8f833bb7ac2d4940c1d5d7dad9fab20ce34dddacab43e324ee4adb532052"
+    },
+    {
+      "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\embedding_cache\\c56ef87ba33dbdf51368b09ebb6cd7fea2974319e565ff65b92c17c2cb1f0f24.npy",
+      "sha256": "d0d0feb4080c5e3fc92902945f86ad68cf8c479ae73bdfbc4b65e33daf52214f"
+    },
+    {
+      "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\embedding_cache\\f57bbddf2a97000b9b5621f09c2c161c69875b5dd70923892b3966758f7cb7f7.npy",
+      "sha256": "530e3e639e938c13d95f65e6fd791b2fc4c12483a668698a147fde7707862926"
+    },
+    {
+      "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\embedding_cache\\a4559b149741ba66e9969ff752158afbd76f5fd8557b71010ff0e2e8ef209e0f.npy",
+      "sha256": "1511983700cce6c10281fb4e46180c695594f2aafead698d963320f2fa860bfd"
+    },
+    {
+      "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\embedding_cache\\8d63815a65baf0dc41d345857620dfea8eb7dbfe7a0aace06ef43f393b97640a.npy",
+      "sha256": "e55ff51b43fabd040f0bd082ccf6b5264879bb540cd07c60daf2ca962e1a13d9"
+    },
+    {
+      "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\embedding_cache\\570d248eeeb7122fd339ca4bc16cafb0c9119d3bfb80793c1e192e12ec2dca38.npy",
+      "sha256": "ea65508a5c3124cfff7e9b125dc42c2b0c89a78400e5df4efbabab55a12234bf"
+    },
+    {
+      "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\embedding_cache\\03a451f74c7759ff5e8dffa86f96966a4a3fbbfa94ec0ff56fbb8cc912595a4b.npy",
+      "sha256": "e38c856edfd36c4ed32ce5abef9039e770eec4e141a1bc2914f1cc710a14ea98"
+    },
+    {
+      "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\embedding_cache\\66e1917865ab4e70a639ebe3b719c4cd3b034397bb94c427de7e8716e401b78b.npy",
+      "sha256": "8a15cebc2f3abea7bdf9283953d3e593594038fca31e28d1fc98e59a48dc1ebf"
+    },
+    {
+      "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\embedding_cache\\9ee9e4ab71d08eed3c9674c6caaf187de0b26d06ee6d040ed21eb2f686771b96.npy",
+      "sha256": "1daedfb56f8432434dfc83c653aff2aa0b6952d8e1efdf1937ab2873698d07cd"
+    },
+    {
+      "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\embedding_cache\\a76cff9dcf0be99173975a6add9c908ae9c0cd20192fd005eace0696a6a70a5f.npy",
+      "sha256": "b51e47459c62a0b6e80f4de431c4aab9a8ff87a58f50d9d6afad05e480c7a101"
+    },
+    {
+      "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\embedding_cache\\80ab0b863713a0ada2813f53ad05cc074dd1d744f4ce71394a6a702bc5b83ce9.npy",
+      "sha256": "c55e60eb0ce9da6d24f966317c6acc31bb05620c6b8836bd0b3e9edfc3ec360e"
+    },
+    {
+      "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\embedding_cache\\069c39af3f9b32dbd45dc547381a2d3c669dc906f00938f490abe0624d1a2875.npy",
+      "sha256": "bedaf3fa94b03b2a8444a6a9b4a4c86813fd229cd02c8d31c7386270dc010049"
+    },
+    {
+      "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\embedding_cache\\600c9145d555f137f0da02c880a7fdc060b3e9577d9262e35f9180ff3febff25.npy",
+      "sha256": "64ce5778465e42fc23e389c0ebdaabfdeed8e00ae32442599722991540195192"
+    },
+    {
+      "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\embedding_cache\\f43d4bcb2de23761c56022358560db74b4a0c2c16c4ec98ac7f14d62214dc9af.npy",
+      "sha256": "9170e9ef97c4e3f309f5ae150fb78c51379e5389dd0e4088b87fc5e592c7f5ea"
+    },
+    {
+      "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\embedding_cache\\60b274e90d727b5225b3c105951d9597646cca184579750545f30d326036ab77.npy",
+      "sha256": "a65e39b950a5ffc71a469138436e1be6b374862237bc8e6338b8207535181509"
+    },
+    {
+      "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\embedding_cache\\cf77d7787987b9098039aeea4bc005aefe64ea2fc0098bb61f8a18ca2ff701b4.npy",
+      "sha256": "fc9dd04f408c66a7dc62b7809a703fa27075f2c6ce0a0788383ad5ba806bb545"
+    },
+    {
+      "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\embedding_cache\\629895e453f15588a7de17c14033aa8486622736b0716055fa638a68a2b3536f.npy",
+      "sha256": "051ec57572f4afafec5a5024b9fb52eb8a4ce60e8e0e3a18e8cba2623f63efeb"
+    },
+    {
+      "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\embedding_cache\\5cd0236521490b57e82de88e84461549b8198ea6d857ecb9b3e1bf9f7ebc7648.npy",
+      "sha256": "1e9a7189d4740f163dfb437d2e84bd34f0c85a19bd56d1ca55b099f96c576cd8"
+    },
+    {
+      "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\embedding_cache\\0b1b0c9e7df7f361349d29912c8bfa8ebdabdad50e2f1b54b87718244fb2f1d0.npy",
+      "sha256": "2c1c6073212915598b5003db0c28d95a1229e21e66969e250e7de0e61fef46a1"
+    },
+    {
+      "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\embedding_cache\\9384d13b1b3e719267d1af93657199f910d0b288bc4b8c835c79a5345c7e4bf0.npy",
+      "sha256": "ddbecfb9342089c9396c30234a86a0bb38206144d323d534d81fe1c66ceb84aa"
+    },
+    {
+      "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\embedding_cache\\1cf07510384efddb3f448229fdf3fb21ddd5bea81ed389a6e9be8343af267b8f.npy",
+      "sha256": "d8fb04e9139218e800952e99e24bfb31949b0ab8e872cef58eac887027b337ff"
+    },
+    {
+      "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\embedding_cache\\96a01e091872359ca0bd27e4a8fbfc7463ee7dbcd8b1c0bffae94516de8145bb.npy",
+      "sha256": "01fec65d8639b841388048c6ad08c6657c22e1e792013dbfec3c6c23e2ab4a01"
+    },
+    {
+      "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\embedding_cache\\c017d741bf90cf32a8838fd194e1771d57260fa153d77b9926da4db41af23079.npy",
+      "sha256": "d727cd148d11196de906ac4d4d0647e5cfb4de913cf2331f0a92fbe9dbc5e4b5"
+    },
+    {
+      "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\embedding_cache\\d6fcb7107af74b3bb1efe73a4389fa272bc319a2340b752b166b0e32e77ade21.npy",
+      "sha256": "0de64e8e443b825c367dab1aebac630a5a6cfd22f979127a7a7f94666d428dad"
+    },
+    {
+      "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\embedding_cache\\f8ec582c9504a1d0a403bfe03946e4912a93aaa95f841c2afbfc2f3c4c6cb3b1.npy",
+      "sha256": "b445749fc435a6b8c7a315783508aa956acdca34d037ae106edd0e36e0986cf7"
+    },
+    {
+      "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\embedding_cache\\2642365fb5ed83e7f74f73483819693a63e5bdba2c59980f443cea47f60e7f05.npy",
+      "sha256": "57c8dd228e5b0ab330981326d141627ad1b13013a9ec6debaf049c7ffa44520a"
+    },
+    {
+      "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\embedding_cache\\92016b7972ef6a18c831d8fb49d9933d6a2c1c47702a998ac3db3821f5b0bf01.npy",
+      "sha256": "72ec322c33b865ed441ef539fba5a5aac68d71d7998e0a6d8f28711bae4400b5"
+    },
+    {
+      "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\embedding_cache\\c9ac1bf0fb53dfe1fe0b93bd11b2befae72e3b8f3ed7df05bafecb04c4d62f3b.npy",
+      "sha256": "89f50992331d87fa5e06aa17a21cd4d93501eb2c6a80e4805b60c2e22819c041"
+    },
+    {
+      "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\embedding_cache\\eb4c64065c21904975cc6918f2bdcfb4b158bef31aa396dfe4e88a210656354f.npy",
+      "sha256": "a5c47ef30bf1d42e258be969b081d83e4bc5810d8a854d951f803423bdf3478f"
+    },
+    {
+      "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\embedding_cache\\f562afdccddac77bac3e7f15d1e4095e1a214fc2917f6934a5647226c3158180.npy",
+      "sha256": "e78abaa82049ee5ca2f420d73c5809f9247942317b6fc3d32c23fab24f28d900"
+    },
+    {
+      "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\embedding_cache\\15d76f2afe74917db9f8df5e6b59a46ddd05d175400f2dc19e131e51fddb08d7.npy",
+      "sha256": "a2b0aaa7165de8bdd6dd66840f3840ea577e2d452cfa597bb28475be5f557b78"
+    },
+    {
+      "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\embedding_cache\\0ffdfdad017c11e45cd863cbe064459a0aac48b91e46e965f8b93300522f541d.npy",
+      "sha256": "84cebf75ec66b436061567947cea0b8b2c13f11536a33ff8ec246042f4925ee0"
+    },
+    {
+      "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\embedding_cache\\1d8f5f7234955c552a72ab7663f66aca2f998fe4b3ef37a53e0784adb95d2f4d.npy",
+      "sha256": "78ccbe71e0a2ac68878f5960b417777fcf99d7fa0f9b6acdf25e704eafc77a8b"
+    },
+    {
+      "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\embedding_cache\\68c3eb99f371b7fb98de8f1e32cc5168d9da5b416ccb1166f45d83fae329a441.npy",
+      "sha256": "a715a78fe2f2126cafec3bc27d97c1a248f9e680d83543edb8376275ca2048e9"
+    },
+    {
+      "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\embedding_cache\\0a74b7dbd8c6eb3db3451484ad7bee20f208ef37cb9ac7c3d80fa793963dac8a.npy",
+      "sha256": "4a05e237c49735adc598553a0b45be87840bfa4d9d6c841aca73afa0a43868e3"
+    },
+    {
+      "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\embedding_cache\\0b21bd5a5d0bcf409ab27fe293274353318a9b425dad278b96dfe07193e7ada3.npy",
+      "sha256": "214755fef4b6fdcdbc1dfd4fbd568372e6978ccd13066840970c7dd80d40381b"
+    },
+    {
+      "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\embedding_cache\\1276726354538c655babbab9995d98dfb5829fd27afe0ce709e9a049c08001b0.npy",
+      "sha256": "3373fb26f0a59aef811b3981ee4201bf7b644910d4564c06c68f5bfd2e17268d"
+    },
+    {
+      "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\embedding_cache\\034bf0f6e2da5c82859dfaca20438a09fc12747f86f2431fa0b625c47d1de5b7.npy",
+      "sha256": "8c6dbe33109afda23f83c0ed0891882aac428d5af9fedbb1701d60f0f1f0f569"
+    },
+    {
+      "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\embedding_cache\\63d7fff524dcbfa9234e75cfcf45a2b225824381dd1fab8ff16a4ea6be9b7148.npy",
+      "sha256": "cd1c338d1968175cebc9ee85fe48573602b89ab7a4fe3db47ef8297d846c2e27"
+    },
+    {
+      "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\embedding_cache\\2edf8bdb4947a9c9de9f1940cdf9afb123fe7124642ceefe6fed151b42ad5346.npy",
+      "sha256": "7f417375d172cc0957d2f0748967f0c105be01cf521d9125f1048f973c5193f8"
+    },
+    {
+      "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\embedding_cache\\aa802baddf5bea15725491fbbba1520d22ac526085922fcdc639834358a8b2c3.npy",
+      "sha256": "3050876c16e898cf96e9a4500f3d63540a0e73696de0634b6e284ec36b9fe4be"
+    },
+    {
+      "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\embedding_cache\\716c3ff991b7649880dff89cd710901d3b25ae738019448e3058a2da96f4d948.npy",
+      "sha256": "f24ee6ae39c64098b69be04f1b5ee5d9845dfa71ec8d7d3402555629bfd44d8c"
+    },
+    {
+      "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\embedding_cache\\c79555c6d12faf9093c025f372c0cfe343a901632bd5497e0bd5fca68e9c2d83.npy",
+      "sha256": "ab6dabd514d16dc1c7b39be640f2c846dde374e94f2ebe2a5756bbffd8e2a26b"
+    },
+    {
+      "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\embedding_cache\\8b75979434ff430d972517ce4b5e48afcfde153fed11ac4e8f8e23958a5d311b.npy",
+      "sha256": "2746d7c988cccd387654d0852bf660a10a28ec61f6d98de8b0192e2f3d15aa4d"
+    },
+    {
+      "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\embedding_cache\\d40055d23c8c84caea84ffb443b86c80873b6e7703f4b91c9ac7e8ed3232b51e.npy",
+      "sha256": "ad545eb86609829c7b6ecb3f4314b6324ad5dc2b607d3d98588d1452c45ecab3"
+    },
+    {
+      "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\embedding_cache\\630c38f936f18c921cbf332aa7e0f9750bbdf2633481e4301b899554fcbe4f9d.npy",
+      "sha256": "ec4865cf81e3f1826cc0fb660e68fc497b76d25320e42c319d6b982886075f18"
+    },
+    {
+      "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\embedding_cache\\9f05b43d5d6b7c80abc285ef4754b4e50f441ae41b8b1251727e4b899dc43515.npy",
+      "sha256": "96c09243de16a7ec32d66ee9ca4107ec3f0c41fb71d9ab8da5a1eaa31240d60a"
+    },
+    {
+      "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\embedding_cache\\fd569a717c6ecfcdb34088cd4859195303dc63a4060d61d16b0ecee148502d54.npy",
+      "sha256": "0627c8a0c7fcabc83734e3a8d2d49f3d964719c16cbb8a360566195a6e2db216"
+    },
+    {
+      "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\embedding_cache\\5f77c817afb1b784bcbbaf52450e2a2602837235c1f6223b71c4bc1df63185d3.npy",
+      "sha256": "fa9594e4fab35b79d9bc7fffc0ace2120b58a1b7d2b71ef7103823898448f955"
+    },
+    {
+      "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\embedding_cache\\440bfcb663856098235f59b028d8af63a39183e9c57f5b29cc00d095fa5b11a1.npy",
+      "sha256": "ce657d9538ed722b5de27e73f7b98137fcaeddcc5704123d10fa0c8b232e0878"
+    }
+  ],
+  "created_vectors": [
+    {
+      "path": "C:\\ClearEval\\reports\\cleareval_20261012\\step_language_probe\\new_embedding_cache\\d3a99db84071bde70a661502887f3d62ad4253a41b5cdc5b34e2fe64a57ed297.npy",
+      "sha256": "4500932bb489fa36338f3736fef41947703ed20ed488e3db2dd8bbf82bb19da2"
+    },
+    {
+      "path": "C:\\ClearEval\\reports\\cleareval_20261012\\step_language_probe\\new_embedding_cache\\b05704cf9a6f7ec75f098935ac60df1029d2d36260537d7d342aeb5ad11b6011.npy",
+      "sha256": "7b1c07984f79317cf96e50fcd09f39c77cfb4a5dd7daf42b74291ed1104499f4"
+    },
+    {
+      "path": "C:\\ClearEval\\reports\\cleareval_20261012\\step_language_probe\\new_embedding_cache\\43293593b5c638c57f73b535a0e6b8247ba1a8f8b8bbc55b4b8e4e1c1effdbeb.npy",
+      "sha256": "8d54b02ce1dc1a6edbbccf6b416ec9d4987ea8e54efd49c054a6c1eee3a15c05"
+    },
+    {
+      "path": "C:\\ClearEval\\reports\\cleareval_20261012\\step_language_probe\\new_embedding_cache\\bd25a652240ec3b4d723255abbe4b6cca1df4655bad38a2bbcfa034a1515b994.npy",
+      "sha256": "f0a967915a343425d31672107acd1cd7b358a50c44f8619931f48fa4e2aaf398"
+    },
+    {
+      "path": "C:\\ClearEval\\reports\\cleareval_20261012\\step_language_probe\\new_embedding_cache\\c4d8e2b8aabe8918b4f5d28ee468fe55a43a57d430c690272da6f18909f57ea1.npy",
+      "sha256": "e194ad43feafec55aedf7c9554cbd92ab6fcd71bce3410d2a4fcd4ac97ba5703"
+    },
+    {
+      "path": "C:\\ClearEval\\reports\\cleareval_20261012\\step_language_probe\\new_embedding_cache\\98ea4c94075f4d163470f29cec8e00bcfcb97227283264ab50bb0fba2e190a5c.npy",
+      "sha256": "a70952ce0e8d984b4a4871aff0c2635f6d755aa89d8460dd35d6c688b6157b53"
+    },
+    {
+      "path": "C:\\ClearEval\\reports\\cleareval_20261012\\step_language_probe\\new_embedding_cache\\9cf52368b59c00d9102a481a830ea77a46451e01746f9d6864b36da81c43a941.npy",
+      "sha256": "9de591856aac9f15fe477bddc3b20f72db93d862a57181026ae9f52b63da59f5"
+    },
+    {
+      "path": "C:\\ClearEval\\reports\\cleareval_20261012\\step_language_probe\\new_embedding_cache\\d8519835c780b6ba5794f41360325ed657185c9d96aec9987f7855c744152b7a.npy",
+      "sha256": "bb47ce5b73f71f3f420281f525681fb68ec3cbdd3bf04cb4cd665a9aa44674a4"
+    },
+    {
+      "path": "C:\\ClearEval\\reports\\cleareval_20261012\\step_language_probe\\new_embedding_cache\\42b02c396693aba33a470fae57debf1715b8d9c28c905ee48d51b85c83a8154a.npy",
+      "sha256": "e47a02a15d0e96c79a924a2fd784bae854615f3a07751e694f7bedf4df9fca9e"
+    },
+    {
+      "path": "C:\\ClearEval\\reports\\cleareval_20261012\\step_language_probe\\new_embedding_cache\\d8958afef0f4b807e69a3dfb5adf93f88b3f6aa40a95471840887e0b70b37b75.npy",
+      "sha256": "37ca02cbf643cd6bd4d4dee16703993635f7ae7facb2b0a12fbb0857c722b1a7"
+    },
+    {
+      "path": "C:\\ClearEval\\reports\\cleareval_20261012\\step_language_probe\\new_embedding_cache\\313d6943a390664a2952ac1931cf1c90b638a85b855d5a1723f826eaa98d5d29.npy",
+      "sha256": "56e28be3d48eabe2af2259f4a8d80cb48cf719a7246d0fa9b60c05ac888badb0"
+    },
+    {
+      "path": "C:\\ClearEval\\reports\\cleareval_20261012\\step_language_probe\\new_embedding_cache\\3138a8a2572517ceb3cc235be494b54714057f42ff78efb6b1e8ba7693929d62.npy",
+      "sha256": "707c4d81b70809fe56cd9354fed82a3819aa4c968deb9f6b94b2bed04fd2c881"
+    },
+    {
+      "path": "C:\\ClearEval\\reports\\cleareval_20261012\\step_language_probe\\new_embedding_cache\\255cb52176405f8e5c72fbf07a7e902e137fff94a4cf821adacc6bbfbe8f5464.npy",
+      "sha256": "4cdeb1a6755dfdca5018bc9c52b1eab3f3d3cead05fdfd16af4d254daf77559b"
+    },
+    {
+      "path": "C:\\ClearEval\\reports\\cleareval_20261012\\step_language_probe\\new_embedding_cache\\c31013368aadbfe13ee7b38fe51ce6c7af4b427a486f92229ae2bc721097dd04.npy",
+      "sha256": "4197ca8ad630800fb27727cd86addb3e9d4a4ecb45709431e7e33cd1bd9d4832"
+    },
+    {
+      "path": "C:\\ClearEval\\reports\\cleareval_20261012\\step_language_probe\\new_embedding_cache\\6b11b5f74417ba861a89e8a5e6f70bd5adb96642b8f1f6106e094724b691ee84.npy",
+      "sha256": "a9518b280f3a48b7bf1e50a86ecdfc5fd95a6ddbb003dc7565e3c7de24935c5e"
+    },
+    {
+      "path": "C:\\ClearEval\\reports\\cleareval_20261012\\step_language_probe\\new_embedding_cache\\1cfeb7b4a6c387875052b2c962cff23c12a3697cc40b3febc3a070f103e1375e.npy",
+      "sha256": "611dad0370b9a2dc643bb87180da21095f327a184a65f5d4e344b20033363d07"
+    },
+    {
+      "path": "C:\\ClearEval\\reports\\cleareval_20261012\\step_language_probe\\new_embedding_cache\\11f8f27113a6c338cc834e199a2f10ffc4e95c30b59b81fc0d7d9db5085cefa2.npy",
+      "sha256": "377c5d435fd9e5e85d4a3da59c98d12896e72bb51f1fd3dedf1e7caed16e4bb9"
+    },
+    {
+      "path": "C:\\ClearEval\\reports\\cleareval_20261012\\step_language_probe\\new_embedding_cache\\1c9aea8dbad9c03fccf7af293a106fc71c7241fd6f9cce6fbc85543dcec11542.npy",
+      "sha256": "f546fcf68a1047daae12b100a69cddd4e55a6fc2599d3770a651563033020a5b"
+    },
+    {
+      "path": "C:\\ClearEval\\reports\\cleareval_20261012\\step_language_probe\\new_embedding_cache\\f25681ef6997a46198494a5c2b668e27f31baf768d9f0ea2374c36613f0bcb86.npy",
+      "sha256": "da0c1e6d5548a07026ff03f6140f9d5c63b6825cc067088d21357b8b2421302e"
+    },
+    {
+      "path": "C:\\ClearEval\\reports\\cleareval_20261012\\step_language_probe\\new_embedding_cache\\aa8fc0830695c7c316ff8174eef8af464af9fab457a3ce0233670af612a5cbfc.npy",
+      "sha256": "d0dc44d70864bbd21b072137d3585a69d06f5bcf9dd6fdbd78ccd65817d84a35"
+    },
+    {
+      "path": "C:\\ClearEval\\reports\\cleareval_20261012\\step_language_probe\\new_embedding_cache\\7534b4ae388debfa0209105943b136afde111032272c0f34ac6c159145313649.npy",
+      "sha256": "0c122e5a071bc7f7c97b2c0832ed3de5346d5ce1a395554712d019a0d610bc58"
+    },
+    {
+      "path": "C:\\ClearEval\\reports\\cleareval_20261012\\step_language_probe\\new_embedding_cache\\e1fff7fe20670f8425abc070e7169ad99a995a4b140ae7eb2ea8ec7cc158e2e5.npy",
+      "sha256": "52121a9a9b66c0d0cdd8ce7d5224315189209bd0bec9a1d8899e2f786f3ed1df"
+    },
+    {
+      "path": "C:\\ClearEval\\reports\\cleareval_20261012\\step_language_probe\\new_embedding_cache\\4c94e62d86634ca049d5173481618440c013045b4a144eacd785968e0ba53b64.npy",
+      "sha256": "05c398b7e22922e0d890628562d7e6cd7a613606f6b15bb8beb0a592779cb482"
+    },
+    {
+      "path": "C:\\ClearEval\\reports\\cleareval_20261012\\step_language_probe\\new_embedding_cache\\6cb0fefeed99493171a857e4e1217679c5d3109470355b43099b06deb2d0b9e6.npy",
+      "sha256": "5e8337de75058c86def59db97fb70f33a92821de3bd3cde4eda145a89af8bf85"
+    },
+    {
+      "path": "C:\\ClearEval\\reports\\cleareval_20261012\\step_language_probe\\new_embedding_cache\\74a42e51e136da38e9038436c12598da73fba3ca863b1b576031f7b157dc5e5b.npy",
+      "sha256": "4bc5c358e4cc4c49c06cfecaa8e6197917ceba9367cd93df70508789b31b5459"
+    },
+    {
+      "path": "C:\\ClearEval\\reports\\cleareval_20261012\\step_language_probe\\new_embedding_cache\\6734eb270c4ff4f73018794b408f46925414e26bca5d5a776f5cb241f590fb7f.npy",
+      "sha256": "09c04944bf4b81859392bd50993faded585e191544b9d5708cd5a1753e4e0bd6"
+    },
+    {
+      "path": "C:\\ClearEval\\reports\\cleareval_20261012\\step_language_probe\\new_embedding_cache\\2535720e446a75b941a7fc84d0f6db10712e8f3ed1cab6ab49caca92b783d2dd.npy",
+      "sha256": "e30d81bbad92beae5c1b4e42ba4641450d37e0117aa7a6eed869608a52dd6c1f"
+    },
+    {
+      "path": "C:\\ClearEval\\reports\\cleareval_20261012\\step_language_probe\\new_embedding_cache\\95fe0abcde1f816319e02e5d6a927de8ad05cbd91db7493fb3a4ce119f320b4b.npy",
+      "sha256": "1fcc259d620773468fc24e008d46108a5e149ae69ab056f0506a8143b19d5234"
+    },
+    {
+      "path": "C:\\ClearEval\\reports\\cleareval_20261012\\step_language_probe\\new_embedding_cache\\117fd570da763138c0c0c30bf7c6aee439b947a06eec978646f57348f74837e7.npy",
+      "sha256": "76d0edd5052436f5923be4d97f6186d02949d64d96c8bc9ad8377d3c73d3aaa8"
+    },
+    {
+      "path": "C:\\ClearEval\\reports\\cleareval_20261012\\step_language_probe\\new_embedding_cache\\e6ad9fac06449fb51579d1557a5d1eb32a25056a0fb98e38841b479b2a9ee0e2.npy",
+      "sha256": "0cb408fec2074008658d354c45a20e8828d677b423fffb98a669f20cd1ce22c2"
+    },
+    {
+      "path": "C:\\ClearEval\\reports\\cleareval_20261012\\step_language_probe\\new_embedding_cache\\f08ad03febea7d8a3ffd7ccbd13cefaac80f64fa27ca3bee625b202c23a073c0.npy",
+      "sha256": "c609d44d8ba629d403403ce58aa99951f0d7d2987fa48e7432b4d2a3c2550165"
+    },
+    {
+      "path": "C:\\ClearEval\\reports\\cleareval_20261012\\step_language_probe\\new_embedding_cache\\78103dec455fe6e597f411dd5b541e114c1d6b7e91c77ac1f82400f300ef01cc.npy",
+      "sha256": "6b1f62efd6e03ac3e57ce8dc0b1f6338f39e3a5b6afe6b977271e16913aa87a9"
+    },
+    {
+      "path": "C:\\ClearEval\\reports\\cleareval_20261012\\step_language_probe\\new_embedding_cache\\bd8da846bb78248008fb429194489b87f3eb7f376e58ada9d8fa256fbdd0a608.npy",
+      "sha256": "cce93d01cb66ba2c946a80a3701de6a82351ed0fb40903d8c61bcead601d88e6"
+    },
+    {
+      "path": "C:\\ClearEval\\reports\\cleareval_20261012\\step_language_probe\\new_embedding_cache\\c895f8055a09aa69cd78940b9215fa90cbac3ac64edac3ba6f5a1c7563330a4f.npy",
+      "sha256": "924fdab86edd68d2889747c691b799c4b986a7de96d53c3241ce3a14eb5498fb"
+    },
+    {
+      "path": "C:\\ClearEval\\reports\\cleareval_20261012\\step_language_probe\\new_embedding_cache\\1dee562c96463651ae5c2a8ac626d377a667f3ba6fe6b2c59914157f31fd73c7.npy",
+      "sha256": "f94a06efbdc6df486a76250cbb3bbb35f43b7baef59bd614eec2fefbe126784f"
+    },
+    {
+      "path": "C:\\ClearEval\\reports\\cleareval_20261012\\step_language_probe\\new_embedding_cache\\bf940c36a14ff8d83e5b7c782c4f8a81cb2b33a025d11412ee1b64d39b3e0cdc.npy",
+      "sha256": "5123f90025efba1f9b7edd5dd5f69816a2324bfcb17a9a40b93ca64fcc580c33"
+    },
+    {
+      "path": "C:\\ClearEval\\reports\\cleareval_20261012\\step_language_probe\\new_embedding_cache\\8f247b82eb2a5cfa92fa25ed2255bf3a2cb7ad322d6f30fabe4fd96f72ce9cf2.npy",
+      "sha256": "d37ede43dc2a79531bf216b0fe69654512daa91281e0000bb40de21120dabff0"
+    },
+    {
+      "path": "C:\\ClearEval\\reports\\cleareval_20261012\\step_language_probe\\new_embedding_cache\\c64d702ec798c8140bdad60d68aae8fadb41da945092ae02269534a79c7678f5.npy",
+      "sha256": "35d2c48d5536e03de0398ccab2cc61e3547f4878ba3493412f010d62c480c4cb"
+    },
+    {
+      "path": "C:\\ClearEval\\reports\\cleareval_20261012\\step_language_probe\\new_embedding_cache\\5940a43bae3225f50b0736c496fa1cfea6bf7ec9c5410d289df03222f993860d.npy",
+      "sha256": "fb3ef134fef33efbeafb6bd66550ed5a318cfa065e12f8f894b1ffd153b8d489"
+    },
+    {
+      "path": "C:\\ClearEval\\reports\\cleareval_20261012\\step_language_probe\\new_embedding_cache\\536f694c4c2c3caae0a7404e835e15bfe342178377ef2315155357188d81db3c.npy",
+      "sha256": "924b91a845d150e0a17afb8f5d3cf0b370a77bdf40631c5cade297744bfeae49"
+    },
+    {
+      "path": "C:\\ClearEval\\reports\\cleareval_20261012\\step_language_probe\\new_embedding_cache\\75f7725b47861c9c5c3b9263087c42aa84a9b2c0c09d6cf67018bd43ff551f1f.npy",
+      "sha256": "f629e4b71274c1e5a13223662a6c2e328e115af272cbd9d42ccf714558611a29"
+    },
+    {
+      "path": "C:\\ClearEval\\reports\\cleareval_20261012\\step_language_probe\\new_embedding_cache\\7f76460f2f45b05555b9fc58aa0065d994a3d17f62c51e4219d1231456dbc15b.npy",
+      "sha256": "e4d5725986f7b84fb105a021ade5892fc63c8479f06fa500f024b812fbcc2a8b"
+    },
+    {
+      "path": "C:\\ClearEval\\reports\\cleareval_20261012\\step_language_probe\\new_embedding_cache\\8bcee8605217b77d57d4e79ef03c1c7f7d68182933848599f4caacb196fbaf70.npy",
+      "sha256": "a517e7f74f435385e6bd90df71990d1d0f1e6455532b93bda1dbdc278e8e8695"
+    },
+    {
+      "path": "C:\\ClearEval\\reports\\cleareval_20261012\\step_language_probe\\new_embedding_cache\\055315b0213989f8186a93bea99c42890e6a6b4bb3729e8bb3e0b661611ea594.npy",
+      "sha256": "030bff49b6173aa184bf0b1540eefabb8f458b0ed2c0ea26d2adbe1a9613498b"
+    },
+    {
+      "path": "C:\\ClearEval\\reports\\cleareval_20261012\\step_language_probe\\new_embedding_cache\\fd9728d2e83abbc9cf68c5da48005e390f109e929851944a05a5db24a4b7a4ff.npy",
+      "sha256": "1b308a304d00747b2d3d40060133c193b19a7d64b7b9787be671c8884aaf6b2d"
+    },
+    {
+      "path": "C:\\ClearEval\\reports\\cleareval_20261012\\step_language_probe\\new_embedding_cache\\c71036cb796f8928c23740947b9d697cd852eda94432696a5d1402e970746ac6.npy",
+      "sha256": "57c4767c6dda8a70444fc6a591706d2fd5c85edf019e4a956d078ab5d1b9dee7"
+    },
+    {
+      "path": "C:\\ClearEval\\reports\\cleareval_20261012\\step_language_probe\\new_embedding_cache\\504c0592613cbf9b41f37b88563c69e035937d2fd1237665b9efeaf018b51e3c.npy",
+      "sha256": "f0e7579812e69e20e6d17b8bfaa7ca94ceeb5f10421b204c2e7f765c422a8396"
+    },
+    {
+      "path": "C:\\ClearEval\\reports\\cleareval_20261012\\step_language_probe\\new_embedding_cache\\d3702d621a046f11e7e2f26b034095f00db36c279fb67d9650d528e7925f1975.npy",
+      "sha256": "a925178a75b327000d191bdef8359406845e8cc6ff7d786852df3c8bc5b94df1"
+    },
+    {
+      "path": "C:\\ClearEval\\reports\\cleareval_20261012\\step_language_probe\\new_embedding_cache\\2af7b5e1c1cd6daeeb2e86045b0e342d7efd56577ee866becaf378a2b0b83079.npy",
+      "sha256": "44b7ea74ac215fb0acf24e05bef4784220c4a041a108d86ac7448bd61700e1f9"
+    },
+    {
+      "path": "C:\\ClearEval\\reports\\cleareval_20261012\\step_language_probe\\new_embedding_cache\\7898534f5c2c4370a4c30ed2bc1203ef505c9d4cd911c0d67add5a18b6593747.npy",
+      "sha256": "18c4ea545a2bb72d7d452f12030101667f20ff1a70ba94c95ffafe5ef098d753"
+    },
+    {
+      "path": "C:\\ClearEval\\reports\\cleareval_20261012\\step_language_probe\\new_embedding_cache\\320813b2e851b83b2f5b7b79cecf766d939f57c275d49a08f0d790e438856ac0.npy",
+      "sha256": "5ab85c22de7489fc3856c4daea0ecb90f01b9e07a12ae192aebbe1b839252d7f"
+    },
+    {
+      "path": "C:\\ClearEval\\reports\\cleareval_20261012\\step_language_probe\\new_embedding_cache\\09bfdb993f40c0c8957bede4e18db07bfba20611247974ac036dadb90a209d78.npy",
+      "sha256": "60819f17838cbcf1defee450fbd75428be60f2155783c987852721998c1bff2c"
+    },
+    {
+      "path": "C:\\ClearEval\\reports\\cleareval_20261012\\step_language_probe\\new_embedding_cache\\a7347f59d9e66466891b23f95a9197562aa384f49009f2d3c717ae1dbfdabae2.npy",
+      "sha256": "8d054fea3939ea9412e3044092fd6e512918b02a421a3a4971f84dd4ff02311c"
+    },
+    {
+      "path": "C:\\ClearEval\\reports\\cleareval_20261012\\step_language_probe\\new_embedding_cache\\42e479f1e2d315d19c517646e694d34de560f27a2ee19595379c38b2c7a1778e.npy",
+      "sha256": "11991c9662ba474606fd2a348d61bf3e7df6768912f37fd637f1a5d5204d26f8"
+    },
+    {
+      "path": "C:\\ClearEval\\reports\\cleareval_20261012\\step_language_probe\\new_embedding_cache\\adb41d970d64e47c39ee918e9d706da6e8f62178f8b40f14bd64718c74b0b96e.npy",
+      "sha256": "0c8312a7cd5c3ae6d1f5cf1083b1f9b0e7a2c4a16da35a0163480c89e8c06827"
+    },
+    {
+      "path": "C:\\ClearEval\\reports\\cleareval_20261012\\step_language_probe\\new_embedding_cache\\09be37204107abc8bd42a371cd0ad2ac8a15a6a165f970bcddb953477aebb578.npy",
+      "sha256": "98c240e2807e1cd2b2042e30a7e1dc7541fba59a05be0471ef7f2428feeaeafe"
+    },
+    {
+      "path": "C:\\ClearEval\\reports\\cleareval_20261012\\step_language_probe\\new_embedding_cache\\fb34265d8922e18745a782cd76d22edd6bd1d271dfd1a58627b435678e832c6b.npy",
+      "sha256": "ef36175355c69ebd3cc1bc02df0fe26bb2ad5f50140180da58f823da9f4570d2"
+    },
+    {
+      "path": "C:\\ClearEval\\reports\\cleareval_20261012\\step_language_probe\\new_embedding_cache\\c7e37dd935346490df1a6f01382ba97e0f6e861f88a8f0d5d86ef50c29365dae.npy",
+      "sha256": "091a0082e3df8b6c2a3e1b18f86ac3f4e1e625619fc14d21987de5de638ff29a"
+    },
+    {
+      "path": "C:\\ClearEval\\reports\\cleareval_20261012\\step_language_probe\\new_embedding_cache\\1e499295e0fc60848a27bc67211314791e9e869770064263e659d245f06949d2.npy",
+      "sha256": "029f9fd46a5c1e047fad927a60fc552878fcbb4a27e927c052cd963cb12afcdc"
+    },
+    {
+      "path": "C:\\ClearEval\\reports\\cleareval_20261012\\step_language_probe\\new_embedding_cache\\ee776200ae514c36a55cb16f9331a1355bbb6808b915d8207987353160d74ce3.npy",
+      "sha256": "fd851b1419f0970b5ed62b4ada611d16f6ffd00c975f3e65778c2029fc71fb06"
+    },
+    {
+      "path": "C:\\ClearEval\\reports\\cleareval_20261012\\step_language_probe\\new_embedding_cache\\3065bb873179f134fbdc49f514c3db16f193942cc1830927981c71f73cf103c2.npy",
+      "sha256": "b6ee0ec6982b345c561d805490d87e6a935720654d997f8afc6985d10949ac15"
+    },
+    {
+      "path": "C:\\ClearEval\\reports\\cleareval_20261012\\step_language_probe\\new_embedding_cache\\cc662d8deafe900a81d2989de985b8fd7358d20a8398acbb78f4272acedf00fe.npy",
+      "sha256": "456b53e66bf9c9b4acc2cad16082d9fb776d13b9e26d43cc16b0e77be4080b8f"
+    },
+    {
+      "path": "C:\\ClearEval\\reports\\cleareval_20261012\\step_language_probe\\new_embedding_cache\\5546dc99bb6f91c3adb606daf44c242692f8123b4b075e1adc3f9dc760f4215f.npy",
+      "sha256": "cbbb367b59d1091870472b6c77995e2ed7a0b5f9a25c51a9ccee295f207163bd"
+    },
+    {
+      "path": "C:\\ClearEval\\reports\\cleareval_20261012\\step_language_probe\\new_embedding_cache\\ba1525b573c07ff9ccaa9f11750b9df3794b0cecf69610546705ce0b450ffca8.npy",
+      "sha256": "668eb301b03e54136292f08d651d14b0b99a06998eba743687d0512ffb7261b5"
+    },
+    {
+      "path": "C:\\ClearEval\\reports\\cleareval_20261012\\step_language_probe\\new_embedding_cache\\4c99c23bfde2c4537c5a7ea37153b2c05a7acfc0f155be395a356f7d5e1c8195.npy",
+      "sha256": "33057e4d6178883848b773745df1007a4496e80f1322052e859e01be08847c77"
+    },
+    {
+      "path": "C:\\ClearEval\\reports\\cleareval_20261012\\step_language_probe\\new_embedding_cache\\af7a7274ac48d96f5dacd7b9fde38dc00b3715e632ab523bd08e8855c68e90a9.npy",
+      "sha256": "e21db34f9fdabda32420e1c79fa06165a49796f0bd2fea4412d9f5b0981c53da"
+    },
+    {
+      "path": "C:\\ClearEval\\reports\\cleareval_20261012\\step_language_probe\\new_embedding_cache\\9fa78e99e17893ad9c93df774f6bfad247d81a539543d8512fefc5db7c21f548.npy",
+      "sha256": "41791fb85014187c37d74787f1df6019800f91eed8a3fab204401b93c2e1cc83"
+    },
+    {
+      "path": "C:\\ClearEval\\reports\\cleareval_20261012\\step_language_probe\\new_embedding_cache\\9be8524b9d9bdaa8e15d6ec55271fe5707c416cd5c6cc74ec73f8fd0727699ee.npy",
+      "sha256": "fc0bc57335bf6915dcb2ef662a0901395b972ac5647bfa2dff4d72cd3e4e6a2f"
+    },
+    {
+      "path": "C:\\ClearEval\\reports\\cleareval_20261012\\step_language_probe\\new_embedding_cache\\cde53b73663d96e633974fc445806c028504da3027f89e3154dbf66d9a7b8b4a.npy",
+      "sha256": "060e316d0c19cbf6dd1a9938649f8b09988eccb8a15eb0d3ffd89bc582ac7fbb"
+    },
+    {
+      "path": "C:\\ClearEval\\reports\\cleareval_20261012\\step_language_probe\\new_embedding_cache\\5e6d049031e22ebd769588e9e4030c6fe394a94a4527ccaf2ccfd7985a0a049a.npy",
+      "sha256": "2cfd8efb00c218dc43388c926f887c7ba61f83b70892c3176d4a038abc8d592f"
+    },
+    {
+      "path": "C:\\ClearEval\\reports\\cleareval_20261012\\step_language_probe\\new_embedding_cache\\54a0d72486ebed7d9bd7288e97d93b85c0e2b1d089bcd29c9e5675b3d42357eb.npy",
+      "sha256": "893bcd875dc46a409c84db2ab99a49a58ffe805b0566651750f6afe888abc595"
+    },
+    {
+      "path": "C:\\ClearEval\\reports\\cleareval_20261012\\step_language_probe\\new_embedding_cache\\cc93a4b47d3e9f2193d3d9f669bff0b39e01d08c5c869525ebc298feb58761ac.npy",
+      "sha256": "f050989a3e8a818781a6f5f5f8ad97b6eb1e3fadfa0ae94d000f1b3d63e0929b"
+    },
+    {
+      "path": "C:\\ClearEval\\reports\\cleareval_20261012\\step_language_probe\\new_embedding_cache\\1e5696e879dc9e3fc175f7bef5257908a7f40bca4d11690add690c396aeb02d3.npy",
+      "sha256": "6a2411fd83fada477835b27835d47d4d0095d1aca70afacafa12f96fc2444654"
+    }
+  ],
+  "ledger": {
+    "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\judges\\request_ledger.jsonl",
+    "sha256": "cbf7618d8586c208f8c49c1b44a15d94c974f5d9bc21d4e5fe20d523a47ed04f"
+  },
+  "network_disabled": true,
+  "new_evaluator_requests": 0
+}

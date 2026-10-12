@@ -1,0 +1,27 @@
+stage: automatic_time_and_joint_sensitivity_20261012
+execution_revision: r2
+candidate: source-time-ledger-v1.3
+final_replay_suffix: '04'
+original_formulas_preserved: true
+primary_SR_SP_unchanged: true
+primary_encoder: all-mpnet-base-v2
+primary_threshold: 0.7
+sensitivity_thresholds: [0.6, 0.7, 0.8]
+reference_selection: task_route_filter_then_max_SR_same_reference_SP_fixed_order
+time_scope: reported_serial_core_incubations
+finite_duration_range: midpoint_within_branch
+disjunction_and_optional_steps: separate_explicit_branches
+overnight_without_numeric_definition_hours: 8
+numeric_definition_precedes_default: true
+cumulative_total: replace_initial_contribution_do_not_add
+recurrence_interval: not_extra_duration
+missing_value: null
+new_model_calls: 0
+new_expert_annotations: 0
+actual_human_budget: {experts: 1, development: 5, holdout: 15}
+time_branch_scenarios_joint: 8
+exact_paired_task_draws_per_scenario: 4
+source_connected_blocks: 1
+population_CI_claimed: false
+formal_independent_confirmation: false
+old_Cor_reused_pending_qualitative_revision: true

@@ -1,0 +1,1845 @@
+{
+  "result": {
+    "cell_id": "R3C07__r0",
+    "cohort": "confirmation_qwen_01",
+    "question_id": 248,
+    "baseline_metrics": {
+      "c_param": 3,
+      "co_order": 2,
+      "co_method": 1,
+      "co_param": 0,
+      "co_chem": 1,
+      "s_method": 0.1263,
+      "s_label": 5.1,
+      "s_trans": 2.814646787157323,
+      "s_time": null,
+      "sr": 0.0,
+      "sp": 0.0,
+      "Com": 0.6,
+      "Cor": 0.5416666666666666,
+      "Eff": null,
+      "IA": null,
+      "HV": null
+    },
+    "metrics": {
+      "c_param": 3,
+      "co_order": 2,
+      "co_method": 1,
+      "co_param": 0,
+      "co_chem": 1,
+      "s_method": 0.1263,
+      "s_label": 5.1,
+      "s_trans": 2.814646787157323,
+      "s_time": 0.0696993280570204,
+      "sr": 0.0,
+      "sp": 0.0,
+      "Com": 0.6,
+      "Cor": 0.5416666666666666,
+      "Eff": 0.584177176267862,
+      "IA": 0.5416666666666666,
+      "HV": 0.18985758228705513
+    },
+    "complete_numeric_CCE": true,
+    "source_document": {
+      "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\optimizer_round3_20261011\\confirmation_qwen_01\\source_documents\\4dca84598051a5f58be13cde.json",
+      "sha256": "329fc6484fa59e7ed5d70a29a515c73bfa42f941bcedad6f57f0eb7961efd932"
+    },
+    "post_record": {
+      "path": "C:\\ClearEval\\reports\\cleareval_20261012\\typed_label_transfer\\lexical_candidate_02\\processing\\R3C07__r0.json",
+      "sha256": "c842b62378db9887ca4270e0b14a1937233bce553033ed3a93b4d3ae9b3bdf97"
+    },
+    "answer_sha256": "0bbe7be8c1a3eaabf163e5be1d6eac66d9e9ca9290d7ca7cfc20209acc6c5fef",
+    "proposal": {
+      "version": "selected-label-source-v1.1",
+      "answer_sha256": "0bbe7be8c1a3eaabf163e5be1d6eac66d9e9ca9290d7ca7cfc20209acc6c5fef",
+      "relations": [
+        {
+          "fluorophore": "tdTomato",
+          "marker": "",
+          "source_spans": [
+            {
+              "unit_id": "L0002",
+              "start": 48,
+              "end": 63,
+              "quote": "tdTomato (内源荧光)",
+              "answer_sha256": "0bbe7be8c1a3eaabf163e5be1d6eac66d9e9ca9290d7ca7cfc20209acc6c5fef"
+            }
+          ],
+          "basis": "explicit standalone signal in chosen list; external target-pair channel not applicable",
+          "source_fluor_literal": "tdTomato (内源荧光)",
+          "clone_identity_inferred": false,
+          "generic_AF": false
+        },
+        {
+          "fluorophore": "Alexa Fluor 647",
+          "marker": "β-III Tubulin (TUJ1)",
+          "source_spans": [
+            {
+              "unit_id": "L0002",
+              "start": 64,
+              "end": 105,
+              "quote": " β-III Tubulin (TUJ1) + Alexa Fluor (647)",
+              "answer_sha256": "0bbe7be8c1a3eaabf163e5be1d6eac66d9e9ca9290d7ca7cfc20209acc6c5fef"
+            }
+          ],
+          "basis": "explicit selected target + fluorophore; antibody carrier/clone not required",
+          "source_target_literal": "β-III Tubulin (TUJ1)",
+          "target_role_qualifier": null,
+          "source_fluor_literal": "Alexa Fluor (647)",
+          "clone_identity_inferred": false,
+          "generic_AF": false
+        }
+      ],
+      "issues": [],
+      "header_candidates": 1,
+      "ready": true,
+      "new_model_calls": 0,
+      "new_per_answer_author_annotations": 0,
+      "independent_evaluator": false,
+      "expert_validated": false,
+      "scope": "explicit chosen-label list; no claim of universal biological relation extraction",
+      "header_source": {
+        "unit_id": "L0002",
+        "start": 26,
+        "end": 107,
+        "quote": "**Chosen Labeling:** [tdTomato (内源荧光), β-III Tubulin (TUJ1) + Alexa Fluor (647)]\n",
+        "answer_sha256": "0bbe7be8c1a3eaabf163e5be1d6eac66d9e9ca9290d7ca7cfc20209acc6c5fef"
+      },
+      "actual_AF_operation_evidence": [
+        {
+          "fluorophore": "Alexa Fluor 647",
+          "source": {
+            "unit_id": "L0003",
+            "start": 107,
+            "end": 597,
+            "quote": "**Justification:** FDISCO（Fluorescence-preserved 3D Imaging of Solvent-Cleared Organs）是基于有机溶剂的快速透明方法，全脑透明可在约2天内完成，满足\"尽快成像\"的需求，且相比iDISCO+/uDISCO对荧光蛋白保护更佳（低温+碱性条件抑制荧光淬灭），已有文献证明可良好保留tdTomato内源信号。FDISCO使用THF脱水/脱脂后以BABB作为RI匹配液（RI≈1.56），与光片显微镜兼容，可接受一定程度的组织收缩（FDISCO收缩率约35–40%，均匀收缩不影响投射追踪）。标记策略：①保留tdTomato内源荧光追踪长程投射神经元；②在透明前对固定脑进行全脑免疫染色（iDISCO-style whole-mount），使用抗β-III Tubulin（TUJ1）抗体 + Alexa Fluor 647二抗标记轴突骨架结构，Alexa Fluor 647在有机溶剂中稳定性优异。两通道（tdTomato ~590 nm；AF647 ~647 nm）光谱分离良好，适合双通道光片成像。\n",
+            "answer_sha256": "0bbe7be8c1a3eaabf163e5be1d6eac66d9e9ca9290d7ca7cfc20209acc6c5fef"
+          },
+          "literal": "Alexa Fluor 647"
+        },
+        {
+          "fluorophore": "Alexa Fluor 647",
+          "source": {
+            "unit_id": "L0003",
+            "start": 107,
+            "end": 597,
+            "quote": "**Justification:** FDISCO（Fluorescence-preserved 3D Imaging of Solvent-Cleared Organs）是基于有机溶剂的快速透明方法，全脑透明可在约2天内完成，满足\"尽快成像\"的需求，且相比iDISCO+/uDISCO对荧光蛋白保护更佳（低温+碱性条件抑制荧光淬灭），已有文献证明可良好保留tdTomato内源信号。FDISCO使用THF脱水/脱脂后以BABB作为RI匹配液（RI≈1.56），与光片显微镜兼容，可接受一定程度的组织收缩（FDISCO收缩率约35–40%，均匀收缩不影响投射追踪）。标记策略：①保留tdTomato内源荧光追踪长程投射神经元；②在透明前对固定脑进行全脑免疫染色（iDISCO-style whole-mount），使用抗β-III Tubulin（TUJ1）抗体 + Alexa Fluor 647二抗标记轴突骨架结构，Alexa Fluor 647在有机溶剂中稳定性优异。两通道（tdTomato ~590 nm；AF647 ~647 nm）光谱分离良好，适合双通道光片成像。\n",
+            "answer_sha256": "0bbe7be8c1a3eaabf163e5be1d6eac66d9e9ca9290d7ca7cfc20209acc6c5fef"
+          },
+          "literal": "Alexa Fluor 647"
+        },
+        {
+          "fluorophore": "Alexa Fluor 647",
+          "source": {
+            "unit_id": "L0003",
+            "start": 107,
+            "end": 597,
+            "quote": "**Justification:** FDISCO（Fluorescence-preserved 3D Imaging of Solvent-Cleared Organs）是基于有机溶剂的快速透明方法，全脑透明可在约2天内完成，满足\"尽快成像\"的需求，且相比iDISCO+/uDISCO对荧光蛋白保护更佳（低温+碱性条件抑制荧光淬灭），已有文献证明可良好保留tdTomato内源信号。FDISCO使用THF脱水/脱脂后以BABB作为RI匹配液（RI≈1.56），与光片显微镜兼容，可接受一定程度的组织收缩（FDISCO收缩率约35–40%，均匀收缩不影响投射追踪）。标记策略：①保留tdTomato内源荧光追踪长程投射神经元；②在透明前对固定脑进行全脑免疫染色（iDISCO-style whole-mount），使用抗β-III Tubulin（TUJ1）抗体 + Alexa Fluor 647二抗标记轴突骨架结构，Alexa Fluor 647在有机溶剂中稳定性优异。两通道（tdTomato ~590 nm；AF647 ~647 nm）光谱分离良好，适合双通道光片成像。\n",
+            "answer_sha256": "0bbe7be8c1a3eaabf163e5be1d6eac66d9e9ca9290d7ca7cfc20209acc6c5fef"
+          },
+          "literal": "AF647"
+        },
+        {
+          "fluorophore": "Alexa Fluor 647",
+          "source": {
+            "unit_id": "L0016",
+            "start": 1219,
+            "end": 1247,
+            "quote": "**5 二抗孵育（Alexa Fluor 647）**\n",
+            "answer_sha256": "0bbe7be8c1a3eaabf163e5be1d6eac66d9e9ca9290d7ca7cfc20209acc6c5fef"
+          },
+          "literal": "Alexa Fluor 647）"
+        },
+        {
+          "fluorophore": "Alexa Fluor 647",
+          "source": {
+            "unit_id": "L0017",
+            "start": 1247,
+            "end": 1340,
+            "quote": "5.1 将脑组织置于含驴抗兔 Alexa Fluor 647二抗（1:500稀释于封闭液）的溶液中，避光振荡孵育。(Temperature: 37 ℃, Time: 48 hours)\n",
+            "answer_sha256": "0bbe7be8c1a3eaabf163e5be1d6eac66d9e9ca9290d7ca7cfc20209acc6c5fef"
+          },
+          "literal": "Alexa Fluor 647"
+        }
+      ],
+      "selection_uses_achieved_score": false
+    },
+    "decision": "source_rule_applied",
+    "label_derivation": {
+      "version": "cce-typed-label-scorer-v2.1",
+      "s_label": 5.1,
+      "channels": {
+        "s_target_match": 6.0,
+        "s_marker_fluor_compat": 6.0,
+        "s_method_fluor_compat": 5.1
+      },
+      "channel_applicability": {
+        "s_target_match": {
+          "applicable": true,
+          "value": 6.0,
+          "contributing_pairs": [
+            "semantic:1"
+          ]
+        },
+        "s_marker_fluor_compat": {
+          "applicable": true,
+          "value": 6.0,
+          "contributing_pairs": [
+            "semantic:1"
+          ]
+        },
+        "s_method_fluor_compat": {
+          "applicable": true,
+          "value": 5.1,
+          "contributing_pairs": [
+            "semantic:0",
+            "semantic:1"
+          ]
+        }
+      },
+      "pair_results": [
+        {
+          "pair_id": "semantic:0",
+          "entity_id": null,
+          "fluorophore": "tdTomato",
+          "reported_marker": null,
+          "reported_target_literal": null,
+          "label_type": "native_fluorescent_protein",
+          "original_function_input": {
+            "tdTomato": ""
+          },
+          "applicable": {
+            "s_target_match": false,
+            "s_marker_fluor_compat": false,
+            "s_method_fluor_compat": true
+          },
+          "channels": {
+            "s_target_match": null,
+            "s_marker_fluor_compat": null,
+            "s_method_fluor_compat": 5.4
+          },
+          "not_applicable_reason": "standalone fluorescence has no antibody target-pair channel",
+          "source_evidence": [
+            {
+              "unit_id": "L0002",
+              "start": 48,
+              "end": 63,
+              "quote": "tdTomato (内源荧光)",
+              "answer_sha256": "0bbe7be8c1a3eaabf163e5be1d6eac66d9e9ca9290d7ca7cfc20209acc6c5fef"
+            }
+          ],
+          "compatibility_audit": [
+            {
+              "kind": "method_fluor",
+              "method_name": "FDISCO",
+              "fluorophore": "tdTomato",
+              "source": "KnowledgeBase/method_fluro_compati.json",
+              "value": 0.9,
+              "status": "TABLE_REPORTED"
+            }
+          ]
+        },
+        {
+          "pair_id": "semantic:1",
+          "entity_id": null,
+          "fluorophore": "Alexa Fluor 647",
+          "reported_marker": "β-III Tubulin (TUJ1)",
+          "reported_target_literal": null,
+          "label_type": "targeted_or_unclassified_reagent",
+          "original_function_input": {
+            "Alexa Fluor 647": "β-III Tubulin (TUJ1)"
+          },
+          "applicable": {
+            "s_target_match": true,
+            "s_marker_fluor_compat": true,
+            "s_method_fluor_compat": true
+          },
+          "channels": {
+            "s_target_match": 6.0,
+            "s_marker_fluor_compat": 6.0,
+            "s_method_fluor_compat": 5.1
+          },
+          "not_applicable_reason": null,
+          "source_evidence": [
+            {
+              "unit_id": "L0002",
+              "start": 64,
+              "end": 105,
+              "quote": " β-III Tubulin (TUJ1) + Alexa Fluor (647)",
+              "answer_sha256": "0bbe7be8c1a3eaabf163e5be1d6eac66d9e9ca9290d7ca7cfc20209acc6c5fef"
+            }
+          ],
+          "compatibility_audit": [
+            {
+              "kind": "marker_fluor",
+              "marker": "β-III Tubulin (TUJ1)",
+              "fluorophore": "Alexa Fluor 647",
+              "source": "KnowledgeBase/tissue.json",
+              "value": true,
+              "status": "TABLE_REPORTED"
+            },
+            {
+              "kind": "method_fluor",
+              "method_name": "FDISCO",
+              "fluorophore": "Alexa Fluor 647",
+              "source": "KnowledgeBase/method_fluro_compati.json",
+              "value": 0.85,
+              "status": "TABLE_REPORTED"
+            }
+          ]
+        }
+      ],
+      "resolved_uncertainties": [],
+      "remaining_uncertainties": [],
+      "minimum_of_available_applicable_channels": 5.1,
+      "task_target_coverage": "native/direct task coverage remains separate from antibody-pair applicability",
+      "new_model_calls": 0,
+      "expert_validated": false
+    },
+    "lookup_trace": [
+      {
+        "marker": "β-III Tubulin (TUJ1)",
+        "fluorophore": "Alexa Fluor 647",
+        "status": "all_applicable_scopes_have_same_authored_value",
+        "value": true,
+        "column": "AlexaFluor 647/Cy5 ",
+        "matching_target_options": [
+          {
+            "target_index": 1,
+            "source_tissue_xlsx_row": 4,
+            "marker_slot": "recommended_marker_1",
+            "marker_name": "β-III Tubulin (TUJ1)",
+            "query_path": "中枢神经 > 神经元结构 > 神经元(通用)",
+            "major_category": "中枢神经",
+            "subcategory": "神经元结构",
+            "structure_or_cell_subtype": "神经元(通用)",
+            "authored_target_parent": {
+              "marker_name": "β-III Tubulin (TUJ1)",
+              "target_index": 1,
+              "source_tissue_xlsx_row": 4,
+              "query_path": "中枢神经 > 神经元结构 > 神经元(通用)",
+              "marker_slot": "recommended_marker_1"
+            },
+            "authored_option_index": 0,
+            "option_split_applied": false
+          }
+        ],
+        "candidate_rows": [
+          {
+            "row_index": 0,
+            "matching_authored_names": [
+              {
+                "field": "推荐标志物 1",
+                "authored_name": "β-III Tubulin (TUJ1)",
+                "option": "β-III Tubulin (TUJ1)",
+                "option_split_applied": false
+              }
+            ],
+            "scope": {
+              "大类": "中枢神经",
+              "亚类": "神经元结构",
+              "结构/细胞类型": "神经元(通用)"
+            },
+            "cell_value": 1
+          },
+          {
+            "row_index": 32,
+            "matching_authored_names": [
+              {
+                "field": "推荐标志物 2",
+                "authored_name": "β-III Tubulin",
+                "option": "β-III Tubulin",
+                "option_split_applied": false
+              }
+            ],
+            "scope": {
+              "大类": "呼吸系统",
+              "亚类": "神经系统",
+              "结构/细胞类型": "肺部迷走神经"
+            },
+            "cell_value": 1
+          },
+          {
+            "row_index": 55,
+            "matching_authored_names": [
+              {
+                "field": "推荐标志物 1",
+                "authored_name": "Tuj1",
+                "option": "Tuj1",
+                "option_split_applied": false
+              }
+            ],
+            "scope": {
+              "大类": "肠道系统",
+              "亚类": "肠神经",
+              "结构/细胞类型": "肠神经丛"
+            },
+            "cell_value": 1
+          },
+          {
+            "row_index": 76,
+            "matching_authored_names": [
+              {
+                "field": "推荐标志物 2",
+                "authored_name": "β-III Tubulin / TUJ1",
+                "option": "β-III Tubulin",
+                "option_split_applied": true
+              },
+              {
+                "field": "推荐标志物 2",
+                "authored_name": "β-III Tubulin / TUJ1",
+                "option": "TUJ1",
+                "option_split_applied": true
+              }
+            ],
+            "scope": {
+              "大类": "临床病理",
+              "亚类": "皮肤活检",
+              "结构/细胞类型": "表皮内神经纤维 IENF"
+            },
+            "cell_value": null
+          },
+          {
+            "row_index": 80,
+            "matching_authored_names": [
+              {
+                "field": "推荐标志物 1",
+                "authored_name": "β-III Tubulin / TUJ1",
+                "option": "β-III Tubulin",
+                "option_split_applied": true
+              },
+              {
+                "field": "推荐标志物 1",
+                "authored_name": "β-III Tubulin / TUJ1",
+                "option": "TUJ1",
+                "option_split_applied": true
+              }
+            ],
+            "scope": {
+              "大类": "斑马鱼系统",
+              "亚类": "侧线系统",
+              "结构/细胞类型": "侧线神经纤维"
+            },
+            "cell_value": null
+          },
+          {
+            "row_index": 84,
+            "matching_authored_names": [
+              {
+                "field": "推荐标志物 2",
+                "authored_name": "β-III Tubulin / PGP9.5",
+                "option": "β-III Tubulin",
+                "option_split_applied": true
+              }
+            ],
+            "scope": {
+              "大类": "骨骼肌系统",
+              "亚类": "神经肌肉接头",
+              "结构/细胞类型": "运动神经末梢/轴突骨架"
+            },
+            "cell_value": null
+          },
+          {
+            "row_index": 85,
+            "matching_authored_names": [
+              {
+                "field": "推荐标志物 2",
+                "authored_name": "β-III Tubulin / TUJ1",
+                "option": "β-III Tubulin",
+                "option_split_applied": true
+              },
+              {
+                "field": "推荐标志物 2",
+                "authored_name": "β-III Tubulin / TUJ1",
+                "option": "TUJ1",
+                "option_split_applied": true
+              }
+            ],
+            "scope": {
+              "大类": "消化系统",
+              "亚类": "胃壁神经系统",
+              "结构/细胞类型": "胃壁迷走神经/泛神经纤维网络"
+            },
+            "cell_value": null
+          },
+          {
+            "row_index": 90,
+            "matching_authored_names": [
+              {
+                "field": "推荐标志物 2",
+                "authored_name": "PGP9.5 / β-III Tubulin",
+                "option": "β-III Tubulin",
+                "option_split_applied": true
+              }
+            ],
+            "scope": {
+              "大类": "硬组织",
+              "亚类": "骨骼微环境",
+              "结构/细胞类型": "骨组织感觉神经与泛神经网络"
+            },
+            "cell_value": null
+          },
+          {
+            "row_index": 100,
+            "matching_authored_names": [
+              {
+                "field": "推荐标志物 1",
+                "authored_name": "PGP9.5 / β-III Tubulin",
+                "option": "β-III Tubulin",
+                "option_split_applied": true
+              }
+            ],
+            "scope": {
+              "大类": "硬组织",
+              "亚类": "内耳结构",
+              "结构/细胞类型": "耳蜗神经支配"
+            },
+            "cell_value": null
+          },
+          {
+            "row_index": 106,
+            "matching_authored_names": [
+              {
+                "field": "推荐标志物 2",
+                "authored_name": "β-III Tubulin / TUJ1",
+                "option": "β-III Tubulin",
+                "option_split_applied": true
+              },
+              {
+                "field": "推荐标志物 2",
+                "authored_name": "β-III Tubulin / TUJ1",
+                "option": "TUJ1",
+                "option_split_applied": true
+              }
+            ],
+            "scope": {
+              "大类": "发育生物学",
+              "亚类": "胚胎神经系统",
+              "结构/细胞类型": "胚胎颅/脊神经与外周神经"
+            },
+            "cell_value": null
+          }
+        ],
+        "selected_row_indices": [
+          0
+        ],
+        "per_scope_evidence": [
+          {
+            "scope": {
+              "大类": "中枢神经",
+              "亚类": "神经元结构",
+              "结构/细胞类型": "神经元(通用)"
+            },
+            "row_indices": [
+              0
+            ],
+            "all_cell_values": [
+              1
+            ],
+            "state": "consistent_authored_value",
+            "value": 1
+          }
+        ],
+        "row_selection_uses_scores": false,
+        "different_scopes_merged": false,
+        "new_alias_or_KB_value": false,
+        "declared_task_scope": null,
+        "exact_lookup_value": true,
+        "evidence_level": "existing_specific_table_value"
+      }
+    ],
+    "changes": {
+      "s_label": {
+        "before": null,
+        "after": 5.1
+      }
+    },
+    "quantitative_data": {
+      "method_name": "FDISCO",
+      "tissue_ri_value": 1.46,
+      "total_time_hours": null,
+      "sample_tier": "T04_WHOLE_MOUSE_BRAIN_5_12MM",
+      "reagent_ri_value": 1.56,
+      "protocol_time_hours": null
+    },
+    "new_model_calls": 0,
+    "new_per_answer_author_annotations": 0,
+    "candidate_point_metrics": {
+      "c_param": 3,
+      "co_order": 2,
+      "co_method": 1,
+      "co_param": 0,
+      "co_chem": 1,
+      "s_method": 0.1263,
+      "s_label": 5.1,
+      "s_trans": 2.814646787157323,
+      "s_time": 0.0696993280570204,
+      "sr": 0.0,
+      "sp": 0.0,
+      "Com": 0.6,
+      "Cor": 0.5416666666666666,
+      "Eff": 0.584177176267862,
+      "IA": 0.5416666666666666,
+      "HV": 0.18985758228705513
+    },
+    "time_candidate_ledger": {
+      "version": "source-time-ledger-v1.3",
+      "answer_sha256": "0bbe7be8c1a3eaabf163e5be1d6eac66d9e9ca9290d7ca7cfc20209acc6c5fef",
+      "operations": [
+        {
+          "operation_id": "O1",
+          "source": {
+            "unit_id": "L0007",
+            "start": 653,
+            "end": 733,
+            "quote": "1.1 将已4% PFA固定的成年小鼠全脑置于1× PBS中充分漂洗，去除残余固定液。(Temperature: 4 ℃, Time: 3 × 1 hour)\n",
+            "answer_sha256": "0bbe7be8c1a3eaabf163e5be1d6eac66d9e9ca9290d7ca7cfc20209acc6c5fef"
+          },
+          "raw_phase": "labeling_preparation",
+          "raw_execution_scope": "initial",
+          "raw_parsed_duration": {
+            "state": "explicit_exact",
+            "bounds_hours": [
+              1.0,
+              1.0
+            ],
+            "unique_hours": 1.0,
+            "source_numeric": true
+          },
+          "raw_repeat_count": 1,
+          "scope": {
+            "role": "excluded",
+            "basis": "saved explicit excluded phase",
+            "original_phase": "labeling_preparation",
+            "heading": {
+              "start": 621,
+              "end": 653,
+              "quote": "**1 样品预处理（Post-fixation wash）**\n",
+              "title": "样品预处理（Post-fixation wash）"
+            }
+          }
+        },
+        {
+          "operation_id": "O2",
+          "source": {
+            "unit_id": "L0009",
+            "start": 751,
+            "end": 844,
+            "quote": "2.1 将脑组织置于含0.2% (vol/vol) Triton X-100的1× PBS（PBST）中振荡渗透。(Temperature: 37 ℃, Time: 24 hours)\n",
+            "answer_sha256": "0bbe7be8c1a3eaabf163e5be1d6eac66d9e9ca9290d7ca7cfc20209acc6c5fef"
+          },
+          "raw_phase": "labeling_preparation",
+          "raw_execution_scope": "initial",
+          "raw_parsed_duration": {
+            "state": "explicit_exact",
+            "bounds_hours": [
+              24.0,
+              24.0
+            ],
+            "unique_hours": 24.0,
+            "source_numeric": true
+          },
+          "raw_repeat_count": 1,
+          "scope": {
+            "role": "excluded",
+            "basis": "saved explicit excluded phase",
+            "original_phase": "labeling_preparation",
+            "heading": {
+              "start": 733,
+              "end": 751,
+              "quote": "**2 全脑免疫染色前渗透处理**\n",
+              "title": "全脑免疫染色前渗透处理"
+            }
+          }
+        },
+        {
+          "operation_id": "O3",
+          "source": {
+            "unit_id": "L0010",
+            "start": 844,
+            "end": 897,
+            "quote": "2.2 更换新鲜PBST继续渗透。(Temperature: 37 ℃, Time: 24 hours)\n",
+            "answer_sha256": "0bbe7be8c1a3eaabf163e5be1d6eac66d9e9ca9290d7ca7cfc20209acc6c5fef"
+          },
+          "raw_phase": "labeling_preparation",
+          "raw_execution_scope": "initial",
+          "raw_parsed_duration": {
+            "state": "explicit_exact",
+            "bounds_hours": [
+              24.0,
+              24.0
+            ],
+            "unique_hours": 24.0,
+            "source_numeric": true
+          },
+          "raw_repeat_count": 1,
+          "scope": {
+            "role": "excluded",
+            "basis": "saved explicit excluded phase",
+            "original_phase": "labeling_preparation",
+            "heading": {
+              "start": 733,
+              "end": 751,
+              "quote": "**2 全脑免疫染色前渗透处理**\n",
+              "title": "全脑免疫染色前渗透处理"
+            }
+          }
+        },
+        {
+          "operation_id": "O4",
+          "source": {
+            "unit_id": "L0012",
+            "start": 906,
+            "end": 1032,
+            "quote": "3.1 将脑组织置于封闭液（5% (vol/vol) 正常驴血清 + 0.2% Triton X-100 + 0.1% (wt/vol) NaN₃ in 1× PBS）中振荡封闭。(Temperature: 37 ℃, Time: 24 hours)\n",
+            "answer_sha256": "0bbe7be8c1a3eaabf163e5be1d6eac66d9e9ca9290d7ca7cfc20209acc6c5fef"
+          },
+          "raw_phase": "labeling_preparation",
+          "raw_execution_scope": "initial",
+          "raw_parsed_duration": {
+            "state": "explicit_exact",
+            "bounds_hours": [
+              24.0,
+              24.0
+            ],
+            "unique_hours": 24.0,
+            "source_numeric": true
+          },
+          "raw_repeat_count": 1,
+          "scope": {
+            "role": "excluded",
+            "basis": "saved explicit excluded phase",
+            "original_phase": "labeling_preparation",
+            "heading": {
+              "start": 897,
+              "end": 906,
+              "quote": "**3 封闭**\n",
+              "title": "封闭"
+            }
+          }
+        },
+        {
+          "operation_id": "O5",
+          "source": {
+            "unit_id": "L0014",
+            "start": 1065,
+            "end": 1163,
+            "quote": "4.1 将脑组织置于含抗β-III Tubulin（TUJ1）兔多克隆抗体（1:500稀释于封闭液）的溶液中，轻柔振荡孵育。(Temperature: 37 ℃, Time: 48 hours)\n",
+            "answer_sha256": "0bbe7be8c1a3eaabf163e5be1d6eac66d9e9ca9290d7ca7cfc20209acc6c5fef"
+          },
+          "raw_phase": "labeling_preparation",
+          "raw_execution_scope": "initial",
+          "raw_parsed_duration": {
+            "state": "explicit_exact",
+            "bounds_hours": [
+              48.0,
+              48.0
+            ],
+            "unique_hours": 48.0,
+            "source_numeric": true
+          },
+          "raw_repeat_count": 1,
+          "scope": {
+            "role": "excluded",
+            "basis": "saved explicit excluded phase",
+            "original_phase": "labeling_preparation",
+            "heading": {
+              "start": 1032,
+              "end": 1065,
+              "quote": "**4 一抗孵育（β-III Tubulin / TUJ1）**\n",
+              "title": "一抗孵育（β-III Tubulin / TUJ1）"
+            }
+          }
+        },
+        {
+          "operation_id": "O6",
+          "source": {
+            "unit_id": "L0015",
+            "start": 1163,
+            "end": 1219,
+            "quote": "4.2 用PBST洗涤，去除未结合一抗。(Temperature: RT, Time: 5 × 1 hour)\n",
+            "answer_sha256": "0bbe7be8c1a3eaabf163e5be1d6eac66d9e9ca9290d7ca7cfc20209acc6c5fef"
+          },
+          "raw_phase": "labeling_preparation",
+          "raw_execution_scope": "initial",
+          "raw_parsed_duration": {
+            "state": "explicit_exact",
+            "bounds_hours": [
+              1.0,
+              1.0
+            ],
+            "unique_hours": 1.0,
+            "source_numeric": true
+          },
+          "raw_repeat_count": 1,
+          "scope": {
+            "role": "excluded",
+            "basis": "saved explicit excluded phase",
+            "original_phase": "labeling_preparation",
+            "heading": {
+              "start": 1032,
+              "end": 1065,
+              "quote": "**4 一抗孵育（β-III Tubulin / TUJ1）**\n",
+              "title": "一抗孵育（β-III Tubulin / TUJ1）"
+            }
+          }
+        },
+        {
+          "operation_id": "O7",
+          "source": {
+            "unit_id": "L0017",
+            "start": 1247,
+            "end": 1340,
+            "quote": "5.1 将脑组织置于含驴抗兔 Alexa Fluor 647二抗（1:500稀释于封闭液）的溶液中，避光振荡孵育。(Temperature: 37 ℃, Time: 48 hours)\n",
+            "answer_sha256": "0bbe7be8c1a3eaabf163e5be1d6eac66d9e9ca9290d7ca7cfc20209acc6c5fef"
+          },
+          "raw_phase": "labeling_preparation",
+          "raw_execution_scope": "initial",
+          "raw_parsed_duration": {
+            "state": "explicit_exact",
+            "bounds_hours": [
+              48.0,
+              48.0
+            ],
+            "unique_hours": 48.0,
+            "source_numeric": true
+          },
+          "raw_repeat_count": 1,
+          "scope": {
+            "role": "excluded",
+            "basis": "saved explicit excluded phase",
+            "original_phase": "labeling_preparation",
+            "heading": {
+              "start": 1219,
+              "end": 1247,
+              "quote": "**5 二抗孵育（Alexa Fluor 647）**\n",
+              "title": "二抗孵育（Alexa Fluor 647）"
+            }
+          }
+        },
+        {
+          "operation_id": "O8",
+          "source": {
+            "unit_id": "L0018",
+            "start": 1340,
+            "end": 1396,
+            "quote": "5.2 用PBST洗涤，去除未结合二抗。(Temperature: RT, Time: 5 × 1 hour)\n",
+            "answer_sha256": "0bbe7be8c1a3eaabf163e5be1d6eac66d9e9ca9290d7ca7cfc20209acc6c5fef"
+          },
+          "raw_phase": "labeling_preparation",
+          "raw_execution_scope": "initial",
+          "raw_parsed_duration": {
+            "state": "explicit_exact",
+            "bounds_hours": [
+              1.0,
+              1.0
+            ],
+            "unique_hours": 1.0,
+            "source_numeric": true
+          },
+          "raw_repeat_count": 1,
+          "scope": {
+            "role": "excluded",
+            "basis": "saved explicit excluded phase",
+            "original_phase": "labeling_preparation",
+            "heading": {
+              "start": 1219,
+              "end": 1247,
+              "quote": "**5 二抗孵育（Alexa Fluor 647）**\n",
+              "title": "二抗孵育（Alexa Fluor 647）"
+            }
+          }
+        },
+        {
+          "operation_id": "O9",
+          "source": {
+            "unit_id": "L0019",
+            "start": 1396,
+            "end": 1446,
+            "quote": "5.3 用1× PBS终洗。(Temperature: RT, Time: 2 × 30 min)\n",
+            "answer_sha256": "0bbe7be8c1a3eaabf163e5be1d6eac66d9e9ca9290d7ca7cfc20209acc6c5fef"
+          },
+          "raw_phase": "labeling_preparation",
+          "raw_execution_scope": "initial",
+          "raw_parsed_duration": {
+            "state": "explicit_exact",
+            "bounds_hours": [
+              0.5,
+              0.5
+            ],
+            "unique_hours": 0.5,
+            "source_numeric": true
+          },
+          "raw_repeat_count": 1,
+          "scope": {
+            "role": "excluded",
+            "basis": "saved explicit excluded phase",
+            "original_phase": "labeling_preparation",
+            "heading": {
+              "start": 1219,
+              "end": 1247,
+              "quote": "**5 二抗孵育（Alexa Fluor 647）**\n",
+              "title": "二抗孵育（Alexa Fluor 647）"
+            }
+          }
+        },
+        {
+          "operation_id": "O10",
+          "source": {
+            "unit_id": "L0021",
+            "start": 1464,
+            "end": 1562,
+            "quote": "6.1 将脑组织置于50% (vol/vol) THF（四氢呋喃）水溶液（用NaOH调pH至9–10，以保护荧光蛋白）中振荡脱水。(Temperature: 4 ℃, Time: 1 hour)\n",
+            "answer_sha256": "0bbe7be8c1a3eaabf163e5be1d6eac66d9e9ca9290d7ca7cfc20209acc6c5fef"
+          },
+          "raw_phase": "clearing_treatment",
+          "raw_execution_scope": "initial",
+          "raw_parsed_duration": {
+            "state": "explicit_exact",
+            "bounds_hours": [
+              1.0,
+              1.0
+            ],
+            "unique_hours": 1.0,
+            "source_numeric": true
+          },
+          "raw_repeat_count": 1,
+          "scope": {
+            "role": "core",
+            "basis": "saved core phase, reconciled with explicit source heading",
+            "heading": {
+              "start": 1446,
+              "end": 1464,
+              "quote": "**6 脱水（THF梯度脱水）**\n",
+              "title": "脱水（THF梯度脱水）"
+            }
+          },
+          "duration": {
+            "options": [
+              {
+                "option_id": "field_0",
+                "bounds_hours": [
+                  1.0,
+                  1.0
+                ],
+                "count": 1,
+                "literal": "1 hour",
+                "expression": "1 hour",
+                "count_in_field": false,
+                "overnight_default": false,
+                "each_in_field": false,
+                "repeat_interpretation": {
+                  "count": 1,
+                  "basis": "one separately represented timed operation; again is not itself an optional branch"
+                },
+                "source": {
+                  "unit_id": "L0021",
+                  "start": 1548,
+                  "end": 1560,
+                  "quote": "Time: 1 hour",
+                  "answer_sha256": "0bbe7be8c1a3eaabf163e5be1d6eac66d9e9ca9290d7ca7cfc20209acc6c5fef"
+                },
+                "basis": "explicit source Time field"
+              }
+            ],
+            "issue": null,
+            "source": {
+              "unit_id": "L0021",
+              "start": 1548,
+              "end": 1560,
+              "quote": "Time: 1 hour",
+              "answer_sha256": "0bbe7be8c1a3eaabf163e5be1d6eac66d9e9ca9290d7ca7cfc20209acc6c5fef"
+            },
+            "basis": "explicit source Time field",
+            "original_parent_context": null,
+            "point_convention": "midpoint within each explicit finite range; no averaging across alternative routes",
+            "prose_numeric_mentions": [],
+            "conflicting_prose_readings": [],
+            "explicit_field_precedence_declared": true
+          },
+          "branch_group": null
+        },
+        {
+          "operation_id": "O11",
+          "source": {
+            "unit_id": "L0022",
+            "start": 1562,
+            "end": 1640,
+            "quote": "6.2 将脑组织置于70% (vol/vol) THF水溶液（pH 9–10）中振荡脱水。(Temperature: 4 ℃, Time: 1 hour)\n",
+            "answer_sha256": "0bbe7be8c1a3eaabf163e5be1d6eac66d9e9ca9290d7ca7cfc20209acc6c5fef"
+          },
+          "raw_phase": "clearing_treatment",
+          "raw_execution_scope": "initial",
+          "raw_parsed_duration": {
+            "state": "explicit_exact",
+            "bounds_hours": [
+              1.0,
+              1.0
+            ],
+            "unique_hours": 1.0,
+            "source_numeric": true
+          },
+          "raw_repeat_count": 1,
+          "scope": {
+            "role": "core",
+            "basis": "saved core phase, reconciled with explicit source heading",
+            "heading": {
+              "start": 1446,
+              "end": 1464,
+              "quote": "**6 脱水（THF梯度脱水）**\n",
+              "title": "脱水（THF梯度脱水）"
+            }
+          },
+          "duration": {
+            "options": [
+              {
+                "option_id": "field_0",
+                "bounds_hours": [
+                  1.0,
+                  1.0
+                ],
+                "count": 1,
+                "literal": "1 hour",
+                "expression": "1 hour",
+                "count_in_field": false,
+                "overnight_default": false,
+                "each_in_field": false,
+                "repeat_interpretation": {
+                  "count": 1,
+                  "basis": "one separately represented timed operation; again is not itself an optional branch"
+                },
+                "source": {
+                  "unit_id": "L0022",
+                  "start": 1626,
+                  "end": 1638,
+                  "quote": "Time: 1 hour",
+                  "answer_sha256": "0bbe7be8c1a3eaabf163e5be1d6eac66d9e9ca9290d7ca7cfc20209acc6c5fef"
+                },
+                "basis": "explicit source Time field"
+              }
+            ],
+            "issue": null,
+            "source": {
+              "unit_id": "L0022",
+              "start": 1626,
+              "end": 1638,
+              "quote": "Time: 1 hour",
+              "answer_sha256": "0bbe7be8c1a3eaabf163e5be1d6eac66d9e9ca9290d7ca7cfc20209acc6c5fef"
+            },
+            "basis": "explicit source Time field",
+            "original_parent_context": null,
+            "point_convention": "midpoint within each explicit finite range; no averaging across alternative routes",
+            "prose_numeric_mentions": [],
+            "conflicting_prose_readings": [],
+            "explicit_field_precedence_declared": true
+          },
+          "branch_group": null
+        },
+        {
+          "operation_id": "O12",
+          "source": {
+            "unit_id": "L0023",
+            "start": 1640,
+            "end": 1718,
+            "quote": "6.3 将脑组织置于80% (vol/vol) THF水溶液（pH 9–10）中振荡脱水。(Temperature: 4 ℃, Time: 1 hour)\n",
+            "answer_sha256": "0bbe7be8c1a3eaabf163e5be1d6eac66d9e9ca9290d7ca7cfc20209acc6c5fef"
+          },
+          "raw_phase": "clearing_treatment",
+          "raw_execution_scope": "initial",
+          "raw_parsed_duration": {
+            "state": "explicit_exact",
+            "bounds_hours": [
+              1.0,
+              1.0
+            ],
+            "unique_hours": 1.0,
+            "source_numeric": true
+          },
+          "raw_repeat_count": 1,
+          "scope": {
+            "role": "core",
+            "basis": "saved core phase, reconciled with explicit source heading",
+            "heading": {
+              "start": 1446,
+              "end": 1464,
+              "quote": "**6 脱水（THF梯度脱水）**\n",
+              "title": "脱水（THF梯度脱水）"
+            }
+          },
+          "duration": {
+            "options": [
+              {
+                "option_id": "field_0",
+                "bounds_hours": [
+                  1.0,
+                  1.0
+                ],
+                "count": 1,
+                "literal": "1 hour",
+                "expression": "1 hour",
+                "count_in_field": false,
+                "overnight_default": false,
+                "each_in_field": false,
+                "repeat_interpretation": {
+                  "count": 1,
+                  "basis": "one separately represented timed operation; again is not itself an optional branch"
+                },
+                "source": {
+                  "unit_id": "L0023",
+                  "start": 1704,
+                  "end": 1716,
+                  "quote": "Time: 1 hour",
+                  "answer_sha256": "0bbe7be8c1a3eaabf163e5be1d6eac66d9e9ca9290d7ca7cfc20209acc6c5fef"
+                },
+                "basis": "explicit source Time field"
+              }
+            ],
+            "issue": null,
+            "source": {
+              "unit_id": "L0023",
+              "start": 1704,
+              "end": 1716,
+              "quote": "Time: 1 hour",
+              "answer_sha256": "0bbe7be8c1a3eaabf163e5be1d6eac66d9e9ca9290d7ca7cfc20209acc6c5fef"
+            },
+            "basis": "explicit source Time field",
+            "original_parent_context": null,
+            "point_convention": "midpoint within each explicit finite range; no averaging across alternative routes",
+            "prose_numeric_mentions": [],
+            "conflicting_prose_readings": [],
+            "explicit_field_precedence_declared": true
+          },
+          "branch_group": null
+        },
+        {
+          "operation_id": "O13",
+          "source": {
+            "unit_id": "L0024",
+            "start": 1718,
+            "end": 1799,
+            "quote": "6.4 将脑组织置于100% THF（无水，pH 9–10，加少量NaOH）中振荡脱水，第一次。(Temperature: 4 ℃, Time: 1 hour)\n",
+            "answer_sha256": "0bbe7be8c1a3eaabf163e5be1d6eac66d9e9ca9290d7ca7cfc20209acc6c5fef"
+          },
+          "raw_phase": "clearing_treatment",
+          "raw_execution_scope": "initial",
+          "raw_parsed_duration": {
+            "state": "explicit_exact",
+            "bounds_hours": [
+              1.0,
+              1.0
+            ],
+            "unique_hours": 1.0,
+            "source_numeric": true
+          },
+          "raw_repeat_count": 1,
+          "scope": {
+            "role": "core",
+            "basis": "saved core phase, reconciled with explicit source heading",
+            "heading": {
+              "start": 1446,
+              "end": 1464,
+              "quote": "**6 脱水（THF梯度脱水）**\n",
+              "title": "脱水（THF梯度脱水）"
+            }
+          },
+          "duration": {
+            "options": [
+              {
+                "option_id": "field_0",
+                "bounds_hours": [
+                  1.0,
+                  1.0
+                ],
+                "count": 1,
+                "literal": "1 hour",
+                "expression": "1 hour",
+                "count_in_field": false,
+                "overnight_default": false,
+                "each_in_field": false,
+                "repeat_interpretation": {
+                  "count": 1,
+                  "basis": "one separately represented timed operation; again is not itself an optional branch"
+                },
+                "source": {
+                  "unit_id": "L0024",
+                  "start": 1785,
+                  "end": 1797,
+                  "quote": "Time: 1 hour",
+                  "answer_sha256": "0bbe7be8c1a3eaabf163e5be1d6eac66d9e9ca9290d7ca7cfc20209acc6c5fef"
+                },
+                "basis": "explicit source Time field"
+              }
+            ],
+            "issue": null,
+            "source": {
+              "unit_id": "L0024",
+              "start": 1785,
+              "end": 1797,
+              "quote": "Time: 1 hour",
+              "answer_sha256": "0bbe7be8c1a3eaabf163e5be1d6eac66d9e9ca9290d7ca7cfc20209acc6c5fef"
+            },
+            "basis": "explicit source Time field",
+            "original_parent_context": null,
+            "point_convention": "midpoint within each explicit finite range; no averaging across alternative routes",
+            "prose_numeric_mentions": [],
+            "conflicting_prose_readings": [],
+            "explicit_field_precedence_declared": true
+          },
+          "branch_group": null
+        },
+        {
+          "operation_id": "O14",
+          "source": {
+            "unit_id": "L0025",
+            "start": 1799,
+            "end": 1881,
+            "quote": "6.5 将脑组织置于100% THF（无水，pH 9–10）中振荡脱水，第二次（更换新鲜THF）。(Temperature: 4 ℃, Time: 1 hour)\n",
+            "answer_sha256": "0bbe7be8c1a3eaabf163e5be1d6eac66d9e9ca9290d7ca7cfc20209acc6c5fef"
+          },
+          "raw_phase": "clearing_treatment",
+          "raw_execution_scope": "initial",
+          "raw_parsed_duration": {
+            "state": "explicit_exact",
+            "bounds_hours": [
+              1.0,
+              1.0
+            ],
+            "unique_hours": 1.0,
+            "source_numeric": true
+          },
+          "raw_repeat_count": 1,
+          "scope": {
+            "role": "core",
+            "basis": "saved core phase, reconciled with explicit source heading",
+            "heading": {
+              "start": 1446,
+              "end": 1464,
+              "quote": "**6 脱水（THF梯度脱水）**\n",
+              "title": "脱水（THF梯度脱水）"
+            }
+          },
+          "duration": {
+            "options": [
+              {
+                "option_id": "field_0",
+                "bounds_hours": [
+                  1.0,
+                  1.0
+                ],
+                "count": 1,
+                "literal": "1 hour",
+                "expression": "1 hour",
+                "count_in_field": false,
+                "overnight_default": false,
+                "each_in_field": false,
+                "repeat_interpretation": {
+                  "count": 1,
+                  "basis": "one separately represented timed operation; again is not itself an optional branch"
+                },
+                "source": {
+                  "unit_id": "L0025",
+                  "start": 1867,
+                  "end": 1879,
+                  "quote": "Time: 1 hour",
+                  "answer_sha256": "0bbe7be8c1a3eaabf163e5be1d6eac66d9e9ca9290d7ca7cfc20209acc6c5fef"
+                },
+                "basis": "explicit source Time field"
+              }
+            ],
+            "issue": null,
+            "source": {
+              "unit_id": "L0025",
+              "start": 1867,
+              "end": 1879,
+              "quote": "Time: 1 hour",
+              "answer_sha256": "0bbe7be8c1a3eaabf163e5be1d6eac66d9e9ca9290d7ca7cfc20209acc6c5fef"
+            },
+            "basis": "explicit source Time field",
+            "original_parent_context": null,
+            "point_convention": "midpoint within each explicit finite range; no averaging across alternative routes",
+            "prose_numeric_mentions": [],
+            "conflicting_prose_readings": [],
+            "explicit_field_precedence_declared": true
+          },
+          "branch_group": null
+        },
+        {
+          "operation_id": "O15",
+          "source": {
+            "unit_id": "L0027",
+            "start": 1899,
+            "end": 2010,
+            "quote": "7.1 将脑组织置于BABB（苯甲醇:苯甲酸苄酯 = 1:2, vol/vol）中振荡，完成脱脂并开始RI匹配，直至组织完全透明（通常30–60 min）。(Temperature: 4 ℃, Time: 1 hour)\n",
+            "answer_sha256": "0bbe7be8c1a3eaabf163e5be1d6eac66d9e9ca9290d7ca7cfc20209acc6c5fef"
+          },
+          "raw_phase": "ri_matching",
+          "raw_execution_scope": "initial",
+          "raw_parsed_duration": {
+            "state": "unresolved_operation_record_binding",
+            "bounds_hours": null,
+            "unique_hours": null
+          },
+          "raw_repeat_count": 1,
+          "scope": {
+            "role": "core",
+            "basis": "saved core phase, reconciled with explicit source heading",
+            "heading": {
+              "start": 1881,
+              "end": 1899,
+              "quote": "**7 脱脂（BABB预处理）**\n",
+              "title": "脱脂（BABB预处理）"
+            }
+          },
+          "duration": {
+            "options": [
+              {
+                "option_id": "field_0",
+                "bounds_hours": [
+                  1.0,
+                  1.0
+                ],
+                "count": 1,
+                "literal": "1 hour",
+                "expression": "1 hour",
+                "count_in_field": false,
+                "overnight_default": false,
+                "each_in_field": false,
+                "repeat_interpretation": {
+                  "count": 1,
+                  "basis": "one separately represented timed operation; again is not itself an optional branch"
+                },
+                "source": {
+                  "unit_id": "L0027",
+                  "start": 1996,
+                  "end": 2008,
+                  "quote": "Time: 1 hour",
+                  "answer_sha256": "0bbe7be8c1a3eaabf163e5be1d6eac66d9e9ca9290d7ca7cfc20209acc6c5fef"
+                },
+                "basis": "explicit source Time field"
+              }
+            ],
+            "issue": null,
+            "source": {
+              "unit_id": "L0027",
+              "start": 1996,
+              "end": 2008,
+              "quote": "Time: 1 hour",
+              "answer_sha256": "0bbe7be8c1a3eaabf163e5be1d6eac66d9e9ca9290d7ca7cfc20209acc6c5fef"
+            },
+            "basis": "explicit source Time field",
+            "original_parent_context": null,
+            "point_convention": "midpoint within each explicit finite range; no averaging across alternative routes",
+            "prose_numeric_mentions": [
+              {
+                "literal": "60 min",
+                "bounds_hours": [
+                  1.0,
+                  1.0
+                ],
+                "source_numeric": true,
+                "source": {
+                  "unit_id": "L0027",
+                  "start": 1969,
+                  "end": 1975,
+                  "quote": "60 min",
+                  "answer_sha256": "0bbe7be8c1a3eaabf163e5be1d6eac66d9e9ca9290d7ca7cfc20209acc6c5fef"
+                }
+              }
+            ],
+            "conflicting_prose_readings": [],
+            "explicit_field_precedence_declared": true
+          },
+          "branch_group": null
+        },
+        {
+          "operation_id": "O16",
+          "source": {
+            "unit_id": "L0029",
+            "start": 2035,
+            "end": 2121,
+            "quote": "8.1 将透明脑组织转移至新鲜BABB（RI ≈ 1.56）中，避光静置平衡，确保组织完全透明且无气泡。(Temperature: 4 ℃, Time: 2 hours)\n",
+            "answer_sha256": "0bbe7be8c1a3eaabf163e5be1d6eac66d9e9ca9290d7ca7cfc20209acc6c5fef"
+          },
+          "raw_phase": "ri_matching",
+          "raw_execution_scope": "initial",
+          "raw_parsed_duration": {
+            "state": "explicit_exact",
+            "bounds_hours": [
+              2.0,
+              2.0
+            ],
+            "unique_hours": 2.0,
+            "source_numeric": true
+          },
+          "raw_repeat_count": 1,
+          "scope": {
+            "role": "core",
+            "basis": "saved core phase, reconciled with explicit source heading",
+            "heading": {
+              "start": 2010,
+              "end": 2035,
+              "quote": "**8 折射率匹配（RI Matching）**\n",
+              "title": "折射率匹配（RI Matching）"
+            }
+          },
+          "duration": {
+            "options": [
+              {
+                "option_id": "field_0",
+                "bounds_hours": [
+                  2.0,
+                  2.0
+                ],
+                "count": 1,
+                "literal": "2 hours",
+                "expression": "2 hours",
+                "count_in_field": false,
+                "overnight_default": false,
+                "each_in_field": false,
+                "repeat_interpretation": {
+                  "count": 1,
+                  "basis": "one separately represented timed operation; again is not itself an optional branch"
+                },
+                "source": {
+                  "unit_id": "L0029",
+                  "start": 2106,
+                  "end": 2119,
+                  "quote": "Time: 2 hours",
+                  "answer_sha256": "0bbe7be8c1a3eaabf163e5be1d6eac66d9e9ca9290d7ca7cfc20209acc6c5fef"
+                },
+                "basis": "explicit source Time field"
+              }
+            ],
+            "issue": null,
+            "source": {
+              "unit_id": "L0029",
+              "start": 2106,
+              "end": 2119,
+              "quote": "Time: 2 hours",
+              "answer_sha256": "0bbe7be8c1a3eaabf163e5be1d6eac66d9e9ca9290d7ca7cfc20209acc6c5fef"
+            },
+            "basis": "explicit source Time field",
+            "original_parent_context": null,
+            "point_convention": "midpoint within each explicit finite range; no averaging across alternative routes",
+            "prose_numeric_mentions": [],
+            "conflicting_prose_readings": [],
+            "explicit_field_precedence_declared": true
+          },
+          "branch_group": null
+        },
+        {
+          "operation_id": "O17",
+          "source": {
+            "unit_id": "L0030",
+            "start": 2121,
+            "end": 2183,
+            "quote": "8.2 再次更换新鲜BABB，确认组织完全透明，准备成像。(Temperature: 4 ℃, Time: 30 min)\n",
+            "answer_sha256": "0bbe7be8c1a3eaabf163e5be1d6eac66d9e9ca9290d7ca7cfc20209acc6c5fef"
+          },
+          "raw_phase": "ri_matching",
+          "raw_execution_scope": "initial",
+          "raw_parsed_duration": {
+            "state": "explicit_exact",
+            "bounds_hours": [
+              0.5,
+              0.5
+            ],
+            "unique_hours": 0.5,
+            "source_numeric": true
+          },
+          "raw_repeat_count": 1,
+          "scope": {
+            "role": "core",
+            "basis": "saved core phase, reconciled with explicit source heading",
+            "heading": {
+              "start": 2010,
+              "end": 2035,
+              "quote": "**8 折射率匹配（RI Matching）**\n",
+              "title": "折射率匹配（RI Matching）"
+            }
+          },
+          "duration": {
+            "options": [
+              {
+                "option_id": "field_0",
+                "bounds_hours": [
+                  0.5,
+                  0.5
+                ],
+                "count": 1,
+                "literal": "30 min",
+                "expression": "30 min",
+                "count_in_field": false,
+                "overnight_default": false,
+                "each_in_field": false,
+                "repeat_interpretation": {
+                  "count": 1,
+                  "basis": "one separately represented timed operation; again is not itself an optional branch"
+                },
+                "source": {
+                  "unit_id": "L0030",
+                  "start": 2169,
+                  "end": 2181,
+                  "quote": "Time: 30 min",
+                  "answer_sha256": "0bbe7be8c1a3eaabf163e5be1d6eac66d9e9ca9290d7ca7cfc20209acc6c5fef"
+                },
+                "basis": "explicit source Time field"
+              }
+            ],
+            "issue": null,
+            "source": {
+              "unit_id": "L0030",
+              "start": 2169,
+              "end": 2181,
+              "quote": "Time: 30 min",
+              "answer_sha256": "0bbe7be8c1a3eaabf163e5be1d6eac66d9e9ca9290d7ca7cfc20209acc6c5fef"
+            },
+            "basis": "explicit source Time field",
+            "original_parent_context": null,
+            "point_convention": "midpoint within each explicit finite range; no averaging across alternative routes",
+            "prose_numeric_mentions": [],
+            "conflicting_prose_readings": [],
+            "explicit_field_precedence_declared": true
+          },
+          "branch_group": null
+        },
+        {
+          "operation_id": "O18",
+          "source": {
+            "unit_id": "L0032",
+            "start": 2198,
+            "end": 2293,
+            "quote": "9.1 将透明脑组织转移至适配光片显微镜样品槽的BABB中，使用折射率匹配的浸没介质（RI = 1.56）固定样品位置，避免气泡。(Temperature: RT, Time: 即刻成像)\n",
+            "answer_sha256": "0bbe7be8c1a3eaabf163e5be1d6eac66d9e9ca9290d7ca7cfc20209acc6c5fef"
+          },
+          "raw_phase": "imaging",
+          "raw_execution_scope": "initial",
+          "raw_parsed_duration": {
+            "state": "missing",
+            "bounds_hours": null,
+            "unique_hours": null
+          },
+          "raw_repeat_count": 1,
+          "scope": {
+            "role": "excluded",
+            "basis": "saved explicit excluded phase",
+            "original_phase": "imaging",
+            "heading": {
+              "start": 2183,
+              "end": 2198,
+              "quote": "**9 成像前处理与保存**\n",
+              "title": "成像前处理与保存"
+            }
+          }
+        },
+        {
+          "operation_id": "O19",
+          "source": {
+            "unit_id": "L0033",
+            "start": 2293,
+            "end": 2380,
+            "quote": "9.2 若需短期保存，将样品密封于BABB中，避光、4 ℃保存（建议1周内完成成像，以防荧光信号衰减）。(Temperature: 4 ℃, Time: ≤ 7 days)\n",
+            "answer_sha256": "0bbe7be8c1a3eaabf163e5be1d6eac66d9e9ca9290d7ca7cfc20209acc6c5fef"
+          },
+          "raw_phase": "storage",
+          "raw_execution_scope": "conditional_or_future",
+          "raw_parsed_duration": {
+            "state": "explicit_exact",
+            "bounds_hours": [
+              168.0,
+              168.0
+            ],
+            "unique_hours": 168.0,
+            "source_numeric": true
+          },
+          "raw_repeat_count": 1,
+          "scope": {
+            "role": "excluded",
+            "basis": "saved explicit excluded phase",
+            "original_phase": "storage",
+            "heading": {
+              "start": 2183,
+              "end": 2198,
+              "quote": "**9 成像前处理与保存**\n",
+              "title": "成像前处理与保存"
+            }
+          }
+        }
+      ],
+      "issues": [],
+      "scenarios": [
+        {
+          "scenario_id": "S000",
+          "selection": {},
+          "contributions": [
+            {
+              "operation_id": "O10",
+              "option_id": "field_0",
+              "bounds_hours": [
+                1.0,
+                1.0
+              ],
+              "repeat_count": 1,
+              "duration_bounds_hours": [
+                1.0,
+                1.0
+              ],
+              "source": {
+                "unit_id": "L0021",
+                "start": 1548,
+                "end": 1560,
+                "quote": "Time: 1 hour",
+                "answer_sha256": "0bbe7be8c1a3eaabf163e5be1d6eac66d9e9ca9290d7ca7cfc20209acc6c5fef"
+              }
+            },
+            {
+              "operation_id": "O11",
+              "option_id": "field_0",
+              "bounds_hours": [
+                1.0,
+                1.0
+              ],
+              "repeat_count": 1,
+              "duration_bounds_hours": [
+                1.0,
+                1.0
+              ],
+              "source": {
+                "unit_id": "L0022",
+                "start": 1626,
+                "end": 1638,
+                "quote": "Time: 1 hour",
+                "answer_sha256": "0bbe7be8c1a3eaabf163e5be1d6eac66d9e9ca9290d7ca7cfc20209acc6c5fef"
+              }
+            },
+            {
+              "operation_id": "O12",
+              "option_id": "field_0",
+              "bounds_hours": [
+                1.0,
+                1.0
+              ],
+              "repeat_count": 1,
+              "duration_bounds_hours": [
+                1.0,
+                1.0
+              ],
+              "source": {
+                "unit_id": "L0023",
+                "start": 1704,
+                "end": 1716,
+                "quote": "Time: 1 hour",
+                "answer_sha256": "0bbe7be8c1a3eaabf163e5be1d6eac66d9e9ca9290d7ca7cfc20209acc6c5fef"
+              }
+            },
+            {
+              "operation_id": "O13",
+              "option_id": "field_0",
+              "bounds_hours": [
+                1.0,
+                1.0
+              ],
+              "repeat_count": 1,
+              "duration_bounds_hours": [
+                1.0,
+                1.0
+              ],
+              "source": {
+                "unit_id": "L0024",
+                "start": 1785,
+                "end": 1797,
+                "quote": "Time: 1 hour",
+                "answer_sha256": "0bbe7be8c1a3eaabf163e5be1d6eac66d9e9ca9290d7ca7cfc20209acc6c5fef"
+              }
+            },
+            {
+              "operation_id": "O14",
+              "option_id": "field_0",
+              "bounds_hours": [
+                1.0,
+                1.0
+              ],
+              "repeat_count": 1,
+              "duration_bounds_hours": [
+                1.0,
+                1.0
+              ],
+              "source": {
+                "unit_id": "L0025",
+                "start": 1867,
+                "end": 1879,
+                "quote": "Time: 1 hour",
+                "answer_sha256": "0bbe7be8c1a3eaabf163e5be1d6eac66d9e9ca9290d7ca7cfc20209acc6c5fef"
+              }
+            },
+            {
+              "operation_id": "O15",
+              "option_id": "field_0",
+              "bounds_hours": [
+                1.0,
+                1.0
+              ],
+              "repeat_count": 1,
+              "duration_bounds_hours": [
+                1.0,
+                1.0
+              ],
+              "source": {
+                "unit_id": "L0027",
+                "start": 1996,
+                "end": 2008,
+                "quote": "Time: 1 hour",
+                "answer_sha256": "0bbe7be8c1a3eaabf163e5be1d6eac66d9e9ca9290d7ca7cfc20209acc6c5fef"
+              }
+            },
+            {
+              "operation_id": "O16",
+              "option_id": "field_0",
+              "bounds_hours": [
+                2.0,
+                2.0
+              ],
+              "repeat_count": 1,
+              "duration_bounds_hours": [
+                2.0,
+                2.0
+              ],
+              "source": {
+                "unit_id": "L0029",
+                "start": 2106,
+                "end": 2119,
+                "quote": "Time: 2 hours",
+                "answer_sha256": "0bbe7be8c1a3eaabf163e5be1d6eac66d9e9ca9290d7ca7cfc20209acc6c5fef"
+              }
+            },
+            {
+              "operation_id": "O17",
+              "option_id": "field_0",
+              "bounds_hours": [
+                0.5,
+                0.5
+              ],
+              "repeat_count": 1,
+              "duration_bounds_hours": [
+                0.5,
+                0.5
+              ],
+              "source": {
+                "unit_id": "L0030",
+                "start": 2169,
+                "end": 2181,
+                "quote": "Time: 30 min",
+                "answer_sha256": "0bbe7be8c1a3eaabf163e5be1d6eac66d9e9ca9290d7ca7cfc20209acc6c5fef"
+              }
+            }
+          ],
+          "omitted_core_operations": [],
+          "unknown_duration_operations": [],
+          "issues": [],
+          "known_subtotal_bounds_hours": [
+            8.5,
+            8.5
+          ],
+          "bounds_hours": [
+            8.5,
+            8.5
+          ],
+          "hours": 8.5
+        }
+      ],
+      "hours": 8.5,
+      "single_unbranched_point": true,
+      "conditional_group_count": 0,
+      "schedule_convention": "sum reported serial core incubation durations",
+      "elapsed_laboratory_time_claimed": false,
+      "model_raw_modified": false,
+      "new_model_calls": 0,
+      "selection_uses_achieved_score": false,
+      "expert_validated": false
+    },
+    "time_formula": {
+      "policy": "kb-window-asymmetric-median-0.20-under-0.10-over-v1",
+      "source": "time_kb.json",
+      "requested_tier": "T04_WHOLE_MOUSE_BRAIN_5_12MM",
+      "actual_hours": 8.5,
+      "min_hours": 48.0,
+      "max_hours": 96.0,
+      "median_hours": 72.0,
+      "tau_hours": 14.4,
+      "delta_hours": 39.5,
+      "tau_under_fraction": 0.2,
+      "tau_over_fraction": 0.1,
+      "status": "scored",
+      "resolved_tier": "T04_WHOLE_MOUSE_BRAIN_5_12MM",
+      "method_key": "fdisco"
+    },
+    "conditional_time_results": [
+      {
+        "scenario_id": "S000",
+        "hours": 8.5,
+        "metrics": {
+          "c_param": 3,
+          "co_order": 2,
+          "co_method": 1,
+          "co_param": 0,
+          "co_chem": 1,
+          "s_method": 0.1263,
+          "s_label": 5.1,
+          "s_trans": 2.814646787157323,
+          "s_time": 0.0696993280570204,
+          "sr": 0.0,
+          "sp": 0.0,
+          "Com": 0.6,
+          "Cor": 0.5416666666666666,
+          "Eff": 0.584177176267862,
+          "IA": 0.5416666666666666,
+          "HV": 0.18985758228705513
+        },
+        "formula": {
+          "policy": "kb-window-asymmetric-median-0.20-under-0.10-over-v1",
+          "source": "time_kb.json",
+          "requested_tier": "T04_WHOLE_MOUSE_BRAIN_5_12MM",
+          "actual_hours": 8.5,
+          "min_hours": 48.0,
+          "max_hours": 96.0,
+          "median_hours": 72.0,
+          "tau_hours": 14.4,
+          "delta_hours": 39.5,
+          "tau_under_fraction": 0.2,
+          "tau_over_fraction": 0.1,
+          "status": "scored",
+          "resolved_tier": "T04_WHOLE_MOUSE_BRAIN_5_12MM",
+          "method_key": "fdisco"
+        }
+      }
+    ],
+    "time_dependency_view_reconstructed": false,
+    "candidate_point_applied": true,
+    "time_changes": {
+      "s_time": {
+        "before": null,
+        "after": 0.0696993280570204
+      },
+      "Eff": {
+        "before": null,
+        "after": 0.584177176267862
+      },
+      "IA": {
+        "before": null,
+        "after": 0.5416666666666666
+      },
+      "HV": {
+        "before": null,
+        "after": 0.18985758228705513
+      }
+    }
+  },
+  "case_source": {
+    "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\optimizer_round3_20261011\\confirmation_qwen_01\\cases.json",
+    "sha256": "b4e50ef0280f7450532e198c1c6cd85ec399de06f68007a848cae1ed0fb5a08f"
+  },
+  "original_source": {
+    "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\optimizer_round3_20261011\\confirmation_qwen_01\\original_source_documents\\4dca84598051a5f58be13cde.json",
+    "sha256": "4f13d621a3f6cec8abba099ed59d9df208ee4628d56717b4bccabc794e51fc05"
+  }
+}

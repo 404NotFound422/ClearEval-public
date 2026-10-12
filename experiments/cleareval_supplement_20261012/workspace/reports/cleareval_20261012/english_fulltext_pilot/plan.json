@@ -1,0 +1,50 @@
+{
+  "created_utc": "2026-10-12T11:01:36.415576+00:00",
+  "study": "fulltext_English_author_reuse_development_pilot",
+  "scope": "Full-text route recognition, segmentation and raw SR/SP; no fresh Cor/EGES inference",
+  "natural_answers": 8,
+  "tasks": [
+    1,
+    2,
+    23,
+    248
+  ],
+  "generators": [
+    "glm4.7-thinking",
+    "openai_claude-sonnet-4.6",
+    "openai_gpt-5.2-thinking",
+    "openai_qwen3-max"
+  ],
+  "representations": [
+    "original",
+    "english_author"
+  ],
+  "threshold": 0.7,
+  "encoder": "unchanged all-mpnet-base-v2",
+  "control_types": [
+    "renumber_operations",
+    "merge_adjacent_operations",
+    "delete_reported_core_operations"
+  ],
+  "control_bases": [
+    "R3C04",
+    "R3C07"
+  ],
+  "control_scope": "step-metric diagnostic; not completed full-CCE E2",
+  "translation_policy": "Reuse 55 saved translated step bodies; author translates framing and one native-label word; all original scientific choices retained",
+  "translation_quality_status": "mechanical checks plus author reading, not expert or independent translator verification",
+  "new_generative_requests": 0,
+  "primary_scores_overwritten": false,
+  "reference_selection": "Recognize route on each full text; use fixed task/method-compatible complete versions; max SR then same-version SP then fixed order",
+  "human_budget": {
+    "experts": 1,
+    "development": 5,
+    "holdout": 15
+  },
+  "hypotheses": [
+    "English can change matches while retaining reported choices",
+    "Full-text translation can also change parser output, unlike step-only replacement",
+    "Deletion response and merge invariance must be checked separately from score increases"
+  ],
+  "new_Qwen_batch": "Prepared separately; not authorized against exhausted historical cap"
+}

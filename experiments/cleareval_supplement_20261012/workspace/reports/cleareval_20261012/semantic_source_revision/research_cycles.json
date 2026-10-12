@@ -1,0 +1,44 @@
+{
+  "new_model_calls": 0,
+  "author_source_analysis": true,
+  "cycles": [
+    {
+      "phenomenon": "Explicit Chinese selected method discarded",
+      "hypothesis": "Selection context was underrecognized",
+      "test": "Same candidate across 32 archived returns plus positive/negative selection examples",
+      "observed": "Only C04 method and transparency components recovered; all old finite values unchanged",
+      "next": "Validate on unexposed wording in a future real evaluator batch"
+    },
+    {
+      "phenomenon": "Resolvable target-fluor relations withheld",
+      "evidence": "Exact original answer spans and marker/fluor role definitions",
+      "test": "Author source decomposition plus the existing label scorer",
+      "observed": "Four additional label values; three additional complete single-value CCE records",
+      "limit": "This is source-assisted analysis, not new automatic/expert accuracy"
+    },
+    {
+      "phenomenon": "Canonical split moved a trailing Time field next to storage",
+      "test": "Compare original parent step, mapping, and both time interpretations",
+      "observed": "C01 time interpretation changes; all resulting CCE vectors in the declared scenarios are equal"
+    },
+    {
+      "phenomenon": "TUJ1 parenthesis was overread as proof of clone identity",
+      "primary_source": "https://www.ptglab.com/products/TUBB3-specific-Antibody-CL488-66375.htm",
+      "counterexample": "Product uses TUBB3-specific/TUJ1 target label but reports clone 1F8G10",
+      "observed": "Corrected metadata interpretation; no score changed"
+    },
+    {
+      "phenomenon": "An optional bleach remained implicit in an already complete CCE record",
+      "hypothesis": "Omitting the optional 12 h might leave the time score invariant",
+      "test": "Evaluate 20 and 32 hours using the same original time function and KB",
+      "observed": "2.5709906743058366 versus 3.0; invariance rejected",
+      "next": "Cross both source branches with the other answer branches; completed in joint_with_optional_bleach"
+    },
+    {
+      "phenomenon": "Scalar model ordering could depend on source branches",
+      "test": "8 main and 32 total declared source/scope combinations, fixed paired tasks",
+      "observed": "Mean-HV ordering changes; both models remain nondominated in all enumerated scenarios",
+      "limit": "Two exposed tasks with shared source family, no population uncertainty inference"
+    }
+  ]
+}

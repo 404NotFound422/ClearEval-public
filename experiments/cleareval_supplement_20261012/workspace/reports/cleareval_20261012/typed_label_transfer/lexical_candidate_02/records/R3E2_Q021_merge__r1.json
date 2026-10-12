@@ -1,0 +1,1083 @@
+{
+  "cell_id": "R3E2_Q021_merge__r1",
+  "cohort": "E2_canonical_qwen_01",
+  "question_id": 21,
+  "case_id": "round3_control_q021_merge_v1",
+  "anonymous_answer_id": "R3E2_Q021_merge",
+  "repeat_index": 1,
+  "metrics": {
+    "c_param": 3,
+    "co_order": 2,
+    "co_method": 2,
+    "co_param": 1,
+    "co_chem": 1,
+    "s_method": -0.45,
+    "s_label": null,
+    "s_trans": 2.7055534759358473,
+    "s_time": 0.0,
+    "sr": 0.0,
+    "sp": 0.0,
+    "Com": 0.6,
+    "Cor": 0.7916666666666666,
+    "Eff": null,
+    "IA": null,
+    "HV": null
+  },
+  "complete_numeric_CCE": false,
+  "original_status": "success",
+  "source_record": {
+    "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\optimizer_round3_20261011\\E2_canonical_qwen_01\\run\\attempts\\ffab255ceaf7a51319502628322f3c8f91d28bd1005b25ecee9298f9fb8013dd_1\\processing.json",
+    "sha256": "b98b719e8a0ad1c0c22617105b41218d72b3e09e1e0fc6f8030b69f4947a00f8"
+  },
+  "source_document": {
+    "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\optimizer_round3_20261011\\E2_canonical_qwen_01\\source_documents\\5f10cf47a83f14a4b614bbdc.json",
+    "sha256": "b32dbed2ceaaf33d543c0880d0d5ac1c158d20960ed2b553f8f0901c89da47df"
+  },
+  "answer_sha256": "a4cbc22e8baf8818d7de4ad9b273d15e5df22f6dc89cb80f36ef73820f1afa35",
+  "original_answer_sha256": "db1e92df39a3ec1b12be6c046edf94903e037d0a2b6dbb39d0b54e8cd07155bc",
+  "trial": {
+    "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\optimizer_round3_20261011\\E2_canonical_qwen_01\\run\\trials\\ffab255ceaf7a51319502628322f3c8f91d28bd1005b25ecee9298f9fb8013dd.json",
+    "sha256": "b6536cca2a560f021290a72ac742c6cc9f1ec5a4643cf09c5fcebaf659e7c692"
+  },
+  "saved_trial_id": "ffab255ceaf7a51319502628322f3c8f91d28bd1005b25ecee9298f9fb8013dd",
+  "quantitative_data": {
+    "method_name": "FDISCO",
+    "tissue_ri_value": 1.46,
+    "total_time_hours": 48.0,
+    "sample_tier": "T02_THICK_SLICE_0P5_3MM",
+    "reagent_ri_value": 1.56,
+    "protocol_time_hours": null
+  },
+  "time_derivation": {
+    "hours": 48.0,
+    "issues": [],
+    "original_calculation": {
+      "total_hours": 48.0,
+      "candidate_bounds_hours": [
+        48.0,
+        48.0
+      ],
+      "issues": [],
+      "included_operation_ids": [
+        "OP004",
+        "OP005",
+        "OP006",
+        "OP007",
+        "OP008",
+        "OP009"
+      ],
+      "excluded_operations": [
+        {
+          "id": "OP001",
+          "phase": "labeling_preparation"
+        },
+        {
+          "id": "OP002",
+          "phase": "labeling_preparation"
+        },
+        {
+          "id": "OP003",
+          "phase": "labeling_preparation"
+        },
+        {
+          "id": "OP010",
+          "phase": "storage"
+        },
+        {
+          "id": "OP011",
+          "phase": "imaging"
+        }
+      ],
+      "claims": [],
+      "mode": "serial",
+      "known_operation_contributions": [
+        {
+          "operation_id": "OP004",
+          "lower_hours": 6.0,
+          "upper_hours": 6.0,
+          "repeat_status": "source_exact_or_single"
+        },
+        {
+          "operation_id": "OP005",
+          "lower_hours": 6.0,
+          "upper_hours": 6.0,
+          "repeat_status": "source_exact_or_single"
+        },
+        {
+          "operation_id": "OP006",
+          "lower_hours": 6.0,
+          "upper_hours": 6.0,
+          "repeat_status": "source_exact_or_single"
+        },
+        {
+          "operation_id": "OP007",
+          "lower_hours": 6.0,
+          "upper_hours": 6.0,
+          "repeat_status": "source_exact_or_single"
+        },
+        {
+          "operation_id": "OP008",
+          "lower_hours": 12.0,
+          "upper_hours": 12.0,
+          "repeat_status": "source_exact_or_single"
+        },
+        {
+          "operation_id": "OP009",
+          "lower_hours": 12.0,
+          "upper_hours": 12.0,
+          "repeat_status": "source_exact_or_single"
+        }
+      ],
+      "initial_scope_candidate_bounds_hours": [
+        48.0,
+        48.0
+      ],
+      "conditional_operations": [],
+      "timeline_derivation": {
+        "model_proposed_operation_ids": [
+          "OP001",
+          "OP002",
+          "OP003",
+          "OP004",
+          "OP005",
+          "OP006",
+          "OP007",
+          "OP008",
+          "OP009",
+          "OP010",
+          "OP011"
+        ],
+        "program_initial_operation_ids": [
+          "OP004",
+          "OP005",
+          "OP006",
+          "OP007",
+          "OP008",
+          "OP009"
+        ],
+        "excluded_from_proposal": [
+          "OP001",
+          "OP002",
+          "OP003",
+          "OP010",
+          "OP011"
+        ],
+        "added_from_declared_initial_operations": [],
+        "same_members_and_order": false,
+        "raw_proposal_preserved": true,
+        "phase_and_scope_semantics_verified": false
+      },
+      "model_precedence_audit": {
+        "cyclic_model_proposal": false,
+        "backward_document_order_edges": 0,
+        "unsupported_dependency_claims": 0,
+        "model_edges_used_for_aggregation": false,
+        "program_uses_declared_schedule_and_source_order_convention": true
+      },
+      "coverage_scopes": {
+        "whole_protocol_operations": "complete",
+        "core_time_operations": "complete",
+        "model_timeline_completeness": "complete",
+        "program_core_gate_independent_of_whole_protocol_completeness": true,
+        "action_recall_is_not_exhaustive_semantic_gold": true
+      },
+      "initial_plus_at_most_one_conditional_execution_envelope_hours": null,
+      "endpoint_scope": "The primary score covers the reported initial core processing. Conditional later operations and their time bounds are retained separately.",
+      "bounds_scope": "Conditional on supplied phase/schedule classification; null upper bound means no finite source-supported upper bound.",
+      "serial_convention": "Document-order operations are provisionally summed only if no branch/overlap cue is detected; semantic schedule is not certified.",
+      "overnight_policy": "Original rubric: overnight is eight hours by convention, not a measured duration.",
+      "scientific_total_confirmed": false,
+      "primary_time_scope": "initial_core_clearing_to_first_imaging_ready"
+    }
+  },
+  "version": "typed-label-fixed-rule-transfer-v1",
+  "primary_metrics": {
+    "c_param": 3,
+    "co_order": 2,
+    "co_method": 2,
+    "co_param": 1,
+    "co_chem": 1,
+    "s_method": -0.45,
+    "s_label": null,
+    "s_trans": 2.7055534759358473,
+    "s_time": 0.0,
+    "sr": 0.0,
+    "sp": 0.0,
+    "Com": 0.6,
+    "Cor": 0.7916666666666666,
+    "Eff": null,
+    "IA": null,
+    "HV": null
+  },
+  "typed_label_metrics": {
+    "c_param": 3,
+    "co_order": 2,
+    "co_method": 2,
+    "co_param": 1,
+    "co_chem": 1,
+    "s_method": -0.45,
+    "s_label": 4.199999999999999,
+    "s_trans": 2.7055534759358473,
+    "s_time": 0.0,
+    "sr": 0.0,
+    "sp": 0.0,
+    "Com": 0.6,
+    "Cor": 0.7916666666666666,
+    "Eff": 0.5029627896613206,
+    "IA": 0.5029627896613206,
+    "HV": 0.23890732508912726
+  },
+  "typed_midpoint_metrics": {
+    "c_param": 3,
+    "co_order": 2,
+    "co_method": 2,
+    "co_param": 1,
+    "co_chem": 1,
+    "s_method": -0.45,
+    "s_label": 4.199999999999999,
+    "s_trans": 2.7055534759358473,
+    "s_time": 0.0,
+    "sr": 0.0,
+    "sp": 0.0,
+    "Com": 0.6,
+    "Cor": 0.7916666666666666,
+    "Eff": 0.5029627896613206,
+    "IA": 0.5029627896613206,
+    "HV": 0.23890732508912726
+  },
+  "label_replay_status": "replayed",
+  "label_derivation": {
+    "version": "cce-typed-label-scorer-v2.1",
+    "s_label": 4.199999999999999,
+    "channels": {
+      "s_target_match": null,
+      "s_marker_fluor_compat": null,
+      "s_method_fluor_compat": 4.199999999999999
+    },
+    "channel_applicability": {
+      "s_target_match": {
+        "applicable": false,
+        "value": null,
+        "contributing_pairs": []
+      },
+      "s_marker_fluor_compat": {
+        "applicable": false,
+        "value": null,
+        "contributing_pairs": []
+      },
+      "s_method_fluor_compat": {
+        "applicable": true,
+        "value": 4.199999999999999,
+        "contributing_pairs": [
+          "relation:R001",
+          "native:I001",
+          "relation:R002",
+          "unresolved_entity:E006",
+          "unresolved_entity:E007"
+        ]
+      }
+    },
+    "pair_results": [
+      {
+        "pair_id": "relation:R001",
+        "entity_id": "E001",
+        "fluorophore": "GFP",
+        "reported_marker": null,
+        "reported_target_literal": null,
+        "label_type": "native_fluorescent_protein",
+        "original_function_input": {
+          "GFP": ""
+        },
+        "applicable": {
+          "s_target_match": false,
+          "s_marker_fluor_compat": false,
+          "s_method_fluor_compat": true
+        },
+        "channels": {
+          "s_target_match": null,
+          "s_marker_fluor_compat": null,
+          "s_method_fluor_compat": 5.4
+        },
+        "not_applicable_reason": "standalone fluorescence has no antibody target-pair channel",
+        "source_evidence": {
+          "unit_id": "L0002",
+          "start": 26,
+          "end": 64,
+          "quote": "**Chosen Labeling:** [GFP (内源), DAPI]\n",
+          "answer_sha256": "a4cbc22e8baf8818d7de4ad9b273d15e5df22f6dc89cb80f36ef73820f1afa35"
+        },
+        "compatibility_audit": [
+          {
+            "kind": "method_fluor",
+            "method_name": "FDISCO",
+            "fluorophore": "GFP",
+            "source": "KnowledgeBase/method_fluro_compati.json",
+            "value": 0.9,
+            "status": "TABLE_REPORTED"
+          }
+        ]
+      },
+      {
+        "pair_id": "native:I001",
+        "entity_id": "E001",
+        "fluorophore": "GFP",
+        "reported_marker": null,
+        "reported_target_literal": null,
+        "label_type": "native_fluorescent_protein",
+        "original_function_input": {
+          "GFP": ""
+        },
+        "applicable": {
+          "s_target_match": false,
+          "s_marker_fluor_compat": false,
+          "s_method_fluor_compat": true
+        },
+        "channels": {
+          "s_target_match": null,
+          "s_marker_fluor_compat": null,
+          "s_method_fluor_compat": 5.4
+        },
+        "not_applicable_reason": "standalone fluorescence has no antibody target-pair channel",
+        "source_evidence": {
+          "unit_id": "L0002",
+          "start": 26,
+          "end": 64,
+          "quote": "**Chosen Labeling:** [GFP (内源), DAPI]\n",
+          "answer_sha256": "a4cbc22e8baf8818d7de4ad9b273d15e5df22f6dc89cb80f36ef73820f1afa35"
+        },
+        "compatibility_audit": [
+          {
+            "kind": "method_fluor",
+            "method_name": "FDISCO",
+            "fluorophore": "GFP",
+            "source": "KnowledgeBase/method_fluro_compati.json",
+            "value": 0.9,
+            "status": "TABLE_REPORTED"
+          }
+        ]
+      },
+      {
+        "pair_id": "relation:R002",
+        "entity_id": "E002",
+        "fluorophore": "DAPI",
+        "reported_marker": null,
+        "reported_target_literal": null,
+        "label_type": "direct_stain",
+        "original_function_input": {
+          "DAPI": ""
+        },
+        "applicable": {
+          "s_target_match": false,
+          "s_marker_fluor_compat": false,
+          "s_method_fluor_compat": true
+        },
+        "channels": {
+          "s_target_match": null,
+          "s_marker_fluor_compat": null,
+          "s_method_fluor_compat": 4.199999999999999
+        },
+        "not_applicable_reason": "standalone fluorescence has no antibody target-pair channel",
+        "source_evidence": {
+          "unit_id": "L0002",
+          "start": 26,
+          "end": 64,
+          "quote": "**Chosen Labeling:** [GFP (内源), DAPI]\n",
+          "answer_sha256": "a4cbc22e8baf8818d7de4ad9b273d15e5df22f6dc89cb80f36ef73820f1afa35"
+        },
+        "compatibility_audit": [
+          {
+            "kind": "method_fluor",
+            "method_name": "FDISCO",
+            "fluorophore": "DAPI",
+            "source": "KnowledgeBase/method_fluro_compati.json",
+            "value": 0.7,
+            "status": "TABLE_REPORTED"
+          }
+        ]
+      },
+      {
+        "pair_id": "unresolved_entity:E006",
+        "entity_id": "E006",
+        "fluorophore": "DAPI",
+        "reported_marker": null,
+        "reported_target_literal": null,
+        "label_type": "direct_stain",
+        "original_function_input": {
+          "DAPI": ""
+        },
+        "applicable": {
+          "s_target_match": false,
+          "s_marker_fluor_compat": false,
+          "s_method_fluor_compat": true
+        },
+        "channels": {
+          "s_target_match": null,
+          "s_marker_fluor_compat": null,
+          "s_method_fluor_compat": 4.199999999999999
+        },
+        "not_applicable_reason": "standalone fluorescence has no antibody target-pair channel",
+        "source_evidence": {
+          "unit_id": "L0006",
+          "start": 926,
+          "end": 930,
+          "quote": "DAPI",
+          "answer_sha256": "a4cbc22e8baf8818d7de4ad9b273d15e5df22f6dc89cb80f36ef73820f1afa35"
+        },
+        "compatibility_audit": [
+          {
+            "kind": "method_fluor",
+            "method_name": "FDISCO",
+            "fluorophore": "DAPI",
+            "source": "KnowledgeBase/method_fluro_compati.json",
+            "value": 0.7,
+            "status": "TABLE_REPORTED"
+          }
+        ]
+      },
+      {
+        "pair_id": "unresolved_entity:E007",
+        "entity_id": "E007",
+        "fluorophore": "DAPI",
+        "reported_marker": null,
+        "reported_target_literal": null,
+        "label_type": "direct_stain",
+        "original_function_input": {
+          "DAPI": ""
+        },
+        "applicable": {
+          "s_target_match": false,
+          "s_marker_fluor_compat": false,
+          "s_method_fluor_compat": true
+        },
+        "channels": {
+          "s_target_match": null,
+          "s_marker_fluor_compat": null,
+          "s_method_fluor_compat": 4.199999999999999
+        },
+        "not_applicable_reason": "standalone fluorescence has no antibody target-pair channel",
+        "source_evidence": {
+          "unit_id": "L0007",
+          "start": 1067,
+          "end": 1071,
+          "quote": "DAPI",
+          "answer_sha256": "a4cbc22e8baf8818d7de4ad9b273d15e5df22f6dc89cb80f36ef73820f1afa35"
+        },
+        "compatibility_audit": [
+          {
+            "kind": "method_fluor",
+            "method_name": "FDISCO",
+            "fluorophore": "DAPI",
+            "source": "KnowledgeBase/method_fluro_compati.json",
+            "value": 0.7,
+            "status": "TABLE_REPORTED"
+          }
+        ]
+      }
+    ],
+    "resolved_uncertainties": [
+      {
+        "kind": "reported_unresolved_relation",
+        "relation_id": "R001",
+        "entity_id": "E001",
+        "resolution": "antibody relation is not applicable to this standalone signal"
+      },
+      {
+        "kind": "reported_unresolved_relation",
+        "relation_id": "R002",
+        "entity_id": "E002",
+        "resolution": "antibody relation is not applicable to this standalone signal"
+      }
+    ],
+    "remaining_uncertainties": [],
+    "minimum_of_available_applicable_channels": 4.199999999999999,
+    "task_target_coverage": "native/direct task coverage remains separate from antibody-pair applicability",
+    "new_model_calls": 0,
+    "expert_validated": false
+  },
+  "compatibility_lookup_trace": [],
+  "midpoint_time_derivation": {
+    "hours": 48.0,
+    "bounds_hours": [
+      48.0,
+      48.0
+    ],
+    "decision": "existing_source_bound_scalar",
+    "issues": []
+  },
+  "remaining_dependencies": {
+    "time": [],
+    "label_relations": [],
+    "compatibility": []
+  },
+  "original_technical_status_preserved": true,
+  "new_model_calls": 0,
+  "new_author_annotations": 0,
+  "scope_candidate_metrics": {
+    "c_param": 3,
+    "co_order": 2,
+    "co_method": 2,
+    "co_param": 1,
+    "co_chem": 1,
+    "s_method": -0.45,
+    "s_label": 4.199999999999999,
+    "s_trans": 2.7055534759358473,
+    "s_time": 0.0,
+    "sr": 0.0,
+    "sp": 0.0,
+    "Com": 0.6,
+    "Cor": 0.7916666666666666,
+    "Eff": 0.5029627896613206,
+    "IA": 0.5029627896613206,
+    "HV": 0.23890732508912726
+  },
+  "scope_time_interpretation": {
+    "hours": 48.0,
+    "bounds_hours": [
+      48.0,
+      48.0
+    ],
+    "decision": "existing_source_bound_scalar",
+    "issues": [],
+    "scope": "reported_core_operations"
+  },
+  "repeated_channel_resolution": [],
+  "scope_label_derivation": {
+    "version": "cce-typed-label-scorer-v2.1",
+    "s_label": 4.199999999999999,
+    "channels": {
+      "s_target_match": null,
+      "s_marker_fluor_compat": null,
+      "s_method_fluor_compat": 4.199999999999999
+    },
+    "channel_applicability": {
+      "s_target_match": {
+        "applicable": false,
+        "value": null,
+        "contributing_pairs": []
+      },
+      "s_marker_fluor_compat": {
+        "applicable": false,
+        "value": null,
+        "contributing_pairs": []
+      },
+      "s_method_fluor_compat": {
+        "applicable": true,
+        "value": 4.199999999999999,
+        "contributing_pairs": [
+          "relation:R001",
+          "native:I001",
+          "relation:R002",
+          "unresolved_entity:E006",
+          "unresolved_entity:E007"
+        ]
+      }
+    },
+    "pair_results": [
+      {
+        "pair_id": "relation:R001",
+        "entity_id": "E001",
+        "fluorophore": "GFP",
+        "reported_marker": null,
+        "reported_target_literal": null,
+        "label_type": "native_fluorescent_protein",
+        "original_function_input": {
+          "GFP": ""
+        },
+        "applicable": {
+          "s_target_match": false,
+          "s_marker_fluor_compat": false,
+          "s_method_fluor_compat": true
+        },
+        "channels": {
+          "s_target_match": null,
+          "s_marker_fluor_compat": null,
+          "s_method_fluor_compat": 5.4
+        },
+        "not_applicable_reason": "standalone fluorescence has no antibody target-pair channel",
+        "source_evidence": {
+          "unit_id": "L0002",
+          "start": 26,
+          "end": 64,
+          "quote": "**Chosen Labeling:** [GFP (内源), DAPI]\n",
+          "answer_sha256": "a4cbc22e8baf8818d7de4ad9b273d15e5df22f6dc89cb80f36ef73820f1afa35"
+        },
+        "compatibility_audit": [
+          {
+            "kind": "method_fluor",
+            "method_name": "FDISCO",
+            "fluorophore": "GFP",
+            "source": "KnowledgeBase/method_fluro_compati.json",
+            "value": 0.9,
+            "status": "TABLE_REPORTED"
+          }
+        ]
+      },
+      {
+        "pair_id": "native:I001",
+        "entity_id": "E001",
+        "fluorophore": "GFP",
+        "reported_marker": null,
+        "reported_target_literal": null,
+        "label_type": "native_fluorescent_protein",
+        "original_function_input": {
+          "GFP": ""
+        },
+        "applicable": {
+          "s_target_match": false,
+          "s_marker_fluor_compat": false,
+          "s_method_fluor_compat": true
+        },
+        "channels": {
+          "s_target_match": null,
+          "s_marker_fluor_compat": null,
+          "s_method_fluor_compat": 5.4
+        },
+        "not_applicable_reason": "standalone fluorescence has no antibody target-pair channel",
+        "source_evidence": {
+          "unit_id": "L0002",
+          "start": 26,
+          "end": 64,
+          "quote": "**Chosen Labeling:** [GFP (内源), DAPI]\n",
+          "answer_sha256": "a4cbc22e8baf8818d7de4ad9b273d15e5df22f6dc89cb80f36ef73820f1afa35"
+        },
+        "compatibility_audit": [
+          {
+            "kind": "method_fluor",
+            "method_name": "FDISCO",
+            "fluorophore": "GFP",
+            "source": "KnowledgeBase/method_fluro_compati.json",
+            "value": 0.9,
+            "status": "TABLE_REPORTED"
+          }
+        ]
+      },
+      {
+        "pair_id": "relation:R002",
+        "entity_id": "E002",
+        "fluorophore": "DAPI",
+        "reported_marker": null,
+        "reported_target_literal": null,
+        "label_type": "direct_stain",
+        "original_function_input": {
+          "DAPI": ""
+        },
+        "applicable": {
+          "s_target_match": false,
+          "s_marker_fluor_compat": false,
+          "s_method_fluor_compat": true
+        },
+        "channels": {
+          "s_target_match": null,
+          "s_marker_fluor_compat": null,
+          "s_method_fluor_compat": 4.199999999999999
+        },
+        "not_applicable_reason": "standalone fluorescence has no antibody target-pair channel",
+        "source_evidence": {
+          "unit_id": "L0002",
+          "start": 26,
+          "end": 64,
+          "quote": "**Chosen Labeling:** [GFP (内源), DAPI]\n",
+          "answer_sha256": "a4cbc22e8baf8818d7de4ad9b273d15e5df22f6dc89cb80f36ef73820f1afa35"
+        },
+        "compatibility_audit": [
+          {
+            "kind": "method_fluor",
+            "method_name": "FDISCO",
+            "fluorophore": "DAPI",
+            "source": "KnowledgeBase/method_fluro_compati.json",
+            "value": 0.7,
+            "status": "TABLE_REPORTED"
+          }
+        ]
+      },
+      {
+        "pair_id": "unresolved_entity:E006",
+        "entity_id": "E006",
+        "fluorophore": "DAPI",
+        "reported_marker": null,
+        "reported_target_literal": null,
+        "label_type": "direct_stain",
+        "original_function_input": {
+          "DAPI": ""
+        },
+        "applicable": {
+          "s_target_match": false,
+          "s_marker_fluor_compat": false,
+          "s_method_fluor_compat": true
+        },
+        "channels": {
+          "s_target_match": null,
+          "s_marker_fluor_compat": null,
+          "s_method_fluor_compat": 4.199999999999999
+        },
+        "not_applicable_reason": "standalone fluorescence has no antibody target-pair channel",
+        "source_evidence": {
+          "unit_id": "L0006",
+          "start": 926,
+          "end": 930,
+          "quote": "DAPI",
+          "answer_sha256": "a4cbc22e8baf8818d7de4ad9b273d15e5df22f6dc89cb80f36ef73820f1afa35"
+        },
+        "compatibility_audit": [
+          {
+            "kind": "method_fluor",
+            "method_name": "FDISCO",
+            "fluorophore": "DAPI",
+            "source": "KnowledgeBase/method_fluro_compati.json",
+            "value": 0.7,
+            "status": "TABLE_REPORTED"
+          }
+        ]
+      },
+      {
+        "pair_id": "unresolved_entity:E007",
+        "entity_id": "E007",
+        "fluorophore": "DAPI",
+        "reported_marker": null,
+        "reported_target_literal": null,
+        "label_type": "direct_stain",
+        "original_function_input": {
+          "DAPI": ""
+        },
+        "applicable": {
+          "s_target_match": false,
+          "s_marker_fluor_compat": false,
+          "s_method_fluor_compat": true
+        },
+        "channels": {
+          "s_target_match": null,
+          "s_marker_fluor_compat": null,
+          "s_method_fluor_compat": 4.199999999999999
+        },
+        "not_applicable_reason": "standalone fluorescence has no antibody target-pair channel",
+        "source_evidence": {
+          "unit_id": "L0007",
+          "start": 1067,
+          "end": 1071,
+          "quote": "DAPI",
+          "answer_sha256": "a4cbc22e8baf8818d7de4ad9b273d15e5df22f6dc89cb80f36ef73820f1afa35"
+        },
+        "compatibility_audit": [
+          {
+            "kind": "method_fluor",
+            "method_name": "FDISCO",
+            "fluorophore": "DAPI",
+            "source": "KnowledgeBase/method_fluro_compati.json",
+            "value": 0.7,
+            "status": "TABLE_REPORTED"
+          }
+        ]
+      }
+    ],
+    "resolved_uncertainties": [
+      {
+        "kind": "reported_unresolved_relation",
+        "relation_id": "R001",
+        "entity_id": "E001",
+        "resolution": "antibody relation is not applicable to this standalone signal"
+      },
+      {
+        "kind": "reported_unresolved_relation",
+        "relation_id": "R002",
+        "entity_id": "E002",
+        "resolution": "antibody relation is not applicable to this standalone signal"
+      }
+    ],
+    "remaining_uncertainties": [],
+    "minimum_of_available_applicable_channels": 4.199999999999999,
+    "task_target_coverage": "native/direct task coverage remains separate from antibody-pair applicability",
+    "new_model_calls": 0,
+    "expert_validated": false
+  },
+  "scope_changes": {},
+  "original_raw_untouched": true,
+  "lexical_candidate_metrics": {
+    "c_param": 3,
+    "co_order": 2,
+    "co_method": 2,
+    "co_param": 1,
+    "co_chem": 1,
+    "s_method": -0.45,
+    "s_label": 4.199999999999999,
+    "s_trans": 2.7055534759358473,
+    "s_time": 0.0,
+    "sr": 0.0,
+    "sp": 0.0,
+    "Com": 0.6,
+    "Cor": 0.7916666666666666,
+    "Eff": 0.5029627896613206,
+    "IA": 0.5029627896613206,
+    "HV": 0.23890732508912726
+  },
+  "lexical_full_conversion": true,
+  "lexical_post": null,
+  "lexical_label_derivation": {
+    "version": "cce-typed-label-scorer-v2.1",
+    "s_label": 4.199999999999999,
+    "channels": {
+      "s_target_match": null,
+      "s_marker_fluor_compat": null,
+      "s_method_fluor_compat": 4.199999999999999
+    },
+    "channel_applicability": {
+      "s_target_match": {
+        "applicable": false,
+        "value": null,
+        "contributing_pairs": []
+      },
+      "s_marker_fluor_compat": {
+        "applicable": false,
+        "value": null,
+        "contributing_pairs": []
+      },
+      "s_method_fluor_compat": {
+        "applicable": true,
+        "value": 4.199999999999999,
+        "contributing_pairs": [
+          "relation:R001",
+          "native:I001",
+          "relation:R002",
+          "unresolved_entity:E006",
+          "unresolved_entity:E007"
+        ]
+      }
+    },
+    "pair_results": [
+      {
+        "pair_id": "relation:R001",
+        "entity_id": "E001",
+        "fluorophore": "GFP",
+        "reported_marker": null,
+        "reported_target_literal": null,
+        "label_type": "native_fluorescent_protein",
+        "original_function_input": {
+          "GFP": ""
+        },
+        "applicable": {
+          "s_target_match": false,
+          "s_marker_fluor_compat": false,
+          "s_method_fluor_compat": true
+        },
+        "channels": {
+          "s_target_match": null,
+          "s_marker_fluor_compat": null,
+          "s_method_fluor_compat": 5.4
+        },
+        "not_applicable_reason": "standalone fluorescence has no antibody target-pair channel",
+        "source_evidence": {
+          "unit_id": "L0002",
+          "start": 26,
+          "end": 64,
+          "quote": "**Chosen Labeling:** [GFP (内源), DAPI]\n",
+          "answer_sha256": "a4cbc22e8baf8818d7de4ad9b273d15e5df22f6dc89cb80f36ef73820f1afa35"
+        },
+        "compatibility_audit": [
+          {
+            "kind": "method_fluor",
+            "method_name": "FDISCO",
+            "fluorophore": "GFP",
+            "source": "KnowledgeBase/method_fluro_compati.json",
+            "value": 0.9,
+            "status": "TABLE_REPORTED"
+          }
+        ]
+      },
+      {
+        "pair_id": "native:I001",
+        "entity_id": "E001",
+        "fluorophore": "GFP",
+        "reported_marker": null,
+        "reported_target_literal": null,
+        "label_type": "native_fluorescent_protein",
+        "original_function_input": {
+          "GFP": ""
+        },
+        "applicable": {
+          "s_target_match": false,
+          "s_marker_fluor_compat": false,
+          "s_method_fluor_compat": true
+        },
+        "channels": {
+          "s_target_match": null,
+          "s_marker_fluor_compat": null,
+          "s_method_fluor_compat": 5.4
+        },
+        "not_applicable_reason": "standalone fluorescence has no antibody target-pair channel",
+        "source_evidence": {
+          "unit_id": "L0002",
+          "start": 26,
+          "end": 64,
+          "quote": "**Chosen Labeling:** [GFP (内源), DAPI]\n",
+          "answer_sha256": "a4cbc22e8baf8818d7de4ad9b273d15e5df22f6dc89cb80f36ef73820f1afa35"
+        },
+        "compatibility_audit": [
+          {
+            "kind": "method_fluor",
+            "method_name": "FDISCO",
+            "fluorophore": "GFP",
+            "source": "KnowledgeBase/method_fluro_compati.json",
+            "value": 0.9,
+            "status": "TABLE_REPORTED"
+          }
+        ]
+      },
+      {
+        "pair_id": "relation:R002",
+        "entity_id": "E002",
+        "fluorophore": "DAPI",
+        "reported_marker": null,
+        "reported_target_literal": null,
+        "label_type": "direct_stain",
+        "original_function_input": {
+          "DAPI": ""
+        },
+        "applicable": {
+          "s_target_match": false,
+          "s_marker_fluor_compat": false,
+          "s_method_fluor_compat": true
+        },
+        "channels": {
+          "s_target_match": null,
+          "s_marker_fluor_compat": null,
+          "s_method_fluor_compat": 4.199999999999999
+        },
+        "not_applicable_reason": "standalone fluorescence has no antibody target-pair channel",
+        "source_evidence": {
+          "unit_id": "L0002",
+          "start": 26,
+          "end": 64,
+          "quote": "**Chosen Labeling:** [GFP (内源), DAPI]\n",
+          "answer_sha256": "a4cbc22e8baf8818d7de4ad9b273d15e5df22f6dc89cb80f36ef73820f1afa35"
+        },
+        "compatibility_audit": [
+          {
+            "kind": "method_fluor",
+            "method_name": "FDISCO",
+            "fluorophore": "DAPI",
+            "source": "KnowledgeBase/method_fluro_compati.json",
+            "value": 0.7,
+            "status": "TABLE_REPORTED"
+          }
+        ]
+      },
+      {
+        "pair_id": "unresolved_entity:E006",
+        "entity_id": "E006",
+        "fluorophore": "DAPI",
+        "reported_marker": null,
+        "reported_target_literal": null,
+        "label_type": "direct_stain",
+        "original_function_input": {
+          "DAPI": ""
+        },
+        "applicable": {
+          "s_target_match": false,
+          "s_marker_fluor_compat": false,
+          "s_method_fluor_compat": true
+        },
+        "channels": {
+          "s_target_match": null,
+          "s_marker_fluor_compat": null,
+          "s_method_fluor_compat": 4.199999999999999
+        },
+        "not_applicable_reason": "standalone fluorescence has no antibody target-pair channel",
+        "source_evidence": {
+          "unit_id": "L0006",
+          "start": 926,
+          "end": 930,
+          "quote": "DAPI",
+          "answer_sha256": "a4cbc22e8baf8818d7de4ad9b273d15e5df22f6dc89cb80f36ef73820f1afa35"
+        },
+        "compatibility_audit": [
+          {
+            "kind": "method_fluor",
+            "method_name": "FDISCO",
+            "fluorophore": "DAPI",
+            "source": "KnowledgeBase/method_fluro_compati.json",
+            "value": 0.7,
+            "status": "TABLE_REPORTED"
+          }
+        ]
+      },
+      {
+        "pair_id": "unresolved_entity:E007",
+        "entity_id": "E007",
+        "fluorophore": "DAPI",
+        "reported_marker": null,
+        "reported_target_literal": null,
+        "label_type": "direct_stain",
+        "original_function_input": {
+          "DAPI": ""
+        },
+        "applicable": {
+          "s_target_match": false,
+          "s_marker_fluor_compat": false,
+          "s_method_fluor_compat": true
+        },
+        "channels": {
+          "s_target_match": null,
+          "s_marker_fluor_compat": null,
+          "s_method_fluor_compat": 4.199999999999999
+        },
+        "not_applicable_reason": "standalone fluorescence has no antibody target-pair channel",
+        "source_evidence": {
+          "unit_id": "L0007",
+          "start": 1067,
+          "end": 1071,
+          "quote": "DAPI",
+          "answer_sha256": "a4cbc22e8baf8818d7de4ad9b273d15e5df22f6dc89cb80f36ef73820f1afa35"
+        },
+        "compatibility_audit": [
+          {
+            "kind": "method_fluor",
+            "method_name": "FDISCO",
+            "fluorophore": "DAPI",
+            "source": "KnowledgeBase/method_fluro_compati.json",
+            "value": 0.7,
+            "status": "TABLE_REPORTED"
+          }
+        ]
+      }
+    ],
+    "resolved_uncertainties": [
+      {
+        "kind": "reported_unresolved_relation",
+        "relation_id": "R001",
+        "entity_id": "E001",
+        "resolution": "antibody relation is not applicable to this standalone signal"
+      },
+      {
+        "kind": "reported_unresolved_relation",
+        "relation_id": "R002",
+        "entity_id": "E002",
+        "resolution": "antibody relation is not applicable to this standalone signal"
+      }
+    ],
+    "remaining_uncertainties": [],
+    "minimum_of_available_applicable_channels": 4.199999999999999,
+    "task_target_coverage": "native/direct task coverage remains separate from antibody-pair applicability",
+    "new_model_calls": 0,
+    "expert_validated": false
+  },
+  "lexical_time_interpretation": {
+    "hours": 48.0,
+    "bounds_hours": [
+      48.0,
+      48.0
+    ],
+    "decision": "existing_source_bound_scalar",
+    "issues": [],
+    "scope": "reported_core_operations"
+  },
+  "lexical_relation_resolution": [],
+  "lexical_failure": null,
+  "lexical_wiring": {
+    "version": "multilingual-name-boundary-v1",
+    "rebound_environments": 2
+  },
+  "lexical_changes": {},
+  "raw_source": {
+    "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\optimizer_round3_20261011\\E2_canonical_qwen_01\\run\\attempts\\ffab255ceaf7a51319502628322f3c8f91d28bd1005b25ecee9298f9fb8013dd_1\\raw_response.txt",
+    "sha256": "a299edcfd4da99e313b5c52865a1e3c14cb8eeeac91ce08af9b8f9d228a4ff15"
+  }
+}

@@ -1,0 +1,301 @@
+{
+  "cohort": "secondary8_posthoc",
+  "cell_id": "FPC11",
+  "anonymous_answer_id": "FPC11",
+  "question_id": 2,
+  "original_status": "success",
+  "version": "cce-typed-label-scorer-v2.1",
+  "metrics": {
+    "c_param": 3,
+    "co_order": 1,
+    "co_method": 2,
+    "co_param": 0,
+    "co_chem": 1,
+    "s_method": 2.375,
+    "s_label": null,
+    "s_trans": 2.814646787157323,
+    "s_time": 3.0,
+    "sr": 0.2222222222222222,
+    "sp": 0.1,
+    "Com": 0.6888888888888889,
+    "Cor": 0.5833333333333334,
+    "Eff": null,
+    "IA": null,
+    "HV": null
+  },
+  "complete_numeric_CCE": false,
+  "baseline_metrics": {
+    "c_param": 3,
+    "co_order": 1,
+    "co_method": 2,
+    "co_param": 0,
+    "co_chem": 1,
+    "s_method": 2.375,
+    "s_label": null,
+    "s_trans": 2.814646787157323,
+    "s_time": 3.0,
+    "sr": 0.2222222222222222,
+    "sp": 0.1,
+    "Com": 0.6888888888888889,
+    "Cor": 0.5833333333333334,
+    "Eff": null,
+    "IA": null,
+    "HV": null
+  },
+  "quantitative_data": {
+    "method_name": "iDISCO+",
+    "tissue_ri_value": 1.46,
+    "total_time_hours": 56.0,
+    "sample_tier": "T04_WHOLE_MOUSE_BRAIN_5_12MM",
+    "reagent_ri_value": null,
+    "protocol_time_hours": null
+  },
+  "time_derivation": {
+    "hours": 56.0,
+    "bounds_hours": [
+      56.0,
+      56.0
+    ],
+    "decision": "existing_source_bound_scalar",
+    "issues": []
+  },
+  "time_formula": {
+    "policy": "kb-window-asymmetric-median-0.20-under-0.10-over-v1",
+    "source": "time_kb.json",
+    "requested_tier": "T04_WHOLE_MOUSE_BRAIN_5_12MM",
+    "actual_hours": 56.0,
+    "min_hours": 24.0,
+    "max_hours": 72.0,
+    "median_hours": 36.0,
+    "tau_hours": 7.2,
+    "delta_hours": 0.0,
+    "tau_under_fraction": 0.2,
+    "tau_over_fraction": 0.1,
+    "status": "scored",
+    "resolved_tier": "T04_WHOLE_MOUSE_BRAIN_5_12MM",
+    "method_key": "idisco+"
+  },
+  "time_sensitivity": [
+    {
+      "time_hours": 56.0,
+      "s_time": 3.0,
+      "Eff": null
+    }
+  ],
+  "label_derivation": {
+    "version": "cce-typed-label-scorer-v2.1",
+    "s_label": null,
+    "channels": {
+      "s_target_match": null,
+      "s_marker_fluor_compat": null,
+      "s_method_fluor_compat": null
+    },
+    "channel_applicability": {
+      "s_target_match": {
+        "applicable": true,
+        "value": null,
+        "contributing_pairs": [
+          "relation:R001"
+        ]
+      },
+      "s_marker_fluor_compat": {
+        "applicable": true,
+        "value": null,
+        "contributing_pairs": [
+          "relation:R001"
+        ]
+      },
+      "s_method_fluor_compat": {
+        "applicable": true,
+        "value": null,
+        "contributing_pairs": [
+          "relation:R002",
+          "relation:R003",
+          "relation:R001"
+        ]
+      }
+    },
+    "pair_results": [
+      {
+        "pair_id": "relation:R002",
+        "entity_id": "E003",
+        "fluorophore": "NeuroTrace 530/615",
+        "reported_marker": null,
+        "reported_target_literal": null,
+        "label_type": "direct_stain",
+        "original_function_input": {
+          "NeuroTrace 530/615": ""
+        },
+        "applicable": {
+          "s_target_match": false,
+          "s_marker_fluor_compat": false,
+          "s_method_fluor_compat": true
+        },
+        "channels": {
+          "s_target_match": null,
+          "s_marker_fluor_compat": null,
+          "s_method_fluor_compat": null
+        },
+        "not_applicable_reason": "standalone fluorescence has no antibody target-pair channel",
+        "source_evidence": {
+          "unit_id": "L0026",
+          "start": 2030,
+          "end": 2128,
+          "quote": "4.4 Incubation with NeuroTrace 530/615 (1:1000 dilution in PBS) (Temperature: RT, Time: 1 hour)  \n",
+          "answer_sha256": "7113ca411c5c14b7bd18929b7da6628cc54c837dad1c082bb288bb88bc2d2408"
+        },
+        "compatibility_audit": [
+          {
+            "kind": "method_fluor",
+            "method_name": "iDISCO+",
+            "fluorophore": "NeuroTrace 530/615",
+            "source": "KnowledgeBase/method_fluro_compati.json",
+            "value": null,
+            "status": "UNKNOWN"
+          }
+        ]
+      },
+      {
+        "pair_id": "relation:R003",
+        "entity_id": "E004",
+        "fluorophore": "DAPI",
+        "reported_marker": null,
+        "reported_target_literal": null,
+        "label_type": "direct_stain",
+        "original_function_input": {
+          "DAPI": ""
+        },
+        "applicable": {
+          "s_target_match": false,
+          "s_marker_fluor_compat": false,
+          "s_method_fluor_compat": true
+        },
+        "channels": {
+          "s_target_match": null,
+          "s_marker_fluor_compat": null,
+          "s_method_fluor_compat": 3.9000000000000004
+        },
+        "not_applicable_reason": "standalone fluorescence has no antibody target-pair channel",
+        "source_evidence": {
+          "unit_id": "L0027",
+          "start": 2128,
+          "end": 2216,
+          "quote": "4.5 Incubation with DAPI (1:1000 dilution in PBS) (Temperature: RT, Time: 10 minutes)  \n",
+          "answer_sha256": "7113ca411c5c14b7bd18929b7da6628cc54c837dad1c082bb288bb88bc2d2408"
+        },
+        "compatibility_audit": [
+          {
+            "kind": "method_fluor",
+            "method_name": "iDISCO+",
+            "fluorophore": "DAPI",
+            "source": "KnowledgeBase/method_fluro_compati.json",
+            "value": 0.65,
+            "status": "TABLE_REPORTED"
+          }
+        ]
+      },
+      {
+        "pair_id": "relation:R001",
+        "entity_id": "E005",
+        "fluorophore": "Alexa Fluor 647",
+        "reported_marker": null,
+        "reported_target_literal": null,
+        "label_type": "targeted_or_unclassified_reagent",
+        "original_function_input": {
+          "Alexa Fluor 647": ""
+        },
+        "applicable": {
+          "s_target_match": true,
+          "s_marker_fluor_compat": true,
+          "s_method_fluor_compat": true
+        },
+        "channels": {
+          "s_target_match": null,
+          "s_marker_fluor_compat": null,
+          "s_method_fluor_compat": 5.4
+        },
+        "not_applicable_reason": null,
+        "source_evidence": {
+          "unit_id": "L0025",
+          "start": 1890,
+          "end": 2030,
+          "quote": "4.3 Incubation with secondary antibody conjugated to Alexa Fluor 647 (1:500 dilution in blocking buffer) (Temperature: RT, Time: 2 hours)  \n",
+          "answer_sha256": "7113ca411c5c14b7bd18929b7da6628cc54c837dad1c082bb288bb88bc2d2408"
+        },
+        "compatibility_audit": [
+          {
+            "kind": "method_fluor",
+            "method_name": "iDISCO+",
+            "fluorophore": "Alexa Fluor 647",
+            "source": "KnowledgeBase/method_fluro_compati.json",
+            "value": 0.9,
+            "status": "TABLE_REPORTED"
+          }
+        ]
+      }
+    ],
+    "resolved_uncertainties": [],
+    "remaining_uncertainties": [
+      {
+        "kind": "reported_unresolved_relation",
+        "relation_id": "R001",
+        "entity_id": "E005"
+      }
+    ],
+    "minimum_of_available_applicable_channels": null,
+    "task_target_coverage": "native/direct task coverage remains separate from antibody-pair applicability",
+    "new_model_calls": 0,
+    "expert_validated": false
+  },
+  "compatibility_lookup_trace": [],
+  "semantic_decomposition_applied": false,
+  "semantic_author": "saved judge decomposition",
+  "remaining_dependencies": {
+    "time": [],
+    "label_relations": [
+      {
+        "kind": "reported_unresolved_relation",
+        "relation_id": "R001",
+        "entity_id": "E005"
+      }
+    ],
+    "compatibility": []
+  },
+  "new_model_requests": 0,
+  "new_expert_records": 0,
+  "direct_scores_rejudged": false,
+  "SR_SP_changed": false,
+  "raw_judge_status_changed": false,
+  "status": "replayed",
+  "source_record": {
+    "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\optimizer_round3_20261011\\uniform_v7\\actual_01\\cells\\secondary8_posthoc\\FPC11\\posthoc.json",
+    "sha256": "4232277989cd4689b386887cf9e5243daa94bbfaecdc65dfdaefba8ad8e35886"
+  },
+  "answer_sha256": "7113ca411c5c14b7bd18929b7da6628cc54c837dad1c082bb288bb88bc2d2408",
+  "changes": {},
+  "comparison_metrics": {
+    "c_param": 3,
+    "co_order": 1,
+    "co_method": 2,
+    "co_param": 0,
+    "co_chem": 1,
+    "s_method": 2.375,
+    "s_label": null,
+    "s_trans": 2.814646787157323,
+    "s_time": 3.0,
+    "sr": 0.2222222222222222,
+    "sp": 0.1,
+    "Com": 0.6888888888888889,
+    "Cor": 0.5833333333333334,
+    "Eff": null,
+    "IA": null,
+    "HV": null
+  },
+  "typed_replay_status": "replayed",
+  "typed_semantic_annotation": false,
+  "typed_changes": {},
+  "source_document": {
+    "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\optimizer_round2_20261010\\secondary_E5_confirmation_v1\\source_documents\\FPC11.json",
+    "sha256": "e6a6cba2d2ae2ad2d1739d9229fadbd69f12cdc556a3a26783d1617f3a51f726"
+  }
+}

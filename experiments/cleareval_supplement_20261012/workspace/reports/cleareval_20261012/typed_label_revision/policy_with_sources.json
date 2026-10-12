@@ -1,0 +1,73 @@
+{
+  "version": "typed-label-applicability-AF-and-sourced-pairs-v2.1",
+  "authorization": "User clarified MAP2/AF roles, native GFP requires no external marker, and allowed AF-family approximation on 2026-10-12; then instructed continuation.",
+  "standalone_types": {
+    "native_fluorescent_protein": [
+      "GFP",
+      "EGFP",
+      "YFP",
+      "EYFP",
+      "tdTomato",
+      "RFP",
+      "mCherry",
+      "mRFP"
+    ],
+    "direct_stain": [
+      "DAPI",
+      "Hoechst",
+      "Hoechst 33342",
+      "Hoechst 33258",
+      "PI",
+      "Propidium iodide",
+      "TO-PRO-3",
+      "DiI",
+      "DiO",
+      "DiD",
+      "NeuroTrace 500",
+      "NeuroTrace 530/615"
+    ]
+  },
+  "applicability": "Standalone signals contribute method-fluor compatibility without an external antibody-marker channel; do not replace an inapplicable channel with zero or a fabricated biological target.",
+  "af_family_approximation": {
+    "version": "AF-family-consensus-from-applicable-marker-rows-v1",
+    "donor_columns": [
+      "AlexaFluor 488",
+      "AlexaFluor 568/Cy3",
+      "AlexaFluor 647/Cy5 "
+    ],
+    "rule": "Use unanimous known AF-family cells for the same marker in selected rows when the specific query is unresolved. Preserve direct specific values and conflicts; no maximum selection.",
+    "scope": "general target-fluor pairing; method-fluor numerical values remain dye-specific",
+    "source": "User-authorized approximation; existing tissue table donor cells retained for each query",
+    "allow_sourced_pair_donors": true
+  },
+  "secondary_carrier_rule": "An explicitly reported fluor-target pair is sufficient for marker_dict; a source-declared secondary carrier using that fluor does not require a separate biological target to score the same pair.",
+  "unaffected": "Original SR/SP, c_param, stored Correctness values, s_method, s_trans, s_time and CCE aggregation equations are retained; new qualitative prompt is evaluated separately.",
+  "sourced_target_fluor_pairs": [
+    {
+      "marker": "GFP",
+      "fluorophore": "Alexa Fluor 488",
+      "compatible": true,
+      "source_url": "https://www.thermofisher.com/antibody/product/A-21311.html?CID=AFLBC-A-21311",
+      "corroborating_url": "https://www.abcam.com/en-us/products/primary-antibodies/alexa-fluor-488-gfp-antibody-epr14104-gfp-booster-ab225314",
+      "catalogue_ids": [
+        "A-21311",
+        "ab225314"
+      ],
+      "accessed": "2026-10-12",
+      "supported_claim": "A GFP-targeting antibody conjugated to AF488 exists and has reported IF use.",
+      "scope_limit": "General target-fluor pairing only; does not validate this answer, clone, sample depth or clearing method."
+    },
+    {
+      "marker": "MAP2",
+      "fluorophore": "Alexa Fluor 594",
+      "compatible": true,
+      "source_url": "https://www.abcam.com/en-us/products/primary-antibodies/alexa-fluor-594-map2-antibody-epr19691-neuronal-marker-ab302832",
+      "catalogue_ids": [
+        "ab302832"
+      ],
+      "accessed": "2026-10-12",
+      "supported_claim": "MAP2 antibody EPR19691 conjugated to AF594 has reported mouse/rat neuron IF use.",
+      "scope_limit": "General target-fluor pairing only; not tissue-clearing retention or penetration validation."
+    }
+  ]
+}

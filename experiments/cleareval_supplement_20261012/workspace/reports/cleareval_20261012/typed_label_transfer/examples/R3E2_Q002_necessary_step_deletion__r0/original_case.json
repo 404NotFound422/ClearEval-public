@@ -1,0 +1,174 @@
+{
+  "question_id": 2,
+  "specific_question": "我需要对完整成年小鼠全脑进行透明化处理，以构建神经元胞体、轴突和树突结构的三维形态图谱，用于观察全脑神经元结构分布和主要神经纤维走行。我的样本是完整的成年小鼠大脑，尺寸约 10 mm × 8 mm × 6 mm，已完成 4% PFA 灌流固定和后固定。请根据该科学问题自行选择合适的荧光/标记策略，并基于所选标记样本选择匹配的组织透明方法。请仅输出 protocol，第1行写明所选荧光/标记策略和所选组织透明方法，随后仅列出透明处理、RI 匹配和保存/成像前处理步骤的关键试剂、条件和时间",
+  "generator_model": "gemini-3-pro",
+  "base_id": "gemini-3-pro__q2",
+  "references": [
+    {
+      "reference_id": "FDISCO_SUPPLEMENT_V2_WHOLE_BRAIN",
+      "route_id": "FDISCO",
+      "route_aliases": [
+        "FDISCO",
+        "F-DISCO"
+      ],
+      "question_ids": [
+        2,
+        248
+      ],
+      "steps": [
+        {
+          "step_id": "FDISCO-V2-WHOLE_BRAIN-01",
+          "text": "Incubate the fixed tissue in 50% (vol/vol) THF in water, adjusted to pH 9.0 with triethylamine, at 4 degrees C for 12 hours with gentle shaking in the dark.",
+          "source_anchor": "FDISCO_TABLE_S1_P12 + FDISCO_MAIN_CLEARING_P1",
+          "module": "dehydration",
+          "required": true,
+          "required_scope": "author-reported branch coverage; biological necessity not validated",
+          "timing_status": "author_table_whole_brain"
+        },
+        {
+          "step_id": "FDISCO-V2-WHOLE_BRAIN-02",
+          "text": "Incubate the fixed tissue in 70% (vol/vol) THF in water, adjusted to pH 9.0 with triethylamine, at 4 degrees C for 12 hours with gentle shaking in the dark.",
+          "source_anchor": "FDISCO_TABLE_S1_P12 + FDISCO_MAIN_CLEARING_P1",
+          "module": "dehydration",
+          "required": true,
+          "required_scope": "author-reported branch coverage; biological necessity not validated",
+          "timing_status": "author_table_whole_brain"
+        },
+        {
+          "step_id": "FDISCO-V2-WHOLE_BRAIN-03",
+          "text": "Incubate the fixed tissue in 80% (vol/vol) THF in water, adjusted to pH 9.0 with triethylamine, at 4 degrees C for 12 hours with gentle shaking in the dark.",
+          "source_anchor": "FDISCO_TABLE_S1_P12 + FDISCO_MAIN_CLEARING_P1",
+          "module": "dehydration",
+          "required": true,
+          "required_scope": "author-reported branch coverage; biological necessity not validated",
+          "timing_status": "author_table_whole_brain"
+        },
+        {
+          "step_id": "FDISCO-V2-WHOLE_BRAIN-04",
+          "text": "Incubate the fixed tissue in 100% (vol/vol) THF in water, adjusted to pH 9.0 with triethylamine, at 4 degrees C for 12 hours with gentle shaking in the dark.",
+          "source_anchor": "FDISCO_TABLE_S1_P12 + FDISCO_MAIN_CLEARING_P1",
+          "module": "dehydration",
+          "required": true,
+          "required_scope": "author-reported branch coverage; biological necessity not validated",
+          "timing_status": "author_table_whole_brain"
+        },
+        {
+          "step_id": "FDISCO-V2-WHOLE_BRAIN-05",
+          "text": "Repeat incubation in fresh 100% THF twice more, 12 hours each, for three incubations in total, at 4 degrees C with gentle shaking in the dark.",
+          "source_anchor": "FDISCO_TABLE_S1_P12 + FDISCO_MAIN_CLEARING_P1",
+          "module": "dehydration",
+          "required": true,
+          "required_scope": "author-reported branch coverage; biological necessity not validated",
+          "timing_status": "author_table_whole_brain"
+        },
+        {
+          "step_id": "FDISCO-V2-WHOLE_BRAIN-06",
+          "text": "Transfer the dehydrated tissue to pure DBE for refractive index matching and clearing at 4 degrees C for 3 hours with gentle shaking in the dark.",
+          "source_anchor": "FDISCO_TABLE_S1_P12 + FDISCO_MAIN_CLEARING_P1",
+          "module": "ri_matching",
+          "required": true,
+          "required_scope": "author-reported branch coverage; biological necessity not validated",
+          "timing_status": "author_table_whole_brain"
+        },
+        {
+          "step_id": "FDISCO-V2-WHOLE_BRAIN-07",
+          "text": "Store the cleared tissue in DBE in an airtight glass chamber at 4 degrees C in the dark until imaging.",
+          "source_anchor": "FDISCO_MAIN_STORAGE_P3",
+          "module": "storage",
+          "required": true,
+          "required_scope": "author-reported branch coverage; biological necessity not validated",
+          "timing_status": "no_fixed_storage_duration"
+        }
+      ],
+      "source_path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\reference_recovery\\recovered_supplements\\aau8355_SM.pdf",
+      "source_sha256": "f3a7cff9c400786f418a64e91b1781f7370fcbf55a821635cdf2eafa1fb87339",
+      "source_url": "https://doi.org/10.1126/sciadv.aau8355",
+      "supplement_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC6357753.1/aau8355_SM.pdf",
+      "family_id": "FDISCO_QI2019_MOUSE_BRAIN",
+      "status": "source_extracted",
+      "human_confirmation": null,
+      "formal_eligible": false,
+      "source_scope": "author-reported post-fixation procedure coverage, not validated biological necessity",
+      "completeness_status": "supplement-bound author-procedure development candidate; expert confirmation pending",
+      "evidence_manifest_path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\reference_recovery\\supplement_bound\\evidence_manifest.json",
+      "evidence_ids": [
+        "FDISCO_TABLE_S1_P12",
+        "FDISCO_MAIN_CLEARING_P1",
+        "FDISCO_MAIN_STORAGE_P3"
+      ],
+      "source_pages": [
+        {
+          "evidence_id": "FDISCO_TABLE_S1_P12",
+          "pdf_page_one_based": 12,
+          "source_anchor": null
+        },
+        {
+          "evidence_id": "FDISCO_MAIN_CLEARING_P1",
+          "pdf_page_one_based": null,
+          "source_anchor": "sec[title='FDISCO clearing procedure']/p[1]"
+        },
+        {
+          "evidence_id": "FDISCO_MAIN_STORAGE_P3",
+          "pdf_page_one_based": null,
+          "source_anchor": "sec[title='FDISCO clearing procedure']/p[3], first sentence"
+        }
+      ],
+      "v1_reference_id": "FDISCO_QI2019_FIXED_MOUSE_BRAIN_V1",
+      "v1_step_count": 7,
+      "applicability": {
+        "species": "mouse",
+        "tissue": "fixed adult whole brain",
+        "question_ids": [
+          2,
+          248
+        ],
+        "initial_fixation_complete": true,
+        "source_sample_class_support": "direct adult-brain class in author table",
+        "exact_3mm_schedule_supported": null,
+        "timing_policy": "author_table_whole_brain",
+        "unknown_timing_is_not_a_missing_step": true,
+        "endpoint_scope": "clearing/RI matching/storage only; labeling preparation excluded",
+        "outcomes_pending": [
+          "task-specific chosen labels",
+          "weak sparse signal retention",
+          "long-term reimaging",
+          "six-month preservation",
+          "morphology/distortion targets"
+        ],
+        "remaining_review": [
+          "Shortened timings in the table note are an author option, not a mandatory extra step.",
+          "Long-storage re-clearing is conditional and is not added to every initial-imaging sequence.",
+          "No direct 3 mm timing interpolation from 1 mm FDISCO or 1-2 mm PEGASOS slice schedules.",
+          "Expert granularity/applicability confirmation remains pending."
+        ]
+      },
+      "unknown_parameters": [],
+      "frozen": true,
+      "freeze_scope": "independent supplement-derived v2 development candidate; preserve v1 historical scores"
+    }
+  ],
+  "reference_status": "source_extracted_not_expert_confirmed",
+  "source_family": "FDISCO_QI2019_MOUSE_BRAIN",
+  "scope": "supplement_v2_full_text_control_development_pending_expert",
+  "case_id": "round3_control_q002_necessary_step_deletion_v1",
+  "condition": "necessary_step_deletion",
+  "model_response": "**Chosen Method:** FDISCO\n**Chosen Labeling:** [GFP (内源)]\n**Justification:** FDISCO is highly optimal for intact adult mouse whole brains as it provides excellent transparency while significantly preserving endogenous fluorescent proteins (like GFP). For constructing a whole-brain 3D morphological map of neuronal somas, axons, and dendrites, utilizing endogenous GFP (e.g., via transgenic labeling or viral tracing) bypasses the severe penetration limitations and long incubation times of whole-brain immunolabeling. FDISCO's low-temperature THF dehydration effectively prevents fluorescence quenching, and its solvent-based RI matching achieves the deep transparency required for whole-brain light-sheet imaging.\n\n**Protocol Steps:**\n\n1. Incubation with 50% (vol/vol) tetrahydrofuran (THF) aqueous solution in a glass vial with gentle shaking. (Temperature: 4 ℃, Time: 12 hours)\n2. Incubation with 70% (vol/vol) THF aqueous solution with gentle shaking. (Temperature: 4 ℃, Time: 12 hours)\n3. Incubation with 80% (vol/vol) THF aqueous solution with gentle shaking. (Temperature: 4 ℃, Time: 12 hours)\n4. Incubation with 100% (vol/vol) pure THF with gentle shaking. (Temperature: 4 ℃, Time: 12 hours)\n5. Incubation with fresh 100% (vol/vol) pure THF with gentle shaking. (Temperature: 4 ℃, Time: 12 hours)\n\n\n\n",
+  "natural_answer_source_case_id": "gemini-3-pro__q2__baseline",
+  "canonicalized_not_unedited_natural_answer": true,
+  "conflict_status": "source_extracted_development_not_expert_confirmed",
+  "source_case_id": "gemini-3-pro__q2__order_canonical_baseline__supplement_v2",
+  "source_case_file": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\optimizer_round2_20261010\\grounded_controls_v11\\cases.json",
+  "source_scope": "previously_exposed_development_task_same_canonical_fulltext_baseline",
+  "answer_source": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\controls\\order_conflict_cases.json",
+  "answer_sha256": "087842f8c1651f4edc8da9e6e71480afc325cdddd71a8157391a70c95ea0d009",
+  "question_sha256": "d7975ab8e8560e669a5a4883eb7a7be95ef4a5b6645dd2415a48d413c7202cb9",
+  "formal_eligible": false,
+  "expert_confirmation": null,
+  "anonymous_answer_id": "R3E2_Q002_necessary_step_deletion",
+  "round3_provenance": {
+    "baseline_anonymous_answer_id": "E2_13",
+    "merge_anonymous_answer_id": null,
+    "same_baseline_for_all_three_variants": true,
+    "new_case_id_does_not_change_identical_source_content_hash": true
+  }
+}

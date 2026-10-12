@@ -1,0 +1,439 @@
+{
+  "cohort": "secondary8_posthoc",
+  "cell_id": "FPC13",
+  "anonymous_answer_id": "FPC13",
+  "question_id": 21,
+  "original_status": "success",
+  "version": "cce-scoped-midpoint-scorer-v1",
+  "metrics": {
+    "c_param": 2,
+    "co_order": 2,
+    "co_method": 0,
+    "co_param": 1,
+    "co_chem": 1,
+    "s_method": 0.9722,
+    "s_label": null,
+    "s_trans": 3.0,
+    "s_time": 2.6822438745397866e-06,
+    "sr": 0.0,
+    "sp": 0.0,
+    "Com": 0.39999999999999997,
+    "Cor": 0.5416666666666666,
+    "Eff": null,
+    "IA": null,
+    "HV": null
+  },
+  "complete_numeric_CCE": false,
+  "baseline_metrics": {
+    "c_param": 2,
+    "co_order": 2,
+    "co_method": 0,
+    "co_param": 1,
+    "co_chem": 1,
+    "s_method": 0.9722,
+    "s_label": null,
+    "s_trans": 3.0,
+    "s_time": 2.6822438745397866e-06,
+    "sr": 0.0,
+    "sp": 0.0,
+    "Com": 0.39999999999999997,
+    "Cor": 0.5416666666666666,
+    "Eff": null,
+    "IA": null,
+    "HV": null
+  },
+  "quantitative_data": {
+    "method_name": "CUBIC",
+    "tissue_ri_value": 1.46,
+    "total_time_hours": 158.0,
+    "sample_tier": "T02_THICK_SLICE_0P5_3MM",
+    "reagent_ri_value": null,
+    "protocol_time_hours": null
+  },
+  "time_derivation": {
+    "hours": 158.0,
+    "bounds_hours": [
+      158.0,
+      158.0
+    ],
+    "decision": "existing_source_bound_scalar",
+    "issues": []
+  },
+  "time_formula": {
+    "policy": "kb-window-asymmetric-median-0.20-under-0.10-over-v1",
+    "source": "time_kb.json",
+    "requested_tier": "T02_THICK_SLICE_0P5_3MM",
+    "actual_hours": 158.0,
+    "min_hours": 24.0,
+    "max_hours": 120.0,
+    "median_hours": 72.0,
+    "tau_hours": 7.2,
+    "delta_hours": 38.0,
+    "tau_under_fraction": 0.2,
+    "tau_over_fraction": 0.1,
+    "status": "scored",
+    "resolved_tier": "T02_THICK_SLICE_0P5_3MM",
+    "method_key": "cubic"
+  },
+  "time_sensitivity": [
+    {
+      "time_hours": 158.0,
+      "s_time": 2.6822438745397866e-06,
+      "Eff": null
+    }
+  ],
+  "label_derivation": {
+    "version": "label-occurrence-projection-v1-posthoc",
+    "channels": {
+      "s_target_match": 6.0,
+      "s_marker_fluor_compat": 6.0,
+      "s_method_fluor_compat": 4.800000000000001
+    },
+    "s_label": null,
+    "original_occurrence_numeric_label": 4.800000000000001,
+    "pair_results": [
+      {
+        "pair_id": "relation:R0001",
+        "kind": "supported_relation",
+        "original_function_input": {
+          "Alexa Fluor 488": "MAP2"
+        },
+        "channels": {
+          "s_target_match": 6.0,
+          "s_marker_fluor_compat": 6.0,
+          "s_method_fluor_compat": 4.800000000000001
+        },
+        "local_s_label": 4.800000000000001,
+        "contribution_present": {
+          "s_target_match": true,
+          "s_marker_fluor_compat": true,
+          "s_method_fluor_compat": true
+        },
+        "marker_identity_conflict": false,
+        "compatibility_audit": [
+          {
+            "kind": "marker_fluor",
+            "marker": "MAP2",
+            "fluorophore": "Alexa Fluor 488",
+            "source": "KnowledgeBase/tissue.json",
+            "value": true,
+            "status": "TABLE_REPORTED"
+          },
+          {
+            "kind": "method_fluor",
+            "method_name": "CUBIC",
+            "fluorophore": "Alexa Fluor 488",
+            "source": "KnowledgeBase/method_fluro_compati.json",
+            "value": 0.8,
+            "status": "TABLE_REPORTED"
+          }
+        ]
+      },
+      {
+        "pair_id": "native:I0001",
+        "kind": "source_native_fluor_key_only",
+        "original_function_input": {
+          "GFP": ""
+        },
+        "channels": {
+          "s_target_match": null,
+          "s_marker_fluor_compat": null,
+          "s_method_fluor_compat": 5.1
+        },
+        "local_s_label": null,
+        "contribution_present": {
+          "s_target_match": false,
+          "s_marker_fluor_compat": false,
+          "s_method_fluor_compat": true
+        },
+        "marker_identity_conflict": false,
+        "compatibility_audit": [
+          {
+            "kind": "method_fluor",
+            "method_name": "CUBIC",
+            "fluorophore": "GFP",
+            "source": "KnowledgeBase/method_fluro_compati.json",
+            "value": 0.85,
+            "status": "TABLE_REPORTED"
+          }
+        ]
+      }
+    ],
+    "explicit_label_uncertainties": [
+      {
+        "kind": "reported_unknown_label_entity",
+        "entity_id": "E0007",
+        "literal_name": "Alexa Fluor 488-conjugated anti-IgG"
+      }
+    ],
+    "publication_note": "explicit unresolved nonzero whole-label evidence",
+    "original_identity_unresolved": false,
+    "zero_witnesses": [],
+    "nullable_min_original_AST_sha256": "b885e7e1d6118c52aed9e67773ab1cf762010c468ed1cab70a0be6b465f56d58",
+    "original_function_file": "C:\\ClearEval\\ClearEval-public\\OEQ_run_grading_new.py",
+    "original_function_file_sha256": "0d48d96bd53b8bcf3c8678cf3151679ee70dc0d7b6d7e110486d1d7a77f9ea0e",
+    "single_value_projection_complete": true,
+    "unknown_pairs_retained": 1,
+    "finite_zero_is_not_complete_graph": false,
+    "new_KB_values": false,
+    "biological_target_inferred": false,
+    "model_calls": 0
+  },
+  "compatibility_lookup_trace": [
+    {
+      "marker": "MAP2",
+      "fluorophore": "Alexa Fluor 488",
+      "status": "all_applicable_scopes_have_same_authored_value",
+      "value": true,
+      "column": "AlexaFluor 488",
+      "matching_target_options": [
+        {
+          "target_index": 2,
+          "source_tissue_xlsx_row": 4,
+          "marker_slot": "recommended_marker_2",
+          "marker_name": "MAP2",
+          "query_path": "中枢神经 > 神经元结构 > 神经元(通用)",
+          "major_category": "中枢神经",
+          "subcategory": "神经元结构",
+          "structure_or_cell_subtype": "神经元(通用)",
+          "authored_target_parent": {
+            "marker_name": "MAP2",
+            "target_index": 2,
+            "source_tissue_xlsx_row": 4,
+            "query_path": "中枢神经 > 神经元结构 > 神经元(通用)",
+            "marker_slot": "recommended_marker_2"
+          },
+          "authored_option_index": 0,
+          "option_split_applied": false
+        }
+      ],
+      "candidate_rows": [
+        {
+          "row_index": 0,
+          "matching_authored_names": [
+            {
+              "field": "推荐标志物 2",
+              "authored_name": "MAP2",
+              "option": "MAP2",
+              "option_split_applied": false
+            }
+          ],
+          "scope": {
+            "大类": "中枢神经",
+            "亚类": "神经元结构",
+            "结构/细胞类型": "神经元(通用)"
+          },
+          "cell_value": 1
+        },
+        {
+          "row_index": 63,
+          "matching_authored_names": [
+            {
+              "field": "推荐标志物 2",
+              "authored_name": "MAP2 / Nestin",
+              "option": "MAP2",
+              "option_split_applied": true
+            }
+          ],
+          "scope": {
+            "大类": "通用结构",
+            "亚类": "类器官",
+            "结构/细胞类型": "大脑类器官整体"
+          },
+          "cell_value": 1
+        },
+        {
+          "row_index": 93,
+          "matching_authored_names": [
+            {
+              "field": "推荐标志物 1",
+              "authored_name": "MAP2",
+              "option": "MAP2",
+              "option_split_applied": false
+            }
+          ],
+          "scope": {
+            "大类": "中枢神经",
+            "亚类": "神经元结构",
+            "结构/细胞类型": "CA1 树突/树突棘结构辅助"
+          },
+          "cell_value": null
+        }
+      ],
+      "selected_row_indices": [
+        0
+      ],
+      "per_scope_evidence": [
+        {
+          "scope": {
+            "大类": "中枢神经",
+            "亚类": "神经元结构",
+            "结构/细胞类型": "神经元(通用)"
+          },
+          "row_indices": [
+            0
+          ],
+          "all_cell_values": [
+            1
+          ],
+          "state": "consistent_authored_value",
+          "value": 1
+        }
+      ],
+      "row_selection_uses_scores": false,
+      "different_scopes_merged": false,
+      "new_alias_or_KB_value": false,
+      "declared_task_scope": {
+        "scope": {
+          "大类": "中枢神经",
+          "亚类": "神经元结构",
+          "结构/细胞类型": "神经元(通用)"
+        },
+        "basis": "题干要求稀疏脑神经元形态与树突结构，没有指定 CA1；固定题目参考路径含通用神经元 MAP2 行。对该题所有模型与变体使用同一范围。",
+        "decision_author": "current assistant, development-stage task interpretation",
+        "source": "fixed demand registry question 21 and marker_query_targets; label_lookup_midpoint.json"
+      },
+      "legacy_last_row_value": null
+    },
+    {
+      "marker": "MAP2",
+      "fluorophore": "Alexa Fluor 488",
+      "status": "all_applicable_scopes_have_same_authored_value",
+      "value": true,
+      "column": "AlexaFluor 488",
+      "matching_target_options": [
+        {
+          "target_index": 2,
+          "source_tissue_xlsx_row": 4,
+          "marker_slot": "recommended_marker_2",
+          "marker_name": "MAP2",
+          "query_path": "中枢神经 > 神经元结构 > 神经元(通用)",
+          "major_category": "中枢神经",
+          "subcategory": "神经元结构",
+          "structure_or_cell_subtype": "神经元(通用)",
+          "authored_target_parent": {
+            "marker_name": "MAP2",
+            "target_index": 2,
+            "source_tissue_xlsx_row": 4,
+            "query_path": "中枢神经 > 神经元结构 > 神经元(通用)",
+            "marker_slot": "recommended_marker_2"
+          },
+          "authored_option_index": 0,
+          "option_split_applied": false
+        }
+      ],
+      "candidate_rows": [
+        {
+          "row_index": 0,
+          "matching_authored_names": [
+            {
+              "field": "推荐标志物 2",
+              "authored_name": "MAP2",
+              "option": "MAP2",
+              "option_split_applied": false
+            }
+          ],
+          "scope": {
+            "大类": "中枢神经",
+            "亚类": "神经元结构",
+            "结构/细胞类型": "神经元(通用)"
+          },
+          "cell_value": 1
+        },
+        {
+          "row_index": 63,
+          "matching_authored_names": [
+            {
+              "field": "推荐标志物 2",
+              "authored_name": "MAP2 / Nestin",
+              "option": "MAP2",
+              "option_split_applied": true
+            }
+          ],
+          "scope": {
+            "大类": "通用结构",
+            "亚类": "类器官",
+            "结构/细胞类型": "大脑类器官整体"
+          },
+          "cell_value": 1
+        },
+        {
+          "row_index": 93,
+          "matching_authored_names": [
+            {
+              "field": "推荐标志物 1",
+              "authored_name": "MAP2",
+              "option": "MAP2",
+              "option_split_applied": false
+            }
+          ],
+          "scope": {
+            "大类": "中枢神经",
+            "亚类": "神经元结构",
+            "结构/细胞类型": "CA1 树突/树突棘结构辅助"
+          },
+          "cell_value": null
+        }
+      ],
+      "selected_row_indices": [
+        0
+      ],
+      "per_scope_evidence": [
+        {
+          "scope": {
+            "大类": "中枢神经",
+            "亚类": "神经元结构",
+            "结构/细胞类型": "神经元(通用)"
+          },
+          "row_indices": [
+            0
+          ],
+          "all_cell_values": [
+            1
+          ],
+          "state": "consistent_authored_value",
+          "value": 1
+        }
+      ],
+      "row_selection_uses_scores": false,
+      "different_scopes_merged": false,
+      "new_alias_or_KB_value": false,
+      "declared_task_scope": {
+        "scope": {
+          "大类": "中枢神经",
+          "亚类": "神经元结构",
+          "结构/细胞类型": "神经元(通用)"
+        },
+        "basis": "题干要求稀疏脑神经元形态与树突结构，没有指定 CA1；固定题目参考路径含通用神经元 MAP2 行。对该题所有模型与变体使用同一范围。",
+        "decision_author": "current assistant, development-stage task interpretation",
+        "source": "fixed demand registry question 21 and marker_query_targets; label_lookup_midpoint.json"
+      },
+      "legacy_last_row_value": null
+    }
+  ],
+  "semantic_decomposition_applied": false,
+  "semantic_author": "saved judge decomposition",
+  "remaining_dependencies": {
+    "time": [],
+    "label_relations": [
+      {
+        "kind": "reported_unknown_label_entity",
+        "entity_id": "E0007",
+        "literal_name": "Alexa Fluor 488-conjugated anti-IgG"
+      }
+    ],
+    "compatibility": []
+  },
+  "new_model_requests": 0,
+  "new_expert_records": 0,
+  "direct_scores_rejudged": false,
+  "SR_SP_changed": false,
+  "raw_judge_status_changed": false,
+  "status": "replayed",
+  "source_record": {
+    "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\optimizer_round3_20261011\\uniform_v7\\actual_01\\cells\\secondary8_posthoc\\FPC13\\posthoc.json",
+    "sha256": "e67602fb499a82c5c98f5c7b2772b0d75feafc9918d8f02bc6a66634e6133766"
+  },
+  "answer_sha256": "d876ecbc180d5294cad36da3a6468dcd780db8d4764aa563aee10b2330f0e39f",
+  "changes": {}
+}

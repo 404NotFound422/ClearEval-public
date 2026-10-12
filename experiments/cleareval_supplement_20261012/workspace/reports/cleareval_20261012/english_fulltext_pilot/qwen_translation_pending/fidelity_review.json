@@ -1,0 +1,395 @@
+[
+  {
+    "request_id": "T01_R3C04_baseline",
+    "reviewer": "current_assistant_source_review",
+    "expert_verified": false,
+    "blind_to_scores": false,
+    "source": {
+      "path": "C:\\ClearEval\\reports\\cleareval_20261012\\english_fulltext_pilot\\documents\\R3C04\\original.txt",
+      "sha256": "2b6db955429fd6f3b190ffd315fe36d59fb2b7955b27a7d6c37111b4ea660cf8"
+    },
+    "translation": {
+      "path": "C:\\ClearEval\\reports\\cleareval_20261012\\english_fulltext_pilot\\qwen_translation_pending\\returns\\T01_R3C04_baseline\\english_text.txt",
+      "sha256": "b4126dfedc5774585356868c11b7318df490d8f1869708b3f2d92a81e58c07fa"
+    },
+    "scope": "Read complete baseline sources/translations and all variant differences; inspect numeric/time unit alignment, repeats, simultaneous incubations, optional clauses, and retained scientific claims.",
+    "numbered_structure_retained": true,
+    "operational_number_and_time_checks_pass": true,
+    "whole_text_has_no_remaining_CJK": true,
+    "findings": [
+      {
+        "kind": "number_token_flag_resolved_by_source_review",
+        "source": {
+          "start": 261,
+          "end": 263,
+          "quote": "三维"
+        },
+        "translation": {
+          "start": 611,
+          "end": 613,
+          "quote": "3D"
+        },
+        "judgment": "Semantically intended dimensional descriptor; no new experimental numerical parameter.",
+        "material_parameter_change": false
+      },
+      {
+        "kind": "heading_modifier_compression",
+        "source": {
+          "start": 1895,
+          "end": 1903,
+          "quote": "二抗全脑免疫标记"
+        },
+        "translation": {
+          "start": 2972,
+          "end": 2990,
+          "quote": "Secondary, far-red"
+        },
+        "judgment": "Whole-brain immunolabeling modifier is omitted in this heading; the shared specimen context and secondary-antibody operation remain. Not strict verbatim preservation; flag for source review.",
+        "main_scoring_repaired": false
+      },
+      {
+        "kind": "heading_modifier_compression",
+        "source": {
+          "start": 2468,
+          "end": 2472,
+          "quote": "再次脱水"
+        },
+        "translation": {
+          "start": 3943,
+          "end": 3970,
+          "quote": "Dehydration before clearing"
+        },
+        "judgment": "Explicit again is compressed in the heading. Earlier and later workflow positions remain; translated scientific equivalence has not been expert-adjudicated.",
+        "main_scoring_repaired": false
+      }
+    ],
+    "source_scientific_errors_corrected_by_reviewer": false,
+    "operation_content_review": "No material operation, numerical, repeat, or branch alteration identified in this assistant review; this is not an expert accuracy estimate.",
+    "display_status": "observed_raw_SRSP_retained_with_local_fidelity_notes",
+    "uniform_full_English_experiment_eligible": true,
+    "whole_document_semantically_lossless_claimed": false
+  },
+  {
+    "request_id": "T02_R3C04_renumber_operations",
+    "reviewer": "current_assistant_source_review",
+    "expert_verified": false,
+    "blind_to_scores": false,
+    "source": {
+      "path": "C:\\ClearEval\\reports\\cleareval_20261012\\english_fulltext_pilot\\controls\\R3C04\\original\\renumber_operations.txt",
+      "sha256": "bf7d26fd40ea9327bb744c485ac13526d6a134b056fb845c1d2ba4c1c2560780"
+    },
+    "translation": {
+      "path": "C:\\ClearEval\\reports\\cleareval_20261012\\english_fulltext_pilot\\qwen_translation_pending\\returns\\T02_R3C04_renumber_operations\\english_text.txt",
+      "sha256": "252a33c93f396dd768619e21414cebc7baf18eff3ca204b17e1467735188811b"
+    },
+    "scope": "Read complete baseline sources/translations and all variant differences; inspect numeric/time unit alignment, repeats, simultaneous incubations, optional clauses, and retained scientific claims.",
+    "numbered_structure_retained": true,
+    "operational_number_and_time_checks_pass": true,
+    "whole_text_has_no_remaining_CJK": true,
+    "findings": [
+      {
+        "kind": "number_token_flag_resolved_by_source_review",
+        "source": {
+          "start": 261,
+          "end": 263,
+          "quote": "三维"
+        },
+        "translation": {
+          "start": 601,
+          "end": 603,
+          "quote": "3D"
+        },
+        "judgment": "Semantically intended dimensional descriptor; no new experimental numerical parameter.",
+        "material_parameter_change": false
+      },
+      {
+        "kind": "heading_modifier_compression",
+        "source": {
+          "start": 1949,
+          "end": 1957,
+          "quote": "二抗全脑免疫标记"
+        },
+        "translation": {
+          "start": 2993,
+          "end": 3011,
+          "quote": "Secondary, far-red"
+        },
+        "judgment": "Whole-brain immunolabeling modifier is omitted in this heading; the shared specimen context and secondary-antibody operation remain. Not strict verbatim preservation; flag for source review.",
+        "main_scoring_repaired": false
+      },
+      {
+        "kind": "heading_modifier_compression",
+        "source": {
+          "start": 2539,
+          "end": 2543,
+          "quote": "再次脱水"
+        },
+        "translation": {
+          "start": 3977,
+          "end": 4004,
+          "quote": "Dehydration before clearing"
+        },
+        "judgment": "Explicit again is compressed in the heading. Earlier and later workflow positions remain; translated scientific equivalence has not been expert-adjudicated.",
+        "main_scoring_repaired": false
+      }
+    ],
+    "source_scientific_errors_corrected_by_reviewer": false,
+    "operation_content_review": "No material operation, numerical, repeat, or branch alteration identified in this assistant review; this is not an expert accuracy estimate.",
+    "display_status": "observed_raw_SRSP_retained_with_local_fidelity_notes",
+    "uniform_full_English_experiment_eligible": true,
+    "whole_document_semantically_lossless_claimed": false
+  },
+  {
+    "request_id": "T03_R3C04_merge_adjacent_operations",
+    "reviewer": "current_assistant_source_review",
+    "expert_verified": false,
+    "blind_to_scores": false,
+    "source": {
+      "path": "C:\\ClearEval\\reports\\cleareval_20261012\\english_fulltext_pilot\\controls\\R3C04\\original\\merge_adjacent_operations.txt",
+      "sha256": "10cd8fa819acca2bbe346c6c395a6d5478f9be2040351b21bf685fd85cf75666"
+    },
+    "translation": {
+      "path": "C:\\ClearEval\\reports\\cleareval_20261012\\english_fulltext_pilot\\qwen_translation_pending\\returns\\T03_R3C04_merge_adjacent_operations\\english_text.txt",
+      "sha256": "950be1ebd0afc65bd92b423f3b432c2590e1118231377ee3fac3143370d23d43"
+    },
+    "scope": "Read complete baseline sources/translations and all variant differences; inspect numeric/time unit alignment, repeats, simultaneous incubations, optional clauses, and retained scientific claims.",
+    "numbered_structure_retained": true,
+    "operational_number_and_time_checks_pass": true,
+    "whole_text_has_no_remaining_CJK": true,
+    "findings": [
+      {
+        "kind": "number_token_flag_resolved_by_source_review",
+        "source": {
+          "start": 261,
+          "end": 263,
+          "quote": "三维"
+        },
+        "translation": {
+          "start": 636,
+          "end": 638,
+          "quote": "3D"
+        },
+        "judgment": "Semantically intended dimensional descriptor; no new experimental numerical parameter.",
+        "material_parameter_change": false
+      },
+      {
+        "kind": "heading_modifier_compression",
+        "source": {
+          "start": 1895,
+          "end": 1903,
+          "quote": "二抗全脑免疫标记"
+        },
+        "translation": {
+          "start": 2990,
+          "end": 3008,
+          "quote": "Secondary, far-red"
+        },
+        "judgment": "Whole-brain immunolabeling modifier is omitted in this heading; the shared specimen context and secondary-antibody operation remain. Not strict verbatim preservation; flag for source review.",
+        "main_scoring_repaired": false
+      },
+      {
+        "kind": "heading_modifier_compression",
+        "source": {
+          "start": 2468,
+          "end": 2472,
+          "quote": "再次脱水"
+        },
+        "translation": {
+          "start": 3961,
+          "end": 3988,
+          "quote": "Dehydration before clearing"
+        },
+        "judgment": "Explicit again is compressed in the heading. Earlier and later workflow positions remain; translated scientific equivalence has not been expert-adjudicated.",
+        "main_scoring_repaired": false
+      }
+    ],
+    "source_scientific_errors_corrected_by_reviewer": false,
+    "operation_content_review": "No material operation, numerical, repeat, or branch alteration identified in this assistant review; this is not an expert accuracy estimate.",
+    "display_status": "observed_raw_SRSP_retained_with_local_fidelity_notes",
+    "uniform_full_English_experiment_eligible": true,
+    "whole_document_semantically_lossless_claimed": false
+  },
+  {
+    "request_id": "T04_R3C04_delete_reported_core_operations",
+    "reviewer": "current_assistant_source_review",
+    "expert_verified": false,
+    "blind_to_scores": false,
+    "source": {
+      "path": "C:\\ClearEval\\reports\\cleareval_20261012\\english_fulltext_pilot\\controls\\R3C04\\original\\delete_reported_core_operations.txt",
+      "sha256": "93d66c75ae980b490567a19e1673ab3049fd749b8b6f6e187fa5e79345f47d31"
+    },
+    "translation": {
+      "path": "C:\\ClearEval\\reports\\cleareval_20261012\\english_fulltext_pilot\\qwen_translation_pending\\returns\\T04_R3C04_delete_reported_core_operations\\english_text.txt",
+      "sha256": "7804ba6653992f29d34efffb020606764c2379954ec566a2e46a66e4c09b4063"
+    },
+    "scope": "Read complete baseline sources/translations and all variant differences; inspect numeric/time unit alignment, repeats, simultaneous incubations, optional clauses, and retained scientific claims.",
+    "numbered_structure_retained": true,
+    "operational_number_and_time_checks_pass": true,
+    "whole_text_has_no_remaining_CJK": true,
+    "findings": [
+      {
+        "kind": "number_token_flag_resolved_by_source_review",
+        "source": {
+          "start": 261,
+          "end": 263,
+          "quote": "三维"
+        },
+        "translation": {
+          "start": 604,
+          "end": 606,
+          "quote": "3D"
+        },
+        "judgment": "Semantically intended dimensional descriptor; no new experimental numerical parameter.",
+        "material_parameter_change": false
+      },
+      {
+        "kind": "heading_modifier_compression",
+        "source": {
+          "start": 1895,
+          "end": 1903,
+          "quote": "二抗全脑免疫标记"
+        },
+        "translation": {
+          "start": 2942,
+          "end": 2960,
+          "quote": "Secondary, far-red"
+        },
+        "judgment": "Whole-brain immunolabeling modifier is omitted in this heading; the shared specimen context and secondary-antibody operation remain. Not strict verbatim preservation; flag for source review.",
+        "main_scoring_repaired": false
+      },
+      {
+        "kind": "heading_modifier_compression",
+        "source": {
+          "start": 2468,
+          "end": 2472,
+          "quote": "再次脱水"
+        },
+        "translation": {
+          "start": 3904,
+          "end": 3931,
+          "quote": "Dehydration before clearing"
+        },
+        "judgment": "Explicit again is compressed in the heading. Earlier and later workflow positions remain; translated scientific equivalence has not been expert-adjudicated.",
+        "main_scoring_repaired": false
+      }
+    ],
+    "source_scientific_errors_corrected_by_reviewer": false,
+    "operation_content_review": "No material operation, numerical, repeat, or branch alteration identified in this assistant review; this is not an expert accuracy estimate.",
+    "display_status": "observed_raw_SRSP_retained_with_local_fidelity_notes",
+    "uniform_full_English_experiment_eligible": true,
+    "whole_document_semantically_lossless_claimed": false
+  },
+  {
+    "request_id": "T05_R3C07_baseline",
+    "reviewer": "current_assistant_source_review",
+    "expert_verified": false,
+    "blind_to_scores": false,
+    "source": {
+      "path": "C:\\ClearEval\\reports\\cleareval_20261012\\english_fulltext_pilot\\documents\\R3C07\\original.txt",
+      "sha256": "4b84fdc89feaa11f37599e9f3fe38336fecf418a499e8609ec08312f6cb78bd3"
+    },
+    "translation": {
+      "path": "C:\\ClearEval\\reports\\cleareval_20261012\\english_fulltext_pilot\\qwen_translation_pending\\returns\\T05_R3C07_baseline\\english_text.txt",
+      "sha256": "d31f4b22e2870a9b17259a2a79a971435335c313ccc5d0c3464e2933ac2130ab"
+    },
+    "scope": "Read complete baseline sources/translations and all variant differences; inspect numeric/time unit alignment, repeats, simultaneous incubations, optional clauses, and retained scientific claims.",
+    "numbered_structure_retained": true,
+    "operational_number_and_time_checks_pass": true,
+    "whole_text_has_no_remaining_CJK": true,
+    "findings": [],
+    "source_scientific_errors_corrected_by_reviewer": false,
+    "operation_content_review": "No material operation, numerical, repeat, or branch alteration identified in this assistant review; this is not an expert accuracy estimate.",
+    "display_status": "observed_raw_SRSP_retained_with_local_fidelity_notes",
+    "uniform_full_English_experiment_eligible": true,
+    "whole_document_semantically_lossless_claimed": false
+  },
+  {
+    "request_id": "T06_R3C07_renumber_operations",
+    "reviewer": "current_assistant_source_review",
+    "expert_verified": false,
+    "blind_to_scores": false,
+    "source": {
+      "path": "C:\\ClearEval\\reports\\cleareval_20261012\\english_fulltext_pilot\\controls\\R3C07\\original\\renumber_operations.txt",
+      "sha256": "75d519c778e67a35792196aad81811891c8619a69685f6d7c2a80d78a8e42ffa"
+    },
+    "translation": {
+      "path": "C:\\ClearEval\\reports\\cleareval_20261012\\english_fulltext_pilot\\qwen_translation_pending\\returns\\T06_R3C07_renumber_operations\\english_text.txt",
+      "sha256": "b3efb36b14b0c453f6135e826611e5bad54705cff507bfa41cc8c7e042b007e9"
+    },
+    "scope": "Read complete baseline sources/translations and all variant differences; inspect numeric/time unit alignment, repeats, simultaneous incubations, optional clauses, and retained scientific claims.",
+    "numbered_structure_retained": true,
+    "operational_number_and_time_checks_pass": true,
+    "whole_text_has_no_remaining_CJK": false,
+    "findings": [
+      {
+        "kind": "untranslated_selected_label",
+        "source": {
+          "start": 58,
+          "end": 62,
+          "quote": "内源荧光"
+        },
+        "translation": {
+          "start": 58,
+          "end": 62,
+          "quote": "内源荧光"
+        },
+        "judgment": "Incomplete full-English translation. Label is before Protocol Steps and is not encoded by this step scorer. Separate offline intervention demonstrates no effect on this SR/SP drop.",
+        "whole_text_English_complete": false,
+        "local_impact": "label translation only; do not erase observed SR/SP"
+      }
+    ],
+    "source_scientific_errors_corrected_by_reviewer": false,
+    "operation_content_review": "No material operation, numerical, repeat, or branch alteration identified in this assistant review; this is not an expert accuracy estimate.",
+    "display_status": "observed_raw_SRSP_retained_with_local_fidelity_notes",
+    "uniform_full_English_experiment_eligible": false,
+    "whole_document_semantically_lossless_claimed": false
+  },
+  {
+    "request_id": "T07_R3C07_merge_adjacent_operations",
+    "reviewer": "current_assistant_source_review",
+    "expert_verified": false,
+    "blind_to_scores": false,
+    "source": {
+      "path": "C:\\ClearEval\\reports\\cleareval_20261012\\english_fulltext_pilot\\controls\\R3C07\\original\\merge_adjacent_operations.txt",
+      "sha256": "f6d307513fbc5b42832601b29d5c0c0450e486d149647d9510fe5cc577f1bb4d"
+    },
+    "translation": {
+      "path": "C:\\ClearEval\\reports\\cleareval_20261012\\english_fulltext_pilot\\qwen_translation_pending\\returns\\T07_R3C07_merge_adjacent_operations\\english_text.txt",
+      "sha256": "065d9873a374e20150bd8a137be49f79cb5c754be9f26e06a8598d8a36445d7b"
+    },
+    "scope": "Read complete baseline sources/translations and all variant differences; inspect numeric/time unit alignment, repeats, simultaneous incubations, optional clauses, and retained scientific claims.",
+    "numbered_structure_retained": true,
+    "operational_number_and_time_checks_pass": true,
+    "whole_text_has_no_remaining_CJK": true,
+    "findings": [],
+    "source_scientific_errors_corrected_by_reviewer": false,
+    "operation_content_review": "No material operation, numerical, repeat, or branch alteration identified in this assistant review; this is not an expert accuracy estimate.",
+    "display_status": "observed_raw_SRSP_retained_with_local_fidelity_notes",
+    "uniform_full_English_experiment_eligible": true,
+    "whole_document_semantically_lossless_claimed": false
+  },
+  {
+    "request_id": "T08_R3C07_delete_reported_core_operations",
+    "reviewer": "current_assistant_source_review",
+    "expert_verified": false,
+    "blind_to_scores": false,
+    "source": {
+      "path": "C:\\ClearEval\\reports\\cleareval_20261012\\english_fulltext_pilot\\controls\\R3C07\\original\\delete_reported_core_operations.txt",
+      "sha256": "e64d7052b6a3b5cfdf5cfbb8d12ed8be736e9f0808e71de70a586d52ed3c4cdb"
+    },
+    "translation": {
+      "path": "C:\\ClearEval\\reports\\cleareval_20261012\\english_fulltext_pilot\\qwen_translation_pending\\returns\\T08_R3C07_delete_reported_core_operations\\english_text.txt",
+      "sha256": "f699903a9e66c6285f694e001dad8f2a6c703aaac885fb6d26ee6e54b5b6e570"
+    },
+    "scope": "Read complete baseline sources/translations and all variant differences; inspect numeric/time unit alignment, repeats, simultaneous incubations, optional clauses, and retained scientific claims.",
+    "numbered_structure_retained": true,
+    "operational_number_and_time_checks_pass": true,
+    "whole_text_has_no_remaining_CJK": true,
+    "findings": [],
+    "source_scientific_errors_corrected_by_reviewer": false,
+    "operation_content_review": "No material operation, numerical, repeat, or branch alteration identified in this assistant review; this is not an expert accuracy estimate.",
+    "display_status": "observed_raw_SRSP_retained_with_local_fidelity_notes",
+    "uniform_full_English_experiment_eligible": true,
+    "whole_document_semantically_lossless_claimed": false
+  }
+]

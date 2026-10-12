@@ -1,0 +1,508 @@
+{
+  "cohort": "Qwen_repeats",
+  "cell_id": "A05__local_qwen27b_q8_development__r2",
+  "anonymous_answer_id": "A05",
+  "question_id": 248,
+  "original_status": "success",
+  "version": "cce-typed-label-scorer-v2.1",
+  "metrics": {
+    "c_param": 2,
+    "co_order": 2,
+    "co_method": 2,
+    "co_param": 0,
+    "co_chem": 1,
+    "s_method": 0.1263,
+    "s_label": 5.1,
+    "s_trans": 2.814646787157323,
+    "s_time": 0.2171307077557154,
+    "sr": 0.7142857142857143,
+    "sp": 0.75,
+    "Com": 0.6857142857142857,
+    "Cor": 0.6666666666666666,
+    "Eff": 0.5964631245760865,
+    "IA": 0.5964631245760865,
+    "HV": 0.2726688569490681
+  },
+  "complete_numeric_CCE": true,
+  "baseline_metrics": {
+    "c_param": 2,
+    "co_order": 2,
+    "co_method": 2,
+    "co_param": 0,
+    "co_chem": 1,
+    "s_method": 0.1263,
+    "s_label": 5.1,
+    "s_trans": 2.814646787157323,
+    "s_time": 0.2171307077557154,
+    "sr": 0.7142857142857143,
+    "sp": 0.75,
+    "Com": 0.6857142857142857,
+    "Cor": 0.6666666666666666,
+    "Eff": 0.5964631245760865,
+    "IA": 0.5964631245760865,
+    "HV": 0.2726688569490681
+  },
+  "quantitative_data": {
+    "method_name": "FDISCO",
+    "tissue_ri_value": 1.46,
+    "total_time_hours": 15.0,
+    "sample_tier": "T04_WHOLE_MOUSE_BRAIN_5_12MM",
+    "reagent_ri_value": null,
+    "protocol_time_hours": null
+  },
+  "time_derivation": {
+    "hours": 15.0,
+    "bounds_hours": [
+      15.0,
+      15.0
+    ],
+    "decision": "existing_source_bound_scalar",
+    "issues": []
+  },
+  "time_formula": {
+    "policy": "kb-window-asymmetric-median-0.20-under-0.10-over-v1",
+    "source": "time_kb.json",
+    "requested_tier": "T04_WHOLE_MOUSE_BRAIN_5_12MM",
+    "actual_hours": 15.0,
+    "min_hours": 48.0,
+    "max_hours": 96.0,
+    "median_hours": 72.0,
+    "tau_hours": 14.4,
+    "delta_hours": 33.0,
+    "tau_under_fraction": 0.2,
+    "tau_over_fraction": 0.1,
+    "status": "scored",
+    "resolved_tier": "T04_WHOLE_MOUSE_BRAIN_5_12MM",
+    "method_key": "fdisco"
+  },
+  "time_sensitivity": [
+    {
+      "time_hours": 15.0,
+      "s_time": 0.2171307077557154,
+      "Eff": 0.5964631245760865
+    }
+  ],
+  "label_derivation": {
+    "version": "cce-typed-label-scorer-v2.1",
+    "s_label": 5.1,
+    "channels": {
+      "s_target_match": 6.0,
+      "s_marker_fluor_compat": 6.0,
+      "s_method_fluor_compat": 5.1
+    },
+    "channel_applicability": {
+      "s_target_match": {
+        "applicable": true,
+        "value": 6.0,
+        "contributing_pairs": [
+          "relation:R001"
+        ]
+      },
+      "s_marker_fluor_compat": {
+        "applicable": true,
+        "value": 6.0,
+        "contributing_pairs": [
+          "relation:R001"
+        ]
+      },
+      "s_method_fluor_compat": {
+        "applicable": true,
+        "value": 5.1,
+        "contributing_pairs": [
+          "native:I001",
+          "relation:R001"
+        ]
+      }
+    },
+    "pair_results": [
+      {
+        "pair_id": "native:I001",
+        "entity_id": "E001",
+        "fluorophore": "tdTomato",
+        "reported_marker": null,
+        "reported_target_literal": null,
+        "label_type": "native_fluorescent_protein",
+        "original_function_input": {
+          "tdTomato": ""
+        },
+        "applicable": {
+          "s_target_match": false,
+          "s_marker_fluor_compat": false,
+          "s_method_fluor_compat": true
+        },
+        "channels": {
+          "s_target_match": null,
+          "s_marker_fluor_compat": null,
+          "s_method_fluor_compat": 5.4
+        },
+        "not_applicable_reason": "standalone fluorescence has no antibody target-pair channel",
+        "source_evidence": {
+          "unit_id": "L0002",
+          "start": 26,
+          "end": 98,
+          "quote": "**Chosen Labeling:** [tdTomato, β-III Tubulin (TUJ1) + Alexa Fluor 647]\n",
+          "answer_sha256": "3d5efe24118072a52395d692e598dbb926b6b1a2a0313c9d3f73e123c93ba756"
+        },
+        "compatibility_audit": [
+          {
+            "kind": "method_fluor",
+            "method_name": "FDISCO",
+            "fluorophore": "tdTomato",
+            "source": "KnowledgeBase/method_fluro_compati.json",
+            "value": 0.9,
+            "status": "TABLE_REPORTED"
+          }
+        ]
+      },
+      {
+        "pair_id": "relation:R001",
+        "entity_id": "E003",
+        "fluorophore": "Alexa Fluor 647",
+        "reported_marker": "β-III Tubulin (TUJ1)",
+        "reported_target_literal": "β-III Tubulin (TUJ1)",
+        "label_type": "targeted_or_unclassified_reagent",
+        "original_function_input": {
+          "Alexa Fluor 647": "β-III Tubulin (TUJ1)"
+        },
+        "applicable": {
+          "s_target_match": true,
+          "s_marker_fluor_compat": true,
+          "s_method_fluor_compat": true
+        },
+        "channels": {
+          "s_target_match": 6.0,
+          "s_marker_fluor_compat": 6.0,
+          "s_method_fluor_compat": 5.1
+        },
+        "not_applicable_reason": null,
+        "source_evidence": {
+          "unit_id": "L0002",
+          "start": 26,
+          "end": 98,
+          "quote": "**Chosen Labeling:** [tdTomato, β-III Tubulin (TUJ1) + Alexa Fluor 647]\n",
+          "answer_sha256": "3d5efe24118072a52395d692e598dbb926b6b1a2a0313c9d3f73e123c93ba756"
+        },
+        "compatibility_audit": [
+          {
+            "kind": "marker_fluor",
+            "marker": "β-III Tubulin (TUJ1)",
+            "fluorophore": "Alexa Fluor 647",
+            "source": "KnowledgeBase/tissue.json",
+            "value": true,
+            "status": "TABLE_REPORTED"
+          },
+          {
+            "kind": "method_fluor",
+            "method_name": "FDISCO",
+            "fluorophore": "Alexa Fluor 647",
+            "source": "KnowledgeBase/method_fluro_compati.json",
+            "value": 0.85,
+            "status": "TABLE_REPORTED"
+          }
+        ]
+      }
+    ],
+    "resolved_uncertainties": [],
+    "remaining_uncertainties": [],
+    "minimum_of_available_applicable_channels": 5.1,
+    "task_target_coverage": "native/direct task coverage remains separate from antibody-pair applicability",
+    "new_model_calls": 0,
+    "expert_validated": false
+  },
+  "compatibility_lookup_trace": [
+    {
+      "marker": "β-III Tubulin (TUJ1)",
+      "fluorophore": "Alexa Fluor 647",
+      "status": "all_applicable_scopes_have_same_authored_value",
+      "value": true,
+      "column": "AlexaFluor 647/Cy5 ",
+      "matching_target_options": [
+        {
+          "target_index": 1,
+          "source_tissue_xlsx_row": 4,
+          "marker_slot": "recommended_marker_1",
+          "marker_name": "β-III Tubulin (TUJ1)",
+          "query_path": "中枢神经 > 神经元结构 > 神经元(通用)",
+          "major_category": "中枢神经",
+          "subcategory": "神经元结构",
+          "structure_or_cell_subtype": "神经元(通用)",
+          "authored_target_parent": {
+            "marker_name": "β-III Tubulin (TUJ1)",
+            "target_index": 1,
+            "source_tissue_xlsx_row": 4,
+            "query_path": "中枢神经 > 神经元结构 > 神经元(通用)",
+            "marker_slot": "recommended_marker_1"
+          },
+          "authored_option_index": 0,
+          "option_split_applied": false
+        }
+      ],
+      "candidate_rows": [
+        {
+          "row_index": 0,
+          "matching_authored_names": [
+            {
+              "field": "推荐标志物 1",
+              "authored_name": "β-III Tubulin (TUJ1)",
+              "option": "β-III Tubulin (TUJ1)",
+              "option_split_applied": false
+            }
+          ],
+          "scope": {
+            "大类": "中枢神经",
+            "亚类": "神经元结构",
+            "结构/细胞类型": "神经元(通用)"
+          },
+          "cell_value": 1
+        },
+        {
+          "row_index": 32,
+          "matching_authored_names": [
+            {
+              "field": "推荐标志物 2",
+              "authored_name": "β-III Tubulin",
+              "option": "β-III Tubulin",
+              "option_split_applied": false
+            }
+          ],
+          "scope": {
+            "大类": "呼吸系统",
+            "亚类": "神经系统",
+            "结构/细胞类型": "肺部迷走神经"
+          },
+          "cell_value": 1
+        },
+        {
+          "row_index": 55,
+          "matching_authored_names": [
+            {
+              "field": "推荐标志物 1",
+              "authored_name": "Tuj1",
+              "option": "Tuj1",
+              "option_split_applied": false
+            }
+          ],
+          "scope": {
+            "大类": "肠道系统",
+            "亚类": "肠神经",
+            "结构/细胞类型": "肠神经丛"
+          },
+          "cell_value": 1
+        },
+        {
+          "row_index": 76,
+          "matching_authored_names": [
+            {
+              "field": "推荐标志物 2",
+              "authored_name": "β-III Tubulin / TUJ1",
+              "option": "β-III Tubulin",
+              "option_split_applied": true
+            },
+            {
+              "field": "推荐标志物 2",
+              "authored_name": "β-III Tubulin / TUJ1",
+              "option": "TUJ1",
+              "option_split_applied": true
+            }
+          ],
+          "scope": {
+            "大类": "临床病理",
+            "亚类": "皮肤活检",
+            "结构/细胞类型": "表皮内神经纤维 IENF"
+          },
+          "cell_value": null
+        },
+        {
+          "row_index": 80,
+          "matching_authored_names": [
+            {
+              "field": "推荐标志物 1",
+              "authored_name": "β-III Tubulin / TUJ1",
+              "option": "β-III Tubulin",
+              "option_split_applied": true
+            },
+            {
+              "field": "推荐标志物 1",
+              "authored_name": "β-III Tubulin / TUJ1",
+              "option": "TUJ1",
+              "option_split_applied": true
+            }
+          ],
+          "scope": {
+            "大类": "斑马鱼系统",
+            "亚类": "侧线系统",
+            "结构/细胞类型": "侧线神经纤维"
+          },
+          "cell_value": null
+        },
+        {
+          "row_index": 84,
+          "matching_authored_names": [
+            {
+              "field": "推荐标志物 2",
+              "authored_name": "β-III Tubulin / PGP9.5",
+              "option": "β-III Tubulin",
+              "option_split_applied": true
+            }
+          ],
+          "scope": {
+            "大类": "骨骼肌系统",
+            "亚类": "神经肌肉接头",
+            "结构/细胞类型": "运动神经末梢/轴突骨架"
+          },
+          "cell_value": null
+        },
+        {
+          "row_index": 85,
+          "matching_authored_names": [
+            {
+              "field": "推荐标志物 2",
+              "authored_name": "β-III Tubulin / TUJ1",
+              "option": "β-III Tubulin",
+              "option_split_applied": true
+            },
+            {
+              "field": "推荐标志物 2",
+              "authored_name": "β-III Tubulin / TUJ1",
+              "option": "TUJ1",
+              "option_split_applied": true
+            }
+          ],
+          "scope": {
+            "大类": "消化系统",
+            "亚类": "胃壁神经系统",
+            "结构/细胞类型": "胃壁迷走神经/泛神经纤维网络"
+          },
+          "cell_value": null
+        },
+        {
+          "row_index": 90,
+          "matching_authored_names": [
+            {
+              "field": "推荐标志物 2",
+              "authored_name": "PGP9.5 / β-III Tubulin",
+              "option": "β-III Tubulin",
+              "option_split_applied": true
+            }
+          ],
+          "scope": {
+            "大类": "硬组织",
+            "亚类": "骨骼微环境",
+            "结构/细胞类型": "骨组织感觉神经与泛神经网络"
+          },
+          "cell_value": null
+        },
+        {
+          "row_index": 100,
+          "matching_authored_names": [
+            {
+              "field": "推荐标志物 1",
+              "authored_name": "PGP9.5 / β-III Tubulin",
+              "option": "β-III Tubulin",
+              "option_split_applied": true
+            }
+          ],
+          "scope": {
+            "大类": "硬组织",
+            "亚类": "内耳结构",
+            "结构/细胞类型": "耳蜗神经支配"
+          },
+          "cell_value": null
+        },
+        {
+          "row_index": 106,
+          "matching_authored_names": [
+            {
+              "field": "推荐标志物 2",
+              "authored_name": "β-III Tubulin / TUJ1",
+              "option": "β-III Tubulin",
+              "option_split_applied": true
+            },
+            {
+              "field": "推荐标志物 2",
+              "authored_name": "β-III Tubulin / TUJ1",
+              "option": "TUJ1",
+              "option_split_applied": true
+            }
+          ],
+          "scope": {
+            "大类": "发育生物学",
+            "亚类": "胚胎神经系统",
+            "结构/细胞类型": "胚胎颅/脊神经与外周神经"
+          },
+          "cell_value": null
+        }
+      ],
+      "selected_row_indices": [
+        0
+      ],
+      "per_scope_evidence": [
+        {
+          "scope": {
+            "大类": "中枢神经",
+            "亚类": "神经元结构",
+            "结构/细胞类型": "神经元(通用)"
+          },
+          "row_indices": [
+            0
+          ],
+          "all_cell_values": [
+            1
+          ],
+          "state": "consistent_authored_value",
+          "value": 1
+        }
+      ],
+      "row_selection_uses_scores": false,
+      "different_scopes_merged": false,
+      "new_alias_or_KB_value": false,
+      "declared_task_scope": null,
+      "exact_lookup_value": true,
+      "evidence_level": "existing_specific_table_value"
+    }
+  ],
+  "semantic_decomposition_applied": false,
+  "semantic_author": "saved judge decomposition",
+  "remaining_dependencies": {
+    "time": [],
+    "label_relations": [],
+    "compatibility": []
+  },
+  "new_model_requests": 0,
+  "new_expert_records": 0,
+  "direct_scores_rejudged": false,
+  "SR_SP_changed": false,
+  "raw_judge_status_changed": false,
+  "status": "replayed",
+  "source_record": {
+    "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\optimizer_round3_20261011\\uniform_v7\\actual_01\\cells\\Qwen_repeats\\A05__local_qwen27b_q8_development__r2\\posthoc.json",
+    "sha256": "2b18f8e1c7725956a0fd824485b34a1ad8dfdef0834f88c56b7596f685df74b5"
+  },
+  "answer_sha256": "3d5efe24118072a52395d692e598dbb926b6b1a2a0313c9d3f73e123c93ba756",
+  "changes": {},
+  "comparison_metrics": {
+    "c_param": 2,
+    "co_order": 2,
+    "co_method": 2,
+    "co_param": 0,
+    "co_chem": 1,
+    "s_method": 0.1263,
+    "s_label": 5.1,
+    "s_trans": 2.814646787157323,
+    "s_time": 0.2171307077557154,
+    "sr": 0.7142857142857143,
+    "sp": 0.75,
+    "Com": 0.6857142857142857,
+    "Cor": 0.6666666666666666,
+    "Eff": 0.5964631245760865,
+    "IA": 0.5964631245760865,
+    "HV": 0.2726688569490681
+  },
+  "typed_replay_status": "replayed",
+  "typed_semantic_annotation": false,
+  "typed_changes": {},
+  "source_document": {
+    "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\optimizer_round2_20261010\\grounded_stability_v11\\source_documents\\A05.json",
+    "sha256": "0f959ac0f80bfa017bab851a75ea7507544b03d0cda64f20584d461adf2bb6fc"
+  }
+}

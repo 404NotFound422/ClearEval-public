@@ -1,0 +1,60 @@
+{
+  "numeric_scope": "automatic_plus_inherited_C08_include_bleach",
+  "model_cohort": [
+    "openai_claude-sonnet-4.6",
+    "openai_qwen3-max"
+  ],
+  "cohort_size": 2,
+  "question_denominator": 2,
+  "common_question_ids": [
+    "248"
+  ],
+  "evaluated_question_ids": [
+    "23",
+    "248"
+  ],
+  "evaluated_question_n": 2,
+  "common_fraction_of_evaluated_questions": 0.5,
+  "common_n": 1,
+  "common_coverage": 0.5,
+  "per_model_eligible_n": {
+    "openai_claude-sonnet-4.6": 1,
+    "openai_qwen3-max": 2
+  },
+  "excluded_counts": {
+    "incomplete_CCE": 1,
+    "cross_model_question_hash_mismatch": 0
+  },
+  "means": {
+    "openai_claude-sonnet-4.6": {
+      "Com": 0.6,
+      "Cor": 0.5416666666666666,
+      "Eff": 0.584177176267862,
+      "IA": 0.5416666666666666,
+      "HV": 0.18985758228705513
+    },
+    "openai_qwen3-max": {
+      "Com": 0.7333333333333333,
+      "Cor": 0.875,
+      "Eff": 0.662988898929777,
+      "IA": 0.662988898929777,
+      "HV": 0.42541787681327353
+    }
+  },
+  "dominance_matrix": {
+    "openai_claude-sonnet-4.6": {
+      "openai_claude-sonnet-4.6": false,
+      "openai_qwen3-max": false
+    },
+    "openai_qwen3-max": {
+      "openai_claude-sonnet-4.6": true,
+      "openai_qwen3-max": false
+    }
+  },
+  "empirical_nondominated": [
+    "openai_qwen3-max"
+  ],
+  "dominance_tolerance": 1e-12,
+  "aggregation": "mean of per-question IA=min(Com,Cor,Eff) and HV=Com*Cor*Eff",
+  "formal_result": false
+}

@@ -1,0 +1,879 @@
+{
+  "cohort": "secondary8_posthoc",
+  "cell_id": "FPC14",
+  "anonymous_answer_id": "FPC14",
+  "question_id": 22,
+  "original_status": "success",
+  "version": "cce-typed-label-scorer-v2",
+  "metrics": {
+    "c_param": 3,
+    "co_order": 1,
+    "co_method": 1,
+    "co_param": 1,
+    "co_chem": 0,
+    "s_method": -1.0625,
+    "s_label": 0.0,
+    "s_trans": 2.6784375046866993,
+    "s_time": 0.0,
+    "sr": 0.1111111111111111,
+    "sp": 0.1,
+    "Com": 0.6444444444444444,
+    "Cor": 0.3333333333333333,
+    "Eff": 0.2950781253905583,
+    "IA": 0.2950781253905583,
+    "HV": 0.06338715286167547
+  },
+  "complete_numeric_CCE": true,
+  "baseline_metrics": {
+    "c_param": 3,
+    "co_order": 1,
+    "co_method": 1,
+    "co_param": 1,
+    "co_chem": 0,
+    "s_method": -1.0625,
+    "s_label": 0.0,
+    "s_trans": 2.6784375046866993,
+    "s_time": 0.0,
+    "sr": 0.1111111111111111,
+    "sp": 0.1,
+    "Com": 0.6444444444444444,
+    "Cor": 0.3333333333333333,
+    "Eff": 0.2950781253905583,
+    "IA": 0.2950781253905583,
+    "HV": 0.06338715286167547
+  },
+  "quantitative_data": {
+    "method_name": "iDISCO+",
+    "tissue_ri_value": 1.46,
+    "total_time_hours": 85.0,
+    "sample_tier": "T02_THICK_SLICE_0P5_3MM",
+    "reagent_ri_value": null,
+    "protocol_time_hours": null
+  },
+  "time_derivation": {
+    "hours": 85.0,
+    "bounds_hours": [
+      85.0,
+      85.0
+    ],
+    "decision": "existing_source_bound_scalar",
+    "issues": []
+  },
+  "time_formula": {
+    "policy": "kb-window-asymmetric-median-0.20-under-0.10-over-v1",
+    "source": "time_kb.json",
+    "requested_tier": "T02_THICK_SLICE_0P5_3MM",
+    "actual_hours": 85.0,
+    "min_hours": 2.0,
+    "max_hours": 8.0,
+    "median_hours": 4.0,
+    "tau_hours": 0.4,
+    "delta_hours": 77.0,
+    "tau_under_fraction": 0.2,
+    "tau_over_fraction": 0.1,
+    "status": "scored",
+    "resolved_tier": "T02_THICK_SLICE_0P5_3MM",
+    "method_key": "idisco+"
+  },
+  "time_sensitivity": [
+    {
+      "time_hours": 85.0,
+      "s_time": 0.0,
+      "Eff": 0.2950781253905583
+    }
+  ],
+  "label_derivation": {
+    "version": "cce-typed-label-scorer-v2",
+    "s_label": 0.0,
+    "channels": {
+      "s_target_match": 0.0,
+      "s_marker_fluor_compat": null,
+      "s_method_fluor_compat": null
+    },
+    "channel_applicability": {
+      "s_target_match": {
+        "applicable": true,
+        "value": 0.0,
+        "contributing_pairs": [
+          "relation:R001"
+        ]
+      },
+      "s_marker_fluor_compat": {
+        "applicable": true,
+        "value": null,
+        "contributing_pairs": [
+          "relation:R001"
+        ]
+      },
+      "s_method_fluor_compat": {
+        "applicable": true,
+        "value": null,
+        "contributing_pairs": [
+          "native:I001",
+          "unresolved_entity:E002",
+          "relation:R001",
+          "unresolved_entity:E005",
+          "unresolved_entity:E006",
+          "unresolved_entity:E007"
+        ]
+      }
+    },
+    "pair_results": [
+      {
+        "pair_id": "native:I001",
+        "entity_id": "E001",
+        "fluorophore": "GFP",
+        "reported_marker": null,
+        "reported_target_literal": null,
+        "label_type": "native_fluorescent_protein",
+        "original_function_input": {
+          "GFP": ""
+        },
+        "applicable": {
+          "s_target_match": false,
+          "s_marker_fluor_compat": false,
+          "s_method_fluor_compat": true
+        },
+        "channels": {
+          "s_target_match": null,
+          "s_marker_fluor_compat": null,
+          "s_method_fluor_compat": 1.2000000000000002
+        },
+        "not_applicable_reason": "standalone fluorescence has no antibody target-pair channel",
+        "source_evidence": {
+          "unit_id": "L0002",
+          "start": 29,
+          "end": 91,
+          "quote": "**Chosen Labeling:** [GFP (内源), Phalloidin-Alexa Fluor 647]  \n",
+          "answer_sha256": "02104ef3a463ee93bd1fa54e9a3c23116f6315a525343759286598ff77909696"
+        },
+        "compatibility_audit": [
+          {
+            "kind": "method_fluor",
+            "method_name": "iDISCO+",
+            "fluorophore": "GFP",
+            "source": "KnowledgeBase/method_fluro_compati.json",
+            "value": 0.2,
+            "status": "TABLE_REPORTED"
+          }
+        ]
+      },
+      {
+        "pair_id": "unresolved_entity:E002",
+        "entity_id": "E002",
+        "fluorophore": "Phalloidin-Alexa Fluor 647",
+        "reported_marker": null,
+        "reported_target_literal": null,
+        "label_type": "targeted_or_unclassified_reagent",
+        "original_function_input": {
+          "Phalloidin-Alexa Fluor 647": ""
+        },
+        "applicable": {
+          "s_target_match": false,
+          "s_marker_fluor_compat": false,
+          "s_method_fluor_compat": true
+        },
+        "channels": {
+          "s_target_match": null,
+          "s_marker_fluor_compat": null,
+          "s_method_fluor_compat": null
+        },
+        "not_applicable_reason": null,
+        "source_evidence": {
+          "unit_id": "L0002",
+          "start": 61,
+          "end": 87,
+          "quote": "Phalloidin-Alexa Fluor 647",
+          "answer_sha256": "02104ef3a463ee93bd1fa54e9a3c23116f6315a525343759286598ff77909696"
+        },
+        "compatibility_audit": [
+          {
+            "kind": "method_fluor",
+            "method_name": "iDISCO+",
+            "fluorophore": "Phalloidin-Alexa Fluor 647",
+            "source": "KnowledgeBase/method_fluro_compati.json",
+            "value": null,
+            "status": "UNKNOWN"
+          }
+        ]
+      },
+      {
+        "pair_id": "relation:R001",
+        "entity_id": "E004",
+        "fluorophore": "Phalloidin-Alexa Fluor 647",
+        "reported_marker": "F-actin",
+        "reported_target_literal": "F-actin",
+        "label_type": "targeted_or_unclassified_reagent",
+        "original_function_input": {
+          "Phalloidin-Alexa Fluor 647": "F-actin"
+        },
+        "applicable": {
+          "s_target_match": true,
+          "s_marker_fluor_compat": true,
+          "s_method_fluor_compat": true
+        },
+        "channels": {
+          "s_target_match": 0.0,
+          "s_marker_fluor_compat": null,
+          "s_method_fluor_compat": null
+        },
+        "not_applicable_reason": null,
+        "source_evidence": {
+          "unit_id": "L0003",
+          "start": 91,
+          "end": 597,
+          "quote": "**Justification:** iDISCO+ is well-suited for thick brain tissues due to its high penetration depth and compatibility with lipid-soluble reagents, which helps preserve weak endogenous fluorescence signals like GFP. The use of Phalloidin-Alexa Fluor 647 allows for robust labeling of F-actin, which is essential for visualizing dendritic structures and neuronal morphology. This method also supports long-term storage in RI-matched media, minimizing fluorescence quenching and tissue deformation over time.\n",
+          "answer_sha256": "02104ef3a463ee93bd1fa54e9a3c23116f6315a525343759286598ff77909696"
+        },
+        "compatibility_audit": [
+          {
+            "kind": "marker_fluor",
+            "marker": "F-actin",
+            "fluorophore": "Phalloidin-Alexa Fluor 647",
+            "source": "KnowledgeBase/tissue.json",
+            "value": null,
+            "status": "UNKNOWN"
+          },
+          {
+            "kind": "method_fluor",
+            "method_name": "iDISCO+",
+            "fluorophore": "Phalloidin-Alexa Fluor 647",
+            "source": "KnowledgeBase/method_fluro_compati.json",
+            "value": null,
+            "status": "UNKNOWN"
+          }
+        ]
+      },
+      {
+        "pair_id": "unresolved_entity:E005",
+        "entity_id": "E005",
+        "fluorophore": "Phalloidin-Alexa Fluor 647",
+        "reported_marker": null,
+        "reported_target_literal": null,
+        "label_type": "targeted_or_unclassified_reagent",
+        "original_function_input": {
+          "Phalloidin-Alexa Fluor 647": ""
+        },
+        "applicable": {
+          "s_target_match": false,
+          "s_marker_fluor_compat": false,
+          "s_method_fluor_compat": true
+        },
+        "channels": {
+          "s_target_match": null,
+          "s_marker_fluor_compat": null,
+          "s_method_fluor_compat": null
+        },
+        "not_applicable_reason": null,
+        "source_evidence": {
+          "unit_id": "L0019",
+          "start": 1300,
+          "end": 1326,
+          "quote": "Phalloidin-Alexa Fluor 647",
+          "answer_sha256": "02104ef3a463ee93bd1fa54e9a3c23116f6315a525343759286598ff77909696"
+        },
+        "compatibility_audit": [
+          {
+            "kind": "method_fluor",
+            "method_name": "iDISCO+",
+            "fluorophore": "Phalloidin-Alexa Fluor 647",
+            "source": "KnowledgeBase/method_fluro_compati.json",
+            "value": null,
+            "status": "UNKNOWN"
+          }
+        ]
+      },
+      {
+        "pair_id": "unresolved_entity:E006",
+        "entity_id": "E006",
+        "fluorophore": "Phalloidin-Alexa Fluor 647",
+        "reported_marker": null,
+        "reported_target_literal": null,
+        "label_type": "targeted_or_unclassified_reagent",
+        "original_function_input": {
+          "Phalloidin-Alexa Fluor 647": ""
+        },
+        "applicable": {
+          "s_target_match": false,
+          "s_marker_fluor_compat": false,
+          "s_method_fluor_compat": true
+        },
+        "channels": {
+          "s_target_match": null,
+          "s_marker_fluor_compat": null,
+          "s_method_fluor_compat": null
+        },
+        "not_applicable_reason": null,
+        "source_evidence": {
+          "unit_id": "L0020",
+          "start": 1413,
+          "end": 1439,
+          "quote": "Phalloidin-Alexa Fluor 647",
+          "answer_sha256": "02104ef3a463ee93bd1fa54e9a3c23116f6315a525343759286598ff77909696"
+        },
+        "compatibility_audit": [
+          {
+            "kind": "method_fluor",
+            "method_name": "iDISCO+",
+            "fluorophore": "Phalloidin-Alexa Fluor 647",
+            "source": "KnowledgeBase/method_fluro_compati.json",
+            "value": null,
+            "status": "UNKNOWN"
+          }
+        ]
+      },
+      {
+        "pair_id": "unresolved_entity:E007",
+        "entity_id": "E007",
+        "fluorophore": "Phalloidin-Alexa Fluor 647",
+        "reported_marker": null,
+        "reported_target_literal": null,
+        "label_type": "targeted_or_unclassified_reagent",
+        "original_function_input": {
+          "Phalloidin-Alexa Fluor 647": ""
+        },
+        "applicable": {
+          "s_target_match": false,
+          "s_marker_fluor_compat": false,
+          "s_method_fluor_compat": true
+        },
+        "channels": {
+          "s_target_match": null,
+          "s_marker_fluor_compat": null,
+          "s_method_fluor_compat": null
+        },
+        "not_applicable_reason": null,
+        "source_evidence": {
+          "unit_id": "L0021",
+          "start": 1525,
+          "end": 1551,
+          "quote": "Phalloidin-Alexa Fluor 647",
+          "answer_sha256": "02104ef3a463ee93bd1fa54e9a3c23116f6315a525343759286598ff77909696"
+        },
+        "compatibility_audit": [
+          {
+            "kind": "method_fluor",
+            "method_name": "iDISCO+",
+            "fluorophore": "Phalloidin-Alexa Fluor 647",
+            "source": "KnowledgeBase/method_fluro_compati.json",
+            "value": null,
+            "status": "UNKNOWN"
+          }
+        ]
+      }
+    ],
+    "resolved_uncertainties": [],
+    "remaining_uncertainties": [],
+    "minimum_of_available_applicable_channels": 0.0,
+    "task_target_coverage": "native/direct task coverage remains separate from antibody-pair applicability",
+    "new_model_calls": 0,
+    "expert_validated": false
+  },
+  "compatibility_lookup_trace": [
+    {
+      "marker": "F-actin",
+      "fluorophore": "Phalloidin-Alexa Fluor 647",
+      "status": "unmapped_authored_fluor_column",
+      "value": null,
+      "column": null,
+      "matching_target_options": [],
+      "candidate_rows": [
+        {
+          "row_index": 63,
+          "matching_authored_names": [
+            {
+              "field": "推荐标志物 1",
+              "authored_name": "F-Actin",
+              "option": "F-Actin",
+              "option_split_applied": false
+            }
+          ],
+          "scope": {
+            "大类": "通用结构",
+            "亚类": "类器官",
+            "结构/细胞类型": "大脑类器官整体"
+          },
+          "cell_value": null
+        },
+        {
+          "row_index": 79,
+          "matching_authored_names": [
+            {
+              "field": "推荐标志物 2",
+              "authored_name": "Phalloidin / F-actin",
+              "option": "Phalloidin",
+              "option_split_applied": true
+            },
+            {
+              "field": "推荐标志物 2",
+              "authored_name": "Phalloidin / F-actin",
+              "option": "F-actin",
+              "option_split_applied": true
+            }
+          ],
+          "scope": {
+            "大类": "斑马鱼系统",
+            "亚类": "侧线系统",
+            "结构/细胞类型": "侧线毛细胞"
+          },
+          "cell_value": null
+        },
+        {
+          "row_index": 83,
+          "matching_authored_names": [
+            {
+              "field": "推荐标志物 2",
+              "authored_name": "Phalloidin / F-actin",
+              "option": "Phalloidin",
+              "option_split_applied": true
+            },
+            {
+              "field": "推荐标志物 2",
+              "authored_name": "Phalloidin / F-actin",
+              "option": "F-actin",
+              "option_split_applied": true
+            }
+          ],
+          "scope": {
+            "大类": "骨骼肌系统",
+            "亚类": "神经肌肉接头",
+            "结构/细胞类型": "突触后膜/AChR 聚集"
+          },
+          "cell_value": null
+        },
+        {
+          "row_index": 96,
+          "matching_authored_names": [
+            {
+              "field": "推荐标志物 1",
+              "authored_name": "Phalloidin / F-actin",
+              "option": "Phalloidin",
+              "option_split_applied": true
+            },
+            {
+              "field": "推荐标志物 1",
+              "authored_name": "Phalloidin / F-actin",
+              "option": "F-actin",
+              "option_split_applied": true
+            }
+          ],
+          "scope": {
+            "大类": "心脏系统",
+            "亚类": "实质细胞",
+            "结构/细胞类型": "心肌纤维取向辅助"
+          },
+          "cell_value": null
+        },
+        {
+          "row_index": 99,
+          "matching_authored_names": [
+            {
+              "field": "推荐标志物 2",
+              "authored_name": "Phalloidin / F-actin",
+              "option": "Phalloidin",
+              "option_split_applied": true
+            },
+            {
+              "field": "推荐标志物 2",
+              "authored_name": "Phalloidin / F-actin",
+              "option": "F-actin",
+              "option_split_applied": true
+            }
+          ],
+          "scope": {
+            "大类": "硬组织",
+            "亚类": "内耳结构",
+            "结构/细胞类型": "耳蜗毛细胞/静纤毛束"
+          },
+          "cell_value": null
+        },
+        {
+          "row_index": 102,
+          "matching_authored_names": [
+            {
+              "field": "推荐标志物 2",
+              "authored_name": "Phalloidin",
+              "option": "Phalloidin",
+              "option_split_applied": false
+            }
+          ],
+          "scope": {
+            "大类": "心脏系统",
+            "亚类": "神经系统",
+            "结构/细胞类型": "心脏神经-心肌结构关系"
+          },
+          "cell_value": null
+        }
+      ],
+      "selected_row_indices": [
+        63,
+        79,
+        83,
+        96,
+        99,
+        102
+      ],
+      "per_scope_evidence": [
+        {
+          "scope": {
+            "大类": "心脏系统",
+            "亚类": "实质细胞",
+            "结构/细胞类型": "心肌纤维取向辅助"
+          },
+          "row_indices": [
+            96
+          ],
+          "all_cell_values": [],
+          "state": "authored_unknown",
+          "value": null
+        },
+        {
+          "scope": {
+            "大类": "心脏系统",
+            "亚类": "神经系统",
+            "结构/细胞类型": "心脏神经-心肌结构关系"
+          },
+          "row_indices": [
+            102
+          ],
+          "all_cell_values": [],
+          "state": "authored_unknown",
+          "value": null
+        },
+        {
+          "scope": {
+            "大类": "斑马鱼系统",
+            "亚类": "侧线系统",
+            "结构/细胞类型": "侧线毛细胞"
+          },
+          "row_indices": [
+            79
+          ],
+          "all_cell_values": [],
+          "state": "authored_unknown",
+          "value": null
+        },
+        {
+          "scope": {
+            "大类": "硬组织",
+            "亚类": "内耳结构",
+            "结构/细胞类型": "耳蜗毛细胞/静纤毛束"
+          },
+          "row_indices": [
+            99
+          ],
+          "all_cell_values": [],
+          "state": "authored_unknown",
+          "value": null
+        },
+        {
+          "scope": {
+            "大类": "通用结构",
+            "亚类": "类器官",
+            "结构/细胞类型": "大脑类器官整体"
+          },
+          "row_indices": [
+            63
+          ],
+          "all_cell_values": [],
+          "state": "authored_unknown",
+          "value": null
+        },
+        {
+          "scope": {
+            "大类": "骨骼肌系统",
+            "亚类": "神经肌肉接头",
+            "结构/细胞类型": "突触后膜/AChR 聚集"
+          },
+          "row_indices": [
+            83
+          ],
+          "all_cell_values": [],
+          "state": "authored_unknown",
+          "value": null
+        }
+      ],
+      "row_selection_uses_scores": false,
+      "different_scopes_merged": false,
+      "new_alias_or_KB_value": false,
+      "declared_task_scope": null,
+      "exact_lookup_value": null,
+      "evidence_level": "unresolved"
+    }
+  ],
+  "semantic_decomposition_applied": false,
+  "semantic_author": "saved judge decomposition",
+  "remaining_dependencies": {
+    "time": [],
+    "label_relations": [],
+    "compatibility": [
+      {
+        "marker": "F-actin",
+        "fluorophore": "Phalloidin-Alexa Fluor 647",
+        "status": "unmapped_authored_fluor_column",
+        "value": null,
+        "column": null,
+        "matching_target_options": [],
+        "candidate_rows": [
+          {
+            "row_index": 63,
+            "matching_authored_names": [
+              {
+                "field": "推荐标志物 1",
+                "authored_name": "F-Actin",
+                "option": "F-Actin",
+                "option_split_applied": false
+              }
+            ],
+            "scope": {
+              "大类": "通用结构",
+              "亚类": "类器官",
+              "结构/细胞类型": "大脑类器官整体"
+            },
+            "cell_value": null
+          },
+          {
+            "row_index": 79,
+            "matching_authored_names": [
+              {
+                "field": "推荐标志物 2",
+                "authored_name": "Phalloidin / F-actin",
+                "option": "Phalloidin",
+                "option_split_applied": true
+              },
+              {
+                "field": "推荐标志物 2",
+                "authored_name": "Phalloidin / F-actin",
+                "option": "F-actin",
+                "option_split_applied": true
+              }
+            ],
+            "scope": {
+              "大类": "斑马鱼系统",
+              "亚类": "侧线系统",
+              "结构/细胞类型": "侧线毛细胞"
+            },
+            "cell_value": null
+          },
+          {
+            "row_index": 83,
+            "matching_authored_names": [
+              {
+                "field": "推荐标志物 2",
+                "authored_name": "Phalloidin / F-actin",
+                "option": "Phalloidin",
+                "option_split_applied": true
+              },
+              {
+                "field": "推荐标志物 2",
+                "authored_name": "Phalloidin / F-actin",
+                "option": "F-actin",
+                "option_split_applied": true
+              }
+            ],
+            "scope": {
+              "大类": "骨骼肌系统",
+              "亚类": "神经肌肉接头",
+              "结构/细胞类型": "突触后膜/AChR 聚集"
+            },
+            "cell_value": null
+          },
+          {
+            "row_index": 96,
+            "matching_authored_names": [
+              {
+                "field": "推荐标志物 1",
+                "authored_name": "Phalloidin / F-actin",
+                "option": "Phalloidin",
+                "option_split_applied": true
+              },
+              {
+                "field": "推荐标志物 1",
+                "authored_name": "Phalloidin / F-actin",
+                "option": "F-actin",
+                "option_split_applied": true
+              }
+            ],
+            "scope": {
+              "大类": "心脏系统",
+              "亚类": "实质细胞",
+              "结构/细胞类型": "心肌纤维取向辅助"
+            },
+            "cell_value": null
+          },
+          {
+            "row_index": 99,
+            "matching_authored_names": [
+              {
+                "field": "推荐标志物 2",
+                "authored_name": "Phalloidin / F-actin",
+                "option": "Phalloidin",
+                "option_split_applied": true
+              },
+              {
+                "field": "推荐标志物 2",
+                "authored_name": "Phalloidin / F-actin",
+                "option": "F-actin",
+                "option_split_applied": true
+              }
+            ],
+            "scope": {
+              "大类": "硬组织",
+              "亚类": "内耳结构",
+              "结构/细胞类型": "耳蜗毛细胞/静纤毛束"
+            },
+            "cell_value": null
+          },
+          {
+            "row_index": 102,
+            "matching_authored_names": [
+              {
+                "field": "推荐标志物 2",
+                "authored_name": "Phalloidin",
+                "option": "Phalloidin",
+                "option_split_applied": false
+              }
+            ],
+            "scope": {
+              "大类": "心脏系统",
+              "亚类": "神经系统",
+              "结构/细胞类型": "心脏神经-心肌结构关系"
+            },
+            "cell_value": null
+          }
+        ],
+        "selected_row_indices": [
+          63,
+          79,
+          83,
+          96,
+          99,
+          102
+        ],
+        "per_scope_evidence": [
+          {
+            "scope": {
+              "大类": "心脏系统",
+              "亚类": "实质细胞",
+              "结构/细胞类型": "心肌纤维取向辅助"
+            },
+            "row_indices": [
+              96
+            ],
+            "all_cell_values": [],
+            "state": "authored_unknown",
+            "value": null
+          },
+          {
+            "scope": {
+              "大类": "心脏系统",
+              "亚类": "神经系统",
+              "结构/细胞类型": "心脏神经-心肌结构关系"
+            },
+            "row_indices": [
+              102
+            ],
+            "all_cell_values": [],
+            "state": "authored_unknown",
+            "value": null
+          },
+          {
+            "scope": {
+              "大类": "斑马鱼系统",
+              "亚类": "侧线系统",
+              "结构/细胞类型": "侧线毛细胞"
+            },
+            "row_indices": [
+              79
+            ],
+            "all_cell_values": [],
+            "state": "authored_unknown",
+            "value": null
+          },
+          {
+            "scope": {
+              "大类": "硬组织",
+              "亚类": "内耳结构",
+              "结构/细胞类型": "耳蜗毛细胞/静纤毛束"
+            },
+            "row_indices": [
+              99
+            ],
+            "all_cell_values": [],
+            "state": "authored_unknown",
+            "value": null
+          },
+          {
+            "scope": {
+              "大类": "通用结构",
+              "亚类": "类器官",
+              "结构/细胞类型": "大脑类器官整体"
+            },
+            "row_indices": [
+              63
+            ],
+            "all_cell_values": [],
+            "state": "authored_unknown",
+            "value": null
+          },
+          {
+            "scope": {
+              "大类": "骨骼肌系统",
+              "亚类": "神经肌肉接头",
+              "结构/细胞类型": "突触后膜/AChR 聚集"
+            },
+            "row_indices": [
+              83
+            ],
+            "all_cell_values": [],
+            "state": "authored_unknown",
+            "value": null
+          }
+        ],
+        "row_selection_uses_scores": false,
+        "different_scopes_merged": false,
+        "new_alias_or_KB_value": false,
+        "declared_task_scope": null,
+        "exact_lookup_value": null,
+        "evidence_level": "unresolved"
+      }
+    ]
+  },
+  "new_model_requests": 0,
+  "new_expert_records": 0,
+  "direct_scores_rejudged": false,
+  "SR_SP_changed": false,
+  "raw_judge_status_changed": false,
+  "status": "replayed",
+  "source_record": {
+    "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\optimizer_round3_20261011\\uniform_v7\\actual_01\\cells\\secondary8_posthoc\\FPC14\\posthoc.json",
+    "sha256": "ad7d10bcdda75f6c4837171e3540e1cb8b06113471dfdfbd12991ec2e2d90586"
+  },
+  "answer_sha256": "02104ef3a463ee93bd1fa54e9a3c23116f6315a525343759286598ff77909696",
+  "changes": {},
+  "comparison_metrics": {
+    "c_param": 3,
+    "co_order": 1,
+    "co_method": 1,
+    "co_param": 1,
+    "co_chem": 0,
+    "s_method": -1.0625,
+    "s_label": 0.0,
+    "s_trans": 2.6784375046866993,
+    "s_time": 0.0,
+    "sr": 0.1111111111111111,
+    "sp": 0.1,
+    "Com": 0.6444444444444444,
+    "Cor": 0.3333333333333333,
+    "Eff": 0.2950781253905583,
+    "IA": 0.2950781253905583,
+    "HV": 0.06338715286167547
+  },
+  "typed_replay_status": "replayed",
+  "typed_semantic_annotation": false,
+  "typed_changes": {},
+  "source_document": {
+    "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\optimizer_round2_20261010\\secondary_E5_confirmation_v1\\source_documents\\FPC14.json",
+    "sha256": "465c240d5f370e672069022cba760653956d80ccf3566570d502c5943e966572"
+  }
+}

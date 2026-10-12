@@ -1,0 +1,3519 @@
+{
+  "result": {
+    "cell_id": "R3C08__r0",
+    "cohort": "confirmation_qwen_01",
+    "question_id": 248,
+    "baseline_metrics": {
+      "c_param": 3,
+      "co_order": 3,
+      "co_method": 2,
+      "co_param": 1,
+      "co_chem": 1,
+      "s_method": -0.4313,
+      "s_label": 1.7999999999999998,
+      "s_trans": 2.814646787157323,
+      "s_time": 3.0,
+      "sr": 0.3333333333333333,
+      "sp": 0.11428571428571428,
+      "Com": 0.7333333333333333,
+      "Cor": 0.875,
+      "Eff": 0.662988898929777,
+      "IA": 0.662988898929777,
+      "HV": 0.42541787681327353
+    },
+    "metrics": {
+      "c_param": 3,
+      "co_order": 3,
+      "co_method": 2,
+      "co_param": 1,
+      "co_chem": 1,
+      "s_method": -0.4313,
+      "s_label": 1.7999999999999998,
+      "s_trans": 2.814646787157323,
+      "s_time": 3.0,
+      "sr": 0.3333333333333333,
+      "sp": 0.11428571428571428,
+      "Com": 0.7333333333333333,
+      "Cor": 0.875,
+      "Eff": 0.662988898929777,
+      "IA": 0.662988898929777,
+      "HV": 0.42541787681327353
+    },
+    "complete_numeric_CCE": true,
+    "source_document": {
+      "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\optimizer_round3_20261011\\confirmation_qwen_01\\source_documents\\a0be171b1e6430f37d04d331.json",
+      "sha256": "46be67488b98209906c6e4db078c7cc29f2b669307750c9f6b1d8841ec2840d1"
+    },
+    "post_record": {
+      "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\optimizer_round3_20261011\\confirmation_qwen_01\\run\\attempts\\0b141ce2a9d2aaf5c4a8a565c784aec2ae4df43a763021f315b541fb2e5885ee_1\\processing.json",
+      "sha256": "1fc73006aca04043203e1b41ba403bf987dddad3c11922773aa245efe905d67b"
+    },
+    "answer_sha256": "dd2b2f24deba09da0fa5c6496d98b313f5648329345b250f58c4fa7fcb04e7dc",
+    "proposal": {
+      "version": "selected-label-source-v1.1",
+      "answer_sha256": "dd2b2f24deba09da0fa5c6496d98b313f5648329345b250f58c4fa7fcb04e7dc",
+      "relations": [
+        {
+          "fluorophore": "tdTomato",
+          "marker": "",
+          "source_spans": [
+            {
+              "unit_id": "L0002",
+              "start": 49,
+              "end": 70,
+              "quote": "tdTomato (endogenous)",
+              "answer_sha256": "dd2b2f24deba09da0fa5c6496d98b313f5648329345b250f58c4fa7fcb04e7dc"
+            }
+          ],
+          "basis": "explicit standalone signal in chosen list; external target-pair channel not applicable",
+          "source_fluor_literal": "tdTomato (endogenous)",
+          "clone_identity_inferred": false,
+          "generic_AF": false
+        },
+        {
+          "fluorophore": "Alexa Fluor 647",
+          "marker": "β-III Tubulin (TUJ1)",
+          "source_spans": [
+            {
+              "unit_id": "L0002",
+              "start": 71,
+              "end": 110,
+              "quote": " β-III Tubulin (TUJ1) + Alexa Fluor 647",
+              "answer_sha256": "dd2b2f24deba09da0fa5c6496d98b313f5648329345b250f58c4fa7fcb04e7dc"
+            }
+          ],
+          "basis": "explicit selected target + fluorophore; antibody carrier/clone not required",
+          "source_target_literal": "β-III Tubulin (TUJ1)",
+          "target_role_qualifier": null,
+          "source_fluor_literal": "Alexa Fluor 647",
+          "clone_identity_inferred": false,
+          "generic_AF": false
+        }
+      ],
+      "issues": [],
+      "header_candidates": 1,
+      "ready": true,
+      "new_model_calls": 0,
+      "new_per_answer_author_annotations": 0,
+      "independent_evaluator": false,
+      "expert_validated": false,
+      "scope": "explicit chosen-label list; no claim of universal biological relation extraction",
+      "header_source": {
+        "unit_id": "L0002",
+        "start": 27,
+        "end": 112,
+        "quote": "**Chosen Labeling:** [tdTomato (endogenous), β-III Tubulin (TUJ1) + Alexa Fluor 647]\n",
+        "answer_sha256": "dd2b2f24deba09da0fa5c6496d98b313f5648329345b250f58c4fa7fcb04e7dc"
+      },
+      "actual_AF_operation_evidence": [
+        {
+          "fluorophore": "Alexa Fluor 647",
+          "source": {
+            "unit_id": "L0031",
+            "start": 2543,
+            "end": 2683,
+            "quote": "Incubation with Alexa Fluor 647-conjugated donkey anti-mouse IgG (H+L) diluted 1:300 in blocking buffer.(Temperature: 37 ℃, Time: 48 hours)\n",
+            "answer_sha256": "dd2b2f24deba09da0fa5c6496d98b313f5648329345b250f58c4fa7fcb04e7dc"
+          },
+          "literal": "Alexa Fluor 647"
+        }
+      ],
+      "selection_uses_achieved_score": false
+    },
+    "decision": "source_rule_applied",
+    "label_derivation": {
+      "version": "cce-typed-label-scorer-v2.1",
+      "s_label": 1.7999999999999998,
+      "channels": {
+        "s_target_match": 6.0,
+        "s_marker_fluor_compat": 6.0,
+        "s_method_fluor_compat": 1.7999999999999998
+      },
+      "channel_applicability": {
+        "s_target_match": {
+          "applicable": true,
+          "value": 6.0,
+          "contributing_pairs": [
+            "semantic:1"
+          ]
+        },
+        "s_marker_fluor_compat": {
+          "applicable": true,
+          "value": 6.0,
+          "contributing_pairs": [
+            "semantic:1"
+          ]
+        },
+        "s_method_fluor_compat": {
+          "applicable": true,
+          "value": 1.7999999999999998,
+          "contributing_pairs": [
+            "semantic:0",
+            "semantic:1"
+          ]
+        }
+      },
+      "pair_results": [
+        {
+          "pair_id": "semantic:0",
+          "entity_id": null,
+          "fluorophore": "tdTomato",
+          "reported_marker": null,
+          "reported_target_literal": null,
+          "label_type": "native_fluorescent_protein",
+          "original_function_input": {
+            "tdTomato": ""
+          },
+          "applicable": {
+            "s_target_match": false,
+            "s_marker_fluor_compat": false,
+            "s_method_fluor_compat": true
+          },
+          "channels": {
+            "s_target_match": null,
+            "s_marker_fluor_compat": null,
+            "s_method_fluor_compat": 1.7999999999999998
+          },
+          "not_applicable_reason": "standalone fluorescence has no antibody target-pair channel",
+          "source_evidence": [
+            {
+              "unit_id": "L0002",
+              "start": 49,
+              "end": 70,
+              "quote": "tdTomato (endogenous)",
+              "answer_sha256": "dd2b2f24deba09da0fa5c6496d98b313f5648329345b250f58c4fa7fcb04e7dc"
+            }
+          ],
+          "compatibility_audit": [
+            {
+              "kind": "method_fluor",
+              "method_name": "iDISCO+",
+              "fluorophore": "tdTomato",
+              "source": "KnowledgeBase/method_fluro_compati.json",
+              "value": 0.3,
+              "status": "TABLE_REPORTED"
+            }
+          ]
+        },
+        {
+          "pair_id": "semantic:1",
+          "entity_id": null,
+          "fluorophore": "Alexa Fluor 647",
+          "reported_marker": "β-III Tubulin (TUJ1)",
+          "reported_target_literal": null,
+          "label_type": "targeted_or_unclassified_reagent",
+          "original_function_input": {
+            "Alexa Fluor 647": "β-III Tubulin (TUJ1)"
+          },
+          "applicable": {
+            "s_target_match": true,
+            "s_marker_fluor_compat": true,
+            "s_method_fluor_compat": true
+          },
+          "channels": {
+            "s_target_match": 6.0,
+            "s_marker_fluor_compat": 6.0,
+            "s_method_fluor_compat": 5.4
+          },
+          "not_applicable_reason": null,
+          "source_evidence": [
+            {
+              "unit_id": "L0002",
+              "start": 71,
+              "end": 110,
+              "quote": " β-III Tubulin (TUJ1) + Alexa Fluor 647",
+              "answer_sha256": "dd2b2f24deba09da0fa5c6496d98b313f5648329345b250f58c4fa7fcb04e7dc"
+            }
+          ],
+          "compatibility_audit": [
+            {
+              "kind": "marker_fluor",
+              "marker": "β-III Tubulin (TUJ1)",
+              "fluorophore": "Alexa Fluor 647",
+              "source": "KnowledgeBase/tissue.json",
+              "value": true,
+              "status": "TABLE_REPORTED"
+            },
+            {
+              "kind": "method_fluor",
+              "method_name": "iDISCO+",
+              "fluorophore": "Alexa Fluor 647",
+              "source": "KnowledgeBase/method_fluro_compati.json",
+              "value": 0.9,
+              "status": "TABLE_REPORTED"
+            }
+          ]
+        }
+      ],
+      "resolved_uncertainties": [],
+      "remaining_uncertainties": [],
+      "minimum_of_available_applicable_channels": 1.7999999999999998,
+      "task_target_coverage": "native/direct task coverage remains separate from antibody-pair applicability",
+      "new_model_calls": 0,
+      "expert_validated": false
+    },
+    "lookup_trace": [
+      {
+        "marker": "β-III Tubulin (TUJ1)",
+        "fluorophore": "Alexa Fluor 647",
+        "status": "all_applicable_scopes_have_same_authored_value",
+        "value": true,
+        "column": "AlexaFluor 647/Cy5 ",
+        "matching_target_options": [
+          {
+            "target_index": 1,
+            "source_tissue_xlsx_row": 4,
+            "marker_slot": "recommended_marker_1",
+            "marker_name": "β-III Tubulin (TUJ1)",
+            "query_path": "中枢神经 > 神经元结构 > 神经元(通用)",
+            "major_category": "中枢神经",
+            "subcategory": "神经元结构",
+            "structure_or_cell_subtype": "神经元(通用)",
+            "authored_target_parent": {
+              "marker_name": "β-III Tubulin (TUJ1)",
+              "target_index": 1,
+              "source_tissue_xlsx_row": 4,
+              "query_path": "中枢神经 > 神经元结构 > 神经元(通用)",
+              "marker_slot": "recommended_marker_1"
+            },
+            "authored_option_index": 0,
+            "option_split_applied": false
+          }
+        ],
+        "candidate_rows": [
+          {
+            "row_index": 0,
+            "matching_authored_names": [
+              {
+                "field": "推荐标志物 1",
+                "authored_name": "β-III Tubulin (TUJ1)",
+                "option": "β-III Tubulin (TUJ1)",
+                "option_split_applied": false
+              }
+            ],
+            "scope": {
+              "大类": "中枢神经",
+              "亚类": "神经元结构",
+              "结构/细胞类型": "神经元(通用)"
+            },
+            "cell_value": 1
+          },
+          {
+            "row_index": 32,
+            "matching_authored_names": [
+              {
+                "field": "推荐标志物 2",
+                "authored_name": "β-III Tubulin",
+                "option": "β-III Tubulin",
+                "option_split_applied": false
+              }
+            ],
+            "scope": {
+              "大类": "呼吸系统",
+              "亚类": "神经系统",
+              "结构/细胞类型": "肺部迷走神经"
+            },
+            "cell_value": 1
+          },
+          {
+            "row_index": 55,
+            "matching_authored_names": [
+              {
+                "field": "推荐标志物 1",
+                "authored_name": "Tuj1",
+                "option": "Tuj1",
+                "option_split_applied": false
+              }
+            ],
+            "scope": {
+              "大类": "肠道系统",
+              "亚类": "肠神经",
+              "结构/细胞类型": "肠神经丛"
+            },
+            "cell_value": 1
+          },
+          {
+            "row_index": 76,
+            "matching_authored_names": [
+              {
+                "field": "推荐标志物 2",
+                "authored_name": "β-III Tubulin / TUJ1",
+                "option": "β-III Tubulin",
+                "option_split_applied": true
+              },
+              {
+                "field": "推荐标志物 2",
+                "authored_name": "β-III Tubulin / TUJ1",
+                "option": "TUJ1",
+                "option_split_applied": true
+              }
+            ],
+            "scope": {
+              "大类": "临床病理",
+              "亚类": "皮肤活检",
+              "结构/细胞类型": "表皮内神经纤维 IENF"
+            },
+            "cell_value": null
+          },
+          {
+            "row_index": 80,
+            "matching_authored_names": [
+              {
+                "field": "推荐标志物 1",
+                "authored_name": "β-III Tubulin / TUJ1",
+                "option": "β-III Tubulin",
+                "option_split_applied": true
+              },
+              {
+                "field": "推荐标志物 1",
+                "authored_name": "β-III Tubulin / TUJ1",
+                "option": "TUJ1",
+                "option_split_applied": true
+              }
+            ],
+            "scope": {
+              "大类": "斑马鱼系统",
+              "亚类": "侧线系统",
+              "结构/细胞类型": "侧线神经纤维"
+            },
+            "cell_value": null
+          },
+          {
+            "row_index": 84,
+            "matching_authored_names": [
+              {
+                "field": "推荐标志物 2",
+                "authored_name": "β-III Tubulin / PGP9.5",
+                "option": "β-III Tubulin",
+                "option_split_applied": true
+              }
+            ],
+            "scope": {
+              "大类": "骨骼肌系统",
+              "亚类": "神经肌肉接头",
+              "结构/细胞类型": "运动神经末梢/轴突骨架"
+            },
+            "cell_value": null
+          },
+          {
+            "row_index": 85,
+            "matching_authored_names": [
+              {
+                "field": "推荐标志物 2",
+                "authored_name": "β-III Tubulin / TUJ1",
+                "option": "β-III Tubulin",
+                "option_split_applied": true
+              },
+              {
+                "field": "推荐标志物 2",
+                "authored_name": "β-III Tubulin / TUJ1",
+                "option": "TUJ1",
+                "option_split_applied": true
+              }
+            ],
+            "scope": {
+              "大类": "消化系统",
+              "亚类": "胃壁神经系统",
+              "结构/细胞类型": "胃壁迷走神经/泛神经纤维网络"
+            },
+            "cell_value": null
+          },
+          {
+            "row_index": 90,
+            "matching_authored_names": [
+              {
+                "field": "推荐标志物 2",
+                "authored_name": "PGP9.5 / β-III Tubulin",
+                "option": "β-III Tubulin",
+                "option_split_applied": true
+              }
+            ],
+            "scope": {
+              "大类": "硬组织",
+              "亚类": "骨骼微环境",
+              "结构/细胞类型": "骨组织感觉神经与泛神经网络"
+            },
+            "cell_value": null
+          },
+          {
+            "row_index": 100,
+            "matching_authored_names": [
+              {
+                "field": "推荐标志物 1",
+                "authored_name": "PGP9.5 / β-III Tubulin",
+                "option": "β-III Tubulin",
+                "option_split_applied": true
+              }
+            ],
+            "scope": {
+              "大类": "硬组织",
+              "亚类": "内耳结构",
+              "结构/细胞类型": "耳蜗神经支配"
+            },
+            "cell_value": null
+          },
+          {
+            "row_index": 106,
+            "matching_authored_names": [
+              {
+                "field": "推荐标志物 2",
+                "authored_name": "β-III Tubulin / TUJ1",
+                "option": "β-III Tubulin",
+                "option_split_applied": true
+              },
+              {
+                "field": "推荐标志物 2",
+                "authored_name": "β-III Tubulin / TUJ1",
+                "option": "TUJ1",
+                "option_split_applied": true
+              }
+            ],
+            "scope": {
+              "大类": "发育生物学",
+              "亚类": "胚胎神经系统",
+              "结构/细胞类型": "胚胎颅/脊神经与外周神经"
+            },
+            "cell_value": null
+          }
+        ],
+        "selected_row_indices": [
+          0
+        ],
+        "per_scope_evidence": [
+          {
+            "scope": {
+              "大类": "中枢神经",
+              "亚类": "神经元结构",
+              "结构/细胞类型": "神经元(通用)"
+            },
+            "row_indices": [
+              0
+            ],
+            "all_cell_values": [
+              1
+            ],
+            "state": "consistent_authored_value",
+            "value": 1
+          }
+        ],
+        "row_selection_uses_scores": false,
+        "different_scopes_merged": false,
+        "new_alias_or_KB_value": false,
+        "declared_task_scope": null,
+        "exact_lookup_value": true,
+        "evidence_level": "existing_specific_table_value"
+      }
+    ],
+    "changes": {},
+    "quantitative_data": {
+      "method_name": "iDISCO+",
+      "tissue_ri_value": 1.46,
+      "total_time_hours": null,
+      "sample_tier": "T04_WHOLE_MOUSE_BRAIN_5_12MM",
+      "reagent_ri_value": null,
+      "protocol_time_hours": null
+    },
+    "new_model_calls": 0,
+    "new_per_answer_author_annotations": 0,
+    "candidate_point_metrics": null,
+    "time_candidate_ledger": {
+      "version": "source-time-ledger-v1.3",
+      "answer_sha256": "dd2b2f24deba09da0fa5c6496d98b313f5648329345b250f58c4fa7fcb04e7dc",
+      "operations": [
+        {
+          "operation_id": "OP1",
+          "source": {
+            "unit_id": "L0006",
+            "start": 810,
+            "end": 888,
+            "quote": "Incubation with 20% (vol/vol) methanol in PBS.(Temperature: RT, Time: 1 hour)\n",
+            "answer_sha256": "dd2b2f24deba09da0fa5c6496d98b313f5648329345b250f58c4fa7fcb04e7dc"
+          },
+          "raw_phase": "decolorization",
+          "raw_execution_scope": "initial",
+          "raw_parsed_duration": {
+            "state": "explicit_exact",
+            "bounds_hours": [
+              1.0,
+              1.0
+            ],
+            "unique_hours": 1.0,
+            "source_numeric": true
+          },
+          "raw_repeat_count": 1,
+          "scope": {
+            "role": "core",
+            "basis": "saved core phase, reconciled with explicit source heading",
+            "heading": {
+              "start": 798,
+              "end": 810,
+              "quote": "Dehydration\n",
+              "title": "Dehydration"
+            }
+          },
+          "duration": {
+            "options": [
+              {
+                "option_id": "field_0",
+                "bounds_hours": [
+                  1.0,
+                  1.0
+                ],
+                "count": 1,
+                "literal": "1 hour",
+                "expression": "1 hour",
+                "count_in_field": false,
+                "overnight_default": false,
+                "each_in_field": false,
+                "repeat_interpretation": {
+                  "count": 1,
+                  "basis": "one separately represented timed operation; again is not itself an optional branch"
+                },
+                "source": {
+                  "unit_id": "L0006",
+                  "start": 874,
+                  "end": 886,
+                  "quote": "Time: 1 hour",
+                  "answer_sha256": "dd2b2f24deba09da0fa5c6496d98b313f5648329345b250f58c4fa7fcb04e7dc"
+                },
+                "basis": "explicit source Time field"
+              }
+            ],
+            "issue": null,
+            "source": {
+              "unit_id": "L0006",
+              "start": 874,
+              "end": 886,
+              "quote": "Time: 1 hour",
+              "answer_sha256": "dd2b2f24deba09da0fa5c6496d98b313f5648329345b250f58c4fa7fcb04e7dc"
+            },
+            "basis": "explicit source Time field",
+            "original_parent_context": null,
+            "point_convention": "midpoint within each explicit finite range; no averaging across alternative routes",
+            "prose_numeric_mentions": [],
+            "conflicting_prose_readings": [],
+            "explicit_field_precedence_declared": true
+          },
+          "branch_group": null
+        },
+        {
+          "operation_id": "OP2",
+          "source": {
+            "unit_id": "L0007",
+            "start": 888,
+            "end": 966,
+            "quote": "Incubation with 40% (vol/vol) methanol in PBS.(Temperature: RT, Time: 1 hour)\n",
+            "answer_sha256": "dd2b2f24deba09da0fa5c6496d98b313f5648329345b250f58c4fa7fcb04e7dc"
+          },
+          "raw_phase": "decolorization",
+          "raw_execution_scope": "initial",
+          "raw_parsed_duration": {
+            "state": "explicit_exact",
+            "bounds_hours": [
+              1.0,
+              1.0
+            ],
+            "unique_hours": 1.0,
+            "source_numeric": true
+          },
+          "raw_repeat_count": 1,
+          "scope": {
+            "role": "core",
+            "basis": "saved core phase, reconciled with explicit source heading",
+            "heading": {
+              "start": 798,
+              "end": 810,
+              "quote": "Dehydration\n",
+              "title": "Dehydration"
+            }
+          },
+          "duration": {
+            "options": [
+              {
+                "option_id": "field_0",
+                "bounds_hours": [
+                  1.0,
+                  1.0
+                ],
+                "count": 1,
+                "literal": "1 hour",
+                "expression": "1 hour",
+                "count_in_field": false,
+                "overnight_default": false,
+                "each_in_field": false,
+                "repeat_interpretation": {
+                  "count": 1,
+                  "basis": "one separately represented timed operation; again is not itself an optional branch"
+                },
+                "source": {
+                  "unit_id": "L0007",
+                  "start": 952,
+                  "end": 964,
+                  "quote": "Time: 1 hour",
+                  "answer_sha256": "dd2b2f24deba09da0fa5c6496d98b313f5648329345b250f58c4fa7fcb04e7dc"
+                },
+                "basis": "explicit source Time field"
+              }
+            ],
+            "issue": null,
+            "source": {
+              "unit_id": "L0007",
+              "start": 952,
+              "end": 964,
+              "quote": "Time: 1 hour",
+              "answer_sha256": "dd2b2f24deba09da0fa5c6496d98b313f5648329345b250f58c4fa7fcb04e7dc"
+            },
+            "basis": "explicit source Time field",
+            "original_parent_context": null,
+            "point_convention": "midpoint within each explicit finite range; no averaging across alternative routes",
+            "prose_numeric_mentions": [],
+            "conflicting_prose_readings": [],
+            "explicit_field_precedence_declared": true
+          },
+          "branch_group": null
+        },
+        {
+          "operation_id": "OP3",
+          "source": {
+            "unit_id": "L0008",
+            "start": 966,
+            "end": 1044,
+            "quote": "Incubation with 60% (vol/vol) methanol in PBS.(Temperature: RT, Time: 1 hour)\n",
+            "answer_sha256": "dd2b2f24deba09da0fa5c6496d98b313f5648329345b250f58c4fa7fcb04e7dc"
+          },
+          "raw_phase": "decolorization",
+          "raw_execution_scope": "initial",
+          "raw_parsed_duration": {
+            "state": "explicit_exact",
+            "bounds_hours": [
+              1.0,
+              1.0
+            ],
+            "unique_hours": 1.0,
+            "source_numeric": true
+          },
+          "raw_repeat_count": 1,
+          "scope": {
+            "role": "core",
+            "basis": "saved core phase, reconciled with explicit source heading",
+            "heading": {
+              "start": 798,
+              "end": 810,
+              "quote": "Dehydration\n",
+              "title": "Dehydration"
+            }
+          },
+          "duration": {
+            "options": [
+              {
+                "option_id": "field_0",
+                "bounds_hours": [
+                  1.0,
+                  1.0
+                ],
+                "count": 1,
+                "literal": "1 hour",
+                "expression": "1 hour",
+                "count_in_field": false,
+                "overnight_default": false,
+                "each_in_field": false,
+                "repeat_interpretation": {
+                  "count": 1,
+                  "basis": "one separately represented timed operation; again is not itself an optional branch"
+                },
+                "source": {
+                  "unit_id": "L0008",
+                  "start": 1030,
+                  "end": 1042,
+                  "quote": "Time: 1 hour",
+                  "answer_sha256": "dd2b2f24deba09da0fa5c6496d98b313f5648329345b250f58c4fa7fcb04e7dc"
+                },
+                "basis": "explicit source Time field"
+              }
+            ],
+            "issue": null,
+            "source": {
+              "unit_id": "L0008",
+              "start": 1030,
+              "end": 1042,
+              "quote": "Time: 1 hour",
+              "answer_sha256": "dd2b2f24deba09da0fa5c6496d98b313f5648329345b250f58c4fa7fcb04e7dc"
+            },
+            "basis": "explicit source Time field",
+            "original_parent_context": null,
+            "point_convention": "midpoint within each explicit finite range; no averaging across alternative routes",
+            "prose_numeric_mentions": [],
+            "conflicting_prose_readings": [],
+            "explicit_field_precedence_declared": true
+          },
+          "branch_group": null
+        },
+        {
+          "operation_id": "OP4",
+          "source": {
+            "unit_id": "L0009",
+            "start": 1044,
+            "end": 1122,
+            "quote": "Incubation with 80% (vol/vol) methanol in PBS.(Temperature: RT, Time: 1 hour)\n",
+            "answer_sha256": "dd2b2f24deba09da0fa5c6496d98b313f5648329345b250f58c4fa7fcb04e7dc"
+          },
+          "raw_phase": "decolorization",
+          "raw_execution_scope": "initial",
+          "raw_parsed_duration": {
+            "state": "explicit_exact",
+            "bounds_hours": [
+              1.0,
+              1.0
+            ],
+            "unique_hours": 1.0,
+            "source_numeric": true
+          },
+          "raw_repeat_count": 1,
+          "scope": {
+            "role": "core",
+            "basis": "saved core phase, reconciled with explicit source heading",
+            "heading": {
+              "start": 798,
+              "end": 810,
+              "quote": "Dehydration\n",
+              "title": "Dehydration"
+            }
+          },
+          "duration": {
+            "options": [
+              {
+                "option_id": "field_0",
+                "bounds_hours": [
+                  1.0,
+                  1.0
+                ],
+                "count": 1,
+                "literal": "1 hour",
+                "expression": "1 hour",
+                "count_in_field": false,
+                "overnight_default": false,
+                "each_in_field": false,
+                "repeat_interpretation": {
+                  "count": 1,
+                  "basis": "one separately represented timed operation; again is not itself an optional branch"
+                },
+                "source": {
+                  "unit_id": "L0009",
+                  "start": 1108,
+                  "end": 1120,
+                  "quote": "Time: 1 hour",
+                  "answer_sha256": "dd2b2f24deba09da0fa5c6496d98b313f5648329345b250f58c4fa7fcb04e7dc"
+                },
+                "basis": "explicit source Time field"
+              }
+            ],
+            "issue": null,
+            "source": {
+              "unit_id": "L0009",
+              "start": 1108,
+              "end": 1120,
+              "quote": "Time: 1 hour",
+              "answer_sha256": "dd2b2f24deba09da0fa5c6496d98b313f5648329345b250f58c4fa7fcb04e7dc"
+            },
+            "basis": "explicit source Time field",
+            "original_parent_context": null,
+            "point_convention": "midpoint within each explicit finite range; no averaging across alternative routes",
+            "prose_numeric_mentions": [],
+            "conflicting_prose_readings": [],
+            "explicit_field_precedence_declared": true
+          },
+          "branch_group": null
+        },
+        {
+          "operation_id": "OP5",
+          "source": {
+            "unit_id": "L0010",
+            "start": 1122,
+            "end": 1194,
+            "quote": "Incubation with 100% (vol/vol) methanol.(Temperature: RT, Time: 1 hour)\n",
+            "answer_sha256": "dd2b2f24deba09da0fa5c6496d98b313f5648329345b250f58c4fa7fcb04e7dc"
+          },
+          "raw_phase": "decolorization",
+          "raw_execution_scope": "initial",
+          "raw_parsed_duration": {
+            "state": "explicit_exact",
+            "bounds_hours": [
+              1.0,
+              1.0
+            ],
+            "unique_hours": 1.0,
+            "source_numeric": true
+          },
+          "raw_repeat_count": 1,
+          "scope": {
+            "role": "core",
+            "basis": "saved core phase, reconciled with explicit source heading",
+            "heading": {
+              "start": 798,
+              "end": 810,
+              "quote": "Dehydration\n",
+              "title": "Dehydration"
+            }
+          },
+          "duration": {
+            "options": [
+              {
+                "option_id": "field_0",
+                "bounds_hours": [
+                  1.0,
+                  1.0
+                ],
+                "count": 1,
+                "literal": "1 hour",
+                "expression": "1 hour",
+                "count_in_field": false,
+                "overnight_default": false,
+                "each_in_field": false,
+                "repeat_interpretation": {
+                  "count": 1,
+                  "basis": "one separately represented timed operation; again is not itself an optional branch"
+                },
+                "source": {
+                  "unit_id": "L0010",
+                  "start": 1180,
+                  "end": 1192,
+                  "quote": "Time: 1 hour",
+                  "answer_sha256": "dd2b2f24deba09da0fa5c6496d98b313f5648329345b250f58c4fa7fcb04e7dc"
+                },
+                "basis": "explicit source Time field"
+              }
+            ],
+            "issue": null,
+            "source": {
+              "unit_id": "L0010",
+              "start": 1180,
+              "end": 1192,
+              "quote": "Time: 1 hour",
+              "answer_sha256": "dd2b2f24deba09da0fa5c6496d98b313f5648329345b250f58c4fa7fcb04e7dc"
+            },
+            "basis": "explicit source Time field",
+            "original_parent_context": null,
+            "point_convention": "midpoint within each explicit finite range; no averaging across alternative routes",
+            "prose_numeric_mentions": [],
+            "conflicting_prose_readings": [],
+            "explicit_field_precedence_declared": true
+          },
+          "branch_group": null
+        },
+        {
+          "operation_id": "OP6",
+          "source": {
+            "unit_id": "L0011",
+            "start": 1194,
+            "end": 1266,
+            "quote": "Incubation with 100% (vol/vol) methanol.(Temperature: RT, Time: 1 hour)\n",
+            "answer_sha256": "dd2b2f24deba09da0fa5c6496d98b313f5648329345b250f58c4fa7fcb04e7dc"
+          },
+          "raw_phase": "decolorization",
+          "raw_execution_scope": "initial",
+          "raw_parsed_duration": {
+            "state": "explicit_exact",
+            "bounds_hours": [
+              1.0,
+              1.0
+            ],
+            "unique_hours": 1.0,
+            "source_numeric": true
+          },
+          "raw_repeat_count": 1,
+          "scope": {
+            "role": "core",
+            "basis": "saved core phase, reconciled with explicit source heading",
+            "heading": {
+              "start": 798,
+              "end": 810,
+              "quote": "Dehydration\n",
+              "title": "Dehydration"
+            }
+          },
+          "duration": {
+            "options": [
+              {
+                "option_id": "field_0",
+                "bounds_hours": [
+                  1.0,
+                  1.0
+                ],
+                "count": 1,
+                "literal": "1 hour",
+                "expression": "1 hour",
+                "count_in_field": false,
+                "overnight_default": false,
+                "each_in_field": false,
+                "repeat_interpretation": {
+                  "count": 1,
+                  "basis": "one separately represented timed operation; again is not itself an optional branch"
+                },
+                "source": {
+                  "unit_id": "L0011",
+                  "start": 1252,
+                  "end": 1264,
+                  "quote": "Time: 1 hour",
+                  "answer_sha256": "dd2b2f24deba09da0fa5c6496d98b313f5648329345b250f58c4fa7fcb04e7dc"
+                },
+                "basis": "explicit source Time field"
+              }
+            ],
+            "issue": null,
+            "source": {
+              "unit_id": "L0011",
+              "start": 1252,
+              "end": 1264,
+              "quote": "Time: 1 hour",
+              "answer_sha256": "dd2b2f24deba09da0fa5c6496d98b313f5648329345b250f58c4fa7fcb04e7dc"
+            },
+            "basis": "explicit source Time field",
+            "original_parent_context": null,
+            "point_convention": "midpoint within each explicit finite range; no averaging across alternative routes",
+            "prose_numeric_mentions": [],
+            "conflicting_prose_readings": [],
+            "explicit_field_precedence_declared": true
+          },
+          "branch_group": null
+        },
+        {
+          "operation_id": "OP7",
+          "source": {
+            "unit_id": "L0013",
+            "start": 1346,
+            "end": 1479,
+            "quote": "Incubation with chilled fresh 5% (vol/vol) H₂O₂ in methanol (1 volume 30% H₂O₂ to 5 volumes MeOH).(Temperature: 4 ℃, Time: 12 hours)\n",
+            "answer_sha256": "dd2b2f24deba09da0fa5c6496d98b313f5648329345b250f58c4fa7fcb04e7dc"
+          },
+          "raw_phase": "decolorization",
+          "raw_execution_scope": "initial",
+          "raw_parsed_duration": {
+            "state": "explicit_exact",
+            "bounds_hours": [
+              12.0,
+              12.0
+            ],
+            "unique_hours": 12.0,
+            "source_numeric": true
+          },
+          "raw_repeat_count": 1,
+          "scope": {
+            "role": "core",
+            "basis": "saved core phase, reconciled with explicit source heading",
+            "heading": {
+              "start": 1266,
+              "end": 1346,
+              "quote": "2 Bleaching (optional but recommended for endogenous fluorescence preservation)\n",
+              "title": "Bleaching (optional but recommended for endogenous fluorescence preservation)"
+            }
+          },
+          "duration": {
+            "options": [
+              {
+                "option_id": "field_0",
+                "bounds_hours": [
+                  12.0,
+                  12.0
+                ],
+                "count": 1,
+                "literal": "12 hours",
+                "expression": "12 hours",
+                "count_in_field": false,
+                "overnight_default": false,
+                "each_in_field": false,
+                "repeat_interpretation": {
+                  "count": 1,
+                  "basis": "one separately represented timed operation; again is not itself an optional branch"
+                },
+                "source": {
+                  "unit_id": "L0013",
+                  "start": 1463,
+                  "end": 1477,
+                  "quote": "Time: 12 hours",
+                  "answer_sha256": "dd2b2f24deba09da0fa5c6496d98b313f5648329345b250f58c4fa7fcb04e7dc"
+                },
+                "basis": "explicit source Time field"
+              }
+            ],
+            "issue": null,
+            "source": {
+              "unit_id": "L0013",
+              "start": 1463,
+              "end": 1477,
+              "quote": "Time: 12 hours",
+              "answer_sha256": "dd2b2f24deba09da0fa5c6496d98b313f5648329345b250f58c4fa7fcb04e7dc"
+            },
+            "basis": "explicit source Time field",
+            "original_parent_context": null,
+            "point_convention": "midpoint within each explicit finite range; no averaging across alternative routes",
+            "prose_numeric_mentions": [],
+            "conflicting_prose_readings": [],
+            "explicit_field_precedence_declared": true
+          },
+          "branch_group": "heading:1266",
+          "branch_source": {
+            "start": 1266,
+            "end": 1346,
+            "quote": "2 Bleaching (optional but recommended for endogenous fluorescence preservation)\n",
+            "title": "Bleaching (optional but recommended for endogenous fluorescence preservation)"
+          }
+        },
+        {
+          "operation_id": "OP8",
+          "source": {
+            "unit_id": "L0015",
+            "start": 1493,
+            "end": 1571,
+            "quote": "Incubation with 80% (vol/vol) methanol in PBS.(Temperature: RT, Time: 1 hour)\n",
+            "answer_sha256": "dd2b2f24deba09da0fa5c6496d98b313f5648329345b250f58c4fa7fcb04e7dc"
+          },
+          "raw_phase": "reagent_transition_wash",
+          "raw_execution_scope": "initial",
+          "raw_parsed_duration": {
+            "state": "explicit_exact",
+            "bounds_hours": [
+              1.0,
+              1.0
+            ],
+            "unique_hours": 1.0,
+            "source_numeric": true
+          },
+          "raw_repeat_count": 1,
+          "scope": {
+            "role": "core",
+            "basis": "saved core phase, reconciled with explicit source heading",
+            "heading": {
+              "start": 1479,
+              "end": 1493,
+              "quote": "3 Rehydration\n",
+              "title": "Rehydration"
+            }
+          },
+          "duration": {
+            "options": [
+              {
+                "option_id": "field_0",
+                "bounds_hours": [
+                  1.0,
+                  1.0
+                ],
+                "count": 1,
+                "literal": "1 hour",
+                "expression": "1 hour",
+                "count_in_field": false,
+                "overnight_default": false,
+                "each_in_field": false,
+                "repeat_interpretation": {
+                  "count": 1,
+                  "basis": "one separately represented timed operation; again is not itself an optional branch"
+                },
+                "source": {
+                  "unit_id": "L0015",
+                  "start": 1557,
+                  "end": 1569,
+                  "quote": "Time: 1 hour",
+                  "answer_sha256": "dd2b2f24deba09da0fa5c6496d98b313f5648329345b250f58c4fa7fcb04e7dc"
+                },
+                "basis": "explicit source Time field"
+              }
+            ],
+            "issue": null,
+            "source": {
+              "unit_id": "L0015",
+              "start": 1557,
+              "end": 1569,
+              "quote": "Time: 1 hour",
+              "answer_sha256": "dd2b2f24deba09da0fa5c6496d98b313f5648329345b250f58c4fa7fcb04e7dc"
+            },
+            "basis": "explicit source Time field",
+            "original_parent_context": null,
+            "point_convention": "midpoint within each explicit finite range; no averaging across alternative routes",
+            "prose_numeric_mentions": [],
+            "conflicting_prose_readings": [],
+            "explicit_field_precedence_declared": true
+          },
+          "branch_group": null
+        },
+        {
+          "operation_id": "OP9",
+          "source": {
+            "unit_id": "L0016",
+            "start": 1571,
+            "end": 1649,
+            "quote": "Incubation with 60% (vol/vol) methanol in PBS.(Temperature: RT, Time: 1 hour)\n",
+            "answer_sha256": "dd2b2f24deba09da0fa5c6496d98b313f5648329345b250f58c4fa7fcb04e7dc"
+          },
+          "raw_phase": "reagent_transition_wash",
+          "raw_execution_scope": "initial",
+          "raw_parsed_duration": {
+            "state": "explicit_exact",
+            "bounds_hours": [
+              1.0,
+              1.0
+            ],
+            "unique_hours": 1.0,
+            "source_numeric": true
+          },
+          "raw_repeat_count": 1,
+          "scope": {
+            "role": "core",
+            "basis": "saved core phase, reconciled with explicit source heading",
+            "heading": {
+              "start": 1479,
+              "end": 1493,
+              "quote": "3 Rehydration\n",
+              "title": "Rehydration"
+            }
+          },
+          "duration": {
+            "options": [
+              {
+                "option_id": "field_0",
+                "bounds_hours": [
+                  1.0,
+                  1.0
+                ],
+                "count": 1,
+                "literal": "1 hour",
+                "expression": "1 hour",
+                "count_in_field": false,
+                "overnight_default": false,
+                "each_in_field": false,
+                "repeat_interpretation": {
+                  "count": 1,
+                  "basis": "one separately represented timed operation; again is not itself an optional branch"
+                },
+                "source": {
+                  "unit_id": "L0016",
+                  "start": 1635,
+                  "end": 1647,
+                  "quote": "Time: 1 hour",
+                  "answer_sha256": "dd2b2f24deba09da0fa5c6496d98b313f5648329345b250f58c4fa7fcb04e7dc"
+                },
+                "basis": "explicit source Time field"
+              }
+            ],
+            "issue": null,
+            "source": {
+              "unit_id": "L0016",
+              "start": 1635,
+              "end": 1647,
+              "quote": "Time: 1 hour",
+              "answer_sha256": "dd2b2f24deba09da0fa5c6496d98b313f5648329345b250f58c4fa7fcb04e7dc"
+            },
+            "basis": "explicit source Time field",
+            "original_parent_context": null,
+            "point_convention": "midpoint within each explicit finite range; no averaging across alternative routes",
+            "prose_numeric_mentions": [],
+            "conflicting_prose_readings": [],
+            "explicit_field_precedence_declared": true
+          },
+          "branch_group": null
+        },
+        {
+          "operation_id": "OP10",
+          "source": {
+            "unit_id": "L0017",
+            "start": 1649,
+            "end": 1727,
+            "quote": "Incubation with 40% (vol/vol) methanol in PBS.(Temperature: RT, Time: 1 hour)\n",
+            "answer_sha256": "dd2b2f24deba09da0fa5c6496d98b313f5648329345b250f58c4fa7fcb04e7dc"
+          },
+          "raw_phase": "reagent_transition_wash",
+          "raw_execution_scope": "initial",
+          "raw_parsed_duration": {
+            "state": "explicit_exact",
+            "bounds_hours": [
+              1.0,
+              1.0
+            ],
+            "unique_hours": 1.0,
+            "source_numeric": true
+          },
+          "raw_repeat_count": 1,
+          "scope": {
+            "role": "core",
+            "basis": "saved core phase, reconciled with explicit source heading",
+            "heading": {
+              "start": 1479,
+              "end": 1493,
+              "quote": "3 Rehydration\n",
+              "title": "Rehydration"
+            }
+          },
+          "duration": {
+            "options": [
+              {
+                "option_id": "field_0",
+                "bounds_hours": [
+                  1.0,
+                  1.0
+                ],
+                "count": 1,
+                "literal": "1 hour",
+                "expression": "1 hour",
+                "count_in_field": false,
+                "overnight_default": false,
+                "each_in_field": false,
+                "repeat_interpretation": {
+                  "count": 1,
+                  "basis": "one separately represented timed operation; again is not itself an optional branch"
+                },
+                "source": {
+                  "unit_id": "L0017",
+                  "start": 1713,
+                  "end": 1725,
+                  "quote": "Time: 1 hour",
+                  "answer_sha256": "dd2b2f24deba09da0fa5c6496d98b313f5648329345b250f58c4fa7fcb04e7dc"
+                },
+                "basis": "explicit source Time field"
+              }
+            ],
+            "issue": null,
+            "source": {
+              "unit_id": "L0017",
+              "start": 1713,
+              "end": 1725,
+              "quote": "Time: 1 hour",
+              "answer_sha256": "dd2b2f24deba09da0fa5c6496d98b313f5648329345b250f58c4fa7fcb04e7dc"
+            },
+            "basis": "explicit source Time field",
+            "original_parent_context": null,
+            "point_convention": "midpoint within each explicit finite range; no averaging across alternative routes",
+            "prose_numeric_mentions": [],
+            "conflicting_prose_readings": [],
+            "explicit_field_precedence_declared": true
+          },
+          "branch_group": null
+        },
+        {
+          "operation_id": "OP11",
+          "source": {
+            "unit_id": "L0018",
+            "start": 1727,
+            "end": 1805,
+            "quote": "Incubation with 20% (vol/vol) methanol in PBS.(Temperature: RT, Time: 1 hour)\n",
+            "answer_sha256": "dd2b2f24deba09da0fa5c6496d98b313f5648329345b250f58c4fa7fcb04e7dc"
+          },
+          "raw_phase": "reagent_transition_wash",
+          "raw_execution_scope": "initial",
+          "raw_parsed_duration": {
+            "state": "explicit_exact",
+            "bounds_hours": [
+              1.0,
+              1.0
+            ],
+            "unique_hours": 1.0,
+            "source_numeric": true
+          },
+          "raw_repeat_count": 1,
+          "scope": {
+            "role": "core",
+            "basis": "saved core phase, reconciled with explicit source heading",
+            "heading": {
+              "start": 1479,
+              "end": 1493,
+              "quote": "3 Rehydration\n",
+              "title": "Rehydration"
+            }
+          },
+          "duration": {
+            "options": [
+              {
+                "option_id": "field_0",
+                "bounds_hours": [
+                  1.0,
+                  1.0
+                ],
+                "count": 1,
+                "literal": "1 hour",
+                "expression": "1 hour",
+                "count_in_field": false,
+                "overnight_default": false,
+                "each_in_field": false,
+                "repeat_interpretation": {
+                  "count": 1,
+                  "basis": "one separately represented timed operation; again is not itself an optional branch"
+                },
+                "source": {
+                  "unit_id": "L0018",
+                  "start": 1791,
+                  "end": 1803,
+                  "quote": "Time: 1 hour",
+                  "answer_sha256": "dd2b2f24deba09da0fa5c6496d98b313f5648329345b250f58c4fa7fcb04e7dc"
+                },
+                "basis": "explicit source Time field"
+              }
+            ],
+            "issue": null,
+            "source": {
+              "unit_id": "L0018",
+              "start": 1791,
+              "end": 1803,
+              "quote": "Time: 1 hour",
+              "answer_sha256": "dd2b2f24deba09da0fa5c6496d98b313f5648329345b250f58c4fa7fcb04e7dc"
+            },
+            "basis": "explicit source Time field",
+            "original_parent_context": null,
+            "point_convention": "midpoint within each explicit finite range; no averaging across alternative routes",
+            "prose_numeric_mentions": [],
+            "conflicting_prose_readings": [],
+            "explicit_field_precedence_declared": true
+          },
+          "branch_group": null
+        },
+        {
+          "operation_id": "OP12",
+          "source": {
+            "unit_id": "L0019",
+            "start": 1805,
+            "end": 1893,
+            "quote": "Incubation with PBS + 0.2% (vol/vol) Triton X-100 (PBT).(Temperature: RT, Time: 1 hour)\n",
+            "answer_sha256": "dd2b2f24deba09da0fa5c6496d98b313f5648329345b250f58c4fa7fcb04e7dc"
+          },
+          "raw_phase": "reagent_transition_wash",
+          "raw_execution_scope": "initial",
+          "raw_parsed_duration": {
+            "state": "explicit_exact",
+            "bounds_hours": [
+              1.0,
+              1.0
+            ],
+            "unique_hours": 1.0,
+            "source_numeric": true
+          },
+          "raw_repeat_count": 1,
+          "scope": {
+            "role": "core",
+            "basis": "saved core phase, reconciled with explicit source heading",
+            "heading": {
+              "start": 1479,
+              "end": 1493,
+              "quote": "3 Rehydration\n",
+              "title": "Rehydration"
+            }
+          },
+          "duration": {
+            "options": [
+              {
+                "option_id": "field_0",
+                "bounds_hours": [
+                  1.0,
+                  1.0
+                ],
+                "count": 1,
+                "literal": "1 hour",
+                "expression": "1 hour",
+                "count_in_field": false,
+                "overnight_default": false,
+                "each_in_field": false,
+                "repeat_interpretation": {
+                  "count": 1,
+                  "basis": "one separately represented timed operation; again is not itself an optional branch"
+                },
+                "source": {
+                  "unit_id": "L0019",
+                  "start": 1879,
+                  "end": 1891,
+                  "quote": "Time: 1 hour",
+                  "answer_sha256": "dd2b2f24deba09da0fa5c6496d98b313f5648329345b250f58c4fa7fcb04e7dc"
+                },
+                "basis": "explicit source Time field"
+              }
+            ],
+            "issue": null,
+            "source": {
+              "unit_id": "L0019",
+              "start": 1879,
+              "end": 1891,
+              "quote": "Time: 1 hour",
+              "answer_sha256": "dd2b2f24deba09da0fa5c6496d98b313f5648329345b250f58c4fa7fcb04e7dc"
+            },
+            "basis": "explicit source Time field",
+            "original_parent_context": null,
+            "point_convention": "midpoint within each explicit finite range; no averaging across alternative routes",
+            "prose_numeric_mentions": [],
+            "conflicting_prose_readings": [],
+            "explicit_field_precedence_declared": true
+          },
+          "branch_group": null
+        },
+        {
+          "operation_id": "OP13",
+          "source": {
+            "unit_id": "L0021",
+            "start": 1923,
+            "end": 2016,
+            "quote": "Incubation with PBT + 20% (vol/vol) DMSO + 0.3 M glycine.(Temperature: 37 ℃, Time: 24 hours)\n",
+            "answer_sha256": "dd2b2f24deba09da0fa5c6496d98b313f5648329345b250f58c4fa7fcb04e7dc"
+          },
+          "raw_phase": "labeling_preparation",
+          "raw_execution_scope": "initial",
+          "raw_parsed_duration": {
+            "state": "explicit_exact",
+            "bounds_hours": [
+              24.0,
+              24.0
+            ],
+            "unique_hours": 24.0,
+            "source_numeric": true
+          },
+          "raw_repeat_count": 1,
+          "scope": {
+            "role": "excluded",
+            "basis": "saved explicit excluded phase",
+            "original_phase": "labeling_preparation",
+            "heading": {
+              "start": 1893,
+              "end": 1923,
+              "quote": "Permeabilization and Blocking\n",
+              "title": "Permeabilization and Blocking"
+            }
+          }
+        },
+        {
+          "operation_id": "OP14",
+          "source": {
+            "unit_id": "L0022",
+            "start": 2016,
+            "end": 2138,
+            "quote": "Incubation with PBT + 10% (vol/vol) DMSO + 6% (wt/vol) donkey serum (blocking buffer).(Temperature: 37 ℃, Time: 24 hours)\n",
+            "answer_sha256": "dd2b2f24deba09da0fa5c6496d98b313f5648329345b250f58c4fa7fcb04e7dc"
+          },
+          "raw_phase": "labeling_preparation",
+          "raw_execution_scope": "initial",
+          "raw_parsed_duration": {
+            "state": "explicit_exact",
+            "bounds_hours": [
+              24.0,
+              24.0
+            ],
+            "unique_hours": 24.0,
+            "source_numeric": true
+          },
+          "raw_repeat_count": 1,
+          "scope": {
+            "role": "excluded",
+            "basis": "saved explicit excluded phase",
+            "original_phase": "labeling_preparation",
+            "heading": {
+              "start": 1893,
+              "end": 1923,
+              "quote": "Permeabilization and Blocking\n",
+              "title": "Permeabilization and Blocking"
+            }
+          }
+        },
+        {
+          "operation_id": "OP15",
+          "source": {
+            "unit_id": "L0024",
+            "start": 2166,
+            "end": 2294,
+            "quote": "Incubation with anti-β-III Tubulin (TUJ1) primary antibody diluted 1:500 in blocking buffer.(Temperature: 37 ℃, Time: 72 hours)\n",
+            "answer_sha256": "dd2b2f24deba09da0fa5c6496d98b313f5648329345b250f58c4fa7fcb04e7dc"
+          },
+          "raw_phase": "labeling_preparation",
+          "raw_execution_scope": "initial",
+          "raw_parsed_duration": {
+            "state": "explicit_exact",
+            "bounds_hours": [
+              72.0,
+              72.0
+            ],
+            "unique_hours": 72.0,
+            "source_numeric": true
+          },
+          "raw_repeat_count": 1,
+          "scope": {
+            "role": "excluded",
+            "basis": "saved explicit excluded phase",
+            "original_phase": "labeling_preparation",
+            "heading": {
+              "start": 2138,
+              "end": 2166,
+              "quote": "5 Primary Antibody Staining\n",
+              "title": "Primary Antibody Staining"
+            }
+          }
+        },
+        {
+          "operation_id": "OP16",
+          "source": {
+            "unit_id": "L0026",
+            "start": 2301,
+            "end": 2354,
+            "quote": "Incubation with PBT.(Temperature: RT, Time: 6 hours)\n",
+            "answer_sha256": "dd2b2f24deba09da0fa5c6496d98b313f5648329345b250f58c4fa7fcb04e7dc"
+          },
+          "raw_phase": "reagent_transition_wash",
+          "raw_execution_scope": "initial",
+          "raw_parsed_duration": {
+            "state": "explicit_exact",
+            "bounds_hours": [
+              6.0,
+              6.0
+            ],
+            "unique_hours": 6.0,
+            "source_numeric": true
+          },
+          "raw_repeat_count": 1,
+          "scope": {
+            "role": "excluded",
+            "basis": "wash section within explicit antibody/labeling sequence, including repeat-only records",
+            "heading": {
+              "start": 2294,
+              "end": 2301,
+              "quote": "6 Wash\n",
+              "title": "Wash"
+            },
+            "preceding_phase_heading": {
+              "start": 2138,
+              "end": 2166,
+              "quote": "5 Primary Antibody Staining\n",
+              "title": "Primary Antibody Staining"
+            }
+          }
+        },
+        {
+          "operation_id": "OP17",
+          "source": {
+            "unit_id": "L0027",
+            "start": 2354,
+            "end": 2407,
+            "quote": "Incubation with PBT.(Temperature: RT, Time: 6 hours)\n",
+            "answer_sha256": "dd2b2f24deba09da0fa5c6496d98b313f5648329345b250f58c4fa7fcb04e7dc"
+          },
+          "raw_phase": "reagent_transition_wash",
+          "raw_execution_scope": "initial",
+          "raw_parsed_duration": {
+            "state": "explicit_exact",
+            "bounds_hours": [
+              6.0,
+              6.0
+            ],
+            "unique_hours": 6.0,
+            "source_numeric": true
+          },
+          "raw_repeat_count": 1,
+          "scope": {
+            "role": "excluded",
+            "basis": "wash section within explicit antibody/labeling sequence, including repeat-only records",
+            "heading": {
+              "start": 2294,
+              "end": 2301,
+              "quote": "6 Wash\n",
+              "title": "Wash"
+            },
+            "preceding_phase_heading": {
+              "start": 2138,
+              "end": 2166,
+              "quote": "5 Primary Antibody Staining\n",
+              "title": "Primary Antibody Staining"
+            }
+          }
+        },
+        {
+          "operation_id": "OP18",
+          "source": {
+            "unit_id": "L0028",
+            "start": 2407,
+            "end": 2460,
+            "quote": "Incubation with PBT.(Temperature: RT, Time: 6 hours)\n",
+            "answer_sha256": "dd2b2f24deba09da0fa5c6496d98b313f5648329345b250f58c4fa7fcb04e7dc"
+          },
+          "raw_phase": "reagent_transition_wash",
+          "raw_execution_scope": "initial",
+          "raw_parsed_duration": {
+            "state": "explicit_exact",
+            "bounds_hours": [
+              6.0,
+              6.0
+            ],
+            "unique_hours": 6.0,
+            "source_numeric": true
+          },
+          "raw_repeat_count": 1,
+          "scope": {
+            "role": "excluded",
+            "basis": "wash section within explicit antibody/labeling sequence, including repeat-only records",
+            "heading": {
+              "start": 2294,
+              "end": 2301,
+              "quote": "6 Wash\n",
+              "title": "Wash"
+            },
+            "preceding_phase_heading": {
+              "start": 2138,
+              "end": 2166,
+              "quote": "5 Primary Antibody Staining\n",
+              "title": "Primary Antibody Staining"
+            }
+          }
+        },
+        {
+          "operation_id": "OP19",
+          "source": {
+            "unit_id": "L0029",
+            "start": 2460,
+            "end": 2513,
+            "quote": "Incubation with PBT.(Temperature: RT, Time: 6 hours)\n",
+            "answer_sha256": "dd2b2f24deba09da0fa5c6496d98b313f5648329345b250f58c4fa7fcb04e7dc"
+          },
+          "raw_phase": "reagent_transition_wash",
+          "raw_execution_scope": "initial",
+          "raw_parsed_duration": {
+            "state": "explicit_exact",
+            "bounds_hours": [
+              6.0,
+              6.0
+            ],
+            "unique_hours": 6.0,
+            "source_numeric": true
+          },
+          "raw_repeat_count": 1,
+          "scope": {
+            "role": "excluded",
+            "basis": "wash section within explicit antibody/labeling sequence, including repeat-only records",
+            "heading": {
+              "start": 2294,
+              "end": 2301,
+              "quote": "6 Wash\n",
+              "title": "Wash"
+            },
+            "preceding_phase_heading": {
+              "start": 2138,
+              "end": 2166,
+              "quote": "5 Primary Antibody Staining\n",
+              "title": "Primary Antibody Staining"
+            }
+          }
+        },
+        {
+          "operation_id": "OP20",
+          "source": {
+            "unit_id": "L0031",
+            "start": 2543,
+            "end": 2683,
+            "quote": "Incubation with Alexa Fluor 647-conjugated donkey anti-mouse IgG (H+L) diluted 1:300 in blocking buffer.(Temperature: 37 ℃, Time: 48 hours)\n",
+            "answer_sha256": "dd2b2f24deba09da0fa5c6496d98b313f5648329345b250f58c4fa7fcb04e7dc"
+          },
+          "raw_phase": "labeling_preparation",
+          "raw_execution_scope": "initial",
+          "raw_parsed_duration": {
+            "state": "explicit_exact",
+            "bounds_hours": [
+              48.0,
+              48.0
+            ],
+            "unique_hours": 48.0,
+            "source_numeric": true
+          },
+          "raw_repeat_count": 1,
+          "scope": {
+            "role": "excluded",
+            "basis": "saved explicit excluded phase",
+            "original_phase": "labeling_preparation",
+            "heading": {
+              "start": 2513,
+              "end": 2543,
+              "quote": "7 Secondary Antibody Staining\n",
+              "title": "Secondary Antibody Staining"
+            }
+          }
+        },
+        {
+          "operation_id": "OP21",
+          "source": {
+            "unit_id": "L0033",
+            "start": 2690,
+            "end": 2743,
+            "quote": "Incubation with PBT.(Temperature: RT, Time: 6 hours)\n",
+            "answer_sha256": "dd2b2f24deba09da0fa5c6496d98b313f5648329345b250f58c4fa7fcb04e7dc"
+          },
+          "raw_phase": "reagent_transition_wash",
+          "raw_execution_scope": "initial",
+          "raw_parsed_duration": {
+            "state": "explicit_exact",
+            "bounds_hours": [
+              6.0,
+              6.0
+            ],
+            "unique_hours": 6.0,
+            "source_numeric": true
+          },
+          "raw_repeat_count": 1,
+          "scope": {
+            "role": "excluded",
+            "basis": "wash section within explicit antibody/labeling sequence, including repeat-only records",
+            "heading": {
+              "start": 2683,
+              "end": 2690,
+              "quote": "8 Wash\n",
+              "title": "Wash"
+            },
+            "preceding_phase_heading": {
+              "start": 2513,
+              "end": 2543,
+              "quote": "7 Secondary Antibody Staining\n",
+              "title": "Secondary Antibody Staining"
+            }
+          }
+        },
+        {
+          "operation_id": "OP22",
+          "source": {
+            "unit_id": "L0034",
+            "start": 2743,
+            "end": 2796,
+            "quote": "Incubation with PBT.(Temperature: RT, Time: 6 hours)\n",
+            "answer_sha256": "dd2b2f24deba09da0fa5c6496d98b313f5648329345b250f58c4fa7fcb04e7dc"
+          },
+          "raw_phase": "reagent_transition_wash",
+          "raw_execution_scope": "initial",
+          "raw_parsed_duration": {
+            "state": "explicit_exact",
+            "bounds_hours": [
+              6.0,
+              6.0
+            ],
+            "unique_hours": 6.0,
+            "source_numeric": true
+          },
+          "raw_repeat_count": 1,
+          "scope": {
+            "role": "excluded",
+            "basis": "wash section within explicit antibody/labeling sequence, including repeat-only records",
+            "heading": {
+              "start": 2683,
+              "end": 2690,
+              "quote": "8 Wash\n",
+              "title": "Wash"
+            },
+            "preceding_phase_heading": {
+              "start": 2513,
+              "end": 2543,
+              "quote": "7 Secondary Antibody Staining\n",
+              "title": "Secondary Antibody Staining"
+            }
+          }
+        },
+        {
+          "operation_id": "OP23",
+          "source": {
+            "unit_id": "L0035",
+            "start": 2796,
+            "end": 2849,
+            "quote": "Incubation with PBT.(Temperature: RT, Time: 6 hours)\n",
+            "answer_sha256": "dd2b2f24deba09da0fa5c6496d98b313f5648329345b250f58c4fa7fcb04e7dc"
+          },
+          "raw_phase": "reagent_transition_wash",
+          "raw_execution_scope": "initial",
+          "raw_parsed_duration": {
+            "state": "explicit_exact",
+            "bounds_hours": [
+              6.0,
+              6.0
+            ],
+            "unique_hours": 6.0,
+            "source_numeric": true
+          },
+          "raw_repeat_count": 1,
+          "scope": {
+            "role": "excluded",
+            "basis": "wash section within explicit antibody/labeling sequence, including repeat-only records",
+            "heading": {
+              "start": 2683,
+              "end": 2690,
+              "quote": "8 Wash\n",
+              "title": "Wash"
+            },
+            "preceding_phase_heading": {
+              "start": 2513,
+              "end": 2543,
+              "quote": "7 Secondary Antibody Staining\n",
+              "title": "Secondary Antibody Staining"
+            }
+          }
+        },
+        {
+          "operation_id": "OP24",
+          "source": {
+            "unit_id": "L0037",
+            "start": 2885,
+            "end": 2963,
+            "quote": "Incubation with 20% (vol/vol) methanol in PBS.(Temperature: RT, Time: 1 hour)\n",
+            "answer_sha256": "dd2b2f24deba09da0fa5c6496d98b313f5648329345b250f58c4fa7fcb04e7dc"
+          },
+          "raw_phase": "decolorization",
+          "raw_execution_scope": "initial",
+          "raw_parsed_duration": {
+            "state": "explicit_exact",
+            "bounds_hours": [
+              1.0,
+              1.0
+            ],
+            "unique_hours": 1.0,
+            "source_numeric": true
+          },
+          "raw_repeat_count": 1,
+          "scope": {
+            "role": "core",
+            "basis": "saved core phase, reconciled with explicit source heading",
+            "heading": {
+              "start": 2849,
+              "end": 2885,
+              "quote": "9 Dehydration (post-immunostaining)\n",
+              "title": "Dehydration (post-immunostaining)"
+            }
+          },
+          "duration": {
+            "options": [
+              {
+                "option_id": "field_0",
+                "bounds_hours": [
+                  1.0,
+                  1.0
+                ],
+                "count": 1,
+                "literal": "1 hour",
+                "expression": "1 hour",
+                "count_in_field": false,
+                "overnight_default": false,
+                "each_in_field": false,
+                "repeat_interpretation": {
+                  "count": 1,
+                  "basis": "one separately represented timed operation; again is not itself an optional branch"
+                },
+                "source": {
+                  "unit_id": "L0037",
+                  "start": 2949,
+                  "end": 2961,
+                  "quote": "Time: 1 hour",
+                  "answer_sha256": "dd2b2f24deba09da0fa5c6496d98b313f5648329345b250f58c4fa7fcb04e7dc"
+                },
+                "basis": "explicit source Time field"
+              }
+            ],
+            "issue": null,
+            "source": {
+              "unit_id": "L0037",
+              "start": 2949,
+              "end": 2961,
+              "quote": "Time: 1 hour",
+              "answer_sha256": "dd2b2f24deba09da0fa5c6496d98b313f5648329345b250f58c4fa7fcb04e7dc"
+            },
+            "basis": "explicit source Time field",
+            "original_parent_context": null,
+            "point_convention": "midpoint within each explicit finite range; no averaging across alternative routes",
+            "prose_numeric_mentions": [],
+            "conflicting_prose_readings": [],
+            "explicit_field_precedence_declared": true
+          },
+          "branch_group": null
+        },
+        {
+          "operation_id": "OP25",
+          "source": {
+            "unit_id": "L0038",
+            "start": 2963,
+            "end": 3041,
+            "quote": "Incubation with 40% (vol/vol) methanol in PBS.(Temperature: RT, Time: 1 hour)\n",
+            "answer_sha256": "dd2b2f24deba09da0fa5c6496d98b313f5648329345b250f58c4fa7fcb04e7dc"
+          },
+          "raw_phase": "decolorization",
+          "raw_execution_scope": "initial",
+          "raw_parsed_duration": {
+            "state": "explicit_exact",
+            "bounds_hours": [
+              1.0,
+              1.0
+            ],
+            "unique_hours": 1.0,
+            "source_numeric": true
+          },
+          "raw_repeat_count": 1,
+          "scope": {
+            "role": "core",
+            "basis": "saved core phase, reconciled with explicit source heading",
+            "heading": {
+              "start": 2849,
+              "end": 2885,
+              "quote": "9 Dehydration (post-immunostaining)\n",
+              "title": "Dehydration (post-immunostaining)"
+            }
+          },
+          "duration": {
+            "options": [
+              {
+                "option_id": "field_0",
+                "bounds_hours": [
+                  1.0,
+                  1.0
+                ],
+                "count": 1,
+                "literal": "1 hour",
+                "expression": "1 hour",
+                "count_in_field": false,
+                "overnight_default": false,
+                "each_in_field": false,
+                "repeat_interpretation": {
+                  "count": 1,
+                  "basis": "one separately represented timed operation; again is not itself an optional branch"
+                },
+                "source": {
+                  "unit_id": "L0038",
+                  "start": 3027,
+                  "end": 3039,
+                  "quote": "Time: 1 hour",
+                  "answer_sha256": "dd2b2f24deba09da0fa5c6496d98b313f5648329345b250f58c4fa7fcb04e7dc"
+                },
+                "basis": "explicit source Time field"
+              }
+            ],
+            "issue": null,
+            "source": {
+              "unit_id": "L0038",
+              "start": 3027,
+              "end": 3039,
+              "quote": "Time: 1 hour",
+              "answer_sha256": "dd2b2f24deba09da0fa5c6496d98b313f5648329345b250f58c4fa7fcb04e7dc"
+            },
+            "basis": "explicit source Time field",
+            "original_parent_context": null,
+            "point_convention": "midpoint within each explicit finite range; no averaging across alternative routes",
+            "prose_numeric_mentions": [],
+            "conflicting_prose_readings": [],
+            "explicit_field_precedence_declared": true
+          },
+          "branch_group": null
+        },
+        {
+          "operation_id": "OP26",
+          "source": {
+            "unit_id": "L0039",
+            "start": 3041,
+            "end": 3119,
+            "quote": "Incubation with 60% (vol/vol) methanol in PBS.(Temperature: RT, Time: 1 hour)\n",
+            "answer_sha256": "dd2b2f24deba09da0fa5c6496d98b313f5648329345b250f58c4fa7fcb04e7dc"
+          },
+          "raw_phase": "decolorization",
+          "raw_execution_scope": "initial",
+          "raw_parsed_duration": {
+            "state": "explicit_exact",
+            "bounds_hours": [
+              1.0,
+              1.0
+            ],
+            "unique_hours": 1.0,
+            "source_numeric": true
+          },
+          "raw_repeat_count": 1,
+          "scope": {
+            "role": "core",
+            "basis": "saved core phase, reconciled with explicit source heading",
+            "heading": {
+              "start": 2849,
+              "end": 2885,
+              "quote": "9 Dehydration (post-immunostaining)\n",
+              "title": "Dehydration (post-immunostaining)"
+            }
+          },
+          "duration": {
+            "options": [
+              {
+                "option_id": "field_0",
+                "bounds_hours": [
+                  1.0,
+                  1.0
+                ],
+                "count": 1,
+                "literal": "1 hour",
+                "expression": "1 hour",
+                "count_in_field": false,
+                "overnight_default": false,
+                "each_in_field": false,
+                "repeat_interpretation": {
+                  "count": 1,
+                  "basis": "one separately represented timed operation; again is not itself an optional branch"
+                },
+                "source": {
+                  "unit_id": "L0039",
+                  "start": 3105,
+                  "end": 3117,
+                  "quote": "Time: 1 hour",
+                  "answer_sha256": "dd2b2f24deba09da0fa5c6496d98b313f5648329345b250f58c4fa7fcb04e7dc"
+                },
+                "basis": "explicit source Time field"
+              }
+            ],
+            "issue": null,
+            "source": {
+              "unit_id": "L0039",
+              "start": 3105,
+              "end": 3117,
+              "quote": "Time: 1 hour",
+              "answer_sha256": "dd2b2f24deba09da0fa5c6496d98b313f5648329345b250f58c4fa7fcb04e7dc"
+            },
+            "basis": "explicit source Time field",
+            "original_parent_context": null,
+            "point_convention": "midpoint within each explicit finite range; no averaging across alternative routes",
+            "prose_numeric_mentions": [],
+            "conflicting_prose_readings": [],
+            "explicit_field_precedence_declared": true
+          },
+          "branch_group": null
+        },
+        {
+          "operation_id": "OP27",
+          "source": {
+            "unit_id": "L0040",
+            "start": 3119,
+            "end": 3197,
+            "quote": "Incubation with 80% (vol/vol) methanol in PBS.(Temperature: RT, Time: 1 hour)\n",
+            "answer_sha256": "dd2b2f24deba09da0fa5c6496d98b313f5648329345b250f58c4fa7fcb04e7dc"
+          },
+          "raw_phase": "decolorization",
+          "raw_execution_scope": "initial",
+          "raw_parsed_duration": {
+            "state": "explicit_exact",
+            "bounds_hours": [
+              1.0,
+              1.0
+            ],
+            "unique_hours": 1.0,
+            "source_numeric": true
+          },
+          "raw_repeat_count": 1,
+          "scope": {
+            "role": "core",
+            "basis": "saved core phase, reconciled with explicit source heading",
+            "heading": {
+              "start": 2849,
+              "end": 2885,
+              "quote": "9 Dehydration (post-immunostaining)\n",
+              "title": "Dehydration (post-immunostaining)"
+            }
+          },
+          "duration": {
+            "options": [
+              {
+                "option_id": "field_0",
+                "bounds_hours": [
+                  1.0,
+                  1.0
+                ],
+                "count": 1,
+                "literal": "1 hour",
+                "expression": "1 hour",
+                "count_in_field": false,
+                "overnight_default": false,
+                "each_in_field": false,
+                "repeat_interpretation": {
+                  "count": 1,
+                  "basis": "one separately represented timed operation; again is not itself an optional branch"
+                },
+                "source": {
+                  "unit_id": "L0040",
+                  "start": 3183,
+                  "end": 3195,
+                  "quote": "Time: 1 hour",
+                  "answer_sha256": "dd2b2f24deba09da0fa5c6496d98b313f5648329345b250f58c4fa7fcb04e7dc"
+                },
+                "basis": "explicit source Time field"
+              }
+            ],
+            "issue": null,
+            "source": {
+              "unit_id": "L0040",
+              "start": 3183,
+              "end": 3195,
+              "quote": "Time: 1 hour",
+              "answer_sha256": "dd2b2f24deba09da0fa5c6496d98b313f5648329345b250f58c4fa7fcb04e7dc"
+            },
+            "basis": "explicit source Time field",
+            "original_parent_context": null,
+            "point_convention": "midpoint within each explicit finite range; no averaging across alternative routes",
+            "prose_numeric_mentions": [],
+            "conflicting_prose_readings": [],
+            "explicit_field_precedence_declared": true
+          },
+          "branch_group": null
+        },
+        {
+          "operation_id": "OP28",
+          "source": {
+            "unit_id": "L0041",
+            "start": 3197,
+            "end": 3269,
+            "quote": "Incubation with 100% (vol/vol) methanol.(Temperature: RT, Time: 1 hour)\n",
+            "answer_sha256": "dd2b2f24deba09da0fa5c6496d98b313f5648329345b250f58c4fa7fcb04e7dc"
+          },
+          "raw_phase": "decolorization",
+          "raw_execution_scope": "initial",
+          "raw_parsed_duration": {
+            "state": "explicit_exact",
+            "bounds_hours": [
+              1.0,
+              1.0
+            ],
+            "unique_hours": 1.0,
+            "source_numeric": true
+          },
+          "raw_repeat_count": 1,
+          "scope": {
+            "role": "core",
+            "basis": "saved core phase, reconciled with explicit source heading",
+            "heading": {
+              "start": 2849,
+              "end": 2885,
+              "quote": "9 Dehydration (post-immunostaining)\n",
+              "title": "Dehydration (post-immunostaining)"
+            }
+          },
+          "duration": {
+            "options": [
+              {
+                "option_id": "field_0",
+                "bounds_hours": [
+                  1.0,
+                  1.0
+                ],
+                "count": 1,
+                "literal": "1 hour",
+                "expression": "1 hour",
+                "count_in_field": false,
+                "overnight_default": false,
+                "each_in_field": false,
+                "repeat_interpretation": {
+                  "count": 1,
+                  "basis": "one separately represented timed operation; again is not itself an optional branch"
+                },
+                "source": {
+                  "unit_id": "L0041",
+                  "start": 3255,
+                  "end": 3267,
+                  "quote": "Time: 1 hour",
+                  "answer_sha256": "dd2b2f24deba09da0fa5c6496d98b313f5648329345b250f58c4fa7fcb04e7dc"
+                },
+                "basis": "explicit source Time field"
+              }
+            ],
+            "issue": null,
+            "source": {
+              "unit_id": "L0041",
+              "start": 3255,
+              "end": 3267,
+              "quote": "Time: 1 hour",
+              "answer_sha256": "dd2b2f24deba09da0fa5c6496d98b313f5648329345b250f58c4fa7fcb04e7dc"
+            },
+            "basis": "explicit source Time field",
+            "original_parent_context": null,
+            "point_convention": "midpoint within each explicit finite range; no averaging across alternative routes",
+            "prose_numeric_mentions": [],
+            "conflicting_prose_readings": [],
+            "explicit_field_precedence_declared": true
+          },
+          "branch_group": null
+        },
+        {
+          "operation_id": "OP29",
+          "source": {
+            "unit_id": "L0042",
+            "start": 3269,
+            "end": 3341,
+            "quote": "Incubation with 100% (vol/vol) methanol.(Temperature: RT, Time: 1 hour)\n",
+            "answer_sha256": "dd2b2f24deba09da0fa5c6496d98b313f5648329345b250f58c4fa7fcb04e7dc"
+          },
+          "raw_phase": "decolorization",
+          "raw_execution_scope": "initial",
+          "raw_parsed_duration": {
+            "state": "explicit_exact",
+            "bounds_hours": [
+              1.0,
+              1.0
+            ],
+            "unique_hours": 1.0,
+            "source_numeric": true
+          },
+          "raw_repeat_count": 1,
+          "scope": {
+            "role": "core",
+            "basis": "saved core phase, reconciled with explicit source heading",
+            "heading": {
+              "start": 2849,
+              "end": 2885,
+              "quote": "9 Dehydration (post-immunostaining)\n",
+              "title": "Dehydration (post-immunostaining)"
+            }
+          },
+          "duration": {
+            "options": [
+              {
+                "option_id": "field_0",
+                "bounds_hours": [
+                  1.0,
+                  1.0
+                ],
+                "count": 1,
+                "literal": "1 hour",
+                "expression": "1 hour",
+                "count_in_field": false,
+                "overnight_default": false,
+                "each_in_field": false,
+                "repeat_interpretation": {
+                  "count": 1,
+                  "basis": "one separately represented timed operation; again is not itself an optional branch"
+                },
+                "source": {
+                  "unit_id": "L0042",
+                  "start": 3327,
+                  "end": 3339,
+                  "quote": "Time: 1 hour",
+                  "answer_sha256": "dd2b2f24deba09da0fa5c6496d98b313f5648329345b250f58c4fa7fcb04e7dc"
+                },
+                "basis": "explicit source Time field"
+              }
+            ],
+            "issue": null,
+            "source": {
+              "unit_id": "L0042",
+              "start": 3327,
+              "end": 3339,
+              "quote": "Time: 1 hour",
+              "answer_sha256": "dd2b2f24deba09da0fa5c6496d98b313f5648329345b250f58c4fa7fcb04e7dc"
+            },
+            "basis": "explicit source Time field",
+            "original_parent_context": null,
+            "point_convention": "midpoint within each explicit finite range; no averaging across alternative routes",
+            "prose_numeric_mentions": [],
+            "conflicting_prose_readings": [],
+            "explicit_field_precedence_declared": true
+          },
+          "branch_group": null
+        },
+        {
+          "operation_id": "OP30",
+          "source": {
+            "unit_id": "L0044",
+            "start": 3354,
+            "end": 3428,
+            "quote": "Incubation with dichloromethane (DCM).(Temperature: RT, Time: 30 minutes)\n",
+            "answer_sha256": "dd2b2f24deba09da0fa5c6496d98b313f5648329345b250f58c4fa7fcb04e7dc"
+          },
+          "raw_phase": "delipidation",
+          "raw_execution_scope": "initial",
+          "raw_parsed_duration": {
+            "state": "explicit_exact",
+            "bounds_hours": [
+              0.5,
+              0.5
+            ],
+            "unique_hours": 0.5,
+            "source_numeric": true
+          },
+          "raw_repeat_count": 1,
+          "scope": {
+            "role": "core",
+            "basis": "saved core phase, reconciled with explicit source heading",
+            "heading": {
+              "start": 3341,
+              "end": 3354,
+              "quote": "Delipidation\n",
+              "title": "Delipidation"
+            }
+          },
+          "duration": {
+            "options": [
+              {
+                "option_id": "field_0",
+                "bounds_hours": [
+                  0.5,
+                  0.5
+                ],
+                "count": 1,
+                "literal": "30 minutes",
+                "expression": "30 minutes",
+                "count_in_field": false,
+                "overnight_default": false,
+                "each_in_field": false,
+                "repeat_interpretation": {
+                  "count": 1,
+                  "basis": "one separately represented timed operation; again is not itself an optional branch"
+                },
+                "source": {
+                  "unit_id": "L0044",
+                  "start": 3410,
+                  "end": 3426,
+                  "quote": "Time: 30 minutes",
+                  "answer_sha256": "dd2b2f24deba09da0fa5c6496d98b313f5648329345b250f58c4fa7fcb04e7dc"
+                },
+                "basis": "explicit source Time field"
+              }
+            ],
+            "issue": null,
+            "source": {
+              "unit_id": "L0044",
+              "start": 3410,
+              "end": 3426,
+              "quote": "Time: 30 minutes",
+              "answer_sha256": "dd2b2f24deba09da0fa5c6496d98b313f5648329345b250f58c4fa7fcb04e7dc"
+            },
+            "basis": "explicit source Time field",
+            "original_parent_context": null,
+            "point_convention": "midpoint within each explicit finite range; no averaging across alternative routes",
+            "prose_numeric_mentions": [],
+            "conflicting_prose_readings": [],
+            "explicit_field_precedence_declared": true
+          },
+          "branch_group": null
+        },
+        {
+          "operation_id": "OP31",
+          "source": {
+            "unit_id": "L0045",
+            "start": 3428,
+            "end": 3502,
+            "quote": "Incubation with dichloromethane (DCM).(Temperature: RT, Time: 30 minutes)\n",
+            "answer_sha256": "dd2b2f24deba09da0fa5c6496d98b313f5648329345b250f58c4fa7fcb04e7dc"
+          },
+          "raw_phase": "delipidation",
+          "raw_execution_scope": "initial",
+          "raw_parsed_duration": {
+            "state": "explicit_exact",
+            "bounds_hours": [
+              0.5,
+              0.5
+            ],
+            "unique_hours": 0.5,
+            "source_numeric": true
+          },
+          "raw_repeat_count": 1,
+          "scope": {
+            "role": "core",
+            "basis": "saved core phase, reconciled with explicit source heading",
+            "heading": {
+              "start": 3341,
+              "end": 3354,
+              "quote": "Delipidation\n",
+              "title": "Delipidation"
+            }
+          },
+          "duration": {
+            "options": [
+              {
+                "option_id": "field_0",
+                "bounds_hours": [
+                  0.5,
+                  0.5
+                ],
+                "count": 1,
+                "literal": "30 minutes",
+                "expression": "30 minutes",
+                "count_in_field": false,
+                "overnight_default": false,
+                "each_in_field": false,
+                "repeat_interpretation": {
+                  "count": 1,
+                  "basis": "one separately represented timed operation; again is not itself an optional branch"
+                },
+                "source": {
+                  "unit_id": "L0045",
+                  "start": 3484,
+                  "end": 3500,
+                  "quote": "Time: 30 minutes",
+                  "answer_sha256": "dd2b2f24deba09da0fa5c6496d98b313f5648329345b250f58c4fa7fcb04e7dc"
+                },
+                "basis": "explicit source Time field"
+              }
+            ],
+            "issue": null,
+            "source": {
+              "unit_id": "L0045",
+              "start": 3484,
+              "end": 3500,
+              "quote": "Time: 30 minutes",
+              "answer_sha256": "dd2b2f24deba09da0fa5c6496d98b313f5648329345b250f58c4fa7fcb04e7dc"
+            },
+            "basis": "explicit source Time field",
+            "original_parent_context": null,
+            "point_convention": "midpoint within each explicit finite range; no averaging across alternative routes",
+            "prose_numeric_mentions": [],
+            "conflicting_prose_readings": [],
+            "explicit_field_precedence_declared": true
+          },
+          "branch_group": null
+        },
+        {
+          "operation_id": "OP32",
+          "source": {
+            "unit_id": "L0047",
+            "start": 3528,
+            "end": 3647,
+            "quote": "Incubation with 100% (vol/vol) dibenzyl ether (DBE, Sigma 108014-1KG) without shaking.(Temperature: RT, Time: 2 hours)\n",
+            "answer_sha256": "dd2b2f24deba09da0fa5c6496d98b313f5648329345b250f58c4fa7fcb04e7dc"
+          },
+          "raw_phase": "ri_matching",
+          "raw_execution_scope": "initial",
+          "raw_parsed_duration": {
+            "state": "explicit_exact",
+            "bounds_hours": [
+              2.0,
+              2.0
+            ],
+            "unique_hours": 2.0,
+            "source_numeric": true
+          },
+          "raw_repeat_count": 1,
+          "scope": {
+            "role": "core",
+            "basis": "saved core phase, reconciled with explicit source heading",
+            "heading": {
+              "start": 3502,
+              "end": 3528,
+              "quote": "Refractive Index Matching\n",
+              "title": "Refractive Index Matching"
+            }
+          },
+          "duration": {
+            "options": [
+              {
+                "option_id": "field_0",
+                "bounds_hours": [
+                  2.0,
+                  2.0
+                ],
+                "count": 1,
+                "literal": "2 hours",
+                "expression": "2 hours",
+                "count_in_field": false,
+                "overnight_default": false,
+                "each_in_field": false,
+                "repeat_interpretation": {
+                  "count": 1,
+                  "basis": "one separately represented timed operation; again is not itself an optional branch"
+                },
+                "source": {
+                  "unit_id": "L0047",
+                  "start": 3632,
+                  "end": 3645,
+                  "quote": "Time: 2 hours",
+                  "answer_sha256": "dd2b2f24deba09da0fa5c6496d98b313f5648329345b250f58c4fa7fcb04e7dc"
+                },
+                "basis": "explicit source Time field"
+              }
+            ],
+            "issue": null,
+            "source": {
+              "unit_id": "L0047",
+              "start": 3632,
+              "end": 3645,
+              "quote": "Time: 2 hours",
+              "answer_sha256": "dd2b2f24deba09da0fa5c6496d98b313f5648329345b250f58c4fa7fcb04e7dc"
+            },
+            "basis": "explicit source Time field",
+            "original_parent_context": null,
+            "point_convention": "midpoint within each explicit finite range; no averaging across alternative routes",
+            "prose_numeric_mentions": [],
+            "conflicting_prose_readings": [],
+            "explicit_field_precedence_declared": true
+          },
+          "branch_group": null
+        },
+        {
+          "operation_id": "OP33",
+          "source": {
+            "unit_id": "L0049",
+            "start": 3682,
+            "end": 3820,
+            "quote": "Transfer brain to glass vial filled with fresh DBE and store at RT in the dark until light-sheet imaging.(Temperature: RT, Time: ≤7 days)\n",
+            "answer_sha256": "dd2b2f24deba09da0fa5c6496d98b313f5648329345b250f58c4fa7fcb04e7dc"
+          },
+          "raw_phase": "storage",
+          "raw_execution_scope": "initial",
+          "raw_parsed_duration": {
+            "state": "missing",
+            "bounds_hours": null,
+            "unique_hours": null
+          },
+          "raw_repeat_count": 1,
+          "scope": {
+            "role": "excluded",
+            "basis": "saved explicit excluded phase",
+            "original_phase": "storage",
+            "heading": {
+              "start": 3647,
+              "end": 3682,
+              "quote": "12 Storage and Imaging Preparation\n",
+              "title": "Storage and Imaging Preparation"
+            }
+          }
+        }
+      ],
+      "issues": [],
+      "scenarios": [
+        {
+          "scenario_id": "S000",
+          "selection": {
+            "branch:heading:1266": false
+          },
+          "contributions": [
+            {
+              "operation_id": "OP1",
+              "option_id": "field_0",
+              "bounds_hours": [
+                1.0,
+                1.0
+              ],
+              "repeat_count": 1,
+              "duration_bounds_hours": [
+                1.0,
+                1.0
+              ],
+              "source": {
+                "unit_id": "L0006",
+                "start": 874,
+                "end": 886,
+                "quote": "Time: 1 hour",
+                "answer_sha256": "dd2b2f24deba09da0fa5c6496d98b313f5648329345b250f58c4fa7fcb04e7dc"
+              }
+            },
+            {
+              "operation_id": "OP2",
+              "option_id": "field_0",
+              "bounds_hours": [
+                1.0,
+                1.0
+              ],
+              "repeat_count": 1,
+              "duration_bounds_hours": [
+                1.0,
+                1.0
+              ],
+              "source": {
+                "unit_id": "L0007",
+                "start": 952,
+                "end": 964,
+                "quote": "Time: 1 hour",
+                "answer_sha256": "dd2b2f24deba09da0fa5c6496d98b313f5648329345b250f58c4fa7fcb04e7dc"
+              }
+            },
+            {
+              "operation_id": "OP3",
+              "option_id": "field_0",
+              "bounds_hours": [
+                1.0,
+                1.0
+              ],
+              "repeat_count": 1,
+              "duration_bounds_hours": [
+                1.0,
+                1.0
+              ],
+              "source": {
+                "unit_id": "L0008",
+                "start": 1030,
+                "end": 1042,
+                "quote": "Time: 1 hour",
+                "answer_sha256": "dd2b2f24deba09da0fa5c6496d98b313f5648329345b250f58c4fa7fcb04e7dc"
+              }
+            },
+            {
+              "operation_id": "OP4",
+              "option_id": "field_0",
+              "bounds_hours": [
+                1.0,
+                1.0
+              ],
+              "repeat_count": 1,
+              "duration_bounds_hours": [
+                1.0,
+                1.0
+              ],
+              "source": {
+                "unit_id": "L0009",
+                "start": 1108,
+                "end": 1120,
+                "quote": "Time: 1 hour",
+                "answer_sha256": "dd2b2f24deba09da0fa5c6496d98b313f5648329345b250f58c4fa7fcb04e7dc"
+              }
+            },
+            {
+              "operation_id": "OP5",
+              "option_id": "field_0",
+              "bounds_hours": [
+                1.0,
+                1.0
+              ],
+              "repeat_count": 1,
+              "duration_bounds_hours": [
+                1.0,
+                1.0
+              ],
+              "source": {
+                "unit_id": "L0010",
+                "start": 1180,
+                "end": 1192,
+                "quote": "Time: 1 hour",
+                "answer_sha256": "dd2b2f24deba09da0fa5c6496d98b313f5648329345b250f58c4fa7fcb04e7dc"
+              }
+            },
+            {
+              "operation_id": "OP6",
+              "option_id": "field_0",
+              "bounds_hours": [
+                1.0,
+                1.0
+              ],
+              "repeat_count": 1,
+              "duration_bounds_hours": [
+                1.0,
+                1.0
+              ],
+              "source": {
+                "unit_id": "L0011",
+                "start": 1252,
+                "end": 1264,
+                "quote": "Time: 1 hour",
+                "answer_sha256": "dd2b2f24deba09da0fa5c6496d98b313f5648329345b250f58c4fa7fcb04e7dc"
+              }
+            },
+            {
+              "operation_id": "OP8",
+              "option_id": "field_0",
+              "bounds_hours": [
+                1.0,
+                1.0
+              ],
+              "repeat_count": 1,
+              "duration_bounds_hours": [
+                1.0,
+                1.0
+              ],
+              "source": {
+                "unit_id": "L0015",
+                "start": 1557,
+                "end": 1569,
+                "quote": "Time: 1 hour",
+                "answer_sha256": "dd2b2f24deba09da0fa5c6496d98b313f5648329345b250f58c4fa7fcb04e7dc"
+              }
+            },
+            {
+              "operation_id": "OP9",
+              "option_id": "field_0",
+              "bounds_hours": [
+                1.0,
+                1.0
+              ],
+              "repeat_count": 1,
+              "duration_bounds_hours": [
+                1.0,
+                1.0
+              ],
+              "source": {
+                "unit_id": "L0016",
+                "start": 1635,
+                "end": 1647,
+                "quote": "Time: 1 hour",
+                "answer_sha256": "dd2b2f24deba09da0fa5c6496d98b313f5648329345b250f58c4fa7fcb04e7dc"
+              }
+            },
+            {
+              "operation_id": "OP10",
+              "option_id": "field_0",
+              "bounds_hours": [
+                1.0,
+                1.0
+              ],
+              "repeat_count": 1,
+              "duration_bounds_hours": [
+                1.0,
+                1.0
+              ],
+              "source": {
+                "unit_id": "L0017",
+                "start": 1713,
+                "end": 1725,
+                "quote": "Time: 1 hour",
+                "answer_sha256": "dd2b2f24deba09da0fa5c6496d98b313f5648329345b250f58c4fa7fcb04e7dc"
+              }
+            },
+            {
+              "operation_id": "OP11",
+              "option_id": "field_0",
+              "bounds_hours": [
+                1.0,
+                1.0
+              ],
+              "repeat_count": 1,
+              "duration_bounds_hours": [
+                1.0,
+                1.0
+              ],
+              "source": {
+                "unit_id": "L0018",
+                "start": 1791,
+                "end": 1803,
+                "quote": "Time: 1 hour",
+                "answer_sha256": "dd2b2f24deba09da0fa5c6496d98b313f5648329345b250f58c4fa7fcb04e7dc"
+              }
+            },
+            {
+              "operation_id": "OP12",
+              "option_id": "field_0",
+              "bounds_hours": [
+                1.0,
+                1.0
+              ],
+              "repeat_count": 1,
+              "duration_bounds_hours": [
+                1.0,
+                1.0
+              ],
+              "source": {
+                "unit_id": "L0019",
+                "start": 1879,
+                "end": 1891,
+                "quote": "Time: 1 hour",
+                "answer_sha256": "dd2b2f24deba09da0fa5c6496d98b313f5648329345b250f58c4fa7fcb04e7dc"
+              }
+            },
+            {
+              "operation_id": "OP24",
+              "option_id": "field_0",
+              "bounds_hours": [
+                1.0,
+                1.0
+              ],
+              "repeat_count": 1,
+              "duration_bounds_hours": [
+                1.0,
+                1.0
+              ],
+              "source": {
+                "unit_id": "L0037",
+                "start": 2949,
+                "end": 2961,
+                "quote": "Time: 1 hour",
+                "answer_sha256": "dd2b2f24deba09da0fa5c6496d98b313f5648329345b250f58c4fa7fcb04e7dc"
+              }
+            },
+            {
+              "operation_id": "OP25",
+              "option_id": "field_0",
+              "bounds_hours": [
+                1.0,
+                1.0
+              ],
+              "repeat_count": 1,
+              "duration_bounds_hours": [
+                1.0,
+                1.0
+              ],
+              "source": {
+                "unit_id": "L0038",
+                "start": 3027,
+                "end": 3039,
+                "quote": "Time: 1 hour",
+                "answer_sha256": "dd2b2f24deba09da0fa5c6496d98b313f5648329345b250f58c4fa7fcb04e7dc"
+              }
+            },
+            {
+              "operation_id": "OP26",
+              "option_id": "field_0",
+              "bounds_hours": [
+                1.0,
+                1.0
+              ],
+              "repeat_count": 1,
+              "duration_bounds_hours": [
+                1.0,
+                1.0
+              ],
+              "source": {
+                "unit_id": "L0039",
+                "start": 3105,
+                "end": 3117,
+                "quote": "Time: 1 hour",
+                "answer_sha256": "dd2b2f24deba09da0fa5c6496d98b313f5648329345b250f58c4fa7fcb04e7dc"
+              }
+            },
+            {
+              "operation_id": "OP27",
+              "option_id": "field_0",
+              "bounds_hours": [
+                1.0,
+                1.0
+              ],
+              "repeat_count": 1,
+              "duration_bounds_hours": [
+                1.0,
+                1.0
+              ],
+              "source": {
+                "unit_id": "L0040",
+                "start": 3183,
+                "end": 3195,
+                "quote": "Time: 1 hour",
+                "answer_sha256": "dd2b2f24deba09da0fa5c6496d98b313f5648329345b250f58c4fa7fcb04e7dc"
+              }
+            },
+            {
+              "operation_id": "OP28",
+              "option_id": "field_0",
+              "bounds_hours": [
+                1.0,
+                1.0
+              ],
+              "repeat_count": 1,
+              "duration_bounds_hours": [
+                1.0,
+                1.0
+              ],
+              "source": {
+                "unit_id": "L0041",
+                "start": 3255,
+                "end": 3267,
+                "quote": "Time: 1 hour",
+                "answer_sha256": "dd2b2f24deba09da0fa5c6496d98b313f5648329345b250f58c4fa7fcb04e7dc"
+              }
+            },
+            {
+              "operation_id": "OP29",
+              "option_id": "field_0",
+              "bounds_hours": [
+                1.0,
+                1.0
+              ],
+              "repeat_count": 1,
+              "duration_bounds_hours": [
+                1.0,
+                1.0
+              ],
+              "source": {
+                "unit_id": "L0042",
+                "start": 3327,
+                "end": 3339,
+                "quote": "Time: 1 hour",
+                "answer_sha256": "dd2b2f24deba09da0fa5c6496d98b313f5648329345b250f58c4fa7fcb04e7dc"
+              }
+            },
+            {
+              "operation_id": "OP30",
+              "option_id": "field_0",
+              "bounds_hours": [
+                0.5,
+                0.5
+              ],
+              "repeat_count": 1,
+              "duration_bounds_hours": [
+                0.5,
+                0.5
+              ],
+              "source": {
+                "unit_id": "L0044",
+                "start": 3410,
+                "end": 3426,
+                "quote": "Time: 30 minutes",
+                "answer_sha256": "dd2b2f24deba09da0fa5c6496d98b313f5648329345b250f58c4fa7fcb04e7dc"
+              }
+            },
+            {
+              "operation_id": "OP31",
+              "option_id": "field_0",
+              "bounds_hours": [
+                0.5,
+                0.5
+              ],
+              "repeat_count": 1,
+              "duration_bounds_hours": [
+                0.5,
+                0.5
+              ],
+              "source": {
+                "unit_id": "L0045",
+                "start": 3484,
+                "end": 3500,
+                "quote": "Time: 30 minutes",
+                "answer_sha256": "dd2b2f24deba09da0fa5c6496d98b313f5648329345b250f58c4fa7fcb04e7dc"
+              }
+            },
+            {
+              "operation_id": "OP32",
+              "option_id": "field_0",
+              "bounds_hours": [
+                2.0,
+                2.0
+              ],
+              "repeat_count": 1,
+              "duration_bounds_hours": [
+                2.0,
+                2.0
+              ],
+              "source": {
+                "unit_id": "L0047",
+                "start": 3632,
+                "end": 3645,
+                "quote": "Time: 2 hours",
+                "answer_sha256": "dd2b2f24deba09da0fa5c6496d98b313f5648329345b250f58c4fa7fcb04e7dc"
+              }
+            }
+          ],
+          "omitted_core_operations": [
+            "OP7"
+          ],
+          "unknown_duration_operations": [],
+          "issues": [],
+          "known_subtotal_bounds_hours": [
+            20.0,
+            20.0
+          ],
+          "bounds_hours": [
+            20.0,
+            20.0
+          ],
+          "hours": 20.0
+        },
+        {
+          "scenario_id": "S001",
+          "selection": {
+            "branch:heading:1266": true
+          },
+          "contributions": [
+            {
+              "operation_id": "OP1",
+              "option_id": "field_0",
+              "bounds_hours": [
+                1.0,
+                1.0
+              ],
+              "repeat_count": 1,
+              "duration_bounds_hours": [
+                1.0,
+                1.0
+              ],
+              "source": {
+                "unit_id": "L0006",
+                "start": 874,
+                "end": 886,
+                "quote": "Time: 1 hour",
+                "answer_sha256": "dd2b2f24deba09da0fa5c6496d98b313f5648329345b250f58c4fa7fcb04e7dc"
+              }
+            },
+            {
+              "operation_id": "OP2",
+              "option_id": "field_0",
+              "bounds_hours": [
+                1.0,
+                1.0
+              ],
+              "repeat_count": 1,
+              "duration_bounds_hours": [
+                1.0,
+                1.0
+              ],
+              "source": {
+                "unit_id": "L0007",
+                "start": 952,
+                "end": 964,
+                "quote": "Time: 1 hour",
+                "answer_sha256": "dd2b2f24deba09da0fa5c6496d98b313f5648329345b250f58c4fa7fcb04e7dc"
+              }
+            },
+            {
+              "operation_id": "OP3",
+              "option_id": "field_0",
+              "bounds_hours": [
+                1.0,
+                1.0
+              ],
+              "repeat_count": 1,
+              "duration_bounds_hours": [
+                1.0,
+                1.0
+              ],
+              "source": {
+                "unit_id": "L0008",
+                "start": 1030,
+                "end": 1042,
+                "quote": "Time: 1 hour",
+                "answer_sha256": "dd2b2f24deba09da0fa5c6496d98b313f5648329345b250f58c4fa7fcb04e7dc"
+              }
+            },
+            {
+              "operation_id": "OP4",
+              "option_id": "field_0",
+              "bounds_hours": [
+                1.0,
+                1.0
+              ],
+              "repeat_count": 1,
+              "duration_bounds_hours": [
+                1.0,
+                1.0
+              ],
+              "source": {
+                "unit_id": "L0009",
+                "start": 1108,
+                "end": 1120,
+                "quote": "Time: 1 hour",
+                "answer_sha256": "dd2b2f24deba09da0fa5c6496d98b313f5648329345b250f58c4fa7fcb04e7dc"
+              }
+            },
+            {
+              "operation_id": "OP5",
+              "option_id": "field_0",
+              "bounds_hours": [
+                1.0,
+                1.0
+              ],
+              "repeat_count": 1,
+              "duration_bounds_hours": [
+                1.0,
+                1.0
+              ],
+              "source": {
+                "unit_id": "L0010",
+                "start": 1180,
+                "end": 1192,
+                "quote": "Time: 1 hour",
+                "answer_sha256": "dd2b2f24deba09da0fa5c6496d98b313f5648329345b250f58c4fa7fcb04e7dc"
+              }
+            },
+            {
+              "operation_id": "OP6",
+              "option_id": "field_0",
+              "bounds_hours": [
+                1.0,
+                1.0
+              ],
+              "repeat_count": 1,
+              "duration_bounds_hours": [
+                1.0,
+                1.0
+              ],
+              "source": {
+                "unit_id": "L0011",
+                "start": 1252,
+                "end": 1264,
+                "quote": "Time: 1 hour",
+                "answer_sha256": "dd2b2f24deba09da0fa5c6496d98b313f5648329345b250f58c4fa7fcb04e7dc"
+              }
+            },
+            {
+              "operation_id": "OP7",
+              "option_id": "field_0",
+              "bounds_hours": [
+                12.0,
+                12.0
+              ],
+              "repeat_count": 1,
+              "duration_bounds_hours": [
+                12.0,
+                12.0
+              ],
+              "source": {
+                "unit_id": "L0013",
+                "start": 1463,
+                "end": 1477,
+                "quote": "Time: 12 hours",
+                "answer_sha256": "dd2b2f24deba09da0fa5c6496d98b313f5648329345b250f58c4fa7fcb04e7dc"
+              }
+            },
+            {
+              "operation_id": "OP8",
+              "option_id": "field_0",
+              "bounds_hours": [
+                1.0,
+                1.0
+              ],
+              "repeat_count": 1,
+              "duration_bounds_hours": [
+                1.0,
+                1.0
+              ],
+              "source": {
+                "unit_id": "L0015",
+                "start": 1557,
+                "end": 1569,
+                "quote": "Time: 1 hour",
+                "answer_sha256": "dd2b2f24deba09da0fa5c6496d98b313f5648329345b250f58c4fa7fcb04e7dc"
+              }
+            },
+            {
+              "operation_id": "OP9",
+              "option_id": "field_0",
+              "bounds_hours": [
+                1.0,
+                1.0
+              ],
+              "repeat_count": 1,
+              "duration_bounds_hours": [
+                1.0,
+                1.0
+              ],
+              "source": {
+                "unit_id": "L0016",
+                "start": 1635,
+                "end": 1647,
+                "quote": "Time: 1 hour",
+                "answer_sha256": "dd2b2f24deba09da0fa5c6496d98b313f5648329345b250f58c4fa7fcb04e7dc"
+              }
+            },
+            {
+              "operation_id": "OP10",
+              "option_id": "field_0",
+              "bounds_hours": [
+                1.0,
+                1.0
+              ],
+              "repeat_count": 1,
+              "duration_bounds_hours": [
+                1.0,
+                1.0
+              ],
+              "source": {
+                "unit_id": "L0017",
+                "start": 1713,
+                "end": 1725,
+                "quote": "Time: 1 hour",
+                "answer_sha256": "dd2b2f24deba09da0fa5c6496d98b313f5648329345b250f58c4fa7fcb04e7dc"
+              }
+            },
+            {
+              "operation_id": "OP11",
+              "option_id": "field_0",
+              "bounds_hours": [
+                1.0,
+                1.0
+              ],
+              "repeat_count": 1,
+              "duration_bounds_hours": [
+                1.0,
+                1.0
+              ],
+              "source": {
+                "unit_id": "L0018",
+                "start": 1791,
+                "end": 1803,
+                "quote": "Time: 1 hour",
+                "answer_sha256": "dd2b2f24deba09da0fa5c6496d98b313f5648329345b250f58c4fa7fcb04e7dc"
+              }
+            },
+            {
+              "operation_id": "OP12",
+              "option_id": "field_0",
+              "bounds_hours": [
+                1.0,
+                1.0
+              ],
+              "repeat_count": 1,
+              "duration_bounds_hours": [
+                1.0,
+                1.0
+              ],
+              "source": {
+                "unit_id": "L0019",
+                "start": 1879,
+                "end": 1891,
+                "quote": "Time: 1 hour",
+                "answer_sha256": "dd2b2f24deba09da0fa5c6496d98b313f5648329345b250f58c4fa7fcb04e7dc"
+              }
+            },
+            {
+              "operation_id": "OP24",
+              "option_id": "field_0",
+              "bounds_hours": [
+                1.0,
+                1.0
+              ],
+              "repeat_count": 1,
+              "duration_bounds_hours": [
+                1.0,
+                1.0
+              ],
+              "source": {
+                "unit_id": "L0037",
+                "start": 2949,
+                "end": 2961,
+                "quote": "Time: 1 hour",
+                "answer_sha256": "dd2b2f24deba09da0fa5c6496d98b313f5648329345b250f58c4fa7fcb04e7dc"
+              }
+            },
+            {
+              "operation_id": "OP25",
+              "option_id": "field_0",
+              "bounds_hours": [
+                1.0,
+                1.0
+              ],
+              "repeat_count": 1,
+              "duration_bounds_hours": [
+                1.0,
+                1.0
+              ],
+              "source": {
+                "unit_id": "L0038",
+                "start": 3027,
+                "end": 3039,
+                "quote": "Time: 1 hour",
+                "answer_sha256": "dd2b2f24deba09da0fa5c6496d98b313f5648329345b250f58c4fa7fcb04e7dc"
+              }
+            },
+            {
+              "operation_id": "OP26",
+              "option_id": "field_0",
+              "bounds_hours": [
+                1.0,
+                1.0
+              ],
+              "repeat_count": 1,
+              "duration_bounds_hours": [
+                1.0,
+                1.0
+              ],
+              "source": {
+                "unit_id": "L0039",
+                "start": 3105,
+                "end": 3117,
+                "quote": "Time: 1 hour",
+                "answer_sha256": "dd2b2f24deba09da0fa5c6496d98b313f5648329345b250f58c4fa7fcb04e7dc"
+              }
+            },
+            {
+              "operation_id": "OP27",
+              "option_id": "field_0",
+              "bounds_hours": [
+                1.0,
+                1.0
+              ],
+              "repeat_count": 1,
+              "duration_bounds_hours": [
+                1.0,
+                1.0
+              ],
+              "source": {
+                "unit_id": "L0040",
+                "start": 3183,
+                "end": 3195,
+                "quote": "Time: 1 hour",
+                "answer_sha256": "dd2b2f24deba09da0fa5c6496d98b313f5648329345b250f58c4fa7fcb04e7dc"
+              }
+            },
+            {
+              "operation_id": "OP28",
+              "option_id": "field_0",
+              "bounds_hours": [
+                1.0,
+                1.0
+              ],
+              "repeat_count": 1,
+              "duration_bounds_hours": [
+                1.0,
+                1.0
+              ],
+              "source": {
+                "unit_id": "L0041",
+                "start": 3255,
+                "end": 3267,
+                "quote": "Time: 1 hour",
+                "answer_sha256": "dd2b2f24deba09da0fa5c6496d98b313f5648329345b250f58c4fa7fcb04e7dc"
+              }
+            },
+            {
+              "operation_id": "OP29",
+              "option_id": "field_0",
+              "bounds_hours": [
+                1.0,
+                1.0
+              ],
+              "repeat_count": 1,
+              "duration_bounds_hours": [
+                1.0,
+                1.0
+              ],
+              "source": {
+                "unit_id": "L0042",
+                "start": 3327,
+                "end": 3339,
+                "quote": "Time: 1 hour",
+                "answer_sha256": "dd2b2f24deba09da0fa5c6496d98b313f5648329345b250f58c4fa7fcb04e7dc"
+              }
+            },
+            {
+              "operation_id": "OP30",
+              "option_id": "field_0",
+              "bounds_hours": [
+                0.5,
+                0.5
+              ],
+              "repeat_count": 1,
+              "duration_bounds_hours": [
+                0.5,
+                0.5
+              ],
+              "source": {
+                "unit_id": "L0044",
+                "start": 3410,
+                "end": 3426,
+                "quote": "Time: 30 minutes",
+                "answer_sha256": "dd2b2f24deba09da0fa5c6496d98b313f5648329345b250f58c4fa7fcb04e7dc"
+              }
+            },
+            {
+              "operation_id": "OP31",
+              "option_id": "field_0",
+              "bounds_hours": [
+                0.5,
+                0.5
+              ],
+              "repeat_count": 1,
+              "duration_bounds_hours": [
+                0.5,
+                0.5
+              ],
+              "source": {
+                "unit_id": "L0045",
+                "start": 3484,
+                "end": 3500,
+                "quote": "Time: 30 minutes",
+                "answer_sha256": "dd2b2f24deba09da0fa5c6496d98b313f5648329345b250f58c4fa7fcb04e7dc"
+              }
+            },
+            {
+              "operation_id": "OP32",
+              "option_id": "field_0",
+              "bounds_hours": [
+                2.0,
+                2.0
+              ],
+              "repeat_count": 1,
+              "duration_bounds_hours": [
+                2.0,
+                2.0
+              ],
+              "source": {
+                "unit_id": "L0047",
+                "start": 3632,
+                "end": 3645,
+                "quote": "Time: 2 hours",
+                "answer_sha256": "dd2b2f24deba09da0fa5c6496d98b313f5648329345b250f58c4fa7fcb04e7dc"
+              }
+            }
+          ],
+          "omitted_core_operations": [],
+          "unknown_duration_operations": [],
+          "issues": [],
+          "known_subtotal_bounds_hours": [
+            32.0,
+            32.0
+          ],
+          "bounds_hours": [
+            32.0,
+            32.0
+          ],
+          "hours": 32.0
+        }
+      ],
+      "hours": null,
+      "single_unbranched_point": false,
+      "conditional_group_count": 1,
+      "schedule_convention": "sum reported serial core incubation durations",
+      "elapsed_laboratory_time_claimed": false,
+      "model_raw_modified": false,
+      "new_model_calls": 0,
+      "selection_uses_achieved_score": false,
+      "expert_validated": false
+    },
+    "time_formula": null,
+    "conditional_time_results": [
+      {
+        "scenario_id": "S000",
+        "hours": 20.0,
+        "metrics": {
+          "c_param": 3,
+          "co_order": 3,
+          "co_method": 2,
+          "co_param": 1,
+          "co_chem": 1,
+          "s_method": -0.4313,
+          "s_label": 1.7999999999999998,
+          "s_trans": 2.814646787157323,
+          "s_time": 2.5709906743058366,
+          "sr": 0.3333333333333333,
+          "sp": 0.11428571428571428,
+          "Com": 0.7333333333333333,
+          "Cor": 0.875,
+          "Eff": 0.6272381217885967,
+          "IA": 0.6272381217885967,
+          "HV": 0.40247779481434953
+        },
+        "formula": {
+          "policy": "kb-window-asymmetric-median-0.20-under-0.10-over-v1",
+          "source": "time_kb.json",
+          "requested_tier": "T04_WHOLE_MOUSE_BRAIN_5_12MM",
+          "actual_hours": 20.0,
+          "min_hours": 24.0,
+          "max_hours": 72.0,
+          "median_hours": 36.0,
+          "tau_hours": 7.2,
+          "delta_hours": 4.0,
+          "tau_under_fraction": 0.2,
+          "tau_over_fraction": 0.1,
+          "status": "scored",
+          "resolved_tier": "T04_WHOLE_MOUSE_BRAIN_5_12MM",
+          "method_key": "idisco+"
+        }
+      },
+      {
+        "scenario_id": "S001",
+        "hours": 32.0,
+        "metrics": {
+          "c_param": 3,
+          "co_order": 3,
+          "co_method": 2,
+          "co_param": 1,
+          "co_chem": 1,
+          "s_method": -0.4313,
+          "s_label": 1.7999999999999998,
+          "s_trans": 2.814646787157323,
+          "s_time": 3.0,
+          "sr": 0.3333333333333333,
+          "sp": 0.11428571428571428,
+          "Com": 0.7333333333333333,
+          "Cor": 0.875,
+          "Eff": 0.662988898929777,
+          "IA": 0.662988898929777,
+          "HV": 0.42541787681327353
+        },
+        "formula": {
+          "policy": "kb-window-asymmetric-median-0.20-under-0.10-over-v1",
+          "source": "time_kb.json",
+          "requested_tier": "T04_WHOLE_MOUSE_BRAIN_5_12MM",
+          "actual_hours": 32.0,
+          "min_hours": 24.0,
+          "max_hours": 72.0,
+          "median_hours": 36.0,
+          "tau_hours": 7.2,
+          "delta_hours": 0.0,
+          "tau_under_fraction": 0.2,
+          "tau_over_fraction": 0.1,
+          "status": "scored",
+          "resolved_tier": "T04_WHOLE_MOUSE_BRAIN_5_12MM",
+          "method_key": "idisco+"
+        }
+      }
+    ],
+    "time_dependency_view_reconstructed": false,
+    "candidate_point_applied": false,
+    "time_changes": {}
+  },
+  "case_source": {
+    "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\optimizer_round3_20261011\\confirmation_qwen_01\\cases.json",
+    "sha256": "b4e50ef0280f7450532e198c1c6cd85ec399de06f68007a848cae1ed0fb5a08f"
+  },
+  "original_source": {
+    "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\optimizer_round3_20261011\\confirmation_qwen_01\\original_source_documents\\a0be171b1e6430f37d04d331.json",
+    "sha256": "4f5946865e0cddd750e261480134038ab1e5cfef838f630234998b5c6073530c"
+  }
+}

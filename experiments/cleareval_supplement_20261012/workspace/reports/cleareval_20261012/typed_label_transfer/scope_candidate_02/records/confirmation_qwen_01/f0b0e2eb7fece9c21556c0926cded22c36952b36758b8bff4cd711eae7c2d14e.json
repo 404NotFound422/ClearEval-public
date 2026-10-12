@@ -1,0 +1,953 @@
+{
+  "cell_id": "R3C05__r0",
+  "cohort": "confirmation_qwen_01",
+  "question_id": 23,
+  "case_id": "round3_confirmation_05",
+  "anonymous_answer_id": "R3C05",
+  "repeat_index": 0,
+  "metrics": {
+    "c_param": 3,
+    "co_order": 3,
+    "co_method": 2,
+    "co_param": 1,
+    "co_chem": 1,
+    "s_method": -0.45,
+    "s_label": null,
+    "s_trans": 2.7055534759358473,
+    "s_time": null,
+    "sr": 1.0,
+    "sp": 0.27586206896551724,
+    "Com": 1.0,
+    "Cor": 0.875,
+    "Eff": null,
+    "IA": null,
+    "HV": null
+  },
+  "complete_numeric_CCE": false,
+  "original_status": "success",
+  "source_record": {
+    "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\optimizer_round3_20261011\\confirmation_qwen_01\\run\\attempts\\f0b0e2eb7fece9c21556c0926cded22c36952b36758b8bff4cd711eae7c2d14e_1\\processing.json",
+    "sha256": "f0a37609c4669cc59e1ba9fb08f8e207dfdea8c12a43686c7b288f675f136e41"
+  },
+  "source_document": {
+    "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\optimizer_round3_20261011\\confirmation_qwen_01\\source_documents\\5f8fcf1226c974435e2393be.json",
+    "sha256": "bce5bca25c677dfd6ed01de7e2c2aaac721eaefcc2bdb904e00c59c35989a4dd"
+  },
+  "answer_sha256": "cc1fe1e633dae5d4152c8f44f671575c7cce8fd4e14b209fc6046886e8559c4c",
+  "original_answer_sha256": "5635b58bca905e8a848c015f1823e33c7011e69dcfa6f7c787ef4eab8b7c2c1c",
+  "trial": {
+    "path": "C:\\ClearEval\\ClearEval-public\\artifacts\\cce_validation\\optimizer_round3_20261011\\confirmation_qwen_01\\run\\trials\\f0b0e2eb7fece9c21556c0926cded22c36952b36758b8bff4cd711eae7c2d14e.json",
+    "sha256": "edc38d0fd5c945054d66bcd90a9da2e0a4bf33fff31cd19e7d2767ead35e6591"
+  },
+  "saved_trial_id": "f0b0e2eb7fece9c21556c0926cded22c36952b36758b8bff4cd711eae7c2d14e",
+  "quantitative_data": {
+    "method_name": "FDISCO",
+    "tissue_ri_value": 1.46,
+    "total_time_hours": null,
+    "sample_tier": "T02_THICK_SLICE_0P5_3MM",
+    "reagent_ri_value": 1.56,
+    "protocol_time_hours": null
+  },
+  "time_derivation": {
+    "hours": null,
+    "issues": [
+      "conditional_scope_lacks_explicit_source_evidence",
+      "labeling_preparation_not_source_supported_or_possible_core_function",
+      "no_complete_numeric_operation_set",
+      "nonunique_duration_range",
+      "source_action_records_not_all_classified",
+      "source_duration_candidates_not_all_classified",
+      "unknown_included_duration_or_repeat:OP014",
+      "unknown_included_duration_or_repeat:OP016",
+      "unknown_included_duration_or_repeat:OP018"
+    ],
+    "original_calculation": {
+      "total_hours": null,
+      "candidate_bounds_hours": [
+        8.5,
+        null
+      ],
+      "issues": [
+        "conditional_scope_lacks_explicit_source_evidence",
+        "labeling_preparation_not_source_supported_or_possible_core_function",
+        "no_complete_numeric_operation_set",
+        "nonunique_duration_range",
+        "source_action_records_not_all_classified",
+        "source_duration_candidates_not_all_classified",
+        "unknown_included_duration_or_repeat:OP014",
+        "unknown_included_duration_or_repeat:OP016",
+        "unknown_included_duration_or_repeat:OP018"
+      ],
+      "included_operation_ids": [
+        "OP009",
+        "OP010",
+        "OP011",
+        "OP012",
+        "OP013",
+        "OP014",
+        "OP015",
+        "OP016",
+        "OP017",
+        "OP018"
+      ],
+      "excluded_operations": [
+        {
+          "id": "OP001",
+          "phase": "routine_wash"
+        },
+        {
+          "id": "OP002",
+          "phase": "labeling_preparation"
+        },
+        {
+          "id": "OP003",
+          "phase": "labeling_preparation"
+        },
+        {
+          "id": "OP004",
+          "phase": "routine_wash"
+        },
+        {
+          "id": "OP005",
+          "phase": "labeling_preparation"
+        },
+        {
+          "id": "OP006",
+          "phase": "labeling_preparation"
+        },
+        {
+          "id": "OP007",
+          "phase": "labeling_preparation"
+        },
+        {
+          "id": "OP008",
+          "phase": "routine_wash"
+        },
+        {
+          "id": "OP020",
+          "phase": "storage"
+        },
+        {
+          "id": "OP021",
+          "phase": "storage"
+        },
+        {
+          "id": "OP022",
+          "phase": "storage"
+        },
+        {
+          "id": "OP023",
+          "phase": "storage"
+        },
+        {
+          "id": "OP025",
+          "phase": "imaging"
+        },
+        {
+          "id": "OP026",
+          "phase": "imaging"
+        },
+        {
+          "id": "OP027",
+          "phase": "imaging"
+        },
+        {
+          "id": "OP028",
+          "phase": "storage"
+        }
+      ],
+      "claims": [],
+      "mode": "serial",
+      "known_operation_contributions": [
+        {
+          "operation_id": "OP009",
+          "lower_hours": 1.0,
+          "upper_hours": 1.0,
+          "repeat_status": "source_exact_or_single"
+        },
+        {
+          "operation_id": "OP010",
+          "lower_hours": 1.0,
+          "upper_hours": 1.0,
+          "repeat_status": "source_exact_or_single"
+        },
+        {
+          "operation_id": "OP011",
+          "lower_hours": 1.0,
+          "upper_hours": 1.0,
+          "repeat_status": "source_exact_or_single"
+        },
+        {
+          "operation_id": "OP012",
+          "lower_hours": 1.0,
+          "upper_hours": 1.0,
+          "repeat_status": "source_exact_or_single"
+        },
+        {
+          "operation_id": "OP013",
+          "lower_hours": 1.0,
+          "upper_hours": 1.0,
+          "repeat_status": "source_exact_or_single"
+        },
+        {
+          "operation_id": "OP014",
+          "lower_hours": 1.0,
+          "upper_hours": null,
+          "repeat_status": "unknown_at_least_one"
+        },
+        {
+          "operation_id": "OP015",
+          "lower_hours": 0.5,
+          "upper_hours": 0.5,
+          "repeat_status": "source_exact_or_single"
+        },
+        {
+          "operation_id": "OP017",
+          "lower_hours": 2.0,
+          "upper_hours": 2.0,
+          "repeat_status": "source_exact_or_single"
+        }
+      ],
+      "initial_scope_candidate_bounds_hours": [
+        8.5,
+        null
+      ],
+      "conditional_operations": [
+        {
+          "operation_id": "OP019",
+          "source_supported_condition": true,
+          "condition_evidence": {
+            "unit_id": "L0039",
+            "quote": "4.3 Verify optical transparency visually; tissue should appear fully clear. If residual opacity remains, replace with fresh DBE and continue incubation for an additional 4 hours at 4 °C.\n",
+            "occurrence": 0,
+            "source_id": "SRC_c0837405c26e1292edcb48aa",
+            "start": 4741,
+            "end": 4928,
+            "answer_sha256": "cc1fe1e633dae5d4152c8f44f671575c7cce8fd4e14b209fc6046886e8559c4c",
+            "context_start": 4741,
+            "context_end": 4928,
+            "context": "4.3 Verify optical transparency visually; tissue should appear fully clear. If residual opacity remains, replace with fresh DBE and continue incubation for an additional 4 hours at 4 °C.\n",
+            "unit_reference": {
+              "source_unit_sha256": "0b1bed4c2ed64b8eb6a196ce141f7070a56449d02f19365fa388feacf8ed4093",
+              "raw_unit_text_preserved": true,
+              "wide_evidence_not_atomic_identity": true
+            }
+          },
+          "bounds_hours": [
+            4.0,
+            4.0
+          ]
+        },
+        {
+          "operation_id": "OP024",
+          "source_supported_condition": false,
+          "condition_evidence": {
+            "unit_id": "L0048",
+            "quote": "6.1 Remove sample from storage DBE; transfer to a fresh glass vial with 100% DBE for equilibration. (Temperature: RT, Time: 30 min, protected from light)\n",
+            "occurrence": 0,
+            "source_id": "SRC_c0837405c26e1292edcb48aa",
+            "start": 5505,
+            "end": 5659,
+            "answer_sha256": "cc1fe1e633dae5d4152c8f44f671575c7cce8fd4e14b209fc6046886e8559c4c",
+            "context_start": 5505,
+            "context_end": 5659,
+            "context": "6.1 Remove sample from storage DBE; transfer to a fresh glass vial with 100% DBE for equilibration. (Temperature: RT, Time: 30 min, protected from light)\n",
+            "unit_reference": {
+              "source_unit_sha256": "89b427af86bcbb56f7d91d90e28464accbabea449b958da99ba82bc66afb02ce",
+              "raw_unit_text_preserved": true,
+              "wide_evidence_not_atomic_identity": true
+            }
+          },
+          "bounds_hours": [
+            0.5,
+            0.5
+          ]
+        }
+      ],
+      "timeline_derivation": {
+        "model_proposed_operation_ids": [
+          "OP001",
+          "OP002",
+          "OP003",
+          "OP004",
+          "OP005",
+          "OP006",
+          "OP007",
+          "OP008",
+          "OP009",
+          "OP010",
+          "OP011",
+          "OP012",
+          "OP013",
+          "OP014",
+          "OP015",
+          "OP016",
+          "OP017",
+          "OP018",
+          "OP020",
+          "OP021",
+          "OP022"
+        ],
+        "program_initial_operation_ids": [
+          "OP009",
+          "OP010",
+          "OP011",
+          "OP012",
+          "OP013",
+          "OP014",
+          "OP015",
+          "OP016",
+          "OP017",
+          "OP018"
+        ],
+        "excluded_from_proposal": [
+          "OP001",
+          "OP002",
+          "OP003",
+          "OP004",
+          "OP005",
+          "OP006",
+          "OP007",
+          "OP008",
+          "OP020",
+          "OP021",
+          "OP022"
+        ],
+        "added_from_declared_initial_operations": [],
+        "same_members_and_order": false,
+        "raw_proposal_preserved": true,
+        "phase_and_scope_semantics_verified": false
+      },
+      "model_precedence_audit": {
+        "cyclic_model_proposal": false,
+        "backward_document_order_edges": 0,
+        "unsupported_dependency_claims": 0,
+        "model_edges_used_for_aggregation": false,
+        "program_uses_declared_schedule_and_source_order_convention": true
+      },
+      "coverage_scopes": {
+        "whole_protocol_operations": "complete",
+        "core_time_operations": "complete",
+        "model_timeline_completeness": "complete",
+        "program_core_gate_independent_of_whole_protocol_completeness": true,
+        "action_recall_is_not_exhaustive_semantic_gold": true
+      },
+      "initial_plus_at_most_one_conditional_execution_envelope_hours": [
+        8.5,
+        null
+      ],
+      "endpoint_scope": "The primary score covers the reported initial core processing. Conditional later operations and their time bounds are retained separately.",
+      "bounds_scope": "Conditional on supplied phase/schedule classification; null upper bound means no finite source-supported upper bound.",
+      "serial_convention": "Document-order operations are provisionally summed only if no branch/overlap cue is detected; semantic schedule is not certified.",
+      "overnight_policy": "Original rubric: overnight is eight hours by convention, not a measured duration.",
+      "scientific_total_confirmed": false,
+      "primary_time_scope": "initial_core_clearing_to_first_imaging_ready",
+      "later_processing_reported_separately": true
+    }
+  },
+  "version": "typed-label-fixed-rule-transfer-v1",
+  "primary_metrics": {
+    "c_param": 3,
+    "co_order": 3,
+    "co_method": 2,
+    "co_param": 1,
+    "co_chem": 1,
+    "s_method": -0.45,
+    "s_label": null,
+    "s_trans": 2.7055534759358473,
+    "s_time": null,
+    "sr": 1.0,
+    "sp": 0.27586206896551724,
+    "Com": 1.0,
+    "Cor": 0.875,
+    "Eff": null,
+    "IA": null,
+    "HV": null
+  },
+  "typed_label_metrics": {
+    "c_param": 3,
+    "co_order": 3,
+    "co_method": 2,
+    "co_param": 1,
+    "co_chem": 1,
+    "s_method": -0.45,
+    "s_label": null,
+    "s_trans": 2.7055534759358473,
+    "s_time": null,
+    "sr": 1.0,
+    "sp": 0.27586206896551724,
+    "Com": 1.0,
+    "Cor": 0.875,
+    "Eff": null,
+    "IA": null,
+    "HV": null
+  },
+  "typed_midpoint_metrics": {
+    "c_param": 3,
+    "co_order": 3,
+    "co_method": 2,
+    "co_param": 1,
+    "co_chem": 1,
+    "s_method": -0.45,
+    "s_label": null,
+    "s_trans": 2.7055534759358473,
+    "s_time": null,
+    "sr": 1.0,
+    "sp": 0.27586206896551724,
+    "Com": 1.0,
+    "Cor": 0.875,
+    "Eff": null,
+    "IA": null,
+    "HV": null
+  },
+  "label_replay_status": "replayed",
+  "label_derivation": {
+    "version": "cce-typed-label-scorer-v2.1",
+    "s_label": null,
+    "channels": {
+      "s_target_match": null,
+      "s_marker_fluor_compat": null,
+      "s_method_fluor_compat": 5.1
+    },
+    "channel_applicability": {
+      "s_target_match": {
+        "applicable": true,
+        "value": null,
+        "contributing_pairs": [
+          "relation:R001"
+        ]
+      },
+      "s_marker_fluor_compat": {
+        "applicable": true,
+        "value": null,
+        "contributing_pairs": [
+          "relation:R001"
+        ]
+      },
+      "s_method_fluor_compat": {
+        "applicable": true,
+        "value": 5.1,
+        "contributing_pairs": [
+          "native:I001",
+          "relation:R001"
+        ]
+      }
+    },
+    "pair_results": [
+      {
+        "pair_id": "native:I001",
+        "entity_id": "E001",
+        "fluorophore": "EGFP",
+        "reported_marker": null,
+        "reported_target_literal": null,
+        "label_type": "native_fluorescent_protein",
+        "original_function_input": {
+          "EGFP": ""
+        },
+        "applicable": {
+          "s_target_match": false,
+          "s_marker_fluor_compat": false,
+          "s_method_fluor_compat": true
+        },
+        "channels": {
+          "s_target_match": null,
+          "s_marker_fluor_compat": null,
+          "s_method_fluor_compat": 5.4
+        },
+        "not_applicable_reason": "standalone fluorescence has no antibody target-pair channel",
+        "source_evidence": {
+          "unit_id": "L0002",
+          "start": 26,
+          "end": 109,
+          "quote": "**Chosen Labeling:** [EGFP (endogenous), MAP2 + Alexa Fluor (secondary conjugate)]\n",
+          "answer_sha256": "cc1fe1e633dae5d4152c8f44f671575c7cce8fd4e14b209fc6046886e8559c4c"
+        },
+        "compatibility_audit": [
+          {
+            "kind": "method_fluor",
+            "method_name": "FDISCO",
+            "fluorophore": "EGFP",
+            "source": "KnowledgeBase/method_fluro_compati.json",
+            "value": 0.9,
+            "status": "TABLE_REPORTED"
+          }
+        ]
+      },
+      {
+        "pair_id": "relation:R001",
+        "entity_id": "E003",
+        "fluorophore": "Alexa Fluor 647",
+        "reported_marker": null,
+        "reported_target_literal": "MAP2",
+        "label_type": "targeted_or_unclassified_reagent",
+        "original_function_input": {
+          "Alexa Fluor 647": ""
+        },
+        "applicable": {
+          "s_target_match": true,
+          "s_marker_fluor_compat": true,
+          "s_method_fluor_compat": true
+        },
+        "channels": {
+          "s_target_match": null,
+          "s_marker_fluor_compat": null,
+          "s_method_fluor_compat": 5.1
+        },
+        "not_applicable_reason": null,
+        "source_evidence": {
+          "unit_id": "L0019",
+          "start": 2765,
+          "end": 3012,
+          "quote": "1.5 Secondary antibody incubation: incubate with donkey anti-rabbit Alexa Fluor 647-conjugated secondary antibody [1:500 dilution in antibody diluent as in step 1.3]. (Temperature: 37 °C, Time: 48 hours, with gentle shaking, protected from light)\n",
+          "answer_sha256": "cc1fe1e633dae5d4152c8f44f671575c7cce8fd4e14b209fc6046886e8559c4c"
+        },
+        "compatibility_audit": [
+          {
+            "kind": "method_fluor",
+            "method_name": "FDISCO",
+            "fluorophore": "Alexa Fluor 647",
+            "source": "KnowledgeBase/method_fluro_compati.json",
+            "value": 0.85,
+            "status": "TABLE_REPORTED"
+          }
+        ]
+      }
+    ],
+    "resolved_uncertainties": [],
+    "remaining_uncertainties": [
+      {
+        "kind": "reported_unresolved_relation",
+        "relation_id": "R001",
+        "entity_id": "E003"
+      }
+    ],
+    "minimum_of_available_applicable_channels": null,
+    "task_target_coverage": "native/direct task coverage remains separate from antibody-pair applicability",
+    "new_model_calls": 0,
+    "expert_validated": false
+  },
+  "compatibility_lookup_trace": [],
+  "midpoint_time_derivation": {
+    "hours": null,
+    "bounds_hours": [
+      8.5,
+      null
+    ],
+    "decision": "source_semantic_resolution_needed",
+    "issues": [
+      "conditional_scope_lacks_explicit_source_evidence",
+      "labeling_preparation_not_source_supported_or_possible_core_function",
+      "no_complete_numeric_operation_set",
+      "nonunique_duration_range",
+      "source_action_records_not_all_classified",
+      "source_duration_candidates_not_all_classified",
+      "unknown_included_duration_or_repeat:OP014",
+      "unknown_included_duration_or_repeat:OP016",
+      "unknown_included_duration_or_repeat:OP018"
+    ]
+  },
+  "remaining_dependencies": {
+    "time": [
+      "conditional_scope_lacks_explicit_source_evidence",
+      "labeling_preparation_not_source_supported_or_possible_core_function",
+      "no_complete_numeric_operation_set",
+      "nonunique_duration_range",
+      "source_action_records_not_all_classified",
+      "source_duration_candidates_not_all_classified",
+      "unknown_included_duration_or_repeat:OP014",
+      "unknown_included_duration_or_repeat:OP016",
+      "unknown_included_duration_or_repeat:OP018"
+    ],
+    "label_relations": [
+      {
+        "kind": "reported_unresolved_relation",
+        "relation_id": "R001",
+        "entity_id": "E003"
+      }
+    ],
+    "compatibility": []
+  },
+  "original_technical_status_preserved": true,
+  "new_model_calls": 0,
+  "new_author_annotations": 0,
+  "scope_candidate_metrics": {
+    "c_param": 3,
+    "co_order": 3,
+    "co_method": 2,
+    "co_param": 1,
+    "co_chem": 1,
+    "s_method": -0.45,
+    "s_label": null,
+    "s_trans": 2.7055534759358473,
+    "s_time": null,
+    "sr": 1.0,
+    "sp": 0.27586206896551724,
+    "Com": 1.0,
+    "Cor": 0.875,
+    "Eff": null,
+    "IA": null,
+    "HV": null
+  },
+  "scope_time_interpretation": {
+    "hours": null,
+    "bounds_hours": [
+      8.5,
+      null
+    ],
+    "decision": "unresolved_source_input",
+    "scope": "reported_core_operations",
+    "original_issues": [
+      "conditional_scope_lacks_explicit_source_evidence",
+      "labeling_preparation_not_source_supported_or_possible_core_function",
+      "no_complete_numeric_operation_set",
+      "nonunique_duration_range",
+      "source_action_records_not_all_classified",
+      "source_duration_candidates_not_all_classified",
+      "unknown_included_duration_or_repeat:OP014",
+      "unknown_included_duration_or_repeat:OP016",
+      "unknown_included_duration_or_repeat:OP018"
+    ],
+    "resolved_scope_issues": [],
+    "issues": [
+      "conditional_scope_lacks_explicit_source_evidence",
+      "labeling_preparation_not_source_supported_or_possible_core_function",
+      "no_complete_numeric_operation_set",
+      "nonunique_duration_range",
+      "source_action_records_not_all_classified",
+      "source_duration_candidates_not_all_classified",
+      "unknown_included_duration_or_repeat:OP014",
+      "unknown_included_duration_or_repeat:OP016",
+      "unknown_included_duration_or_repeat:OP018"
+    ],
+    "phase_evidence": [
+      {
+        "operation_id": "OP002",
+        "supported": false,
+        "reason": "source_heading_does_not_establish_excluded_phase",
+        "heading": {
+          "start": 1964,
+          "end": 2043,
+          "quote": "**1 Pre-clearing Immunostaining (MAP2 labeling before organic solvent steps)**\n",
+          "title": "Pre-clearing Immunostaining (MAP2 labeling before organic solvent steps)"
+        },
+        "operation": {
+          "unit_id": "L0016",
+          "quote": "1.2 Permeabilization and blocking: incubate tissue in blocking/permeabilization buffer [0.5% (vol/vol) Triton X-100, 10% (vol/vol) normal donkey serum, 0.1% (wt/vol) sodium azide in 1× PBS]. (Temperature: 37 °C, Time: 24 hours, with gentle shaking)\n",
+          "occurrence": 0,
+          "source_id": "SRC_c0837405c26e1292edcb48aa",
+          "start": 2156,
+          "end": 2405,
+          "answer_sha256": "cc1fe1e633dae5d4152c8f44f671575c7cce8fd4e14b209fc6046886e8559c4c",
+          "context_start": 2156,
+          "context_end": 2405,
+          "context": "1.2 Permeabilization and blocking: incubate tissue in blocking/permeabilization buffer [0.5% (vol/vol) Triton X-100, 10% (vol/vol) normal donkey serum, 0.1% (wt/vol) sodium azide in 1× PBS]. (Temperature: 37 °C, Time: 24 hours, with gentle shaking)\n",
+          "unit_reference": {
+            "source_unit_sha256": "308aef11708e0969535548dbfb19a2e98fa8e534f8ed27ffb6b215a3d06cfea0",
+            "raw_unit_text_preserved": true,
+            "wide_evidence_not_atomic_identity": true
+          }
+        }
+      },
+      {
+        "operation_id": "OP003",
+        "supported": false,
+        "reason": "source_heading_does_not_establish_excluded_phase",
+        "heading": {
+          "start": 1964,
+          "end": 2043,
+          "quote": "**1 Pre-clearing Immunostaining (MAP2 labeling before organic solvent steps)**\n",
+          "title": "Pre-clearing Immunostaining (MAP2 labeling before organic solvent steps)"
+        },
+        "operation": {
+          "unit_id": "L0017",
+          "quote": "1.3 Primary antibody incubation: incubate with anti-MAP2 rabbit polyclonal antibody [1:500 dilution in antibody diluent: 0.5% Triton X-100, 5% normal donkey serum, 0.1% sodium azide in 1× PBS]. (Temperature: 37 °C, Time: 48 hours, with gentle shaking)\n",
+          "occurrence": 0,
+          "source_id": "SRC_c0837405c26e1292edcb48aa",
+          "start": 2405,
+          "end": 2657,
+          "answer_sha256": "cc1fe1e633dae5d4152c8f44f671575c7cce8fd4e14b209fc6046886e8559c4c",
+          "context_start": 2405,
+          "context_end": 2657,
+          "context": "1.3 Primary antibody incubation: incubate with anti-MAP2 rabbit polyclonal antibody [1:500 dilution in antibody diluent: 0.5% Triton X-100, 5% normal donkey serum, 0.1% sodium azide in 1× PBS]. (Temperature: 37 °C, Time: 48 hours, with gentle shaking)\n",
+          "unit_reference": {
+            "source_unit_sha256": "c2749a58c63214c58aaae2ca4500989becb6dbb3424504375fa3214beab12074",
+            "raw_unit_text_preserved": true,
+            "wide_evidence_not_atomic_identity": true
+          }
+        }
+      },
+      {
+        "operation_id": "OP005",
+        "supported": false,
+        "reason": "source_heading_does_not_establish_excluded_phase",
+        "heading": {
+          "start": 1964,
+          "end": 2043,
+          "quote": "**1 Pre-clearing Immunostaining (MAP2 labeling before organic solvent steps)**\n",
+          "title": "Pre-clearing Immunostaining (MAP2 labeling before organic solvent steps)"
+        },
+        "operation": {
+          "unit_id": "L0019",
+          "quote": "1.5 Secondary antibody incubation: incubate with donkey anti-rabbit Alexa Fluor 647-conjugated secondary antibody [1:500 dilution in antibody diluent as in step 1.3]. (Temperature: 37 °C, Time: 48 hours, with gentle shaking, protected from light)\n",
+          "occurrence": 0,
+          "source_id": "SRC_c0837405c26e1292edcb48aa",
+          "start": 2765,
+          "end": 3012,
+          "answer_sha256": "cc1fe1e633dae5d4152c8f44f671575c7cce8fd4e14b209fc6046886e8559c4c",
+          "context_start": 2765,
+          "context_end": 3012,
+          "context": "1.5 Secondary antibody incubation: incubate with donkey anti-rabbit Alexa Fluor 647-conjugated secondary antibody [1:500 dilution in antibody diluent as in step 1.3]. (Temperature: 37 °C, Time: 48 hours, with gentle shaking, protected from light)\n",
+          "unit_reference": {
+            "source_unit_sha256": "94165223249bdf028fb520eb32960afaf97d74a98a8bfafdc36953088a6c54f3",
+            "raw_unit_text_preserved": true,
+            "wide_evidence_not_atomic_identity": true
+          }
+        }
+      },
+      {
+        "operation_id": "OP006",
+        "supported": false,
+        "reason": "source_heading_does_not_establish_excluded_phase",
+        "heading": {
+          "start": 1964,
+          "end": 2043,
+          "quote": "**1 Pre-clearing Immunostaining (MAP2 labeling before organic solvent steps)**\n",
+          "title": "Pre-clearing Immunostaining (MAP2 labeling before organic solvent steps)"
+        },
+        "operation": {
+          "unit_id": "L0020",
+          "quote": "1.6 Wash 5× with PBST. (Temperature: RT, Time: 1 hour per wash)",
+          "occurrence": 0,
+          "source_id": "SRC_c0837405c26e1292edcb48aa",
+          "start": 3012,
+          "end": 3075,
+          "answer_sha256": "cc1fe1e633dae5d4152c8f44f671575c7cce8fd4e14b209fc6046886e8559c4c",
+          "context_start": 3012,
+          "context_end": 3076,
+          "context": "1.6 Wash 5× with PBST. (Temperature: RT, Time: 1 hour per wash)\n",
+          "candidate_reference": {
+            "candidate_id": "O0008",
+            "kind": "operation_span",
+            "registry_sha256": "fd98f487bf8acb76f9d922e6b377cca5feedeafd2e9acfe7b1e62b3eb12d14ea",
+            "enumerator_version": "source_bound_extraction_v11",
+            "selection_is_not_semantic_confirmation": true
+          }
+        }
+      },
+      {
+        "operation_id": "OP007",
+        "supported": false,
+        "reason": "source_heading_does_not_establish_excluded_phase",
+        "heading": {
+          "start": 1964,
+          "end": 2043,
+          "quote": "**1 Pre-clearing Immunostaining (MAP2 labeling before organic solvent steps)**\n",
+          "title": "Pre-clearing Immunostaining (MAP2 labeling before organic solvent steps)"
+        },
+        "operation": {
+          "unit_id": "L0021",
+          "quote": "1.7 Post-immunostaining fixation: incubate in 4% (wt/vol) PFA in 1× PBS to crosslink antibodies in place. (Temperature: RT, Time: 2 hours, with gentle shaking)\n",
+          "occurrence": 0,
+          "source_id": "SRC_c0837405c26e1292edcb48aa",
+          "start": 3076,
+          "end": 3236,
+          "answer_sha256": "cc1fe1e633dae5d4152c8f44f671575c7cce8fd4e14b209fc6046886e8559c4c",
+          "context_start": 3076,
+          "context_end": 3236,
+          "context": "1.7 Post-immunostaining fixation: incubate in 4% (wt/vol) PFA in 1× PBS to crosslink antibodies in place. (Temperature: RT, Time: 2 hours, with gentle shaking)\n",
+          "unit_reference": {
+            "source_unit_sha256": "d29fc1b9f76826cf7d0e657dd7385524bb076aa383774f43f2dd69f0c673aa74",
+            "raw_unit_text_preserved": true,
+            "wide_evidence_not_atomic_identity": true
+          }
+        }
+      }
+    ],
+    "operation_contributions": [
+      {
+        "operation_id": "OP009",
+        "lower_hours": 1.0,
+        "upper_hours": 1.0,
+        "repeat_status": "source_exact_or_single"
+      },
+      {
+        "operation_id": "OP010",
+        "lower_hours": 1.0,
+        "upper_hours": 1.0,
+        "repeat_status": "source_exact_or_single"
+      },
+      {
+        "operation_id": "OP011",
+        "lower_hours": 1.0,
+        "upper_hours": 1.0,
+        "repeat_status": "source_exact_or_single"
+      },
+      {
+        "operation_id": "OP012",
+        "lower_hours": 1.0,
+        "upper_hours": 1.0,
+        "repeat_status": "source_exact_or_single"
+      },
+      {
+        "operation_id": "OP013",
+        "lower_hours": 1.0,
+        "upper_hours": 1.0,
+        "repeat_status": "source_exact_or_single"
+      },
+      {
+        "operation_id": "OP014",
+        "lower_hours": 1.0,
+        "upper_hours": null,
+        "repeat_status": "unknown_at_least_one"
+      },
+      {
+        "operation_id": "OP015",
+        "lower_hours": 0.5,
+        "upper_hours": 0.5,
+        "repeat_status": "source_exact_or_single"
+      },
+      {
+        "operation_id": "OP017",
+        "lower_hours": 2.0,
+        "upper_hours": 2.0,
+        "repeat_status": "source_exact_or_single"
+      }
+    ],
+    "workflow_completeness_not_inferred": true,
+    "complete_experimental_endpoint_duration": "not_separately_estimated",
+    "saved_coverage_judgment": {
+      "entities": "complete",
+      "time_operations": "complete",
+      "core_time_operations": "complete",
+      "unresolved": []
+    }
+  },
+  "repeated_channel_resolution": [],
+  "scope_label_derivation": {
+    "version": "cce-typed-label-scorer-v2.1",
+    "s_label": null,
+    "channels": {
+      "s_target_match": null,
+      "s_marker_fluor_compat": null,
+      "s_method_fluor_compat": 5.1
+    },
+    "channel_applicability": {
+      "s_target_match": {
+        "applicable": true,
+        "value": null,
+        "contributing_pairs": [
+          "relation:R001"
+        ]
+      },
+      "s_marker_fluor_compat": {
+        "applicable": true,
+        "value": null,
+        "contributing_pairs": [
+          "relation:R001"
+        ]
+      },
+      "s_method_fluor_compat": {
+        "applicable": true,
+        "value": 5.1,
+        "contributing_pairs": [
+          "native:I001",
+          "relation:R001"
+        ]
+      }
+    },
+    "pair_results": [
+      {
+        "pair_id": "native:I001",
+        "entity_id": "E001",
+        "fluorophore": "EGFP",
+        "reported_marker": null,
+        "reported_target_literal": null,
+        "label_type": "native_fluorescent_protein",
+        "original_function_input": {
+          "EGFP": ""
+        },
+        "applicable": {
+          "s_target_match": false,
+          "s_marker_fluor_compat": false,
+          "s_method_fluor_compat": true
+        },
+        "channels": {
+          "s_target_match": null,
+          "s_marker_fluor_compat": null,
+          "s_method_fluor_compat": 5.4
+        },
+        "not_applicable_reason": "standalone fluorescence has no antibody target-pair channel",
+        "source_evidence": {
+          "unit_id": "L0002",
+          "start": 26,
+          "end": 109,
+          "quote": "**Chosen Labeling:** [EGFP (endogenous), MAP2 + Alexa Fluor (secondary conjugate)]\n",
+          "answer_sha256": "cc1fe1e633dae5d4152c8f44f671575c7cce8fd4e14b209fc6046886e8559c4c"
+        },
+        "compatibility_audit": [
+          {
+            "kind": "method_fluor",
+            "method_name": "FDISCO",
+            "fluorophore": "EGFP",
+            "source": "KnowledgeBase/method_fluro_compati.json",
+            "value": 0.9,
+            "status": "TABLE_REPORTED"
+          }
+        ]
+      },
+      {
+        "pair_id": "relation:R001",
+        "entity_id": "E003",
+        "fluorophore": "Alexa Fluor 647",
+        "reported_marker": null,
+        "reported_target_literal": "MAP2",
+        "label_type": "targeted_or_unclassified_reagent",
+        "original_function_input": {
+          "Alexa Fluor 647": ""
+        },
+        "applicable": {
+          "s_target_match": true,
+          "s_marker_fluor_compat": true,
+          "s_method_fluor_compat": true
+        },
+        "channels": {
+          "s_target_match": null,
+          "s_marker_fluor_compat": null,
+          "s_method_fluor_compat": 5.1
+        },
+        "not_applicable_reason": null,
+        "source_evidence": {
+          "unit_id": "L0019",
+          "start": 2765,
+          "end": 3012,
+          "quote": "1.5 Secondary antibody incubation: incubate with donkey anti-rabbit Alexa Fluor 647-conjugated secondary antibody [1:500 dilution in antibody diluent as in step 1.3]. (Temperature: 37 °C, Time: 48 hours, with gentle shaking, protected from light)\n",
+          "answer_sha256": "cc1fe1e633dae5d4152c8f44f671575c7cce8fd4e14b209fc6046886e8559c4c"
+        },
+        "compatibility_audit": [
+          {
+            "kind": "method_fluor",
+            "method_name": "FDISCO",
+            "fluorophore": "Alexa Fluor 647",
+            "source": "KnowledgeBase/method_fluro_compati.json",
+            "value": 0.85,
+            "status": "TABLE_REPORTED"
+          }
+        ]
+      }
+    ],
+    "resolved_uncertainties": [],
+    "remaining_uncertainties": [
+      {
+        "kind": "reported_unresolved_relation",
+        "relation_id": "R001",
+        "entity_id": "E003"
+      }
+    ],
+    "minimum_of_available_applicable_channels": null,
+    "task_target_coverage": "native/direct task coverage remains separate from antibody-pair applicability",
+    "new_model_calls": 0,
+    "expert_validated": false
+  },
+  "scope_changes": {},
+  "original_raw_untouched": true
+}

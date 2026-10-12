@@ -1,0 +1,1165 @@
+{
+  "references": [
+    {
+      "title": "HeidelTime: High Quality Rule-Based Extraction and Normalization of Temporal Expressions",
+      "year": 2010,
+      "url": "https://aclanthology.org/S10-1071/",
+      "supports": "separate recognition and normalization; no laboratory truth claim"
+    },
+    {
+      "title": "Beyond Accuracy: Behavioral Testing of NLP Models with CheckList",
+      "year": 2020,
+      "url": "https://aclanthology.org/2020.acl-main.442/",
+      "supports": "behavioral invariance and failure tests"
+    },
+    {
+      "title": "Making Monolingual Sentence Embeddings Multilingual using Knowledge Distillation",
+      "year": 2020,
+      "url": "https://aclanthology.org/2020.emnlp-main.365/",
+      "supports": "future multilingual alignment direction, not an executed fix"
+    }
+  ],
+  "iterations": [
+    {
+      "iteration": 1,
+      "canonical32": {
+        "cohort": "canonical32",
+        "saved_returns": 32,
+        "unbranched_candidate_point_count": 29,
+        "s_time_available_before": 26,
+        "s_time_available_after": 30,
+        "complete_before": 26,
+        "complete_after": 30,
+        "changed": [
+          "R3C01__r0",
+          "R3C02__r0",
+          "R3C04__r0",
+          "R3C07__r0"
+        ],
+        "candidate_not_applied": [
+          {
+            "cell_id": "R3C03__r0",
+            "issues": [
+              {
+                "kind": "source_schedule_not_serial",
+                "mode": "unknown"
+              },
+              {
+                "kind": "unknown_operation_scope",
+                "operation_id": "OP01"
+              },
+              {
+                "kind": "unknown_operation_scope",
+                "operation_id": "OP02"
+              },
+              {
+                "kind": "no_reported_core_incubations"
+              }
+            ],
+            "finite_scenarios": 0
+          },
+          {
+            "cell_id": "R3C05__r0",
+            "issues": [
+              {
+                "kind": "unrepresented_source_action_candidates",
+                "records": [
+                  {
+                    "candidate": {
+                      "candidate_id": "C0209",
+                      "kind": "operation_record_lead",
+                      "span": {
+                        "unit_id": "L0032",
+                        "quote": "**3 Delipidation and Clearing**",
+                        "occurrence": 0,
+                        "source_id": "SRC_c0837405c26e1292edcb48aa",
+                        "start": 4076,
+                        "end": 4107,
+                        "answer_sha256": "cc1fe1e633dae5d4152c8f44f671575c7cce8fd4e14b209fc6046886e8559c4c",
+                        "context_start": 4076,
+                        "context_end": 4108,
+                        "context": "**3 Delipidation and Clearing**\n"
+                      },
+                      "role": "lexical_action_record_recall_not_core_phase_or_completeness_gold",
+                      "coverage_state": "uncovered_candidate",
+                      "record_represented": false,
+                      "original_coverage_state": "uncovered_candidate",
+                      "unresolved_field_records_preserved": []
+                    },
+                    "title_check": {
+                      "supported": false,
+                      "reason": "not_a_standalone_phase_title",
+                      "source": {
+                        "unit_id": "L0032",
+                        "quote": "**3 Delipidation and Clearing**",
+                        "occurrence": 0,
+                        "source_id": "SRC_c0837405c26e1292edcb48aa",
+                        "start": 4076,
+                        "end": 4107,
+                        "answer_sha256": "cc1fe1e633dae5d4152c8f44f671575c7cce8fd4e14b209fc6046886e8559c4c",
+                        "context_start": 4076,
+                        "context_end": 4108,
+                        "context": "**3 Delipidation and Clearing**\n"
+                      }
+                    }
+                  },
+                  {
+                    "candidate": {
+                      "candidate_id": "C0211",
+                      "kind": "operation_record_lead",
+                      "span": {
+                        "unit_id": "L0036",
+                        "quote": "**4 Refractive Index Matching and Clearing in DBE**",
+                        "occurrence": 0,
+                        "source_id": "SRC_c0837405c26e1292edcb48aa",
+                        "start": 4341,
+                        "end": 4392,
+                        "answer_sha256": "cc1fe1e633dae5d4152c8f44f671575c7cce8fd4e14b209fc6046886e8559c4c",
+                        "context_start": 4341,
+                        "context_end": 4393,
+                        "context": "**4 Refractive Index Matching and Clearing in DBE**\n"
+                      },
+                      "role": "lexical_action_record_recall_not_core_phase_or_completeness_gold",
+                      "coverage_state": "uncovered_candidate",
+                      "record_represented": false,
+                      "original_coverage_state": "uncovered_candidate",
+                      "unresolved_field_records_preserved": []
+                    },
+                    "title_check": {
+                      "supported": false,
+                      "reason": "not_a_standalone_phase_title",
+                      "source": {
+                        "unit_id": "L0036",
+                        "quote": "**4 Refractive Index Matching and Clearing in DBE**",
+                        "occurrence": 0,
+                        "source_id": "SRC_c0837405c26e1292edcb48aa",
+                        "start": 4341,
+                        "end": 4392,
+                        "answer_sha256": "cc1fe1e633dae5d4152c8f44f671575c7cce8fd4e14b209fc6046886e8559c4c",
+                        "context_start": 4341,
+                        "context_end": 4393,
+                        "context": "**4 Refractive Index Matching and Clearing in DBE**\n"
+                      }
+                    }
+                  }
+                ]
+              }
+            ],
+            "finite_scenarios": 0
+          },
+          {
+            "cell_id": "R3C08__r0",
+            "issues": [],
+            "finite_scenarios": 2
+          }
+        ],
+        "new_model_calls": 0,
+        "new_per_answer_author_annotations": 0,
+        "scientific_accuracy_claimed": false
+      },
+      "archived67": {
+        "cohort": "archived67",
+        "saved_returns": 67,
+        "unbranched_candidate_point_count": 60,
+        "s_time_available_before": 61,
+        "s_time_available_after": 63,
+        "complete_before": 48,
+        "complete_after": 49,
+        "changed": [
+          "FPC02",
+          "FPC04",
+          "FPC13"
+        ],
+        "candidate_not_applied": [
+          {
+            "cell_id": "E2_03__local_qwen27b_q8_development__r0",
+            "issues": [
+              {
+                "kind": "missing_or_unbound_operation_duration",
+                "operation_id": "OP01"
+              },
+              {
+                "kind": "missing_or_unbound_operation_duration",
+                "operation_id": "OP02"
+              },
+              {
+                "kind": "missing_or_unbound_operation_duration",
+                "operation_id": "OP03"
+              },
+              {
+                "kind": "missing_or_unbound_operation_duration",
+                "operation_id": "OP04"
+              },
+              {
+                "kind": "missing_or_unbound_operation_duration",
+                "operation_id": "OP05"
+              },
+              {
+                "kind": "missing_or_unbound_operation_duration",
+                "operation_id": "OP06"
+              },
+              {
+                "kind": "missing_or_unbound_operation_duration",
+                "operation_id": "OP07"
+              }
+            ],
+            "finite_scenarios": 0
+          },
+          {
+            "cell_id": "E2_07__local_qwen27b_q8_development__r0",
+            "issues": [
+              {
+                "kind": "missing_or_unbound_operation_duration",
+                "operation_id": "OP4"
+              },
+              {
+                "kind": "missing_or_unbound_operation_duration",
+                "operation_id": "OP5"
+              },
+              {
+                "kind": "missing_or_unbound_operation_duration",
+                "operation_id": "OP6"
+              },
+              {
+                "kind": "missing_or_unbound_operation_duration",
+                "operation_id": "OP7"
+              },
+              {
+                "kind": "missing_or_unbound_operation_duration",
+                "operation_id": "OP8"
+              },
+              {
+                "kind": "missing_or_unbound_operation_duration",
+                "operation_id": "OP9"
+              }
+            ],
+            "finite_scenarios": 0
+          },
+          {
+            "cell_id": "E2_11__local_qwen27b_q8_development__r0",
+            "issues": [
+              {
+                "kind": "missing_or_unbound_operation_duration",
+                "operation_id": "OP08"
+              },
+              {
+                "kind": "missing_or_unbound_operation_duration",
+                "operation_id": "OP09"
+              },
+              {
+                "kind": "missing_or_unbound_operation_duration",
+                "operation_id": "OP10"
+              },
+              {
+                "kind": "missing_or_unbound_operation_duration",
+                "operation_id": "OP11"
+              },
+              {
+                "kind": "missing_or_unbound_operation_duration",
+                "operation_id": "OP12"
+              },
+              {
+                "kind": "missing_or_unbound_operation_duration",
+                "operation_id": "OP13"
+              },
+              {
+                "kind": "missing_or_unbound_operation_duration",
+                "operation_id": "OP14"
+              }
+            ],
+            "finite_scenarios": 0
+          },
+          {
+            "cell_id": "A01__codex_unobserved__r1",
+            "issues": [
+              {
+                "kind": "missing_or_unbound_operation_duration",
+                "operation_id": "P2"
+              },
+              {
+                "kind": "missing_or_unbound_operation_duration",
+                "operation_id": "P9"
+              },
+              {
+                "kind": "unrepresented_source_action_candidates",
+                "records": [
+                  {
+                    "candidate": {
+                      "candidate_id": "C0078",
+                      "kind": "operation_record_lead",
+                      "span": {
+                        "unit_id": "L0015",
+                        "quote": "2.6 Incubation with a fresh second batch of 100% (vol/vol) peroxide-free THF (pH 9.0 adjusted with Triethylamine).(Temperature: 4 ℃, Time: 12 hours)",
+                        "occurrence": 0,
+                        "source_id": "SRC_51920a4fec8d07d246ad932f",
+                        "start": 1467,
+                        "end": 1615,
+                        "answer_sha256": "963230e5722093771be058ec61e609d7865721d2c597162bea482eec3275e3cb",
+                        "context_start": 1467,
+                        "context_end": 1616,
+                        "context": "2.6 Incubation with a fresh second batch of 100% (vol/vol) peroxide-free THF (pH 9.0 adjusted with Triethylamine).(Temperature: 4 ℃, Time: 12 hours)\n"
+                      },
+                      "role": "lexical_action_record_recall_not_core_phase_or_completeness_gold",
+                      "coverage_state": "explicitly_unresolved"
+                    },
+                    "title_check": {
+                      "supported": false,
+                      "reason": "not_a_standalone_phase_title",
+                      "source": {
+                        "unit_id": "L0015",
+                        "quote": "2.6 Incubation with a fresh second batch of 100% (vol/vol) peroxide-free THF (pH 9.0 adjusted with Triethylamine).(Temperature: 4 ℃, Time: 12 hours)",
+                        "occurrence": 0,
+                        "source_id": "SRC_51920a4fec8d07d246ad932f",
+                        "start": 1467,
+                        "end": 1615,
+                        "answer_sha256": "963230e5722093771be058ec61e609d7865721d2c597162bea482eec3275e3cb",
+                        "context_start": 1467,
+                        "context_end": 1616,
+                        "context": "2.6 Incubation with a fresh second batch of 100% (vol/vol) peroxide-free THF (pH 9.0 adjusted with Triethylamine).(Temperature: 4 ℃, Time: 12 hours)\n"
+                      }
+                    }
+                  }
+                ]
+              }
+            ],
+            "finite_scenarios": 0
+          },
+          {
+            "cell_id": "FPC05",
+            "issues": [],
+            "finite_scenarios": 8
+          },
+          {
+            "cell_id": "FPC07",
+            "issues": [
+              {
+                "kind": "unparsed_or_multiple_Time_field_durations",
+                "operation_id": "OP10"
+              }
+            ],
+            "finite_scenarios": 0
+          },
+          {
+            "cell_id": "FPC16",
+            "issues": [
+              {
+                "kind": "unresolved_repeat",
+                "operation_id": "OP011"
+              }
+            ],
+            "finite_scenarios": 0
+          }
+        ],
+        "new_model_calls": 0,
+        "new_per_answer_author_annotations": 0,
+        "scientific_accuracy_claimed": false
+      }
+    },
+    {
+      "iteration": 2,
+      "canonical32": {
+        "cohort": "canonical32",
+        "saved_returns": 32,
+        "unbranched_candidate_point_count": 28,
+        "s_time_available_before": 26,
+        "s_time_available_after": 29,
+        "complete_before": 26,
+        "complete_after": 29,
+        "changed": [
+          "R3C01__r0",
+          "R3C04__r0",
+          "R3C07__r0"
+        ],
+        "candidate_not_applied": [
+          {
+            "cell_id": "R3C02__r0",
+            "issues": [
+              {
+                "kind": "combined_labeling_and_core_transition_duration_unreported",
+                "operation_id": "OP034"
+              },
+              {
+                "kind": "missing_or_unbound_operation_duration",
+                "operation_id": "OP035"
+              },
+              {
+                "kind": "missing_or_unbound_operation_duration",
+                "operation_id": "OP036"
+              }
+            ],
+            "finite_scenarios": 1
+          },
+          {
+            "cell_id": "R3C03__r0",
+            "issues": [
+              {
+                "kind": "source_schedule_not_serial",
+                "mode": "unknown"
+              },
+              {
+                "kind": "unknown_operation_scope",
+                "operation_id": "OP01"
+              },
+              {
+                "kind": "unknown_operation_scope",
+                "operation_id": "OP02"
+              },
+              {
+                "kind": "no_reported_core_incubations"
+              }
+            ],
+            "finite_scenarios": 0
+          },
+          {
+            "cell_id": "R3C05__r0",
+            "issues": [],
+            "finite_scenarios": 4
+          },
+          {
+            "cell_id": "R3C08__r0",
+            "issues": [],
+            "finite_scenarios": 2
+          }
+        ],
+        "new_model_calls": 0,
+        "new_per_answer_author_annotations": 0,
+        "scientific_accuracy_claimed": false
+      },
+      "archived67": {
+        "cohort": "archived67",
+        "saved_returns": 67,
+        "unbranched_candidate_point_count": 60,
+        "s_time_available_before": 61,
+        "s_time_available_after": 63,
+        "complete_before": 48,
+        "complete_after": 49,
+        "changed": [
+          "FPC02",
+          "FPC04",
+          "FPC13"
+        ],
+        "candidate_not_applied": [
+          {
+            "cell_id": "E2_03__local_qwen27b_q8_development__r0",
+            "issues": [
+              {
+                "kind": "missing_or_unbound_operation_duration",
+                "operation_id": "OP01"
+              },
+              {
+                "kind": "missing_or_unbound_operation_duration",
+                "operation_id": "OP02"
+              },
+              {
+                "kind": "missing_or_unbound_operation_duration",
+                "operation_id": "OP03"
+              },
+              {
+                "kind": "missing_or_unbound_operation_duration",
+                "operation_id": "OP04"
+              },
+              {
+                "kind": "missing_or_unbound_operation_duration",
+                "operation_id": "OP05"
+              },
+              {
+                "kind": "missing_or_unbound_operation_duration",
+                "operation_id": "OP06"
+              },
+              {
+                "kind": "missing_or_unbound_operation_duration",
+                "operation_id": "OP07"
+              }
+            ],
+            "finite_scenarios": 0
+          },
+          {
+            "cell_id": "E2_07__local_qwen27b_q8_development__r0",
+            "issues": [
+              {
+                "kind": "missing_or_unbound_operation_duration",
+                "operation_id": "OP4"
+              },
+              {
+                "kind": "missing_or_unbound_operation_duration",
+                "operation_id": "OP5"
+              },
+              {
+                "kind": "missing_or_unbound_operation_duration",
+                "operation_id": "OP6"
+              },
+              {
+                "kind": "missing_or_unbound_operation_duration",
+                "operation_id": "OP7"
+              },
+              {
+                "kind": "missing_or_unbound_operation_duration",
+                "operation_id": "OP8"
+              },
+              {
+                "kind": "missing_or_unbound_operation_duration",
+                "operation_id": "OP9"
+              }
+            ],
+            "finite_scenarios": 0
+          },
+          {
+            "cell_id": "E2_11__local_qwen27b_q8_development__r0",
+            "issues": [
+              {
+                "kind": "missing_or_unbound_operation_duration",
+                "operation_id": "OP08"
+              },
+              {
+                "kind": "missing_or_unbound_operation_duration",
+                "operation_id": "OP09"
+              },
+              {
+                "kind": "missing_or_unbound_operation_duration",
+                "operation_id": "OP10"
+              },
+              {
+                "kind": "missing_or_unbound_operation_duration",
+                "operation_id": "OP11"
+              },
+              {
+                "kind": "missing_or_unbound_operation_duration",
+                "operation_id": "OP12"
+              },
+              {
+                "kind": "missing_or_unbound_operation_duration",
+                "operation_id": "OP13"
+              },
+              {
+                "kind": "missing_or_unbound_operation_duration",
+                "operation_id": "OP14"
+              }
+            ],
+            "finite_scenarios": 0
+          },
+          {
+            "cell_id": "A01__codex_unobserved__r1",
+            "issues": [
+              {
+                "kind": "missing_or_unbound_operation_duration",
+                "operation_id": "P2"
+              },
+              {
+                "kind": "missing_or_unbound_operation_duration",
+                "operation_id": "P9"
+              },
+              {
+                "kind": "unrepresented_source_action_candidates",
+                "records": [
+                  {
+                    "candidate": {
+                      "candidate_id": "C0078",
+                      "kind": "operation_record_lead",
+                      "span": {
+                        "unit_id": "L0015",
+                        "quote": "2.6 Incubation with a fresh second batch of 100% (vol/vol) peroxide-free THF (pH 9.0 adjusted with Triethylamine).(Temperature: 4 ℃, Time: 12 hours)",
+                        "occurrence": 0,
+                        "source_id": "SRC_51920a4fec8d07d246ad932f",
+                        "start": 1467,
+                        "end": 1615,
+                        "answer_sha256": "963230e5722093771be058ec61e609d7865721d2c597162bea482eec3275e3cb",
+                        "context_start": 1467,
+                        "context_end": 1616,
+                        "context": "2.6 Incubation with a fresh second batch of 100% (vol/vol) peroxide-free THF (pH 9.0 adjusted with Triethylamine).(Temperature: 4 ℃, Time: 12 hours)\n"
+                      },
+                      "role": "lexical_action_record_recall_not_core_phase_or_completeness_gold",
+                      "coverage_state": "explicitly_unresolved"
+                    },
+                    "title_check": {
+                      "supported": false,
+                      "reason": "not_a_standalone_phase_title",
+                      "source": {
+                        "unit_id": "L0015",
+                        "quote": "2.6 Incubation with a fresh second batch of 100% (vol/vol) peroxide-free THF (pH 9.0 adjusted with Triethylamine).(Temperature: 4 ℃, Time: 12 hours)",
+                        "occurrence": 0,
+                        "source_id": "SRC_51920a4fec8d07d246ad932f",
+                        "start": 1467,
+                        "end": 1615,
+                        "answer_sha256": "963230e5722093771be058ec61e609d7865721d2c597162bea482eec3275e3cb",
+                        "context_start": 1467,
+                        "context_end": 1616,
+                        "context": "2.6 Incubation with a fresh second batch of 100% (vol/vol) peroxide-free THF (pH 9.0 adjusted with Triethylamine).(Temperature: 4 ℃, Time: 12 hours)\n"
+                      }
+                    }
+                  }
+                ]
+              }
+            ],
+            "finite_scenarios": 0
+          },
+          {
+            "cell_id": "FPC05",
+            "issues": [],
+            "finite_scenarios": 8
+          },
+          {
+            "cell_id": "FPC07",
+            "issues": [
+              {
+                "kind": "unparsed_or_multiple_Time_field_durations",
+                "operation_id": "OP10"
+              }
+            ],
+            "finite_scenarios": 0
+          },
+          {
+            "cell_id": "FPC16",
+            "issues": [
+              {
+                "kind": "unresolved_repeat",
+                "operation_id": "OP011"
+              }
+            ],
+            "finite_scenarios": 0
+          }
+        ],
+        "new_model_calls": 0,
+        "new_per_answer_author_annotations": 0,
+        "scientific_accuracy_claimed": false
+      }
+    },
+    {
+      "iteration": 3,
+      "canonical32": {
+        "cohort": "canonical32",
+        "saved_returns": 32,
+        "unbranched_candidate_point_count": 28,
+        "s_time_available_before": 26,
+        "s_time_available_after": 29,
+        "complete_before": 26,
+        "complete_after": 29,
+        "changed": [
+          "R3C01__r0",
+          "R3C04__r0",
+          "R3C07__r0"
+        ],
+        "candidate_not_applied": [
+          {
+            "cell_id": "R3C02__r0",
+            "issues": [
+              {
+                "kind": "combined_labeling_and_core_transition_duration_unreported",
+                "operation_id": "OP034"
+              },
+              {
+                "kind": "missing_or_unbound_operation_duration",
+                "operation_id": "OP035"
+              },
+              {
+                "kind": "missing_or_unbound_operation_duration",
+                "operation_id": "OP036"
+              }
+            ],
+            "finite_scenarios": 1
+          },
+          {
+            "cell_id": "R3C03__r0",
+            "issues": [
+              {
+                "kind": "source_schedule_not_serial",
+                "mode": "unknown"
+              },
+              {
+                "kind": "unknown_operation_scope",
+                "operation_id": "OP01"
+              },
+              {
+                "kind": "unknown_operation_scope",
+                "operation_id": "OP02"
+              },
+              {
+                "kind": "no_reported_core_incubations"
+              }
+            ],
+            "finite_scenarios": 0
+          },
+          {
+            "cell_id": "R3C05__r0",
+            "issues": [],
+            "finite_scenarios": 4
+          },
+          {
+            "cell_id": "R3C08__r0",
+            "issues": [],
+            "finite_scenarios": 2
+          }
+        ],
+        "new_model_calls": 0,
+        "new_per_answer_author_annotations": 0,
+        "scientific_accuracy_claimed": false
+      },
+      "archived67": {
+        "cohort": "archived67",
+        "saved_returns": 67,
+        "unbranched_candidate_point_count": 58,
+        "s_time_available_before": 61,
+        "s_time_available_after": 63,
+        "complete_before": 48,
+        "complete_after": 49,
+        "changed": [
+          "FPC02",
+          "FPC04"
+        ],
+        "candidate_not_applied": [
+          {
+            "cell_id": "E2_03__local_qwen27b_q8_development__r0",
+            "issues": [
+              {
+                "kind": "missing_or_unbound_operation_duration",
+                "operation_id": "OP01"
+              },
+              {
+                "kind": "missing_or_unbound_operation_duration",
+                "operation_id": "OP02"
+              },
+              {
+                "kind": "missing_or_unbound_operation_duration",
+                "operation_id": "OP03"
+              },
+              {
+                "kind": "missing_or_unbound_operation_duration",
+                "operation_id": "OP04"
+              },
+              {
+                "kind": "missing_or_unbound_operation_duration",
+                "operation_id": "OP05"
+              },
+              {
+                "kind": "missing_or_unbound_operation_duration",
+                "operation_id": "OP06"
+              },
+              {
+                "kind": "missing_or_unbound_operation_duration",
+                "operation_id": "OP07"
+              }
+            ],
+            "finite_scenarios": 0
+          },
+          {
+            "cell_id": "E2_07__local_qwen27b_q8_development__r0",
+            "issues": [
+              {
+                "kind": "missing_or_unbound_operation_duration",
+                "operation_id": "OP4"
+              },
+              {
+                "kind": "missing_or_unbound_operation_duration",
+                "operation_id": "OP5"
+              },
+              {
+                "kind": "missing_or_unbound_operation_duration",
+                "operation_id": "OP6"
+              },
+              {
+                "kind": "missing_or_unbound_operation_duration",
+                "operation_id": "OP7"
+              },
+              {
+                "kind": "missing_or_unbound_operation_duration",
+                "operation_id": "OP8"
+              },
+              {
+                "kind": "missing_or_unbound_operation_duration",
+                "operation_id": "OP9"
+              }
+            ],
+            "finite_scenarios": 0
+          },
+          {
+            "cell_id": "E2_11__local_qwen27b_q8_development__r0",
+            "issues": [
+              {
+                "kind": "missing_or_unbound_operation_duration",
+                "operation_id": "OP08"
+              },
+              {
+                "kind": "missing_or_unbound_operation_duration",
+                "operation_id": "OP09"
+              },
+              {
+                "kind": "missing_or_unbound_operation_duration",
+                "operation_id": "OP10"
+              },
+              {
+                "kind": "missing_or_unbound_operation_duration",
+                "operation_id": "OP11"
+              },
+              {
+                "kind": "missing_or_unbound_operation_duration",
+                "operation_id": "OP12"
+              },
+              {
+                "kind": "missing_or_unbound_operation_duration",
+                "operation_id": "OP13"
+              },
+              {
+                "kind": "missing_or_unbound_operation_duration",
+                "operation_id": "OP14"
+              }
+            ],
+            "finite_scenarios": 0
+          },
+          {
+            "cell_id": "E2_20__local_qwen27b_q8_development__r0",
+            "issues": [],
+            "finite_scenarios": 2
+          },
+          {
+            "cell_id": "E2_21__local_qwen27b_q8_development__r0",
+            "issues": [],
+            "finite_scenarios": 2
+          },
+          {
+            "cell_id": "A01__codex_unobserved__r1",
+            "issues": [
+              {
+                "kind": "missing_or_unbound_operation_duration",
+                "operation_id": "P2"
+              },
+              {
+                "kind": "missing_or_unbound_operation_duration",
+                "operation_id": "P9"
+              },
+              {
+                "kind": "unrepresented_source_action_candidates",
+                "records": [
+                  {
+                    "candidate": {
+                      "candidate_id": "C0078",
+                      "kind": "operation_record_lead",
+                      "span": {
+                        "unit_id": "L0015",
+                        "quote": "2.6 Incubation with a fresh second batch of 100% (vol/vol) peroxide-free THF (pH 9.0 adjusted with Triethylamine).(Temperature: 4 ℃, Time: 12 hours)",
+                        "occurrence": 0,
+                        "source_id": "SRC_51920a4fec8d07d246ad932f",
+                        "start": 1467,
+                        "end": 1615,
+                        "answer_sha256": "963230e5722093771be058ec61e609d7865721d2c597162bea482eec3275e3cb",
+                        "context_start": 1467,
+                        "context_end": 1616,
+                        "context": "2.6 Incubation with a fresh second batch of 100% (vol/vol) peroxide-free THF (pH 9.0 adjusted with Triethylamine).(Temperature: 4 ℃, Time: 12 hours)\n"
+                      },
+                      "role": "lexical_action_record_recall_not_core_phase_or_completeness_gold",
+                      "coverage_state": "explicitly_unresolved"
+                    },
+                    "title_check": {
+                      "supported": false,
+                      "reason": "not_a_standalone_phase_title",
+                      "source": {
+                        "unit_id": "L0015",
+                        "quote": "2.6 Incubation with a fresh second batch of 100% (vol/vol) peroxide-free THF (pH 9.0 adjusted with Triethylamine).(Temperature: 4 ℃, Time: 12 hours)",
+                        "occurrence": 0,
+                        "source_id": "SRC_51920a4fec8d07d246ad932f",
+                        "start": 1467,
+                        "end": 1615,
+                        "answer_sha256": "963230e5722093771be058ec61e609d7865721d2c597162bea482eec3275e3cb",
+                        "context_start": 1467,
+                        "context_end": 1616,
+                        "context": "2.6 Incubation with a fresh second batch of 100% (vol/vol) peroxide-free THF (pH 9.0 adjusted with Triethylamine).(Temperature: 4 ℃, Time: 12 hours)\n"
+                      }
+                    }
+                  }
+                ]
+              }
+            ],
+            "finite_scenarios": 0
+          },
+          {
+            "cell_id": "FPC05",
+            "issues": [],
+            "finite_scenarios": 8
+          },
+          {
+            "cell_id": "FPC07",
+            "issues": [
+              {
+                "kind": "unparsed_or_multiple_Time_field_durations",
+                "operation_id": "OP10"
+              }
+            ],
+            "finite_scenarios": 0
+          },
+          {
+            "cell_id": "FPC16",
+            "issues": [
+              {
+                "kind": "unresolved_repeat",
+                "operation_id": "OP011"
+              }
+            ],
+            "finite_scenarios": 0
+          }
+        ],
+        "new_model_calls": 0,
+        "new_per_answer_author_annotations": 0,
+        "scientific_accuracy_claimed": false
+      }
+    },
+    {
+      "iteration": 4,
+      "canonical32": {
+        "cohort": "canonical32",
+        "saved_returns": 32,
+        "unbranched_candidate_point_count": 28,
+        "s_time_available_before": 26,
+        "s_time_available_after": 29,
+        "complete_before": 26,
+        "complete_after": 29,
+        "changed": [
+          "R3C01__r0",
+          "R3C04__r0",
+          "R3C07__r0"
+        ],
+        "candidate_not_applied": [
+          {
+            "cell_id": "R3C02__r0",
+            "issues": [
+              {
+                "kind": "combined_labeling_and_core_transition_duration_unreported",
+                "operation_id": "OP034"
+              },
+              {
+                "kind": "missing_or_unbound_operation_duration",
+                "operation_id": "OP035"
+              },
+              {
+                "kind": "missing_or_unbound_operation_duration",
+                "operation_id": "OP036"
+              }
+            ],
+            "finite_scenarios": 1
+          },
+          {
+            "cell_id": "R3C03__r0",
+            "issues": [
+              {
+                "kind": "source_schedule_not_serial",
+                "mode": "unknown"
+              },
+              {
+                "kind": "unknown_operation_scope",
+                "operation_id": "OP01"
+              },
+              {
+                "kind": "unknown_operation_scope",
+                "operation_id": "OP02"
+              },
+              {
+                "kind": "no_reported_core_incubations"
+              }
+            ],
+            "finite_scenarios": 0
+          },
+          {
+            "cell_id": "R3C05__r0",
+            "issues": [],
+            "finite_scenarios": 4
+          },
+          {
+            "cell_id": "R3C08__r0",
+            "issues": [],
+            "finite_scenarios": 2
+          }
+        ],
+        "new_model_calls": 0,
+        "new_per_answer_author_annotations": 0,
+        "scientific_accuracy_claimed": false
+      },
+      "archived67": {
+        "cohort": "archived67",
+        "saved_returns": 67,
+        "unbranched_candidate_point_count": 60,
+        "s_time_available_before": 61,
+        "s_time_available_after": 63,
+        "complete_before": 48,
+        "complete_after": 49,
+        "changed": [
+          "FPC02",
+          "FPC04"
+        ],
+        "candidate_not_applied": [
+          {
+            "cell_id": "E2_03__local_qwen27b_q8_development__r0",
+            "issues": [
+              {
+                "kind": "missing_or_unbound_operation_duration",
+                "operation_id": "OP01"
+              },
+              {
+                "kind": "missing_or_unbound_operation_duration",
+                "operation_id": "OP02"
+              },
+              {
+                "kind": "missing_or_unbound_operation_duration",
+                "operation_id": "OP03"
+              },
+              {
+                "kind": "missing_or_unbound_operation_duration",
+                "operation_id": "OP04"
+              },
+              {
+                "kind": "missing_or_unbound_operation_duration",
+                "operation_id": "OP05"
+              },
+              {
+                "kind": "missing_or_unbound_operation_duration",
+                "operation_id": "OP06"
+              },
+              {
+                "kind": "missing_or_unbound_operation_duration",
+                "operation_id": "OP07"
+              }
+            ],
+            "finite_scenarios": 0
+          },
+          {
+            "cell_id": "E2_07__local_qwen27b_q8_development__r0",
+            "issues": [
+              {
+                "kind": "missing_or_unbound_operation_duration",
+                "operation_id": "OP4"
+              },
+              {
+                "kind": "missing_or_unbound_operation_duration",
+                "operation_id": "OP5"
+              },
+              {
+                "kind": "missing_or_unbound_operation_duration",
+                "operation_id": "OP6"
+              },
+              {
+                "kind": "missing_or_unbound_operation_duration",
+                "operation_id": "OP7"
+              },
+              {
+                "kind": "missing_or_unbound_operation_duration",
+                "operation_id": "OP8"
+              },
+              {
+                "kind": "missing_or_unbound_operation_duration",
+                "operation_id": "OP9"
+              }
+            ],
+            "finite_scenarios": 0
+          },
+          {
+            "cell_id": "E2_11__local_qwen27b_q8_development__r0",
+            "issues": [
+              {
+                "kind": "missing_or_unbound_operation_duration",
+                "operation_id": "OP08"
+              },
+              {
+                "kind": "missing_or_unbound_operation_duration",
+                "operation_id": "OP09"
+              },
+              {
+                "kind": "missing_or_unbound_operation_duration",
+                "operation_id": "OP10"
+              },
+              {
+                "kind": "missing_or_unbound_operation_duration",
+                "operation_id": "OP11"
+              },
+              {
+                "kind": "missing_or_unbound_operation_duration",
+                "operation_id": "OP12"
+              },
+              {
+                "kind": "missing_or_unbound_operation_duration",
+                "operation_id": "OP13"
+              },
+              {
+                "kind": "missing_or_unbound_operation_duration",
+                "operation_id": "OP14"
+              }
+            ],
+            "finite_scenarios": 0
+          },
+          {
+            "cell_id": "E2_20__local_qwen27b_q8_development__r0",
+            "issues": [],
+            "finite_scenarios": 2
+          },
+          {
+            "cell_id": "E2_21__local_qwen27b_q8_development__r0",
+            "issues": [],
+            "finite_scenarios": 2
+          },
+          {
+            "cell_id": "A01__codex_unobserved__r1",
+            "issues": [
+              {
+                "kind": "missing_or_unbound_operation_duration",
+                "operation_id": "P9"
+              },
+              {
+                "kind": "unrepresented_source_action_candidates",
+                "records": [
+                  {
+                    "candidate": {
+                      "candidate_id": "C0078",
+                      "kind": "operation_record_lead",
+                      "span": {
+                        "unit_id": "L0015",
+                        "quote": "2.6 Incubation with a fresh second batch of 100% (vol/vol) peroxide-free THF (pH 9.0 adjusted with Triethylamine).(Temperature: 4 ℃, Time: 12 hours)",
+                        "occurrence": 0,
+                        "source_id": "SRC_51920a4fec8d07d246ad932f",
+                        "start": 1467,
+                        "end": 1615,
+                        "answer_sha256": "963230e5722093771be058ec61e609d7865721d2c597162bea482eec3275e3cb",
+                        "context_start": 1467,
+                        "context_end": 1616,
+                        "context": "2.6 Incubation with a fresh second batch of 100% (vol/vol) peroxide-free THF (pH 9.0 adjusted with Triethylamine).(Temperature: 4 ℃, Time: 12 hours)\n"
+                      },
+                      "role": "lexical_action_record_recall_not_core_phase_or_completeness_gold",
+                      "coverage_state": "explicitly_unresolved"
+                    },
+                    "title_check": {
+                      "supported": false,
+                      "reason": "not_a_standalone_phase_title",
+                      "source": {
+                        "unit_id": "L0015",
+                        "quote": "2.6 Incubation with a fresh second batch of 100% (vol/vol) peroxide-free THF (pH 9.0 adjusted with Triethylamine).(Temperature: 4 ℃, Time: 12 hours)",
+                        "occurrence": 0,
+                        "source_id": "SRC_51920a4fec8d07d246ad932f",
+                        "start": 1467,
+                        "end": 1615,
+                        "answer_sha256": "963230e5722093771be058ec61e609d7865721d2c597162bea482eec3275e3cb",
+                        "context_start": 1467,
+                        "context_end": 1616,
+                        "context": "2.6 Incubation with a fresh second batch of 100% (vol/vol) peroxide-free THF (pH 9.0 adjusted with Triethylamine).(Temperature: 4 ℃, Time: 12 hours)\n"
+                      }
+                    }
+                  }
+                ]
+              }
+            ],
+            "finite_scenarios": 0
+          },
+          {
+            "cell_id": "FPC05",
+            "issues": [],
+            "finite_scenarios": 2
+          }
+        ],
+        "new_model_calls": 0,
+        "new_per_answer_author_annotations": 0,
+        "scientific_accuracy_claimed": false
+      }
+    }
+  ],
+  "next_test": "language-equivalent steps + incomplete generic clauses + deletion + segmentation; frozen development then unexposed audit",
+  "rejected_directions": [
+    "choose highest scoring time branch",
+    "average incompatible alternatives",
+    "lower threshold based on model rank",
+    "call repeated source-block draws independent evidence"
+  ],
+  "new_knowledge_base_numbers": false
+}

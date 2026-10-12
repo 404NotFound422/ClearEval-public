@@ -1,0 +1,12 @@
+"""Ablation: preserve original schema order with the exact original v11 prompt."""
+import cce_generation_completion_candidate_v1 as ordered_tools
+original=ordered_tools.original
+CANDIDATE_VERSION='generation_order_only_v1'
+VERSION=original.VERSION
+ordered_json=ordered_tools.ordered_json
+write_ordered_once=ordered_tools.write_ordered_once
+format_order_manifest=ordered_tools.format_order_manifest
+payload_for=ordered_tools.payload_for
+schema_for_document=original.schema_for_document
+make_prompt=original.make_prompt
+convert=original.convert

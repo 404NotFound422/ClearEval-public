@@ -1,0 +1,3580 @@
+[
+  {
+    "request_id": "T01_R3C04_baseline",
+    "answer_id": "R3C04",
+    "condition": "baseline",
+    "raw_sr": 0.3333333333333333,
+    "raw_sp": 0.3076923076923077,
+    "raw_n": 39,
+    "candidate_sr": 0.3333333333333333,
+    "candidate_sp": 0.3333333333333333,
+    "candidate_n": 36,
+    "removed_heading_n": 3,
+    "removed_headings": [
+      {
+        "old_generated_index": 16,
+        "step": {
+          "text": "Wash after primary",
+          "start": 2709,
+          "end": 2730
+        },
+        "title_evidence": {
+          "start": 2709,
+          "end": 2730,
+          "line": "6 Wash after primary\n",
+          "label": "6",
+          "body": "Wash after primary"
+        },
+        "old_generated_max_similarity": 0.43486765027046204
+      },
+      {
+        "old_generated_index": 20,
+        "step": {
+          "text": "Wash after secondary",
+          "start": 3387,
+          "end": 3410
+        },
+        "title_evidence": {
+          "start": 3387,
+          "end": 3410,
+          "line": "8 Wash after secondary\n",
+          "label": "8",
+          "body": "Wash after secondary"
+        },
+        "old_generated_max_similarity": 0.4711070656776428
+      },
+      {
+        "old_generated_index": 23,
+        "step": {
+          "text": "Nuclear stain (TO-PRO-3, whole-brain nuclear localization for registration/segmentation assistance)",
+          "start": 3645,
+          "end": 3747
+        },
+        "title_evidence": {
+          "start": 3645,
+          "end": 3747,
+          "line": "9 Nuclear stain (TO-PRO-3, whole-brain nuclear localization for registration/segmentation assistance)\n",
+          "label": "9",
+          "body": "Nuclear stain (TO-PRO-3, whole-brain nuclear localization for registration/segmentation assistance)"
+        },
+        "old_generated_max_similarity": 0.349904328584671
+      }
+    ],
+    "candidate_selection": {
+      "reference_id": "IDISCO_PLUS_2016_SUPPLEMENT_METHOD_FAMILY_V1",
+      "fixed_order": 0,
+      "score": {
+        "sr": 0.3333333333333333,
+        "sp": 0.3333333333333333,
+        "reference_n": 9,
+        "generated_n": 36,
+        "matches": [
+          {
+            "reference_index": 0,
+            "reference_text": "After immunolabeling, dehydrate the brain in 20% methanol in water for 1 hour.",
+            "generated_index": 32,
+            "generated_text": "Continue soaking in fresh 100% DBE until fully transparent (usually required for whole brain). (Temperature: RT, Time: 12–24 hours, Light: protected)",
+            "similarity": 0.6643031239509583,
+            "matched": false
+          },
+          {
+            "reference_index": 1,
+            "reference_text": "After immunolabeling, dehydrate the brain in 40% methanol in water for 1 hour.",
+            "generated_index": 32,
+            "generated_text": "Continue soaking in fresh 100% DBE until fully transparent (usually required for whole brain). (Temperature: RT, Time: 12–24 hours, Light: protected)",
+            "similarity": 0.6699363589286804,
+            "matched": false
+          },
+          {
+            "reference_index": 2,
+            "reference_text": "After immunolabeling, dehydrate the brain in 60% methanol in water for 1 hour.",
+            "generated_index": 32,
+            "generated_text": "Continue soaking in fresh 100% DBE until fully transparent (usually required for whole brain). (Temperature: RT, Time: 12–24 hours, Light: protected)",
+            "similarity": 0.6710556745529175,
+            "matched": false
+          },
+          {
+            "reference_index": 3,
+            "reference_text": "After immunolabeling, dehydrate the brain in 80% methanol in water for 1 hour.",
+            "generated_index": 32,
+            "generated_text": "Continue soaking in fresh 100% DBE until fully transparent (usually required for whole brain). (Temperature: RT, Time: 12–24 hours, Light: protected)",
+            "similarity": 0.6721386313438416,
+            "matched": false
+          },
+          {
+            "reference_index": 4,
+            "reference_text": "After the methanol gradient, treat with 100% methanol for 1 hour twice.",
+            "generated_index": 5,
+            "generated_text": "Soak again in fresh 100% (vol/vol) methanol. (Temperature: RT, Time: 2 hours)",
+            "similarity": 0.7839270830154419,
+            "matched": true
+          },
+          {
+            "reference_index": 5,
+            "reference_text": "Incubate overnight in 1 volume methanol and 2 volumes dichloromethane (DCM), until the samples sink to the bottom of the vial.",
+            "generated_index": 1,
+            "generated_text": "Soak in 40% (vol/vol) methanol/water solution, gentle agitation. (Temperature: RT, Time: 2 hours)",
+            "similarity": 0.708564281463623,
+            "matched": true
+          },
+          {
+            "reference_index": 6,
+            "reference_text": "Wash twice in 100% dichloromethane (DCM), 20 minutes each, to remove methanol.",
+            "generated_index": 5,
+            "generated_text": "Soak again in fresh 100% (vol/vol) methanol. (Temperature: RT, Time: 2 hours)",
+            "similarity": 0.6748326420783997,
+            "matched": false
+          },
+          {
+            "reference_index": 7,
+            "reference_text": "Incubate in dibenzyl ether (DBE) without shaking until clear, reported as about 30 minutes.",
+            "generated_index": 31,
+            "generated_text": "Pre-soak in 100% Dibenzyl Ether (DBE, RI≈1.56). (Temperature: RT, Time: 3 hours, Light: protected)",
+            "similarity": 0.6554045677185059,
+            "matched": false
+          },
+          {
+            "reference_index": 8,
+            "reference_text": "Store the cleared brain in DBE at room temperature.",
+            "generated_index": 32,
+            "generated_text": "Continue soaking in fresh 100% DBE until fully transparent (usually required for whole brain). (Temperature: RT, Time: 12–24 hours, Light: protected)",
+            "similarity": 0.7097359299659729,
+            "matched": true
+          }
+        ],
+        "generated_max_similarity": [
+          0.7799121141433716,
+          0.7768975496292114,
+          0.7740509510040283,
+          0.7720093727111816,
+          0.7717365026473999,
+          0.7839270830154419,
+          0.6450634598731995,
+          0.753407895565033,
+          0.7590967416763306,
+          0.7597302198410034,
+          0.7666125893592834,
+          0.6446847915649414,
+          0.5557599067687988,
+          0.5301222205162048,
+          0.5582418441772461,
+          0.5732536911964417,
+          0.5636310577392578,
+          0.4877770245075226,
+          0.4874979853630066,
+          0.6261007785797119,
+          0.518034040927887,
+          0.48195838928222656,
+          0.6292639374732971,
+          0.5777381062507629,
+          0.547135055065155,
+          0.5400073528289795,
+          0.5224416255950928,
+          0.5385711193084717,
+          0.593350887298584,
+          0.7122089862823486,
+          0.697874903678894,
+          0.6680481433868408,
+          0.7097359299659729,
+          0.6962087750434875,
+          0.5559948086738586,
+          0.5877236127853394
+        ],
+        "reference_truncated": 0,
+        "generated_truncated": 0,
+        "generated_cjk_steps": 0
+      }
+    },
+    "candidate_all_references": [
+      {
+        "reference_id": "IDISCO_PLUS_2016_SUPPLEMENT_METHOD_FAMILY_V1",
+        "fixed_order": 0,
+        "score": {
+          "sr": 0.3333333333333333,
+          "sp": 0.3333333333333333,
+          "reference_n": 9,
+          "generated_n": 36,
+          "matches": [
+            {
+              "reference_index": 0,
+              "reference_text": "After immunolabeling, dehydrate the brain in 20% methanol in water for 1 hour.",
+              "generated_index": 32,
+              "generated_text": "Continue soaking in fresh 100% DBE until fully transparent (usually required for whole brain). (Temperature: RT, Time: 12–24 hours, Light: protected)",
+              "similarity": 0.6643031239509583,
+              "matched": false
+            },
+            {
+              "reference_index": 1,
+              "reference_text": "After immunolabeling, dehydrate the brain in 40% methanol in water for 1 hour.",
+              "generated_index": 32,
+              "generated_text": "Continue soaking in fresh 100% DBE until fully transparent (usually required for whole brain). (Temperature: RT, Time: 12–24 hours, Light: protected)",
+              "similarity": 0.6699363589286804,
+              "matched": false
+            },
+            {
+              "reference_index": 2,
+              "reference_text": "After immunolabeling, dehydrate the brain in 60% methanol in water for 1 hour.",
+              "generated_index": 32,
+              "generated_text": "Continue soaking in fresh 100% DBE until fully transparent (usually required for whole brain). (Temperature: RT, Time: 12–24 hours, Light: protected)",
+              "similarity": 0.6710556745529175,
+              "matched": false
+            },
+            {
+              "reference_index": 3,
+              "reference_text": "After immunolabeling, dehydrate the brain in 80% methanol in water for 1 hour.",
+              "generated_index": 32,
+              "generated_text": "Continue soaking in fresh 100% DBE until fully transparent (usually required for whole brain). (Temperature: RT, Time: 12–24 hours, Light: protected)",
+              "similarity": 0.6721386313438416,
+              "matched": false
+            },
+            {
+              "reference_index": 4,
+              "reference_text": "After the methanol gradient, treat with 100% methanol for 1 hour twice.",
+              "generated_index": 5,
+              "generated_text": "Soak again in fresh 100% (vol/vol) methanol. (Temperature: RT, Time: 2 hours)",
+              "similarity": 0.7839270830154419,
+              "matched": true
+            },
+            {
+              "reference_index": 5,
+              "reference_text": "Incubate overnight in 1 volume methanol and 2 volumes dichloromethane (DCM), until the samples sink to the bottom of the vial.",
+              "generated_index": 1,
+              "generated_text": "Soak in 40% (vol/vol) methanol/water solution, gentle agitation. (Temperature: RT, Time: 2 hours)",
+              "similarity": 0.708564281463623,
+              "matched": true
+            },
+            {
+              "reference_index": 6,
+              "reference_text": "Wash twice in 100% dichloromethane (DCM), 20 minutes each, to remove methanol.",
+              "generated_index": 5,
+              "generated_text": "Soak again in fresh 100% (vol/vol) methanol. (Temperature: RT, Time: 2 hours)",
+              "similarity": 0.6748326420783997,
+              "matched": false
+            },
+            {
+              "reference_index": 7,
+              "reference_text": "Incubate in dibenzyl ether (DBE) without shaking until clear, reported as about 30 minutes.",
+              "generated_index": 31,
+              "generated_text": "Pre-soak in 100% Dibenzyl Ether (DBE, RI≈1.56). (Temperature: RT, Time: 3 hours, Light: protected)",
+              "similarity": 0.6554045677185059,
+              "matched": false
+            },
+            {
+              "reference_index": 8,
+              "reference_text": "Store the cleared brain in DBE at room temperature.",
+              "generated_index": 32,
+              "generated_text": "Continue soaking in fresh 100% DBE until fully transparent (usually required for whole brain). (Temperature: RT, Time: 12–24 hours, Light: protected)",
+              "similarity": 0.7097359299659729,
+              "matched": true
+            }
+          ],
+          "generated_max_similarity": [
+            0.7799121141433716,
+            0.7768975496292114,
+            0.7740509510040283,
+            0.7720093727111816,
+            0.7717365026473999,
+            0.7839270830154419,
+            0.6450634598731995,
+            0.753407895565033,
+            0.7590967416763306,
+            0.7597302198410034,
+            0.7666125893592834,
+            0.6446847915649414,
+            0.5557599067687988,
+            0.5301222205162048,
+            0.5582418441772461,
+            0.5732536911964417,
+            0.5636310577392578,
+            0.4877770245075226,
+            0.4874979853630066,
+            0.6261007785797119,
+            0.518034040927887,
+            0.48195838928222656,
+            0.6292639374732971,
+            0.5777381062507629,
+            0.547135055065155,
+            0.5400073528289795,
+            0.5224416255950928,
+            0.5385711193084717,
+            0.593350887298584,
+            0.7122089862823486,
+            0.697874903678894,
+            0.6680481433868408,
+            0.7097359299659729,
+            0.6962087750434875,
+            0.5559948086738586,
+            0.5877236127853394
+          ],
+          "reference_truncated": 0,
+          "generated_truncated": 0,
+          "generated_cjk_steps": 0
+        }
+      },
+      {
+        "reference_id": "IDISCO_PLUS_2016_APRIL_BENCH_METHOD_FAMILY_V1",
+        "fixed_order": 1,
+        "score": {
+          "sr": 0.2222222222222222,
+          "sp": 0.3055555555555556,
+          "reference_n": 9,
+          "generated_n": 36,
+          "matches": [
+            {
+              "reference_index": 0,
+              "reference_text": "After immunolabeling, dehydrate the brain in 20% methanol in water for 1 hour at room temperature.",
+              "generated_index": 32,
+              "generated_text": "Continue soaking in fresh 100% DBE until fully transparent (usually required for whole brain). (Temperature: RT, Time: 12–24 hours, Light: protected)",
+              "similarity": 0.6793689131736755,
+              "matched": false
+            },
+            {
+              "reference_index": 1,
+              "reference_text": "After immunolabeling, dehydrate the brain in 40% methanol in water for 1 hour at room temperature.",
+              "generated_index": 32,
+              "generated_text": "Continue soaking in fresh 100% DBE until fully transparent (usually required for whole brain). (Temperature: RT, Time: 12–24 hours, Light: protected)",
+              "similarity": 0.6827962398529053,
+              "matched": false
+            },
+            {
+              "reference_index": 2,
+              "reference_text": "After immunolabeling, dehydrate the brain in 60% methanol in water for 1 hour at room temperature.",
+              "generated_index": 32,
+              "generated_text": "Continue soaking in fresh 100% DBE until fully transparent (usually required for whole brain). (Temperature: RT, Time: 12–24 hours, Light: protected)",
+              "similarity": 0.6835818290710449,
+              "matched": false
+            },
+            {
+              "reference_index": 3,
+              "reference_text": "After immunolabeling, dehydrate the brain in 80% methanol in water for 1 hour at room temperature.",
+              "generated_index": 32,
+              "generated_text": "Continue soaking in fresh 100% DBE until fully transparent (usually required for whole brain). (Temperature: RT, Time: 12–24 hours, Light: protected)",
+              "similarity": 0.6853773593902588,
+              "matched": false
+            },
+            {
+              "reference_index": 4,
+              "reference_text": "After the methanol gradient, treat with 100% methanol for 1 hour twice at room temperature. Leaving the sample overnight at room temperature at this point is explicitly optional.",
+              "generated_index": 0,
+              "generated_text": "Soak in 20% (vol/vol) methanol/water solution, gentle agitation. (Temperature: RT, Time: 2 hours)",
+              "similarity": 0.7450129389762878,
+              "matched": true
+            },
+            {
+              "reference_index": 5,
+              "reference_text": "Incubate in 66% dichloromethane (DCM) and 33% methanol for 3 hours at room temperature with shaking.",
+              "generated_index": 29,
+              "generated_text": "Soak in 66% (vol/vol) Dichloromethane (DCM)/33% methanol mixture. (Temperature: RT, Time: 3 hours)",
+              "similarity": 0.7255233526229858,
+              "matched": true
+            },
+            {
+              "reference_index": 6,
+              "reference_text": "Wash twice in 100% dichloromethane (DCM), 15 minutes each, with shaking to remove methanol.",
+              "generated_index": 19,
+              "generated_text": "Wash with PBS + 0.2% Triton X-100 + 0.01% NaN3, gentle agitation with solution changes. (Temperature: RT, Time: 6 hours)",
+              "similarity": 0.6805830001831055,
+              "matched": false
+            },
+            {
+              "reference_index": 7,
+              "reference_text": "Incubate in dibenzyl ether (DBE) without shaking. Fill the tube almost completely with DBE to prevent air from oxidizing the sample.",
+              "generated_index": 31,
+              "generated_text": "Pre-soak in 100% Dibenzyl Ether (DBE, RI≈1.56). (Temperature: RT, Time: 3 hours, Light: protected)",
+              "similarity": 0.6751309037208557,
+              "matched": false
+            },
+            {
+              "reference_index": 8,
+              "reference_text": "Before imaging, invert the tube a couple of times to finish mixing the solution.",
+              "generated_index": 34,
+              "generated_text": "Replace with fresh DBE once before light-sheet imaging and allow to stand for degassing/sedimentation. (Temperature: RT, Time: 1–2 hours)",
+              "similarity": 0.49726417660713196,
+              "matched": false
+            }
+          ],
+          "generated_max_similarity": [
+            0.7450129389762878,
+            0.7420293092727661,
+            0.740247368812561,
+            0.7360427379608154,
+            0.7334874272346497,
+            0.7371713519096375,
+            0.6565724611282349,
+            0.716822624206543,
+            0.725090503692627,
+            0.726088285446167,
+            0.732600212097168,
+            0.5780642032623291,
+            0.5363149642944336,
+            0.5243574380874634,
+            0.5320567488670349,
+            0.5476616024971008,
+            0.6141143441200256,
+            0.5581104159355164,
+            0.4505424499511719,
+            0.6805830001831055,
+            0.5894167423248291,
+            0.4852696359157562,
+            0.676192045211792,
+            0.5332974791526794,
+            0.5078427791595459,
+            0.5022468566894531,
+            0.49546414613723755,
+            0.501939058303833,
+            0.5801032781600952,
+            0.7255233526229858,
+            0.6837717890739441,
+            0.6814448833465576,
+            0.6853773593902588,
+            0.6750401854515076,
+            0.5338451862335205,
+            0.463715136051178
+          ],
+          "reference_truncated": 0,
+          "generated_truncated": 0,
+          "generated_cjk_steps": 0
+        }
+      }
+    ],
+    "candidate_steps": [
+      {
+        "text": "Soak in 20% (vol/vol) methanol/water solution, gentle agitation. (Temperature: RT, Time: 2 hours)",
+        "start": 739,
+        "end": 841
+      },
+      {
+        "text": "Soak in 40% (vol/vol) methanol/water solution, gentle agitation. (Temperature: RT, Time: 2 hours)",
+        "start": 841,
+        "end": 943
+      },
+      {
+        "text": "Soak in 60% (vol/vol) methanol/water solution, gentle agitation. (Temperature: RT, Time: 2 hours)",
+        "start": 943,
+        "end": 1045
+      },
+      {
+        "text": "Soak in 80% (vol/vol) methanol/water solution, gentle agitation. (Temperature: RT, Time: 2 hours)",
+        "start": 1045,
+        "end": 1147
+      },
+      {
+        "text": "Soak in 100% (vol/vol) methanol, gentle agitation. (Temperature: RT, Time: 2 hours)",
+        "start": 1147,
+        "end": 1235
+      },
+      {
+        "text": "Soak again in fresh 100% (vol/vol) methanol. (Temperature: RT, Time: 2 hours)",
+        "start": 1235,
+        "end": 1317
+      },
+      {
+        "text": "Soak in 5% H2O2 in methanol (Volume ratio: 30% H2O2 : methanol = 1 : 5), protected from light. (Temperature: 4 ℃, Time: 12–16 hours)",
+        "start": 1411,
+        "end": 1548
+      },
+      {
+        "text": "Soak in 80% (vol/vol) methanol/water solution. (Temperature: RT, Time: 1.5 hours)",
+        "start": 1563,
+        "end": 1649
+      },
+      {
+        "text": "Soak in 60% (vol/vol) methanol/water solution. (Temperature: RT, Time: 1.5 hours)",
+        "start": 1649,
+        "end": 1735
+      },
+      {
+        "text": "Soak in 40% (vol/vol) methanol/water solution. (Temperature: RT, Time: 1.5 hours)",
+        "start": 1735,
+        "end": 1821
+      },
+      {
+        "text": "Soak in 20% (vol/vol) methanol/water solution. (Temperature: RT, Time: 1.5 hours)",
+        "start": 1821,
+        "end": 1907
+      },
+      {
+        "text": "Soak in 1×PBS. (Temperature: RT, Time: 1.5 hours)",
+        "start": 1907,
+        "end": 1961
+      },
+      {
+        "text": "Permeabilization solution: PBS + 0.2% (vol/vol) Triton X-100 + 20% (vol/vol) DMSO + 0.3 M Glycine, gentle agitation. (Temperature: 37 ℃, Time: 24 hours)",
+        "start": 1992,
+        "end": 2149
+      },
+      {
+        "text": "Blocking solution: PBS + 0.2% Triton X-100 + 10% (vol/vol) DMSO + 6% (vol/vol) Normal Donkey Serum (NDS), gentle agitation. (Temperature: 37 ℃, Time: 24 hours)",
+        "start": 2149,
+        "end": 2313
+      },
+      {
+        "text": "Primary antibody incubation solution: PBS + 0.2% Triton X-100 + 5% DMSO + 3% NDS + 0.01% (w/v) NaN3; add NeuN (RBFOX3) primary antibody at 1:200. (Temperature: 37 ℃, Time: 5–7 days)",
+        "start": 2352,
+        "end": 2538
+      },
+      {
+        "text": "Add β-III Tubulin (TUJ1) primary antibody at 1:300 to the same incubation solution (can be co-incubated in the same tube as 5.1). (Temperature: 37 ℃, Time: 5–7 days)",
+        "start": 2538,
+        "end": 2708
+      },
+      {
+        "text": "Wash solution: PBS + 0.2% Triton X-100 + 0.01% NaN3, gentle agitation with solution changes. (Temperature: RT, Time: 6 hours)",
+        "start": 2730,
+        "end": 2860
+      },
+      {
+        "text": "Repeat 6.1 for a total of 6 times (total wash approximately 36 hours). (Temperature: RT, Time: 36 hours)",
+        "start": 2860,
+        "end": 2969
+      },
+      {
+        "text": "Secondary antibody incubation solution: PBS + 0.2% Triton X-100 + 3% NDS + 0.01% NaN3; add Donkey anti-mouse/rabbit (matched to primary antibody host) Alexa Fluor 647 secondary antibody at 1:400 (corresponding to NeuN and TUJ1 respectively; if the two primary antibodies have different hosts, they can be co-incubated in the same tube). (Temperature: 37 ℃, Time: 5–7 days, Light: protected)",
+        "start": 2991,
+        "end": 3386
+      },
+      {
+        "text": "Wash with PBS + 0.2% Triton X-100 + 0.01% NaN3, gentle agitation with solution changes. (Temperature: RT, Time: 6 hours)",
+        "start": 3410,
+        "end": 3535
+      },
+      {
+        "text": "Repeat 8.1 for a total of 6 times (total wash approximately 36 hours). (Temperature: RT, Time: 36 hours)",
+        "start": 3535,
+        "end": 3644
+      },
+      {
+        "text": "TO-PRO-3 1–2 µM (in PBS + 0.2% Triton X-100), protected from light, gentle agitation. (Temperature: RT, Time: 12–24 hours)",
+        "start": 3747,
+        "end": 3874
+      },
+      {
+        "text": "Wash with PBS 3 times. (Temperature: RT, Time: 2 hours each)",
+        "start": 3874,
+        "end": 3939
+      },
+      {
+        "text": "20% methanol/water. (Temperature: RT, Time: 1.5 hours)",
+        "start": 3971,
+        "end": 4031
+      },
+      {
+        "text": "40% methanol/water. (Temperature: RT, Time: 1.5 hours)",
+        "start": 4031,
+        "end": 4091
+      },
+      {
+        "text": "60% methanol/water. (Temperature: RT, Time: 1.5 hours)",
+        "start": 4091,
+        "end": 4151
+      },
+      {
+        "text": "80% methanol/water. (Temperature: RT, Time: 1.5 hours)",
+        "start": 4151,
+        "end": 4211
+      },
+      {
+        "text": "100% methanol. (Temperature: RT, Time: 2 hours)",
+        "start": 4211,
+        "end": 4264
+      },
+      {
+        "text": "Fresh 100% methanol. (Temperature: RT, Time: 2 hours)",
+        "start": 4264,
+        "end": 4323
+      },
+      {
+        "text": "Soak in 66% (vol/vol) Dichloromethane (DCM)/33% methanol mixture. (Temperature: RT, Time: 3 hours)",
+        "start": 4349,
+        "end": 4453
+      },
+      {
+        "text": "Soak in 100% DCM. (Temperature: RT, Time: 2 × 1.5 hours)",
+        "start": 4453,
+        "end": 4515
+      },
+      {
+        "text": "Pre-soak in 100% Dibenzyl Ether (DBE, RI≈1.56). (Temperature: RT, Time: 3 hours, Light: protected)",
+        "start": 4550,
+        "end": 4654
+      },
+      {
+        "text": "Continue soaking in fresh 100% DBE until fully transparent (usually required for whole brain). (Temperature: RT, Time: 12–24 hours, Light: protected)",
+        "start": 4654,
+        "end": 4809
+      },
+      {
+        "text": "Keep sample fully immersed in fresh 100% DBE, store sealed and protected from light (fill container as much as possible to reduce oxidation). (Temperature: RT or 4 ℃, Time: up to 1–2 weeks)",
+        "start": 4835,
+        "end": 5030
+      },
+      {
+        "text": "Replace with fresh DBE once before light-sheet imaging and allow to stand for degassing/sedimentation. (Temperature: RT, Time: 1–2 hours)",
+        "start": 5030,
+        "end": 5173
+      },
+      {
+        "text": "Match imaging medium and objective: use DBE-compatible imaging chamber and sealing materials with RI≈1.56; fix sample on a mount and proceed directly to whole-brain light-sheet scanning. (Temperature: RT, Time: per imaging session)",
+        "start": 5173,
+        "end": 5409
+      }
+    ],
+    "main_score_replaced": false
+  },
+  {
+    "request_id": "T02_R3C04_renumber_operations",
+    "answer_id": "R3C04",
+    "condition": "renumber_operations",
+    "raw_sr": 0.3333333333333333,
+    "raw_sp": 0.3076923076923077,
+    "raw_n": 39,
+    "candidate_sr": 0.3333333333333333,
+    "candidate_sp": 0.3333333333333333,
+    "candidate_n": 36,
+    "removed_heading_n": 3,
+    "removed_headings": [
+      {
+        "old_generated_index": 16,
+        "step": {
+          "text": "Wash after primary",
+          "start": 2722,
+          "end": 2745
+        },
+        "title_evidence": {
+          "start": 2722,
+          "end": 2745,
+          "line": "106 Wash after primary\n",
+          "label": "106",
+          "body": "Wash after primary"
+        },
+        "old_generated_max_similarity": 0.43486765027046204
+      },
+      {
+        "old_generated_index": 20,
+        "step": {
+          "text": "Wash after secondary",
+          "start": 3410,
+          "end": 3435
+        },
+        "title_evidence": {
+          "start": 3410,
+          "end": 3435,
+          "line": "108 Wash after secondary\n",
+          "label": "108",
+          "body": "Wash after secondary"
+        },
+        "old_generated_max_similarity": 0.4711070656776428
+      },
+      {
+        "old_generated_index": 23,
+        "step": {
+          "text": "Nuclear stain (TO-PRO-3, whole-brain nuclear localization for registration/segmentation assistance)",
+          "start": 3674,
+          "end": 3778
+        },
+        "title_evidence": {
+          "start": 3674,
+          "end": 3778,
+          "line": "109 Nuclear stain (TO-PRO-3, whole-brain nuclear localization for registration/segmentation assistance)\n",
+          "label": "109",
+          "body": "Nuclear stain (TO-PRO-3, whole-brain nuclear localization for registration/segmentation assistance)"
+        },
+        "old_generated_max_similarity": 0.349904328584671
+      }
+    ],
+    "candidate_selection": {
+      "reference_id": "IDISCO_PLUS_2016_SUPPLEMENT_METHOD_FAMILY_V1",
+      "fixed_order": 0,
+      "score": {
+        "sr": 0.3333333333333333,
+        "sp": 0.3333333333333333,
+        "reference_n": 9,
+        "generated_n": 36,
+        "matches": [
+          {
+            "reference_index": 0,
+            "reference_text": "After immunolabeling, dehydrate the brain in 20% methanol in water for 1 hour.",
+            "generated_index": 32,
+            "generated_text": "Continue soaking in fresh 100% DBE until fully transparent (usually required for whole brain). (Temperature: RT, Time: 12–24 hours, Light: protected)",
+            "similarity": 0.6643031239509583,
+            "matched": false
+          },
+          {
+            "reference_index": 1,
+            "reference_text": "After immunolabeling, dehydrate the brain in 40% methanol in water for 1 hour.",
+            "generated_index": 32,
+            "generated_text": "Continue soaking in fresh 100% DBE until fully transparent (usually required for whole brain). (Temperature: RT, Time: 12–24 hours, Light: protected)",
+            "similarity": 0.6699363589286804,
+            "matched": false
+          },
+          {
+            "reference_index": 2,
+            "reference_text": "After immunolabeling, dehydrate the brain in 60% methanol in water for 1 hour.",
+            "generated_index": 32,
+            "generated_text": "Continue soaking in fresh 100% DBE until fully transparent (usually required for whole brain). (Temperature: RT, Time: 12–24 hours, Light: protected)",
+            "similarity": 0.6710556745529175,
+            "matched": false
+          },
+          {
+            "reference_index": 3,
+            "reference_text": "After immunolabeling, dehydrate the brain in 80% methanol in water for 1 hour.",
+            "generated_index": 32,
+            "generated_text": "Continue soaking in fresh 100% DBE until fully transparent (usually required for whole brain). (Temperature: RT, Time: 12–24 hours, Light: protected)",
+            "similarity": 0.6721386313438416,
+            "matched": false
+          },
+          {
+            "reference_index": 4,
+            "reference_text": "After the methanol gradient, treat with 100% methanol for 1 hour twice.",
+            "generated_index": 5,
+            "generated_text": "Soak again in fresh 100% (vol/vol) methanol. (Temperature: RT, Time: 2 hours)",
+            "similarity": 0.7839270830154419,
+            "matched": true
+          },
+          {
+            "reference_index": 5,
+            "reference_text": "Incubate overnight in 1 volume methanol and 2 volumes dichloromethane (DCM), until the samples sink to the bottom of the vial.",
+            "generated_index": 29,
+            "generated_text": "Soak in 66% (vol/vol) Dichloromethane (DCM)/33% methanol mixture. (Temperature: RT, Time: 3 hours)",
+            "similarity": 0.7069908380508423,
+            "matched": true
+          },
+          {
+            "reference_index": 6,
+            "reference_text": "Wash twice in 100% dichloromethane (DCM), 20 minutes each, to remove methanol.",
+            "generated_index": 5,
+            "generated_text": "Soak again in fresh 100% (vol/vol) methanol. (Temperature: RT, Time: 2 hours)",
+            "similarity": 0.6748326420783997,
+            "matched": false
+          },
+          {
+            "reference_index": 7,
+            "reference_text": "Incubate in dibenzyl ether (DBE) without shaking until clear, reported as about 30 minutes.",
+            "generated_index": 31,
+            "generated_text": "Pre-soak in 100% Dibenzyl Ether (DBE, RI≈1.56). (Temperature: RT, Time: 3 hours, Light: protected)",
+            "similarity": 0.6554045677185059,
+            "matched": false
+          },
+          {
+            "reference_index": 8,
+            "reference_text": "Store the cleared brain in DBE at room temperature.",
+            "generated_index": 32,
+            "generated_text": "Continue soaking in fresh 100% DBE until fully transparent (usually required for whole brain). (Temperature: RT, Time: 12–24 hours, Light: protected)",
+            "similarity": 0.7097359299659729,
+            "matched": true
+          }
+        ],
+        "generated_max_similarity": [
+          0.7473598718643188,
+          0.7426219582557678,
+          0.7422139644622803,
+          0.7394164800643921,
+          0.7392662763595581,
+          0.7839270830154419,
+          0.6450634598731995,
+          0.753407895565033,
+          0.7590967416763306,
+          0.7597302198410034,
+          0.7666125893592834,
+          0.6446847915649414,
+          0.5284315347671509,
+          0.537703275680542,
+          0.5582418441772461,
+          0.5728541016578674,
+          0.5746649503707886,
+          0.5236688256263733,
+          0.4874979853630066,
+          0.6216651201248169,
+          0.5181567668914795,
+          0.4241258502006531,
+          0.6292639374732971,
+          0.5777381062507629,
+          0.547135055065155,
+          0.5400073528289795,
+          0.5224416255950928,
+          0.5385711193084717,
+          0.593350887298584,
+          0.7122089862823486,
+          0.697874903678894,
+          0.6680481433868408,
+          0.7097359299659729,
+          0.6962087750434875,
+          0.5364447832107544,
+          0.5902822017669678
+        ],
+        "reference_truncated": 0,
+        "generated_truncated": 0,
+        "generated_cjk_steps": 0
+      }
+    },
+    "candidate_all_references": [
+      {
+        "reference_id": "IDISCO_PLUS_2016_SUPPLEMENT_METHOD_FAMILY_V1",
+        "fixed_order": 0,
+        "score": {
+          "sr": 0.3333333333333333,
+          "sp": 0.3333333333333333,
+          "reference_n": 9,
+          "generated_n": 36,
+          "matches": [
+            {
+              "reference_index": 0,
+              "reference_text": "After immunolabeling, dehydrate the brain in 20% methanol in water for 1 hour.",
+              "generated_index": 32,
+              "generated_text": "Continue soaking in fresh 100% DBE until fully transparent (usually required for whole brain). (Temperature: RT, Time: 12–24 hours, Light: protected)",
+              "similarity": 0.6643031239509583,
+              "matched": false
+            },
+            {
+              "reference_index": 1,
+              "reference_text": "After immunolabeling, dehydrate the brain in 40% methanol in water for 1 hour.",
+              "generated_index": 32,
+              "generated_text": "Continue soaking in fresh 100% DBE until fully transparent (usually required for whole brain). (Temperature: RT, Time: 12–24 hours, Light: protected)",
+              "similarity": 0.6699363589286804,
+              "matched": false
+            },
+            {
+              "reference_index": 2,
+              "reference_text": "After immunolabeling, dehydrate the brain in 60% methanol in water for 1 hour.",
+              "generated_index": 32,
+              "generated_text": "Continue soaking in fresh 100% DBE until fully transparent (usually required for whole brain). (Temperature: RT, Time: 12–24 hours, Light: protected)",
+              "similarity": 0.6710556745529175,
+              "matched": false
+            },
+            {
+              "reference_index": 3,
+              "reference_text": "After immunolabeling, dehydrate the brain in 80% methanol in water for 1 hour.",
+              "generated_index": 32,
+              "generated_text": "Continue soaking in fresh 100% DBE until fully transparent (usually required for whole brain). (Temperature: RT, Time: 12–24 hours, Light: protected)",
+              "similarity": 0.6721386313438416,
+              "matched": false
+            },
+            {
+              "reference_index": 4,
+              "reference_text": "After the methanol gradient, treat with 100% methanol for 1 hour twice.",
+              "generated_index": 5,
+              "generated_text": "Soak again in fresh 100% (vol/vol) methanol. (Temperature: RT, Time: 2 hours)",
+              "similarity": 0.7839270830154419,
+              "matched": true
+            },
+            {
+              "reference_index": 5,
+              "reference_text": "Incubate overnight in 1 volume methanol and 2 volumes dichloromethane (DCM), until the samples sink to the bottom of the vial.",
+              "generated_index": 29,
+              "generated_text": "Soak in 66% (vol/vol) Dichloromethane (DCM)/33% methanol mixture. (Temperature: RT, Time: 3 hours)",
+              "similarity": 0.7069908380508423,
+              "matched": true
+            },
+            {
+              "reference_index": 6,
+              "reference_text": "Wash twice in 100% dichloromethane (DCM), 20 minutes each, to remove methanol.",
+              "generated_index": 5,
+              "generated_text": "Soak again in fresh 100% (vol/vol) methanol. (Temperature: RT, Time: 2 hours)",
+              "similarity": 0.6748326420783997,
+              "matched": false
+            },
+            {
+              "reference_index": 7,
+              "reference_text": "Incubate in dibenzyl ether (DBE) without shaking until clear, reported as about 30 minutes.",
+              "generated_index": 31,
+              "generated_text": "Pre-soak in 100% Dibenzyl Ether (DBE, RI≈1.56). (Temperature: RT, Time: 3 hours, Light: protected)",
+              "similarity": 0.6554045677185059,
+              "matched": false
+            },
+            {
+              "reference_index": 8,
+              "reference_text": "Store the cleared brain in DBE at room temperature.",
+              "generated_index": 32,
+              "generated_text": "Continue soaking in fresh 100% DBE until fully transparent (usually required for whole brain). (Temperature: RT, Time: 12–24 hours, Light: protected)",
+              "similarity": 0.7097359299659729,
+              "matched": true
+            }
+          ],
+          "generated_max_similarity": [
+            0.7473598718643188,
+            0.7426219582557678,
+            0.7422139644622803,
+            0.7394164800643921,
+            0.7392662763595581,
+            0.7839270830154419,
+            0.6450634598731995,
+            0.753407895565033,
+            0.7590967416763306,
+            0.7597302198410034,
+            0.7666125893592834,
+            0.6446847915649414,
+            0.5284315347671509,
+            0.537703275680542,
+            0.5582418441772461,
+            0.5728541016578674,
+            0.5746649503707886,
+            0.5236688256263733,
+            0.4874979853630066,
+            0.6216651201248169,
+            0.5181567668914795,
+            0.4241258502006531,
+            0.6292639374732971,
+            0.5777381062507629,
+            0.547135055065155,
+            0.5400073528289795,
+            0.5224416255950928,
+            0.5385711193084717,
+            0.593350887298584,
+            0.7122089862823486,
+            0.697874903678894,
+            0.6680481433868408,
+            0.7097359299659729,
+            0.6962087750434875,
+            0.5364447832107544,
+            0.5902822017669678
+          ],
+          "reference_truncated": 0,
+          "generated_truncated": 0,
+          "generated_cjk_steps": 0
+        }
+      },
+      {
+        "reference_id": "IDISCO_PLUS_2016_APRIL_BENCH_METHOD_FAMILY_V1",
+        "fixed_order": 1,
+        "score": {
+          "sr": 0.2222222222222222,
+          "sp": 0.16666666666666666,
+          "reference_n": 9,
+          "generated_n": 36,
+          "matches": [
+            {
+              "reference_index": 0,
+              "reference_text": "After immunolabeling, dehydrate the brain in 20% methanol in water for 1 hour at room temperature.",
+              "generated_index": 32,
+              "generated_text": "Continue soaking in fresh 100% DBE until fully transparent (usually required for whole brain). (Temperature: RT, Time: 12–24 hours, Light: protected)",
+              "similarity": 0.6793689131736755,
+              "matched": false
+            },
+            {
+              "reference_index": 1,
+              "reference_text": "After immunolabeling, dehydrate the brain in 40% methanol in water for 1 hour at room temperature.",
+              "generated_index": 32,
+              "generated_text": "Continue soaking in fresh 100% DBE until fully transparent (usually required for whole brain). (Temperature: RT, Time: 12–24 hours, Light: protected)",
+              "similarity": 0.6827962398529053,
+              "matched": false
+            },
+            {
+              "reference_index": 2,
+              "reference_text": "After immunolabeling, dehydrate the brain in 60% methanol in water for 1 hour at room temperature.",
+              "generated_index": 32,
+              "generated_text": "Continue soaking in fresh 100% DBE until fully transparent (usually required for whole brain). (Temperature: RT, Time: 12–24 hours, Light: protected)",
+              "similarity": 0.6835818290710449,
+              "matched": false
+            },
+            {
+              "reference_index": 3,
+              "reference_text": "After immunolabeling, dehydrate the brain in 80% methanol in water for 1 hour at room temperature.",
+              "generated_index": 32,
+              "generated_text": "Continue soaking in fresh 100% DBE until fully transparent (usually required for whole brain). (Temperature: RT, Time: 12–24 hours, Light: protected)",
+              "similarity": 0.6853773593902588,
+              "matched": false
+            },
+            {
+              "reference_index": 4,
+              "reference_text": "After the methanol gradient, treat with 100% methanol for 1 hour twice at room temperature. Leaving the sample overnight at room temperature at this point is explicitly optional.",
+              "generated_index": 5,
+              "generated_text": "Soak again in fresh 100% (vol/vol) methanol. (Temperature: RT, Time: 2 hours)",
+              "similarity": 0.7371713519096375,
+              "matched": true
+            },
+            {
+              "reference_index": 5,
+              "reference_text": "Incubate in 66% dichloromethane (DCM) and 33% methanol for 3 hours at room temperature with shaking.",
+              "generated_index": 29,
+              "generated_text": "Soak in 66% (vol/vol) Dichloromethane (DCM)/33% methanol mixture. (Temperature: RT, Time: 3 hours)",
+              "similarity": 0.7255233526229858,
+              "matched": true
+            },
+            {
+              "reference_index": 6,
+              "reference_text": "Wash twice in 100% dichloromethane (DCM), 15 minutes each, with shaking to remove methanol.",
+              "generated_index": 19,
+              "generated_text": "Wash with PBS + 0.2% Triton X-100 + 0.01% NaN3, gentle rocking with solution changes. (Temperature: RT, Time: 6 hours)",
+              "similarity": 0.6835267543792725,
+              "matched": false
+            },
+            {
+              "reference_index": 7,
+              "reference_text": "Incubate in dibenzyl ether (DBE) without shaking. Fill the tube almost completely with DBE to prevent air from oxidizing the sample.",
+              "generated_index": 31,
+              "generated_text": "Pre-soak in 100% Dibenzyl Ether (DBE, RI≈1.56). (Temperature: RT, Time: 3 hours, Light: protected)",
+              "similarity": 0.6751309037208557,
+              "matched": false
+            },
+            {
+              "reference_index": 8,
+              "reference_text": "Before imaging, invert the tube a couple of times to finish mixing the solution.",
+              "generated_index": 34,
+              "generated_text": "Before light-sheet imaging, replace with fresh DBE once and let stand to remove bubbles/settle. (Temperature: RT, Time: 1–2 hours)",
+              "similarity": 0.5658847093582153,
+              "matched": false
+            }
+          ],
+          "generated_max_similarity": [
+            0.6682908535003662,
+            0.6639853119850159,
+            0.6645541191101074,
+            0.6650328636169434,
+            0.665472149848938,
+            0.7371713519096375,
+            0.6565724611282349,
+            0.716822624206543,
+            0.725090503692627,
+            0.726088285446167,
+            0.732600212097168,
+            0.5780642032623291,
+            0.5346760749816895,
+            0.5295158624649048,
+            0.5320567488670349,
+            0.5478638410568237,
+            0.6335417628288269,
+            0.591973602771759,
+            0.4505424499511719,
+            0.6835267543792725,
+            0.5880471467971802,
+            0.4684791564941406,
+            0.676192045211792,
+            0.5332974791526794,
+            0.5078427791595459,
+            0.5022468566894531,
+            0.49546414613723755,
+            0.501939058303833,
+            0.5801032781600952,
+            0.7255233526229858,
+            0.6837717890739441,
+            0.6814448833465576,
+            0.6853773593902588,
+            0.6750401854515076,
+            0.5658847093582153,
+            0.47733592987060547
+          ],
+          "reference_truncated": 0,
+          "generated_truncated": 0,
+          "generated_cjk_steps": 0
+        }
+      }
+    ],
+    "candidate_steps": [
+      {
+        "text": "Soak in 20% (vol/vol) methanol/water solution, gentle rocking. (Temperature: RT, Time: 2 hours)",
+        "start": 724,
+        "end": 826
+      },
+      {
+        "text": "Soak in 40% (vol/vol) methanol/water solution, gentle rocking. (Temperature: RT, Time: 2 hours)",
+        "start": 826,
+        "end": 928
+      },
+      {
+        "text": "Soak in 60% (vol/vol) methanol/water solution, gentle rocking. (Temperature: RT, Time: 2 hours)",
+        "start": 928,
+        "end": 1030
+      },
+      {
+        "text": "Soak in 80% (vol/vol) methanol/water solution, gentle rocking. (Temperature: RT, Time: 2 hours)",
+        "start": 1030,
+        "end": 1132
+      },
+      {
+        "text": "Soak in 100% (vol/vol) methanol, gentle rocking. (Temperature: RT, Time: 2 hours)",
+        "start": 1132,
+        "end": 1220
+      },
+      {
+        "text": "Soak again in fresh 100% (vol/vol) methanol. (Temperature: RT, Time: 2 hours)",
+        "start": 1220,
+        "end": 1304
+      },
+      {
+        "text": "Soak in 5% H2O2 in methanol (Volume ratio: 30% H2O2 : methanol = 1 : 5), protected from light. (Temperature: 4 ℃, Time: 12–16 hours)",
+        "start": 1400,
+        "end": 1539
+      },
+      {
+        "text": "Soak in 80% (vol/vol) methanol/water solution. (Temperature: RT, Time: 1.5 hours)",
+        "start": 1556,
+        "end": 1644
+      },
+      {
+        "text": "Soak in 60% (vol/vol) methanol/water solution. (Temperature: RT, Time: 1.5 hours)",
+        "start": 1644,
+        "end": 1732
+      },
+      {
+        "text": "Soak in 40% (vol/vol) methanol/water solution. (Temperature: RT, Time: 1.5 hours)",
+        "start": 1732,
+        "end": 1820
+      },
+      {
+        "text": "Soak in 20% (vol/vol) methanol/water solution. (Temperature: RT, Time: 1.5 hours)",
+        "start": 1820,
+        "end": 1908
+      },
+      {
+        "text": "Soak in 1×PBS. (Temperature: RT, Time: 1.5 hours)",
+        "start": 1908,
+        "end": 1964
+      },
+      {
+        "text": "Permeabilization solution: PBS + 0.2% (vol/vol) Triton X-100 + 20% (vol/vol) DMSO + 0.3 M Glycine, gentle rocking. (Temperature: 37 ℃, Time: 24 hours)",
+        "start": 1997,
+        "end": 2154
+      },
+      {
+        "text": "Blocking solution: PBS + 0.2% Triton X-100 + 10% (vol/vol) DMSO + 6% (vol/vol) Normal Donkey Serum (NDS), gentle rocking. (Temperature: 37 ℃, Time: 24 hours)",
+        "start": 2154,
+        "end": 2318
+      },
+      {
+        "text": "Primary antibody incubation solution: PBS + 0.2% Triton X-100 + 5% DMSO + 3% NDS + 0.01% (w/v) NaN3; add NeuN (RBFOX3) primary antibody at 1:200. (Temperature: 37 ℃, Time: 5–7 days)",
+        "start": 2359,
+        "end": 2547
+      },
+      {
+        "text": "Add β-III Tubulin (TUJ1) primary antibody at 1:300 to the same incubation solution (can be co-incubated in the same tube as 105.1). (Temperature: 37 ℃, Time: 5–7 days)",
+        "start": 2547,
+        "end": 2721
+      },
+      {
+        "text": "Wash solution: PBS + 0.2% Triton X-100 + 0.01% NaN3, gentle rocking with solution changes. (Temperature: RT, Time: 6 hours)",
+        "start": 2745,
+        "end": 2875
+      },
+      {
+        "text": "Repeat 106.1 for a total of 6 times (total wash approximately 36 hours). (Temperature: RT, Time: 36 hours)",
+        "start": 2875,
+        "end": 2988
+      },
+      {
+        "text": "Secondary antibody incubation solution: PBS + 0.2% Triton X-100 + 3% NDS + 0.01% NaN3; add Donkey anti-mouse/rabbit (matched to primary antibody host) Alexa Fluor 647 secondary antibody at 1:400 (corresponding to NeuN and TUJ1 respectively; if the two primary antibodies have different hosts, they can be co-incubated in the same tube). (Temperature: 37 ℃, Time: 5–7 days, Light: protected)",
+        "start": 3012,
+        "end": 3409
+      },
+      {
+        "text": "Wash with PBS + 0.2% Triton X-100 + 0.01% NaN3, gentle rocking with solution changes. (Temperature: RT, Time: 6 hours)",
+        "start": 3435,
+        "end": 3560
+      },
+      {
+        "text": "Repeat 108.1 for a total of 6 times (total wash approximately 36 hours). (Temperature: RT, Time: 36 hours)",
+        "start": 3560,
+        "end": 3673
+      },
+      {
+        "text": "TO-PRO-3 1–2 µM (in PBS + 0.2% Triton X-100), protected from light, gentle rocking. (Temperature: RT, Time: 12–24 hours)",
+        "start": 3778,
+        "end": 3905
+      },
+      {
+        "text": "Wash with PBS 3 times. (Temperature: RT, Time: 2 hours each)",
+        "start": 3905,
+        "end": 3972
+      },
+      {
+        "text": "20% methanol/water. (Temperature: RT, Time: 1.5 hours)",
+        "start": 4005,
+        "end": 4066
+      },
+      {
+        "text": "40% methanol/water. (Temperature: RT, Time: 1.5 hours)",
+        "start": 4066,
+        "end": 4127
+      },
+      {
+        "text": "60% methanol/water. (Temperature: RT, Time: 1.5 hours)",
+        "start": 4127,
+        "end": 4188
+      },
+      {
+        "text": "80% methanol/water. (Temperature: RT, Time: 1.5 hours)",
+        "start": 4188,
+        "end": 4249
+      },
+      {
+        "text": "100% methanol. (Temperature: RT, Time: 2 hours)",
+        "start": 4249,
+        "end": 4303
+      },
+      {
+        "text": "Fresh 100% methanol. (Temperature: RT, Time: 2 hours)",
+        "start": 4303,
+        "end": 4363
+      },
+      {
+        "text": "Soak in 66% (vol/vol) Dichloromethane (DCM)/33% methanol mixture. (Temperature: RT, Time: 3 hours)",
+        "start": 4390,
+        "end": 4495
+      },
+      {
+        "text": "Soak in 100% DCM. (Temperature: RT, Time: 2 × 1.5 hours)",
+        "start": 4495,
+        "end": 4558
+      },
+      {
+        "text": "Pre-soak in 100% Dibenzyl Ether (DBE, RI≈1.56). (Temperature: RT, Time: 3 hours, Light: protected)",
+        "start": 4594,
+        "end": 4699
+      },
+      {
+        "text": "Continue soaking in fresh 100% DBE until fully transparent (usually required for whole brain). (Temperature: RT, Time: 12–24 hours, Light: protected)",
+        "start": 4699,
+        "end": 4855
+      },
+      {
+        "text": "Keep sample fully immersed in fresh 100% DBE, store sealed and protected from light (fill container as much as possible to reduce oxidation). (Temperature: RT or 4 ℃, Time: up to 1–2 weeks)",
+        "start": 4882,
+        "end": 5078
+      },
+      {
+        "text": "Before light-sheet imaging, replace with fresh DBE once and let stand to remove bubbles/settle. (Temperature: RT, Time: 1–2 hours)",
+        "start": 5078,
+        "end": 5215
+      },
+      {
+        "text": "Match imaging medium and objective: use DBE-compatible imaging chamber and sealing materials with RI≈1.56; after fixing sample to a mount, proceed directly to whole-brain light-sheet scanning. (Temperature: RT, Time: per imaging session)",
+        "start": 5215,
+        "end": 5458
+      }
+    ],
+    "main_score_replaced": false
+  },
+  {
+    "request_id": "T03_R3C04_merge_adjacent_operations",
+    "answer_id": "R3C04",
+    "condition": "merge_adjacent_operations",
+    "raw_sr": 0.3333333333333333,
+    "raw_sp": 0.3157894736842105,
+    "raw_n": 38,
+    "candidate_sr": 0.3333333333333333,
+    "candidate_sp": 0.34285714285714286,
+    "candidate_n": 35,
+    "removed_heading_n": 3,
+    "removed_headings": [
+      {
+        "old_generated_index": 16,
+        "step": {
+          "text": "Wash after primary",
+          "start": 2727,
+          "end": 2748
+        },
+        "title_evidence": {
+          "start": 2727,
+          "end": 2748,
+          "line": "6 Wash after primary\n",
+          "label": "6",
+          "body": "Wash after primary"
+        },
+        "old_generated_max_similarity": 0.43486765027046204
+      },
+      {
+        "old_generated_index": 20,
+        "step": {
+          "text": "Wash after secondary",
+          "start": 3405,
+          "end": 3428
+        },
+        "title_evidence": {
+          "start": 3405,
+          "end": 3428,
+          "line": "8 Wash after secondary\n",
+          "label": "8",
+          "body": "Wash after secondary"
+        },
+        "old_generated_max_similarity": 0.4711070656776428
+      },
+      {
+        "old_generated_index": 23,
+        "step": {
+          "text": "Nuclear stain (TO-PRO-3, whole-brain nuclear localization for registration/segmentation assistance)",
+          "start": 3663,
+          "end": 3765
+        },
+        "title_evidence": {
+          "start": 3663,
+          "end": 3765,
+          "line": "9 Nuclear stain (TO-PRO-3, whole-brain nuclear localization for registration/segmentation assistance)\n",
+          "label": "9",
+          "body": "Nuclear stain (TO-PRO-3, whole-brain nuclear localization for registration/segmentation assistance)"
+        },
+        "old_generated_max_similarity": 0.349904328584671
+      }
+    ],
+    "candidate_selection": {
+      "reference_id": "IDISCO_PLUS_2016_SUPPLEMENT_METHOD_FAMILY_V1",
+      "fixed_order": 0,
+      "score": {
+        "sr": 0.3333333333333333,
+        "sp": 0.34285714285714286,
+        "reference_n": 9,
+        "generated_n": 35,
+        "matches": [
+          {
+            "reference_index": 0,
+            "reference_text": "After immunolabeling, dehydrate the brain in 20% methanol in water for 1 hour.",
+            "generated_index": 31,
+            "generated_text": "Continue soaking in fresh 100% DBE until fully transparent (usually required for whole brain). (Temperature: RT, Time: 12–24 hours, Light: protected)",
+            "similarity": 0.6643030047416687,
+            "matched": false
+          },
+          {
+            "reference_index": 1,
+            "reference_text": "After immunolabeling, dehydrate the brain in 40% methanol in water for 1 hour.",
+            "generated_index": 31,
+            "generated_text": "Continue soaking in fresh 100% DBE until fully transparent (usually required for whole brain). (Temperature: RT, Time: 12–24 hours, Light: protected)",
+            "similarity": 0.66993647813797,
+            "matched": false
+          },
+          {
+            "reference_index": 2,
+            "reference_text": "After immunolabeling, dehydrate the brain in 60% methanol in water for 1 hour.",
+            "generated_index": 31,
+            "generated_text": "Continue soaking in fresh 100% DBE until fully transparent (usually required for whole brain). (Temperature: RT, Time: 12–24 hours, Light: protected)",
+            "similarity": 0.6710556745529175,
+            "matched": false
+          },
+          {
+            "reference_index": 3,
+            "reference_text": "After immunolabeling, dehydrate the brain in 80% methanol in water for 1 hour.",
+            "generated_index": 31,
+            "generated_text": "Continue soaking in fresh 100% DBE until fully transparent (usually required for whole brain). (Temperature: RT, Time: 12–24 hours, Light: protected)",
+            "similarity": 0.6721387505531311,
+            "matched": false
+          },
+          {
+            "reference_index": 4,
+            "reference_text": "After the methanol gradient, treat with 100% methanol for 1 hour twice.",
+            "generated_index": 5,
+            "generated_text": "Soak again in fresh 100% (vol/vol) methanol. (Temperature: RT, Time: 2 hours)",
+            "similarity": 0.7839270830154419,
+            "matched": true
+          },
+          {
+            "reference_index": 5,
+            "reference_text": "Incubate overnight in 1 volume methanol and 2 volumes dichloromethane (DCM), until the samples sink to the bottom of the vial.",
+            "generated_index": 1,
+            "generated_text": "Soak in 40% (vol/vol) methanol/water solution, gentle agitation. (Temperature: RT, Time: 2 hours)",
+            "similarity": 0.708564281463623,
+            "matched": true
+          },
+          {
+            "reference_index": 6,
+            "reference_text": "Wash twice in 100% dichloromethane (DCM), 20 minutes each, to remove methanol.",
+            "generated_index": 5,
+            "generated_text": "Soak again in fresh 100% (vol/vol) methanol. (Temperature: RT, Time: 2 hours)",
+            "similarity": 0.6748326420783997,
+            "matched": false
+          },
+          {
+            "reference_index": 7,
+            "reference_text": "Incubate in dibenzyl ether (DBE) without shaking until clear, reported as about 30 minutes.",
+            "generated_index": 30,
+            "generated_text": "Pre-soak in 100% Dibenzyl Ether (DBE, RI≈1.56). (Temperature: RT, Time: 3 hours, Light: protected)",
+            "similarity": 0.6554045677185059,
+            "matched": false
+          },
+          {
+            "reference_index": 8,
+            "reference_text": "Store the cleared brain in DBE at room temperature.",
+            "generated_index": 31,
+            "generated_text": "Continue soaking in fresh 100% DBE until fully transparent (usually required for whole brain). (Temperature: RT, Time: 12–24 hours, Light: protected)",
+            "similarity": 0.7097359299659729,
+            "matched": true
+          }
+        ],
+        "generated_max_similarity": [
+          0.7799121141433716,
+          0.7768975496292114,
+          0.7740509510040283,
+          0.7720093727111816,
+          0.7717365026473999,
+          0.7839270830154419,
+          0.6450634598731995,
+          0.753407895565033,
+          0.7590967416763306,
+          0.7597302198410034,
+          0.7666125893592834,
+          0.6446847915649414,
+          0.5557599067687988,
+          0.5301222205162048,
+          0.5582418441772461,
+          0.5732536911964417,
+          0.5636310577392578,
+          0.4877770245075226,
+          0.4874979853630066,
+          0.6261007785797119,
+          0.518034040927887,
+          0.48195838928222656,
+          0.6292639374732971,
+          0.56449294090271,
+          0.5400073528289795,
+          0.5224416255950928,
+          0.5385711193084717,
+          0.593350887298584,
+          0.7122089862823486,
+          0.697874903678894,
+          0.6680481433868408,
+          0.7097359299659729,
+          0.6962087750434875,
+          0.5559948086738586,
+          0.5913360118865967
+        ],
+        "reference_truncated": 0,
+        "generated_truncated": 0,
+        "generated_cjk_steps": 0
+      }
+    },
+    "candidate_all_references": [
+      {
+        "reference_id": "IDISCO_PLUS_2016_SUPPLEMENT_METHOD_FAMILY_V1",
+        "fixed_order": 0,
+        "score": {
+          "sr": 0.3333333333333333,
+          "sp": 0.34285714285714286,
+          "reference_n": 9,
+          "generated_n": 35,
+          "matches": [
+            {
+              "reference_index": 0,
+              "reference_text": "After immunolabeling, dehydrate the brain in 20% methanol in water for 1 hour.",
+              "generated_index": 31,
+              "generated_text": "Continue soaking in fresh 100% DBE until fully transparent (usually required for whole brain). (Temperature: RT, Time: 12–24 hours, Light: protected)",
+              "similarity": 0.6643030047416687,
+              "matched": false
+            },
+            {
+              "reference_index": 1,
+              "reference_text": "After immunolabeling, dehydrate the brain in 40% methanol in water for 1 hour.",
+              "generated_index": 31,
+              "generated_text": "Continue soaking in fresh 100% DBE until fully transparent (usually required for whole brain). (Temperature: RT, Time: 12–24 hours, Light: protected)",
+              "similarity": 0.66993647813797,
+              "matched": false
+            },
+            {
+              "reference_index": 2,
+              "reference_text": "After immunolabeling, dehydrate the brain in 60% methanol in water for 1 hour.",
+              "generated_index": 31,
+              "generated_text": "Continue soaking in fresh 100% DBE until fully transparent (usually required for whole brain). (Temperature: RT, Time: 12–24 hours, Light: protected)",
+              "similarity": 0.6710556745529175,
+              "matched": false
+            },
+            {
+              "reference_index": 3,
+              "reference_text": "After immunolabeling, dehydrate the brain in 80% methanol in water for 1 hour.",
+              "generated_index": 31,
+              "generated_text": "Continue soaking in fresh 100% DBE until fully transparent (usually required for whole brain). (Temperature: RT, Time: 12–24 hours, Light: protected)",
+              "similarity": 0.6721387505531311,
+              "matched": false
+            },
+            {
+              "reference_index": 4,
+              "reference_text": "After the methanol gradient, treat with 100% methanol for 1 hour twice.",
+              "generated_index": 5,
+              "generated_text": "Soak again in fresh 100% (vol/vol) methanol. (Temperature: RT, Time: 2 hours)",
+              "similarity": 0.7839270830154419,
+              "matched": true
+            },
+            {
+              "reference_index": 5,
+              "reference_text": "Incubate overnight in 1 volume methanol and 2 volumes dichloromethane (DCM), until the samples sink to the bottom of the vial.",
+              "generated_index": 1,
+              "generated_text": "Soak in 40% (vol/vol) methanol/water solution, gentle agitation. (Temperature: RT, Time: 2 hours)",
+              "similarity": 0.708564281463623,
+              "matched": true
+            },
+            {
+              "reference_index": 6,
+              "reference_text": "Wash twice in 100% dichloromethane (DCM), 20 minutes each, to remove methanol.",
+              "generated_index": 5,
+              "generated_text": "Soak again in fresh 100% (vol/vol) methanol. (Temperature: RT, Time: 2 hours)",
+              "similarity": 0.6748326420783997,
+              "matched": false
+            },
+            {
+              "reference_index": 7,
+              "reference_text": "Incubate in dibenzyl ether (DBE) without shaking until clear, reported as about 30 minutes.",
+              "generated_index": 30,
+              "generated_text": "Pre-soak in 100% Dibenzyl Ether (DBE, RI≈1.56). (Temperature: RT, Time: 3 hours, Light: protected)",
+              "similarity": 0.6554045677185059,
+              "matched": false
+            },
+            {
+              "reference_index": 8,
+              "reference_text": "Store the cleared brain in DBE at room temperature.",
+              "generated_index": 31,
+              "generated_text": "Continue soaking in fresh 100% DBE until fully transparent (usually required for whole brain). (Temperature: RT, Time: 12–24 hours, Light: protected)",
+              "similarity": 0.7097359299659729,
+              "matched": true
+            }
+          ],
+          "generated_max_similarity": [
+            0.7799121141433716,
+            0.7768975496292114,
+            0.7740509510040283,
+            0.7720093727111816,
+            0.7717365026473999,
+            0.7839270830154419,
+            0.6450634598731995,
+            0.753407895565033,
+            0.7590967416763306,
+            0.7597302198410034,
+            0.7666125893592834,
+            0.6446847915649414,
+            0.5557599067687988,
+            0.5301222205162048,
+            0.5582418441772461,
+            0.5732536911964417,
+            0.5636310577392578,
+            0.4877770245075226,
+            0.4874979853630066,
+            0.6261007785797119,
+            0.518034040927887,
+            0.48195838928222656,
+            0.6292639374732971,
+            0.56449294090271,
+            0.5400073528289795,
+            0.5224416255950928,
+            0.5385711193084717,
+            0.593350887298584,
+            0.7122089862823486,
+            0.697874903678894,
+            0.6680481433868408,
+            0.7097359299659729,
+            0.6962087750434875,
+            0.5559948086738586,
+            0.5913360118865967
+          ],
+          "reference_truncated": 0,
+          "generated_truncated": 0,
+          "generated_cjk_steps": 0
+        }
+      },
+      {
+        "reference_id": "IDISCO_PLUS_2016_APRIL_BENCH_METHOD_FAMILY_V1",
+        "fixed_order": 1,
+        "score": {
+          "sr": 0.2222222222222222,
+          "sp": 0.3142857142857143,
+          "reference_n": 9,
+          "generated_n": 35,
+          "matches": [
+            {
+              "reference_index": 0,
+              "reference_text": "After immunolabeling, dehydrate the brain in 20% methanol in water for 1 hour at room temperature.",
+              "generated_index": 31,
+              "generated_text": "Continue soaking in fresh 100% DBE until fully transparent (usually required for whole brain). (Temperature: RT, Time: 12–24 hours, Light: protected)",
+              "similarity": 0.6793689131736755,
+              "matched": false
+            },
+            {
+              "reference_index": 1,
+              "reference_text": "After immunolabeling, dehydrate the brain in 40% methanol in water for 1 hour at room temperature.",
+              "generated_index": 31,
+              "generated_text": "Continue soaking in fresh 100% DBE until fully transparent (usually required for whole brain). (Temperature: RT, Time: 12–24 hours, Light: protected)",
+              "similarity": 0.6827961802482605,
+              "matched": false
+            },
+            {
+              "reference_index": 2,
+              "reference_text": "After immunolabeling, dehydrate the brain in 60% methanol in water for 1 hour at room temperature.",
+              "generated_index": 31,
+              "generated_text": "Continue soaking in fresh 100% DBE until fully transparent (usually required for whole brain). (Temperature: RT, Time: 12–24 hours, Light: protected)",
+              "similarity": 0.6835817098617554,
+              "matched": false
+            },
+            {
+              "reference_index": 3,
+              "reference_text": "After immunolabeling, dehydrate the brain in 80% methanol in water for 1 hour at room temperature.",
+              "generated_index": 31,
+              "generated_text": "Continue soaking in fresh 100% DBE until fully transparent (usually required for whole brain). (Temperature: RT, Time: 12–24 hours, Light: protected)",
+              "similarity": 0.6853771209716797,
+              "matched": false
+            },
+            {
+              "reference_index": 4,
+              "reference_text": "After the methanol gradient, treat with 100% methanol for 1 hour twice at room temperature. Leaving the sample overnight at room temperature at this point is explicitly optional.",
+              "generated_index": 0,
+              "generated_text": "Soak in 20% (vol/vol) methanol/water solution, gentle agitation. (Temperature: RT, Time: 2 hours)",
+              "similarity": 0.7450129389762878,
+              "matched": true
+            },
+            {
+              "reference_index": 5,
+              "reference_text": "Incubate in 66% dichloromethane (DCM) and 33% methanol for 3 hours at room temperature with shaking.",
+              "generated_index": 28,
+              "generated_text": "Soak in 66% (vol/vol) Dichloromethane (DCM)/33% methanol mixture. (Temperature: RT, Time: 3 hours)",
+              "similarity": 0.7255233526229858,
+              "matched": true
+            },
+            {
+              "reference_index": 6,
+              "reference_text": "Wash twice in 100% dichloromethane (DCM), 15 minutes each, with shaking to remove methanol.",
+              "generated_index": 19,
+              "generated_text": "Wash with PBS + 0.2% Triton X-100 + 0.01% NaN3, gentle agitation with solution changes. (Temperature: RT, Time: 6 hours)",
+              "similarity": 0.6805830001831055,
+              "matched": false
+            },
+            {
+              "reference_index": 7,
+              "reference_text": "Incubate in dibenzyl ether (DBE) without shaking. Fill the tube almost completely with DBE to prevent air from oxidizing the sample.",
+              "generated_index": 30,
+              "generated_text": "Pre-soak in 100% Dibenzyl Ether (DBE, RI≈1.56). (Temperature: RT, Time: 3 hours, Light: protected)",
+              "similarity": 0.6751309037208557,
+              "matched": false
+            },
+            {
+              "reference_index": 8,
+              "reference_text": "Before imaging, invert the tube a couple of times to finish mixing the solution.",
+              "generated_index": 33,
+              "generated_text": "Replace with fresh DBE once before light-sheet imaging and allow to stand for degassing/sedimentation. (Temperature: RT, Time: 1–2 hours)",
+              "similarity": 0.49726417660713196,
+              "matched": false
+            }
+          ],
+          "generated_max_similarity": [
+            0.7450129389762878,
+            0.7420293092727661,
+            0.740247368812561,
+            0.7360427379608154,
+            0.7334874272346497,
+            0.7371713519096375,
+            0.6565724611282349,
+            0.716822624206543,
+            0.725090503692627,
+            0.726088285446167,
+            0.732600212097168,
+            0.5780642032623291,
+            0.5363149642944336,
+            0.5243574380874634,
+            0.5320567488670349,
+            0.5476616024971008,
+            0.6141143441200256,
+            0.5581104159355164,
+            0.4505424499511719,
+            0.6805830001831055,
+            0.5894167423248291,
+            0.4852696359157562,
+            0.676192045211792,
+            0.5519861578941345,
+            0.5022468566894531,
+            0.49546414613723755,
+            0.501939058303833,
+            0.5801032781600952,
+            0.7255233526229858,
+            0.6837717890739441,
+            0.6814448833465576,
+            0.6853771209716797,
+            0.6750401854515076,
+            0.5338451862335205,
+            0.4573805630207062
+          ],
+          "reference_truncated": 0,
+          "generated_truncated": 0,
+          "generated_cjk_steps": 0
+        }
+      }
+    ],
+    "candidate_steps": [
+      {
+        "text": "Soak in 20% (vol/vol) methanol/water solution, gentle agitation. (Temperature: RT, Time: 2 hours)",
+        "start": 757,
+        "end": 859
+      },
+      {
+        "text": "Soak in 40% (vol/vol) methanol/water solution, gentle agitation. (Temperature: RT, Time: 2 hours)",
+        "start": 859,
+        "end": 961
+      },
+      {
+        "text": "Soak in 60% (vol/vol) methanol/water solution, gentle agitation. (Temperature: RT, Time: 2 hours)",
+        "start": 961,
+        "end": 1063
+      },
+      {
+        "text": "Soak in 80% (vol/vol) methanol/water solution, gentle agitation. (Temperature: RT, Time: 2 hours)",
+        "start": 1063,
+        "end": 1165
+      },
+      {
+        "text": "Soak in 100% (vol/vol) methanol, gentle agitation. (Temperature: RT, Time: 2 hours)",
+        "start": 1165,
+        "end": 1253
+      },
+      {
+        "text": "Soak again in fresh 100% (vol/vol) methanol. (Temperature: RT, Time: 2 hours)",
+        "start": 1253,
+        "end": 1335
+      },
+      {
+        "text": "Soak in 5% H2O2 in methanol (volume ratio: 30% H2O2 : methanol = 1 : 5), protected from light. (Temperature: 4 ℃, Time: 12–16 hours)",
+        "start": 1429,
+        "end": 1566
+      },
+      {
+        "text": "Soak in 80% (vol/vol) methanol/water solution. (Temperature: RT, Time: 1.5 hours)",
+        "start": 1581,
+        "end": 1667
+      },
+      {
+        "text": "Soak in 60% (vol/vol) methanol/water solution. (Temperature: RT, Time: 1.5 hours)",
+        "start": 1667,
+        "end": 1753
+      },
+      {
+        "text": "Soak in 40% (vol/vol) methanol/water solution. (Temperature: RT, Time: 1.5 hours)",
+        "start": 1753,
+        "end": 1839
+      },
+      {
+        "text": "Soak in 20% (vol/vol) methanol/water solution. (Temperature: RT, Time: 1.5 hours)",
+        "start": 1839,
+        "end": 1925
+      },
+      {
+        "text": "Soak in 1×PBS. (Temperature: RT, Time: 1.5 hours)",
+        "start": 1925,
+        "end": 1979
+      },
+      {
+        "text": "Permeabilization solution: PBS + 0.2% (vol/vol) Triton X-100 + 20% (vol/vol) DMSO + 0.3 M Glycine, gentle agitation. (Temperature: 37 ℃, Time: 24 hours)",
+        "start": 2010,
+        "end": 2167
+      },
+      {
+        "text": "Blocking solution: PBS + 0.2% Triton X-100 + 10% (vol/vol) DMSO + 6% (vol/vol) Normal Donkey Serum (NDS), gentle agitation. (Temperature: 37 ℃, Time: 24 hours)",
+        "start": 2167,
+        "end": 2331
+      },
+      {
+        "text": "Primary antibody incubation solution: PBS + 0.2% Triton X-100 + 5% DMSO + 3% NDS + 0.01% (w/v) NaN3; add NeuN (RBFOX3) primary antibody at 1:200. (Temperature: 37 ℃, Time: 5–7 days)",
+        "start": 2370,
+        "end": 2556
+      },
+      {
+        "text": "Add β-III Tubulin (TUJ1) primary antibody at 1:300 to the same incubation solution (can be co-incubated in the same tube as 5.1). (Temperature: 37 ℃, Time: 5–7 days)",
+        "start": 2556,
+        "end": 2726
+      },
+      {
+        "text": "Wash solution: PBS + 0.2% Triton X-100 + 0.01% NaN3, gentle agitation with solution changes. (Temperature: RT, Time: 6 hours)",
+        "start": 2748,
+        "end": 2878
+      },
+      {
+        "text": "Repeat 6.1 for a total of 6 times (total wash approximately 36 hours). (Temperature: RT, Time: 36 hours)",
+        "start": 2878,
+        "end": 2987
+      },
+      {
+        "text": "Secondary antibody incubation solution: PBS + 0.2% Triton X-100 + 3% NDS + 0.01% NaN3; add Donkey anti-mouse/rabbit (matched to primary antibody host) Alexa Fluor 647 secondary antibody at 1:400 (corresponding to NeuN and TUJ1 respectively; if the two primary antibodies have different hosts, they can be co-incubated in the same tube). (Temperature: 37 ℃, Time: 5–7 days, Light: protected)",
+        "start": 3009,
+        "end": 3404
+      },
+      {
+        "text": "Wash with PBS + 0.2% Triton X-100 + 0.01% NaN3, gentle agitation with solution changes. (Temperature: RT, Time: 6 hours)",
+        "start": 3428,
+        "end": 3553
+      },
+      {
+        "text": "Repeat 8.1 for a total of 6 times (total wash approximately 36 hours). (Temperature: RT, Time: 36 hours)",
+        "start": 3553,
+        "end": 3662
+      },
+      {
+        "text": "TO-PRO-3 1–2 µM (in PBS + 0.2% Triton X-100), protected from light, gentle agitation. (Temperature: RT, Time: 12–24 hours)",
+        "start": 3765,
+        "end": 3892
+      },
+      {
+        "text": "Wash with PBS 3 times. (Temperature: RT, Time: 2 hours each)",
+        "start": 3892,
+        "end": 3957
+      },
+      {
+        "text": "20% methanol/water. (Temperature: RT, Time: 1.5 hours) 40% methanol/water. (Temperature: RT, Time: 1.5 hours)",
+        "start": 3989,
+        "end": 4104
+      },
+      {
+        "text": "60% methanol/water. (Temperature: RT, Time: 1.5 hours)",
+        "start": 4104,
+        "end": 4164
+      },
+      {
+        "text": "80% methanol/water. (Temperature: RT, Time: 1.5 hours)",
+        "start": 4164,
+        "end": 4224
+      },
+      {
+        "text": "100% methanol. (Temperature: RT, Time: 2 hours)",
+        "start": 4224,
+        "end": 4277
+      },
+      {
+        "text": "Fresh 100% methanol. (Temperature: RT, Time: 2 hours)",
+        "start": 4277,
+        "end": 4336
+      },
+      {
+        "text": "Soak in 66% (vol/vol) Dichloromethane (DCM)/33% methanol mixture. (Temperature: RT, Time: 3 hours)",
+        "start": 4362,
+        "end": 4466
+      },
+      {
+        "text": "Soak in 100% DCM. (Temperature: RT, Time: 2 × 1.5 hours)",
+        "start": 4466,
+        "end": 4528
+      },
+      {
+        "text": "Pre-soak in 100% Dibenzyl Ether (DBE, RI≈1.56). (Temperature: RT, Time: 3 hours, Light: protected)",
+        "start": 4563,
+        "end": 4667
+      },
+      {
+        "text": "Continue soaking in fresh 100% DBE until fully transparent (usually required for whole brain). (Temperature: RT, Time: 12–24 hours, Light: protected)",
+        "start": 4667,
+        "end": 4822
+      },
+      {
+        "text": "Keep sample fully immersed in fresh 100% DBE, store sealed and protected from light (fill container as much as possible to reduce oxidation). (Temperature: RT or 4 ℃, Time: up to 1–2 weeks)",
+        "start": 4848,
+        "end": 5043
+      },
+      {
+        "text": "Replace with fresh DBE once before light-sheet imaging and allow to stand for degassing/sedimentation. (Temperature: RT, Time: 1–2 hours)",
+        "start": 5043,
+        "end": 5186
+      },
+      {
+        "text": "Match imaging medium and objective: use DBE-compatible imaging chamber and sealing materials with RI≈1.56; fix sample on a holder and proceed directly to whole-brain light-sheet scanning. (Temperature: RT, Time: per imaging session)",
+        "start": 5186,
+        "end": 5423
+      }
+    ],
+    "main_score_replaced": false
+  },
+  {
+    "request_id": "T04_R3C04_delete_reported_core_operations",
+    "answer_id": "R3C04",
+    "condition": "delete_reported_core_operations",
+    "raw_sr": 0.3333333333333333,
+    "raw_sp": 0.36363636363636365,
+    "raw_n": 33,
+    "candidate_sr": 0.3333333333333333,
+    "candidate_sp": 0.4,
+    "candidate_n": 30,
+    "removed_heading_n": 3,
+    "removed_headings": [
+      {
+        "old_generated_index": 16,
+        "step": {
+          "text": "Wash after primary",
+          "start": 2681,
+          "end": 2702
+        },
+        "title_evidence": {
+          "start": 2681,
+          "end": 2702,
+          "line": "6 Wash after primary\n",
+          "label": "6",
+          "body": "Wash after primary"
+        },
+        "old_generated_max_similarity": 0.43486765027046204
+      },
+      {
+        "old_generated_index": 20,
+        "step": {
+          "text": "Wash after secondary",
+          "start": 3357,
+          "end": 3380
+        },
+        "title_evidence": {
+          "start": 3357,
+          "end": 3380,
+          "line": "8 Wash after secondary\n",
+          "label": "8",
+          "body": "Wash after secondary"
+        },
+        "old_generated_max_similarity": 0.4711070656776428
+      },
+      {
+        "old_generated_index": 23,
+        "step": {
+          "text": "Nuclear stain (TO-PRO-3, whole-brain nuclear localization to assist registration/segmentation)",
+          "start": 3613,
+          "end": 3710
+        },
+        "title_evidence": {
+          "start": 3613,
+          "end": 3710,
+          "line": "9 Nuclear stain (TO-PRO-3, whole-brain nuclear localization to assist registration/segmentation)\n",
+          "label": "9",
+          "body": "Nuclear stain (TO-PRO-3, whole-brain nuclear localization to assist registration/segmentation)"
+        },
+        "old_generated_max_similarity": 0.3585148751735687
+      }
+    ],
+    "candidate_selection": {
+      "reference_id": "IDISCO_PLUS_2016_SUPPLEMENT_METHOD_FAMILY_V1",
+      "fixed_order": 0,
+      "score": {
+        "sr": 0.3333333333333333,
+        "sp": 0.4,
+        "reference_n": 9,
+        "generated_n": 30,
+        "matches": [
+          {
+            "reference_index": 0,
+            "reference_text": "After immunolabeling, dehydrate the brain in 20% methanol in water for 1 hour.",
+            "generated_index": 26,
+            "generated_text": "Continue soaking in fresh 100% DBE until fully transparent (usually required for whole brain). (Temperature: RT, Time: 12–24 hours, Light: protected)",
+            "similarity": 0.6643031239509583,
+            "matched": false
+          },
+          {
+            "reference_index": 1,
+            "reference_text": "After immunolabeling, dehydrate the brain in 40% methanol in water for 1 hour.",
+            "generated_index": 26,
+            "generated_text": "Continue soaking in fresh 100% DBE until fully transparent (usually required for whole brain). (Temperature: RT, Time: 12–24 hours, Light: protected)",
+            "similarity": 0.6699363589286804,
+            "matched": false
+          },
+          {
+            "reference_index": 2,
+            "reference_text": "After immunolabeling, dehydrate the brain in 60% methanol in water for 1 hour.",
+            "generated_index": 26,
+            "generated_text": "Continue soaking in fresh 100% DBE until fully transparent (usually required for whole brain). (Temperature: RT, Time: 12–24 hours, Light: protected)",
+            "similarity": 0.6710556745529175,
+            "matched": false
+          },
+          {
+            "reference_index": 3,
+            "reference_text": "After immunolabeling, dehydrate the brain in 80% methanol in water for 1 hour.",
+            "generated_index": 26,
+            "generated_text": "Continue soaking in fresh 100% DBE until fully transparent (usually required for whole brain). (Temperature: RT, Time: 12–24 hours, Light: protected)",
+            "similarity": 0.6721386313438416,
+            "matched": false
+          },
+          {
+            "reference_index": 4,
+            "reference_text": "After the methanol gradient, treat with 100% methanol for 1 hour twice.",
+            "generated_index": 5,
+            "generated_text": "Soak again in fresh 100% (vol/vol) methanol. (Temperature: RT, Time: 2 hours)",
+            "similarity": 0.7839270830154419,
+            "matched": true
+          },
+          {
+            "reference_index": 5,
+            "reference_text": "Incubate overnight in 1 volume methanol and 2 volumes dichloromethane (DCM), until the samples sink to the bottom of the vial.",
+            "generated_index": 23,
+            "generated_text": "Soak in 66% (vol/vol) Dichloromethane (DCM)/33% methanol mixture. (Temperature: RT, Time: 3 hours)",
+            "similarity": 0.7069908380508423,
+            "matched": true
+          },
+          {
+            "reference_index": 6,
+            "reference_text": "Wash twice in 100% dichloromethane (DCM), 20 minutes each, to remove methanol.",
+            "generated_index": 5,
+            "generated_text": "Soak again in fresh 100% (vol/vol) methanol. (Temperature: RT, Time: 2 hours)",
+            "similarity": 0.6748326420783997,
+            "matched": false
+          },
+          {
+            "reference_index": 7,
+            "reference_text": "Incubate in dibenzyl ether (DBE) without shaking until clear, reported as about 30 minutes.",
+            "generated_index": 25,
+            "generated_text": "Pre-soak in 100% Dibenzyl Ether (DBE, RI≈1.56). (Temperature: RT, Time: 3 hours, Light: protected)",
+            "similarity": 0.6554045677185059,
+            "matched": false
+          },
+          {
+            "reference_index": 8,
+            "reference_text": "Store the cleared brain in DBE at room temperature.",
+            "generated_index": 26,
+            "generated_text": "Continue soaking in fresh 100% DBE until fully transparent (usually required for whole brain). (Temperature: RT, Time: 12–24 hours, Light: protected)",
+            "similarity": 0.7097359299659729,
+            "matched": true
+          }
+        ],
+        "generated_max_similarity": [
+          0.7473598718643188,
+          0.7426219582557678,
+          0.7422139644622803,
+          0.7394164800643921,
+          0.7392662763595581,
+          0.7839270830154419,
+          0.6450634598731995,
+          0.753407895565033,
+          0.7590967416763306,
+          0.7597302198410034,
+          0.7666125893592834,
+          0.6446847915649414,
+          0.5284315347671509,
+          0.537703275680542,
+          0.5582418441772461,
+          0.5732536911964417,
+          0.5746649503707886,
+          0.4877770245075226,
+          0.4874979853630066,
+          0.6216651201248169,
+          0.518034040927887,
+          0.4241258502006531,
+          0.6292639374732971,
+          0.7122089862823486,
+          0.6978749632835388,
+          0.6680482625961304,
+          0.7097359299659729,
+          0.6962087750434875,
+          0.57471764087677,
+          0.5892025232315063
+        ],
+        "reference_truncated": 0,
+        "generated_truncated": 0,
+        "generated_cjk_steps": 0
+      }
+    },
+    "candidate_all_references": [
+      {
+        "reference_id": "IDISCO_PLUS_2016_SUPPLEMENT_METHOD_FAMILY_V1",
+        "fixed_order": 0,
+        "score": {
+          "sr": 0.3333333333333333,
+          "sp": 0.4,
+          "reference_n": 9,
+          "generated_n": 30,
+          "matches": [
+            {
+              "reference_index": 0,
+              "reference_text": "After immunolabeling, dehydrate the brain in 20% methanol in water for 1 hour.",
+              "generated_index": 26,
+              "generated_text": "Continue soaking in fresh 100% DBE until fully transparent (usually required for whole brain). (Temperature: RT, Time: 12–24 hours, Light: protected)",
+              "similarity": 0.6643031239509583,
+              "matched": false
+            },
+            {
+              "reference_index": 1,
+              "reference_text": "After immunolabeling, dehydrate the brain in 40% methanol in water for 1 hour.",
+              "generated_index": 26,
+              "generated_text": "Continue soaking in fresh 100% DBE until fully transparent (usually required for whole brain). (Temperature: RT, Time: 12–24 hours, Light: protected)",
+              "similarity": 0.6699363589286804,
+              "matched": false
+            },
+            {
+              "reference_index": 2,
+              "reference_text": "After immunolabeling, dehydrate the brain in 60% methanol in water for 1 hour.",
+              "generated_index": 26,
+              "generated_text": "Continue soaking in fresh 100% DBE until fully transparent (usually required for whole brain). (Temperature: RT, Time: 12–24 hours, Light: protected)",
+              "similarity": 0.6710556745529175,
+              "matched": false
+            },
+            {
+              "reference_index": 3,
+              "reference_text": "After immunolabeling, dehydrate the brain in 80% methanol in water for 1 hour.",
+              "generated_index": 26,
+              "generated_text": "Continue soaking in fresh 100% DBE until fully transparent (usually required for whole brain). (Temperature: RT, Time: 12–24 hours, Light: protected)",
+              "similarity": 0.6721386313438416,
+              "matched": false
+            },
+            {
+              "reference_index": 4,
+              "reference_text": "After the methanol gradient, treat with 100% methanol for 1 hour twice.",
+              "generated_index": 5,
+              "generated_text": "Soak again in fresh 100% (vol/vol) methanol. (Temperature: RT, Time: 2 hours)",
+              "similarity": 0.7839270830154419,
+              "matched": true
+            },
+            {
+              "reference_index": 5,
+              "reference_text": "Incubate overnight in 1 volume methanol and 2 volumes dichloromethane (DCM), until the samples sink to the bottom of the vial.",
+              "generated_index": 23,
+              "generated_text": "Soak in 66% (vol/vol) Dichloromethane (DCM)/33% methanol mixture. (Temperature: RT, Time: 3 hours)",
+              "similarity": 0.7069908380508423,
+              "matched": true
+            },
+            {
+              "reference_index": 6,
+              "reference_text": "Wash twice in 100% dichloromethane (DCM), 20 minutes each, to remove methanol.",
+              "generated_index": 5,
+              "generated_text": "Soak again in fresh 100% (vol/vol) methanol. (Temperature: RT, Time: 2 hours)",
+              "similarity": 0.6748326420783997,
+              "matched": false
+            },
+            {
+              "reference_index": 7,
+              "reference_text": "Incubate in dibenzyl ether (DBE) without shaking until clear, reported as about 30 minutes.",
+              "generated_index": 25,
+              "generated_text": "Pre-soak in 100% Dibenzyl Ether (DBE, RI≈1.56). (Temperature: RT, Time: 3 hours, Light: protected)",
+              "similarity": 0.6554045677185059,
+              "matched": false
+            },
+            {
+              "reference_index": 8,
+              "reference_text": "Store the cleared brain in DBE at room temperature.",
+              "generated_index": 26,
+              "generated_text": "Continue soaking in fresh 100% DBE until fully transparent (usually required for whole brain). (Temperature: RT, Time: 12–24 hours, Light: protected)",
+              "similarity": 0.7097359299659729,
+              "matched": true
+            }
+          ],
+          "generated_max_similarity": [
+            0.7473598718643188,
+            0.7426219582557678,
+            0.7422139644622803,
+            0.7394164800643921,
+            0.7392662763595581,
+            0.7839270830154419,
+            0.6450634598731995,
+            0.753407895565033,
+            0.7590967416763306,
+            0.7597302198410034,
+            0.7666125893592834,
+            0.6446847915649414,
+            0.5284315347671509,
+            0.537703275680542,
+            0.5582418441772461,
+            0.5732536911964417,
+            0.5746649503707886,
+            0.4877770245075226,
+            0.4874979853630066,
+            0.6216651201248169,
+            0.518034040927887,
+            0.4241258502006531,
+            0.6292639374732971,
+            0.7122089862823486,
+            0.6978749632835388,
+            0.6680482625961304,
+            0.7097359299659729,
+            0.6962087750434875,
+            0.57471764087677,
+            0.5892025232315063
+          ],
+          "reference_truncated": 0,
+          "generated_truncated": 0,
+          "generated_cjk_steps": 0
+        }
+      },
+      {
+        "reference_id": "IDISCO_PLUS_2016_APRIL_BENCH_METHOD_FAMILY_V1",
+        "fixed_order": 1,
+        "score": {
+          "sr": 0.2222222222222222,
+          "sp": 0.2,
+          "reference_n": 9,
+          "generated_n": 30,
+          "matches": [
+            {
+              "reference_index": 0,
+              "reference_text": "After immunolabeling, dehydrate the brain in 20% methanol in water for 1 hour at room temperature.",
+              "generated_index": 26,
+              "generated_text": "Continue soaking in fresh 100% DBE until fully transparent (usually required for whole brain). (Temperature: RT, Time: 12–24 hours, Light: protected)",
+              "similarity": 0.6793689131736755,
+              "matched": false
+            },
+            {
+              "reference_index": 1,
+              "reference_text": "After immunolabeling, dehydrate the brain in 40% methanol in water for 1 hour at room temperature.",
+              "generated_index": 26,
+              "generated_text": "Continue soaking in fresh 100% DBE until fully transparent (usually required for whole brain). (Temperature: RT, Time: 12–24 hours, Light: protected)",
+              "similarity": 0.6827962398529053,
+              "matched": false
+            },
+            {
+              "reference_index": 2,
+              "reference_text": "After immunolabeling, dehydrate the brain in 60% methanol in water for 1 hour at room temperature.",
+              "generated_index": 26,
+              "generated_text": "Continue soaking in fresh 100% DBE until fully transparent (usually required for whole brain). (Temperature: RT, Time: 12–24 hours, Light: protected)",
+              "similarity": 0.6835818290710449,
+              "matched": false
+            },
+            {
+              "reference_index": 3,
+              "reference_text": "After immunolabeling, dehydrate the brain in 80% methanol in water for 1 hour at room temperature.",
+              "generated_index": 26,
+              "generated_text": "Continue soaking in fresh 100% DBE until fully transparent (usually required for whole brain). (Temperature: RT, Time: 12–24 hours, Light: protected)",
+              "similarity": 0.6853773593902588,
+              "matched": false
+            },
+            {
+              "reference_index": 4,
+              "reference_text": "After the methanol gradient, treat with 100% methanol for 1 hour twice at room temperature. Leaving the sample overnight at room temperature at this point is explicitly optional.",
+              "generated_index": 5,
+              "generated_text": "Soak again in fresh 100% (vol/vol) methanol. (Temperature: RT, Time: 2 hours)",
+              "similarity": 0.7371713519096375,
+              "matched": true
+            },
+            {
+              "reference_index": 5,
+              "reference_text": "Incubate in 66% dichloromethane (DCM) and 33% methanol for 3 hours at room temperature with shaking.",
+              "generated_index": 23,
+              "generated_text": "Soak in 66% (vol/vol) Dichloromethane (DCM)/33% methanol mixture. (Temperature: RT, Time: 3 hours)",
+              "similarity": 0.7255233526229858,
+              "matched": true
+            },
+            {
+              "reference_index": 6,
+              "reference_text": "Wash twice in 100% dichloromethane (DCM), 15 minutes each, with shaking to remove methanol.",
+              "generated_index": 19,
+              "generated_text": "Wash with PBS + 0.2% Triton X-100 + 0.01% NaN3, gentle rocking with solution changes. (Temperature: RT, Time: 6 hours)",
+              "similarity": 0.6835267543792725,
+              "matched": false
+            },
+            {
+              "reference_index": 7,
+              "reference_text": "Incubate in dibenzyl ether (DBE) without shaking. Fill the tube almost completely with DBE to prevent air from oxidizing the sample.",
+              "generated_index": 25,
+              "generated_text": "Pre-soak in 100% Dibenzyl Ether (DBE, RI≈1.56). (Temperature: RT, Time: 3 hours, Light: protected)",
+              "similarity": 0.6751308441162109,
+              "matched": false
+            },
+            {
+              "reference_index": 8,
+              "reference_text": "Before imaging, invert the tube a couple of times to finish mixing the solution.",
+              "generated_index": 28,
+              "generated_text": "Replace with fresh DBE once before light-sheet imaging and let stand to degas/settle. (Temperature: RT, Time: 1–2 hours)",
+              "similarity": 0.5193563103675842,
+              "matched": false
+            }
+          ],
+          "generated_max_similarity": [
+            0.6682908535003662,
+            0.6639853119850159,
+            0.6645541191101074,
+            0.6650328636169434,
+            0.665472149848938,
+            0.7371713519096375,
+            0.6565724611282349,
+            0.716822624206543,
+            0.725090503692627,
+            0.726088285446167,
+            0.732600212097168,
+            0.5780642032623291,
+            0.5346760749816895,
+            0.5295158624649048,
+            0.5320567488670349,
+            0.5476616024971008,
+            0.6335417628288269,
+            0.5581104159355164,
+            0.4505424499511719,
+            0.6835267543792725,
+            0.5894167423248291,
+            0.4684791564941406,
+            0.676192045211792,
+            0.7255233526229858,
+            0.6837718486785889,
+            0.6814450025558472,
+            0.6853773593902588,
+            0.6750401854515076,
+            0.5641526579856873,
+            0.47110384702682495
+          ],
+          "reference_truncated": 0,
+          "generated_truncated": 0,
+          "generated_cjk_steps": 0
+        }
+      }
+    ],
+    "candidate_steps": [
+      {
+        "text": "Soak in 20% (vol/vol) methanol/water solution, gentle rocking. (Temperature: RT, Time: 2 hours)",
+        "start": 725,
+        "end": 825
+      },
+      {
+        "text": "Soak in 40% (vol/vol) methanol/water solution, gentle rocking. (Temperature: RT, Time: 2 hours)",
+        "start": 825,
+        "end": 925
+      },
+      {
+        "text": "Soak in 60% (vol/vol) methanol/water solution, gentle rocking. (Temperature: RT, Time: 2 hours)",
+        "start": 925,
+        "end": 1025
+      },
+      {
+        "text": "Soak in 80% (vol/vol) methanol/water solution, gentle rocking. (Temperature: RT, Time: 2 hours)",
+        "start": 1025,
+        "end": 1125
+      },
+      {
+        "text": "Soak in 100% (vol/vol) methanol, gentle rocking. (Temperature: RT, Time: 2 hours)",
+        "start": 1125,
+        "end": 1211
+      },
+      {
+        "text": "Soak again in fresh 100% (vol/vol) methanol. (Temperature: RT, Time: 2 hours)",
+        "start": 1211,
+        "end": 1293
+      },
+      {
+        "text": "Soak in 5% H2O2 in methanol (Volume ratio: 30% H2O2 : methanol = 1 : 5), protected from light. (Temperature: 4 ℃, Time: 12–16 hours)",
+        "start": 1387,
+        "end": 1524
+      },
+      {
+        "text": "Soak in 80% (vol/vol) methanol/water solution. (Temperature: RT, Time: 1.5 hours)",
+        "start": 1539,
+        "end": 1625
+      },
+      {
+        "text": "Soak in 60% (vol/vol) methanol/water solution. (Temperature: RT, Time: 1.5 hours)",
+        "start": 1625,
+        "end": 1711
+      },
+      {
+        "text": "Soak in 40% (vol/vol) methanol/water solution. (Temperature: RT, Time: 1.5 hours)",
+        "start": 1711,
+        "end": 1797
+      },
+      {
+        "text": "Soak in 20% (vol/vol) methanol/water solution. (Temperature: RT, Time: 1.5 hours)",
+        "start": 1797,
+        "end": 1883
+      },
+      {
+        "text": "Soak in 1×PBS. (Temperature: RT, Time: 1.5 hours)",
+        "start": 1883,
+        "end": 1937
+      },
+      {
+        "text": "Permeabilization solution: PBS + 0.2% (vol/vol) Triton X-100 + 20% (vol/vol) DMSO + 0.3 M Glycine, gentle rocking. (Temperature: 37 ℃, Time: 24 hours)",
+        "start": 1968,
+        "end": 2123
+      },
+      {
+        "text": "Blocking solution: PBS + 0.2% Triton X-100 + 10% (vol/vol) DMSO + 6% (vol/vol) Normal Donkey Serum (NDS), gentle rocking. (Temperature: 37 ℃, Time: 24 hours)",
+        "start": 2123,
+        "end": 2285
+      },
+      {
+        "text": "Primary antibody incubation solution: PBS + 0.2% Triton X-100 + 5% DMSO + 3% NDS + 0.01% (w/v) NaN3; add NeuN (RBFOX3) primary antibody at 1:200. (Temperature: 37 ℃, Time: 5–7 days)",
+        "start": 2324,
+        "end": 2510
+      },
+      {
+        "text": "Add β-III Tubulin (TUJ1) primary antibody at 1:300 to the same incubation solution (can be co-incubated in the same tube as 5.1). (Temperature: 37 ℃, Time: 5–7 days)",
+        "start": 2510,
+        "end": 2680
+      },
+      {
+        "text": "Wash solution: PBS + 0.2% Triton X-100 + 0.01% NaN3, gentle rocking with solution changes. (Temperature: RT, Time: 6 hours)",
+        "start": 2702,
+        "end": 2830
+      },
+      {
+        "text": "Repeat 6.1 for a total of 6 times (total wash approximately 36 hours). (Temperature: RT, Time: 36 hours)",
+        "start": 2830,
+        "end": 2939
+      },
+      {
+        "text": "Secondary antibody incubation solution: PBS + 0.2% Triton X-100 + 3% NDS + 0.01% NaN3; add Donkey anti-mouse/rabbit (matched to primary antibody host) Alexa Fluor 647 secondary antibody at 1:400 (corresponding to NeuN and TUJ1 respectively; if the two primary antibodies have different hosts, they can be co-incubated in the same tube). (Temperature: 37 ℃, Time: 5–7 days, Light: protected)",
+        "start": 2961,
+        "end": 3356
+      },
+      {
+        "text": "Wash with PBS + 0.2% Triton X-100 + 0.01% NaN3, gentle rocking with solution changes. (Temperature: RT, Time: 6 hours)",
+        "start": 3380,
+        "end": 3503
+      },
+      {
+        "text": "Repeat 8.1 for a total of 6 times (total wash approximately 36 hours). (Temperature: RT, Time: 36 hours)",
+        "start": 3503,
+        "end": 3612
+      },
+      {
+        "text": "TO-PRO-3 1–2 µM (in PBS + 0.2% Triton X-100), protected from light, gentle rocking. (Temperature: RT, Time: 12–24 hours)",
+        "start": 3710,
+        "end": 3835
+      },
+      {
+        "text": "Wash with PBS 3 times. (Temperature: RT, Time: 2 hours each)",
+        "start": 3835,
+        "end": 3900
+      },
+      {
+        "text": "Soak in 66% (vol/vol) Dichloromethane (DCM)/33% methanol mixture. (Temperature: RT, Time: 3 hours)",
+        "start": 3958,
+        "end": 4062
+      },
+      {
+        "text": "Soak in 100% DCM. (Temperature: RT, Time: 2 × 1.5 hours)",
+        "start": 4062,
+        "end": 4124
+      },
+      {
+        "text": "Pre-soak in 100% Dibenzyl Ether (DBE, RI≈1.56). (Temperature: RT, Time: 3 hours, Light: protected)",
+        "start": 4159,
+        "end": 4263
+      },
+      {
+        "text": "Continue soaking in fresh 100% DBE until fully transparent (usually required for whole brain). (Temperature: RT, Time: 12–24 hours, Light: protected)",
+        "start": 4263,
+        "end": 4418
+      },
+      {
+        "text": "Keep sample fully immersed in fresh 100% DBE, store sealed and protected from light (fill container as much as possible to reduce oxidation). (Temperature: RT or 4 ℃, Time: up to 1–2 weeks)",
+        "start": 4444,
+        "end": 4639
+      },
+      {
+        "text": "Replace with fresh DBE once before light-sheet imaging and let stand to degas/settle. (Temperature: RT, Time: 1–2 hours)",
+        "start": 4639,
+        "end": 4765
+      },
+      {
+        "text": "Match imaging medium and objective: use DBE-compatible imaging chamber and sealing materials with RI≈1.56; after fixing sample on a mount, proceed directly to whole-brain light-sheet scanning. (Temperature: RT, Time: per imaging session)",
+        "start": 4765,
+        "end": 5007
+      }
+    ],
+    "main_score_replaced": false
+  },
+  {
+    "request_id": "T05_R3C07_baseline",
+    "answer_id": "R3C07",
+    "condition": "baseline",
+    "raw_sr": 0.5714285714285714,
+    "raw_sp": 0.05263157894736842,
+    "raw_n": 19,
+    "candidate_sr": 0.5714285714285714,
+    "candidate_sp": 0.05263157894736842,
+    "candidate_n": 19,
+    "removed_heading_n": 0,
+    "removed_headings": [],
+    "candidate_selection": {
+      "reference_id": "FDISCO_SUPPLEMENT_V2_WHOLE_BRAIN",
+      "fixed_order": 0,
+      "score": {
+        "sr": 0.5714285714285714,
+        "sp": 0.05263157894736842,
+        "reference_n": 7,
+        "generated_n": 19,
+        "matches": [
+          {
+            "reference_index": 0,
+            "reference_text": "Incubate the fixed tissue in 50% (vol/vol) THF in water, adjusted to pH 9.0 with triethylamine, at 4 degrees C for 12 hours with gentle shaking in the dark.",
+            "generated_index": 13,
+            "generated_text": "Place the brain tissue in 100% THF (anhydrous, pH 9–10) for oscillating dehydration, second time (replace with fresh THF). (Temperature: 4 ℃, Time: 1 hour)",
+            "similarity": 0.7037748694419861,
+            "matched": true
+          },
+          {
+            "reference_index": 1,
+            "reference_text": "Incubate the fixed tissue in 70% (vol/vol) THF in water, adjusted to pH 9.0 with triethylamine, at 4 degrees C for 12 hours with gentle shaking in the dark.",
+            "generated_index": 13,
+            "generated_text": "Place the brain tissue in 100% THF (anhydrous, pH 9–10) for oscillating dehydration, second time (replace with fresh THF). (Temperature: 4 ℃, Time: 1 hour)",
+            "similarity": 0.704083263874054,
+            "matched": true
+          },
+          {
+            "reference_index": 2,
+            "reference_text": "Incubate the fixed tissue in 80% (vol/vol) THF in water, adjusted to pH 9.0 with triethylamine, at 4 degrees C for 12 hours with gentle shaking in the dark.",
+            "generated_index": 13,
+            "generated_text": "Place the brain tissue in 100% THF (anhydrous, pH 9–10) for oscillating dehydration, second time (replace with fresh THF). (Temperature: 4 ℃, Time: 1 hour)",
+            "similarity": 0.7052682042121887,
+            "matched": true
+          },
+          {
+            "reference_index": 3,
+            "reference_text": "Incubate the fixed tissue in 100% (vol/vol) THF in water, adjusted to pH 9.0 with triethylamine, at 4 degrees C for 12 hours with gentle shaking in the dark.",
+            "generated_index": 13,
+            "generated_text": "Place the brain tissue in 100% THF (anhydrous, pH 9–10) for oscillating dehydration, second time (replace with fresh THF). (Temperature: 4 ℃, Time: 1 hour)",
+            "similarity": 0.7051258683204651,
+            "matched": true
+          },
+          {
+            "reference_index": 4,
+            "reference_text": "Repeat incubation in fresh 100% THF twice more, 12 hours each, for three incubations in total, at 4 degrees C with gentle shaking in the dark.",
+            "generated_index": 7,
+            "generated_text": "Wash with PBST to remove unbound secondary antibody. (Temperature: RT, Time: 5 × 1 hour)",
+            "similarity": 0.5305786728858948,
+            "matched": false
+          },
+          {
+            "reference_index": 5,
+            "reference_text": "Transfer the dehydrated tissue to pure DBE for refractive index matching and clearing at 4 degrees C for 3 hours with gentle shaking in the dark.",
+            "generated_index": 16,
+            "generated_text": "Replace with fresh BABB again, confirm the tissue is completely transparent, and prepare for imaging. (Temperature: 4 ℃, Time: 30 min)",
+            "similarity": 0.658495306968689,
+            "matched": false
+          },
+          {
+            "reference_index": 6,
+            "reference_text": "Store the cleared tissue in DBE in an airtight glass chamber at 4 degrees C in the dark until imaging.",
+            "generated_index": 16,
+            "generated_text": "Replace with fresh BABB again, confirm the tissue is completely transparent, and prepare for imaging. (Temperature: 4 ℃, Time: 30 min)",
+            "similarity": 0.699491024017334,
+            "matched": false
+          }
+        ],
+        "generated_max_similarity": [
+          0.4389820098876953,
+          0.5411130785942078,
+          0.5020041465759277,
+          0.5230021476745605,
+          0.4878103733062744,
+          0.588676929473877,
+          0.49631381034851074,
+          0.5818532705307007,
+          0.449798047542572,
+          0.616998553276062,
+          0.5892513990402222,
+          0.5878981351852417,
+          0.6565274000167847,
+          0.7052682042121887,
+          0.6290395855903625,
+          0.6088365316390991,
+          0.699491024017334,
+          0.6147299408912659,
+          0.5848643779754639
+        ],
+        "reference_truncated": 0,
+        "generated_truncated": 0,
+        "generated_cjk_steps": 0
+      }
+    },
+    "candidate_all_references": [
+      {
+        "reference_id": "FDISCO_SUPPLEMENT_V2_WHOLE_BRAIN",
+        "fixed_order": 0,
+        "score": {
+          "sr": 0.5714285714285714,
+          "sp": 0.05263157894736842,
+          "reference_n": 7,
+          "generated_n": 19,
+          "matches": [
+            {
+              "reference_index": 0,
+              "reference_text": "Incubate the fixed tissue in 50% (vol/vol) THF in water, adjusted to pH 9.0 with triethylamine, at 4 degrees C for 12 hours with gentle shaking in the dark.",
+              "generated_index": 13,
+              "generated_text": "Place the brain tissue in 100% THF (anhydrous, pH 9–10) for oscillating dehydration, second time (replace with fresh THF). (Temperature: 4 ℃, Time: 1 hour)",
+              "similarity": 0.7037748694419861,
+              "matched": true
+            },
+            {
+              "reference_index": 1,
+              "reference_text": "Incubate the fixed tissue in 70% (vol/vol) THF in water, adjusted to pH 9.0 with triethylamine, at 4 degrees C for 12 hours with gentle shaking in the dark.",
+              "generated_index": 13,
+              "generated_text": "Place the brain tissue in 100% THF (anhydrous, pH 9–10) for oscillating dehydration, second time (replace with fresh THF). (Temperature: 4 ℃, Time: 1 hour)",
+              "similarity": 0.704083263874054,
+              "matched": true
+            },
+            {
+              "reference_index": 2,
+              "reference_text": "Incubate the fixed tissue in 80% (vol/vol) THF in water, adjusted to pH 9.0 with triethylamine, at 4 degrees C for 12 hours with gentle shaking in the dark.",
+              "generated_index": 13,
+              "generated_text": "Place the brain tissue in 100% THF (anhydrous, pH 9–10) for oscillating dehydration, second time (replace with fresh THF). (Temperature: 4 ℃, Time: 1 hour)",
+              "similarity": 0.7052682042121887,
+              "matched": true
+            },
+            {
+              "reference_index": 3,
+              "reference_text": "Incubate the fixed tissue in 100% (vol/vol) THF in water, adjusted to pH 9.0 with triethylamine, at 4 degrees C for 12 hours with gentle shaking in the dark.",
+              "generated_index": 13,
+              "generated_text": "Place the brain tissue in 100% THF (anhydrous, pH 9–10) for oscillating dehydration, second time (replace with fresh THF). (Temperature: 4 ℃, Time: 1 hour)",
+              "similarity": 0.7051258683204651,
+              "matched": true
+            },
+            {
+              "reference_index": 4,
+              "reference_text": "Repeat incubation in fresh 100% THF twice more, 12 hours each, for three incubations in total, at 4 degrees C with gentle shaking in the dark.",
+              "generated_index": 7,
+              "generated_text": "Wash with PBST to remove unbound secondary antibody. (Temperature: RT, Time: 5 × 1 hour)",
+              "similarity": 0.5305786728858948,
+              "matched": false
+            },
+            {
+              "reference_index": 5,
+              "reference_text": "Transfer the dehydrated tissue to pure DBE for refractive index matching and clearing at 4 degrees C for 3 hours with gentle shaking in the dark.",
+              "generated_index": 16,
+              "generated_text": "Replace with fresh BABB again, confirm the tissue is completely transparent, and prepare for imaging. (Temperature: 4 ℃, Time: 30 min)",
+              "similarity": 0.658495306968689,
+              "matched": false
+            },
+            {
+              "reference_index": 6,
+              "reference_text": "Store the cleared tissue in DBE in an airtight glass chamber at 4 degrees C in the dark until imaging.",
+              "generated_index": 16,
+              "generated_text": "Replace with fresh BABB again, confirm the tissue is completely transparent, and prepare for imaging. (Temperature: 4 ℃, Time: 30 min)",
+              "similarity": 0.699491024017334,
+              "matched": false
+            }
+          ],
+          "generated_max_similarity": [
+            0.4389820098876953,
+            0.5411130785942078,
+            0.5020041465759277,
+            0.5230021476745605,
+            0.4878103733062744,
+            0.588676929473877,
+            0.49631381034851074,
+            0.5818532705307007,
+            0.449798047542572,
+            0.616998553276062,
+            0.5892513990402222,
+            0.5878981351852417,
+            0.6565274000167847,
+            0.7052682042121887,
+            0.6290395855903625,
+            0.6088365316390991,
+            0.699491024017334,
+            0.6147299408912659,
+            0.5848643779754639
+          ],
+          "reference_truncated": 0,
+          "generated_truncated": 0,
+          "generated_cjk_steps": 0
+        }
+      }
+    ],
+    "candidate_steps": [
+      {
+        "text": "Place the adult mouse whole brain, already fixed in 4% PFA, in 1× PBS for thorough washing to remove residual fixative. (Temperature: 4 ℃, Time: 3 × 1 hour)",
+        "start": 1507,
+        "end": 1668
+      },
+      {
+        "text": "Place the brain tissue in 1× PBS containing 0.2% (vol/vol) Triton X-100 (PBST) for oscillating permeabilization. (Temperature: 37 ℃, Time: 24 hours)",
+        "start": 1727,
+        "end": 1880
+      },
+      {
+        "text": "Replace with fresh PBST and continue permeabilization. (Temperature: 37 ℃, Time: 24 hours)",
+        "start": 1880,
+        "end": 1975
+      },
+      {
+        "text": "Place the brain tissue in blocking solution (5% (vol/vol) normal donkey serum + 0.2% Triton X-100 + 0.1% (wt/vol) NaN₃ in 1× PBS) for oscillating blocking. (Temperature: 37 ℃, Time: 24 hours)",
+        "start": 1991,
+        "end": 2187
+      },
+      {
+        "text": "Place the brain tissue in a solution containing anti-β-III Tubulin (TUJ1) rabbit polyclonal antibody (diluted 1:500 in blocking solution) and incubate with gentle oscillation. (Temperature: 37 ℃, Time: 48 hours)",
+        "start": 2245,
+        "end": 2461
+      },
+      {
+        "text": "Wash with PBST to remove unbound primary antibody. (Temperature: RT, Time: 5 × 1 hour)",
+        "start": 2461,
+        "end": 2552
+      },
+      {
+        "text": "Place the brain tissue in a solution containing donkey anti-rabbit Alexa Fluor 647 secondary antibody (diluted 1:500 in blocking solution) and incubate with oscillation protected from light. (Temperature: 37 ℃, Time: 48 hours)",
+        "start": 2607,
+        "end": 2838
+      },
+      {
+        "text": "Wash with PBST to remove unbound secondary antibody. (Temperature: RT, Time: 5 × 1 hour)",
+        "start": 2838,
+        "end": 2931
+      },
+      {
+        "text": "Final wash with 1× PBS. (Temperature: RT, Time: 2 × 30 min)",
+        "start": 2931,
+        "end": 2995
+      },
+      {
+        "text": "Place the brain tissue in 50% (vol/vol) THF (tetrahydrofuran) aqueous solution (adjusted to pH 9–10 with NaOH to protect fluorescent proteins) for oscillating dehydration. (Temperature: 4 ℃, Time: 1 hour)",
+        "start": 3041,
+        "end": 3250
+      },
+      {
+        "text": "Place the brain tissue in 70% (vol/vol) THF aqueous solution (pH 9–10) for oscillating dehydration. (Temperature: 4 ℃, Time: 1 hour)",
+        "start": 3250,
+        "end": 3387
+      },
+      {
+        "text": "Place the brain tissue in 80% (vol/vol) THF aqueous solution (pH 9–10) for oscillating dehydration. (Temperature: 4 ℃, Time: 1 hour)",
+        "start": 3387,
+        "end": 3524
+      },
+      {
+        "text": "Place the brain tissue in 100% THF (anhydrous, pH 9–10, with a small amount of NaOH added) for oscillating dehydration, first time. (Temperature: 4 ℃, Time: 1 hour)",
+        "start": 3524,
+        "end": 3693
+      },
+      {
+        "text": "Place the brain tissue in 100% THF (anhydrous, pH 9–10) for oscillating dehydration, second time (replace with fresh THF). (Temperature: 4 ℃, Time: 1 hour)",
+        "start": 3693,
+        "end": 3853
+      },
+      {
+        "text": "Place the brain tissue in BABB (benzyl alcohol:benzyl benzoate = 1:2, vol/vol) with oscillation to complete de-lipidation and begin RI matching, until the tissue is completely transparent (usually 30–60 min). (Temperature: 4 ℃, Time: 1 hour)",
+        "start": 3895,
+        "end": 4141
+      },
+      {
+        "text": "Transfer the transparent brain tissue to fresh BABB (RI ≈ 1.56), let it stand protected from light to equilibrate, ensuring the tissue is completely transparent and free of bubbles. (Temperature: 4 ℃, Time: 2 hours)",
+        "start": 4188,
+        "end": 4408
+      },
+      {
+        "text": "Replace with fresh BABB again, confirm the tissue is completely transparent, and prepare for imaging. (Temperature: 4 ℃, Time: 30 min)",
+        "start": 4408,
+        "end": 4547
+      },
+      {
+        "text": "Transfer the transparent brain tissue to BABB in a sample holder compatible with the light-sheet microscope sample slot, use a refractive index-matched immersion medium (RI = 1.56) to fix the sample position, and avoid bubbles. (Temperature: RT, Time: Immediate imaging)",
+        "start": 4589,
+        "end": 4864
+      },
+      {
+        "text": "If short-term storage is required, seal the sample in BABB and store protected from light at 4 ℃ (imaging is recommended to be completed within 1 week to prevent fluorescence signal decay). (Temperature: 4 ℃, Time: ≤ 7 days)",
+        "start": 4864,
+        "end": 5092
+      }
+    ],
+    "main_score_replaced": false
+  },
+  {
+    "request_id": "T06_R3C07_renumber_operations",
+    "answer_id": "R3C07",
+    "condition": "renumber_operations",
+    "raw_sr": 0.0,
+    "raw_sp": 0.0,
+    "raw_n": 19,
+    "candidate_sr": 0.0,
+    "candidate_sp": 0.0,
+    "candidate_n": 19,
+    "removed_heading_n": 0,
+    "removed_headings": [],
+    "candidate_selection": {
+      "reference_id": "FDISCO_SUPPLEMENT_V2_WHOLE_BRAIN",
+      "fixed_order": 0,
+      "score": {
+        "sr": 0.0,
+        "sp": 0.0,
+        "reference_n": 7,
+        "generated_n": 19,
+        "matches": [
+          {
+            "reference_index": 0,
+            "reference_text": "Incubate the fixed tissue in 50% (vol/vol) THF in water, adjusted to pH 9.0 with triethylamine, at 4 degrees C for 12 hours with gentle shaking in the dark.",
+            "generated_index": 13,
+            "generated_text": "Place the brain tissue in 100% THF (anhydrous, pH 9–10) and agitate for dehydration, second time (replace with fresh THF). (Temperature: 4 ℃, Time: 1 hour)",
+            "similarity": 0.6905732154846191,
+            "matched": false
+          },
+          {
+            "reference_index": 1,
+            "reference_text": "Incubate the fixed tissue in 70% (vol/vol) THF in water, adjusted to pH 9.0 with triethylamine, at 4 degrees C for 12 hours with gentle shaking in the dark.",
+            "generated_index": 13,
+            "generated_text": "Place the brain tissue in 100% THF (anhydrous, pH 9–10) and agitate for dehydration, second time (replace with fresh THF). (Temperature: 4 ℃, Time: 1 hour)",
+            "similarity": 0.6915405988693237,
+            "matched": false
+          },
+          {
+            "reference_index": 2,
+            "reference_text": "Incubate the fixed tissue in 80% (vol/vol) THF in water, adjusted to pH 9.0 with triethylamine, at 4 degrees C for 12 hours with gentle shaking in the dark.",
+            "generated_index": 13,
+            "generated_text": "Place the brain tissue in 100% THF (anhydrous, pH 9–10) and agitate for dehydration, second time (replace with fresh THF). (Temperature: 4 ℃, Time: 1 hour)",
+            "similarity": 0.6930760145187378,
+            "matched": false
+          },
+          {
+            "reference_index": 3,
+            "reference_text": "Incubate the fixed tissue in 100% (vol/vol) THF in water, adjusted to pH 9.0 with triethylamine, at 4 degrees C for 12 hours with gentle shaking in the dark.",
+            "generated_index": 13,
+            "generated_text": "Place the brain tissue in 100% THF (anhydrous, pH 9–10) and agitate for dehydration, second time (replace with fresh THF). (Temperature: 4 ℃, Time: 1 hour)",
+            "similarity": 0.6922850012779236,
+            "matched": false
+          },
+          {
+            "reference_index": 4,
+            "reference_text": "Repeat incubation in fresh 100% THF twice more, 12 hours each, for three incubations in total, at 4 degrees C with gentle shaking in the dark.",
+            "generated_index": 7,
+            "generated_text": "Wash with PBST to remove unbound secondary antibody. (Temperature: RT, Time: 5 × 1 hour)",
+            "similarity": 0.5305786728858948,
+            "matched": false
+          },
+          {
+            "reference_index": 5,
+            "reference_text": "Transfer the dehydrated tissue to pure DBE for refractive index matching and clearing at 4 degrees C for 3 hours with gentle shaking in the dark.",
+            "generated_index": 16,
+            "generated_text": "Replace with fresh BABB again, confirm the tissue is completely transparent, and prepare for imaging. (Temperature: 4 ℃, Time: 30 min)",
+            "similarity": 0.658495306968689,
+            "matched": false
+          },
+          {
+            "reference_index": 6,
+            "reference_text": "Store the cleared tissue in DBE in an airtight glass chamber at 4 degrees C in the dark until imaging.",
+            "generated_index": 16,
+            "generated_text": "Replace with fresh BABB again, confirm the tissue is completely transparent, and prepare for imaging. (Temperature: 4 ℃, Time: 30 min)",
+            "similarity": 0.699491024017334,
+            "matched": false
+          }
+        ],
+        "generated_max_similarity": [
+          0.4389820098876953,
+          0.5702420473098755,
+          0.5020041465759277,
+          0.5390206575393677,
+          0.5033882856369019,
+          0.588676929473877,
+          0.5154228806495667,
+          0.5818532705307007,
+          0.449798047542572,
+          0.6180201768875122,
+          0.604557454586029,
+          0.6040148138999939,
+          0.6472419500350952,
+          0.6930760145187378,
+          0.6520307660102844,
+          0.6097702980041504,
+          0.699491024017334,
+          0.6245390772819519,
+          0.5848643779754639
+        ],
+        "reference_truncated": 0,
+        "generated_truncated": 0,
+        "generated_cjk_steps": 0
+      }
+    },
+    "candidate_all_references": [
+      {
+        "reference_id": "FDISCO_SUPPLEMENT_V2_WHOLE_BRAIN",
+        "fixed_order": 0,
+        "score": {
+          "sr": 0.0,
+          "sp": 0.0,
+          "reference_n": 7,
+          "generated_n": 19,
+          "matches": [
+            {
+              "reference_index": 0,
+              "reference_text": "Incubate the fixed tissue in 50% (vol/vol) THF in water, adjusted to pH 9.0 with triethylamine, at 4 degrees C for 12 hours with gentle shaking in the dark.",
+              "generated_index": 13,
+              "generated_text": "Place the brain tissue in 100% THF (anhydrous, pH 9–10) and agitate for dehydration, second time (replace with fresh THF). (Temperature: 4 ℃, Time: 1 hour)",
+              "similarity": 0.6905732154846191,
+              "matched": false
+            },
+            {
+              "reference_index": 1,
+              "reference_text": "Incubate the fixed tissue in 70% (vol/vol) THF in water, adjusted to pH 9.0 with triethylamine, at 4 degrees C for 12 hours with gentle shaking in the dark.",
+              "generated_index": 13,
+              "generated_text": "Place the brain tissue in 100% THF (anhydrous, pH 9–10) and agitate for dehydration, second time (replace with fresh THF). (Temperature: 4 ℃, Time: 1 hour)",
+              "similarity": 0.6915405988693237,
+              "matched": false
+            },
+            {
+              "reference_index": 2,
+              "reference_text": "Incubate the fixed tissue in 80% (vol/vol) THF in water, adjusted to pH 9.0 with triethylamine, at 4 degrees C for 12 hours with gentle shaking in the dark.",
+              "generated_index": 13,
+              "generated_text": "Place the brain tissue in 100% THF (anhydrous, pH 9–10) and agitate for dehydration, second time (replace with fresh THF). (Temperature: 4 ℃, Time: 1 hour)",
+              "similarity": 0.6930760145187378,
+              "matched": false
+            },
+            {
+              "reference_index": 3,
+              "reference_text": "Incubate the fixed tissue in 100% (vol/vol) THF in water, adjusted to pH 9.0 with triethylamine, at 4 degrees C for 12 hours with gentle shaking in the dark.",
+              "generated_index": 13,
+              "generated_text": "Place the brain tissue in 100% THF (anhydrous, pH 9–10) and agitate for dehydration, second time (replace with fresh THF). (Temperature: 4 ℃, Time: 1 hour)",
+              "similarity": 0.6922850012779236,
+              "matched": false
+            },
+            {
+              "reference_index": 4,
+              "reference_text": "Repeat incubation in fresh 100% THF twice more, 12 hours each, for three incubations in total, at 4 degrees C with gentle shaking in the dark.",
+              "generated_index": 7,
+              "generated_text": "Wash with PBST to remove unbound secondary antibody. (Temperature: RT, Time: 5 × 1 hour)",
+              "similarity": 0.5305786728858948,
+              "matched": false
+            },
+            {
+              "reference_index": 5,
+              "reference_text": "Transfer the dehydrated tissue to pure DBE for refractive index matching and clearing at 4 degrees C for 3 hours with gentle shaking in the dark.",
+              "generated_index": 16,
+              "generated_text": "Replace with fresh BABB again, confirm the tissue is completely transparent, and prepare for imaging. (Temperature: 4 ℃, Time: 30 min)",
+              "similarity": 0.658495306968689,
+              "matched": false
+            },
+            {
+              "reference_index": 6,
+              "reference_text": "Store the cleared tissue in DBE in an airtight glass chamber at 4 degrees C in the dark until imaging.",
+              "generated_index": 16,
+              "generated_text": "Replace with fresh BABB again, confirm the tissue is completely transparent, and prepare for imaging. (Temperature: 4 ℃, Time: 30 min)",
+              "similarity": 0.699491024017334,
+              "matched": false
+            }
+          ],
+          "generated_max_similarity": [
+            0.4389820098876953,
+            0.5702420473098755,
+            0.5020041465759277,
+            0.5390206575393677,
+            0.5033882856369019,
+            0.588676929473877,
+            0.5154228806495667,
+            0.5818532705307007,
+            0.449798047542572,
+            0.6180201768875122,
+            0.604557454586029,
+            0.6040148138999939,
+            0.6472419500350952,
+            0.6930760145187378,
+            0.6520307660102844,
+            0.6097702980041504,
+            0.699491024017334,
+            0.6245390772819519,
+            0.5848643779754639
+          ],
+          "reference_truncated": 0,
+          "generated_truncated": 0,
+          "generated_cjk_steps": 0
+        }
+      }
+    ],
+    "candidate_steps": [
+      {
+        "text": "Place the adult mouse whole brain, already fixed in 4% PFA, in 1× PBS for thorough washing to remove residual fixative. (Temperature: 4 ℃, Time: 3 × 1 hour)",
+        "start": 1490,
+        "end": 1653
+      },
+      {
+        "text": "Place the brain tissue in 1× PBS containing 0.2% (vol/vol) Triton X-100 (PBST) and agitate for permeabilization. (Temperature: 37 ℃, Time: 24 hours)",
+        "start": 1714,
+        "end": 1869
+      },
+      {
+        "text": "Replace with fresh PBST and continue permeabilization. (Temperature: 37 ℃, Time: 24 hours)",
+        "start": 1869,
+        "end": 1966
+      },
+      {
+        "text": "Place the brain tissue in blocking solution (5% (vol/vol) normal donkey serum + 0.2% Triton X-100 + 0.1% (wt/vol) NaN₃ in 1× PBS) and agitate for blocking. (Temperature: 37 ℃, Time: 24 hours)",
+        "start": 1984,
+        "end": 2182
+      },
+      {
+        "text": "Place the brain tissue in a solution containing anti-β-III Tubulin (TUJ1) rabbit polyclonal antibody (diluted 1:500 in blocking solution) and incubate with gentle agitation. (Temperature: 37 ℃, Time: 48 hours)",
+        "start": 2242,
+        "end": 2458
+      },
+      {
+        "text": "Wash with PBST to remove unbound primary antibody. (Temperature: RT, Time: 5 × 1 hour)",
+        "start": 2458,
+        "end": 2551
+      },
+      {
+        "text": "Place the brain tissue in a solution containing donkey anti-rabbit Alexa Fluor 647 secondary antibody (diluted 1:500 in blocking solution) and incubate with agitation protected from light. (Temperature: 37 ℃, Time: 48 hours)",
+        "start": 2608,
+        "end": 2839
+      },
+      {
+        "text": "Wash with PBST to remove unbound secondary antibody. (Temperature: RT, Time: 5 × 1 hour)",
+        "start": 2839,
+        "end": 2934
+      },
+      {
+        "text": "Final wash with 1× PBS. (Temperature: RT, Time: 2 × 30 min)",
+        "start": 2934,
+        "end": 3000
+      },
+      {
+        "text": "Place the brain tissue in 50% (vol/vol) THF (tetrahydrofuran) aqueous solution (adjust pH to 9–10 with NaOH to protect fluorescent proteins) and agitate for dehydration. (Temperature: 4 ℃, Time: 1 hour)",
+        "start": 3048,
+        "end": 3257
+      },
+      {
+        "text": "Place the brain tissue in 70% (vol/vol) THF aqueous solution (pH 9–10) and agitate for dehydration. (Temperature: 4 ℃, Time: 1 hour)",
+        "start": 3257,
+        "end": 3396
+      },
+      {
+        "text": "Place the brain tissue in 80% (vol/vol) THF aqueous solution (pH 9–10) and agitate for dehydration. (Temperature: 4 ℃, Time: 1 hour)",
+        "start": 3396,
+        "end": 3535
+      },
+      {
+        "text": "Place the brain tissue in 100% THF (anhydrous, pH 9–10, add a small amount of NaOH) and agitate for dehydration, first time. (Temperature: 4 ℃, Time: 1 hour)",
+        "start": 3535,
+        "end": 3699
+      },
+      {
+        "text": "Place the brain tissue in 100% THF (anhydrous, pH 9–10) and agitate for dehydration, second time (replace with fresh THF). (Temperature: 4 ℃, Time: 1 hour)",
+        "start": 3699,
+        "end": 3861
+      },
+      {
+        "text": "Place the brain tissue in BABB (benzyl alcohol:benzyl benzoate = 1:2, vol/vol) and agitate to complete delipidation and begin RI matching, until the tissue is completely transparent (usually 30–60 min). (Temperature: 4 ℃, Time: 1 hour)",
+        "start": 3904,
+        "end": 4146
+      },
+      {
+        "text": "Transfer the transparent brain tissue to fresh BABB (RI ≈ 1.56) and let it stand protected from light to equilibrate, ensuring the tissue is completely transparent and free of bubbles. (Temperature: 4 ℃, Time: 2 hours)",
+        "start": 4195,
+        "end": 4420
+      },
+      {
+        "text": "Replace with fresh BABB again, confirm the tissue is completely transparent, and prepare for imaging. (Temperature: 4 ℃, Time: 30 min)",
+        "start": 4420,
+        "end": 4561
+      },
+      {
+        "text": "Transfer the transparent brain tissue to BABB in a sample holder compatible with the light-sheet microscope sample slot. Use a refractive index-matched immersion medium (RI = 1.56) to fix the sample position, avoiding bubbles. (Temperature: RT, Time: Immediate imaging)",
+        "start": 4605,
+        "end": 4881
+      },
+      {
+        "text": "If short-term storage is required, seal the sample in BABB and store protected from light at 4 ℃ (imaging is recommended to be completed within 1 week to prevent fluorescence signal decay). (Temperature: 4 ℃, Time: ≤ 7 days)",
+        "start": 4881,
+        "end": 5111
+      }
+    ],
+    "main_score_replaced": false
+  },
+  {
+    "request_id": "T07_R3C07_merge_adjacent_operations",
+    "answer_id": "R3C07",
+    "condition": "merge_adjacent_operations",
+    "raw_sr": 0.5714285714285714,
+    "raw_sp": 0.1111111111111111,
+    "raw_n": 18,
+    "candidate_sr": 0.5714285714285714,
+    "candidate_sp": 0.1111111111111111,
+    "candidate_n": 18,
+    "removed_heading_n": 0,
+    "removed_headings": [],
+    "candidate_selection": {
+      "reference_id": "FDISCO_SUPPLEMENT_V2_WHOLE_BRAIN",
+      "fixed_order": 0,
+      "score": {
+        "sr": 0.5714285714285714,
+        "sp": 0.1111111111111111,
+        "reference_n": 7,
+        "generated_n": 18,
+        "matches": [
+          {
+            "reference_index": 0,
+            "reference_text": "Incubate the fixed tissue in 50% (vol/vol) THF in water, adjusted to pH 9.0 with triethylamine, at 4 degrees C for 12 hours with gentle shaking in the dark.",
+            "generated_index": 9,
+            "generated_text": "Place the brain tissue in 50% (vol/vol) THF (tetrahydrofuran) aqueous solution (adjusted to pH 9–10 with NaOH to protect fluorescent proteins) for oscillating dehydration. (Temperature: 4 ℃, Time: 1 hour) Place the brain tissue in 70% (vol/vol) THF aqueous solution (pH 9–10) for oscillating dehydration. (Temperature: 4 ℃, Time: 1 hour)",
+            "similarity": 0.7131584882736206,
+            "matched": true
+          },
+          {
+            "reference_index": 1,
+            "reference_text": "Incubate the fixed tissue in 70% (vol/vol) THF in water, adjusted to pH 9.0 with triethylamine, at 4 degrees C for 12 hours with gentle shaking in the dark.",
+            "generated_index": 9,
+            "generated_text": "Place the brain tissue in 50% (vol/vol) THF (tetrahydrofuran) aqueous solution (adjusted to pH 9–10 with NaOH to protect fluorescent proteins) for oscillating dehydration. (Temperature: 4 ℃, Time: 1 hour) Place the brain tissue in 70% (vol/vol) THF aqueous solution (pH 9–10) for oscillating dehydration. (Temperature: 4 ℃, Time: 1 hour)",
+            "similarity": 0.7102065682411194,
+            "matched": true
+          },
+          {
+            "reference_index": 2,
+            "reference_text": "Incubate the fixed tissue in 80% (vol/vol) THF in water, adjusted to pH 9.0 with triethylamine, at 4 degrees C for 12 hours with gentle shaking in the dark.",
+            "generated_index": 9,
+            "generated_text": "Place the brain tissue in 50% (vol/vol) THF (tetrahydrofuran) aqueous solution (adjusted to pH 9–10 with NaOH to protect fluorescent proteins) for oscillating dehydration. (Temperature: 4 ℃, Time: 1 hour) Place the brain tissue in 70% (vol/vol) THF aqueous solution (pH 9–10) for oscillating dehydration. (Temperature: 4 ℃, Time: 1 hour)",
+            "similarity": 0.7122204303741455,
+            "matched": true
+          },
+          {
+            "reference_index": 3,
+            "reference_text": "Incubate the fixed tissue in 100% (vol/vol) THF in water, adjusted to pH 9.0 with triethylamine, at 4 degrees C for 12 hours with gentle shaking in the dark.",
+            "generated_index": 9,
+            "generated_text": "Place the brain tissue in 50% (vol/vol) THF (tetrahydrofuran) aqueous solution (adjusted to pH 9–10 with NaOH to protect fluorescent proteins) for oscillating dehydration. (Temperature: 4 ℃, Time: 1 hour) Place the brain tissue in 70% (vol/vol) THF aqueous solution (pH 9–10) for oscillating dehydration. (Temperature: 4 ℃, Time: 1 hour)",
+            "similarity": 0.7112419009208679,
+            "matched": true
+          },
+          {
+            "reference_index": 4,
+            "reference_text": "Repeat incubation in fresh 100% THF twice more, 12 hours each, for three incubations in total, at 4 degrees C with gentle shaking in the dark.",
+            "generated_index": 7,
+            "generated_text": "Wash with PBST to remove unbound secondary antibody. (Temperature: RT, Time: 5 × 1 hour)",
+            "similarity": 0.5305786728858948,
+            "matched": false
+          },
+          {
+            "reference_index": 5,
+            "reference_text": "Transfer the dehydrated tissue to pure DBE for refractive index matching and clearing at 4 degrees C for 3 hours with gentle shaking in the dark.",
+            "generated_index": 15,
+            "generated_text": "Replace with fresh BABB again, confirm the tissue is completely transparent, and prepare for imaging. (Temperature: 4 ℃, Time: 30 min)",
+            "similarity": 0.658495306968689,
+            "matched": false
+          },
+          {
+            "reference_index": 6,
+            "reference_text": "Store the cleared tissue in DBE in an airtight glass chamber at 4 degrees C in the dark until imaging.",
+            "generated_index": 15,
+            "generated_text": "Replace with fresh BABB again, confirm the tissue is completely transparent, and prepare for imaging. (Temperature: 4 ℃, Time: 30 min)",
+            "similarity": 0.699491024017334,
+            "matched": false
+          }
+        ],
+        "generated_max_similarity": [
+          0.4389820098876953,
+          0.5411130785942078,
+          0.5020041465759277,
+          0.5230021476745605,
+          0.4878103733062744,
+          0.588676929473877,
+          0.49631381034851074,
+          0.5818532705307007,
+          0.449798047542572,
+          0.7131584882736206,
+          0.5878981351852417,
+          0.6616829633712769,
+          0.7052682042121887,
+          0.6290395855903625,
+          0.6088365316390991,
+          0.699491024017334,
+          0.6035629510879517,
+          0.5848643779754639
+        ],
+        "reference_truncated": 0,
+        "generated_truncated": 0,
+        "generated_cjk_steps": 0
+      }
+    },
+    "candidate_all_references": [
+      {
+        "reference_id": "FDISCO_SUPPLEMENT_V2_WHOLE_BRAIN",
+        "fixed_order": 0,
+        "score": {
+          "sr": 0.5714285714285714,
+          "sp": 0.1111111111111111,
+          "reference_n": 7,
+          "generated_n": 18,
+          "matches": [
+            {
+              "reference_index": 0,
+              "reference_text": "Incubate the fixed tissue in 50% (vol/vol) THF in water, adjusted to pH 9.0 with triethylamine, at 4 degrees C for 12 hours with gentle shaking in the dark.",
+              "generated_index": 9,
+              "generated_text": "Place the brain tissue in 50% (vol/vol) THF (tetrahydrofuran) aqueous solution (adjusted to pH 9–10 with NaOH to protect fluorescent proteins) for oscillating dehydration. (Temperature: 4 ℃, Time: 1 hour) Place the brain tissue in 70% (vol/vol) THF aqueous solution (pH 9–10) for oscillating dehydration. (Temperature: 4 ℃, Time: 1 hour)",
+              "similarity": 0.7131584882736206,
+              "matched": true
+            },
+            {
+              "reference_index": 1,
+              "reference_text": "Incubate the fixed tissue in 70% (vol/vol) THF in water, adjusted to pH 9.0 with triethylamine, at 4 degrees C for 12 hours with gentle shaking in the dark.",
+              "generated_index": 9,
+              "generated_text": "Place the brain tissue in 50% (vol/vol) THF (tetrahydrofuran) aqueous solution (adjusted to pH 9–10 with NaOH to protect fluorescent proteins) for oscillating dehydration. (Temperature: 4 ℃, Time: 1 hour) Place the brain tissue in 70% (vol/vol) THF aqueous solution (pH 9–10) for oscillating dehydration. (Temperature: 4 ℃, Time: 1 hour)",
+              "similarity": 0.7102065682411194,
+              "matched": true
+            },
+            {
+              "reference_index": 2,
+              "reference_text": "Incubate the fixed tissue in 80% (vol/vol) THF in water, adjusted to pH 9.0 with triethylamine, at 4 degrees C for 12 hours with gentle shaking in the dark.",
+              "generated_index": 9,
+              "generated_text": "Place the brain tissue in 50% (vol/vol) THF (tetrahydrofuran) aqueous solution (adjusted to pH 9–10 with NaOH to protect fluorescent proteins) for oscillating dehydration. (Temperature: 4 ℃, Time: 1 hour) Place the brain tissue in 70% (vol/vol) THF aqueous solution (pH 9–10) for oscillating dehydration. (Temperature: 4 ℃, Time: 1 hour)",
+              "similarity": 0.7122204303741455,
+              "matched": true
+            },
+            {
+              "reference_index": 3,
+              "reference_text": "Incubate the fixed tissue in 100% (vol/vol) THF in water, adjusted to pH 9.0 with triethylamine, at 4 degrees C for 12 hours with gentle shaking in the dark.",
+              "generated_index": 9,
+              "generated_text": "Place the brain tissue in 50% (vol/vol) THF (tetrahydrofuran) aqueous solution (adjusted to pH 9–10 with NaOH to protect fluorescent proteins) for oscillating dehydration. (Temperature: 4 ℃, Time: 1 hour) Place the brain tissue in 70% (vol/vol) THF aqueous solution (pH 9–10) for oscillating dehydration. (Temperature: 4 ℃, Time: 1 hour)",
+              "similarity": 0.7112419009208679,
+              "matched": true
+            },
+            {
+              "reference_index": 4,
+              "reference_text": "Repeat incubation in fresh 100% THF twice more, 12 hours each, for three incubations in total, at 4 degrees C with gentle shaking in the dark.",
+              "generated_index": 7,
+              "generated_text": "Wash with PBST to remove unbound secondary antibody. (Temperature: RT, Time: 5 × 1 hour)",
+              "similarity": 0.5305786728858948,
+              "matched": false
+            },
+            {
+              "reference_index": 5,
+              "reference_text": "Transfer the dehydrated tissue to pure DBE for refractive index matching and clearing at 4 degrees C for 3 hours with gentle shaking in the dark.",
+              "generated_index": 15,
+              "generated_text": "Replace with fresh BABB again, confirm the tissue is completely transparent, and prepare for imaging. (Temperature: 4 ℃, Time: 30 min)",
+              "similarity": 0.658495306968689,
+              "matched": false
+            },
+            {
+              "reference_index": 6,
+              "reference_text": "Store the cleared tissue in DBE in an airtight glass chamber at 4 degrees C in the dark until imaging.",
+              "generated_index": 15,
+              "generated_text": "Replace with fresh BABB again, confirm the tissue is completely transparent, and prepare for imaging. (Temperature: 4 ℃, Time: 30 min)",
+              "similarity": 0.699491024017334,
+              "matched": false
+            }
+          ],
+          "generated_max_similarity": [
+            0.4389820098876953,
+            0.5411130785942078,
+            0.5020041465759277,
+            0.5230021476745605,
+            0.4878103733062744,
+            0.588676929473877,
+            0.49631381034851074,
+            0.5818532705307007,
+            0.449798047542572,
+            0.7131584882736206,
+            0.5878981351852417,
+            0.6616829633712769,
+            0.7052682042121887,
+            0.6290395855903625,
+            0.6088365316390991,
+            0.699491024017334,
+            0.6035629510879517,
+            0.5848643779754639
+          ],
+          "reference_truncated": 0,
+          "generated_truncated": 0,
+          "generated_cjk_steps": 0
+        }
+      }
+    ],
+    "candidate_steps": [
+      {
+        "text": "Place the adult mouse whole brain, already fixed in 4% PFA, in 1× PBS for thorough washing to remove residual fixative. (Temperature: 4 ℃, Time: 3 × 1 hour)",
+        "start": 1507,
+        "end": 1668
+      },
+      {
+        "text": "Place the brain tissue in 1× PBS containing 0.2% (vol/vol) Triton X-100 (PBST) for oscillating permeabilization. (Temperature: 37 ℃, Time: 24 hours)",
+        "start": 1727,
+        "end": 1880
+      },
+      {
+        "text": "Replace with fresh PBST and continue permeabilization. (Temperature: 37 ℃, Time: 24 hours)",
+        "start": 1880,
+        "end": 1975
+      },
+      {
+        "text": "Place the brain tissue in blocking solution (5% (vol/vol) normal donkey serum + 0.2% Triton X-100 + 0.1% (wt/vol) NaN₃ in 1× PBS) for oscillating blocking. (Temperature: 37 ℃, Time: 24 hours)",
+        "start": 1991,
+        "end": 2187
+      },
+      {
+        "text": "Place the brain tissue in a solution containing anti-β-III Tubulin (TUJ1) rabbit polyclonal antibody (diluted 1:500 in blocking solution) and incubate with gentle oscillation. (Temperature: 37 ℃, Time: 48 hours)",
+        "start": 2245,
+        "end": 2461
+      },
+      {
+        "text": "Wash with PBST to remove unbound primary antibody. (Temperature: RT, Time: 5 × 1 hour)",
+        "start": 2461,
+        "end": 2552
+      },
+      {
+        "text": "Place the brain tissue in a solution containing donkey anti-rabbit Alexa Fluor 647 secondary antibody (diluted 1:500 in blocking solution) and incubate with oscillation protected from light. (Temperature: 37 ℃, Time: 48 hours)",
+        "start": 2607,
+        "end": 2838
+      },
+      {
+        "text": "Wash with PBST to remove unbound secondary antibody. (Temperature: RT, Time: 5 × 1 hour)",
+        "start": 2838,
+        "end": 2931
+      },
+      {
+        "text": "Final wash with 1× PBS. (Temperature: RT, Time: 2 × 30 min)",
+        "start": 2931,
+        "end": 2995
+      },
+      {
+        "text": "Place the brain tissue in 50% (vol/vol) THF (tetrahydrofuran) aqueous solution (adjusted to pH 9–10 with NaOH to protect fluorescent proteins) for oscillating dehydration. (Temperature: 4 ℃, Time: 1 hour) Place the brain tissue in 70% (vol/vol) THF aqueous solution (pH 9–10) for oscillating dehydration. (Temperature: 4 ℃, Time: 1 hour)",
+        "start": 3041,
+        "end": 3383
+      },
+      {
+        "text": "Place the brain tissue in 80% (vol/vol) THF aqueous solution (pH 9–10) for oscillating dehydration. (Temperature: 4 ℃, Time: 1 hour)",
+        "start": 3383,
+        "end": 3520
+      },
+      {
+        "text": "Place the brain tissue in 100% THF (anhydrous, pH 9–10, with a small amount of NaOH) for oscillating dehydration, first time. (Temperature: 4 ℃, Time: 1 hour)",
+        "start": 3520,
+        "end": 3683
+      },
+      {
+        "text": "Place the brain tissue in 100% THF (anhydrous, pH 9–10) for oscillating dehydration, second time (replace with fresh THF). (Temperature: 4 ℃, Time: 1 hour)",
+        "start": 3683,
+        "end": 3843
+      },
+      {
+        "text": "Place the brain tissue in BABB (benzyl alcohol:benzyl benzoate = 1:2, vol/vol) with oscillation to complete de-lipidation and begin RI matching, until the tissue is completely transparent (usually 30–60 min). (Temperature: 4 ℃, Time: 1 hour)",
+        "start": 3885,
+        "end": 4131
+      },
+      {
+        "text": "Transfer the transparent brain tissue to fresh BABB (RI ≈ 1.56), let it stand protected from light to equilibrate, ensuring the tissue is completely transparent and free of bubbles. (Temperature: 4 ℃, Time: 2 hours)",
+        "start": 4178,
+        "end": 4398
+      },
+      {
+        "text": "Replace with fresh BABB again, confirm the tissue is completely transparent, and prepare for imaging. (Temperature: 4 ℃, Time: 30 min)",
+        "start": 4398,
+        "end": 4537
+      },
+      {
+        "text": "Transfer the transparent brain tissue to BABB in a sample holder compatible with the light-sheet microscope, use a refractive index-matched immersion medium (RI = 1.56) to fix the sample position, and avoid bubbles. (Temperature: RT, Time: Immediate imaging)",
+        "start": 4579,
+        "end": 4842
+      },
+      {
+        "text": "If short-term storage is required, seal the sample in BABB and store protected from light at 4 ℃ (imaging is recommended to be completed within 1 week to prevent fluorescence signal decay). (Temperature: 4 ℃, Time: ≤ 7 days)",
+        "start": 4842,
+        "end": 5070
+      }
+    ],
+    "main_score_replaced": false
+  },
+  {
+    "request_id": "T08_R3C07_delete_reported_core_operations",
+    "answer_id": "R3C07",
+    "condition": "delete_reported_core_operations",
+    "raw_sr": 0.0,
+    "raw_sp": 0.0,
+    "raw_n": 14,
+    "candidate_sr": 0.0,
+    "candidate_sp": 0.0,
+    "candidate_n": 14,
+    "removed_heading_n": 0,
+    "removed_headings": [],
+    "candidate_selection": {
+      "reference_id": "FDISCO_SUPPLEMENT_V2_WHOLE_BRAIN",
+      "fixed_order": 0,
+      "score": {
+        "sr": 0.0,
+        "sp": 0.0,
+        "reference_n": 7,
+        "generated_n": 14,
+        "matches": [
+          {
+            "reference_index": 0,
+            "reference_text": "Incubate the fixed tissue in 50% (vol/vol) THF in water, adjusted to pH 9.0 with triethylamine, at 4 degrees C for 12 hours with gentle shaking in the dark.",
+            "generated_index": 11,
+            "generated_text": "Replace with fresh BABB again, confirm the tissue is completely transparent, and prepare for imaging. (Temperature: 4 ℃, Time: 30 min)",
+            "similarity": 0.6503893136978149,
+            "matched": false
+          },
+          {
+            "reference_index": 1,
+            "reference_text": "Incubate the fixed tissue in 70% (vol/vol) THF in water, adjusted to pH 9.0 with triethylamine, at 4 degrees C for 12 hours with gentle shaking in the dark.",
+            "generated_index": 11,
+            "generated_text": "Replace with fresh BABB again, confirm the tissue is completely transparent, and prepare for imaging. (Temperature: 4 ℃, Time: 30 min)",
+            "similarity": 0.6515673398971558,
+            "matched": false
+          },
+          {
+            "reference_index": 2,
+            "reference_text": "Incubate the fixed tissue in 80% (vol/vol) THF in water, adjusted to pH 9.0 with triethylamine, at 4 degrees C for 12 hours with gentle shaking in the dark.",
+            "generated_index": 11,
+            "generated_text": "Replace with fresh BABB again, confirm the tissue is completely transparent, and prepare for imaging. (Temperature: 4 ℃, Time: 30 min)",
+            "similarity": 0.6518259048461914,
+            "matched": false
+          },
+          {
+            "reference_index": 3,
+            "reference_text": "Incubate the fixed tissue in 100% (vol/vol) THF in water, adjusted to pH 9.0 with triethylamine, at 4 degrees C for 12 hours with gentle shaking in the dark.",
+            "generated_index": 11,
+            "generated_text": "Replace with fresh BABB again, confirm the tissue is completely transparent, and prepare for imaging. (Temperature: 4 ℃, Time: 30 min)",
+            "similarity": 0.6490208506584167,
+            "matched": false
+          },
+          {
+            "reference_index": 4,
+            "reference_text": "Repeat incubation in fresh 100% THF twice more, 12 hours each, for three incubations in total, at 4 degrees C with gentle shaking in the dark.",
+            "generated_index": 7,
+            "generated_text": "Wash with PBST to remove unbound secondary antibody. (Temperature: RT, Time: 5 × 1 hour)",
+            "similarity": 0.5305786728858948,
+            "matched": false
+          },
+          {
+            "reference_index": 5,
+            "reference_text": "Transfer the dehydrated tissue to pure DBE for refractive index matching and clearing at 4 degrees C for 3 hours with gentle shaking in the dark.",
+            "generated_index": 11,
+            "generated_text": "Replace with fresh BABB again, confirm the tissue is completely transparent, and prepare for imaging. (Temperature: 4 ℃, Time: 30 min)",
+            "similarity": 0.658495306968689,
+            "matched": false
+          },
+          {
+            "reference_index": 6,
+            "reference_text": "Store the cleared tissue in DBE in an airtight glass chamber at 4 degrees C in the dark until imaging.",
+            "generated_index": 11,
+            "generated_text": "Replace with fresh BABB again, confirm the tissue is completely transparent, and prepare for imaging. (Temperature: 4 ℃, Time: 30 min)",
+            "similarity": 0.699491024017334,
+            "matched": false
+          }
+        ],
+        "generated_max_similarity": [
+          0.4389820098876953,
+          0.5411130785942078,
+          0.5020041465759277,
+          0.5230021476745605,
+          0.4878103733062744,
+          0.588676929473877,
+          0.49631381034851074,
+          0.5818532705307007,
+          0.449798047542572,
+          0.6229020953178406,
+          0.6099951267242432,
+          0.699491024017334,
+          0.6245390772819519,
+          0.5848643779754639
+        ],
+        "reference_truncated": 0,
+        "generated_truncated": 0,
+        "generated_cjk_steps": 0
+      }
+    },
+    "candidate_all_references": [
+      {
+        "reference_id": "FDISCO_SUPPLEMENT_V2_WHOLE_BRAIN",
+        "fixed_order": 0,
+        "score": {
+          "sr": 0.0,
+          "sp": 0.0,
+          "reference_n": 7,
+          "generated_n": 14,
+          "matches": [
+            {
+              "reference_index": 0,
+              "reference_text": "Incubate the fixed tissue in 50% (vol/vol) THF in water, adjusted to pH 9.0 with triethylamine, at 4 degrees C for 12 hours with gentle shaking in the dark.",
+              "generated_index": 11,
+              "generated_text": "Replace with fresh BABB again, confirm the tissue is completely transparent, and prepare for imaging. (Temperature: 4 ℃, Time: 30 min)",
+              "similarity": 0.6503893136978149,
+              "matched": false
+            },
+            {
+              "reference_index": 1,
+              "reference_text": "Incubate the fixed tissue in 70% (vol/vol) THF in water, adjusted to pH 9.0 with triethylamine, at 4 degrees C for 12 hours with gentle shaking in the dark.",
+              "generated_index": 11,
+              "generated_text": "Replace with fresh BABB again, confirm the tissue is completely transparent, and prepare for imaging. (Temperature: 4 ℃, Time: 30 min)",
+              "similarity": 0.6515673398971558,
+              "matched": false
+            },
+            {
+              "reference_index": 2,
+              "reference_text": "Incubate the fixed tissue in 80% (vol/vol) THF in water, adjusted to pH 9.0 with triethylamine, at 4 degrees C for 12 hours with gentle shaking in the dark.",
+              "generated_index": 11,
+              "generated_text": "Replace with fresh BABB again, confirm the tissue is completely transparent, and prepare for imaging. (Temperature: 4 ℃, Time: 30 min)",
+              "similarity": 0.6518259048461914,
+              "matched": false
+            },
+            {
+              "reference_index": 3,
+              "reference_text": "Incubate the fixed tissue in 100% (vol/vol) THF in water, adjusted to pH 9.0 with triethylamine, at 4 degrees C for 12 hours with gentle shaking in the dark.",
+              "generated_index": 11,
+              "generated_text": "Replace with fresh BABB again, confirm the tissue is completely transparent, and prepare for imaging. (Temperature: 4 ℃, Time: 30 min)",
+              "similarity": 0.6490208506584167,
+              "matched": false
+            },
+            {
+              "reference_index": 4,
+              "reference_text": "Repeat incubation in fresh 100% THF twice more, 12 hours each, for three incubations in total, at 4 degrees C with gentle shaking in the dark.",
+              "generated_index": 7,
+              "generated_text": "Wash with PBST to remove unbound secondary antibody. (Temperature: RT, Time: 5 × 1 hour)",
+              "similarity": 0.5305786728858948,
+              "matched": false
+            },
+            {
+              "reference_index": 5,
+              "reference_text": "Transfer the dehydrated tissue to pure DBE for refractive index matching and clearing at 4 degrees C for 3 hours with gentle shaking in the dark.",
+              "generated_index": 11,
+              "generated_text": "Replace with fresh BABB again, confirm the tissue is completely transparent, and prepare for imaging. (Temperature: 4 ℃, Time: 30 min)",
+              "similarity": 0.658495306968689,
+              "matched": false
+            },
+            {
+              "reference_index": 6,
+              "reference_text": "Store the cleared tissue in DBE in an airtight glass chamber at 4 degrees C in the dark until imaging.",
+              "generated_index": 11,
+              "generated_text": "Replace with fresh BABB again, confirm the tissue is completely transparent, and prepare for imaging. (Temperature: 4 ℃, Time: 30 min)",
+              "similarity": 0.699491024017334,
+              "matched": false
+            }
+          ],
+          "generated_max_similarity": [
+            0.4389820098876953,
+            0.5411130785942078,
+            0.5020041465759277,
+            0.5230021476745605,
+            0.4878103733062744,
+            0.588676929473877,
+            0.49631381034851074,
+            0.5818532705307007,
+            0.449798047542572,
+            0.6229020953178406,
+            0.6099951267242432,
+            0.699491024017334,
+            0.6245390772819519,
+            0.5848643779754639
+          ],
+          "reference_truncated": 0,
+          "generated_truncated": 0,
+          "generated_cjk_steps": 0
+        }
+      }
+    ],
+    "candidate_steps": [
+      {
+        "text": "Place the adult mouse whole brain, already fixed in 4% PFA, in 1× PBS for thorough washing to remove residual fixative. (Temperature: 4 ℃, Time: 3 × 1 hour)",
+        "start": 1505,
+        "end": 1666
+      },
+      {
+        "text": "Place the brain tissue in 1× PBS containing 0.2% (vol/vol) Triton X-100 (PBST) for oscillating permeabilization. (Temperature: 37 ℃, Time: 24 hours)",
+        "start": 1725,
+        "end": 1878
+      },
+      {
+        "text": "Replace with fresh PBST and continue permeabilization. (Temperature: 37 ℃, Time: 24 hours)",
+        "start": 1878,
+        "end": 1973
+      },
+      {
+        "text": "Place the brain tissue in blocking solution (5% (vol/vol) normal donkey serum + 0.2% Triton X-100 + 0.1% (wt/vol) NaN₃ in 1× PBS) for oscillating blocking. (Temperature: 37 ℃, Time: 24 hours)",
+        "start": 1989,
+        "end": 2185
+      },
+      {
+        "text": "Place the brain tissue in a solution containing anti-β-III Tubulin (TUJ1) rabbit polyclonal antibody (diluted 1:500 in blocking solution) and incubate with gentle oscillation. (Temperature: 37 ℃, Time: 48 hours)",
+        "start": 2243,
+        "end": 2459
+      },
+      {
+        "text": "Wash with PBST to remove unbound primary antibody. (Temperature: RT, Time: 5 × 1 hour)",
+        "start": 2459,
+        "end": 2550
+      },
+      {
+        "text": "Place the brain tissue in a solution containing donkey anti-rabbit Alexa Fluor 647 secondary antibody (diluted 1:500 in blocking solution) and incubate with oscillation protected from light. (Temperature: 37 ℃, Time: 48 hours)",
+        "start": 2605,
+        "end": 2836
+      },
+      {
+        "text": "Wash with PBST to remove unbound secondary antibody. (Temperature: RT, Time: 5 × 1 hour)",
+        "start": 2836,
+        "end": 2929
+      },
+      {
+        "text": "Final wash with 1× PBS. (Temperature: RT, Time: 2 × 30 min)",
+        "start": 2929,
+        "end": 2993
+      },
+      {
+        "text": "Place the brain tissue in BABB (benzyl alcohol:benzyl benzoate = 1:2, vol/vol) and oscillate to complete de-lipidation and initiate RI matching until the tissue is completely transparent (typically 30–60 min). (Temperature: 4 ℃, Time: 1 hour)",
+        "start": 3081,
+        "end": 3328
+      },
+      {
+        "text": "Transfer the transparent brain tissue to fresh BABB (RI ≈ 1.56) and equilibrate with static standing protected from light, ensuring the tissue is completely transparent and free of bubbles. (Temperature: 4 ℃, Time: 2 hours)",
+        "start": 3375,
+        "end": 3603
+      },
+      {
+        "text": "Replace with fresh BABB again, confirm the tissue is completely transparent, and prepare for imaging. (Temperature: 4 ℃, Time: 30 min)",
+        "start": 3603,
+        "end": 3742
+      },
+      {
+        "text": "Transfer the transparent brain tissue to BABB in a sample holder compatible with the light-sheet microscope sample slot. Use a refractive index-matched immersion medium (RI = 1.56) to fix the sample position, avoiding bubbles. (Temperature: RT, Time: Immediate imaging)",
+        "start": 3784,
+        "end": 4058
+      },
+      {
+        "text": "If short-term storage is required, seal the sample in BABB and store protected from light at 4 ℃ (imaging is recommended to be completed within 1 week to prevent fluorescence signal decay). (Temperature: 4 ℃, Time: ≤ 7 days)",
+        "start": 4058,
+        "end": 4286
+      }
+    ],
+    "main_score_replaced": false
+  }
+]

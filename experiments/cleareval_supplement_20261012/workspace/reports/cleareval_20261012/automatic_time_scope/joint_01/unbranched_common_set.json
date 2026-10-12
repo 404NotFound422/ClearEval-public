@@ -1,0 +1,32 @@
+{
+  "numeric_scope": "automatic_unbranched_only",
+  "model_cohort": [
+    "openai_claude-sonnet-4.6",
+    "openai_qwen3-max"
+  ],
+  "cohort_size": 2,
+  "question_denominator": 2,
+  "common_question_ids": [],
+  "evaluated_question_ids": [
+    "23",
+    "248"
+  ],
+  "evaluated_question_n": 2,
+  "common_fraction_of_evaluated_questions": 0.0,
+  "common_n": 0,
+  "common_coverage": 0.0,
+  "per_model_eligible_n": {
+    "openai_claude-sonnet-4.6": 1,
+    "openai_qwen3-max": 1
+  },
+  "excluded_counts": {
+    "incomplete_CCE": 2,
+    "cross_model_question_hash_mismatch": 0
+  },
+  "means": {},
+  "dominance_matrix": {},
+  "empirical_nondominated": [],
+  "dominance_tolerance": 1e-12,
+  "aggregation": "mean of per-question IA=min(Com,Cor,Eff) and HV=Com*Cor*Eff",
+  "formal_result": false
+}
