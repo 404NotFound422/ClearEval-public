@@ -1,0 +1,27 @@
+{
+  "status": "PASS_WITH_DECLARED_LIMITS",
+  "pattern_findings": [],
+  "checks": [
+    "private_key",
+    "github_token",
+    "openai_key",
+    "aws_access_key",
+    "jwt",
+    "email_address",
+    "local_absolute_path",
+    "private_notes_or_messages",
+    "credential_assignment"
+  ],
+  "manual_review": [
+    "Only the explicit publication whitelist is eligible for upload. The generated build directory is excluded.",
+    "No paper or article-chunk body, private report body, full experimental request, scientific model raw response, credential, private account detail, private collaboration message, or unreviewed runner file is included.",
+    "Candidate questions, answers, and archived experimental prompts are reconstructed locally from three byte-verified existing public source files; long text is not added to this batch.",
+    "Public resource indices contain paths, URLs, hashes and availability metadata only. Public visibility is not treated as a redistribution license.",
+    "Portability patch includes only relative historical script paths; no local absolute paths.",
+    "Known-looking token checks are heuristic and do not constitute a universal secret detector. Exact whitelist review and source exclusion are the primary safeguards."
+  ],
+  "copyright_scope": "No new third-party paper full text or excerpt is redistributed. The inherited repository tree is preserved; this review concerns only newly added batch files.",
+  "no_new_license_granted": true,
+  "scanned_final_file_count": 24,
+  "final_documentation_revision_checked": true
+}

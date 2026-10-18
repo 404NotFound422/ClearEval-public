@@ -1,0 +1,34 @@
+--- original/build_format_controls.py
++++ scripts/build_format_controls.py
+@@ -17,8 +17,8 @@
+ STATUS = "FORMAT_INVARIANCE_CANDIDATE"
+ TRANSFORM = "insert_one_lf_after_each_existing_empty_lf_line_v1"
+ ALLOWED_WHITESPACE = " \t\r\n"
+-DEFAULT_SOURCE = Path(__file__).resolve().parent.parent / "shared_inventory/candidate20_original_pairs.json"
+-DEFAULT_OUTPUT = Path(__file__).resolve().parent
++DEFAULT_SOURCE = Path(__file__).resolve().parent.parent / "build/inputs/candidate20_original_pairs.json"
++DEFAULT_OUTPUT = Path(__file__).resolve().parent.parent / "build/format_controls"
+ PROTECTED_NAMES = (
+     "candidate20_original_pairs.json",
+     "V3_planned_98_structural_ledger.json",
+@@ -270,7 +270,7 @@
+         "frozen_shared20": False,
+         "planned98_ledger_modified": False,
+         "must_reconcile_if_source_candidates_change": True,
+-        "verification_command": "python cleareval_resume_20261018/v3_format_controls/build_format_controls.py --verify",
++        "verification_command": "python scripts/build_format_controls.py --verify",
+     }
+     write_json(output / "validation_summary.json", summary)
+     verify(source, output)
+
+--- original/test_format_controls.py
++++ tests/test_format_controls.py
+@@ -7,6 +7,8 @@
+ from copy import deepcopy
+ from pathlib import Path
+ 
++import sys
++sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "scripts"))
+ import build_format_controls as controls
+ 
+ 

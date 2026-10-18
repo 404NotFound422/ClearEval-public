@@ -1,0 +1,33 @@
+{
+  "reports": [
+    {
+      "filename": "ClearEval_评估器验证_论文增补_0120.docx",
+      "sha256": "1e6bbfc45e5610993f5e9e3a88fc9698dad17ff4689e9324957c92d12ddf596a",
+      "bytes": 1120735,
+      "reported_page_count": 10,
+      "scope": "Historical V1; v6 three tasks by three Co/Com repeats; three separately executed direct judgments paired with the same three structured first passes; natural-variant and matching diagnostics; fixed-input v8 replay.",
+      "evidence_level": "REPORT_ONLY_RAW_NOT_RECOVERED",
+      "included_in_this_batch": false
+    },
+    {
+      "filename": "ClearEval_评估器验证_题答与证据附件_0120.docx",
+      "sha256": "9978e8c39b66fbab63f5cf5cc7c3a9b2306d2e2f09e9962b91f334e0b1c78df9",
+      "bytes": 54183,
+      "reported_page_count": 15,
+      "scope": "Inputs and evidence attachment for the main report. Candidate answers are evaluation objects, not validated experimental advice.",
+      "evidence_level": "REPORT_ONLY_RAW_NOT_RECOVERED",
+      "included_in_this_batch": false
+    },
+    {
+      "filename": "ClearEval_B07三遍重复_结果补页.docx",
+      "sha256": "40ea67cb8893ce8e1750d65dc4b2023e7125aa74ac6752500ff1ebafec27b9a3",
+      "bytes": 42427,
+      "reported_page_count": null,
+      "scope": "One B07/Q119 answer repeated three times under the v8-labelled batch; full Eff/IA numerical valid n=0. Kept separate from v6 and this new candidate batch.",
+      "evidence_level": "REPORT_ONLY_RAW_NOT_RECOVERED",
+      "included_in_this_batch": false
+    }
+  ],
+  "warning": "Report existence is not raw-run verification. These report indices cannot be used to regenerate scores or reconstruct missing model outputs. No historical run is credited to the current V5 target.",
+  "V4_counting": "The main report describes one additional direct judgment per task (three direct executions). The structured comparator reuses each task first v6 repeat; that structured observation is not an extra execution. Direct executions must not be relabelled as reused v6 raw."
+}

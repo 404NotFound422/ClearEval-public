@@ -1,0 +1,698 @@
+{
+  "schema_version": 1,
+  "status": "PROPOSED_NOT_FROZEN",
+  "source_commit": "a7961f468d8f1a8c28f9cc928199b26fba334883",
+  "source_files": "The same three fixed public archives identified in candidate20_manifest.json. Every proposed record text hash has been checked against those archives.",
+  "candidate_count": 20,
+  "task_family_count": 20,
+  "scientific_applicability_gold": false,
+  "is_holdout": false,
+  "automatic_use_by_format_scripts": false,
+  "selection_summary": "Existing provider availability and original question-answer/demand binding; retain compatible C inputs then families, expand tissue-tier coverage, unknown exposure before known development, stable predefined rank; no score-based selection.",
+  "warning": "Metadata handoff only. The P proposal is not frozen and is not a recovered B20 list. Provider assets are not included in this batch and require explicit local recovery and binding. No scientific correctness or scoring readiness is implied.",
+  "items": [
+    {
+      "proposal_id": "P01",
+      "question_id": 5,
+      "answer_id": "openai_qwen3-max__1-shot__Q005__7c3c1d9c10ee",
+      "task_family_id": "S005",
+      "developer_exposure": "DEV",
+      "method_declared_exact": "iDISCO+",
+      "original_tier": "T06_LONG_CNS_OR_TUBULAR_15_80MM",
+      "source_file_sha256": "f2c0777e65dfb5ee9bab7a1cbc2380ec8c8dc34b6d73ccc5779407f41fc61499",
+      "record_index_zero_based": 4,
+      "original_question_sha256": "104921500724cc128c4178cd8b7189836ccfcaecbd2c6bd5fd778e92445e857e",
+      "answer_sha256": "7c3c1d9c10ee15001c6216f5df1ad628a9f72372e54f0bf40bcc728b43285dbe",
+      "selection_status": "PROPOSED_NOT_FROZEN",
+      "source_binding_status": "SOURCE_BOUND_NOT_APPLICABILITY_VALIDATED",
+      "task_applicability_validation": "NOT_PERFORMED",
+      "is_heldout": false,
+      "s_time_status": "EXACT_TIER_ROW_PRESENT",
+      "s_time_available_tier_keys": [
+        "T06_LONG_CNS_OR_TUBULAR_15_80MM"
+      ],
+      "s_time_scope_conflicts": [],
+      "existing_provider_reference_keys": [
+        "idisco-dec2016-atomic-clearing-v3"
+      ],
+      "v1_change": "NEW_FAMILY_PROPOSED",
+      "related_v1_candidate_id": null,
+      "source_path": "dataset/Q+AR/model_response/from_openai_qwen3-max_1-shot.json",
+      "gap_summary": [
+        "Task-specific scientific applicability and complete evidence binding remain unverified.",
+        "Sample RI mapping, task scope and actual-round label judgment remain to be bound/run."
+      ],
+      "original_B_slot_mapping": null,
+      "new_scientific_runs": 0
+    },
+    {
+      "proposal_id": "P02",
+      "question_id": 13,
+      "answer_id": "openai_qwen3-max__1-shot__Q013__fac2c7217f2d",
+      "task_family_id": "S013",
+      "developer_exposure": "DEV",
+      "method_declared_exact": "iDISCO+",
+      "original_tier": "T04_WHOLE_MOUSE_BRAIN_5_12MM",
+      "source_file_sha256": "f2c0777e65dfb5ee9bab7a1cbc2380ec8c8dc34b6d73ccc5779407f41fc61499",
+      "record_index_zero_based": 12,
+      "original_question_sha256": "11391ede1748dd802d9fc28f1ec8976615ddfecd93661ec79c132ad5e492ffcd",
+      "answer_sha256": "fac2c7217f2dced19ee3fb378dbcfad4a863fb47a5ab0d2793e94c6ccf33ad12",
+      "selection_status": "PROPOSED_NOT_FROZEN",
+      "source_binding_status": "SOURCE_BOUND_NOT_APPLICABILITY_VALIDATED",
+      "task_applicability_validation": "NOT_PERFORMED",
+      "is_heldout": false,
+      "s_time_status": "EXACT_TIER_ROW_PRESENT",
+      "s_time_available_tier_keys": [
+        "T04_WHOLE_MOUSE_BRAIN_5_12MM"
+      ],
+      "s_time_scope_conflicts": [],
+      "existing_provider_reference_keys": [
+        "idisco-dec2016-atomic-clearing-v3"
+      ],
+      "v1_change": "NEW_FAMILY_PROPOSED",
+      "related_v1_candidate_id": null,
+      "source_path": "dataset/Q+AR/model_response/from_openai_qwen3-max_1-shot.json",
+      "gap_summary": [
+        "Task-specific scientific applicability and complete evidence binding remain unverified.",
+        "Sample RI mapping, task scope and actual-round label judgment remain to be bound/run."
+      ],
+      "original_B_slot_mapping": null,
+      "new_scientific_runs": 0
+    },
+    {
+      "proposal_id": "P03",
+      "question_id": 33,
+      "answer_id": "openai_qwen3-max__1-shot__Q033__7f2d31ab375f",
+      "task_family_id": "S033",
+      "developer_exposure": "DEV",
+      "method_declared_exact": "iDISCO+",
+      "original_tier": "T03_SMALL_WHOLE_SAMPLE_1_5MM",
+      "source_file_sha256": "f2c0777e65dfb5ee9bab7a1cbc2380ec8c8dc34b6d73ccc5779407f41fc61499",
+      "record_index_zero_based": 32,
+      "original_question_sha256": "97922272bb642fb3fc5785fa6d115e79613600f8bd34d6402bc83024537a7bab",
+      "answer_sha256": "7f2d31ab375f3b9b61c6eda413d8230a7914c013de3e85bf477cb24c25f1d3e1",
+      "selection_status": "PROPOSED_NOT_FROZEN",
+      "source_binding_status": "SOURCE_BOUND_NOT_APPLICABILITY_VALIDATED",
+      "task_applicability_validation": "NOT_PERFORMED",
+      "is_heldout": false,
+      "s_time_status": "EXACT_TIER_ROW_PRESENT",
+      "s_time_available_tier_keys": [
+        "T03_SMALL_WHOLE_SAMPLE_1_5MM"
+      ],
+      "s_time_scope_conflicts": [],
+      "existing_provider_reference_keys": [
+        "idisco-dec2016-atomic-clearing-v3"
+      ],
+      "v1_change": "NEW_FAMILY_PROPOSED",
+      "related_v1_candidate_id": null,
+      "source_path": "dataset/Q+AR/model_response/from_openai_qwen3-max_1-shot.json",
+      "gap_summary": [
+        "Task-specific scientific applicability and complete evidence binding remain unverified.",
+        "Sample RI mapping, task scope and actual-round label judgment remain to be bound/run."
+      ],
+      "original_B_slot_mapping": null,
+      "new_scientific_runs": 0
+    },
+    {
+      "proposal_id": "P04",
+      "question_id": 61,
+      "answer_id": "openai_gpt-5.2-thinking__1-shot__Q061__5a7c89958b1f",
+      "task_family_id": "S061",
+      "developer_exposure": "UNKNOWN",
+      "method_declared_exact": "FDISCO",
+      "original_tier": "T08_WHOLE_BODY_ADULT_MOUSE",
+      "source_file_sha256": "ccae3e5e14a48766837d73a7af113d832d02785cea2e3440a12a88f208e19002",
+      "record_index_zero_based": 60,
+      "original_question_sha256": "0fe53514732e305989506f25aed86c2c6a0e96330f72d9e0a3d56cebdc1604be",
+      "answer_sha256": "5a7c89958b1f7892ba6bdb781b6ee7ec23499e48c657ab380959cb964d6948eb",
+      "selection_status": "PROPOSED_NOT_FROZEN",
+      "source_binding_status": "SOURCE_BOUND_NOT_APPLICABILITY_VALIDATED",
+      "task_applicability_validation": "NOT_PERFORMED",
+      "is_heldout": false,
+      "s_time_status": "EXACT_TIER_ROW_PRESENT",
+      "s_time_available_tier_keys": [
+        "T08_WHOLE_BODY_ADULT_MOUSE"
+      ],
+      "s_time_scope_conflicts": [],
+      "existing_provider_reference_keys": [
+        "fdisco2019-atomic-clearing-thf100x2-v3",
+        "fdisco2019-atomic-clearing-thf100x3-v3"
+      ],
+      "v1_change": "EXACT_INPUT_KEPT",
+      "related_v1_candidate_id": "C04",
+      "source_path": "dataset/Q+AR/model_response/from_openai_gpt-5.2-thinking_1-shot.json",
+      "gap_summary": [
+        "Task-specific scientific applicability and complete evidence binding remain unverified.",
+        "Sample RI mapping, task scope and actual-round label judgment remain to be bound/run."
+      ],
+      "original_B_slot_mapping": null,
+      "new_scientific_runs": 0
+    },
+    {
+      "proposal_id": "P05",
+      "question_id": 66,
+      "answer_id": "gemini-3-flash__1-shot__Q066__1f0dc0c682d7",
+      "task_family_id": "S065",
+      "developer_exposure": "DEV",
+      "method_declared_exact": "MACS",
+      "original_tier": "T10_LIPID_OR_PIGMENT_RICH",
+      "source_file_sha256": "e0d85905048ce93a95e65b10b483e60faff4fcde6ff88470e039ae2f47621f8e",
+      "record_index_zero_based": 62,
+      "original_question_sha256": "cd90fccb766a62fc2439f565d64b613c62cd4ec565f68806d02614f2a93e4310",
+      "answer_sha256": "1f0dc0c682d7d63da27b6985f1b84b4d8b0dab4b8c55255def1c3a2309339a4a",
+      "selection_status": "PROPOSED_NOT_FROZEN",
+      "source_binding_status": "SOURCE_BOUND_NOT_APPLICABILITY_VALIDATED",
+      "task_applicability_validation": "NOT_PERFORMED",
+      "is_heldout": false,
+      "s_time_status": "EXACT_TIER_ROW_PRESENT",
+      "s_time_available_tier_keys": [
+        "T10_LIPID_OR_PIGMENT_RICH"
+      ],
+      "s_time_scope_conflicts": [],
+      "existing_provider_reference_keys": [
+        "macs-original2020-serial-three-v1"
+      ],
+      "v1_change": "EXACT_INPUT_KEPT",
+      "related_v1_candidate_id": "C05",
+      "source_path": "dataset/Q+AR/model_response/from_gemini-3-flash_1-shot.json",
+      "gap_summary": [
+        "Task-specific scientific applicability and complete evidence binding remain unverified.",
+        "Sample RI mapping, task scope and actual-round label judgment remain to be bound/run."
+      ],
+      "original_B_slot_mapping": null,
+      "new_scientific_runs": 0
+    },
+    {
+      "proposal_id": "P06",
+      "question_id": 77,
+      "answer_id": "openai_qwen3-max__1-shot__Q077__031bd50c0597",
+      "task_family_id": "S077",
+      "developer_exposure": "UNKNOWN",
+      "method_declared_exact": "iDISCO+",
+      "original_tier": "T03_SMALL_WHOLE_SAMPLE_1_5MM",
+      "source_file_sha256": "f2c0777e65dfb5ee9bab7a1cbc2380ec8c8dc34b6d73ccc5779407f41fc61499",
+      "record_index_zero_based": 76,
+      "original_question_sha256": "0b82e265cafc0e4ddd823ba83d80f8e36bee00b68075e4d5c9d8feb6d665962e",
+      "answer_sha256": "031bd50c0597ec869c16a7a18a57b4e01ff873ef3be8f8bdaa090b1837c2490f",
+      "selection_status": "PROPOSED_NOT_FROZEN",
+      "source_binding_status": "SOURCE_BOUND_NOT_APPLICABILITY_VALIDATED",
+      "task_applicability_validation": "NOT_PERFORMED",
+      "is_heldout": false,
+      "s_time_status": "EXACT_TIER_ROW_PRESENT",
+      "s_time_available_tier_keys": [
+        "T03_SMALL_WHOLE_SAMPLE_1_5MM"
+      ],
+      "s_time_scope_conflicts": [],
+      "existing_provider_reference_keys": [
+        "idisco-dec2016-atomic-clearing-v3"
+      ],
+      "v1_change": "EXACT_INPUT_KEPT",
+      "related_v1_candidate_id": "C06",
+      "source_path": "dataset/Q+AR/model_response/from_openai_qwen3-max_1-shot.json",
+      "gap_summary": [
+        "Task-specific scientific applicability and complete evidence binding remain unverified.",
+        "Sample RI mapping, task scope and actual-round label judgment remain to be bound/run."
+      ],
+      "original_B_slot_mapping": null,
+      "new_scientific_runs": 0
+    },
+    {
+      "proposal_id": "P07",
+      "question_id": 81,
+      "answer_id": "openai_qwen3-max__1-shot__Q081__03432880bc1f",
+      "task_family_id": "S081",
+      "developer_exposure": "UNKNOWN",
+      "method_declared_exact": "iDISCO+",
+      "original_tier": "T05_MOUSE_SOFT_ORGAN_5_20MM",
+      "source_file_sha256": "f2c0777e65dfb5ee9bab7a1cbc2380ec8c8dc34b6d73ccc5779407f41fc61499",
+      "record_index_zero_based": 80,
+      "original_question_sha256": "681a0566e4988894340103df5540d6ce742d139a693612d3829bdd9ac99ab373",
+      "answer_sha256": "03432880bc1f1858b0db2662f593fb6f053a7a314bb627f4e8a495a560afe5aa",
+      "selection_status": "PROPOSED_NOT_FROZEN",
+      "source_binding_status": "SOURCE_BOUND_NOT_APPLICABILITY_VALIDATED",
+      "task_applicability_validation": "NOT_PERFORMED",
+      "is_heldout": false,
+      "s_time_status": "EXACT_TIER_ROW_PRESENT",
+      "s_time_available_tier_keys": [
+        "T05_MOUSE_SOFT_ORGAN_5_20MM"
+      ],
+      "s_time_scope_conflicts": [],
+      "existing_provider_reference_keys": [
+        "idisco-dec2016-atomic-clearing-v3"
+      ],
+      "v1_change": "EXACT_INPUT_KEPT",
+      "related_v1_candidate_id": "C07",
+      "source_path": "dataset/Q+AR/model_response/from_openai_qwen3-max_1-shot.json",
+      "gap_summary": [
+        "Task-specific scientific applicability and complete evidence binding remain unverified.",
+        "Sample RI mapping, task scope and actual-round label judgment remain to be bound/run."
+      ],
+      "original_B_slot_mapping": null,
+      "new_scientific_runs": 0
+    },
+    {
+      "proposal_id": "P08",
+      "question_id": 89,
+      "answer_id": "openai_qwen3-max__1-shot__Q089__968ca98283d4",
+      "task_family_id": "S089",
+      "developer_exposure": "UNKNOWN",
+      "method_declared_exact": "iDISCO+",
+      "original_tier": "T05_MOUSE_SOFT_ORGAN_5_20MM",
+      "source_file_sha256": "f2c0777e65dfb5ee9bab7a1cbc2380ec8c8dc34b6d73ccc5779407f41fc61499",
+      "record_index_zero_based": 88,
+      "original_question_sha256": "783f6ad670a7cbb27b453feea045194c0bf262d100b1c8fe7f000688f94705fb",
+      "answer_sha256": "968ca98283d44fef1b56cf2d2818070c71bb9747dab1363826fce702d7a5912a",
+      "selection_status": "PROPOSED_NOT_FROZEN",
+      "source_binding_status": "SOURCE_BOUND_NOT_APPLICABILITY_VALIDATED",
+      "task_applicability_validation": "NOT_PERFORMED",
+      "is_heldout": false,
+      "s_time_status": "EXACT_TIER_ROW_PRESENT",
+      "s_time_available_tier_keys": [
+        "T05_MOUSE_SOFT_ORGAN_5_20MM"
+      ],
+      "s_time_scope_conflicts": [],
+      "existing_provider_reference_keys": [
+        "idisco-dec2016-atomic-clearing-v3"
+      ],
+      "v1_change": "EXACT_INPUT_KEPT",
+      "related_v1_candidate_id": "C08",
+      "source_path": "dataset/Q+AR/model_response/from_openai_qwen3-max_1-shot.json",
+      "gap_summary": [
+        "Task-specific scientific applicability and complete evidence binding remain unverified.",
+        "Sample RI mapping, task scope and actual-round label judgment remain to be bound/run."
+      ],
+      "original_B_slot_mapping": null,
+      "new_scientific_runs": 0
+    },
+    {
+      "proposal_id": "P09",
+      "question_id": 93,
+      "answer_id": "openai_gpt-5.2-thinking__1-shot__Q093__e511d8b7f015",
+      "task_family_id": "S093",
+      "developer_exposure": "DEV",
+      "method_declared_exact": "iDISCO+",
+      "original_tier": "T05_MOUSE_SOFT_ORGAN_5_20MM",
+      "source_file_sha256": "ccae3e5e14a48766837d73a7af113d832d02785cea2e3440a12a88f208e19002",
+      "record_index_zero_based": 92,
+      "original_question_sha256": "580c9a0a6578ae915f77e37c49f3ccc84395a1532e9687b56e6fda754997c954",
+      "answer_sha256": "e511d8b7f01550ad610efd53e1522b1bd873e79727477c86457bafdb0c519909",
+      "selection_status": "PROPOSED_NOT_FROZEN",
+      "source_binding_status": "SOURCE_BOUND_NOT_APPLICABILITY_VALIDATED",
+      "task_applicability_validation": "NOT_PERFORMED",
+      "is_heldout": false,
+      "s_time_status": "EXACT_TIER_ROW_PRESENT",
+      "s_time_available_tier_keys": [
+        "T05_MOUSE_SOFT_ORGAN_5_20MM"
+      ],
+      "s_time_scope_conflicts": [],
+      "existing_provider_reference_keys": [
+        "idisco-dec2016-atomic-clearing-v3"
+      ],
+      "v1_change": "SAME_FAMILY_REAL_ANSWER_CHANGED",
+      "related_v1_candidate_id": "C09",
+      "source_path": "dataset/Q+AR/model_response/from_openai_gpt-5.2-thinking_1-shot.json",
+      "gap_summary": [
+        "Task-specific scientific applicability and complete evidence binding remain unverified.",
+        "Sample RI mapping, task scope and actual-round label judgment remain to be bound/run."
+      ],
+      "original_B_slot_mapping": null,
+      "new_scientific_runs": 0
+    },
+    {
+      "proposal_id": "P10",
+      "question_id": 105,
+      "answer_id": "openai_gpt-5.2-thinking__1-shot__Q105__5ae353ba8889",
+      "task_family_id": "S105",
+      "developer_exposure": "DEV",
+      "method_declared_exact": "iDISCO+",
+      "original_tier": "T05_MOUSE_SOFT_ORGAN_5_20MM",
+      "source_file_sha256": "ccae3e5e14a48766837d73a7af113d832d02785cea2e3440a12a88f208e19002",
+      "record_index_zero_based": 104,
+      "original_question_sha256": "ee7b41739d75ce70c7ff6dc01daa011b623ebd3d28cd8f4c8f2ed4e54727c027",
+      "answer_sha256": "5ae353ba88896b70659d3b8ccaad7bd2e61778131fa76a98a99f36b614f1cc92",
+      "selection_status": "PROPOSED_NOT_FROZEN",
+      "source_binding_status": "SOURCE_BOUND_NOT_APPLICABILITY_VALIDATED",
+      "task_applicability_validation": "NOT_PERFORMED",
+      "is_heldout": false,
+      "s_time_status": "EXACT_TIER_ROW_PRESENT",
+      "s_time_available_tier_keys": [
+        "T05_MOUSE_SOFT_ORGAN_5_20MM"
+      ],
+      "s_time_scope_conflicts": [],
+      "existing_provider_reference_keys": [
+        "idisco-dec2016-atomic-clearing-v3"
+      ],
+      "v1_change": "NEW_FAMILY_PROPOSED",
+      "related_v1_candidate_id": null,
+      "source_path": "dataset/Q+AR/model_response/from_openai_gpt-5.2-thinking_1-shot.json",
+      "gap_summary": [
+        "Task-specific scientific applicability and complete evidence binding remain unverified.",
+        "Sample RI mapping, task scope and actual-round label judgment remain to be bound/run."
+      ],
+      "original_B_slot_mapping": null,
+      "new_scientific_runs": 0
+    },
+    {
+      "proposal_id": "P11",
+      "question_id": 113,
+      "answer_id": "openai_qwen3-max__1-shot__Q113__f76f90d0b78d",
+      "task_family_id": "S113",
+      "developer_exposure": "UNKNOWN",
+      "method_declared_exact": "iDISCO+",
+      "original_tier": "T10_LIPID_OR_PIGMENT_RICH",
+      "source_file_sha256": "f2c0777e65dfb5ee9bab7a1cbc2380ec8c8dc34b6d73ccc5779407f41fc61499",
+      "record_index_zero_based": 112,
+      "original_question_sha256": "ca430df09658cd02c07a466a66122ef9d63653c3d8ddcb75169c17a2b43a4d95",
+      "answer_sha256": "f76f90d0b78db52f57200a1082571587d4979e0f8b0b0a9d216f33c4d06b7f39",
+      "selection_status": "PROPOSED_NOT_FROZEN",
+      "source_binding_status": "SOURCE_BOUND_NOT_APPLICABILITY_VALIDATED",
+      "task_applicability_validation": "NOT_PERFORMED",
+      "is_heldout": false,
+      "s_time_status": "EXACT_TIER_ROW_PRESENT",
+      "s_time_available_tier_keys": [
+        "T10_LIPID_OR_PIGMENT_RICH"
+      ],
+      "s_time_scope_conflicts": [],
+      "existing_provider_reference_keys": [
+        "idisco-dec2016-atomic-clearing-v3"
+      ],
+      "v1_change": "EXACT_INPUT_KEPT",
+      "related_v1_candidate_id": "C10",
+      "source_path": "dataset/Q+AR/model_response/from_openai_qwen3-max_1-shot.json",
+      "gap_summary": [
+        "Task-specific scientific applicability and complete evidence binding remain unverified.",
+        "Sample RI mapping, task scope and actual-round label judgment remain to be bound/run."
+      ],
+      "original_B_slot_mapping": null,
+      "new_scientific_runs": 0
+    },
+    {
+      "proposal_id": "P12",
+      "question_id": 131,
+      "answer_id": "openai_gpt-5.2-thinking__1-shot__Q131__ba54be538a48",
+      "task_family_id": "S129",
+      "developer_exposure": "DEV",
+      "method_declared_exact": "MACS",
+      "original_tier": "T03_SMALL_WHOLE_SAMPLE_1_5MM",
+      "source_file_sha256": "ccae3e5e14a48766837d73a7af113d832d02785cea2e3440a12a88f208e19002",
+      "record_index_zero_based": 130,
+      "original_question_sha256": "212e2aa4cb86e687b6bb52a959dc6567379a99ea308846dc31e07910633410ac",
+      "answer_sha256": "ba54be538a48afed5f7011383cb9c0be2e6492987f27844e31bbb9727fdfbbfe",
+      "selection_status": "PROPOSED_NOT_FROZEN",
+      "source_binding_status": "SOURCE_BOUND_NOT_APPLICABILITY_VALIDATED",
+      "task_applicability_validation": "NOT_PERFORMED",
+      "is_heldout": false,
+      "s_time_status": "EXACT_TIER_ROW_PRESENT",
+      "s_time_available_tier_keys": [
+        "T03_SMALL_WHOLE_SAMPLE_1_5MM"
+      ],
+      "s_time_scope_conflicts": [],
+      "existing_provider_reference_keys": [
+        "macs-original2020-serial-three-v1"
+      ],
+      "v1_change": "NEW_FAMILY_PROPOSED",
+      "related_v1_candidate_id": null,
+      "source_path": "dataset/Q+AR/model_response/from_openai_gpt-5.2-thinking_1-shot.json",
+      "gap_summary": [
+        "Task-specific scientific applicability and complete evidence binding remain unverified.",
+        "Sample RI mapping, task scope and actual-round label judgment remain to be bound/run."
+      ],
+      "original_B_slot_mapping": null,
+      "new_scientific_runs": 0
+    },
+    {
+      "proposal_id": "P13",
+      "question_id": 134,
+      "answer_id": "gemini-3-flash__1-shot__Q134__20631670a901",
+      "task_family_id": "S133",
+      "developer_exposure": "UNKNOWN",
+      "method_declared_exact": "FDISCO",
+      "original_tier": "T09_HUMAN_DENSE_CLINICAL_BLOCK",
+      "source_file_sha256": "e0d85905048ce93a95e65b10b483e60faff4fcde6ff88470e039ae2f47621f8e",
+      "record_index_zero_based": 130,
+      "original_question_sha256": "fce21b41a9b02dfca2a21a6b65e7f3c6a859a3fac2f668202c7f0f365a8173cc",
+      "answer_sha256": "20631670a901dd48382081d67b67b3eff0512834f08207586eadc52a00012f09",
+      "selection_status": "PROPOSED_NOT_FROZEN",
+      "source_binding_status": "SOURCE_BOUND_NOT_APPLICABILITY_VALIDATED",
+      "task_applicability_validation": "NOT_PERFORMED",
+      "is_heldout": false,
+      "s_time_status": "MISSING_TIER_ROW",
+      "s_time_available_tier_keys": [],
+      "s_time_scope_conflicts": [],
+      "existing_provider_reference_keys": [
+        "fdisco2019-atomic-clearing-thf100x2-v3",
+        "fdisco2019-atomic-clearing-thf100x3-v3"
+      ],
+      "v1_change": "EXACT_INPUT_KEPT",
+      "related_v1_candidate_id": "C11",
+      "source_path": "dataset/Q+AR/model_response/from_gemini-3-flash_1-shot.json",
+      "gap_summary": [
+        "Task-specific scientific applicability and complete evidence binding remain unverified.",
+        "Sample RI mapping, task scope and actual-round label judgment remain to be bound/run.",
+        "Time reference tier requires explicit handling: MISSING_TIER_ROW"
+      ],
+      "original_B_slot_mapping": null,
+      "new_scientific_runs": 0
+    },
+    {
+      "proposal_id": "P14",
+      "question_id": 165,
+      "answer_id": "openai_qwen3-max__1-shot__Q165__f225a66a69bf",
+      "task_family_id": "S165",
+      "developer_exposure": "UNKNOWN",
+      "method_declared_exact": "iDISCO+",
+      "original_tier": "T06_LONG_CNS_OR_TUBULAR_15_80MM",
+      "source_file_sha256": "f2c0777e65dfb5ee9bab7a1cbc2380ec8c8dc34b6d73ccc5779407f41fc61499",
+      "record_index_zero_based": 164,
+      "original_question_sha256": "a8a377d71e45feb9fd30083cb2942e1ad6407eb081b5a0477a3b6980445fc997",
+      "answer_sha256": "f225a66a69bf590da425482f1a6663335bade5c263723b2a6eaf83de9d2d1df4",
+      "selection_status": "PROPOSED_NOT_FROZEN",
+      "source_binding_status": "SOURCE_BOUND_NOT_APPLICABILITY_VALIDATED",
+      "task_applicability_validation": "NOT_PERFORMED",
+      "is_heldout": false,
+      "s_time_status": "EXACT_TIER_ROW_PRESENT",
+      "s_time_available_tier_keys": [
+        "T06_LONG_CNS_OR_TUBULAR_15_80MM"
+      ],
+      "s_time_scope_conflicts": [],
+      "existing_provider_reference_keys": [
+        "idisco-dec2016-atomic-clearing-v3"
+      ],
+      "v1_change": "SAME_FAMILY_REAL_ANSWER_CHANGED",
+      "related_v1_candidate_id": "C14",
+      "source_path": "dataset/Q+AR/model_response/from_openai_qwen3-max_1-shot.json",
+      "gap_summary": [
+        "Task-specific scientific applicability and complete evidence binding remain unverified.",
+        "Sample RI mapping, task scope and actual-round label judgment remain to be bound/run."
+      ],
+      "original_B_slot_mapping": null,
+      "new_scientific_runs": 0
+    },
+    {
+      "proposal_id": "P15",
+      "question_id": 197,
+      "answer_id": "openai_qwen3-max__1-shot__Q197__10652302e736",
+      "task_family_id": "S197",
+      "developer_exposure": "UNKNOWN",
+      "method_declared_exact": "iDISCO+",
+      "original_tier": "T03_SMALL_WHOLE_SAMPLE_1_5MM",
+      "source_file_sha256": "f2c0777e65dfb5ee9bab7a1cbc2380ec8c8dc34b6d73ccc5779407f41fc61499",
+      "record_index_zero_based": 196,
+      "original_question_sha256": "13fe6119bc2529877c282e0e97af2978ccec9b095db32cf70bea54f05e1969c8",
+      "answer_sha256": "10652302e736962e17b559ddbe474c994f026400427b59d721533f75d17f845c",
+      "selection_status": "PROPOSED_NOT_FROZEN",
+      "source_binding_status": "SOURCE_BOUND_NOT_APPLICABILITY_VALIDATED",
+      "task_applicability_validation": "NOT_PERFORMED",
+      "is_heldout": false,
+      "s_time_status": "EXACT_TIER_ROW_PRESENT",
+      "s_time_available_tier_keys": [
+        "T03_SMALL_WHOLE_SAMPLE_1_5MM"
+      ],
+      "s_time_scope_conflicts": [],
+      "existing_provider_reference_keys": [
+        "idisco-dec2016-atomic-clearing-v3"
+      ],
+      "v1_change": "EXACT_INPUT_KEPT",
+      "related_v1_candidate_id": "C15",
+      "source_path": "dataset/Q+AR/model_response/from_openai_qwen3-max_1-shot.json",
+      "gap_summary": [
+        "Task-specific scientific applicability and complete evidence binding remain unverified.",
+        "Sample RI mapping, task scope and actual-round label judgment remain to be bound/run."
+      ],
+      "original_B_slot_mapping": null,
+      "new_scientific_runs": 0
+    },
+    {
+      "proposal_id": "P16",
+      "question_id": 221,
+      "answer_id": "openai_qwen3-max__1-shot__Q221__db8104334e88",
+      "task_family_id": "S125",
+      "developer_exposure": "DEV",
+      "method_declared_exact": "iDISCO+",
+      "original_tier": "T12_WHOLE_EYE_OR_RETINA",
+      "source_file_sha256": "f2c0777e65dfb5ee9bab7a1cbc2380ec8c8dc34b6d73ccc5779407f41fc61499",
+      "record_index_zero_based": 220,
+      "original_question_sha256": "48383ffa47a5fb983939827ecf8cc94668fdb4066b8cc37c23b82e38b4e2ea97",
+      "answer_sha256": "db8104334e88d0bdb70b95a32fb67645aafd914924b001c6ebc8aeff0ba0d091",
+      "selection_status": "PROPOSED_NOT_FROZEN",
+      "source_binding_status": "SOURCE_BOUND_NOT_APPLICABILITY_VALIDATED",
+      "task_applicability_validation": "NOT_PERFORMED",
+      "is_heldout": false,
+      "s_time_status": "EXACT_TIER_ROW_PRESENT",
+      "s_time_available_tier_keys": [
+        "T12_WHOLE_EYE_OR_RETINA"
+      ],
+      "s_time_scope_conflicts": [],
+      "existing_provider_reference_keys": [
+        "idisco-dec2016-atomic-clearing-v3"
+      ],
+      "v1_change": "NEW_FAMILY_PROPOSED",
+      "related_v1_candidate_id": null,
+      "source_path": "dataset/Q+AR/model_response/from_openai_qwen3-max_1-shot.json",
+      "gap_summary": [
+        "Task-specific scientific applicability and complete evidence binding remain unverified.",
+        "Sample RI mapping, task scope and actual-round label judgment remain to be bound/run."
+      ],
+      "original_B_slot_mapping": null,
+      "new_scientific_runs": 0
+    },
+    {
+      "proposal_id": "P17",
+      "question_id": 233,
+      "answer_id": "openai_qwen3-max__1-shot__Q233__bde8d85f4a6b",
+      "task_family_id": "S233",
+      "developer_exposure": "UNKNOWN",
+      "method_declared_exact": "iDISCO+",
+      "original_tier": "T05_MOUSE_SOFT_ORGAN_5_20MM",
+      "source_file_sha256": "f2c0777e65dfb5ee9bab7a1cbc2380ec8c8dc34b6d73ccc5779407f41fc61499",
+      "record_index_zero_based": 232,
+      "original_question_sha256": "e8b1e2767c36df6d41849b3b8ccc6ef6d86b97b4860f972441731ffd70db91de",
+      "answer_sha256": "bde8d85f4a6b54ee0dc10bc4ca6cd20e1f0007f3e5932ff1640d16851213f143",
+      "selection_status": "PROPOSED_NOT_FROZEN",
+      "source_binding_status": "SOURCE_BOUND_NOT_APPLICABILITY_VALIDATED",
+      "task_applicability_validation": "NOT_PERFORMED",
+      "is_heldout": false,
+      "s_time_status": "EXACT_TIER_ROW_PRESENT",
+      "s_time_available_tier_keys": [
+        "T05_MOUSE_SOFT_ORGAN_5_20MM"
+      ],
+      "s_time_scope_conflicts": [],
+      "existing_provider_reference_keys": [
+        "idisco-dec2016-atomic-clearing-v3"
+      ],
+      "v1_change": "EXACT_INPUT_KEPT",
+      "related_v1_candidate_id": "C16",
+      "source_path": "dataset/Q+AR/model_response/from_openai_qwen3-max_1-shot.json",
+      "gap_summary": [
+        "Task-specific scientific applicability and complete evidence binding remain unverified.",
+        "Sample RI mapping, task scope and actual-round label judgment remain to be bound/run."
+      ],
+      "original_B_slot_mapping": null,
+      "new_scientific_runs": 0
+    },
+    {
+      "proposal_id": "P18",
+      "question_id": 243,
+      "answer_id": "gemini-3-flash__1-shot__Q243__a4433c861cf1",
+      "task_family_id": "S243",
+      "developer_exposure": "UNKNOWN",
+      "method_declared_exact": "iDISCO+",
+      "original_tier": "T02_THICK_SLICE_0P5_3MM",
+      "source_file_sha256": "e0d85905048ce93a95e65b10b483e60faff4fcde6ff88470e039ae2f47621f8e",
+      "record_index_zero_based": 235,
+      "original_question_sha256": "1f87280e9bd305d55693af00a70519ed749eeae852760ad307a222cf2961b080",
+      "answer_sha256": "a4433c861cf186e4042edd3c6cb3326214bc89b76e38a0b34ab3af1ed35f6480",
+      "selection_status": "PROPOSED_NOT_FROZEN",
+      "source_binding_status": "SOURCE_BOUND_NOT_APPLICABILITY_VALIDATED",
+      "task_applicability_validation": "NOT_PERFORMED",
+      "is_heldout": false,
+      "s_time_status": "EXACT_TIER_ROW_PRESENT",
+      "s_time_available_tier_keys": [
+        "T02_THICK_SLICE_0P5_3MM"
+      ],
+      "s_time_scope_conflicts": [],
+      "existing_provider_reference_keys": [
+        "idisco-dec2016-atomic-clearing-v3"
+      ],
+      "v1_change": "SAME_FAMILY_REAL_ANSWER_CHANGED",
+      "related_v1_candidate_id": "C18",
+      "source_path": "dataset/Q+AR/model_response/from_gemini-3-flash_1-shot.json",
+      "gap_summary": [
+        "Task-specific scientific applicability and complete evidence binding remain unverified.",
+        "Sample RI mapping, task scope and actual-round label judgment remain to be bound/run."
+      ],
+      "original_B_slot_mapping": null,
+      "new_scientific_runs": 0
+    },
+    {
+      "proposal_id": "P19",
+      "question_id": 244,
+      "answer_id": "openai_qwen3-max__1-shot__Q244__dc4ea9f92d18",
+      "task_family_id": "S244",
+      "developer_exposure": "UNKNOWN",
+      "method_declared_exact": "iDISCO+",
+      "original_tier": "T02_THICK_SLICE_0P5_3MM",
+      "source_file_sha256": "f2c0777e65dfb5ee9bab7a1cbc2380ec8c8dc34b6d73ccc5779407f41fc61499",
+      "record_index_zero_based": 242,
+      "original_question_sha256": "f711a035130eba41cb849b3f4fdffaa077957d9cfcf2ed176abef3f76fe04907",
+      "answer_sha256": "dc4ea9f92d18bc9776d2f1cb937b073cfa7b3166ead33d658402b8ca7cca0b1b",
+      "selection_status": "PROPOSED_NOT_FROZEN",
+      "source_binding_status": "SOURCE_BOUND_NOT_APPLICABILITY_VALIDATED",
+      "task_applicability_validation": "NOT_PERFORMED",
+      "is_heldout": false,
+      "s_time_status": "EXACT_TIER_ROW_PRESENT",
+      "s_time_available_tier_keys": [
+        "T02_THICK_SLICE_0P5_3MM"
+      ],
+      "s_time_scope_conflicts": [],
+      "existing_provider_reference_keys": [
+        "idisco-dec2016-atomic-clearing-v3"
+      ],
+      "v1_change": "EXACT_INPUT_KEPT",
+      "related_v1_candidate_id": "C19",
+      "source_path": "dataset/Q+AR/model_response/from_openai_qwen3-max_1-shot.json",
+      "gap_summary": [
+        "Task-specific scientific applicability and complete evidence binding remain unverified.",
+        "Sample RI mapping, task scope and actual-round label judgment remain to be bound/run."
+      ],
+      "original_B_slot_mapping": null,
+      "new_scientific_runs": 0
+    },
+    {
+      "proposal_id": "P20",
+      "question_id": 254,
+      "answer_id": "openai_qwen3-max__1-shot__Q254__67e008c11884",
+      "task_family_id": "S053",
+      "developer_exposure": "DEV",
+      "method_declared_exact": "iDISCO+",
+      "original_tier": "T07_HARD_TISSUE_BONE_TOOTH_COCHLEA",
+      "source_file_sha256": "f2c0777e65dfb5ee9bab7a1cbc2380ec8c8dc34b6d73ccc5779407f41fc61499",
+      "record_index_zero_based": 250,
+      "original_question_sha256": "e9b6a824fd6cc5c473c08f16debc10ce6e574f537040f72e31bf6130533079ab",
+      "answer_sha256": "67e008c1188496e09c44c37118f07c2a9a6373faa2f2c1ea13d15063c90137d7",
+      "selection_status": "PROPOSED_NOT_FROZEN",
+      "source_binding_status": "SOURCE_BOUND_NOT_APPLICABILITY_VALIDATED",
+      "task_applicability_validation": "NOT_PERFORMED",
+      "is_heldout": false,
+      "s_time_status": "PARENT_TIER_SUBROWS_PRESENT",
+      "s_time_available_tier_keys": [
+        "T07A_SMALL_HARD_TISSUE_BONE_TOOTH",
+        "T07B_LARGE_HARD_TISSUE_BONE_COCHLEA"
+      ],
+      "s_time_scope_conflicts": [],
+      "existing_provider_reference_keys": [
+        "idisco-dec2016-atomic-clearing-v3"
+      ],
+      "v1_change": "NEW_FAMILY_PROPOSED",
+      "related_v1_candidate_id": null,
+      "source_path": "dataset/Q+AR/model_response/from_openai_qwen3-max_1-shot.json",
+      "gap_summary": [
+        "Task-specific scientific applicability and complete evidence binding remain unverified.",
+        "Sample RI mapping, task scope and actual-round label judgment remain to be bound/run.",
+        "Time reference tier requires explicit handling: PARENT_TIER_SUBROWS_PRESENT"
+      ],
+      "original_B_slot_mapping": null,
+      "new_scientific_runs": 0
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+test_exact_fixture_extraction (test_extract_inputs.InputSafetyTests.test_exact_fixture_extraction) ... ok
+test_false_holdout_claim_rejected (test_extract_inputs.InputSafetyTests.test_false_holdout_claim_rejected) ... ok
+test_path_escape_rejected (test_extract_inputs.InputSafetyTests.test_path_escape_rejected) ... ok
+test_record_identity_change_rejected (test_extract_inputs.InputSafetyTests.test_record_identity_change_rejected) ... ok
+test_source_byte_change_rejected (test_extract_inputs.InputSafetyTests.test_source_byte_change_rejected) ... ok
+test_text_hash_change_rejected (test_extract_inputs.InputSafetyTests.test_text_hash_change_rejected) ... ok
+test_all_current_20_candidate_pairs_and_files (test_format_controls.FormatControlsTests.test_all_current_20_candidate_pairs_and_files) ... ok
+test_consecutive_empty_lines_each_receive_one_lf (test_format_controls.FormatControlsTests.test_consecutive_empty_lines_each_receive_one_lf) ... ok
+test_exact_lf_insertion_only (test_format_controls.FormatControlsTests.test_exact_lf_insertion_only) ... ok
+test_failed_candidate_is_excluded_and_recorded (test_format_controls.FormatControlsTests.test_failed_candidate_is_excluded_and_recorded) ... ok
+test_incomplete_or_changed_line_mapping_is_rejected (test_format_controls.FormatControlsTests.test_incomplete_or_changed_line_mapping_is_rejected) ... ok
+test_line_reordering_is_rejected (test_format_controls.FormatControlsTests.test_line_reordering_is_rejected) ... ok
+test_mutation_of_non_whitespace_is_rejected (test_format_controls.FormatControlsTests.test_mutation_of_non_whitespace_is_rejected) ... ok
+test_no_exact_empty_lf_line_fails_without_fallback (test_format_controls.FormatControlsTests.test_no_exact_empty_lf_line_fails_without_fallback) ... ok
+test_non_ascii_content_is_not_normalized (test_format_controls.FormatControlsTests.test_non_ascii_content_is_not_normalized) ... ok
+test_original_whitespace_within_lines_untouched (test_format_controls.FormatControlsTests.test_original_whitespace_within_lines_untouched) ... ok
+test_patch_wrong_location_or_non_lf_is_rejected (test_format_controls.FormatControlsTests.test_patch_wrong_location_or_non_lf_is_rejected) ... ok
+test_source_candidate_change_is_detected (test_format_controls.FormatControlsTests.test_source_candidate_change_is_detected) ... ok
+test_stale_extra_pair_artifact_is_rejected (test_format_controls.FormatControlsTests.test_stale_extra_pair_artifact_is_rejected) ... ok
+test_summary_count_tampering_is_rejected (test_format_controls.FormatControlsTests.test_summary_count_tampering_is_rejected) ... ok
+test_summary_gold_claim_tampering_is_rejected (test_format_controls.FormatControlsTests.test_summary_gold_claim_tampering_is_rejected) ... ok
+test_unapproved_expectation_is_rejected (test_format_controls.FormatControlsTests.test_unapproved_expectation_is_rejected) ... ok
+test_unapproved_inline_space_change_is_rejected (test_format_controls.FormatControlsTests.test_unapproved_inline_space_change_is_rejected) ... ok
+test_word_joining_is_rejected_even_when_stripped_equal (test_format_controls.FormatControlsTests.test_word_joining_is_rejected_even_when_stripped_equal) ... ok
+
+----------------------------------------------------------------------
+Ran 24 tests in 0.194s
+
+OK

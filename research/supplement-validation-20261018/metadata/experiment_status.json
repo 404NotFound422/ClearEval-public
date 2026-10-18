@@ -1,0 +1,61 @@
+{
+  "as_of": "2026-10-18",
+  "batch_status": "PREPARATION_AND_FORMAT_CONTROL_ONLY",
+  "new_scientific_scoring_runs": 0,
+  "V1": {
+    "historical_old_scale_pairs": 240,
+    "historical_questions": 20,
+    "answers_per_question": 12,
+    "new_expert_cases": 6,
+    "new_expert_local_questions": 14,
+    "new_expert_feedback_status": "NOT_RETURNED",
+    "new_expert_design": "SINGLE_EXPERT_LOCAL_REVIEW_PREFERRED_NOT_INTER_RATER_AGREEMENT"
+  },
+  "V2": {
+    "planned_development": 5,
+    "planned_holdout": 15,
+    "status": "PAUSED"
+  },
+  "V3": {
+    "planned_base_inputs": 20,
+    "planned_variants": {
+      "equivalent_or_format": 20,
+      "omission": 20,
+      "explicit_error": 20,
+      "reasonable_alternative": 8,
+      "insufficient_evidence": 10
+    },
+    "planned_total_inputs": 98,
+    "this_batch_candidate_format_pairs": 20,
+    "original_B_manifest_recovered": false,
+    "C_to_B_mapping_frozen": false,
+    "full_gold_complete": false,
+    "scientific_scores_in_this_batch": 0
+  },
+  "V4": {
+    "same_model_required": true,
+    "same_evidence_required": true,
+    "same_rubric_required": true,
+    "historical_reported_direct_executions": 3,
+    "historical_structured_comparator": "FIRST_V6_REPEAT_PER_TASK_REUSED",
+    "additional_structured_executions_for_these_comparisons": 0,
+    "historical_raw_verified_in_this_batch": false,
+    "suggested_local_shared_inputs": 20,
+    "original_independent_fixed_quota": null,
+    "quota_status": "LOCAL_SUGGESTION_TO_SHARE_V5_INPUTS"
+  },
+  "V5": {
+    "target_same_version_full_chain_executions": 60,
+    "reported_v6_CoCom_repeats": 9,
+    "reported_v8_B07_repeats": 3,
+    "cross_version_pooling_allowed": false,
+    "current_version_credited_full_chain_executions": 0,
+    "full_Eff_IA_valid_n": 0
+  },
+  "scientific_reproducibility": "Historical report indices are not substitutes for missing raw runs. Only the pure-format construction and engineering tests are reproducible from this batch.",
+  "author_judgment_items_pending": [
+    "Label-separation commitment and host-information scope",
+    "THF shared-carrier scope",
+    "Whether storage capability for weeks satisfies the relevant time-completeness slot"
+  ]
+}

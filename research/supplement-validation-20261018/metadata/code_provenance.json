@@ -1,0 +1,14 @@
+{
+  "generator_original_sha256": "d9fc70080ca068a9bbb6199e437c035715688676a48055ee76b2e02a28f7c07b",
+  "generator_published_sha256": "b2bdffea9a77c70183df019f9e8fa25890d56512cdbe28554b351f9d36b3f19a",
+  "test_original_sha256": "35cba7b95814974e9962047e20cc4de04192ebbe7f0a39759e87e6f2dcbb0028",
+  "test_published_sha256": "15eec3466cdbc0c7d9c1f451e2f71ca587aaf9230a360150fba6418cd1bb8282",
+  "changes": [
+    "Generator default input/output paths now use package-relative build directories.",
+    "Verification command uses the package-relative script path.",
+    "Test import path resolves from its own file.",
+    "No transformation, validation, or test assertion logic changed."
+  ],
+  "patch": "reports/portability_changes.patch",
+  "input_metadata_change": "Extracted candidate source_path becomes repository-relative. All other original-pair fields, including question and answer strings, are reproduced exactly. The aggregate JSON hash changes due only to this provenance-path cleanup; individual text/diff hashes are unchanged."
+}

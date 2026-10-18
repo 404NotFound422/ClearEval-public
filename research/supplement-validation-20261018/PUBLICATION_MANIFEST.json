@@ -1,0 +1,177 @@
+{
+  "schema_version": 1,
+  "batch_id": "supplement-validation-20261018-preparation-format-v1",
+  "repository": "404NotFound422/ClearEval-public",
+  "target_branch": "research/supplement-validation-20261018",
+  "base_commit": "a7961f468d8f1a8c28f9cc928199b26fba334883",
+  "repository_directory": "research/supplement-validation-20261018",
+  "status": "PREPARATION_AND_FORMAT_CONTROL_ONLY",
+  "content_set_sha256": "d0e67a81452dea88a10ecfade65ceabf1c74cb659a0dbabab8da44720f8fa72f",
+  "content_hash_definition": "SHA256 of UTF-8 lines: <sha256><two spaces><relative POSIX path><LF>, sorted by path, covering every listed file; PUBLICATION_MANIFEST.json excludes itself.",
+  "listed_file_count": 23,
+  "listed_total_bytes": 163396,
+  "files": [
+    {
+      "path": ".gitignore",
+      "bytes": 30,
+      "sha256": "195cdf58978fdd47b0bf433d9140fd11bb2b68d3d242a2f946cfabad6e1b5a61",
+      "source": "Publication packaging metadata.",
+      "public_basis": "User-authorized technical metadata only."
+    },
+    {
+      "path": "EXPERIMENT_PLAN_zh.md",
+      "bytes": 12645,
+      "sha256": "d17ccfe78ed989d4a9cbc3ec8bf092a3d01fdfadf9fb6988320b402c526ea116",
+      "source": "Research plan, current verified artifact, and prior delivered reports indexed by exact SHA256.",
+      "public_basis": "User-authorized research status and concise scope summaries; report bodies and missing historical raw not published or reconstructed."
+    },
+    {
+      "path": "LOCAL_EXECUTION_zh.md",
+      "bytes": 3986,
+      "sha256": "91dd86a53d9a5b2cb3bab61ce9436e6a32f4c11de3d91a8697b09631ea4de603",
+      "source": "Research plan, current verified artifact, and prior delivered reports indexed by exact SHA256.",
+      "public_basis": "User-authorized research status and concise scope summaries; report bodies and missing historical raw not published or reconstructed."
+    },
+    {
+      "path": "README.md",
+      "bytes": 5355,
+      "sha256": "4b63e4c6311ecaffa672346efa8947c255cb5949f8b679148c9cc4f7cc1f26ed",
+      "source": "Research plan, current verified artifact, and prior delivered reports indexed by exact SHA256.",
+      "public_basis": "User-authorized research status and concise scope summaries; report bodies and missing historical raw not published or reconstructed."
+    },
+    {
+      "path": "STATUS_zh.md",
+      "bytes": 3300,
+      "sha256": "a00eb1cf1336a8371715510c3936f8668fffc26693f5400c70e1937dda8ba5b5",
+      "source": "Research plan, current verified artifact, and prior delivered reports indexed by exact SHA256.",
+      "public_basis": "User-authorized research status and concise scope summaries; report bodies and missing historical raw not published or reconstructed."
+    },
+    {
+      "path": "metadata/candidate20_manifest.json",
+      "bytes": 25658,
+      "sha256": "097a3f8d0fc6f9d2fbccedad08e9a4dd81053f9b2146bb2ae8cfc993c91e9cd4",
+      "source": "Candidate inventory metadata; three fixed public source files verified by SHA256 and Git blob SHA at a7961f468d8f1a8c28f9cc928199b26fba334883.",
+      "public_basis": "Metadata, source URLs and hashes only; long-form source text remains in the already-public repository."
+    },
+    {
+      "path": "metadata/code_provenance.json",
+      "bytes": 1039,
+      "sha256": "f2e9a4ac70d6b4755c419f69118b21d2e68a301d8cec25a7d3e748c52e1657ba",
+      "source": "Previously verified local LF-only generator and 18 regressions; exact original hashes and portability patch recorded in metadata/code_provenance.json.",
+      "public_basis": "User-authorized research code; no transformation or test-assertion logic changes; no credentials or unpublished scientific raw."
+    },
+    {
+      "path": "metadata/experiment_status.json",
+      "bytes": 2191,
+      "sha256": "dd07a9df37890aa175f4d38a8b9225b4d0d6cea8a3cada8340581f8e2fa4bf83",
+      "source": "Research plan, current verified artifact, and prior delivered reports indexed by exact SHA256.",
+      "public_basis": "User-authorized research status and concise scope summaries; report bodies and missing historical raw not published or reconstructed."
+    },
+    {
+      "path": "metadata/historical_report_index.json",
+      "bytes": 2034,
+      "sha256": "8a3961d739f8551eb63277ed8db8fc113e0acf8960546f23ebe81d8b3223acae",
+      "source": "Research plan, current verified artifact, and prior delivered reports indexed by exact SHA256.",
+      "public_basis": "User-authorized research status and concise scope summaries; report bodies and missing historical raw not published or reconstructed."
+    },
+    {
+      "path": "metadata/proposed20_v3_metadata.json",
+      "bytes": 32597,
+      "sha256": "a8784473676dad0030a7d3f35ae6308f3046d048c186caeff3bfd4c959052277",
+      "source": "Candidate inventory metadata; three fixed public source files verified by SHA256 and Git blob SHA at a7961f468d8f1a8c28f9cc928199b26fba334883.",
+      "public_basis": "Metadata, source URLs and hashes only; long-form source text remains in the already-public repository."
+    },
+    {
+      "path": "metadata/reusable_asset_index.json",
+      "bytes": 12304,
+      "sha256": "9a05f8e29a706e270a3674ab6d44b3396f5b0070a2c249923a9e4b13128652c1",
+      "source": "Existing public repository resources at the pinned commit and recovered operational-reference availability metadata.",
+      "public_basis": "References, hashes and availability only; no paper, article-chunk or provider body redistributed."
+    },
+    {
+      "path": "reports/clean_room_verification.json",
+      "bytes": 613,
+      "sha256": "9e1e8b1c552300c7f22b1f5cf5a99f727fd740215fe3d18f1ceaf1150938e3a3",
+      "source": "Actual offline engineering execution, deterministic artifact metrics, clean-room rerun, and publication checks.",
+      "public_basis": "Counts, hashes and engineering logs only; no new scientific scores."
+    },
+    {
+      "path": "reports/expected_format_metrics.json",
+      "bytes": 16665,
+      "sha256": "6e02f2328c1f8a510227e9fc76f861629f86125cba37dbb6b6ae03ed72b6d94f",
+      "source": "Actual offline engineering execution, deterministic artifact metrics, clean-room rerun, and publication checks.",
+      "public_basis": "Counts, hashes and engineering logs only; no new scientific scores."
+    },
+    {
+      "path": "reports/portability_changes.patch",
+      "bytes": 1428,
+      "sha256": "dd9becaa736993cafdc8fa62d6a8c02f0c23e256757d477e3490132c6353be44",
+      "source": "Previously verified local LF-only generator and 18 regressions; exact original hashes and portability patch recorded in metadata/code_provenance.json.",
+      "public_basis": "User-authorized research code; no transformation or test-assertion logic changes; no credentials or unpublished scientific raw."
+    },
+    {
+      "path": "reports/publication_checks.json",
+      "bytes": 1562,
+      "sha256": "1f0629373cf8cc934cafd717dc020686f2d23954d697d4237189c7fea550935e",
+      "source": "Actual offline engineering execution, deterministic artifact metrics, clean-room rerun, and publication checks.",
+      "public_basis": "Counts, hashes and engineering logs only; no new scientific scores."
+    },
+    {
+      "path": "reports/reproduction_result.json",
+      "bytes": 528,
+      "sha256": "f262b18a000a22a584f0ce236bd34524b6c5b60fe3560d4e7b1e6d6918f34284",
+      "source": "Actual offline engineering execution, deterministic artifact metrics, clean-room rerun, and publication checks.",
+      "public_basis": "Counts, hashes and engineering logs only; no new scientific scores."
+    },
+    {
+      "path": "reports/test_results.txt",
+      "bytes": 3261,
+      "sha256": "58cb7a5dce2aece504388d2afcb2cd8b06a6eee709e6ed91842ec01346a2685b",
+      "source": "Actual offline engineering execution, deterministic artifact metrics, clean-room rerun, and publication checks.",
+      "public_basis": "Counts, hashes and engineering logs only; no new scientific scores."
+    },
+    {
+      "path": "results_template.csv",
+      "bytes": 429,
+      "sha256": "7c03e53d3138d58bc0973119f0f7784d150bb3b25138afc9a532b7dde1c45460",
+      "source": "Publication packaging metadata.",
+      "public_basis": "User-authorized technical metadata only."
+    },
+    {
+      "path": "scripts/build_format_controls.py",
+      "bytes": 18357,
+      "sha256": "b2bdffea9a77c70183df019f9e8fa25890d56512cdbe28554b351f9d36b3f19a",
+      "source": "Previously verified local LF-only generator and 18 regressions; exact original hashes and portability patch recorded in metadata/code_provenance.json.",
+      "public_basis": "User-authorized research code; no transformation or test-assertion logic changes; no credentials or unpublished scientific raw."
+    },
+    {
+      "path": "scripts/extract_inputs.py",
+      "bytes": 3813,
+      "sha256": "189d02432a76ead3bf9bbc38dfc43e8cfb28dc7a6806de0b0429edceb989d0f8",
+      "source": "New standard-library-only provenance extraction, reproduction orchestration, and six synthetic input-integrity tests.",
+      "public_basis": "User-authorized research tooling; no network or scientific scoring code."
+    },
+    {
+      "path": "scripts/reproduce.py",
+      "bytes": 3724,
+      "sha256": "910e2559ea9e78a0de245e54380cb6b661e9fca0f0a4255c05b779b9d3996438",
+      "source": "New standard-library-only provenance extraction, reproduction orchestration, and six synthetic input-integrity tests.",
+      "public_basis": "User-authorized research tooling; no network or scientific scoring code."
+    },
+    {
+      "path": "tests/test_extract_inputs.py",
+      "bytes": 3223,
+      "sha256": "f1446d908125dc176f78ceecac5d4c41e6985d1f5f22ac89ea3f5ebdeb9e713e",
+      "source": "New standard-library-only provenance extraction, reproduction orchestration, and six synthetic input-integrity tests.",
+      "public_basis": "User-authorized research tooling; no network or scientific scoring code."
+    },
+    {
+      "path": "tests/test_format_controls.py",
+      "bytes": 8654,
+      "sha256": "15eec3466cdbc0c7d9c1f451e2f71ca587aaf9230a360150fba6418cd1bb8282",
+      "source": "Previously verified local LF-only generator and 18 regressions; exact original hashes and portability patch recorded in metadata/code_provenance.json.",
+      "public_basis": "User-authorized research code; no transformation or test-assertion logic changes; no credentials or unpublished scientific raw."
+    }
+  ],
+  "self_exclusion": "This manifest is also explicitly whitelisted for publication but is excluded from its own recursive content hash."
+}
