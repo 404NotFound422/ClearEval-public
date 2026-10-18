@@ -1,6 +1,8 @@
 # ClearEval V1–V5补充实验：本地执行说明
 
-本目录整理本轮论文补充实验的目标、已有材料、实际缺口、执行顺序和统计口径，供本地接手。完整实验尚未完成，完整评分runner当前未验收、未随本批发布。纯格式复现代码作为附属工程工具提供。
+[现在能运行什么／完整评分还缺什么／本地如何补齐](CURRENT_STATUS_zh.md) 汇总本轮修正、实际可用命令、缺失文件和下一步。
+
+**现在能跑20组格式复现和19项工程测试。完整评分还需恢复必要资料、配置依赖、冻结正式输入manifest，并解除各模块的连带阻断。** 本目录同时提供V1至V5科学目标、规模、执行顺序与统计口径；完整实验尚未完成。
 
 ## 实验目标与数据规模
 
@@ -17,7 +19,7 @@ V3的78变体为20等义/格式、20遗漏、20关键错误、8合理替代、10
 ## 建议执行顺序
 
 1. 读 [完整实验计划](EXPERIMENT_PLAN_zh.md)，明确采用的样本、规则、版本与尚需研究者决定的事项。C20、P20、原B20不得混用。
-2. 本地核对已有评分代码与恢复版本差异，只补齐运行必需接线和依赖；以一次真实输入验收完整阶段、字段和raw保存。不要假设本批存在完整runner命令。
+2. 先按最新状态页的确切文件路径补齐运行依赖，修复各模块的结果/失败隔离，再以一次真实输入验收完整阶段、字段和raw保存。
 3. 在看新分数前冻结样本/证据/provider、模型与编码器版本、prompt/rubric、统计和失败口径。V3预期关系不能由被测评分器自作gold。
 4. 执行同版V5的20×3，并以指定首遍开展同证据V4；按冻结结构补齐V3。V1专家判断单独追踪，V2保持暂停。
 5. 保存每次实际输入、请求/响应raw、版本、矩阵、判项、失败及重试关系。区分全流程完成、有限数值、合法UNKNOWN/N/A和技术失败，不能读分后改规则、扩样或覆盖失败。
@@ -46,6 +48,22 @@ python3 -B scripts/reproduce.py
 
 全部完整题答/变体与测试结果生成于被忽略的 `build/`；本批不再复制长篇源文本。`reports/expected_format_metrics.json`及实际日志提供工程基线；`PUBLICATION_MANIFEST.json`列出本批文件与来源hash。格式构造不表示科学正确性、专家gold、独立留出或V3整体完成。
 
+## 附属工具：19项工程测试
+
+进入 [runner_engineering_candidate](runner_engineering_candidate/README.md) 后运行：
+
+```sh
+python -S -B verify_package.py
+python -S -B run_engineering_tests.py
+```
+
+CPython 3.12、仅标准库、无需模型。干净目录独立验收为16项纯scope回归＋3项包边界，共19/19；另2项来源依赖测试明确未运行。完整候选31/31属于另一验收范围。本包提供入口源码与工程测试所需依赖；`prepare/verify/execute`仅帮助页通过，正式评分依赖仍未齐。详见[缺项及准确附件成员](runner_engineering_candidate/MISSING_LOCAL_FILES.json)、[运行依赖拆分说明](runner_engineering_candidate/RUNTIME_GAP_AUDIT.md)、[独立验收报告](reports/PORTABLE_ENGINEERING_REVIEW_zh.md)。
+
 ## 发布边界
 
-不发布当前未验收runner、模型权重/cache、论文全文、私有报告正文、完整原实验请求、账户信息或凭据；不运行GitHub Actions。原公开数据仅以固定commit路径和hash引用；公开可见不自动等于获得第三方再分发许可。无新license授予。自然答案是被评价对象，不是实验操作推荐。
+本次新增工程候选源码和明确通过的工程检查；完整科学运行仍待验收。包内不含模型权重/cache、论文全文、私有报告正文、完整原实验请求、账户信息或凭据；不运行GitHub Actions。原公开数据仅以固定commit路径和hash引用；公开可见不自动等于获得第三方再分发许可。无新license授予。自然答案是被评价对象，不是实验操作推荐。
+
+
+## 发布快照与后续更新
+
+`PUBLICATION_MANIFEST.json`保留为初次提交 `3bc06c6b5ffe0bd32ff6d25fc74d181442a5934a` 的24文件快照。校验该快照时应使用对应提交；本次README、CURRENT_STATUS与工程包增量由 `PUBLICATION_UPDATE_20261018.json` 另行记录，不回写旧快照或旧测试结果。初版STATUS和实验计划中的工程进度是当时快照，当前工程结果以CURRENT_STATUS为准。

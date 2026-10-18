@@ -1,0 +1,73 @@
+{
+  "status": "PORTABLE_TARGET_PASS",
+  "target": "archive-free-minimal-engineering-candidate",
+  "python_version": "3.12.14",
+  "isolated_from_parent_recovery_tree": true,
+  "site_packages_disabled": true,
+  "clean_copy": true,
+  "tests": {
+    "original_scope_total": 18,
+    "portable_scope_regressions": 16,
+    "package_boundaries": 3,
+    "portable_total": 19,
+    "portable_passed": 19,
+    "source_bound_scope_tests_not_run_by_portable_target": 2,
+    "full_scope_check_result_without_source": "16 pass; 2 missing-source ERROR. Not full-suite acceptance."
+  },
+  "checks": [
+    {
+      "name": "standalone_suite",
+      "command": "python -S -B run_engineering_tests.py",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "behavior_matches_expectation": true,
+      "interpretation": "Portable engineering check only"
+    },
+    {
+      "name": "full_scope_expected_missing_source",
+      "command": "python -S -B -m unittest discover -s tests -p test_scope_regressions.py -v",
+      "exit_code": 1,
+      "expected_exit_code": 1,
+      "behavior_matches_expectation": true,
+      "interpretation": "NOT_RUN_BY_PORTABLE_TARGET; full original scope has 16 pass and 2 missing-source errors"
+    },
+    {
+      "name": "package_integrity",
+      "command": "python -S -B verify_package.py",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "behavior_matches_expectation": true,
+      "interpretation": "Portable engineering check only"
+    },
+    {
+      "name": "complete_vendor_expected_block",
+      "command": "python -S -B verify_package.py --require-complete-vendor",
+      "exit_code": 2,
+      "expected_exit_code": 2,
+      "behavior_matches_expectation": true,
+      "interpretation": "Expected block; not a complete vendor pass"
+    },
+    {
+      "name": "runner_help",
+      "command": "python -S -B runner.py --help",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "behavior_matches_expectation": true,
+      "interpretation": "Portable engineering check only"
+    }
+  ],
+  "scan": {
+    "files_scanned": 43,
+    "forbidden_binary_files": [],
+    "secret_or_private_absolute_path_matches": [],
+    "scope": "bounded regex and extension scan, plus allowlisted source-copy provenance; not an exhaustive security or license audit"
+  },
+  "original_vendor_manifest_preserved": true,
+  "present_vendor_entries": 19,
+  "missing_vendor_entries": 75,
+  "formal_prepare_verified": false,
+  "formal_execute_verified": false,
+  "scientific_validation": false,
+  "model_calls": 0,
+  "encoder_calls": 0
+}

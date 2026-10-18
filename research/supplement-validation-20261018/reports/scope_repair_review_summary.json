@@ -1,0 +1,61 @@
+{
+  "status": "INDEPENDENT_ENGINEERING_PASS_WITH_PUBLISHED_SUPPORT_LIMITS",
+  "code_freeze": "d795ab8f5ff7a835cd8bfef5326197238bb9ef13962a7b92c2c3942d4ded266b",
+  "vendor_manifest_digest": "f083b48a692ca04315ba293844de8cba26f680190fd0f9b7fdc9757c5dc0724b",
+  "candidate_suite": {
+    "passed": 31,
+    "total": 31
+  },
+  "independent_boundary_groups": {
+    "passed": 18,
+    "total": 18
+  },
+  "bruteforce_graphs": 180,
+  "illegal_matrix_value_classes": 6,
+  "illegal_matrix_shapes": 4,
+  "legacy_boundary_cases": 9,
+  "static20": {
+    "processable": 7,
+    "scope_unsupported": 13,
+    "unexpected_error": 0,
+    "processable_ids": [
+      "P04",
+      "P05",
+      "P09",
+      "P10",
+      "P12",
+      "P13",
+      "P18"
+    ],
+    "method": "All-catalog synthetic selection on exact v3 originals; live pair_inputs gate; no model canonical or production manifest"
+  },
+  "calls": {
+    "judge": 0,
+    "encoder": 0,
+    "installations": 0,
+    "production": 0
+  },
+  "end_to_end_validated": false,
+  "scientific_certified": false,
+  "portable_github_closure_verified": false,
+  "review_stage": "Full local candidate engineering review before the separately checked portable copy",
+  "original_review_report_sha256": "6ba1b71ce1da8c3fead1d11c6f08fda5359e1c3382dff67c72b39003ce55e98a",
+  "current_scope_gate_effect": {
+    "directly_limits": [
+      "c",
+      "SP",
+      "Com requiring c"
+    ],
+    "shared_prepare_stops_entire_attempt": true,
+    "Co_Eff_direct_skipped_due_to_current_coupling": true,
+    "module_isolation_implemented": false,
+    "independent_module_execution_validated": false,
+    "next_priority": "Record eligibility, outputs and failures per module; verify independently runnable Co/Eff/direct rather than treating every completeness-scope failure as a universal scientific blocker."
+  },
+  "failure_stage_label_issue": {
+    "current_label_may_be": "canonical",
+    "actual_location": "pair_inputs after consume_canonical",
+    "next_change": "Add a separate scope-preparation failure label; do not count scope unsupported as JSON extraction failure.",
+    "frozen_code_changed_by_publication": false
+  }
+}

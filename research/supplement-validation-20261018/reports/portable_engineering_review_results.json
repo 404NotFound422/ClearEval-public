@@ -1,0 +1,246 @@
+{
+  "scope": "ISOLATED_MINIMAL_PACKAGE_ENGINEERING_REVIEW_ONLY",
+  "source_code_freeze": "d795ab8f5ff7a835cd8bfef5326197238bb9ef13962a7b92c2c3942d4ded266b",
+  "source_vendor_digest": "f083b48a692ca04315ba293844de8cba26f680190fd0f9b7fdc9757c5dc0724b",
+  "source_copy_count": 31,
+  "source_copies_byte_identical": true,
+  "original_vendor_manifest_unchanged": true,
+  "vendor_manifest_count": 94,
+  "vendor_present": 19,
+  "vendor_missing": 75,
+  "declared_omissions_exact": true,
+  "source_package_hashes": {
+    "TEST_PLAN.json": "1e1b9520fdd263e46ae369a1ccf280b37f514b9c73de3faaab5df9cdb66e093a",
+    "PACKAGE_MANIFEST.json": "0534aaa5f2f5364635459e8bd293b59a0b9e19e311118a2b1e0570fc1534e80d",
+    "build_input_bindings.py": "9c319f48bd91a81a6c925b4132317abcf6d09df93ec0e6ee4edbe15089060c9b",
+    "RUNTIME_GAP_AUDIT.md": "5f5e60019770ff32695ccb1ce9cc8ee2ab743b4a7c857bee9f9971bea79b8dcd",
+    "README.md": "4799340afe265450e414f3c998ea4f1fac5275b4cf13e1040cbc89a444345352",
+    "run_engineering_tests.py": "bd4939a2acb779480249fa113896e12e9f1476de3ec71c6b96f04ee29f2e0c25",
+    "VERIFICATION.json": "1b461e4736d833353764639f77badfa6d519c099ffba46a1e8f3214999183c60",
+    ".gitignore": "b1cfc27830de4efddb0616db8e674237d577eeb5813c5b2d760e1ddf8854a55a",
+    "PROVENANCE.json": "55d62af77af89b08d9d0973b68cbf77ba3424a02a5c6cec5a0239013d3beedc3",
+    "VENDOR_MANIFEST.json": "241bc75e8f5448848b724398cba0ee8f666fc55a2340cbbe36c6a0a52827b85d",
+    "DEPENDENCIES.md": "5e9cb317b72220f151b4757bc16c1b4790310b3429fb5765dd9c8a177501f389",
+    "verify_package.py": "e336aaac3ef7d9e4ac29727d5574c1dd635b76c080f2bdc413bbf6b4b2ee8f99",
+    "MISSING_LOCAL_FILES.json": "66705a44d43f41511f5668179a853afc7942e9f5282b671294638d922ed618e7",
+    "runner.py": "e7a555f023345f4325ef1955c7a4427340ec889e0213456921de2dd62cd7c95c",
+    "providers/mpnet_encoder.py": "a6019bb6a3a89738214fb9ea2f6118c1bc81949b4bd5244ca4a8767285f61331",
+    "providers/http_judge.py": "af6361b482acb1e00710df00cd831bbca9b37d439cb1734eda2c07b2242a9209",
+    "representation/oeq_simple_representation.py": "b3f95df92308d07da1194b59947e44fa27111a99126cc70a5a52c10be11d8c0f",
+    "representation/oeq_simple_time.py": "3da35517bf88520c502cc87ed9b0d5bc86dcfbb036ceefee804b6a1b3ef39b9c",
+    "representation/oeq_atomic_alignment.py": "24aa46cbaac6b30b1d37d158601df06345ec0d1ef97b279b407030411dcc82ba",
+    "matching/oeq_quantity_assignment.py": "6b7227700d4af259b0daa62ed04908b27c3e7ccc05dcc24c527bd726fabc88c9",
+    "matching/oeq_capacity_matching.py": "09217fedaefd7750ee887c0a08e721da68e7f9ce56bf43ec3747481640ffe313",
+    "schemas/canonical.json": "bd952a4118f43d012e7741396d83008eaa2cf4a126973173292e157f48048e39",
+    "tests/test_scope_regressions.py": "a2cd7d32010d51e67ef92b62e4f4d43650b36d6e7efaab1317f39cf6ab7844e5",
+    "tests/test_package_boundaries.py": "bb08e62096caf5249dade8bef75800144d145f24c85ae7c617a7e281610f8c7d",
+    "scope/oeq_protocol_scope.py": "19daed67e347785c26829b53d03dd2f8b6a9e44a22fcffb474413c0066606ada",
+    "vendor/source/verified_marker_aliases.py": "ca74fd47a02fd8758eac2175fc211bb3eb16c3728e80bed0ab85640ffd5b1c54",
+    "vendor/source/oeq_unit_facts.py": "82d953885995805056c968ca1ce12d670aba89b7c86b2556fe81c3c7188c20ab",
+    "vendor/source/oeq_representation_consistency.py": "5d8de1708aeab1d44ae6fd1c9899ed3caa4437562a69880ab6a862ee6cf6ab14",
+    "vendor/source/marker_input_contract.py": "f80badc12e06a1e7afcc30c26888f8227694c30d96aed6028d9d4012a6241382",
+    "vendor/source/oeq_atomic_source_projection.py": "48149b22ac4f484d0ef78b5f3353ece88c8d9077df8c40bd8d0ada74da3aedb0",
+    "vendor/source/evaluator_integrity.py": "68c6d95deb14d5012965a5948e4a8958d77038f8a1d203212e801f1823bb0cbc",
+    "vendor/source/oeq_score_bounds.py": "94bff2c91a14234ae8cbdb156e23488a7077b48211f9c6e085579a46021dd7a9",
+    "vendor/source/oeq_sample_marker_applicability.py": "2a2c788ea26f067dface3b9018e1a355e858c908cc512cf4b83cdb126a956772",
+    "vendor/source/oeq_exact_zero_aggregate.py": "02a508eddf6c32cde154741604fe7c7eec235f23ca6dd9d7c9b8ab6ec58ea05e",
+    "vendor/source/evaluation_contract.py": "7a82ba64295505461b74f64a2747e8c58416e38e5b77b9ce17c4b004fdadb1be",
+    "vendor/source/oeq_practical_scoring.py": "43afb28a82bf7ff7443269d02eec2a36166ac30caef1b34f0ec6338d5f9b2583",
+    "vendor/source/oeq_practical_assessment.py": "9f43a622b8b18fa83df0c5cc2d06dbb445ee2ed187dc0ce9955d5b6f0895c61e",
+    "vendor/source/experiments/cce_completeness_revision_20261013/sr_completeness_adapter.py": "ed5d4bc9f6d8eb766d9c87e571ea709ed9ff1751ca889616fb58f6710ea93518",
+    "vendor/source/experiments/construct_validity/evidence.py": "ef557c0d35160730c39674ef27fda8fa8e49b82898f52e7e065fe8a33aafbdb7",
+    "vendor/source/experiments/construct_validity/contract.py": "7311d4967ce65723d75bfc2fd612956accdeee61c11f654e7b9096ba9bf850db",
+    "vendor/source/experiments/construct_validity/__init__.py": "cb3bc0369249c9c45d4cf3beed71b35106763c6f4b342e1d555adc69f02142bf",
+    "vendor/source/experiments/construct_validity/fidelity.py": "88c2925e33647cd2c4ba245e54b87d5392f51184d23c7b53f2a78efcf2b37222",
+    "vendor/source/experiments/construct_validity/compact_grounding.py": "e34af59244f0a9a349050255b8e4fc551fca1e06117270e71c094076eb601561"
+  },
+  "checks": [
+    {
+      "label": "package_hashes",
+      "args": [
+        "verify_package.py"
+      ],
+      "expected_return_code": 0,
+      "actual_return_code": 0,
+      "status": "PASS",
+      "stdout": "{\n  \"package_status\": \"PASS\",\n  \"package_files_checked\": 42,\n  \"package_hash_failures\": [],\n  \"vendor_files_present\": 19,\n  \"expected_vendor_omissions\": 75,\n  \"vendor_files_missing\": 75,\n  \"vendor_hash_failures\": [],\n  \"unexpected_missing_vendor_files\": [],\n  \"locally_restored_vendor_files\": [],\n  \"vendor_snapshot_complete\": false,\n  \"formal_pipeline_validated\": false,\n  \"model_calls\": 0,\n  \"encoder_calls\": 0\n}\n",
+      "stderr": ""
+    },
+    {
+      "label": "full_vendor_gate_expected_block",
+      "args": [
+        "verify_package.py",
+        "--require-complete-vendor"
+      ],
+      "expected_return_code": 2,
+      "actual_return_code": 2,
+      "status": "PASS",
+      "stdout": "{\n  \"package_status\": \"PASS\",\n  \"package_files_checked\": 42,\n  \"package_hash_failures\": [],\n  \"vendor_files_present\": 19,\n  \"expected_vendor_omissions\": 75,\n  \"vendor_files_missing\": 75,\n  \"vendor_hash_failures\": [],\n  \"unexpected_missing_vendor_files\": [],\n  \"locally_restored_vendor_files\": [],\n  \"vendor_snapshot_complete\": false,\n  \"formal_pipeline_validated\": false,\n  \"model_calls\": 0,\n  \"encoder_calls\": 0\n}\n",
+      "stderr": ""
+    },
+    {
+      "label": "selected_portable_tests_16_scope_plus_3_boundary",
+      "args": [
+        "run_engineering_tests.py"
+      ],
+      "expected_return_code": 0,
+      "actual_return_code": 0,
+      "status": "PASS",
+      "stdout": "Portable target: 16 of 18 original scope tests + 3 package-boundary tests.\nNOT RUN (local source evidence required): test_solvent_reversal_does_not_cross_routes_or_override_clearing\nNOT RUN (local source evidence required): test_source_backed_solvent_reversal_allows_equal_boundary_wash\n{\n  \"portable_tests_run\": 19,\n  \"passed\": 19,\n  \"failures\": 0,\n  \"errors\": 0,\n  \"skipped_in_portable_suite\": 0,\n  \"source_bound_tests_not_run\": [\n    \"test_solvent_reversal_does_not_cross_routes_or_override_clearing\",\n    \"test_source_backed_solvent_reversal_allows_equal_boundary_wash\"\n  ],\n  \"formal_pipeline_validated\": false,\n  \"model_calls\": 0,\n  \"encoder_calls\": 0\n}\n",
+      "stderr": "test_chinese_negated_optional_and_unselected_rows_not_asserted (test_scope_regressions.ScopeRegressionTests.test_chinese_negated_optional_and_unselected_rows_not_asserted) ... ok\ntest_explicit_mixed_scope_heading_does_not_choose_first_phase (test_scope_regressions.ScopeRegressionTests.test_explicit_mixed_scope_heading_does_not_choose_first_phase) ... ok\ntest_explicit_post_label_buffer_washes_are_outside_clearing (test_scope_regressions.ScopeRegressionTests.test_explicit_post_label_buffer_washes_are_outside_clearing) ... ok\ntest_finite_chinese_current_headings_preserve_original_text (test_scope_regressions.ScopeRegressionTests.test_finite_chinese_current_headings_preserve_original_text) ... ok\ntest_future_purpose_cannot_promote_current_phase (test_scope_regressions.ScopeRegressionTests.test_future_purpose_cannot_promote_current_phase) ... ok\ntest_generic_wash_and_contradictory_post_label_wash_stay_unresolved (test_scope_regressions.ScopeRegressionTests.test_generic_wash_and_contradictory_post_label_wash_stay_unresolved) ... ok\ntest_in_scope_outside_scope_conflict_still_blocks (test_scope_regressions.ScopeRegressionTests.test_in_scope_outside_scope_conflict_still_blocks) ... ok\ntest_known_preparation_heading_excluded_without_disabling_gate (test_scope_regressions.ScopeRegressionTests.test_known_preparation_heading_excluded_without_disabling_gate) ... ok\ntest_literal_identity_exception_does_not_relax_modality_or_parameters (test_scope_regressions.ScopeRegressionTests.test_literal_identity_exception_does_not_relax_modality_or_parameters) ... ok\ntest_mixed_and_unknown_heading_suffixes_remain_unresolved (test_scope_regressions.ScopeRegressionTests.test_mixed_and_unknown_heading_suffixes_remain_unresolved) ... ok\ntest_outside_scope_membership_preserves_phase_uncertainty (test_scope_regressions.ScopeRegressionTests.test_outside_scope_membership_preserves_phase_uncertainty) ... ok\ntest_unknown_current_heading_remains_technical_blocker (test_scope_regressions.ScopeRegressionTests.test_unknown_current_heading_remains_technical_blocker) ... ok\ntest_unknown_identity_never_matches_merely_because_both_unknown (test_scope_regressions.ScopeRegressionTests.test_unknown_identity_never_matches_merely_because_both_unknown) ... ok\ntest_unknown_reference_phase_still_blocks (test_scope_regressions.ScopeRegressionTests.test_unknown_reference_phase_still_blocks) ... ok\ntest_unselected_route_does_not_block_requested_route (test_scope_regressions.ScopeRegressionTests.test_unselected_route_does_not_block_requested_route) ... ok\ntest_verified_v3_assertion_compatibility_retains_assertion (test_scope_regressions.ScopeRegressionTests.test_verified_v3_assertion_compatibility_retains_assertion) ... ok\ntest_all_cli_help_without_site_packages (test_package_boundaries.PackageBoundaryTests.test_all_cli_help_without_site_packages) ... ok\ntest_original_vendor_hashes_and_declared_missing_files (test_package_boundaries.PackageBoundaryTests.test_original_vendor_hashes_and_declared_missing_files) ... ok\ntest_prepare_still_rejects_incomplete_vendor_before_output (test_package_boundaries.PackageBoundaryTests.test_prepare_still_rejects_incomplete_vendor_before_output) ... ok\n\n----------------------------------------------------------------------\nRan 19 tests in 0.818s\n\nOK\n"
+    },
+    {
+      "label": "full_original_scope_expected_missing_source_errors",
+      "args": [
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_scope_regressions.py",
+        "-v"
+      ],
+      "expected_return_code": 1,
+      "actual_return_code": 1,
+      "status": "PASS",
+      "stdout": "",
+      "stderr": "test_chinese_negated_optional_and_unselected_rows_not_asserted (test_scope_regressions.ScopeRegressionTests.test_chinese_negated_optional_and_unselected_rows_not_asserted) ... ok\ntest_explicit_mixed_scope_heading_does_not_choose_first_phase (test_scope_regressions.ScopeRegressionTests.test_explicit_mixed_scope_heading_does_not_choose_first_phase) ... ok\ntest_explicit_post_label_buffer_washes_are_outside_clearing (test_scope_regressions.ScopeRegressionTests.test_explicit_post_label_buffer_washes_are_outside_clearing) ... ok\ntest_finite_chinese_current_headings_preserve_original_text (test_scope_regressions.ScopeRegressionTests.test_finite_chinese_current_headings_preserve_original_text) ... ok\ntest_future_purpose_cannot_promote_current_phase (test_scope_regressions.ScopeRegressionTests.test_future_purpose_cannot_promote_current_phase) ... ok\ntest_generic_wash_and_contradictory_post_label_wash_stay_unresolved (test_scope_regressions.ScopeRegressionTests.test_generic_wash_and_contradictory_post_label_wash_stay_unresolved) ... ok\ntest_in_scope_outside_scope_conflict_still_blocks (test_scope_regressions.ScopeRegressionTests.test_in_scope_outside_scope_conflict_still_blocks) ... ok\ntest_known_preparation_heading_excluded_without_disabling_gate (test_scope_regressions.ScopeRegressionTests.test_known_preparation_heading_excluded_without_disabling_gate) ... ok\ntest_literal_identity_exception_does_not_relax_modality_or_parameters (test_scope_regressions.ScopeRegressionTests.test_literal_identity_exception_does_not_relax_modality_or_parameters) ... ok\ntest_mixed_and_unknown_heading_suffixes_remain_unresolved (test_scope_regressions.ScopeRegressionTests.test_mixed_and_unknown_heading_suffixes_remain_unresolved) ... ok\ntest_outside_scope_membership_preserves_phase_uncertainty (test_scope_regressions.ScopeRegressionTests.test_outside_scope_membership_preserves_phase_uncertainty) ... ok\ntest_solvent_reversal_does_not_cross_routes_or_override_clearing (test_scope_regressions.ScopeRegressionTests.test_solvent_reversal_does_not_cross_routes_or_override_clearing) ... ERROR\ntest_source_backed_solvent_reversal_allows_equal_boundary_wash (test_scope_regressions.ScopeRegressionTests.test_source_backed_solvent_reversal_allows_equal_boundary_wash) ... ERROR\ntest_unknown_current_heading_remains_technical_blocker (test_scope_regressions.ScopeRegressionTests.test_unknown_current_heading_remains_technical_blocker) ... ok\ntest_unknown_identity_never_matches_merely_because_both_unknown (test_scope_regressions.ScopeRegressionTests.test_unknown_identity_never_matches_merely_because_both_unknown) ... ok\ntest_unknown_reference_phase_still_blocks (test_scope_regressions.ScopeRegressionTests.test_unknown_reference_phase_still_blocks) ... ok\ntest_unselected_route_does_not_block_requested_route (test_scope_regressions.ScopeRegressionTests.test_unselected_route_does_not_block_requested_route) ... ok\ntest_verified_v3_assertion_compatibility_retains_assertion (test_scope_regressions.ScopeRegressionTests.test_verified_v3_assertion_compatibility_retains_assertion) ... ok\n\n======================================================================\nERROR: test_solvent_reversal_does_not_cross_routes_or_override_clearing (test_scope_regressions.ScopeRegressionTests.test_solvent_reversal_does_not_cross_routes_or_override_clearing)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"<isolated-package>/tests/test_scope_regressions.py\", line 147, in test_solvent_reversal_does_not_cross_routes_or_override_clearing\n    c, e, p = scoped_fixture(altered)\n              ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<isolated-package>/tests/test_scope_regressions.py\", line 39, in scoped_fixture\n    pair = pair_scope(candidate_from_records(candidate), reference,\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<isolated-package>/representation/oeq_atomic_alignment.py\", line 505, in pair_scope\n    rows=contextual_scope(data['operations'],method=method) if side=='candidate' else data['operations']\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<isolated-package>/representation/oeq_atomic_alignment.py\", line 468, in contextual_scope\n    source_rows={r['id']:r for r in source_reference()['operations']}\n                                    ^^^^^^^^^^^^^^^^^^\n  File \"<isolated-package>/representation/oeq_atomic_alignment.py\", line 406, in source_reference\n    _locked()\n  File \"<isolated-package>/vendor/source/oeq_atomic_source_projection.py\", line 20, in _locked\n    if _sha(p)!=LOCK_SHA256:raise ValueError('Atomic admission registry lock changed')\n       ^^^^^^^\n  File \"<isolated-package>/vendor/source/oeq_atomic_source_projection.py\", line 17, in _sha\n    def _sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()\n                                      ^^^^^^^^^^^^^^\n  File \"<python-runtime>/lib/python3.12/pathlib.py\", line 1019, in read_bytes\n    with self.open(mode='rb') as f:\n         ^^^^^^^^^^^^^^^^^^^^\n  File \"<python-runtime>/lib/python3.12/pathlib.py\", line 1013, in open\n    return io.open(self, mode, buffering, encoding, errors, newline)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nFileNotFoundError: [Errno 2] No such file or directory: '<isolated-package>/vendor/source/experiments/idisco_full_atomic_reference_20261015/atomic_admission_lock_v1.json'\n\n======================================================================\nERROR: test_source_backed_solvent_reversal_allows_equal_boundary_wash (test_scope_regressions.ScopeRegressionTests.test_source_backed_solvent_reversal_allows_equal_boundary_wash)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"<isolated-package>/tests/test_scope_regressions.py\", line 117, in test_source_backed_solvent_reversal_allows_equal_boundary_wash\n    catalog, extraction, pair = scoped_fixture(protocol)\n                                ^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<isolated-package>/tests/test_scope_regressions.py\", line 39, in scoped_fixture\n    pair = pair_scope(candidate_from_records(candidate), reference,\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<isolated-package>/representation/oeq_atomic_alignment.py\", line 505, in pair_scope\n    rows=contextual_scope(data['operations'],method=method) if side=='candidate' else data['operations']\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<isolated-package>/representation/oeq_atomic_alignment.py\", line 468, in contextual_scope\n    source_rows={r['id']:r for r in source_reference()['operations']}\n                                    ^^^^^^^^^^^^^^^^^^\n  File \"<isolated-package>/representation/oeq_atomic_alignment.py\", line 406, in source_reference\n    _locked()\n  File \"<isolated-package>/vendor/source/oeq_atomic_source_projection.py\", line 20, in _locked\n    if _sha(p)!=LOCK_SHA256:raise ValueError('Atomic admission registry lock changed')\n       ^^^^^^^\n  File \"<isolated-package>/vendor/source/oeq_atomic_source_projection.py\", line 17, in _sha\n    def _sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()\n                                      ^^^^^^^^^^^^^^\n  File \"<python-runtime>/lib/python3.12/pathlib.py\", line 1019, in read_bytes\n    with self.open(mode='rb') as f:\n         ^^^^^^^^^^^^^^^^^^^^\n  File \"<python-runtime>/lib/python3.12/pathlib.py\", line 1013, in open\n    return io.open(self, mode, buffering, encoding, errors, newline)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nFileNotFoundError: [Errno 2] No such file or directory: '<isolated-package>/vendor/source/experiments/idisco_full_atomic_reference_20261015/atomic_admission_lock_v1.json'\n\n----------------------------------------------------------------------\nRan 18 tests in 0.099s\n\nFAILED (errors=2)\n"
+    },
+    {
+      "label": "cli_help_runner.py_",
+      "args": [
+        "runner.py",
+        "--help"
+      ],
+      "expected_return_code": 0,
+      "actual_return_code": 0,
+      "status": "PASS",
+      "stdout": "usage: runner.py [-h] {inventory-check,prepare,verify,execute} ...\n\nNew, isolated execution candidate. Preparation is offline; execution needs a\nbound permit. Never imports the old CLI, replaces its lock, or treats\nhistorical raws as fresh output.\n\npositional arguments:\n  {inventory-check,prepare,verify,execute}\n\noptions:\n  -h, --help            show this help message and exit\n",
+      "stderr": ""
+    },
+    {
+      "label": "cli_help_build_input_bindings.py_",
+      "args": [
+        "build_input_bindings.py",
+        "--help"
+      ],
+      "expected_return_code": 0,
+      "actual_return_code": 0,
+      "status": "PASS",
+      "stdout": "usage: build_input_bindings.py [-h] --pairs PAIRS --questions QUESTIONS\n                               --demand DEMAND --demand-manifest\n                               DEMAND_MANIFEST --out OUT\n\nRestore exact old question/demand bindings only; does not make source/task\nchoices.\n\noptions:\n  -h, --help            show this help message and exit\n  --pairs PAIRS\n  --questions QUESTIONS\n  --demand DEMAND\n  --demand-manifest DEMAND_MANIFEST\n  --out OUT\n",
+      "stderr": ""
+    },
+    {
+      "label": "cli_help_runner.py_inventory-check",
+      "args": [
+        "runner.py",
+        "inventory-check",
+        "--help"
+      ],
+      "expected_return_code": 0,
+      "actual_return_code": 0,
+      "status": "PASS",
+      "stdout": "usage: runner.py inventory-check [-h] --pairs PAIRS --inventory INVENTORY\n                                 --out OUT\n\noptions:\n  -h, --help            show this help message and exit\n  --pairs PAIRS\n  --inventory INVENTORY\n  --out OUT\n",
+      "stderr": ""
+    },
+    {
+      "label": "cli_help_runner.py_prepare",
+      "args": [
+        "runner.py",
+        "prepare",
+        "--help"
+      ],
+      "expected_return_code": 0,
+      "actual_return_code": 0,
+      "status": "PASS",
+      "stdout": "usage: runner.py prepare [-h] --manifest MANIFEST --out OUT\n\noptions:\n  -h, --help           show this help message and exit\n  --manifest MANIFEST\n  --out OUT\n",
+      "stderr": ""
+    },
+    {
+      "label": "cli_help_runner.py_verify",
+      "args": [
+        "runner.py",
+        "verify",
+        "--help"
+      ],
+      "expected_return_code": 0,
+      "actual_return_code": 0,
+      "status": "PASS",
+      "stdout": "usage: runner.py verify [-h] --prepared PREPARED\n\noptions:\n  -h, --help           show this help message and exit\n  --prepared PREPARED\n",
+      "stderr": ""
+    },
+    {
+      "label": "cli_help_runner.py_execute",
+      "args": [
+        "runner.py",
+        "execute",
+        "--help"
+      ],
+      "expected_return_code": 0,
+      "actual_return_code": 0,
+      "status": "PASS",
+      "stdout": "usage: runner.py execute [-h] --prepared PREPARED --out OUT --permit PERMIT\n\noptions:\n  -h, --help           show this help message and exit\n  --prepared PREPARED\n  --out OUT\n  --permit PERMIT\n",
+      "stderr": ""
+    },
+    {
+      "label": "tampered_source_rejected",
+      "args": [
+        "verify_package.py"
+      ],
+      "expected_return_code": 1,
+      "actual_return_code": 1,
+      "status": "PASS",
+      "stdout": "{\n  \"package_status\": \"FAIL\",\n  \"package_files_checked\": 42,\n  \"package_hash_failures\": [\n    \"runner.py\"\n  ],\n  \"vendor_files_present\": 19,\n  \"expected_vendor_omissions\": 75,\n  \"vendor_files_missing\": 75,\n  \"vendor_hash_failures\": [],\n  \"unexpected_missing_vendor_files\": [],\n  \"locally_restored_vendor_files\": [],\n  \"vendor_snapshot_complete\": false,\n  \"formal_pipeline_validated\": false,\n  \"model_calls\": 0,\n  \"encoder_calls\": 0\n}\n",
+      "stderr": ""
+    },
+    {
+      "label": "wrong_vendor_restoration_rejected",
+      "args": [
+        "verify_package.py"
+      ],
+      "expected_return_code": 1,
+      "actual_return_code": 1,
+      "status": "PASS",
+      "stdout": "{\n  \"package_status\": \"FAIL\",\n  \"package_files_checked\": 42,\n  \"package_hash_failures\": [],\n  \"vendor_files_present\": 20,\n  \"expected_vendor_omissions\": 75,\n  \"vendor_files_missing\": 74,\n  \"vendor_hash_failures\": [\n    \"vendor/contract/contract.py\"\n  ],\n  \"unexpected_missing_vendor_files\": [],\n  \"locally_restored_vendor_files\": [\n    \"vendor/contract/contract.py\"\n  ],\n  \"vendor_snapshot_complete\": false,\n  \"formal_pipeline_validated\": false,\n  \"model_calls\": 0,\n  \"encoder_calls\": 0\n}\n",
+      "stderr": ""
+    },
+    {
+      "label": "restored_clean_package_hashes",
+      "args": [
+        "verify_package.py"
+      ],
+      "expected_return_code": 0,
+      "actual_return_code": 0,
+      "status": "PASS",
+      "stdout": "{\n  \"package_status\": \"PASS\",\n  \"package_files_checked\": 42,\n  \"package_hash_failures\": [],\n  \"vendor_files_present\": 19,\n  \"expected_vendor_omissions\": 75,\n  \"vendor_files_missing\": 75,\n  \"vendor_hash_failures\": [],\n  \"unexpected_missing_vendor_files\": [],\n  \"locally_restored_vendor_files\": [],\n  \"vendor_snapshot_complete\": false,\n  \"formal_pipeline_validated\": false,\n  \"model_calls\": 0,\n  \"encoder_calls\": 0\n}\n",
+      "stderr": ""
+    },
+    {
+      "label": "selected_tests_no_third_party_imports",
+      "args": [
+        "-c",
+        "import json,sys,run_engineering_tests as E; result=E.main(); forbidden=sorted(set(sys.modules)&{'numpy','scipy','jsonschema','torch','transformers','sentence_transformers'}); print(json.dumps({'selected_target':'16 scope + 3 package boundaries','successful':result==0,'third_party_modules_loaded':forbidden})); sys.exit(0 if result==0 and not forbidden else 1)"
+      ],
+      "expected_return_code": 0,
+      "actual_return_code": 0,
+      "status": "PASS",
+      "stdout": "Portable target: 16 of 18 original scope tests + 3 package-boundary tests.\nNOT RUN (local source evidence required): test_solvent_reversal_does_not_cross_routes_or_override_clearing\nNOT RUN (local source evidence required): test_source_backed_solvent_reversal_allows_equal_boundary_wash\n{\n  \"portable_tests_run\": 19,\n  \"passed\": 19,\n  \"failures\": 0,\n  \"errors\": 0,\n  \"skipped_in_portable_suite\": 0,\n  \"source_bound_tests_not_run\": [\n    \"test_solvent_reversal_does_not_cross_routes_or_override_clearing\",\n    \"test_source_backed_solvent_reversal_allows_equal_boundary_wash\"\n  ],\n  \"formal_pipeline_validated\": false,\n  \"model_calls\": 0,\n  \"encoder_calls\": 0\n}\n{\"selected_target\": \"16 scope + 3 package boundaries\", \"successful\": true, \"third_party_modules_loaded\": []}\n",
+      "stderr": "test_chinese_negated_optional_and_unselected_rows_not_asserted (test_scope_regressions.ScopeRegressionTests.test_chinese_negated_optional_and_unselected_rows_not_asserted) ... ok\ntest_explicit_mixed_scope_heading_does_not_choose_first_phase (test_scope_regressions.ScopeRegressionTests.test_explicit_mixed_scope_heading_does_not_choose_first_phase) ... ok\ntest_explicit_post_label_buffer_washes_are_outside_clearing (test_scope_regressions.ScopeRegressionTests.test_explicit_post_label_buffer_washes_are_outside_clearing) ... ok\ntest_finite_chinese_current_headings_preserve_original_text (test_scope_regressions.ScopeRegressionTests.test_finite_chinese_current_headings_preserve_original_text) ... ok\ntest_future_purpose_cannot_promote_current_phase (test_scope_regressions.ScopeRegressionTests.test_future_purpose_cannot_promote_current_phase) ... ok\ntest_generic_wash_and_contradictory_post_label_wash_stay_unresolved (test_scope_regressions.ScopeRegressionTests.test_generic_wash_and_contradictory_post_label_wash_stay_unresolved) ... ok\ntest_in_scope_outside_scope_conflict_still_blocks (test_scope_regressions.ScopeRegressionTests.test_in_scope_outside_scope_conflict_still_blocks) ... ok\ntest_known_preparation_heading_excluded_without_disabling_gate (test_scope_regressions.ScopeRegressionTests.test_known_preparation_heading_excluded_without_disabling_gate) ... ok\ntest_literal_identity_exception_does_not_relax_modality_or_parameters (test_scope_regressions.ScopeRegressionTests.test_literal_identity_exception_does_not_relax_modality_or_parameters) ... ok\ntest_mixed_and_unknown_heading_suffixes_remain_unresolved (test_scope_regressions.ScopeRegressionTests.test_mixed_and_unknown_heading_suffixes_remain_unresolved) ... ok\ntest_outside_scope_membership_preserves_phase_uncertainty (test_scope_regressions.ScopeRegressionTests.test_outside_scope_membership_preserves_phase_uncertainty) ... ok\ntest_unknown_current_heading_remains_technical_blocker (test_scope_regressions.ScopeRegressionTests.test_unknown_current_heading_remains_technical_blocker) ... ok\ntest_unknown_identity_never_matches_merely_because_both_unknown (test_scope_regressions.ScopeRegressionTests.test_unknown_identity_never_matches_merely_because_both_unknown) ... ok\ntest_unknown_reference_phase_still_blocks (test_scope_regressions.ScopeRegressionTests.test_unknown_reference_phase_still_blocks) ... ok\ntest_unselected_route_does_not_block_requested_route (test_scope_regressions.ScopeRegressionTests.test_unselected_route_does_not_block_requested_route) ... ok\ntest_verified_v3_assertion_compatibility_retains_assertion (test_scope_regressions.ScopeRegressionTests.test_verified_v3_assertion_compatibility_retains_assertion) ... ok\ntest_all_cli_help_without_site_packages (test_package_boundaries.PackageBoundaryTests.test_all_cli_help_without_site_packages) ... ok\ntest_original_vendor_hashes_and_declared_missing_files (test_package_boundaries.PackageBoundaryTests.test_original_vendor_hashes_and_declared_missing_files) ... ok\ntest_prepare_still_rejects_incomplete_vendor_before_output (test_package_boundaries.PackageBoundaryTests.test_prepare_still_rejects_incomplete_vendor_before_output) ... ok\n\n----------------------------------------------------------------------\nRan 19 tests in 0.777s\n\nOK\n"
+    }
+  ],
+  "calls": {
+    "judge": 0,
+    "encoder": 0,
+    "installation": 0,
+    "production": 0
+  },
+  "formal_pipeline_validated": false,
+  "third_party_probe": {
+    "selected_target": "16 scope + 3 package boundaries",
+    "successful": true,
+    "third_party_modules_loaded": []
+  },
+  "stage_unchanged_after_checks": true,
+  "status": "PASS_MINIMAL_ENGINEERING_BASE_ONLY"
+}
