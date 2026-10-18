@@ -1,0 +1,1400 @@
+{
+  "version": "source-parameter-contract-protocol-only-v1-20261016",
+  "status": "Source-derived benchmark operationalization; not expert gold or scientific necessity certification.",
+  "interpretation": {
+    "evidence": "quote is the published factual statement; requirement_judgment is the separate benchmark inclusion judgment; criterion describes candidate-explicit evidence without assuming published values.",
+    "selector_matching": "NAME matches exact named entities, normalizing typographic hyphens only. ROLE is route-local. execution_context limits phase applicability and is part of matching, not just commentary.",
+    "scope": "Concrete tissue-processing protocol only. Working-solution recipes and direct operating conditions retained. Procurement, reagent manufacture/purification and solvent-peroxide-removal production procedures excluded without equivalent replacement obligations.",
+    "deduplication": "Do not count the same operation/dimension/subject obligation twice through NAME and ROLE matches. Grouped preparation rows are one composite obligation, not additional hidden denominator slots.",
+    "applicability": "Only REQUIRED_PROCEDURE_SPECIFICATION belongs to the unconditional denominator. CONDITIONAL activates only for the quoted condition in its execution context. OPTIONAL never inflates the required denominator.",
+    "uncertainty": "No supplementary material or external facts were used. Approximate durations, alternative repetition counts, and tissue dependence remain as stated; the contract does not certify scientific sufficiency.",
+    "value_evaluation": "Criteria test explicit executable specification and linkage. Any assessment of conformity with a published value must use the cited quote as evidence, never impute that value into missing candidate text. Explicitness/completeness is not the same as agreement with published values. Keep conformity judgments separate.",
+    "phase_scope": "Each phase_scope is a nonempty array whose members are DEHYDRATION, RI_MATCHING, CLEARING, STORAGE, or PREPARATION. Matching requires source route, selector eligibility, phase membership, applicability, and execution_context together. A name alone never overrides phase. Initial DBE concentration applies only to RI_MATCHING, never STORAGE or restoration merely because DBE occurs there.",
+    "preparation_matching": "For PREPARATION rows, NAME selectors identify the prepared recipe/reagent and ROLE selectors identify the owning route process. Evaluate route-level preparation evidence rather than requiring the same preparation to be restated at each bath. Phase is not inferred from dimension: optional terminal heating and restoration have dimension preparation but CLEARING phase; conditional decalcification is a PREPARATION operation. Preparation dimension alone is not exclusion: direct working-solution formulation, carrier and freshness-state conditions remain eligible.",
+    "evidence_boundary": "A quoted source passage in candidate material remains source evidence unless candidate-authored executable instructions explicitly adopt and link it to the candidate operation or named recipe. Citation, quotation, or matching source wording alone must never supply an inferred candidate value.",
+    "cross_metric_scope": "Missing procurement/manufacture/purification details must not be penalized in completeness, correctness or effectiveness, directly or via renamed equivalent requirements."
+  },
+  "requirements": [
+    {
+      "scope_unit": "OPERATION",
+      "id": "fdisco_dehydration_medium",
+      "source_card_id": "fdisco-sciadv2019-sec13",
+      "passage_id": "fdisco_02",
+      "quote": "Tissues were dehydrated with THF solutions (mixed with dH2O, pH adjusted to 9.0 with triethylamine) at a series of concentrations 50, 70, 80, and 100 volume % (twice or thrice).",
+      "dimension": "medium",
+      "subject": null,
+      "selector": {
+        "kind": "ROLE",
+        "values": [
+          "dehydration"
+        ]
+      },
+      "applicability": "REQUIRED_PROCEDURE_SPECIFICATION",
+      "condition_quote": null,
+      "requirement_judgment": "Included in this benchmark denominator as an explicit executable specification; this is an operationalization judgment, not certification of scientific necessity.",
+      "criterion": "Explicitly identify the dehydration medium and ordered bath sequence, including the repeat count chosen for the final-strength bath.",
+      "execution_context": "initial dehydration",
+      "phase_scope": [
+        "DEHYDRATION"
+      ]
+    },
+    {
+      "scope_unit": "OPERATION",
+      "id": "fdisco_thf_concentrations",
+      "source_card_id": "fdisco-sciadv2019-sec13",
+      "passage_id": "fdisco_02",
+      "quote": "Tissues were dehydrated with THF solutions (mixed with dH2O, pH adjusted to 9.0 with triethylamine) at a series of concentrations 50, 70, 80, and 100 volume % (twice or thrice).",
+      "dimension": "concentration",
+      "subject": "THF",
+      "selector": {
+        "kind": "NAME",
+        "values": [
+          "THF"
+        ]
+      },
+      "applicability": "REQUIRED_PROCEDURE_SPECIFICATION",
+      "condition_quote": null,
+      "requirement_judgment": "Included in this benchmark denominator as an explicit executable specification; this is an operationalization judgment, not certification of scientific necessity.",
+      "criterion": "Specify an executable THF concentration and concentration basis for each dehydration bath; do not assume a concentration from the solvent name.",
+      "execution_context": "initial dehydration",
+      "phase_scope": [
+        "DEHYDRATION"
+      ]
+    },
+    {
+      "scope_unit": "ROUTE",
+      "id": "fdisco_thf_carrier",
+      "source_card_id": "fdisco-sciadv2019-sec13",
+      "passage_id": "fdisco_02",
+      "quote": "Tissues were dehydrated with THF solutions (mixed with dH2O, pH adjusted to 9.0 with triethylamine) at a series of concentrations 50, 70, 80, and 100 volume % (twice or thrice).",
+      "dimension": "carrier",
+      "subject": "THF",
+      "selector": {
+        "kind": "NAME",
+        "values": [
+          "THF"
+        ]
+      },
+      "applicability": "REQUIRED_PROCEDURE_SPECIFICATION",
+      "condition_quote": null,
+      "requirement_judgment": "Included in this benchmark denominator as an explicit executable specification; this is an operationalization judgment, not certification of scientific necessity.",
+      "criterion": "Identify the aqueous carrier used to dilute THF for the applicable baths.",
+      "execution_context": "initial THF dilution preparation",
+      "phase_scope": [
+        "PREPARATION"
+      ]
+    },
+    {
+      "scope_unit": "OPERATION",
+      "id": "fdisco_thf_final_ph",
+      "source_card_id": "fdisco-sciadv2019-sec13",
+      "passage_id": "fdisco_02",
+      "quote": "Tissues were dehydrated with THF solutions (mixed with dH2O, pH adjusted to 9.0 with triethylamine) at a series of concentrations 50, 70, 80, and 100 volume % (twice or thrice).",
+      "dimension": "pH",
+      "subject": "THF",
+      "selector": {
+        "kind": "NAME",
+        "values": [
+          "THF"
+        ]
+      },
+      "applicability": "REQUIRED_PROCEDURE_SPECIFICATION",
+      "condition_quote": null,
+      "requirement_judgment": "The benchmark requires explicit final THF-solution target pH and adjusting-agent linkage. This is a conservative specification criterion, not evidence that precursor-water pH establishes the final solution pH or that the excerpt provides a measurement procedure.",
+      "criterion": "Specify the target pH of the final THF solution and name the pH-adjusting agent. Stating only the precursor water pH does not satisfy this requirement.",
+      "execution_context": "initial dehydration",
+      "phase_scope": [
+        "DEHYDRATION"
+      ],
+      "source_uncertainty": "The source places pH adjusted to 9.0 with triethylamine in the THF-solutions parenthesis, but gives no measurement procedure, concentration-specific pH verification, or solvent-mixing calculation. A precursor-water pH statement alone cannot establish final THF-solution pH. Do not infer a candidate final pH or an unreported measurement."
+    },
+    {
+      "scope_unit": "OPERATION",
+      "id": "fdisco_matching_medium",
+      "source_card_id": "fdisco-sciadv2019-sec13",
+      "passage_id": "fdisco_03",
+      "quote": "Pure DBE (108014, Sigma-Aldrich) was used as a refractive index matching solution to clear tissue after dehydration.",
+      "dimension": "medium",
+      "subject": null,
+      "selector": {
+        "kind": "ROLE",
+        "values": [
+          "ri_matching"
+        ]
+      },
+      "applicability": "REQUIRED_PROCEDURE_SPECIFICATION",
+      "condition_quote": null,
+      "requirement_judgment": "Included in this benchmark denominator as an explicit executable specification; this is an operationalization judgment, not certification of scientific necessity.",
+      "criterion": "Identify the refractive-index-matching medium and its position after dehydration.",
+      "execution_context": "initial matching",
+      "phase_scope": [
+        "RI_MATCHING"
+      ]
+    },
+    {
+      "scope_unit": "OPERATION",
+      "id": "fdisco_dbe_concentration",
+      "source_card_id": "fdisco-sciadv2019-sec13",
+      "passage_id": "fdisco_03",
+      "quote": "Pure DBE (108014, Sigma-Aldrich) was used as a refractive index matching solution to clear tissue after dehydration.",
+      "dimension": "concentration",
+      "subject": "DBE",
+      "selector": {
+        "kind": "NAME",
+        "values": [
+          "DBE"
+        ]
+      },
+      "applicability": "REQUIRED_PROCEDURE_SPECIFICATION",
+      "condition_quote": null,
+      "requirement_judgment": "Retain the direct working-solution concentration obligation. Neat/100% describes the applied formulation, not procurement quality or reagent production.",
+      "criterion": "Explicitly specify the working-solution concentration of the DBE matching medium, such as neat or 100% DBE. This is not a requirement for supplier purity, grade, brand, catalog number, testing, or purification.",
+      "execution_context": "initial matching",
+      "phase_scope": [
+        "RI_MATCHING"
+      ]
+    },
+    {
+      "scope_unit": "OPERATION",
+      "id": "fdisco_clearing_temperature",
+      "source_card_id": "fdisco-sciadv2019-sec13",
+      "passage_id": "fdisco_04",
+      "quote": "All steps were performed at 4°C with slight shaking.",
+      "dimension": "temperature",
+      "subject": null,
+      "selector": {
+        "kind": "ROLE",
+        "values": [
+          "dehydration",
+          "ri_matching"
+        ]
+      },
+      "applicability": "REQUIRED_PROCEDURE_SPECIFICATION",
+      "condition_quote": null,
+      "requirement_judgment": "Included in this benchmark denominator as an explicit executable specification; this is an operationalization judgment, not certification of scientific necessity.",
+      "criterion": "Specify the operating temperature for each dehydration and refractive-index-matching operation.",
+      "execution_context": "initial clearing; dehydration and refractive-index matching",
+      "phase_scope": [
+        "DEHYDRATION",
+        "RI_MATCHING"
+      ]
+    },
+    {
+      "scope_unit": "OPERATION",
+      "id": "fdisco_clearing_agitation",
+      "source_card_id": "fdisco-sciadv2019-sec13",
+      "passage_id": "fdisco_04",
+      "quote": "All steps were performed at 4°C with slight shaking.",
+      "dimension": "agitation",
+      "subject": null,
+      "selector": {
+        "kind": "ROLE",
+        "values": [
+          "dehydration",
+          "ri_matching"
+        ]
+      },
+      "applicability": "REQUIRED_PROCEDURE_SPECIFICATION",
+      "condition_quote": null,
+      "requirement_judgment": "Included in this benchmark denominator as an explicit executable specification; this is an operationalization judgment, not certification of scientific necessity.",
+      "criterion": "Specify the agitation condition for each dehydration and refractive-index-matching operation.",
+      "execution_context": "initial clearing; dehydration and refractive-index matching",
+      "phase_scope": [
+        "DEHYDRATION",
+        "RI_MATCHING"
+      ]
+    },
+    {
+      "scope_unit": "OPERATION",
+      "id": "fdisco_clearing_container",
+      "source_card_id": "fdisco-sciadv2019-sec13",
+      "passage_id": "fdisco_05",
+      "quote": "During clearing, the tissues were placed in glass chambers covered with aluminum foil in the dark.",
+      "dimension": "container",
+      "subject": null,
+      "selector": {
+        "kind": "ROLE",
+        "values": [
+          "dehydration",
+          "ri_matching"
+        ]
+      },
+      "applicability": "REQUIRED_PROCEDURE_SPECIFICATION",
+      "condition_quote": null,
+      "requirement_judgment": "Included in this benchmark denominator as an explicit executable specification; this is an operationalization judgment, not certification of scientific necessity.",
+      "criterion": "Specify the container material and type for each clearing operation.",
+      "execution_context": "initial clearing; dehydration and refractive-index matching",
+      "phase_scope": [
+        "DEHYDRATION",
+        "RI_MATCHING"
+      ]
+    },
+    {
+      "scope_unit": "OPERATION",
+      "id": "fdisco_clearing_light",
+      "source_card_id": "fdisco-sciadv2019-sec13",
+      "passage_id": "fdisco_05",
+      "quote": "During clearing, the tissues were placed in glass chambers covered with aluminum foil in the dark.",
+      "dimension": "light_protection",
+      "subject": null,
+      "selector": {
+        "kind": "ROLE",
+        "values": [
+          "dehydration",
+          "ri_matching"
+        ]
+      },
+      "applicability": "REQUIRED_PROCEDURE_SPECIFICATION",
+      "condition_quote": null,
+      "requirement_judgment": "Included in this benchmark denominator as an explicit executable specification; this is an operationalization judgment, not certification of scientific necessity.",
+      "criterion": "Specify the light-protection arrangement for each clearing operation, including the covering and dark conditions.",
+      "execution_context": "initial clearing; dehydration and refractive-index matching",
+      "phase_scope": [
+        "DEHYDRATION",
+        "RI_MATCHING"
+      ]
+    },
+    {
+      "scope_unit": "OPERATION",
+      "id": "fdisco_clearing_time",
+      "source_card_id": "fdisco-sciadv2019-sec13",
+      "passage_id": "fdisco_06",
+      "quote": "The incubation time of each step depended on the tissue type and size (table S1).",
+      "dimension": "time_or_endpoint",
+      "subject": null,
+      "selector": {
+        "kind": "ROLE",
+        "values": [
+          "dehydration",
+          "ri_matching"
+        ]
+      },
+      "applicability": "REQUIRED_PROCEDURE_SPECIFICATION",
+      "condition_quote": null,
+      "requirement_judgment": "Included in this benchmark denominator as an explicit executable specification; this is an operationalization judgment, not certification of scientific necessity.",
+      "criterion": "Provide an executable incubation time or operational endpoint for each clearing operation, appropriate to the stated tissue. The excerpt supplies no universal duration; do not infer hours from the unavailable supplementary table.",
+      "execution_context": "initial clearing; dehydration and refractive-index matching",
+      "phase_scope": [
+        "DEHYDRATION",
+        "RI_MATCHING"
+      ]
+    },
+    {
+      "scope_unit": "OPERATION",
+      "id": "fdisco_storage_medium",
+      "source_card_id": "fdisco-sciadv2019-sec13",
+      "passage_id": "fdisco_07",
+      "quote": "After FDISCO clearing, the tissues were stored in DBE in airtight glass chambers at 4°C in the dark.",
+      "dimension": "medium",
+      "subject": null,
+      "selector": {
+        "kind": "ROLE",
+        "values": [
+          "storage"
+        ]
+      },
+      "applicability": "REQUIRED_PROCEDURE_SPECIFICATION",
+      "condition_quote": null,
+      "requirement_judgment": "Included in this benchmark denominator as an explicit executable specification; this is an operationalization judgment, not certification of scientific necessity.",
+      "criterion": "Explicitly name the medium in which cleared tissues will be stored.",
+      "execution_context": "post-clearing storage",
+      "phase_scope": [
+        "STORAGE"
+      ]
+    },
+    {
+      "scope_unit": "OPERATION",
+      "id": "fdisco_storage_container",
+      "source_card_id": "fdisco-sciadv2019-sec13",
+      "passage_id": "fdisco_07",
+      "quote": "After FDISCO clearing, the tissues were stored in DBE in airtight glass chambers at 4°C in the dark.",
+      "dimension": "container",
+      "subject": null,
+      "selector": {
+        "kind": "ROLE",
+        "values": [
+          "storage"
+        ]
+      },
+      "applicability": "REQUIRED_PROCEDURE_SPECIFICATION",
+      "condition_quote": null,
+      "requirement_judgment": "Included in this benchmark denominator as an explicit executable specification; this is an operationalization judgment, not certification of scientific necessity.",
+      "criterion": "Specify the storage container material and airtight closure.",
+      "execution_context": "post-clearing storage",
+      "phase_scope": [
+        "STORAGE"
+      ]
+    },
+    {
+      "scope_unit": "OPERATION",
+      "id": "fdisco_storage_temperature",
+      "source_card_id": "fdisco-sciadv2019-sec13",
+      "passage_id": "fdisco_07",
+      "quote": "After FDISCO clearing, the tissues were stored in DBE in airtight glass chambers at 4°C in the dark.",
+      "dimension": "temperature",
+      "subject": null,
+      "selector": {
+        "kind": "ROLE",
+        "values": [
+          "storage"
+        ]
+      },
+      "applicability": "REQUIRED_PROCEDURE_SPECIFICATION",
+      "condition_quote": null,
+      "requirement_judgment": "Included in this benchmark denominator as an explicit executable specification; this is an operationalization judgment, not certification of scientific necessity.",
+      "criterion": "Explicitly specify the tissue-storage temperature.",
+      "execution_context": "post-clearing storage",
+      "phase_scope": [
+        "STORAGE"
+      ]
+    },
+    {
+      "scope_unit": "OPERATION",
+      "id": "fdisco_storage_light",
+      "source_card_id": "fdisco-sciadv2019-sec13",
+      "passage_id": "fdisco_07",
+      "quote": "After FDISCO clearing, the tissues were stored in DBE in airtight glass chambers at 4°C in the dark.",
+      "dimension": "light_protection",
+      "subject": null,
+      "selector": {
+        "kind": "ROLE",
+        "values": [
+          "storage"
+        ]
+      },
+      "applicability": "REQUIRED_PROCEDURE_SPECIFICATION",
+      "condition_quote": null,
+      "requirement_judgment": "Included in this benchmark denominator as an explicit executable specification; this is an operationalization judgment, not certification of scientific necessity.",
+      "criterion": "Explicitly specify light protection during storage.",
+      "execution_context": "post-clearing storage",
+      "phase_scope": [
+        "STORAGE"
+      ]
+    },
+    {
+      "scope_unit": "ROUTE",
+      "id": "fdisco_fresh_preparation",
+      "source_card_id": "fdisco-sciadv2019-sec13",
+      "passage_id": "fdisco_10",
+      "quote": "The clearing agents were freshly prepared.",
+      "dimension": "preparation",
+      "subject": null,
+      "selector": {
+        "kind": "ROLE",
+        "values": [
+          "clearing"
+        ]
+      },
+      "applicability": "REQUIRED_PROCEDURE_SPECIFICATION",
+      "condition_quote": null,
+      "requirement_judgment": "Retain only the direct working-solution freshness state; no reagent-manufacturing or purification procedure is a protocol-design obligation.",
+      "criterion": "State use of freshly prepared clearing working solutions. No preparation procedure, numeric shelf life, quality testing, procurement criterion, or reagent production process is required.",
+      "execution_context": "shared clearing-agent preparation",
+      "phase_scope": [
+        "PREPARATION"
+      ]
+    },
+    {
+      "scope_unit": "OPERATION",
+      "id": "fdisco_repeat_imaging_restoration",
+      "source_card_id": "fdisco-sciadv2019-sec13",
+      "passage_id": "fdisco_08",
+      "quote": "As tissue transparency might decrease during long-term storage after clearing, prior to repeated imaging, the tissues should be transferred to 100 volume % THF for several hours and then incubated again in DBE until the tissues were transparent.",
+      "dimension": "preparation",
+      "subject": null,
+      "selector": {
+        "kind": "ROLE",
+        "values": [
+          "clearing"
+        ]
+      },
+      "applicability": "CONDITIONAL",
+      "condition_quote": "As tissue transparency might decrease during long-term storage after clearing, prior to repeated imaging",
+      "requirement_judgment": "Included only when the stated source condition applies; excluded from the unconditional denominator.",
+      "criterion": "When planning repeat imaging after long-term storage with possible transparency loss, specify the restoration sequence, the THF concentration and its executable incubation time or endpoint, followed by the DBE incubation endpoint. Do not silently convert the source phrase “several hours” into an invented fixed duration.",
+      "execution_context": "transparency restoration before repeat imaging; not initial clearing",
+      "phase_scope": [
+        "CLEARING"
+      ]
+    },
+    {
+      "scope_unit": "ROUTE",
+      "id": "macs_macs-r0_mxda",
+      "source_card_id": "macs-original2020-methods",
+      "passage_id": "recipes",
+      "quote": "MACS‐R0 contains 20 vol% MXDA (Tokyo chemical industry, D0127) and 15% (w/v) sorbitol (Sigma, 85529) mixed with distilled water",
+      "dimension": "formulation_component",
+      "subject": "MXDA",
+      "selector": {
+        "kind": "NAME",
+        "values": [
+          "MACS-R0"
+        ]
+      },
+      "applicability": "REQUIRED_PROCEDURE_SPECIFICATION",
+      "condition_quote": null,
+      "requirement_judgment": "Included in this benchmark denominator as an explicit executable specification; this is an operationalization judgment, not certification of scientific necessity.",
+      "criterion": "Explicitly link named MXDA and its executable concentration, including concentration basis, to MACS-R0. A pooled ingredient list or a concentration assigned only to a different recipe is insufficient.",
+      "execution_context": "shared MACS-R0 recipe preparation",
+      "phase_scope": [
+        "PREPARATION"
+      ]
+    },
+    {
+      "scope_unit": "ROUTE",
+      "id": "macs_macs-r0_sorbitol",
+      "source_card_id": "macs-original2020-methods",
+      "passage_id": "recipes",
+      "quote": "MACS‐R0 contains 20 vol% MXDA (Tokyo chemical industry, D0127) and 15% (w/v) sorbitol (Sigma, 85529) mixed with distilled water",
+      "dimension": "formulation_component",
+      "subject": "sorbitol",
+      "selector": {
+        "kind": "NAME",
+        "values": [
+          "MACS-R0"
+        ]
+      },
+      "applicability": "REQUIRED_PROCEDURE_SPECIFICATION",
+      "condition_quote": null,
+      "requirement_judgment": "Included in this benchmark denominator as an explicit executable specification; this is an operationalization judgment, not certification of scientific necessity.",
+      "criterion": "Explicitly link named sorbitol and its executable concentration, including concentration basis, to MACS-R0. A pooled ingredient list or a concentration assigned only to a different recipe is insufficient.",
+      "execution_context": "shared MACS-R0 recipe preparation",
+      "phase_scope": [
+        "PREPARATION"
+      ]
+    },
+    {
+      "scope_unit": "ROUTE",
+      "id": "macs_macs-r0_carrier",
+      "source_card_id": "macs-original2020-methods",
+      "passage_id": "recipes",
+      "quote": "MACS‐R0 contains 20 vol% MXDA (Tokyo chemical industry, D0127) and 15% (w/v) sorbitol (Sigma, 85529) mixed with distilled water",
+      "dimension": "carrier",
+      "subject": null,
+      "selector": {
+        "kind": "NAME",
+        "values": [
+          "MACS-R0"
+        ]
+      },
+      "applicability": "REQUIRED_PROCEDURE_SPECIFICATION",
+      "condition_quote": null,
+      "requirement_judgment": "Included in this benchmark denominator as an explicit executable specification; this is an operationalization judgment, not certification of scientific necessity.",
+      "criterion": "Explicitly link the carrier solvent or buffer to MACS-R0; if using buffer, specify its executable strength. A carrier named only for another recipe is insufficient.",
+      "execution_context": "shared MACS-R0 recipe preparation",
+      "phase_scope": [
+        "PREPARATION"
+      ]
+    },
+    {
+      "scope_unit": "ROUTE",
+      "id": "macs_macs-r1_mxda",
+      "source_card_id": "macs-original2020-methods",
+      "passage_id": "recipes",
+      "quote": "a solution containing 40 vol% MXDA and 30% (w/v) sorbitol dissolved in 1 × PBS was termed MACS‐R1.",
+      "dimension": "formulation_component",
+      "subject": "MXDA",
+      "selector": {
+        "kind": "NAME",
+        "values": [
+          "MACS-R1"
+        ]
+      },
+      "applicability": "REQUIRED_PROCEDURE_SPECIFICATION",
+      "condition_quote": null,
+      "requirement_judgment": "Included in this benchmark denominator as an explicit executable specification; this is an operationalization judgment, not certification of scientific necessity.",
+      "criterion": "Explicitly link named MXDA and its executable concentration, including concentration basis, to MACS-R1. A pooled ingredient list or a concentration assigned only to a different recipe is insufficient.",
+      "execution_context": "shared MACS-R1 recipe preparation",
+      "phase_scope": [
+        "PREPARATION"
+      ]
+    },
+    {
+      "scope_unit": "ROUTE",
+      "id": "macs_macs-r1_sorbitol",
+      "source_card_id": "macs-original2020-methods",
+      "passage_id": "recipes",
+      "quote": "a solution containing 40 vol% MXDA and 30% (w/v) sorbitol dissolved in 1 × PBS was termed MACS‐R1.",
+      "dimension": "formulation_component",
+      "subject": "sorbitol",
+      "selector": {
+        "kind": "NAME",
+        "values": [
+          "MACS-R1"
+        ]
+      },
+      "applicability": "REQUIRED_PROCEDURE_SPECIFICATION",
+      "condition_quote": null,
+      "requirement_judgment": "Included in this benchmark denominator as an explicit executable specification; this is an operationalization judgment, not certification of scientific necessity.",
+      "criterion": "Explicitly link named sorbitol and its executable concentration, including concentration basis, to MACS-R1. A pooled ingredient list or a concentration assigned only to a different recipe is insufficient.",
+      "execution_context": "shared MACS-R1 recipe preparation",
+      "phase_scope": [
+        "PREPARATION"
+      ]
+    },
+    {
+      "scope_unit": "ROUTE",
+      "id": "macs_macs-r1_carrier",
+      "source_card_id": "macs-original2020-methods",
+      "passage_id": "recipes",
+      "quote": "a solution containing 40 vol% MXDA and 30% (w/v) sorbitol dissolved in 1 × PBS was termed MACS‐R1.",
+      "dimension": "carrier",
+      "subject": null,
+      "selector": {
+        "kind": "NAME",
+        "values": [
+          "MACS-R1"
+        ]
+      },
+      "applicability": "REQUIRED_PROCEDURE_SPECIFICATION",
+      "condition_quote": null,
+      "requirement_judgment": "Included in this benchmark denominator as an explicit executable specification; this is an operationalization judgment, not certification of scientific necessity.",
+      "criterion": "Explicitly link the carrier solvent or buffer to MACS-R1; if using buffer, specify its executable strength. A carrier named only for another recipe is insufficient.",
+      "execution_context": "shared MACS-R1 recipe preparation",
+      "phase_scope": [
+        "PREPARATION"
+      ]
+    },
+    {
+      "scope_unit": "ROUTE",
+      "id": "macs_macs-r2_mxda",
+      "source_card_id": "macs-original2020-methods",
+      "passage_id": "recipes",
+      "quote": "MACS‐R2 was prepared as a mixture of 40 vol% MXDA and 50% (w/v) sorbitol in distilled water.",
+      "dimension": "formulation_component",
+      "subject": "MXDA",
+      "selector": {
+        "kind": "NAME",
+        "values": [
+          "MACS-R2"
+        ]
+      },
+      "applicability": "REQUIRED_PROCEDURE_SPECIFICATION",
+      "condition_quote": null,
+      "requirement_judgment": "Included in this benchmark denominator as an explicit executable specification; this is an operationalization judgment, not certification of scientific necessity.",
+      "criterion": "Explicitly link named MXDA and its executable concentration, including concentration basis, to MACS-R2. A pooled ingredient list or a concentration assigned only to a different recipe is insufficient.",
+      "execution_context": "shared MACS-R2 recipe preparation",
+      "phase_scope": [
+        "PREPARATION"
+      ]
+    },
+    {
+      "scope_unit": "ROUTE",
+      "id": "macs_macs-r2_sorbitol",
+      "source_card_id": "macs-original2020-methods",
+      "passage_id": "recipes",
+      "quote": "MACS‐R2 was prepared as a mixture of 40 vol% MXDA and 50% (w/v) sorbitol in distilled water.",
+      "dimension": "formulation_component",
+      "subject": "sorbitol",
+      "selector": {
+        "kind": "NAME",
+        "values": [
+          "MACS-R2"
+        ]
+      },
+      "applicability": "REQUIRED_PROCEDURE_SPECIFICATION",
+      "condition_quote": null,
+      "requirement_judgment": "Included in this benchmark denominator as an explicit executable specification; this is an operationalization judgment, not certification of scientific necessity.",
+      "criterion": "Explicitly link named sorbitol and its executable concentration, including concentration basis, to MACS-R2. A pooled ingredient list or a concentration assigned only to a different recipe is insufficient.",
+      "execution_context": "shared MACS-R2 recipe preparation",
+      "phase_scope": [
+        "PREPARATION"
+      ]
+    },
+    {
+      "scope_unit": "ROUTE",
+      "id": "macs_macs-r2_carrier",
+      "source_card_id": "macs-original2020-methods",
+      "passage_id": "recipes",
+      "quote": "MACS‐R2 was prepared as a mixture of 40 vol% MXDA and 50% (w/v) sorbitol in distilled water.",
+      "dimension": "carrier",
+      "subject": null,
+      "selector": {
+        "kind": "NAME",
+        "values": [
+          "MACS-R2"
+        ]
+      },
+      "applicability": "REQUIRED_PROCEDURE_SPECIFICATION",
+      "condition_quote": null,
+      "requirement_judgment": "Included in this benchmark denominator as an explicit executable specification; this is an operationalization judgment, not certification of scientific necessity.",
+      "criterion": "Explicitly link the carrier solvent or buffer to MACS-R2; if using buffer, specify its executable strength. A carrier named only for another recipe is insufficient.",
+      "execution_context": "shared MACS-R2 recipe preparation",
+      "phase_scope": [
+        "PREPARATION"
+      ]
+    },
+    {
+      "scope_unit": "ROUTE",
+      "id": "macs_recipe_heating",
+      "source_card_id": "macs-original2020-methods",
+      "passage_id": "recipes",
+      "quote": "Proper heating with a water bath could promote the dissolution of sorbitol.",
+      "dimension": "preparation",
+      "subject": "sorbitol",
+      "selector": {
+        "kind": "NAME",
+        "values": [
+          "MACS-R0",
+          "MACS-R1",
+          "MACS-R2"
+        ]
+      },
+      "applicability": "OPTIONAL",
+      "condition_quote": "Proper heating with a water bath could promote the dissolution of sorbitol.",
+      "requirement_judgment": "Optional source variant; excluded from the required denominator.",
+      "criterion": "If using this optional dissolution aid, specify the heating method and an executable temperature/time or dissolution endpoint; the source does not supply numerical preparation-heating settings.",
+      "execution_context": "optional shared recipe-dissolution heating",
+      "phase_scope": [
+        "PREPARATION"
+      ]
+    },
+    {
+      "scope_unit": "OPERATION",
+      "id": "macs_serial_medium",
+      "source_card_id": "macs-original2020-methods",
+      "passage_id": "serial_r0_r1_r2",
+      "quote": "MACS Clearing ProcedureFor passive clearing, fixed samples were serially incubated in 20–30 mL MACS‐R0, MACS‐R1, and MACS‐R2 solutions in 50 mL conical tubes with gentle shaking.",
+      "dimension": "medium",
+      "subject": null,
+      "selector": {
+        "kind": "ROLE",
+        "values": [
+          "clearing"
+        ]
+      },
+      "applicability": "REQUIRED_PROCEDURE_SPECIFICATION",
+      "condition_quote": null,
+      "requirement_judgment": "Included in this benchmark denominator as an explicit executable specification; this is an operationalization judgment, not certification of scientific necessity.",
+      "criterion": "Explicitly identify the serial clearing solutions and their ordered succession.",
+      "execution_context": "initial serial MACS clearing",
+      "phase_scope": [
+        "CLEARING"
+      ]
+    },
+    {
+      "scope_unit": "OPERATION",
+      "id": "macs_bath_volume",
+      "source_card_id": "macs-original2020-methods",
+      "passage_id": "serial_r0_r1_r2",
+      "quote": "MACS Clearing ProcedureFor passive clearing, fixed samples were serially incubated in 20–30 mL MACS‐R0, MACS‐R1, and MACS‐R2 solutions in 50 mL conical tubes with gentle shaking.",
+      "dimension": "volume",
+      "subject": null,
+      "selector": {
+        "kind": "NAME",
+        "values": [
+          "MACS-R0",
+          "MACS-R1",
+          "MACS-R2"
+        ]
+      },
+      "applicability": "REQUIRED_PROCEDURE_SPECIFICATION",
+      "condition_quote": null,
+      "requirement_judgment": "Included in this benchmark denominator as an explicit executable specification; this is an operationalization judgment, not certification of scientific necessity.",
+      "criterion": "Specify the working solution volume for each serial bath.",
+      "execution_context": "initial serial MACS clearing",
+      "phase_scope": [
+        "CLEARING"
+      ]
+    },
+    {
+      "scope_unit": "OPERATION",
+      "id": "macs_bath_container",
+      "source_card_id": "macs-original2020-methods",
+      "passage_id": "serial_r0_r1_r2",
+      "quote": "MACS Clearing ProcedureFor passive clearing, fixed samples were serially incubated in 20–30 mL MACS‐R0, MACS‐R1, and MACS‐R2 solutions in 50 mL conical tubes with gentle shaking.",
+      "dimension": "container",
+      "subject": null,
+      "selector": {
+        "kind": "NAME",
+        "values": [
+          "MACS-R0",
+          "MACS-R1",
+          "MACS-R2"
+        ]
+      },
+      "applicability": "REQUIRED_PROCEDURE_SPECIFICATION",
+      "condition_quote": null,
+      "requirement_judgment": "Included in this benchmark denominator as an explicit executable specification; this is an operationalization judgment, not certification of scientific necessity.",
+      "criterion": "Specify the vessel type and capacity used for each serial bath.",
+      "execution_context": "initial serial MACS clearing",
+      "phase_scope": [
+        "CLEARING"
+      ]
+    },
+    {
+      "scope_unit": "OPERATION",
+      "id": "macs_bath_agitation",
+      "source_card_id": "macs-original2020-methods",
+      "passage_id": "serial_r0_r1_r2",
+      "quote": "MACS Clearing ProcedureFor passive clearing, fixed samples were serially incubated in 20–30 mL MACS‐R0, MACS‐R1, and MACS‐R2 solutions in 50 mL conical tubes with gentle shaking.",
+      "dimension": "agitation",
+      "subject": null,
+      "selector": {
+        "kind": "NAME",
+        "values": [
+          "MACS-R0",
+          "MACS-R1",
+          "MACS-R2"
+        ]
+      },
+      "applicability": "REQUIRED_PROCEDURE_SPECIFICATION",
+      "condition_quote": null,
+      "requirement_judgment": "Included in this benchmark denominator as an explicit executable specification; this is an operationalization judgment, not certification of scientific necessity.",
+      "criterion": "Specify the agitation condition for each serial bath.",
+      "execution_context": "initial serial MACS clearing",
+      "phase_scope": [
+        "CLEARING"
+      ]
+    },
+    {
+      "scope_unit": "OPERATION",
+      "id": "macs_early_bath_time",
+      "source_card_id": "macs-original2020-methods",
+      "passage_id": "procedure_context",
+      "quote": "The time needed for clearing in each solution depends on the tissue type and thickness (Figure S2b–e, Supporting Information).",
+      "dimension": "time_or_endpoint",
+      "subject": null,
+      "selector": {
+        "kind": "NAME",
+        "values": [
+          "MACS-R0",
+          "MACS-R1"
+        ]
+      },
+      "applicability": "REQUIRED_PROCEDURE_SPECIFICATION",
+      "condition_quote": null,
+      "requirement_judgment": "Included in this benchmark denominator as an explicit executable specification; this is an operationalization judgment, not certification of scientific necessity.",
+      "criterion": "Provide an executable incubation time or operational endpoint for each named bath appropriate to the sample. The source says timing is tissue dependent and supplies no universal hours.",
+      "execution_context": "initial MACS-R0 and MACS-R1 incubations",
+      "phase_scope": [
+        "CLEARING"
+      ]
+    },
+    {
+      "scope_unit": "OPERATION",
+      "id": "macs_final_bath_time",
+      "source_card_id": "macs-original2020-methods",
+      "passage_id": "procedure_context",
+      "quote": "The incubation time in final buffer was adjustable by visual inspection for desired transparency.",
+      "dimension": "time_or_endpoint",
+      "subject": null,
+      "selector": {
+        "kind": "NAME",
+        "values": [
+          "MACS-R2"
+        ]
+      },
+      "applicability": "REQUIRED_PROCEDURE_SPECIFICATION",
+      "condition_quote": null,
+      "requirement_judgment": "Included in this benchmark denominator as an explicit executable specification; this is an operationalization judgment, not certification of scientific necessity.",
+      "criterion": "Provide an executable incubation time or a visual transparency endpoint for the final bath. Do not infer a fixed universal duration.",
+      "execution_context": "initial MACS-R2 incubation",
+      "phase_scope": [
+        "CLEARING"
+      ]
+    },
+    {
+      "scope_unit": "OPERATION",
+      "id": "macs_clearing_temperature",
+      "source_card_id": "macs-original2020-methods",
+      "passage_id": "procedure_context",
+      "quote": "Notably, the temperature during clearing should be kept below 30 °C for better preservation of endogenous fluorescence signals.",
+      "dimension": "temperature",
+      "subject": null,
+      "selector": {
+        "kind": "ROLE",
+        "values": [
+          "clearing"
+        ]
+      },
+      "applicability": "REQUIRED_PROCEDURE_SPECIFICATION",
+      "condition_quote": null,
+      "requirement_judgment": "Included in this benchmark denominator as an explicit executable specification; this is an operationalization judgment, not certification of scientific necessity.",
+      "criterion": "Specify the baseline operating temperature or limit for every clearing bath. Scope any separately chosen optional end-of-step heating exception explicitly; do not let that exception replace the baseline condition.",
+      "execution_context": "baseline initial serial clearing; optional terminal heating is separately scoped",
+      "phase_scope": [
+        "CLEARING"
+      ]
+    },
+    {
+      "scope_unit": "OPERATION",
+      "id": "macs_optional_terminal_heating",
+      "source_card_id": "macs-original2020-methods",
+      "passage_id": "procedure_context",
+      "quote": "Heating to 37 °C at the end of each step for approximately 1–3 h is optional for better clearing performance.",
+      "dimension": "preparation",
+      "subject": null,
+      "selector": {
+        "kind": "NAME",
+        "values": [
+          "MACS-R0",
+          "MACS-R1",
+          "MACS-R2"
+        ]
+      },
+      "applicability": "OPTIONAL",
+      "condition_quote": "Heating to 37 °C at the end of each step for approximately 1–3 h is optional for better clearing performance.",
+      "requirement_judgment": "Optional source variant; excluded from the required denominator.",
+      "criterion": "If choosing optional end-of-step heating, explicitly specify its temperature, duration and placement at the end of the step as an exception to baseline clearing conditions.",
+      "execution_context": "optional terminal heating phase of each clearing bath",
+      "phase_scope": [
+        "CLEARING"
+      ]
+    },
+    {
+      "scope_unit": "OPERATION",
+      "id": "macs_conditional_decalcification",
+      "source_card_id": "macs-original2020-methods",
+      "passage_id": "procedure_context",
+      "quote": "Hard bones and whole bodies should be incubated first in 0.2 m ethylene diamine tetraacetic acid (EDTA) (Sinopharm Chemical Reagent Co., Ltd, China) for decalcification and then treated with MACS‐R0, MACS‐R1, and MACS‐R2 in succession.",
+      "dimension": "preparation",
+      "subject": "EDTA",
+      "selector": {
+        "kind": "ROLE",
+        "values": [
+          "clearing"
+        ]
+      },
+      "applicability": "CONDITIONAL",
+      "condition_quote": "Hard bones and whole bodies",
+      "requirement_judgment": "Included only when the stated source condition applies; excluded from the unconditional denominator.",
+      "criterion": "For the stated hard-bone or whole-body sample condition, specify preliminary decalcification, name the reagent and give its executable concentration, and place it before the serial clearing baths. Do not invent a source-supported duration.",
+      "execution_context": "One sample-dependent pretreatment operation before serial clearing, only for hard bones or whole bodies; not one obligation per MACS bath.",
+      "phase_scope": [
+        "PREPARATION"
+      ]
+    },
+    {
+      "id": "idisco_dehydrate_medium",
+      "source_card_id": "idisco-dec2016-full",
+      "passage_id": "clear-dehydrate",
+      "quote": "1. Dehydrate in methanol/H2O series: 20%, 40%, 60%, 80%, 100%, 100%; 1hr each at\nRT. Can be left optionally overnight at RT at this point.",
+      "dimension": "medium",
+      "subject": null,
+      "selector": {
+        "kind": "ROLE",
+        "values": [
+          "dehydration"
+        ]
+      },
+      "phase_scope": [
+        "DEHYDRATION"
+      ],
+      "criterion": "Explicitly identify the dehydration solvent and ordered bath sequence, including the candidate-selected repetition count. Do not supply an omitted bath or count from the source; conformity to the published series is separate.",
+      "applicability": "REQUIRED_PROCEDURE_SPECIFICATION",
+      "condition_quote": null,
+      "scope_unit": "OPERATION",
+      "requirement_judgment": "Source-derived benchmark explicitness obligation, not scientific necessity certification.",
+      "execution_context": "Downstream clearing dehydration after immunolabeling, excluding upstream methanol pretreatment; an optional overnight pause occurs only after the completed series."
+    },
+    {
+      "id": "idisco_dehydrate_concentration",
+      "source_card_id": "idisco-dec2016-full",
+      "passage_id": "clear-dehydrate",
+      "quote": "1. Dehydrate in methanol/H2O series: 20%, 40%, 60%, 80%, 100%, 100%; 1hr each at\nRT. Can be left optionally overnight at RT at this point.",
+      "dimension": "concentration",
+      "subject": "methanol",
+      "selector": {
+        "kind": "ROLE",
+        "values": [
+          "dehydration"
+        ]
+      },
+      "phase_scope": [
+        "DEHYDRATION"
+      ],
+      "criterion": "Explicitly state the solvent concentration for each dehydration bath and identify the aqueous carrier for diluted baths. A clearly linked shared carrier statement suffices; neat baths do not require an aqueous carrier. Do not infer a percentage basis unreported by the source.",
+      "applicability": "REQUIRED_PROCEDURE_SPECIFICATION",
+      "condition_quote": null,
+      "scope_unit": "OPERATION",
+      "requirement_judgment": "Source-derived benchmark explicitness obligation, not scientific necessity certification.",
+      "execution_context": "Downstream clearing dehydration after immunolabeling, excluding upstream methanol pretreatment; an optional overnight pause occurs only after the completed series."
+    },
+    {
+      "id": "idisco_dehydrate_time_or_endpoint",
+      "source_card_id": "idisco-dec2016-full",
+      "passage_id": "clear-dehydrate",
+      "quote": "1. Dehydrate in methanol/H2O series: 20%, 40%, 60%, 80%, 100%, 100%; 1hr each at\nRT. Can be left optionally overnight at RT at this point.",
+      "dimension": "time_or_endpoint",
+      "subject": null,
+      "selector": {
+        "kind": "ROLE",
+        "values": [
+          "dehydration"
+        ]
+      },
+      "phase_scope": [
+        "DEHYDRATION"
+      ],
+      "criterion": "State duration or executable endpoint for each dehydration bath.",
+      "applicability": "REQUIRED_PROCEDURE_SPECIFICATION",
+      "condition_quote": null,
+      "scope_unit": "OPERATION",
+      "requirement_judgment": "Source-derived benchmark explicitness obligation, not scientific necessity certification.",
+      "execution_context": "Downstream clearing dehydration after immunolabeling, excluding upstream methanol pretreatment; an optional overnight pause occurs only after the completed series."
+    },
+    {
+      "id": "idisco_dehydrate_temperature",
+      "source_card_id": "idisco-dec2016-full",
+      "passage_id": "clear-dehydrate",
+      "quote": "1. Dehydrate in methanol/H2O series: 20%, 40%, 60%, 80%, 100%, 100%; 1hr each at\nRT. Can be left optionally overnight at RT at this point.",
+      "dimension": "temperature",
+      "subject": null,
+      "selector": {
+        "kind": "ROLE",
+        "values": [
+          "dehydration"
+        ]
+      },
+      "phase_scope": [
+        "DEHYDRATION"
+      ],
+      "criterion": "State the temperature applying to each dehydration bath.",
+      "applicability": "REQUIRED_PROCEDURE_SPECIFICATION",
+      "condition_quote": null,
+      "scope_unit": "OPERATION",
+      "requirement_judgment": "Source-derived benchmark explicitness obligation, not scientific necessity certification.",
+      "execution_context": "Downstream clearing dehydration after immunolabeling, excluding upstream methanol pretreatment; an optional overnight pause occurs only after the completed series."
+    },
+    {
+      "id": "idisco_overnight",
+      "source_card_id": "idisco-dec2016-full",
+      "passage_id": "clear-dehydrate",
+      "quote": "1. Dehydrate in methanol/H2O series: 20%, 40%, 60%, 80%, 100%, 100%; 1hr each at\nRT. Can be left optionally overnight at RT at this point.",
+      "dimension": "time_or_endpoint",
+      "subject": null,
+      "selector": {
+        "kind": "ROLE",
+        "values": [
+          "dehydration"
+        ]
+      },
+      "phase_scope": [
+        "DEHYDRATION"
+      ],
+      "criterion": "If the candidate elects an overnight pause after the completed dehydration series, explicitly link its duration and temperature to that pause. Its omission never creates a missing required parameter.",
+      "applicability": "OPTIONAL",
+      "condition_quote": null,
+      "scope_unit": "OPERATION",
+      "requirement_judgment": "Optional source-supported pause, excluded from the required denominator; not an obligation to perform or specify an overnight pause.",
+      "execution_context": "Downstream clearing dehydration after immunolabeling, excluding upstream methanol pretreatment; an optional overnight pause occurs only after the completed series."
+    },
+    {
+      "id": "idisco_mixture_medium",
+      "source_card_id": "idisco-dec2016-full",
+      "passage_id": "clear-mixture",
+      "quote": "2. 3H incubation, with shaking, in 66% DCM / 33% Methanol at RT",
+      "dimension": "medium",
+      "subject": null,
+      "selector": {
+        "kind": "ROLE",
+        "values": [
+          "mixed_solvent_exchange"
+        ]
+      },
+      "phase_scope": [
+        "CLEARING"
+      ],
+      "criterion": "Name both solvents in the mixed exchange bath.",
+      "applicability": "REQUIRED_PROCEDURE_SPECIFICATION",
+      "condition_quote": null,
+      "scope_unit": "OPERATION",
+      "requirement_judgment": "Source-derived benchmark explicitness obligation, not scientific necessity certification.",
+      "execution_context": "Downstream mixed-solvent exchange after dehydration and before pure-solvent washing; excludes the upstream overnight pretreatment mixture."
+    },
+    {
+      "id": "idisco_mixture_concentration",
+      "source_card_id": "idisco-dec2016-full",
+      "passage_id": "clear-mixture",
+      "quote": "2. 3H incubation, with shaking, in 66% DCM / 33% Methanol at RT",
+      "dimension": "concentration",
+      "subject": "DCM/methanol",
+      "selector": {
+        "kind": "ROLE",
+        "values": [
+          "mixed_solvent_exchange"
+        ]
+      },
+      "phase_scope": [
+        "CLEARING"
+      ],
+      "criterion": "Specify both mixed-solvent proportions.",
+      "applicability": "REQUIRED_PROCEDURE_SPECIFICATION",
+      "condition_quote": null,
+      "scope_unit": "OPERATION",
+      "requirement_judgment": "Source-derived benchmark explicitness obligation, not scientific necessity certification.",
+      "execution_context": "Downstream mixed-solvent exchange after dehydration and before pure-solvent washing; excludes the upstream overnight pretreatment mixture."
+    },
+    {
+      "id": "idisco_mixture_time_or_endpoint",
+      "source_card_id": "idisco-dec2016-full",
+      "passage_id": "clear-mixture",
+      "quote": "2. 3H incubation, with shaking, in 66% DCM / 33% Methanol at RT",
+      "dimension": "time_or_endpoint",
+      "subject": null,
+      "selector": {
+        "kind": "ROLE",
+        "values": [
+          "mixed_solvent_exchange"
+        ]
+      },
+      "phase_scope": [
+        "CLEARING"
+      ],
+      "criterion": "Specify mixed-solvent incubation time or endpoint.",
+      "applicability": "REQUIRED_PROCEDURE_SPECIFICATION",
+      "condition_quote": null,
+      "scope_unit": "OPERATION",
+      "requirement_judgment": "Source-derived benchmark explicitness obligation, not scientific necessity certification.",
+      "execution_context": "Downstream mixed-solvent exchange after dehydration and before pure-solvent washing; excludes the upstream overnight pretreatment mixture."
+    },
+    {
+      "id": "idisco_mixture_temperature",
+      "source_card_id": "idisco-dec2016-full",
+      "passage_id": "clear-mixture",
+      "quote": "2. 3H incubation, with shaking, in 66% DCM / 33% Methanol at RT",
+      "dimension": "temperature",
+      "subject": null,
+      "selector": {
+        "kind": "ROLE",
+        "values": [
+          "mixed_solvent_exchange"
+        ]
+      },
+      "phase_scope": [
+        "CLEARING"
+      ],
+      "criterion": "Specify mixed-solvent incubation temperature.",
+      "applicability": "REQUIRED_PROCEDURE_SPECIFICATION",
+      "condition_quote": null,
+      "scope_unit": "OPERATION",
+      "requirement_judgment": "Source-derived benchmark explicitness obligation, not scientific necessity certification.",
+      "execution_context": "Downstream mixed-solvent exchange after dehydration and before pure-solvent washing; excludes the upstream overnight pretreatment mixture."
+    },
+    {
+      "id": "idisco_mixture_agitation",
+      "source_card_id": "idisco-dec2016-full",
+      "passage_id": "clear-mixture",
+      "quote": "2. 3H incubation, with shaking, in 66% DCM / 33% Methanol at RT",
+      "dimension": "agitation",
+      "subject": null,
+      "selector": {
+        "kind": "ROLE",
+        "values": [
+          "mixed_solvent_exchange"
+        ]
+      },
+      "phase_scope": [
+        "CLEARING"
+      ],
+      "criterion": "Specify agitation for mixed-solvent incubation.",
+      "applicability": "REQUIRED_PROCEDURE_SPECIFICATION",
+      "condition_quote": null,
+      "scope_unit": "OPERATION",
+      "requirement_judgment": "Source-derived benchmark explicitness obligation, not scientific necessity certification.",
+      "execution_context": "Downstream mixed-solvent exchange after dehydration and before pure-solvent washing; excludes the upstream overnight pretreatment mixture."
+    },
+    {
+      "id": "idisco_wash_medium",
+      "source_card_id": "idisco-dec2016-full",
+      "passage_id": "clear-dcm",
+      "quote": "3. Incubate in 100% DCM (Sigma 270997-12X100ML) 15 minutes twice (with shaking)\nto wash the MeOH.",
+      "dimension": "medium",
+      "subject": null,
+      "selector": {
+        "kind": "ROLE",
+        "values": [
+          "pure_solvent_wash"
+        ]
+      },
+      "phase_scope": [
+        "CLEARING"
+      ],
+      "criterion": "Explicitly identify the solvent used for the downstream wash. Whether that named solvent conforms to the published DCM choice is a separate judgment.",
+      "applicability": "REQUIRED_PROCEDURE_SPECIFICATION",
+      "condition_quote": null,
+      "scope_unit": "OPERATION",
+      "requirement_judgment": "Source-derived benchmark explicitness obligation, not scientific necessity certification.",
+      "execution_context": "Downstream pure-solvent wash after mixed-solvent exchange and before refractive-index matching."
+    },
+    {
+      "id": "idisco_wash_concentration",
+      "source_card_id": "idisco-dec2016-full",
+      "passage_id": "clear-dcm",
+      "quote": "3. Incubate in 100% DCM (Sigma 270997-12X100ML) 15 minutes twice (with shaking)\nto wash the MeOH.",
+      "dimension": "concentration",
+      "subject": "DCM",
+      "selector": {
+        "kind": "ROLE",
+        "values": [
+          "pure_solvent_wash"
+        ]
+      },
+      "phase_scope": [
+        "CLEARING"
+      ],
+      "criterion": "Specify wash-solvent concentration.",
+      "applicability": "REQUIRED_PROCEDURE_SPECIFICATION",
+      "condition_quote": null,
+      "scope_unit": "OPERATION",
+      "requirement_judgment": "Source-derived benchmark explicitness obligation, not scientific necessity certification.",
+      "execution_context": "Downstream pure-solvent wash after mixed-solvent exchange and before refractive-index matching."
+    },
+    {
+      "id": "idisco_wash_time_or_endpoint",
+      "source_card_id": "idisco-dec2016-full",
+      "passage_id": "clear-dcm",
+      "quote": "3. Incubate in 100% DCM (Sigma 270997-12X100ML) 15 minutes twice (with shaking)\nto wash the MeOH.",
+      "dimension": "time_or_endpoint",
+      "subject": null,
+      "selector": {
+        "kind": "ROLE",
+        "values": [
+          "pure_solvent_wash"
+        ]
+      },
+      "phase_scope": [
+        "CLEARING"
+      ],
+      "criterion": "Explicitly specify duration or an executable endpoint for each wash and the candidate-selected repetition count. Retain distinct candidate wash operations; do not supply the published count of two when omitted. Count/value conformity is separate.",
+      "applicability": "REQUIRED_PROCEDURE_SPECIFICATION",
+      "condition_quote": null,
+      "scope_unit": "OPERATION",
+      "requirement_judgment": "Source-derived benchmark explicitness obligation, not scientific necessity certification.",
+      "execution_context": "Downstream pure-solvent wash after mixed-solvent exchange and before refractive-index matching."
+    },
+    {
+      "id": "idisco_wash_agitation",
+      "source_card_id": "idisco-dec2016-full",
+      "passage_id": "clear-dcm",
+      "quote": "3. Incubate in 100% DCM (Sigma 270997-12X100ML) 15 minutes twice (with shaking)\nto wash the MeOH.",
+      "dimension": "agitation",
+      "subject": null,
+      "selector": {
+        "kind": "ROLE",
+        "values": [
+          "pure_solvent_wash"
+        ]
+      },
+      "phase_scope": [
+        "CLEARING"
+      ],
+      "criterion": "Specify wash agitation.",
+      "applicability": "REQUIRED_PROCEDURE_SPECIFICATION",
+      "condition_quote": null,
+      "scope_unit": "OPERATION",
+      "requirement_judgment": "Source-derived benchmark explicitness obligation, not scientific necessity certification.",
+      "execution_context": "Downstream pure-solvent wash after mixed-solvent exchange and before refractive-index matching."
+    },
+    {
+      "id": "idisco_dbe_medium",
+      "source_card_id": "idisco-dec2016-full",
+      "passage_id": "clear-dbe",
+      "quote": "4. Incubate in DiBenzyl Ether (DBE, Sigma 108014-1KG) (no shaking). The tube should\nbe filled almost completely with DBE to prevent the air from oxidizing the sample.\nBefore imaging, invert the tube a couple of time to finish mixing the solution.",
+      "dimension": "medium",
+      "subject": null,
+      "selector": {
+        "kind": "ROLE",
+        "values": [
+          "ri_matching"
+        ]
+      },
+      "phase_scope": [
+        "RI_MATCHING"
+      ],
+      "criterion": "Explicitly name the refractive-index-matching medium. Whether that named medium conforms to the published DBE choice is a separate judgment.",
+      "applicability": "REQUIRED_PROCEDURE_SPECIFICATION",
+      "condition_quote": null,
+      "scope_unit": "OPERATION",
+      "requirement_judgment": "Source-derived benchmark explicitness obligation, not scientific necessity certification.",
+      "execution_context": "Downstream refractive-index-matching incubation after pure-solvent washing; excludes imaging and post-clearing storage."
+    },
+    {
+      "id": "idisco_dbe_agitation",
+      "source_card_id": "idisco-dec2016-full",
+      "passage_id": "clear-dbe",
+      "quote": "4. Incubate in DiBenzyl Ether (DBE, Sigma 108014-1KG) (no shaking). The tube should\nbe filled almost completely with DBE to prevent the air from oxidizing the sample.\nBefore imaging, invert the tube a couple of time to finish mixing the solution.",
+      "dimension": "agitation",
+      "subject": null,
+      "selector": {
+        "kind": "ROLE",
+        "values": [
+          "ri_matching"
+        ]
+      },
+      "phase_scope": [
+        "RI_MATCHING"
+      ],
+      "criterion": "Specify agitation or its absence for DBE incubation.",
+      "applicability": "REQUIRED_PROCEDURE_SPECIFICATION",
+      "condition_quote": null,
+      "scope_unit": "OPERATION",
+      "requirement_judgment": "Source-derived benchmark explicitness obligation, not scientific necessity certification.",
+      "execution_context": "Downstream refractive-index-matching incubation after pure-solvent washing; excludes imaging and post-clearing storage."
+    },
+    {
+      "id": "idisco_dbe_fill_level",
+      "source_card_id": "idisco-dec2016-full",
+      "passage_id": "clear-dbe",
+      "quote": "4. Incubate in DiBenzyl Ether (DBE, Sigma 108014-1KG) (no shaking). The tube should\nbe filled almost completely with DBE to prevent the air from oxidizing the sample.\nBefore imaging, invert the tube a couple of time to finish mixing the solution.",
+      "dimension": "fill_level",
+      "subject": null,
+      "selector": {
+        "kind": "ROLE",
+        "values": [
+          "ri_matching"
+        ]
+      },
+      "phase_scope": [
+        "RI_MATCHING"
+      ],
+      "criterion": "Explicitly specify the tube fill level or an executable headspace condition for the matching incubation. Whether it conforms to the published almost-complete fill is a separate judgment.",
+      "applicability": "REQUIRED_PROCEDURE_SPECIFICATION",
+      "condition_quote": null,
+      "scope_unit": "OPERATION",
+      "requirement_judgment": "Source-derived benchmark explicitness obligation, not scientific necessity certification.",
+      "execution_context": "Downstream refractive-index-matching incubation after pure-solvent washing; excludes imaging and post-clearing storage."
+    },
+    {
+      "id": "idisco_preimaging_inversion",
+      "source_card_id": "idisco-dec2016-full",
+      "passage_id": "clear-dbe",
+      "quote": "4. Incubate in DiBenzyl Ether (DBE, Sigma 108014-1KG) (no shaking). The tube should\nbe filled almost completely with DBE to prevent the air from oxidizing the sample.\nBefore imaging, invert the tube a couple of time to finish mixing the solution.",
+      "dimension": "preimaging_mixing",
+      "subject": null,
+      "selector": {
+        "kind": "ROLE",
+        "values": [
+          "ri_matching"
+        ]
+      },
+      "phase_scope": [
+        "RI_MATCHING"
+      ],
+      "criterion": "Only when pre-imaging preparation is explicitly included in the evaluated scope, specify the mixing action and its timing before imaging. Assess conformity to the published inversion instruction separately; this row does not apply to downstream-clearing-only evaluation.",
+      "applicability": "CONDITIONAL",
+      "condition_quote": "Before imaging",
+      "scope_unit": "OPERATION",
+      "requirement_judgment": "Conditional benchmark explicitness obligation only for an explicitly in-scope pre-imaging branch; excluded from the downstream-clearing-only denominator.",
+      "execution_context": "Pre-imaging preparation only, conditional on imaging preparation being explicitly inside the evaluated task scope. Never activate for downstream-clearing-only scope or merely because DBE is present."
+    }
+  ],
+  "excluded_notes": [
+    {
+      "source_card_id": "macs-original2020-methods",
+      "passage_id": "recipes",
+      "quote": "When preparing MACS solutions, latex gloves should be worn to avoid direct contact with chemicals.",
+      "why": "PPE advice, outside execution-parameter denominator; not a claim that PPE is unnecessary."
+    },
+    {
+      "source_card_id": "macs-original2020-methods",
+      "passage_id": "recipes",
+      "quote": "Though the MXDA is hardly volatile, a ventilated environment is recommended.",
+      "why": "Safety/environment recommendation, outside the chosen execution-parameter denominator."
+    },
+    {
+      "source_card_id": "fdisco-sciadv2019-sec13",
+      "passage_id": "fdisco_11",
+      "quote": "All other clearing protocols, including BABB, 3DISCO, uDISCO, FluoClearBABB, Ethanol-ECi, CUBIC, and PACT, were performed following the original papers (16, 17, 22, 23, 26–28).",
+      "why": "Other protocols and references are outside the two supplied route contracts; no execution details imported from cited sources."
+    },
+    {
+      "source_card_id": "macs-original2020-methods",
+      "passage_id": "procedure_context",
+      "quote": "All other clearing protocols mentioned in this paper, including SeeDB2, ScaleS, CUBIC‐L/R/RA, PACT, and uDISCO, were performed following the original publications.[ 18, 24, 26, 40, 41 ]",
+      "why": "Other protocols and references are outside scope; cited publications were not consulted."
+    },
+    {
+      "source_card_id": "fdisco-sciadv2019-sec13",
+      "passage_id": "fdisco_06",
+      "quote": "(table S1)",
+      "why": "Table is not supplied; no supplementary numerical incubation times or tissue-specific schedules can be derived."
+    },
+    {
+      "source_card_id": "macs-original2020-methods",
+      "passage_id": "procedure_context",
+      "quote": "(Figure S2b–e, Supporting Information)",
+      "why": "Supporting figure is not supplied; no numerical tissue-specific durations can be derived."
+    },
+    {
+      "source_card_id": "idisco-dec2016-full",
+      "passage_id": "clearing-sidebar",
+      "quote": "Read the\nsafety data\nsheet (MSDS) for the\nuse of DCM and DBE.\nIncubations and\nstorage can be done\nin plastic Eppendorf\ntubes.",
+      "why": "Plastic Eppendorf tubes are a permissive material choice, not a mandatory container-material obligation. The MSDS instruction is safety guidance outside this execution-parameter denominator, not a claim that consulting safety information is unnecessary."
+    },
+    {
+      "source_card_id": "idisco-dec2016-full",
+      "passage_id": "reagent-quality",
+      "quote": "Reagents list\nWe use the following reagents for iDISCO+. Most reagents may be replaced by similar products from\nother vendors, but those replacement should be carefully considered. It is critical to use very high\nquality organic solvents to prevent oxidation of the sample during clearing.",
+      "why": "Source background only under protocol-design-only scope. Procurement grade/product/quality selection is not a required protocol detail and cannot produce completeness, correctness or effectiveness deductions, including via an equivalent quality declaration."
+    },
+    {
+      "source_card_id": "idisco-dec2016-full",
+      "passage_id": "imaging-lightsheet",
+      "quote": "Light sheet microscope\nThe use of a light sheet microscope (e.g. LaVision Biotec.) is recommended. The sample\nis ready to be directly imaged in the microscope chamber filled with DBE. Light sheet\nallows fast imaging of a large field of view, with very deep optical penetration and\nlimited photobleaching.",
+      "why": "Imaging equipment recommendation outside downstream clearing operation comparison."
+    },
+    {
+      "source_card_id": "idisco-dec2016-full",
+      "passage_id": "imaging-scanning",
+      "quote": "Scanning microscope (confocal or 2-photon)\nUpright confocal and 2-photon microscopes can image the sample with a depth up to\nthe working distance of the objective at high resolution. A chamber has to be built to\nconfine the DBE and protect the microscope. To build an imaging chamber:\n1. The chamber (Script provided at iDISCO.info) can be 3D printed with Visijet M3\nCrystal resin, which is resistant to DBE.\n2. Secure the chamber to the microscope slide with Kwik-sil epoxy (VWR). This epoxy\ndoes not permanently bond so that sample and spacers can be recovered after\nimaging. Make sure there are no gaps that the DBE can leak through.\n3. Place a drop of epoxy in the center of the chamber and place sample on drop.\n4. Close the chamber by gluing a coverslip to the spacer with the epoxy. Do not glue\nover filling inlet.\n5. Fill the chamber with DBE with a pipet through the filling inlet.\n6. Plug the inlet with epoxy.",
+      "why": "Conditional imaging branch outside downstream clearing operation comparison."
+    }
+  ],
+  "parent_contract_version": "source-parameter-contract-v3",
+  "task_scope_version": "protocol-design-only-v1-20261016",
+  "background_only_requirements": [
+    {
+      "scope_unit": "ROUTE",
+      "id": "fdisco_peroxide_removal",
+      "source_card_id": "fdisco-sciadv2019-sec13",
+      "passage_id": "fdisco_09",
+      "quote": "The peroxides in THF and DBE were removed by column absorption chromatography with basic activated aluminum oxide (20001861, Sinopharm Chemical Reagent Co. Ltd., China) (24).",
+      "dimension": "preparation",
+      "subject": null,
+      "selector": {
+        "kind": "NAME",
+        "values": [
+          "THF",
+          "DBE"
+        ]
+      },
+      "applicability": "REQUIRED_PROCEDURE_SPECIFICATION",
+      "condition_quote": null,
+      "requirement_judgment": "Included in this benchmark denominator as an explicit executable specification; this is an operationalization judgment, not certification of scientific necessity.",
+      "criterion": "Describe peroxide removal for both solvents, including the separation method and adsorbent identity. A generic safety warning does not specify preparation.",
+      "execution_context": "shared solvent preparation",
+      "phase_scope": [
+        "PREPARATION"
+      ]
+    },
+    {
+      "id": "idisco_solvent_quality_preparation",
+      "source_card_id": "idisco-dec2016-full",
+      "passage_id": "reagent-quality",
+      "quote": "Reagents list\nWe use the following reagents for iDISCO+. Most reagents may be replaced by similar products from\nother vendors, but those replacement should be carefully considered. It is critical to use very high\nquality organic solvents to prevent oxidation of the sample during clearing.",
+      "dimension": "preparation",
+      "subject": "organic solvents",
+      "selector": {
+        "kind": "ROLE",
+        "values": [
+          "dehydration",
+          "mixed_solvent_exchange",
+          "pure_solvent_wash",
+          "ri_matching"
+        ]
+      },
+      "phase_scope": [
+        "PREPARATION"
+      ],
+      "criterion": "Explicitly specify the organic-solvent quality or procurement selection for the downstream route, with an actionable identified grade/product or a stated quality-selection criterion linked to the solvents used. A clearly linked route-wide specification may cover multiple solvents. Do not assume quality from a solvent name or import source catalog numbers into missing candidate text. Assess conformity separately; alternative suppliers or products are not automatically non-explicit.",
+      "applicability": "REQUIRED_PROCEDURE_SPECIFICATION",
+      "condition_quote": null,
+      "scope_unit": "ROUTE",
+      "requirement_judgment": "Include once per downstream route as a composite preparation/procurement explicitness obligation because the source explicitly calls high-quality organic solvents critical for clearing. Requiring an actionable selection is a benchmark operationalization, not a source-defined numerical purity standard or scientific necessity certification.",
+      "execution_context": "Preparation/procurement of organic solvents used in downstream clearing; count once per route, not once per selector, solvent, or bath. Excludes upstream staining buffers and imaging equipment.",
+      "source_uncertainty": "Very high quality is qualitative. The source gives product examples in the separate reagents passage and permits carefully considered substitutions, but defines no universal purity percentage, oxidation assay, acceptance threshold, or preparation treatment. None may be invented or required as published facts."
+    }
+  ]
+}

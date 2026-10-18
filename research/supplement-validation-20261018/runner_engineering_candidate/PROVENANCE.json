@@ -8,7 +8,7 @@
   "public_main_base": "a7961f468d8f1a8c28f9cc928199b26fba334883",
   "previous_public_research_commit": "3bc06c6b5ffe0bd32ff6d25fc74d181442a5934a",
   "previous_public_readme": "https://github.com/404NotFound422/ClearEval-public/blob/3bc06c6b5ffe0bd32ff6d25fc74d181442a5934a/research/supplement-validation-20261018/README.md",
-  "copy_policy": "Byte-identical approved candidate files; no vendor or original-test modifications; minimal 16-test pure-code import closure plus candidate entrypoints/code-freeze inputs. Two source-bound tests remain unchanged but are explicitly NOT RUN by the portable target. Missing modules/data remain explicitly missing.",
+  "copy_policy": "Original frozen runner, matching/representation/provider source, original scope tests, VENDOR_MANIFEST and all 94 vendor entries retain exact original hashes. Two packaging test harness files and publication metadata are updated to verify restored completeness; previous versions are retained under history/268fc731.",
   "copied_files": {
     "VENDOR_MANIFEST.json": "241bc75e8f5448848b724398cba0ee8f666fc55a2340cbbe36c6a0a52827b85d",
     "build_input_bindings.py": "9c319f48bd91a81a6c925b4132317abcf6d09df93ec0e6ee4edbe15089060c9b",
@@ -48,11 +48,14 @@
     "reason": "13 integration tests require a private recovery/archive tree; not part of the standalone test target."
   },
   "license_review": {
-    "license_file_in_candidate_or_recovered_source": "NOT_FOUND",
     "new_license_granted": false,
-    "source": "User-supplied recovered project source tracked by original VENDOR_MANIFEST. Inclusion does not establish an open-source or third-party redistribution license. Original rights remain.",
-    "redistributed_third_party_full_text": false
+    "original_43_file_review": "history/268fc731/PROVENANCE.json",
+    "current_source_notice": "THIRD_PARTY_SOURCES.md",
+    "source_materials_included": true,
+    "scope": "User-authorized original dependency files. User-supplied iDISCO text and structured transformations are re-delivered; FDISCO CC BY-NC and MACS CC BY attribution is preserved. No new open-source license is inferred."
   },
   "formal_scientific_validation": false,
-  "new_model_or_encoder_calls": 0
+  "new_model_or_encoder_calls": 0,
+  "original_43_file_package_provenance_snapshot": "history/268fc731/PROVENANCE.json",
+  "dependency_restoration": "DEPENDENCY_RESTORE_MANIFEST.json"
 }

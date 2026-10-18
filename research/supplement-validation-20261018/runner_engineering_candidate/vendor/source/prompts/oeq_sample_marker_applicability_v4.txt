@@ -1,0 +1,61 @@
+
+SAMPLE AND MARKER APPLICABILITY (sample-marker-applicability-v4-20261015):
+Apply the supplied applicability_rubric to the original task and actual selected
+answer. These sources supplement general clearing recipes; they are not new
+mandatory reference operations. Assess target identity, species/clone reactivity,
+tissue/cell expression and specificity, sample physical properties, task goal,
+and preservation/processing scope. An organ-name mismatch alone is not an error.
+A recommendation-table omission or a nonstandard marker alone is not an error.
+Use marker_input_contract for the actual supplied table and data-quality issues.
+Recommended metadata never creates a mandatory target. If task/table constraints
+leave no verified allowed route, expose that input inconsistency; do not charge
+the answer simply for omitting an unavailable recommended marker. Separately
+evaluate scientific claims actually made by the answer, without inventing a
+successful alternative or requiring review approval before scoring.
+A supported functional alternative remains acceptable. Homology is not antibody
+cross-reactivity; staining a general cell class is not automatically identifying
+its required subtype, activation state, or malignant state. Interpret the full
+stated scheme, including legitimate contextual morphology, at task-requested
+specificity. Do not invent an unrequested molecular target or diagnostic standard.
+
+Separate (a) observed contradiction, (b) concrete limited applicability, and
+(c) merely missing validation evidence. Identify the actual claim and limitation,
+not just 'different organ' or 'not in the table'. Material extrapolation with a
+specific supported limitation and retained useful function can merit Co_method=1
+(out of existing max 2). Functional/supported substitutions merit 2. Established
+incompatibility or loss of a required key function merits 0. Missing relevant
+evidence alone does not prove failure; use null only when the missing evidence
+really prevents this component judgment. Never require universal experimental
+validation before giving a benchmark score. State source versus MODEL_JUDGMENT.
+
+For mineralized bone in iDISCO/iDISCO+, decalcification is a necessary
+sample-adaptation consideration. Already-decalcified material satisfies that
+condition. Explicitly selecting no decalcification for a still-mineralized bone
+or intact-tooth route that depends on deep optical access is a substantive
+applicability problem under the supplied hard-tissue study, not merely 'no paper
+provided'. Assign 1 for a material obstacle with remaining useful function; 0
+when the required key imaging function is unsupported by the route because the
+necessary mineral-barrier treatment is explicitly excluded. Explain the bound
+specimen, required optical function, and why the chosen severity applies.
+This is not a universal requirement for every clearing method or every specimen.
+An unmentioned pretreatment is NOT an explicit assertion that it was omitted.
+If the task starts after labeling or asks only downstream clearing, do not infer
+unknown upstream pretreatment was absent or assign 0 on that inference. A full
+workflow missing an applicable required step can affect completeness; distinguish
+that from positively stated exclusion and from source/extraction omissions.
+For teeth, distinguish preserving gross geometry from preserving enamel/dentin
+mineral: do not silently cure a no-damage/mineral-preservation constraint by
+adding decalcification. Explain a constraint conflict or material ambiguity.
+
+Use a single primary correctness component for the same applicability defect:
+Co_method for sample-method or marker-strategy applicability, Co_order only for
+an independent dependency/order error. A definite missing task-required target
+is assessed by task_coverage; do not also deduct Co_method for that same target
+absence. A limited specificity concern with useful task coverage can instead
+receive the moderate Co_method band; do not convert every nonstandard choice
+into the binary label failure. Reserve FAILED for an established unmet required
+outcome; UNKNOWN for genuinely unresolved target identity. Keep the original
+AND/OR and optionality. A known broad marker is not proof of a specific subtype,
+but an unspecified reagent must not be described as universally incapable.
+Keep all maxima, label aggregation and Alexa missing-model minus-one policy
+unchanged. This rubric is a benchmark judgment, not wet-lab or clinical validation.

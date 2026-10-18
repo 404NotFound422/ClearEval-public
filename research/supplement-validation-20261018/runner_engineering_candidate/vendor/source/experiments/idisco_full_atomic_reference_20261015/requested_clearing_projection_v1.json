@@ -1,0 +1,1357 @@
+{
+  "schema_version": "fixed-task-evidence-projection-v2-target-responsibilities",
+  "question_id": 13,
+  "question": "我需要对阿尔茨海默病小鼠模型全脑进行透明化处理，用于构建全脑淀粉样沉积物的三维空间分布图谱。样本为完整 5XFAD 小鼠大脑，尺寸约 10 mm × 8 mm × 6 mm，已完成固定和后固定。科学目标是在完整脑尺度下观察淀粉样斑块在皮层、海马、丘脑、杏仁核和其他相关脑区中的空间分布、密度差异、斑块负荷和局部聚集模式，并用于后续脑区配准、斑块计数和体积定量分析。\n\n请根据该科学问题自行选择合适的双靶点荧光/标记策略，并基于所选标记样本选择匹配的组织透明方法。请仅输出 protocol，第 1 行写明所选双靶点荧光/标记策略和组织透明方法，随后仅列出透明处理、RI 匹配和保存/成像前处理步骤的关键试剂、条件和时间。",
+  "selected_route": "main",
+  "route_id": "main",
+  "available_routes": [
+    "main"
+  ],
+  "route_status": "BOUND",
+  "reference_id": "idisco-dec2016-atomic-clearing-v1",
+  "cards": [
+    {
+      "schema_version": "source-grounding-v2",
+      "id": "idisco-dec2016-full",
+      "identity": {
+        "url": "https://idisco.info/wp-content/uploads/2015/04/whole-mount-staining-bench-protocol-methanol-dec-2016.pdf",
+        "version": "December 2016",
+        "publication_status": "CURRENT",
+        "publication_status_evidence": {
+          "checked_at": "2026-10-14T20:40:00Z",
+          "status": "CURRENT",
+          "meaning": "AUTHOR_SITE_CURRENTLY_LISTED_PROTOCOL_VERSION_ONLY",
+          "protocol_version": "December 2016",
+          "protocol_url": "https://idisco.info/wp-content/uploads/2015/04/whole-mount-staining-bench-protocol-methanol-dec-2016.pdf",
+          "evidence": [
+            {
+              "url": "https://idisco.info/idisco-protocol/",
+              "locator": "first download link, web-extracted line 5",
+              "short_quote": "Download an up to date .pdf version",
+              "finding": "The linked filename is whole-mount-staining-bench-protocol-methanol-dec-2016."
+            },
+            {
+              "url": "https://idisco.info/idisco-protocol/update-history/",
+              "locator": "first dated heading and its three explanatory paragraphs, lines 7-11",
+              "finding": "December 2016 is the first listed revision. The page describes a pre-extraction update based on user feedback and says adoption is optional when the May 2016 version already works."
+            }
+          ],
+          "limits": [
+            "Not a claim that all scientific conclusions are currently true.",
+            "Not a claim that all later literature or correction databases were exhaustively searched.",
+            "No retraction/correction notice was observed on the two inspected author pages; absence elsewhere is not asserted.",
+            "The protocol webpage sample table differs from the frozen PDF; its timing/volume values are not merged into this reference."
+          ],
+          "native_contract_semantics": {
+            "file": "experiments/construct_validity/evidence.py",
+            "lines": "135-147, 260-263",
+            "behavior": "CURRENT and CORRECTED avoid the publication guard; CORRECTED requires a correction_chain and downstream check must acknowledge it. UNKNOWN and RETRACTED add guards. The enum does not distinguish journal articles from author-maintained protocols.",
+            "interface_gap": "No document-type-specific lifecycle enum or machine-validated CURRENT evidence. The supplied evidence and explicitly narrow interpretation are retained; scientific_truth remains null."
+          }
+        }
+      },
+      "source_document": {
+        "text": "iDISCO protocol December 2016\niDISCO+ protocol\nRecommendations for sample handling\nThe following are given as a general guideline and may vary for specific applications.\nBuffers\nPTx.2 (1L)\n• 100mL PBS 10X\n• 2mL TritonX-100\nPTwH (1L)\n• 100mL PBS 10X\n• 2mL Tween-20\n• 1mL of 10mg/mL Heparin stock solution\nPermeabilization Solution (500mL)\n• 400mL PTx.2\n• 11.5g of Glycine\n• 100mL of DMSO\nBlocking Solution (50mL)\n• 42mL PTx.2\n• 3mL of Donkey Serum\n• 5mL of DMSO\nSample type Incubation time ( n ) Solution volume\nEmbryonic:\nE10-E11 embryo 1d 1.6mL\nE12 embryo 2d 1.6mL\nE13-E14 embryo 3d 1.6mL\nE15-16 embryo 4d 4mL\nE18 head 4d 4mL\nAdult organ 4d 1.6mL\nAdult brain:\nhindbrain + cerebellum 3d 1.6mL\ncut hemisphere 5d 1.6mL\nWhole brain 7d 4.5mL\nTo insure the\nbest staining and\nImaging conditions we\nrecommend trimming\nthe sample to a size\nmost relevant for the\nspecific biological\nquestion.\nAdd .02% NaN3\nto all stock\nsolutions to prevent\nmicrobial growth.\n\fiDISCO protocol December 2016\nBench Protocol\nSample Collection\nEmbryo:\n1. Collect E10.5-E16.5 mouse embryos in ice-cold Leibovitz L-15 or PBS.\n2. Keep on ice for 5min to drain blood from umbilical cord.\n3. Fix in 1xPBS/4%PFA at 4°c, o/n with shaking.\n4. Fix at room temperature (RT) 1h (optional).\n5. Wash in PBS with shaking: RT 30min x 3times.\nAdult:\n1. Anesthetize the mouse.\n2. Perfuse with 20mL PBS.\n3. Perfuse with 20mL 4%PFA/PBS.\n4. Dissect the brain/organ and trim to the appropriate size.\n5. Fix in 1xPBS/4%PFA at 4°c, o/n with shaking, then RT 1h.\n6. Wash in PBS with shaking: RT 30min x 3times.\nSample Pretreatment with Methanol\nBefore staining make sure antibodies are compatible with methanol\npretreatment. Instruction on how to do so are listed on the last page.\n1. Dehydrate with methanol/H2O series: 20%, 40%, 60%, 80%, 100%; 1h each.\n2. Wash further with 100% methanol for 1h and then chill the sample at 4°c.\n3. Overnight incubation, with shaking, in 66% DCM / 33% Methanol at RT\n4. Wash twice in 100% Methanol at RT, and then chill the sample at 4°c\n5. Bleach in chilled fresh 5%H2O2 in methanol (1 volume 30% H2O2 to 5 volumes\nMeOH), overnight at 4°c.\n6. Rehydrate with methanol/H2O series: 80%, 60%, 40%, 20%, PBS; 1h each at RT.\n7. Wash in PTx.2 RT 1h x2 at RT.\nAlternative Pretreatment (<1mm (adult) or embryos only)\n1. Wash fixed samples in PTx.2, RT 1h x2.\n2. Incubate in 1xPBS/0.2%TritonX-100/20%DMSO, 37°C, o/n.\n3. Incubate in 1xPBS/0.1%Tween-20/0.1%TritonX-\n100/0.1%Deoxycholate/0.1%NP40/20%DMSO, 37°C o/n.\n4. Wash in PTx.2, RT 1h x 2.\nImmunolabeling\n1. Incubate samples in Permeabilization Solution, 37°C 𝐧\n2 days (max. 2 days)\n2. Block in Blocking Solution, 37 °, 𝐧\n2 days (max. 2 days).\n3. Incubate with primary antibody in PTwH/5%DMSO/3% Donkey Serum, 37°, n days.\n4. Wash in PTwH for 4-5 times until the next day.\n5. Incubate with secondary antibody in PTwH/3% Donkey Serum, 37°, n days.\n6. Wash in PTwH for 4-5 times until the next day.\nCan store in\nPBS with .02%\nNaN3 at 4°.\nCan store in\nPBS with .02%\nNaN3 at 4°.\nPerform all\nsteps in closed\ntubes. Fully fill\ntubes to prevent\noxidation\nCentrifuging\nsecondary\nantibody solution at\n20000g for 10\nminutes can prevent\nformation of\nprecipitates in the\nsample.\nAlternatively, you can\nsyringe-filter the\nsolution at 0.2µm.\n\fiDISCO protocol December 2016\nClearing\n1. Dehydrate in methanol/H2O series: 20%, 40%, 60%, 80%, 100%, 100%; 1hr each at\nRT. Can be left optionally overnight at RT at this point.\n2. 3H incubation, with shaking, in 66% DCM / 33% Methanol at RT\n3. Incubate in 100% DCM (Sigma 270997-12X100ML) 15 minutes twice (with shaking)\nto wash the MeOH.\n4. Incubate in DiBenzyl Ether (DBE, Sigma 108014-1KG) (no shaking). The tube should\nbe filled almost completely with DBE to prevent the air from oxidizing the sample.\nBefore imaging, invert the tube a couple of time to finish mixing the solution.\nImaging\nLight sheet microscope\nThe use of a light sheet microscope (e.g. LaVision Biotec.) is recommended. The sample\nis ready to be directly imaged in the microscope chamber filled with DBE. Light sheet\nallows fast imaging of a large field of view, with very deep optical penetration and\nlimited photobleaching.\nScanning microscope (confocal or 2-photon)\nUpright confocal and 2-photon microscopes can image the sample with a depth up to\nthe working distance of the objective at high resolution. A chamber has to be built to\nconfine the DBE and protect the microscope. To build an imaging chamber:\n1. The chamber (Script provided at iDISCO.info) can be 3D printed with Visijet M3\nCrystal resin, which is resistant to DBE.\n2. Secure the chamber to the microscope slide with Kwik-sil epoxy (VWR). This epoxy\ndoes not permanently bond so that sample and spacers can be recovered after\nimaging. Make sure there are no gaps that the DBE can leak through.\n3. Place a drop of epoxy in the center of the chamber and place sample on drop.\n4. Close the chamber by gluing a coverslip to the spacer with the epoxy. Do not glue\nover filling inlet.\n5. Fill the chamber with DBE with a pipet through the filling inlet.\n6. Plug the inlet with epoxy.\nChamber for two photon or confocal microscope\nRead the\nsafety data\nsheet (MSDS) for the\nuse of DCM and DBE.\nIncubations and\nstorage can be done\nin plastic Eppendorf\ntubes.\nA chamber\ncan also be\nbuilt up using dental\nepoxy if access to a\n3D printer in not\navailable. Also,\nonline 3D printing\nservices can provide\na good alternative.\nhttp://www.3dhubs.\ncom is a good way to\nstart.\n\fiDISCO protocol December 2016\nAntibody validation\nTo assess the methanol compatibility of untested antibodies, we recommend doing the\nfollowing:\n1. Collect 20µm frozen sections of the PFA fixed tissue of interest on superfrost slides.\nFloating vibratome sections also work.\n2. Incubate the sections for 3h at least in 100% methanol at room temperature\n3. Rehydrate in PBS directly and proceed with the immunostaining normally. Use non\nmethanol treated slides as a positive control.\nIf the antibody yields a good signal to noise ratio, the antibody is then compatible with\nthe methanol treatment and should work in whole-mount. If the signal is strongly\ndiminished after the methanol treatment, one can use the non-methanol protocol, or\ntest alternative antibodies against the target protein.\nAntibody Concentration and Choice\nAntibody concentration is the most important parameter to optimize for a successful\nstaining.\n• If you notice a “ring” background around the edges of the sample, the antibody\nis causing a non-specific staining, indicating that the concentration is too high.\nThis will also cause poor diffusion. Reduce the concentration.\n• If you don’t have any staining deep in the sample AND don’t have a ring\nbackground, the antibody is depleted by the antigens and the concentration\nshould be increased. If increasing the concentration leads to the formation of a\nring background, or is not economically viable, another reference should be\nused, or the antigen is too concentrated for whole-mount labeling.\n• If you have a weak staining at the center, but still visible, the incubation time\nshould be increased.\n• Never use antibodies raised in mouse on mouse tissue, as the secondary IgGs\nwill bind to the endogenous mouse IgG in the vasculature.\n• It is very often a good investment to spend time screening antibodies from\ndifferent vendors for a given antigen. Not all antibodies are made equal!\n• Secondary antibody concentrations are less critical, but concentrations should\nbe within the same range as for the primary IgG concentrations.\nQuestions?\nYou can visit http://www.idisco.info to get the latest public updates on the protocol\nand validated antibodies.\n\fiDISCO protocol December 2016\nReagents list\nWe use the following reagents for iDISCO+. Most reagents may be replaced by similar products from\nother vendors, but those replacement should be carefully considered. It is critical to use very high\nquality organic solvents to prevent oxidation of the sample during clearing.\nWe use double distilled water (MilliQ system).\nReagent Reference\nPBS 10X Ambion AM9624\nTriton-X100 Sigma X100-500ML\nTween-20 Sigma P9416-100ML\nDMSO Fisher D128-4\nSodium Azide 58032-100G\nDonkey Serum Jackson Immunoresearch 017-000-121\nGlycine Sigma G7126-500G\nHeparin Sigma H3393-50KU\nMethanol Fisher A412SK-4\nHydrogen Peroxide 30% Sigma 216763-100ML\nDiChloroMethane Sigma 270997-12X100ML\nDiBenzylEther Sigma 108014-1KG or 3KG\nParaFormAldehyde 16% EMS 15710-S\nConsumables and hardware\nReagent Reference\nTubes (small samples) Eppendorf 2mL\nTubes (large samples) Eppendorf 5mL\nOrbital shaker VWR nutating mixer\nHybridization oven VWR 5420\nWith carousel 47746-112\n\f",
+        "sha256": "fb3f5c351901f4af86c466ccc70207c41004ba6dd8e2733343fd6af7e7428162",
+        "url": "https://idisco.info/wp-content/uploads/2015/04/whole-mount-staining-bench-protocol-methanol-dec-2016.pdf",
+        "version": "December 2016"
+      },
+      "passages": [
+        {
+          "id": "protocol-title",
+          "start": 30,
+          "end": 46,
+          "quote": "iDISCO+ protocol",
+          "sha256": "2c0fe4734c82251d058bc05cde3be430034f03e143745827a0e7e1b3dbaeef83",
+          "page": 1
+        },
+        {
+          "id": "sample-guideline",
+          "start": 47,
+          "end": 169,
+          "quote": "Recommendations for sample handling\nThe following are given as a general guideline and may vary for specific applications.",
+          "sha256": "33e2e30651941c277ae1646c245e4e640bdc00fc23050c012990df2a8ca1b486",
+          "page": 1
+        },
+        {
+          "id": "buffers",
+          "start": 170,
+          "end": 460,
+          "quote": "Buffers\nPTx.2 (1L)\n• 100mL PBS 10X\n• 2mL TritonX-100\nPTwH (1L)\n• 100mL PBS 10X\n• 2mL Tween-20\n• 1mL of 10mg/mL Heparin stock solution\nPermeabilization Solution (500mL)\n• 400mL PTx.2\n• 11.5g of Glycine\n• 100mL of DMSO\nBlocking Solution (50mL)\n• 42mL PTx.2\n• 3mL of Donkey Serum\n• 5mL of DMSO",
+          "sha256": "89e65fdf8b512ce62da2cd7f2400e04d70d36d5c35a2b9083d725120d66be38e",
+          "page": 1
+        },
+        {
+          "id": "sample-table",
+          "start": 461,
+          "end": 737,
+          "quote": "Sample type Incubation time ( n ) Solution volume\nEmbryonic:\nE10-E11 embryo 1d 1.6mL\nE12 embryo 2d 1.6mL\nE13-E14 embryo 3d 1.6mL\nE15-16 embryo 4d 4mL\nE18 head 4d 4mL\nAdult organ 4d 1.6mL\nAdult brain:\nhindbrain + cerebellum 3d 1.6mL\ncut hemisphere 5d 1.6mL\nWhole brain 7d 4.5mL",
+          "sha256": "082e5c1774ac1f37d0552d3352f496fc182522c8e6e2b1f2bef978139de15ca5",
+          "page": 1
+        },
+        {
+          "id": "collection",
+          "start": 996,
+          "end": 1556,
+          "quote": "Sample Collection\nEmbryo:\n1. Collect E10.5-E16.5 mouse embryos in ice-cold Leibovitz L-15 or PBS.\n2. Keep on ice for 5min to drain blood from umbilical cord.\n3. Fix in 1xPBS/4%PFA at 4°c, o/n with shaking.\n4. Fix at room temperature (RT) 1h (optional).\n5. Wash in PBS with shaking: RT 30min x 3times.\nAdult:\n1. Anesthetize the mouse.\n2. Perfuse with 20mL PBS.\n3. Perfuse with 20mL 4%PFA/PBS.\n4. Dissect the brain/organ and trim to the appropriate size.\n5. Fix in 1xPBS/4%PFA at 4°c, o/n with shaking, then RT 1h.\n6. Wash in PBS with shaking: RT 30min x 3times.",
+          "sha256": "42ed3ee9acbcb5694c5d394977de7f6075fe27beaf7d82a8610891000c902472",
+          "page": 2
+        },
+        {
+          "id": "methanol-pretreatment",
+          "start": 1557,
+          "end": 2234,
+          "quote": "Sample Pretreatment with Methanol\nBefore staining make sure antibodies are compatible with methanol\npretreatment. Instruction on how to do so are listed on the last page.\n1. Dehydrate with methanol/H2O series: 20%, 40%, 60%, 80%, 100%; 1h each.\n2. Wash further with 100% methanol for 1h and then chill the sample at 4°c.\n3. Overnight incubation, with shaking, in 66% DCM / 33% Methanol at RT\n4. Wash twice in 100% Methanol at RT, and then chill the sample at 4°c\n5. Bleach in chilled fresh 5%H2O2 in methanol (1 volume 30% H2O2 to 5 volumes\nMeOH), overnight at 4°c.\n6. Rehydrate with methanol/H2O series: 80%, 60%, 40%, 20%, PBS; 1h each at RT.\n7. Wash in PTx.2 RT 1h x2 at RT.",
+          "sha256": "8ea6ea621124f50050c1917132835cc1475ed866eebf8e7c106c5a8209c9e087",
+          "page": 2
+        },
+        {
+          "id": "alternative-pretreatment",
+          "start": 2235,
+          "end": 2514,
+          "quote": "Alternative Pretreatment (<1mm (adult) or embryos only)\n1. Wash fixed samples in PTx.2, RT 1h x2.\n2. Incubate in 1xPBS/0.2%TritonX-100/20%DMSO, 37°C, o/n.\n3. Incubate in 1xPBS/0.1%Tween-20/0.1%TritonX-\n100/0.1%Deoxycholate/0.1%NP40/20%DMSO, 37°C o/n.\n4. Wash in PTx.2, RT 1h x 2.",
+          "sha256": "e43114397e94f61829c237eefc337a28ea8f758371b1e1185c94a613dc453ab0",
+          "page": 2
+        },
+        {
+          "id": "immunolabeling",
+          "start": 2515,
+          "end": 2921,
+          "quote": "Immunolabeling\n1. Incubate samples in Permeabilization Solution, 37°C 𝐧\n2 days (max. 2 days)\n2. Block in Blocking Solution, 37 °, 𝐧\n2 days (max. 2 days).\n3. Incubate with primary antibody in PTwH/5%DMSO/3% Donkey Serum, 37°, n days.\n4. Wash in PTwH for 4-5 times until the next day.\n5. Incubate with secondary antibody in PTwH/3% Donkey Serum, 37°, n days.\n6. Wash in PTwH for 4-5 times until the next day.",
+          "sha256": "94cd8e26c7967bd646740d7a28dc6bbdd1f636fa7cc43ee084c9a2bf131473f1",
+          "page": 2
+        },
+        {
+          "id": "collection-labeling-sidebars",
+          "start": 2922,
+          "end": 3252,
+          "quote": "Can store in\nPBS with .02%\nNaN3 at 4°.\nCan store in\nPBS with .02%\nNaN3 at 4°.\nPerform all\nsteps in closed\ntubes. Fully fill\ntubes to prevent\noxidation\nCentrifuging\nsecondary\nantibody solution at\n20000g for 10\nminutes can prevent\nformation of\nprecipitates in the\nsample.\nAlternatively, you can\nsyringe-filter the\nsolution at 0.2µm.",
+          "sha256": "fdd009843ee4a15e53556d6c57750c17b7ce1fa91653fa0f1166b4c49b126e02",
+          "page": 2
+        },
+        {
+          "id": "clear-dehydrate",
+          "start": 3293,
+          "end": 3431,
+          "quote": "1. Dehydrate in methanol/H2O series: 20%, 40%, 60%, 80%, 100%, 100%; 1hr each at\nRT. Can be left optionally overnight at RT at this point.",
+          "sha256": "4722c9b34c35247aba79dfb9bbfe8477b339086bc6ab0187781822995a6b950b",
+          "page": 3
+        },
+        {
+          "id": "clear-mixture",
+          "start": 3432,
+          "end": 3495,
+          "quote": "2. 3H incubation, with shaking, in 66% DCM / 33% Methanol at RT",
+          "sha256": "c333b35de768d62f4e28d780316eaa761abb4cb18d30a33731f2d1701cf399c3",
+          "page": 3
+        },
+        {
+          "id": "clear-dcm",
+          "start": 3496,
+          "end": 3593,
+          "quote": "3. Incubate in 100% DCM (Sigma 270997-12X100ML) 15 minutes twice (with shaking)\nto wash the MeOH.",
+          "sha256": "67331e32023ca9d40334dcf1dafde5abb62aa314b3bf7000102d3cab78aaaf1d",
+          "page": 3
+        },
+        {
+          "id": "clear-dbe",
+          "start": 3594,
+          "end": 3840,
+          "quote": "4. Incubate in DiBenzyl Ether (DBE, Sigma 108014-1KG) (no shaking). The tube should\nbe filled almost completely with DBE to prevent the air from oxidizing the sample.\nBefore imaging, invert the tube a couple of time to finish mixing the solution.",
+          "sha256": "1cf445db2859fab2bd1f0bdf4b2cfa3c36cfa47bf4b8d886eb0feeaf0d3b4768",
+          "page": 3
+        },
+        {
+          "id": "imaging-lightsheet",
+          "start": 3849,
+          "end": 4153,
+          "quote": "Light sheet microscope\nThe use of a light sheet microscope (e.g. LaVision Biotec.) is recommended. The sample\nis ready to be directly imaged in the microscope chamber filled with DBE. Light sheet\nallows fast imaging of a large field of view, with very deep optical penetration and\nlimited photobleaching.",
+          "sha256": "e8939804d22f6345ed0c79ecedb51f422b5f0f27475a8e255f4de207a44b16a1",
+          "page": 3
+        },
+        {
+          "id": "imaging-scanning",
+          "start": 4154,
+          "end": 5074,
+          "quote": "Scanning microscope (confocal or 2-photon)\nUpright confocal and 2-photon microscopes can image the sample with a depth up to\nthe working distance of the objective at high resolution. A chamber has to be built to\nconfine the DBE and protect the microscope. To build an imaging chamber:\n1. The chamber (Script provided at iDISCO.info) can be 3D printed with Visijet M3\nCrystal resin, which is resistant to DBE.\n2. Secure the chamber to the microscope slide with Kwik-sil epoxy (VWR). This epoxy\ndoes not permanently bond so that sample and spacers can be recovered after\nimaging. Make sure there are no gaps that the DBE can leak through.\n3. Place a drop of epoxy in the center of the chamber and place sample on drop.\n4. Close the chamber by gluing a coverslip to the spacer with the epoxy. Do not glue\nover filling inlet.\n5. Fill the chamber with DBE with a pipet through the filling inlet.\n6. Plug the inlet with epoxy.",
+          "sha256": "567d17d148977282ce251122d9e48e829942e343c729fdb05233a372e024d674",
+          "page": 3
+        },
+        {
+          "id": "clearing-sidebar",
+          "start": 5121,
+          "end": 5246,
+          "quote": "Read the\nsafety data\nsheet (MSDS) for the\nuse of DCM and DBE.\nIncubations and\nstorage can be done\nin plastic Eppendorf\ntubes.",
+          "sha256": "3f4ceb0c2aeca51be0d9c78632a6e1594fb842e1061fc6566bb128b36de96c04",
+          "page": 3
+        },
+        {
+          "id": "chamber-alternative",
+          "start": 5247,
+          "end": 5453,
+          "quote": "A chamber\ncan also be\nbuilt up using dental\nepoxy if access to a\n3D printer in not\navailable. Also,\nonline 3D printing\nservices can provide\na good alternative.\nhttp://www.3dhubs.\ncom is a good way to\nstart.",
+          "sha256": "49d0e9920da0d50b716ad4511f49af2bbd5a46ae767b71d4a02c77a150f528c4",
+          "page": 3
+        },
+        {
+          "id": "antibody-validation",
+          "start": 5485,
+          "end": 6246,
+          "quote": "Antibody validation\nTo assess the methanol compatibility of untested antibodies, we recommend doing the\nfollowing:\n1. Collect 20µm frozen sections of the PFA fixed tissue of interest on superfrost slides.\nFloating vibratome sections also work.\n2. Incubate the sections for 3h at least in 100% methanol at room temperature\n3. Rehydrate in PBS directly and proceed with the immunostaining normally. Use non\nmethanol treated slides as a positive control.\nIf the antibody yields a good signal to noise ratio, the antibody is then compatible with\nthe methanol treatment and should work in whole-mount. If the signal is strongly\ndiminished after the methanol treatment, one can use the non-methanol protocol, or\ntest alternative antibodies against the target protein.",
+          "sha256": "60ff5c75c2fa65b8bf0f30c75b7987c5fcfadb3bee6029acf622a7b95980e7b0",
+          "page": 4
+        },
+        {
+          "id": "antibody-choice",
+          "start": 6247,
+          "end": 7511,
+          "quote": "Antibody Concentration and Choice\nAntibody concentration is the most important parameter to optimize for a successful\nstaining.\n• If you notice a “ring” background around the edges of the sample, the antibody\nis causing a non-specific staining, indicating that the concentration is too high.\nThis will also cause poor diffusion. Reduce the concentration.\n• If you don’t have any staining deep in the sample AND don’t have a ring\nbackground, the antibody is depleted by the antigens and the concentration\nshould be increased. If increasing the concentration leads to the formation of a\nring background, or is not economically viable, another reference should be\nused, or the antigen is too concentrated for whole-mount labeling.\n• If you have a weak staining at the center, but still visible, the incubation time\nshould be increased.\n• Never use antibodies raised in mouse on mouse tissue, as the secondary IgGs\nwill bind to the endogenous mouse IgG in the vasculature.\n• It is very often a good investment to spend time screening antibodies from\ndifferent vendors for a given antigen. Not all antibodies are made equal!\n• Secondary antibody concentrations are less critical, but concentrations should\nbe within the same range as for the primary IgG concentrations.",
+          "sha256": "2f9b81a74256ef4771a4271b421f6691c18df02747fc2a452dfd78762b0b80c3",
+          "page": 4
+        },
+        {
+          "id": "reagent-quality",
+          "start": 7666,
+          "end": 7955,
+          "quote": "Reagents list\nWe use the following reagents for iDISCO+. Most reagents may be replaced by similar products from\nother vendors, but those replacement should be carefully considered. It is critical to use very high\nquality organic solvents to prevent oxidation of the sample during clearing.",
+          "sha256": "19dd7ada03369c06018708788b388798165f3e4c9e70da2d12de3b61b4b7870d",
+          "page": 5
+        },
+        {
+          "id": "reagents",
+          "start": 7956,
+          "end": 8615,
+          "quote": "We use double distilled water (MilliQ system).\nReagent Reference\nPBS 10X Ambion AM9624\nTriton-X100 Sigma X100-500ML\nTween-20 Sigma P9416-100ML\nDMSO Fisher D128-4\nSodium Azide 58032-100G\nDonkey Serum Jackson Immunoresearch 017-000-121\nGlycine Sigma G7126-500G\nHeparin Sigma H3393-50KU\nMethanol Fisher A412SK-4\nHydrogen Peroxide 30% Sigma 216763-100ML\nDiChloroMethane Sigma 270997-12X100ML\nDiBenzylEther Sigma 108014-1KG or 3KG\nParaFormAldehyde 16% EMS 15710-S\nConsumables and hardware\nReagent Reference\nTubes (small samples) Eppendorf 2mL\nTubes (large samples) Eppendorf 5mL\nOrbital shaker VWR nutating mixer\nHybridization oven VWR 5420\nWith carousel 47746-112",
+          "sha256": "693fc74fd5c5abab6c550b0c63242d4af9df6d801c9c81bf7c829233e3978735",
+          "page": 5
+        }
+      ],
+      "applicability": {
+        "protocol": "iDISCO+"
+      },
+      "scope_support": {
+        "protocol": {
+          "kind": "EXPLICIT",
+          "raw_value": "iDISCO+",
+          "transform": "IDENTITY",
+          "spans": [
+            {
+              "start": 30,
+              "end": 37,
+              "quote": "iDISCO+"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "requirements": [
+    {
+      "id": "KEY_REAGENTS",
+      "kind": "COMPLETENESS",
+      "necessary": true,
+      "text": "Report 关键试剂 as explicitly requested; presence does not establish scientific correctness.",
+      "reference_role": "CONSTRAINT",
+      "scope": "GLOBAL",
+      "evidence_ids": [],
+      "question_span": {
+        "start": 299,
+        "end": 303,
+        "quote": "关键试剂"
+      }
+    },
+    {
+      "id": "KEY_CONDITIONS",
+      "kind": "COMPLETENESS",
+      "necessary": true,
+      "text": "Report 条件 as explicitly requested; presence does not establish scientific correctness.",
+      "reference_role": "CONSTRAINT",
+      "scope": "GLOBAL",
+      "evidence_ids": [],
+      "question_span": {
+        "start": 304,
+        "end": 306,
+        "quote": "条件"
+      }
+    },
+    {
+      "id": "KEY_TIMES",
+      "kind": "COMPLETENESS",
+      "necessary": true,
+      "text": "Report 时间 as explicitly requested; presence does not establish scientific correctness.",
+      "reference_role": "CONSTRAINT",
+      "scope": "GLOBAL",
+      "evidence_ids": [],
+      "question_span": {
+        "start": 307,
+        "end": 309,
+        "quote": "时间"
+      }
+    }
+  ],
+  "fixed_requirements": [
+    {
+      "id": "KEY_REAGENTS",
+      "kind": "COMPLETENESS",
+      "necessary": true,
+      "text": "Report 关键试剂 as explicitly requested; presence does not establish scientific correctness.",
+      "reference_role": "CONSTRAINT",
+      "scope": "GLOBAL",
+      "evidence_ids": [],
+      "question_span": {
+        "start": 299,
+        "end": 303,
+        "quote": "关键试剂"
+      }
+    },
+    {
+      "id": "KEY_CONDITIONS",
+      "kind": "COMPLETENESS",
+      "necessary": true,
+      "text": "Report 条件 as explicitly requested; presence does not establish scientific correctness.",
+      "reference_role": "CONSTRAINT",
+      "scope": "GLOBAL",
+      "evidence_ids": [],
+      "question_span": {
+        "start": 304,
+        "end": 306,
+        "quote": "条件"
+      }
+    },
+    {
+      "id": "KEY_TIMES",
+      "kind": "COMPLETENESS",
+      "necessary": true,
+      "text": "Report 时间 as explicitly requested; presence does not establish scientific correctness.",
+      "reference_role": "CONSTRAINT",
+      "scope": "GLOBAL",
+      "evidence_ids": [],
+      "question_span": {
+        "start": 307,
+        "end": 309,
+        "quote": "时间"
+      }
+    }
+  ],
+  "formula": null,
+  "sr_inventory": {
+    "schema_version": "route-required-stage-inventory-v1",
+    "status": "frozen_development",
+    "inventory_id": "q13-idisco-dec2016-atomic-clearing-v1",
+    "route_id": "main",
+    "reference_id": "idisco-dec2016-atomic-clearing-v1",
+    "reference_status": "PUBLISHED_REPORTED_INSTANCE_CANDIDATE_NOT_EXPERT_GOLD",
+    "sources": [
+      {
+        "source_id": "idisco-dec2016-full",
+        "locator": "https://idisco.info/wp-content/uploads/2015/04/whole-mount-staining-bench-protocol-methanol-dec-2016.pdf#page=3"
+      }
+    ],
+    "reference_steps": [
+      {
+        "reference_step_id": "REF-c-1.01",
+        "text": "Dehydrate in 20% methanol/H2O. (Temperature: RT) (Time: 1hr)",
+        "text_origin": "DERIVED",
+        "source_ids": [
+          "idisco-dec2016-full"
+        ],
+        "passage_ids": {
+          "idisco-dec2016-full": [
+            "protocol-title",
+            "clear-dehydrate"
+          ]
+        },
+        "applicability": {
+          "protocol": "iDISCO+"
+        },
+        "reference_role": "REPORTED_INSTANCE",
+        "stage_id": "dehydration",
+        "protocol_id": "idisco-plus-dec2016",
+        "aliases": [],
+        "suboperations_note": "Source-explicit treatment expanded from cited paragraph; normalized wording is not a literal quotation.",
+        "atomic_expansion": {
+          "version": "idisco-dec2016-atomic-occurrence-v1-diagnostic",
+          "parent_reference_step_id": "dehydration",
+          "occurrence_index": 1,
+          "occurrence_count": 6,
+          "comparison_phase": "clearing",
+          "group_parameters": {
+            "optional_after_series": "Can be left optionally overnight at RT at this point.",
+            "scope": "AFTER_SERIES_NOT_EACH_OCCURRENCE"
+          },
+          "source": {
+            "start": 3293,
+            "end": 3432,
+            "quote": "1. Dehydrate in methanol/H2O series: 20%, 40%, 60%, 80%, 100%, 100%; 1hr each at\nRT. Can be left optionally overnight at RT at this point.",
+            "page": 3,
+            "url": "https://idisco.info/wp-content/uploads/2015/04/whole-mount-staining-bench-protocol-methanol-dec-2016.pdf",
+            "text_sha256": "fb3f5c351901f4af86c466ccc70207c41004ba6dd8e2733343fd6af7e7428162"
+          }
+        }
+      },
+      {
+        "reference_step_id": "REF-c-1.02",
+        "text": "Dehydrate in 40% methanol/H2O. (Temperature: RT) (Time: 1hr)",
+        "text_origin": "DERIVED",
+        "source_ids": [
+          "idisco-dec2016-full"
+        ],
+        "passage_ids": {
+          "idisco-dec2016-full": [
+            "protocol-title",
+            "clear-dehydrate"
+          ]
+        },
+        "applicability": {
+          "protocol": "iDISCO+"
+        },
+        "reference_role": "REPORTED_INSTANCE",
+        "stage_id": "dehydration",
+        "protocol_id": "idisco-plus-dec2016",
+        "aliases": [],
+        "suboperations_note": "Source-explicit treatment expanded from cited paragraph; normalized wording is not a literal quotation.",
+        "atomic_expansion": {
+          "version": "idisco-dec2016-atomic-occurrence-v1-diagnostic",
+          "parent_reference_step_id": "dehydration",
+          "occurrence_index": 2,
+          "occurrence_count": 6,
+          "comparison_phase": "clearing",
+          "group_parameters": {
+            "optional_after_series": "Can be left optionally overnight at RT at this point.",
+            "scope": "AFTER_SERIES_NOT_EACH_OCCURRENCE"
+          },
+          "source": {
+            "start": 3293,
+            "end": 3432,
+            "quote": "1. Dehydrate in methanol/H2O series: 20%, 40%, 60%, 80%, 100%, 100%; 1hr each at\nRT. Can be left optionally overnight at RT at this point.",
+            "page": 3,
+            "url": "https://idisco.info/wp-content/uploads/2015/04/whole-mount-staining-bench-protocol-methanol-dec-2016.pdf",
+            "text_sha256": "fb3f5c351901f4af86c466ccc70207c41004ba6dd8e2733343fd6af7e7428162"
+          }
+        }
+      },
+      {
+        "reference_step_id": "REF-c-1.03",
+        "text": "Dehydrate in 60% methanol/H2O. (Temperature: RT) (Time: 1hr)",
+        "text_origin": "DERIVED",
+        "source_ids": [
+          "idisco-dec2016-full"
+        ],
+        "passage_ids": {
+          "idisco-dec2016-full": [
+            "protocol-title",
+            "clear-dehydrate"
+          ]
+        },
+        "applicability": {
+          "protocol": "iDISCO+"
+        },
+        "reference_role": "REPORTED_INSTANCE",
+        "stage_id": "dehydration",
+        "protocol_id": "idisco-plus-dec2016",
+        "aliases": [],
+        "suboperations_note": "Source-explicit treatment expanded from cited paragraph; normalized wording is not a literal quotation.",
+        "atomic_expansion": {
+          "version": "idisco-dec2016-atomic-occurrence-v1-diagnostic",
+          "parent_reference_step_id": "dehydration",
+          "occurrence_index": 3,
+          "occurrence_count": 6,
+          "comparison_phase": "clearing",
+          "group_parameters": {
+            "optional_after_series": "Can be left optionally overnight at RT at this point.",
+            "scope": "AFTER_SERIES_NOT_EACH_OCCURRENCE"
+          },
+          "source": {
+            "start": 3293,
+            "end": 3432,
+            "quote": "1. Dehydrate in methanol/H2O series: 20%, 40%, 60%, 80%, 100%, 100%; 1hr each at\nRT. Can be left optionally overnight at RT at this point.",
+            "page": 3,
+            "url": "https://idisco.info/wp-content/uploads/2015/04/whole-mount-staining-bench-protocol-methanol-dec-2016.pdf",
+            "text_sha256": "fb3f5c351901f4af86c466ccc70207c41004ba6dd8e2733343fd6af7e7428162"
+          }
+        }
+      },
+      {
+        "reference_step_id": "REF-c-1.04",
+        "text": "Dehydrate in 80% methanol/H2O. (Temperature: RT) (Time: 1hr)",
+        "text_origin": "DERIVED",
+        "source_ids": [
+          "idisco-dec2016-full"
+        ],
+        "passage_ids": {
+          "idisco-dec2016-full": [
+            "protocol-title",
+            "clear-dehydrate"
+          ]
+        },
+        "applicability": {
+          "protocol": "iDISCO+"
+        },
+        "reference_role": "REPORTED_INSTANCE",
+        "stage_id": "dehydration",
+        "protocol_id": "idisco-plus-dec2016",
+        "aliases": [],
+        "suboperations_note": "Source-explicit treatment expanded from cited paragraph; normalized wording is not a literal quotation.",
+        "atomic_expansion": {
+          "version": "idisco-dec2016-atomic-occurrence-v1-diagnostic",
+          "parent_reference_step_id": "dehydration",
+          "occurrence_index": 4,
+          "occurrence_count": 6,
+          "comparison_phase": "clearing",
+          "group_parameters": {
+            "optional_after_series": "Can be left optionally overnight at RT at this point.",
+            "scope": "AFTER_SERIES_NOT_EACH_OCCURRENCE"
+          },
+          "source": {
+            "start": 3293,
+            "end": 3432,
+            "quote": "1. Dehydrate in methanol/H2O series: 20%, 40%, 60%, 80%, 100%, 100%; 1hr each at\nRT. Can be left optionally overnight at RT at this point.",
+            "page": 3,
+            "url": "https://idisco.info/wp-content/uploads/2015/04/whole-mount-staining-bench-protocol-methanol-dec-2016.pdf",
+            "text_sha256": "fb3f5c351901f4af86c466ccc70207c41004ba6dd8e2733343fd6af7e7428162"
+          }
+        }
+      },
+      {
+        "reference_step_id": "REF-c-1.05",
+        "text": "Dehydrate in 100% methanol/H2O. (Temperature: RT) (Time: 1hr)",
+        "text_origin": "DERIVED",
+        "source_ids": [
+          "idisco-dec2016-full"
+        ],
+        "passage_ids": {
+          "idisco-dec2016-full": [
+            "protocol-title",
+            "clear-dehydrate"
+          ]
+        },
+        "applicability": {
+          "protocol": "iDISCO+"
+        },
+        "reference_role": "REPORTED_INSTANCE",
+        "stage_id": "dehydration",
+        "protocol_id": "idisco-plus-dec2016",
+        "aliases": [],
+        "suboperations_note": "Source-explicit treatment expanded from cited paragraph; normalized wording is not a literal quotation.",
+        "atomic_expansion": {
+          "version": "idisco-dec2016-atomic-occurrence-v1-diagnostic",
+          "parent_reference_step_id": "dehydration",
+          "occurrence_index": 5,
+          "occurrence_count": 6,
+          "comparison_phase": "clearing",
+          "group_parameters": {
+            "optional_after_series": "Can be left optionally overnight at RT at this point.",
+            "scope": "AFTER_SERIES_NOT_EACH_OCCURRENCE"
+          },
+          "source": {
+            "start": 3293,
+            "end": 3432,
+            "quote": "1. Dehydrate in methanol/H2O series: 20%, 40%, 60%, 80%, 100%, 100%; 1hr each at\nRT. Can be left optionally overnight at RT at this point.",
+            "page": 3,
+            "url": "https://idisco.info/wp-content/uploads/2015/04/whole-mount-staining-bench-protocol-methanol-dec-2016.pdf",
+            "text_sha256": "fb3f5c351901f4af86c466ccc70207c41004ba6dd8e2733343fd6af7e7428162"
+          }
+        }
+      },
+      {
+        "reference_step_id": "REF-c-1.06",
+        "text": "Dehydrate in 100% methanol/H2O. (Temperature: RT) (Time: 1hr)",
+        "text_origin": "DERIVED",
+        "source_ids": [
+          "idisco-dec2016-full"
+        ],
+        "passage_ids": {
+          "idisco-dec2016-full": [
+            "protocol-title",
+            "clear-dehydrate"
+          ]
+        },
+        "applicability": {
+          "protocol": "iDISCO+"
+        },
+        "reference_role": "REPORTED_INSTANCE",
+        "stage_id": "dehydration",
+        "protocol_id": "idisco-plus-dec2016",
+        "aliases": [],
+        "suboperations_note": "Source-explicit treatment expanded from cited paragraph; normalized wording is not a literal quotation.",
+        "atomic_expansion": {
+          "version": "idisco-dec2016-atomic-occurrence-v1-diagnostic",
+          "parent_reference_step_id": "dehydration",
+          "occurrence_index": 6,
+          "occurrence_count": 6,
+          "comparison_phase": "clearing",
+          "group_parameters": {
+            "optional_after_series": "Can be left optionally overnight at RT at this point.",
+            "scope": "AFTER_SERIES_NOT_EACH_OCCURRENCE"
+          },
+          "source": {
+            "start": 3293,
+            "end": 3432,
+            "quote": "1. Dehydrate in methanol/H2O series: 20%, 40%, 60%, 80%, 100%, 100%; 1hr each at\nRT. Can be left optionally overnight at RT at this point.",
+            "page": 3,
+            "url": "https://idisco.info/wp-content/uploads/2015/04/whole-mount-staining-bench-protocol-methanol-dec-2016.pdf",
+            "text_sha256": "fb3f5c351901f4af86c466ccc70207c41004ba6dd8e2733343fd6af7e7428162"
+          }
+        }
+      },
+      {
+        "reference_step_id": "REF-c-2.01",
+        "text": "Incubate in 66% DCM / 33% Methanol with shaking. (Temperature: RT) (Time: 3H)",
+        "text_origin": "DERIVED",
+        "source_ids": [
+          "idisco-dec2016-full"
+        ],
+        "passage_ids": {
+          "idisco-dec2016-full": [
+            "protocol-title",
+            "clear-mixture"
+          ]
+        },
+        "applicability": {
+          "protocol": "iDISCO+"
+        },
+        "reference_role": "REPORTED_INSTANCE",
+        "stage_id": "solvent-exchange",
+        "protocol_id": "idisco-plus-dec2016",
+        "aliases": [
+          "DCM/methanol"
+        ],
+        "suboperations_note": "Source-explicit treatment expanded from cited paragraph; normalized wording is not a literal quotation.",
+        "atomic_expansion": {
+          "version": "idisco-dec2016-atomic-occurrence-v1-diagnostic",
+          "parent_reference_step_id": "mixed-solvent",
+          "occurrence_index": 1,
+          "occurrence_count": 1,
+          "comparison_phase": "clearing",
+          "group_parameters": {},
+          "source": {
+            "start": 3432,
+            "end": 3496,
+            "quote": "2. 3H incubation, with shaking, in 66% DCM / 33% Methanol at RT",
+            "page": 3,
+            "url": "https://idisco.info/wp-content/uploads/2015/04/whole-mount-staining-bench-protocol-methanol-dec-2016.pdf",
+            "text_sha256": "fb3f5c351901f4af86c466ccc70207c41004ba6dd8e2733343fd6af7e7428162"
+          }
+        }
+      },
+      {
+        "reference_step_id": "REF-c-3.01",
+        "text": "Incubate in 100% DCM with shaking to wash the MeOH. (Time: 15 minutes)",
+        "text_origin": "DERIVED",
+        "source_ids": [
+          "idisco-dec2016-full"
+        ],
+        "passage_ids": {
+          "idisco-dec2016-full": [
+            "protocol-title",
+            "clear-dcm"
+          ]
+        },
+        "applicability": {
+          "protocol": "iDISCO+"
+        },
+        "reference_role": "REPORTED_INSTANCE",
+        "stage_id": "solvent-exchange",
+        "protocol_id": "idisco-plus-dec2016",
+        "aliases": [
+          "DiChloroMethane",
+          "DCM"
+        ],
+        "suboperations_note": "Source-explicit treatment expanded from cited paragraph; normalized wording is not a literal quotation.",
+        "atomic_expansion": {
+          "version": "idisco-dec2016-atomic-occurrence-v1-diagnostic",
+          "parent_reference_step_id": "dcm-wash",
+          "occurrence_index": 1,
+          "occurrence_count": 2,
+          "comparison_phase": "clearing",
+          "group_parameters": {},
+          "source": {
+            "start": 3496,
+            "end": 3594,
+            "quote": "3. Incubate in 100% DCM (Sigma 270997-12X100ML) 15 minutes twice (with shaking)\nto wash the MeOH.",
+            "page": 3,
+            "url": "https://idisco.info/wp-content/uploads/2015/04/whole-mount-staining-bench-protocol-methanol-dec-2016.pdf",
+            "text_sha256": "fb3f5c351901f4af86c466ccc70207c41004ba6dd8e2733343fd6af7e7428162"
+          }
+        }
+      },
+      {
+        "reference_step_id": "REF-c-3.02",
+        "text": "Incubate in 100% DCM with shaking to wash the MeOH. (Time: 15 minutes)",
+        "text_origin": "DERIVED",
+        "source_ids": [
+          "idisco-dec2016-full"
+        ],
+        "passage_ids": {
+          "idisco-dec2016-full": [
+            "protocol-title",
+            "clear-dcm"
+          ]
+        },
+        "applicability": {
+          "protocol": "iDISCO+"
+        },
+        "reference_role": "REPORTED_INSTANCE",
+        "stage_id": "solvent-exchange",
+        "protocol_id": "idisco-plus-dec2016",
+        "aliases": [
+          "DiChloroMethane",
+          "DCM"
+        ],
+        "suboperations_note": "Source-explicit treatment expanded from cited paragraph; normalized wording is not a literal quotation.",
+        "atomic_expansion": {
+          "version": "idisco-dec2016-atomic-occurrence-v1-diagnostic",
+          "parent_reference_step_id": "dcm-wash",
+          "occurrence_index": 2,
+          "occurrence_count": 2,
+          "comparison_phase": "clearing",
+          "group_parameters": {},
+          "source": {
+            "start": 3496,
+            "end": 3594,
+            "quote": "3. Incubate in 100% DCM (Sigma 270997-12X100ML) 15 minutes twice (with shaking)\nto wash the MeOH.",
+            "page": 3,
+            "url": "https://idisco.info/wp-content/uploads/2015/04/whole-mount-staining-bench-protocol-methanol-dec-2016.pdf",
+            "text_sha256": "fb3f5c351901f4af86c466ccc70207c41004ba6dd8e2733343fd6af7e7428162"
+          }
+        }
+      },
+      {
+        "reference_step_id": "REF-c-4.01",
+        "text": "Incubate in DiBenzyl Ether (DBE) without shaking.",
+        "text_origin": "DERIVED",
+        "source_ids": [
+          "idisco-dec2016-full"
+        ],
+        "passage_ids": {
+          "idisco-dec2016-full": [
+            "protocol-title",
+            "clear-dbe"
+          ]
+        },
+        "applicability": {
+          "protocol": "iDISCO+"
+        },
+        "reference_role": "REPORTED_INSTANCE",
+        "stage_id": "ri-and-preimaging",
+        "protocol_id": "idisco-plus-dec2016",
+        "aliases": [
+          "DiBenzyl Ether",
+          "DBE",
+          "RI matching"
+        ],
+        "suboperations_note": "Source-explicit treatment expanded from cited paragraph; normalized wording is not a literal quotation.",
+        "atomic_expansion": {
+          "version": "idisco-dec2016-atomic-occurrence-v1-diagnostic",
+          "parent_reference_step_id": "dbe-equilibration",
+          "occurrence_index": 1,
+          "occurrence_count": 1,
+          "comparison_phase": "ri_matching_storage",
+          "group_parameters": {},
+          "source": {
+            "start": 3594,
+            "end": 3840,
+            "quote": "4. Incubate in DiBenzyl Ether (DBE, Sigma 108014-1KG) (no shaking). The tube should\nbe filled almost completely with DBE to prevent the air from oxidizing the sample.\nBefore imaging, invert the tube a couple of time to finish mixing the solution.",
+            "page": 3,
+            "url": "https://idisco.info/wp-content/uploads/2015/04/whole-mount-staining-bench-protocol-methanol-dec-2016.pdf",
+            "text_sha256": "fb3f5c351901f4af86c466ccc70207c41004ba6dd8e2733343fd6af7e7428162"
+          }
+        }
+      }
+    ],
+    "required_stages": [
+      {
+        "stage_id": "dehydration",
+        "reference_step_ids": [
+          "REF-c-1.01",
+          "REF-c-1.02",
+          "REF-c-1.03",
+          "REF-c-1.04",
+          "REF-c-1.05",
+          "REF-c-1.06"
+        ],
+        "source_ids": [
+          "idisco-dec2016-full"
+        ],
+        "passage_ids": {
+          "idisco-dec2016-full": [
+            "protocol-title",
+            "clear-dehydrate"
+          ]
+        },
+        "applicability": {
+          "protocol": "iDISCO+"
+        },
+        "reference_role": "REPORTED_INSTANCE",
+        "necessity_certified": false
+      },
+      {
+        "stage_id": "solvent-exchange",
+        "reference_step_ids": [
+          "REF-c-2.01",
+          "REF-c-3.01",
+          "REF-c-3.02"
+        ],
+        "source_ids": [
+          "idisco-dec2016-full"
+        ],
+        "passage_ids": {
+          "idisco-dec2016-full": [
+            "protocol-title",
+            "clear-mixture",
+            "clear-dcm"
+          ]
+        },
+        "applicability": {
+          "protocol": "iDISCO+"
+        },
+        "reference_role": "REPORTED_INSTANCE",
+        "necessity_certified": false
+      },
+      {
+        "stage_id": "ri-and-preimaging",
+        "reference_step_ids": [
+          "REF-c-4.01"
+        ],
+        "source_ids": [
+          "idisco-dec2016-full"
+        ],
+        "passage_ids": {
+          "idisco-dec2016-full": [
+            "protocol-title",
+            "clear-dbe"
+          ]
+        },
+        "applicability": {
+          "protocol": "iDISCO+"
+        },
+        "reference_role": "REPORTED_INSTANCE",
+        "necessity_certified": false
+      }
+    ],
+    "required_transitions": [],
+    "coverage_scope": "Requested clearing/RI/storage only; atomic occurrence expansion; no mandatory immunolabeling execution.",
+    "storage_context_passages": [
+      "clearing-sidebar",
+      "clear-dbe"
+    ],
+    "storage_limits": "No fixed DBE incubation duration, DBE storage duration or DBE storage temperature reported here. PBS/NaN3 storage sidebar on page 2 applies to collection, not DBE storage."
+  },
+  "correctness_checks": {
+    "co_order": [],
+    "co_method": [],
+    "co_param": [],
+    "co_chem": []
+  },
+  "parameter_requirements": [
+    "KEY_REAGENTS",
+    "KEY_CONDITIONS",
+    "KEY_TIMES"
+  ],
+  "submetrics": {},
+  "evidence_audit": {
+    "idisco-dec2016-full": {
+      "status": "BOUND",
+      "identity": true,
+      "fulltext": true,
+      "source_sha256": "fb3f5c351901f4af86c466ccc70207c41004ba6dd8e2733343fd6af7e7428162",
+      "source_version": "December 2016",
+      "passages": {
+        "protocol-title": {
+          "start": 30,
+          "end": 46,
+          "quote": "iDISCO+ protocol",
+          "quote_sha256": "2c0fe4734c82251d058bc05cde3be430034f03e143745827a0e7e1b3dbaeef83",
+          "id": "protocol-title"
+        },
+        "sample-guideline": {
+          "start": 47,
+          "end": 169,
+          "quote": "Recommendations for sample handling\nThe following are given as a general guideline and may vary for specific applications.",
+          "quote_sha256": "33e2e30651941c277ae1646c245e4e640bdc00fc23050c012990df2a8ca1b486",
+          "id": "sample-guideline"
+        },
+        "buffers": {
+          "start": 170,
+          "end": 460,
+          "quote": "Buffers\nPTx.2 (1L)\n• 100mL PBS 10X\n• 2mL TritonX-100\nPTwH (1L)\n• 100mL PBS 10X\n• 2mL Tween-20\n• 1mL of 10mg/mL Heparin stock solution\nPermeabilization Solution (500mL)\n• 400mL PTx.2\n• 11.5g of Glycine\n• 100mL of DMSO\nBlocking Solution (50mL)\n• 42mL PTx.2\n• 3mL of Donkey Serum\n• 5mL of DMSO",
+          "quote_sha256": "89e65fdf8b512ce62da2cd7f2400e04d70d36d5c35a2b9083d725120d66be38e",
+          "id": "buffers"
+        },
+        "sample-table": {
+          "start": 461,
+          "end": 737,
+          "quote": "Sample type Incubation time ( n ) Solution volume\nEmbryonic:\nE10-E11 embryo 1d 1.6mL\nE12 embryo 2d 1.6mL\nE13-E14 embryo 3d 1.6mL\nE15-16 embryo 4d 4mL\nE18 head 4d 4mL\nAdult organ 4d 1.6mL\nAdult brain:\nhindbrain + cerebellum 3d 1.6mL\ncut hemisphere 5d 1.6mL\nWhole brain 7d 4.5mL",
+          "quote_sha256": "082e5c1774ac1f37d0552d3352f496fc182522c8e6e2b1f2bef978139de15ca5",
+          "id": "sample-table"
+        },
+        "collection": {
+          "start": 996,
+          "end": 1556,
+          "quote": "Sample Collection\nEmbryo:\n1. Collect E10.5-E16.5 mouse embryos in ice-cold Leibovitz L-15 or PBS.\n2. Keep on ice for 5min to drain blood from umbilical cord.\n3. Fix in 1xPBS/4%PFA at 4°c, o/n with shaking.\n4. Fix at room temperature (RT) 1h (optional).\n5. Wash in PBS with shaking: RT 30min x 3times.\nAdult:\n1. Anesthetize the mouse.\n2. Perfuse with 20mL PBS.\n3. Perfuse with 20mL 4%PFA/PBS.\n4. Dissect the brain/organ and trim to the appropriate size.\n5. Fix in 1xPBS/4%PFA at 4°c, o/n with shaking, then RT 1h.\n6. Wash in PBS with shaking: RT 30min x 3times.",
+          "quote_sha256": "42ed3ee9acbcb5694c5d394977de7f6075fe27beaf7d82a8610891000c902472",
+          "id": "collection"
+        },
+        "methanol-pretreatment": {
+          "start": 1557,
+          "end": 2234,
+          "quote": "Sample Pretreatment with Methanol\nBefore staining make sure antibodies are compatible with methanol\npretreatment. Instruction on how to do so are listed on the last page.\n1. Dehydrate with methanol/H2O series: 20%, 40%, 60%, 80%, 100%; 1h each.\n2. Wash further with 100% methanol for 1h and then chill the sample at 4°c.\n3. Overnight incubation, with shaking, in 66% DCM / 33% Methanol at RT\n4. Wash twice in 100% Methanol at RT, and then chill the sample at 4°c\n5. Bleach in chilled fresh 5%H2O2 in methanol (1 volume 30% H2O2 to 5 volumes\nMeOH), overnight at 4°c.\n6. Rehydrate with methanol/H2O series: 80%, 60%, 40%, 20%, PBS; 1h each at RT.\n7. Wash in PTx.2 RT 1h x2 at RT.",
+          "quote_sha256": "8ea6ea621124f50050c1917132835cc1475ed866eebf8e7c106c5a8209c9e087",
+          "id": "methanol-pretreatment"
+        },
+        "alternative-pretreatment": {
+          "start": 2235,
+          "end": 2514,
+          "quote": "Alternative Pretreatment (<1mm (adult) or embryos only)\n1. Wash fixed samples in PTx.2, RT 1h x2.\n2. Incubate in 1xPBS/0.2%TritonX-100/20%DMSO, 37°C, o/n.\n3. Incubate in 1xPBS/0.1%Tween-20/0.1%TritonX-\n100/0.1%Deoxycholate/0.1%NP40/20%DMSO, 37°C o/n.\n4. Wash in PTx.2, RT 1h x 2.",
+          "quote_sha256": "e43114397e94f61829c237eefc337a28ea8f758371b1e1185c94a613dc453ab0",
+          "id": "alternative-pretreatment"
+        },
+        "immunolabeling": {
+          "start": 2515,
+          "end": 2921,
+          "quote": "Immunolabeling\n1. Incubate samples in Permeabilization Solution, 37°C 𝐧\n2 days (max. 2 days)\n2. Block in Blocking Solution, 37 °, 𝐧\n2 days (max. 2 days).\n3. Incubate with primary antibody in PTwH/5%DMSO/3% Donkey Serum, 37°, n days.\n4. Wash in PTwH for 4-5 times until the next day.\n5. Incubate with secondary antibody in PTwH/3% Donkey Serum, 37°, n days.\n6. Wash in PTwH for 4-5 times until the next day.",
+          "quote_sha256": "94cd8e26c7967bd646740d7a28dc6bbdd1f636fa7cc43ee084c9a2bf131473f1",
+          "id": "immunolabeling"
+        },
+        "collection-labeling-sidebars": {
+          "start": 2922,
+          "end": 3252,
+          "quote": "Can store in\nPBS with .02%\nNaN3 at 4°.\nCan store in\nPBS with .02%\nNaN3 at 4°.\nPerform all\nsteps in closed\ntubes. Fully fill\ntubes to prevent\noxidation\nCentrifuging\nsecondary\nantibody solution at\n20000g for 10\nminutes can prevent\nformation of\nprecipitates in the\nsample.\nAlternatively, you can\nsyringe-filter the\nsolution at 0.2µm.",
+          "quote_sha256": "fdd009843ee4a15e53556d6c57750c17b7ce1fa91653fa0f1166b4c49b126e02",
+          "id": "collection-labeling-sidebars"
+        },
+        "clear-dehydrate": {
+          "start": 3293,
+          "end": 3431,
+          "quote": "1. Dehydrate in methanol/H2O series: 20%, 40%, 60%, 80%, 100%, 100%; 1hr each at\nRT. Can be left optionally overnight at RT at this point.",
+          "quote_sha256": "4722c9b34c35247aba79dfb9bbfe8477b339086bc6ab0187781822995a6b950b",
+          "id": "clear-dehydrate"
+        },
+        "clear-mixture": {
+          "start": 3432,
+          "end": 3495,
+          "quote": "2. 3H incubation, with shaking, in 66% DCM / 33% Methanol at RT",
+          "quote_sha256": "c333b35de768d62f4e28d780316eaa761abb4cb18d30a33731f2d1701cf399c3",
+          "id": "clear-mixture"
+        },
+        "clear-dcm": {
+          "start": 3496,
+          "end": 3593,
+          "quote": "3. Incubate in 100% DCM (Sigma 270997-12X100ML) 15 minutes twice (with shaking)\nto wash the MeOH.",
+          "quote_sha256": "67331e32023ca9d40334dcf1dafde5abb62aa314b3bf7000102d3cab78aaaf1d",
+          "id": "clear-dcm"
+        },
+        "clear-dbe": {
+          "start": 3594,
+          "end": 3840,
+          "quote": "4. Incubate in DiBenzyl Ether (DBE, Sigma 108014-1KG) (no shaking). The tube should\nbe filled almost completely with DBE to prevent the air from oxidizing the sample.\nBefore imaging, invert the tube a couple of time to finish mixing the solution.",
+          "quote_sha256": "1cf445db2859fab2bd1f0bdf4b2cfa3c36cfa47bf4b8d886eb0feeaf0d3b4768",
+          "id": "clear-dbe"
+        },
+        "imaging-lightsheet": {
+          "start": 3849,
+          "end": 4153,
+          "quote": "Light sheet microscope\nThe use of a light sheet microscope (e.g. LaVision Biotec.) is recommended. The sample\nis ready to be directly imaged in the microscope chamber filled with DBE. Light sheet\nallows fast imaging of a large field of view, with very deep optical penetration and\nlimited photobleaching.",
+          "quote_sha256": "e8939804d22f6345ed0c79ecedb51f422b5f0f27475a8e255f4de207a44b16a1",
+          "id": "imaging-lightsheet"
+        },
+        "imaging-scanning": {
+          "start": 4154,
+          "end": 5074,
+          "quote": "Scanning microscope (confocal or 2-photon)\nUpright confocal and 2-photon microscopes can image the sample with a depth up to\nthe working distance of the objective at high resolution. A chamber has to be built to\nconfine the DBE and protect the microscope. To build an imaging chamber:\n1. The chamber (Script provided at iDISCO.info) can be 3D printed with Visijet M3\nCrystal resin, which is resistant to DBE.\n2. Secure the chamber to the microscope slide with Kwik-sil epoxy (VWR). This epoxy\ndoes not permanently bond so that sample and spacers can be recovered after\nimaging. Make sure there are no gaps that the DBE can leak through.\n3. Place a drop of epoxy in the center of the chamber and place sample on drop.\n4. Close the chamber by gluing a coverslip to the spacer with the epoxy. Do not glue\nover filling inlet.\n5. Fill the chamber with DBE with a pipet through the filling inlet.\n6. Plug the inlet with epoxy.",
+          "quote_sha256": "567d17d148977282ce251122d9e48e829942e343c729fdb05233a372e024d674",
+          "id": "imaging-scanning"
+        },
+        "clearing-sidebar": {
+          "start": 5121,
+          "end": 5246,
+          "quote": "Read the\nsafety data\nsheet (MSDS) for the\nuse of DCM and DBE.\nIncubations and\nstorage can be done\nin plastic Eppendorf\ntubes.",
+          "quote_sha256": "3f4ceb0c2aeca51be0d9c78632a6e1594fb842e1061fc6566bb128b36de96c04",
+          "id": "clearing-sidebar"
+        },
+        "chamber-alternative": {
+          "start": 5247,
+          "end": 5453,
+          "quote": "A chamber\ncan also be\nbuilt up using dental\nepoxy if access to a\n3D printer in not\navailable. Also,\nonline 3D printing\nservices can provide\na good alternative.\nhttp://www.3dhubs.\ncom is a good way to\nstart.",
+          "quote_sha256": "49d0e9920da0d50b716ad4511f49af2bbd5a46ae767b71d4a02c77a150f528c4",
+          "id": "chamber-alternative"
+        },
+        "antibody-validation": {
+          "start": 5485,
+          "end": 6246,
+          "quote": "Antibody validation\nTo assess the methanol compatibility of untested antibodies, we recommend doing the\nfollowing:\n1. Collect 20µm frozen sections of the PFA fixed tissue of interest on superfrost slides.\nFloating vibratome sections also work.\n2. Incubate the sections for 3h at least in 100% methanol at room temperature\n3. Rehydrate in PBS directly and proceed with the immunostaining normally. Use non\nmethanol treated slides as a positive control.\nIf the antibody yields a good signal to noise ratio, the antibody is then compatible with\nthe methanol treatment and should work in whole-mount. If the signal is strongly\ndiminished after the methanol treatment, one can use the non-methanol protocol, or\ntest alternative antibodies against the target protein.",
+          "quote_sha256": "60ff5c75c2fa65b8bf0f30c75b7987c5fcfadb3bee6029acf622a7b95980e7b0",
+          "id": "antibody-validation"
+        },
+        "antibody-choice": {
+          "start": 6247,
+          "end": 7511,
+          "quote": "Antibody Concentration and Choice\nAntibody concentration is the most important parameter to optimize for a successful\nstaining.\n• If you notice a “ring” background around the edges of the sample, the antibody\nis causing a non-specific staining, indicating that the concentration is too high.\nThis will also cause poor diffusion. Reduce the concentration.\n• If you don’t have any staining deep in the sample AND don’t have a ring\nbackground, the antibody is depleted by the antigens and the concentration\nshould be increased. If increasing the concentration leads to the formation of a\nring background, or is not economically viable, another reference should be\nused, or the antigen is too concentrated for whole-mount labeling.\n• If you have a weak staining at the center, but still visible, the incubation time\nshould be increased.\n• Never use antibodies raised in mouse on mouse tissue, as the secondary IgGs\nwill bind to the endogenous mouse IgG in the vasculature.\n• It is very often a good investment to spend time screening antibodies from\ndifferent vendors for a given antigen. Not all antibodies are made equal!\n• Secondary antibody concentrations are less critical, but concentrations should\nbe within the same range as for the primary IgG concentrations.",
+          "quote_sha256": "2f9b81a74256ef4771a4271b421f6691c18df02747fc2a452dfd78762b0b80c3",
+          "id": "antibody-choice"
+        },
+        "reagent-quality": {
+          "start": 7666,
+          "end": 7955,
+          "quote": "Reagents list\nWe use the following reagents for iDISCO+. Most reagents may be replaced by similar products from\nother vendors, but those replacement should be carefully considered. It is critical to use very high\nquality organic solvents to prevent oxidation of the sample during clearing.",
+          "quote_sha256": "19dd7ada03369c06018708788b388798165f3e4c9e70da2d12de3b61b4b7870d",
+          "id": "reagent-quality"
+        },
+        "reagents": {
+          "start": 7956,
+          "end": 8615,
+          "quote": "We use double distilled water (MilliQ system).\nReagent Reference\nPBS 10X Ambion AM9624\nTriton-X100 Sigma X100-500ML\nTween-20 Sigma P9416-100ML\nDMSO Fisher D128-4\nSodium Azide 58032-100G\nDonkey Serum Jackson Immunoresearch 017-000-121\nGlycine Sigma G7126-500G\nHeparin Sigma H3393-50KU\nMethanol Fisher A412SK-4\nHydrogen Peroxide 30% Sigma 216763-100ML\nDiChloroMethane Sigma 270997-12X100ML\nDiBenzylEther Sigma 108014-1KG or 3KG\nParaFormAldehyde 16% EMS 15710-S\nConsumables and hardware\nReagent Reference\nTubes (small samples) Eppendorf 2mL\nTubes (large samples) Eppendorf 5mL\nOrbital shaker VWR nutating mixer\nHybridization oven VWR 5420\nWith carousel 47746-112",
+          "quote_sha256": "693fc74fd5c5abab6c550b0c63242d4af9df6d801c9c81bf7c829233e3978735",
+          "id": "reagents"
+        }
+      },
+      "scope_audits": {
+        "protocol": {
+          "kind": "EXPLICIT",
+          "status": "GROUNDED",
+          "spans": [
+            {
+              "start": 30,
+              "end": 37,
+              "quote": "iDISCO+",
+              "quote_sha256": "44a14c2ee1a80204807fac42ee94104d139307dce748109d0b7a5daf46610a6e"
+            }
+          ],
+          "contexts": [
+            {
+              "start": 30,
+              "end": 46,
+              "quote": "iDISCO+ protocol"
+            }
+          ],
+          "raw_value": "iDISCO+",
+          "transform": "IDENTITY",
+          "issues": []
+        }
+      },
+      "guards": [],
+      "publication_status": "CURRENT",
+      "origin_authentication": "SUPPLIED_SNAPSHOT_NOT_INDEPENDENTLY_AUTHENTICATED"
+    }
+  },
+  "requirement_evidence": {
+    "KEY_REAGENTS": {
+      "status": "BOUND",
+      "guards": [],
+      "requirement_ids": [
+        "KEY_REAGENTS"
+      ],
+      "binding_scope": "FIXED_INPUT_BINDING_ONLY_NOT_SCIENTIFIC_CERTIFICATION",
+      "scientific_truth": null
+    },
+    "KEY_CONDITIONS": {
+      "status": "BOUND",
+      "guards": [],
+      "requirement_ids": [
+        "KEY_CONDITIONS"
+      ],
+      "binding_scope": "FIXED_INPUT_BINDING_ONLY_NOT_SCIENTIFIC_CERTIFICATION",
+      "scientific_truth": null
+    },
+    "KEY_TIMES": {
+      "status": "BOUND",
+      "guards": [],
+      "requirement_ids": [
+        "KEY_TIMES"
+      ],
+      "binding_scope": "FIXED_INPUT_BINDING_ONLY_NOT_SCIENTIFIC_CERTIFICATION",
+      "scientific_truth": null
+    }
+  },
+  "evidence_gates": {
+    "c_param": {
+      "status": "BOUND",
+      "guards": [],
+      "requirement_ids": [
+        "KEY_REAGENTS",
+        "KEY_CONDITIONS",
+        "KEY_TIMES"
+      ],
+      "binding_scope": "FIXED_INPUT_BINDING_ONLY_NOT_SCIENTIFIC_CERTIFICATION",
+      "scientific_truth": null
+    },
+    "co_order": {
+      "status": "UNRESOLVED",
+      "guards": [
+        "FIXED_METRIC_REQUIREMENTS_MISSING"
+      ],
+      "requirement_ids": [],
+      "binding_scope": "FIXED_INPUT_BINDING_ONLY_NOT_SCIENTIFIC_CERTIFICATION",
+      "scientific_truth": null
+    },
+    "co_method": {
+      "status": "UNRESOLVED",
+      "guards": [
+        "FIXED_METRIC_REQUIREMENTS_MISSING"
+      ],
+      "requirement_ids": [],
+      "binding_scope": "FIXED_INPUT_BINDING_ONLY_NOT_SCIENTIFIC_CERTIFICATION",
+      "scientific_truth": null
+    },
+    "co_param": {
+      "status": "UNRESOLVED",
+      "guards": [
+        "FIXED_METRIC_REQUIREMENTS_MISSING"
+      ],
+      "requirement_ids": [],
+      "binding_scope": "FIXED_INPUT_BINDING_ONLY_NOT_SCIENTIFIC_CERTIFICATION",
+      "scientific_truth": null
+    },
+    "co_chem": {
+      "status": "UNRESOLVED",
+      "guards": [
+        "FIXED_METRIC_REQUIREMENTS_MISSING"
+      ],
+      "requirement_ids": [],
+      "binding_scope": "FIXED_INPUT_BINDING_ONLY_NOT_SCIENTIFIC_CERTIFICATION",
+      "scientific_truth": null
+    }
+  },
+  "inventory_evidence": {
+    "status": "BOUND",
+    "guards": [],
+    "coverage_scope": "SELECTED_REFERENCE_ONLY",
+    "physical_necessity_certified": false,
+    "binding_scope": "FIXED_INPUT_BINDING_ONLY_NOT_SCIENTIFIC_CERTIFICATION",
+    "scientific_truth": null
+  },
+  "reference_text_audit": {
+    "REF-c-1.01": {
+      "origin": "DERIVED",
+      "source_spans": [
+        {
+          "source_id": "idisco-dec2016-full",
+          "start": 30,
+          "end": 46,
+          "quote": "iDISCO+ protocol",
+          "quote_sha256": "2c0fe4734c82251d058bc05cde3be430034f03e143745827a0e7e1b3dbaeef83",
+          "id": "protocol-title"
+        },
+        {
+          "source_id": "idisco-dec2016-full",
+          "start": 3293,
+          "end": 3431,
+          "quote": "1. Dehydrate in methanol/H2O series: 20%, 40%, 60%, 80%, 100%, 100%; 1hr each at\nRT. Can be left optionally overnight at RT at this point.",
+          "quote_sha256": "4722c9b34c35247aba79dfb9bbfe8477b339086bc6ab0187781822995a6b950b",
+          "id": "clear-dehydrate"
+        }
+      ],
+      "literal_match": null,
+      "semantic_entailment": null
+    },
+    "REF-c-1.02": {
+      "origin": "DERIVED",
+      "source_spans": [
+        {
+          "source_id": "idisco-dec2016-full",
+          "start": 30,
+          "end": 46,
+          "quote": "iDISCO+ protocol",
+          "quote_sha256": "2c0fe4734c82251d058bc05cde3be430034f03e143745827a0e7e1b3dbaeef83",
+          "id": "protocol-title"
+        },
+        {
+          "source_id": "idisco-dec2016-full",
+          "start": 3293,
+          "end": 3431,
+          "quote": "1. Dehydrate in methanol/H2O series: 20%, 40%, 60%, 80%, 100%, 100%; 1hr each at\nRT. Can be left optionally overnight at RT at this point.",
+          "quote_sha256": "4722c9b34c35247aba79dfb9bbfe8477b339086bc6ab0187781822995a6b950b",
+          "id": "clear-dehydrate"
+        }
+      ],
+      "literal_match": null,
+      "semantic_entailment": null
+    },
+    "REF-c-1.03": {
+      "origin": "DERIVED",
+      "source_spans": [
+        {
+          "source_id": "idisco-dec2016-full",
+          "start": 30,
+          "end": 46,
+          "quote": "iDISCO+ protocol",
+          "quote_sha256": "2c0fe4734c82251d058bc05cde3be430034f03e143745827a0e7e1b3dbaeef83",
+          "id": "protocol-title"
+        },
+        {
+          "source_id": "idisco-dec2016-full",
+          "start": 3293,
+          "end": 3431,
+          "quote": "1. Dehydrate in methanol/H2O series: 20%, 40%, 60%, 80%, 100%, 100%; 1hr each at\nRT. Can be left optionally overnight at RT at this point.",
+          "quote_sha256": "4722c9b34c35247aba79dfb9bbfe8477b339086bc6ab0187781822995a6b950b",
+          "id": "clear-dehydrate"
+        }
+      ],
+      "literal_match": null,
+      "semantic_entailment": null
+    },
+    "REF-c-1.04": {
+      "origin": "DERIVED",
+      "source_spans": [
+        {
+          "source_id": "idisco-dec2016-full",
+          "start": 30,
+          "end": 46,
+          "quote": "iDISCO+ protocol",
+          "quote_sha256": "2c0fe4734c82251d058bc05cde3be430034f03e143745827a0e7e1b3dbaeef83",
+          "id": "protocol-title"
+        },
+        {
+          "source_id": "idisco-dec2016-full",
+          "start": 3293,
+          "end": 3431,
+          "quote": "1. Dehydrate in methanol/H2O series: 20%, 40%, 60%, 80%, 100%, 100%; 1hr each at\nRT. Can be left optionally overnight at RT at this point.",
+          "quote_sha256": "4722c9b34c35247aba79dfb9bbfe8477b339086bc6ab0187781822995a6b950b",
+          "id": "clear-dehydrate"
+        }
+      ],
+      "literal_match": null,
+      "semantic_entailment": null
+    },
+    "REF-c-1.05": {
+      "origin": "DERIVED",
+      "source_spans": [
+        {
+          "source_id": "idisco-dec2016-full",
+          "start": 30,
+          "end": 46,
+          "quote": "iDISCO+ protocol",
+          "quote_sha256": "2c0fe4734c82251d058bc05cde3be430034f03e143745827a0e7e1b3dbaeef83",
+          "id": "protocol-title"
+        },
+        {
+          "source_id": "idisco-dec2016-full",
+          "start": 3293,
+          "end": 3431,
+          "quote": "1. Dehydrate in methanol/H2O series: 20%, 40%, 60%, 80%, 100%, 100%; 1hr each at\nRT. Can be left optionally overnight at RT at this point.",
+          "quote_sha256": "4722c9b34c35247aba79dfb9bbfe8477b339086bc6ab0187781822995a6b950b",
+          "id": "clear-dehydrate"
+        }
+      ],
+      "literal_match": null,
+      "semantic_entailment": null
+    },
+    "REF-c-1.06": {
+      "origin": "DERIVED",
+      "source_spans": [
+        {
+          "source_id": "idisco-dec2016-full",
+          "start": 30,
+          "end": 46,
+          "quote": "iDISCO+ protocol",
+          "quote_sha256": "2c0fe4734c82251d058bc05cde3be430034f03e143745827a0e7e1b3dbaeef83",
+          "id": "protocol-title"
+        },
+        {
+          "source_id": "idisco-dec2016-full",
+          "start": 3293,
+          "end": 3431,
+          "quote": "1. Dehydrate in methanol/H2O series: 20%, 40%, 60%, 80%, 100%, 100%; 1hr each at\nRT. Can be left optionally overnight at RT at this point.",
+          "quote_sha256": "4722c9b34c35247aba79dfb9bbfe8477b339086bc6ab0187781822995a6b950b",
+          "id": "clear-dehydrate"
+        }
+      ],
+      "literal_match": null,
+      "semantic_entailment": null
+    },
+    "REF-c-2.01": {
+      "origin": "DERIVED",
+      "source_spans": [
+        {
+          "source_id": "idisco-dec2016-full",
+          "start": 30,
+          "end": 46,
+          "quote": "iDISCO+ protocol",
+          "quote_sha256": "2c0fe4734c82251d058bc05cde3be430034f03e143745827a0e7e1b3dbaeef83",
+          "id": "protocol-title"
+        },
+        {
+          "source_id": "idisco-dec2016-full",
+          "start": 3432,
+          "end": 3495,
+          "quote": "2. 3H incubation, with shaking, in 66% DCM / 33% Methanol at RT",
+          "quote_sha256": "c333b35de768d62f4e28d780316eaa761abb4cb18d30a33731f2d1701cf399c3",
+          "id": "clear-mixture"
+        }
+      ],
+      "literal_match": null,
+      "semantic_entailment": null
+    },
+    "REF-c-3.01": {
+      "origin": "DERIVED",
+      "source_spans": [
+        {
+          "source_id": "idisco-dec2016-full",
+          "start": 30,
+          "end": 46,
+          "quote": "iDISCO+ protocol",
+          "quote_sha256": "2c0fe4734c82251d058bc05cde3be430034f03e143745827a0e7e1b3dbaeef83",
+          "id": "protocol-title"
+        },
+        {
+          "source_id": "idisco-dec2016-full",
+          "start": 3496,
+          "end": 3593,
+          "quote": "3. Incubate in 100% DCM (Sigma 270997-12X100ML) 15 minutes twice (with shaking)\nto wash the MeOH.",
+          "quote_sha256": "67331e32023ca9d40334dcf1dafde5abb62aa314b3bf7000102d3cab78aaaf1d",
+          "id": "clear-dcm"
+        }
+      ],
+      "literal_match": null,
+      "semantic_entailment": null
+    },
+    "REF-c-3.02": {
+      "origin": "DERIVED",
+      "source_spans": [
+        {
+          "source_id": "idisco-dec2016-full",
+          "start": 30,
+          "end": 46,
+          "quote": "iDISCO+ protocol",
+          "quote_sha256": "2c0fe4734c82251d058bc05cde3be430034f03e143745827a0e7e1b3dbaeef83",
+          "id": "protocol-title"
+        },
+        {
+          "source_id": "idisco-dec2016-full",
+          "start": 3496,
+          "end": 3593,
+          "quote": "3. Incubate in 100% DCM (Sigma 270997-12X100ML) 15 minutes twice (with shaking)\nto wash the MeOH.",
+          "quote_sha256": "67331e32023ca9d40334dcf1dafde5abb62aa314b3bf7000102d3cab78aaaf1d",
+          "id": "clear-dcm"
+        }
+      ],
+      "literal_match": null,
+      "semantic_entailment": null
+    },
+    "REF-c-4.01": {
+      "origin": "DERIVED",
+      "source_spans": [
+        {
+          "source_id": "idisco-dec2016-full",
+          "start": 30,
+          "end": 46,
+          "quote": "iDISCO+ protocol",
+          "quote_sha256": "2c0fe4734c82251d058bc05cde3be430034f03e143745827a0e7e1b3dbaeef83",
+          "id": "protocol-title"
+        },
+        {
+          "source_id": "idisco-dec2016-full",
+          "start": 3594,
+          "end": 3840,
+          "quote": "4. Incubate in DiBenzyl Ether (DBE, Sigma 108014-1KG) (no shaking). The tube should\nbe filled almost completely with DBE to prevent the air from oxidizing the sample.\nBefore imaging, invert the tube a couple of time to finish mixing the solution.",
+          "quote_sha256": "1cf445db2859fab2bd1f0bdf4b2cfa3c36cfa47bf4b8d886eb0feeaf0d3b4768",
+          "id": "clear-dbe"
+        }
+      ],
+      "literal_match": null,
+      "semantic_entailment": null
+    }
+  },
+  "binding_scope": "FIXED_INPUT_BINDING_ONLY_NOT_SCIENTIFIC_CERTIFICATION",
+  "scientific_truth": null
+}

@@ -1,0 +1,381 @@
+[
+  {
+    "question_id": 165,
+    "question": "我需要对两类固定小鼠神经组织进行透明化处理：一类为长约 3 cm 的连续脊髓段，另一类为保留丘脑至体感皮层连接的连续脑块，约 10 mm × 8 mm × 6 mm。脊髓样本在左右腰段感觉纤维入口分别局灶放置普通 DiI 和 DiD；脑样本在左右丘脑体感中继区域分别放置两种染料。膜内扩散已完成，并经独立对照验证目标段标记及背景合格。\n\n科学目标是重建各样本内已标记纤维的走行和终止区域。两类样本分别成像；每种染料仅解释为相应局灶位置出发的膜连续投射，不跨突触中继，也不将分离的脊髓与脑样本拼成一条从外周到皮层的连续纤维。\n\n请从给定列表选择兼容的透明方法，保留既有 DiI/DiD 主示踪通道，并在验证膜染料保留的前提下改善透明度和 RI 匹配。允许温和保脂处理，不强制充分脱脂或脱水；如加核/结构参考，不能替代来源选择性示踪。\n\n请仅输出 protocol，第 1 行写明所选荧光/标记策略和组织透明方法，随后仅列出必要的标记前处理、探针/抗体孵育与洗涤、透明处理、RI 匹配和保存/成像前处理步骤的关键试剂、条件和时间。已明确完成且质控合格的标记步骤无需重复。",
+    "tissue_hierarchy_from_tissue_xlsx": {
+      "tissue_inferred": "脑/脊髓",
+      "tissue_tier_code": "T06_LONG_CNS_OR_TUBULAR_15_80MM",
+      "tissue_tier_label": "长段CNS/管状组织15-80mm"
+    },
+    "marker_query_targets": [
+      {
+        "target_index": 1,
+        "source_tissue_xlsx_row": 90,
+        "marker_slot": "recommended_marker_1",
+        "marker_name": "DiI",
+        "query_path": "中枢神经 > 神经环路 > 躯体感觉上行通路",
+        "major_category": "中枢神经",
+        "subcategory": "神经环路",
+        "structure_or_cell_subtype": "躯体感觉上行通路"
+      },
+      {
+        "target_index": 2,
+        "source_tissue_xlsx_row": 90,
+        "marker_slot": "recommended_marker_2",
+        "marker_name": "DiD",
+        "query_path": "中枢神经 > 神经环路 > 躯体感觉上行通路",
+        "major_category": "中枢神经",
+        "subcategory": "神经环路",
+        "structure_or_cell_subtype": "躯体感觉上行通路"
+      }
+    ]
+  },
+  {
+    "question_id": 166,
+    "question": "我需要对两类固定小鼠神经组织进行透明化处理：一类为长约 3 cm 的连续脊髓段，另一类为保留丘脑至体感皮层连接的连续脑块，约 10 mm × 8 mm × 6 mm。脊髓样本在左右腰段感觉纤维入口分别局灶放置普通 DiI 和 DiD；脑样本在左右丘脑体感中继区域分别放置两种染料。膜内扩散已完成，并经独立对照验证目标段标记及背景合格。\n\n科学目标是比较左右侧局灶标记纤维在同一直接投射段内的空间分离与重叠。两类样本分别成像；每种染料仅解释为相应局灶位置出发的膜连续投射，不跨突触中继，也不将分离的脊髓与脑样本拼成一条从外周到皮层的连续纤维。\n\n请从给定列表选择兼容的透明方法，保留既有 DiI/DiD 主示踪通道，并在验证膜染料保留的前提下改善透明度和 RI 匹配。允许温和保脂处理，不强制充分脱脂或脱水；如加核/结构参考，不能替代来源选择性示踪。\n\n请仅输出 protocol，第 1 行写明所选荧光/标记策略和组织透明方法，随后仅列出必要的标记前处理、探针/抗体孵育与洗涤、透明处理、RI 匹配和保存/成像前处理步骤的关键试剂、条件和时间。已明确完成且质控合格的标记步骤无需重复。",
+    "tissue_hierarchy_from_tissue_xlsx": {
+      "tissue_inferred": "脑/脊髓",
+      "tissue_tier_code": "T06_LONG_CNS_OR_TUBULAR_15_80MM",
+      "tissue_tier_label": "长段CNS/管状组织15-80mm"
+    },
+    "marker_query_targets": [
+      {
+        "target_index": 1,
+        "source_tissue_xlsx_row": 90,
+        "marker_slot": "recommended_marker_1",
+        "marker_name": "DiI",
+        "query_path": "中枢神经 > 神经环路 > 躯体感觉上行通路",
+        "major_category": "中枢神经",
+        "subcategory": "神经环路",
+        "structure_or_cell_subtype": "躯体感觉上行通路"
+      },
+      {
+        "target_index": 2,
+        "source_tissue_xlsx_row": 90,
+        "marker_slot": "recommended_marker_2",
+        "marker_name": "DiD",
+        "query_path": "中枢神经 > 神经环路 > 躯体感觉上行通路",
+        "major_category": "中枢神经",
+        "subcategory": "神经环路",
+        "structure_or_cell_subtype": "躯体感觉上行通路"
+      }
+    ]
+  },
+  {
+    "question_id": 167,
+    "question": "我需要对两类固定小鼠神经组织进行透明化处理：一类为长约 3 cm 的连续脊髓段，另一类为保留丘脑至体感皮层连接的连续脑块，约 10 mm × 8 mm × 6 mm。脊髓样本在左右腰段感觉纤维入口分别局灶放置普通 DiI 和 DiD；脑样本在左右丘脑体感中继区域分别放置两种染料。膜内扩散已完成，并经独立对照验证目标段标记及背景合格。\n\n科学目标是比较各直接投射段内纤维束、分支和终末区的解剖位置。两类样本分别成像；每种染料仅解释为相应局灶位置出发的膜连续投射，不跨突触中继，也不将分离的脊髓与脑样本拼成一条从外周到皮层的连续纤维。\n\n请从给定列表选择兼容的透明方法，保留既有 DiI/DiD 主示踪通道，并在验证膜染料保留的前提下改善透明度和 RI 匹配。允许温和保脂处理，不强制充分脱脂或脱水；如加核/结构参考，不能替代来源选择性示踪。\n\n请仅输出 protocol，第 1 行写明所选荧光/标记策略和组织透明方法，随后仅列出必要的标记前处理、探针/抗体孵育与洗涤、透明处理、RI 匹配和保存/成像前处理步骤的关键试剂、条件和时间。已明确完成且质控合格的标记步骤无需重复。",
+    "tissue_hierarchy_from_tissue_xlsx": {
+      "tissue_inferred": "脑/脊髓",
+      "tissue_tier_code": "T06_LONG_CNS_OR_TUBULAR_15_80MM",
+      "tissue_tier_label": "长段CNS/管状组织15-80mm"
+    },
+    "marker_query_targets": [
+      {
+        "target_index": 1,
+        "source_tissue_xlsx_row": 90,
+        "marker_slot": "recommended_marker_1",
+        "marker_name": "DiI",
+        "query_path": "中枢神经 > 神经环路 > 躯体感觉上行通路",
+        "major_category": "中枢神经",
+        "subcategory": "神经环路",
+        "structure_or_cell_subtype": "躯体感觉上行通路"
+      },
+      {
+        "target_index": 2,
+        "source_tissue_xlsx_row": 90,
+        "marker_slot": "recommended_marker_2",
+        "marker_name": "DiD",
+        "query_path": "中枢神经 > 神经环路 > 躯体感觉上行通路",
+        "major_category": "中枢神经",
+        "subcategory": "神经环路",
+        "structure_or_cell_subtype": "躯体感觉上行通路"
+      }
+    ]
+  },
+  {
+    "question_id": 168,
+    "question": "我需要对两类固定小鼠神经组织进行透明化处理：一类为长约 3 cm 的连续脊髓段，另一类为保留丘脑至体感皮层连接的连续脑块，约 10 mm × 8 mm × 6 mm。脊髓样本在左右腰段感觉纤维入口分别局灶放置普通 DiI 和 DiD；脑样本在左右丘脑体感中继区域分别放置两种染料。膜内扩散已完成，并经独立对照验证目标段标记及背景合格。\n\n科学目标是获得各直接投射段内连续且低背景的三维纤维图像。两类样本分别成像；每种染料仅解释为相应局灶位置出发的膜连续投射，不跨突触中继，也不将分离的脊髓与脑样本拼成一条从外周到皮层的连续纤维。\n\n以下为合成排错情境：此前已完成 DiI/DiD 标记的同类样本经 SDS 处理 48 h 后，膜示踪信号明显下降；随后加入 Alexa Fluor 647 偶联抗 TUJ1 抗体并以甘油匹配，仍无法恢复来源选择性路径。该抗体只能提供泛神经结构，不能替代局灶膜示踪。修正版面向重新完成膜示踪的同类新固定样本，不假定旧样本已丢失的染料能够恢复。\n\n请从给定列表选择兼容的透明方法，保留既有 DiI/DiD 主示踪通道，并在验证膜染料保留的前提下改善透明度和 RI 匹配。允许温和保脂处理，不强制充分脱脂或脱水；如加核/结构参考，不能替代来源选择性示踪。\n\n修正版用于同类新样本；题目已给出的在体报告、示踪及必要标记前提继续适用。需要改变固定条件时应明确写出，不假定已碎裂组织或已丢失信号可由后续透明步骤恢复。\n\n请仅输出修正后的 protocol，第 1 行写明应保留或更换的荧光/标记策略和组织透明方法，随后仅列出必要的标记前处理、探针/抗体孵育与洗涤、透明处理、RI 匹配和保存/成像前处理步骤的关键试剂、条件和时间。已明确完成且质控合格的标记步骤无需重复。",
+    "tissue_hierarchy_from_tissue_xlsx": {
+      "tissue_inferred": "脑/脊髓",
+      "tissue_tier_code": "T06_LONG_CNS_OR_TUBULAR_15_80MM",
+      "tissue_tier_label": "长段CNS/管状组织15-80mm"
+    },
+    "marker_query_targets": [
+      {
+        "target_index": 1,
+        "source_tissue_xlsx_row": 90,
+        "marker_slot": "recommended_marker_1",
+        "marker_name": "DiI",
+        "query_path": "中枢神经 > 神经环路 > 躯体感觉上行通路",
+        "major_category": "中枢神经",
+        "subcategory": "神经环路",
+        "structure_or_cell_subtype": "躯体感觉上行通路"
+      },
+      {
+        "target_index": 2,
+        "source_tissue_xlsx_row": 90,
+        "marker_slot": "recommended_marker_2",
+        "marker_name": "DiD",
+        "query_path": "中枢神经 > 神经环路 > 躯体感觉上行通路",
+        "major_category": "中枢神经",
+        "subcategory": "神经环路",
+        "structure_or_cell_subtype": "躯体感觉上行通路"
+      }
+    ]
+  },
+  {
+    "question_id": 221,
+    "question": "我需要对固定小鼠视觉系统的两组示踪后分离样本进行透明化处理。第一组在解剖连接尚连续时，于两个明确记录的视网膜局灶位置分别放置普通 DiI 和 DiD；第二组在 LGN—V1 连接尚连续时，于两个明确记录的 LGN 局灶位置分别放置两种染料。完成膜内扩散并通过独立对照验证标记后，再分离用于成像的完整视网膜（直径约 5 mm）、LGN（约 2 mm × 1.5 mm × 1 mm）和 V1（约 3 mm × 3 mm × 2 mm）。\n\n科学目标是分别显示视网膜来源与 LGN 来源直接投射在相应组织块内的局部分布。各分离组织块仅分析内部可见的局部走行与终末，不恢复已切断的块间连续路径。两组样本分别分析，普通 DiI/DiD 不作为跨突触示踪工具，不将视网膜—LGN 与 LGN—V1 推断为同一根连续轴突，也不据此确认整个多级回路的功能连接。\n\n请从给定列表选择与既有 DiI/DiD 兼容的透明方法，优先保持膜染料和视网膜层次，改善 RI 匹配与成像深度。可选表内核染料作配准参考，不以抗体结构染色替代主示踪。\n\n请仅输出 protocol，第 1 行写明所选荧光/标记策略和组织透明方法，随后仅列出必要的标记前处理、探针/抗体孵育与洗涤、透明处理、RI 匹配和保存/成像前处理步骤的关键试剂、条件和时间。已明确完成且质控合格的标记步骤无需重复。",
+    "tissue_hierarchy_from_tissue_xlsx": {
+      "tissue_inferred": "视网膜",
+      "tissue_tier_code": "T12_WHOLE_EYE_OR_RETINA",
+      "tissue_tier_label": "完整眼球/视网膜/色素眼组织"
+    },
+    "marker_query_targets": [
+      {
+        "target_index": 1,
+        "source_tissue_xlsx_row": 101,
+        "marker_slot": "recommended_marker_1",
+        "marker_name": "DiI",
+        "query_path": "眼部系统 > 视觉通路 > 视网膜-LGN-V1 投射通路",
+        "major_category": "眼部系统",
+        "subcategory": "视觉通路",
+        "structure_or_cell_subtype": "视网膜-LGN-V1 投射通路"
+      },
+      {
+        "target_index": 2,
+        "source_tissue_xlsx_row": 101,
+        "marker_slot": "recommended_marker_2",
+        "marker_name": "DiD",
+        "query_path": "眼部系统 > 视觉通路 > 视网膜-LGN-V1 投射通路",
+        "major_category": "眼部系统",
+        "subcategory": "视觉通路",
+        "structure_or_cell_subtype": "视网膜-LGN-V1 投射通路"
+      },
+      {
+        "target_index": 3,
+        "source_tissue_xlsx_row": 102,
+        "marker_slot": "recommended_marker_1",
+        "marker_name": "DAPI / Hoechst",
+        "query_path": "眼部系统 > 视网膜 > 视网膜分层结构辅助",
+        "major_category": "眼部系统",
+        "subcategory": "视网膜",
+        "structure_or_cell_subtype": "视网膜分层结构辅助"
+      },
+      {
+        "target_index": 4,
+        "source_tissue_xlsx_row": 102,
+        "marker_slot": "recommended_marker_2",
+        "marker_name": "TO-PRO-3",
+        "query_path": "眼部系统 > 视网膜 > 视网膜分层结构辅助",
+        "major_category": "眼部系统",
+        "subcategory": "视网膜",
+        "structure_or_cell_subtype": "视网膜分层结构辅助"
+      }
+    ]
+  },
+  {
+    "question_id": 222,
+    "question": "我需要对固定小鼠视觉系统的两组示踪后分离样本进行透明化处理。第一组在解剖连接尚连续时，于两个明确记录的视网膜局灶位置分别放置普通 DiI 和 DiD；第二组在 LGN—V1 连接尚连续时，于两个明确记录的 LGN 局灶位置分别放置两种染料。完成膜内扩散并通过独立对照验证标记后，再分离用于成像的完整视网膜（直径约 5 mm）、LGN（约 2 mm × 1.5 mm × 1 mm）和 V1（约 3 mm × 3 mm × 2 mm）。\n\n科学目标是比较两个视网膜局灶位置所标记纤维在 LGN 的终末分布，并独立比较 LGN 至 V1 投射。各分离组织块仅分析内部可见的局部走行与终末，不恢复已切断的块间连续路径。两组样本分别分析，普通 DiI/DiD 不作为跨突触示踪工具，不将视网膜—LGN 与 LGN—V1 推断为同一根连续轴突，也不据此确认整个多级回路的功能连接。\n\n请从给定列表选择与既有 DiI/DiD 兼容的透明方法，优先保持膜染料和视网膜层次，改善 RI 匹配与成像深度。可选表内核染料作配准参考，不以抗体结构染色替代主示踪。\n\n请仅输出 protocol，第 1 行写明所选荧光/标记策略和组织透明方法，随后仅列出必要的标记前处理、探针/抗体孵育与洗涤、透明处理、RI 匹配和保存/成像前处理步骤的关键试剂、条件和时间。已明确完成且质控合格的标记步骤无需重复。",
+    "tissue_hierarchy_from_tissue_xlsx": {
+      "tissue_inferred": "视网膜",
+      "tissue_tier_code": "T12_WHOLE_EYE_OR_RETINA",
+      "tissue_tier_label": "完整眼球/视网膜/色素眼组织"
+    },
+    "marker_query_targets": [
+      {
+        "target_index": 1,
+        "source_tissue_xlsx_row": 101,
+        "marker_slot": "recommended_marker_1",
+        "marker_name": "DiI",
+        "query_path": "眼部系统 > 视觉通路 > 视网膜-LGN-V1 投射通路",
+        "major_category": "眼部系统",
+        "subcategory": "视觉通路",
+        "structure_or_cell_subtype": "视网膜-LGN-V1 投射通路"
+      },
+      {
+        "target_index": 2,
+        "source_tissue_xlsx_row": 101,
+        "marker_slot": "recommended_marker_2",
+        "marker_name": "DiD",
+        "query_path": "眼部系统 > 视觉通路 > 视网膜-LGN-V1 投射通路",
+        "major_category": "眼部系统",
+        "subcategory": "视觉通路",
+        "structure_or_cell_subtype": "视网膜-LGN-V1 投射通路"
+      },
+      {
+        "target_index": 3,
+        "source_tissue_xlsx_row": 102,
+        "marker_slot": "recommended_marker_1",
+        "marker_name": "DAPI / Hoechst",
+        "query_path": "眼部系统 > 视网膜 > 视网膜分层结构辅助",
+        "major_category": "眼部系统",
+        "subcategory": "视网膜",
+        "structure_or_cell_subtype": "视网膜分层结构辅助"
+      },
+      {
+        "target_index": 4,
+        "source_tissue_xlsx_row": 102,
+        "marker_slot": "recommended_marker_2",
+        "marker_name": "TO-PRO-3",
+        "query_path": "眼部系统 > 视网膜 > 视网膜分层结构辅助",
+        "major_category": "眼部系统",
+        "subcategory": "视网膜",
+        "structure_or_cell_subtype": "视网膜分层结构辅助"
+      }
+    ]
+  },
+  {
+    "question_id": 223,
+    "question": "我需要对固定小鼠视觉系统的两组示踪后分离样本进行透明化处理。第一组在解剖连接尚连续时，于两个明确记录的视网膜局灶位置分别放置普通 DiI 和 DiD；第二组在 LGN—V1 连接尚连续时，于两个明确记录的 LGN 局灶位置分别放置两种染料。完成膜内扩散并通过独立对照验证标记后，再分离用于成像的完整视网膜（直径约 5 mm）、LGN（约 2 mm × 1.5 mm × 1 mm）和 V1（约 3 mm × 3 mm × 2 mm）。\n\n科学目标是分析各直接投射段内的纤维走行、终末分布与局部组织层次的关系。各分离组织块仅分析内部可见的局部走行与终末，不恢复已切断的块间连续路径。两组样本分别分析，普通 DiI/DiD 不作为跨突触示踪工具，不将视网膜—LGN 与 LGN—V1 推断为同一根连续轴突，也不据此确认整个多级回路的功能连接。\n\n请从给定列表选择与既有 DiI/DiD 兼容的透明方法，优先保持膜染料和视网膜层次，改善 RI 匹配与成像深度。可选表内核染料作配准参考，不以抗体结构染色替代主示踪。\n\n请仅输出 protocol，第 1 行写明所选荧光/标记策略和组织透明方法，随后仅列出必要的标记前处理、探针/抗体孵育与洗涤、透明处理、RI 匹配和保存/成像前处理步骤的关键试剂、条件和时间。已明确完成且质控合格的标记步骤无需重复。",
+    "tissue_hierarchy_from_tissue_xlsx": {
+      "tissue_inferred": "视网膜",
+      "tissue_tier_code": "T12_WHOLE_EYE_OR_RETINA",
+      "tissue_tier_label": "完整眼球/视网膜/色素眼组织"
+    },
+    "marker_query_targets": [
+      {
+        "target_index": 1,
+        "source_tissue_xlsx_row": 101,
+        "marker_slot": "recommended_marker_1",
+        "marker_name": "DiI",
+        "query_path": "眼部系统 > 视觉通路 > 视网膜-LGN-V1 投射通路",
+        "major_category": "眼部系统",
+        "subcategory": "视觉通路",
+        "structure_or_cell_subtype": "视网膜-LGN-V1 投射通路"
+      },
+      {
+        "target_index": 2,
+        "source_tissue_xlsx_row": 101,
+        "marker_slot": "recommended_marker_2",
+        "marker_name": "DiD",
+        "query_path": "眼部系统 > 视觉通路 > 视网膜-LGN-V1 投射通路",
+        "major_category": "眼部系统",
+        "subcategory": "视觉通路",
+        "structure_or_cell_subtype": "视网膜-LGN-V1 投射通路"
+      },
+      {
+        "target_index": 3,
+        "source_tissue_xlsx_row": 102,
+        "marker_slot": "recommended_marker_1",
+        "marker_name": "DAPI / Hoechst",
+        "query_path": "眼部系统 > 视网膜 > 视网膜分层结构辅助",
+        "major_category": "眼部系统",
+        "subcategory": "视网膜",
+        "structure_or_cell_subtype": "视网膜分层结构辅助"
+      },
+      {
+        "target_index": 4,
+        "source_tissue_xlsx_row": 102,
+        "marker_slot": "recommended_marker_2",
+        "marker_name": "TO-PRO-3",
+        "query_path": "眼部系统 > 视网膜 > 视网膜分层结构辅助",
+        "major_category": "眼部系统",
+        "subcategory": "视网膜",
+        "structure_or_cell_subtype": "视网膜分层结构辅助"
+      }
+    ]
+  },
+  {
+    "question_id": 224,
+    "question": "我需要对固定小鼠视觉系统的两组示踪后分离样本进行透明化处理。第一组在解剖连接尚连续时，于两个明确记录的视网膜局灶位置分别放置普通 DiI 和 DiD；第二组在 LGN—V1 连接尚连续时，于两个明确记录的 LGN 局灶位置分别放置两种染料。完成膜内扩散并通过独立对照验证标记后，再分离用于成像的完整视网膜（直径约 5 mm）、LGN（约 2 mm × 1.5 mm × 1 mm）和 V1（约 3 mm × 3 mm × 2 mm）。\n\n科学目标是保留膜示踪信号和视网膜层次，获得各直接投射段的三维结构。各分离组织块仅分析内部可见的局部走行与终末，不恢复已切断的块间连续路径。两组样本分别分析，普通 DiI/DiD 不作为跨突触示踪工具，不将视网膜—LGN 与 LGN—V1 推断为同一根连续轴突，也不据此确认整个多级回路的功能连接。\n\n以下为合成排错情境：先前同类膜标记样本经过未经兼容性验证的溶剂脱水处理，出现视网膜皱缩和膜染料信号下降；缺少完整处理记录，无法确定单一原因。请为重新完成同样膜示踪的新固定样本设计低形变流程。\n\n请从给定列表选择与既有 DiI/DiD 兼容的透明方法，优先保持膜染料和视网膜层次，改善 RI 匹配与成像深度。可选表内核染料作配准参考，不以抗体结构染色替代主示踪。\n\n修正版用于同类新样本；题目已给出的在体报告、示踪及必要标记前提继续适用。需要改变固定条件时应明确写出，不假定已碎裂组织或已丢失信号可由后续透明步骤恢复。\n\n请仅输出修正后的 protocol，第 1 行写明应保留或更换的荧光/标记策略和组织透明方法，随后仅列出必要的标记前处理、探针/抗体孵育与洗涤、透明处理、RI 匹配和保存/成像前处理步骤的关键试剂、条件和时间。已明确完成且质控合格的标记步骤无需重复。",
+    "tissue_hierarchy_from_tissue_xlsx": {
+      "tissue_inferred": "视网膜",
+      "tissue_tier_code": "T12_WHOLE_EYE_OR_RETINA",
+      "tissue_tier_label": "完整眼球/视网膜/色素眼组织"
+    },
+    "marker_query_targets": [
+      {
+        "target_index": 1,
+        "source_tissue_xlsx_row": 101,
+        "marker_slot": "recommended_marker_1",
+        "marker_name": "DiI",
+        "query_path": "眼部系统 > 视觉通路 > 视网膜-LGN-V1 投射通路",
+        "major_category": "眼部系统",
+        "subcategory": "视觉通路",
+        "structure_or_cell_subtype": "视网膜-LGN-V1 投射通路"
+      },
+      {
+        "target_index": 2,
+        "source_tissue_xlsx_row": 101,
+        "marker_slot": "recommended_marker_2",
+        "marker_name": "DiD",
+        "query_path": "眼部系统 > 视觉通路 > 视网膜-LGN-V1 投射通路",
+        "major_category": "眼部系统",
+        "subcategory": "视觉通路",
+        "structure_or_cell_subtype": "视网膜-LGN-V1 投射通路"
+      },
+      {
+        "target_index": 3,
+        "source_tissue_xlsx_row": 102,
+        "marker_slot": "recommended_marker_1",
+        "marker_name": "DAPI / Hoechst",
+        "query_path": "眼部系统 > 视网膜 > 视网膜分层结构辅助",
+        "major_category": "眼部系统",
+        "subcategory": "视网膜",
+        "structure_or_cell_subtype": "视网膜分层结构辅助"
+      },
+      {
+        "target_index": 4,
+        "source_tissue_xlsx_row": 102,
+        "marker_slot": "recommended_marker_2",
+        "marker_name": "TO-PRO-3",
+        "query_path": "眼部系统 > 视网膜 > 视网膜分层结构辅助",
+        "major_category": "眼部系统",
+        "subcategory": "视网膜",
+        "structure_or_cell_subtype": "视网膜分层结构辅助"
+      }
+    ]
+  },
+  {
+    "question_id": 240,
+    "question": "一个直径约 300 μm 的人源肠道类器官已用 4% PFA 固定，目标是在 1–2 天内显示增殖细胞的三维分布，并尽量避免破坏类器官整体结构。需根据以下科学目标选择兼容的荧光/标记策略：需要同时标记细胞周期相关蛋白和 DNA 复制相关蛋白，并选择匹配的组织透明方法；若需要显示上皮细胞核，可使用限制范围内的核染料作为辅助通道。1–2 天时限从固定完成后开始，包含所选标记、透明化和成像前处理。应针对 300 μm 类器官安排可在该时限内完成的步骤，并以标记均匀性和结构质控为准。\n\n请仅输出 protocol，第 1 行写明所选双靶点荧光/标记策略和组织透明方法，随后仅列出必要的标记前处理、探针/抗体孵育与洗涤、透明处理、RI 匹配和保存/成像前处理步骤的关键试剂、条件和时间。已明确完成且质控合格的标记步骤无需重复。",
+    "tissue_hierarchy_from_tissue_xlsx": {
+      "tissue_inferred": "肠道类器官",
+      "tissue_tier_code": "T03_SMALL_WHOLE_SAMPLE_1_5MM",
+      "tissue_tier_label": "小型完整样本1-5mm"
+    },
+    "marker_query_targets": [
+      {
+        "target_index": 1,
+        "source_tissue_xlsx_row": 107,
+        "marker_slot": "recommended_marker_1",
+        "marker_name": "Ki67 / MKI67",
+        "query_path": "通用结构 > 类器官 > 肠道类器官整体",
+        "major_category": "通用结构",
+        "subcategory": "类器官",
+        "structure_or_cell_subtype": "肠道类器官整体"
+      },
+      {
+        "target_index": 2,
+        "source_tissue_xlsx_row": 107,
+        "marker_slot": "recommended_marker_2",
+        "marker_name": "PCNA",
+        "query_path": "通用结构 > 类器官 > 肠道类器官整体",
+        "major_category": "通用结构",
+        "subcategory": "类器官",
+        "structure_or_cell_subtype": "肠道类器官整体"
+      },
+      {
+        "target_index": 3,
+        "source_tissue_xlsx_row": 63,
+        "marker_slot": "recommended_marker_1",
+        "marker_name": "Ki67 (MKI67)",
+        "query_path": "通用功能 > 增殖监测 > 增殖细胞核",
+        "major_category": "通用功能",
+        "subcategory": "增殖监测",
+        "structure_or_cell_subtype": "增殖细胞核"
+      },
+      {
+        "target_index": 4,
+        "source_tissue_xlsx_row": 63,
+        "marker_slot": "recommended_marker_2",
+        "marker_name": "PCNA",
+        "query_path": "通用功能 > 增殖监测 > 增殖细胞核",
+        "major_category": "通用功能",
+        "subcategory": "增殖监测",
+        "structure_or_cell_subtype": "增殖细胞核"
+      }
+    ]
+  }
+]

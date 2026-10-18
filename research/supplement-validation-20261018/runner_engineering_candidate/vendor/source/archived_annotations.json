@@ -1,0 +1,874 @@
+{
+  "214": {
+    "question_sha256": "23e3b00fb01623d272617470c809343cd32ef6be216366cf5909f2f4ebd6e07d",
+    "clause_reviews": [
+      {
+        "start": 0,
+        "end": 49,
+        "quote": "我需要对小鼠完整结肠进行透明化处理，用于在三维空间中同时标记肠神经系统中的神经元胞体和泛神经纤维。",
+        "roles": [
+          "GIVEN_SAMPLE",
+          "REQUIRED_GOAL"
+        ],
+        "axis_candidates": [],
+        "reason": "样本身份/几何是已给事实；不凭样本大就推抗体渗透，不在本层另估tier或权重。 明确实验目标保留；目标身份、拓扑或组织完整性不自动等价于某一轴的标量要求。",
+        "numeric_projection_authorized": false,
+        "representation_status": "UNREPRESENTED_CLAUSE_WITH_OPTIONAL_SUBCLAUSE_CANDIDATES"
+      },
+      {
+        "start": 49,
+        "end": 83,
+        "quote": "样本为完整结肠，长度约 6–8 cm，管径约 3–4 mm，已固定；",
+        "roles": [
+          "GIVEN_SAMPLE",
+          "COMPLETED_PREPARATION"
+        ],
+        "axis_candidates": [],
+        "reason": "样本身份/几何是已给事实；不凭样本大就推抗体渗透，不在本层另估tier或权重。 仅原文指定的固定/后固定已完成，不推出免疫标记完成。",
+        "numeric_projection_authorized": false,
+        "representation_status": "UNREPRESENTED_CLAUSE_WITH_OPTIONAL_SUBCLAUSE_CANDIDATES"
+      },
+      {
+        "start": 83,
+        "end": 111,
+        "quote": "需要保留肠壁分层结构，以便区分肌间神经丛和粘膜下神经丛。",
+        "roles": [
+          "REQUIRED_GOAL"
+        ],
+        "axis_candidates": [],
+        "reason": "明确实验目标保留；目标身份、拓扑或组织完整性不自动等价于某一轴的标量要求。",
+        "numeric_projection_authorized": false,
+        "representation_status": "UNREPRESENTED_CLAUSE_WITH_OPTIONAL_SUBCLAUSE_CANDIDATES"
+      },
+      {
+        "start": 111,
+        "end": 194,
+        "quote": "科学目标是定位 ENS 神经元胞体形成的神经节节点，并通过泛神经纤维信号显示神经节之间的连接路径，比较不同肠段中神经节密度、纤维束走向、网络连通性和肠壁层次分布差异。",
+        "roles": [
+          "REQUIRED_GOAL"
+        ],
+        "axis_candidates": [],
+        "reason": "明确实验目标保留；目标身份、拓扑或组织完整性不自动等价于某一轴的标量要求。",
+        "numeric_projection_authorized": false,
+        "representation_status": "UNREPRESENTED_CLAUSE_WITH_OPTIONAL_SUBCLAUSE_CANDIDATES"
+      },
+      {
+        "start": 196,
+        "end": 230,
+        "quote": "请根据该科学问题选择兼容的荧光/标记策略，并选择匹配的组织透明方法。",
+        "roles": [
+          "REQUIRED_SELECTION"
+        ],
+        "axis_candidates": [],
+        "reason": "标记与透明方法需要匹配；未指定标记机制，不先验假定抗体或内源FP。",
+        "numeric_projection_authorized": false,
+        "representation_status": "UNREPRESENTED_CLAUSE_WITH_OPTIONAL_SUBCLAUSE_CANDIDATES"
+      },
+      {
+        "start": 230,
+        "end": 260,
+        "quote": "若直接结构染料可以帮助显示肌层或黏膜层结构，可作为辅助通道；",
+        "roles": [
+          "CONDITIONAL_OPTION"
+        ],
+        "axis_candidates": [],
+        "reason": "辅助通道有前提，保留条件，不升级无条件必须项。",
+        "numeric_projection_authorized": false,
+        "representation_status": "UNREPRESENTED_CLAUSE_WITH_OPTIONAL_SUBCLAUSE_CANDIDATES"
+      },
+      {
+        "start": 260,
+        "end": 290,
+        "quote": "但 ENS 节点和纤维网络身份仍需由表内肠神经相关靶点完成。",
+        "roles": [
+          "REQUIRED_TARGET_CONSTRAINT"
+        ],
+        "axis_candidates": [],
+        "reason": "靶点身份及列表边界独立保留，六轴不完整表示它。",
+        "numeric_projection_authorized": false,
+        "representation_status": "UNREPRESENTED_CLAUSE_WITH_OPTIONAL_SUBCLAUSE_CANDIDATES"
+      },
+      {
+        "start": 290,
+        "end": 366,
+        "quote": "请仅输出 protocol，第 1 行写明所选荧光/标记策略和组织透明方法，随后仅列出透明处理、RI 匹配和保存/成像前处理步骤的关键试剂、条件和时间。",
+        "roles": [
+          "OUTPUT_FORMAT"
+        ],
+        "axis_candidates": [],
+        "reason": "要求输出条件和时间属于格式，不是追求短时间或简化实验。",
+        "numeric_projection_authorized": false,
+        "representation_status": "UNREPRESENTED_CLAUSE_WITH_OPTIONAL_SUBCLAUSE_CANDIDATES"
+      }
+    ],
+    "facts": [
+      {
+        "start": 83,
+        "end": 93,
+        "quote": "需要保留肠壁分层结构",
+        "roles": [
+          "REQUIRED_GOAL"
+        ],
+        "axis_candidates": [],
+        "reason": "分层结构保存有几何关联，但不是明确尺寸不变/严格各向同性；M_geo单值不保证层身份保留。",
+        "numeric_projection_authorized": false,
+        "representation_status": "UNREPRESENTED_AS_NUMERIC_REQUIREMENT"
+      },
+      {
+        "start": 167,
+        "end": 172,
+        "quote": "神经节密度",
+        "roles": [
+          "REQUIRED_GOAL"
+        ],
+        "axis_candidates": [
+          {
+            "axis": "geometry_preference",
+            "status": "SEMANTIC_CANDIDATE_ONLY",
+            "reason": "密度比较属于定量形态语义；仅候选对应M_geo，不能自动确定严格各向同性或权重。"
+          }
+        ],
+        "reason": "密度比较属于定量形态语义；仅候选对应M_geo，不能自动确定严格各向同性或权重。",
+        "numeric_projection_authorized": false,
+        "representation_status": "SEMANTIC_AXIS_CANDIDATE_ONLY"
+      },
+      {
+        "start": 230,
+        "end": 259,
+        "quote": "若直接结构染料可以帮助显示肌层或黏膜层结构，可作为辅助通道",
+        "roles": [
+          "CONDITIONAL_OPTION"
+        ],
+        "axis_candidates": [],
+        "reason": "有条件的结构染料辅助通道，不是内源FP，也未定义抗体穿透难度。",
+        "numeric_projection_authorized": false,
+        "representation_status": "UNREPRESENTED_AS_NUMERIC_REQUIREMENT"
+      },
+      {
+        "start": 262,
+        "end": 289,
+        "quote": "ENS 节点和纤维网络身份仍需由表内肠神经相关靶点完成",
+        "roles": [
+          "REQUIRED_TARGET_CONSTRAINT"
+        ],
+        "axis_candidates": [],
+        "reason": "神经身份及靶点限制独立unrepresented。",
+        "numeric_projection_authorized": false,
+        "representation_status": "UNREPRESENTED_AS_NUMERIC_REQUIREMENT"
+      }
+    ],
+    "priority_status": "NO_GLOBAL_AXIS_RANKING_STATED"
+  },
+  "229": {
+    "question_sha256": "1a83b632c9e07e3c330c96e90ac80bea54f779e05f369b6eb553cc134b6ad6d7",
+    "clause_reviews": [
+      {
+        "start": 0,
+        "end": 59,
+        "quote": "我需要对中枢神经系统脊髓损伤模型中的大鼠完整脊髓进行透明化处理，用于观察损伤区域胶质瘢痕的三维边界和星形胶质细胞反应。",
+        "roles": [
+          "GIVEN_SAMPLE",
+          "REQUIRED_GOAL"
+        ],
+        "axis_candidates": [],
+        "reason": "样本身份/几何是已给事实；不凭样本大就推抗体渗透，不在本层另估tier或权重。 明确实验目标保留；目标身份、拓扑或组织完整性不自动等价于某一轴的标量要求。",
+        "numeric_projection_authorized": false,
+        "representation_status": "UNREPRESENTED_CLAUSE_WITH_OPTIONAL_SUBCLAUSE_CANDIDATES"
+      },
+      {
+        "start": 59,
+        "end": 124,
+        "quote": "样本为大鼠完整脊髓，约 40 mm × 4 mm × 3 mm，包含损伤中心以及上下各约 1 cm 正常组织，已完成固定和后固定。",
+        "roles": [
+          "GIVEN_SAMPLE",
+          "COMPLETED_PREPARATION"
+        ],
+        "axis_candidates": [],
+        "reason": "样本身份/几何是已给事实；不凭样本大就推抗体渗透，不在本层另估tier或权重。 仅原文指定的固定/后固定已完成，不推出免疫标记完成。",
+        "numeric_projection_authorized": false,
+        "representation_status": "UNREPRESENTED_CLAUSE_WITH_OPTIONAL_SUBCLAUSE_CANDIDATES"
+      },
+      {
+        "start": 124,
+        "end": 204,
+        "quote": "科学目标是在完整脊髓尺度下显示损伤中心周围反应性星形胶质细胞形成的胶质瘢痕，比较瘢痕核心、边缘和邻近正常组织中星形胶质细胞密度、突起形态、瘢痕厚度和空间连续性；",
+        "roles": [
+          "REQUIRED_GOAL"
+        ],
+        "axis_candidates": [],
+        "reason": "明确实验目标保留；目标身份、拓扑或组织完整性不自动等价于某一轴的标量要求。",
+        "numeric_projection_authorized": false,
+        "representation_status": "UNREPRESENTED_CLAUSE_WITH_OPTIONAL_SUBCLAUSE_CANDIDATES"
+      },
+      {
+        "start": 204,
+        "end": 236,
+        "quote": "若需要判断再生轴突是否穿过瘢痕，则需额外显示轴突或再生轴突信号。",
+        "roles": [
+          "CONDITIONAL_GOAL"
+        ],
+        "axis_candidates": [],
+        "reason": "只有原文条件成立时才需要额外目标，不能默认全部激活。",
+        "numeric_projection_authorized": false,
+        "representation_status": "UNREPRESENTED_CLAUSE_WITH_OPTIONAL_SUBCLAUSE_CANDIDATES"
+      },
+      {
+        "start": 238,
+        "end": 282,
+        "quote": "请根据该科学问题自行选择合适的荧光/标记策略，并基于所选标记样本选择匹配的组织透明方法。",
+        "roles": [
+          "REQUIRED_SELECTION"
+        ],
+        "axis_candidates": [],
+        "reason": "标记与透明方法需要匹配；未指定标记机制，不先验假定抗体或内源FP。",
+        "numeric_projection_authorized": false,
+        "representation_status": "UNREPRESENTED_CLAUSE_WITH_OPTIONAL_SUBCLAUSE_CANDIDATES"
+      },
+      {
+        "start": 282,
+        "end": 310,
+        "quote": "若仅使用星形胶质标记，模型应明确其只能定义胶质瘢痕区域；",
+        "roles": [
+          "CONDITIONAL_LIMITATION"
+        ],
+        "axis_candidates": [],
+        "reason": "保留标记能回答的问题边界，不把能力限制当额外数值轴。",
+        "numeric_projection_authorized": false,
+        "representation_status": "UNREPRESENTED_CLAUSE_WITH_OPTIONAL_SUBCLAUSE_CANDIDATES"
+      },
+      {
+        "start": 310,
+        "end": 348,
+        "quote": "若科学目标要求判断轴突穿越，则应选择表内轴突/神经纤维相关靶点作为辅助通道。",
+        "roles": [
+          "CONDITIONAL_GOAL"
+        ],
+        "axis_candidates": [],
+        "reason": "只有原文条件成立时才需要额外目标，不能默认全部激活。",
+        "numeric_projection_authorized": false,
+        "representation_status": "UNREPRESENTED_CLAUSE_WITH_OPTIONAL_SUBCLAUSE_CANDIDATES"
+      },
+      {
+        "start": 348,
+        "end": 424,
+        "quote": "请仅输出 protocol，第 1 行写明所选荧光/标记策略和组织透明方法，随后仅列出透明处理、RI 匹配和保存/成像前处理步骤的关键试剂、条件和时间。",
+        "roles": [
+          "OUTPUT_FORMAT"
+        ],
+        "axis_candidates": [],
+        "reason": "要求输出条件和时间属于格式，不是追求短时间或简化实验。",
+        "numeric_projection_authorized": false,
+        "representation_status": "UNREPRESENTED_CLAUSE_WITH_OPTIONAL_SUBCLAUSE_CANDIDATES"
+      }
+    ],
+    "facts": [
+      {
+        "start": 114,
+        "end": 123,
+        "quote": "已完成固定和后固定",
+        "roles": [
+          "COMPLETED_PREPARATION"
+        ],
+        "axis_candidates": [],
+        "reason": "只完成固定，不等于免疫染色已完成。",
+        "numeric_projection_authorized": false,
+        "representation_status": "UNREPRESENTED_AS_NUMERIC_REQUIREMENT"
+      },
+      {
+        "start": 179,
+        "end": 203,
+        "quote": "星形胶质细胞密度、突起形态、瘢痕厚度和空间连续性",
+        "roles": [
+          "REQUIRED_GOAL"
+        ],
+        "axis_candidates": [
+          {
+            "axis": "geometry_preference",
+            "status": "SEMANTIC_CANDIDATE_ONLY",
+            "reason": "密度/厚度比较属于现有定量形态与尺寸测量定义；结构连续性仍不能由M_geo完全表示。"
+          }
+        ],
+        "reason": "密度/厚度比较属于现有定量形态与尺寸测量定义；结构连续性仍不能由M_geo完全表示。",
+        "numeric_projection_authorized": false,
+        "representation_status": "SEMANTIC_AXIS_CANDIDATE_ONLY"
+      },
+      {
+        "start": 204,
+        "end": 235,
+        "quote": "若需要判断再生轴突是否穿过瘢痕，则需额外显示轴突或再生轴突信号",
+        "roles": [
+          "CONDITIONAL_GOAL"
+        ],
+        "axis_candidates": [],
+        "reason": "条件性额外轴突信号不能当所有题的无条件双通道要求。",
+        "numeric_projection_authorized": false,
+        "representation_status": "UNREPRESENTED_AS_NUMERIC_REQUIREMENT"
+      }
+    ],
+    "priority_status": "NO_GLOBAL_AXIS_RANKING_STATED"
+  },
+  "186": {
+    "question_sha256": "3e2b782756207bb008e0d4a0585bc71d9157a912727a5c461f95608caea1689c",
+    "clause_reviews": [
+      {
+        "start": 0,
+        "end": 49,
+        "quote": "我需要对小鼠脑胶质瘤组织进行透明化处理，用于同时显示脑肿瘤区域的血管内皮结构和功能性灌流血管腔面。",
+        "roles": [
+          "GIVEN_SAMPLE",
+          "REQUIRED_GOAL"
+        ],
+        "axis_candidates": [],
+        "reason": "样本身份/几何是已给事实；不凭样本大就推抗体渗透，不在本层另估tier或权重。 明确实验目标保留；目标身份、拓扑或组织完整性不自动等价于某一轴的标量要求。",
+        "numeric_projection_authorized": false,
+        "representation_status": "UNREPRESENTED_CLAUSE_WITH_OPTIONAL_SUBCLAUSE_CANDIDATES"
+      },
+      {
+        "start": 49,
+        "end": 88,
+        "quote": "样本为完整脑胶质瘤组织，大小约 8 mm × 6 mm × 4 mm，已固定。",
+        "roles": [
+          "GIVEN_SAMPLE",
+          "COMPLETED_PREPARATION"
+        ],
+        "axis_candidates": [],
+        "reason": "样本身份/几何是已给事实；不凭样本大就推抗体渗透，不在本层另估tier或权重。 仅原文指定的固定/后固定已完成，不推出免疫标记完成。",
+        "numeric_projection_authorized": false,
+        "representation_status": "UNREPRESENTED_CLAUSE_WITH_OPTIONAL_SUBCLAUSE_CANDIDATES"
+      },
+      {
+        "start": 88,
+        "end": 178,
+        "quote": "科学目标是比较肿瘤内结构性血管网络与实际被灌流标记到的功能性血管之间的空间重叠，分析抗血管生成治疗后血管内皮分布、灌流恢复、管径均一性、血管剪枝、异常分支减少和核心区缺血改善情况。",
+        "roles": [
+          "REQUIRED_GOAL"
+        ],
+        "axis_candidates": [],
+        "reason": "明确实验目标保留；目标身份、拓扑或组织完整性不自动等价于某一轴的标量要求。",
+        "numeric_projection_authorized": false,
+        "representation_status": "UNREPRESENTED_CLAUSE_WITH_OPTIONAL_SUBCLAUSE_CANDIDATES"
+      },
+      {
+        "start": 180,
+        "end": 214,
+        "quote": "请根据该科学问题选择兼容的荧光/标记策略，并选择匹配的组织透明方法。",
+        "roles": [
+          "REQUIRED_SELECTION"
+        ],
+        "axis_candidates": [],
+        "reason": "标记与透明方法需要匹配；未指定标记机制，不先验假定抗体或内源FP。",
+        "numeric_projection_authorized": false,
+        "representation_status": "UNREPRESENTED_CLAUSE_WITH_OPTIONAL_SUBCLAUSE_CANDIDATES"
+      },
+      {
+        "start": 214,
+        "end": 247,
+        "quote": "若直接血管腔面探针能够回答灌流功能问题，应优先作为功能性血管通道；",
+        "roles": [
+          "CONDITIONAL_OPTIMIZATION_PREFERENCE"
+        ],
+        "axis_candidates": [],
+        "reason": "优先级只作用于满足功能条件的通道选择，不是全局速度/安全/FP优先级。",
+        "numeric_projection_authorized": false,
+        "representation_status": "UNREPRESENTED_CLAUSE_WITH_OPTIONAL_SUBCLAUSE_CANDIDATES"
+      },
+      {
+        "start": 247,
+        "end": 268,
+        "quote": "血管内皮结构完整性则需要表内血管内皮靶点。",
+        "roles": [
+          "REQUIRED_TARGET_CONSTRAINT"
+        ],
+        "axis_candidates": [],
+        "reason": "靶点身份及列表边界独立保留，六轴不完整表示它。",
+        "numeric_projection_authorized": false,
+        "representation_status": "UNREPRESENTED_CLAUSE_WITH_OPTIONAL_SUBCLAUSE_CANDIDATES"
+      },
+      {
+        "start": 268,
+        "end": 344,
+        "quote": "请仅输出 protocol，第 1 行写明所选荧光/标记策略和组织透明方法，随后仅列出透明处理、RI 匹配和保存/成像前处理步骤的关键试剂、条件和时间。",
+        "roles": [
+          "OUTPUT_FORMAT"
+        ],
+        "axis_candidates": [],
+        "reason": "要求输出条件和时间属于格式，不是追求短时间或简化实验。",
+        "numeric_projection_authorized": false,
+        "representation_status": "UNREPRESENTED_CLAUSE_WITH_OPTIONAL_SUBCLAUSE_CANDIDATES"
+      }
+    ],
+    "facts": [
+      {
+        "start": 214,
+        "end": 246,
+        "quote": "若直接血管腔面探针能够回答灌流功能问题，应优先作为功能性血管通道",
+        "roles": [
+          "CONDITIONAL_OPTIMIZATION_PREFERENCE"
+        ],
+        "axis_candidates": [],
+        "reason": "功能可回答性是前提；通道优先不属于六轴任何全局优先级。",
+        "numeric_projection_authorized": false,
+        "representation_status": "UNREPRESENTED_AS_NUMERIC_REQUIREMENT"
+      },
+      {
+        "start": 247,
+        "end": 267,
+        "quote": "血管内皮结构完整性则需要表内血管内皮靶点",
+        "roles": [
+          "REQUIRED_TARGET_CONSTRAINT"
+        ],
+        "axis_candidates": [],
+        "reason": "结构内皮身份不能由功能腔面探针代替，六轴无靶点身份轴。",
+        "numeric_projection_authorized": false,
+        "representation_status": "UNREPRESENTED_AS_NUMERIC_REQUIREMENT"
+      },
+      {
+        "start": 150,
+        "end": 155,
+        "quote": "管径均一性",
+        "roles": [
+          "REQUIRED_GOAL"
+        ],
+        "axis_candidates": [
+          {
+            "axis": "geometry_preference",
+            "status": "RELATED_BUT_INSUFFICIENT",
+            "reason": "管径有几何关联，但本句是治疗效果目标列表，未明确测量约束/变形容限；不激活标量。"
+          }
+        ],
+        "reason": "管径有几何关联，但本句是治疗效果目标列表，未明确测量约束/变形容限；不激活标量。",
+        "numeric_projection_authorized": false,
+        "representation_status": "UNREPRESENTED_AS_NUMERIC_REQUIREMENT"
+      }
+    ],
+    "priority_status": "NO_GLOBAL_AXIS_RANKING_STATED; CONDITIONAL_CHANNEL_PRIORITY_ONLY"
+  },
+  "249": {
+    "question_sha256": "d176be68eeaa266996b007ac99c4b9aa731354c2ab7befd602daac641733e971",
+    "clause_reviews": [
+      {
+        "start": 0,
+        "end": 54,
+        "quote": "一只成年小鼠整肝需要在光片显微镜下观察肝静脉、门静脉和全肝血管网拓扑，对形变不敏感，但希望保持血管荧光信号。",
+        "roles": [
+          "GIVEN_SAMPLE",
+          "REQUIRED_GOAL",
+          "EXPLICIT_NON_PRIORITY",
+          "OPTIMIZATION_PREFERENCE"
+        ],
+        "axis_candidates": [],
+        "reason": "样本身份/几何是已给事实；不凭样本大就推抗体渗透，不在本层另估tier或权重。 明确实验目标保留；目标身份、拓扑或组织完整性不自动等价于某一轴的标量要求。 明确不敏感不能当作要求严格保持尺寸，也未给出偏好收缩的数值。 希望保留信号是倾向；未明确内源荧光蛋白，不能套F_fp。",
+        "numeric_projection_authorized": false,
+        "representation_status": "UNREPRESENTED_CLAUSE_WITH_OPTIONAL_SUBCLAUSE_CANDIDATES"
+      },
+      {
+        "start": 54,
+        "end": 135,
+        "quote": "需根据以下科学目标选择兼容的荧光/标记策略：需要同时标记肝血窦内皮细胞的两种特异性内皮受体，以避免仅用通用血管内皮标志物遗漏肝血窦网络，并选择匹配的组织透明方法。",
+        "roles": [
+          "REQUIRED_GOAL",
+          "REQUIRED_TARGET_CONSTRAINT",
+          "REQUIRED_SELECTION"
+        ],
+        "axis_candidates": [],
+        "reason": "明确实验目标保留；目标身份、拓扑或组织完整性不自动等价于某一轴的标量要求。 靶点身份及列表边界独立保留，六轴不完整表示它。 标记与透明方法需要匹配；未指定标记机制，不先验假定抗体或内源FP。",
+        "numeric_projection_authorized": false,
+        "representation_status": "UNREPRESENTED_CLAUSE_WITH_OPTIONAL_SUBCLAUSE_CANDIDATES"
+      },
+      {
+        "start": 135,
+        "end": 214,
+        "quote": "请仅输出 protocol，第 1 行写明所选双靶点荧光/标记策略和组织透明方法，随后仅列出透明处理、RI 匹配和保存/成像前处理步骤的关键试剂、条件和时间。",
+        "roles": [
+          "OUTPUT_FORMAT"
+        ],
+        "axis_candidates": [],
+        "reason": "要求输出条件和时间属于格式，不是追求短时间或简化实验。",
+        "numeric_projection_authorized": false,
+        "representation_status": "UNREPRESENTED_CLAUSE_WITH_OPTIONAL_SUBCLAUSE_CANDIDATES"
+      }
+    ],
+    "facts": [
+      {
+        "start": 35,
+        "end": 41,
+        "quote": "对形变不敏感",
+        "roles": [
+          "EXPLICIT_NON_PRIORITY"
+        ],
+        "axis_candidates": [
+          {
+            "axis": "geometry_preference",
+            "status": "EXPLICIT_NON_PRIORITY",
+            "reason": "负向重要性事实必须保留；不能把它当无信息或从中编造收缩target。"
+          }
+        ],
+        "reason": "负向重要性事实必须保留；不能把它当无信息或从中编造收缩target。",
+        "numeric_projection_authorized": false,
+        "representation_status": "UNREPRESENTED_AS_NUMERIC_REQUIREMENT"
+      },
+      {
+        "start": 43,
+        "end": 53,
+        "quote": "希望保持血管荧光信号",
+        "roles": [
+          "OPTIMIZATION_PREFERENCE"
+        ],
+        "axis_candidates": [],
+        "reason": "通用血管荧光包括外源标记；F_fp仅内源荧光蛋白，P_dye仅外源渗透，两者均不表示信号保持。",
+        "numeric_projection_authorized": false,
+        "representation_status": "UNREPRESENTED_AS_NUMERIC_REQUIREMENT"
+      },
+      {
+        "start": 76,
+        "end": 99,
+        "quote": "需要同时标记肝血窦内皮细胞的两种特异性内皮受体",
+        "roles": [
+          "REQUIRED_GOAL"
+        ],
+        "axis_candidates": [],
+        "reason": "双受体身份和覆盖目标独立保留；不因双标直接推出深层抗体困难。",
+        "numeric_projection_authorized": false,
+        "representation_status": "UNREPRESENTED_AS_NUMERIC_REQUIREMENT"
+      }
+    ],
+    "priority_status": "GEOMETRY_EXPLICITLY_NON_PRIORITY; OTHER_AXIS_RANKING_UNSPECIFIED"
+  },
+  "108": {
+    "question_sha256": "95e2666e08a305bf7b24fe1fa5697cfc510c6c9659d1eb5afc05eb4c92291249",
+    "clause_reviews": [
+      {
+        "start": 0,
+        "end": 48,
+        "quote": "我需要对胰腺系统内分泌结构中的完整小鼠胰腺进行透明化处理，用于精确测定全胰腺胰岛 β 细胞总量。",
+        "roles": [
+          "GIVEN_SAMPLE",
+          "REQUIRED_GOAL"
+        ],
+        "axis_candidates": [],
+        "reason": "样本身份/几何是已给事实；不凭样本大就推抗体渗透，不在本层另估tier或权重。 明确实验目标保留；目标身份、拓扑或组织完整性不自动等价于某一轴的标量要求。",
+        "numeric_projection_authorized": false,
+        "representation_status": "UNREPRESENTED_CLAUSE_WITH_OPTIONAL_SUBCLAUSE_CANDIDATES"
+      },
+      {
+        "start": 48,
+        "end": 92,
+        "quote": "样本为完整小鼠胰腺，大小约 15 mm × 8 mm × 3 mm，已完成固定和后固定。",
+        "roles": [
+          "GIVEN_SAMPLE",
+          "COMPLETED_PREPARATION"
+        ],
+        "axis_candidates": [],
+        "reason": "样本身份/几何是已给事实；不凭样本大就推抗体渗透，不在本层另估tier或权重。 仅原文指定的固定/后固定已完成，不推出免疫标记完成。",
+        "numeric_projection_authorized": false,
+        "representation_status": "UNREPRESENTED_CLAUSE_WITH_OPTIONAL_SUBCLAUSE_CANDIDATES"
+      },
+      {
+        "start": 92,
+        "end": 172,
+        "quote": "科学目标是同时标记 β 细胞激素产物和发育/内分泌相关转录因子，在全胰腺范围内识别胰岛结构，计算 β 细胞总体积、胰岛数量、胰岛大小分布和区域性 β 细胞负荷。",
+        "roles": [
+          "REQUIRED_GOAL"
+        ],
+        "axis_candidates": [],
+        "reason": "明确实验目标保留；目标身份、拓扑或组织完整性不自动等价于某一轴的标量要求。",
+        "numeric_projection_authorized": false,
+        "representation_status": "UNREPRESENTED_CLAUSE_WITH_OPTIONAL_SUBCLAUSE_CANDIDATES"
+      },
+      {
+        "start": 174,
+        "end": 215,
+        "quote": "我在进行小鼠胰腺透明化实验后发现，胰岛结构破坏严重，且 β 细胞激素产物信号很弱。",
+        "roles": [
+          "HISTORICAL_FAILURE"
+        ],
+        "axis_candidates": [],
+        "reason": "失败现象需要保留，但不能把历史结果变成当前参数上限或已知因果。",
+        "numeric_projection_authorized": false,
+        "representation_status": "UNREPRESENTED_CLAUSE_WITH_OPTIONAL_SUBCLAUSE_CANDIDATES"
+      },
+      {
+        "start": 215,
+        "end": 270,
+        "quote": "此前使用 CUBIC protocol，但 delipidation 进行了 96 小时，温度设为 45°C。",
+        "roles": [
+          "HISTORICAL_CONDITION"
+        ],
+        "axis_candidates": [],
+        "reason": "已发生的条件/流程，不是当前要求，不推导96小时上限或速度优先。",
+        "numeric_projection_authorized": false,
+        "representation_status": "UNREPRESENTED_CLAUSE_WITH_OPTIONAL_SUBCLAUSE_CANDIDATES"
+      },
+      {
+        "start": 270,
+        "end": 328,
+        "quote": "请根据上述科学目标，在不引入给定标记物列表之外靶点或表外荧光团的前提下，重新选择或调整荧光/标记策略与组织透明方法。",
+        "roles": [
+          "REQUIRED_TARGET_CONSTRAINT",
+          "REQUIRED_SELECTION"
+        ],
+        "axis_candidates": [],
+        "reason": "靶点身份及列表边界独立保留，六轴不完整表示它。 标记与透明方法需要匹配；未指定标记机制，不先验假定抗体或内源FP。",
+        "numeric_projection_authorized": false,
+        "representation_status": "UNREPRESENTED_CLAUSE_WITH_OPTIONAL_SUBCLAUSE_CANDIDATES"
+      },
+      {
+        "start": 328,
+        "end": 387,
+        "quote": "修正版应适合完整胰腺柔软组织的低形变透明化、胰岛结构保留、β 细胞双信号检测、抗原和荧光保持，以及全器官三维定量分析。",
+        "roles": [
+          "REQUIRED_GOAL"
+        ],
+        "axis_candidates": [],
+        "reason": "明确实验目标保留；目标身份、拓扑或组织完整性不自动等价于某一轴的标量要求。",
+        "numeric_projection_authorized": false,
+        "representation_status": "UNREPRESENTED_CLAUSE_WITH_OPTIONAL_SUBCLAUSE_CANDIDATES"
+      },
+      {
+        "start": 389,
+        "end": 474,
+        "quote": "请仅输出修正后的 protocol，第 1 行写明应保留或更换的荧光/标记策略和组织透明方法，随后仅列出透明处理、RI 匹配和保存/成像前处理步骤的关键试剂、条件和时间。",
+        "roles": [
+          "OUTPUT_FORMAT"
+        ],
+        "axis_candidates": [],
+        "reason": "要求输出条件和时间属于格式，不是追求短时间或简化实验。",
+        "numeric_projection_authorized": false,
+        "representation_status": "UNREPRESENTED_CLAUSE_WITH_OPTIONAL_SUBCLAUSE_CANDIDATES"
+      }
+    ],
+    "facts": [
+      {
+        "start": 138,
+        "end": 171,
+        "quote": "计算 β 细胞总体积、胰岛数量、胰岛大小分布和区域性 β 细胞负荷",
+        "roles": [
+          "REQUIRED_GOAL"
+        ],
+        "axis_candidates": [
+          {
+            "axis": "geometry_preference",
+            "status": "SEMANTIC_CANDIDATE_ONLY",
+            "reason": "总体积/大小分布直接满足既有体积测量和定量形态定义，但本层不自动配置权重。"
+          }
+        ],
+        "reason": "总体积/大小分布直接满足既有体积测量和定量形态定义，但本层不自动配置权重。",
+        "numeric_projection_authorized": false,
+        "representation_status": "SEMANTIC_AXIS_CANDIDATE_ONLY"
+      },
+      {
+        "start": 191,
+        "end": 214,
+        "quote": "胰岛结构破坏严重，且 β 细胞激素产物信号很弱",
+        "roles": [
+          "HISTORICAL_FAILURE"
+        ],
+        "axis_candidates": [],
+        "reason": "结构与信号历史失败，并非已证实96h/45°C单独致因。",
+        "numeric_projection_authorized": false,
+        "representation_status": "UNREPRESENTED_AS_NUMERIC_REQUIREMENT"
+      },
+      {
+        "start": 215,
+        "end": 269,
+        "quote": "此前使用 CUBIC protocol，但 delipidation 进行了 96 小时，温度设为 45°C",
+        "roles": [
+          "HISTORICAL_CONDITION"
+        ],
+        "axis_candidates": [],
+        "reason": "已执行的条件，不是新任务96h截止/速度优先。",
+        "numeric_projection_authorized": false,
+        "representation_status": "UNREPRESENTED_AS_NUMERIC_REQUIREMENT"
+      },
+      {
+        "start": 343,
+        "end": 349,
+        "quote": "低形变透明化",
+        "roles": [
+          "REQUIRED_GOAL"
+        ],
+        "axis_candidates": [
+          {
+            "axis": "geometry_preference",
+            "status": "SEMANTIC_CANDIDATE_ONLY",
+            "reason": "现有M_geo涉及变形/尺寸，语义可恢复；低形变不等于已给严格无尺寸变化或具体权重。"
+          }
+        ],
+        "reason": "现有M_geo涉及变形/尺寸，语义可恢复；低形变不等于已给严格无尺寸变化或具体权重。",
+        "numeric_projection_authorized": false,
+        "representation_status": "SEMANTIC_AXIS_CANDIDATE_ONLY"
+      },
+      {
+        "start": 350,
+        "end": 356,
+        "quote": "胰岛结构保留",
+        "roles": [
+          "REQUIRED_GOAL"
+        ],
+        "axis_candidates": [],
+        "reason": "局部组织完整性不能由单一尺寸变化比保证。",
+        "numeric_projection_authorized": false,
+        "representation_status": "UNREPRESENTED_AS_NUMERIC_REQUIREMENT"
+      },
+      {
+        "start": 357,
+        "end": 374,
+        "quote": "β 细胞双信号检测、抗原和荧光保持",
+        "roles": [
+          "REQUIRED_GOAL"
+        ],
+        "axis_candidates": [],
+        "reason": "抗原及未指定类型的荧光保持没有既有FP合法映射；不能将抗原保存等同外源标签渗透。",
+        "numeric_projection_authorized": false,
+        "representation_status": "UNREPRESENTED_AS_NUMERIC_REQUIREMENT"
+      }
+    ],
+    "priority_status": "NO_GLOBAL_AXIS_RANKING_STATED"
+  },
+  "48": {
+    "question_sha256": "23a2ef61d7e49d3419bc7c0f5d885eafe38fa6de489baae1b7f21d7ff9e9f721",
+    "clause_reviews": [
+      {
+        "start": 0,
+        "end": 59,
+        "quote": "我需要对完整小鼠股骨进行透明化处理，用于研究骨髓造血干细胞微环境中交感神经纤维、血管网络及血管周围结构的三维空间关系。",
+        "roles": [
+          "GIVEN_SAMPLE",
+          "REQUIRED_GOAL"
+        ],
+        "axis_candidates": [],
+        "reason": "样本身份/几何是已给事实；不凭样本大就推抗体渗透，不在本层另估tier或权重。 明确实验目标保留；目标身份、拓扑或组织完整性不自动等价于某一轴的标量要求。",
+        "numeric_projection_authorized": false,
+        "representation_status": "UNREPRESENTED_CLAUSE_WITH_OPTIONAL_SUBCLAUSE_CANDIDATES"
+      },
+      {
+        "start": 59,
+        "end": 87,
+        "quote": "样本为完整股骨，长度约 15 mm，已完成固定和后固定。",
+        "roles": [
+          "GIVEN_SAMPLE",
+          "COMPLETED_PREPARATION"
+        ],
+        "axis_candidates": [],
+        "reason": "样本身份/几何是已给事实；不凭样本大就推抗体渗透，不在本层另估tier或权重。 仅原文指定的固定/后固定已完成，不推出免疫标记完成。",
+        "numeric_projection_authorized": false,
+        "representation_status": "UNREPRESENTED_CLAUSE_WITH_OPTIONAL_SUBCLAUSE_CANDIDATES"
+      },
+      {
+        "start": 87,
+        "end": 171,
+        "quote": "科学目标是在完整骨髓腔尺度下同时观察交感神经纤维和血管/血管周围结构，分析它们在骨髓中央区、骨内膜区域和干骺端区域中的空间分布、距离关系、局部富集和潜在龛结构组织方式。",
+        "roles": [
+          "REQUIRED_GOAL"
+        ],
+        "axis_candidates": [],
+        "reason": "明确实验目标保留；目标身份、拓扑或组织完整性不自动等价于某一轴的标量要求。",
+        "numeric_projection_authorized": false,
+        "representation_status": "UNREPRESENTED_CLAUSE_WITH_OPTIONAL_SUBCLAUSE_CANDIDATES"
+      },
+      {
+        "start": 173,
+        "end": 247,
+        "quote": "我在进行小鼠股骨骨髓透明化实验时遇到问题：组织在叔丁醇梯度 70% 步骤后变得非常脆，后续操作中容易碎裂，导致完整股骨结构和骨髓腔空间连续性被破坏。",
+        "roles": [
+          "HISTORICAL_FAILURE",
+          "HISTORICAL_CONDITION"
+        ],
+        "axis_candidates": [],
+        "reason": "失败现象需要保留，但不能把历史结果变成当前参数上限或已知因果。 已发生的条件/流程，不是当前要求，不推导96小时上限或速度优先。",
+        "numeric_projection_authorized": false,
+        "representation_status": "UNREPRESENTED_CLAUSE_WITH_OPTIONAL_SUBCLAUSE_CANDIDATES"
+      },
+      {
+        "start": 247,
+        "end": 290,
+        "quote": "此前流程为固定和免疫标记后，直接按照 BoneClear protocol 进行处理。",
+        "roles": [
+          "HISTORICAL_CONDITION"
+        ],
+        "axis_candidates": [],
+        "reason": "已发生的条件/流程，不是当前要求，不推导96小时上限或速度优先。",
+        "numeric_projection_authorized": false,
+        "representation_status": "UNREPRESENTED_CLAUSE_WITH_OPTIONAL_SUBCLAUSE_CANDIDATES"
+      },
+      {
+        "start": 290,
+        "end": 405,
+        "quote": "请根据上述科学目标，在不引入给定标记物列表之外靶点或表外荧光团的前提下，重新选择或调整荧光/标记策略与组织透明方法，使其适合完整股骨硬组织透明化、骨髓腔结构保留、交感神经纤维和血管/周细胞结构双信号检测，以及低脆裂风险的三维成像。",
+        "roles": [
+          "REQUIRED_TARGET_CONSTRAINT",
+          "REQUIRED_GOAL",
+          "REQUIRED_SELECTION"
+        ],
+        "axis_candidates": [],
+        "reason": "靶点身份及列表边界独立保留，六轴不完整表示它。 明确实验目标保留；目标身份、拓扑或组织完整性不自动等价于某一轴的标量要求。 标记与透明方法需要匹配；未指定标记机制，不先验假定抗体或内源FP。",
+        "numeric_projection_authorized": false,
+        "representation_status": "UNREPRESENTED_CLAUSE_WITH_OPTIONAL_SUBCLAUSE_CANDIDATES"
+      },
+      {
+        "start": 407,
+        "end": 495,
+        "quote": "请仅输出修正后的 protocol，第 1 行写明应保留或更换的双靶点荧光/标记策略和组织透明方法，随后仅列出透明处理、RI 匹配和保存/成像前处理步骤的关键试剂、条件和时间。",
+        "roles": [
+          "OUTPUT_FORMAT"
+        ],
+        "axis_candidates": [],
+        "reason": "要求输出条件和时间属于格式，不是追求短时间或简化实验。",
+        "numeric_projection_authorized": false,
+        "representation_status": "UNREPRESENTED_CLAUSE_WITH_OPTIONAL_SUBCLAUSE_CANDIDATES"
+      }
+    ],
+    "facts": [
+      {
+        "start": 194,
+        "end": 225,
+        "quote": "组织在叔丁醇梯度 70% 步骤后变得非常脆，后续操作中容易碎裂",
+        "roles": [
+          "HISTORICAL_FAILURE",
+          "HISTORICAL_CONDITION"
+        ],
+        "axis_candidates": [],
+        "reason": "脆裂是材料完整性问题，非毒性安全或时间优先；不能凭先后顺序推断唯一因果。",
+        "numeric_projection_authorized": false,
+        "representation_status": "UNREPRESENTED_AS_NUMERIC_REQUIREMENT"
+      },
+      {
+        "start": 247,
+        "end": 289,
+        "quote": "此前流程为固定和免疫标记后，直接按照 BoneClear protocol 进行处理",
+        "roles": [
+          "HISTORICAL_CONDITION"
+        ],
+        "axis_candidates": [],
+        "reason": "历史流程含免疫标记，不等于修正方案已完成所有新标记或当前无需标记。",
+        "numeric_projection_authorized": false,
+        "representation_status": "UNREPRESENTED_AS_NUMERIC_REQUIREMENT"
+      },
+      {
+        "start": 363,
+        "end": 370,
+        "quote": "骨髓腔结构保留",
+        "roles": [
+          "REQUIRED_GOAL"
+        ],
+        "axis_candidates": [],
+        "reason": "结构完整性/连通性与尺寸比不同，六轴没有明确的脆裂风险轴。",
+        "numeric_projection_authorized": false,
+        "representation_status": "UNREPRESENTED_AS_NUMERIC_REQUIREMENT"
+      },
+      {
+        "start": 394,
+        "end": 404,
+        "quote": "低脆裂风险的三维成像",
+        "roles": [
+          "REQUIRED_GOAL"
+        ],
+        "axis_candidates": [],
+        "reason": "不能映射毒性安全S_safe；独立保存脆裂风险目标。",
+        "numeric_projection_authorized": false,
+        "representation_status": "UNREPRESENTED_AS_NUMERIC_REQUIREMENT"
+      }
+    ],
+    "priority_status": "NO_GLOBAL_AXIS_RANKING_STATED"
+  }
+}

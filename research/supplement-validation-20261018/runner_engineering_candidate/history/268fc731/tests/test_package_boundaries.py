@@ -1,0 +1,45 @@
+"""Archive-free package boundary checks; no model/encoder or scientific test data."""
+import json
+import os
+from pathlib import Path
+import subprocess
+import sys
+import tempfile
+import unittest
+
+ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT))
+import runner as R
+import verify_package
+
+class PackageBoundaryTests(unittest.TestCase):
+    def test_original_vendor_hashes_and_declared_missing_files(self):
+        report = verify_package.check()
+        self.assertEqual(report['package_status'], 'PASS')
+        self.assertEqual(report['vendor_files_missing'], report['expected_vendor_omissions'])
+        self.assertFalse(report['vendor_snapshot_complete'])
+        self.assertFalse(report['formal_pipeline_validated'])
+        provenance = json.loads((ROOT / 'PROVENANCE.json').read_text())
+        self.assertEqual(R.sha(ROOT / 'VENDOR_MANIFEST.json'), provenance['source_vendor_manifest_sha256'])
+        self.assertEqual(R.code_freeze(), provenance['source_code_freeze'])
+
+    def test_prepare_still_rejects_incomplete_vendor_before_output(self):
+        with tempfile.TemporaryDirectory() as temp:
+            output = Path(temp) / 'must_remain_absent'
+            with self.assertRaises(FileNotFoundError):
+                R.prepare(Path(temp) / 'no_execution_manifest.json', output)
+            self.assertFalse(output.exists())
+
+    def test_all_cli_help_without_site_packages(self):
+        env = {k: v for k, v in os.environ.items() if k not in ('PYTHONPATH', 'PYTHONHOME')}
+        commands = [('runner.py', []), ('build_input_bindings.py', [])]
+        commands.extend(('runner.py', [cmd]) for cmd in ('inventory-check', 'prepare', 'verify', 'execute'))
+        for filename, args in commands:
+            with self.subTest(filename=filename, args=args):
+                result = subprocess.run([sys.executable, '-S', '-B', str(ROOT / filename), *args, '--help'],
+                    cwd=ROOT, env=env, text=True, capture_output=True, timeout=20)
+                self.assertEqual(result.returncode, 0, result.stderr)
+                self.assertIn('usage:', result.stdout)
+
+if __name__ == '__main__':
+    unittest.main()

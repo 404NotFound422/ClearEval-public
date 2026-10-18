@@ -1,0 +1,410 @@
+{
+  "2": {
+    "schema_version": "fixed-task-evidence-v1",
+    "question_id": 2,
+    "question": "我需要对完整成年小鼠全脑进行透明化处理，以构建神经元胞体、轴突和树突结构的三维形态图谱，用于观察全脑神经元结构分布和主要神经纤维走行。我的样本是完整的成年小鼠大脑，尺寸约 10 mm × 8 mm × 6 mm，已完成 4% PFA 灌流固定和后固定。请根据该科学问题自行选择合适的荧光/标记策略，并基于所选标记样本选择匹配的组织透明方法。请仅输出 protocol，第1行写明所选荧光/标记策略和所选组织透明方法，随后仅列出透明处理、RI 匹配和保存/成像前处理步骤的关键试剂、条件和时间",
+    "cards": [
+      {
+        "schema_version": "source-grounding-v2",
+        "id": "fdisco-sciadv2019-sec13",
+        "identity": {
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6357753/#sec13",
+          "version": "Science Advances 2019 5(1):eaau8355 published journal XML, sec13 paragraphs 1 and 3",
+          "publication_status": "CURRENT",
+          "publication_status_evidence": {
+            "scope": "Fixed published XML version with is-retracted=no and is-manuscript=no; 2026-10-14 recorded focused correction check found no matching update. Not a comprehensive retraction registry or scientific truth certificate.",
+            "source_bibliography": {
+              "title": "FDISCO: Advanced solvent-based clearing method for imaging whole organs",
+              "authors": [
+                "Yisong Qi",
+                "Tingting Yu",
+                "Jianyi Xu",
+                "Peng Wan",
+                "Yilin Ma",
+                "Jingtan Zhu",
+                "Yusha Li",
+                "Hui Gong",
+                "Qingming Luo",
+                "Dan Zhu"
+              ],
+              "journal": "Science Advances",
+              "volume": "5",
+              "issue": "1",
+              "pages_or_article_number": "eaau8355",
+              "end_page": null,
+              "publication_dates": [
+                {
+                  "type": null,
+                  "year": "2019",
+                  "month": "1",
+                  "day": "11"
+                }
+              ],
+              "doi": "10.1126/sciadv.aau8355",
+              "pmid": "30746463",
+              "pmcid": "PMC6357753",
+              "version": "published journal article in PMC XML; not author manuscript",
+              "version_evidence": "article-meta custom-meta is-manuscript=no / publisher metadata",
+              "license": "Copyright © 2019 The Authors, some rights reserved; exclusive licensee American Association for the Advancement of Science. No claim to original U.S. Government Works. Distributed under a Creative Commons Attribution NonCommercial License 4.0 (CC BY-NC).This is an open-access article distributed under the terms of the Creative Commons Attribution-NonCommercial license, which permits use, distribution, and reproduction in any medium, so long as the resultant use is not for commercial advantage and provided the original work is properly cited.",
+              "corrections": [],
+              "correction_check": "XML has no related-article correction link; is-retracted=no. Focused DOI/correction search found no matching update."
+            },
+            "xml_path": "/workspace/scratch/250603738113/method_development_expansion_20261014/reviewed_core_batch/sources_internal/PMC6357753.xml",
+            "xml_sha256": "93b628083396408d5a6df5e4fffb7a89f3997d37465d73504397e6d9a5c4e34a",
+            "web_check_20261015": "PMC browser check returned challenge; not counted as a new fulltext/version verification."
+          }
+        },
+        "source_document": {
+          "text": "FDISCO clearing procedure\n\nFDISCO clearing consisted of two steps: dehydration and refractive index matching. Tissues were dehydrated with THF solutions (mixed with dH2O, pH adjusted to 9.0 with triethylamine) at a series of concentrations 50, 70, 80, and 100 volume % (twice or thrice). Pure DBE (108014, Sigma-Aldrich) was used as a refractive index matching solution to clear tissue after dehydration. All steps were performed at 4°C with slight shaking. During clearing, the tissues were placed in glass chambers covered with aluminum foil in the dark. The incubation time of each step depended on the tissue type and size (table S1).\n\nAfter FDISCO clearing, the tissues were stored in DBE in airtight glass chambers at 4°C in the dark. As tissue transparency might decrease during long-term storage after clearing, prior to repeated imaging, the tissues should be transferred to 100 volume % THF for several hours and then incubated again in DBE until the tissues were transparent. The peroxides in THF and DBE were removed by column absorption chromatography with basic activated aluminum oxide (20001861, Sinopharm Chemical Reagent Co. Ltd., China) (24). The clearing agents were freshly prepared. All other clearing protocols, including BABB, 3DISCO, uDISCO, FluoClearBABB, Ethanol-ECi, CUBIC, and PACT, were performed following the original papers (16, 17, 22, 23, 26–28).\n",
+          "sha256": "35c9600df019b29483e752b96daae7276da0eab669106435b72c78722f51ac1d",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6357753/#sec13",
+          "version": "Science Advances 2019 5(1):eaau8355 published journal XML, sec13 paragraphs 1 and 3",
+          "excerpt_scope": "Exact selected published section excerpt; not full article or supplementary table"
+        },
+        "passages": [
+          {
+            "id": "method-title",
+            "start": 0,
+            "end": 6,
+            "quote": "FDISCO",
+            "sha256": "cdc1a174a1b38f50fac2c93a221c2b65c4373df4aef698bc0d61cca1a568070e"
+          },
+          {
+            "id": "fdisco_01",
+            "start": 27,
+            "end": 109,
+            "quote": "FDISCO clearing consisted of two steps: dehydration and refractive index matching.",
+            "sha256": "687ff3ddba5b6cecd4ebcd12e8d39fabbab8c0b378fc74d4b96577e6c0962e31"
+          },
+          {
+            "id": "fdisco_02",
+            "start": 110,
+            "end": 287,
+            "quote": "Tissues were dehydrated with THF solutions (mixed with dH2O, pH adjusted to 9.0 with triethylamine) at a series of concentrations 50, 70, 80, and 100 volume % (twice or thrice).",
+            "sha256": "bc4ed1728ced69aa6a1f11476af3c0e4e57ad2da5b0c1e4ede54fcdb75764c3c"
+          },
+          {
+            "id": "fdisco_03",
+            "start": 288,
+            "end": 404,
+            "quote": "Pure DBE (108014, Sigma-Aldrich) was used as a refractive index matching solution to clear tissue after dehydration.",
+            "sha256": "0c5b959b01d0aa9a4062f07d9343d014d61357ab767b50a3b707d75a8c2541fb"
+          },
+          {
+            "id": "fdisco_04",
+            "start": 405,
+            "end": 457,
+            "quote": "All steps were performed at 4°C with slight shaking.",
+            "sha256": "4cf6039a459e4a0baf73a262fbe254c4b3567e9574b09718872790c56d29c5d1"
+          },
+          {
+            "id": "fdisco_05",
+            "start": 458,
+            "end": 556,
+            "quote": "During clearing, the tissues were placed in glass chambers covered with aluminum foil in the dark.",
+            "sha256": "8eed806100834a8da711545efc5e20016dd36dd89d7dc1b92f7993c00ef421c4"
+          },
+          {
+            "id": "fdisco_06",
+            "start": 557,
+            "end": 638,
+            "quote": "The incubation time of each step depended on the tissue type and size (table S1).",
+            "sha256": "3172fd83b5752fc4eee9928c9985f8dc27e92a4742bb3851b60fb454653cbd50"
+          },
+          {
+            "id": "fdisco_07",
+            "start": 640,
+            "end": 740,
+            "quote": "After FDISCO clearing, the tissues were stored in DBE in airtight glass chambers at 4°C in the dark.",
+            "sha256": "3ac160f9f571d269d758b09ff1cc924548d9d2407cac090b49c77861552911a8"
+          },
+          {
+            "id": "fdisco_08",
+            "start": 741,
+            "end": 986,
+            "quote": "As tissue transparency might decrease during long-term storage after clearing, prior to repeated imaging, the tissues should be transferred to 100 volume % THF for several hours and then incubated again in DBE until the tissues were transparent.",
+            "sha256": "ffffe67db6994be825a43b2f406cf9b79b46a5fd26191feb0a3cf8282be2311e"
+          },
+          {
+            "id": "fdisco_09",
+            "start": 987,
+            "end": 1161,
+            "quote": "The peroxides in THF and DBE were removed by column absorption chromatography with basic activated aluminum oxide (20001861, Sinopharm Chemical Reagent Co. Ltd., China) (24).",
+            "sha256": "3c03ccf5de0e846a603e55c8667097941f1215c0e0566ba988232203c849d6eb"
+          },
+          {
+            "id": "fdisco_10",
+            "start": 1162,
+            "end": 1204,
+            "quote": "The clearing agents were freshly prepared.",
+            "sha256": "656e11df5f580e2641aea2f5e0d489cd8153078554b166e533fd06556ab45f51"
+          },
+          {
+            "id": "fdisco_11",
+            "start": 1205,
+            "end": 1381,
+            "quote": "All other clearing protocols, including BABB, 3DISCO, uDISCO, FluoClearBABB, Ethanol-ECi, CUBIC, and PACT, were performed following the original papers (16, 17, 22, 23, 26–28).",
+            "sha256": "3f72b26d3e035222a51aef137614db2405a8d43b0982e1c19ddae701ca20841b"
+          }
+        ],
+        "applicability": {
+          "protocol": "FDISCO"
+        },
+        "scope_support": {
+          "protocol": {
+            "kind": "EXPLICIT",
+            "raw_value": "FDISCO",
+            "transform": "IDENTITY",
+            "spans": [
+              {
+                "start": 0,
+                "end": 6,
+                "quote": "FDISCO"
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "requirements": [
+      {
+        "id": "KEY_REAGENTS",
+        "kind": "COMPLETENESS",
+        "necessary": true,
+        "text": "Report 关键试剂 as explicitly requested; presence does not establish scientific correctness.",
+        "reference_role": "CONSTRAINT",
+        "scope": "GLOBAL",
+        "evidence_ids": [],
+        "question_span": {
+          "start": 235,
+          "end": 239,
+          "quote": "关键试剂"
+        }
+      },
+      {
+        "id": "KEY_CONDITIONS",
+        "kind": "COMPLETENESS",
+        "necessary": true,
+        "text": "Report 条件 as explicitly requested; presence does not establish scientific correctness.",
+        "reference_role": "CONSTRAINT",
+        "scope": "GLOBAL",
+        "evidence_ids": [],
+        "question_span": {
+          "start": 240,
+          "end": 242,
+          "quote": "条件"
+        }
+      },
+      {
+        "id": "KEY_TIMES",
+        "kind": "COMPLETENESS",
+        "necessary": true,
+        "text": "Report 时间 as explicitly requested; presence does not establish scientific correctness.",
+        "reference_role": "CONSTRAINT",
+        "scope": "GLOBAL",
+        "evidence_ids": [],
+        "question_span": {
+          "start": 243,
+          "end": 245,
+          "quote": "时间"
+        }
+      }
+    ],
+    "routes": {
+      "main": {
+        "sr_inventory": {
+          "schema_version": "route-required-stage-inventory-v1",
+          "status": "frozen_development",
+          "inventory_id": "q2-fdisco2019-clearing-storage-v1",
+          "route_id": "main",
+          "reference_id": "fdisco2019-clearing-ri-storage-v1",
+          "reference_status": "PUBLISHED_REPORTED_INSTANCE_CANDIDATE_NOT_EXPERT_GOLD",
+          "sources": [
+            {
+              "source_id": "fdisco-sciadv2019-sec13",
+              "locator": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6357753/#sec13"
+            }
+          ],
+          "reference_steps": [
+            {
+              "reference_step_id": "fdisco_02",
+              "text": "Tissues were dehydrated with THF solutions (mixed with dH2O, pH adjusted to 9.0 with triethylamine) at a series of concentrations 50, 70, 80, and 100 volume % (twice or thrice).",
+              "text_origin": "EXPLICIT",
+              "source_ids": [
+                "fdisco-sciadv2019-sec13"
+              ],
+              "passage_ids": {
+                "fdisco-sciadv2019-sec13": [
+                  "method-title",
+                  "fdisco_02",
+                  "fdisco_04",
+                  "fdisco_05",
+                  "fdisco_06"
+                ]
+              },
+              "applicability": {
+                "protocol": "FDISCO"
+              },
+              "reference_role": "REPORTED_INSTANCE",
+              "stage_id": "dehydration",
+              "protocol_id": "fdisco-sciadv2019",
+              "aliases": []
+            },
+            {
+              "reference_step_id": "fdisco_03",
+              "text": "Pure DBE (108014, Sigma-Aldrich) was used as a refractive index matching solution to clear tissue after dehydration.",
+              "text_origin": "EXPLICIT",
+              "source_ids": [
+                "fdisco-sciadv2019-sec13"
+              ],
+              "passage_ids": {
+                "fdisco-sciadv2019-sec13": [
+                  "method-title",
+                  "fdisco_03",
+                  "fdisco_04",
+                  "fdisco_05",
+                  "fdisco_06"
+                ]
+              },
+              "applicability": {
+                "protocol": "FDISCO"
+              },
+              "reference_role": "REPORTED_INSTANCE",
+              "stage_id": "ri-matching",
+              "protocol_id": "fdisco-sciadv2019",
+              "aliases": []
+            },
+            {
+              "reference_step_id": "fdisco_07",
+              "text": "After FDISCO clearing, the tissues were stored in DBE in airtight glass chambers at 4°C in the dark.",
+              "text_origin": "EXPLICIT",
+              "source_ids": [
+                "fdisco-sciadv2019-sec13"
+              ],
+              "passage_ids": {
+                "fdisco-sciadv2019-sec13": [
+                  "method-title",
+                  "fdisco_07"
+                ]
+              },
+              "applicability": {
+                "protocol": "FDISCO"
+              },
+              "reference_role": "REPORTED_INSTANCE",
+              "stage_id": "storage",
+              "protocol_id": "fdisco-sciadv2019",
+              "aliases": []
+            }
+          ],
+          "required_stages": [
+            {
+              "stage_id": "dehydration",
+              "reference_step_ids": [
+                "fdisco_02"
+              ],
+              "source_ids": [
+                "fdisco-sciadv2019-sec13"
+              ],
+              "passage_ids": {
+                "fdisco-sciadv2019-sec13": [
+                  "method-title",
+                  "fdisco_02",
+                  "fdisco_04",
+                  "fdisco_05",
+                  "fdisco_06"
+                ]
+              },
+              "applicability": {
+                "protocol": "FDISCO"
+              },
+              "reference_role": "REPORTED_INSTANCE",
+              "necessity_certified": false
+            },
+            {
+              "stage_id": "ri-matching",
+              "reference_step_ids": [
+                "fdisco_03"
+              ],
+              "source_ids": [
+                "fdisco-sciadv2019-sec13"
+              ],
+              "passage_ids": {
+                "fdisco-sciadv2019-sec13": [
+                  "method-title",
+                  "fdisco_03",
+                  "fdisco_04",
+                  "fdisco_05",
+                  "fdisco_06"
+                ]
+              },
+              "applicability": {
+                "protocol": "FDISCO"
+              },
+              "reference_role": "REPORTED_INSTANCE",
+              "necessity_certified": false
+            },
+            {
+              "stage_id": "storage",
+              "reference_step_ids": [
+                "fdisco_07"
+              ],
+              "source_ids": [
+                "fdisco-sciadv2019-sec13"
+              ],
+              "passage_ids": {
+                "fdisco-sciadv2019-sec13": [
+                  "method-title",
+                  "fdisco_07"
+                ]
+              },
+              "applicability": {
+                "protocol": "FDISCO"
+              },
+              "reference_role": "REPORTED_INSTANCE",
+              "necessity_certified": false
+            }
+          ],
+          "required_transitions": [],
+          "coverage_scope": "Q2 requested clearing, RI, storage/pre-imaging only; source sample-processing operations. Not whole-task adequacy.",
+          "source_context_policy": {
+            "fdisco_01": "overview, not operation",
+            "fdisco_04": "global temperature/motion context attached to clearing; not operation",
+            "fdisco_05": "global container/light context attached to clearing; not operation",
+            "fdisco_06": "Table S1 timing unresolved; not absence of timings",
+            "fdisco_08": "conditional repeated-imaging reprocessing; not mandatory for initial imaging, excluded from fixed initial-imaging denominator",
+            "fdisco_09": "source reagent preparation context; not an additional sample-processing operation",
+            "fdisco_10": "freshness context",
+            "fdisco_11": "other method crossreferences excluded"
+          },
+          "parameter_policy": "Reported settings only; no allowed ranges; storage or clearing-duration correctness unresolved without scoped constraints."
+        },
+        "correctness_checks": {
+          "co_method": [],
+          "co_param": [],
+          "co_order": [],
+          "co_chem": []
+        },
+        "parameter_requirements": [
+          "KEY_REAGENTS",
+          "KEY_CONDITIONS",
+          "KEY_TIMES"
+        ],
+        "submetrics": {}
+      }
+    },
+    "metadata": {
+      "status": "SOURCE_FIRST_Q2_FDISCO_REFERENCE_CANDIDATE_PENDING_INDEPENDENT_REVIEW",
+      "question_object_sha256": "c2994e267ee645317852ec2d7ac61b4e64a7699f535352193c37e53b40d6b888",
+      "scientific_truth": null,
+      "expert_gold": false,
+      "method_reference_status": "MISSING_NO_SUBSTITUTION",
+      "scores": null,
+      "candidate_text_consulted": false,
+      "scientific_applicability": null,
+      "source_scope": "Published sec13 paragraphs1/3 only; bone/whole-body paragraph2 excluded, no supplementary-table inference",
+      "reused_standard_inventory": "/workspace/scratch/250603738113/benchmark_rubric_revision_20261014/experiments/shared_reference_representation_20261014/fdisco_inventory.json",
+      "reviewed_eight_unit_catalog": "/workspace/scratch/250603738113/method_development_expansion_20261014/evidence_conversion/fdisco_revision_20261014/FDISCO.literature_evidence_v2.json",
+      "operation_inventory_not_research_unit_count": true
+    }
+  }
+}

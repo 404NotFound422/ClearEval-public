@@ -1,73 +1,82 @@
 {
-  "status": "PORTABLE_TARGET_PASS",
-  "target": "archive-free-minimal-engineering-candidate",
-  "python_version": "3.12.14",
-  "isolated_from_parent_recovery_tree": true,
+  "status": "INDEPENDENT_CLEAN_COPY_ENGINEERING_PASS_COMPLETE_ORIGINAL_VENDOR",
+  "python_version": "3.12",
   "site_packages_disabled": true,
-  "clean_copy": true,
+  "bytecode_disabled": true,
+  "isolation": "Fresh directory copied from frozen package, separate from previous source and recovery trees",
+  "tested_package_manifest_sha256": "3e07491fe9fba6966610824095c10d15237fa70247ad51e2f8081266c2dffb7e",
+  "code_freeze": "d795ab8f5ff7a835cd8bfef5326197238bb9ef13962a7b92c2c3942d4ded266b",
+  "vendor_manifest_sha256": "241bc75e8f5448848b724398cba0ee8f666fc55a2340cbbe36c6a0a52827b85d",
   "tests": {
-    "original_scope_total": 18,
-    "portable_scope_regressions": 16,
-    "package_boundaries": 3,
-    "portable_total": 19,
-    "portable_passed": 19,
-    "source_bound_scope_tests_not_run_by_portable_target": 2,
-    "full_scope_check_result_without_source": "16 pass; 2 missing-source ERROR. Not full-suite acceptance."
+    "default_engineering": {
+      "run": 21,
+      "passed": 21,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "original_scope": {
+      "run": 18,
+      "passed": 18,
+      "failures": 0,
+      "errors": 0
+    },
+    "source_bound_tests_run": 2,
+    "package_boundary_tests": 3
   },
-  "checks": [
+  "commands": [
     {
-      "name": "standalone_suite",
-      "command": "python -S -B run_engineering_tests.py",
-      "exit_code": 0,
-      "expected_exit_code": 0,
-      "behavior_matches_expectation": true,
-      "interpretation": "Portable engineering check only"
-    },
-    {
-      "name": "full_scope_expected_missing_source",
-      "command": "python -S -B -m unittest discover -s tests -p test_scope_regressions.py -v",
-      "exit_code": 1,
-      "expected_exit_code": 1,
-      "behavior_matches_expectation": true,
-      "interpretation": "NOT_RUN_BY_PORTABLE_TARGET; full original scope has 16 pass and 2 missing-source errors"
-    },
-    {
-      "name": "package_integrity",
-      "command": "python -S -B verify_package.py",
-      "exit_code": 0,
-      "expected_exit_code": 0,
-      "behavior_matches_expectation": true,
-      "interpretation": "Portable engineering check only"
-    },
-    {
-      "name": "complete_vendor_expected_block",
       "command": "python -S -B verify_package.py --require-complete-vendor",
-      "exit_code": 2,
-      "expected_exit_code": 2,
-      "behavior_matches_expectation": true,
-      "interpretation": "Expected block; not a complete vendor pass"
+      "exit_code": 0
     },
     {
-      "name": "runner_help",
-      "command": "python -S -B runner.py --help",
-      "exit_code": 0,
-      "expected_exit_code": 0,
-      "behavior_matches_expectation": true,
-      "interpretation": "Portable engineering check only"
+      "command": "python -S -B run_engineering_tests.py",
+      "exit_code": 0
+    },
+    {
+      "command": "python -S -B -m unittest discover -s tests -p test_scope_regressions.py -v",
+      "exit_code": 0
     }
   ],
-  "scan": {
-    "files_scanned": 43,
-    "forbidden_binary_files": [],
-    "secret_or_private_absolute_path_matches": [],
-    "scope": "bounded regex and extension scan, plus allowlisted source-copy provenance; not an exhaustive security or license audit"
+  "vendor_entries": 94,
+  "vendor_entries_present": 94,
+  "vendor_entries_missing": 0,
+  "original_vendor_manifest_unchanged": true,
+  "original_runner_unchanged": true,
+  "original_scope_tests_unchanged": true,
+  "test_entry_and_package_boundary_conditions_updated": true,
+  "integrity_result": {
+    "package_status": "PASS",
+    "package_files_checked": 128,
+    "package_hash_failures": [],
+    "vendor_files_present": 94,
+    "expected_vendor_omissions": 0,
+    "vendor_files_missing": 0,
+    "vendor_hash_failures": [],
+    "unexpected_missing_vendor_files": [],
+    "locally_restored_vendor_files": [],
+    "vendor_snapshot_complete": true,
+    "formal_pipeline_validated": false,
+    "model_calls": 0,
+    "encoder_calls": 0
   },
-  "original_vendor_manifest_preserved": true,
-  "present_vendor_entries": 19,
-  "missing_vendor_entries": 75,
-  "formal_prepare_verified": false,
-  "formal_execute_verified": false,
-  "scientific_validation": false,
+  "logs": [
+    {
+      "path": "../reports/dependency_vendor_verify.log",
+      "sha256": "3b6a3f241e529c2b0848c5074bf19aecc86423756ed542faedf2f1e3cf978510"
+    },
+    {
+      "path": "../reports/dependency_engineering_21.log",
+      "sha256": "7c141a23d795275016e7dbf4062523d9cb1461e64a85a9987a3f5a5912327c38"
+    },
+    {
+      "path": "../reports/dependency_scope_18.log",
+      "sha256": "936565788255c44838b4e4ff52ef71440a5af1f17cc3f83a79b746da0d5b0ba5"
+    }
+  ],
+  "previous_verification": "history/268fc731/VERIFICATION.json",
+  "formal_pipeline_validated": false,
   "model_calls": 0,
-  "encoder_calls": 0
+  "encoder_calls": 0,
+  "scientific_runs": 0
 }

@@ -1,0 +1,42 @@
+Engineering target: all 18 original scope tests + 3 package-boundary tests.
+The 2 source-bound scope tests are included; missing source files are errors.
+test_chinese_negated_optional_and_unselected_rows_not_asserted (test_scope_regressions.ScopeRegressionTests.test_chinese_negated_optional_and_unselected_rows_not_asserted) ... ok
+test_explicit_mixed_scope_heading_does_not_choose_first_phase (test_scope_regressions.ScopeRegressionTests.test_explicit_mixed_scope_heading_does_not_choose_first_phase) ... ok
+test_explicit_post_label_buffer_washes_are_outside_clearing (test_scope_regressions.ScopeRegressionTests.test_explicit_post_label_buffer_washes_are_outside_clearing) ... ok
+test_finite_chinese_current_headings_preserve_original_text (test_scope_regressions.ScopeRegressionTests.test_finite_chinese_current_headings_preserve_original_text) ... ok
+test_future_purpose_cannot_promote_current_phase (test_scope_regressions.ScopeRegressionTests.test_future_purpose_cannot_promote_current_phase) ... ok
+test_generic_wash_and_contradictory_post_label_wash_stay_unresolved (test_scope_regressions.ScopeRegressionTests.test_generic_wash_and_contradictory_post_label_wash_stay_unresolved) ... ok
+test_in_scope_outside_scope_conflict_still_blocks (test_scope_regressions.ScopeRegressionTests.test_in_scope_outside_scope_conflict_still_blocks) ... ok
+test_known_preparation_heading_excluded_without_disabling_gate (test_scope_regressions.ScopeRegressionTests.test_known_preparation_heading_excluded_without_disabling_gate) ... ok
+test_literal_identity_exception_does_not_relax_modality_or_parameters (test_scope_regressions.ScopeRegressionTests.test_literal_identity_exception_does_not_relax_modality_or_parameters) ... ok
+test_mixed_and_unknown_heading_suffixes_remain_unresolved (test_scope_regressions.ScopeRegressionTests.test_mixed_and_unknown_heading_suffixes_remain_unresolved) ... ok
+test_outside_scope_membership_preserves_phase_uncertainty (test_scope_regressions.ScopeRegressionTests.test_outside_scope_membership_preserves_phase_uncertainty) ... ok
+test_solvent_reversal_does_not_cross_routes_or_override_clearing (test_scope_regressions.ScopeRegressionTests.test_solvent_reversal_does_not_cross_routes_or_override_clearing) ... ok
+test_source_backed_solvent_reversal_allows_equal_boundary_wash (test_scope_regressions.ScopeRegressionTests.test_source_backed_solvent_reversal_allows_equal_boundary_wash) ... ok
+test_unknown_current_heading_remains_technical_blocker (test_scope_regressions.ScopeRegressionTests.test_unknown_current_heading_remains_technical_blocker) ... ok
+test_unknown_identity_never_matches_merely_because_both_unknown (test_scope_regressions.ScopeRegressionTests.test_unknown_identity_never_matches_merely_because_both_unknown) ... ok
+test_unknown_reference_phase_still_blocks (test_scope_regressions.ScopeRegressionTests.test_unknown_reference_phase_still_blocks) ... ok
+test_unselected_route_does_not_block_requested_route (test_scope_regressions.ScopeRegressionTests.test_unselected_route_does_not_block_requested_route) ... ok
+test_verified_v3_assertion_compatibility_retains_assertion (test_scope_regressions.ScopeRegressionTests.test_verified_v3_assertion_compatibility_retains_assertion) ... ok
+test_all_cli_help_without_site_packages (test_package_boundaries.PackageBoundaryTests.test_all_cli_help_without_site_packages) ... ok
+test_original_vendor_hashes_and_declared_missing_files (test_package_boundaries.PackageBoundaryTests.test_original_vendor_hashes_and_declared_missing_files) ... ok
+test_prepare_still_rejects_missing_vendor_before_output (test_package_boundaries.PackageBoundaryTests.test_prepare_still_rejects_missing_vendor_before_output) ... ok
+
+----------------------------------------------------------------------
+Ran 21 tests in 0.930s
+
+OK
+{
+  "engineering_tests_run": 21,
+  "passed": 21,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "source_bound_tests_included": [
+    "test_solvent_reversal_does_not_cross_routes_or_override_clearing",
+    "test_source_backed_solvent_reversal_allows_equal_boundary_wash"
+  ],
+  "formal_pipeline_validated": false,
+  "model_calls": 0,
+  "encoder_calls": 0
+}

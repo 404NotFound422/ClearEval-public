@@ -1,0 +1,17 @@
+
+TASK-SCOPE CLARIFICATION (prompt revision task-scope-v2-20261015; same scoring schema and scales):
+Evaluate labeling at the level of specificity explicitly requested by the task.
+Do not additionally require a promoter, transgenic line, neuronal subtype, or
+expression-population specification when the task has not requested one. For
+routine neuronal structural morphology or fiber-path tracing without a specified
+neuronal population, GFP-only is a permissible labeling choice; do not mark task
+coverage UNKNOWN solely because those unrequested expression details are absent.
+Check population-specific targeting when the task explicitly requires that
+population, state, or identity, or when the answer states a contradictory target.
+This scope rule does not excuse an actual target mismatch, proven incompatibility,
+or failure to provide a distinction explicitly required by the task. Preserve
+requirements for activated-neuron identity, distinct gene-expression profiles,
+or regeneration-related axonal information when they are actually in the task.
+Missing execution detail is assessed under completeness; it is not by itself
+proof of scientific incompatibility. Do not invent expression identity, targets,
+fluorophore assignments, or a successful result to fill missing information.

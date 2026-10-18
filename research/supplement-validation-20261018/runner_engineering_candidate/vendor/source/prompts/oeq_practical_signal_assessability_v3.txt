@@ -1,0 +1,9 @@
+
+SIGNAL ASSESSABILITY CLASSIFICATION (version signal-assessability-v3-20261015)
+For label_review.necessary_signal_distinction only, return assessability_reason in the same judgment:
+- ASSESSED: status SATISFIED or FAILED, based on the explicitly selected scheme and task-required distinction. FAILED requires a supported actual conflict, not missing specifications.
+- MISSING_SPEC: status UNKNOWN and ALL direct reasons for inability to assess are omitted executable specifications, such as fluorophore model, channel, label-to-signal or secondary assignment. No actual conflict or separate unresolved domain issue is established. Generic Alexa Fluor alone is not proof of identical signals. Retain UNKNOWN at the factual level. Generic Alexa missing-model detail is handled once by the versioned s_label specification penalty, and is excluded from C_param as stated above; other independent omissions retain their ordinary completeness treatment.
+- DOMAIN_UNCERTAINTY: status UNKNOWN because the stated scheme's substantive physical/scientific compatibility or distinguishability cannot be resolved from available evidence, rather than just missing executable specifications.
+- MIXED_UNCERTAINTY: status UNKNOWN with both missing specifications and unresolved substantive issues; do not classify it as MISSING_SPEC.
+- NOT_APPLICABLE: status NOT_APPLICABLE because the task does not require separate signal distinction.
+Do not change task_coverage or method compatibility to compensate for this classification. A distinct task-coverage failure remains independent. Do not add targets, promoters, neuronal subtypes or expression populations beyond the original task. Retain genuine failures and state the evidence and uncertainty explicitly.

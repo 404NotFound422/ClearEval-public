@@ -1,0 +1,214 @@
+{
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "const": "sample-scope-candidate-v1"
+    },
+    "question_id": {
+      "enum": [
+        165,
+        166,
+        167,
+        168,
+        221,
+        222,
+        223,
+        224,
+        240
+      ]
+    },
+    "question_sha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "sample_id_semantics": {
+      "const": "QUESTION_LOCAL_OBJECT_CLASS_NOT_PHYSICAL_SPECIMEN"
+    },
+    "samples": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "sample_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "identity": {
+            "type": "string",
+            "minLength": 1
+          },
+          "form": {
+            "enum": [
+              "CONTINUOUS_SEGMENT",
+              "CONTINUOUS_BLOCK",
+              "WHOLE_RETINA",
+              "SEPARATED_TISSUE_BLOCK",
+              "WHOLE_ORGANOID"
+            ]
+          },
+          "dimensions": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "axis": {
+                  "enum": [
+                    "length",
+                    "diameter",
+                    "unspecified_axis_1",
+                    "unspecified_axis_2",
+                    "unspecified_axis_3"
+                  ]
+                },
+                "value": {
+                  "type": "number",
+                  "exclusiveMinimum": 0
+                },
+                "unit": {
+                  "enum": [
+                    "cm",
+                    "mm",
+                    "μm"
+                  ]
+                },
+                "normalized_value_mm": {
+                  "type": "number",
+                  "exclusiveMinimum": 0
+                },
+                "approximate": {
+                  "const": true
+                }
+              },
+              "required": [
+                "axis",
+                "value",
+                "unit",
+                "normalized_value_mm",
+                "approximate"
+              ],
+              "additionalProperties": false
+            },
+            "minItems": 1
+          },
+          "anchors": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "start": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "end": {
+                  "type": "integer",
+                  "minimum": 1
+                },
+                "quote": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              },
+              "required": [
+                "start",
+                "end",
+                "quote"
+              ],
+              "additionalProperties": false
+            },
+            "minItems": 1
+          },
+          "tier": {
+            "const": "UNKNOWN"
+          },
+          "reference_applicability": {
+            "const": "UNKNOWN"
+          },
+          "time_reference": {
+            "const": "UNKNOWN"
+          },
+          "ri_reference": {
+            "const": "UNKNOWN"
+          },
+          "physical_specimen_count": {
+            "const": "UNKNOWN"
+          },
+          "group_membership": {
+            "const": "UNKNOWN"
+          }
+        },
+        "required": [
+          "sample_id",
+          "identity",
+          "form",
+          "dimensions",
+          "anchors",
+          "tier",
+          "reference_applicability",
+          "time_reference",
+          "ri_reference",
+          "physical_specimen_count",
+          "group_membership"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 1
+    },
+    "context_anchors": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "start": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "end": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "quote": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "start",
+          "end",
+          "quote"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 1
+    },
+    "cross_sample_aggregation": {
+      "const": "UNKNOWN"
+    },
+    "question_level_tier": {
+      "const": "UNKNOWN"
+    },
+    "question_level_time": {
+      "const": "UNKNOWN"
+    },
+    "question_level_ri": {
+      "const": "UNKNOWN"
+    },
+    "deployment_status": {
+      "const": "ISOLATED_CANDIDATE"
+    }
+  },
+  "required": [
+    "schema_version",
+    "question_id",
+    "question_sha256",
+    "sample_id_semantics",
+    "samples",
+    "context_anchors",
+    "cross_sample_aggregation",
+    "question_level_tier",
+    "question_level_time",
+    "question_level_ri",
+    "deployment_status"
+  ],
+  "additionalProperties": false,
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

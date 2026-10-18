@@ -5,6 +5,7 @@ from pathlib import Path
 import subprocess
 import sys
 import tempfile
+from unittest.mock import patch
 import unittest
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -17,17 +18,23 @@ class PackageBoundaryTests(unittest.TestCase):
         report = verify_package.check()
         self.assertEqual(report['package_status'], 'PASS')
         self.assertEqual(report['vendor_files_missing'], report['expected_vendor_omissions'])
-        self.assertFalse(report['vendor_snapshot_complete'])
+        self.assertEqual(report['vendor_snapshot_complete'], report['expected_vendor_omissions'] == 0)
         self.assertFalse(report['formal_pipeline_validated'])
         provenance = json.loads((ROOT / 'PROVENANCE.json').read_text())
         self.assertEqual(R.sha(ROOT / 'VENDOR_MANIFEST.json'), provenance['source_vendor_manifest_sha256'])
         self.assertEqual(R.code_freeze(), provenance['source_code_freeze'])
 
-    def test_prepare_still_rejects_incomplete_vendor_before_output(self):
+    def test_prepare_still_rejects_missing_vendor_before_output(self):
+        # Exercise the unchanged real vendor guard against an intentionally empty
+        # temporary source root, even when this delivered snapshot is complete.
         with tempfile.TemporaryDirectory() as temp:
+            partial_root = Path(temp) / 'incomplete_candidate'
+            partial_root.mkdir()
+            (partial_root / 'VENDOR_MANIFEST.json').write_bytes((ROOT / 'VENDOR_MANIFEST.json').read_bytes())
             output = Path(temp) / 'must_remain_absent'
-            with self.assertRaises(FileNotFoundError):
-                R.prepare(Path(temp) / 'no_execution_manifest.json', output)
+            with patch.object(R, 'HERE', partial_root):
+                with self.assertRaises(FileNotFoundError):
+                    R.prepare(Path(temp) / 'no_execution_manifest.json', output)
             self.assertFalse(output.exists())
 
     def test_all_cli_help_without_site_packages(self):

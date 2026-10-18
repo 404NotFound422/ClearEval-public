@@ -1,0 +1,296 @@
+{
+  "157": {
+    "schema_version": "fixed-task-evidence-v1",
+    "question_id": 157,
+    "question": "我需要对中枢神经系统神经环路中的完整小鼠大脑进行透明化处理，用于研究负性情绪相关神经环路机制，并在全脑范围内追踪杏仁核、前额叶皮层、丘脑和伏隔核之间的长程神经连接。样本为完整小鼠大脑，大小约 10 mm × 8 mm × 6 mm，已完成固定和后固定；目标投射神经元和轴突带有 EGFP 与 tdTomato 内源荧光报告信号，需要在透明化后尽量保留。科学目标是在完整脑尺度下同时显示两组示踪标记的投射神经元胞体和长程轴突路径，比较它们在杏仁核-前额叶皮层-丘脑-伏隔核相关通路中的起始区域、投射终点、纤维束走行、交叉区域和空间重叠程度。\n\n请根据该科学问题自行选择合适的荧光/标记策略，并基于所选标记样本选择匹配的组织透明方法。若已有 EGFP 与 tdTomato 内源荧光报告信号可以直接完成投射神经元和轴突示踪，应优先保留该信号，不应额外选择抗体替代同一主示踪目标。请仅输出 protocol，第 1 行写明所选荧光/标记策略和组织透明方法，随后仅列出透明处理、RI 匹配和保存/成像前处理步骤的关键试剂、条件和时间。",
+    "cards": [
+      {
+        "schema_version": "source-grounding-v2",
+        "id": "macs-original2020-methods",
+        "identity": {
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7175264/",
+          "version": "Published original MACS Advanced Science 2020 1903185, methods sections 0150 and 0160; exact local XML text normalization",
+          "publication_status": "CURRENT",
+          "publication_status_evidence": {
+            "scope": "Published original primary article accessed; not comprehensive retraction certification",
+            "xml_path": "/workspace/scratch/250603738113/method_development_expansion_20261014/reviewed_core_batch/sources_internal/PMC7175264.xml",
+            "xml_sha256": "b564bd936feabc141eee45706b294d7a2598050daad616130e4f69848c832ce4"
+          }
+        },
+        "source_document": {
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7175264/",
+          "version": "Published original MACS Advanced Science 2020 1903185, methods sections 0150 and 0160; exact local XML text normalization",
+          "text": "Preparation of MACS SolutionsThe MACS protocol contains three solutions. Recipes for each solution were as follows: MACS‐R0 contains 20 vol% MXDA (Tokyo chemical industry, D0127) and 15% (w/v) sorbitol (Sigma, 85529) mixed with distilled water, a solution containing 40 vol% MXDA and 30% (w/v) sorbitol dissolved in 1 × PBS was termed MACS‐R1. MACS‐R2 was prepared as a mixture of 40 vol% MXDA and 50% (w/v) sorbitol in distilled water. Proper heating with a water bath could promote the dissolution of sorbitol. When preparing MACS solutions, latex gloves should be worn to avoid direct contact with chemicals. Though the MXDA is hardly volatile, a ventilated environment is recommended.\n\nMACS Clearing ProcedureFor passive clearing, fixed samples were serially incubated in 20–30 mL MACS‐R0, MACS‐R1, and MACS‐R2 solutions in 50 mL conical tubes with gentle shaking. The time needed for clearing in each solution depends on the tissue type and thickness (Figure S2b–e, Supporting Information). Hard bones and whole bodies should be incubated first in 0.2 m ethylene diamine tetraacetic acid (EDTA) (Sinopharm Chemical Reagent Co., Ltd, China) for decalcification and then treated with MACS‐R0, MACS‐R1, and MACS‐R2 in succession. The incubation time in final buffer was adjustable by visual inspection for desired transparency. Notably, the temperature during clearing should be kept below 30 °C for better preservation of endogenous fluorescence signals. Heating to 37 °C at the end of each step for approximately 1–3 h is optional for better clearing performance. All other clearing protocols mentioned in this paper, including SeeDB2, ScaleS, CUBIC‐L/R/RA, PACT, and uDISCO, were performed following the original publications.[ 18, 24, 26, 40, 41 ]",
+          "sha256": "22b44d8c6458f43d7fd6409ba52a224cedc69324f5c816bc0aadcdb04578f002"
+        },
+        "passages": [
+          {
+            "id": "method",
+            "start": 15,
+            "end": 19,
+            "quote": "MACS",
+            "sha256": "aa4975fdc928cc297d9c636fc59df8a7e9c18e66e9567a924a3a8a2991b470c7"
+          },
+          {
+            "id": "serial_r0_r1_r2",
+            "start": 690,
+            "end": 868,
+            "quote": "MACS Clearing ProcedureFor passive clearing, fixed samples were serially incubated in 20–30 mL MACS‐R0, MACS‐R1, and MACS‐R2 solutions in 50 mL conical tubes with gentle shaking.",
+            "sha256": "4734da326213945208859978eab3a409208b71dc3362b72ca1c582a7bcdcfd66"
+          },
+          {
+            "id": "recipes",
+            "start": 0,
+            "end": 688,
+            "quote": "Preparation of MACS SolutionsThe MACS protocol contains three solutions. Recipes for each solution were as follows: MACS‐R0 contains 20 vol% MXDA (Tokyo chemical industry, D0127) and 15% (w/v) sorbitol (Sigma, 85529) mixed with distilled water, a solution containing 40 vol% MXDA and 30% (w/v) sorbitol dissolved in 1 × PBS was termed MACS‐R1. MACS‐R2 was prepared as a mixture of 40 vol% MXDA and 50% (w/v) sorbitol in distilled water. Proper heating with a water bath could promote the dissolution of sorbitol. When preparing MACS solutions, latex gloves should be worn to avoid direct contact with chemicals. Though the MXDA is hardly volatile, a ventilated environment is recommended.",
+            "sha256": "69e0c5d6f6431c4f1a65ddc86cd22234c95e3273af52437405f4455f14435b0a"
+          },
+          {
+            "id": "procedure_context",
+            "start": 690,
+            "end": 1753,
+            "quote": "MACS Clearing ProcedureFor passive clearing, fixed samples were serially incubated in 20–30 mL MACS‐R0, MACS‐R1, and MACS‐R2 solutions in 50 mL conical tubes with gentle shaking. The time needed for clearing in each solution depends on the tissue type and thickness (Figure S2b–e, Supporting Information). Hard bones and whole bodies should be incubated first in 0.2 m ethylene diamine tetraacetic acid (EDTA) (Sinopharm Chemical Reagent Co., Ltd, China) for decalcification and then treated with MACS‐R0, MACS‐R1, and MACS‐R2 in succession. The incubation time in final buffer was adjustable by visual inspection for desired transparency. Notably, the temperature during clearing should be kept below 30 °C for better preservation of endogenous fluorescence signals. Heating to 37 °C at the end of each step for approximately 1–3 h is optional for better clearing performance. All other clearing protocols mentioned in this paper, including SeeDB2, ScaleS, CUBIC‐L/R/RA, PACT, and uDISCO, were performed following the original publications.[ 18, 24, 26, 40, 41 ]",
+            "sha256": "d618bf6aaae6bf2e451b56a7b119c76db2263dcaff9c95e2761450c22690650c"
+          }
+        ],
+        "applicability": {
+          "protocol": "MACS"
+        },
+        "scope_support": {
+          "protocol": {
+            "kind": "EXPLICIT",
+            "raw_value": "MACS",
+            "transform": "IDENTITY",
+            "spans": [
+              {
+                "start": 15,
+                "end": 19,
+                "quote": "MACS"
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "requirements": [
+      {
+        "id": "KEY_REAGENTS",
+        "kind": "COMPLETENESS",
+        "necessary": true,
+        "text": "Report 关键试剂 as explicitly requested; presence does not establish scientific correctness.",
+        "reference_role": "CONSTRAINT",
+        "scope": "GLOBAL",
+        "evidence_ids": [],
+        "question_span": {
+          "start": 452,
+          "end": 456,
+          "quote": "关键试剂"
+        }
+      },
+      {
+        "id": "KEY_CONDITIONS",
+        "kind": "COMPLETENESS",
+        "necessary": true,
+        "text": "Report 条件 as explicitly requested; presence does not establish scientific correctness.",
+        "reference_role": "CONSTRAINT",
+        "scope": "GLOBAL",
+        "evidence_ids": [],
+        "question_span": {
+          "start": 457,
+          "end": 459,
+          "quote": "条件"
+        }
+      },
+      {
+        "id": "KEY_TIMES",
+        "kind": "COMPLETENESS",
+        "necessary": true,
+        "text": "Report 时间 as explicitly requested; presence does not establish scientific correctness.",
+        "reference_role": "CONSTRAINT",
+        "scope": "GLOBAL",
+        "evidence_ids": [],
+        "question_span": {
+          "start": 460,
+          "end": 462,
+          "quote": "时间"
+        }
+      }
+    ],
+    "routes": {
+      "main": {
+        "sr_inventory": {
+          "schema_version": "route-required-stage-inventory-v1",
+          "status": "frozen_development",
+          "inventory_id": "q157-macs-original2020-serial-three-v1",
+          "route_id": "main",
+          "reference_id": "macs-original2020-serial-three-v1",
+          "reference_status": "PUBLISHED_REPORTED_INSTANCE_CANDIDATE_NOT_EXPERT_GOLD",
+          "sources": [
+            {
+              "source_id": "macs-original2020-methods",
+              "locator": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7175264/"
+            }
+          ],
+          "reference_steps": [
+            {
+              "reference_step_id": "MACS_R0",
+              "text": "Fixed samples were incubated in 20–30 mL MACS‐R0 solution in 50 mL conical tubes with gentle shaking.",
+              "text_origin": "DERIVED",
+              "source_ids": [
+                "macs-original2020-methods"
+              ],
+              "passage_ids": {
+                "macs-original2020-methods": [
+                  "serial_r0_r1_r2",
+                  "procedure_context",
+                  "recipes"
+                ]
+              },
+              "applicability": {
+                "protocol": "MACS"
+              },
+              "reference_role": "REPORTED_INSTANCE",
+              "stage_id": "MACS_R0",
+              "protocol_id": "macs-original2020",
+              "aliases": []
+            },
+            {
+              "reference_step_id": "MACS_R1",
+              "text": "Fixed samples were incubated in 20–30 mL MACS‐R1 solution in 50 mL conical tubes with gentle shaking.",
+              "text_origin": "DERIVED",
+              "source_ids": [
+                "macs-original2020-methods"
+              ],
+              "passage_ids": {
+                "macs-original2020-methods": [
+                  "serial_r0_r1_r2",
+                  "procedure_context",
+                  "recipes"
+                ]
+              },
+              "applicability": {
+                "protocol": "MACS"
+              },
+              "reference_role": "REPORTED_INSTANCE",
+              "stage_id": "MACS_R1",
+              "protocol_id": "macs-original2020",
+              "aliases": []
+            },
+            {
+              "reference_step_id": "MACS_R2",
+              "text": "Fixed samples were incubated in 20–30 mL MACS‐R2 solution in 50 mL conical tubes with gentle shaking.",
+              "text_origin": "DERIVED",
+              "source_ids": [
+                "macs-original2020-methods"
+              ],
+              "passage_ids": {
+                "macs-original2020-methods": [
+                  "serial_r0_r1_r2",
+                  "procedure_context",
+                  "recipes"
+                ]
+              },
+              "applicability": {
+                "protocol": "MACS"
+              },
+              "reference_role": "REPORTED_INSTANCE",
+              "stage_id": "MACS_R2",
+              "protocol_id": "macs-original2020",
+              "aliases": []
+            }
+          ],
+          "required_stages": [
+            {
+              "stage_id": "MACS_R0",
+              "reference_step_ids": [
+                "MACS_R0"
+              ],
+              "source_ids": [
+                "macs-original2020-methods"
+              ],
+              "passage_ids": {
+                "macs-original2020-methods": [
+                  "serial_r0_r1_r2",
+                  "procedure_context",
+                  "recipes"
+                ]
+              },
+              "applicability": {
+                "protocol": "MACS"
+              },
+              "reference_role": "REPORTED_INSTANCE",
+              "necessity_certified": false
+            },
+            {
+              "stage_id": "MACS_R1",
+              "reference_step_ids": [
+                "MACS_R1"
+              ],
+              "source_ids": [
+                "macs-original2020-methods"
+              ],
+              "passage_ids": {
+                "macs-original2020-methods": [
+                  "serial_r0_r1_r2",
+                  "procedure_context",
+                  "recipes"
+                ]
+              },
+              "applicability": {
+                "protocol": "MACS"
+              },
+              "reference_role": "REPORTED_INSTANCE",
+              "necessity_certified": false
+            },
+            {
+              "stage_id": "MACS_R2",
+              "reference_step_ids": [
+                "MACS_R2"
+              ],
+              "source_ids": [
+                "macs-original2020-methods"
+              ],
+              "passage_ids": {
+                "macs-original2020-methods": [
+                  "serial_r0_r1_r2",
+                  "procedure_context",
+                  "recipes"
+                ]
+              },
+              "applicability": {
+                "protocol": "MACS"
+              },
+              "reference_role": "REPORTED_INSTANCE",
+              "necessity_certified": false
+            }
+          ],
+          "required_transitions": [],
+          "coverage_scope": "Three named serial solution incubations from original methods; no fabricated storage or duration, no wet-lab adequacy certification.",
+          "parameter_policy": "Recipes/temperature remain original source context; exact duration depends on sample; no candidate-driven denominator expansion."
+        },
+        "correctness_checks": {
+          "co_order": [],
+          "co_method": [],
+          "co_param": [],
+          "co_chem": []
+        },
+        "parameter_requirements": [
+          "KEY_REAGENTS",
+          "KEY_CONDITIONS",
+          "KEY_TIMES"
+        ],
+        "submetrics": {}
+      }
+    },
+    "metadata": {
+      "expert_gold": false,
+      "status": "SOURCE_PROVIDER_AWAITING_INDEPENDENT_REVIEW",
+      "source_xml": {
+        "path": "/workspace/scratch/250603738113/method_development_expansion_20261014/reviewed_core_batch/sources_internal/PMC7175264.xml",
+        "sha256": "b564bd936feabc141eee45706b294d7a2598050daad616130e4f69848c832ce4"
+      },
+      "source_only": true,
+      "candidate_not_rewritten": true
+    }
+  }
+}

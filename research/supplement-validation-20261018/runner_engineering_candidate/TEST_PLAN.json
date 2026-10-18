@@ -1,5 +1,5 @@
 {
-  "status": "EXPLICIT_PORTABLE_SUBSET_NOT_FULL_SCOPE_VALIDATION",
+  "status": "FULL_ORIGINAL_SCOPE_PLUS_PACKAGE_BOUNDARIES",
   "original_scope_test_count": 18,
   "portable_scope_tests": [
     "test_chinese_negated_optional_and_unselected_rows_not_asserted",
@@ -13,6 +13,8 @@
     "test_literal_identity_exception_does_not_relax_modality_or_parameters",
     "test_mixed_and_unknown_heading_suffixes_remain_unresolved",
     "test_outside_scope_membership_preserves_phase_uncertainty",
+    "test_solvent_reversal_does_not_cross_routes_or_override_clearing",
+    "test_source_backed_solvent_reversal_allows_equal_boundary_wash",
     "test_unknown_current_heading_remains_technical_blocker",
     "test_unknown_identity_never_matches_merely_because_both_unknown",
     "test_unknown_reference_phase_still_blocks",
@@ -20,10 +22,11 @@
     "test_verified_v3_assertion_compatibility_retains_assertion"
   ],
   "package_boundary_tests": 3,
-  "source_bound_tests_not_run": [
+  "full_original_scope_command": "python -S -B -m unittest discover -s tests -p test_scope_regressions.py -v",
+  "source_bound_tests": [
     {
       "name": "test_solvent_reversal_does_not_cross_routes_or_override_clearing",
-      "reason": "Invokes source_reference() and its unchanged iDISCO source lock. Original source/derived evidence is intentionally absent; no mocked lock or substitute source is allowed.",
+      "reason": "Required original source files are now delivered at their original hashes; included in the default full 18 scope target without a mocked source lock.",
       "required_original_files": {
         "vendor/source/experiments/idisco_full_atomic_reference_20261015/atomic_admission_lock_v1.json": "0f3f36a1284800cd42bac17742607d2c8d501492ddba8c52418a12e3046e7bf7",
         "vendor/source/experiments/idisco_full_atomic_reference_20261015/atomic_reference.py": "a580f68d004826c4b1efb0e1d89456fd2bb7aa1e4b4dad5516765b095ba04504",
@@ -35,7 +38,7 @@
     },
     {
       "name": "test_source_backed_solvent_reversal_allows_equal_boundary_wash",
-      "reason": "Invokes source_reference() and its unchanged iDISCO source lock. Original source/derived evidence is intentionally absent; no mocked lock or substitute source is allowed.",
+      "reason": "Required original source files are now delivered at their original hashes; included in the default full 18 scope target without a mocked source lock.",
       "required_original_files": {
         "vendor/source/experiments/idisco_full_atomic_reference_20261015/atomic_admission_lock_v1.json": "0f3f36a1284800cd42bac17742607d2c8d501492ddba8c52418a12e3046e7bf7",
         "vendor/source/experiments/idisco_full_atomic_reference_20261015/atomic_reference.py": "a580f68d004826c4b1efb0e1d89456fd2bb7aa1e4b4dad5516765b095ba04504",
@@ -46,6 +49,7 @@
       }
     }
   ],
-  "full_original_scope_command": "python -S -B -m unittest discover -s tests -p test_scope_regressions.py -v",
-  "expected_full_original_scope_without_local_source": "16 pass and 2 missing-file ERROR; these are not reported as passes."
+  "default_test_count": 21,
+  "source_bound_tests_not_run_count": 0,
+  "previous_snapshot": "history/268fc731/TEST_PLAN.json"
 }

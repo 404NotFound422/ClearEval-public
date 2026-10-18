@@ -1,0 +1,1758 @@
+{
+  "status": "ORIGINAL_75_DEPENDENCIES_DELIVERED",
+  "base_commit": "268fc731ce8c3d149ef51e776d748bed4210833f",
+  "original_dependency_file_count": 75,
+  "original_vendor_entries_total": 94,
+  "original_vendor_entries_present": 94,
+  "remaining_missing": 0,
+  "original_vendor_manifest_changed": false,
+  "source_notice": "THIRD_PARTY_SOURCES.md",
+  "files": {
+    "vendor/contract/contract.py": "66d14ad3a49a584499ee568a2efb7b2c216e008c7e06690bb1c688229a923213",
+    "vendor/contract/schema.json": "ea1de3edc931b8a0ac7d9341dd1a8c0ae15c4eb5a6a42ce1c80e605ccbcd354c",
+    "vendor/source/source_parameter_contract.json": "f8acc42ed9da4c36b3f7b1f807e9607ec8d3db6f3814e2b08de640fab134dd8e",
+    "vendor/source/transport_repair.py": "80d56b2300c622d702ebbf416344c246d23babf9a844825ef700d8208e382f46",
+    "vendor/source/oeq_quantity_assignment.py": "4bb54a9428284479be1daf311059c56cbe81f3ebfac2bc8864783c6e62fd6c72",
+    "vendor/source/OEQ_run_grading_new.py": "17065a25ca9d850a56a48941f5a79cf237d346d1caea4b38ab119a94e2f37d5b",
+    "vendor/source/oeq_score_lineage.py": "9dca1a71a36d1fe634736e12182e59ef88f9c0378da3be4e892524d1e07c7c80",
+    "vendor/source/oeq_fluor_lexical_identity.py": "183b144bdd0a874bc324a49a16e420744ae30d8c8937fb2cb7e6eaac99693c29",
+    "vendor/source/requirement_facts.py": "fa4a028de3674bde2bdbf6bec4a029adc1edcad1f37e0a268409e12fd71815e2",
+    "vendor/source/oeq_fdisco_atomic_reference.py": "91b184b3e65d5d0fa3bd5e3f596f275db9fed10f8f8dfabcc447d77aca571593",
+    "vendor/source/integration_archived_demands.json": "fe50a6a68738831662a1a1cc4309c60977dfd6fabe8a8b38669fe17ffc7c663e",
+    "vendor/source/oeq_source_reference_scope.py": "c4e626400817b2d4c844424c2a2913b40bae40a93581d42390a72a9dfc68c4a2",
+    "vendor/source/archived_annotations.json": "33e9d70dfafa07403e70afdf4f4e864f1ac5ae09fcec93e78edb6a6d4da147cc",
+    "vendor/source/extract_clearing_time.py": "80b9b66b237e13d7537cb16ecbf99fd83149d7f362ac83bf47f5d374b310ad43",
+    "vendor/source/oeq_quantity_presence.py": "62bfc041a55941b6fea5984327f56177f9551494595c1abcaae08f6163e52777",
+    "vendor/source/oeq_task_evidence.py": "a24cc08346f1121f8dc7080114b3e19f65e69466aefd73e3d1a6730c3578227f",
+    "vendor/source/benchmark_scoring.py": "ea0ef27b7ff9101a01b17779b1603f7a56f0fbc364b02cb00957fcb3a81ed84f",
+    "vendor/source/oeq_scientific.py": "63b9fdd30a9644400fff1d7186c4193ca7dca13254839fd13771578dde862a78",
+    "vendor/source/sample_scope_runtime.py": "6a3b1a11ca7f26898ca2a4fa4107a1fe4843a068525730b80141bc463d0083fe",
+    "vendor/source/oeq_macs_atomic_reference.py": "45b2a216aee2487df9d5996c80058009a8c69eb474cb717c70721212b6871ba7",
+    "vendor/source/oeq_simple_representation.py": "2ba630104dca3b6b67d6eb1259d65a9c76fe0ca3c93b88911ca65f39d7337270",
+    "vendor/source/oeq_structured_judgment.py": "d6ed618d028bdf4d066e1df10a3ed31d2440d5a46281bddb27578ec1d356d4c5",
+    "vendor/source/oeq_presence_matching.py": "42c4213c21b029b12ddc8a4491d9dedcc2686bb3601778e8ad1680c9e03b7a87",
+    "vendor/source/oeq_capacity_matching.py": "2f523a6455514713abd0f0c48662b70aa37e67f903db62f5055f735916e8d827",
+    "vendor/source/archived_metadata.py": "5551f8dc510bb03be69520c0a918f7f3eaf45708cb45b169c62f1740f4307493",
+    "vendor/source/oeq_ri_reference.py": "4c8bf18ddb34e6649ec0cfbb713fde906bee6e09d8fcd7fb16f75bbc36e54b4b",
+    "vendor/source/oeq_sr_scoring.py": "0db7320e490825af050ebd01ac53517898c4fc8d7cdbe9130a8e8744aefb5d54",
+    "vendor/source/oeq_source_parameter_slots.py": "a1dfb4b518fcb76f27341396df84f02460c82276bc1d6f747bb569f8b3a122fd",
+    "vendor/source/oeq_quantity_audit.py": "aad8754c24af89c32b2ea257778e85a806e5a4c24c6632fd4b8dc7ec3d2b0743",
+    "vendor/source/oeq_atomic_reference_v3.py": "879a34dbf4e2243c53c74a72e59c4f2b5625fc601dc49fd5d6201f01dbc03317",
+    "vendor/source/oeq_sr_assessment.py": "638a1fad66e82dcc98d7ffe6f032cc0d7e3c78b526507ba76397c958b8bfa171",
+    "vendor/source/oeq_simple_time.py": "74d466ff1acb129de3a113f5b865fcf84dee9d25541b4de9dd385a24e5fc4481",
+    "vendor/source/oeq_atomic_alignment.py": "3ac7e8600622da7231ae70971817ed2b340b9616fee673cf77eb1cafe2385b28",
+    "vendor/source/integration_qualification.py": "307a764c554bd3c3f67c88819be6ea9c988f97967ab87025645706f62e9da93b",
+    "vendor/source/integration_offline.py": "bab2e6ce4c9865484bfe7a762b7d79793cb329127951ac700debba5abf6d3e88",
+    "vendor/contract/fixtures/questions.json": "6ffe623a1bd5359dda8bb5fae11eefbe9836c42373811ec698be38555f70fbe5",
+    "vendor/contract/fixtures/contracts.json": "a8e594291c7321145c1ac14610d54a4a3006ee1ce6108e0d0792e7a10d18bd57",
+    "vendor/source/prompts/parse_user_preference_vector.py": "df1eb2b0fba720f91819964b152c77e1ea286dd81296206bdf1739a776a87841",
+    "vendor/source/prompts/gen_protocol_template.py": "285e38fbb1a4f963b3de2692c9b08e2b94c7b34ecaa2d416db825281b3be7dd4",
+    "vendor/source/prompts/oeq_practical_signal_assessability_v3.txt": "07ee253f354d9823f984a2cdcdd9a845224be0e0087dc69945d539282180ea54",
+    "vendor/source/prompts/oeq_practical_score_only.txt": "298339846dd2c609b516a81514f56821849d3e9707faa1ed38c3b71c96072b15",
+    "vendor/source/prompts/oeq_practical_task_scope_v2.txt": "993293da0c4b5d30c50aa980204e673c97cfb39e06f277b1db7ac773c6081dcb",
+    "vendor/source/prompts/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "vendor/source/prompts/oeq_sample_marker_applicability_v4.txt": "77bed42842fef848b226adb48287c9a8dd72cdeb7287552f416a0f90b6b9e194",
+    "vendor/source/KnowledgeBase/tissue.json": "664d9668ad141ae9862d063d6756bae8b296aaf99ac616810fe8a84be174da34",
+    "vendor/source/KnowledgeBase/tissue_ri.json": "14105fd47302a69e6a005b81ab66acfe0b781283df506f8350d56d7b88a7dffc",
+    "vendor/source/KnowledgeBase/time_kb.json": "ebd1dd2d23a91e43b6d956d716eacdcd570a7e18507563bf7f4115b7c43b2d6e",
+    "vendor/source/KnowledgeBase/method_sigma_ri.json": "250c87f3a530178c9bb88b7649d99ad6969e638d0e8ae513664761ce7cc444e9",
+    "vendor/source/KnowledgeBase/method_ri_ref.json": "d45f794e6287808f1aad3703809a753c195638c4790455237c9bf43f7455e4cd",
+    "vendor/source/KnowledgeBase/method_fluro_compati.json": "96b348fe9393c7e6540a165393c433e39f60ec4c845515571030367eae86e0d6",
+    "vendor/source/results/oeq_metrics.py": "83cc2f738a60cc9580c00b2de1647e6e45cbd93396768f8f4d88a50fc8fb9712",
+    "vendor/source/dataset/Q+AR/src/model_space_signed.json": "b94b04b35a11511d01c9e5b5c8eec07ff595f956e3121a51f2ca53cd92ffb0ec",
+    "vendor/source/dataset/Q+AR/src/question_final.json": "c2392f7ec345cab0d26c197468dd3928828531a0bed116b63248f28c7a207a19",
+    "vendor/source/experiments/idisco_full_atomic_reference_20261015/paired_requested_clearing_wash4.json": "9d772e627fc8227d600dfc8ff945db5f1f15e33f9d1d040546260170ac92bdbd",
+    "vendor/source/experiments/idisco_full_atomic_reference_20261015/atomic_admission_lock_v1.json": "0f3f36a1284800cd42bac17742607d2c8d501492ddba8c52418a12e3046e7bf7",
+    "vendor/source/experiments/idisco_full_atomic_reference_20261015/atomic_reference.py": "a580f68d004826c4b1efb0e1d89456fd2bb7aa1e4b4dad5516765b095ba04504",
+    "vendor/source/experiments/idisco_full_atomic_reference_20261015/requested_clearing_projection_v1.json": "0a1dd02c3ebdb5ce055321b65ca4e8eb69303fe94dd0a15826d8c84d842ad00c",
+    "vendor/source/experiments/idisco_full_atomic_reference_20261015/reference_full_wash4.json": "678590e966ce4ad2aa3a32faf6aa8bea216dbb6be1db951b01e2604d2e9dd2cd",
+    "vendor/source/experiments/full_batch_reference_binding_20261015/source_template_lock.json": "49ec3dcbbe6e5d7eb9790d43d4482cedca02e124b330e0d2c3e17bb8d519f19c",
+    "vendor/source/experiments/full_batch_reference_binding_20261015/reference_binding.py": "0603ea8b4c5bbb56b009c0b293ad89ab1a7b317fe40205ee564e2242c582b9e0",
+    "vendor/source/experiments/q2_fdisco_reference_independent_review_20261015/verification.json": "6e0c4aef9cd766e3efbdd020af2b08ec6518332ffa20141f66858e7d373f6de1",
+    "vendor/source/experiments/construct_validity/objectives.py": "0e987249c0ab75f4e6d861b85254abe540527c4b785fc95e86e2ae46ce71b2b7",
+    "vendor/source/experiments/construct_validity/source_conditions.py": "9ad3e83ae4de07ba14565c48c6c812d58424fd3b4603f966128a5f0a71e680d8",
+    "vendor/source/experiments/construct_validity/requirement_scope.py": "9fb5af417fa8e41af377e7c5316a9d8523e5beffea93cef97bf99600bc35b521",
+    "vendor/source/experiments/construct_validity/answer_matching.py": "b0928bf958944fa6528d8e9293b730fe20f0aedb034aa4f91a8a20410cf8360f",
+    "vendor/source/experiments/construct_validity/task_function_presence.py": "43a7774bfe6d279a806c8f292cfdcd69e1f9fb3025efd8bf3dcd2f27b306459c",
+    "vendor/source/experiments/construct_validity/task_state.py": "ffc2c2b8d4b292b47d90fb25d96d6a91eac909a665ba8c9b55262b4fb128cd88",
+    "vendor/source/experiments/construct_validity/candidate_binding.py": "b160d74bd6fadd508bd5fe91034e958ace6ae7fa45b79d06e0fd4a0ad4d5a8fc",
+    "vendor/source/experiments/idisco_full_atomic_reference_20261015/source/idisco_dec2016_raw.txt": "fb3f5c351901f4af86c466ccc70207c41004ba6dd8e2733343fd6af7e7428162",
+    "vendor/source/experiments/full_batch_reference_binding_20261015/q2_reference_augmentation/task_evidence.json": "a83137e5147c06cbbfeb419635b03af76de6782fd53bdd534a2153d912326a39",
+    "vendor/source/experiments/real_multiroute_q157_prepare_20261015/source_provider/MACS_task_evidence.json": "3f2dbb0e0d721780b2dae008b10bb6b62f6c320c9b9f5c546c3a8176745fe3ce",
+    "vendor/source/experiments/real_multiroute_q157_prepare_20261015/independent_source_review/verification.json": "607920834ce3ab8e752cca5740b914ef235c9b53cfba706db004813acb8179d2",
+    "vendor/source/experiments/fdisco_representation_pilot_20261014/source/fdisco_clearing_excerpt.txt": "35c9600df019b29483e752b96daae7276da0eab669106435b72c78722f51ac1d",
+    "scope/source_parameter_contract.json": "f8acc42ed9da4c36b3f7b1f807e9607ec8d3db6f3814e2b08de640fab134dd8e",
+    "scope/source_parameter_contract_protocol_only.json": "78eff08b0d56208271d1caca57104d4d9a9a3dde81190a4563f9001629f50520",
+    "THIRD_PARTY_SOURCES.md": "f9ba3afcd19116a1136adac6280fa7efd6b03f58ff04fdc8733909997d895481"
+  },
+  "engineering_test_changes": {
+    "status": "PACKAGING_TEST_ONLY_CHANGES_REQUIRING_MERGED_COPY_VALIDATION",
+    "files": {
+      "run_engineering_tests.py": "3999a220ad57866d38371643b3325cb574f73837f4462e0a4576b907b1ede5d1",
+      "tests/test_package_boundaries.py": "ac54b39f31a942b0cd4bc6917d65ad37d7c7c517c1269724266b4274dab160eb"
+    },
+    "original_runner_and_vendor_changed": false,
+    "description": "Run all 18 original scope cases after dependency restoration, preserve the real missing-vendor negative check in an isolated temporary root, and compare completeness to the current explicit omissions list."
+  },
+  "source_audit": {
+    "status": "ALL_75_ORIGINAL_DEPENDENCIES_READY_PENDING_INDEPENDENT_REVIEW",
+    "authorization_scope": "User explicitly requested missing dependency files uploaded to their public ClearEval GitHub project. Original immutable bytes only; no credential or source-lock changes.",
+    "total_missing_reviewed": 75,
+    "immediately_allowed_files": 75,
+    "copyright_or_license_notice_pending": 0,
+    "sensitive_blocked_files": 0,
+    "scanner_findings_requiring_context_review": [],
+    "scan_limit": "Regex/structured-content inspection is not a formal guarantee; all flags are reviewed before publication.",
+    "files": [
+      {
+        "path": "vendor/contract/contract.py",
+        "sha256": "66d14ad3a49a584499ee568a2efb7b2c216e008c7e06690bb1c688229a923213",
+        "bytes": 6141,
+        "status": "ALLOW_PUBLIC_UPLOAD_NOW",
+        "reason": "User-authorized project code, authored prompts/schema, benchmark question/contract data, derived lookup facts or project provenance; no third-party full text located.",
+        "purpose": "Legacy sample-scope contract loader/schema or approved question/contract fixture; native runtime imports sample_scope_runtime and its eager SCOPE construction reads the fixtures.",
+        "runtime_relevance": "LEGACY_RUNTIME_COUPLING_OR_VERIFIER; separate from a new execution case manifest",
+        "verified_sources": [
+          {
+            "kind": "USER_ATTACHMENT_EXACT_MEMBER",
+            "attachment_filename": "ClearEval_固定输入修复包_第1部分_共4部分.zip",
+            "nested_archive_members": [],
+            "member_path": "ClearEval_fixed_input_repair_candidate_20261016/contract/contract.py",
+            "sha256_verified": true
+          }
+        ],
+        "sensitive_data_scan_flags": [],
+        "historical_workspace_path_count": 0,
+        "historical_path_handling": null
+      },
+      {
+        "path": "vendor/contract/schema.json",
+        "sha256": "ea1de3edc931b8a0ac7d9341dd1a8c0ae15c4eb5a6a42ce1c80e605ccbcd354c",
+        "bytes": 5062,
+        "status": "ALLOW_PUBLIC_UPLOAD_NOW",
+        "reason": "User-authorized project code, authored prompts/schema, benchmark question/contract data, derived lookup facts or project provenance; no third-party full text located.",
+        "purpose": "Legacy sample-scope contract loader/schema or approved question/contract fixture; native runtime imports sample_scope_runtime and its eager SCOPE construction reads the fixtures.",
+        "runtime_relevance": "LEGACY_RUNTIME_COUPLING_OR_VERIFIER; separate from a new execution case manifest",
+        "verified_sources": [
+          {
+            "kind": "USER_ATTACHMENT_EXACT_MEMBER",
+            "attachment_filename": "ClearEval_固定输入修复包_第1部分_共4部分.zip",
+            "nested_archive_members": [],
+            "member_path": "ClearEval_fixed_input_repair_candidate_20261016/contract/schema.json",
+            "sha256_verified": true
+          }
+        ],
+        "sensitive_data_scan_flags": [],
+        "historical_workspace_path_count": 0,
+        "historical_path_handling": null
+      },
+      {
+        "path": "vendor/source/source_parameter_contract.json",
+        "sha256": "f8acc42ed9da4c36b3f7b1f807e9607ec8d3db6f3814e2b08de640fab134dd8e",
+        "bytes": 69303,
+        "status": "ALLOW_USER_PROVIDED_CONTENT_REPACKAGING",
+        "reason": "The user supplied the identical iDISCO source in ClearEval_support.rar and explicitly requested the project dependency files uploaded to their GitHub repository; this reproduces/transforms supplied content, not newly scraped third-party text. No new open license is asserted.",
+        "purpose": "Frozen scoring requirement/parameter contract; scope adapter compares historical and protocol-only contracts.",
+        "runtime_relevance": "RUNTIME_STRUCTURED_SCORING_CONTRACT",
+        "verified_sources": [
+          {
+            "kind": "USER_ATTACHMENT_EXACT_MEMBER",
+            "attachment_filename": "ClearEval_固定输入修复包_第4部分_共4部分.zip",
+            "nested_archive_members": [],
+            "member_path": "ClearEval_fixed_input_repair_candidate_20261016/source/source_parameter_contract.json",
+            "sha256_verified": true
+          }
+        ],
+        "sensitive_data_scan_flags": [],
+        "historical_workspace_path_count": 0,
+        "historical_path_handling": null,
+        "user_provided_source": {
+          "attachment_filename": "ClearEval_support.rar",
+          "member_path": "ClearEval_support/sources/evidence_role_validation_20261015_r3_selection/source_originals/idisco_source_document.txt",
+          "sha256": "fb3f5c351901f4af86c466ccc70207c41004ba6dd8e2733343fd6af7e7428162",
+          "independent_review": "Identical source bytes and derived quotations verified by independent publication reviewer."
+        }
+      },
+      {
+        "path": "vendor/source/transport_repair.py",
+        "sha256": "80d56b2300c622d702ebbf416344c246d23babf9a844825ef700d8208e382f46",
+        "bytes": 2771,
+        "status": "ALLOW_PUBLIC_UPLOAD_NOW",
+        "reason": "User-authorized project code, authored prompts/schema, benchmark question/contract data, derived lookup facts or project provenance; no third-party full text located.",
+        "purpose": "Recovered Python source for full scoring, source adapters, schema/contract consumption, or legacy compatibility; omitted from the measured portable-test import closure.",
+        "runtime_relevance": "FULL_RUNTIME_OR_ROUTE_SPECIFIC_CODE; exact runtime closure requires a separate audited manifest",
+        "verified_sources": [
+          {
+            "kind": "USER_ATTACHMENT_EXACT_MEMBER",
+            "attachment_filename": "ClearEval_固定输入修复包_第4部分_共4部分.zip",
+            "nested_archive_members": [],
+            "member_path": "ClearEval_fixed_input_repair_candidate_20261016/source/transport_repair.py",
+            "sha256_verified": true
+          }
+        ],
+        "sensitive_data_scan_flags": [],
+        "historical_workspace_path_count": 0,
+        "historical_path_handling": null
+      },
+      {
+        "path": "vendor/source/oeq_quantity_assignment.py",
+        "sha256": "4bb54a9428284479be1daf311059c56cbe81f3ebfac2bc8864783c6e62fd6c72",
+        "bytes": 5791,
+        "status": "ALLOW_PUBLIC_UPLOAD_NOW",
+        "reason": "User-authorized project code, authored prompts/schema, benchmark question/contract data, derived lookup facts or project provenance; no third-party full text located.",
+        "purpose": "Preserved legacy implementation; the new runner preloads its matching or representation replacement under the same module name.",
+        "runtime_relevance": "VERIFIER_ONLY_FOR_NEW_RUNNER_PATH; candidate overlay supersedes this file",
+        "verified_sources": [
+          {
+            "kind": "USER_ATTACHMENT_EXACT_MEMBER",
+            "attachment_filename": "ClearEval_固定输入修复包_第4部分_共4部分.zip",
+            "nested_archive_members": [],
+            "member_path": "ClearEval_fixed_input_repair_candidate_20261016/source/oeq_quantity_assignment.py",
+            "sha256_verified": true
+          }
+        ],
+        "sensitive_data_scan_flags": [],
+        "historical_workspace_path_count": 0,
+        "historical_path_handling": null
+      },
+      {
+        "path": "vendor/source/OEQ_run_grading_new.py",
+        "sha256": "17065a25ca9d850a56a48941f5a79cf237d346d1caea4b38ab119a94e2f37d5b",
+        "bytes": 151745,
+        "status": "ALLOW_PUBLIC_UPLOAD_NOW",
+        "reason": "User-authorized project code, authored prompts/schema, benchmark question/contract data, derived lookup facts or project provenance; no third-party full text located.",
+        "purpose": "Recovered Python source for full scoring, source adapters, schema/contract consumption, or legacy compatibility; omitted from the measured portable-test import closure.",
+        "runtime_relevance": "FULL_RUNTIME_OR_ROUTE_SPECIFIC_CODE; exact runtime closure requires a separate audited manifest",
+        "verified_sources": [
+          {
+            "kind": "USER_ATTACHMENT_EXACT_MEMBER",
+            "attachment_filename": "ClearEval_固定输入修复包_第4部分_共4部分.zip",
+            "nested_archive_members": [],
+            "member_path": "ClearEval_fixed_input_repair_candidate_20261016/source/OEQ_run_grading_new.py",
+            "sha256_verified": true
+          }
+        ],
+        "sensitive_data_scan_flags": [],
+        "historical_workspace_path_count": 0,
+        "historical_path_handling": null
+      },
+      {
+        "path": "vendor/source/oeq_score_lineage.py",
+        "sha256": "9dca1a71a36d1fe634736e12182e59ef88f9c0378da3be4e892524d1e07c7c80",
+        "bytes": 5271,
+        "status": "ALLOW_PUBLIC_UPLOAD_NOW",
+        "reason": "User-authorized project code, authored prompts/schema, benchmark question/contract data, derived lookup facts or project provenance; no third-party full text located.",
+        "purpose": "Recovered Python source for full scoring, source adapters, schema/contract consumption, or legacy compatibility; omitted from the measured portable-test import closure.",
+        "runtime_relevance": "FULL_RUNTIME_OR_ROUTE_SPECIFIC_CODE; exact runtime closure requires a separate audited manifest",
+        "verified_sources": [
+          {
+            "kind": "USER_ATTACHMENT_EXACT_MEMBER",
+            "attachment_filename": "ClearEval_固定输入修复包_第4部分_共4部分.zip",
+            "nested_archive_members": [],
+            "member_path": "ClearEval_fixed_input_repair_candidate_20261016/source/oeq_score_lineage.py",
+            "sha256_verified": true
+          }
+        ],
+        "sensitive_data_scan_flags": [],
+        "historical_workspace_path_count": 0,
+        "historical_path_handling": null
+      },
+      {
+        "path": "vendor/source/oeq_fluor_lexical_identity.py",
+        "sha256": "183b144bdd0a874bc324a49a16e420744ae30d8c8937fb2cb7e6eaac99693c29",
+        "bytes": 869,
+        "status": "ALLOW_PUBLIC_UPLOAD_NOW",
+        "reason": "User-authorized project code, authored prompts/schema, benchmark question/contract data, derived lookup facts or project provenance; no third-party full text located.",
+        "purpose": "Recovered Python source for full scoring, source adapters, schema/contract consumption, or legacy compatibility; omitted from the measured portable-test import closure.",
+        "runtime_relevance": "FULL_RUNTIME_OR_ROUTE_SPECIFIC_CODE; exact runtime closure requires a separate audited manifest",
+        "verified_sources": [
+          {
+            "kind": "USER_ATTACHMENT_EXACT_MEMBER",
+            "attachment_filename": "ClearEval_固定输入修复包_第4部分_共4部分.zip",
+            "nested_archive_members": [],
+            "member_path": "ClearEval_fixed_input_repair_candidate_20261016/source/oeq_fluor_lexical_identity.py",
+            "sha256_verified": true
+          }
+        ],
+        "sensitive_data_scan_flags": [],
+        "historical_workspace_path_count": 0,
+        "historical_path_handling": null
+      },
+      {
+        "path": "vendor/source/requirement_facts.py",
+        "sha256": "fa4a028de3674bde2bdbf6bec4a029adc1edcad1f37e0a268409e12fd71815e2",
+        "bytes": 6048,
+        "status": "ALLOW_PUBLIC_UPLOAD_NOW",
+        "reason": "User-authorized project code, authored prompts/schema, benchmark question/contract data, derived lookup facts or project provenance; no third-party full text located.",
+        "purpose": "Recovered Python source for full scoring, source adapters, schema/contract consumption, or legacy compatibility; omitted from the measured portable-test import closure.",
+        "runtime_relevance": "FULL_RUNTIME_OR_ROUTE_SPECIFIC_CODE; exact runtime closure requires a separate audited manifest",
+        "verified_sources": [
+          {
+            "kind": "USER_ATTACHMENT_EXACT_MEMBER",
+            "attachment_filename": "ClearEval_固定输入修复包_第4部分_共4部分.zip",
+            "nested_archive_members": [],
+            "member_path": "ClearEval_fixed_input_repair_candidate_20261016/source/requirement_facts.py",
+            "sha256_verified": true
+          }
+        ],
+        "sensitive_data_scan_flags": [],
+        "historical_workspace_path_count": 0,
+        "historical_path_handling": null
+      },
+      {
+        "path": "vendor/source/oeq_fdisco_atomic_reference.py",
+        "sha256": "91b184b3e65d5d0fa3bd5e3f596f275db9fed10f8f8dfabcc447d77aca571593",
+        "bytes": 6802,
+        "status": "ALLOW_PUBLIC_UPLOAD_NOW",
+        "reason": "User-authorized project code, authored prompts/schema, benchmark question/contract data, derived lookup facts or project provenance; no third-party full text located.",
+        "purpose": "Recovered Python source for full scoring, source adapters, schema/contract consumption, or legacy compatibility; omitted from the measured portable-test import closure.",
+        "runtime_relevance": "FULL_RUNTIME_OR_ROUTE_SPECIFIC_CODE; exact runtime closure requires a separate audited manifest",
+        "verified_sources": [
+          {
+            "kind": "USER_ATTACHMENT_EXACT_MEMBER",
+            "attachment_filename": "ClearEval_固定输入修复包_第4部分_共4部分.zip",
+            "nested_archive_members": [],
+            "member_path": "ClearEval_fixed_input_repair_candidate_20261016/source/oeq_fdisco_atomic_reference.py",
+            "sha256_verified": true
+          }
+        ],
+        "sensitive_data_scan_flags": [],
+        "historical_workspace_path_count": 0,
+        "historical_path_handling": null
+      },
+      {
+        "path": "vendor/source/integration_archived_demands.json",
+        "sha256": "fe50a6a68738831662a1a1cc4309c60977dfd6fabe8a8b38669fe17ffc7c663e",
+        "bytes": 18984,
+        "status": "ALLOW_PUBLIC_UPLOAD_NOW",
+        "reason": "User-authorized project code, authored prompts/schema, benchmark question/contract data, derived lookup facts or project provenance; no third-party full text located.",
+        "purpose": "Archived demand qualification mapping read by integration_qualification.demand_status.",
+        "runtime_relevance": "RUNTIME_QUALIFICATION_WITH_HISTORICAL_COUPLING",
+        "verified_sources": [
+          {
+            "kind": "USER_ATTACHMENT_EXACT_MEMBER",
+            "attachment_filename": "ClearEval_固定输入修复包_第4部分_共4部分.zip",
+            "nested_archive_members": [],
+            "member_path": "ClearEval_fixed_input_repair_candidate_20261016/source/integration_archived_demands.json",
+            "sha256_verified": true
+          }
+        ],
+        "sensitive_data_scan_flags": [],
+        "historical_workspace_path_count": 0,
+        "historical_path_handling": null
+      },
+      {
+        "path": "vendor/source/oeq_source_reference_scope.py",
+        "sha256": "c4e626400817b2d4c844424c2a2913b40bae40a93581d42390a72a9dfc68c4a2",
+        "bytes": 5801,
+        "status": "ALLOW_PUBLIC_UPLOAD_NOW",
+        "reason": "User-authorized project code, authored prompts/schema, benchmark question/contract data, derived lookup facts or project provenance; no third-party full text located.",
+        "purpose": "Recovered Python source for full scoring, source adapters, schema/contract consumption, or legacy compatibility; omitted from the measured portable-test import closure.",
+        "runtime_relevance": "FULL_RUNTIME_OR_ROUTE_SPECIFIC_CODE; exact runtime closure requires a separate audited manifest",
+        "verified_sources": [
+          {
+            "kind": "USER_ATTACHMENT_EXACT_MEMBER",
+            "attachment_filename": "ClearEval_固定输入修复包_第4部分_共4部分.zip",
+            "nested_archive_members": [],
+            "member_path": "ClearEval_fixed_input_repair_candidate_20261016/source/oeq_source_reference_scope.py",
+            "sha256_verified": true
+          }
+        ],
+        "sensitive_data_scan_flags": [],
+        "historical_workspace_path_count": 0,
+        "historical_path_handling": null
+      },
+      {
+        "path": "vendor/source/archived_annotations.json",
+        "sha256": "33e9d70dfafa07403e70afdf4f4e864f1ac5ae09fcec93e78edb6a6d4da147cc",
+        "bytes": 39581,
+        "status": "ALLOW_PUBLIC_UPLOAD_NOW",
+        "reason": "User-authorized project code, authored prompts/schema, benchmark question/contract data, derived lookup facts or project provenance; no third-party full text located.",
+        "purpose": "Archived metadata annotations consumed by archived_metadata legacy integration.",
+        "runtime_relevance": "LEGACY_ARCHIVE_COUPLING_OR_VERIFIER; not a new model output",
+        "verified_sources": [
+          {
+            "kind": "USER_ATTACHMENT_EXACT_MEMBER",
+            "attachment_filename": "ClearEval_固定输入修复包_第4部分_共4部分.zip",
+            "nested_archive_members": [],
+            "member_path": "ClearEval_fixed_input_repair_candidate_20261016/source/archived_annotations.json",
+            "sha256_verified": true
+          }
+        ],
+        "sensitive_data_scan_flags": [],
+        "historical_workspace_path_count": 0,
+        "historical_path_handling": null
+      },
+      {
+        "path": "vendor/source/extract_clearing_time.py",
+        "sha256": "80b9b66b237e13d7537cb16ecbf99fd83149d7f362ac83bf47f5d374b310ad43",
+        "bytes": 28563,
+        "status": "ALLOW_PUBLIC_UPLOAD_NOW",
+        "reason": "User-authorized project code, authored prompts/schema, benchmark question/contract data, derived lookup facts or project provenance; no third-party full text located.",
+        "purpose": "Recovered Python source for full scoring, source adapters, schema/contract consumption, or legacy compatibility; omitted from the measured portable-test import closure.",
+        "runtime_relevance": "FULL_RUNTIME_OR_ROUTE_SPECIFIC_CODE; exact runtime closure requires a separate audited manifest",
+        "verified_sources": [
+          {
+            "kind": "USER_ATTACHMENT_EXACT_MEMBER",
+            "attachment_filename": "ClearEval_固定输入修复包_第4部分_共4部分.zip",
+            "nested_archive_members": [],
+            "member_path": "ClearEval_fixed_input_repair_candidate_20261016/source/extract_clearing_time.py",
+            "sha256_verified": true
+          }
+        ],
+        "sensitive_data_scan_flags": [],
+        "historical_workspace_path_count": 0,
+        "historical_path_handling": null
+      },
+      {
+        "path": "vendor/source/oeq_quantity_presence.py",
+        "sha256": "62bfc041a55941b6fea5984327f56177f9551494595c1abcaae08f6163e52777",
+        "bytes": 5098,
+        "status": "ALLOW_PUBLIC_UPLOAD_NOW",
+        "reason": "User-authorized project code, authored prompts/schema, benchmark question/contract data, derived lookup facts or project provenance; no third-party full text located.",
+        "purpose": "Recovered Python source for full scoring, source adapters, schema/contract consumption, or legacy compatibility; omitted from the measured portable-test import closure.",
+        "runtime_relevance": "FULL_RUNTIME_OR_ROUTE_SPECIFIC_CODE; exact runtime closure requires a separate audited manifest",
+        "verified_sources": [
+          {
+            "kind": "USER_ATTACHMENT_EXACT_MEMBER",
+            "attachment_filename": "ClearEval_固定输入修复包_第4部分_共4部分.zip",
+            "nested_archive_members": [],
+            "member_path": "ClearEval_fixed_input_repair_candidate_20261016/source/oeq_quantity_presence.py",
+            "sha256_verified": true
+          }
+        ],
+        "sensitive_data_scan_flags": [],
+        "historical_workspace_path_count": 0,
+        "historical_path_handling": null
+      },
+      {
+        "path": "vendor/source/oeq_task_evidence.py",
+        "sha256": "a24cc08346f1121f8dc7080114b3e19f65e69466aefd73e3d1a6730c3578227f",
+        "bytes": 20538,
+        "status": "ALLOW_PUBLIC_UPLOAD_NOW",
+        "reason": "User-authorized project code, authored prompts/schema, benchmark question/contract data, derived lookup facts or project provenance; no third-party full text located.",
+        "purpose": "Recovered Python source for full scoring, source adapters, schema/contract consumption, or legacy compatibility; omitted from the measured portable-test import closure.",
+        "runtime_relevance": "FULL_RUNTIME_OR_ROUTE_SPECIFIC_CODE; exact runtime closure requires a separate audited manifest",
+        "verified_sources": [
+          {
+            "kind": "USER_ATTACHMENT_EXACT_MEMBER",
+            "attachment_filename": "ClearEval_固定输入修复包_第4部分_共4部分.zip",
+            "nested_archive_members": [],
+            "member_path": "ClearEval_fixed_input_repair_candidate_20261016/source/oeq_task_evidence.py",
+            "sha256_verified": true
+          }
+        ],
+        "sensitive_data_scan_flags": [],
+        "historical_workspace_path_count": 0,
+        "historical_path_handling": null
+      },
+      {
+        "path": "vendor/source/benchmark_scoring.py",
+        "sha256": "ea0ef27b7ff9101a01b17779b1603f7a56f0fbc364b02cb00957fcb3a81ed84f",
+        "bytes": 21860,
+        "status": "ALLOW_PUBLIC_UPLOAD_NOW",
+        "reason": "User-authorized project code, authored prompts/schema, benchmark question/contract data, derived lookup facts or project provenance; no third-party full text located.",
+        "purpose": "Recovered Python source for full scoring, source adapters, schema/contract consumption, or legacy compatibility; omitted from the measured portable-test import closure.",
+        "runtime_relevance": "FULL_RUNTIME_OR_ROUTE_SPECIFIC_CODE; exact runtime closure requires a separate audited manifest",
+        "verified_sources": [
+          {
+            "kind": "USER_ATTACHMENT_EXACT_MEMBER",
+            "attachment_filename": "ClearEval_固定输入修复包_第4部分_共4部分.zip",
+            "nested_archive_members": [],
+            "member_path": "ClearEval_fixed_input_repair_candidate_20261016/source/benchmark_scoring.py",
+            "sha256_verified": true
+          }
+        ],
+        "sensitive_data_scan_flags": [],
+        "historical_workspace_path_count": 0,
+        "historical_path_handling": null
+      },
+      {
+        "path": "vendor/source/oeq_scientific.py",
+        "sha256": "63b9fdd30a9644400fff1d7186c4193ca7dca13254839fd13771578dde862a78",
+        "bytes": 60819,
+        "status": "ALLOW_PUBLIC_UPLOAD_NOW",
+        "reason": "User-authorized project code, authored prompts/schema, benchmark question/contract data, derived lookup facts or project provenance; no third-party full text located.",
+        "purpose": "Recovered Python source for full scoring, source adapters, schema/contract consumption, or legacy compatibility; omitted from the measured portable-test import closure.",
+        "runtime_relevance": "FULL_RUNTIME_OR_ROUTE_SPECIFIC_CODE; exact runtime closure requires a separate audited manifest",
+        "verified_sources": [
+          {
+            "kind": "USER_ATTACHMENT_EXACT_MEMBER",
+            "attachment_filename": "ClearEval_固定输入修复包_第4部分_共4部分.zip",
+            "nested_archive_members": [],
+            "member_path": "ClearEval_fixed_input_repair_candidate_20261016/source/oeq_scientific.py",
+            "sha256_verified": true
+          }
+        ],
+        "sensitive_data_scan_flags": [],
+        "historical_workspace_path_count": 0,
+        "historical_path_handling": null
+      },
+      {
+        "path": "vendor/source/sample_scope_runtime.py",
+        "sha256": "6a3b1a11ca7f26898ca2a4fa4107a1fe4843a068525730b80141bc463d0083fe",
+        "bytes": 8019,
+        "status": "ALLOW_PUBLIC_UPLOAD_NOW",
+        "reason": "User-authorized project code, authored prompts/schema, benchmark question/contract data, derived lookup facts or project provenance; no third-party full text located.",
+        "purpose": "Recovered Python source for full scoring, source adapters, schema/contract consumption, or legacy compatibility; omitted from the measured portable-test import closure.",
+        "runtime_relevance": "FULL_RUNTIME_OR_ROUTE_SPECIFIC_CODE; exact runtime closure requires a separate audited manifest",
+        "verified_sources": [
+          {
+            "kind": "USER_ATTACHMENT_EXACT_MEMBER",
+            "attachment_filename": "ClearEval_固定输入修复包_第4部分_共4部分.zip",
+            "nested_archive_members": [],
+            "member_path": "ClearEval_fixed_input_repair_candidate_20261016/source/sample_scope_runtime.py",
+            "sha256_verified": true
+          }
+        ],
+        "sensitive_data_scan_flags": [],
+        "historical_workspace_path_count": 0,
+        "historical_path_handling": null
+      },
+      {
+        "path": "vendor/source/oeq_macs_atomic_reference.py",
+        "sha256": "45b2a216aee2487df9d5996c80058009a8c69eb474cb717c70721212b6871ba7",
+        "bytes": 4657,
+        "status": "ALLOW_PUBLIC_UPLOAD_NOW",
+        "reason": "User-authorized project code, authored prompts/schema, benchmark question/contract data, derived lookup facts or project provenance; no third-party full text located.",
+        "purpose": "Recovered Python source for full scoring, source adapters, schema/contract consumption, or legacy compatibility; omitted from the measured portable-test import closure.",
+        "runtime_relevance": "FULL_RUNTIME_OR_ROUTE_SPECIFIC_CODE; exact runtime closure requires a separate audited manifest",
+        "verified_sources": [
+          {
+            "kind": "USER_ATTACHMENT_EXACT_MEMBER",
+            "attachment_filename": "ClearEval_固定输入修复包_第4部分_共4部分.zip",
+            "nested_archive_members": [],
+            "member_path": "ClearEval_fixed_input_repair_candidate_20261016/source/oeq_macs_atomic_reference.py",
+            "sha256_verified": true
+          }
+        ],
+        "sensitive_data_scan_flags": [],
+        "historical_workspace_path_count": 0,
+        "historical_path_handling": null
+      },
+      {
+        "path": "vendor/source/oeq_simple_representation.py",
+        "sha256": "2ba630104dca3b6b67d6eb1259d65a9c76fe0ca3c93b88911ca65f39d7337270",
+        "bytes": 7942,
+        "status": "ALLOW_PUBLIC_UPLOAD_NOW",
+        "reason": "User-authorized project code, authored prompts/schema, benchmark question/contract data, derived lookup facts or project provenance; no third-party full text located.",
+        "purpose": "Preserved legacy implementation; the new runner preloads its matching or representation replacement under the same module name.",
+        "runtime_relevance": "VERIFIER_ONLY_FOR_NEW_RUNNER_PATH; candidate overlay supersedes this file",
+        "verified_sources": [
+          {
+            "kind": "USER_ATTACHMENT_EXACT_MEMBER",
+            "attachment_filename": "ClearEval_固定输入修复包_第4部分_共4部分.zip",
+            "nested_archive_members": [],
+            "member_path": "ClearEval_fixed_input_repair_candidate_20261016/source/oeq_simple_representation.py",
+            "sha256_verified": true
+          }
+        ],
+        "sensitive_data_scan_flags": [],
+        "historical_workspace_path_count": 0,
+        "historical_path_handling": null
+      },
+      {
+        "path": "vendor/source/oeq_structured_judgment.py",
+        "sha256": "d6ed618d028bdf4d066e1df10a3ed31d2440d5a46281bddb27578ec1d356d4c5",
+        "bytes": 10817,
+        "status": "ALLOW_PUBLIC_UPLOAD_NOW",
+        "reason": "User-authorized project code, authored prompts/schema, benchmark question/contract data, derived lookup facts or project provenance; no third-party full text located.",
+        "purpose": "Recovered Python source for full scoring, source adapters, schema/contract consumption, or legacy compatibility; omitted from the measured portable-test import closure.",
+        "runtime_relevance": "FULL_RUNTIME_OR_ROUTE_SPECIFIC_CODE; exact runtime closure requires a separate audited manifest",
+        "verified_sources": [
+          {
+            "kind": "USER_ATTACHMENT_EXACT_MEMBER",
+            "attachment_filename": "ClearEval_固定输入修复包_第4部分_共4部分.zip",
+            "nested_archive_members": [],
+            "member_path": "ClearEval_fixed_input_repair_candidate_20261016/source/oeq_structured_judgment.py",
+            "sha256_verified": true
+          }
+        ],
+        "sensitive_data_scan_flags": [],
+        "historical_workspace_path_count": 0,
+        "historical_path_handling": null
+      },
+      {
+        "path": "vendor/source/oeq_presence_matching.py",
+        "sha256": "42c4213c21b029b12ddc8a4491d9dedcc2686bb3601778e8ad1680c9e03b7a87",
+        "bytes": 4669,
+        "status": "ALLOW_PUBLIC_UPLOAD_NOW",
+        "reason": "User-authorized project code, authored prompts/schema, benchmark question/contract data, derived lookup facts or project provenance; no third-party full text located.",
+        "purpose": "Recovered Python source for full scoring, source adapters, schema/contract consumption, or legacy compatibility; omitted from the measured portable-test import closure.",
+        "runtime_relevance": "FULL_RUNTIME_OR_ROUTE_SPECIFIC_CODE; exact runtime closure requires a separate audited manifest",
+        "verified_sources": [
+          {
+            "kind": "USER_ATTACHMENT_EXACT_MEMBER",
+            "attachment_filename": "ClearEval_固定输入修复包_第4部分_共4部分.zip",
+            "nested_archive_members": [],
+            "member_path": "ClearEval_fixed_input_repair_candidate_20261016/source/oeq_presence_matching.py",
+            "sha256_verified": true
+          }
+        ],
+        "sensitive_data_scan_flags": [],
+        "historical_workspace_path_count": 0,
+        "historical_path_handling": null
+      },
+      {
+        "path": "vendor/source/oeq_capacity_matching.py",
+        "sha256": "2f523a6455514713abd0f0c48662b70aa37e67f903db62f5055f735916e8d827",
+        "bytes": 8154,
+        "status": "ALLOW_PUBLIC_UPLOAD_NOW",
+        "reason": "User-authorized project code, authored prompts/schema, benchmark question/contract data, derived lookup facts or project provenance; no third-party full text located.",
+        "purpose": "Preserved legacy implementation; the new runner preloads its matching or representation replacement under the same module name.",
+        "runtime_relevance": "VERIFIER_ONLY_FOR_NEW_RUNNER_PATH; candidate overlay supersedes this file",
+        "verified_sources": [
+          {
+            "kind": "USER_ATTACHMENT_EXACT_MEMBER",
+            "attachment_filename": "ClearEval_固定输入修复包_第4部分_共4部分.zip",
+            "nested_archive_members": [],
+            "member_path": "ClearEval_fixed_input_repair_candidate_20261016/source/oeq_capacity_matching.py",
+            "sha256_verified": true
+          }
+        ],
+        "sensitive_data_scan_flags": [],
+        "historical_workspace_path_count": 0,
+        "historical_path_handling": null
+      },
+      {
+        "path": "vendor/source/archived_metadata.py",
+        "sha256": "5551f8dc510bb03be69520c0a918f7f3eaf45708cb45b169c62f1740f4307493",
+        "bytes": 3217,
+        "status": "ALLOW_PUBLIC_UPLOAD_NOW",
+        "reason": "User-authorized project code, authored prompts/schema, benchmark question/contract data, derived lookup facts or project provenance; no third-party full text located.",
+        "purpose": "Recovered Python source for full scoring, source adapters, schema/contract consumption, or legacy compatibility; omitted from the measured portable-test import closure.",
+        "runtime_relevance": "FULL_RUNTIME_OR_ROUTE_SPECIFIC_CODE; exact runtime closure requires a separate audited manifest",
+        "verified_sources": [
+          {
+            "kind": "USER_ATTACHMENT_EXACT_MEMBER",
+            "attachment_filename": "ClearEval_固定输入修复包_第4部分_共4部分.zip",
+            "nested_archive_members": [],
+            "member_path": "ClearEval_fixed_input_repair_candidate_20261016/source/archived_metadata.py",
+            "sha256_verified": true
+          }
+        ],
+        "sensitive_data_scan_flags": [],
+        "historical_workspace_path_count": 0,
+        "historical_path_handling": null
+      },
+      {
+        "path": "vendor/source/oeq_ri_reference.py",
+        "sha256": "4c8bf18ddb34e6649ec0cfbb713fde906bee6e09d8fcd7fb16f75bbc36e54b4b",
+        "bytes": 2022,
+        "status": "ALLOW_PUBLIC_UPLOAD_NOW",
+        "reason": "User-authorized project code, authored prompts/schema, benchmark question/contract data, derived lookup facts or project provenance; no third-party full text located.",
+        "purpose": "Recovered Python source for full scoring, source adapters, schema/contract consumption, or legacy compatibility; omitted from the measured portable-test import closure.",
+        "runtime_relevance": "FULL_RUNTIME_OR_ROUTE_SPECIFIC_CODE; exact runtime closure requires a separate audited manifest",
+        "verified_sources": [
+          {
+            "kind": "USER_ATTACHMENT_EXACT_MEMBER",
+            "attachment_filename": "ClearEval_固定输入修复包_第4部分_共4部分.zip",
+            "nested_archive_members": [],
+            "member_path": "ClearEval_fixed_input_repair_candidate_20261016/source/oeq_ri_reference.py",
+            "sha256_verified": true
+          }
+        ],
+        "sensitive_data_scan_flags": [],
+        "historical_workspace_path_count": 0,
+        "historical_path_handling": null
+      },
+      {
+        "path": "vendor/source/oeq_sr_scoring.py",
+        "sha256": "0db7320e490825af050ebd01ac53517898c4fc8d7cdbe9130a8e8744aefb5d54",
+        "bytes": 34213,
+        "status": "ALLOW_PUBLIC_UPLOAD_NOW",
+        "reason": "User-authorized project code, authored prompts/schema, benchmark question/contract data, derived lookup facts or project provenance; no third-party full text located.",
+        "purpose": "Recovered Python source for full scoring, source adapters, schema/contract consumption, or legacy compatibility; omitted from the measured portable-test import closure.",
+        "runtime_relevance": "FULL_RUNTIME_OR_ROUTE_SPECIFIC_CODE; exact runtime closure requires a separate audited manifest",
+        "verified_sources": [
+          {
+            "kind": "USER_ATTACHMENT_EXACT_MEMBER",
+            "attachment_filename": "ClearEval_固定输入修复包_第4部分_共4部分.zip",
+            "nested_archive_members": [],
+            "member_path": "ClearEval_fixed_input_repair_candidate_20261016/source/oeq_sr_scoring.py",
+            "sha256_verified": true
+          }
+        ],
+        "sensitive_data_scan_flags": [],
+        "historical_workspace_path_count": 0,
+        "historical_path_handling": null
+      },
+      {
+        "path": "vendor/source/oeq_source_parameter_slots.py",
+        "sha256": "a1dfb4b518fcb76f27341396df84f02460c82276bc1d6f747bb569f8b3a122fd",
+        "bytes": 8072,
+        "status": "ALLOW_PUBLIC_UPLOAD_NOW",
+        "reason": "User-authorized project code, authored prompts/schema, benchmark question/contract data, derived lookup facts or project provenance; no third-party full text located.",
+        "purpose": "Recovered Python source for full scoring, source adapters, schema/contract consumption, or legacy compatibility; omitted from the measured portable-test import closure.",
+        "runtime_relevance": "FULL_RUNTIME_OR_ROUTE_SPECIFIC_CODE; exact runtime closure requires a separate audited manifest",
+        "verified_sources": [
+          {
+            "kind": "USER_ATTACHMENT_EXACT_MEMBER",
+            "attachment_filename": "ClearEval_固定输入修复包_第4部分_共4部分.zip",
+            "nested_archive_members": [],
+            "member_path": "ClearEval_fixed_input_repair_candidate_20261016/source/oeq_source_parameter_slots.py",
+            "sha256_verified": true
+          }
+        ],
+        "sensitive_data_scan_flags": [],
+        "historical_workspace_path_count": 0,
+        "historical_path_handling": null
+      },
+      {
+        "path": "vendor/source/oeq_quantity_audit.py",
+        "sha256": "aad8754c24af89c32b2ea257778e85a806e5a4c24c6632fd4b8dc7ec3d2b0743",
+        "bytes": 16639,
+        "status": "ALLOW_PUBLIC_UPLOAD_NOW",
+        "reason": "User-authorized project code, authored prompts/schema, benchmark question/contract data, derived lookup facts or project provenance; no third-party full text located.",
+        "purpose": "Recovered Python source for full scoring, source adapters, schema/contract consumption, or legacy compatibility; omitted from the measured portable-test import closure.",
+        "runtime_relevance": "FULL_RUNTIME_OR_ROUTE_SPECIFIC_CODE; exact runtime closure requires a separate audited manifest",
+        "verified_sources": [
+          {
+            "kind": "USER_ATTACHMENT_EXACT_MEMBER",
+            "attachment_filename": "ClearEval_固定输入修复包_第4部分_共4部分.zip",
+            "nested_archive_members": [],
+            "member_path": "ClearEval_fixed_input_repair_candidate_20261016/source/oeq_quantity_audit.py",
+            "sha256_verified": true
+          }
+        ],
+        "sensitive_data_scan_flags": [],
+        "historical_workspace_path_count": 0,
+        "historical_path_handling": null
+      },
+      {
+        "path": "vendor/source/oeq_atomic_reference_v3.py",
+        "sha256": "879a34dbf4e2243c53c74a72e59c4f2b5625fc601dc49fd5d6201f01dbc03317",
+        "bytes": 4119,
+        "status": "ALLOW_PUBLIC_UPLOAD_NOW",
+        "reason": "User-authorized project code, authored prompts/schema, benchmark question/contract data, derived lookup facts or project provenance; no third-party full text located.",
+        "purpose": "Recovered Python source for full scoring, source adapters, schema/contract consumption, or legacy compatibility; omitted from the measured portable-test import closure.",
+        "runtime_relevance": "FULL_RUNTIME_OR_ROUTE_SPECIFIC_CODE; exact runtime closure requires a separate audited manifest",
+        "verified_sources": [
+          {
+            "kind": "USER_ATTACHMENT_EXACT_MEMBER",
+            "attachment_filename": "ClearEval_固定输入修复包_第4部分_共4部分.zip",
+            "nested_archive_members": [],
+            "member_path": "ClearEval_fixed_input_repair_candidate_20261016/source/oeq_atomic_reference_v3.py",
+            "sha256_verified": true
+          }
+        ],
+        "sensitive_data_scan_flags": [],
+        "historical_workspace_path_count": 0,
+        "historical_path_handling": null
+      },
+      {
+        "path": "vendor/source/oeq_sr_assessment.py",
+        "sha256": "638a1fad66e82dcc98d7ffe6f032cc0d7e3c78b526507ba76397c958b8bfa171",
+        "bytes": 47149,
+        "status": "ALLOW_PUBLIC_UPLOAD_NOW",
+        "reason": "User-authorized project code, authored prompts/schema, benchmark question/contract data, derived lookup facts or project provenance; no third-party full text located.",
+        "purpose": "Recovered Python source for full scoring, source adapters, schema/contract consumption, or legacy compatibility; omitted from the measured portable-test import closure.",
+        "runtime_relevance": "FULL_RUNTIME_OR_ROUTE_SPECIFIC_CODE; exact runtime closure requires a separate audited manifest",
+        "verified_sources": [
+          {
+            "kind": "USER_ATTACHMENT_EXACT_MEMBER",
+            "attachment_filename": "ClearEval_固定输入修复包_第4部分_共4部分.zip",
+            "nested_archive_members": [],
+            "member_path": "ClearEval_fixed_input_repair_candidate_20261016/source/oeq_sr_assessment.py",
+            "sha256_verified": true
+          }
+        ],
+        "sensitive_data_scan_flags": [],
+        "historical_workspace_path_count": 0,
+        "historical_path_handling": null
+      },
+      {
+        "path": "vendor/source/oeq_simple_time.py",
+        "sha256": "74d466ff1acb129de3a113f5b865fcf84dee9d25541b4de9dd385a24e5fc4481",
+        "bytes": 12919,
+        "status": "ALLOW_PUBLIC_UPLOAD_NOW",
+        "reason": "User-authorized project code, authored prompts/schema, benchmark question/contract data, derived lookup facts or project provenance; no third-party full text located.",
+        "purpose": "Preserved legacy implementation; the new runner preloads its matching or representation replacement under the same module name.",
+        "runtime_relevance": "VERIFIER_ONLY_FOR_NEW_RUNNER_PATH; candidate overlay supersedes this file",
+        "verified_sources": [
+          {
+            "kind": "USER_ATTACHMENT_EXACT_MEMBER",
+            "attachment_filename": "ClearEval_固定输入修复包_第4部分_共4部分.zip",
+            "nested_archive_members": [],
+            "member_path": "ClearEval_fixed_input_repair_candidate_20261016/source/oeq_simple_time.py",
+            "sha256_verified": true
+          }
+        ],
+        "sensitive_data_scan_flags": [],
+        "historical_workspace_path_count": 0,
+        "historical_path_handling": null
+      },
+      {
+        "path": "vendor/source/oeq_atomic_alignment.py",
+        "sha256": "3ac7e8600622da7231ae70971817ed2b340b9616fee673cf77eb1cafe2385b28",
+        "bytes": 29792,
+        "status": "ALLOW_PUBLIC_UPLOAD_NOW",
+        "reason": "User-authorized project code, authored prompts/schema, benchmark question/contract data, derived lookup facts or project provenance; no third-party full text located.",
+        "purpose": "Preserved legacy implementation; the new runner preloads its matching or representation replacement under the same module name.",
+        "runtime_relevance": "VERIFIER_ONLY_FOR_NEW_RUNNER_PATH; candidate overlay supersedes this file",
+        "verified_sources": [
+          {
+            "kind": "USER_ATTACHMENT_EXACT_MEMBER",
+            "attachment_filename": "ClearEval_固定输入修复包_第4部分_共4部分.zip",
+            "nested_archive_members": [],
+            "member_path": "ClearEval_fixed_input_repair_candidate_20261016/source/oeq_atomic_alignment.py",
+            "sha256_verified": true
+          }
+        ],
+        "sensitive_data_scan_flags": [],
+        "historical_workspace_path_count": 0,
+        "historical_path_handling": null
+      },
+      {
+        "path": "vendor/source/integration_qualification.py",
+        "sha256": "307a764c554bd3c3f67c88819be6ea9c988f97967ab87025645706f62e9da93b",
+        "bytes": 1069,
+        "status": "ALLOW_PUBLIC_UPLOAD_NOW",
+        "reason": "User-authorized project code, authored prompts/schema, benchmark question/contract data, derived lookup facts or project provenance; no third-party full text located.",
+        "purpose": "Recovered Python source for full scoring, source adapters, schema/contract consumption, or legacy compatibility; omitted from the measured portable-test import closure.",
+        "runtime_relevance": "FULL_RUNTIME_OR_ROUTE_SPECIFIC_CODE; exact runtime closure requires a separate audited manifest",
+        "verified_sources": [
+          {
+            "kind": "USER_ATTACHMENT_EXACT_MEMBER",
+            "attachment_filename": "ClearEval_固定输入修复包_第4部分_共4部分.zip",
+            "nested_archive_members": [],
+            "member_path": "ClearEval_fixed_input_repair_candidate_20261016/source/integration_qualification.py",
+            "sha256_verified": true
+          }
+        ],
+        "sensitive_data_scan_flags": [],
+        "historical_workspace_path_count": 0,
+        "historical_path_handling": null
+      },
+      {
+        "path": "vendor/source/integration_offline.py",
+        "sha256": "bab2e6ce4c9865484bfe7a762b7d79793cb329127951ac700debba5abf6d3e88",
+        "bytes": 425,
+        "status": "ALLOW_PUBLIC_UPLOAD_NOW",
+        "reason": "User-authorized project code, authored prompts/schema, benchmark question/contract data, derived lookup facts or project provenance; no third-party full text located.",
+        "purpose": "Recovered Python source for full scoring, source adapters, schema/contract consumption, or legacy compatibility; omitted from the measured portable-test import closure.",
+        "runtime_relevance": "FULL_RUNTIME_OR_ROUTE_SPECIFIC_CODE; exact runtime closure requires a separate audited manifest",
+        "verified_sources": [
+          {
+            "kind": "USER_ATTACHMENT_EXACT_MEMBER",
+            "attachment_filename": "ClearEval_固定输入修复包_第4部分_共4部分.zip",
+            "nested_archive_members": [],
+            "member_path": "ClearEval_fixed_input_repair_candidate_20261016/source/integration_offline.py",
+            "sha256_verified": true
+          }
+        ],
+        "sensitive_data_scan_flags": [],
+        "historical_workspace_path_count": 0,
+        "historical_path_handling": null
+      },
+      {
+        "path": "vendor/contract/fixtures/questions.json",
+        "sha256": "6ffe623a1bd5359dda8bb5fae11eefbe9836c42373811ec698be38555f70fbe5",
+        "bytes": 26937,
+        "status": "ALLOW_PUBLIC_UPLOAD_NOW",
+        "reason": "User-authorized project code, authored prompts/schema, benchmark question/contract data, derived lookup facts or project provenance; no third-party full text located.",
+        "purpose": "Legacy sample-scope contract loader/schema or approved question/contract fixture; native runtime imports sample_scope_runtime and its eager SCOPE construction reads the fixtures.",
+        "runtime_relevance": "LEGACY_RUNTIME_COUPLING_OR_VERIFIER; separate from a new execution case manifest",
+        "verified_sources": [
+          {
+            "kind": "USER_ATTACHMENT_EXACT_MEMBER",
+            "attachment_filename": "ClearEval_固定输入修复包_第1部分_共4部分.zip",
+            "nested_archive_members": [],
+            "member_path": "ClearEval_fixed_input_repair_candidate_20261016/contract/fixtures/questions.json",
+            "sha256_verified": true
+          }
+        ],
+        "sensitive_data_scan_flags": [],
+        "historical_workspace_path_count": 0,
+        "historical_path_handling": null
+      },
+      {
+        "path": "vendor/contract/fixtures/contracts.json",
+        "sha256": "a8e594291c7321145c1ac14610d54a4a3006ee1ce6108e0d0792e7a10d18bd57",
+        "bytes": 27091,
+        "status": "ALLOW_PUBLIC_UPLOAD_NOW",
+        "reason": "User-authorized project code, authored prompts/schema, benchmark question/contract data, derived lookup facts or project provenance; no third-party full text located.",
+        "purpose": "Legacy sample-scope contract loader/schema or approved question/contract fixture; native runtime imports sample_scope_runtime and its eager SCOPE construction reads the fixtures.",
+        "runtime_relevance": "LEGACY_RUNTIME_COUPLING_OR_VERIFIER; separate from a new execution case manifest",
+        "verified_sources": [
+          {
+            "kind": "USER_ATTACHMENT_EXACT_MEMBER",
+            "attachment_filename": "ClearEval_固定输入修复包_第1部分_共4部分.zip",
+            "nested_archive_members": [],
+            "member_path": "ClearEval_fixed_input_repair_candidate_20261016/contract/fixtures/contracts.json",
+            "sha256_verified": true
+          }
+        ],
+        "sensitive_data_scan_flags": [],
+        "historical_workspace_path_count": 0,
+        "historical_path_handling": null
+      },
+      {
+        "path": "vendor/source/prompts/parse_user_preference_vector.py",
+        "sha256": "df1eb2b0fba720f91819964b152c77e1ea286dd81296206bdf1739a776a87841",
+        "bytes": 4474,
+        "status": "ALLOW_PUBLIC_UPLOAD_NOW",
+        "reason": "User-authorized project code, authored prompts/schema, benchmark question/contract data, derived lookup facts or project provenance; no third-party full text located.",
+        "purpose": "Authored prompt template; some are legacy-generation imports while practical score templates are consumed by the paired scoring route.",
+        "runtime_relevance": "RUNTIME_PROMPT_OR_LEGACY_IMPORT_COUPLING",
+        "verified_sources": [
+          {
+            "kind": "USER_ATTACHMENT_EXACT_MEMBER",
+            "attachment_filename": "ClearEval_固定输入修复包_第4部分_共4部分.zip",
+            "nested_archive_members": [],
+            "member_path": "ClearEval_fixed_input_repair_candidate_20261016/source/prompts/parse_user_preference_vector.py",
+            "sha256_verified": true
+          }
+        ],
+        "sensitive_data_scan_flags": [],
+        "historical_workspace_path_count": 0,
+        "historical_path_handling": null
+      },
+      {
+        "path": "vendor/source/prompts/gen_protocol_template.py",
+        "sha256": "285e38fbb1a4f963b3de2692c9b08e2b94c7b34ecaa2d416db825281b3be7dd4",
+        "bytes": 5639,
+        "status": "ALLOW_PUBLIC_UPLOAD_NOW",
+        "reason": "User-authorized project code, authored prompts/schema, benchmark question/contract data, derived lookup facts or project provenance; no third-party full text located.",
+        "purpose": "Authored prompt template; some are legacy-generation imports while practical score templates are consumed by the paired scoring route.",
+        "runtime_relevance": "RUNTIME_PROMPT_OR_LEGACY_IMPORT_COUPLING",
+        "verified_sources": [
+          {
+            "kind": "USER_ATTACHMENT_EXACT_MEMBER",
+            "attachment_filename": "ClearEval_固定输入修复包_第4部分_共4部分.zip",
+            "nested_archive_members": [],
+            "member_path": "ClearEval_fixed_input_repair_candidate_20261016/source/prompts/gen_protocol_template.py",
+            "sha256_verified": true
+          }
+        ],
+        "sensitive_data_scan_flags": [],
+        "historical_workspace_path_count": 0,
+        "historical_path_handling": null
+      },
+      {
+        "path": "vendor/source/prompts/oeq_practical_signal_assessability_v3.txt",
+        "sha256": "07ee253f354d9823f984a2cdcdd9a845224be0e0087dc69945d539282180ea54",
+        "bytes": 1741,
+        "status": "ALLOW_PUBLIC_UPLOAD_NOW",
+        "reason": "User-authorized project code, authored prompts/schema, benchmark question/contract data, derived lookup facts or project provenance; no third-party full text located.",
+        "purpose": "Authored prompt template; some are legacy-generation imports while practical score templates are consumed by the paired scoring route.",
+        "runtime_relevance": "RUNTIME_PROMPT_OR_LEGACY_IMPORT_COUPLING",
+        "verified_sources": [
+          {
+            "kind": "USER_ATTACHMENT_EXACT_MEMBER",
+            "attachment_filename": "ClearEval_固定输入修复包_第4部分_共4部分.zip",
+            "nested_archive_members": [],
+            "member_path": "ClearEval_fixed_input_repair_candidate_20261016/source/prompts/oeq_practical_signal_assessability_v3.txt",
+            "sha256_verified": true
+          }
+        ],
+        "sensitive_data_scan_flags": [],
+        "historical_workspace_path_count": 0,
+        "historical_path_handling": null
+      },
+      {
+        "path": "vendor/source/prompts/oeq_practical_score_only.txt",
+        "sha256": "298339846dd2c609b516a81514f56821849d3e9707faa1ed38c3b71c96072b15",
+        "bytes": 5338,
+        "status": "ALLOW_PUBLIC_UPLOAD_NOW",
+        "reason": "User-authorized project code, authored prompts/schema, benchmark question/contract data, derived lookup facts or project provenance; no third-party full text located.",
+        "purpose": "Authored prompt template; some are legacy-generation imports while practical score templates are consumed by the paired scoring route.",
+        "runtime_relevance": "RUNTIME_PROMPT_OR_LEGACY_IMPORT_COUPLING",
+        "verified_sources": [
+          {
+            "kind": "USER_ATTACHMENT_EXACT_MEMBER",
+            "attachment_filename": "ClearEval_固定输入修复包_第4部分_共4部分.zip",
+            "nested_archive_members": [],
+            "member_path": "ClearEval_fixed_input_repair_candidate_20261016/source/prompts/oeq_practical_score_only.txt",
+            "sha256_verified": true
+          }
+        ],
+        "sensitive_data_scan_flags": [],
+        "historical_workspace_path_count": 0,
+        "historical_path_handling": null
+      },
+      {
+        "path": "vendor/source/prompts/oeq_practical_task_scope_v2.txt",
+        "sha256": "993293da0c4b5d30c50aa980204e673c97cfb39e06f277b1db7ac773c6081dcb",
+        "bytes": 1289,
+        "status": "ALLOW_PUBLIC_UPLOAD_NOW",
+        "reason": "User-authorized project code, authored prompts/schema, benchmark question/contract data, derived lookup facts or project provenance; no third-party full text located.",
+        "purpose": "Authored prompt template; some are legacy-generation imports while practical score templates are consumed by the paired scoring route.",
+        "runtime_relevance": "RUNTIME_PROMPT_OR_LEGACY_IMPORT_COUPLING",
+        "verified_sources": [
+          {
+            "kind": "USER_ATTACHMENT_EXACT_MEMBER",
+            "attachment_filename": "ClearEval_固定输入修复包_第4部分_共4部分.zip",
+            "nested_archive_members": [],
+            "member_path": "ClearEval_fixed_input_repair_candidate_20261016/source/prompts/oeq_practical_task_scope_v2.txt",
+            "sha256_verified": true
+          }
+        ],
+        "sensitive_data_scan_flags": [],
+        "historical_workspace_path_count": 0,
+        "historical_path_handling": null
+      },
+      {
+        "path": "vendor/source/prompts/__init__.py",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0,
+        "status": "ALLOW_PUBLIC_UPLOAD_NOW",
+        "reason": "User-authorized project code, authored prompts/schema, benchmark question/contract data, derived lookup facts or project provenance; no third-party full text located.",
+        "purpose": "Authored prompt template; some are legacy-generation imports while practical score templates are consumed by the paired scoring route.",
+        "runtime_relevance": "RUNTIME_PROMPT_OR_LEGACY_IMPORT_COUPLING",
+        "verified_sources": [
+          {
+            "kind": "USER_ATTACHMENT_EXACT_MEMBER",
+            "attachment_filename": "ClearEval_固定输入修复包_第4部分_共4部分.zip",
+            "nested_archive_members": [],
+            "member_path": "ClearEval_fixed_input_repair_candidate_20261016/source/prompts/__init__.py",
+            "sha256_verified": true
+          }
+        ],
+        "sensitive_data_scan_flags": [],
+        "historical_workspace_path_count": 0,
+        "historical_path_handling": null
+      },
+      {
+        "path": "vendor/source/prompts/oeq_sample_marker_applicability_v4.txt",
+        "sha256": "77bed42842fef848b226adb48287c9a8dd72cdeb7287552f416a0f90b6b9e194",
+        "bytes": 4483,
+        "status": "ALLOW_PUBLIC_UPLOAD_NOW",
+        "reason": "User-authorized project code, authored prompts/schema, benchmark question/contract data, derived lookup facts or project provenance; no third-party full text located.",
+        "purpose": "Authored prompt template; some are legacy-generation imports while practical score templates are consumed by the paired scoring route.",
+        "runtime_relevance": "RUNTIME_PROMPT_OR_LEGACY_IMPORT_COUPLING",
+        "verified_sources": [
+          {
+            "kind": "USER_ATTACHMENT_EXACT_MEMBER",
+            "attachment_filename": "ClearEval_固定输入修复包_第4部分_共4部分.zip",
+            "nested_archive_members": [],
+            "member_path": "ClearEval_fixed_input_repair_candidate_20261016/source/prompts/oeq_sample_marker_applicability_v4.txt",
+            "sha256_verified": true
+          }
+        ],
+        "sensitive_data_scan_flags": [],
+        "historical_workspace_path_count": 0,
+        "historical_path_handling": null
+      },
+      {
+        "path": "vendor/source/KnowledgeBase/tissue.json",
+        "sha256": "664d9668ad141ae9862d063d6756bae8b296aaf99ac616810fe8a84be174da34",
+        "bytes": 79587,
+        "status": "ALLOW_PUBLIC_UPLOAD_NOW",
+        "reason": "User-authorized project code, authored prompts/schema, benchmark question/contract data, derived lookup facts or project provenance; no third-party full text located.",
+        "purpose": "Frozen lookup table loaded by native effectiveness/scoring runtime; benchmark input provenance, not independent scientific validation.",
+        "runtime_relevance": "RUNTIME_LOOKUP_FOR_EFFECTIVENESS",
+        "verified_sources": [
+          {
+            "kind": "USER_ATTACHMENT_EXACT_MEMBER",
+            "attachment_filename": "ClearEval_固定输入修复包_第4部分_共4部分.zip",
+            "nested_archive_members": [],
+            "member_path": "ClearEval_fixed_input_repair_candidate_20261016/source/KnowledgeBase/tissue.json",
+            "sha256_verified": true
+          }
+        ],
+        "sensitive_data_scan_flags": [],
+        "historical_workspace_path_count": 0,
+        "historical_path_handling": null
+      },
+      {
+        "path": "vendor/source/KnowledgeBase/tissue_ri.json",
+        "sha256": "14105fd47302a69e6a005b81ab66acfe0b781283df506f8350d56d7b88a7dffc",
+        "bytes": 2183,
+        "status": "ALLOW_PUBLIC_UPLOAD_NOW",
+        "reason": "User-authorized project code, authored prompts/schema, benchmark question/contract data, derived lookup facts or project provenance; no third-party full text located.",
+        "purpose": "Frozen lookup table loaded by native effectiveness/scoring runtime; benchmark input provenance, not independent scientific validation.",
+        "runtime_relevance": "RUNTIME_LOOKUP_FOR_EFFECTIVENESS",
+        "verified_sources": [
+          {
+            "kind": "USER_ATTACHMENT_EXACT_MEMBER",
+            "attachment_filename": "ClearEval_固定输入修复包_第4部分_共4部分.zip",
+            "nested_archive_members": [],
+            "member_path": "ClearEval_fixed_input_repair_candidate_20261016/source/KnowledgeBase/tissue_ri.json",
+            "sha256_verified": true
+          }
+        ],
+        "sensitive_data_scan_flags": [],
+        "historical_workspace_path_count": 0,
+        "historical_path_handling": null
+      },
+      {
+        "path": "vendor/source/KnowledgeBase/time_kb.json",
+        "sha256": "ebd1dd2d23a91e43b6d956d716eacdcd570a7e18507563bf7f4115b7c43b2d6e",
+        "bytes": 207116,
+        "status": "ALLOW_PUBLIC_UPLOAD_NOW",
+        "reason": "User-authorized project code, authored prompts/schema, benchmark question/contract data, derived lookup facts or project provenance; no third-party full text located.",
+        "purpose": "Frozen lookup table loaded by native effectiveness/scoring runtime; benchmark input provenance, not independent scientific validation.",
+        "runtime_relevance": "RUNTIME_LOOKUP_FOR_EFFECTIVENESS",
+        "verified_sources": [
+          {
+            "kind": "USER_ATTACHMENT_EXACT_MEMBER",
+            "attachment_filename": "ClearEval_固定输入修复包_第4部分_共4部分.zip",
+            "nested_archive_members": [],
+            "member_path": "ClearEval_fixed_input_repair_candidate_20261016/source/KnowledgeBase/time_kb.json",
+            "sha256_verified": true
+          }
+        ],
+        "sensitive_data_scan_flags": [],
+        "historical_workspace_path_count": 0,
+        "historical_path_handling": null
+      },
+      {
+        "path": "vendor/source/KnowledgeBase/method_sigma_ri.json",
+        "sha256": "250c87f3a530178c9bb88b7649d99ad6969e638d0e8ae513664761ce7cc444e9",
+        "bytes": 11900,
+        "status": "ALLOW_PUBLIC_UPLOAD_NOW",
+        "reason": "User-authorized project code, authored prompts/schema, benchmark question/contract data, derived lookup facts or project provenance; no third-party full text located.",
+        "purpose": "Frozen lookup table loaded by native effectiveness/scoring runtime; benchmark input provenance, not independent scientific validation.",
+        "runtime_relevance": "RUNTIME_LOOKUP_FOR_EFFECTIVENESS",
+        "verified_sources": [
+          {
+            "kind": "USER_ATTACHMENT_EXACT_MEMBER",
+            "attachment_filename": "ClearEval_固定输入修复包_第4部分_共4部分.zip",
+            "nested_archive_members": [],
+            "member_path": "ClearEval_fixed_input_repair_candidate_20261016/source/KnowledgeBase/method_sigma_ri.json",
+            "sha256_verified": true
+          }
+        ],
+        "sensitive_data_scan_flags": [],
+        "historical_workspace_path_count": 0,
+        "historical_path_handling": null
+      },
+      {
+        "path": "vendor/source/KnowledgeBase/method_ri_ref.json",
+        "sha256": "d45f794e6287808f1aad3703809a753c195638c4790455237c9bf43f7455e4cd",
+        "bytes": 3852,
+        "status": "ALLOW_PUBLIC_UPLOAD_NOW",
+        "reason": "User-authorized project code, authored prompts/schema, benchmark question/contract data, derived lookup facts or project provenance; no third-party full text located.",
+        "purpose": "Frozen lookup table loaded by native effectiveness/scoring runtime; benchmark input provenance, not independent scientific validation.",
+        "runtime_relevance": "RUNTIME_LOOKUP_FOR_EFFECTIVENESS",
+        "verified_sources": [
+          {
+            "kind": "USER_ATTACHMENT_EXACT_MEMBER",
+            "attachment_filename": "ClearEval_固定输入修复包_第4部分_共4部分.zip",
+            "nested_archive_members": [],
+            "member_path": "ClearEval_fixed_input_repair_candidate_20261016/source/KnowledgeBase/method_ri_ref.json",
+            "sha256_verified": true
+          }
+        ],
+        "sensitive_data_scan_flags": [],
+        "historical_workspace_path_count": 0,
+        "historical_path_handling": null
+      },
+      {
+        "path": "vendor/source/KnowledgeBase/method_fluro_compati.json",
+        "sha256": "96b348fe9393c7e6540a165393c433e39f60ec4c845515571030367eae86e0d6",
+        "bytes": 17730,
+        "status": "ALLOW_PUBLIC_UPLOAD_NOW",
+        "reason": "User-authorized project code, authored prompts/schema, benchmark question/contract data, derived lookup facts or project provenance; no third-party full text located.",
+        "purpose": "Frozen lookup table loaded by native effectiveness/scoring runtime; benchmark input provenance, not independent scientific validation.",
+        "runtime_relevance": "RUNTIME_LOOKUP_FOR_EFFECTIVENESS",
+        "verified_sources": [
+          {
+            "kind": "USER_ATTACHMENT_EXACT_MEMBER",
+            "attachment_filename": "ClearEval_固定输入修复包_第4部分_共4部分.zip",
+            "nested_archive_members": [],
+            "member_path": "ClearEval_fixed_input_repair_candidate_20261016/source/KnowledgeBase/method_fluro_compati.json",
+            "sha256_verified": true
+          }
+        ],
+        "sensitive_data_scan_flags": [],
+        "historical_workspace_path_count": 0,
+        "historical_path_handling": null
+      },
+      {
+        "path": "vendor/source/results/oeq_metrics.py",
+        "sha256": "83cc2f738a60cc9580c00b2de1647e6e45cbd93396768f8f4d88a50fc8fb9712",
+        "bytes": 5132,
+        "status": "ALLOW_PUBLIC_UPLOAD_NOW",
+        "reason": "User-authorized project code, authored prompts/schema, benchmark question/contract data, derived lookup facts or project provenance; no third-party full text located.",
+        "purpose": "Recovered Python source for full scoring, source adapters, schema/contract consumption, or legacy compatibility; omitted from the measured portable-test import closure.",
+        "runtime_relevance": "FULL_RUNTIME_OR_ROUTE_SPECIFIC_CODE; exact runtime closure requires a separate audited manifest",
+        "verified_sources": [
+          {
+            "kind": "USER_ATTACHMENT_EXACT_MEMBER",
+            "attachment_filename": "ClearEval_固定输入修复包_第4部分_共4部分.zip",
+            "nested_archive_members": [],
+            "member_path": "ClearEval_fixed_input_repair_candidate_20261016/source/results/oeq_metrics.py",
+            "sha256_verified": true
+          }
+        ],
+        "sensitive_data_scan_flags": [],
+        "historical_workspace_path_count": 0,
+        "historical_path_handling": null
+      },
+      {
+        "path": "vendor/source/dataset/Q+AR/src/model_space_signed.json",
+        "sha256": "b94b04b35a11511d01c9e5b5c8eec07ff595f956e3121a51f2ca53cd92ffb0ec",
+        "bytes": 2780,
+        "status": "ALLOW_PUBLIC_UPLOAD_NOW",
+        "reason": "User-authorized project code, authored prompts/schema, benchmark question/contract data, derived lookup facts or project provenance; no third-party full text located.",
+        "purpose": "Historical question snapshot or signed method capability table used by legacy runtime/binding code.",
+        "runtime_relevance": "RUNTIME_OR_LEGACY_BINDING; exact selected-path requirement must be reviewed",
+        "verified_sources": [
+          {
+            "kind": "USER_ATTACHMENT_EXACT_MEMBER",
+            "attachment_filename": "ClearEval_固定输入修复包_第4部分_共4部分.zip",
+            "nested_archive_members": [],
+            "member_path": "ClearEval_fixed_input_repair_candidate_20261016/source/dataset/Q+AR/src/model_space_signed.json",
+            "sha256_verified": true
+          }
+        ],
+        "sensitive_data_scan_flags": [],
+        "historical_workspace_path_count": 0,
+        "historical_path_handling": null
+      },
+      {
+        "path": "vendor/source/dataset/Q+AR/src/question_final.json",
+        "sha256": "c2392f7ec345cab0d26c197468dd3928828531a0bed116b63248f28c7a207a19",
+        "bytes": 687055,
+        "status": "ALLOW_PUBLIC_UPLOAD_NOW",
+        "reason": "User-authorized project code, authored prompts/schema, benchmark question/contract data, derived lookup facts or project provenance; no third-party full text located.",
+        "purpose": "Historical question snapshot or signed method capability table used by legacy runtime/binding code.",
+        "runtime_relevance": "RUNTIME_OR_LEGACY_BINDING; exact selected-path requirement must be reviewed",
+        "verified_sources": [
+          {
+            "kind": "USER_ATTACHMENT_EXACT_MEMBER",
+            "attachment_filename": "ClearEval_固定输入修复包_第4部分_共4部分.zip",
+            "nested_archive_members": [],
+            "member_path": "ClearEval_fixed_input_repair_candidate_20261016/source/dataset/Q+AR/src/question_final.json",
+            "sha256_verified": true
+          }
+        ],
+        "sensitive_data_scan_flags": [],
+        "historical_workspace_path_count": 0,
+        "historical_path_handling": null
+      },
+      {
+        "path": "vendor/source/experiments/idisco_full_atomic_reference_20261015/paired_requested_clearing_wash4.json",
+        "sha256": "9d772e627fc8227d600dfc8ff945db5f1f15e33f9d1d040546260170ac92bdbd",
+        "bytes": 75596,
+        "status": "ALLOW_USER_PROVIDED_CONTENT_REPACKAGING",
+        "reason": "The user supplied the identical iDISCO source in ClearEval_support.rar and explicitly requested the project dependency files uploaded to their GitHub repository; this reproduces/transforms supplied content, not newly scraped third-party text. No new open license is asserted.",
+        "purpose": "Locked source/evidence/provenance or method-specific reference input; required only by relevant source adapter, or by global vendor verification.",
+        "runtime_relevance": "SELECTED_SOURCE_ROUTE_OR_GLOBAL_VERIFIER; not universally needed by every method",
+        "verified_sources": [
+          {
+            "kind": "USER_ATTACHMENT_EXACT_MEMBER",
+            "attachment_filename": "ClearEval_固定输入修复包_第4部分_共4部分.zip",
+            "nested_archive_members": [],
+            "member_path": "ClearEval_fixed_input_repair_candidate_20261016/source/experiments/idisco_full_atomic_reference_20261015/paired_requested_clearing_wash4.json",
+            "sha256_verified": true
+          }
+        ],
+        "sensitive_data_scan_flags": [],
+        "historical_workspace_path_count": 1,
+        "historical_path_handling": "Preserved byte-identical provenance; ephemeral project workspace paths are not credentials or personal identifiers. Runtime consumers use their own relative code paths; provenance paths should not be treated as portable file locators.",
+        "user_provided_source": {
+          "attachment_filename": "ClearEval_support.rar",
+          "member_path": "ClearEval_support/sources/evidence_role_validation_20261015_r3_selection/source_originals/idisco_source_document.txt",
+          "sha256": "fb3f5c351901f4af86c466ccc70207c41004ba6dd8e2733343fd6af7e7428162",
+          "independent_review": "Identical source bytes and derived quotations verified by independent publication reviewer."
+        }
+      },
+      {
+        "path": "vendor/source/experiments/idisco_full_atomic_reference_20261015/atomic_admission_lock_v1.json",
+        "sha256": "0f3f36a1284800cd42bac17742607d2c8d501492ddba8c52418a12e3046e7bf7",
+        "bytes": 600,
+        "status": "ALLOW_PUBLIC_UPLOAD_NOW",
+        "reason": "User-authorized project code, authored prompts/schema, benchmark question/contract data, derived lookup facts or project provenance; no third-party full text located.",
+        "purpose": "Locked source/evidence/provenance or method-specific reference input; required only by relevant source adapter, or by global vendor verification.",
+        "runtime_relevance": "SELECTED_SOURCE_ROUTE_OR_GLOBAL_VERIFIER; not universally needed by every method",
+        "verified_sources": [
+          {
+            "kind": "USER_ATTACHMENT_EXACT_MEMBER",
+            "attachment_filename": "ClearEval_固定输入修复包_第4部分_共4部分.zip",
+            "nested_archive_members": [],
+            "member_path": "ClearEval_fixed_input_repair_candidate_20261016/source/experiments/idisco_full_atomic_reference_20261015/atomic_admission_lock_v1.json",
+            "sha256_verified": true
+          }
+        ],
+        "sensitive_data_scan_flags": [],
+        "historical_workspace_path_count": 0,
+        "historical_path_handling": null
+      },
+      {
+        "path": "vendor/source/experiments/idisco_full_atomic_reference_20261015/atomic_reference.py",
+        "sha256": "a580f68d004826c4b1efb0e1d89456fd2bb7aa1e4b4dad5516765b095ba04504",
+        "bytes": 11538,
+        "status": "ALLOW_PUBLIC_UPLOAD_NOW",
+        "reason": "User-authorized project code, authored prompts/schema, benchmark question/contract data, derived lookup facts or project provenance; no third-party full text located.",
+        "purpose": "Recovered Python source for full scoring, source adapters, schema/contract consumption, or legacy compatibility; omitted from the measured portable-test import closure.",
+        "runtime_relevance": "FULL_RUNTIME_OR_ROUTE_SPECIFIC_CODE; exact runtime closure requires a separate audited manifest",
+        "verified_sources": [
+          {
+            "kind": "USER_ATTACHMENT_EXACT_MEMBER",
+            "attachment_filename": "ClearEval_固定输入修复包_第4部分_共4部分.zip",
+            "nested_archive_members": [],
+            "member_path": "ClearEval_fixed_input_repair_candidate_20261016/source/experiments/idisco_full_atomic_reference_20261015/atomic_reference.py",
+            "sha256_verified": true
+          }
+        ],
+        "sensitive_data_scan_flags": [],
+        "historical_workspace_path_count": 0,
+        "historical_path_handling": null
+      },
+      {
+        "path": "vendor/source/experiments/idisco_full_atomic_reference_20261015/requested_clearing_projection_v1.json",
+        "sha256": "0a1dd02c3ebdb5ce055321b65ca4e8eb69303fe94dd0a15826d8c84d842ad00c",
+        "bytes": 73690,
+        "status": "ALLOW_USER_PROVIDED_CONTENT_REPACKAGING",
+        "reason": "The user supplied the identical iDISCO source in ClearEval_support.rar and explicitly requested the project dependency files uploaded to their GitHub repository; this reproduces/transforms supplied content, not newly scraped third-party text. No new open license is asserted.",
+        "purpose": "Locked source/evidence/provenance or method-specific reference input; required only by relevant source adapter, or by global vendor verification.",
+        "runtime_relevance": "SELECTED_SOURCE_ROUTE_OR_GLOBAL_VERIFIER; not universally needed by every method",
+        "verified_sources": [
+          {
+            "kind": "USER_ATTACHMENT_EXACT_MEMBER",
+            "attachment_filename": "ClearEval_固定输入修复包_第4部分_共4部分.zip",
+            "nested_archive_members": [],
+            "member_path": "ClearEval_fixed_input_repair_candidate_20261016/source/experiments/idisco_full_atomic_reference_20261015/requested_clearing_projection_v1.json",
+            "sha256_verified": true
+          }
+        ],
+        "sensitive_data_scan_flags": [],
+        "historical_workspace_path_count": 0,
+        "historical_path_handling": null,
+        "user_provided_source": {
+          "attachment_filename": "ClearEval_support.rar",
+          "member_path": "ClearEval_support/sources/evidence_role_validation_20261015_r3_selection/source_originals/idisco_source_document.txt",
+          "sha256": "fb3f5c351901f4af86c466ccc70207c41004ba6dd8e2733343fd6af7e7428162",
+          "independent_review": "Identical source bytes and derived quotations verified by independent publication reviewer."
+        }
+      },
+      {
+        "path": "vendor/source/experiments/idisco_full_atomic_reference_20261015/reference_full_wash4.json",
+        "sha256": "678590e966ce4ad2aa3a32faf6aa8bea216dbb6be1db951b01e2604d2e9dd2cd",
+        "bytes": 84845,
+        "status": "ALLOW_USER_PROVIDED_CONTENT_REPACKAGING",
+        "reason": "The user supplied the identical iDISCO source in ClearEval_support.rar and explicitly requested the project dependency files uploaded to their GitHub repository; this reproduces/transforms supplied content, not newly scraped third-party text. No new open license is asserted.",
+        "purpose": "Locked source/evidence/provenance or method-specific reference input; required only by relevant source adapter, or by global vendor verification.",
+        "runtime_relevance": "SELECTED_SOURCE_ROUTE_OR_GLOBAL_VERIFIER; not universally needed by every method",
+        "verified_sources": [
+          {
+            "kind": "USER_ATTACHMENT_EXACT_MEMBER",
+            "attachment_filename": "ClearEval_固定输入修复包_第4部分_共4部分.zip",
+            "nested_archive_members": [],
+            "member_path": "ClearEval_fixed_input_repair_candidate_20261016/source/experiments/idisco_full_atomic_reference_20261015/reference_full_wash4.json",
+            "sha256_verified": true
+          }
+        ],
+        "sensitive_data_scan_flags": [],
+        "historical_workspace_path_count": 1,
+        "historical_path_handling": "Preserved byte-identical provenance; ephemeral project workspace paths are not credentials or personal identifiers. Runtime consumers use their own relative code paths; provenance paths should not be treated as portable file locators.",
+        "user_provided_source": {
+          "attachment_filename": "ClearEval_support.rar",
+          "member_path": "ClearEval_support/sources/evidence_role_validation_20261015_r3_selection/source_originals/idisco_source_document.txt",
+          "sha256": "fb3f5c351901f4af86c466ccc70207c41004ba6dd8e2733343fd6af7e7428162",
+          "independent_review": "Identical source bytes and derived quotations verified by independent publication reviewer."
+        }
+      },
+      {
+        "path": "vendor/source/experiments/full_batch_reference_binding_20261015/source_template_lock.json",
+        "sha256": "49ec3dcbbe6e5d7eb9790d43d4482cedca02e124b330e0d2c3e17bb8d519f19c",
+        "bytes": 2419,
+        "status": "ALLOW_PUBLIC_UPLOAD_NOW",
+        "reason": "User-authorized project code, authored prompts/schema, benchmark question/contract data, derived lookup facts or project provenance; no third-party full text located.",
+        "purpose": "Locked source/evidence/provenance or method-specific reference input; required only by relevant source adapter, or by global vendor verification.",
+        "runtime_relevance": "SELECTED_SOURCE_ROUTE_OR_GLOBAL_VERIFIER; not universally needed by every method",
+        "verified_sources": [
+          {
+            "kind": "USER_ATTACHMENT_EXACT_MEMBER",
+            "attachment_filename": "ClearEval_固定输入修复包_第4部分_共4部分.zip",
+            "nested_archive_members": [],
+            "member_path": "ClearEval_fixed_input_repair_candidate_20261016/source/experiments/full_batch_reference_binding_20261015/source_template_lock.json",
+            "sha256_verified": true
+          }
+        ],
+        "sensitive_data_scan_flags": [],
+        "historical_workspace_path_count": 8,
+        "historical_path_handling": "Preserved byte-identical provenance; ephemeral project workspace paths are not credentials or personal identifiers. Runtime consumers use their own relative code paths; provenance paths should not be treated as portable file locators."
+      },
+      {
+        "path": "vendor/source/experiments/full_batch_reference_binding_20261015/reference_binding.py",
+        "sha256": "0603ea8b4c5bbb56b009c0b293ad89ab1a7b317fe40205ee564e2242c582b9e0",
+        "bytes": 6701,
+        "status": "ALLOW_PUBLIC_UPLOAD_NOW",
+        "reason": "User-authorized project code, authored prompts/schema, benchmark question/contract data, derived lookup facts or project provenance; no third-party full text located.",
+        "purpose": "Recovered Python source for full scoring, source adapters, schema/contract consumption, or legacy compatibility; omitted from the measured portable-test import closure.",
+        "runtime_relevance": "FULL_RUNTIME_OR_ROUTE_SPECIFIC_CODE; exact runtime closure requires a separate audited manifest",
+        "verified_sources": [
+          {
+            "kind": "USER_ATTACHMENT_EXACT_MEMBER",
+            "attachment_filename": "ClearEval_固定输入修复包_第4部分_共4部分.zip",
+            "nested_archive_members": [],
+            "member_path": "ClearEval_fixed_input_repair_candidate_20261016/source/experiments/full_batch_reference_binding_20261015/reference_binding.py",
+            "sha256_verified": true
+          }
+        ],
+        "sensitive_data_scan_flags": [],
+        "historical_workspace_path_count": 0,
+        "historical_path_handling": null
+      },
+      {
+        "path": "vendor/source/experiments/q2_fdisco_reference_independent_review_20261015/verification.json",
+        "sha256": "6e0c4aef9cd766e3efbdd020af2b08ec6518332ffa20141f66858e7d373f6de1",
+        "bytes": 3086,
+        "status": "ALLOW_PUBLIC_UPLOAD_NOW",
+        "reason": "User-authorized project code, authored prompts/schema, benchmark question/contract data, derived lookup facts or project provenance; no third-party full text located.",
+        "purpose": "Locked source/evidence/provenance or method-specific reference input; required only by relevant source adapter, or by global vendor verification.",
+        "runtime_relevance": "SELECTED_SOURCE_ROUTE_OR_GLOBAL_VERIFIER; not universally needed by every method",
+        "verified_sources": [
+          {
+            "kind": "USER_ATTACHMENT_EXACT_MEMBER",
+            "attachment_filename": "ClearEval_固定输入修复包_第4部分_共4部分.zip",
+            "nested_archive_members": [],
+            "member_path": "ClearEval_fixed_input_repair_candidate_20261016/source/experiments/q2_fdisco_reference_independent_review_20261015/verification.json",
+            "sha256_verified": true
+          }
+        ],
+        "sensitive_data_scan_flags": [],
+        "historical_workspace_path_count": 8,
+        "historical_path_handling": "Preserved byte-identical provenance; ephemeral project workspace paths are not credentials or personal identifiers. Runtime consumers use their own relative code paths; provenance paths should not be treated as portable file locators."
+      },
+      {
+        "path": "vendor/source/experiments/construct_validity/objectives.py",
+        "sha256": "0e987249c0ab75f4e6d861b85254abe540527c4b785fc95e86e2ae46ce71b2b7",
+        "bytes": 7385,
+        "status": "ALLOW_PUBLIC_UPLOAD_NOW",
+        "reason": "User-authorized project code, authored prompts/schema, benchmark question/contract data, derived lookup facts or project provenance; no third-party full text located.",
+        "purpose": "Recovered Python source for full scoring, source adapters, schema/contract consumption, or legacy compatibility; omitted from the measured portable-test import closure.",
+        "runtime_relevance": "FULL_RUNTIME_OR_ROUTE_SPECIFIC_CODE; exact runtime closure requires a separate audited manifest",
+        "verified_sources": [
+          {
+            "kind": "USER_ATTACHMENT_EXACT_MEMBER",
+            "attachment_filename": "ClearEval_固定输入修复包_第4部分_共4部分.zip",
+            "nested_archive_members": [],
+            "member_path": "ClearEval_fixed_input_repair_candidate_20261016/source/experiments/construct_validity/objectives.py",
+            "sha256_verified": true
+          }
+        ],
+        "sensitive_data_scan_flags": [],
+        "historical_workspace_path_count": 0,
+        "historical_path_handling": null
+      },
+      {
+        "path": "vendor/source/experiments/construct_validity/source_conditions.py",
+        "sha256": "9ad3e83ae4de07ba14565c48c6c812d58424fd3b4603f966128a5f0a71e680d8",
+        "bytes": 25710,
+        "status": "ALLOW_PUBLIC_UPLOAD_NOW",
+        "reason": "User-authorized project code, authored prompts/schema, benchmark question/contract data, derived lookup facts or project provenance; no third-party full text located.",
+        "purpose": "Recovered Python source for full scoring, source adapters, schema/contract consumption, or legacy compatibility; omitted from the measured portable-test import closure.",
+        "runtime_relevance": "FULL_RUNTIME_OR_ROUTE_SPECIFIC_CODE; exact runtime closure requires a separate audited manifest",
+        "verified_sources": [
+          {
+            "kind": "USER_ATTACHMENT_EXACT_MEMBER",
+            "attachment_filename": "ClearEval_固定输入修复包_第4部分_共4部分.zip",
+            "nested_archive_members": [],
+            "member_path": "ClearEval_fixed_input_repair_candidate_20261016/source/experiments/construct_validity/source_conditions.py",
+            "sha256_verified": true
+          }
+        ],
+        "sensitive_data_scan_flags": [],
+        "historical_workspace_path_count": 0,
+        "historical_path_handling": null
+      },
+      {
+        "path": "vendor/source/experiments/construct_validity/requirement_scope.py",
+        "sha256": "9fb5af417fa8e41af377e7c5316a9d8523e5beffea93cef97bf99600bc35b521",
+        "bytes": 13762,
+        "status": "ALLOW_PUBLIC_UPLOAD_NOW",
+        "reason": "User-authorized project code, authored prompts/schema, benchmark question/contract data, derived lookup facts or project provenance; no third-party full text located.",
+        "purpose": "Recovered Python source for full scoring, source adapters, schema/contract consumption, or legacy compatibility; omitted from the measured portable-test import closure.",
+        "runtime_relevance": "FULL_RUNTIME_OR_ROUTE_SPECIFIC_CODE; exact runtime closure requires a separate audited manifest",
+        "verified_sources": [
+          {
+            "kind": "USER_ATTACHMENT_EXACT_MEMBER",
+            "attachment_filename": "ClearEval_固定输入修复包_第4部分_共4部分.zip",
+            "nested_archive_members": [],
+            "member_path": "ClearEval_fixed_input_repair_candidate_20261016/source/experiments/construct_validity/requirement_scope.py",
+            "sha256_verified": true
+          }
+        ],
+        "sensitive_data_scan_flags": [],
+        "historical_workspace_path_count": 0,
+        "historical_path_handling": null
+      },
+      {
+        "path": "vendor/source/experiments/construct_validity/answer_matching.py",
+        "sha256": "b0928bf958944fa6528d8e9293b730fe20f0aedb034aa4f91a8a20410cf8360f",
+        "bytes": 10130,
+        "status": "ALLOW_PUBLIC_UPLOAD_NOW",
+        "reason": "User-authorized project code, authored prompts/schema, benchmark question/contract data, derived lookup facts or project provenance; no third-party full text located.",
+        "purpose": "Recovered Python source for full scoring, source adapters, schema/contract consumption, or legacy compatibility; omitted from the measured portable-test import closure.",
+        "runtime_relevance": "FULL_RUNTIME_OR_ROUTE_SPECIFIC_CODE; exact runtime closure requires a separate audited manifest",
+        "verified_sources": [
+          {
+            "kind": "USER_ATTACHMENT_EXACT_MEMBER",
+            "attachment_filename": "ClearEval_固定输入修复包_第4部分_共4部分.zip",
+            "nested_archive_members": [],
+            "member_path": "ClearEval_fixed_input_repair_candidate_20261016/source/experiments/construct_validity/answer_matching.py",
+            "sha256_verified": true
+          }
+        ],
+        "sensitive_data_scan_flags": [],
+        "historical_workspace_path_count": 0,
+        "historical_path_handling": null
+      },
+      {
+        "path": "vendor/source/experiments/construct_validity/task_function_presence.py",
+        "sha256": "43a7774bfe6d279a806c8f292cfdcd69e1f9fb3025efd8bf3dcd2f27b306459c",
+        "bytes": 14276,
+        "status": "ALLOW_PUBLIC_UPLOAD_NOW",
+        "reason": "User-authorized project code, authored prompts/schema, benchmark question/contract data, derived lookup facts or project provenance; no third-party full text located.",
+        "purpose": "Recovered Python source for full scoring, source adapters, schema/contract consumption, or legacy compatibility; omitted from the measured portable-test import closure.",
+        "runtime_relevance": "FULL_RUNTIME_OR_ROUTE_SPECIFIC_CODE; exact runtime closure requires a separate audited manifest",
+        "verified_sources": [
+          {
+            "kind": "USER_ATTACHMENT_EXACT_MEMBER",
+            "attachment_filename": "ClearEval_固定输入修复包_第4部分_共4部分.zip",
+            "nested_archive_members": [],
+            "member_path": "ClearEval_fixed_input_repair_candidate_20261016/source/experiments/construct_validity/task_function_presence.py",
+            "sha256_verified": true
+          }
+        ],
+        "sensitive_data_scan_flags": [],
+        "historical_workspace_path_count": 0,
+        "historical_path_handling": null
+      },
+      {
+        "path": "vendor/source/experiments/construct_validity/task_state.py",
+        "sha256": "ffc2c2b8d4b292b47d90fb25d96d6a91eac909a665ba8c9b55262b4fb128cd88",
+        "bytes": 18612,
+        "status": "ALLOW_PUBLIC_UPLOAD_NOW",
+        "reason": "User-authorized project code, authored prompts/schema, benchmark question/contract data, derived lookup facts or project provenance; no third-party full text located.",
+        "purpose": "Recovered Python source for full scoring, source adapters, schema/contract consumption, or legacy compatibility; omitted from the measured portable-test import closure.",
+        "runtime_relevance": "FULL_RUNTIME_OR_ROUTE_SPECIFIC_CODE; exact runtime closure requires a separate audited manifest",
+        "verified_sources": [
+          {
+            "kind": "USER_ATTACHMENT_EXACT_MEMBER",
+            "attachment_filename": "ClearEval_固定输入修复包_第4部分_共4部分.zip",
+            "nested_archive_members": [],
+            "member_path": "ClearEval_fixed_input_repair_candidate_20261016/source/experiments/construct_validity/task_state.py",
+            "sha256_verified": true
+          }
+        ],
+        "sensitive_data_scan_flags": [],
+        "historical_workspace_path_count": 0,
+        "historical_path_handling": null
+      },
+      {
+        "path": "vendor/source/experiments/construct_validity/candidate_binding.py",
+        "sha256": "b160d74bd6fadd508bd5fe91034e958ace6ae7fa45b79d06e0fd4a0ad4d5a8fc",
+        "bytes": 7420,
+        "status": "ALLOW_PUBLIC_UPLOAD_NOW",
+        "reason": "User-authorized project code, authored prompts/schema, benchmark question/contract data, derived lookup facts or project provenance; no third-party full text located.",
+        "purpose": "Recovered Python source for full scoring, source adapters, schema/contract consumption, or legacy compatibility; omitted from the measured portable-test import closure.",
+        "runtime_relevance": "FULL_RUNTIME_OR_ROUTE_SPECIFIC_CODE; exact runtime closure requires a separate audited manifest",
+        "verified_sources": [
+          {
+            "kind": "USER_ATTACHMENT_EXACT_MEMBER",
+            "attachment_filename": "ClearEval_固定输入修复包_第4部分_共4部分.zip",
+            "nested_archive_members": [],
+            "member_path": "ClearEval_fixed_input_repair_candidate_20261016/source/experiments/construct_validity/candidate_binding.py",
+            "sha256_verified": true
+          }
+        ],
+        "sensitive_data_scan_flags": [],
+        "historical_workspace_path_count": 0,
+        "historical_path_handling": null
+      },
+      {
+        "path": "vendor/source/experiments/idisco_full_atomic_reference_20261015/source/idisco_dec2016_raw.txt",
+        "sha256": "fb3f5c351901f4af86c466ccc70207c41004ba6dd8e2733343fd6af7e7428162",
+        "bytes": 8680,
+        "status": "ALLOW_USER_PROVIDED_CONTENT_REPACKAGING",
+        "reason": "The user supplied the identical iDISCO source in ClearEval_support.rar and explicitly requested the project dependency files uploaded to their GitHub repository; this reproduces/transforms supplied content, not newly scraped third-party text. No new open license is asserted.",
+        "purpose": "Locked source/evidence/provenance or method-specific reference input; required only by relevant source adapter, or by global vendor verification.",
+        "runtime_relevance": "SELECTED_SOURCE_ROUTE_OR_GLOBAL_VERIFIER; not universally needed by every method",
+        "verified_sources": [
+          {
+            "kind": "USER_ATTACHMENT_EXACT_MEMBER",
+            "attachment_filename": "ClearEval_固定输入修复包_第4部分_共4部分.zip",
+            "nested_archive_members": [],
+            "member_path": "ClearEval_fixed_input_repair_candidate_20261016/source/experiments/idisco_full_atomic_reference_20261015/source/idisco_dec2016_raw.txt",
+            "sha256_verified": true
+          }
+        ],
+        "sensitive_data_scan_flags": [],
+        "historical_workspace_path_count": 0,
+        "historical_path_handling": null,
+        "user_provided_source": {
+          "attachment_filename": "ClearEval_support.rar",
+          "member_path": "ClearEval_support/sources/evidence_role_validation_20261015_r3_selection/source_originals/idisco_source_document.txt",
+          "sha256": "fb3f5c351901f4af86c466ccc70207c41004ba6dd8e2733343fd6af7e7428162",
+          "independent_review": "Identical source bytes and derived quotations verified by independent publication reviewer."
+        }
+      },
+      {
+        "path": "vendor/source/experiments/full_batch_reference_binding_20261015/q2_reference_augmentation/task_evidence.json",
+        "sha256": "a83137e5147c06cbbfeb419635b03af76de6782fd53bdd534a2153d912326a39",
+        "bytes": 18994,
+        "status": "ALLOW_PUBLIC_UPLOAD_WITH_THIRD_PARTY_NOTICE",
+        "reason": "CC_BY_NC_4_0_NONCOMMERCIAL_ACADEMIC_RESEARCH",
+        "purpose": "Locked source/evidence/provenance or method-specific reference input; required only by relevant source adapter, or by global vendor verification.",
+        "runtime_relevance": "SELECTED_SOURCE_ROUTE_OR_GLOBAL_VERIFIER; not universally needed by every method",
+        "verified_sources": [
+          {
+            "kind": "USER_ATTACHMENT_EXACT_MEMBER",
+            "attachment_filename": "ClearEval_固定输入修复包_第4部分_共4部分.zip",
+            "nested_archive_members": [],
+            "member_path": "ClearEval_fixed_input_repair_candidate_20261016/source/experiments/full_batch_reference_binding_20261015/q2_reference_augmentation/task_evidence.json",
+            "sha256_verified": true
+          }
+        ],
+        "sensitive_data_scan_flags": [],
+        "historical_workspace_path_count": 3,
+        "historical_path_handling": "Preserved byte-identical provenance; ephemeral project workspace paths are not credentials or personal identifiers. Runtime consumers use their own relative code paths; provenance paths should not be treated as portable file locators.",
+        "license_url": "https://creativecommons.org/licenses/by-nc/4.0/legalcode.en",
+        "required_notice": "THIRD_PARTY_SOURCES.md"
+      },
+      {
+        "path": "vendor/source/experiments/real_multiroute_q157_prepare_20261015/source_provider/MACS_task_evidence.json",
+        "sha256": "3f2dbb0e0d721780b2dae008b10bb6b62f6c320c9b9f5c546c3a8176745fe3ce",
+        "bytes": 15071,
+        "status": "ALLOW_PUBLIC_UPLOAD_WITH_THIRD_PARTY_NOTICE",
+        "reason": "CC_BY_4_0_WITH_ATTRIBUTION",
+        "purpose": "Locked source/evidence/provenance or method-specific reference input; required only by relevant source adapter, or by global vendor verification.",
+        "runtime_relevance": "SELECTED_SOURCE_ROUTE_OR_GLOBAL_VERIFIER; not universally needed by every method",
+        "verified_sources": [
+          {
+            "kind": "USER_ATTACHMENT_EXACT_MEMBER",
+            "attachment_filename": "ClearEval_固定输入修复包_第4部分_共4部分.zip",
+            "nested_archive_members": [],
+            "member_path": "ClearEval_fixed_input_repair_candidate_20261016/source/experiments/real_multiroute_q157_prepare_20261015/source_provider/MACS_task_evidence.json",
+            "sha256_verified": true
+          }
+        ],
+        "sensitive_data_scan_flags": [],
+        "historical_workspace_path_count": 1,
+        "historical_path_handling": "Preserved byte-identical provenance; ephemeral project workspace paths are not credentials or personal identifiers. Runtime consumers use their own relative code paths; provenance paths should not be treated as portable file locators.",
+        "license_url": "https://creativecommons.org/licenses/by/4.0/legalcode.en",
+        "required_notice": "THIRD_PARTY_SOURCES.md"
+      },
+      {
+        "path": "vendor/source/experiments/real_multiroute_q157_prepare_20261015/independent_source_review/verification.json",
+        "sha256": "607920834ce3ab8e752cca5740b914ef235c9b53cfba706db004813acb8179d2",
+        "bytes": 4228,
+        "status": "ALLOW_PUBLIC_UPLOAD_NOW",
+        "reason": "User-authorized project code, authored prompts/schema, benchmark question/contract data, derived lookup facts or project provenance; no third-party full text located.",
+        "purpose": "Locked source/evidence/provenance or method-specific reference input; required only by relevant source adapter, or by global vendor verification.",
+        "runtime_relevance": "SELECTED_SOURCE_ROUTE_OR_GLOBAL_VERIFIER; not universally needed by every method",
+        "verified_sources": [
+          {
+            "kind": "USER_ATTACHMENT_EXACT_MEMBER",
+            "attachment_filename": "ClearEval_固定输入修复包_第4部分_共4部分.zip",
+            "nested_archive_members": [],
+            "member_path": "ClearEval_fixed_input_repair_candidate_20261016/source/experiments/real_multiroute_q157_prepare_20261015/independent_source_review/verification.json",
+            "sha256_verified": true
+          }
+        ],
+        "sensitive_data_scan_flags": [],
+        "historical_workspace_path_count": 1,
+        "historical_path_handling": "Preserved byte-identical provenance; ephemeral project workspace paths are not credentials or personal identifiers. Runtime consumers use their own relative code paths; provenance paths should not be treated as portable file locators."
+      },
+      {
+        "path": "vendor/source/experiments/fdisco_representation_pilot_20261014/source/fdisco_clearing_excerpt.txt",
+        "sha256": "35c9600df019b29483e752b96daae7276da0eab669106435b72c78722f51ac1d",
+        "bytes": 1386,
+        "status": "ALLOW_PUBLIC_UPLOAD_WITH_THIRD_PARTY_NOTICE",
+        "reason": "CC_BY_NC_4_0_NONCOMMERCIAL_ACADEMIC_RESEARCH",
+        "purpose": "Locked source/evidence/provenance or method-specific reference input; required only by relevant source adapter, or by global vendor verification.",
+        "runtime_relevance": "SELECTED_SOURCE_ROUTE_OR_GLOBAL_VERIFIER; not universally needed by every method",
+        "verified_sources": [
+          {
+            "kind": "USER_ATTACHMENT_EXACT_MEMBER",
+            "attachment_filename": "ClearEval_固定输入修复包_第4部分_共4部分.zip",
+            "nested_archive_members": [],
+            "member_path": "ClearEval_fixed_input_repair_candidate_20261016/source/experiments/fdisco_representation_pilot_20261014/source/fdisco_clearing_excerpt.txt",
+            "sha256_verified": true
+          }
+        ],
+        "sensitive_data_scan_flags": [],
+        "historical_workspace_path_count": 0,
+        "historical_path_handling": null,
+        "license_url": "https://creativecommons.org/licenses/by-nc/4.0/legalcode.en",
+        "required_notice": "THIRD_PARTY_SOURCES.md"
+      },
+      {
+        "path": "scope/source_parameter_contract.json",
+        "sha256": "f8acc42ed9da4c36b3f7b1f807e9607ec8d3db6f3814e2b08de640fab134dd8e",
+        "bytes": 69303,
+        "status": "ALLOW_USER_PROVIDED_CONTENT_REPACKAGING",
+        "reason": "The user supplied the identical iDISCO source in ClearEval_support.rar and explicitly requested the project dependency files uploaded to their GitHub repository; this reproduces/transforms supplied content, not newly scraped third-party text. No new open license is asserted.",
+        "purpose": "Frozen scoring requirement/parameter contract; scope adapter compares historical and protocol-only contracts.",
+        "runtime_relevance": "RUNTIME_STRUCTURED_SCORING_CONTRACT",
+        "verified_sources": [
+          {
+            "kind": "USER_ATTACHMENT_EXACT_MEMBER",
+            "attachment_filename": "ClearEval_固定输入修复包_第3部分_共4部分.zip",
+            "nested_archive_members": [],
+            "member_path": "ClearEval_fixed_input_repair_candidate_20261016/policies/operation_scope/source_parameter_contract.json",
+            "sha256_verified": true
+          },
+          {
+            "kind": "USER_ATTACHMENT_EXACT_MEMBER",
+            "attachment_filename": "ClearEval_固定输入修复包_第3部分_共4部分.zip",
+            "nested_archive_members": [],
+            "member_path": "ClearEval_fixed_input_repair_candidate_20261016/policies/scope_diagnostic/source_parameter_contract.json",
+            "sha256_verified": true
+          },
+          {
+            "kind": "USER_ATTACHMENT_EXACT_MEMBER",
+            "attachment_filename": "ClearEval_固定输入修复包_第4部分_共4部分.zip",
+            "nested_archive_members": [],
+            "member_path": "ClearEval_fixed_input_repair_candidate_20261016/roles_v2/source_parameter_contract.json",
+            "sha256_verified": true
+          },
+          {
+            "kind": "USER_ATTACHMENT_EXACT_MEMBER",
+            "attachment_filename": "ClearEval_固定输入修复包_第4部分_共4部分.zip",
+            "nested_archive_members": [],
+            "member_path": "ClearEval_fixed_input_repair_candidate_20261016/source/source_parameter_contract.json",
+            "sha256_verified": true
+          }
+        ],
+        "sensitive_data_scan_flags": [],
+        "historical_workspace_path_count": 0,
+        "historical_path_handling": null,
+        "user_provided_source": {
+          "attachment_filename": "ClearEval_support.rar",
+          "member_path": "ClearEval_support/sources/evidence_role_validation_20261015_r3_selection/source_originals/idisco_source_document.txt",
+          "sha256": "fb3f5c351901f4af86c466ccc70207c41004ba6dd8e2733343fd6af7e7428162",
+          "independent_review": "Identical source bytes and derived quotations verified by independent publication reviewer."
+        }
+      },
+      {
+        "path": "scope/source_parameter_contract_protocol_only.json",
+        "sha256": "78eff08b0d56208271d1caca57104d4d9a9a3dde81190a4563f9001629f50520",
+        "bytes": 69850,
+        "status": "ALLOW_USER_PROVIDED_CONTENT_REPACKAGING",
+        "reason": "The user supplied the identical iDISCO source in ClearEval_support.rar and explicitly requested the project dependency files uploaded to their GitHub repository; this reproduces/transforms supplied content, not newly scraped third-party text. No new open license is asserted.",
+        "purpose": "Frozen scoring requirement/parameter contract; scope adapter compares historical and protocol-only contracts.",
+        "runtime_relevance": "RUNTIME_STRUCTURED_SCORING_CONTRACT",
+        "verified_sources": [
+          {
+            "kind": "USER_ATTACHMENT_EXACT_MEMBER",
+            "attachment_filename": "ClearEval_方案生成范围修订与报告差异_20261016.zip",
+            "nested_archive_members": [
+              "程序增量补丁.zip"
+            ],
+            "member_path": "ClearEval_protocol_only_scope_delta_20261016/overlay/source/source_parameter_contract_protocol_only.json",
+            "sha256_verified": true
+          }
+        ],
+        "sensitive_data_scan_flags": [],
+        "historical_workspace_path_count": 0,
+        "historical_path_handling": null,
+        "user_provided_source": {
+          "attachment_filename": "ClearEval_support.rar",
+          "member_path": "ClearEval_support/sources/evidence_role_validation_20261015_r3_selection/source_originals/idisco_source_document.txt",
+          "sha256": "fb3f5c351901f4af86c466ccc70207c41004ba6dd8e2733343fd6af7e7428162",
+          "independent_review": "Identical source bytes and derived quotations verified by independent publication reviewer."
+        }
+      }
+    ],
+    "runtime_complete_after_first_batch": "Original 94-entry vendor snapshot complete when combined with the previous 19 supplied entries; model environment, execution manifest and end-to-end scientific validation remain separate.",
+    "next_gate": "Copyright-pending source dependencies must not be silently replaced, redacted or removed from VENDOR_MANIFEST."
+  },
+  "formal_pipeline_validated": false
+}
