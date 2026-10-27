@@ -1,0 +1,53 @@
+{
+  "status": "ACCEPT",
+  "scope": "ENGINEERING_INCREMENTAL_CANDIDATE_BASELINE_191_PLUS_VALIDATED_2",
+  "score_counts": {
+    "answers": 185,
+    "prespecified_reference_branches": 193,
+    "metric_rows": 3145,
+    "all_17_bounded": 154,
+    "all_17_point": 52,
+    "answers_with_unavailable_metric": 31,
+    "c_param_unavailable": 6,
+    "reexecuted_branches": 2,
+    "retained_unaffected_branches": 191
+  },
+  "independent_closure_review": "closure_review.md",
+  "independent_initial_review": "../deepseek_v41_flash_final_review.md",
+  "critical_findings": 0,
+  "important_findings": 0,
+  "closed_important_findings": [
+    "I-1: current final code full regression and final-gate evidence"
+  ],
+  "final_code_verification": {
+    "uniform_normal_repairs": "64 passed in 1709.33s",
+    "test_collection": "64 tests collected",
+    "evaluator_integrity": "37 passed in 1.43s",
+    "evidence_pins_recomputed_by_independent_reviewer": 6838
+  },
+  "evidence": {
+    "generation_time_pending_snapshot": "evidence.json",
+    "input_and_code_sha256": "input_and_code_sha256.json",
+    "manifest": "manifest.json"
+  },
+  "generation_time_pending_fields_preserved": {
+    "evidence.json": "PENDING_INDEPENDENT_CLOSURE",
+    "../validation148.json": "SEPARATE_PENDING_GATE_AT_GENERATION",
+    "superseded_by": [
+      "closure_review.md",
+      "../full_regression_current.log"
+    ]
+  },
+  "score_table": "../scores185",
+  "ea_table": "../ea185",
+  "remaining_na": "../remaining_reasons.json",
+  "reproduce": "../REPRODUCE.md",
+  "real_local_review_calls_consumed": 7,
+  "new_scoring_model_calls_in_replay": 0,
+  "new_encoder_calls_in_replay": 0,
+  "full_193_uniform_new_backend_replay_executed": false,
+  "main_table_promoted": false,
+  "current_accepted_main_table_updated": false,
+  "expert_accuracy_or_publication_readiness_evaluated": false,
+  "scientific_zero_or_full_score_imputation_used": false
+}

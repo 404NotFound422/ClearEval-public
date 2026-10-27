@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "C:\ClearEval\ClearEval-runtime-4b42b5a\research\evaluator-research-cycle-20261018\execution_alignment_resolution_20261024_v1\runtime\apply_common_source_revisions_v4.py", line 211, in <module>
+    apply(a.base.resolve(), a.output.resolve(), a.affected_plan.resolve(), [p.resolve() for p in a.revision_root])
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ClearEval\ClearEval-runtime-4b42b5a\research\evaluator-research-cycle-20261018\execution_alignment_resolution_20261024_v1\runtime\apply_common_source_revisions_v4.py", line 151, in apply
+    assert sha(path) == pin, ('PRIOR_PIN_CHANGED', path)
+           ^^^^^^^^^^^^^^^^
+AssertionError: ('PRIOR_PIN_CHANGED', 'C:\\ClearEval\\ClearEval-runtime-4b42b5a\\research\\evaluator-research-cycle-20261018\\execution_alignment_resolution_20261024_v1\\parameter_route_role_scope_v1\\recipe_scope.py')

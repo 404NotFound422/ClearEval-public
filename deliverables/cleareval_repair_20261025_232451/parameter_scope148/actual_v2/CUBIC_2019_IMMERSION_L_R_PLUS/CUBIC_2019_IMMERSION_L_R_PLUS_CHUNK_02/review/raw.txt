@@ -1,0 +1,208 @@
+{
+  "reviews": {
+    "query:6004b9c848831d2d10434ffbde5ef0cd1cf08978554925cae20fc8b28bf368d9": {
+      "leaves": {
+        "whole_source_criterion": {
+          "assertion_kind": "EXPLICIT_VALUE",
+          "support_spans": [
+            {
+              "start": 358,
+              "end": 506,
+              "quote": "1.1 组织块（~2 mm 厚心尖）置于 CUBIC-L（10 wt% N-Butyldiethanolamine + 10 wt% Triton X-100 + 10 wt% Urea，ddH2O 配制）充分浸没并轻摇。(Temperature: 37 ℃, Time: 24 hours)  "
+            }
+          ],
+          "value": {
+            "identity": "N-Butyldiethanolamine",
+            "amount_quote": "10 wt%"
+          },
+          "full_answer_checked": true,
+          "reason": "The candidate explicitly states the identity 'N-Butyldiethanolamine' and the concentration '10 wt%' within the CUBIC-L formulation in step 1.1."
+        }
+      }
+    },
+    "query:61d41f8bd55ba7a17aa65888ea1cf49768242d73ae27c8813b7c0211d28f6fbc": {
+      "leaves": {
+        "duration_and_schedule": {
+          "assertion_kind": "EXPLICIT_VALUE",
+          "support_spans": [
+            {
+              "start": 507,
+              "end": 573,
+              "quote": "1.2 更换新鲜 CUBIC-L 继续去脂至组织明显变浅。(Temperature: 37 ℃, Time: 24 hours)  "
+            }
+          ],
+          "value": {
+            "amount_quote": "24 hours"
+          },
+          "full_answer_checked": true,
+          "reason": "The candidate explicitly states the duration 'Time: 24 hours' for the step involving replacing fresh CUBIC-L."
+        }
+      }
+    },
+    "query:6c74088bbf0b610f45be47399d880cd6fad7799a7dd9f21d30e16a3b510abbe0": {
+      "leaves": {
+        "identity": {
+          "assertion_kind": "EXPLICIT_VALUE",
+          "support_spans": [
+            {
+              "start": 679,
+              "end": 726,
+              "quote": "2.3 PBS 清洗。(Temperature: 4 ℃, Time: 12 hours)  "
+            }
+          ],
+          "value": {
+            "identity": "PBS"
+          },
+          "full_answer_checked": true,
+          "reason": "The candidate explicitly identifies 'PBS' as the medium for the wash step 2.3."
+        }
+      }
+    },
+    "query:6d78c3e5a268d7038f9ac7ca31ed3f6f9b0594e52c7665cd42fea7fb6fa8b820": {
+      "leaves": {
+        "identity": {
+          "assertion_kind": "EXPLICIT_VALUE",
+          "support_spans": [
+            {
+              "start": 1856,
+              "end": 1950,
+              "quote": "9.1 置于 CUBIC-R（推荐 CUBIC-R+，RI≈1.52；或等效高 RI CUBIC 折射率匹配液）预平衡。(Temperature: RT, Time: 6 hours)  "
+            }
+          ],
+          "value": {
+            "identity": "CUBIC-R"
+          },
+          "full_answer_checked": true,
+          "reason": "The candidate explicitly identifies 'CUBIC-R' as the medium for step 9.1."
+        }
+      }
+    },
+    "query:6efbe98a45abc852a5306ef3805a1ceab617643690d0e3b7e73b7fd10e47a1f8": {
+      "leaves": {
+        "whole_source_criterion": {
+          "assertion_kind": "NOT_STATED",
+          "support_spans": [],
+          "value": {},
+          "full_answer_checked": true,
+          "reason": "The candidate mentions 'CUBIC-R' and 'CUBIC-R+' but does not explicitly state the identity or concentration of nicotinamide or N-methylnicotinamide, nor does it provide a verifiable product identity that supplies an executable reagent path for these specific components."
+        }
+      }
+    },
+    "query:6fe4e255fac51c088a7ca0f7d5c621c8cf89a7d2b1a7c0ef57dc8d8d63311878": {
+      "leaves": {
+        "whole_source_criterion": {
+          "assertion_kind": "NOT_STATED",
+          "support_spans": [],
+          "value": {},
+          "full_answer_checked": true,
+          "reason": "The candidate does not specify shaking/rotation or an explicitly scoped shared condition for step 9.2. It only mentions temperature and time."
+        }
+      }
+    },
+    "query:87ba2ede4fbe8e3b0c10c1aa938679a6eb873d75c9ab9246edfe5c52f09134c2": {
+      "leaves": {
+        "identity": {
+          "assertion_kind": "EXPLICIT_VALUE",
+          "support_spans": [
+            {
+              "start": 358,
+              "end": 506,
+              "quote": "1.1 组织块（~2 mm 厚心尖）置于 CUBIC-L（10 wt% N-Butyldiethanolamine + 10 wt% Triton X-100 + 10 wt% Urea，ddH2O 配制）充分浸没并轻摇。(Temperature: 37 ℃, Time: 24 hours)  "
+            }
+          ],
+          "value": {
+            "identity": "CUBIC-L"
+          },
+          "full_answer_checked": true,
+          "reason": "The candidate explicitly identifies 'CUBIC-L' as the medium for step 1.1."
+        }
+      }
+    },
+    "query:8854515d2df76ea58579b07eb0d7fdb52b1dc6d0ccfd6762daaf961038552454": {
+      "leaves": {
+        "transition_ratio": {
+          "assertion_kind": "NOT_STATED",
+          "support_spans": [],
+          "value": {},
+          "full_answer_checked": true,
+          "reason": "The candidate does not specify a transition dilution ratio for the CUBIC-R step."
+        },
+        "transition_diluent": {
+          "assertion_kind": "NOT_STATED",
+          "support_spans": [],
+          "value": {},
+          "full_answer_checked": true,
+          "reason": "The candidate does not specify a transition diluent for the CUBIC-R step."
+        }
+      }
+    },
+    "query:9e22be8755d54443c0f5a2e01d9da4922d5a1c9a6bc3a9718ffe20c0f8addb0a": {
+      "leaves": {
+        "identity": {
+          "assertion_kind": "EXPLICIT_VALUE",
+          "support_spans": [
+            {
+              "start": 634,
+              "end": 678,
+              "quote": "2.2 PBS 清洗。(Temperature: RT, Time: 30 min)  "
+            }
+          ],
+          "value": {
+            "identity": "PBS"
+          },
+          "full_answer_checked": true,
+          "reason": "The candidate explicitly identifies 'PBS' as the medium for the wash step 2.2."
+        }
+      }
+    },
+    "query:a519358c339a0ae7470de2dacb35b20343a903b9f5725a82c4c24b1381a400ff": {
+      "leaves": {
+        "temperature": {
+          "assertion_kind": "EXPLICIT_VALUE",
+          "support_spans": [
+            {
+              "start": 1951,
+              "end": 2024,
+              "quote": "9.2 更换新鲜 CUBIC-R 直至组织完全透明且无明显折射率梯度。(Temperature: RT, Time: 12–24 hours)  "
+            }
+          ],
+          "value": {
+            "identity": "RT"
+          },
+          "full_answer_checked": true,
+          "reason": "The candidate explicitly states the temperature 'Temperature: RT' for step 9.2."
+        }
+      }
+    },
+    "query:a795c56e82bceb633ac68d4514a53f4dab7f8bb89ec40126789f748c5d5a807a": {
+      "leaves": {
+        "agitation": {
+          "assertion_kind": "NOT_STATED",
+          "support_spans": [],
+          "value": {},
+          "full_answer_checked": true,
+          "reason": "The candidate does not specify shaking/rotation or an explicitly scoped shared condition for step 9.2."
+        }
+      }
+    },
+    "query:a9cff6550fb96ac07e12fa30e66a056698a618cdca4925095bdb7b1ab1384344": {
+      "leaves": {
+        "temperature": {
+          "assertion_kind": "EXPLICIT_VALUE",
+          "support_spans": [
+            {
+              "start": 507,
+              "end": 573,
+              "quote": "1.2 更换新鲜 CUBIC-L 继续去脂至组织明显变浅。(Temperature: 37 ℃, Time: 24 hours)  "
+            }
+          ],
+          "value": {
+            "identity": "37 ℃"
+          },
+          "full_answer_checked": true,
+          "reason": "The candidate explicitly states the temperature 'Temperature: 37 ℃' for step 1.2."
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,32 @@
+F                                                                        [100%]
+================================== FAILURES ===================================
+________ test_revision_code_migration_requires_matching_evidence_pins _________
+..\..\tests\test_uniform_normal_repairs.py:1407: in test_revision_code_migration_requires_matching_evidence_pins
+    observed = run_in_scorer_environment(f'''
+..\..\tests\test_uniform_normal_repairs.py:22: in run_in_scorer_environment
+    assert result.returncode == 0, result.stderr
+E   AssertionError: Traceback (most recent call last):
+E       File "<string>", line 32, in <module>
+E         merger.resolve_prior_pins(pins, selected, roots)
+E         ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+E       File "C:\ClearEval\ClearEval-runtime-4b42b5a\research\evaluator-research-cycle-20261018\execution_alignment_resolution_20261024_v1\runtime\apply_common_source_revisions_v4.py", line 91, in resolve_prior_pins
+E         assert read(pin_file).get(normalized) == current, 'CODE_REVISION_SUPPORT_PIN_MISMATCH'
+E                ~~~~^^^^^^^^^^
+E       File "C:\ClearEval\ClearEval-runtime-4b42b5a\research\evaluator-research-cycle-20261018\execution_alignment_resolution_20261024_v1\runtime\collect_uniform_normal185_v4.py", line 35, in read
+E         return json.loads(path.read_bytes())
+E                ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+E       File "C:\ProgramData\anaconda3\Lib\json\__init__.py", line 346, in loads
+E         return _default_decoder.decode(s)
+E                ~~~~~~~~~~~~~~~~~~~~~~~^^^
+E       File "C:\ProgramData\anaconda3\Lib\json\decoder.py", line 345, in decode
+E         obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+E                    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+E       File "C:\ProgramData\anaconda3\Lib\json\decoder.py", line 363, in raw_decode
+E         raise JSONDecodeError("Expecting value", s, err.value) from None
+E     json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+E     
+E   assert 1 == 0
+E    +  where 1 = CompletedProcess(args=['C:\\ProgramData\\anaconda3\\python.exe', '-X', 'utf8', '-B', '-c', "\nimport json, sys\nfrom p..."Expecting value", s, err.value) from None\njson.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)\n').returncode
+=========================== short test summary info ===========================
+FAILED ..\..\tests\test_uniform_normal_repairs.py::test_revision_code_migration_requires_matching_evidence_pins
+1 failed in 4.61s

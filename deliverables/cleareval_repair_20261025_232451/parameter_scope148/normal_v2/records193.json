@@ -1,0 +1,408 @@
+[
+  {
+    "input_id": "EXPAND_148",
+    "branch": "CUBIC_2018_PROTOCOL_I_MOUSE_L_R_RA",
+    "status": "PASS",
+    "normal_pipeline_evaluate_called": true,
+    "original_criteria_receipts_reaudited": true,
+    "whole_components_used_as_observations": false,
+    "current_source_exact": true,
+    "result_path": "C:\\ClearEval\\deliverables\\cleareval_repair_20261025_232451\\parameter_scope148\\normal_v2\\cases\\EXPAND_148\\branches\\CUBIC_2018_PROTOCOL_I_MOUSE_L_R_RA\\result.json",
+    "result_sha256": "c284221b762483c892fabc14205ef3e920b38c2c4a28ff95a80236a305679f78",
+    "scored_component_count": 13,
+    "original_aggregate_count": 4,
+    "all17": {
+      "c_param": {
+        "status": "VALID",
+        "value": 2,
+        "bounds": [
+          2,
+          2
+        ],
+        "conservative_bounds": null,
+        "complete_bounds_available": true,
+        "reason": "ORIGINAL_GRADE_INVARIANT_ACROSS_ALL_SOURCE_WORLDS"
+      },
+      "co_order": {
+        "status": "VALID",
+        "value": 3,
+        "bounds": null,
+        "conservative_bounds": null,
+        "complete_bounds_available": null,
+        "reason": null
+      },
+      "co_method": {
+        "status": "VALID",
+        "value": 2,
+        "bounds": null,
+        "conservative_bounds": null,
+        "complete_bounds_available": null,
+        "reason": "ROOT_CAUSE_KIND_TO_COMPONENT"
+      },
+      "co_param": {
+        "status": "VALID",
+        "value": 2,
+        "bounds": null,
+        "conservative_bounds": null,
+        "complete_bounds_available": null,
+        "reason": "ROOT_CAUSE_KIND_TO_COMPONENT"
+      },
+      "co_chem": {
+        "status": "VALID",
+        "value": 1,
+        "bounds": null,
+        "conservative_bounds": null,
+        "complete_bounds_available": null,
+        "reason": null
+      },
+      "s_method": {
+        "status": "VALID",
+        "value": 0.9,
+        "bounds": null,
+        "conservative_bounds": null,
+        "complete_bounds_available": null,
+        "reason": null
+      },
+      "s_label": {
+        "status": "VALID",
+        "value": 4.199999999999999,
+        "bounds": null,
+        "conservative_bounds": null,
+        "complete_bounds_available": null,
+        "reason": null
+      },
+      "s_trans": {
+        "status": "VALID",
+        "value": 0.03332698961472665,
+        "bounds": null,
+        "conservative_bounds": null,
+        "complete_bounds_available": null,
+        "reason": null
+      },
+      "s_time": {
+        "status": "VALID",
+        "value": 3.0,
+        "bounds": null,
+        "conservative_bounds": null,
+        "complete_bounds_available": null,
+        "reason": "ALL_FINITE_TIME_MEMBERSHIP_RELAXATIONS_HAVE_IDENTICAL_ORIGINAL_SCORE"
+      },
+      "cleareval_coverage": {
+        "status": "UNKNOWN",
+        "value": null,
+        "bounds": [
+          0.25,
+          1.0
+        ],
+        "conservative_bounds": null,
+        "complete_bounds_available": true,
+        "reason": "COVERAGE_OVER_ALL_SOURCE_MANDATORY_REFERENCE_REQUIREMENT_WORLDS"
+      },
+      "cleareval_sp_eligible": {
+        "status": "UNKNOWN",
+        "value": null,
+        "bounds": [
+          0.06903286916869027,
+          0.5833821793397268
+        ],
+        "conservative_bounds": [
+          0.06903286916869027,
+          0.5833821793397268
+        ],
+        "complete_bounds_available": true,
+        "reason": "SOURCE_MEMBERSHIP_OR_ELIGIBILITY_AFFECTS_ORIGINAL_SP"
+      },
+      "bio_sr": {
+        "status": "VALID",
+        "value": 0.0,
+        "bounds": [
+          0.0,
+          0.0
+        ],
+        "conservative_bounds": null,
+        "complete_bounds_available": true,
+        "reason": "ALL_DECLARED_BRANCH_MEMBERSHIP_SCORES_AGREE"
+      },
+      "bio_sp": {
+        "status": "VALID",
+        "value": 0.0,
+        "bounds": [
+          0.0,
+          0.0
+        ],
+        "conservative_bounds": null,
+        "complete_bounds_available": true,
+        "reason": "ALL_DECLARED_BRANCH_MEMBERSHIP_SCORES_AGREE"
+      },
+      "Co": {
+        "status": "VALID",
+        "value": 1.0,
+        "bounds": null,
+        "conservative_bounds": null,
+        "complete_bounds_available": null,
+        "reason": null
+      },
+      "Com": {
+        "status": "UNKNOWN",
+        "value": null,
+        "bounds": [
+          0.5,
+          0.8
+        ],
+        "conservative_bounds": null,
+        "complete_bounds_available": true,
+        "reason": "ORIGINAL_FORMULA_EVIDENCED_SCORE_INTERVAL"
+      },
+      "Eff": {
+        "status": "VALID",
+        "value": 0.5977772491345605,
+        "bounds": [
+          0.5977772491345605,
+          0.5977772491345605
+        ],
+        "conservative_bounds": null,
+        "complete_bounds_available": true,
+        "reason": null
+      },
+      "IA": {
+        "status": "UNKNOWN",
+        "value": null,
+        "bounds": [
+          0.5,
+          0.5977772491345605
+        ],
+        "conservative_bounds": null,
+        "complete_bounds_available": true,
+        "reason": "MINIMUM_OF_EVIDENCED_AGGREGATE_INTERVALS"
+      }
+    },
+    "all17_full_node_sha256": {
+      "c_param": "51637d861977e07b833b9aa976e891c5f1e9cbc5bc2863ce547094e8d32a5e15",
+      "co_order": "bdcfc4f2ec0a6a02e38e8f1c6844ebea44791a51dcaac5ff095c7ac6a1b7c0f1",
+      "co_method": "5678d6efeb92f8e044390d5270e37cf7880deca854e525afaa7253ee287c035a",
+      "co_param": "5678d6efeb92f8e044390d5270e37cf7880deca854e525afaa7253ee287c035a",
+      "co_chem": "2a361ceaea365aa9a4d0ad57fc2cb719f2e545d1cf8cbebe0098d77050ab1b22",
+      "s_method": "14530178030ee75451c3ed341ef92f9bc62d36e454da75fe895f3100f701f02e",
+      "s_label": "641042848cb5aa7cd5e490259d2ef82126c5f5392b6480605fcab996f5edf6a4",
+      "s_trans": "22595f2e302869e7b61349337f24dbd299ad5cf12c99a94a973feaa33f17e08f",
+      "s_time": "287e3f78a95bf143f3f4d43fd870d46d982968acc2554dfb956a94c5383dd1fd",
+      "cleareval_coverage": "d5da9d7ca9287def7819a859925d482db791a24a50c6dd4195f6db8d2028b964",
+      "cleareval_sp_eligible": "148c843711d7673c9ee08d5bf1414513874d4b6ec7a99623c29caed822d4c39d",
+      "bio_sr": "66e31666d1206d076904a71aa5f72fe64bc4fa7567f28c8b7c6b647b6af61d67",
+      "bio_sp": "66e31666d1206d076904a71aa5f72fe64bc4fa7567f28c8b7c6b647b6af61d67",
+      "Co": "bd56210aae3ff2e4395a238f4ffbad855d061e2cbe5672490b3c9735f6e6b123",
+      "Com": "f4cf7b637c821034c71994d1d721630934897e279bcfa43ba7105c733516719f",
+      "Eff": "7ab55e4d72c75e074c22b001ef4d855bf1b87cea95def1e5ac15b721bb73c991",
+      "IA": "88be27129a957e2438b3224b5affe7d3b88fc4ca1f843e33fe82c5f7b414bd3d"
+    },
+    "followup_reconsumed": false,
+    "actual_parameter_review_applied": true,
+    "archive_channel_status": null,
+    "new_model_calls": 0,
+    "new_encoder_calls": 0,
+    "elapsed_seconds": 126.62856849998934
+  },
+  {
+    "input_id": "EXPAND_148",
+    "branch": "CUBIC_2019_IMMERSION_L_R_PLUS",
+    "status": "PASS",
+    "normal_pipeline_evaluate_called": true,
+    "original_criteria_receipts_reaudited": true,
+    "whole_components_used_as_observations": false,
+    "current_source_exact": true,
+    "result_path": "C:\\ClearEval\\deliverables\\cleareval_repair_20261025_232451\\parameter_scope148\\normal_v2\\cases\\EXPAND_148\\branches\\CUBIC_2019_IMMERSION_L_R_PLUS\\result.json",
+    "result_sha256": "4259a20845f445ac462c3677f9213eee01f5411d77ee0953a3a705a4b1eb535d",
+    "scored_component_count": 13,
+    "original_aggregate_count": 4,
+    "all17": {
+      "c_param": {
+        "status": "VALID",
+        "value": 2,
+        "bounds": [
+          2,
+          2
+        ],
+        "conservative_bounds": null,
+        "complete_bounds_available": true,
+        "reason": "ORIGINAL_GRADE_INVARIANT_ACROSS_ALL_SOURCE_WORLDS"
+      },
+      "co_order": {
+        "status": "VALID",
+        "value": 3,
+        "bounds": null,
+        "conservative_bounds": null,
+        "complete_bounds_available": null,
+        "reason": null
+      },
+      "co_method": {
+        "status": "VALID",
+        "value": 2,
+        "bounds": null,
+        "conservative_bounds": null,
+        "complete_bounds_available": null,
+        "reason": "ROOT_CAUSE_KIND_TO_COMPONENT"
+      },
+      "co_param": {
+        "status": "VALID",
+        "value": 2,
+        "bounds": null,
+        "conservative_bounds": null,
+        "complete_bounds_available": null,
+        "reason": "ROOT_CAUSE_KIND_TO_COMPONENT"
+      },
+      "co_chem": {
+        "status": "VALID",
+        "value": 1,
+        "bounds": null,
+        "conservative_bounds": null,
+        "complete_bounds_available": null,
+        "reason": null
+      },
+      "s_method": {
+        "status": "VALID",
+        "value": 0.9,
+        "bounds": null,
+        "conservative_bounds": null,
+        "complete_bounds_available": null,
+        "reason": null
+      },
+      "s_label": {
+        "status": "VALID",
+        "value": 4.199999999999999,
+        "bounds": null,
+        "conservative_bounds": null,
+        "complete_bounds_available": null,
+        "reason": null
+      },
+      "s_trans": {
+        "status": "VALID",
+        "value": 0.03332698961472665,
+        "bounds": null,
+        "conservative_bounds": null,
+        "complete_bounds_available": null,
+        "reason": null
+      },
+      "s_time": {
+        "status": "VALID",
+        "value": 3.0,
+        "bounds": null,
+        "conservative_bounds": null,
+        "complete_bounds_available": null,
+        "reason": "ALL_FINITE_TIME_MEMBERSHIP_RELAXATIONS_HAVE_IDENTICAL_ORIGINAL_SCORE"
+      },
+      "cleareval_coverage": {
+        "status": "UNKNOWN",
+        "value": null,
+        "bounds": [
+          0.1111111111111111,
+          0.625
+        ],
+        "conservative_bounds": null,
+        "complete_bounds_available": true,
+        "reason": "COVERAGE_OVER_ALL_SOURCE_MANDATORY_REFERENCE_REQUIREMENT_WORLDS"
+      },
+      "cleareval_sp_eligible": {
+        "status": "UNKNOWN",
+        "value": null,
+        "bounds": [
+          0.06475494589124407,
+          0.4879725178082784
+        ],
+        "conservative_bounds": [
+          0.06475494589124407,
+          0.4879725178082784
+        ],
+        "complete_bounds_available": true,
+        "reason": "SOURCE_MEMBERSHIP_OR_ELIGIBILITY_AFFECTS_ORIGINAL_SP"
+      },
+      "bio_sr": {
+        "status": "VALID",
+        "value": 0.0,
+        "bounds": [
+          0.0,
+          0.0
+        ],
+        "conservative_bounds": null,
+        "complete_bounds_available": true,
+        "reason": "ALL_DECLARED_BRANCH_MEMBERSHIP_SCORES_AGREE"
+      },
+      "bio_sp": {
+        "status": "VALID",
+        "value": 0.0,
+        "bounds": [
+          0.0,
+          0.0
+        ],
+        "conservative_bounds": null,
+        "complete_bounds_available": true,
+        "reason": "ALL_DECLARED_BRANCH_MEMBERSHIP_SCORES_AGREE"
+      },
+      "Co": {
+        "status": "VALID",
+        "value": 1.0,
+        "bounds": null,
+        "conservative_bounds": null,
+        "complete_bounds_available": null,
+        "reason": null
+      },
+      "Com": {
+        "status": "UNKNOWN",
+        "value": null,
+        "bounds": [
+          0.4444444444444444,
+          0.6499999999999999
+        ],
+        "conservative_bounds": null,
+        "complete_bounds_available": true,
+        "reason": "ORIGINAL_FORMULA_EVIDENCED_SCORE_INTERVAL"
+      },
+      "Eff": {
+        "status": "VALID",
+        "value": 0.5977772491345605,
+        "bounds": [
+          0.5977772491345605,
+          0.5977772491345605
+        ],
+        "conservative_bounds": null,
+        "complete_bounds_available": true,
+        "reason": null
+      },
+      "IA": {
+        "status": "UNKNOWN",
+        "value": null,
+        "bounds": [
+          0.4444444444444444,
+          0.5977772491345605
+        ],
+        "conservative_bounds": null,
+        "complete_bounds_available": true,
+        "reason": "MINIMUM_OF_EVIDENCED_AGGREGATE_INTERVALS"
+      }
+    },
+    "all17_full_node_sha256": {
+      "c_param": "947d2142b9a92cae5dbe2103e81f6ca6a8f047c8d774de557251d14f6cee1b3b",
+      "co_order": "bdcfc4f2ec0a6a02e38e8f1c6844ebea44791a51dcaac5ff095c7ac6a1b7c0f1",
+      "co_method": "5678d6efeb92f8e044390d5270e37cf7880deca854e525afaa7253ee287c035a",
+      "co_param": "5678d6efeb92f8e044390d5270e37cf7880deca854e525afaa7253ee287c035a",
+      "co_chem": "2a361ceaea365aa9a4d0ad57fc2cb719f2e545d1cf8cbebe0098d77050ab1b22",
+      "s_method": "14530178030ee75451c3ed341ef92f9bc62d36e454da75fe895f3100f701f02e",
+      "s_label": "641042848cb5aa7cd5e490259d2ef82126c5f5392b6480605fcab996f5edf6a4",
+      "s_trans": "22595f2e302869e7b61349337f24dbd299ad5cf12c99a94a973feaa33f17e08f",
+      "s_time": "287e3f78a95bf143f3f4d43fd870d46d982968acc2554dfb956a94c5383dd1fd",
+      "cleareval_coverage": "6183503846b3e75df0776a93e7a5f3a58324fd5798400312976f8b0702f6ce0d",
+      "cleareval_sp_eligible": "cc4ba7762b8aeb3a35e14df3924e5de1e3dbdee4c6aff879b9552715a5a4ff31",
+      "bio_sr": "d4628f6a311a3bacba2f9291dee1dac38e1e7b29c0ff1a83523fd7af6686db64",
+      "bio_sp": "d4628f6a311a3bacba2f9291dee1dac38e1e7b29c0ff1a83523fd7af6686db64",
+      "Co": "bd56210aae3ff2e4395a238f4ffbad855d061e2cbe5672490b3c9735f6e6b123",
+      "Com": "3141643e27b42f45d11fb45105735bf07ecbdcc7c8789d519a4e038a68db073c",
+      "Eff": "7ab55e4d72c75e074c22b001ef4d855bf1b87cea95def1e5ac15b721bb73c991",
+      "IA": "78e42fee347fd3b38434c05b9578b3326d2e8368a5a59d4b5ef651669ed7877a"
+    },
+    "followup_reconsumed": false,
+    "actual_parameter_review_applied": true,
+    "archive_channel_status": null,
+    "new_model_calls": 0,
+    "new_encoder_calls": 0,
+    "elapsed_seconds": 163.9049300000188
+  }
+]

@@ -1,0 +1,31 @@
+F                                                                        [100%]
+================================== FAILURES ===================================
+________ test_revision_code_migration_requires_matching_evidence_pins _________
+..\..\tests\test_uniform_normal_repairs.py:1407: in test_revision_code_migration_requires_matching_evidence_pins
+    observed = run_in_scorer_environment(f'''
+..\..\tests\test_uniform_normal_repairs.py:22: in run_in_scorer_environment
+    assert result.returncode == 0, result.stderr
+E   AssertionError: Traceback (most recent call last):
+E       File "<string>", line 34, in <module>
+E         merger.resolve_prior_pins(pins, selected, roots)
+E         ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+E       File "C:\ClearEval\ClearEval-runtime-4b42b5a\research\evaluator-research-cycle-20261018\execution_alignment_resolution_20261024_v1\runtime\apply_common_source_revisions_v4.py", line 93, in resolve_prior_pins
+E         evidence = read(Path(root) / 'loaded_code_sha256.json')
+E       File "C:\ClearEval\ClearEval-runtime-4b42b5a\research\evaluator-research-cycle-20261018\execution_alignment_resolution_20261024_v1\runtime\collect_uniform_normal185_v4.py", line 33, in read
+E         pin = sha(path)
+E       File "C:\ClearEval\ClearEval-runtime-4b42b5a\research\evaluator-research-cycle-20261018\execution_alignment_resolution_20261024_v1\runtime\collect_uniform_normal185_v4.py", line 29, in sha
+E         def sha(path): return projection.sha(path)
+E                               ~~~~~~~~~~~~~~^^^^^^
+E       File "C:\ClearEval\ClearEval-runtime-4b42b5a\research\evaluator-research-cycle-20261018\execution_alignment_resolution_20261024_v1\runtime\frozen_result_projection_v2.py", line 20, in sha
+E         with Path(path).open('rb') as stream:
+E              ~~~~~~~~~~~~~~~^^^^^^
+E       File "C:\ProgramData\anaconda3\Lib\pathlib\_local.py", line 537, in open
+E         return io.open(self, mode, buffering, encoding, errors, newline)
+E                ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E     FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\YWB\\AppData\\Local\\Temp\\pytest-of-YWB\\pytest-2991\\test_revision_code_migration_r0\\loaded_code_sha256.json'
+E     
+E   assert 1 == 0
+E    +  where 1 = CompletedProcess(args=['C:\\ProgramData\\anaconda3\\python.exe', '-X', 'utf8', '-B', '-c', "\nimport json, sys\nfrom p...ta\\\\Local\\\\Temp\\\\pytest-of-YWB\\\\pytest-2991\\\\test_revision_code_migration_r0\\\\loaded_code_sha256.json\'\n').returncode
+=========================== short test summary info ===========================
+FAILED ..\..\tests\test_uniform_normal_repairs.py::test_revision_code_migration_requires_matching_evidence_pins
+1 failed in 4.12s

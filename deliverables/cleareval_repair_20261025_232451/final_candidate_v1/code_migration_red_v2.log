@@ -1,0 +1,35 @@
+FF                                                                       [100%]
+================================== FAILURES ===================================
+________ test_revision_code_migration_requires_matching_evidence_pins _________
+..\..\tests\test_uniform_normal_repairs.py:1407: in test_revision_code_migration_requires_matching_evidence_pins
+    observed = run_in_scorer_environment(f'''
+..\..\tests\test_uniform_normal_repairs.py:22: in run_in_scorer_environment
+    assert result.returncode == 0, result.stderr
+E   AssertionError: Traceback (most recent call last):
+E       File "<string>", line 20, in <module>
+E         resolved = merger.resolve_prior_pins(pins, [{'code_revisions': [migration]}], [normal])
+E                    ^^^^^^^^^^^^^^^^^^^^^^^^^
+E     AttributeError: module 'execution_alignment_resolution_20261024_v1.runtime.apply_common_source_revisions_v4' has no attribute 'resolve_prior_pins'
+E     
+E   assert 1 == 0
+E    +  where 1 = CompletedProcess(args=['C:\\ProgramData\\anaconda3\\python.exe', '-X', 'utf8', '-B', '-c', "\nimport json, sys\nfrom p...alignment_resolution_20261024_v1.runtime.apply_common_source_revisions_v4\' has no attribute \'resolve_prior_pins\'\n').returncode
+_____ test_apply148_with_explicit_code_migration_preserves_other_branches _____
+..\..\tests\test_uniform_normal_repairs.py:1455: in test_apply148_with_explicit_code_migration_preserves_other_branches
+    observed = run_in_scorer_environment(f'''
+..\..\tests\test_uniform_normal_repairs.py:22: in run_in_scorer_environment
+    assert result.returncode == 0, result.stderr
+E   AssertionError: Traceback (most recent call last):
+E       File "<string>", line 10, in <module>
+E         merger.apply(base, output, affected, [root / 'parameter_scope148/normal_v2'])
+E         ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       File "C:\ClearEval\ClearEval-runtime-4b42b5a\research\evaluator-research-cycle-20261018\execution_alignment_resolution_20261024_v1\runtime\apply_common_source_revisions_v4.py", line 151, in apply
+E         assert sha(path) == pin, ('PRIOR_PIN_CHANGED', path)
+E                ^^^^^^^^^^^^^^^^
+E     AssertionError: ('PRIOR_PIN_CHANGED', 'C:\\ClearEval\\ClearEval-runtime-4b42b5a\\research\\evaluator-research-cycle-20261018\\execution_alignment_resolution_20261024_v1\\parameter_route_role_scope_v1\\recipe_scope.py')
+E     
+E   assert 1 == 0
+E    +  where 1 = CompletedProcess(args=['C:\\ProgramData\\anaconda3\\python.exe', '-X', 'utf8', '-B', '-c', "\nimport json, sys\nfrom p...cycle-20261018\\\\execution_alignment_resolution_20261024_v1\\\\parameter_route_role_scope_v1\\\\recipe_scope.py\')\n').returncode
+=========================== short test summary info ===========================
+FAILED ..\..\tests\test_uniform_normal_repairs.py::test_revision_code_migration_requires_matching_evidence_pins
+FAILED ..\..\tests\test_uniform_normal_repairs.py::test_apply148_with_explicit_code_migration_preserves_other_branches
+2 failed, 62 deselected in 14.76s

@@ -1,0 +1,53 @@
+{
+  "reviews": {
+    "query:e23097f4b132bbc121e3e80a33c3c64f8a5d9d9813c4d4865db897a03d304e7f": {
+      "leaves": {
+        "temperature": {
+          "assertion_kind": "EXPLICIT_VALUE",
+          "support_spans": [
+            {
+              "start": 589,
+              "end": 633,
+              "quote": "2.1 PBS 清洗。(Temperature: RT, Time: 30 min)  "
+            }
+          ],
+          "value": {
+            "identity": "RT"
+          },
+          "full_answer_checked": true,
+          "reason": "The candidate explicitly states the temperature 'RT' for the operation in step 2.1."
+        }
+      }
+    },
+    "query:f44eb26c5fee27b675a77db7d9b0910156843eb453618a4415faaa75624032f5": {
+      "leaves": {
+        "whole_source_criterion": {
+          "assertion_kind": "EXPLICIT_VALUE",
+          "support_spans": [
+            {
+              "start": 1951,
+              "end": 2024,
+              "quote": "9.2 更换新鲜 CUBIC-R 直至组织完全透明且无明显折射率梯度。(Temperature: RT, Time: 12–24 hours)  "
+            }
+          ],
+          "value": {
+            "identity": "RT"
+          },
+          "full_answer_checked": true,
+          "reason": "The candidate explicitly states the temperature 'RT' for the operation in step 9.2, satisfying the requirement for a candidate treatment temperature."
+        }
+      }
+    },
+    "query:f839e73d7aa77530570085c8bf9f0cd07b0bb8a2e75c2a2824d162b487fed83d": {
+      "leaves": {
+        "whole_source_criterion": {
+          "assertion_kind": "NOT_STATED",
+          "support_spans": [],
+          "value": {},
+          "full_answer_checked": true,
+          "reason": "The candidate mentions 'CUBIC-R' and 'CUBIC-R+' but does not explicitly identify 'antipyrine' as a component, nor does it provide a concentration or executable amount for antipyrine. The criterion requires identifying antipyrine and its concentration/amount, or a verifiable product identity that supplies an executable reagent path. While 'CUBIC-R+' is a product name, the criterion specifically asks to 'Identify antipyrine and the candidate concentration...'. The candidate does not state that antipyrine is the component or provide its specific concentration in the context of the formulation. It only lists the method name. Therefore, the specific requirement to identify antipyrine and its amount is not met."
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,128 @@
+{
+  "status": "PASS",
+  "input_id": "EXPAND_148",
+  "actual_judge_calls": 7,
+  "target_queries": 73,
+  "origin_query_counts": [
+    12,
+    12,
+    10,
+    12,
+    12,
+    12,
+    3
+  ],
+  "strict_worlds": 10,
+  "all_strict_slots_valid": true,
+  "parameter_status_by_branch": {
+    "CUBIC_2018_PROTOCOL_I_MOUSE_L_R_RA": "VALID",
+    "CUBIC_2019_IMMERSION_L_R_PLUS": "VALID"
+  },
+  "parameter_grade_by_branch": {
+    "CUBIC_2018_PROTOCOL_I_MOUSE_L_R_RA": 2,
+    "CUBIC_2019_IMMERSION_L_R_PLUS": 2
+  },
+  "parameter_bounds_by_branch": {
+    "CUBIC_2018_PROTOCOL_I_MOUSE_L_R_RA": [
+      2,
+      2
+    ],
+    "CUBIC_2019_IMMERSION_L_R_PLUS": [
+      2,
+      2
+    ]
+  },
+  "other_12_leaf_nodes_Co_Eff_EA_supplementary_exact": true,
+  "native_revalidation_passed": true,
+  "disjoint_complete_query_partition_verified": true,
+  "failed_full_response_consumed": false,
+  "new_model_calls_in_validation": 0,
+  "new_encoder_calls": 0,
+  "full_normal_pipeline_executed": false,
+  "accepted_for_normal_replay": true,
+  "accepted_for_scoring": false,
+  "main_table_promoted": false,
+  "baseline_root": "C:\\ClearEval\\deliverables\\cleareval_repair_20261025_232451\\merge_stage1\\merged193_v4",
+  "branches": [
+    {
+      "status": "PASS",
+      "input_id": "EXPAND_148",
+      "branch": "CUBIC_2018_PROTOCOL_I_MOUSE_L_R_RA",
+      "actual_judge_calls": 3,
+      "actual_review_run_ids": [
+        "8163d783c6b2485ca733c97939a761e4",
+        "9a3d493a541a4f6fb101e6e8aae795d9",
+        "5b6011e0faee48ce87802b1343576f70"
+      ],
+      "origin_query_counts": [
+        12,
+        12,
+        10
+      ],
+      "target_queries": 34,
+      "strict_worlds": 4,
+      "all_strict_slots_valid": true,
+      "parameter_status": "VALID",
+      "parameter_grade": 2,
+      "parameter_bounds": [
+        2,
+        2
+      ],
+      "parameter_reason": "ORIGINAL_GRADE_INVARIANT_ACROSS_ALL_SOURCE_WORLDS",
+      "other_12_leaf_nodes_Co_Eff_EA_supplementary_exact": true,
+      "native_revalidation_passed": true,
+      "disjoint_complete_query_partition_verified": true,
+      "failed_full_response_consumed": false,
+      "new_model_calls_in_validation": 0,
+      "new_encoder_calls": 0,
+      "full_normal_pipeline_executed": false,
+      "accepted_for_normal_replay": true,
+      "accepted_for_scoring": false,
+      "baseline_result_path": "C:\\ClearEval\\ClearEval-runtime-4b42b5a\\research\\evaluator-research-cycle-20261018\\execution_alignment_resolution_20261024_v1\\runtime\\normal_component26_remaining_ordinary94_v1\\shard0\\cases\\EXPAND_148\\branches\\CUBIC_2018_PROTOCOL_I_MOUSE_L_R_RA\\result.json",
+      "baseline_result_sha256": "6844dd2d945157f36374e7a639f9b405934ab122194f26fb16d41aca6671300a",
+      "review_sources": "CUBIC_2018_PROTOCOL_I_MOUSE_L_R_RA/review_sources.json",
+      "review_sources_sha256": "72d3db75a6f5bc807b6927af2cb0d992407ea9c85576058337f248ac51dd4401"
+    },
+    {
+      "status": "PASS",
+      "input_id": "EXPAND_148",
+      "branch": "CUBIC_2019_IMMERSION_L_R_PLUS",
+      "actual_judge_calls": 4,
+      "actual_review_run_ids": [
+        "b942abdcb5c24b5898901c3ce67af9cb",
+        "39b263e4dd4a4ede8489fa64679c761c",
+        "03293949f5fc47a18b8376c8f24bfeb4",
+        "921b9ec5e27041c9a6726e3119c2160b"
+      ],
+      "origin_query_counts": [
+        12,
+        12,
+        12,
+        3
+      ],
+      "target_queries": 39,
+      "strict_worlds": 6,
+      "all_strict_slots_valid": true,
+      "parameter_status": "VALID",
+      "parameter_grade": 2,
+      "parameter_bounds": [
+        2,
+        2
+      ],
+      "parameter_reason": "ORIGINAL_GRADE_INVARIANT_ACROSS_ALL_SOURCE_WORLDS",
+      "other_12_leaf_nodes_Co_Eff_EA_supplementary_exact": true,
+      "native_revalidation_passed": true,
+      "disjoint_complete_query_partition_verified": true,
+      "failed_full_response_consumed": false,
+      "new_model_calls_in_validation": 0,
+      "new_encoder_calls": 0,
+      "full_normal_pipeline_executed": false,
+      "accepted_for_normal_replay": true,
+      "accepted_for_scoring": false,
+      "baseline_result_path": "C:\\ClearEval\\ClearEval-runtime-4b42b5a\\research\\evaluator-research-cycle-20261018\\execution_alignment_resolution_20261024_v1\\runtime\\normal_component26_remaining_ordinary94_v1\\shard1\\cases\\EXPAND_148\\branches\\CUBIC_2019_IMMERSION_L_R_PLUS\\result.json",
+      "baseline_result_sha256": "714544f6aaf4c4f21ecd28442b8f04029bb1033e4867d2d2aadf8857c2857a40",
+      "review_sources": "CUBIC_2019_IMMERSION_L_R_PLUS/review_sources.json",
+      "review_sources_sha256": "397af734967de73676ac4c08740e884f1b19331e2bed9f554a78d562a9d2e824"
+    }
+  ]
+}

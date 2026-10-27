@@ -1,0 +1,38 @@
+FF                                                                       [100%]
+================================== FAILURES ===================================
+________ test_revision_code_migration_requires_matching_evidence_pins _________
+..\..\tests\test_uniform_normal_repairs.py:1407: in test_revision_code_migration_requires_matching_evidence_pins
+    observed = run_in_scorer_environment(f'''
+..\..\tests\test_uniform_normal_repairs.py:22: in run_in_scorer_environment
+    assert result.returncode == 0, result.stderr
+E   AssertionError: Traceback (most recent call last):
+E       File "<string>", line 4, in <module>
+E         from execution_alignment_resolution_20261024_v1.runtime import apply_common_source_revisions_v4 as merger
+E       File "C:\ClearEval\ClearEval-runtime-4b42b5a\research\evaluator-research-cycle-20261018\execution_alignment_resolution_20261024_v1\runtime\apply_common_source_revisions_v4.py", line 8, in <module>
+E         from . import normal_revision_equivalence_v1 as eq
+E       File "C:\ClearEval\ClearEval-runtime-4b42b5a\research\evaluator-research-cycle-20261018\execution_alignment_resolution_20261024_v1\runtime\normal_revision_equivalence_v1.py", line 7, in <module>
+E         import frozen_result_projection_v1 as projection
+E     ModuleNotFoundError: No module named 'frozen_result_projection_v1'
+E     
+E   assert 1 == 0
+E    +  where 1 = CompletedProcess(args=['C:\\ProgramData\\anaconda3\\python.exe', '-X', 'utf8', '-B', '-c', "\nimport json\nfrom pathli...ort frozen_result_projection_v1 as projection\nModuleNotFoundError: No module named \'frozen_result_projection_v1\'\n').returncode
+_____ test_apply148_with_explicit_code_migration_preserves_other_branches _____
+..\..\tests\test_uniform_normal_repairs.py:1454: in test_apply148_with_explicit_code_migration_preserves_other_branches
+    observed = run_in_scorer_environment(f'''
+..\..\tests\test_uniform_normal_repairs.py:22: in run_in_scorer_environment
+    assert result.returncode == 0, result.stderr
+E   AssertionError: Traceback (most recent call last):
+E       File "<string>", line 4, in <module>
+E         from execution_alignment_resolution_20261024_v1.runtime import apply_common_source_revisions_v4 as merger
+E       File "C:\ClearEval\ClearEval-runtime-4b42b5a\research\evaluator-research-cycle-20261018\execution_alignment_resolution_20261024_v1\runtime\apply_common_source_revisions_v4.py", line 8, in <module>
+E         from . import normal_revision_equivalence_v1 as eq
+E       File "C:\ClearEval\ClearEval-runtime-4b42b5a\research\evaluator-research-cycle-20261018\execution_alignment_resolution_20261024_v1\runtime\normal_revision_equivalence_v1.py", line 7, in <module>
+E         import frozen_result_projection_v1 as projection
+E     ModuleNotFoundError: No module named 'frozen_result_projection_v1'
+E     
+E   assert 1 == 0
+E    +  where 1 = CompletedProcess(args=['C:\\ProgramData\\anaconda3\\python.exe', '-X', 'utf8', '-B', '-c', "\nimport json\nfrom pathli...ort frozen_result_projection_v1 as projection\nModuleNotFoundError: No module named \'frozen_result_projection_v1\'\n').returncode
+=========================== short test summary info ===========================
+FAILED ..\..\tests\test_uniform_normal_repairs.py::test_revision_code_migration_requires_matching_evidence_pins
+FAILED ..\..\tests\test_uniform_normal_repairs.py::test_apply148_with_explicit_code_migration_preserves_other_branches
+2 failed, 62 deselected in 0.88s

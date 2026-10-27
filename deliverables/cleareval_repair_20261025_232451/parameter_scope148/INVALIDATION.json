@@ -1,0 +1,37 @@
+{
+  "version": "cleareval-148-preparation-invalidation-v1",
+  "status": "PREPARATION_REJECTED_MISSING_OPERATION_ITEMS",
+  "input_id": "EXPAND_148",
+  "affected_branches": [
+    "CUBIC_2018_PROTOCOL_I_MOUSE_L_R_RA",
+    "CUBIC_2019_IMMERSION_L_R_PLUS"
+  ],
+  "rejected_artifacts": [
+    "C:/ClearEval/deliverables/cleareval_repair_20261025_232451/parameter_scope148/validated_preparation_v1",
+    "C:/ClearEval/deliverables/cleareval_repair_20261025_232451/parameter_scope148/phase_prepare_v1"
+  ],
+  "findings": [
+    {
+      "code": "UNEXPANDED_REFERENCE_OPERATION_VARIANTS",
+      "evidence": "R017 and R018 retain MULTIPLE_DIFFERENT_COMPLETE_FINE_REQUIREMENT_TEMPLATES while validated_preparation_v1 marks its only world complete. No reference_operation_variant_audit is present. C18:HALF_R/C18:R and C19:HALF_R/C19:R:1/C19:R:2 have not been retained as complete scoring worlds."
+    },
+    {
+      "code": "MISSING_OPERATION_AND_ROUTE_ITEMS",
+      "evidence": "The rejected 2018 preparation has 25 slots in one world rather than the declared acceptance target of 32 slots in each of four complete worlds. The 2019 preparation likewise lacks the required complete reference-variant worlds. These counts are diagnostic, not evidence for assigning a score."
+    },
+    {
+      "code": "ORIGINAL_SCORING_WORDING_CHANGED",
+      "evidence": "Observed compiled slots include 'Identify Urea，ddH2O 配制' and 'ready-made actual formulation R001', and multiple compiled slots reuse the same original_slot_ids while changing criterion text. They do not preserve the original scoring obligations."
+    },
+    {
+      "code": "PRIMARY_NAME_PROOF_OVERWRITTEN",
+      "evidence": "The frozen private typed projection replaces primary_medium_proof instead of retaining its original exact-name rule and source_evidence; downstream exact source-scope validation therefore cannot reproduce the previous proof."
+    }
+  ],
+  "model_score_generated": false,
+  "accepted_for_scoring": false,
+  "accepted_for_merge": false,
+  "raw_answers_references_or_receipts_modified": false,
+  "handling": "Keep these files unchanged as rejection evidence. Any new preparation, review, or score must use a new versioned directory, preserve original criteria and source IDs, and pass complete-world, strict-slot, terminal-receipt, and full-pipeline validation.",
+  "review_snapshot": "C:/ClearEval/deliverables/cleareval_repair_20261025_232451/review_snapshot_v1/manifest.json"
+}

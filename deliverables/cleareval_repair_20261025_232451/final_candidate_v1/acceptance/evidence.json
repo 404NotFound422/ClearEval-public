@@ -1,0 +1,92 @@
+{
+  "version": "cleareval-incremental-acceptance-evidence-v1",
+  "status": "PENDING_INDEPENDENT_CLOSURE",
+  "scope": "BASELINE_PLUS_TWO_VALIDATED_REFERENCE_BRANCHES_NOT_UNIFORM_193_REPLAY",
+  "final_acceptance_granted": false,
+  "current_accepted_main_table_updated": false,
+  "score_counts": {
+    "answers": 185,
+    "branches": 193,
+    "metric_rows": 3145,
+    "all_17_bounded": 154,
+    "all_17_point": 52,
+    "with_unavailable_metric": 31,
+    "c_param_unavailable": 6,
+    "reexecuted_branches": 2,
+    "retained_branches": 191
+  },
+  "checks": {
+    "current_64_tests_passed": true,
+    "current_64_tests_collected": true,
+    "integrity_37_passed": true,
+    "score_counts_recomputed_from_rows": true,
+    "ea_and_formula_validation_passed": true,
+    "supporting_pin_manifests_themselves_included": true,
+    "all_listed_pins_recomputed": true,
+    "final_and_parameter_review_gates_distinguished": true
+  },
+  "evidence_roles": {
+    "parameter_review_gate_not_final_code": [
+      "C:\\ClearEval\\deliverables\\cleareval_repair_20261025_232451\\review_snapshot_v1\\full_regression54.log",
+      "C:\\ClearEval\\deliverables\\cleareval_repair_20261025_232451\\review_snapshot_v1\\deepseek_v41_flash_review_v4.md"
+    ],
+    "final_code_regression": [
+      "C:\\ClearEval\\deliverables\\cleareval_repair_20261025_232451\\final_candidate_v1\\full_regression_current.log",
+      "C:\\ClearEval\\deliverables\\cleareval_repair_20261025_232451\\final_candidate_v1\\test_collection_current.log",
+      "C:\\ClearEval\\deliverables\\cleareval_repair_20261025_232451\\final_candidate_v1\\integrity_current.log"
+    ],
+    "final_merge": [
+      "C:\\ClearEval\\deliverables\\cleareval_repair_20261025_232451\\final_candidate_v1\\affected148.json",
+      "C:\\ClearEval\\deliverables\\cleareval_repair_20261025_232451\\final_candidate_v1\\merged193\\summary.json",
+      "C:\\ClearEval\\deliverables\\cleareval_repair_20261025_232451\\final_candidate_v1\\merged193\\records193.json",
+      "C:\\ClearEval\\deliverables\\cleareval_repair_20261025_232451\\final_candidate_v1\\merged193\\execution_provenance193.json",
+      "C:\\ClearEval\\deliverables\\cleareval_repair_20261025_232451\\final_candidate_v1\\merged193\\repairs_and_revisions.json",
+      "C:\\ClearEval\\deliverables\\cleareval_repair_20261025_232451\\final_candidate_v1\\merge_v4_driver_v2.log"
+    ],
+    "score_tables": [
+      "C:\\ClearEval\\deliverables\\cleareval_repair_20261025_232451\\final_candidate_v1\\scores185\\summary.json",
+      "C:\\ClearEval\\deliverables\\cleareval_repair_20261025_232451\\final_candidate_v1\\scores185\\rows185.json",
+      "C:\\ClearEval\\deliverables\\cleareval_repair_20261025_232451\\final_candidate_v1\\scores185\\metrics3145.csv",
+      "C:\\ClearEval\\deliverables\\cleareval_repair_20261025_232451\\final_candidate_v1\\scores185\\manifest.json",
+      "C:\\ClearEval\\deliverables\\cleareval_repair_20261025_232451\\final_candidate_v1\\ea185\\summary.json",
+      "C:\\ClearEval\\deliverables\\cleareval_repair_20261025_232451\\final_candidate_v1\\ea185\\rows185.json",
+      "C:\\ClearEval\\deliverables\\cleareval_repair_20261025_232451\\final_candidate_v1\\ea185\\metrics555.csv",
+      "C:\\ClearEval\\deliverables\\cleareval_repair_20261025_232451\\final_candidate_v1\\ea185\\manifest.json"
+    ],
+    "real_judge_and_rejected_driver": [
+      "C:\\ClearEval\\deliverables\\cleareval_repair_20261025_232451\\parameter_scope148\\actual_v2\\execution.json",
+      "C:\\ClearEval\\deliverables\\cleareval_repair_20261025_232451\\parameter_scope148\\actual_v2\\authorization.json",
+      "C:\\ClearEval\\deliverables\\cleareval_repair_20261025_232451\\parameter_scope148\\accepted_v2\\summary.json",
+      "C:\\ClearEval\\deliverables\\cleareval_repair_20261025_232451\\parameter_scope148\\accepted_v2\\manifest.json",
+      "C:\\ClearEval\\deliverables\\cleareval_repair_20261025_232451\\parameter_scope148\\actual_v1\\execution.json",
+      "C:\\ClearEval\\deliverables\\cleareval_repair_20261025_232451\\parameter_scope148\\actual_v1\\failure.json"
+    ],
+    "ea_and_formula_replay": [
+      "C:\\ClearEval\\deliverables\\cleareval_repair_20261025_232451\\final_candidate_v1\\validation148.json",
+      "C:\\ClearEval\\deliverables\\cleareval_repair_20261025_232451\\final_candidate_v1\\validation148_driver_v2.log",
+      "C:\\ClearEval\\deliverables\\cleareval_repair_20261025_232451\\final_candidate_v1\\validation\\validate148.py"
+    ],
+    "focused_acceptance_tests": [
+      "C:\\ClearEval\\deliverables\\cleareval_repair_20261025_232451\\parameter_scope148\\run42_ea_equivalence_test_v2.log",
+      "C:\\ClearEval\\deliverables\\cleareval_repair_20261025_232451\\parameter_scope148\\run42_focused_v2.log",
+      "C:\\ClearEval\\deliverables\\cleareval_repair_20261025_232451\\final_candidate_v1\\code_migration_unit_green_v3.log",
+      "C:\\ClearEval\\deliverables\\cleareval_repair_20261025_232451\\final_candidate_v1\\code_migration_integration_v1.log"
+    ],
+    "remaining_na": [
+      "C:\\ClearEval\\deliverables\\cleareval_repair_20261025_232451\\final_candidate_v1\\remaining\\summary.json",
+      "C:\\ClearEval\\deliverables\\cleareval_repair_20261025_232451\\final_candidate_v1\\remaining_reasons.json"
+    ],
+    "independent_review_with_open_gate": [
+      "C:\\ClearEval\\deliverables\\cleareval_repair_20261025_232451\\final_candidate_v1\\deepseek_v41_flash_final_review.md"
+    ]
+  },
+  "code_revision": {
+    "path": "C:/ClearEval/ClearEval-runtime-4b42b5a/research/evaluator-research-cycle-20261018/execution_alignment_resolution_20261024_v1/parameter_route_role_scope_v1/recipe_scope.py",
+    "before_sha256": "bf83359be7a40e994c520285627ac23c4c1b1dcb4a3cb6d72915a9338c27cd20",
+    "after_sha256": "bff81712540fdec2730e6558b8086f4412bf7cc2641bebddc95004923d03b5c9"
+  },
+  "comparison_scope": "differences_from_accepted_snapshot compares the original benchmark snapshot, not merge_stage1; use execution_provenance193 for this revision",
+  "expert_accuracy_or_publication_readiness_evaluated": false,
+  "new_scoring_model_calls_in_replay": 0,
+  "independent_closure_required": true
+}

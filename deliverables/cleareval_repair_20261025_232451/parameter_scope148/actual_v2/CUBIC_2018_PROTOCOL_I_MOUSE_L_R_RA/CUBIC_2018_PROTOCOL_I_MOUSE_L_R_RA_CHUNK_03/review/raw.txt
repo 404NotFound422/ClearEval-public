@@ -1,0 +1,168 @@
+{
+  "reviews": {
+    "query:bb23b7a30c5c964d0db0a76ea9eab847e53be0af68c1004b9cfa2705c4edc5d9": {
+      "leaves": {
+        "agitation": {
+          "assertion_kind": "NOT_STATED",
+          "support_spans": [],
+          "value": {},
+          "full_answer_checked": true,
+          "reason": "The allowed span '2.2 PBS 清洗。(Temperature: RT, Time: 30 min)' does not mention shaking, rotation, or any agitation method. The full answer does not provide a shared condition for agitation for this specific step."
+        }
+      }
+    },
+    "query:c1fd43a7b4ecf027a86c00689bfd6c66de8eb76b151c09b906f51a79bd74b591": {
+      "leaves": {
+        "transition_ratio": {
+          "assertion_kind": "NOT_STATED",
+          "support_spans": [],
+          "value": {},
+          "full_answer_checked": true,
+          "reason": "The allowed span '9.2 更换新鲜 CUBIC-R...' describes replacing the solution but does not specify a dilution ratio (e.g., 1:10). No dilution ratio is stated in the full answer for this transition."
+        },
+        "transition_diluent": {
+          "assertion_kind": "NOT_STATED",
+          "support_spans": [],
+          "value": {},
+          "full_answer_checked": true,
+          "reason": "The allowed span '9.2 更换新鲜 CUBIC-R...' does not name a diluent (e.g., water, PBS). It implies replacing with fresh CUBIC-R, but does not explicitly state a dilution process with a specific diluent."
+        }
+      }
+    },
+    "query:c9092b2b769ff3a694af480dbd200b2179e7ba02962a8a11a4c614476efeecc5": {
+      "leaves": {
+        "whole_source_criterion": {
+          "assertion_kind": "NOT_STATED",
+          "support_spans": [],
+          "value": {},
+          "full_answer_checked": true,
+          "reason": "The candidate answer does not mention nicotinamide or N-methylnicotinamide anywhere. The CUBIC-R recipe is not fully detailed with these components in the provided text."
+        }
+      }
+    },
+    "query:d36eeed741d911dd1871d73b978e15f78a838ba1e54679fb86f999cdf6fcbc4d": {
+      "leaves": {
+        "component_identity": {
+          "assertion_kind": "NOT_STATED",
+          "support_spans": [],
+          "value": {},
+          "full_answer_checked": true,
+          "reason": "Antipyrine is not mentioned in the candidate answer."
+        },
+        "component_amount": {
+          "assertion_kind": "NOT_STATED",
+          "support_spans": [],
+          "value": {},
+          "full_answer_checked": true,
+          "reason": "Antipyrine is not mentioned in the candidate answer, so no amount is provided."
+        }
+      }
+    },
+    "query:d55eb49dee0510f6d08e1382bba302795bae377b87c68bbd8afb70592cc61b0a": {
+      "leaves": {
+        "temperature": {
+          "assertion_kind": "EXPLICIT_VALUE",
+          "support_spans": [
+            {
+              "start": 1856,
+              "end": 1950,
+              "quote": "9.1 置于 CUBIC-R（推荐 CUBIC-R+，RI≈1.52；或等效高 RI CUBIC 折射率匹配液）预平衡。(Temperature: RT, Time: 6 hours)  "
+            }
+          ],
+          "value": {
+            "identity": "RT"
+          },
+          "full_answer_checked": true,
+          "reason": "The span explicitly states 'Temperature: RT'."
+        }
+      }
+    },
+    "query:d6288d3399c6ecc3fecfaa983fe16db9bb989c02584601f0e58ca128ef3ccb6e": {
+      "leaves": {
+        "identity": {
+          "assertion_kind": "EXPLICIT_VALUE",
+          "support_spans": [
+            {
+              "start": 507,
+              "end": 573,
+              "quote": "1.2 更换新鲜 CUBIC-L 继续去脂至组织明显变浅。(Temperature: 37 ℃, Time: 24 hours)  "
+            }
+          ],
+          "value": {
+            "identity": "CUBIC-L"
+          },
+          "full_answer_checked": true,
+          "reason": "The span explicitly mentions 'CUBIC-L' as the medium being used/replaced."
+        }
+      }
+    },
+    "query:d7b7e8a1dac38c975c50971663adc8e4ce0e3388d1f21ca34e3a6254adf05c36": {
+      "leaves": {
+        "temperature": {
+          "assertion_kind": "EXPLICIT_VALUE",
+          "support_spans": [
+            {
+              "start": 679,
+              "end": 726,
+              "quote": "2.3 PBS 清洗。(Temperature: 4 ℃, Time: 12 hours)  "
+            }
+          ],
+          "value": {
+            "identity": "4 ℃"
+          },
+          "full_answer_checked": true,
+          "reason": "The span explicitly states 'Temperature: 4 ℃'."
+        }
+      }
+    },
+    "query:d80ad64994cd810efe9ec292376709152367f9ecd8a9c39fbd0a37945dea4623": {
+      "leaves": {
+        "temperature": {
+          "assertion_kind": "EXPLICIT_VALUE",
+          "support_spans": [
+            {
+              "start": 358,
+              "end": 506,
+              "quote": "1.1 组织块（~2 mm 厚心尖）置于 CUBIC-L（10 wt% N-Butyldiethanolamine + 10 wt% Triton X-100 + 10 wt% Urea，ddH2O 配制）充分浸没并轻摇。(Temperature: 37 ℃, Time: 24 hours)  "
+            }
+          ],
+          "value": {
+            "identity": "37 ℃"
+          },
+          "full_answer_checked": true,
+          "reason": "The span explicitly states 'Temperature: 37 ℃'."
+        }
+      }
+    },
+    "query:dc588db8d89049b4511d9bedb1e4fd9c6586e973fd19193b2060fbb1ee4238c1": {
+      "leaves": {
+        "agitation": {
+          "assertion_kind": "NOT_STATED",
+          "support_spans": [],
+          "value": {},
+          "full_answer_checked": true,
+          "reason": "The allowed span '1.2 更换新鲜 CUBIC-L...' does not mention shaking or rotation. While step 1.1 mentions '轻摇' (light shaking), the specific step 1.2 does not explicitly state it, and the allowed span for this query does not contain it."
+        }
+      }
+    },
+    "query:e23097f4b132bbc121e3e80a33c3c64f8a5d9d9813c4d4865db897a03d304e7f": {
+      "leaves": {
+        "temperature": {
+          "assertion_kind": "EXPLICIT_VALUE",
+          "support_spans": [
+            {
+              "start": 589,
+              "end": 633,
+              "quote": "2.1 PBS 清洗。(Temperature: RT, Time: 30 min)  "
+            }
+          ],
+          "value": {
+            "identity": "RT"
+          },
+          "full_answer_checked": true,
+          "reason": "The span explicitly states 'Temperature: RT'."
+        }
+      }
+    }
+  }
+}

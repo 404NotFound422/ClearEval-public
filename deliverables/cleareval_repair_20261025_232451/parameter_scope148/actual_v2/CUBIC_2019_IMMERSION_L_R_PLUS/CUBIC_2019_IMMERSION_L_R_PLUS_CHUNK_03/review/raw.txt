@@ -1,0 +1,216 @@
+{
+  "reviews": {
+    "query:aa7a35805bd1a9a3788979a5103c33c089b4cbcb78cd10aaa39956d813a15287": {
+      "leaves": {
+        "whole_source_criterion": {
+          "assertion_kind": "EXPLICIT_VALUE",
+          "support_spans": [
+            {
+              "start": 358,
+              "end": 506,
+              "quote": "1.1 组织块（~2 mm 厚心尖）置于 CUBIC-L（10 wt% N-Butyldiethanolamine + 10 wt% Triton X-100 + 10 wt% Urea，ddH2O 配制）充分浸没并轻摇。(Temperature: 37 ℃, Time: 24 hours)  "
+            }
+          ],
+          "value": {
+            "identity": "Triton X-100",
+            "amount_quote": "10 wt%"
+          },
+          "full_answer_checked": true,
+          "reason": "The candidate explicitly states the concentration of Triton X-100 as 10 wt% in the CUBIC-L formulation."
+        }
+      }
+    },
+    "query:acc15cb39dfc336d165fb60df68a45783ad17209873a4cd4d5e06936348c75c4": {
+      "leaves": {
+        "agitation": {
+          "assertion_kind": "EXPLICIT_VALUE",
+          "support_spans": [
+            {
+              "start": 358,
+              "end": 506,
+              "quote": "1.1 组织块（~2 mm 厚心尖）置于 CUBIC-L（10 wt% N-Butyldiethanolamine + 10 wt% Triton X-100 + 10 wt% Urea，ddH2O 配制）充分浸没并轻摇。(Temperature: 37 ℃, Time: 24 hours)  "
+            }
+          ],
+          "value": {
+            "identity": "轻摇"
+          },
+          "full_answer_checked": true,
+          "reason": "The candidate explicitly specifies '轻摇' (gentle shaking) as the agitation method."
+        }
+      }
+    },
+    "query:b27cbc2b9c6c135de847a0aea806ecd8ab6b2add55942c93d7855e3d0d57b34a": {
+      "leaves": {
+        "temperature": {
+          "assertion_kind": "EXPLICIT_VALUE",
+          "support_spans": [
+            {
+              "start": 634,
+              "end": 678,
+              "quote": "2.2 PBS 清洗。(Temperature: RT, Time: 30 min)  "
+            }
+          ],
+          "value": {
+            "identity": "RT"
+          },
+          "full_answer_checked": true,
+          "reason": "The candidate explicitly states the temperature as RT for this step."
+        }
+      }
+    },
+    "query:ba69b3f85d31331b5e746199abd3927ed6b47af9d6dbfc5c3624fe9e03135315": {
+      "leaves": {
+        "duration_and_schedule": {
+          "assertion_kind": "EXPLICIT_VALUE",
+          "support_spans": [
+            {
+              "start": 1856,
+              "end": 1950,
+              "quote": "9.1 置于 CUBIC-R（推荐 CUBIC-R+，RI≈1.52；或等效高 RI CUBIC 折射率匹配液）预平衡。(Temperature: RT, Time: 6 hours)  "
+            }
+          ],
+          "value": {
+            "amount_quote": "6 hours"
+          },
+          "full_answer_checked": true,
+          "reason": "The candidate explicitly states the duration as 6 hours."
+        }
+      }
+    },
+    "query:bb23b7a30c5c964d0db0a76ea9eab847e53be0af68c1004b9cfa2705c4edc5d9": {
+      "leaves": {
+        "agitation": {
+          "assertion_kind": "NOT_STATED",
+          "support_spans": [],
+          "value": {},
+          "full_answer_checked": true,
+          "reason": "The candidate text for step 2.2 does not specify any shaking or rotation, nor does it reference a shared condition for agitation."
+        }
+      }
+    },
+    "query:bc3a8d160ebf479b82568a5c7c332a8dc622fc7d4f3b81099020cea191e4cf79": {
+      "leaves": {
+        "whole_source_criterion": {
+          "assertion_kind": "EXPLICIT_VALUE",
+          "support_spans": [
+            {
+              "start": 358,
+              "end": 506,
+              "quote": "1.1 组织块（~2 mm 厚心尖）置于 CUBIC-L（10 wt% N-Butyldiethanolamine + 10 wt% Triton X-100 + 10 wt% Urea，ddH2O 配制）充分浸没并轻摇。(Temperature: 37 ℃, Time: 24 hours)  "
+            }
+          ],
+          "value": {
+            "identity": "ddH2O"
+          },
+          "full_answer_checked": true,
+          "reason": "The candidate explicitly identifies 'ddH2O' as the solvent/carrier used to prepare the CUBIC-L solution."
+        }
+      }
+    },
+    "query:c1fd43a7b4ecf027a86c00689bfd6c66de8eb76b151c09b906f51a79bd74b591": {
+      "leaves": {
+        "transition_ratio": {
+          "assertion_kind": "NOT_STATED",
+          "support_spans": [],
+          "value": {},
+          "full_answer_checked": true,
+          "reason": "The candidate does not specify a transition dilution ratio for the CUBIC-R step."
+        },
+        "transition_diluent": {
+          "assertion_kind": "NOT_STATED",
+          "support_spans": [],
+          "value": {},
+          "full_answer_checked": true,
+          "reason": "The candidate does not specify a transition diluent for the CUBIC-R step."
+        }
+      }
+    },
+    "query:d55eb49dee0510f6d08e1382bba302795bae377b87c68bbd8afb70592cc61b0a": {
+      "leaves": {
+        "temperature": {
+          "assertion_kind": "EXPLICIT_VALUE",
+          "support_spans": [
+            {
+              "start": 1856,
+              "end": 1950,
+              "quote": "9.1 置于 CUBIC-R（推荐 CUBIC-R+，RI≈1.52；或等效高 RI CUBIC 折射率匹配液）预平衡。(Temperature: RT, Time: 6 hours)  "
+            }
+          ],
+          "value": {
+            "identity": "RT"
+          },
+          "full_answer_checked": true,
+          "reason": "The candidate explicitly states the temperature as RT for this step."
+        }
+      }
+    },
+    "query:d6288d3399c6ecc3fecfaa983fe16db9bb989c02584601f0e58ca128ef3ccb6e": {
+      "leaves": {
+        "identity": {
+          "assertion_kind": "EXPLICIT_VALUE",
+          "support_spans": [
+            {
+              "start": 507,
+              "end": 573,
+              "quote": "1.2 更换新鲜 CUBIC-L 继续去脂至组织明显变浅。(Temperature: 37 ℃, Time: 24 hours)  "
+            }
+          ],
+          "value": {
+            "identity": "CUBIC-L"
+          },
+          "full_answer_checked": true,
+          "reason": "The candidate explicitly identifies 'CUBIC-L' as the treatment medium."
+        }
+      }
+    },
+    "query:d7b7e8a1dac38c975c50971663adc8e4ce0e3388d1f21ca34e3a6254adf05c36": {
+      "leaves": {
+        "temperature": {
+          "assertion_kind": "EXPLICIT_VALUE",
+          "support_spans": [
+            {
+              "start": 679,
+              "end": 726,
+              "quote": "2.3 PBS 清洗。(Temperature: 4 ℃, Time: 12 hours)  "
+            }
+          ],
+          "value": {
+            "identity": "4 ℃"
+          },
+          "full_answer_checked": true,
+          "reason": "The candidate explicitly states the temperature as 4 ℃ for this step."
+        }
+      }
+    },
+    "query:d80ad64994cd810efe9ec292376709152367f9ecd8a9c39fbd0a37945dea4623": {
+      "leaves": {
+        "temperature": {
+          "assertion_kind": "EXPLICIT_VALUE",
+          "support_spans": [
+            {
+              "start": 358,
+              "end": 506,
+              "quote": "1.1 组织块（~2 mm 厚心尖）置于 CUBIC-L（10 wt% N-Butyldiethanolamine + 10 wt% Triton X-100 + 10 wt% Urea，ddH2O 配制）充分浸没并轻摇。(Temperature: 37 ℃, Time: 24 hours)  "
+            }
+          ],
+          "value": {
+            "identity": "37 ℃"
+          },
+          "full_answer_checked": true,
+          "reason": "The candidate explicitly states the temperature as 37 ℃ for this step."
+        }
+      }
+    },
+    "query:dc588db8d89049b4511d9bedb1e4fd9c6586e973fd19193b2060fbb1ee4238c1": {
+      "leaves": {
+        "agitation": {
+          "assertion_kind": "NOT_STATED",
+          "support_spans": [],
+          "value": {},
+          "full_answer_checked": true,
+          "reason": "The candidate text for step 1.2 does not specify any shaking or rotation, nor does it reference a shared condition for agitation."
+        }
+      }
+    }
+  }
+}

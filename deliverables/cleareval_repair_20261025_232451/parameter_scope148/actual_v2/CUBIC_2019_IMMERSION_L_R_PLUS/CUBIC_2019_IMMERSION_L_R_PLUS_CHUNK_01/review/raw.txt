@@ -1,0 +1,192 @@
+{
+  "reviews": {
+    "query:0c23aac32cc56f4903eeb9a4b48c8db259536750effbf86a3c84ecedea6b3bc2": {
+      "leaves": {
+        "agitation": {
+          "assertion_kind": "NOT_STATED",
+          "support_spans": [],
+          "value": {},
+          "full_answer_checked": true,
+          "reason": "The candidate text for step 2.3 (PBS wash) does not specify shaking, rotation, or any other agitation condition. It only lists the medium, temperature, and time."
+        }
+      }
+    },
+    "query:2ec173b61021f78fdb224ec0a66f0cabccb6042caf21646c13b9bc41c077350a": {
+      "leaves": {
+        "whole_source_criterion": {
+          "assertion_kind": "NOT_STATED",
+          "support_spans": [],
+          "value": {},
+          "full_answer_checked": true,
+          "reason": "The candidate answer does not identify N-butyldiethanolamine or its concentration in the context of the CUBIC-R preparation (steps 9.1/9.2). It mentions CUBIC-R+ as a product, but the criterion specifically asks for the identification of N-butyldiethanolamine and its concentration/amount, or a complete permitted alternative that explicitly supplies this reagent path. The text 'CUBIC-R+' is a product name, but the criterion requires identifying the specific component N-butyldiethanolamine and its concentration/amount, or an unambiguous product identity that *supplies* this path. While CUBIC-R+ is a product, the criterion's phrasing 'Identify N-butyldiethanolamine and the candidate concentration... An unambiguous... product... may satisfy this requirement without restating the proprietary recipe' suggests that if a product is used, it must be clear that it contains the required component. However, the candidate text for step 9.1 says 'CUBIC-R (recommended CUBIC-R+...)', which is a product. But the criterion is specifically about the *component* N-butyldiethanolamine. The candidate does not state the concentration of N-butyldiethanolamine in the CUBIC-R solution. It only names the product. The criterion says 'A bare method name is insufficient.' CUBIC-R+ is a product name. Does it satisfy 'Identify N-butyldiethanolamine'? No, it identifies the product. The criterion allows a product identity *if* it supplies an executable reagent path. But the primary requirement is to identify the component and its amount. Since the component and amount are not stated, and the product name is not explicitly linked to the specific component concentration in the text, it is NOT_STATED for the specific component requirement."
+        }
+      }
+    },
+    "query:3b45af12a4cee5eddcea245cb597a201404a38d0bff2800dd7488b2e775304b0": {
+      "leaves": {
+        "agitation": {
+          "assertion_kind": "NOT_STATED",
+          "support_spans": [],
+          "value": {},
+          "full_answer_checked": true,
+          "reason": "The candidate text for step 9.1 (CUBIC-R pre-equilibration) does not specify shaking, rotation, or any other agitation condition. It only lists the medium, temperature, and time."
+        }
+      }
+    },
+    "query:3d4464640f3cbdd315ba58e2b208f619b8ecc987f6b1e669e743980696b8e75e": {
+      "leaves": {
+        "identity": {
+          "assertion_kind": "EXPLICIT_VALUE",
+          "support_spans": [
+            {
+              "start": 589,
+              "end": 633,
+              "quote": "2.1 PBS 清洗。(Temperature: RT, Time: 30 min)  "
+            }
+          ],
+          "value": {
+            "identity": "PBS"
+          },
+          "full_answer_checked": true,
+          "reason": "The candidate explicitly states 'PBS' as the medium for the wash step 2.1."
+        }
+      }
+    },
+    "query:3e07938b6b817353507e9ecd0dd07336a21c2eb7e900119e9ee3d18d8dd85c0a": {
+      "leaves": {
+        "whole_source_criterion": {
+          "assertion_kind": "NOT_STATED",
+          "support_spans": [],
+          "value": {},
+          "full_answer_checked": true,
+          "reason": "The candidate answer does not identify the solvent/carrier in the CUBIC-R preparation. It mentions 'CUBIC-R' and 'CUBIC-R+', but does not specify the solvent (e.g., water, glycerol, etc.) or the specific composition that acts as the carrier/solvent system for the RI matching. The criterion requires identifying the solvent/carrier. The text does not provide this detail."
+        }
+      }
+    },
+    "query:4280fe11db626e073c7b96a93ecc851e9ecaa1a34b43505870b601393e11fb65": {
+      "leaves": {
+        "duration_and_schedule": {
+          "assertion_kind": "EXPLICIT_VALUE",
+          "support_spans": [
+            {
+              "start": 358,
+              "end": 506,
+              "quote": "1.1 组织块（~2 mm 厚心尖）置于 CUBIC-L（10 wt% N-Butyldiethanolamine + 10 wt% Triton X-100 + 10 wt% Urea，ddH2O 配制）充分浸没并轻摇。(Temperature: 37 ℃, Time: 24 hours)  "
+            }
+          ],
+          "value": {
+            "amount_quote": "24 hours"
+          },
+          "full_answer_checked": true,
+          "reason": "The candidate explicitly states 'Time: 24 hours' for step 1.1."
+        }
+      }
+    },
+    "query:4dfb559e4e8fcfb68f540e4c575ca91863fb244ae42fb1bcb83b3a2d85f66966": {
+      "leaves": {
+        "identity": {
+          "assertion_kind": "EXPLICIT_VALUE",
+          "support_spans": [
+            {
+              "start": 1951,
+              "end": 2024,
+              "quote": "9.2 更换新鲜 CUBIC-R 直至组织完全透明且无明显折射率梯度。(Temperature: RT, Time: 12–24 hours)  "
+            }
+          ],
+          "value": {
+            "identity": "CUBIC-R"
+          },
+          "full_answer_checked": true,
+          "reason": "The candidate explicitly states 'CUBIC-R' as the medium for step 9.2."
+        }
+      }
+    },
+    "query:56c8060b00505ab1fa6e91eb8a923ec27ffdbc1e69142986ef82fa5aedef9f2d": {
+      "leaves": {
+        "duration_and_schedule": {
+          "assertion_kind": "EXPLICIT_VALUE",
+          "support_spans": [
+            {
+              "start": 589,
+              "end": 633,
+              "quote": "2.1 PBS 清洗。(Temperature: RT, Time: 30 min)  "
+            }
+          ],
+          "value": {
+            "amount_quote": "30 min"
+          },
+          "full_answer_checked": true,
+          "reason": "The candidate explicitly states 'Time: 30 min' for step 2.1."
+        }
+      }
+    },
+    "query:5b2e79787abe6cdf5c3820dd22030858c2c860338e7eea3d40a74021c694a946": {
+      "leaves": {
+        "agitation": {
+          "assertion_kind": "NOT_STATED",
+          "support_spans": [],
+          "value": {},
+          "full_answer_checked": true,
+          "reason": "The candidate text for step 2.1 (PBS wash) does not specify shaking, rotation, or any other agitation condition. It only lists the medium, temperature, and time."
+        }
+      }
+    },
+    "query:5c34ed4fd8f86c5e528d66806211fd870d06b51e8ee1066a0d6daf309dddd74d": {
+      "leaves": {
+        "duration_and_schedule": {
+          "assertion_kind": "EXPLICIT_VALUE",
+          "support_spans": [
+            {
+              "start": 634,
+              "end": 678,
+              "quote": "2.2 PBS 清洗。(Temperature: RT, Time: 30 min)  "
+            }
+          ],
+          "value": {
+            "amount_quote": "30 min"
+          },
+          "full_answer_checked": true,
+          "reason": "The candidate explicitly states 'Time: 30 min' for step 2.2."
+        }
+      }
+    },
+    "query:5fc1051679276e057b811cb6fdd5a82e685f5dae22c36fe3a060be945e8e0619": {
+      "leaves": {
+        "duration_and_schedule": {
+          "assertion_kind": "EXPLICIT_VALUE",
+          "support_spans": [
+            {
+              "start": 679,
+              "end": 726,
+              "quote": "2.3 PBS 清洗。(Temperature: 4 ℃, Time: 12 hours)  "
+            }
+          ],
+          "value": {
+            "amount_quote": "12 hours"
+          },
+          "full_answer_checked": true,
+          "reason": "The candidate explicitly states 'Time: 12 hours' for step 2.3."
+        }
+      }
+    },
+    "query:5fe2d91c5ecb6fa63af521e5490ae99b6329807d69c6ae1d094ddb7fe9804ab4": {
+      "leaves": {
+        "duration_and_schedule": {
+          "assertion_kind": "EXPLICIT_VALUE",
+          "support_spans": [
+            {
+              "start": 1951,
+              "end": 2024,
+              "quote": "9.2 更换新鲜 CUBIC-R 直至组织完全透明且无明显折射率梯度。(Temperature: RT, Time: 12–24 hours)  "
+            }
+          ],
+          "value": {
+            "amount_quote": "12–24 hours"
+          },
+          "full_answer_checked": true,
+          "reason": "The candidate explicitly states 'Time: 12–24 hours' for step 9.2."
+        }
+      }
+    }
+  }
+}

@@ -9,3 +9,10 @@
 # Preserve their bytes on Windows rather than converting LF to CRLF.
 /experiments/evidence_materials/vendor/** -text whitespace=cr-at-eol
 /experiments/historical_diagnostics/** -text whitespace=cr-at-eol
+
+# Preserve frozen evaluator source and scoring evidence byte hashes on Windows.
+/deliverables/cleareval_repair_20261025_232451/** -text whitespace=cr-at-eol
+/deliverables/cleareval_repair_20261025_232451/**/*.log -text whitespace=cr-at-eol,-blank-at-eol
+/research/evaluator-research-cycle-20261018/** -text whitespace=cr-at-eol
+/tests/test_uniform_normal_repairs.py -text whitespace=cr-at-eol
+/docs/superpowers/plans/2026-10-26-cleareval-evidence-repair.md -text whitespace=cr-at-eol

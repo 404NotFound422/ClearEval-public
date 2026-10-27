@@ -1,0 +1,317 @@
+{
+  "status": "PASS",
+  "scope": "EXPAND_148_TWO_REFERENCE_BRANCH_EA_AND_AGGREGATE_EVIDENCE",
+  "branches": [
+    {
+      "branch": "CUBIC_2018_PROTOCOL_I_MOUSE_L_R_RA",
+      "result_sha256": "c284221b762483c892fabc14205ef3e920b38c2c4a28ff95a80236a305679f78",
+      "canonical_five_input_sha256": "144e5a5a30dd4c305582061c07f0d7f7e09ddd7188b5efc22b23157296abd605",
+      "input_field_sha256": {
+        "source": "dfa17bd76df4e1327c5bab47aa1acdaab7cbb346ed2046bd85afc2bbeb59139d",
+        "protocol": "d032b0c0d102620b5043b90f90e2a939d958dc9839b76bc857d6f4d8426aca0c",
+        "source_time_facts": "760f0beedf833c9a78dabb60d59e4cc57d021f23259addc83dbf1be77684a1bd",
+        "variable_source_operations": "4b369eae6420982aef08bc744303653e000998636b4b8ad1867bd8a4cf0514cf",
+        "family_id": "25064c5a9fd620b10b4ce5b872b321576f798b1ece58ea22059b889ff411e3f6"
+      },
+      "pure_result_sha256_before_receipt": "04375340c202aec747c705664daf59db8d7303551be0a16b679c47fa8e80c071",
+      "actual_final_callable_and_runtime_reproduced": true,
+      "ea_metrics_unchanged": true,
+      "carrier_additions": {
+        "fields": [
+          "phase_operation_carrier_audit",
+          "phase_operation_carrier_audit_sha256",
+          "phase_operation_carrier_private_projection",
+          "phase_world_operation_carrier_receipt"
+        ],
+        "projection_causal_change": false,
+        "schema_bound_private_world_projector_used": false,
+        "source_values_unchanged": true,
+        "proof_sha256": "15207a05ed7d8ad634d05a995aacd819de63ee4cf5bb4be08cf47c704040b217"
+      },
+      "diagnostic_differences": [
+        {
+          "path": "/private_ea_execution_receipt/input_normalization/original_repeated_container_references",
+          "before": 75,
+          "after": 0,
+          "code_origin": "pure_ea_cache_v1/cache.py:29-46: repeated Python containers before JSON-tree conversion; the canonical five inputs, not this alias count, determine the cache key"
+        },
+        {
+          "path": "/private_ea_execution_receipt/ordinary_cache_admission_proof/catalog_lookups/0/internal_prior_issued_plan_entries",
+          "before": 3,
+          "after": 0,
+          "code_origin": "pure_ea_cache_v1/cache.py:203-204: len(shared_phase_worlds_v3._ISSUED) at lookup; a process-history diagnostic, not one of the five score inputs"
+        },
+        {
+          "path": "/private_ea_execution_receipt/ordinary_cache_admission_proof/catalog_lookups/1/internal_prior_issued_plan_entries",
+          "before": 3,
+          "after": 0,
+          "code_origin": "pure_ea_cache_v1/cache.py:203-204: len(shared_phase_worlds_v3._ISSUED) at lookup; a process-history diagnostic, not one of the five score inputs"
+        },
+        {
+          "path": "/ordinary_ea_reuse_receipt/catalog_lookups/0/internal_prior_issued_plan_entries",
+          "before": 3,
+          "after": 0,
+          "code_origin": "pure_ea_cache_v1/cache.py:203-204: len(shared_phase_worlds_v3._ISSUED) at lookup; a process-history diagnostic, not one of the five score inputs"
+        },
+        {
+          "path": "/ordinary_ea_reuse_receipt/catalog_lookups/1/internal_prior_issued_plan_entries",
+          "before": 3,
+          "after": 0,
+          "code_origin": "pure_ea_cache_v1/cache.py:203-204: len(shared_phase_worlds_v3._ISSUED) at lookup; a process-history diagnostic, not one of the five score inputs"
+        }
+      ],
+      "all_other_ea_receipt_fields_exact": true,
+      "supplementary_version_label_changes_only": {
+        "ea_p": {
+          "before": "canonical-final-ea-ordinary-only-exact-reuse-v2",
+          "after": "normal-shared-metadata-view-treatment-time-scope-entry-v1"
+        },
+        "ea_r": {
+          "before": "canonical-final-ea-ordinary-only-exact-reuse-v2",
+          "after": "normal-shared-metadata-view-treatment-time-scope-entry-v1"
+        },
+        "ea_f1": {
+          "before": "canonical-final-ea-ordinary-only-exact-reuse-v2",
+          "after": "normal-shared-metadata-view-treatment-time-scope-entry-v1"
+        }
+      },
+      "c_param": {
+        "status": "VALID",
+        "value": 2,
+        "bounds": [
+          2,
+          2
+        ],
+        "reason": "ORIGINAL_GRADE_INVARIANT_ACROSS_ALL_SOURCE_WORLDS"
+      },
+      "world_grade_envelopes": [
+        {
+          "world_id": "cubic-original-route-world:1cabcd1bb02ac5ed894d065d",
+          "denominator": 34,
+          "present": 21,
+          "unresolved": 3,
+          "grade_bounds": [
+            2,
+            2
+          ],
+          "point_invariant_over_outer_set": true,
+          "unknown_items_filled": false,
+          "bounds_endpoints_jointly_source_certified": false
+        },
+        {
+          "world_id": "cubic-original-route-world:3f268a5c367173ba649669dc",
+          "denominator": 33,
+          "present": 21,
+          "unresolved": 3,
+          "grade_bounds": [
+            2,
+            2
+          ],
+          "point_invariant_over_outer_set": true,
+          "unknown_items_filled": false,
+          "bounds_endpoints_jointly_source_certified": false
+        },
+        {
+          "world_id": "cubic-original-route-world:427a121d6c17b55c57a8f38d",
+          "denominator": 33,
+          "present": 21,
+          "unresolved": 3,
+          "grade_bounds": [
+            2,
+            2
+          ],
+          "point_invariant_over_outer_set": true,
+          "unknown_items_filled": false,
+          "bounds_endpoints_jointly_source_certified": false
+        },
+        {
+          "world_id": "cubic-original-route-world:5842ea8926d9a0ada849c224",
+          "denominator": 32,
+          "present": 21,
+          "unresolved": 3,
+          "grade_bounds": [
+            2,
+            2
+          ],
+          "point_invariant_over_outer_set": true,
+          "unknown_items_filled": false,
+          "bounds_endpoints_jointly_source_certified": false
+        }
+      ],
+      "Com_IA_original_formula_replay_exact": true,
+      "other_12_leaf_and_Co_Eff_exact": true
+    },
+    {
+      "branch": "CUBIC_2019_IMMERSION_L_R_PLUS",
+      "result_sha256": "4259a20845f445ac462c3677f9213eee01f5411d77ee0953a3a705a4b1eb535d",
+      "canonical_five_input_sha256": "54304a92df4c2409ecaeda716c00d2f605f076d493a5e39b095be7e0e964fd1a",
+      "input_field_sha256": {
+        "source": "09d297146ddb2e65b979aa3e6ad3dffff847ff5b1dd2e891c90b836b23eda85a",
+        "protocol": "d032b0c0d102620b5043b90f90e2a939d958dc9839b76bc857d6f4d8426aca0c",
+        "source_time_facts": "bf9ec2909426dfee6ee6e6586a3d1364aefbbf084405ecf1923d1f63569e9835",
+        "variable_source_operations": "e7b3a49ae06fde4f11a807430fbd6eeec8af20c15d929840cf8d787f1144f1f9",
+        "family_id": "5171a53e9334ef3003ac11a080da0da225c7f0087008abd96eab4ac3674bba79"
+      },
+      "pure_result_sha256_before_receipt": "ba361e17a2797e522f26f73255013d591f901cc25e51e468fa0a66638481abeb",
+      "actual_final_callable_and_runtime_reproduced": true,
+      "ea_metrics_unchanged": true,
+      "carrier_additions": {
+        "fields": [
+          "phase_operation_carrier_audit",
+          "phase_operation_carrier_audit_sha256",
+          "phase_operation_carrier_private_projection",
+          "phase_world_operation_carrier_receipt"
+        ],
+        "projection_causal_change": false,
+        "schema_bound_private_world_projector_used": false,
+        "source_values_unchanged": true,
+        "proof_sha256": "104b8daa64839f8d4c6d8f01943f9ed169eebc423f199748455b0b57d59f8ef0"
+      },
+      "diagnostic_differences": [
+        {
+          "path": "/private_ea_execution_receipt/input_normalization/original_repeated_container_references",
+          "before": 76,
+          "after": 0,
+          "code_origin": "pure_ea_cache_v1/cache.py:29-46: repeated Python containers before JSON-tree conversion; the canonical five inputs, not this alias count, determine the cache key"
+        },
+        {
+          "path": "/private_ea_execution_receipt/ordinary_cache_admission_proof/catalog_lookups/0/internal_prior_issued_plan_entries",
+          "before": 2,
+          "after": 0,
+          "code_origin": "pure_ea_cache_v1/cache.py:203-204: len(shared_phase_worlds_v3._ISSUED) at lookup; a process-history diagnostic, not one of the five score inputs"
+        },
+        {
+          "path": "/ordinary_ea_reuse_receipt/catalog_lookups/0/internal_prior_issued_plan_entries",
+          "before": 2,
+          "after": 0,
+          "code_origin": "pure_ea_cache_v1/cache.py:203-204: len(shared_phase_worlds_v3._ISSUED) at lookup; a process-history diagnostic, not one of the five score inputs"
+        }
+      ],
+      "all_other_ea_receipt_fields_exact": true,
+      "supplementary_version_label_changes_only": {
+        "ea_p": {
+          "before": "canonical-final-ea-ordinary-only-exact-reuse-v2",
+          "after": "normal-shared-metadata-view-treatment-time-scope-entry-v1"
+        },
+        "ea_r": {
+          "before": "canonical-final-ea-ordinary-only-exact-reuse-v2",
+          "after": "normal-shared-metadata-view-treatment-time-scope-entry-v1"
+        },
+        "ea_f1": {
+          "before": "canonical-final-ea-ordinary-only-exact-reuse-v2",
+          "after": "normal-shared-metadata-view-treatment-time-scope-entry-v1"
+        }
+      },
+      "c_param": {
+        "status": "VALID",
+        "value": 2,
+        "bounds": [
+          2,
+          2
+        ],
+        "reason": "ORIGINAL_GRADE_INVARIANT_ACROSS_ALL_SOURCE_WORLDS"
+      },
+      "world_grade_envelopes": [
+        {
+          "world_id": "cubic-original-route-world:7a83835926f1fe99da19d9fb",
+          "denominator": 37,
+          "present": 24,
+          "unresolved": 1,
+          "grade_bounds": [
+            2,
+            2
+          ],
+          "point_invariant_over_outer_set": true,
+          "unknown_items_filled": false,
+          "bounds_endpoints_jointly_source_certified": false
+        },
+        {
+          "world_id": "cubic-original-route-world:93ee11516a72711309fc23e5",
+          "denominator": 36,
+          "present": 24,
+          "unresolved": 1,
+          "grade_bounds": [
+            2,
+            2
+          ],
+          "point_invariant_over_outer_set": true,
+          "unknown_items_filled": false,
+          "bounds_endpoints_jointly_source_certified": false
+        },
+        {
+          "world_id": "cubic-original-route-world:44b4432ade2031d6069ba812",
+          "denominator": 36,
+          "present": 24,
+          "unresolved": 1,
+          "grade_bounds": [
+            2,
+            2
+          ],
+          "point_invariant_over_outer_set": true,
+          "unknown_items_filled": false,
+          "bounds_endpoints_jointly_source_certified": false
+        },
+        {
+          "world_id": "cubic-original-route-world:acc5b8c6a09ebe5d462c9638",
+          "denominator": 36,
+          "present": 24,
+          "unresolved": 1,
+          "grade_bounds": [
+            2,
+            2
+          ],
+          "point_invariant_over_outer_set": true,
+          "unknown_items_filled": false,
+          "bounds_endpoints_jointly_source_certified": false
+        },
+        {
+          "world_id": "cubic-original-route-world:b53165e5cdbfe429737a8252",
+          "denominator": 35,
+          "present": 24,
+          "unresolved": 1,
+          "grade_bounds": [
+            2,
+            2
+          ],
+          "point_invariant_over_outer_set": true,
+          "unknown_items_filled": false,
+          "bounds_endpoints_jointly_source_certified": false
+        },
+        {
+          "world_id": "cubic-original-route-world:fd6a0fcb5960ab9461182c38",
+          "denominator": 35,
+          "present": 24,
+          "unresolved": 1,
+          "grade_bounds": [
+            2,
+            2
+          ],
+          "point_invariant_over_outer_set": true,
+          "unknown_items_filled": false,
+          "bounds_endpoints_jointly_source_certified": false
+        }
+      ],
+      "Com_IA_original_formula_replay_exact": true,
+      "other_12_leaf_and_Co_Eff_exact": true
+    }
+  ],
+  "new_scoring_model_calls": 0,
+  "new_encoder_calls": 0,
+  "ea_identity_only_removes_finite_nonnegative_elapsed_seconds": true,
+  "raw_pure_result_hash_includes_the_saved_original_elapsed_value": true,
+  "diagnostic_fields_are_not_arbitrarily_removed_from_original_artifacts": true,
+  "original_result_and_receipt_hashes_reverified": true,
+  "parameter_grade_is_bucket_invariant_not_all_leaves_resolved": true,
+  "outer_intervals_do_not_claim_joint_endpoint_attainability": true,
+  "expert_accuracy_evaluated": false,
+  "full_regression_acceptance": "SEPARATE_PENDING_GATE_AT_GENERATION",
+  "code_pins": {
+    "C:\\ClearEval\\ClearEval-runtime-4b42b5a\\research\\evaluator-research-cycle-20261018\\execution_alignment_resolution_20261024_v1\\runtime\\pure_ea_cache_v1\\cache.py": "15e5806be8439943614dc680a77c2e7a7e55c9d028209d6d11c94fe891b1bb11",
+    "C:\\ClearEval\\ClearEval-runtime-4b42b5a\\research\\evaluator-research-cycle-20261018\\execution_alignment_resolution_20261024_v1\\runtime\\normal_revision_equivalence_v1.py": "29db61c9a5310a2dbbf460e06be95f1bc1e5c76e236ee0fc660ccfcf2cdd1267",
+    "C:\\ClearEval\\ClearEval-runtime-4b42b5a\\research\\evaluator-research-cycle-20261018\\execution_alignment_resolution_20261024_v1\\runtime\\aggregate_score_bounds_v3.py": "ab1880b465fd33d042caae9fafd4769bf7e8e87a491e991fc0ea5ef6d8da5c5e",
+    "C:\\ClearEval\\ClearEval-runtime-4b42b5a\\research\\evaluator-research-cycle-20261018\\execution_alignment_resolution_20261024_v1\\runtime\\component_entry_v40.py": "7a88d489f47da0b8b87e71918cef84fe91375ae99ed3ae2593962b1ca163c20c",
+    "C:\\ClearEval\\ClearEval-runtime-4b42b5a\\research\\evaluator-refactor-20261018\\scoring_core.py": "87388e2cc174f469e6ce141a1f5bc561c932a475910dc1bb44829a08514fb2d7",
+    "C:\\ClearEval\\ClearEval-runtime-4b42b5a\\tests\\test_uniform_normal_repairs.py": "5d96a6b6d14a83db60e310c96132f5f694a9f68994a32335ba5cdccae457708a",
+    "C:\\ClearEval\\deliverables\\cleareval_repair_20261025_232451\\final_candidate_v1\\validation\\validate148.py": "5c77fd4237239ce6f57107c50dcec58b338fffca89d9953bcdc2122c35394bfa"
+  }
+}
