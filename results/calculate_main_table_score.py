@@ -1,5 +1,6 @@
 import argparse
 import json
+from pathlib import Path
 
 """
 本脚本用于根据聚合后的数据计算 ClearEval 总结表格中的各项指标。
@@ -145,6 +146,17 @@ def main(oeq_file='results/oeq_stats_scoring_v2.jsonl'):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Calculate main table scores.")
-    parser.add_argument("--oeq-file", default="results/oeq_stats_scoring_v2.jsonl", help="Path to OEQ stats JSONL")
+    parser.add_argument("--oeq-file", help="Use historical OEQ stats JSONL explicitly")
+    parser.add_argument("--legacy",action="store_true",help="Print the historical MCQ/OEQ combined table")
     args = parser.parse_args()
-    main(oeq_file=args.oeq_file)
+    if args.legacy or args.oeq_file:
+        main(oeq_file=args.oeq_file or 'results/oeq_stats_scoring_v2.jsonl')
+    else:
+        root=Path(__file__).resolve().parents[1]
+        release=json.loads((root/'CURRENT_SCORING.json').read_text('utf8'))
+        rows=json.loads((root/release['results']/'main_table.json').read_text('utf8'))
+        print(release['release_id']+' | application benchmark | 185 answers')
+        print('Configuration | N | Com | Co | Eff | IA | provisional | incomplete')
+        for r in rows:
+            values=' | '.join(f"{100*r[k]:.2f}" for k in ['Com','Co','Eff','IA'])
+            print(f"{r['generation_configuration']} | {r['sample_count']} | {values} | {r['provisional_answers']} | {r['incomplete_answers']}")

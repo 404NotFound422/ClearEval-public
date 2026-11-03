@@ -1,0 +1,180 @@
+[
+  {
+    "review_id": "R-d3240267b8ef",
+    "id": "EXPAND_139",
+    "field": "concentration:edta",
+    "candidate_ids": [
+      "1.1"
+    ],
+    "reference_links": [
+      {
+        "branch": "selected",
+        "reference": "R1"
+      }
+    ],
+    "owner": "1.1",
+    "group_id": "edta",
+    "state": "PASS",
+    "notes": "",
+    "reviewed_candidate_text": "0.5 M EDTA（pH 8.0，PBS 配制，可加 0.02% NaN3）浸泡，轻摇，溶液每日更换。(Temperature: 4 ℃, Time: 24–48 hours)",
+    "source": "source-record/ClearEval_剩余裁决.csv",
+    "source_sha256": "63a806b386c80af822b874f6f5f8db7ae6e319515bc3ed432c74a9efb6f53a0f"
+  },
+  {
+    "review_id": "R-a088bd734cbe",
+    "id": "EXPAND_156",
+    "field": "declared_recipe:cubic_rplus",
+    "candidate_ids": [
+      "4.1",
+      "4.2"
+    ],
+    "reference_links": [
+      {
+        "branch": "selected",
+        "reference": "R3"
+      },
+      {
+        "branch": "selected",
+        "reference": "R4"
+      }
+    ],
+    "owner": "配方 cubic_rplus",
+    "group_id": "stock_omission",
+    "state": "FAIL",
+    "notes": "括号是实际配方，说明其缺少内容。除此之外，expand_174这个标记的过程也有些错误，其未进行一抗/二抗清洗",
+    "reviewed_candidate_text": "4.1 Incubation with 50% (vol/vol) CUBIC-R+ (45 wt% antipyrine and 30 wt% nicotinamide, diluted with dH2O). (Temperature: RT, Time: 6 hours)\n",
+    "source": "source-record/ClearEval_剩余裁决.csv",
+    "source_sha256": "63a806b386c80af822b874f6f5f8db7ae6e319515bc3ed432c74a9efb6f53a0f"
+  },
+  {
+    "review_id": "R-aabaaf64a6cc",
+    "id": "EXPAND_174",
+    "field": "declared_recipe:bb_peg",
+    "candidate_ids": [
+      "1.7"
+    ],
+    "reference_links": [
+      {
+        "branch": "selected",
+        "reference": "R9"
+      }
+    ],
+    "owner": "配方 bb_peg",
+    "group_id": "stock_omission",
+    "state": "FAIL",
+    "notes": "括号是实际配方，说明其缺少内容。除此之外，expand_174这个标记的过程也有些错误，其未进行一抗/二抗清洗",
+    "reviewed_candidate_text": "1.7 Incubation with BB-PEG (75% vol/vol Benzyl Benzoate and 25% vol/vol PEG-methacrylate) for refractive index matching. (Temperature: 37 ℃, Time: 24 hours)",
+    "source": "source-record/ClearEval_剩余裁决.csv",
+    "source_sha256": "63a806b386c80af822b874f6f5f8db7ae6e319515bc3ed432c74a9efb6f53a0f"
+  },
+  {
+    "review_id": "R-172e76cb8518",
+    "id": "EXPAND_138",
+    "field": "declared_recipe:bb_peg",
+    "candidate_ids": [
+      "4.1"
+    ],
+    "reference_links": [
+      {
+        "branch": "selected",
+        "reference": "R9"
+      }
+    ],
+    "owner": "配方 bb_peg",
+    "group_id": "bb_units",
+    "state": "FAIL",
+    "notes": "以方法部分的单位化配方为准，或者protocol.io的为准",
+    "reviewed_candidate_text": "4.1 Incubation with BB-PEG clearing medium (75% Benzyl Benzoate, 22% PEG-MMA, 3% Quadrol, RI ≈ 1.54).(Temperature: 37 ℃, Time: 24 hours)\n",
+    "source": "source-record/ClearEval_剩余裁决.csv",
+    "source_sha256": "63a806b386c80af822b874f6f5f8db7ae6e319515bc3ed432c74a9efb6f53a0f"
+  },
+  {
+    "review_id": "R-6ddafd07748f",
+    "id": "EXPAND_160",
+    "field": "concentration:edta",
+    "candidate_ids": [
+      "1.1"
+    ],
+    "reference_links": [
+      {
+        "branch": "selected",
+        "reference": "R1"
+      }
+    ],
+    "owner": "1.1",
+    "group_id": "edta",
+    "state": "PASS",
+    "notes": "",
+    "reviewed_candidate_text": "以 0.5 M EDTA（pH 8.0，PBS 配制）完全浸没骨组织，轻摇更换新液。(Temperature: 4 ℃, Time: 股骨/胫骨 7–14 days；颅骨 3–7 days)",
+    "source": "source-record/ClearEval_剩余裁决.csv",
+    "source_sha256": "63a806b386c80af822b874f6f5f8db7ae6e319515bc3ed432c74a9efb6f53a0f"
+  },
+  {
+    "review_id": "R-47c2afa62947",
+    "id": "EXPAND_153",
+    "field": "declared_recipe:seedb2s",
+    "candidate_ids": [
+      "2.3",
+      "2.4"
+    ],
+    "reference_links": [
+      {
+        "branch": "selected",
+        "reference": "R4"
+      },
+      {
+        "branch": "selected",
+        "reference": "R5"
+      }
+    ],
+    "owner": "配方 seedb2s",
+    "group_id": "seedb_units",
+    "state": "FAIL",
+    "notes": "与原配方不一致",
+    "reviewed_candidate_text": "2.1 Incubation with 33% (vol/vol) SeeDB2S solution (prepared as 1 part SeeDB2S stock [80% wt/vol Iohexol] to 2 parts PBS). (Temperature: RT, Time: 12 hours)\n2.3 Incubation with 100% SeeDB2S stock solution (80% wt/vol Iohexol, RI ≈ 1.46) with gentle agitation. (Temperature: RT, Time: 24 hours)",
+    "source": "source-record/ClearEval_剩余裁决.csv",
+    "source_sha256": "63a806b386c80af822b874f6f5f8db7ae6e319515bc3ed432c74a9efb6f53a0f"
+  },
+  {
+    "review_id": "R-34c7b289006e",
+    "id": "EXPAND_109",
+    "field": "concentration:edta",
+    "candidate_ids": [
+      "1.1"
+    ],
+    "reference_links": [
+      {
+        "branch": "selected",
+        "reference": "R1"
+      }
+    ],
+    "owner": "1.1",
+    "group_id": "edta",
+    "state": "PASS",
+    "notes": "",
+    "reviewed_candidate_text": "0.5 M EDTA（pH 7.4，PBS 配制），4 ℃轻摇脱钙，溶液避光。(Temperature: 4 ℃, Time: 7–14 days；每 24 h 换液)",
+    "source": "source-record/ClearEval_剩余裁决.csv",
+    "source_sha256": "63a806b386c80af822b874f6f5f8db7ae6e319515bc3ed432c74a9efb6f53a0f"
+  },
+  {
+    "review_id": "R-e7afef4ae870",
+    "id": "EXPAND_159",
+    "field": "declared_recipe:bb_peg",
+    "candidate_ids": [
+      "5.1"
+    ],
+    "reference_links": [
+      {
+        "branch": "selected",
+        "reference": "R9"
+      }
+    ],
+    "owner": "配方 bb_peg",
+    "group_id": "stock_omission",
+    "state": "FAIL",
+    "notes": "括号是实际配方，说明其缺少内容。除此之外，expand_174这个标记的过程也有些错误，其未进行一抗/二抗清洗",
+    "reviewed_candidate_text": "5.1 Incubation with BB-PEG clearing medium (75% vol/vol Benzyl Benzoate and 25% vol/vol PEG-MMA 500). (Temperature: 37 ℃, Time: 24 hours)\n",
+    "source": "source-record/ClearEval_剩余裁决.csv",
+    "source_sha256": "63a806b386c80af822b874f6f5f8db7ae6e319515bc3ed432c74a9efb6f53a0f"
+  }
+]

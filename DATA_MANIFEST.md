@@ -1,5 +1,21 @@
 # ClearEval — Data & Figure/Table Manifest
 
+## Current full-scoring benchmark
+
+The current application-scoring release is `cleareval-benchmark-20261103-v1`.
+`CURRENT_SCORING.json` selects `dataset/benchmark185/2026-11-03/` and
+`results/benchmark185/2026-11-03/`. `OEQ_run_grading_new.py` recomputes the
+operation checks and complete scores; `results/calculate_main_table_score.py`
+reads its current main table by default. The versioned results include all 185
+answers, 193 reference branches, per-component intervals and source hashes.
+
+The paper mappings below describe the historical experiments. Their combined
+MCQ/OEQ table remains available with
+`python results/calculate_main_table_score.py --legacy`; it is not silently
+combined with the newer 185-answer development snapshot.
+
+## Historical paper manifest
+
 This document maps **every figure and table in the paper** (`article/BIBM/main.tex`)
 to the exact data files and the script that produces it, so reviewers can trace and
 reproduce each result. Anything not listed here is exploratory/superseded and lives

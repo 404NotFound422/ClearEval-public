@@ -19,9 +19,43 @@ credentials, local environments, or superseded dataset-construction files.
   tissue-clearing protocol. Protocols are evaluated with the CCE framework:
   Completeness, Correctness, and Effectiveness.
 
-Completeness and Correctness use a fixed LLM-judge rubric. Effectiveness is
+Historical CCE runs use a fixed LLM-judge rubric for Completeness and Correctness. Effectiveness is
 computed from deterministic checks of method suitability, label compatibility,
 refractive-index matching, and timing plausibility.
+
+The current 185-answer scoring release additionally verifies operation identity,
+order, critical reagents, concentrations, and declared formulations before
+composing CCE scores. Its reviewed decisions, provisional intervals, and original
+answers are included in the repository.
+
+## Current scoring release
+
+**`cleareval-benchmark-20261103-v1`** is the current full-score release for the
+frozen 185-answer application benchmark (193 reference branches).
+[Version pointer](CURRENT_SCORING.json) ·
+[Scoring explanation](results/benchmark185/2026-11-03/评分说明.md) ·
+[All 185 scores](results/benchmark185/2026-11-03/185例完整评分.csv) ·
+[Downloadable review page](results/benchmark185/2026-11-03/完整评分审核.html).
+
+```bash
+# Python 3.11+; no API credentials or model downloads are needed
+python -m pip install -r requirements-scoring.txt
+python OEQ_run_grading_new.py
+python results/calculate_main_table_score.py
+```
+
+The main entry recomputes the packaged V5 operation checks and then writes the
+complete CCE scores. Use `--cached-checks` for a fast replay of the frozen checks,
+or `--output PATH` for a separate run directory. Original component maxima and
+CCE aggregation weights are preserved. All 185 answers remain in the denominator;
+131 have determined component values, 51 retain provisional components, and 3
+unfinished outputs receive zero completion scores. Provisional values remain
+marked with intervals and reasons. The main table reports the 19 generation
+configurations separately with their sample counts and question IDs.
+
+Release validation: 81 scoring tests pass. A fresh run from the exported release
+files reproduces all nine result files byte for byte, including all 185 scores;
+the original answers remain unchanged.
 
 The aggregate indices are:
 
@@ -151,7 +185,8 @@ aggregation scripts against the included model outputs.
 
 Run commands from the repository root:
 
-The default assessment mode is `benchmark`: it writes checked numerical
+For the historical provider-backed workflow, add `--legacy-generation`.
+Its default assessment mode is `benchmark`: it writes checked numerical
 estimates and keeps scientific validation `UNRESOLVED`. Valid explicit unknowns
 remain completed `BENCHMARK_UNRESOLVED` records in the coverage denominator;
 they are not replaced with zero. The current-question demand projection is
@@ -164,10 +199,10 @@ Keep a new score directory when changing the assessment contract. See the
 
 ```bash
 # Generate protocols for the revised questions without grading
-python OEQ_run_grading_new.py --no-evaluation
+python OEQ_run_grading_new.py --legacy-generation --no-evaluation
 
 # Grade included generations against their original question snapshot
-python OEQ_run_grading_new.py --eval-only --question-file dataset/Q+AR/revisions/2026-09-13-stem-fixes/before/question_final.json --response-dir dataset/Q+AR/model_response --score-dir dataset/Q+AR/result_scoring_v2
+python OEQ_run_grading_new.py --legacy-generation --eval-only --question-file dataset/Q+AR/revisions/2026-09-13-stem-fixes/before/question_final.json --response-dir dataset/Q+AR/model_response --score-dir dataset/Q+AR/result_scoring_v2
 ```
 
 Useful options include `--models`, `--teacher`, `--eval-concurrency`,
@@ -233,8 +268,8 @@ accuracy estimates.
 ## Validation status
 
 The repeat-grading pilot and its collection safeguards are documented in
-[docs/judge_blind_pilot.md](docs/judge_blind_pilot.md). The current scoring contract
-is `cleareval-fixed-demand-v5-integrity`, which also records a source-backed
+[docs/judge_blind_pilot.md](docs/judge_blind_pilot.md). The historical provider-backed
+scoring contract is `cleareval-fixed-demand-v5-integrity`, which also records a source-backed
 MECA-79/PNAd target-recognition rule. Scoring versions and archived outputs remain
 separate; repeatability does not establish scientific validity.
 

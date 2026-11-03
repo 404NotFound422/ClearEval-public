@@ -19,11 +19,11 @@ stack:
 # =============================================================================
 
 commands:
-  # Testing — this project has no pytest suite; use syntax + smoke checks
-  test: "python -m py_compile $(find . -maxdepth 2 -name '*.py' -not -path './Auto-claude-code-research-in-sleep/*')"
-  test_unit: "echo 'No unit test suite configured'"
-  test_integration: "echo 'No integration test suite configured'"
-  test_all: "python -m py_compile $(find . -maxdepth 2 -name '*.py' -not -path './Auto-claude-code-research-in-sleep/*')"
+  # Current full-score benchmark regression and portable-release checks.
+  test: "python -m unittest discover -s tests -p test_complete_scoring.py"
+  test_unit: "python -m unittest discover -s tests -p test_complete_scoring.py"
+  test_integration: "python -m unittest discover -s tests -p test_scoring_release.py"
+  test_all: "python -m unittest discover -s tests -p test_*scoring*.py"
   test_watch: "echo 'No watch mode configured'"
 
   # Building
@@ -44,7 +44,7 @@ commands:
   security_scan: "echo 'No security scanner configured'"
 
   # Regression
-  regression_test: "echo 'No regression test suite configured'"
+  regression_test: "python -m unittest discover -s tests -p test_complete_scoring.py"
 
   # Version Control
   vcs_diff: "git diff HEAD~1"

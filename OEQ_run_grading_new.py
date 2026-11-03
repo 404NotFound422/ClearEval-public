@@ -62,6 +62,17 @@
 
 
 
+import sys as _entry_sys
+
+# The released benchmark is the default main scoring workflow. The historical
+# provider-backed generation workflow remains explicitly selectable.
+if __name__ == "__main__":
+    if "--legacy-generation" not in _entry_sys.argv:
+        from cleareval_complete_scoring import main as _complete_scoring_main
+        _complete_args = [a for a in _entry_sys.argv[1:] if a != "--complete-scoring"]
+        raise SystemExit(_complete_scoring_main(_complete_args))
+    _entry_sys.argv.remove("--legacy-generation")
+
 import json
 
 import os

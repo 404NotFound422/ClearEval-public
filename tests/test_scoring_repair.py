@@ -297,7 +297,9 @@ class RunnerTests(unittest.IsolatedAsyncioTestCase):
             ]}), encoding="utf-8")
             responses, scores = Path(tmp) / "responses", Path(tmp) / "scores"
             with patch.dict("sys.modules", {"ollama": SimpleNamespace(Client=SDKClient)}), patch.object(
-                    runner, "OEQ_OUTPUT_DIR", str(responses)), patch.object(runner, "OEQ_SCORE_DIR", str(scores)):
+                    runner, "OEQ_OUTPUT_DIR", str(responses)), patch.object(runner, "OEQ_SCORE_DIR", str(scores)), \
+                    patch("oeq_preflight.run_preflight", return_value={"technical_ready": True}):
+                # Provider orchestration fixture; source-file preflight is tested separately.
                 code = await runner.main([
                     "--assessment-mode", "legacy", "--model-config", str(config), "--models", "offline-local", "--teacher", "offline-teacher",
                     "--question-file", OLD_QUESTIONS, "--demand-vectors", DEMANDS, "--qids", "5",
@@ -556,7 +558,8 @@ class RunnerTests(unittest.IsolatedAsyncioTestCase):
             config.write_text(json.dumps({"models": [{"name": "offline-empty", "type": "Ollama", "model_name": "offline-empty"}]}), encoding="utf-8")
             responses = Path(tmp) / "responses"
             with patch.object(ModelLoader, "load_models", return_value={"offline-empty": model}), \
-                    patch.object(runner, "OEQ_OUTPUT_DIR", str(responses)):
+                    patch.object(runner, "OEQ_OUTPUT_DIR", str(responses)), \
+                    patch("oeq_preflight.run_preflight", return_value={"technical_ready": True}):
                 code = await runner.main([
                     "--no-evaluation", "--model-config", str(config), "--models", "offline-empty",
                     "--question-file", OLD_QUESTIONS, "--demand-vectors", DEMANDS, "--qids", "5",

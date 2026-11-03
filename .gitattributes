@@ -9,3 +9,16 @@
 # Preserve their bytes on Windows rather than converting LF to CRLF.
 /experiments/evidence_materials/vendor/** -text whitespace=cr-at-eol
 /experiments/historical_diagnostics/** -text whitespace=cr-at-eol
+
+# Portable 2026-11-03 scoring release: preserve manifest-bound source/data bytes.
+/cleareval_scoring/** -text whitespace=cr-at-eol
+/cleareval_complete_scoring.py -text whitespace=cr-at-eol
+/complete_scoring_policy.json -text whitespace=cr-at-eol
+/OEQ_run_grading_new.py -text whitespace=cr-at-eol
+/results/oeq_metrics.py -text whitespace=cr-at-eol
+/results/calculate_main_table_score.py -text whitespace=cr-at-eol
+/CURRENT_SCORING.json -text whitespace=cr-at-eol
+/requirements-scoring.txt -text whitespace=cr-at-eol
+/KnowledgeBase/time_kb.json -text whitespace=cr-at-eol
+/dataset/benchmark185/** -text whitespace=cr-at-eol
+/results/benchmark185/** -text whitespace=cr-at-eol
