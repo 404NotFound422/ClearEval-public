@@ -1,0 +1,491 @@
+[
+  {
+    "generation_configuration": "from_gemini-3-flash_1-shot",
+    "sample_count": 35,
+    "question_ids": [
+      16,
+      27,
+      30,
+      35,
+      37,
+      56,
+      66,
+      82,
+      93,
+      105,
+      120,
+      123,
+      126,
+      131,
+      136,
+      141,
+      145,
+      154,
+      161,
+      165,
+      174,
+      179,
+      184,
+      186,
+      199,
+      208,
+      210,
+      223,
+      230,
+      238,
+      243,
+      244,
+      252,
+      255,
+      256
+    ],
+    "Com": 0.7257200577200577,
+    "Co": 0.888095238095238,
+    "Eff": 0.6755966896389959,
+    "IA": 0.5636904257837244,
+    "IA_bounds": [
+      0.5628784926875194,
+      0.5645023588799295
+    ],
+    "provisional_answers": 6,
+    "incomplete_answers": 0
+  },
+  {
+    "generation_configuration": "from_gemini-3-pro_1-shot",
+    "sample_count": 5,
+    "question_ids": [
+      66,
+      93,
+      105,
+      131,
+      186
+    ],
+    "Com": 0.9199999999999999,
+    "Co": 0.975,
+    "Eff": 0.7071858132573319,
+    "IA": 0.7055861465906652,
+    "IA_bounds": [
+      0.7055861465906652,
+      0.7055861465906652
+    ],
+    "provisional_answers": 0,
+    "incomplete_answers": 0
+  },
+  {
+    "generation_configuration": "from_glm4.7-thinking_1-shot",
+    "sample_count": 5,
+    "question_ids": [
+      66,
+      93,
+      105,
+      131,
+      186
+    ],
+    "Com": 0.19,
+    "Co": 0.25,
+    "Eff": 0.2763005936956627,
+    "IA": 0.18,
+    "IA_bounds": [
+      0.18,
+      0.18
+    ],
+    "provisional_answers": 1,
+    "incomplete_answers": 3
+  },
+  {
+    "generation_configuration": "from_glm4.7-unthinking_1-shot",
+    "sample_count": 5,
+    "question_ids": [
+      66,
+      93,
+      105,
+      131,
+      186
+    ],
+    "Com": 0.6688888888888889,
+    "Co": 0.8083333333333333,
+    "Eff": 0.6540449555399542,
+    "IA": 0.5681295652479796,
+    "IA_bounds": [
+      0.5634849508456925,
+      0.5727741796502668
+    ],
+    "provisional_answers": 1,
+    "incomplete_answers": 0
+  },
+  {
+    "generation_configuration": "from_openai_claude-sonnet-4.6_1-shot",
+    "sample_count": 5,
+    "question_ids": [
+      66,
+      93,
+      105,
+      131,
+      186
+    ],
+    "Com": 0.9099999999999999,
+    "Co": 0.8166666666666667,
+    "Eff": 0.7280032200375823,
+    "IA": 0.6891956826763878,
+    "IA_bounds": [
+      0.6835287709965071,
+      0.7212544504629891
+    ],
+    "provisional_answers": 2,
+    "incomplete_answers": 0
+  },
+  {
+    "generation_configuration": "from_openai_deepseek-chat_1-shot",
+    "sample_count": 5,
+    "question_ids": [
+      66,
+      93,
+      105,
+      131,
+      186
+    ],
+    "Com": 0.3937777777777778,
+    "Co": 0.625,
+    "Eff": 0.6308771415714607,
+    "IA": 0.3937777777777778,
+    "IA_bounds": [
+      0.3937777777777778,
+      0.3937777777777778
+    ],
+    "provisional_answers": 0,
+    "incomplete_answers": 0
+  },
+  {
+    "generation_configuration": "from_openai_deepseek-reasoner_1-shot",
+    "sample_count": 5,
+    "question_ids": [
+      66,
+      93,
+      105,
+      131,
+      186
+    ],
+    "Com": 0.39555555555555555,
+    "Co": 0.75,
+    "Eff": 0.6206868912249448,
+    "IA": 0.3940833923031371,
+    "IA_bounds": [
+      0.3940833923031371,
+      0.3940833923031371
+    ],
+    "provisional_answers": 3,
+    "incomplete_answers": 0
+  },
+  {
+    "generation_configuration": "from_openai_gpt-5.2-fast_1-shot",
+    "sample_count": 5,
+    "question_ids": [
+      66,
+      93,
+      105,
+      131,
+      186
+    ],
+    "Com": 0.82,
+    "Co": 0.925,
+    "Eff": 0.765313151009965,
+    "IA": 0.6733605405711002,
+    "IA_bounds": [
+      0.6733605405711002,
+      0.6733605405711002
+    ],
+    "provisional_answers": 0,
+    "incomplete_answers": 0
+  },
+  {
+    "generation_configuration": "from_openai_gpt-5.2-fast_1-shot+KB-RAG",
+    "sample_count": 5,
+    "question_ids": [
+      66,
+      93,
+      105,
+      131,
+      186
+    ],
+    "Com": 0.7066666666666667,
+    "Co": 0.875,
+    "Eff": 0.7952384954409747,
+    "IA": 0.5723169910028707,
+    "IA_bounds": [
+      0.5723169910028707,
+      0.5723169910028707
+    ],
+    "provisional_answers": 1,
+    "incomplete_answers": 0
+  },
+  {
+    "generation_configuration": "from_openai_gpt-5.2-fast_1-shot+KB-RAG+self-check",
+    "sample_count": 5,
+    "question_ids": [
+      66,
+      93,
+      105,
+      131,
+      186
+    ],
+    "Com": 0.8633333333333333,
+    "Co": 1.0,
+    "Eff": 0.780690949582284,
+    "IA": 0.7559656148270367,
+    "IA_bounds": [
+      0.755900657670174,
+      0.7749852214282776
+    ],
+    "provisional_answers": 1,
+    "incomplete_answers": 0
+  },
+  {
+    "generation_configuration": "from_openai_gpt-5.2-thinking_1-shot",
+    "sample_count": 35,
+    "question_ids": [
+      16,
+      27,
+      30,
+      35,
+      37,
+      56,
+      66,
+      82,
+      93,
+      105,
+      120,
+      123,
+      126,
+      131,
+      136,
+      141,
+      145,
+      154,
+      161,
+      165,
+      174,
+      179,
+      184,
+      186,
+      199,
+      208,
+      210,
+      223,
+      230,
+      238,
+      243,
+      244,
+      252,
+      255,
+      256
+    ],
+    "Com": 0.7408888888888889,
+    "Co": 0.9,
+    "Eff": 0.7203818050390098,
+    "IA": 0.6073120932184535,
+    "IA_bounds": [
+      0.5873114243671179,
+      0.6227424647302056
+    ],
+    "provisional_answers": 15,
+    "incomplete_answers": 0
+  },
+  {
+    "generation_configuration": "from_openai_qwen3-14b_1-shot",
+    "sample_count": 5,
+    "question_ids": [
+      66,
+      93,
+      105,
+      131,
+      186
+    ],
+    "Com": 0.52,
+    "Co": 0.6666666666666667,
+    "Eff": 0.6787547762969977,
+    "IA": 0.4984154362412598,
+    "IA_bounds": [
+      0.4984154362412597,
+      0.4984154362412597
+    ],
+    "provisional_answers": 0,
+    "incomplete_answers": 0
+  },
+  {
+    "generation_configuration": "from_openai_qwen3-14b_1-shot+KB-RAG",
+    "sample_count": 5,
+    "question_ids": [
+      66,
+      93,
+      105,
+      131,
+      186
+    ],
+    "Com": 0.2444444444444444,
+    "Co": 0.75,
+    "Eff": 0.6206191678636188,
+    "IA": 0.2444444444444444,
+    "IA_bounds": [
+      0.24444444444444444,
+      0.24444444444444444
+    ],
+    "provisional_answers": 0,
+    "incomplete_answers": 0
+  },
+  {
+    "generation_configuration": "from_openai_qwen3-14b_1-shot+KB-RAG+self-check",
+    "sample_count": 5,
+    "question_ids": [
+      66,
+      93,
+      105,
+      131,
+      186
+    ],
+    "Com": 0.2444444444444444,
+    "Co": 0.75,
+    "Eff": 0.6975645436449067,
+    "IA": 0.2444444444444444,
+    "IA_bounds": [
+      0.24444444444444444,
+      0.24444444444444444
+    ],
+    "provisional_answers": 0,
+    "incomplete_answers": 0
+  },
+  {
+    "generation_configuration": "from_openai_qwen3-235b_1-shot",
+    "sample_count": 35,
+    "question_ids": [
+      16,
+      27,
+      30,
+      35,
+      37,
+      56,
+      66,
+      82,
+      93,
+      105,
+      120,
+      123,
+      126,
+      131,
+      136,
+      141,
+      145,
+      154,
+      161,
+      165,
+      174,
+      179,
+      184,
+      186,
+      199,
+      208,
+      210,
+      223,
+      230,
+      238,
+      243,
+      244,
+      252,
+      255,
+      256
+    ],
+    "Com": 0.5341269841269841,
+    "Co": 0.8107142857142857,
+    "Eff": 0.6228824794650081,
+    "IA": 0.46918308081420873,
+    "IA_bounds": [
+      0.4656116522427801,
+      0.4722564818142456
+    ],
+    "provisional_answers": 9,
+    "incomplete_answers": 0
+  },
+  {
+    "generation_configuration": "from_openai_qwen3-32b_1-shot",
+    "sample_count": 5,
+    "question_ids": [
+      66,
+      93,
+      105,
+      131,
+      186
+    ],
+    "Com": 0.52,
+    "Co": 0.6916666666666667,
+    "Eff": 0.5883759924247848,
+    "IA": 0.49339077099650713,
+    "IA_bounds": [
+      0.4933907709965071,
+      0.4933907709965071
+    ],
+    "provisional_answers": 0,
+    "incomplete_answers": 0
+  },
+  {
+    "generation_configuration": "from_openai_qwen3-max_1-shot",
+    "sample_count": 5,
+    "question_ids": [
+      66,
+      93,
+      105,
+      131,
+      186
+    ],
+    "Com": 0.614,
+    "Co": 0.85,
+    "Eff": 0.6557836272248643,
+    "IA": 0.521787630387544,
+    "IA_bounds": [
+      0.5171696512947342,
+      0.5264056094803541
+    ],
+    "provisional_answers": 2,
+    "incomplete_answers": 0
+  },
+  {
+    "generation_configuration": "from_openai_qwen3-max_1-shot+KB-RAG",
+    "sample_count": 5,
+    "question_ids": [
+      66,
+      93,
+      105,
+      131,
+      186
+    ],
+    "Com": 0.47000000000000003,
+    "Co": 0.75,
+    "Eff": 0.6888153072474074,
+    "IA": 0.3820928645375724,
+    "IA_bounds": [
+      0.34047573507825346,
+      0.41841543624125976
+    ],
+    "provisional_answers": 5,
+    "incomplete_answers": 0
+  },
+  {
+    "generation_configuration": "from_openai_qwen3-max_1-shot+KB-RAG+self-check",
+    "sample_count": 5,
+    "question_ids": [
+      66,
+      93,
+      105,
+      131,
+      186
+    ],
+    "Com": 0.30999999999999994,
+    "Co": 0.7,
+    "Eff": 0.7227728337394678,
+    "IA": 0.30999999999999994,
+    "IA_bounds": [
+      0.31,
+      0.31
+    ],
+    "provisional_answers": 4,
+    "incomplete_answers": 0
+  }
+]

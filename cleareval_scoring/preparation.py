@@ -12,7 +12,8 @@ SPECIMEN = re.compile(r'\b(?:tissue|sample|specimen|organoid|section|seedling|br
 
 def role(step):
     text=step['text'].replace('**','')
-    if not START.search(text) or not REAGENT.search(text):return 'execution_or_other'
+    passive=re.match(r'^\s*[^.;；]{1,70}\b(?:is|was)\s+(?:prepared|mixed|dissolved)\b',text,re.I)
+    if not (START.search(text) or passive) or not REAGENT.search(text):return 'execution_or_other'
     # "for incubation" describes a stock's purpose, not contact with the specimen.
     action_text=re.sub(r'\b(?:for|prior to)\s+(?:subsequent\s+)?(?:incubation|washing|clearing|staining)\b','',text,flags=re.I)
     if SAMPLE_ACTION.search(action_text) or SPECIMEN.search(text):return 'mixed_or_specimen'

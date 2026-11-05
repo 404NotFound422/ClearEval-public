@@ -1,0 +1,26 @@
+"""Run only local claim/adapter controls, then save a small result summary."""
+from pathlib import Path
+import json,sys,unittest
+ROOT=Path(__file__).resolve().parents[2];sys.path.insert(0,str(ROOT))
+from cleareval_scoring.scoring_v6 import VERSION
+suite=unittest.defaultTestLoader.discover(str(ROOT/'tests'),pattern='test_claim*.py')
+result=unittest.TextTestRunner(verbosity=1).run(suite)
+report={'scope':'targeted_claim_and_integration_controls','test_groups':result.testsRun,
+        'failures':len(result.failures),'errors':len(result.errors),
+        'full_benchmark_rescored':False,'new_model_calls':0,
+        'source_controls':{'correct_or_not_penalized_operations':21,'explicit_error_operations':9,'numeric_name_boundaries':4},
+        'covered_fixes':['independent_unmatched_recipe_check','numeric_name_boundary',
+                         'N_M_variant_definition_ownership','nested_unit_parentheses',
+                         'per_operation_recipe_ownership','separate_wash_not_stock_composition',
+                         'negated_additive_not_stock_composition','scoped_main_score_and_bio_intervals',
+                         'unresolved_recipe_not_full_credit','old_cache_version_not_reused_as_new',
+                         'shared_chemical_dictionary_in_cached_replay','reuse_frozen_alignment',
+                         'inline_recipe_execution_projection','stock_vs_working_concentration',
+                         'preparation_repeat_not_specimen_repeat','reference_recipe_not_restatement_requirement',
+                         'containing_and_solution_medium_qualifiers','passive_preparation_exclusion',
+                         'legacy_catalog_and_extension_ownership','explicit_dilution_arithmetic',
+                         'compound_alias_declaration','diluted_stock_identity',
+                         'removal_goal_not_stock_use','staining_additive_not_stock_redefinition'],
+        'published_default':VERSION}
+Path(__file__).with_name('targeted_validation.json').write_text(json.dumps(report,ensure_ascii=False,indent=2),'utf8')
+raise SystemExit(not result.wasSuccessful())

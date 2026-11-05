@@ -30,32 +30,42 @@ answers are included in the repository.
 
 ## Current scoring release
 
-**`cleareval-benchmark-20261103-v1`** is the current full-score release for the
+**`cleareval-benchmark-20261105-v6.2`** is the current full-score release for the
 frozen 185-answer application benchmark (193 reference branches).
 [Version pointer](CURRENT_SCORING.json) ·
-[Scoring explanation](results/benchmark185/2026-11-03/评分说明.md) ·
-[All 185 scores](results/benchmark185/2026-11-03/185例完整评分.csv) ·
-[Downloadable review page](results/benchmark185/2026-11-03/完整评分审核.html).
+[Scoring explanation](results/benchmark185/2026-11-05-v6.2/评分说明.md) ·
+[All 185 scores](results/benchmark185/2026-11-05-v6.2/185例完整评分.csv) ·
+[Downloadable review page](results/benchmark185/2026-11-05-v6.2/完整评分审核.html).
 
 ```bash
 # Python 3.11+; no API credentials or model downloads are needed
 python -m pip install -r requirements-scoring.txt
-python OEQ_run_grading_new.py
+python OEQ_run_grading_new.py --cached-checks
 python results/calculate_main_table_score.py
 ```
 
-The main entry recomputes the packaged V5 operation checks and then writes the
-complete CCE scores. Use `--cached-checks` for a fast replay of the frozen checks,
-or `--output PATH` for a separate run directory. Original component maxima and
+The main entry uses V6.2 operation verification and writes the complete CCE
+scores. The command above reuses the frozen checks; omit `--cached-checks` to
+recompute operation checks, or use `--output PATH` for a separate run directory.
+Original component maxima and
 CCE aggregation weights are preserved. All 185 answers remain in the denominator;
-131 have determined component values, 51 retain provisional components, and 3
+132 have determined component values, 50 retain provisional components, and 3
 unfinished outputs receive zero completion scores. Provisional values remain
 marked with intervals and reasons. The main table reports the 19 generation
 configurations separately with their sample counts and question IDs.
 
-Release validation: 81 scoring tests pass. A fresh run from the exported release
-files reproduces all nine result files byte for byte, including all 185 scores;
-the original answers remain unchanged.
+V6.2 separates inline reagent recipes from specimen operations, binds each
+formulation to its actual use, verifies stated dilution arithmetic, and preserves
+uncertainty in Bio-SR/SP/F1. Preparation instructions do not inflate execution
+step counts; explicit recipe errors still affect correctness. Timing remains
+part of Effectiveness. See the [repair and validation report](experiments/formal_claims_20261105/README.md).
+
+The full 185-answer / 193-branch retest and offline scoring checks pass, with
+all eight expert adjudications and original answers preserved. The mean scores
+are Com 61.61%, Co 82.09%, Eff 66.87%, and IA 51.64%. The packaged checks are in
+`dataset/benchmark185/2026-11-05-v6.2/`; the original inputs remain in
+`dataset/benchmark185/2026-11-03/`. Archived V5 scores can be reproduced with
+`python OEQ_run_grading_new.py --legacy-v5 --output benchmark-reports/legacy-v5`.
 
 The aggregate indices are:
 

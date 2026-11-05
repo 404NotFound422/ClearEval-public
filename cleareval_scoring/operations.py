@@ -37,7 +37,7 @@ MATERIALS = {
     'urea': [r'urea', '尿素'],
     'glycerol': [r'glycerol', '甘油'],
     'sorbitol': [r'sorbitol', '山梨醇'],
-    'hydrogen_peroxide': [r'H2O2', r'hydrogen peroxide'],
+    'hydrogen_peroxide': [r'H[2₂]O[2₂]', r'hydrogen peroxide'],
     'triton_x100': [r'Triton' + DASH + r'X' + DASH + r'100'],
     'tween20': [r'Tween' + DASH + r'20'],
     'tde': [r'(?<!\w)TDE(?!\w)', r'thiodiethanol'],
@@ -52,8 +52,8 @@ MATERIALS = {
 }
 for k in ['0', '1', '2', '3', '4D25', '4D2.5']:
     MATERIALS['scales' + k.lower()] = [r'Sca(?:_l_e|le)S' + re.escape(k) + r'(?![\dD.])']
-MATERIALS['cubic_r1'] = [r'CUBIC' + DASH + r'R1']
-MATERIALS['cubic_r2'] = [r'CUBIC' + DASH + r'R2']
+MATERIALS['cubic_r1'] = [r'CUBIC' + DASH + r'R1(?!\w)']
+MATERIALS['cubic_r2'] = [r'CUBIC' + DASH + r'R2(?!\w)']
 FORMULATIONS = {k for k in MATERIALS if k.startswith(('scales', 'cubic_', 'seedb2'))} | {'ce3d', 'focm', 'boneclear', 'bb_peg', 'tb_peg', 'babb', 'babb_d4', 'babb_d10', 'babb_d15'}
 NUM = r'\d+(?:\.\d+)?'
 PERCENT = re.compile(r'(' + NUM + r')\s*(?:(?:vol|wt)\s*)?%', re.I)
@@ -73,8 +73,8 @@ def nominal_normalize(text):
 def mentions(text, method):
     patterns = dict(MATERIALS)
     if method == 'CUBIC':
-        patterns['cubic_r1'] = patterns['cubic_r1'] + [r'reagent' + DASH + r'1']
-        patterns['cubic_r2'] = patterns['cubic_r2'] + [r'reagent' + DASH + r'2']
+        patterns['cubic_r1'] = patterns['cubic_r1'] + [r'reagent' + DASH + r'1(?!\w)']
+        patterns['cubic_r2'] = patterns['cubic_r2'] + [r'reagent' + DASH + r'2(?!\w)']
     if method == 'SeeDB2':
         patterns['seedb2_solution1'] = [r'solution\s*1']
         patterns['seedb2_solution2'] = [r'solution\s*2']

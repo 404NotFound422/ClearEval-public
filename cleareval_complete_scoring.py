@@ -1,4 +1,4 @@
-"""Compose the frozen benchmark's reviewed v5 checks into complete CCE scores.
+"""Compose the frozen benchmark's reviewed V6.2 checks into complete CCE scores.
 
 No inference calls. Every provisional scalar retains its evidence interval and
 provenance; it is never promoted to a confirmed observation by aggregation.
@@ -19,13 +19,14 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent
 BENCHMARK = ROOT/'dataset/benchmark185/2026-11-03'
-VERSION = 'cleareval-complete-20261103-v1'
+FORMAL_VERSION = 'cleareval-complete-20261105-v6.2'
+VERSION = FORMAL_VERSION
 MAXIMA = dict(c_step=2, c_param=3, co_order=3, co_method=2, co_param=2,
               co_chem=1, s_method=2.5, s_label=6, s_trans=3, s_time=3)
 DEFAULT_INPUT = BENCHMARK/'inputs.json.gz'
-DEFAULT_VERIFIED = BENCHMARK/'verified_checks.json.gz'
+DEFAULT_VERIFIED = ROOT/'dataset/benchmark185/2026-11-05-v6.2/verified_checks.json.gz'
 DEFAULT_PREVIOUS = BENCHMARK/'previous_components.json.gz'
-DEFAULT_OUTPUT = ROOT/'results/benchmark185/2026-11-03'
+DEFAULT_OUTPUT = ROOT/'results/benchmark185/2026-11-05-v6.2'
 POLICY_PATH = ROOT/'complete_scoring_policy.json'
 KB_PATH = ROOT/'KnowledgeBase/time_kb.json'
 
@@ -42,8 +43,8 @@ def repo_path(path):
     return path.relative_to(ROOT).as_posix() if path.is_relative_to(ROOT) else path.name
 
 
-def verified_packets(cases, decisions):
-    from cleareval_scoring import scoring_v5, adjudication
+def verified_packets(cases, decisions, *, independent_claims=True):
+    from cleareval_scoring import scoring_v5,scoring_v6,adjudication
     rows=[]
     for c in cases:
         for d in decisions:
@@ -51,7 +52,8 @@ def verified_packets(cases, decisions):
                 # Review excerpts can concatenate non-adjacent source lines.
                 assert all(line.strip() in c['answer'] for line in d['reviewed_candidate_text'].splitlines()
                            if line.strip()), (c['id'],'adjudicated text changed')
-        packet=adjudication.apply(scoring_v5.score_branch(c),c,decisions)
+        packet=(scoring_v6.score_branch(c,decisions) if independent_claims
+                else adjudication.apply(scoring_v5.score_branch(c),c,decisions))
         rows.append(dict(id=c['id'],branch=c['branch'],method=c['method'],packet=packet))
     return rows
 
@@ -133,6 +135,7 @@ def correctness(case, packet, previous, policy):
     param = score(2, '关键浓度/配方比例检查未检出明确错误；时间和温度不参与正确性')
     for pair in packet['written']['pairs']:
         for key, state in pair['correctness_checks'].items():
+            if key=='declared_recipe:independent_claim':continue  # Owned once below, including unmatched uses.
             if state not in {'FAIL','UNKNOWN'}:
                 continue
             if key.startswith('concentration:') or key=='stock_dilution':
@@ -168,10 +171,20 @@ def correctness(case, packet, previous, policy):
                                          candidates=packet['process_audit']['failed_candidate_ids']))
     # Recipe checks may be attached to a use outside the matched subset.
     for f in packet.get('formulation_results', []):
+        if f.get('scope')=='operation':continue  # Already attributed by candidate below.
         if f['status']=='FAIL' and f.get('used_by'):
             owner = recipe_dimension(packet, f['name'])
             if not any(x['field']=='declared_recipe:'+f['name'] for x in findings[owner]):
                 findings[owner].append(dict(candidates=f['used_by'],field='declared_recipe:'+f['name'],severity='LOCAL'))
+    for f in packet.get('independent_recipe_findings',[]):
+        existing=[x for items in findings.values() for x in items]
+        if any(x.get('candidate')==f['candidate'] and x['field'].startswith('declared_recipe:') for x in existing):
+            continue
+        findings[f['owner']].append(dict(f))
+    for f in packet.get('independent_recipe_unresolved',[]):
+        existing=[x for items in unknown.values() for x in items]
+        if not any(x.get('candidate')==f['candidate'] and x['field'].startswith('declared_recipe:') for x in existing):
+            unknown[f['owner']].append(dict(f))
     current = dict(co_order=order, co_method=method, co_param=param)
     for key, node in current.items():
         fs = findings[key]
@@ -275,11 +288,15 @@ def branch_score(case, packet, previous, policy, kb):
                              cleareval_sp_eligible=score(m['operation_SP'],'候选操作匹配比例'))
         for key, source in [('bio_sr','correctness_Bio_SR'),('bio_sp','correctness_Bio_SP')]:
             lo,hi = m[source+'_lower'],m[source+'_upper']
-            supplementary[key] = score(lo,'V5步骤与配方核验：已确认正确步骤比例',bounds=[lo,hi],
+            supplementary[key] = score(lo,'V5步骤与配方核验：已确认正确步骤比例' if packet['version'].endswith('-v5') else '执行步骤与独立配方核验：已确认正确步骤比例',bounds=[lo,hi],
                                         status='DETERMINED' if lo==hi else 'PROVISIONAL')
         den = m['N_R']+m['N_C']
-        supplementary['bio_f1'] = score(2*m['confirmed_correct_credit']/den if den else 0,
-                                         '2×已确认正确匹配数/(参考执行步骤数+候选执行步骤数)')
+        f1_low=2*m['confirmed_correct_credit']/den if den else 0
+        f1_high=(2*(m['confirmed_correct_credit']+m['correctness_review_credit'])/den
+                 if den and not packet['version'].endswith('-v5') else f1_low)
+        supplementary['bio_f1'] = score(f1_low,
+            '2×已确认正确匹配数/(参考执行步骤数+候选执行步骤数)',bounds=[f1_low,f1_high],
+            status='DETERMINED' if f1_low==f1_high else 'PROVISIONAL')
     metrics = {**components,**supplementary,**compose(components)}
     return dict(id=case['id'],question_id=case['question_id'],branch=case['branch'],method=case['method'],
                 version=VERSION, answer_sha256=case['answer_sha256'],metrics=metrics,
@@ -344,18 +361,35 @@ document.getElementById('query').oninput=render;document.getElementById('filter'
 
 
 def main(argv=None):
+    global VERSION
+    VERSION=FORMAL_VERSION
     ap=argparse.ArgumentParser(description=__doc__)
     for name,default in [('inputs',DEFAULT_INPUT),('verified',DEFAULT_VERIFIED),('previous',DEFAULT_PREVIOUS),
                          ('policy',POLICY_PATH),('time-kb',KB_PATH),('output',DEFAULT_OUTPUT)]:
         ap.add_argument('--'+name,type=Path,default=default)
     ap.add_argument('--cached-checks',action='store_true',help='Replay the frozen verified checks instead of recomputing them')
+    mode=ap.add_mutually_exclusive_group()
+    mode.add_argument('--independent-claims',action='store_true',help='Compatibility alias: independent operation claims are enabled by default in V6.2')
+    mode.add_argument('--legacy-v5',action='store_true',help='Replay the archived V5 checks and scores without rerunning the old engine')
     args=ap.parse_args(argv)
+    from cleareval_scoring.scoring_v6 import VERSION as expected_step_version
+    if args.legacy_v5:
+        VERSION='cleareval-complete-20261103-v1'
+        expected_step_version='cleareval-correctness-20261103-v5'
+        args.cached_checks=True
+        if args.verified==DEFAULT_VERIFIED:args.verified=BENCHMARK/'verified_checks.json.gz'
+        if args.output==DEFAULT_OUTPUT:args.output=ROOT/'benchmark-reports/legacy-v5'
+    args.independent_claims=not args.legacy_v5
     policy=read(args.policy); cases=read(args.inputs)['cases']
     old=read(args.previous);kb=read(args.time_kb)['rows']
     receipt=args.verified.with_name('run_receipt.json')
     assert read(receipt)['input_sha256']==sha(args.inputs), 'Verified checks belong to a different input snapshot'
+    if args.cached_checks:
+        assert read(receipt)['version']==expected_step_version, 'Cached checks use a different scoring version; select the matching versioned cache'
+        if args.independent_claims:
+            assert read(receipt)['verified_sha256']==sha(args.verified), 'Verified cache fingerprint changed'
     decisions_path=args.inputs.with_name('adjudications.json')
-    verified=read(args.verified) if args.cached_checks else verified_packets(cases,read(decisions_path))
+    verified=read(args.verified) if args.cached_checks else verified_packets(cases,read(decisions_path),independent_claims=args.independent_claims)
     packet_map={(r['id'],r['branch']):r['packet'] for r in verified}
     previous_map={(r['input_id'],b['branch']):b['metrics'] for r in old for b in r['branches']}
     assert len(packet_map)==len(cases)==193 and len({c['id'] for c in cases})==185
@@ -364,7 +398,7 @@ def main(argv=None):
     for c in cases:
         assert hashlib.sha256(c['answer'].encode('utf8')).hexdigest()==c['answer_sha256'],c['id']
         p=packet_map[c['id'],c['branch']]
-        assert p['version']=='cleareval-correctness-20261103-v5'
+        assert p['version']==expected_step_version
         row=branch_score(c,p,previous_map[c['id'],c['branch']],policy,kb)
         branches.append(row);grouped[c['id']].append(row)
     rows=[combine_branches(grouped[key]) for key in sorted(grouped)]
@@ -429,7 +463,7 @@ def main(argv=None):
     build_page(args.output/'完整评分审核.html',rows,cases)
     text=f'''# ClearEval 全量评分 · {VERSION}
 
-185份原始回答、193个参考分支全部得到10个基础分项、Bio-SR/SP/F1及Com/Co/Eff/IA。原始回答保持不变。本版是全量细化的起点。
+185份原始回答、193个参考分支全部得到10个基础分项、Bio-SR/SP/F1及Com/Co/Eff/IA。原始回答及8项人工裁决保持不变。
 
 - 分项已确定：{summary['statuses'].get('分项已确定',0)}例。
 - 含暂定分：{summary['provisional_answers']}例；每项保留区间、原因和分数来源。
@@ -458,7 +492,7 @@ IA = min(Com, Co, Eff)。CSV中的聚合分范围0–1，网页展示百分制�
 
 ## 本版实际接入的内容
 
-1. V5执行步骤、试剂、浓度、配方和顺序检查进入正确性分项，再参与Co与IA。Bio-SR/SP/F1同时保留为可验证步骤指标。Co仍是原有四项平均，不能与Bio-F1当作同一个指标。
+1. 执行步骤、试剂、浓度、配方和顺序检查进入正确性分项，再参与Co与IA。Bio-SR/SP/F1同时保留为可验证步骤指标。Co仍是原有四项平均，不能与Bio-F1当作同一个指标。
 2. C_step采用当前执行操作覆盖率×2，沿用最新完整评测中Com的0.4/0.6权重。这是连续覆盖率口径，并非最早的人工0/1/2模块等级。多参考案例先逐分项取最低分再汇总，并保留所有分支区间。
 3. 纯试剂配制从执行步骤分母中分离；已写出的错误配方继续影响使用该配方的正确性。PBS防腐不进入扣分。
 4. 时间与温度参考比较不进入正确性。重新核算12例时间缺项：其中4例PEGASOS重新匹配硬组织层级并纠正参考范围文字。其余已有时间点/区间继续沿用。
@@ -475,17 +509,29 @@ FlyClear原始论文主要验证内源荧光，未找到本次Alexa标记组合�
 
 ## 评分入口和复现
 
-正式主入口：`python OEQ_run_grading_new.py`，默认重算185例的V5执行步骤检查并完成主评分；`--cached-checks`可快速复现冻结的检查结果。历史模型生成/旧评分通过`--legacy-generation`进入。
-默认输入均在仓库内：`dataset/benchmark185/2026-11-03/`、`KnowledgeBase/time_kb.json`和`complete_scoring_policy.json`。不依赖C盘个人目录，不调用新模型。
-主结果位于`results/benchmark185/2026-11-03/`；`python results/calculate_main_table_score.py`默认输出本正式版本，按19种生成条件分别列出样本数和CCE/IA均值。5例和35例配置的题目覆盖不同，列出题号以便后续配对比较。
+正式主入口：`python OEQ_run_grading_new.py --cached-checks`，复用冻结的步骤检查并完成主评分；省略`--cached-checks`可重新计算步骤检查。当前步骤版本为`{expected_step_version}`。历史模型生成/旧评分通过`--legacy-generation`进入；`--legacy-v5`可单独复现归档的V5评分。
+原始输入位于`dataset/benchmark185/2026-11-03/`；本次步骤缓存为`{repo_path(args.verified)}`。知识库为`KnowledgeBase/`，汇总策略为`complete_scoring_policy.json`，均位于仓库内，不调用新模型。
+本次结果位于`{repo_path(args.output)}/`；`python results/calculate_main_table_score.py`默认输出`CURRENT_SCORING.json`指定的正式版本，按19种生成条件分别列出样本数和CCE/IA均值。5例和35例配置的题目覆盖不同，列出题号以便后续配对比较。
 `evaluations185.json.gz`同时提供原有主评分结构，全部185例均经过`results/oeq_metrics.py`核对；总分使用逐案例最低值的均值。
-`manifest.json`记录各输入和结果哈希；V5输入快照哈希在运行前核对。`tests/test_complete_scoring.py`覆盖11项离线回归及全193→185例汇总验证。
+`manifest.json`记录各输入和结果哈希；输入快照和缓存版本在运行前核对。`tests/test_complete_scoring.py`覆盖11项离线回归及全193→185例汇总验证。
+'''
+    if args.independent_claims:
+        text+='''
+## V6.2 正式版更新
+
+句中配方与执行操作分别解析：括号、containing从句和独立配制说明不额外增加执行步骤分母。工作浓度与母液浓度分别读取，并核验明确的稀释算术。试剂配方按实际使用位置绑定，独立配方核查覆盖未匹配的执行步骤；临时染色添加物、洗涤去除对象和否定句不再改写试剂配方。数字名称、N/M变体、嵌套单位括号和被动配制句同步修正。
+
+Bio-SR=K/N_R，Bio-SP=K/N_C，Bio-F1=2K/(N_R+N_C)。K为通过正确性核查的匹配操作数；含U个待定操作时，上界分别将K替换为K+U。试剂配制不计入执行步骤分母，明确错误仍进入相应正确性分项。
+
+全185例/193分支复测已完成；78例应用配方与执行条件分离，16例评分值或状态变化。原始答案、分项满分、CCE权重及有效性评分均保留。详细修复及逐例差异见`experiments/formal_claims_20261105/README.md`。
 '''
     (args.output/'评分说明.md').write_text(text,encoding='utf8')
     sources=[args.inputs,args.verified,receipt,decisions_path,args.previous,args.policy,args.time_kb,Path(__file__),
              ROOT/'OEQ_run_grading_new.py',ROOT/'results/oeq_metrics.py',ROOT/'results/calculate_main_table_score.py',
              ROOT/'CURRENT_SCORING.json',ROOT/'requirements-scoring.txt']
     sources+=sorted((ROOT/'cleareval_scoring').glob('*.py'))+[ROOT/'cleareval_scoring/recipe_catalog.json']
+    sources+=[ROOT/'KnowledgeBase/operation_claim_rules.json']
+    sources+=[ROOT/s['path'] for s in read(ROOT/'KnowledgeBase/operation_claim_rules.json')['sources'].values()]
     manifest=dict(version=VERSION,entry='OEQ_run_grading_new.py',policy=repo_path(args.policy),
                   inputs_sha256={repo_path(p):sha(p) for p in sources},
                   outputs_sha256={p.name:sha(p) for p in args.output.iterdir() if p.is_file() and p.name!='manifest.json'},

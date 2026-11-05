@@ -1,0 +1,85 @@
+{
+  "version": "cleareval-correctness-20261105-v6.1",
+  "selected_cases": [
+    "EXPAND_093",
+    "EXPAND_156"
+  ],
+  "branches": 2,
+  "scope": "recipe_patch_on_cached_alignment",
+  "alignment_runs": 0,
+  "new_model_calls": 0,
+  "full_benchmark_rescored": false,
+  "baseline_sha256": "88154e791e5f63f0676266414e186602602fdb249b659ad429b66e28cc0dadd3",
+  "rows": [
+    {
+      "id": "EXPAND_156",
+      "branch": "selected",
+      "matched_pairs": 3,
+      "changed_pair_states": [],
+      "recipe_conflicts": [
+        {
+          "candidate": "1.1",
+          "stock": "CUBIC-L"
+        },
+        {
+          "candidate": "1.2",
+          "stock": "CUBIC-L"
+        },
+        {
+          "candidate": "4.1",
+          "stock": "CUBIC-R+"
+        },
+        {
+          "candidate": "4.2",
+          "stock": "CUBIC-R+"
+        }
+      ],
+      "preserved_human_reviews": 1,
+      "correctness": {
+        "co_method": {
+          "before": 1.0,
+          "after": 1.0,
+          "before_status": "DETERMINED",
+          "after_status": "DETERMINED"
+        },
+        "co_param": {
+          "before": 2.0,
+          "after": 2.0,
+          "before_status": "DETERMINED",
+          "after_status": "DETERMINED"
+        }
+      }
+    },
+    {
+      "id": "EXPAND_093",
+      "branch": "CUBIC_2019_IMMERSION_L_R_PLUS",
+      "matched_pairs": 3,
+      "changed_pair_states": [],
+      "recipe_conflicts": [
+        {
+          "candidate": "3.1",
+          "stock": "CUBIC-L"
+        },
+        {
+          "candidate": "4.1",
+          "stock": "CUBIC-R+"
+        }
+      ],
+      "preserved_human_reviews": 0,
+      "correctness": {
+        "co_method": {
+          "before": 0.0,
+          "after": 0.0,
+          "before_status": "DETERMINED",
+          "after_status": "DETERMINED"
+        },
+        "co_param": {
+          "before": 2.0,
+          "after": 2.0,
+          "before_status": "DETERMINED",
+          "after_status": "DETERMINED"
+        }
+      }
+    }
+  ]
+}

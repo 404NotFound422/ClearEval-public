@@ -40,8 +40,9 @@ class ReleaseTests(unittest.TestCase):
             self.assertEqual([(r['id'],r['metrics']) for r in expected],[(r['id'],r['metrics']) for r in actual])
 
     def test_portable_input_and_answer_bindings(self):
-        receipt=scorer.read(scorer.BENCHMARK/'run_receipt.json')
+        receipt=scorer.read(scorer.DEFAULT_VERIFIED.with_name('run_receipt.json'))
         self.assertEqual(receipt['input_sha256'],scorer.sha(scorer.DEFAULT_INPUT))
+        self.assertEqual(receipt['verified_sha256'],scorer.sha(scorer.DEFAULT_VERIFIED))
         for case in scorer.read(scorer.DEFAULT_INPUT)['cases']:
             self.assertNotIn('case_path',case)
             self.assertNotIn('reference_path',case)
@@ -52,8 +53,28 @@ class ReleaseTests(unittest.TestCase):
         run=subprocess.run([sys.executable,'-X','utf8','-B',str(ROOT/'results/calculate_main_table_score.py')],
                            cwd=ROOT.parent,capture_output=True,text=True,encoding='utf8')
         self.assertEqual(run.returncode,0,run.stderr)
-        self.assertIn('cleareval-benchmark-20261103-v1',run.stdout)
+        self.assertIn('cleareval-benchmark-20261105-v6.2',run.stdout)
         self.assertIn('185 answers',run.stdout)
+
+    def test_formal_pointer_matches_default_engine_and_results(self):
+        release=scorer.read(ROOT/'CURRENT_SCORING.json')
+        self.assertEqual(release['scoring_version'],scorer.FORMAL_VERSION)
+        self.assertEqual(ROOT/release['verified_checks'],scorer.DEFAULT_VERIFIED)
+        self.assertEqual(ROOT/release['results'],scorer.DEFAULT_OUTPUT)
+        self.assertEqual(scorer.read(scorer.DEFAULT_OUTPUT/'summary.json')['version'],scorer.FORMAL_VERSION)
+        self.assertEqual({r['packet']['version'] for r in scorer.read(scorer.DEFAULT_VERIFIED)},
+                         {release['verified_step_version']})
+
+    def test_archived_v5_replay_preserves_scores(self):
+        with tempfile.TemporaryDirectory() as directory:
+            output=Path(directory)/'results'
+            run=subprocess.run([sys.executable,'-X','utf8','-B',str(ROOT/'OEQ_run_grading_new.py'),
+                                '--legacy-v5','--output',str(output)],cwd=directory,
+                               capture_output=True,text=True,encoding='utf8')
+            self.assertEqual(run.returncode,0,run.stderr)
+            baseline=ROOT/'results/benchmark185/2026-11-03'
+            for name in ['scores185.json.gz','scores193.json.gz','evaluations185.json.gz','main_table.json']:
+                self.assertEqual(scorer.read(output/name),scorer.read(baseline/name),name)
 
 
 if __name__=='__main__':

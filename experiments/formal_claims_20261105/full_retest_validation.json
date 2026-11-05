@@ -1,0 +1,409 @@
+{
+  "version": "cleareval-correctness-20261105-v6.2",
+  "validation": "PASS",
+  "answers": 185,
+  "branches": 193,
+  "new_model_calls": 0,
+  "answers_unchanged": true,
+  "expert_reviews_preserved": 8,
+  "projected_answers": 78,
+  "recipe_bindings_to_check": [],
+  "dilution_checks": {
+    "PASS": 26,
+    "UNKNOWN": 8,
+    "FAIL": 3
+  },
+  "changed_answers": 16,
+  "means": {
+    "bio_sr": {
+      "before": 0.5224924924924925,
+      "after": 0.5231681681681681
+    },
+    "bio_sp": {
+      "before": 0.38185189858295254,
+      "after": 0.3825275742586282
+    },
+    "bio_f1": {
+      "before": 0.4269522727249769,
+      "after": 0.4276279484006526
+    },
+    "Com": {
+      "before": 0.6166557466557466,
+      "after": 0.6161152061152061
+    },
+    "Co": {
+      "before": 0.815990990990991,
+      "after": 0.8209459459459459
+    },
+    "Eff": {
+      "before": 0.6687311967244136,
+      "after": 0.6687311967244136
+    },
+    "IA": {
+      "before": 0.5166458348700899,
+      "after": 0.5164402838044171
+    }
+  },
+  "final_statuses": {
+    "分项已确定": 132,
+    "未完成作答，计0分": 3,
+    "含暂定分": 50
+  },
+  "provisional_components": {
+    "co_method": 12,
+    "co_param": 20,
+    "s_time": 39,
+    "c_step": 4,
+    "s_label": 2
+  },
+  "changed_cases": [
+    {
+      "id": "EXPAND_004",
+      "method": "CUBIC",
+      "changes": {
+        "co_param": {
+          "before": 1.0,
+          "after": 2.0,
+          "before_status": "DETERMINED",
+          "after_status": "DETERMINED"
+        },
+        "Co": {
+          "before": 0.75,
+          "after": 0.875,
+          "before_status": "DETERMINED",
+          "after_status": "DETERMINED"
+        }
+      }
+    },
+    {
+      "id": "EXPAND_016",
+      "method": "CUBIC",
+      "changes": {
+        "co_param": {
+          "before": 1.0,
+          "after": 2.0,
+          "before_status": "DETERMINED",
+          "after_status": "DETERMINED"
+        },
+        "Co": {
+          "before": 0.625,
+          "after": 0.75,
+          "before_status": "DETERMINED",
+          "after_status": "DETERMINED"
+        }
+      }
+    },
+    {
+      "id": "EXPAND_017",
+      "method": "CUBIC",
+      "changes": {
+        "co_param": {
+          "before": 1.0,
+          "after": 2.0,
+          "before_status": "DETERMINED",
+          "after_status": "DETERMINED"
+        },
+        "Co": {
+          "before": 0.75,
+          "after": 0.875,
+          "before_status": "DETERMINED",
+          "after_status": "DETERMINED"
+        }
+      }
+    },
+    {
+      "id": "EXPAND_019",
+      "method": "CUBIC",
+      "changes": {
+        "co_param": {
+          "before": 1.0,
+          "after": 2.0,
+          "before_status": "DETERMINED",
+          "after_status": "DETERMINED"
+        },
+        "Co": {
+          "before": 0.625,
+          "after": 0.75,
+          "before_status": "DETERMINED",
+          "after_status": "DETERMINED"
+        }
+      }
+    },
+    {
+      "id": "EXPAND_024",
+      "method": "CUBIC",
+      "changes": {
+        "co_method": {
+          "before": 1.0,
+          "after": 1.0,
+          "before_status": "PROVISIONAL",
+          "after_status": "DETERMINED"
+        }
+      }
+    },
+    {
+      "id": "EXPAND_072",
+      "method": "iDISCO+",
+      "changes": {
+        "co_param": {
+          "before": 2.0,
+          "after": 1.0,
+          "before_status": "DETERMINED",
+          "after_status": "DETERMINED"
+        },
+        "Co": {
+          "before": 1.0,
+          "after": 0.875,
+          "before_status": "DETERMINED",
+          "after_status": "DETERMINED"
+        }
+      }
+    },
+    {
+      "id": "EXPAND_074",
+      "method": "iDISCO+",
+      "changes": {
+        "co_param": {
+          "before": 2.0,
+          "after": 1.0,
+          "before_status": "DETERMINED",
+          "after_status": "DETERMINED"
+        },
+        "Co": {
+          "before": 0.875,
+          "after": 0.75,
+          "before_status": "DETERMINED",
+          "after_status": "DETERMINED"
+        }
+      }
+    },
+    {
+      "id": "EXPAND_104",
+      "method": "iDISCO+",
+      "changes": {
+        "c_step": {
+          "before": 1.25,
+          "after": 1.0,
+          "before_status": "DETERMINED",
+          "after_status": "DETERMINED"
+        },
+        "co_order": {
+          "before": 1.0,
+          "after": 3.0,
+          "before_status": "DETERMINED",
+          "after_status": "REUSED"
+        },
+        "bio_sr": {
+          "before": 0.125,
+          "after": 0.25,
+          "before_status": "DETERMINED",
+          "after_status": "DETERMINED"
+        },
+        "bio_sp": {
+          "before": 0.125,
+          "after": 0.25,
+          "before_status": "DETERMINED",
+          "after_status": "DETERMINED"
+        },
+        "bio_f1": {
+          "before": 0.125,
+          "after": 0.25,
+          "before_status": "DETERMINED",
+          "after_status": "DETERMINED"
+        },
+        "Com": {
+          "before": 0.44999999999999996,
+          "after": 0.4,
+          "before_status": "DETERMINED",
+          "after_status": "DETERMINED"
+        },
+        "Co": {
+          "before": 0.4583333333333333,
+          "after": 0.625,
+          "before_status": "DETERMINED",
+          "after_status": "DETERMINED"
+        },
+        "IA": {
+          "before": 0.44999999999999996,
+          "after": 0.4,
+          "before_status": "DETERMINED",
+          "after_status": "DETERMINED"
+        }
+      }
+    },
+    {
+      "id": "EXPAND_120",
+      "method": "FOCM",
+      "changes": {
+        "co_method": {
+          "before": 1.0,
+          "after": 1.0,
+          "before_status": "REUSED",
+          "after_status": "DETERMINED"
+        },
+        "co_param": {
+          "before": 1.0,
+          "after": 2.0,
+          "before_status": "DETERMINED",
+          "after_status": "DETERMINED"
+        },
+        "Co": {
+          "before": 0.75,
+          "after": 0.875,
+          "before_status": "DETERMINED",
+          "after_status": "DETERMINED"
+        }
+      }
+    },
+    {
+      "id": "EXPAND_122",
+      "method": "iDISCO+",
+      "changes": {
+        "c_step": {
+          "before": 1.5,
+          "after": 1.25,
+          "before_status": "DETERMINED",
+          "after_status": "DETERMINED"
+        },
+        "Com": {
+          "before": 0.5,
+          "after": 0.44999999999999996,
+          "before_status": "DETERMINED",
+          "after_status": "DETERMINED"
+        },
+        "IA": {
+          "before": 0.45636194714945505,
+          "after": 0.44999999999999996,
+          "before_status": "DETERMINED",
+          "after_status": "DETERMINED"
+        }
+      }
+    },
+    {
+      "id": "EXPAND_123",
+      "method": "FOCM",
+      "changes": {
+        "co_method": {
+          "before": 2.0,
+          "after": 1.0,
+          "before_status": "REUSED",
+          "after_status": "DETERMINED"
+        },
+        "co_param": {
+          "before": 1.0,
+          "after": 2.0,
+          "before_status": "DETERMINED",
+          "after_status": "DETERMINED"
+        }
+      }
+    },
+    {
+      "id": "EXPAND_138",
+      "method": "PEGASOS",
+      "changes": {
+        "bio_sr": {
+          "before": 0.2222222222222222,
+          "after": 0.2222222222222222,
+          "before_status": "DETERMINED",
+          "after_status": "PROVISIONAL"
+        },
+        "bio_sp": {
+          "before": 0.25,
+          "after": 0.25,
+          "before_status": "DETERMINED",
+          "after_status": "PROVISIONAL"
+        },
+        "bio_f1": {
+          "before": 0.23529411764705882,
+          "after": 0.23529411764705882,
+          "before_status": "DETERMINED",
+          "after_status": "PROVISIONAL"
+        }
+      }
+    },
+    {
+      "id": "EXPAND_153",
+      "method": "SeeDB2",
+      "changes": {
+        "co_method": {
+          "before": 1.0,
+          "after": 1.0,
+          "before_status": "REUSED",
+          "after_status": "DETERMINED"
+        }
+      }
+    },
+    {
+      "id": "EXPAND_167",
+      "method": "iDISCO+",
+      "changes": {
+        "co_method": {
+          "before": 0.0,
+          "after": 2.0,
+          "before_status": "DETERMINED",
+          "after_status": "REUSED"
+        },
+        "co_param": {
+          "before": 1.0,
+          "after": 1.0,
+          "before_status": "PROVISIONAL",
+          "after_status": "DETERMINED"
+        },
+        "Co": {
+          "before": 0.625,
+          "after": 0.875,
+          "before_status": "PROVISIONAL",
+          "after_status": "DETERMINED"
+        }
+      }
+    },
+    {
+      "id": "EXPAND_168",
+      "method": "SeeDB2",
+      "changes": {
+        "co_method": {
+          "before": 0.0,
+          "after": 0.0,
+          "before_status": "REUSED",
+          "after_status": "DETERMINED"
+        },
+        "co_param": {
+          "before": 1.0,
+          "after": 2.0,
+          "before_status": "DETERMINED",
+          "after_status": "DETERMINED"
+        },
+        "Co": {
+          "before": 0.625,
+          "after": 0.75,
+          "before_status": "DETERMINED",
+          "after_status": "DETERMINED"
+        },
+        "IA": {
+          "before": 0.625,
+          "after": 0.643335,
+          "before_status": "DETERMINED",
+          "after_status": "DETERMINED"
+        }
+      }
+    },
+    {
+      "id": "EXPAND_184",
+      "method": "CUBIC",
+      "changes": {
+        "co_method": {
+          "before": 1.0,
+          "after": 1.0,
+          "before_status": "PROVISIONAL",
+          "after_status": "DETERMINED"
+        },
+        "Co": {
+          "before": 0.875,
+          "after": 0.875,
+          "before_status": "PROVISIONAL",
+          "after_status": "DETERMINED"
+        }
+      }
+    }
+  ]
+}
