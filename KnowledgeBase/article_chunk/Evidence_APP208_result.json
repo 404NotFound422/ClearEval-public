@@ -1,0 +1,333 @@
+{
+  "TOC_Method_Name": {
+    "Text": "Not specified as a single method in the selected evidence records",
+    "Text_Reference": [
+      "DOI: https://doi.org/10.1016/j.isci.2025.112971",
+      "Evidence-layer structured paraphrase; not a verbatim quotation. Source release: https://github.com/404NotFound422/TOCAgentProject/tree/5e3a711befb3952a2e39f4d53fc9c9f1a7ac0d22/KnowledgeBase/evidence_expansion_20261019",
+      "Local source archive: ../literature_evidence/2026-11-11/source_release.zip; member: full/APP208/version_selection.json"
+    ]
+  },
+  "General_Description": {
+    "Text": "CDC42-effector interaction inhibitors alter patterns of vessel arborization in skin and tumors <i>in vivo</i> (2025). Evidence category: application. This card preserves the evidence layer's structured statements and their original field labels; it does not add a new literature review or certify benchmark scoring thresholds.",
+    "Text_Reference": [
+      "DOI: https://doi.org/10.1016/j.isci.2025.112971",
+      "Evidence-layer structured paraphrase; not a verbatim quotation. Source release: https://github.com/404NotFound422/TOCAgentProject/tree/5e3a711befb3952a2e39f4d53fc9c9f1a7ac0d22/KnowledgeBase/evidence_expansion_20261019",
+      "Local source archive: ../literature_evidence/2026-11-11/source_release.zip; member: full/APP208/version_selection.json"
+    ]
+  },
+  "Tissue_Types": [
+    {
+      "Text1": "samples:\nid: S-SKIN-KO\ntext: Adult mouse dorsal skin,RhoJ-WT versusRhoJ-KO;Fig1 images from3mice/genotype;≥4images/group with dots=image stacks. SupplementalS1A says3/group butS1C says>3mice and>4images/condition, preserve discrepancy. S1D plots animal means(3visible/group) rather than stacks.\nsource_locators: \n  [1]     source_id: S2\n    xml_id: p0055\n    xpath: /article/body/sec[2]/sec[1]/p\n    text_sha256: cf4ffd4edc4e2b59b6ad72e59dff7ef01867a1a9a9294f86045855b10c03bfed\n  [2]     source_id: S2\n    xml_id: fig1\n    xpath: /article/body/sec[2]/sec[1]/fig\n    text_sha256: a83b0f0cdb27aa81807a87f688b0659ea997496acbb4a687539d72b9391b6f18\nn_animals_per_group: 3\nsource_conflict: S1C >3mice\nsupplement_locator: S4 PDFpp2–3",
+      "Text1_Reference": [
+        "Structured evidence: full/APP208/evidence/independent_R2/record_independent_R2.json#/samples/0; SHA-256: e5a2df8e41ff1d3b54833a5ebb54bc2463bc321c8ad10096ea9a657f7e26e752; DOI: https://doi.org/10.1016/j.isci.2025.112971"
+      ]
+    },
+    {
+      "Text2": "samples:\nid: S-TUMOR\ntext: Human melanoma patient-derived xenograft inNSG mouse background;fixed harvested tumors after2-week comparison ofvehicle,ARN22089 lower/higher groups andvemurafenib. Fig2A growth n6mice/group;Fig2D imaging>3tumors/group and≥4images/tumor. S2C explicitly3tumors/group, S2A animalmeans3visible/group. Do not assign growthn6toimaging or resolve>3vs3byguess.\nsource_locators: \n  [1]     source_id: S2\n    xml_id: p0060\n    xpath: /article/body/sec[2]/sec[2]/p\n    text_sha256: 4f8e519ba46ac27f6b405408b611656d0124f80c97a800bf51f121c9175a4ae0\n  [2]     source_id: S2\n    xml_id: fig2\n    xpath: /article/body/sec[2]/sec[2]/fig\n    text_sha256: d41026a973de48a623d99b949ded97c8aeb4049d7d5dd79cde8ea6115df8650a\nsupplement_locator: S4 PDFpp4–5",
+      "Text2_Reference": [
+        "Structured evidence: full/APP208/evidence/independent_R2/record_independent_R2.json#/samples/1; SHA-256: e5a2df8e41ff1d3b54833a5ebb54bc2463bc321c8ad10096ea9a657f7e26e752; DOI: https://doi.org/10.1016/j.isci.2025.112971"
+      ]
+    },
+    {
+      "Text3": "samples:\nid: S-SKIN-DRUG\ntext: Wild-type C57B6 skin after1-week group comparison:vehicle,ARN22089 low/mid/high,vemurafenib,linifanib. Fig4B says>3mice/condition and≥4images/condition;S4C per-animal averages with>4images/animal and3visible animaldots/group. Condition dose labels retained only as identifiers in source figures,not treatment recipe.\nsource_locators: \n  [1]     source_id: S2\n    xml_id: p0070\n    xpath: /article/body/sec[2]/sec[4]/p[1]\n    text_sha256: b078e3b6d7612f9ac9f990f3ed9085e3826a0f8698b589b25e7c83763d139da9\n  [2]     source_id: S2\n    xml_id: fig4\n    xpath: /article/body/sec[2]/sec[4]/fig\n    text_sha256: e9c50d414cc92bdcf65f6c617b532d784873e5a6ec8ba99e849df515a5977135\nsupplement_locator: S4 PDFpp8–9",
+      "Text3_Reference": [
+        "Structured evidence: full/APP208/evidence/independent_R2/record_independent_R2.json#/samples/2; SHA-256: e5a2df8e41ff1d3b54833a5ebb54bc2463bc321c8ad10096ea9a657f7e26e752; DOI: https://doi.org/10.1016/j.isci.2025.112971"
+      ]
+    },
+    {
+      "Text4": "samples:\nid: S-ADJACENT\ntext: NSG mouse skin from≥5mm away fromtumor;2-week endpoint. Distinct fromC57B6normal skin. S5caption refers>3tumors/group despite skin readout;stack dots notanimal dots.\nsource_locators: \n  [1]     source_id: S2\n    xml_id: p0075\n    xpath: /article/body/sec[2]/sec[4]/p[2]\n    text_sha256: 084acb4f1ee251e506a630c41bb6c7ca9f45dd2a7e3ef5f8df00c5d37689255f\nsupplement_locator: S4 PDFpp10–11",
+      "Text4_Reference": [
+        "Structured evidence: full/APP208/evidence/independent_R2/record_independent_R2.json#/samples/3; SHA-256: e5a2df8e41ff1d3b54833a5ebb54bc2463bc321c8ad10096ea9a657f7e26e752; DOI: https://doi.org/10.1016/j.isci.2025.112971"
+      ]
+    },
+    {
+      "Text5": "samples:\nid: S-FLOW\ntext: Skin/spleen flow cytometry:Fig1E ≥4mice/group;S4D drug comparison n4/group. Percent live CD31+PDGFRα− andCD31−PDGFRα+ gated cells,not absolute endothelial/fibroblast census. Viable proportions cannot alone prove no cell loss.\nsource_locators: \n  [1]     source_id: S2\n    xml_id: fig1\n    xpath: /article/body/sec[2]/sec[1]/fig\n    text_sha256: a83b0f0cdb27aa81807a87f688b0659ea997496acbb4a687539d72b9391b6f18\n  [2]     source_id: S2\n    xml_id: p0240\n    xpath: /article/body/sec[8]/sec[3]/sec[10]/p\n    text_sha256: 192d1d7e8d0e26852a06c1fa27cd25db0302f50cdd29effcc3f6963b20c36728\nsupplement_locator: S4 PDFpp8–9",
+      "Text5_Reference": [
+        "Structured evidence: full/APP208/evidence/independent_R2/record_independent_R2.json#/samples/4; SHA-256: e5a2df8e41ff1d3b54833a5ebb54bc2463bc321c8ad10096ea9a657f7e26e752; DOI: https://doi.org/10.1016/j.isci.2025.112971"
+      ]
+    },
+    {
+      "Text6": "samples:\nid: S-RNA\ntext: Bulk skinRNA ARN22089(mid-dose) versusvehicle,1-week endpoint,n4animals/group. Separate tissue-level transcriptomics,not cleared3D readout andnot single-cell-specific expression.\nsource_locators: \n  [1]     source_id: S2\n    xml_id: p0090\n    xpath: /article/body/sec[2]/sec[5]/p[1]\n    text_sha256: 2399650c9bbf68b8b328d5377e01bc30c17c8f695bb347414e29492ed2db604b\n  [2]     source_id: S2\n    xml_id: fig5\n    xpath: /article/body/sec[2]/sec[5]/fig[1]\n    text_sha256: 0ba9fea98641ce61000980f5f06aa644d5fe17bc10f086beef0a86bc89874dd0\n  [3]     source_id: S2\n    xml_id: p0250\n    xpath: /article/body/sec[8]/sec[3]/sec[12]/p\n    text_sha256: b2b10d6bccc46812f0ddb51b87e31cf40d222f84b18d83b38bf1426ea1800cb5\nn_animals_per_group: 4",
+      "Text6_Reference": [
+        "Structured evidence: full/APP208/evidence/independent_R2/record_independent_R2.json#/samples/5; SHA-256: e5a2df8e41ff1d3b54833a5ebb54bc2463bc321c8ad10096ea9a657f7e26e752; DOI: https://doi.org/10.1016/j.isci.2025.112971"
+      ]
+    },
+    {
+      "Text7": "samples:\nid: S-CASIN\ntext: WT andRhoJ-KO skin comparison withCASIN,1-week biological endpoint;Fig6B,C n3animals/group;S7 n3/condition,>4images/animal. Imaging stacks are nested withinanimals.\nsource_locators: \n  [1]     source_id: S2\n    xml_id: p0105\n    xpath: /article/body/sec[2]/sec[5]/p[4]\n    text_sha256: c2db13963badb8d656e79e8358dcc68916683336e93209b94baf1b13cb5e12ac\n  [2]     source_id: S2\n    xml_id: fig6\n    xpath: /article/body/sec[2]/sec[5]/fig[2]\n    text_sha256: 010dd996ed1e68fd69be5440e0697c097904cff223f84f00861d30ce0a0f94ab\nsupplement_locator: S4 PDFpp14–15",
+      "Text7_Reference": [
+        "Structured evidence: full/APP208/evidence/independent_R2/record_independent_R2.json#/samples/6; SHA-256: e5a2df8e41ff1d3b54833a5ebb54bc2463bc321c8ad10096ea9a657f7e26e752; DOI: https://doi.org/10.1016/j.isci.2025.112971"
+      ]
+    },
+    {
+      "Text8": "samples:\nid: S-ORGANOID\ntext: Human-derived vascularized microtumor(VMT) A375/WM3248 andtumor-free vascular microorganoid(VMO) are separate in-vitro comparator systems,not cleared mouse specimens. Fig3/4/6 reports normalized vessel/tumor signals;biological organoidbatch n notenumerated in inspected legends.\nsource_locators: \n  [1]     source_id: S2\n    xml_id: p0065\n    xpath: /article/body/sec[2]/sec[3]/p\n    text_sha256: 6ff884682a4a234aacc95b38d005d777c1142fe79c24d200a6cd4924ed5f7b4a\n  [2]     source_id: S2\n    xml_id: p0080\n    xpath: /article/body/sec[2]/sec[4]/p[3]\n    text_sha256: e4097eed81806c4d9ae2e47e3452ca0ce31ee80f7c6b405026cc6b09b04c3d80\n  [3]     source_id: S2\n    xml_id: fig3\n    xpath: /article/body/sec[2]/sec[3]/fig\n    text_sha256: cfeb6fdab072a0c89b614fd17c3dfd3bf9b0d8f3eedcb7a9994c3ef26447c6d6\n  [4]     source_id: S2\n    xml_id: fig4\n    xpath: /article/body/sec[2]/sec[4]/fig\n    text_sha256: e9c50d414cc92bdcf65f6c617b532d784873e5a6ec8ba99e849df515a5977135\n  [5]     source_id: S2\n    xml_id: fig6\n    xpath: /article/body/sec[2]/sec[5]/fig[2]\n    text_sha256: 010dd996ed1e68fd69be5440e0697c097904cff223f84f00861d30ce0a0f94ab",
+      "Text8_Reference": [
+        "Structured evidence: full/APP208/evidence/independent_R2/record_independent_R2.json#/samples/7; SHA-256: e5a2df8e41ff1d3b54833a5ebb54bc2463bc321c8ad10096ea9a657f7e26e752; DOI: https://doi.org/10.1016/j.isci.2025.112971"
+      ]
+    }
+  ],
+  "Time_Consumption": [
+    {
+      "Text1": "time_axis:\nskin: 1-weekcomparison\ntumor_and_adjacent_skin: 2-weekcomparison\nVMT_VMO: days4/6/8/10 plotted;pairedchamberFig3day6baselineanddays7–9;notanimalstudytime\nfixed_processing: 24–48hfixationplus96.5hlistedclearingstageincubations;DBEstorageandimageacquisitiondurationsunknown",
+      "Text1_Reference": [
+        "Structured evidence: full/APP208/evidence/independent_R2/record_independent_R2.json#/time_axis; SHA-256: e5a2df8e41ff1d3b54833a5ebb54bc2463bc321c8ad10096ea9a657f7e26e752; DOI: https://doi.org/10.1016/j.isci.2025.112971"
+      ]
+    }
+  ],
+  "Tissue_Deformation": [],
+  "Fluorescence_Compatibility": [],
+  "Preservation_Stability": [],
+  "Application": [
+    {
+      "Text1": "protocols:\nid: P-FIX\ntext: Tissues fixed in4%PFA for24–48h andheld in1×PBS at4°C forclearing. Labelsare pre-existing vascular tomatolectin–DyLight649 fromintravascular labeling;live labeling/perfusion procedure intentionally not extracted.\nsource_locators: \n  [1]     source_id: S2\n    xml_id: p0200\n    xpath: /article/body/sec[8]/sec[3]/sec[2]/p\n    text_sha256: 21ffe7609376a6cc6b9f2f5332e0fca8fac53ab6dda74c9f53c11b48e5918bd0\nsample_ids: \n  [1] S-SKIN-KO\n  [2] S-TUMOR\n  [3] S-SKIN-DRUG\n  [4] S-ADJACENT",
+      "Text1_Reference": [
+        "Structured evidence: full/APP208/evidence/independent_R2/record_independent_R2.json#/protocols/0; SHA-256: e5a2df8e41ff1d3b54833a5ebb54bc2463bc321c8ad10096ea9a657f7e26e752; DOI: https://doi.org/10.1016/j.isci.2025.112971"
+      ]
+    },
+    {
+      "Text2": "protocols:\nid: P-CLEAR\ntext: Modified iDISCO onfixed tissues:gradedmethanol20,40,60,80,100,100% over48h atroomtemperature;66%DCM/33%methanol48h atroomtemperature;DCM twice15min;DBE storage/imagingmedium. Text does not say48h atEACH methanol concentration;do not multiply by6. Listed stages sum96.5h,excluding fixation,storage,imaging andhandling;with24–48hfixation nominal listed incubations120.5–144.5h,not measured totalworkflowtime.\nsource_locators: \n  [1]     source_id: S2\n    xml_id: p0205\n    xpath: /article/body/sec[8]/sec[3]/sec[3]/p\n    text_sha256: abcef730d1a08f9c26185e10c18bc7a53afaaedfbc8104a1fc0cfce8b6acbed9\nsample_ids: \n  [1] S-SKIN-KO\n  [2] S-TUMOR\n  [3] S-SKIN-DRUG\nmethod: modified iDISCO\nexplicit_stage_duration_h: 96.5",
+      "Text2_Reference": [
+        "Structured evidence: full/APP208/evidence/independent_R2/record_independent_R2.json#/protocols/1; SHA-256: e5a2df8e41ff1d3b54833a5ebb54bc2463bc321c8ad10096ea9a657f7e26e752; DOI: https://doi.org/10.1016/j.isci.2025.112971"
+      ]
+    },
+    {
+      "Text3": "protocols:\nid: P-IMAGE\ntext: LeicaTCS SP8X andLASXNavigator;HCPLFLOUTAR10×/0.30;DBE medium undercoverslip. Field1024×1024pixels,1107.14×1107.14µm;zstep5µm;DyLight649 signal detection670–708nm. Caption skin>50slices(S1 50–100);tumor>200(S2/S3 207). Zstep is not axial opticalresolution;stackcount does not demonstrate uniform whole-organ penetration.\nsource_locators: \n  [1]     source_id: S2\n    xml_id: p0205\n    xpath: /article/body/sec[8]/sec[3]/sec[3]/p\n    text_sha256: abcef730d1a08f9c26185e10c18bc7a53afaaedfbc8104a1fc0cfce8b6acbed9\n  [2]     source_id: S2\n    xml_id: fig1\n    xpath: /article/body/sec[2]/sec[1]/fig\n    text_sha256: a83b0f0cdb27aa81807a87f688b0659ea997496acbb4a687539d72b9391b6f18\n  [3]     source_id: S2\n    xml_id: fig2\n    xpath: /article/body/sec[2]/sec[2]/fig\n    text_sha256: d41026a973de48a623d99b949ded97c8aeb4049d7d5dd79cde8ea6115df8650a\n  [4]     source_id: S2\n    xml_id: fig4\n    xpath: /article/body/sec[2]/sec[4]/fig\n    text_sha256: e9c50d414cc92bdcf65f6c617b532d784873e5a6ec8ba99e849df515a5977135\nsample_ids: \n  [1] S-SKIN-KO\n  [2] S-TUMOR\n  [3] S-SKIN-DRUG",
+      "Text3_Reference": [
+        "Structured evidence: full/APP208/evidence/independent_R2/record_independent_R2.json#/protocols/2; SHA-256: e5a2df8e41ff1d3b54833a5ebb54bc2463bc321c8ad10096ea9a657f7e26e752; DOI: https://doi.org/10.1016/j.isci.2025.112971"
+      ]
+    },
+    {
+      "Text4": "protocols:\nid: P-2D\ntext: Fiji colorsplit andprojection creategrayscale2Dimage;AngioTool usesfixedanalysisparameters acrossimages forjunctions/endpoints. LocalThickness plugin applied tosame2Dprojections. Thick-vessel overlap/projection topology can differfromtrue3D connectivity;numeric AngioTool parameter valuesnotgiven.\nsource_locators: \n  [1]     source_id: S2\n    xml_id: p0205\n    xpath: /article/body/sec[8]/sec[3]/sec[3]/p\n    text_sha256: abcef730d1a08f9c26185e10c18bc7a53afaaedfbc8104a1fc0cfce8b6acbed9\nsample_ids: \n  [1] S-SKIN-KO\n  [2] S-SKIN-DRUG\n  [3] S-ADJACENT\n  [4] S-CASIN",
+      "Text4_Reference": [
+        "Structured evidence: full/APP208/evidence/independent_R2/record_independent_R2.json#/protocols/3; SHA-256: e5a2df8e41ff1d3b54833a5ebb54bc2463bc321c8ad10096ea9a657f7e26e752; DOI: https://doi.org/10.1016/j.isci.2025.112971"
+      ]
+    },
+    {
+      "Text5": "protocols:\nid: P-3D\ntext: neuTube works on3D TIFFstacks;automatedtracing plusmanualcuration forlowcontrast/largevessels. SWCnodes encodecoordinates,radius,connectivity. Vessel segmentbounded bytwobranchpoints orbranchpoint+endpoint. Source definessegmentlength asdistance betweenboundarypoints;path-length implementation not fullyspecified. Tortuosity explicitlychord/vessellength;ratio<0.5 meanshighlytortuous. Fig2Dplot isfrequencyofsegments meetingthresholds(length>50µm,tortuosity<0.5),not aplotofmeanlength/meanratio.\nsource_locators: \n  [1]     source_id: S2\n    xml_id: p0205\n    xpath: /article/body/sec[8]/sec[3]/sec[3]/p\n    text_sha256: abcef730d1a08f9c26185e10c18bc7a53afaaedfbc8104a1fc0cfce8b6acbed9\n  [2]     source_id: S2\n    xml_id: fig2\n    xpath: /article/body/sec[2]/sec[2]/fig\n    text_sha256: d41026a973de48a623d99b949ded97c8aeb4049d7d5dd79cde8ea6115df8650a\nsample_id: S-TUMOR",
+      "Text5_Reference": [
+        "Structured evidence: full/APP208/evidence/independent_R2/record_independent_R2.json#/protocols/4; SHA-256: e5a2df8e41ff1d3b54833a5ebb54bc2463bc321c8ad10096ea9a657f7e26e752; DOI: https://doi.org/10.1016/j.isci.2025.112971"
+      ]
+    },
+    {
+      "Text6": "protocols:\nid: P-TRIM\ntext: First/lastfew slices removedfromNSGskinstacks forbackground;allC57BL6skinstacks analyzed. Numberremoved unspecified;do not inferidentical sampleddepth acrossthese backgrounds.\nsource_locators: \n  [1]     source_id: S2\n    xml_id: p0205\n    xpath: /article/body/sec[8]/sec[3]/sec[3]/p\n    text_sha256: abcef730d1a08f9c26185e10c18bc7a53afaaedfbc8104a1fc0cfce8b6acbed9\nsample_ids: \n  [1] S-SKIN-DRUG\n  [2] S-ADJACENT",
+      "Text6_Reference": [
+        "Structured evidence: full/APP208/evidence/independent_R2/record_independent_R2.json#/protocols/5; SHA-256: e5a2df8e41ff1d3b54833a5ebb54bc2463bc321c8ad10096ea9a657f7e26e752; DOI: https://doi.org/10.1016/j.isci.2025.112971"
+      ]
+    },
+    {
+      "Text7": "protocols:\nid: P-HISTO\ntext: Independentsectionhistology/immunostaining:4%formaldehyde fixation,H&E/VVG,CD31tumor staining;frozenOCT skinsections forCD34,LYVE1,CD45,pS6/S6. These antibodychannelsare notdemonstrated whole-tissueimmunolabels compatiblewithDBE.\nsource_locators: \n  [1]     source_id: S2\n    xml_id: p0235\n    xpath: /article/body/sec[8]/sec[3]/sec[9]/p\n    text_sha256: 2a4dc952d8cdeadeee238d4351feecc82159576e9684691370c83760ec35f3bf\n  [2]     source_id: S2\n    xml_id: fig5\n    xpath: /article/body/sec[2]/sec[5]/fig[1]\n    text_sha256: 0ba9fea98641ce61000980f5f06aa644d5fe17bc10f086beef0a86bc89874dd0\nsample_ids: \n  [1] S-SKIN-DRUG\n  [2] S-TUMOR",
+      "Text7_Reference": [
+        "Structured evidence: full/APP208/evidence/independent_R2/record_independent_R2.json#/protocols/6; SHA-256: e5a2df8e41ff1d3b54833a5ebb54bc2463bc321c8ad10096ea9a657f7e26e752; DOI: https://doi.org/10.1016/j.isci.2025.112971"
+      ]
+    },
+    {
+      "Text8": "protocols:\nid: P-INVITRO\ntext: Separate nonclearedVMT/VMO fluorescence:BiotekLionheart10×air;REAVER vesselelements;ImageJ total tumorchannelintensity normalizedwithin chamber tobaseline. Fluorescence integratesarea/depth andbrightness,not directcellnumber.\nsource_locators: \n  [1]     source_id: S2\n    xml_id: p0230\n    xpath: /article/body/sec[8]/sec[3]/sec[8]/p\n    text_sha256: 3d18a503712c9626632524e081f79ff5398ef3b603df83b8fa25cff1b0c8b490\nsample_id: S-ORGANOID",
+      "Text8_Reference": [
+        "Structured evidence: full/APP208/evidence/independent_R2/record_independent_R2.json#/protocols/7; SHA-256: e5a2df8e41ff1d3b54833a5ebb54bc2463bc321c8ad10096ea9a657f7e26e752; DOI: https://doi.org/10.1016/j.isci.2025.112971"
+      ]
+    },
+    {
+      "Text9": "results:\nid: R-KO\ntext: RhoJ-KOskin hasfewerjunctions/endpoints andfewer0–10µmcapillary-width pixels/features;11–45µmbin reductionnot significant(Fig1C). neuTube supportsalteredarchitecture. Maintainedepidermis/hairfollicles andsimilarflowgatedlivecellpercentages do notproveunchangedabsolutecellnumbers.\nsource_locators: \n  [1]     source_id: S2\n    xml_id: p0055\n    xpath: /article/body/sec[2]/sec[1]/p\n    text_sha256: cf4ffd4edc4e2b59b6ad72e59dff7ef01867a1a9a9294f86045855b10c03bfed\n  [2]     source_id: S2\n    xml_id: fig1\n    xpath: /article/body/sec[2]/sec[1]/fig\n    text_sha256: a83b0f0cdb27aa81807a87f688b0659ea997496acbb4a687539d72b9391b6f18\nsample_id: S-SKIN-KO\nprotocol_ids: \n  [1] P-CLEAR\n  [2] P-IMAGE\n  [3] P-2D\n  [4] P-3D\nsupplement_locator: S4 S1",
+      "Text9_Reference": [
+        "Structured evidence: full/APP208/evidence/independent_R2/record_independent_R2.json#/results/0; SHA-256: e5a2df8e41ff1d3b54833a5ebb54bc2463bc321c8ad10096ea9a657f7e26e752; DOI: https://doi.org/10.1016/j.isci.2025.112971"
+      ]
+    },
+    {
+      "Text10": "results:\nid: R-TUMOR\ntext: ARN22089groups showreducedtumorgrowth andvascularbranch/endnodes versusvehicle,withvemurafenib comparator. Fig2Dfrequencyoftortuoussegments<0.5:lowerARNgroupnot significant,highergroup significant;do notclaimallmetrics significantatbothlevels. S2Csizebins0–20,21–50,≥50µm showstrongest effectsinsmallvessels. Morphologydoesnot establishselectivecytotoxicity orhumanclinicalefficacy.\nsource_locators: \n  [1]     source_id: S2\n    xml_id: p0060\n    xpath: /article/body/sec[2]/sec[2]/p\n    text_sha256: 4f8e519ba46ac27f6b405408b611656d0124f80c97a800bf51f121c9175a4ae0\n  [2]     source_id: S2\n    xml_id: fig2\n    xpath: /article/body/sec[2]/sec[2]/fig\n    text_sha256: d41026a973de48a623d99b949ded97c8aeb4049d7d5dd79cde8ea6115df8650a\nsample_id: S-TUMOR\nsupplement_locator: S4 S2",
+      "Text10_Reference": [
+        "Structured evidence: full/APP208/evidence/independent_R2/record_independent_R2.json#/results/1; SHA-256: e5a2df8e41ff1d3b54833a5ebb54bc2463bc321c8ad10096ea9a657f7e26e752; DOI: https://doi.org/10.1016/j.isci.2025.112971"
+      ]
+    },
+    {
+      "Text11": "results:\nid: R-ANALOG\ntext: ARN25062/ARN22089 comparison inS3 showsvascular changeswithboth2DAngioTool and3DneuTube;separatecohort fromoralcomparisonFig2,notpooled. S3methodswording aboutfrequencycontradictory;noadministration reconstructionperformed.\nsource_locators: \n  [1]     source_id: S2\n    xml_id: p0060\n    xpath: /article/body/sec[2]/sec[2]/p\n    text_sha256: 4f8e519ba46ac27f6b405408b611656d0124f80c97a800bf51f121c9175a4ae0\nsupplement_locator: S4 S3",
+      "Text11_Reference": [
+        "Structured evidence: full/APP208/evidence/independent_R2/record_independent_R2.json#/results/2; SHA-256: e5a2df8e41ff1d3b54833a5ebb54bc2463bc321c8ad10096ea9a657f7e26e752; DOI: https://doi.org/10.1016/j.isci.2025.112971"
+      ]
+    },
+    {
+      "Text12": "results:\nid: R-SKIN\ntext: ARN22089normal skinshows reducedjunctions/endpoints andwidth-bin counts;vemurafenib/linifanib haveweaker/differentpatterns. NSGadjacentskin replicationseparate.S4Canimallevelsummary supportsjunction/endpointdirection,notjuststack-leveldots. Changes inVVGstaineddermal thicknessareseparatehistology.\nsource_locators: \n  [1]     source_id: S2\n    xml_id: p0070\n    xpath: /article/body/sec[2]/sec[4]/p[1]\n    text_sha256: b078e3b6d7612f9ac9f990f3ed9085e3826a0f8698b589b25e7c83763d139da9\n  [2]     source_id: S2\n    xml_id: p0075\n    xpath: /article/body/sec[2]/sec[4]/p[2]\n    text_sha256: 084acb4f1ee251e506a630c41bb6c7ca9f45dd2a7e3ef5f8df00c5d37689255f\n  [3]     source_id: S2\n    xml_id: fig4\n    xpath: /article/body/sec[2]/sec[4]/fig\n    text_sha256: e9c50d414cc92bdcf65f6c617b532d784873e5a6ec8ba99e849df515a5977135\nsample_id: S-SKIN-DRUG\nsupplement_locator: S4 S4–S5",
+      "Text12_Reference": [
+        "Structured evidence: full/APP208/evidence/independent_R2/record_independent_R2.json#/results/3; SHA-256: e5a2df8e41ff1d3b54833a5ebb54bc2463bc321c8ad10096ea9a657f7e26e752; DOI: https://doi.org/10.1016/j.isci.2025.112971"
+      ]
+    },
+    {
+      "Text13": "results:\nid: R-RHOJ\ntext: MainFig5D/E saysnoadditional vascular effectofARN22089inRhoJ-KO;supportsRhoJ-dependentcomponent ratherthanpureCDC42-specificmechanism. Important discrepancy:S1C EndNode plotshowsstarbetweenKOvehicleandKOARNgroup,contradictingunqualifiedno-difference claim;othermain2Dmetricsns. Preservepanel-specific evidence. Direct in-tissue CDC42 activation was not measured, and intact perfused human skin was not tested.\nsource_locators: \n  [1]     source_id: S2\n    xml_id: p0100\n    xpath: /article/body/sec[2]/sec[5]/p[3]\n    text_sha256: c4138d814a5acc026696944be592f759cea2ca37c9d2256ab76289261789fab1\n  [2]     source_id: S2\n    xml_id: fig5\n    xpath: /article/body/sec[2]/sec[5]/fig[1]\n    text_sha256: 0ba9fea98641ce61000980f5f06aa644d5fe17bc10f086beef0a86bc89874dd0\nsupplement_locator: S4 S1C",
+      "Text13_Reference": [
+        "Structured evidence: full/APP208/evidence/independent_R2/record_independent_R2.json#/results/4; SHA-256: e5a2df8e41ff1d3b54833a5ebb54bc2463bc321c8ad10096ea9a657f7e26e752; DOI: https://doi.org/10.1016/j.isci.2025.112971"
+      ]
+    },
+    {
+      "Text14": "results:\nid: R-CASIN\ntext: CASIN WTandKO vascularjunction/endpoint differencesnot significant;dermalthicknessincreases(Fig6C/S7D). VMOvessellength unchangedwithCASIN relativecontrolbutdecreasedwithARN22089;notproofofabsenceofeveryvascular effect.\nsource_locators: \n  [1]     source_id: S2\n    xml_id: p0105\n    xpath: /article/body/sec[2]/sec[5]/p[4]\n    text_sha256: c2db13963badb8d656e79e8358dcc68916683336e93209b94baf1b13cb5e12ac\n  [2]     source_id: S2\n    xml_id: fig6\n    xpath: /article/body/sec[2]/sec[5]/fig[2]\n    text_sha256: 010dd996ed1e68fd69be5440e0697c097904cff223f84f00861d30ce0a0f94ab\nsample_id: S-CASIN\nsupplement_locator: S4 S7",
+      "Text14_Reference": [
+        "Structured evidence: full/APP208/evidence/independent_R2/record_independent_R2.json#/results/5; SHA-256: e5a2df8e41ff1d3b54833a5ebb54bc2463bc321c8ad10096ea9a657f7e26e752; DOI: https://doi.org/10.1016/j.isci.2025.112971"
+      ]
+    },
+    {
+      "Text15": "results:\nid: R-IN-VITRO\ntext: VMT druggroups showshortervessels;dualchamber designseparatestumorandvascularreadouts. Tumor-freeVMOARN22089/ARN25062 disruptvascularstructureswherevemurafenibdoesnot(Fig4F). Not directlycomparabletoclearedmousevasculature;noengineeredcellproductiondetails retained.\nsource_locators: \n  [1]     source_id: S2\n    xml_id: p0065\n    xpath: /article/body/sec[2]/sec[3]/p\n    text_sha256: 6ff884682a4a234aacc95b38d005d777c1142fe79c24d200a6cd4924ed5f7b4a\n  [2]     source_id: S2\n    xml_id: p0080\n    xpath: /article/body/sec[2]/sec[4]/p[3]\n    text_sha256: e4097eed81806c4d9ae2e47e3452ca0ce31ee80f7c6b405026cc6b09b04c3d80\n  [3]     source_id: S2\n    xml_id: fig3\n    xpath: /article/body/sec[2]/sec[3]/fig\n    text_sha256: cfeb6fdab072a0c89b614fd17c3dfd3bf9b0d8f3eedcb7a9994c3ef26447c6d6\n  [4]     source_id: S2\n    xml_id: fig4\n    xpath: /article/body/sec[2]/sec[4]/fig\n    text_sha256: e9c50d414cc92bdcf65f6c617b532d784873e5a6ec8ba99e849df515a5977135\nsample_id: S-ORGANOID",
+      "Text15_Reference": [
+        "Structured evidence: full/APP208/evidence/independent_R2/record_independent_R2.json#/results/6; SHA-256: e5a2df8e41ff1d3b54833a5ebb54bc2463bc321c8ad10096ea9a657f7e26e752; DOI: https://doi.org/10.1016/j.isci.2025.112971"
+      ]
+    },
+    {
+      "Text16": "results:\nid: R-SAFETY\ntext: No detectedweightloss orobviousbrainvesselchangesdoesnotestablishsystemicsafety. S6Dshowsintestinal/colonvascularreduction andmucosalarchitecturalchanges;authorscallvilluslossbuttissueannotationalternatescolon/intestine,soanatomicidentitycannotbeconfirmedfromlabelalone.\nsource_locators: \n  [1]     source_id: S2\n    xml_id: p0085\n    xpath: /article/body/sec[2]/sec[4]/p[4]\n    text_sha256: fcdf95539ec9d52e39142408ebb9b308c64603ba62b805a751a746b71361c560\nsupplement_locator: S4 S6",
+      "Text16_Reference": [
+        "Structured evidence: full/APP208/evidence/independent_R2/record_independent_R2.json#/results/7; SHA-256: e5a2df8e41ff1d3b54833a5ebb54bc2463bc321c8ad10096ea9a657f7e26e752; DOI: https://doi.org/10.1016/j.isci.2025.112971"
+      ]
+    },
+    {
+      "Text17": "results:\nid: R-RNA\ntext: Authorsreportreducedcelladhesion/CDC42-relatedpathways andmarkerexpression;fixedsectionpS6/CD34/LYVE1/CD45 stainingprovidesdistinctprotein/spatialevidence. TableS1keygenestatisticsdonotmatchblanketgene-significanceclaim:negativeCdc42/Rhoalog2FC havep>.32,padj>.80;Lyve1p.0661,padj.4646;Cd34p.0533,padj.4238. DownwarddirectionisnotstatisticalsignificanceandbulkRNAisnotcellcount. Lpxn, however, has significant negative differential expression (S1 row564, adjusted p .005374604). Rhoj transcription is not detectably reduced. Pathway overrepresentation is not a directional pathway-activity measurement.\nsource_locators: \n  [1]     source_id: S2\n    xml_id: p0090\n    xpath: /article/body/sec[2]/sec[5]/p[1]\n    text_sha256: 2399650c9bbf68b8b328d5377e01bc30c17c8f695bb347414e29492ed2db604b\n  [2]     source_id: S2\n    xml_id: p0095\n    xpath: /article/body/sec[2]/sec[5]/p[2]\n    text_sha256: 218d84762112cc164f30d9d8fd1634220e999d7884efd5ff2931ec47ef7d8f1f\n  [3]     source_id: S2\n    xml_id: fig5\n    xpath: /article/body/sec[2]/sec[5]/fig[1]\n    text_sha256: 0ba9fea98641ce61000980f5f06aa644d5fe17bc10f086beef0a86bc89874dd0\n  [4]     source_id: S2\n    xml_id: p0250\n    xpath: /article/body/sec[8]/sec[3]/sec[12]/p\n    text_sha256: b2b10d6bccc46812f0ddb51b87e31cf40d222f84b18d83b38bf1426ea1800cb5\nsample_id: S-RNA\ntable_locator: S5 Table_S1 rows557,1953,6004,6182;table_audit.json",
+      "Text17_Reference": [
+        "Structured evidence: full/APP208/evidence/independent_R2/record_independent_R2.json#/results/8; SHA-256: e5a2df8e41ff1d3b54833a5ebb54bc2463bc321c8ad10096ea9a657f7e26e752; DOI: https://doi.org/10.1016/j.isci.2025.112971"
+      ]
+    },
+    {
+      "Text18": "table_findings:\nS1: \n  rows_including_header: 17084\n  columns: 7\n  key_rows_read: table_audit.json\n  finding: The nine genes selected in R1 did not have padj<.05, but this is not true of all task-relevant genes. Lpxn row564 has padj .005374604 and meets the displayed 1.5-fold/p<.005 threshold. Full relevant-gene values are in workbook_scientific_audit.json.\nS2: \n  rows: 14906\n  columns: 6\n  header: 14869 uniquely Mapped IDS out of14904(client text box input)\n  finding: BroadmappedlistcannotbeassumedfilteredDElist;Cdc42row2304andRhoarow10383present.\nS3: \n  rows: 882\n  columns: 8\n  scope: PANTHER/Reactomeoverrepresentation;includesmetadata/headerrows\n  finding: Table S3 is PANTHER Fisher overrepresentation with FDR correction, reference 21983 mouse genes, analyzed input 14904 IDs. CDC42 pathway row314 has 94 observed/64.41 expected, enrichment1.46, FDR1.08e-13. Enrichment of membership does not establish directional downregulation or CDC42 biochemical inhibition; mapping list is not itself a filtered DE list.\nS4: \n  rows: 327\n  columns: 8\n  scope: STRINGfunctionalprocesses;includesheaders\n  finding: Fig5A pairs Mmu05150 with Cell adhesion molecules, FDR .00072. Table S4 pairs this description/FDR with mmu04514; mmu05150 is Staphylococcus aureus infection, FDR 2.81e-7. Preserve the mismatch and do not silently substitute identifiers. Fig5A short descriptions Cell migration and MAPK cascade correspond in S4 to Regulation of cell migration and Regulation of MAPK cascade; term IDs and FDRs match. Keep full ontology descriptions to avoid claiming measurements of migration or MAPK activity.\nthreshold_conflict: Fig5A caption FDR <.002 conflicts with .0069 and .02 plotted entries. CD28 PI3K/Akt figure 2.03E-05 is not .0203, but differs from Table S3 .000976. Fig5B >=1.5-fold/p<.005 is not met by all displayed genes. Methods PANTHER p<.09 and STRING p<.009 remain source-specific.",
+      "Text18_Reference": [
+        "Structured evidence: full/APP208/evidence/independent_R2/record_independent_R2.json#/table_findings; SHA-256: e5a2df8e41ff1d3b54833a5ebb54bc2463bc321c8ad10096ea9a657f7e26e752; DOI: https://doi.org/10.1016/j.isci.2025.112971"
+      ]
+    },
+    {
+      "Text19": "statistics:\nunits: Mainstackdotsnestedwithinanimals;S1D/S2A/S4Cshowanimalmeanreanalyseswithmean±SEM. Mainmorphometrymean±SD;growthmean±SEM. Flowpercentagesnotabsolutecount.\ntests: Methodsone-/two-wayANOVAandunpairedt;Fig4Btwo-wayANOVA;Fig6unpairedtwo-tailedt;S1/S2/S4animalreplotsunpairedtwo-tailedt. Preservepaneltestdifferences.\nn_discrepancies: \n  [1] Fig2D>3tumorsvsS2C3tumors\n  [2] Fig4>3micevsS4Canimalplots3visible\n  [3] S1A3micevsS1C>3mice\nmultiplicity: Manymetrics/stacktests;notallmultiplicitycorrectionsorhierarchicalmodelsdescribed.",
+      "Text19_Reference": [
+        "Structured evidence: full/APP208/evidence/independent_R2/record_independent_R2.json#/statistics; SHA-256: e5a2df8e41ff1d3b54833a5ebb54bc2463bc321c8ad10096ea9a657f7e26e752; DOI: https://doi.org/10.1016/j.isci.2025.112971"
+      ]
+    }
+  ],
+  "Note": [
+    {
+      "Text1": "Paper APP208; source coverage: full; source release status: published_in_this_release; source default_eligible: true. Read this study as a whole with its sample, experimental, measurement and limitation fields. All selected source files and mandatory support in the accompanying archive apply jointly. Import does not promote candidate status, resolve contradictions, or turn review citations into independent primary experiments. Application includes source-labelled protocols, comparisons and results; labels within each Text retain their actual role.",
+      "Text1_Reference": [
+        "DOI: https://doi.org/10.1016/j.isci.2025.112971",
+        "Evidence-layer structured paraphrase; not a verbatim quotation. Source release: https://github.com/404NotFound422/TOCAgentProject/tree/5e3a711befb3952a2e39f4d53fc9c9f1a7ac0d22/KnowledgeBase/evidence_expansion_20261019",
+        "Local source archive: ../literature_evidence/2026-11-11/source_release.zip; member: full/APP208/version_selection.json"
+      ]
+    },
+    {
+      "Text2": "Selected version and mandatory composition:\npaper_id: APP208\nstatus: full\ndefault_eligible: true\nactive_scientific_files: \n  [1]     path: full/APP208/evidence/independent_R2/record_independent_R2.json\n    sha256: e5a2df8e41ff1d3b54833a5ebb54bc2463bc321c8ad10096ea9a657f7e26e752\n    source_member: independent_R2/record_independent_R2.json\n  [2]     path: full/APP208/evidence/independent_R2/reviewer_delta.json\n    sha256: 21ff32e8fee025a6dcd760d12092b4137689b8757b6ed80e57d31207f5d8db57\n    source_member: independent_R2/reviewer_delta.json\n  [3]     path: full/APP208/evidence/independent_R2/independent_review_receipt.json\n    sha256: 3733a22ce70867fc6c141b11afa074501ba7de493425fe7a87bc95a367164502\n    source_member: independent_R2/independent_review_receipt.json\n  [4]     path: full/APP208/evidence/independent_R2/workbook_scientific_audit.json\n    sha256: bdcac055ecdad4de26b537a9ff4ca4c8438026cd0f7483929e602ba20d861e15\n    source_member: independent_R2/workbook_scientific_audit.json\n  [5]     path: full/APP208/evidence/second_narrow_review/statistics_delta_receipt.json\n    sha256: f48e1ea93b8a4eb25a1a36c053d51c3317408f43fb8a6a262f4d807072486755\n    source_member: second_narrow_review/statistics_delta_receipt.json\n  [6]     path: full/APP208/evidence/final_acceptance/acceptance_receipt.json\n    sha256: 64deed6ba3094c7896740a51e91503f77a1e87c8ca93b257ab732715d91040e0\n    source_member: final_acceptance/acceptance_receipt.json\n  [7]     path: full/APP208/evidence/final_acceptance/mapping_and_n_caveat.json\n    sha256: 5fa819f3951a3370ffe15e3eda87977f26e653a6c69731a2e0cd7b76248ec5fa\n    source_member: final_acceptance/mapping_and_n_caveat.json\n  [8]     path: full/APP208/evidence/source_locators_and_hashes.json\n    sha256: b1e4527329c626409e6d2b7449e2725ef19279c3fb2f36ae0f312c67e95d521f\n    source_member: source_locators_and_hashes.json\n  [9]     path: full/APP208/evidence/source_payload_transform.json\n    sha256: 6cac0bc5cc4a80ec02c083d637de6b309ccbc60ee2ebe16f81f56edacb073fb6\n    source_member: source_payload_transform.json\n  [10]     path: full/APP208/evidence/actual_query_log.json\n    sha256: f141e58c610d34644861109b3e17d8c7ccd32e3df87a1a3648888d3da33d49c8\n    source_member: actual_query_log.json\nacceptance: full/APP208/evidence/final_acceptance/acceptance_receipt.json\nmandatory_composition: Every selected file is jointly required, including overlays, deltas, scope guards, provenance corrections and review receipts. Do not use a base record alone.\nactive_version_and_scope: \n  paper_id: APP208\n  current_full_task_scope: true\n  partial: false\n  remaining_relevant_gaps: \n[]\n  package_sha256: 7d77081cf248736c667cb815cac1aa9994fe440b2a00be9f79fb94162f508f89\n  original_package_sha256: 86912704cbf10f1f778d8fcaec6d023e6c2a32291183e7abc068167c49a5f1e0\n  acceptance_archive_member: final_acceptance/acceptance_receipt.json\n  active_version: Exact R2 science plus8delta, second narrow PASS and mandatory mapping_and_n_caveat;62 input labels retain63 rows, Agt ambiguous, Fig5E n unit unknown\n  historical_nonactive_members: \n    [1] record_R1.json\n  net_new_vs_verified117: true\n  doi_crosswalk_check: \n    doi: 10.1016/j.isci.2025.112971\n    historical117_matches: \n[]\n  stage_provenance: \n    R1: \n      execution_period: current_window\n      complete_current_task_scope: true\n      basis: original author extraction preserved\n    R2: \n      execution_period: current_window\n      complete_current_task_scope: true\n      basis: independent scientific and media/table review completed\n    R3: \n      execution_period: current_window\n      complete_current_task_scope: true\n      basis: second independent narrow delta/source review completed\n    R4: \n      execution_period: current_window\n      complete_current_task_scope: true\n      basis: exact-hash binding, caveat/source-row verification and final package completeness check completed\n  change_classification: \n    our_relation_or_scope_binding_error: \n      [1] Agt toAgxt/Agt ambiguity prevents one-to-one mapping; Fig5E n is not animal count\noriginal_member_to_release_path: \n  independent_R2/record_independent_R2.json: full/APP208/evidence/independent_R2/record_independent_R2.json\n  independent_R2/reviewer_delta.json: full/APP208/evidence/independent_R2/reviewer_delta.json\n  independent_R2/independent_review_receipt.json: full/APP208/evidence/independent_R2/independent_review_receipt.json\n  independent_R2/workbook_scientific_audit.json: full/APP208/evidence/independent_R2/workbook_scientific_audit.json\n  second_narrow_review/statistics_delta_receipt.json: full/APP208/evidence/second_narrow_review/statistics_delta_receipt.json\n  final_acceptance/acceptance_receipt.json: full/APP208/evidence/final_acceptance/acceptance_receipt.json\n  final_acceptance/mapping_and_n_caveat.json: full/APP208/evidence/final_acceptance/mapping_and_n_caveat.json\n  source_locators_and_hashes.json: full/APP208/evidence/source_locators_and_hashes.json\n  source_payload_transform.json: full/APP208/evidence/source_payload_transform.json\n  actual_query_log.json: full/APP208/evidence/actual_query_log.json\nsource_asset_policy: Original PDFs, videos, images, workbooks and raw source spans are external provenance only and are not needed to load these structured scientific records.\nhistory_rule: Only this explicit selection is active. Superseded history is not published or recursively promoted.\nactive_reference_aliases: \n  independent_R2/record_independent_R2.json: full/APP208/evidence/independent_R2/record_independent_R2.json\n  independent_R2/reviewer_delta.json: full/APP208/evidence/independent_R2/reviewer_delta.json\n  independent_R2/independent_review_receipt.json: full/APP208/evidence/independent_R2/independent_review_receipt.json\n  independent_R2/workbook_scientific_audit.json: full/APP208/evidence/independent_R2/workbook_scientific_audit.json\n  second_narrow_review/statistics_delta_receipt.json: full/APP208/evidence/second_narrow_review/statistics_delta_receipt.json\n  final_acceptance/acceptance_receipt.json: full/APP208/evidence/final_acceptance/acceptance_receipt.json\n  final_acceptance/mapping_and_n_caveat.json: full/APP208/evidence/final_acceptance/mapping_and_n_caveat.json\n  source_locators_and_hashes.json: full/APP208/evidence/source_locators_and_hashes.json\n  source_payload_transform.json: full/APP208/evidence/source_payload_transform.json\n  actual_query_log.json: full/APP208/evidence/actual_query_log.json\n  table_audit.json: full/APP208/support/table_audit.json\n  figure_query_receipt.json: full/APP208/support/figure_query_receipt.json\n  supplement_query_receipt.json: full/APP208/support/supplement_query_receipt.json\n  paper_completion/APP208/independent_R2/record_independent_R2.json: full/APP208/evidence/independent_R2/record_independent_R2.json\n  paper_completion/APP208/independent_R2/reviewer_delta.json: full/APP208/evidence/independent_R2/reviewer_delta.json\n  paper_completion/APP208/second_narrow_review/statistics_delta_receipt.json: full/APP208/evidence/second_narrow_review/statistics_delta_receipt.json\n  paper_completion/APP208/final_acceptance/mapping_and_n_caveat.json: full/APP208/evidence/final_acceptance/mapping_and_n_caveat.json\nactive_reference_resolution_evidence: \n  [1]     source_file: full/APP208/evidence/independent_R2/record_independent_R2.json\n    json_pointer: /table_findings/S1/key_rows_read\n    reference: table_audit.json\n    resolved_release_path: full/APP208/support/table_audit.json\n    binding_basis: unique_verified_original_member_path\n  [2]     source_file: full/APP208/evidence/independent_R2/record_independent_R2.json\n    json_pointer: /supplement_audit/8/audit\n    reference: table_audit.json\n    resolved_release_path: full/APP208/support/table_audit.json\n    binding_basis: unique_verified_original_member_path\n  [3]     source_file: full/APP208/evidence/independent_R2/record_independent_R2.json\n    json_pointer: /supplement_audit/9/audit\n    reference: table_audit.json\n    resolved_release_path: full/APP208/support/table_audit.json\n    binding_basis: unique_verified_original_member_path\n  [4]     source_file: full/APP208/evidence/independent_R2/record_independent_R2.json\n    json_pointer: /supplement_audit/10/audit\n    reference: table_audit.json\n    resolved_release_path: full/APP208/support/table_audit.json\n    binding_basis: unique_verified_original_member_path\n  [5]     source_file: full/APP208/evidence/independent_R2/record_independent_R2.json\n    json_pointer: /supplement_audit/11/audit\n    reference: table_audit.json\n    resolved_release_path: full/APP208/support/table_audit.json\n    binding_basis: unique_verified_original_member_path\n  [6]     source_file: full/APP208/evidence/independent_R2/independent_review_receipt.json\n    json_pointer: /source_manifest_checks/0/path\n    reference: actual_query_log.json\n    resolved_release_path: full/APP208/evidence/actual_query_log.json\n    binding_basis: unique_verified_original_member_path\n  [7]     source_file: full/APP208/evidence/independent_R2/independent_review_receipt.json\n    json_pointer: /source_manifest_checks/2/path\n    reference: figure_query_receipt.json\n    resolved_release_path: full/APP208/support/figure_query_receipt.json\n    binding_basis: unique_verified_original_member_path\n  [8]     source_file: full/APP208/evidence/independent_R2/independent_review_receipt.json\n    json_pointer: /source_manifest_checks/30/path\n    reference: supplement_query_receipt.json\n    resolved_release_path: full/APP208/support/supplement_query_receipt.json\n    binding_basis: unique_verified_original_member_path\n  [9]     source_file: full/APP208/evidence/independent_R2/independent_review_receipt.json\n    json_pointer: /source_manifest_checks/51/path\n    reference: table_audit.json\n    resolved_release_path: full/APP208/support/table_audit.json\n    binding_basis: unique_verified_original_member_path\n  [10]     source_file: full/APP208/evidence/independent_R2/independent_review_receipt.json\n    json_pointer: /query_receipts_reused/0\n    reference: actual_query_log.json\n    resolved_release_path: full/APP208/evidence/actual_query_log.json\n    binding_basis: unique_verified_original_member_path\n  [11]     source_file: full/APP208/evidence/independent_R2/independent_review_receipt.json\n    json_pointer: /query_receipts_reused/1\n    reference: figure_query_receipt.json\n    resolved_release_path: full/APP208/support/figure_query_receipt.json\n    binding_basis: unique_verified_original_member_path\n  [12]     source_file: full/APP208/evidence/independent_R2/independent_review_receipt.json\n    json_pointer: /query_receipts_reused/2\n    reference: supplement_query_receipt.json\n    resolved_release_path: full/APP208/support/supplement_query_receipt.json\n    binding_basis: unique_verified_original_member_path\n  [13]     source_file: full/APP208/evidence/second_narrow_review/statistics_delta_receipt.json\n    json_pointer: /exact_science_path\n    reference: paper_completion/APP208/independent_R2/record_independent_R2.json\n    resolved_release_path: full/APP208/evidence/independent_R2/record_independent_R2.json\n    binding_basis: unique_verified_original_member_path\n  [14]     source_file: full/APP208/evidence/second_narrow_review/statistics_delta_receipt.json\n    json_pointer: /delta_path\n    reference: paper_completion/APP208/independent_R2/reviewer_delta.json\n    resolved_release_path: full/APP208/evidence/independent_R2/reviewer_delta.json\n    binding_basis: unique_verified_original_member_path\n  [15]     source_file: full/APP208/evidence/final_acceptance/acceptance_receipt.json\n    json_pointer: /exact_science/path\n    reference: paper_completion/APP208/independent_R2/record_independent_R2.json\n    resolved_release_path: full/APP208/evidence/independent_R2/record_independent_R2.json\n    binding_basis: same_paper_exact_source_sha256\n  [16]     source_file: full/APP208/evidence/final_acceptance/acceptance_receipt.json\n    json_pointer: /exact_delta/path\n    reference: paper_completion/APP208/independent_R2/reviewer_delta.json\n    resolved_release_path: full/APP208/evidence/independent_R2/reviewer_delta.json\n    binding_basis: same_paper_exact_source_sha256\n  [17]     source_file: full/APP208/evidence/final_acceptance/acceptance_receipt.json\n    json_pointer: /second_narrow_review/path\n    reference: paper_completion/APP208/second_narrow_review/statistics_delta_receipt.json\n    resolved_release_path: full/APP208/evidence/second_narrow_review/statistics_delta_receipt.json\n    binding_basis: same_paper_exact_source_sha256\n  [18]     source_file: full/APP208/evidence/final_acceptance/acceptance_receipt.json\n    json_pointer: /external_caveat/path\n    reference: paper_completion/APP208/final_acceptance/mapping_and_n_caveat.json\n    resolved_release_path: full/APP208/evidence/final_acceptance/mapping_and_n_caveat.json\n    binding_basis: same_paper_exact_source_sha256\n  [19]     source_file: full/APP208/evidence/source_payload_transform.json\n    json_pointer: /derived_member\n    reference: source_locators_and_hashes.json\n    resolved_release_path: full/APP208/evidence/source_locators_and_hashes.json\n    binding_basis: unique_verified_original_member_path\n  [20]     source_file: full/APP208/evidence/actual_query_log.json\n    json_pointer: /network/0\n    reference: figure_query_receipt.json\n    resolved_release_path: full/APP208/support/figure_query_receipt.json\n    binding_basis: unique_verified_original_member_path\n  [21]     source_file: full/APP208/evidence/actual_query_log.json\n    json_pointer: /network/1\n    reference: supplement_query_receipt.json\n    resolved_release_path: full/APP208/support/supplement_query_receipt.json\n    binding_basis: unique_verified_original_member_path\nexternal_or_historical_references: \n  [1]     source_file: full/APP208/evidence/independent_R2/record_independent_R2.json\n    json_pointer: /provenance/derived_from\n    reference: paper_completion/APP208/record_R1.json\n    automatic_loading: false\n    role: superseded_or_historical_provenance_not_active\n  [2]     source_file: full/APP208/evidence/independent_R2/independent_review_receipt.json\n    json_pointer: /source_manifest_checks/9/path\n    reference: gap_list.md\n    automatic_loading: false\n    role: unselected_package_documentation_or_superseded_receipt\n  [3]     source_file: full/APP208/evidence/independent_R2/independent_review_receipt.json\n    json_pointer: /source_manifest_checks/10/path\n    reference: record_R1.json\n    automatic_loading: false\n    role: superseded_or_historical_provenance_not_active\n  [4]     source_file: full/APP208/evidence/independent_R2/independent_review_receipt.json\n    json_pointer: /source_manifest_checks/11/path\n    reference: source_spans.json\n    automatic_loading: false\n    role: external_original_source_or_acquisition_provenance_not_runtime\n  [5]     source_file: full/APP208/evidence/independent_R2/independent_review_receipt.json\n    json_pointer: /source_manifest_checks/12/path\n    reference: supplement.txt\n    automatic_loading: false\n    role: external_original_source_or_acquisition_provenance_not_runtime\n  [6]     source_file: full/APP208/evidence/source_payload_transform.json\n    json_pointer: /original_member\n    reference: source_spans.json\n    automatic_loading: false\n    role: external_original_source_or_acquisition_provenance_not_runtime\nreference_resolution_policy: Resolve only explicit exact aliases to SHA-bound selected science or required support. Unlisted/ambiguous references raise an error. Never use basename/fuzzy matching at runtime, recursively load history, or activate original source assets.\nrequired_supporting_files: \n  [1]     paper_id: APP208\n    path: full/APP208/support/table_audit.json\n    source_member: table_audit.json\n    source_package_sha256: 7d77081cf248736c667cb815cac1aa9994fe440b2a00be9f79fb94162f508f89\n    sha256: 824387f8dcd0d48159a01239f1a52a6348f7c4a1bbb2bed39c7200153fa92b33\n    source_sha256: 824387f8dcd0d48159a01239f1a52a6348f7c4a1bbb2bed39c7200153fa92b33\n    bytes: 16673\n    role: required_audit_support_referenced_by_active_science\n    transformed: false\n  [2]     paper_id: APP208\n    path: full/APP208/support/figure_query_receipt.json\n    source_member: figure_query_receipt.json\n    source_package_sha256: 7d77081cf248736c667cb815cac1aa9994fe440b2a00be9f79fb94162f508f89\n    sha256: f25e4c09d1c45dd648836c0bda1c014eda555fc1dfbc7c700705da5513a7d977\n    source_sha256: f25e4c09d1c45dd648836c0bda1c014eda555fc1dfbc7c700705da5513a7d977\n    bytes: 1070\n    role: required_audit_support_referenced_by_active_science\n    transformed: false\n  [3]     paper_id: APP208\n    path: full/APP208/support/supplement_query_receipt.json\n    source_member: supplement_query_receipt.json\n    source_package_sha256: 7d77081cf248736c667cb815cac1aa9994fe440b2a00be9f79fb94162f508f89\n    sha256: a324a311bc5dc0fcbb8e45655a4ec7ea4c76e2710fc1837926d84e1cd9882749\n    source_sha256: a324a311bc5dc0fcbb8e45655a4ec7ea4c76e2710fc1837926d84e1cd9882749\n    bytes: 178\n    role: required_audit_support_referenced_by_active_science\n    transformed: false",
+      "Text2_Reference": [
+        "DOI: https://doi.org/10.1016/j.isci.2025.112971",
+        "Evidence-layer structured paraphrase; not a verbatim quotation. Source release: https://github.com/404NotFound422/TOCAgentProject/tree/5e3a711befb3952a2e39f4d53fc9c9f1a7ac0d22/KnowledgeBase/evidence_expansion_20261019",
+        "Local source archive: ../literature_evidence/2026-11-11/source_release.zip; member: full/APP208/version_selection.json"
+      ]
+    },
+    {
+      "Text3": "reading_scope:\nRelevant Results/Discussion/limitations and fixed-tissue methods; all six main figure images/captions; all eight supplemental figure images/captions (17-page PDF); all four workbook structures/rows scanned with task-relevant gene and pathway rows independently verified. Unrelated genes were not individually interpreted, and no statistics were recomputed.",
+      "Text3_Reference": [
+        "Structured evidence: full/APP208/evidence/independent_R2/record_independent_R2.json#/reading_scope; SHA-256: e5a2df8e41ff1d3b54833a5ebb54bc2463bc321c8ad10096ea9a657f7e26e752; DOI: https://doi.org/10.1016/j.isci.2025.112971"
+      ]
+    },
+    {
+      "Text4": "safety_scope:\nmodel_background_only: true\nexcluded: \n  [1] Model establishment procedures\n  [2] Viral construction,production,infection,delivery orspread instructions\n  [3] Cell-production andengineering protocols\nhistorical_batch_block_not_treated_as_single_article_denial: true\nactual_denial_encountered: false",
+      "Text4_Reference": [
+        "Structured evidence: full/APP208/evidence/independent_R2/record_independent_R2.json#/safety_scope; SHA-256: e5a2df8e41ff1d3b54833a5ebb54bc2463bc321c8ad10096ea9a657f7e26e752; DOI: https://doi.org/10.1016/j.isci.2025.112971"
+      ]
+    },
+    {
+      "Text5": "source_limitations:\nclassification: source_conflict\ntext: Imagingn/stackcountsconflictbetweenmainandsupplement;cannotcreateuniqueanimal-IDmapping.",
+      "Text5_Reference": [
+        "Structured evidence: full/APP208/evidence/independent_R2/record_independent_R2.json#/source_limitations/0; SHA-256: e5a2df8e41ff1d3b54833a5ebb54bc2463bc321c8ad10096ea9a657f7e26e752; DOI: https://doi.org/10.1016/j.isci.2025.112971"
+      ]
+    },
+    {
+      "Text6": "source_limitations:\nclassification: source_not_reported_or_not_measured\ntext: Methanol48hsplitsundisclosed;clearing/RIstorageandimagingdurationsnotcomplete;mediumRIvalueabsent.",
+      "Text6_Reference": [
+        "Structured evidence: full/APP208/evidence/independent_R2/record_independent_R2.json#/source_limitations/1; SHA-256: e5a2df8e41ff1d3b54833a5ebb54bc2463bc321c8ad10096ea9a657f7e26e752; DOI: https://doi.org/10.1016/j.isci.2025.112971"
+      ]
+    },
+    {
+      "Text7": "source_limitations:\nclassification: source_not_reported_or_not_measured\ntext: NSGremoved-slicecount,tracingmanualcurationcriteria/numericthresholds/rawSWCimplementationnotfullyspecified.",
+      "Text7_Reference": [
+        "Structured evidence: full/APP208/evidence/independent_R2/record_independent_R2.json#/source_limitations/2; SHA-256: e5a2df8e41ff1d3b54833a5ebb54bc2463bc321c8ad10096ea9a657f7e26e752; DOI: https://doi.org/10.1016/j.isci.2025.112971"
+      ]
+    },
+    {
+      "Text8": "source_limitations:\nclassification: source_conflict\ntext: Fig5keygeneandpathwaythresholdclaimsconflictwithTableS1andfigurepixels;donotassertsignificantCdc42/Rhoadownregulation.",
+      "Text8_Reference": [
+        "Structured evidence: full/APP208/evidence/independent_R2/record_independent_R2.json#/source_limitations/3; SHA-256: e5a2df8e41ff1d3b54833a5ebb54bc2463bc321c8ad10096ea9a657f7e26e752; DOI: https://doi.org/10.1016/j.isci.2025.112971"
+      ]
+    },
+    {
+      "Text9": "source_limitations:\nclassification: source_conflict\ntext: S1CEndNodestarcontrastsblanketnoARNresponseinRhoJ-KO;Fig5ElegendblueRhoJWTlabelcontrastsKOtitle/text.",
+      "Text9_Reference": [
+        "Structured evidence: full/APP208/evidence/independent_R2/record_independent_R2.json#/source_limitations/4; SHA-256: e5a2df8e41ff1d3b54833a5ebb54bc2463bc321c8ad10096ea9a657f7e26e752; DOI: https://doi.org/10.1016/j.isci.2025.112971"
+      ]
+    },
+    {
+      "Text10": "source_limitations:\nclassification: source_conflict\ntext: SupplementS3treatmentfrequencywordingandS6GIanatomyambiguous;notreconstructed.",
+      "Text10_Reference": [
+        "Structured evidence: full/APP208/evidence/independent_R2/record_independent_R2.json#/source_limitations/5; SHA-256: e5a2df8e41ff1d3b54833a5ebb54bc2463bc321c8ad10096ea9a657f7e26e752; DOI: https://doi.org/10.1016/j.isci.2025.112971"
+      ]
+    },
+    {
+      "Text11": "source_limitations:\nclassification: source_not_reported_or_not_measured\ntext: NoquantitativeDyLightretention,photobleaching,deformationorwhole-tissuepenetrationvalidation.",
+      "Text11_Reference": [
+        "Structured evidence: full/APP208/evidence/independent_R2/record_independent_R2.json#/source_limitations/6; SHA-256: e5a2df8e41ff1d3b54833a5ebb54bc2463bc321c8ad10096ea9a657f7e26e752; DOI: https://doi.org/10.1016/j.isci.2025.112971"
+      ]
+    },
+    {
+      "Text12": "source_limitations:\nclassification: source_conflict\ntext: R1 .0203 is a misread: CD28 dependent PI3K/Akt figure value is 2.03E-05. Table S3 gives FDR .000976 for the same R-MMU-389357, a source conflict. Both are below .002; retain .0069 (blood vessel morphogenesis) and .02 (PI3K Cascade) as actual figure threshold exceptions.",
+      "Text12_Reference": [
+        "Structured evidence: full/APP208/evidence/independent_R2/record_independent_R2.json#/source_limitations/7; SHA-256: e5a2df8e41ff1d3b54833a5ebb54bc2463bc321c8ad10096ea9a657f7e26e752; DOI: https://doi.org/10.1016/j.isci.2025.112971"
+      ]
+    },
+    {
+      "Text13": "source_limitations:\nclassification: source_conflict\ntext: Fig5A pairs Mmu05150 with Cell adhesion molecules, FDR .00072. Table S4 pairs this description/FDR with mmu04514; mmu05150 is Staphylococcus aureus infection, FDR 2.81e-7. Preserve the mismatch and do not silently substitute identifiers.",
+      "Text13_Reference": [
+        "Structured evidence: full/APP208/evidence/independent_R2/record_independent_R2.json#/source_limitations/8; SHA-256: e5a2df8e41ff1d3b54833a5ebb54bc2463bc321c8ad10096ea9a657f7e26e752; DOI: https://doi.org/10.1016/j.isci.2025.112971"
+      ]
+    },
+    {
+      "Text14": "text_scope:\nResults p0055–p0105, Discussion/Limitations, fixed-tissue portion p0200, p0205 imaging/analysis, p0230 comparator imaging, p0235 histology, p0240 gating context, p0250 RNA analysis, all figure captions",
+      "Text14_Reference": [
+        "Structured evidence: full/APP208/evidence/independent_R2/independent_review_receipt.json#/text_scope; SHA-256: 3733a22ce70867fc6c141b11afa074501ba7de493425fe7a87bc95a367164502; DOI: https://doi.org/10.1016/j.isci.2025.112971"
+      ]
+    },
+    {
+      "Text15": "workbook_scope:\nAll rows scanned; Fig5B/S4E and Results-marker genes, Fig5A pathway IDs/values, S2 mapping membership, S3 background/test metadata and S4 ontology fields independently checked; no unrelated statistical recomputation",
+      "Text15_Reference": [
+        "Structured evidence: full/APP208/evidence/independent_R2/independent_review_receipt.json#/workbook_scope; SHA-256: 3733a22ce70867fc6c141b11afa074501ba7de493425fe7a87bc95a367164502; DOI: https://doi.org/10.1016/j.isci.2025.112971"
+      ]
+    },
+    {
+      "Text16": "safety_scope:\nFixed-tissue scientific evidence only; model establishment, viral construction/production/infection/delivery and cell engineering procedures not added.",
+      "Text16_Reference": [
+        "Structured evidence: full/APP208/evidence/independent_R2/independent_review_receipt.json#/safety_scope; SHA-256: 3733a22ce70867fc6c141b11afa074501ba7de493425fe7a87bc95a367164502; DOI: https://doi.org/10.1016/j.isci.2025.112971"
+      ]
+    },
+    {
+      "Text17": "mapping_scope_verdict:\nPASS for source-preserving row extraction; add explicit Agt ambiguity note before claiming one-to-one mapping",
+      "Text17_Reference": [
+        "Structured evidence: full/APP208/evidence/second_narrow_review/statistics_delta_receipt.json#/mapping_scope_verdict; SHA-256: f48e1ea93b8a4eb25a1a36c053d51c3317408f43fb8a6a262f4d807072486755; DOI: https://doi.org/10.1016/j.isci.2025.112971"
+      ]
+    },
+    {
+      "Text18": "gene_scope:\nS1_unique_requested_genes: 62\nS1_values_and_row_numbers_checked_against_original_workbook: all 62 exact; zero mismatches\nS2_extracted_mapping_rows: 63\nS2_unique_requested_labels: 62\nS2_values_and_row_numbers_checked_against_original_workbook: all 63 exact; zero mismatches\nsource_label_support: Fig5B and FigS4E pixels checked; Rhoj is mechanistic context; Ptprc is CD45 marker context. Scope is targeted figure/results genes, not all genes or all pathway members.\nconcrete_micro_annotation: S2 input label Agt has two source mapping rows: row3114 maps to Agxt/alanine--glyoxylate aminotransferase (UniProt O35423); row6314 maps to Agt/angiotensinogen (UniProt P11859). Retain both original rows, label ambiguity, and do not count them as two distinct requested genes or infer a one-to-one map.",
+      "Text18_Reference": [
+        "Structured evidence: full/APP208/evidence/second_narrow_review/statistics_delta_receipt.json#/gene_scope; SHA-256: f48e1ea93b8a4eb25a1a36c053d51c3317408f43fb8a6a262f4d807072486755; DOI: https://doi.org/10.1016/j.isci.2025.112971"
+      ]
+    },
+    {
+      "Text19": "Source version and scope record (not an additional scientific claim): acceptance_receipt:\npaper_id: APP208\nstatus: full\nacceptance_scope: Complete extraction of available fixed-tissue scientific evidence, with explicit source unknowns, conflicts and the external mapping/n-unit caveat. Not a claim of fully reported experiments or unambiguous gene mapping.\nexact_science: \n  path: paper_completion/APP208/independent_R2/record_independent_R2.json\n  sha256: e5a2df8e41ff1d3b54833a5ebb54bc2463bc321c8ad10096ea9a657f7e26e752\nexact_delta: \n  path: paper_completion/APP208/independent_R2/reviewer_delta.json\n  sha256: 21ff32e8fee025a6dcd760d12092b4137689b8757b6ed80e57d31207f5d8db57\nsecond_narrow_review: \n  path: paper_completion/APP208/second_narrow_review/statistics_delta_receipt.json\n  sha256: f48e1ea93b8a4eb25a1a36c053d51c3317408f43fb8a6a262f4d807072486755\n  verdict: eight deltas PASS\nexternal_caveat: \n  path: paper_completion/APP208/final_acceptance/mapping_and_n_caveat.json\n  sha256: 5fa819f3951a3370ffe15e3eda87977f26e653a6c69731a2e0cd7b76248ec5fa\nreview_chain: \n  R1: original author extraction preserved\n  R2: independent scientific and media/table review completed\n  R3: second independent narrow delta/source review completed\n  R4: exact-hash binding, caveat/source-row verification and final package completeness check completed\nsource_artifacts_excluded_from_archive: \n  [1] original PDF\n  [2] original figure images\n  [3] original supplementary workbooks\n  [4] videos\nledger_modified: false\npublished: false",
+      "Text19_Reference": [
+        "Structured evidence: full/APP208/evidence/final_acceptance/acceptance_receipt.json#; SHA-256: 64deed6ba3094c7896740a51e91503f77a1e87c8ca93b257ab732715d91040e0; DOI: https://doi.org/10.1016/j.isci.2025.112971"
+      ]
+    },
+    {
+      "Text20": "mapping_caveat:\nThe 62 requested input labels yield 63 retained Table S2 rows. Agt is ambiguous: row 3114 maps to Agxt whereas row 6314 maps to Agt. Both source rows are retained; there is no unambiguous one-to-one mapping claim. No deduplication, count adjustment, or statistics recomputation performed.",
+      "Text20_Reference": [
+        "Structured evidence: full/APP208/evidence/final_acceptance/mapping_and_n_caveat.json#/mapping_caveat; SHA-256: 5fa819f3951a3370ffe15e3eda87977f26e653a6c69731a2e0cd7b76248ec5fa; DOI: https://doi.org/10.1016/j.isci.2025.112971"
+      ]
+    },
+    {
+      "Text21": "Fig5E_n_caveat:\nFig5E caption gives n ≥ 3 per condition without specifying the unit; do not promote this n to an animal count. Main figure points and wider experimental context do not resolve the caption-specific unit.",
+      "Text21_Reference": [
+        "Structured evidence: full/APP208/evidence/final_acceptance/mapping_and_n_caveat.json#/Fig5E_n_caveat; SHA-256: 5fa819f3951a3370ffe15e3eda87977f26e653a6c69731a2e0cd7b76248ec5fa; DOI: https://doi.org/10.1016/j.isci.2025.112971"
+      ]
+    },
+    {
+      "Text22": "table_read:\nopenpyxlread-only,nochanges",
+      "Text22_Reference": [
+        "Structured evidence: full/APP208/evidence/actual_query_log.json#/table_read; SHA-256: f141e58c610d34644861109b3e17d8c7ccd32e3df87a1a3648888d3da33d49c8; DOI: https://doi.org/10.1016/j.isci.2025.112971"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,542 @@
+{
+  "TOC_Method_Name": {
+    "Text": "Not specified as a single method in the selected evidence records",
+    "Text_Reference": [
+      "DOI: https://doi.org/10.1002/2056-4538.12388",
+      "Evidence-layer structured paraphrase; not a verbatim quotation. Source release: https://github.com/404NotFound422/TOCAgentProject/tree/5e3a711befb3952a2e39f4d53fc9c9f1a7ac0d22/KnowledgeBase/evidence_expansion_20261019",
+      "Local source archive: ../literature_evidence/2026-11-11/source_release.zip; member: full/APP211/version_selection.json"
+    ]
+  },
+  "General_Description": {
+    "Text": "Volumetric imaging of the tumor microvasculature reflects outcomes and genomic states of clear cell renal cell carcinoma (2024). Evidence category: application. This card preserves the evidence layer's structured statements and their original field labels; it does not add a new literature review or certify benchmark scoring thresholds.",
+    "Text_Reference": [
+      "DOI: https://doi.org/10.1002/2056-4538.12388",
+      "Evidence-layer structured paraphrase; not a verbatim quotation. Source release: https://github.com/404NotFound422/TOCAgentProject/tree/5e3a711befb3952a2e39f4d53fc9c9f1a7ac0d22/KnowledgeBase/evidence_expansion_20261019",
+      "Local source archive: ../literature_evidence/2026-11-11/source_release.zip; member: full/APP211/version_selection.json"
+    ]
+  },
+  "Tissue_Types": [
+    {
+      "Text1": "samples:\nsample_id: S46\nspecies: human\ntissue: clear-cell renal carcinoma central tumor core\nstate: surgical FFPE\ndiameter_mm: 3\npatients: 46\nblocks_per_patient: 1\nsex: \n  male: 32\n  female: 14\nage_year_median: 63.4\nreported_interval: \n  [1] 19.6\n  [2] 82.7\ninterval_label: IQR in main; unspecified parentheses in Table S1\nsource: \n  source_id: main\n  xpath: /article/body/sec[2]/sec[1]/p\n  text_sha256: 26c0596ea341a752999d2236ddb7fefc200cab75906e03429e6ea9d3e9cb6b5a\ndemographic_source: \n  source_id: main\n  xpath: /article/body/sec[3]/sec[1]/p[1]\n  normalized_text_sha256: 640ad4953fb3bdae014c624c5eb6879ea017f4cee0ab4a0137a6525baabab1ca",
+      "Text1_Reference": [
+        "Structured evidence: full/APP211/evidence/APP211/scientific_reviewed_final_v2.json#/samples/0; SHA-256: be6d1e62df1f9080bbdab198267e1802c75b57ea6c7a9c4566f3192a5fa4f26a; DOI: https://doi.org/10.1002/2056-4538.12388"
+      ]
+    },
+    {
+      "Text2": "samples:\nsample_id: S20\nspecies: human\ntissue: matched fresh-frozen tumor genomic analysis subset\nn: 20\nlink: paired to imaged FFPE; not another 20 cleared samples\nsource: \n  source_id: main\n  xpath: //fig[@id=\"cjp212388-fig-0006\"]\n  text_sha256: c97ea1203f7280cb68ced7d844264873179084227d76ac1cd78dceba19c93b52",
+      "Text2_Reference": [
+        "Structured evidence: full/APP211/evidence/APP211/scientific_reviewed_final_v2.json#/samples/1; SHA-256: be6d1e62df1f9080bbdab198267e1802c75b57ea6c7a9c4566f3192a5fa4f26a; DOI: https://doi.org/10.1002/2056-4538.12388"
+      ]
+    }
+  ],
+  "Time_Consumption": [],
+  "Tissue_Deformation": [],
+  "Fluorescence_Compatibility": [],
+  "Preservation_Stability": [],
+  "Application": [
+    {
+      "Text1": "protocols:\nprotocol_id: P1\nmethod: DIPCO\nsample_id: S46\ntotal_duration: null (as recorded in source)\ntotal_duration_reason: several stages and final DBE duration unspecified; cannot sum overnight terms into a reported total\nsource_duration_limit: Incubation/processing and storage are distinct; follow-up months and video seconds are not clearing time.",
+      "Text1_Reference": [
+        "Structured evidence: full/APP211/evidence/APP211/scientific_reviewed_final_v2.json#/protocols/0; SHA-256: be6d1e62df1f9080bbdab198267e1802c75b57ea6c7a9c4566f3192a5fa4f26a; DOI: https://doi.org/10.1002/2056-4538.12388"
+      ]
+    },
+    {
+      "Text2": "operations:\noperation_id: O01\nsample_id: S46\nprotocol_id: P1\nstage: preprocessing\naction: deparaffinization and ethanol wash\ntime: overnight\ntemperature: null (as recorded in source)\nreported_details: 100% ethanol; deparaffinization details not fully reported\nsource: \n  source_id: main\n  xpath: /article/body/sec[2]/sec[2]/p[1]\n  text_sha256: 71d022a8fde7627132a680c032e57c1ea7a1454e3244b24fa9c770b99cbbddfb",
+      "Text2_Reference": [
+        "Structured evidence: full/APP211/evidence/APP211/scientific_reviewed_final_v2.json#/operations/0; SHA-256: be6d1e62df1f9080bbdab198267e1802c75b57ea6c7a9c4566f3192a5fa4f26a; DOI: https://doi.org/10.1002/2056-4538.12388"
+      ]
+    },
+    {
+      "Text3": "operations:\noperation_id: O02\nsample_id: S46\nprotocol_id: P1\nstage: preprocessing\naction: bleaching\ntime: null (as recorded in source)\ntemperature: null (as recorded in source)\nreported_details: 5% hydrogen peroxide\nsource: \n  source_id: main\n  xpath: /article/body/sec[2]/sec[2]/p[1]\n  text_sha256: 71d022a8fde7627132a680c032e57c1ea7a1454e3244b24fa9c770b99cbbddfb",
+      "Text3_Reference": [
+        "Structured evidence: full/APP211/evidence/APP211/scientific_reviewed_final_v2.json#/operations/1; SHA-256: be6d1e62df1f9080bbdab198267e1802c75b57ea6c7a9c4566f3192a5fa4f26a; DOI: https://doi.org/10.1002/2056-4538.12388"
+      ]
+    },
+    {
+      "Text4": "operations:\noperation_id: O03\nsample_id: S46\nprotocol_id: P1\nstage: preprocessing\naction: rehydration\ntime: null (as recorded in source)\ntemperature: null (as recorded in source)\nreported_details: descending methanol; exact series not reported\nsource: \n  source_id: main\n  xpath: /article/body/sec[2]/sec[2]/p[1]\n  text_sha256: 71d022a8fde7627132a680c032e57c1ea7a1454e3244b24fa9c770b99cbbddfb",
+      "Text4_Reference": [
+        "Structured evidence: full/APP211/evidence/APP211/scientific_reviewed_final_v2.json#/operations/2; SHA-256: be6d1e62df1f9080bbdab198267e1802c75b57ea6c7a9c4566f3192a5fa4f26a; DOI: https://doi.org/10.1002/2056-4538.12388"
+      ]
+    },
+    {
+      "Text5": "operations:\noperation_id: O04\nsample_id: S46\nprotocol_id: P1\nstage: blocking\naction: donkey-serum block\ntime: overnight\ntemperature: room temperature\nreported_details: serum percentage unknown\nsource: \n  source_id: main\n  xpath: /article/body/sec[2]/sec[2]/p[1]\n  text_sha256: 71d022a8fde7627132a680c032e57c1ea7a1454e3244b24fa9c770b99cbbddfb",
+      "Text5_Reference": [
+        "Structured evidence: full/APP211/evidence/APP211/scientific_reviewed_final_v2.json#/operations/3; SHA-256: be6d1e62df1f9080bbdab198267e1802c75b57ea6c7a9c4566f3192a5fa4f26a; DOI: https://doi.org/10.1002/2056-4538.12388"
+      ]
+    },
+    {
+      "Text6": "operations:\noperation_id: O05\nsample_id: S46\nprotocol_id: P1\nstage: labeling\naction: primary antibody labeling\ntime: 4 days\ntemperature: null (as recorded in source)\nreported_details: CD34 1:100 NU-4A1; LYVE-1 1:100 ab33682; donkey-serum carrier\nsource: \n  source_id: main\n  xpath: /article/body/sec[2]/sec[2]/p[1]\n  text_sha256: 71d022a8fde7627132a680c032e57c1ea7a1454e3244b24fa9c770b99cbbddfb",
+      "Text6_Reference": [
+        "Structured evidence: full/APP211/evidence/APP211/scientific_reviewed_final_v2.json#/operations/4; SHA-256: be6d1e62df1f9080bbdab198267e1802c75b57ea6c7a9c4566f3192a5fa4f26a; DOI: https://doi.org/10.1002/2056-4538.12388"
+      ]
+    },
+    {
+      "Text7": "operations:\noperation_id: O06\nsample_id: S46\nprotocol_id: P1\nstage: washing\naction: post-primary wash\ntime: null (as recorded in source)\ntemperature: null (as recorded in source)\nreported_details: wash schedule unspecified\nsource: \n  source_id: main\n  xpath: /article/body/sec[2]/sec[2]/p[1]\n  text_sha256: 71d022a8fde7627132a680c032e57c1ea7a1454e3244b24fa9c770b99cbbddfb",
+      "Text7_Reference": [
+        "Structured evidence: full/APP211/evidence/APP211/scientific_reviewed_final_v2.json#/operations/5; SHA-256: be6d1e62df1f9080bbdab198267e1802c75b57ea6c7a9c4566f3192a5fa4f26a; DOI: https://doi.org/10.1002/2056-4538.12388"
+      ]
+    },
+    {
+      "Text8": "operations:\noperation_id: O07\nsample_id: S46\nprotocol_id: P1\nstage: labeling\naction: secondary antibody plus nuclear stain\ntime: 4 days\ntemperature: null (as recorded in source)\nreported_details: YOPRO-1 nuclear label; secondary identity, dilution and fluorophores unknown\nsource: \n  source_id: main\n  xpath: /article/body/sec[2]/sec[2]/p[1]\n  text_sha256: 71d022a8fde7627132a680c032e57c1ea7a1454e3244b24fa9c770b99cbbddfb",
+      "Text8_Reference": [
+        "Structured evidence: full/APP211/evidence/APP211/scientific_reviewed_final_v2.json#/operations/6; SHA-256: be6d1e62df1f9080bbdab198267e1802c75b57ea6c7a9c4566f3192a5fa4f26a; DOI: https://doi.org/10.1002/2056-4538.12388"
+      ]
+    },
+    {
+      "Text9": "operations:\noperation_id: O08\nsample_id: S46\nprotocol_id: P1\nstage: clearing\naction: dehydration\ntime: null (as recorded in source)\ntemperature: null (as recorded in source)\nreported_details: ascending methanol; exact series unspecified\nsource: \n  source_id: main\n  xpath: /article/body/sec[2]/sec[2]/p[1]\n  text_sha256: 71d022a8fde7627132a680c032e57c1ea7a1454e3244b24fa9c770b99cbbddfb",
+      "Text9_Reference": [
+        "Structured evidence: full/APP211/evidence/APP211/scientific_reviewed_final_v2.json#/operations/7; SHA-256: be6d1e62df1f9080bbdab198267e1802c75b57ea6c7a9c4566f3192a5fa4f26a; DOI: https://doi.org/10.1002/2056-4538.12388"
+      ]
+    },
+    {
+      "Text10": "operations:\noperation_id: O09\nsample_id: S46\nprotocol_id: P1\nstage: clearing\naction: dichloromethane incubation\ntime: 15 min twice\ntemperature: null (as recorded in source)\nreported_details: 100% DCM\nsource: \n  source_id: main\n  xpath: /article/body/sec[2]/sec[2]/p[1]\n  text_sha256: 71d022a8fde7627132a680c032e57c1ea7a1454e3244b24fa9c770b99cbbddfb",
+      "Text10_Reference": [
+        "Structured evidence: full/APP211/evidence/APP211/scientific_reviewed_final_v2.json#/operations/8; SHA-256: be6d1e62df1f9080bbdab198267e1802c75b57ea6c7a9c4566f3192a5fa4f26a; DOI: https://doi.org/10.1002/2056-4538.12388"
+      ]
+    },
+    {
+      "Text11": "operations:\noperation_id: O10\nsample_id: S46\nprotocol_id: P1\nstage: refractive_matching\naction: dibenzyl ether incubation\ntime: until sufficiently cleared\ntemperature: room temperature\nreported_details: no numeric duration reported\nsource: \n  source_id: main\n  xpath: /article/body/sec[2]/sec[2]/p[1]\n  text_sha256: 71d022a8fde7627132a680c032e57c1ea7a1454e3244b24fa9c770b99cbbddfb",
+      "Text11_Reference": [
+        "Structured evidence: full/APP211/evidence/APP211/scientific_reviewed_final_v2.json#/operations/9; SHA-256: be6d1e62df1f9080bbdab198267e1802c75b57ea6c7a9c4566f3192a5fa4f26a; DOI: https://doi.org/10.1002/2056-4538.12388"
+      ]
+    },
+    {
+      "Text12": "operations:\noperation_id: O11\nsample_id: S46\nprotocol_id: P1\nstage: storage\naction: dark storage until imaging\ntime: null (as recorded in source)\ntemperature: room temperature\nreported_details: duration unknown\nsource: \n  source_id: main\n  xpath: /article/body/sec[2]/sec[2]/p[1]\n  text_sha256: 71d022a8fde7627132a680c032e57c1ea7a1454e3244b24fa9c770b99cbbddfb",
+      "Text12_Reference": [
+        "Structured evidence: full/APP211/evidence/APP211/scientific_reviewed_final_v2.json#/operations/10; SHA-256: be6d1e62df1f9080bbdab198267e1802c75b57ea6c7a9c4566f3192a5fa4f26a; DOI: https://doi.org/10.1002/2056-4538.12388"
+      ]
+    },
+    {
+      "Text13": "imaging:\nsample_id: S46\nCD34_excitation_nm: 561\nLYVE1_excitation_nm: 638\nYOPRO1_excitation_nm: 488\nxy_um: 2.289\nz_um: 10\nsource: \n  source_id: main\n  xpath: /article/body/sec[2]/sec[2]/p[2]\n  text_sha256: 3a7827e1f1009c2d2ca346b5fec5cafc1cba87b370e51951ca435ac613ee1f35\nxy_resolution_source: \n  source_id: main\n  xpath: /article/body/sec[2]/sec[3]/p\n  normalized_text_sha256: e2f14204ff5275828955df3b255f11c13ae442b5797f43552e02c84163a3a4ec",
+      "Text13_Reference": [
+        "Structured evidence: full/APP211/evidence/APP211/scientific_reviewed_final_v2.json#/imaging/0; SHA-256: be6d1e62df1f9080bbdab198267e1802c75b57ea6c7a9c4566f3192a5fa4f26a; DOI: https://doi.org/10.1002/2056-4538.12388"
+      ]
+    },
+    {
+      "Text14": "results:\nresult_id: R1\nsample_id: S46\nobservation: 血管与淋巴管空间分布及粗细不均一\nsource: \n  source_id: main\n  xpath: /article/body/sec[3]/sec[1]/p[2]\n  text_sha256: d6ee161a5cba8e8329d221820665972f7b9782321c853539bf59ca9140126a25",
+      "Text14_Reference": [
+        "Structured evidence: full/APP211/evidence/APP211/scientific_reviewed_final_v2.json#/results/0; SHA-256: be6d1e62df1f9080bbdab198267e1802c75b57ea6c7a9c4566f3192a5fa4f26a; DOI: https://doi.org/10.1002/2056-4538.12388"
+      ]
+    },
+    {
+      "Text15": "results:\nresult_id: R2\nsample_id: S46\nobservation: 肿瘤大小≥70 mm的联合曲线AUC 0.720，95%CI 0.572–0.869；正文和图内为CD34峰度+偏度，图注变量不同\nsource: \n  source_id: main\n  xpath: /article/body/sec[3]/sec[2]/p[2]\n  text_sha256: 97fb4183828d573dbc399534807a98aeadea36ed123a6db0778ff1ec166f5f86",
+      "Text15_Reference": [
+        "Structured evidence: full/APP211/evidence/APP211/scientific_reviewed_final_v2.json#/results/1; SHA-256: be6d1e62df1f9080bbdab198267e1802c75b57ea6c7a9c4566f3192a5fa4f26a; DOI: https://doi.org/10.1002/2056-4538.12388"
+      ]
+    },
+    {
+      "Text16": "results:\nresult_id: R3\nsample_id: S46\nobservation: 静脉侵犯联合曲线AUC 0.686，95%CI 0.493–0.879；正文和图内为血管长度+CD34峰度，图注变量不同\nsource: \n  source_id: main\n  xpath: /article/body/sec[3]/sec[2]/p[2]\n  text_sha256: 97fb4183828d573dbc399534807a98aeadea36ed123a6db0778ff1ec166f5f86",
+      "Text16_Reference": [
+        "Structured evidence: full/APP211/evidence/APP211/scientific_reviewed_final_v2.json#/results/2; SHA-256: be6d1e62df1f9080bbdab198267e1802c75b57ea6c7a9c4566f3192a5fa4f26a; DOI: https://doi.org/10.1002/2056-4538.12388"
+      ]
+    },
+    {
+      "Text17": "results:\nresult_id: R4\nsample_id: S46\nobservation: 部分影像参数与总生存仅在单变量分析相关；多变量分析未显著，不是独立预后验证\nsource: \n  source_id: main\n  xpath: /article/body/sec[3]/sec[2]/p[4]\n  text_sha256: d0e68da4778b9cf62ad96d2e0e39159a7aefeab7a95c63e3091e10caba97a06c",
+      "Text17_Reference": [
+        "Structured evidence: full/APP211/evidence/APP211/scientific_reviewed_final_v2.json#/results/3; SHA-256: be6d1e62df1f9080bbdab198267e1802c75b57ea6c7a9c4566f3192a5fa4f26a; DOI: https://doi.org/10.1002/2056-4538.12388"
+      ]
+    },
+    {
+      "Text18": "results:\nresult_id: R5\nsample_id: S20\nobservation: PI3K-mTOR状态与血管半径相关，P=0.045；AUC0.747，95%CI0.517–0.977。属于观察关联，未证明因果或治疗预测\nsource: \n  source_id: main\n  xpath: /article/body/sec[3]/sec[3]/p[2]\n  text_sha256: 26af04a49f2793659f213f3f250575e8925b526c8c1a8a5eda2150c9e8595546",
+      "Text18_Reference": [
+        "Structured evidence: full/APP211/evidence/APP211/scientific_reviewed_final_v2.json#/results/4; SHA-256: be6d1e62df1f9080bbdab198267e1802c75b57ea6c7a9c4566f3192a5fa4f26a; DOI: https://doi.org/10.1002/2056-4538.12388"
+      ]
+    },
+    {
+      "Text19": "roc_numeric_panels:\nF2A: \n  [1]     marker: CD34\n    metric: kurtosis\n    auc: 0.501\n    ci95: \n      [1] 0.328\n      [2] 0.673\n    n_patients: 46\n    endpoint: tumor grade 3 or 4\n    source: Figure 2 panel A\n    sample_id: S46\n  [2]     marker: CD34\n    metric: density\n    auc: 0.541\n    ci95: \n      [1] 0.369\n      [2] 0.712\n    n_patients: 46\n    endpoint: tumor grade 3 or 4\n    source: Figure 2 panel A\n    sample_id: S46\n  [3]     marker: CD34\n    metric: length\n    auc: 0.554\n    ci95: \n      [1] 0.382\n      [2] 0.725\n    n_patients: 46\n    endpoint: tumor grade 3 or 4\n    source: Figure 2 panel A\n    sample_id: S46\n  [4]     marker: CD34\n    metric: skewness\n    auc: 0.554\n    ci95: \n      [1] 0.382\n      [2] 0.726\n    n_patients: 46\n    endpoint: tumor grade 3 or 4\n    source: Figure 2 panel A\n    sample_id: S46\n  [5]     marker: CD34\n    metric: radius\n    auc: 0.604\n    ci95: \n      [1] 0.436\n      [2] 0.772\n    n_patients: 46\n    endpoint: tumor grade 3 or 4\n    source: Figure 2 panel A\n    sample_id: S46\n  [6]     marker: CD34\n    metric: variance\n    auc: 0.607\n    ci95: \n      [1] 0.439\n      [2] 0.775\n    n_patients: 46\n    endpoint: tumor grade 3 or 4\n    source: Figure 2 panel A\n    sample_id: S46\nF2B: \n  [1]     marker: CD34\n    metric: length\n    auc: 0.539\n    ci95: \n      [1] 0.368\n      [2] 0.709\n    n_patients: 46\n    endpoint: tumor diameter >=70 mm\n    source: Figure 2 panel B\n    sample_id: S46\n  [2]     marker: CD34\n    metric: radius\n    auc: 0.542\n    ci95: \n      [1] 0.37\n      [2] 0.713\n    n_patients: 46\n    endpoint: tumor diameter >=70 mm\n    source: Figure 2 panel B\n    sample_id: S46\n  [3]     marker: CD34\n    metric: variance\n    auc: 0.584\n    ci95: \n      [1] 0.417\n      [2] 0.754\n    n_patients: 46\n    endpoint: tumor diameter >=70 mm\n    source: Figure 2 panel B\n    sample_id: S46\n  [4]     marker: CD34\n    metric: density\n    auc: 0.595\n    ci95: \n      [1] 0.43\n      [2] 0.761\n    n_patients: 46\n    endpoint: tumor diameter >=70 mm\n    source: Figure 2 panel B\n    sample_id: S46\n  [5]     marker: CD34\n    metric: kurtosis\n    auc: 0.639\n    ci95: \n      [1] 0.473\n      [2] 0.805\n    n_patients: 46\n    endpoint: tumor diameter >=70 mm\n    source: Figure 2 panel B\n    sample_id: S46\n  [6]     marker: CD34\n    metric: skewness\n    auc: 0.698\n    ci95: \n      [1] 0.545\n      [2] 0.85\n    n_patients: 46\n    endpoint: tumor diameter >=70 mm\n    source: Figure 2 panel B\n    sample_id: S46\nF2C: \n  [1]     marker: CD34\n    metric: radius\n    auc: 0.529\n    ci95: \n      [1] 0.319\n      [2] 0.738\n    n_patients: 46\n    endpoint: positive venous invasion\n    source: Figure 2 panel C\n    sample_id: S46\n  [2]     marker: CD34\n    metric: variance\n    auc: 0.566\n    ci95: \n      [1] 0.369\n      [2] 0.764\n    n_patients: 46\n    endpoint: positive venous invasion\n    source: Figure 2 panel C\n    sample_id: S46\n  [3]     marker: CD34\n    metric: density\n    auc: 0.569\n    ci95: \n      [1] 0.343\n      [2] 0.795\n    n_patients: 46\n    endpoint: positive venous invasion\n    source: Figure 2 panel C\n    sample_id: S46\n  [4]     marker: CD34\n    metric: skewness\n    auc: 0.618\n    ci95: \n      [1] 0.444\n      [2] 0.792\n    n_patients: 46\n    endpoint: positive venous invasion\n    source: Figure 2 panel C\n    sample_id: S46\n  [5]     marker: CD34\n    metric: length\n    auc: 0.629\n    ci95: \n      [1] 0.415\n      [2] 0.842\n    n_patients: 46\n    endpoint: positive venous invasion\n    source: Figure 2 panel C\n    sample_id: S46\n  [6]     marker: CD34\n    metric: kurtosis\n    auc: 0.649\n    ci95: \n      [1] 0.462\n      [2] 0.837\n    n_patients: 46\n    endpoint: positive venous invasion\n    source: Figure 2 panel C\n    sample_id: S46\nF3A: \n  [1]     marker: LYVE1\n    metric: density\n    auc: 0.512\n    ci95: \n      [1] 0.334\n      [2] 0.691\n    n_patients: 46\n    endpoint: tumor grade 3 or 4\n    source: Figure 3 panel A\n    sample_id: S46\n  [2]     marker: LYVE1\n    metric: variance\n    auc: 0.518\n    ci95: \n      [1] 0.347\n      [2] 0.689\n    n_patients: 46\n    endpoint: tumor grade 3 or 4\n    source: Figure 3 panel A\n    sample_id: S46\n  [3]     marker: LYVE1\n    metric: skewness\n    auc: 0.526\n    ci95: \n      [1] 0.353\n      [2] 0.698\n    n_patients: 46\n    endpoint: tumor grade 3 or 4\n    source: Figure 3 panel A\n    sample_id: S46\n  [4]     marker: LYVE1\n    metric: radius\n    auc: 0.545\n    ci95: \n      [1] 0.373\n      [2] 0.718\n    n_patients: 46\n    endpoint: tumor grade 3 or 4\n    source: Figure 3 panel A\n    sample_id: S46\n  [5]     marker: LYVE1\n    metric: length\n    auc: 0.576\n    ci95: \n      [1] 0.402\n      [2] 0.749\n    n_patients: 46\n    endpoint: tumor grade 3 or 4\n    source: Figure 3 panel A\n    sample_id: S46\n  [6]     marker: LYVE1\n    metric: kurtosis\n    auc: 0.586\n    ci95: \n      [1] 0.411\n      [2] 0.761\n    n_patients: 46\n    endpoint: tumor grade 3 or 4\n    source: Figure 3 panel A\n    sample_id: S46\nF3B: \n  [1]     marker: LYVE1\n    metric: length\n    auc: 0.511\n    ci95: \n      [1] 0.337\n      [2] 0.686\n    n_patients: 46\n    endpoint: tumor diameter >=70 mm\n    source: Figure 3 panel B\n    sample_id: S46\n  [2]     marker: LYVE1\n    metric: radius\n    auc: 0.53\n    ci95: \n      [1] 0.357\n      [2] 0.704\n    n_patients: 46\n    endpoint: tumor diameter >=70 mm\n    source: Figure 3 panel B\n    sample_id: S46\n  [3]     marker: LYVE1\n    metric: variance\n    auc: 0.535\n    ci95: \n      [1] 0.364\n      [2] 0.706\n    n_patients: 46\n    endpoint: tumor diameter >=70 mm\n    source: Figure 3 panel B\n    sample_id: S46\n  [4]     marker: LYVE1\n    metric: skewness\n    auc: 0.552\n    ci95: \n      [1] 0.38\n      [2] 0.724\n    n_patients: 46\n    endpoint: tumor diameter >=70 mm\n    source: Figure 3 panel B\n    sample_id: S46\n  [5]     marker: LYVE1\n    metric: density\n    auc: 0.563\n    ci95: \n      [1] 0.39\n      [2] 0.736\n    n_patients: 46\n    endpoint: tumor diameter >=70 mm\n    source: Figure 3 panel B\n    sample_id: S46\n  [6]     marker: LYVE1\n    metric: kurtosis\n    auc: 0.626\n    ci95: \n      [1] 0.458\n      [2] 0.794\n    n_patients: 46\n    endpoint: tumor diameter >=70 mm\n    source: Figure 3 panel B\n    sample_id: S46\nF3C: \n  [1]     marker: LYVE1\n    metric: kurtosis\n    auc: 0.512\n    ci95: \n      [1] 0.292\n      [2] 0.731\n    n_patients: 46\n    endpoint: positive venous invasion\n    source: Figure 3 panel C\n    sample_id: S46\n  [2]     marker: LYVE1\n    metric: variance\n    auc: 0.512\n    ci95: \n      [1] 0.304\n      [2] 0.719\n    n_patients: 46\n    endpoint: positive venous invasion\n    source: Figure 3 panel C\n    sample_id: S46\n  [3]     marker: LYVE1\n    metric: skewness\n    auc: 0.514\n    ci95: \n      [1] 0.297\n      [2] 0.732\n    n_patients: 46\n    endpoint: positive venous invasion\n    source: Figure 3 panel C\n    sample_id: S46\n  [4]     marker: LYVE1\n    metric: radius\n    auc: 0.525\n    ci95: \n      [1] 0.303\n      [2] 0.746\n    n_patients: 46\n    endpoint: positive venous invasion\n    source: Figure 3 panel C\n    sample_id: S46\n  [5]     marker: LYVE1\n    metric: length\n    auc: 0.54\n    ci95: \n      [1] 0.329\n      [2] 0.752\n    n_patients: 46\n    endpoint: positive venous invasion\n    source: Figure 3 panel C\n    sample_id: S46\n  [6]     marker: LYVE1\n    metric: density\n    auc: 0.561\n    ci95: \n      [1] 0.329\n      [2] 0.793\n    n_patients: 46\n    endpoint: positive venous invasion\n    source: Figure 3 panel C\n    sample_id: S46",
+      "Text19_Reference": [
+        "Structured evidence: full/APP211/evidence/APP211/scientific_reviewed_final_v2.json#/roc_numeric_panels; SHA-256: be6d1e62df1f9080bbdab198267e1802c75b57ea6c7a9c4566f3192a5fa4f26a; DOI: https://doi.org/10.1002/2056-4538.12388"
+      ]
+    },
+    {
+      "Text20": "genomic_imaging_associations:\nsample_id: S20\nmarker: CD34\nmetric: variance\npathway: PI3K-mTOR\npositive_n: 7\nnegative_n: 13\np: 0.384\neffect: observational association, not causal\nsource: Figure6B\np_test: Mann–Whitney U per Methods group comparisons; Figure6D explicitly confirms for radius",
+      "Text20_Reference": [
+        "Structured evidence: full/APP211/evidence/APP211/scientific_reviewed_final_v2.json#/genomic_imaging_associations/0; SHA-256: be6d1e62df1f9080bbdab198267e1802c75b57ea6c7a9c4566f3192a5fa4f26a; DOI: https://doi.org/10.1002/2056-4538.12388"
+      ]
+    },
+    {
+      "Text21": "genomic_imaging_associations:\nsample_id: S20\nmarker: CD34\nmetric: skewness\npathway: PI3K-mTOR\npositive_n: 7\nnegative_n: 13\np: 0.902\neffect: observational association, not causal\nsource: Figure6B\np_test: Mann–Whitney U per Methods group comparisons; Figure6D explicitly confirms for radius",
+      "Text21_Reference": [
+        "Structured evidence: full/APP211/evidence/APP211/scientific_reviewed_final_v2.json#/genomic_imaging_associations/1; SHA-256: be6d1e62df1f9080bbdab198267e1802c75b57ea6c7a9c4566f3192a5fa4f26a; DOI: https://doi.org/10.1002/2056-4538.12388"
+      ]
+    },
+    {
+      "Text22": "genomic_imaging_associations:\nsample_id: S20\nmarker: CD34\nmetric: kurtosis\npathway: PI3K-mTOR\npositive_n: 7\nnegative_n: 13\np: 0.711\neffect: observational association, not causal\nsource: Figure6B\np_test: Mann–Whitney U per Methods group comparisons; Figure6D explicitly confirms for radius",
+      "Text22_Reference": [
+        "Structured evidence: full/APP211/evidence/APP211/scientific_reviewed_final_v2.json#/genomic_imaging_associations/2; SHA-256: be6d1e62df1f9080bbdab198267e1802c75b57ea6c7a9c4566f3192a5fa4f26a; DOI: https://doi.org/10.1002/2056-4538.12388"
+      ]
+    },
+    {
+      "Text23": "genomic_imaging_associations:\nsample_id: S20\nmarker: CD34\nmetric: radius\npathway: PI3K-mTOR\npositive_n: 7\nnegative_n: 13\np: 0.045\neffect: observational association, not causal\nsource: Figure6B\np_test: Mann–Whitney U per Methods group comparisons; Figure6D explicitly confirms for radius",
+      "Text23_Reference": [
+        "Structured evidence: full/APP211/evidence/APP211/scientific_reviewed_final_v2.json#/genomic_imaging_associations/3; SHA-256: be6d1e62df1f9080bbdab198267e1802c75b57ea6c7a9c4566f3192a5fa4f26a; DOI: https://doi.org/10.1002/2056-4538.12388"
+      ]
+    },
+    {
+      "Text24": "genomic_imaging_associations:\nsample_id: S20\nmarker: CD34\nmetric: length\npathway: PI3K-mTOR\npositive_n: 7\nnegative_n: 13\np: 1.0\neffect: observational association, not causal\nsource: Figure6B\np_test: Mann–Whitney U per Methods group comparisons; Figure6D explicitly confirms for radius",
+      "Text24_Reference": [
+        "Structured evidence: full/APP211/evidence/APP211/scientific_reviewed_final_v2.json#/genomic_imaging_associations/4; SHA-256: be6d1e62df1f9080bbdab198267e1802c75b57ea6c7a9c4566f3192a5fa4f26a; DOI: https://doi.org/10.1002/2056-4538.12388"
+      ]
+    },
+    {
+      "Text25": "genomic_imaging_associations:\nsample_id: S20\nmarker: CD34\nmetric: density\npathway: PI3K-mTOR\npositive_n: 7\nnegative_n: 13\np: 0.227\neffect: observational association, not causal\nsource: Figure6B\np_test: Mann–Whitney U per Methods group comparisons; Figure6D explicitly confirms for radius",
+      "Text25_Reference": [
+        "Structured evidence: full/APP211/evidence/APP211/scientific_reviewed_final_v2.json#/genomic_imaging_associations/5; SHA-256: be6d1e62df1f9080bbdab198267e1802c75b57ea6c7a9c4566f3192a5fa4f26a; DOI: https://doi.org/10.1002/2056-4538.12388"
+      ]
+    },
+    {
+      "Text26": "genomic_imaging_associations:\nsample_id: S20\nmarker: CD34\nmetric: variance\npathway: TP53/Cell cycle\npositive_n: 5\nnegative_n: 15\np: 0.8\neffect: observational association, not causal\nsource: Figure6B\np_test: Mann–Whitney U per Methods group comparisons; Figure6D explicitly confirms for radius",
+      "Text26_Reference": [
+        "Structured evidence: full/APP211/evidence/APP211/scientific_reviewed_final_v2.json#/genomic_imaging_associations/6; SHA-256: be6d1e62df1f9080bbdab198267e1802c75b57ea6c7a9c4566f3192a5fa4f26a; DOI: https://doi.org/10.1002/2056-4538.12388"
+      ]
+    },
+    {
+      "Text27": "genomic_imaging_associations:\nsample_id: S20\nmarker: CD34\nmetric: skewness\npathway: TP53/Cell cycle\npositive_n: 5\nnegative_n: 15\np: 0.612\neffect: observational association, not causal\nsource: Figure6B\np_test: Mann–Whitney U per Methods group comparisons; Figure6D explicitly confirms for radius",
+      "Text27_Reference": [
+        "Structured evidence: full/APP211/evidence/APP211/scientific_reviewed_final_v2.json#/genomic_imaging_associations/7; SHA-256: be6d1e62df1f9080bbdab198267e1802c75b57ea6c7a9c4566f3192a5fa4f26a; DOI: https://doi.org/10.1002/2056-4538.12388"
+      ]
+    },
+    {
+      "Text28": "genomic_imaging_associations:\nsample_id: S20\nmarker: CD34\nmetric: kurtosis\npathway: TP53/Cell cycle\npositive_n: 5\nnegative_n: 15\np: 0.349\neffect: observational association, not causal\nsource: Figure6B\np_test: Mann–Whitney U per Methods group comparisons; Figure6D explicitly confirms for radius",
+      "Text28_Reference": [
+        "Structured evidence: full/APP211/evidence/APP211/scientific_reviewed_final_v2.json#/genomic_imaging_associations/8; SHA-256: be6d1e62df1f9080bbdab198267e1802c75b57ea6c7a9c4566f3192a5fa4f26a; DOI: https://doi.org/10.1002/2056-4538.12388"
+      ]
+    },
+    {
+      "Text29": "genomic_imaging_associations:\nsample_id: S20\nmarker: CD34\nmetric: radius\npathway: TP53/Cell cycle\npositive_n: 5\nnegative_n: 15\np: 0.497\neffect: observational association, not causal\nsource: Figure6B\np_test: Mann–Whitney U per Methods group comparisons; Figure6D explicitly confirms for radius",
+      "Text29_Reference": [
+        "Structured evidence: full/APP211/evidence/APP211/scientific_reviewed_final_v2.json#/genomic_imaging_associations/9; SHA-256: be6d1e62df1f9080bbdab198267e1802c75b57ea6c7a9c4566f3192a5fa4f26a; DOI: https://doi.org/10.1002/2056-4538.12388"
+      ]
+    },
+    {
+      "Text30": "genomic_imaging_associations:\nsample_id: S20\nmarker: CD34\nmetric: length\npathway: TP53/Cell cycle\npositive_n: 5\nnegative_n: 15\np: 0.497\neffect: observational association, not causal\nsource: Figure6B\np_test: Mann–Whitney U per Methods group comparisons; Figure6D explicitly confirms for radius",
+      "Text30_Reference": [
+        "Structured evidence: full/APP211/evidence/APP211/scientific_reviewed_final_v2.json#/genomic_imaging_associations/10; SHA-256: be6d1e62df1f9080bbdab198267e1802c75b57ea6c7a9c4566f3192a5fa4f26a; DOI: https://doi.org/10.1002/2056-4538.12388"
+      ]
+    },
+    {
+      "Text31": "genomic_imaging_associations:\nsample_id: S20\nmarker: CD34\nmetric: density\npathway: TP53/Cell cycle\npositive_n: 5\nnegative_n: 15\np: 0.866\neffect: observational association, not causal\nsource: Figure6B\np_test: Mann–Whitney U per Methods group comparisons; Figure6D explicitly confirms for radius",
+      "Text31_Reference": [
+        "Structured evidence: full/APP211/evidence/APP211/scientific_reviewed_final_v2.json#/genomic_imaging_associations/11; SHA-256: be6d1e62df1f9080bbdab198267e1802c75b57ea6c7a9c4566f3192a5fa4f26a; DOI: https://doi.org/10.1002/2056-4538.12388"
+      ]
+    },
+    {
+      "Text32": "genomic_imaging_associations:\nsample_id: S20\nmarker: CD34\nmetric: variance\npathway: SWI/SNF complex\npositive_n: 6\nnegative_n: 14\np: 0.602\neffect: observational association, not causal\nsource: Figure6B\np_test: Mann–Whitney U per Methods group comparisons; Figure6D explicitly confirms for radius",
+      "Text32_Reference": [
+        "Structured evidence: full/APP211/evidence/APP211/scientific_reviewed_final_v2.json#/genomic_imaging_associations/12; SHA-256: be6d1e62df1f9080bbdab198267e1802c75b57ea6c7a9c4566f3192a5fa4f26a; DOI: https://doi.org/10.1002/2056-4538.12388"
+      ]
+    },
+    {
+      "Text33": "genomic_imaging_associations:\nsample_id: S20\nmarker: CD34\nmetric: skewness\npathway: SWI/SNF complex\npositive_n: 6\nnegative_n: 14\np: 0.494\neffect: observational association, not causal\nsource: Figure6B\np_test: Mann–Whitney U per Methods group comparisons; Figure6D explicitly confirms for radius",
+      "Text33_Reference": [
+        "Structured evidence: full/APP211/evidence/APP211/scientific_reviewed_final_v2.json#/genomic_imaging_associations/13; SHA-256: be6d1e62df1f9080bbdab198267e1802c75b57ea6c7a9c4566f3192a5fa4f26a; DOI: https://doi.org/10.1002/2056-4538.12388"
+      ]
+    },
+    {
+      "Text34": "genomic_imaging_associations:\nsample_id: S20\nmarker: CD34\nmetric: kurtosis\npathway: SWI/SNF complex\npositive_n: 6\nnegative_n: 14\np: 0.904\neffect: observational association, not causal\nsource: Figure6B\np_test: Mann–Whitney U per Methods group comparisons; Figure6D explicitly confirms for radius",
+      "Text34_Reference": [
+        "Structured evidence: full/APP211/evidence/APP211/scientific_reviewed_final_v2.json#/genomic_imaging_associations/14; SHA-256: be6d1e62df1f9080bbdab198267e1802c75b57ea6c7a9c4566f3192a5fa4f26a; DOI: https://doi.org/10.1002/2056-4538.12388"
+      ]
+    },
+    {
+      "Text35": "genomic_imaging_associations:\nsample_id: S20\nmarker: CD34\nmetric: radius\npathway: SWI/SNF complex\npositive_n: 6\nnegative_n: 14\np: 0.718\neffect: observational association, not causal\nsource: Figure6B\np_test: Mann–Whitney U per Methods group comparisons; Figure6D explicitly confirms for radius",
+      "Text35_Reference": [
+        "Structured evidence: full/APP211/evidence/APP211/scientific_reviewed_final_v2.json#/genomic_imaging_associations/15; SHA-256: be6d1e62df1f9080bbdab198267e1802c75b57ea6c7a9c4566f3192a5fa4f26a; DOI: https://doi.org/10.1002/2056-4538.12388"
+      ]
+    },
+    {
+      "Text36": "genomic_imaging_associations:\nsample_id: S20\nmarker: CD34\nmetric: length\npathway: SWI/SNF complex\npositive_n: 6\nnegative_n: 14\np: 0.841\neffect: observational association, not causal\nsource: Figure6B\np_test: Mann–Whitney U per Methods group comparisons; Figure6D explicitly confirms for radius",
+      "Text36_Reference": [
+        "Structured evidence: full/APP211/evidence/APP211/scientific_reviewed_final_v2.json#/genomic_imaging_associations/16; SHA-256: be6d1e62df1f9080bbdab198267e1802c75b57ea6c7a9c4566f3192a5fa4f26a; DOI: https://doi.org/10.1002/2056-4538.12388"
+      ]
+    },
+    {
+      "Text37": "genomic_imaging_associations:\nsample_id: S20\nmarker: CD34\nmetric: density\npathway: SWI/SNF complex\npositive_n: 6\nnegative_n: 14\np: 0.904\neffect: observational association, not causal\nsource: Figure6B\np_test: Mann–Whitney U per Methods group comparisons; Figure6D explicitly confirms for radius",
+      "Text37_Reference": [
+        "Structured evidence: full/APP211/evidence/APP211/scientific_reviewed_final_v2.json#/genomic_imaging_associations/17; SHA-256: be6d1e62df1f9080bbdab198267e1802c75b57ea6c7a9c4566f3192a5fa4f26a; DOI: https://doi.org/10.1002/2056-4538.12388"
+      ]
+    },
+    {
+      "Text38": "genomic_imaging_associations:\nsample_id: S20\nmarker: LYVE1\nmetric: variance\npathway: PI3K-mTOR\npositive_n: 7\nnegative_n: 13\np: 0.311\neffect: observational association, not causal\nsource: Figure6C\np_test: Mann–Whitney U per Methods group comparisons; Figure6D explicitly confirms for radius",
+      "Text38_Reference": [
+        "Structured evidence: full/APP211/evidence/APP211/scientific_reviewed_final_v2.json#/genomic_imaging_associations/18; SHA-256: be6d1e62df1f9080bbdab198267e1802c75b57ea6c7a9c4566f3192a5fa4f26a; DOI: https://doi.org/10.1002/2056-4538.12388"
+      ]
+    },
+    {
+      "Text39": "genomic_imaging_associations:\nsample_id: S20\nmarker: LYVE1\nmetric: skewness\npathway: PI3K-mTOR\npositive_n: 7\nnegative_n: 13\np: 0.643\neffect: observational association, not causal\nsource: Figure6C\np_test: Mann–Whitney U per Methods group comparisons; Figure6D explicitly confirms for radius",
+      "Text39_Reference": [
+        "Structured evidence: full/APP211/evidence/APP211/scientific_reviewed_final_v2.json#/genomic_imaging_associations/19; SHA-256: be6d1e62df1f9080bbdab198267e1802c75b57ea6c7a9c4566f3192a5fa4f26a; DOI: https://doi.org/10.1002/2056-4538.12388"
+      ]
+    },
+    {
+      "Text40": "genomic_imaging_associations:\nsample_id: S20\nmarker: LYVE1\nmetric: kurtosis\npathway: PI3K-mTOR\npositive_n: 7\nnegative_n: 13\np: 0.311\neffect: observational association, not causal\nsource: Figure6C\np_test: Mann–Whitney U per Methods group comparisons; Figure6D explicitly confirms for radius",
+      "Text40_Reference": [
+        "Structured evidence: full/APP211/evidence/APP211/scientific_reviewed_final_v2.json#/genomic_imaging_associations/20; SHA-256: be6d1e62df1f9080bbdab198267e1802c75b57ea6c7a9c4566f3192a5fa4f26a; DOI: https://doi.org/10.1002/2056-4538.12388"
+      ]
+    },
+    {
+      "Text41": "genomic_imaging_associations:\nsample_id: S20\nmarker: LYVE1\nmetric: radius\npathway: PI3K-mTOR\npositive_n: 7\nnegative_n: 13\np: 0.241\neffect: observational association, not causal\nsource: Figure6C\np_test: Mann–Whitney U per Methods group comparisons; Figure6D explicitly confirms for radius",
+      "Text41_Reference": [
+        "Structured evidence: full/APP211/evidence/APP211/scientific_reviewed_final_v2.json#/genomic_imaging_associations/21; SHA-256: be6d1e62df1f9080bbdab198267e1802c75b57ea6c7a9c4566f3192a5fa4f26a; DOI: https://doi.org/10.1002/2056-4538.12388"
+      ]
+    },
+    {
+      "Text42": "genomic_imaging_associations:\nsample_id: S20\nmarker: LYVE1\nmetric: length\npathway: PI3K-mTOR\npositive_n: 7\nnegative_n: 13\np: 0.485\neffect: observational association, not causal\nsource: Figure6C\np_test: Mann–Whitney U per Methods group comparisons; Figure6D explicitly confirms for radius",
+      "Text42_Reference": [
+        "Structured evidence: full/APP211/evidence/APP211/scientific_reviewed_final_v2.json#/genomic_imaging_associations/22; SHA-256: be6d1e62df1f9080bbdab198267e1802c75b57ea6c7a9c4566f3192a5fa4f26a; DOI: https://doi.org/10.1002/2056-4538.12388"
+      ]
+    },
+    {
+      "Text43": "genomic_imaging_associations:\nsample_id: S20\nmarker: LYVE1\nmetric: density\npathway: PI3K-mTOR\npositive_n: 7\nnegative_n: 13\np: 1.0\neffect: observational association, not causal\nsource: Figure6C\np_test: Mann–Whitney U per Methods group comparisons; Figure6D explicitly confirms for radius",
+      "Text43_Reference": [
+        "Structured evidence: full/APP211/evidence/APP211/scientific_reviewed_final_v2.json#/genomic_imaging_associations/23; SHA-256: be6d1e62df1f9080bbdab198267e1802c75b57ea6c7a9c4566f3192a5fa4f26a; DOI: https://doi.org/10.1002/2056-4538.12388"
+      ]
+    },
+    {
+      "Text44": "genomic_imaging_associations:\nsample_id: S20\nmarker: LYVE1\nmetric: variance\npathway: TP53/Cell cycle\npositive_n: 5\nnegative_n: 15\np: 0.354\neffect: observational association, not causal\nsource: Figure6C\np_test: Mann–Whitney U per Methods group comparisons; Figure6D explicitly confirms for radius",
+      "Text44_Reference": [
+        "Structured evidence: full/APP211/evidence/APP211/scientific_reviewed_final_v2.json#/genomic_imaging_associations/24; SHA-256: be6d1e62df1f9080bbdab198267e1802c75b57ea6c7a9c4566f3192a5fa4f26a; DOI: https://doi.org/10.1002/2056-4538.12388"
+      ]
+    },
+    {
+      "Text45": "genomic_imaging_associations:\nsample_id: S20\nmarker: LYVE1\nmetric: skewness\npathway: TP53/Cell cycle\npositive_n: 5\nnegative_n: 15\np: 0.842\neffect: observational association, not causal\nsource: Figure6C\np_test: Mann–Whitney U per Methods group comparisons; Figure6D explicitly confirms for radius",
+      "Text45_Reference": [
+        "Structured evidence: full/APP211/evidence/APP211/scientific_reviewed_final_v2.json#/genomic_imaging_associations/25; SHA-256: be6d1e62df1f9080bbdab198267e1802c75b57ea6c7a9c4566f3192a5fa4f26a; DOI: https://doi.org/10.1002/2056-4538.12388"
+      ]
+    },
+    {
+      "Text46": "genomic_imaging_associations:\nsample_id: S20\nmarker: LYVE1\nmetric: kurtosis\npathway: TP53/Cell cycle\npositive_n: 5\nnegative_n: 15\np: 0.548\neffect: observational association, not causal\nsource: Figure6C\np_test: Mann–Whitney U per Methods group comparisons; Figure6D explicitly confirms for radius",
+      "Text46_Reference": [
+        "Structured evidence: full/APP211/evidence/APP211/scientific_reviewed_final_v2.json#/genomic_imaging_associations/26; SHA-256: be6d1e62df1f9080bbdab198267e1802c75b57ea6c7a9c4566f3192a5fa4f26a; DOI: https://doi.org/10.1002/2056-4538.12388"
+      ]
+    },
+    {
+      "Text47": "genomic_imaging_associations:\nsample_id: S20\nmarker: LYVE1\nmetric: radius\npathway: TP53/Cell cycle\npositive_n: 5\nnegative_n: 15\np: 1.0\neffect: observational association, not causal\nsource: Figure6C\np_test: Mann–Whitney U per Methods group comparisons; Figure6D explicitly confirms for radius",
+      "Text47_Reference": [
+        "Structured evidence: full/APP211/evidence/APP211/scientific_reviewed_final_v2.json#/genomic_imaging_associations/27; SHA-256: be6d1e62df1f9080bbdab198267e1802c75b57ea6c7a9c4566f3192a5fa4f26a; DOI: https://doi.org/10.1002/2056-4538.12388"
+      ]
+    },
+    {
+      "Text48": "genomic_imaging_associations:\nsample_id: S20\nmarker: LYVE1\nmetric: length\npathway: TP53/Cell cycle\npositive_n: 5\nnegative_n: 15\np: 0.66\neffect: observational association, not causal\nsource: Figure6C\np_test: Mann–Whitney U per Methods group comparisons; Figure6D explicitly confirms for radius",
+      "Text48_Reference": [
+        "Structured evidence: full/APP211/evidence/APP211/scientific_reviewed_final_v2.json#/genomic_imaging_associations/28; SHA-256: be6d1e62df1f9080bbdab198267e1802c75b57ea6c7a9c4566f3192a5fa4f26a; DOI: https://doi.org/10.1002/2056-4538.12388"
+      ]
+    },
+    {
+      "Text49": "genomic_imaging_associations:\nsample_id: S20\nmarker: LYVE1\nmetric: density\npathway: TP53/Cell cycle\npositive_n: 5\nnegative_n: 15\np: 0.719\neffect: observational association, not causal\nsource: Figure6C\np_test: Mann–Whitney U per Methods group comparisons; Figure6D explicitly confirms for radius",
+      "Text49_Reference": [
+        "Structured evidence: full/APP211/evidence/APP211/scientific_reviewed_final_v2.json#/genomic_imaging_associations/29; SHA-256: be6d1e62df1f9080bbdab198267e1802c75b57ea6c7a9c4566f3192a5fa4f26a; DOI: https://doi.org/10.1002/2056-4538.12388"
+      ]
+    },
+    {
+      "Text50": "genomic_imaging_associations:\nsample_id: S20\nmarker: LYVE1\nmetric: variance\npathway: SWI/SNF complex\npositive_n: 6\nnegative_n: 14\np: 0.47\neffect: observational association, not causal\nsource: Figure6C\np_test: Mann–Whitney U per Methods group comparisons; Figure6D explicitly confirms for radius",
+      "Text50_Reference": [
+        "Structured evidence: full/APP211/evidence/APP211/scientific_reviewed_final_v2.json#/genomic_imaging_associations/30; SHA-256: be6d1e62df1f9080bbdab198267e1802c75b57ea6c7a9c4566f3192a5fa4f26a; DOI: https://doi.org/10.1002/2056-4538.12388"
+      ]
+    },
+    {
+      "Text51": "genomic_imaging_associations:\nsample_id: S20\nmarker: LYVE1\nmetric: skewness\npathway: SWI/SNF complex\npositive_n: 6\nnegative_n: 14\np: 0.381\neffect: observational association, not causal\nsource: Figure6C\np_test: Mann–Whitney U per Methods group comparisons; Figure6D explicitly confirms for radius",
+      "Text51_Reference": [
+        "Structured evidence: full/APP211/evidence/APP211/scientific_reviewed_final_v2.json#/genomic_imaging_associations/31; SHA-256: be6d1e62df1f9080bbdab198267e1802c75b57ea6c7a9c4566f3192a5fa4f26a; DOI: https://doi.org/10.1002/2056-4538.12388"
+      ]
+    },
+    {
+      "Text52": "genomic_imaging_associations:\nsample_id: S20\nmarker: LYVE1\nmetric: kurtosis\npathway: SWI/SNF complex\npositive_n: 6\nnegative_n: 14\np: 0.154\neffect: observational association, not causal\nsource: Figure6C\np_test: Mann–Whitney U per Methods group comparisons; Figure6D explicitly confirms for radius",
+      "Text52_Reference": [
+        "Structured evidence: full/APP211/evidence/APP211/scientific_reviewed_final_v2.json#/genomic_imaging_associations/32; SHA-256: be6d1e62df1f9080bbdab198267e1802c75b57ea6c7a9c4566f3192a5fa4f26a; DOI: https://doi.org/10.1002/2056-4538.12388"
+      ]
+    },
+    {
+      "Text53": "genomic_imaging_associations:\nsample_id: S20\nmarker: LYVE1\nmetric: radius\npathway: SWI/SNF complex\npositive_n: 6\nnegative_n: 14\np: 0.91\neffect: observational association, not causal\nsource: Figure6C\np_test: Mann–Whitney U per Methods group comparisons; Figure6D explicitly confirms for radius",
+      "Text53_Reference": [
+        "Structured evidence: full/APP211/evidence/APP211/scientific_reviewed_final_v2.json#/genomic_imaging_associations/33; SHA-256: be6d1e62df1f9080bbdab198267e1802c75b57ea6c7a9c4566f3192a5fa4f26a; DOI: https://doi.org/10.1002/2056-4538.12388"
+      ]
+    },
+    {
+      "Text54": "genomic_imaging_associations:\nsample_id: S20\nmarker: LYVE1\nmetric: length\npathway: SWI/SNF complex\npositive_n: 6\nnegative_n: 14\np: 0.622\neffect: observational association, not causal\nsource: Figure6C\np_test: Mann–Whitney U per Methods group comparisons; Figure6D explicitly confirms for radius",
+      "Text54_Reference": [
+        "Structured evidence: full/APP211/evidence/APP211/scientific_reviewed_final_v2.json#/genomic_imaging_associations/34; SHA-256: be6d1e62df1f9080bbdab198267e1802c75b57ea6c7a9c4566f3192a5fa4f26a; DOI: https://doi.org/10.1002/2056-4538.12388"
+      ]
+    },
+    {
+      "Text55": "genomic_imaging_associations:\nsample_id: S20\nmarker: LYVE1\nmetric: density\npathway: SWI/SNF complex\npositive_n: 6\nnegative_n: 14\np: 1.0\neffect: observational association, not causal\nsource: Figure6C\np_test: Mann–Whitney U per Methods group comparisons; Figure6D explicitly confirms for radius",
+      "Text55_Reference": [
+        "Structured evidence: full/APP211/evidence/APP211/scientific_reviewed_final_v2.json#/genomic_imaging_associations/35; SHA-256: be6d1e62df1f9080bbdab198267e1802c75b57ea6c7a9c4566f3192a5fa4f26a; DOI: https://doi.org/10.1002/2056-4538.12388"
+      ]
+    }
+  ],
+  "Note": [
+    {
+      "Text1": "Paper APP211; source coverage: full; source release status: candidate_pending_gates; source default_eligible: false. Read this study as a whole with its sample, experimental, measurement and limitation fields. All selected source files and mandatory support in the accompanying archive apply jointly. Import does not promote candidate status, resolve contradictions, or turn review citations into independent primary experiments. Application includes source-labelled protocols, comparisons and results; labels within each Text retain their actual role.",
+      "Text1_Reference": [
+        "DOI: https://doi.org/10.1002/2056-4538.12388",
+        "Evidence-layer structured paraphrase; not a verbatim quotation. Source release: https://github.com/404NotFound422/TOCAgentProject/tree/5e3a711befb3952a2e39f4d53fc9c9f1a7ac0d22/KnowledgeBase/evidence_expansion_20261019",
+        "Local source archive: ../literature_evidence/2026-11-11/source_release.zip; member: full/APP211/version_selection.json"
+      ]
+    },
+    {
+      "Text2": "Selected version and mandatory composition:\npaper_id: APP211\nstatus: full\ndefault_eligible: false\nactive_scientific_files: \n  [1]     path: full/APP211/evidence/APP211/scientific_reviewed_final_v2.json\n    sha256: be6d1e62df1f9080bbdab198267e1802c75b57ea6c7a9c4566f3192a5fa4f26a\n    source_member: APP211/scientific_reviewed_final_v2.json\n  [2]     path: full/APP211/evidence/APP211/final_acceptance_v2.json\n    sha256: 3e6bc662f419a8331b6888e4f90404f886dec63d6986ec966b2772c46809e52f\n    source_member: APP211/final_acceptance_v2.json\n  [3]     path: full/APP211/evidence/APP211/repair_overlay.json\n    sha256: 9aa6a30e18de071d77b3f3625ee47254a6917deea4cd4c28a1b6b4626cb26f22\n    source_member: APP211/repair_overlay.json\n  [4]     path: full/APP211/evidence/APP211/delta_numeric_overlay_v1.json\n    sha256: 066933ef9f4b7982abfc6267cc6746b17912f46f877608902fb5be3ad1924193\n    source_member: APP211/delta_numeric_overlay_v1.json\n  [5]     path: full/APP211/evidence/APP211/delta_independent_receipt_v1.json\n    sha256: 26ceec3671aef7fe5d96549fcfccd312b8bd50a749532acd3fbf87a411b9e2fc\n    source_member: APP211/delta_independent_receipt_v1.json\n  [6]     path: full/APP211/evidence/APP211/independent_review_report.json\n    sha256: 3f8dca92ba21cc019be0b32329472ca6e914e20b9fa6fb39320847ecb1f21906\n    source_member: APP211/independent_review_report.json\n  [7]     path: full/APP211/evidence/APP211/frozen_R4_query_log.json\n    sha256: 7c9dc1f38920ef76ca4750c81034f598cc4b7bfef77b99771051b44f013fc3a1\n    source_member: APP211/frozen_R4_query_log.json\nacceptance: full/APP211/evidence/APP211/final_acceptance_v2.json\nmandatory_composition: All selected science, mandatory overlays, receipts, scope qualifications and additions are jointly required. Historical candidate status cannot override current acceptance.\nactive_version_and_scope: \n  paper_id: APP211\n  current_full_task_scope: true\n  partial: false\n  remaining_relevant_gaps: \n[]\n  package_sha256: 5189de8ed99433e0898f3704b9151719d5c45f363c68dd2a8385ff626c5c24ff\n  original_package_sha256: 5189de8ed99433e0898f3704b9151719d5c45f363c68dd2a8385ff626c5c24ff\n  acceptance_archive_member: APP211/final_acceptance_v2.json\n  active_version: Final v2 science with exact source-verified numeric delta and independent receipts; original ff914 candidate and original R1 remain frozen provenance\n  net_new_vs_verified117: true\n  doi_crosswalk_check: \n    doi: 10.1002/2056-4538.12388\n    historical117_matches: \n[]\n  stage_provenance: \n    R1: \n      execution_period: current_window\n      complete_current_task_scope: true\n      basis: inherited frozen candidate with audited repairs; R1 is same-window team handoff, not historical reuse\n    R2: \n      execution_period: current_window\n      complete_current_task_scope: true\n      basis: independent whole task-source coverage; R1 is same-window team handoff, not historical reuse\n    R3: \n      execution_period: current_window\n      complete_current_task_scope: true\n      basis: independent protocol/time/fluorescence and sample/denominator review; R1 is same-window team handoff, not historical reuse\n    R4: \n      execution_period: current_window\n      complete_current_task_scope: true\n      basis: actual same-window query receipts reused; R1 is same-window team handoff, not historical reuse\n  counts: \n    genomic_imaging_associations: 36\n    imaging_patients: 46\n    genomic_subset_patients: 20\n  change_classification: \n    our_extraction_transcription_error: \n      [1] Three original CI/p fields corrected\n      [2] Two delta Fig6B p values corrected .800→.866 and .060→.904\n    our_relation_or_scope_binding_error: \n      [1] 36 pathway-marker associations explicitly bound to20-patient subset\n    source_inconsistency_or_publication_version_correction: \n      [1] TP53 denominator remains unresolved\n      [2] OR versus HR source terminology retained\n      [3] Figure3 caption blood versus lymphatic context retained\noriginal_member_to_release_path: \n  APP211/scientific_reviewed_final_v2.json: full/APP211/evidence/APP211/scientific_reviewed_final_v2.json\n  APP211/final_acceptance_v2.json: full/APP211/evidence/APP211/final_acceptance_v2.json\n  APP211/repair_overlay.json: full/APP211/evidence/APP211/repair_overlay.json\n  APP211/delta_numeric_overlay_v1.json: full/APP211/evidence/APP211/delta_numeric_overlay_v1.json\n  APP211/delta_independent_receipt_v1.json: full/APP211/evidence/APP211/delta_independent_receipt_v1.json\n  APP211/independent_review_report.json: full/APP211/evidence/APP211/independent_review_report.json\n  APP211/frozen_R4_query_log.json: full/APP211/evidence/APP211/frozen_R4_query_log.json\nactive_reference_aliases: \n  APP211/scientific_reviewed_final_v2.json: full/APP211/evidence/APP211/scientific_reviewed_final_v2.json\n  APP211/final_acceptance_v2.json: full/APP211/evidence/APP211/final_acceptance_v2.json\n  APP211/repair_overlay.json: full/APP211/evidence/APP211/repair_overlay.json\n  APP211/delta_numeric_overlay_v1.json: full/APP211/evidence/APP211/delta_numeric_overlay_v1.json\n  APP211/delta_independent_receipt_v1.json: full/APP211/evidence/APP211/delta_independent_receipt_v1.json\n  APP211/independent_review_report.json: full/APP211/evidence/APP211/independent_review_report.json\n  APP211/frozen_R4_query_log.json: full/APP211/evidence/APP211/frozen_R4_query_log.json\nrequired_supporting_files: \n[]\nreference_resolution_policy: Resolve explicit aliases only to selected SHA-bound science/support. Historical/source materials never auto-load. New candidate remains ineligible pending gates.\nsource_asset_policy: Original source assets are not republished; accepted scientific members and mandatory correction layers are preserved.\nactive_reference_resolution_evidence: \n[]\nexternal_or_historical_references: \n[]\nrelease_status: candidate_pending_gates\nverified_historical_filename_equivalences: \n[]",
+      "Text2_Reference": [
+        "DOI: https://doi.org/10.1002/2056-4538.12388",
+        "Evidence-layer structured paraphrase; not a verbatim quotation. Source release: https://github.com/404NotFound422/TOCAgentProject/tree/5e3a711befb3952a2e39f4d53fc9c9f1a7ac0d22/KnowledgeBase/evidence_expansion_20261019",
+        "Local source archive: ../literature_evidence/2026-11-11/source_release.zip; member: full/APP211/version_selection.json"
+      ]
+    },
+    {
+      "Text3": "source_conflicts:\nid: C1\nfield: combined ROC variables\nlocations: \n  [1] main Results paragraph /sec[3]/sec[2]/p[2]\n  [2] Fig4 interior\n  [3] Fig4 caption\nfinding: Fig4 interior agrees with body: A kurtosis+skewness; B length+kurtosis. Caption says radius+kurtosis. Retain versions; do not silently harmonize.",
+      "Text3_Reference": [
+        "Structured evidence: full/APP211/evidence/APP211/scientific_reviewed_final_v2.json#/source_conflicts/0; SHA-256: be6d1e62df1f9080bbdab198267e1802c75b57ea6c7a9c4566f3192a5fa4f26a; DOI: https://doi.org/10.1002/2056-4538.12388"
+      ]
+    },
+    {
+      "Text4": "source_conflicts:\nid: C2\nfield: survival effect measure\nlocations: \n  [1] Fig5 interior\n  [2] Fig5 caption\n  [3] Methods statistics\nfinding: Fig5 axis/table say Odds Ratio/OR; body/caption/Methods describe Cox hazard ratio. Numeric values agree; effect-measure conflict unresolved.",
+      "Text4_Reference": [
+        "Structured evidence: full/APP211/evidence/APP211/scientific_reviewed_final_v2.json#/source_conflicts/1; SHA-256: be6d1e62df1f9080bbdab198267e1802c75b57ea6c7a9c4566f3192a5fa4f26a; DOI: https://doi.org/10.1002/2056-4538.12388"
+      ]
+    },
+    {
+      "Text5": "source_conflicts:\nid: C3\nfield: TP53 count\nlocations: \n  [1] Results genomic paragraph\n  [2] Fig6A-C\nfinding: Body says four TP53 cases (25%); Fig6B-C labels pathway-positive n=5 (25%) and negative n=15 (75%), within20-tumor caption. No explicit alternate evaluable TP53 denominator located in main or summary TableS1. Count/denominator linkage is unresolved; do not silently replace four with five or25% with20%.",
+      "Text5_Reference": [
+        "Structured evidence: full/APP211/evidence/APP211/scientific_reviewed_final_v2.json#/source_conflicts/2; SHA-256: be6d1e62df1f9080bbdab198267e1802c75b57ea6c7a9c4566f3192a5fa4f26a; DOI: https://doi.org/10.1002/2056-4538.12388"
+      ]
+    },
+    {
+      "Text6": "source_conflicts:\nid: C4\nfield: TSC1 percentages\nlocations: \n  [1] Fig6A\nfinding: Fig6A displays 10% positive and 95% negative (sum105%); retain as source inconsistency.",
+      "Text6_Reference": [
+        "Structured evidence: full/APP211/evidence/APP211/scientific_reviewed_final_v2.json#/source_conflicts/3; SHA-256: be6d1e62df1f9080bbdab198267e1802c75b57ea6c7a9c4566f3192a5fa4f26a; DOI: https://doi.org/10.1002/2056-4538.12388"
+      ]
+    },
+    {
+      "Text7": "source_conflicts:\nid: C5\nfield: venous invasion frequency\nlocations: \n  [1] Results cohort paragraph\n  [2] TableS1 B17\nfinding: Main says up to50%; TableS1 24/46=52.2%. Retain source-specific counts.",
+      "Text7_Reference": [
+        "Structured evidence: full/APP211/evidence/APP211/scientific_reviewed_final_v2.json#/source_conflicts/4; SHA-256: be6d1e62df1f9080bbdab198267e1802c75b57ea6c7a9c4566f3192a5fa4f26a; DOI: https://doi.org/10.1002/2056-4538.12388"
+      ]
+    },
+    {
+      "Text8": "source_conflicts:\nid: C6\nfield: Figure 3 caption vessel type\nlocations: \n  [1] Figure 3 heading/LYVE-1 plotted labels\n  [2] Figure 3 caption second sentence\nfinding: Caption second sentence says blood vessel parameters although plot and heading describe lymph vessel parameters. Keep plot-specific LYVE-1/lymphatic bindings; do not reinterpret as CD34.",
+      "Text8_Reference": [
+        "Structured evidence: full/APP211/evidence/APP211/scientific_reviewed_final_v2.json#/source_conflicts/5; SHA-256: be6d1e62df1f9080bbdab198267e1802c75b57ea6c7a9c4566f3192a5fa4f26a; DOI: https://doi.org/10.1002/2056-4538.12388"
+      ]
+    },
+    {
+      "Text9": "fluorescence_scope:\nobserved: antibody CD34/LYVE1 and nuclear YOPRO1 signals after DIPCO\nnot_demonstrated: quantitative endogenous fluorescent protein retention\ndiscussion: authors caution solvent method not suitable for endogenous FP retention; secondary rationale not a direct paired retention test",
+      "Text9_Reference": [
+        "Structured evidence: full/APP211/evidence/APP211/scientific_reviewed_final_v2.json#/fluorescence_scope; SHA-256: be6d1e62df1f9080bbdab198267e1802c75b57ea6c7a9c4566f3192a5fa4f26a; DOI: https://doi.org/10.1002/2056-4538.12388"
+      ]
+    },
+    {
+      "Text10": "limitations:\nretrospective limited cohort",
+      "Text10_Reference": [
+        "Structured evidence: full/APP211/evidence/APP211/scientific_reviewed_final_v2.json#/limitations/0; SHA-256: be6d1e62df1f9080bbdab198267e1802c75b57ea6c7a9c4566f3192a5fa4f26a; DOI: https://doi.org/10.1002/2056-4538.12388"
+      ]
+    },
+    {
+      "Text11": "limitations:\nselection toward advanced genomic cases",
+      "Text11_Reference": [
+        "Structured evidence: full/APP211/evidence/APP211/scientific_reviewed_final_v2.json#/limitations/1; SHA-256: be6d1e62df1f9080bbdab198267e1802c75b57ea6c7a9c4566f3192a5fa4f26a; DOI: https://doi.org/10.1002/2056-4538.12388"
+      ]
+    },
+    {
+      "Text12": "limitations:\nno treatment-response validation",
+      "Text12_Reference": [
+        "Structured evidence: full/APP211/evidence/APP211/scientific_reviewed_final_v2.json#/limitations/2; SHA-256: be6d1e62df1f9080bbdab198267e1802c75b57ea6c7a9c4566f3192a5fa4f26a; DOI: https://doi.org/10.1002/2056-4538.12388"
+      ]
+    },
+    {
+      "Text13": "limitations:\nno causal genomic manipulation evidence asserted",
+      "Text13_Reference": [
+        "Structured evidence: full/APP211/evidence/APP211/scientific_reviewed_final_v2.json#/limitations/3; SHA-256: be6d1e62df1f9080bbdab198267e1802c75b57ea6c7a9c4566f3192a5fa4f26a; DOI: https://doi.org/10.1002/2056-4538.12388"
+      ]
+    },
+    {
+      "Text14": "Source version and scope record (not an additional scientific claim): final_acceptance_v2:\npaper_id: APP211\nfinal_scientific_sha256: be6d1e62df1f9080bbdab198267e1802c75b57ea6c7a9c4566f3192a5fa4f26a\nfull_current_task_scope: true\nremaining_relevant_gaps: \n[]\nR1: inherited frozen candidate with audited repairs\nR2: independent whole task-source coverage\nR3: independent protocol/time/fluorescence and sample/denominator review\nR4: actual same-window query receipts reused\ndelta_closure: Fig6B last row directly re-read from CJP2-10-e12388-g004.jpg: TP53 .866 and SWI/SNF .904 confirmed\nfigure_media_mapping: \n  Figure1: g002.jpg\n  Figure2: g006.jpg\n  Figure3: g005.jpg\n  Figure4: g003.jpg\n  Figure5: g001.jpg\n  Figure6: g004.jpg\noriginal_candidate_preserved: true\npublication_or_production_admission: false",
+      "Text14_Reference": [
+        "Structured evidence: full/APP211/evidence/APP211/final_acceptance_v2.json#; SHA-256: 3e6bc662f419a8331b6888e4f90404f886dec63d6986ec966b2772c46809e52f; DOI: https://doi.org/10.1002/2056-4538.12388"
+      ]
+    },
+    {
+      "Text15": "scope:\nIndependent verification of changes introduced by verify_pancreas_tumor_evidence only. This is not self-review of original R1.",
+      "Text15_Reference": [
+        "Structured evidence: full/APP211/evidence/APP211/delta_independent_receipt_v1.json#/scope; SHA-256: 26ceec3671aef7fe5d96549fcfccd312b8bd50a749532acd3fbf87a411b9e2fc; DOI: https://doi.org/10.1002/2056-4538.12388"
+      ]
+    },
+    {
+      "Text16": "scope:\nhuman fixed FFPE clear-cell renal carcinoma; not pancreas",
+      "Text16_Reference": [
+        "Structured evidence: full/APP211/evidence/APP211/independent_review_report.json#/scope; SHA-256: 3f8dca92ba21cc019be0b32329472ca6e914e20b9fa6fb39320847ecb1f21906; DOI: https://doi.org/10.1002/2056-4538.12388"
+      ]
+    },
+    {
+      "Text17": "source_conflicts_verified:\nC1",
+      "Text17_Reference": [
+        "Structured evidence: full/APP211/evidence/APP211/independent_review_report.json#/source_conflicts_verified/0; SHA-256: 3f8dca92ba21cc019be0b32329472ca6e914e20b9fa6fb39320847ecb1f21906; DOI: https://doi.org/10.1002/2056-4538.12388"
+      ]
+    },
+    {
+      "Text18": "source_conflicts_verified:\nC2",
+      "Text18_Reference": [
+        "Structured evidence: full/APP211/evidence/APP211/independent_review_report.json#/source_conflicts_verified/1; SHA-256: 3f8dca92ba21cc019be0b32329472ca6e914e20b9fa6fb39320847ecb1f21906; DOI: https://doi.org/10.1002/2056-4538.12388"
+      ]
+    },
+    {
+      "Text19": "source_conflicts_verified:\nC3",
+      "Text19_Reference": [
+        "Structured evidence: full/APP211/evidence/APP211/independent_review_report.json#/source_conflicts_verified/2; SHA-256: 3f8dca92ba21cc019be0b32329472ca6e914e20b9fa6fb39320847ecb1f21906; DOI: https://doi.org/10.1002/2056-4538.12388"
+      ]
+    },
+    {
+      "Text20": "source_conflicts_verified:\nC4",
+      "Text20_Reference": [
+        "Structured evidence: full/APP211/evidence/APP211/independent_review_report.json#/source_conflicts_verified/3; SHA-256: 3f8dca92ba21cc019be0b32329472ca6e914e20b9fa6fb39320847ecb1f21906; DOI: https://doi.org/10.1002/2056-4538.12388"
+      ]
+    },
+    {
+      "Text21": "source_conflicts_verified:\nC5",
+      "Text21_Reference": [
+        "Structured evidence: full/APP211/evidence/APP211/independent_review_report.json#/source_conflicts_verified/4; SHA-256: 3f8dca92ba21cc019be0b32329472ca6e914e20b9fa6fb39320847ecb1f21906; DOI: https://doi.org/10.1002/2056-4538.12388"
+      ]
+    },
+    {
+      "Text22": "source_scope_caveats:\nS46 is 46 distinct patients, one block each; S20 matched fresh-frozen genomic subset is not 20 additional cleared donors",
+      "Text22_Reference": [
+        "Structured evidence: full/APP211/evidence/APP211/independent_review_report.json#/source_scope_caveats/0; SHA-256: 3f8dca92ba21cc019be0b32329472ca6e914e20b9fa6fb39320847ecb1f21906; DOI: https://doi.org/10.1002/2056-4538.12388"
+      ]
+    },
+    {
+      "Text23": "source_scope_caveats:\nZ-stack/image counts and within-tumor density are not biological n",
+      "Text23_Reference": [
+        "Structured evidence: full/APP211/evidence/APP211/independent_review_report.json#/source_scope_caveats/1; SHA-256: 3f8dca92ba21cc019be0b32329472ca6e914e20b9fa6fb39320847ecb1f21906; DOI: https://doi.org/10.1002/2056-4538.12388"
+      ]
+    },
+    {
+      "Text24": "source_scope_caveats:\nUnknown secondary fluorophore identity cannot be inferred from excitation wavelength",
+      "Text24_Reference": [
+        "Structured evidence: full/APP211/evidence/APP211/independent_review_report.json#/source_scope_caveats/2; SHA-256: 3f8dca92ba21cc019be0b32329472ca6e914e20b9fa6fb39320847ecb1f21906; DOI: https://doi.org/10.1002/2056-4538.12388"
+      ]
+    },
+    {
+      "Text25": "source_scope_caveats:\nNo numeric total clearing duration or paired endogenous FP retention experiment",
+      "Text25_Reference": [
+        "Structured evidence: full/APP211/evidence/APP211/independent_review_report.json#/source_scope_caveats/3; SHA-256: 3f8dca92ba21cc019be0b32329472ca6e914e20b9fa6fb39320847ecb1f21906; DOI: https://doi.org/10.1002/2056-4538.12388"
+      ]
+    },
+    {
+      "Text26": "source_scope_caveats:\nTP53 gene count vs pathway positive count relation unresolved, not corrected by arithmetic",
+      "Text26_Reference": [
+        "Structured evidence: full/APP211/evidence/APP211/independent_review_report.json#/source_scope_caveats/4; SHA-256: 3f8dca92ba21cc019be0b32329472ca6e914e20b9fa6fb39320847ecb1f21906; DOI: https://doi.org/10.1002/2056-4538.12388"
+      ]
+    },
+    {
+      "Text27": "source_scope_caveats:\nNo prospective prediction/causal intervention/treatment recommendation",
+      "Text27_Reference": [
+        "Structured evidence: full/APP211/evidence/APP211/independent_review_report.json#/source_scope_caveats/5; SHA-256: 3f8dca92ba21cc019be0b32329472ca6e914e20b9fa6fb39320847ecb1f21906; DOI: https://doi.org/10.1002/2056-4538.12388"
+      ]
+    },
+    {
+      "Text28": "remaining_acceptance_gaps:\nIndependent verification of repairs/new source bindings and 36 Figure6 associations",
+      "Text28_Reference": [
+        "Structured evidence: full/APP211/evidence/APP211/independent_review_report.json#/remaining_acceptance_gaps/0; SHA-256: 3f8dca92ba21cc019be0b32329472ca6e914e20b9fa6fb39320847ecb1f21906; DOI: https://doi.org/10.1002/2056-4538.12388"
+      ]
+    }
+  ]
+}

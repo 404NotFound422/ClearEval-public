@@ -1,0 +1,681 @@
+{
+  "TOC_Method_Name": {
+    "Text": "Multiscale optical imaging; methanol/BABB whole-mount branch",
+    "Text_Reference": [
+      "DOI: https://doi.org/10.3389/fphys.2021.637136",
+      "Evidence-layer structured paraphrase; not a verbatim quotation. Source release: https://github.com/404NotFound422/TOCAgentProject/tree/5e3a711befb3952a2e39f4d53fc9c9f1a7ac0d22/KnowledgeBase/evidence_expansion_20261019",
+      "Local source archive: ../literature_evidence/2026-11-11/source_release.zip; member: full/A158/version_selection.json"
+    ]
+  },
+  "General_Description": {
+    "Text": "Multiscale and Multimodal Optical Imaging of the Ultrastructure of Human Liver Biopsies (2021). Evidence category: method. This card preserves the evidence layer's structured statements and their original field labels; it does not add a new literature review or certify benchmark scoring thresholds.",
+    "Text_Reference": [
+      "DOI: https://doi.org/10.3389/fphys.2021.637136",
+      "Evidence-layer structured paraphrase; not a verbatim quotation. Source release: https://github.com/404NotFound422/TOCAgentProject/tree/5e3a711befb3952a2e39f4d53fc9c9f1a7ac0d22/KnowledgeBase/evidence_expansion_20261019",
+      "Local source archive: ../literature_evidence/2026-11-11/source_release.zip; member: full/A158/version_selection.json"
+    ]
+  },
+  "Tissue_Types": [
+    {
+      "Text1": "samples:\nsample_id: SMP1\nkind: whole_mount_tissue\nspecies: Homo sapiens\norgan: liver\ncondition: 非肿瘤区组织；常规组织学未见显著病理\ndonor_n: 1\nbiopsy_n: 2\nbiopsy_n_scope: Fig.2 A/B，同一供者；不是全文总标本量\ninitial_block_volume_cm3_approx: 1\ndisplayed_biopsy_dimensions_mm_approx: \n  [1] 3\n  [2] 3\n  [3] 5\nsection_thickness_um: null (as recorded in source)\nsource_locators: \n  [1] S1:B007\n  [2] S1:B017\n  [3] S1:B018\n  [4] S1:B019\nboundary: 起始块与成像标本不是已配对的透明前后尺寸；两份biopsy不能当两名供者。",
+      "Text1_Reference": [
+        "Structured evidence: full/A158/evidence/record.json#/samples/0; SHA-256: 413fe0131e1a3c421e5b21d7f9d9fb1d5540799c4abd45857a6c832d629c36a9; DOI: https://doi.org/10.3389/fphys.2021.637136"
+      ]
+    },
+    {
+      "Text2": "samples:\nsample_id: SMP2\nkind: vibratome_section\nspecies: Homo sapiens\norgan: liver\ncondition: 免疫标记固定肝切片\ndonor_n: null (as recorded in source)\nbiopsy_n: null (as recorded in source)\nsection_n: null (as recorded in source)\nsection_thickness_um: 100\nsource_locators: \n  [1] S1:B014\n  [2] S1:B026\nboundary: Fig.5C与整体样本染色相同；不据此声明同一切面/同一biopsy。",
+      "Text2_Reference": [
+        "Structured evidence: full/A158/evidence/record.json#/samples/1; SHA-256: 413fe0131e1a3c421e5b21d7f9d9fb1d5540799c4abd45857a6c832d629c36a9; DOI: https://doi.org/10.3389/fphys.2021.637136"
+      ]
+    },
+    {
+      "Text3": "samples:\nsample_id: SMP3\nkind: fixed_cryo_section\nspecies: Homo sapiens\norgan: liver\ncondition: 无外源荧光标记的固定冷冻肝切片；图像显示局部纤维性结构和微泡脂肪变\ndonor_n: null (as recorded in source)\nbiopsy_n: null (as recorded in source)\nsection_n: null (as recorded in source)\nsection_thickness_um: null (as recorded in source)\nsection_thickness_methods_um: 50\nsection_thickness_F6A_results_um: 40\nsource_locators: \n  [1] S1:B009\n  [2] S1:B027\n  [3] S1:B029\nboundary: 保留厚度冲突；无BABB处理证据；不能将局部图像形态扩展为临床诊断。",
+      "Text3_Reference": [
+        "Structured evidence: full/A158/evidence/record.json#/samples/2; SHA-256: 413fe0131e1a3c421e5b21d7f9d9fb1d5540799c4abd45857a6c832d629c36a9; DOI: https://doi.org/10.3389/fphys.2021.637136"
+      ]
+    },
+    {
+      "Text4": "samples:\nsample_id: SMP4\nkind: fixed_isolated_cell\nspecies: Homo sapiens\norgan: liver\ncell_type: human liver sinusoidal endothelial cell (hLSEC)\ncondition: 固定分离细胞；CellMask Orange膜染色\ndonor_n: null (as recorded in source)\ndonor_relation_to_SMP1: null (as recorded in source)\nimaged_cells_n: null (as recorded in source)\nimaged_cells_n_relation: >50 in one session\ndisplayed_cells_n: 3\nanalyzed_cells_n: 5\nanalyzed_ROI_n: 21\nanalyzed_fenestrae_n: 4471\nsource_locators: \n  [1] S1:B010\n  [2] S1:B015\n  [3] S1:B031\n  [4] S1:B032\n  [5] S1:B033\n  [6] S1:B034\nboundary: >50成像细胞、3展示细胞、5分析细胞、21ROI、4471孔分别保留；不是独立患者数。",
+      "Text4_Reference": [
+        "Structured evidence: full/A158/evidence/record.json#/samples/3; SHA-256: 413fe0131e1a3c421e5b21d7f9d9fb1d5540799c4abd45857a6c832d629c36a9; DOI: https://doi.org/10.3389/fphys.2021.637136"
+      ]
+    }
+  ],
+  "Time_Consumption": [],
+  "Tissue_Deformation": [],
+  "Fluorescence_Compatibility": [
+    {
+      "Text1": "markers:\nmarker_id: M1\nbranch: whole_mount;confocal_section\ntarget: α smooth muscle actin\nreagent: anti-αSMA-Cy3\nsupplier: Sigma\nclone_or_catalog: 1A4\nfluorophore: Cy3\ndisplay_color: magenta\ndilution: null (as recorded in source)\nsource_locators: \n  [1] S1:B008\n  [2] S1:B014\n  [3] S1:B018\n  [4] S1:B024",
+      "Text1_Reference": [
+        "Structured evidence: full/A158/evidence/record.json#/markers/0; SHA-256: 413fe0131e1a3c421e5b21d7f9d9fb1d5540799c4abd45857a6c832d629c36a9; DOI: https://doi.org/10.3389/fphys.2021.637136"
+      ]
+    },
+    {
+      "Text2": "markers:\nmarker_id: M2\nbranch: whole_mount;confocal_section\ntarget: cytokeratin 19 / cholangiocytes\nreagent: anti-CK19; Alexa647-coupled secondary\nsupplier: Proteintech; Molecular Probes\nclone_or_catalog: 14965-1-AP; secondary unspecified\nfluorophore: Alexa647\ndisplay_color: white\ndilution: null (as recorded in source)\nsource_locators: \n  [1] S1:B008\n  [2] S1:B014\n  [3] S1:B018\n  [4] S1:B024\nboundary: 正文列出标记组合，二抗宿主/亚型未报告。",
+      "Text2_Reference": [
+        "Structured evidence: full/A158/evidence/record.json#/markers/1; SHA-256: 413fe0131e1a3c421e5b21d7f9d9fb1d5540799c4abd45857a6c832d629c36a9; DOI: https://doi.org/10.3389/fphys.2021.637136"
+      ]
+    },
+    {
+      "Text3": "markers:\nmarker_id: M3\nbranch: LSFM;confocal_section\ntarget: tissue autofluorescence\nreagent: null (as recorded in source)\nsupplier: null (as recorded in source)\nclone_or_catalog: null (as recorded in source)\nfluorophore: null (as recorded in source)\ndisplay_color: green\ndilution: null (as recorded in source)\nsource_locators: \n  [1] S1:B024\n  [2] S1:B026\n  [3] F5_actual\nboundary: 自发荧光不是Alexa488外源标记；OPT有Alexa488滤光片不等于样本用了Alexa488。",
+      "Text3_Reference": [
+        "Structured evidence: full/A158/evidence/record.json#/markers/2; SHA-256: 413fe0131e1a3c421e5b21d7f9d9fb1d5540799c4abd45857a6c832d629c36a9; DOI: https://doi.org/10.3389/fphys.2021.637136"
+      ]
+    },
+    {
+      "Text4": "markers:\nmarker_id: M4\nbranch: fixed_hLSEC\ntarget: plasma membrane\nreagent: CellMask Orange\nsupplier: null (as recorded in source)\nclone_or_catalog: null (as recorded in source)\nfluorophore: CellMask Orange\ndisplay_color: grayscale in F8/F9\ndilution: 1:1000 in PBS\nsource_locators: \n  [1] S1:B010\n  [2] S1:B031\n  [3] S1:B032\nboundary: 灰度显示不改变原始荧光染料身份。",
+      "Text4_Reference": [
+        "Structured evidence: full/A158/evidence/record.json#/markers/3; SHA-256: 413fe0131e1a3c421e5b21d7f9d9fb1d5540799c4abd45857a6c832d629c36a9; DOI: https://doi.org/10.3389/fphys.2021.637136"
+      ]
+    },
+    {
+      "Text5": "markers:\nmarker_id: M5\nbranch: CARS;SRS\ntarget: intrinsic molecular vibration contrast\nreagent: null (as recorded in source)\nfluorophore: null (as recorded in source)\ndisplay_color: yellow/magenta in F6A/F7; blue in F6B\nsource_locators: \n  [1] S1:B027\n  [2] S1:B028\n  [3] S1:B029\n  [4] S1:B030\n  [5] F6_actual\nboundary: 阈值/光谱映射伪彩，不是荧光团或抗体。",
+      "Text5_Reference": [
+        "Structured evidence: full/A158/evidence/record.json#/markers/4; SHA-256: 413fe0131e1a3c421e5b21d7f9d9fb1d5540799c4abd45857a6c832d629c36a9; DOI: https://doi.org/10.3389/fphys.2021.637136"
+      ]
+    },
+    {
+      "Text6": "markers:\nmarker_id: M6\nbranch: SHG\ntarget: intrinsic second-harmonic contrast from fibrous structures\nreagent: null (as recorded in source)\nfluorophore: null (as recorded in source)\ndisplay_color: green\nsource_locators: \n  [1] S1:B027\n  [2] S1:B028\n  [3] S1:B029\n  [4] S1:B030\nboundary: 无标记信号，不是绿色荧光标签。",
+      "Text6_Reference": [
+        "Structured evidence: full/A158/evidence/record.json#/markers/5; SHA-256: 413fe0131e1a3c421e5b21d7f9d9fb1d5540799c4abd45857a6c832d629c36a9; DOI: https://doi.org/10.3389/fphys.2021.637136"
+      ]
+    },
+    {
+      "Text7": "fluorescence_assays:\nassay_id: FA1\nlabel: αSMA-Cy3\nsample_id: SMP1\nclearing: methanol/BABB\nevidence: OPT/LSFM图中可见；背景较高\nquantitative_retention: null (as recorded in source)\nbefore_after_pair: false\nsource_locators: \n  [1] S1:B008\n  [2] S1:B018\n  [3] S1:B019\n  [4] S1:B024",
+      "Text7_Reference": [
+        "Structured evidence: full/A158/evidence/record.json#/fluorescence_assays/0; SHA-256: 413fe0131e1a3c421e5b21d7f9d9fb1d5540799c4abd45857a6c832d629c36a9; DOI: https://doi.org/10.3389/fphys.2021.637136"
+      ]
+    },
+    {
+      "Text8": "fluorescence_assays:\nassay_id: FA2\nlabel: CK19/Alexa647\nsample_id: SMP1\nclearing: methanol/BABB\nevidence: OPT/LSFM图中可辨胆管；大管CK19信号下降\nquantitative_retention: null (as recorded in source)\nbefore_after_pair: false\nsource_locators: \n  [1] S1:B008\n  [2] S1:B018\n  [3] S1:B024",
+      "Text8_Reference": [
+        "Structured evidence: full/A158/evidence/record.json#/fluorescence_assays/1; SHA-256: 413fe0131e1a3c421e5b21d7f9d9fb1d5540799c4abd45857a6c832d629c36a9; DOI: https://doi.org/10.3389/fphys.2021.637136"
+      ]
+    },
+    {
+      "Text9": "fluorescence_assays:\nassay_id: FA3\nlabel: CellMask Orange\nsample_id: SMP4\nclearing: null (as recorded in source)\nevidence: 固定细胞SR-SIM膜负对比可见孔\nquantitative_retention: null (as recorded in source)\nbefore_after_pair: false\nsource_locators: \n  [1] S1:B010\n  [2] S1:B031\n  [3] S1:B032\nboundary: 不属于BABB兼容性测试。",
+      "Text9_Reference": [
+        "Structured evidence: full/A158/evidence/record.json#/fluorescence_assays/2; SHA-256: 413fe0131e1a3c421e5b21d7f9d9fb1d5540799c4abd45857a6c832d629c36a9; DOI: https://doi.org/10.3389/fphys.2021.637136"
+      ]
+    }
+  ],
+  "Preservation_Stability": [],
+  "Application": [
+    {
+      "Text1": "protocols:\nprotocol_id: P01\nbranch: sample_receipt\nstage: 已固定样本条件\nreagents_or_conditions: 4% formaldehyde；随后0.5% paraformaldehyde/PBS保存\nduration_original: 固定1 h；保存时长未报道\ntemperature_C: null (as recorded in source)\ntemperature_text: 室温\nsource_locators: \n  [1] S1:B007\nboundary: 取样段与整体专用2h固定关系未明确；不相加为3h。",
+      "Text1_Reference": [
+        "Structured evidence: full/A158/evidence/record.json#/protocols/0; SHA-256: 413fe0131e1a3c421e5b21d7f9d9fb1d5540799c4abd45857a6c832d629c36a9; DOI: https://doi.org/10.3389/fphys.2021.637136"
+      ]
+    },
+    {
+      "Text2": "protocols:\nprotocol_id: P02\nbranch: whole_mount\nstage: 固定条件\nreagents_or_conditions: 4% formaldehyde/PBS\nduration_original: 2 h\ntemperature_C: null (as recorded in source)\ntemperature_text: null (as recorded in source)\nsource_locators: \n  [1] S1:B008\nboundary: 此分支温度未报道；不继承P01室温。",
+      "Text2_Reference": [
+        "Structured evidence: full/A158/evidence/record.json#/protocols/1; SHA-256: 413fe0131e1a3c421e5b21d7f9d9fb1d5540799c4abd45857a6c832d629c36a9; DOI: https://doi.org/10.3389/fphys.2021.637136"
+      ]
+    },
+    {
+      "Text3": "protocols:\nprotocol_id: P03\nbranch: whole_mount\nstage: 透化\nreagents_or_conditions: 5% Triton X-100/PBS\nduration_original: null (as recorded in source)\ntemperature_C: null (as recorded in source)\ntemperature_text: null (as recorded in source)\nsource_locators: \n  [1] S1:B008\nboundary: 时长未报道。",
+      "Text3_Reference": [
+        "Structured evidence: full/A158/evidence/record.json#/protocols/2; SHA-256: 413fe0131e1a3c421e5b21d7f9d9fb1d5540799c4abd45857a6c832d629c36a9; DOI: https://doi.org/10.3389/fphys.2021.637136"
+      ]
+    },
+    {
+      "Text4": "protocols:\nprotocol_id: P04\nbranch: whole_mount\nstage: 封闭\nreagents_or_conditions: Permblock: 3% BSA + 0.5% Tween-20/PBS\nduration_original: null (as recorded in source)\ntemperature_C: null (as recorded in source)\ntemperature_text: null (as recorded in source)\nsource_locators: \n  [1] S1:B008\nboundary: 时长未报道。",
+      "Text4_Reference": [
+        "Structured evidence: full/A158/evidence/record.json#/protocols/3; SHA-256: 413fe0131e1a3c421e5b21d7f9d9fb1d5540799c4abd45857a6c832d629c36a9; DOI: https://doi.org/10.3389/fphys.2021.637136"
+      ]
+    },
+    {
+      "Text5": "protocols:\nprotocol_id: P05\nbranch: whole_mount\nstage: 抗体孵育\nreagents_or_conditions: anti-CK19 (Proteintech 14965-1-AP); anti-αSMA-Cy3 (Sigma 1A4); Alexa647 secondary; Permblock\nduration_original: 至少3 weeks\ntemperature_C: 37\ntemperature_text: null (as recorded in source)\nsource_locators: \n  [1] S1:B008\nboundary: 未逐一给定一抗/二抗时长与稀释；不擅自乘2。",
+      "Text5_Reference": [
+        "Structured evidence: full/A158/evidence/record.json#/protocols/4; SHA-256: 413fe0131e1a3c421e5b21d7f9d9fb1d5540799c4abd45857a6c832d629c36a9; DOI: https://doi.org/10.3389/fphys.2021.637136"
+      ]
+    },
+    {
+      "Text6": "protocols:\nprotocol_id: P06\nbranch: whole_mount\nstage: 抗体步骤后洗涤\nreagents_or_conditions: PBS-T: 0.1% Tween-20/PBS；每步后洗\nduration_original: null (as recorded in source)\ntemperature_C: null (as recorded in source)\ntemperature_text: null (as recorded in source)\nsource_locators: \n  [1] S1:B008\nboundary: 次数与各次时长未报道。",
+      "Text6_Reference": [
+        "Structured evidence: full/A158/evidence/record.json#/protocols/5; SHA-256: 413fe0131e1a3c421e5b21d7f9d9fb1d5540799c4abd45857a6c832d629c36a9; DOI: https://doi.org/10.3389/fphys.2021.637136"
+      ]
+    },
+    {
+      "Text7": "protocols:\nprotocol_id: P07\nbranch: whole_mount\nstage: 包埋\nreagents_or_conditions: 圆柱形1% low-melting agarose\nduration_original: null (as recorded in source)\ntemperature_C: null (as recorded in source)\ntemperature_text: null (as recorded in source)\nsource_locators: \n  [1] S1:B008\nboundary: 用于避免琼脂糖边缘散射。",
+      "Text7_Reference": [
+        "Structured evidence: full/A158/evidence/record.json#/protocols/6; SHA-256: 413fe0131e1a3c421e5b21d7f9d9fb1d5540799c4abd45857a6c832d629c36a9; DOI: https://doi.org/10.3389/fphys.2021.637136"
+      ]
+    },
+    {
+      "Text8": "protocols:\nprotocol_id: P08\nbranch: whole_mount\nstage: 脱水/脱脂\nreagents_or_conditions: methanol: 70%, 95%, >99%, >99%\nduration_original: each at least 2 h\ntemperature_C: null (as recorded in source)\ntemperature_text: null (as recorded in source)\nsource_locators: \n  [1] S1:B008\nboundary: 4次浓度步骤；≥8h仅为这4步的算术下限，不是总流程时间。",
+      "Text8_Reference": [
+        "Structured evidence: full/A158/evidence/record.json#/protocols/7; SHA-256: 413fe0131e1a3c421e5b21d7f9d9fb1d5540799c4abd45857a6c832d629c36a9; DOI: https://doi.org/10.3389/fphys.2021.637136"
+      ]
+    },
+    {
+      "Text9": "protocols:\nprotocol_id: P09\nbranch: whole_mount\nstage: 折射率匹配\nreagents_or_conditions: 逐渐以BABB取代methanol；benzyl alcohol:benzyl benzoate=1:2\nduration_original: null (as recorded in source)\ntemperature_C: null (as recorded in source)\ntemperature_text: null (as recorded in source)\nsource_locators: \n  [1] S1:B008\nboundary: 更换比例/梯度次数、各梯度时长和折射率数值未报道。",
+      "Text9_Reference": [
+        "Structured evidence: full/A158/evidence/record.json#/protocols/8; SHA-256: 413fe0131e1a3c421e5b21d7f9d9fb1d5540799c4abd45857a6c832d629c36a9; DOI: https://doi.org/10.3389/fphys.2021.637136"
+      ]
+    },
+    {
+      "Text10": "protocols:\nprotocol_id: P10\nbranch: whole_mount\nstage: BABB平衡\nreagents_or_conditions: BABB/Murray’s clear\nduration_original: at least one day\ntemperature_C: null (as recorded in source)\ntemperature_text: null (as recorded in source)\nsource_locators: \n  [1] S1:B008\nboundary: 不是完整清透流程总时间；温度未报道。",
+      "Text10_Reference": [
+        "Structured evidence: full/A158/evidence/record.json#/protocols/9; SHA-256: 413fe0131e1a3c421e5b21d7f9d9fb1d5540799c4abd45857a6c832d629c36a9; DOI: https://doi.org/10.3389/fphys.2021.637136"
+      ]
+    },
+    {
+      "Text11": "protocols:\nprotocol_id: P11\nbranch: whole_mount_OPT\nstage: 成像装载\nreagents_or_conditions: 旋转台；完全浸入BABB；imaging-quality quartz cuvette\nduration_original: null (as recorded in source)\ntemperature_C: null (as recorded in source)\ntemperature_text: null (as recorded in source)\nsource_locators: \n  [1] S1:B017\nboundary: 仅正文明确的OPT装载方式，不自动赋给LSFM物镜浸液。",
+      "Text11_Reference": [
+        "Structured evidence: full/A158/evidence/record.json#/protocols/10; SHA-256: 413fe0131e1a3c421e5b21d7f9d9fb1d5540799c4abd45857a6c832d629c36a9; DOI: https://doi.org/10.3389/fphys.2021.637136"
+      ]
+    },
+    {
+      "Text12": "protocols:\nprotocol_id: P12\nbranch: confocal_section\nstage: 固定/切片条件\nreagents_or_conditions: 4% formaldehyde/PBS固定2h；6% low-melting agarose；100µm vibratome sections\nduration_original: 2 h\ntemperature_C: null (as recorded in source)\ntemperature_text: null (as recorded in source)\nsource_locators: \n  [1] S1:B014\nboundary: 此分支没有methanol/BABB。",
+      "Text12_Reference": [
+        "Structured evidence: full/A158/evidence/record.json#/protocols/11; SHA-256: 413fe0131e1a3c421e5b21d7f9d9fb1d5540799c4abd45857a6c832d629c36a9; DOI: https://doi.org/10.3389/fphys.2021.637136"
+      ]
+    },
+    {
+      "Text13": "protocols:\nprotocol_id: P13\nbranch: confocal_section\nstage: 透化/封闭\nreagents_or_conditions: 0.5% Triton X-100/PBS；Permblock 3% BSA+0.5% Tween-20/PBS\nduration_original: null (as recorded in source)\ntemperature_C: null (as recorded in source)\ntemperature_text: null (as recorded in source)\nsource_locators: \n  [1] S1:B014\nboundary: 0.5%与整体5%不可互换。",
+      "Text13_Reference": [
+        "Structured evidence: full/A158/evidence/record.json#/protocols/12; SHA-256: 413fe0131e1a3c421e5b21d7f9d9fb1d5540799c4abd45857a6c832d629c36a9; DOI: https://doi.org/10.3389/fphys.2021.637136"
+      ]
+    },
+    {
+      "Text14": "protocols:\nprotocol_id: P14\nbranch: confocal_section\nstage: 一抗\nreagents_or_conditions: 与whole-mount相同抗体\nduration_original: overnight\ntemperature_C: 4\ntemperature_text: null (as recorded in source)\nsource_locators: \n  [1] S1:B014\nboundary: overnight不擅自换成固定小时数。",
+      "Text14_Reference": [
+        "Structured evidence: full/A158/evidence/record.json#/protocols/13; SHA-256: 413fe0131e1a3c421e5b21d7f9d9fb1d5540799c4abd45857a6c832d629c36a9; DOI: https://doi.org/10.3389/fphys.2021.637136"
+      ]
+    },
+    {
+      "Text15": "protocols:\nprotocol_id: P15\nbranch: confocal_section\nstage: 洗涤\nreagents_or_conditions: PBS-T 0.1% Tween-20/PBS；3次\nduration_original: null (as recorded in source)\ntemperature_C: null (as recorded in source)\ntemperature_text: null (as recorded in source)\nsource_locators: \n  [1] S1:B014\nboundary: 未给单次时长。",
+      "Text15_Reference": [
+        "Structured evidence: full/A158/evidence/record.json#/protocols/14; SHA-256: 413fe0131e1a3c421e5b21d7f9d9fb1d5540799c4abd45857a6c832d629c36a9; DOI: https://doi.org/10.3389/fphys.2021.637136"
+      ]
+    },
+    {
+      "Text16": "protocols:\nprotocol_id: P16\nbranch: confocal_section\nstage: 二抗\nreagents_or_conditions: 与whole-mount所列荧光二抗\nduration_original: 1 h\ntemperature_C: null (as recorded in source)\ntemperature_text: 室温\nsource_locators: \n  [1] S1:B014\nboundary: 不把一抗4°C延用至二抗。",
+      "Text16_Reference": [
+        "Structured evidence: full/A158/evidence/record.json#/protocols/15; SHA-256: 413fe0131e1a3c421e5b21d7f9d9fb1d5540799c4abd45857a6c832d629c36a9; DOI: https://doi.org/10.3389/fphys.2021.637136"
+      ]
+    },
+    {
+      "Text17": "protocols:\nprotocol_id: P17\nbranch: confocal_section\nstage: 封片\nreagents_or_conditions: Mowiol\nduration_original: null (as recorded in source)\ntemperature_C: null (as recorded in source)\ntemperature_text: null (as recorded in source)\nsource_locators: \n  [1] S1:B014\nboundary: 封片介质不是物镜浸液。",
+      "Text17_Reference": [
+        "Structured evidence: full/A158/evidence/record.json#/protocols/16; SHA-256: 413fe0131e1a3c421e5b21d7f9d9fb1d5540799c4abd45857a6c832d629c36a9; DOI: https://doi.org/10.3389/fphys.2021.637136"
+      ]
+    },
+    {
+      "Text18": "protocols:\nprotocol_id: P18\nbranch: nonlinear_section\nstage: 固定样本条件\nreagents_or_conditions: Methods:50µm切片，#1玻片上；4% formaldehyde固定30min；0.5% formaldehyde冲洗；第二盖玻片夹层\nduration_original: 固定30 min\ntemperature_C: null (as recorded in source)\ntemperature_text: 室温\nsource_locators: \n  [1] S1:B009\n  [2] S1:B027\nboundary: 不录入活体获取/冷冻前处理；Results Fig6A另写40µm。",
+      "Text18_Reference": [
+        "Structured evidence: full/A158/evidence/record.json#/protocols/17; SHA-256: 413fe0131e1a3c421e5b21d7f9d9fb1d5540799c4abd45857a6c832d629c36a9; DOI: https://doi.org/10.3389/fphys.2021.637136"
+      ]
+    },
+    {
+      "Text19": "protocols:\nprotocol_id: P19\nbranch: fixed_hLSEC\nstage: 固定状态\nreagents_or_conditions: 4% formaldehyde固定；固定后染色、成像\nduration_original: null (as recorded in source)\ntemperature_C: null (as recorded in source)\ntemperature_text: null (as recorded in source)\nsource_locators: \n  [1] S1:B010\nboundary: 固定时长/温度未知；不录入活细胞分离培养步骤。",
+      "Text19_Reference": [
+        "Structured evidence: full/A158/evidence/record.json#/protocols/18; SHA-256: 413fe0131e1a3c421e5b21d7f9d9fb1d5540799c4abd45857a6c832d629c36a9; DOI: https://doi.org/10.3389/fphys.2021.637136"
+      ]
+    },
+    {
+      "Text20": "protocols:\nprotocol_id: P20\nbranch: fixed_hLSEC\nstage: 膜染色\nreagents_or_conditions: CellMask Orange 1:1000 in PBS\nduration_original: 10 min\ntemperature_C: null (as recorded in source)\ntemperature_text: null (as recorded in source)\nsource_locators: \n  [1] S1:B010\n  [2] S1:B031\nboundary: 孔本身不直接标记，通过膜负对比观察；不是BABB分支。",
+      "Text20_Reference": [
+        "Structured evidence: full/A158/evidence/record.json#/protocols/19; SHA-256: 413fe0131e1a3c421e5b21d7f9d9fb1d5540799c4abd45857a6c832d629c36a9; DOI: https://doi.org/10.3389/fphys.2021.637136"
+      ]
+    },
+    {
+      "Text21": "imaging_settings:\nimaging_id: I1\nmodality: OPT\nparameter_scope: general_method\nobjective_magnification_x: null (as recorded in source)\nobjective_NA: null (as recorded in source)\nobjective_immersion: null (as recorded in source)\nsource_locators: \n  [1] S1:B011\n  [2] S1:B017\n  [3] S1:B021\ninstrument: custom system after Nguyen et al.; Tucsen FL-20BW CMOS\nsystem_magnification_x: 0.5\naperture_diameter_mm: 12\ndepth_of_focus_mm_approx: 2\ncamera_Mpixels: 20\ncamera_pixel_um: 2.4\nrotation_degrees: 360\nactual_projection_count_per_channel: 600\nactual_rotation_step_degrees: 0.6\nchannel_acquisition: sequential\nsample_medium: BABB\nholder: quartz cuvette on rotation stage\nreconstruction: filtered back-projection; Shepp-Logan filter\nsystem_capacity_mm: \n  [1] 27\n  [2] 27\n  [3] 27\nnominal_system_resolution_um: 30\nboundary: 27mm立方与30µm为仪器能力陈述；不是图2样本尺寸/逐图实测分辨率；camera pixel不是重建物方体素。",
+      "Text21_Reference": [
+        "Structured evidence: full/A158/evidence/record.json#/imaging_settings/0; SHA-256: 413fe0131e1a3c421e5b21d7f9d9fb1d5540799c4abd45857a6c832d629c36a9; DOI: https://doi.org/10.3389/fphys.2021.637136"
+      ]
+    },
+    {
+      "Text22": "imaging_settings:\nimaging_id: I2\nmodality: LSFM\nparameter_scope: general_method\nobjective_magnification_x: null (as recorded in source)\nobjective_NA: null (as recorded in source)\nobjective_immersion: null (as recorded in source)\nsource_locators: \n  [1] S1:B012\n  [2] S1:B021\ninstrument: LaVision UltraMicroscope II\nsystem_magnification_choices_x: \n  [1] 1.6\n  [2] 5\nz_step_um: 2\nillumination: dual-sided light sheet; single detection objective\nrendering: Voreen\nsample_medium: whole-mount BABB cleared\nboundary: 各图到底1.6x或5x未映射；NA、物镜浸液、激发/检测波段未知；不能借用共焦20x/0.8。",
+      "Text22_Reference": [
+        "Structured evidence: full/A158/evidence/record.json#/imaging_settings/1; SHA-256: 413fe0131e1a3c421e5b21d7f9d9fb1d5540799c4abd45857a6c832d629c36a9; DOI: https://doi.org/10.3389/fphys.2021.637136"
+      ]
+    },
+    {
+      "Text23": "imaging_settings:\nimaging_id: I3\nmodality: confocal fluorescence\nparameter_scope: general_method\nobjective_magnification_x: 20\nobjective_NA: 0.8\nobjective_immersion: null (as recorded in source)\nsource_locators: \n  [1] S1:B014\ninstrument: Zeiss LSM880\nmounting_medium: Mowiol\nsection_thickness_um: 100\nboundary: 仅Fig5C的传统荧光共焦分支；激发波长、检测范围、z步距、pinhole未报道。",
+      "Text23_Reference": [
+        "Structured evidence: full/A158/evidence/record.json#/imaging_settings/2; SHA-256: 413fe0131e1a3c421e5b21d7f9d9fb1d5540799c4abd45857a6c832d629c36a9; DOI: https://doi.org/10.3389/fphys.2021.637136"
+      ]
+    },
+    {
+      "Text24": "imaging_settings:\nimaging_id: I4\nmodality: CARS\nparameter_scope: general_method\nobjective_magnification_x: 60\nobjective_NA: 1.2\nobjective_immersion: water\nsource_locators: \n  [1] S1:B013\n  [2] S1:B027\n  [3] S1:B028\ninstrument: custom coherent Raman microscope; ScanImage 3.8.1\nobjective: Olympus UPlanSApo\ncollection_condenser: Olympus U-AAC\ncollection_NA: 1.4\ncollection_immersion: oil\ngeometry: forward detection\nstokes_nm: 1032\npump_nm: 799.3\nstokes_power_mW: 16.5\npump_power_mW: 33\npulse_length_ps: 2\nrepetition_MHz: 80\nresonance_cm_1: 2845\ndetector: Hamamatsu H9656-20 PMT; NI PCI-6110S A/D\nfilters: 950SP;785SP;775SP×2;514LP;650/40BP\nprocessing: threshold-based pseudocolor; stitching with motorized stage described\nboundary: Methods称focal intensity但单位mW，按作者焦点功率数值保存；不泛化为SRS功率。Fig6拼接面板归属冲突。",
+      "Text24_Reference": [
+        "Structured evidence: full/A158/evidence/record.json#/imaging_settings/3; SHA-256: 413fe0131e1a3c421e5b21d7f9d9fb1d5540799c4abd45857a6c832d629c36a9; DOI: https://doi.org/10.3389/fphys.2021.637136"
+      ]
+    },
+    {
+      "Text25": "imaging_settings:\nimaging_id: I5\nmodality: hyperspectral SRS\nparameter_scope: general_method\nobjective_magnification_x: 60\nobjective_NA: 1.2\nobjective_immersion: water\nsource_locators: \n  [1] S1:B013\n  [2] S1:B029\n  [3] S1:B030\ninstrument: same custom coherent Raman microscope; APE lock-in detection\nobjective: Olympus UPlanSApo\ncollection_NA: 1.4\ncollection_immersion: oil\ngeometry: forward detection\nstokes_nm: 1032\npump_nm: null (as recorded in source)\npulse_length_ps: 2\nrepetition_MHz: 80\nmodulation_MHz: 20\nspectral_range_cm_1: \n  [1] 2790\n  [2] 3020\nspectral_step_cm_1: 15\nspectral_components_cm_1: \n  [1] 2845\n  [2] 2920\nlaser_power_mW: null (as recorded in source)\ndetector: custom photodiode; tailored lock-in amplifier; NI A/D\nfilters: 950SP;800/50BP\nprocessing: per-pixel spectral fitting to selected Raman spectra; false-color amplitude map\nboundary: pump扫描且功率未逐图报告；2790至3020步长15无法据此断言采集帧数/端点；不继承CARS阈值或拼接。",
+      "Text25_Reference": [
+        "Structured evidence: full/A158/evidence/record.json#/imaging_settings/4; SHA-256: 413fe0131e1a3c421e5b21d7f9d9fb1d5540799c4abd45857a6c832d629c36a9; DOI: https://doi.org/10.3389/fphys.2021.637136"
+      ]
+    },
+    {
+      "Text26": "imaging_settings:\nimaging_id: I6\nmodality: SHG\nparameter_scope: general_method\nobjective_magnification_x: 60\nobjective_NA: 1.2\nobjective_immersion: water\nsource_locators: \n  [1] S1:B013\n  [2] S1:B027\n  [3] S1:B029\ninstrument: same microscope with home-built femtosecond fiber laser\nobjective: Olympus UPlanSApo\ncollection_NA: 1.4\ncollection_immersion: oil\ngeometry: forward detection\nexcitation_nm: 1054\npulse_length_fs: 400\nrepetition_MHz: 55\nfocal_power_mW: 20\nfilters: 532/18BP;950SP;785SP×2\nacquisition_order: subsequent to CARS or SRS on same area\nboundary: 532/18为检测滤片；不等于激发波长。",
+      "Text26_Reference": [
+        "Structured evidence: full/A158/evidence/record.json#/imaging_settings/5; SHA-256: 413fe0131e1a3c421e5b21d7f9d9fb1d5540799c4abd45857a6c832d629c36a9; DOI: https://doi.org/10.3389/fphys.2021.637136"
+      ]
+    },
+    {
+      "Text27": "imaging_settings:\nimaging_id: I7\nmodality: 3D SR-SIM\nparameter_scope: general_method\nobjective_magnification_x: 60\nobjective_NA: 1.42\nobjective_immersion: oil\nsource_locators: \n  [1] S1:B015\ninstrument: DeltaVision OMXv4.0 BLAZE (GE Healthcare)\nobjective: Olympus\nstack_thickness_um: 1\nz_step_nm: 125\nraw_images_per_plane: 15\nphases: 5\nangles: 3\nreconstruction: SoftWoRx\ndisplay_adjustment: linear brightness/contrast using Fiji 2.0.2\nexcitation_nm: null (as recorded in source)\nsample_medium: null (as recorded in source)\nboundary: 作者称aqueous conditions；具体最终介质未知，油浸物镜不等于油中样本；总平面数不能由端点约定缺失强算。",
+      "Text27_Reference": [
+        "Structured evidence: full/A158/evidence/record.json#/imaging_settings/6; SHA-256: 413fe0131e1a3c421e5b21d7f9d9fb1d5540799c4abd45857a6c832d629c36a9; DOI: https://doi.org/10.3389/fphys.2021.637136"
+      ]
+    },
+    {
+      "Text28": "imaging_settings:\nimaging_id: I8\nmodality: macroscopic photograph\nparameter_scope: F2 inset only\nobjective_magnification_x: null (as recorded in source)\nobjective_NA: null (as recorded in source)\nobjective_immersion: null (as recorded in source)\nsource_locators: \n  [1] S1:B018\ninstrument: null (as recorded in source)\nexposure: null (as recorded in source)\nboundary: 清透后标本照片；不继承OPT、LSFM或共焦配置；不存在成对透明前照片。",
+      "Text28_Reference": [
+        "Structured evidence: full/A158/evidence/record.json#/imaging_settings/7; SHA-256: 413fe0131e1a3c421e5b21d7f9d9fb1d5540799c4abd45857a6c832d629c36a9; DOI: https://doi.org/10.3389/fphys.2021.637136"
+      ]
+    },
+    {
+      "Text29": "experiments:\nexperiment_id: E1\nfigure_panels: F2 A/B\nsample_id: SMP1\nimaging_ids: \n  [1] I1\nprotocol_ids: \n  [1] P02\n  [2] P03\n  [3] P04\n  [4] P05\n  [5] P06\n  [6] P07\n  [7] P08\n  [8] P09\n  [9] P10\n  [10] P11\ndescription: 同供者两份清透biopsy的整体投影、虚拟截面和子体积投影；清透照片另归I8。\nrecord_role: analytical evidence partition; not independent replicate count\nsource_locators: \n  [1] S1:B017\n  [2] S1:B018\n  [3] S1:B019\nbiopsy_n: 2\ndonor_n: 1",
+      "Text29_Reference": [
+        "Structured evidence: full/A158/evidence/record.json#/experiments/0; SHA-256: 413fe0131e1a3c421e5b21d7f9d9fb1d5540799c4abd45857a6c832d629c36a9; DOI: https://doi.org/10.3389/fphys.2021.637136"
+      ]
+    },
+    {
+      "Text30": "experiments:\nexperiment_id: E2\nfigure_panels: F3 A/B\nsample_id: SMP1\nimaging_ids: \n  [1] I1\n  [2] I2\nprotocol_ids: \n  [1] P02\n  [2] P03\n  [3] P04\n  [4] P05\n  [5] P06\n  [6] P07\n  [7] P08\n  [8] P09\n  [9] P10\n  [10] P11\ndescription: 同一标本OPT/LSFM近似匹配数字截面对比；正文明确LSFM后OPT。\nrecord_role: analytical evidence partition; not independent replicate count\nsource_locators: \n  [1] S1:B021\n  [2] S1:B022\ndisplayed_section_thickness_um: \n  OPT: 9.6\n  LSFM: 5\npaired_specimen_n: 1\nmatched_plane_registration: approximate in silico, not exact same physical slice",
+      "Text30_Reference": [
+        "Structured evidence: full/A158/evidence/record.json#/experiments/1; SHA-256: 413fe0131e1a3c421e5b21d7f9d9fb1d5540799c4abd45857a6c832d629c36a9; DOI: https://doi.org/10.3389/fphys.2021.637136"
+      ]
+    },
+    {
+      "Text31": "experiments:\nexperiment_id: E3\nfigure_panels: F4 A/B\nsample_id: SMP1\nimaging_ids: \n  [1] I2\nprotocol_ids: \n  [1] P02\n  [2] P03\n  [3] P04\n  [4] P05\n  [5] P06\n  [6] P07\n  [7] P08\n  [8] P09\n  [9] P10\ndescription: 同类整体标本门管区横向/纵向视角；不是两名新供者。\nrecord_role: analytical evidence partition; not independent replicate count\nsource_locators: \n  [1] S1:B023\n  [2] S1:B024\nrendered_volume_um_approx: \n  [1] 1500\n  [2] 1300\n  [3] 800",
+      "Text31_Reference": [
+        "Structured evidence: full/A158/evidence/record.json#/experiments/2; SHA-256: 413fe0131e1a3c421e5b21d7f9d9fb1d5540799c4abd45857a6c832d629c36a9; DOI: https://doi.org/10.3389/fphys.2021.637136"
+      ]
+    },
+    {
+      "Text32": "experiments:\nexperiment_id: E4\nfigure_panels: F5 A/B\nsample_id: SMP1\nimaging_ids: \n  [1] I2\nprotocol_ids: \n  [1] P02\n  [2] P03\n  [3] P04\n  [4] P05\n  [5] P06\n  [6] P07\n  [7] P08\n  [8] P09\n  [9] P10\ndescription: 整体概览与同一渲染体积中门管区放大。\nrecord_role: analytical evidence partition; not independent replicate count\nsource_locators: \n  [1] S1:B025\n  [2] S1:B026\nscale_bar_um: \n  A: 500\n  B: 100",
+      "Text32_Reference": [
+        "Structured evidence: full/A158/evidence/record.json#/experiments/3; SHA-256: 413fe0131e1a3c421e5b21d7f9d9fb1d5540799c4abd45857a6c832d629c36a9; DOI: https://doi.org/10.3389/fphys.2021.637136"
+      ]
+    },
+    {
+      "Text33": "experiments:\nexperiment_id: E5\nfigure_panels: F5 C\nsample_id: SMP2\nimaging_ids: \n  [1] I3\nprotocol_ids: \n  [1] P12\n  [2] P13\n  [3] P14\n  [4] P15\n  [5] P16\n  [6] P17\ndescription: 100µm切片的传统荧光共焦门管区。\nrecord_role: analytical evidence partition; not independent replicate count\nsource_locators: \n  [1] S1:B014\n  [2] S1:B025\n  [3] S1:B026\nscale_bar_um: 100",
+      "Text33_Reference": [
+        "Structured evidence: full/A158/evidence/record.json#/experiments/4; SHA-256: 413fe0131e1a3c421e5b21d7f9d9fb1d5540799c4abd45857a6c832d629c36a9; DOI: https://doi.org/10.3389/fphys.2021.637136"
+      ]
+    },
+    {
+      "Text34": "experiments:\nexperiment_id: E6\nfigure_panels: F6 A\nsample_id: SMP3\nimaging_ids: \n  [1] I4\n  [2] I6\nprotocol_ids: \n  [1] P18\ndescription: CARS阈值伪彩显示细胞/脂滴，随后SHG叠加纤维结构。\nrecord_role: analytical evidence partition; not independent replicate count\nsource_locators: \n  [1] S1:B027\n  [2] S1:B028\nscale_bar_um: 50",
+      "Text34_Reference": [
+        "Structured evidence: full/A158/evidence/record.json#/experiments/5; SHA-256: 413fe0131e1a3c421e5b21d7f9d9fb1d5540799c4abd45857a6c832d629c36a9; DOI: https://doi.org/10.3389/fphys.2021.637136"
+      ]
+    },
+    {
+      "Text35": "experiments:\nexperiment_id: E7\nfigure_panels: F6 B\nsample_id: SMP3\nimaging_ids: \n  [1] I4\nprotocol_ids: \n  [1] P18\ndescription: CARS蓝色显示门静脉与附着红细胞，附近组织改变；拼接归属见冲突。\nrecord_role: analytical evidence partition; not independent replicate count\nsource_locators: \n  [1] S1:B027\n  [2] S1:B028\nscale_bar_um: 30",
+      "Text35_Reference": [
+        "Structured evidence: full/A158/evidence/record.json#/experiments/6; SHA-256: 413fe0131e1a3c421e5b21d7f9d9fb1d5540799c4abd45857a6c832d629c36a9; DOI: https://doi.org/10.3389/fphys.2021.637136"
+      ]
+    },
+    {
+      "Text36": "experiments:\nexperiment_id: E8\nfigure_panels: F7\nsample_id: SMP3\nimaging_ids: \n  [1] I5\n  [2] I6\nprotocol_ids: \n  [1] P18\ndescription: 逐像素拟合的高光谱SRS与随后SHG叠加。\nrecord_role: analytical evidence partition; not independent replicate count\nsource_locators: \n  [1] S1:B029\n  [2] S1:B030\nscale_bar_um: 30",
+      "Text36_Reference": [
+        "Structured evidence: full/A158/evidence/record.json#/experiments/7; SHA-256: 413fe0131e1a3c421e5b21d7f9d9fb1d5540799c4abd45857a6c832d629c36a9; DOI: https://doi.org/10.3389/fphys.2021.637136"
+      ]
+    },
+    {
+      "Text37": "experiments:\nexperiment_id: E9\nfigure_panels: F8\nsample_id: SMP4\nimaging_ids: \n  [1] I7\nprotocol_ids: \n  [1] P19\n  [2] P20\ndescription: 3个代表性固定hLSEC及其局部筛板；来自一次>50细胞成像。\nrecord_role: analytical evidence partition; not independent replicate count\nsource_locators: \n  [1] S1:B031\n  [2] S1:B032\ndisplayed_cells_n: 3\nfield_of_view_um: 40\nscale_bars_um: \n  full_cell: 10\n  ROI: 1",
+      "Text37_Reference": [
+        "Structured evidence: full/A158/evidence/record.json#/experiments/8; SHA-256: 413fe0131e1a3c421e5b21d7f9d9fb1d5540799c4abd45857a6c832d629c36a9; DOI: https://doi.org/10.3389/fphys.2021.637136"
+      ]
+    },
+    {
+      "Text38": "experiments:\nexperiment_id: E10\nfigure_panels: F9 A/B/C\nsample_id: SMP4\nimaging_ids: \n  [1] I7\nprotocol_ids: \n  [1] P19\n  [2] P20\ndescription: 5个细胞的21个最清晰筛板ROI；自动分割4471孔并汇总直径直方图。\nrecord_role: analytical evidence partition; not independent replicate count\nsource_locators: \n  [1] S1:B033\n  [2] S1:B034\nanalyzed_cells_n: 5\nROI_n: 21\nfenestrae_n: 4471\nscale_bar_um: 1",
+      "Text38_Reference": [
+        "Structured evidence: full/A158/evidence/record.json#/experiments/9; SHA-256: 413fe0131e1a3c421e5b21d7f9d9fb1d5540799c4abd45857a6c832d629c36a9; DOI: https://doi.org/10.3389/fphys.2021.637136"
+      ]
+    },
+    {
+      "Text39": "results:\nresult_id: R1\nexperiment_id: E1\nresult_type: qualitative_visibility\nobservation: 清透后可辨CK19胆管与αSMA相关血管；αSMA背景较高，整体最大投影中更妨碍观察。\nvalue: null (as recorded in source)\nunit: null (as recorded in source)\nsource_locators: \n  [1] S1:B017\n  [2] S1:B018\n  [3] S1:B019\nboundary: 不是清透前后透光率或荧光保留率量化。\ninferential_statistics: null (as recorded in source)",
+      "Text39_Reference": [
+        "Structured evidence: full/A158/evidence/record.json#/results/0; SHA-256: 413fe0131e1a3c421e5b21d7f9d9fb1d5540799c4abd45857a6c832d629c36a9; DOI: https://doi.org/10.3389/fphys.2021.637136"
+      ]
+    },
+    {
+      "Text40": "results:\nresult_id: R2\nexperiment_id: E2\nresult_type: within_specimen_qualitative_comparison\nobservation: 两个模态均显示胆管/血管；示例配置中OPT分辨率较低，血管对比弱于胆管。\nvalue: null (as recorded in source)\nunit: null (as recorded in source)\nsource_locators: \n  [1] S1:B021\n  [2] S1:B022\nboundary: 未提供分辨率比值、统计检验或普遍排名；样本只占OPT最大视野一部分。\ninferential_statistics: null (as recorded in source)",
+      "Text40_Reference": [
+        "Structured evidence: full/A158/evidence/record.json#/results/1; SHA-256: 413fe0131e1a3c421e5b21d7f9d9fb1d5540799c4abd45857a6c832d629c36a9; DOI: https://doi.org/10.3389/fphys.2021.637136"
+      ]
+    },
+    {
+      "Text41": "results:\nresult_id: R3\nexperiment_id: E3\nresult_type: morphology\nobservation: Hering最小胆管形成网状结构，经单个或少数ductuli连接门区胆管。\nvalue: null (as recorded in source)\nunit: null (as recorded in source)\nsource_locators: \n  [1] S1:B023\n  [2] S1:B024\nboundary: 固定形态观察不等于证实流动或功能；不是所有肝组织普遍拓扑比例。\ninferential_statistics: null (as recorded in source)",
+      "Text41_Reference": [
+        "Structured evidence: full/A158/evidence/record.json#/results/2; SHA-256: 413fe0131e1a3c421e5b21d7f9d9fb1d5540799c4abd45857a6c832d629c36a9; DOI: https://doi.org/10.3389/fphys.2021.637136"
+      ]
+    },
+    {
+      "Text42": "results:\nresult_id: R4\nexperiment_id: E3\nresult_type: morphology\nobservation: 纵向/环周平滑肌排列分别支持静脉/动脉归属；较大胆管CK19染色降低。\nvalue: null (as recorded in source)\nunit: null (as recorded in source)\nsource_locators: \n  [1] S1:B024\nboundary: 不是用独立血管标记验证的分类准确率；低染色不等于无胆管。\ninferential_statistics: null (as recorded in source)",
+      "Text42_Reference": [
+        "Structured evidence: full/A158/evidence/record.json#/results/3; SHA-256: 413fe0131e1a3c421e5b21d7f9d9fb1d5540799c4abd45857a6c832d629c36a9; DOI: https://doi.org/10.3389/fphys.2021.637136"
+      ]
+    },
+    {
+      "Text43": "results:\nresult_id: R5\nexperiment_id: E4\nresult_type: qualitative_visibility\nobservation: LSFM可辨小胆管管腔及单个胆管细胞。\nvalue: null (as recorded in source)\nunit: null (as recorded in source)\nsource_locators: \n  [1] S1:B025\n  [2] S1:B026\nboundary: \ninferential_statistics: null (as recorded in source)",
+      "Text43_Reference": [
+        "Structured evidence: full/A158/evidence/record.json#/results/4; SHA-256: 413fe0131e1a3c421e5b21d7f9d9fb1d5540799c4abd45857a6c832d629c36a9; DOI: https://doi.org/10.3389/fphys.2021.637136"
+      ]
+    },
+    {
+      "Text44": "results:\nresult_id: R6\nexperiment_id: E5\nresult_type: qualitative_visibility\nobservation: 共焦显示胆管细胞亚细胞结构、门区ECM纤维和胆管内/间细胞大小差异。\nvalue: null (as recorded in source)\nunit: null (as recorded in source)\nsource_locators: \n  [1] S1:B025\n  [2] S1:B026\nboundary: 无细胞尺寸数值或比较统计。\ninferential_statistics: null (as recorded in source)",
+      "Text44_Reference": [
+        "Structured evidence: full/A158/evidence/record.json#/results/5; SHA-256: 413fe0131e1a3c421e5b21d7f9d9fb1d5540799c4abd45857a6c832d629c36a9; DOI: https://doi.org/10.3389/fphys.2021.637136"
+      ]
+    },
+    {
+      "Text45": "results:\nresult_id: R7\nexperiment_id: E6\nresult_type: label_free_morphology\nobservation: CARS低强度背景显示肝细胞和核，高强度显示脂滴；SHG显示纤维性结构。\nvalue: null (as recorded in source)\nunit: null (as recorded in source)\nsource_locators: \n  [1] S1:B027\n  [2] S1:B028\nboundary: 阈值没有数值；不是特异荧光共定位或纤维化定量。\ninferential_statistics: null (as recorded in source)",
+      "Text45_Reference": [
+        "Structured evidence: full/A158/evidence/record.json#/results/6; SHA-256: 413fe0131e1a3c421e5b21d7f9d9fb1d5540799c4abd45857a6c832d629c36a9; DOI: https://doi.org/10.3389/fphys.2021.637136"
+      ]
+    },
+    {
+      "Text46": "results:\nresult_id: R8\nexperiment_id: E7\nresult_type: label_free_morphology\nobservation: CARS显示门静脉壁相关红细胞以及附近组织纤维性改变。\nvalue: null (as recorded in source)\nunit: null (as recorded in source)\nsource_locators: \n  [1] S1:B027\n  [2] S1:B028\nboundary: F6B实际蓝色为显示映射；没有独立细胞数或病理分级。\ninferential_statistics: null (as recorded in source)",
+      "Text46_Reference": [
+        "Structured evidence: full/A158/evidence/record.json#/results/7; SHA-256: 413fe0131e1a3c421e5b21d7f9d9fb1d5540799c4abd45857a6c832d629c36a9; DOI: https://doi.org/10.3389/fphys.2021.637136"
+      ]
+    },
+    {
+      "Text47": "results:\nresult_id: R9\nexperiment_id: E8\nresult_type: label_free_morphology\nobservation: SRS脂质/蛋白映射识别细胞、核和脂滴；SHG结构延伸至实质，作者据形态指出微泡脂肪变。\nvalue: null (as recorded in source)\nunit: null (as recorded in source)\nsource_locators: \n  [1] S1:B029\n  [2] S1:B030\nboundary: 不推断临床诊断准确率、脂肪百分比或病程。\ninferential_statistics: null (as recorded in source)",
+      "Text47_Reference": [
+        "Structured evidence: full/A158/evidence/record.json#/results/8; SHA-256: 413fe0131e1a3c421e5b21d7f9d9fb1d5540799c4abd45857a6c832d629c36a9; DOI: https://doi.org/10.3389/fphys.2021.637136"
+      ]
+    },
+    {
+      "Text48": "results:\nresult_id: R10\nexperiment_id: E9\nresult_type: qualitative_visibility\nobservation: 固定hLSEC膜上可见筛板与暗孔；3个代表细胞展示。\nvalue: null (as recorded in source)\nunit: null (as recorded in source)\nsource_locators: \n  [1] S1:B031\n  [2] S1:B032\nboundary: 不是活细胞动态证据；人鼠覆盖率比较引用既有研究，未当作本研究对照量化。\ninferential_statistics: null (as recorded in source)",
+      "Text48_Reference": [
+        "Structured evidence: full/A158/evidence/record.json#/results/9; SHA-256: 413fe0131e1a3c421e5b21d7f9d9fb1d5540799c4abd45857a6c832d629c36a9; DOI: https://doi.org/10.3389/fphys.2021.637136"
+      ]
+    },
+    {
+      "Text49": "results:\nresult_id: R11\nexperiment_id: E10\nresult_type: measured_distribution_mode\nobservation: 被分析孔径分布峰值位于110–120nm。\nvalue: \n  [1] 110\n  [2] 120\nunit: nm\nsource_locators: \n  [1] S1:B033\n  [2] S1:B034\nboundary: 众数区间，非均值或正常参考范围；5细胞/21选定ROI/4471孔，有95至320nm筛选限制。\ninferential_statistics: null (as recorded in source)",
+      "Text49_Reference": [
+        "Structured evidence: full/A158/evidence/record.json#/results/10; SHA-256: 413fe0131e1a3c421e5b21d7f9d9fb1d5540799c4abd45857a6c832d629c36a9; DOI: https://doi.org/10.3389/fphys.2021.637136"
+      ]
+    },
+    {
+      "Text50": "results:\nresult_id: R12\nexperiment_id: E10\nresult_type: descriptive_distribution_shape\nobservation: 作者描述孔径分布在90–320nm范围总体递减；图9C展示频数直方图。\nvalue: null (as recorded in source)\nunit: null (as recorded in source)\nsource_locators: \n  [1] S1:B033\n  [2] S1:B034\nboundary: 未提供指数模型参数、拟合优度或误差；不作为已验证指数律。\ninferential_statistics: null (as recorded in source)",
+      "Text50_Reference": [
+        "Structured evidence: full/A158/evidence/record.json#/results/11; SHA-256: 413fe0131e1a3c421e5b21d7f9d9fb1d5540799c4abd45857a6c832d629c36a9; DOI: https://doi.org/10.3389/fphys.2021.637136"
+      ]
+    },
+    {
+      "Text51": "author_claims:\nclaim_id: C1\nclaim: 跨7个数量级的多尺度光学成像\nscope: abstract/conclusion author framing\nsource_locators: \n  [1] Abstract\n  [2] S1:B035\nboundary: 不同样本制备/模态组合；不是同一整肝从cm到nm连续采集。",
+      "Text51_Reference": [
+        "Structured evidence: full/A158/evidence/record.json#/author_claims/0; SHA-256: 413fe0131e1a3c421e5b21d7f9d9fb1d5540799c4abd45857a6c832d629c36a9; DOI: https://doi.org/10.3389/fphys.2021.637136"
+      ]
+    },
+    {
+      "Text52": "author_claims:\nclaim_id: C2\nclaim: 超过约0.5mm组织长度的成像需要透明处理\nscope: abstract general rationale\nsource_locators: \n  [1] Abstract\nboundary: 非本研究测定的普遍成像深度阈值。",
+      "Text52_Reference": [
+        "Structured evidence: full/A158/evidence/record.json#/author_claims/1; SHA-256: 413fe0131e1a3c421e5b21d7f9d9fb1d5540799c4abd45857a6c832d629c36a9; DOI: https://doi.org/10.3389/fphys.2021.637136"
+      ]
+    },
+    {
+      "Text53": "author_claims:\nclaim_id: C3\nclaim: 典型CARS/SRS/SHG横向分辨率<400nm，轴向文中写>600nm\nscope: general method discussion\nsource_locators: \n  [1] S1:B027\nboundary: 保留作者不等号；非图6/7实测PSF或分辨率。",
+      "Text53_Reference": [
+        "Structured evidence: full/A158/evidence/record.json#/author_claims/2; SHA-256: 413fe0131e1a3c421e5b21d7f9d9fb1d5540799c4abd45857a6c832d629c36a9; DOI: https://doi.org/10.3389/fphys.2021.637136"
+      ]
+    },
+    {
+      "Text54": "author_claims:\nclaim_id: C4\nclaim: 线性SR-SIM横向约100nm\nscope: general method discussion\nsource_locators: \n  [1] S1:B031\nboundary: 非本次样本实测分辨率；不使用其他文献<90/<50nm作为本文表现。",
+      "Text54_Reference": [
+        "Structured evidence: full/A158/evidence/record.json#/author_claims/3; SHA-256: 413fe0131e1a3c421e5b21d7f9d9fb1d5540799c4abd45857a6c832d629c36a9; DOI: https://doi.org/10.3389/fphys.2021.637136"
+      ]
+    },
+    {
+      "Text55": "author_claims:\nclaim_id: C5\nclaim: 传统荧光共焦通常限于100–200µm厚切片\nscope: general discussion\nsource_locators: \n  [1] S1:B025\nboundary: 本文实际切片100µm；不是本文测出的深度极限。",
+      "Text55_Reference": [
+        "Structured evidence: full/A158/evidence/record.json#/author_claims/4; SHA-256: 413fe0131e1a3c421e5b21d7f9d9fb1d5540799c4abd45857a6c832d629c36a9; DOI: https://doi.org/10.3389/fphys.2021.637136"
+      ]
+    },
+    {
+      "Text56": "author_claims:\nclaim_id: C6\nclaim: 固定、透化、脱水与折射率匹配可能改变自然形态，结论需相关对照\nscope: authors caveat\nsource_locators: \n  [1] S1:B016\nboundary: 本文未给定尺寸保持率，因此不能据一般光学温和性断言形态无改变。",
+      "Text56_Reference": [
+        "Structured evidence: full/A158/evidence/record.json#/author_claims/5; SHA-256: 413fe0131e1a3c421e5b21d7f9d9fb1d5540799c4abd45857a6c832d629c36a9; DOI: https://doi.org/10.3389/fphys.2021.637136"
+      ]
+    },
+    {
+      "Text57": "figures:\nfigure_id: F1\nsource_locator: S1:F1\nactual_image_read: true\ncaption_read: true\nfigure_type: schematic\nobservation: A-D多尺度肝结构示意；不构成实验采集。\nimage_sha256: 1673d527a48da123c5844f0acfb854a344f6e679ebba25811a5fda1a23c2fabd\nimage_source: F1_asset\nboundary: 实际图只辅助核读，不对图中数值数字化。",
+      "Text57_Reference": [
+        "Structured evidence: full/A158/evidence/record.json#/figures/0; SHA-256: 413fe0131e1a3c421e5b21d7f9d9fb1d5540799c4abd45857a6c832d629c36a9; DOI: https://doi.org/10.3389/fphys.2021.637136"
+      ]
+    },
+    {
+      "Text58": "figures:\nfigure_id: F2\nsource_locator: S1:F2\nactual_image_read: true\ncaption_read: true\nfigure_type: experimental image and/or graph\nobservation: A/B两块标本，各含切面/整体投影/局部投影；A左图内含一张清透后宏观照片。\nimage_sha256: 8b7597d7b9f13537086eff663c1e6432de5a18cc871bcf11a9f48f811e2d7389\nimage_source: F2_asset\nboundary: 实际图只辅助核读，不对图中数值数字化。",
+      "Text58_Reference": [
+        "Structured evidence: full/A158/evidence/record.json#/figures/1; SHA-256: 413fe0131e1a3c421e5b21d7f9d9fb1d5540799c4abd45857a6c832d629c36a9; DOI: https://doi.org/10.3389/fphys.2021.637136"
+      ]
+    },
+    {
+      "Text59": "figures:\nfigure_id: F3\nsource_locator: S1:F3\nactual_image_read: true\ncaption_read: true\nfigure_type: experimental image and/or graph\nobservation: 左OPT右LSFM，对应结构可辨；按正文是近似匹配的数字切面。\nimage_sha256: 4f2cdb6cdf69a299e074b5252d853039930d69d3f36780a9c2126321be1a6d8b\nimage_source: F3_asset\nboundary: 实际图只辅助核读，不对图中数值数字化。",
+      "Text59_Reference": [
+        "Structured evidence: full/A158/evidence/record.json#/figures/2; SHA-256: 413fe0131e1a3c421e5b21d7f9d9fb1d5540799c4abd45857a6c832d629c36a9; DOI: https://doi.org/10.3389/fphys.2021.637136"
+      ]
+    },
+    {
+      "Text60": "figures:\nfigure_id: F4\nsource_locator: S1:F4\nactual_image_read: true\ncaption_read: true\nfigure_type: experimental image and/or graph\nobservation: A/B各三列，CK19白色、αSMA洋红、自发荧光绿色；显示横向与纵向门管区。\nimage_sha256: 3f6166f0267bd81d87000f48338cfba505df61a6b08a991f46bb47ca44754e7c\nimage_source: F4_asset\nboundary: 实际图只辅助核读，不对图中数值数字化。",
+      "Text60_Reference": [
+        "Structured evidence: full/A158/evidence/record.json#/figures/3; SHA-256: 413fe0131e1a3c421e5b21d7f9d9fb1d5540799c4abd45857a6c832d629c36a9; DOI: https://doi.org/10.3389/fphys.2021.637136"
+      ]
+    },
+    {
+      "Text61": "figures:\nfigure_id: F5\nsource_locator: S1:F5\nactual_image_read: true\ncaption_read: true\nfigure_type: experimental image and/or graph\nobservation: A整体LSFM，B局部放大，C切片共焦；图内比例尺500、100、100µm。\nimage_sha256: 25ce15a8fb4bbbc65a0f24e71a5beafb05bc6bd681e808176679c0ed449bd84a\nimage_source: F5_asset\nboundary: 实际图只辅助核读，不对图中数值数字化。",
+      "Text61_Reference": [
+        "Structured evidence: full/A158/evidence/record.json#/figures/4; SHA-256: 413fe0131e1a3c421e5b21d7f9d9fb1d5540799c4abd45857a6c832d629c36a9; DOI: https://doi.org/10.3389/fphys.2021.637136"
+      ]
+    },
+    {
+      "Text62": "figures:\nfigure_id: F6\nsource_locator: S1:F6\nactual_image_read: true\ncaption_read: true\nfigure_type: experimental image and/or graph\nobservation: A黄/洋红CARS加绿SHG；B蓝色CARS不规则拼接样视野；图注比例尺50和30µm。\nimage_sha256: da44ec56ff8bb7e991dcd5bc98327baf6adabcf74b1e85d78344e8dc1b205f31\nimage_source: F6_asset\nboundary: 实际图只辅助核读，不对图中数值数字化。",
+      "Text62_Reference": [
+        "Structured evidence: full/A158/evidence/record.json#/figures/5; SHA-256: 413fe0131e1a3c421e5b21d7f9d9fb1d5540799c4abd45857a6c832d629c36a9; DOI: https://doi.org/10.3389/fphys.2021.637136"
+      ]
+    },
+    {
+      "Text63": "figures:\nfigure_id: F7\nsource_locator: S1:F7\nactual_image_read: true\ncaption_read: true\nfigure_type: experimental image and/or graph\nobservation: 黄/洋红高光谱SRS叠加绿色SHG；图注比例尺30µm；不读取荧光标签。\nimage_sha256: 5987f0651fc0e889ad01c0629801f424eae14daa8ee12b25c02839c2ab97377b\nimage_source: F7_asset\nboundary: 实际图只辅助核读，不对图中数值数字化。",
+      "Text63_Reference": [
+        "Structured evidence: full/A158/evidence/record.json#/figures/6; SHA-256: 413fe0131e1a3c421e5b21d7f9d9fb1d5540799c4abd45857a6c832d629c36a9; DOI: https://doi.org/10.3389/fphys.2021.637136"
+      ]
+    },
+    {
+      "Text64": "figures:\nfigure_id: F8\nsource_locator: S1:F8\nactual_image_read: true\ncaption_read: true\nfigure_type: experimental image and/or graph\nobservation: 3行细胞，每行全细胞与ROI灰度图；全图10µm尺，ROI1µm尺；膜孔为暗结构。\nimage_sha256: 72c3c8b49f84964636a8883e0160d043e33d76ee5abbdbb10aa8a87134e4da74\nimage_source: F8_asset\nboundary: 实际图只辅助核读，不对图中数值数字化。",
+      "Text64_Reference": [
+        "Structured evidence: full/A158/evidence/record.json#/figures/7; SHA-256: 413fe0131e1a3c421e5b21d7f9d9fb1d5540799c4abd45857a6c832d629c36a9; DOI: https://doi.org/10.3389/fphys.2021.637136"
+      ]
+    },
+    {
+      "Text65": "figures:\nfigure_id: F9\nsource_locator: S1:F9\nactual_image_read: true\ncaption_read: true\nfigure_type: experimental image and/or graph\nobservation: A ROI与B检测圈相同区域；C频数-直径直方图；黄色圈显示尺寸为实际孔径2倍。\nimage_sha256: 1760e3a3ce85c19c0532302d56858f4fb68b2cf6ae2f67daecbb41072f9ffd78\nimage_source: F9_asset\nboundary: 实际图只辅助核读，不对图中数值数字化。",
+      "Text65_Reference": [
+        "Structured evidence: full/A158/evidence/record.json#/figures/8; SHA-256: 413fe0131e1a3c421e5b21d7f9d9fb1d5540799c4abd45857a6c832d629c36a9; DOI: https://doi.org/10.3389/fphys.2021.637136"
+      ]
+    },
+    {
+      "Text66": "prior_library_comparison:\ntopic: reextraction_basis\nfinding: 先根据XML/PDF及实际图独立抽取后，读取旧A158重构记录比对；旧记录4条流程并未迁移为本轮行数。",
+      "Text66_Reference": [
+        "Structured evidence: full/A158/evidence/record.json#/prior_library_comparison/0; SHA-256: 413fe0131e1a3c421e5b21d7f9d9fb1d5540799c4abd45857a6c832d629c36a9; DOI: https://doi.org/10.3389/fphys.2021.637136"
+      ]
+    },
+    {
+      "Text67": "prior_library_comparison:\ntopic: consistent_boundaries\nfinding: 独立重读确认旧记录的4个关键冲突：固定时间、50/40µm厚度、Fig6拼接归属、95nm筛选与90nm叙述。",
+      "Text67_Reference": [
+        "Structured evidence: full/A158/evidence/record.json#/prior_library_comparison/1; SHA-256: 413fe0131e1a3c421e5b21d7f9d9fb1d5540799c4abd45857a6c832d629c36a9; DOI: https://doi.org/10.3389/fphys.2021.637136"
+      ]
+    },
+    {
+      "Text68": "prior_library_comparison:\ntopic: new_actual_figure_coverage\nfinding: 旧记录注明未做图像数字化/视频解码；本轮9幅实际图逐一目视，核对F5/F8/F9比例尺与F6B蓝色伪彩。",
+      "Text68_Reference": [
+        "Structured evidence: full/A158/evidence/record.json#/prior_library_comparison/2; SHA-256: 413fe0131e1a3c421e5b21d7f9d9fb1d5540799c4abd45857a6c832d629c36a9; DOI: https://doi.org/10.3389/fphys.2021.637136"
+      ]
+    },
+    {
+      "Text69": "prior_library_comparison:\ntopic: supplement_deduplication\nfinding: 按原XML4节点实际去重为2个唯一视频；读取状态以本轮有效媒体检查为准。",
+      "Text69_Reference": [
+        "Structured evidence: full/A158/evidence/record.json#/prior_library_comparison/3; SHA-256: 413fe0131e1a3c421e5b21d7f9d9fb1d5540799c4abd45857a6c832d629c36a9; DOI: https://doi.org/10.3389/fphys.2021.637136"
+      ]
+    },
+    {
+      "Text70": "prior_library_comparison:\ntopic: privacy_scope\nfinding: 不迁移旧记录中的完整患者临床经历原文与获取/活细胞分离细节，仅保留非识别样本条件。",
+      "Text70_Reference": [
+        "Structured evidence: full/A158/evidence/record.json#/prior_library_comparison/4; SHA-256: 413fe0131e1a3c421e5b21d7f9d9fb1d5540799c4abd45857a6c832d629c36a9; DOI: https://doi.org/10.3389/fphys.2021.637136"
+      ]
+    },
+    {
+      "Text71": "prior_library_comparison:\ntopic: no_historical_acceptance\nfinding: 历史review或部分acceptance不视为本轮独立R2/R3/R4；本轮只冻结R1。",
+      "Text71_Reference": [
+        "Structured evidence: full/A158/evidence/record.json#/prior_library_comparison/5; SHA-256: 413fe0131e1a3c421e5b21d7f9d9fb1d5540799c4abd45857a6c832d629c36a9; DOI: https://doi.org/10.3389/fphys.2021.637136"
+      ]
+    }
+  ],
+  "Note": [
+    {
+      "Text1": "Paper A158; source coverage: full; source release status: candidate_pending_gates; source default_eligible: false. Read this study as a whole with its sample, experimental, measurement and limitation fields. All selected source files and mandatory support in the accompanying archive apply jointly. Import does not promote candidate status, resolve contradictions, or turn review citations into independent primary experiments. Application includes source-labelled protocols, comparisons and results; labels within each Text retain their actual role.",
+      "Text1_Reference": [
+        "DOI: https://doi.org/10.3389/fphys.2021.637136",
+        "Evidence-layer structured paraphrase; not a verbatim quotation. Source release: https://github.com/404NotFound422/TOCAgentProject/tree/5e3a711befb3952a2e39f4d53fc9c9f1a7ac0d22/KnowledgeBase/evidence_expansion_20261019",
+        "Local source archive: ../literature_evidence/2026-11-11/source_release.zip; member: full/A158/version_selection.json"
+      ]
+    },
+    {
+      "Text2": "Selected version and mandatory composition:\npaper_id: A158\nstatus: full\nrelease_status: candidate_pending_gates\ndefault_eligible: false\nactive_scientific_files: \n  [1]     path: full/A158/evidence/record.json\n    sha256: 413fe0131e1a3c421e5b21d7f9d9fb1d5540799c4abd45857a6c832d629c36a9\n    source_member: record.json\nrequired_supporting_files: \n  [1]     paper_id: A158\n    path: full/A158/support/review/R4_queries.json\n    source_member: 科学数据与审查附件/review/R4_queries.json\n    accepted_original_sha256: a61034e84bf3ed155bf40aef8c1e08cba6dcbfad59edebb94d05eb56a3762ff2\n    source_sha256: a61034e84bf3ed155bf40aef8c1e08cba6dcbfad59edebb94d05eb56a3762ff2\n    baseline_delivered_sha256: a61034e84bf3ed155bf40aef8c1e08cba6dcbfad59edebb94d05eb56a3762ff2\n    sha256: b5ea77b3f60b477a5e5ff9b1cf6c2c343ac27e33c55e8bf329814199112bf23d\n    bytes: 2114\n    role: required_companion_preserved_not_independently_active\n    transformed: true\n    baseline_delivery_member: 历史交付_1907/历史交付_1707/已验收论文/A158/科学数据与审查附件/review/R4_queries.json\n  [2]     paper_id: A158\n    path: full/A158/support/accepted_scope_binding.json\n    source_member: 科学版本绑定.json\n    accepted_original_sha256: 2a013483dd38db0b0b0436fe82538fa99808278f0475514daf48b784cc34f26d\n    source_sha256: 2a013483dd38db0b0b0436fe82538fa99808278f0475514daf48b784cc34f26d\n    baseline_delivered_sha256: 2a013483dd38db0b0b0436fe82538fa99808278f0475514daf48b784cc34f26d\n    sha256: 2a013483dd38db0b0b0436fe82538fa99808278f0475514daf48b784cc34f26d\n    bytes: 578\n    role: mandatory_scope_and_precedence_binding\n    transformed: false\n    baseline_delivery_member: 历史交付_1907/历史交付_1707/已验收论文/A158/科学版本绑定.json\n  [3]     paper_id: A158\n    path: full/A158/support/review/R2_supplement_sequence_addendum.json\n    source_member: 科学数据与审查附件/review/R2_supplement_sequence_addendum.json\n    accepted_original_sha256: 5f9fe3dfc131e74a4561b0ad99062c149b45b3302cf124d623369f34306bb163\n    source_sha256: 5f9fe3dfc131e74a4561b0ad99062c149b45b3302cf124d623369f34306bb163\n    baseline_delivered_sha256: 5f9fe3dfc131e74a4561b0ad99062c149b45b3302cf124d623369f34306bb163\n    sha256: ee7240e71abfbd780b3c74c4287499cecbeee79b41d79f25f3c68e951d32ef7d\n    bytes: 1707\n    role: required_companion_preserved_not_independently_active\n    transformed: true\n    baseline_delivery_member: 历史交付_1907/历史交付_1707/已验收论文/A158/科学数据与审查附件/review/R2_supplement_sequence_addendum.json\n  [4]     paper_id: A158\n    path: full/A158/support/acceptance.md\n    source_member: 当前验收依据.json\n    accepted_original_sha256: 33e8a018d248eb5dfb1dbd37f0de2c452554be309fa30c7b788e93fe90eaaaf6\n    source_sha256: 33e8a018d248eb5dfb1dbd37f0de2c452554be309fa30c7b788e93fe90eaaaf6\n    baseline_delivered_sha256: 33e8a018d248eb5dfb1dbd37f0de2c452554be309fa30c7b788e93fe90eaaaf6\n    sha256: 33e8a018d248eb5dfb1dbd37f0de2c452554be309fa30c7b788e93fe90eaaaf6\n    bytes: 1148\n    role: current_acceptance_receipt\n    transformed: false\n    baseline_delivery_member: 历史交付_1907/历史交付_1707/已验收论文/A158/当前验收依据.json\n  [5]     paper_id: A158\n    path: full/A158/support/inherited_readme.txt\n    source_member: 阅读说明.txt\n    accepted_original_sha256: adcd65a11a62419b706d340ea95ff51473324015fce622cc8cb03ceb14454c35\n    source_sha256: adcd65a11a62419b706d340ea95ff51473324015fce622cc8cb03ceb14454c35\n    baseline_delivered_sha256: adcd65a11a62419b706d340ea95ff51473324015fce622cc8cb03ceb14454c35\n    sha256: adcd65a11a62419b706d340ea95ff51473324015fce622cc8cb03ceb14454c35\n    bytes: 394\n    role: required_companion_preserved_not_independently_active\n    transformed: false\n    baseline_delivery_member: 历史交付_1907/历史交付_1707/已验收论文/A158/阅读说明.txt\n  [6]     paper_id: A158\n    path: full/A158/support/review/R2_independent_verification.json\n    source_member: 科学数据与审查附件/review/R2_independent_verification.json\n    accepted_original_sha256: 1a827ddf33c987bee9f1bcaafdfccaf7f04c42caaed703574cdb244e10f3013a\n    source_sha256: 1a827ddf33c987bee9f1bcaafdfccaf7f04c42caaed703574cdb244e10f3013a\n    baseline_delivered_sha256: 1a827ddf33c987bee9f1bcaafdfccaf7f04c42caaed703574cdb244e10f3013a\n    sha256: 67105f0d823ccc545afa97f25c82660b7cb9fae97c6da327e6fbdd8963b0dd8f\n    bytes: 3674\n    role: required_companion_preserved_not_independently_active\n    transformed: true\n    baseline_delivery_member: 历史交付_1907/历史交付_1707/已验收论文/A158/科学数据与审查附件/review/R2_independent_verification.json\n  [7]     paper_id: A158\n    path: full/A158/support/review/R3_compatibility_binding.json\n    source_member: 科学数据与审查附件/review/R3_compatibility_binding.json\n    accepted_original_sha256: e9d06959a10714236f9ee1416e776d01ed2961de334f4fdf6cf50de495bb32a8\n    source_sha256: e9d06959a10714236f9ee1416e776d01ed2961de334f4fdf6cf50de495bb32a8\n    baseline_delivered_sha256: e9d06959a10714236f9ee1416e776d01ed2961de334f4fdf6cf50de495bb32a8\n    sha256: 54405c51cf2b491c9279c7d2d5cb599da487bacd9e158b9399a4028dfe3b6bbe\n    bytes: 2450\n    role: required_companion_preserved_not_independently_active\n    transformed: true\n    baseline_delivery_member: 历史交付_1907/历史交付_1707/已验收论文/A158/科学数据与审查附件/review/R3_compatibility_binding.json\n  [8]     paper_id: A158\n    path: full/A158/support/review/R4_gap_search_verification.json\n    source_member: 科学数据与审查附件/review/R4_gap_search_verification.json\n    accepted_original_sha256: 6cf10e10d7a59da09a2ccedcdf5e5fbc0a3c7e276709397515137cce4efd436a\n    source_sha256: 6cf10e10d7a59da09a2ccedcdf5e5fbc0a3c7e276709397515137cce4efd436a\n    baseline_delivered_sha256: 6cf10e10d7a59da09a2ccedcdf5e5fbc0a3c7e276709397515137cce4efd436a\n    sha256: d56214eefec49dd2ba76257ba76cfa5e5ce1d26c25f00b219a7482a2a0f641ab\n    bytes: 5974\n    role: required_companion_preserved_not_independently_active\n    transformed: true\n    baseline_delivery_member: 历史交付_1907/历史交付_1707/已验收论文/A158/科学数据与审查附件/review/R4_gap_search_verification.json\nacceptance: full/A158/support/acceptance.md\nacceptance_files: \n  [1] full/A158/support/acceptance.md\nactive_version_and_scope: \n  scope: 全部相关科学正文、9主图及2视频任务相关序列已核；每视频26/400帧覆盖不同序列/转换，不称逐帧或连续播放；原始数据ZIP未复算。\n  historical_nonactive_members: \n[]\nmandatory_composition: Root plus explicitly selected companions and any current mandatory semantic addendum apply jointly. Never recursively activate audit history.\noriginal_member_to_release_path: \n  record.json: full/A158/evidence/record.json\nactive_reference_aliases: \n  record.json: full/A158/evidence/record.json\n  科学数据与审查附件/review/R4_queries.json: full/A158/support/review/R4_queries.json\n  科学版本绑定.json: full/A158/support/accepted_scope_binding.json\n  科学数据与审查附件/review/R2_supplement_sequence_addendum.json: full/A158/support/review/R2_supplement_sequence_addendum.json\n  当前验收依据.json: full/A158/support/acceptance.md\n  阅读说明.txt: full/A158/support/inherited_readme.txt\n  科学数据与审查附件/review/R2_independent_verification.json: full/A158/support/review/R2_independent_verification.json\n  科学数据与审查附件/review/R3_compatibility_binding.json: full/A158/support/review/R3_compatibility_binding.json\n  科学数据与审查附件/review/R4_gap_search_verification.json: full/A158/support/review/R4_gap_search_verification.json\n  科学数据与审查附件/record_R4_accepted.json: full/A158/evidence/record.json\n  review/R4_queries.json: full/A158/support/review/R4_queries.json\n  accepted_scope_binding.json: full/A158/support/accepted_scope_binding.json\n  review/R2_supplement_sequence_addendum.json: full/A158/support/review/R2_supplement_sequence_addendum.json\n  科学数据与审查附件/review/REVIEW_OUTCOME_FINAL_zh.md: full/A158/support/acceptance.md\n  acceptance.md: full/A158/support/acceptance.md\n  inherited_readme.txt: full/A158/support/inherited_readme.txt\n  review/R2_independent_verification.json: full/A158/support/review/R2_independent_verification.json\n  review/R3_compatibility_binding.json: full/A158/support/review/R3_compatibility_binding.json\n  review/R4_gap_search_verification.json: full/A158/support/review/R4_gap_search_verification.json\nactive_reference_resolution_evidence: \n  [1]     source_file: full/A158/evidence/record.json\n    json_pointer: /review_rounds/1/artifact\n    reference: review/R2_independent_verification.json\n    resolved_release_path: full/A158/support/review/R2_independent_verification.json\n    binding_basis: explicit_verified_alias\n  [2]     source_file: full/A158/evidence/record.json\n    json_pointer: /review_rounds/1/supplement_addendum\n    reference: review/R2_supplement_sequence_addendum.json\n    resolved_release_path: full/A158/support/review/R2_supplement_sequence_addendum.json\n    binding_basis: explicit_verified_alias\n  [3]     source_file: full/A158/evidence/record.json\n    json_pointer: /review_rounds/2/artifact\n    reference: review/R3_compatibility_binding.json\n    resolved_release_path: full/A158/support/review/R3_compatibility_binding.json\n    binding_basis: explicit_verified_alias\n  [4]     source_file: full/A158/evidence/record.json\n    json_pointer: /review_rounds/3/artifact\n    reference: review/R4_gap_search_verification.json\n    resolved_release_path: full/A158/support/review/R4_gap_search_verification.json\n    binding_basis: explicit_verified_alias\n  [5]     source_file: full/A158/support/review/R4_gap_search_verification.json\n    json_pointer: /previous_query_log_reviewed\n    reference: review/R4_queries.json\n    resolved_release_path: full/A158/support/review/R4_queries.json\n    binding_basis: explicit_verified_alias\nexternal_or_historical_references: \n[]\nnonactive_excluded_members: \n[]\nverified_alias_binding_proofs: \n[]\nreference_resolution_policy: Exact explicit aliases only. Acceptance companions apply jointly. Archived original science, source assets and historical candidate flags remain nonruntime provenance. Independent closure review is pending.",
+      "Text2_Reference": [
+        "DOI: https://doi.org/10.3389/fphys.2021.637136",
+        "Evidence-layer structured paraphrase; not a verbatim quotation. Source release: https://github.com/404NotFound422/TOCAgentProject/tree/5e3a711befb3952a2e39f4d53fc9c9f1a7ac0d22/KnowledgeBase/evidence_expansion_20261019",
+        "Local source archive: ../literature_evidence/2026-11-11/source_release.zip; member: full/A158/version_selection.json"
+      ]
+    },
+    {
+      "Text3": "scope:\n已固定人肝组织与固定分离人肝窦内皮细胞的处理、标记、成像和形态结果。排除手术、活细胞分离培养操作、可识别临床经历；原件只私存。",
+      "Text3_Reference": [
+        "Structured evidence: full/A158/evidence/record.json#/scope; SHA-256: 413fe0131e1a3c421e5b21d7f9d9fb1d5540799c4abd45857a6c832d629c36a9; DOI: https://doi.org/10.3389/fphys.2021.637136"
+      ]
+    },
+    {
+      "Text4": "evidence_scope:\nproof_of_concept_not_clinical_validation",
+      "Text4_Reference": [
+        "Structured evidence: full/A158/evidence/record.json#/evidence_scope; SHA-256: 413fe0131e1a3c421e5b21d7f9d9fb1d5540799c4abd45857a6c832d629c36a9; DOI: https://doi.org/10.3389/fphys.2021.637136"
+      ]
+    },
+    {
+      "Text5": "source_conflicts:\nconflict_id: CF1\ntopic: fixation\nreported_values: \n  [1] 取样段4% formaldehyde 1h RT，后0.5% PFA保存\n  [2] 整体专用段4% formaldehyde/PBS 2h，温度未给\nresolution: 保留不同来源作用域，不相加或选择唯一实际固定时间。\nsource_locators: \n  [1] S1:B007\n  [2] S1:B008\nstatus: retained_unresolved_source_difference",
+      "Text5_Reference": [
+        "Structured evidence: full/A158/evidence/record.json#/source_conflicts/0; SHA-256: 413fe0131e1a3c421e5b21d7f9d9fb1d5540799c4abd45857a6c832d629c36a9; DOI: https://doi.org/10.3389/fphys.2021.637136"
+      ]
+    },
+    {
+      "Text6": "source_conflicts:\nconflict_id: CF2\ntopic: nonlinear_section_thickness\nreported_values: \n  [1] Methods 50µm\n  [2] Results F6A 40µm\nresolution: 面板实际厚度null；保存两个原值。\nsource_locators: \n  [1] S1:B009\n  [2] S1:B027\nstatus: retained_unresolved_source_difference",
+      "Text6_Reference": [
+        "Structured evidence: full/A158/evidence/record.json#/source_conflicts/1; SHA-256: 413fe0131e1a3c421e5b21d7f9d9fb1d5540799c4abd45857a6c832d629c36a9; DOI: https://doi.org/10.3389/fphys.2021.637136"
+      ]
+    },
+    {
+      "Text7": "source_conflicts:\nconflict_id: CF3\ntopic: F6_stitching_panel\nreported_values: \n  [1] 图6注拼接说明位于A描述\n  [2] 正文拼接大视野指向B\nresolution: 两处声明均保留；F6B实际图版不规则黑边与拼接相容但不据此抹除文字差异。\nsource_locators: \n  [1] S1:B027\n  [2] S1:B028\n  [3] F6_actual\nstatus: retained_unresolved_source_difference",
+      "Text7_Reference": [
+        "Structured evidence: full/A158/evidence/record.json#/source_conflicts/2; SHA-256: 413fe0131e1a3c421e5b21d7f9d9fb1d5540799c4abd45857a6c832d629c36a9; DOI: https://doi.org/10.3389/fphys.2021.637136"
+      ]
+    },
+    {
+      "Text8": "source_conflicts:\nconflict_id: CF4\ntopic: fenestra_diameter_lower_bound\nreported_values: \n  [1] 排除<95nm\n  [2] 结果分布文字90–320nm\nresolution: 筛选按明确排除规则；结果区间作为作者描述；不把90nm写成入选下限。\nsource_locators: \n  [1] S1:B033\nstatus: retained_unresolved_source_difference",
+      "Text8_Reference": [
+        "Structured evidence: full/A158/evidence/record.json#/source_conflicts/3; SHA-256: 413fe0131e1a3c421e5b21d7f9d9fb1d5540799c4abd45857a6c832d629c36a9; DOI: https://doi.org/10.3389/fphys.2021.637136"
+      ]
+    },
+    {
+      "Text9": "source_conflicts:\nconflict_id: CF5\ntopic: F2_inset_location\nreported_values: \n  [1] 正文upper right corner of row A\n  [2] 图注upper left panel\nresolution: 实际图在A行左面板右上角，两种描述层级不同；均指同一张清透后照片，不生成两张照片。\nsource_locators: \n  [1] S1:B017\n  [2] S1:B018\n  [3] F2_actual\nstatus: resolved_by_actual_figure_layout",
+      "Text9_Reference": [
+        "Structured evidence: full/A158/evidence/record.json#/source_conflicts/4; SHA-256: 413fe0131e1a3c421e5b21d7f9d9fb1d5540799c4abd45857a6c832d629c36a9; DOI: https://doi.org/10.3389/fphys.2021.637136"
+      ]
+    },
+    {
+      "Text10": "missing_fields:\nfield: whole_mount_total_duration\nvalue: null (as recorded in source)\nreason: 洗涤/透化/封闭/梯度置换时长缺失；≥3周抗体与≥1天BABB不能视为完整流程时间。",
+      "Text10_Reference": [
+        "Structured evidence: full/A158/evidence/record.json#/missing_fields/0; SHA-256: 413fe0131e1a3c421e5b21d7f9d9fb1d5540799c4abd45857a6c832d629c36a9; DOI: https://doi.org/10.3389/fphys.2021.637136"
+      ]
+    },
+    {
+      "Text11": "missing_fields:\nfield: whole_mount_temperature_except_antibody\nvalue: null (as recorded in source)\nreason: 37°C仅对应抗体孵育；其他清透阶段未给温度。",
+      "Text11_Reference": [
+        "Structured evidence: full/A158/evidence/record.json#/missing_fields/1; SHA-256: 413fe0131e1a3c421e5b21d7f9d9fb1d5540799c4abd45857a6c832d629c36a9; DOI: https://doi.org/10.3389/fphys.2021.637136"
+      ]
+    },
+    {
+      "Text12": "missing_fields:\nfield: antibody_dilutions\nvalue: null (as recorded in source)\nreason: CK19、αSMA、二抗稀释倍数未报告；CellMask 1:1000单列。",
+      "Text12_Reference": [
+        "Structured evidence: full/A158/evidence/record.json#/missing_fields/2; SHA-256: 413fe0131e1a3c421e5b21d7f9d9fb1d5540799c4abd45857a6c832d629c36a9; DOI: https://doi.org/10.3389/fphys.2021.637136"
+      ]
+    },
+    {
+      "Text13": "missing_fields:\nfield: clearing_transmittance_change\nvalue: null (as recorded in source)\nreason: 没有成对清透前后透过率量化。",
+      "Text13_Reference": [
+        "Structured evidence: full/A158/evidence/record.json#/missing_fields/3; SHA-256: 413fe0131e1a3c421e5b21d7f9d9fb1d5540799c4abd45857a6c832d629c36a9; DOI: https://doi.org/10.3389/fphys.2021.637136"
+      ]
+    },
+    {
+      "Text14": "missing_fields:\nfield: linear_or_volume_size_change\nvalue: null (as recorded in source)\nreason: 无成对前后尺寸测量，不能由起始块与成像块体积计算。",
+      "Text14_Reference": [
+        "Structured evidence: full/A158/evidence/record.json#/missing_fields/4; SHA-256: 413fe0131e1a3c421e5b21d7f9d9fb1d5540799c4abd45857a6c832d629c36a9; DOI: https://doi.org/10.3389/fphys.2021.637136"
+      ]
+    },
+    {
+      "Text15": "missing_fields:\nfield: fluorescence_retention_fraction\nvalue: null (as recorded in source)\nreason: 成像可见标签不等于荧光保持率实验。",
+      "Text15_Reference": [
+        "Structured evidence: full/A158/evidence/record.json#/missing_fields/5; SHA-256: 413fe0131e1a3c421e5b21d7f9d9fb1d5540799c4abd45857a6c832d629c36a9; DOI: https://doi.org/10.3389/fphys.2021.637136"
+      ]
+    },
+    {
+      "Text16": "missing_fields:\nfield: LSFM_per_figure_magnification_NA_immersion\nvalue: null (as recorded in source)\nreason: 只给1.6x/5x选项；未逐图映射，NA与物镜浸液未给。",
+      "Text16_Reference": [
+        "Structured evidence: full/A158/evidence/record.json#/missing_fields/6; SHA-256: 413fe0131e1a3c421e5b21d7f9d9fb1d5540799c4abd45857a6c832d629c36a9; DOI: https://doi.org/10.3389/fphys.2021.637136"
+      ]
+    },
+    {
+      "Text17": "missing_fields:\nfield: nonlinear_section_per_panel_thickness\nvalue: null (as recorded in source)\nreason: 50/40µm冲突。",
+      "Text17_Reference": [
+        "Structured evidence: full/A158/evidence/record.json#/missing_fields/7; SHA-256: 413fe0131e1a3c421e5b21d7f9d9fb1d5540799c4abd45857a6c832d629c36a9; DOI: https://doi.org/10.3389/fphys.2021.637136"
+      ]
+    },
+    {
+      "Text18": "missing_fields:\nfield: hLSEC_donor_n_and_relation_to_tissue_donor\nvalue: null (as recorded in source)\nreason: 没有可靠独立供者总数与跨队列映射。",
+      "Text18_Reference": [
+        "Structured evidence: full/A158/evidence/record.json#/missing_fields/8; SHA-256: 413fe0131e1a3c421e5b21d7f9d9fb1d5540799c4abd45857a6c832d629c36a9; DOI: https://doi.org/10.3389/fphys.2021.637136"
+      ]
+    },
+    {
+      "Text19": "missing_fields:\nfield: hyperspectral_frame_count\nvalue: null (as recorded in source)\nreason: 2790–3020范围与15步距未说明端点处理。",
+      "Text19_Reference": [
+        "Structured evidence: full/A158/evidence/record.json#/missing_fields/9; SHA-256: 413fe0131e1a3c421e5b21d7f9d9fb1d5540799c4abd45857a6c832d629c36a9; DOI: https://doi.org/10.3389/fphys.2021.637136"
+      ]
+    },
+    {
+      "Text20": "missing_fields:\nfield: SR_SIM_sample_mounting_medium_and_excitation\nvalue: null (as recorded in source)\nreason: aqueous conditions描述不确定具体介质，激发波长未给。",
+      "Text20_Reference": [
+        "Structured evidence: full/A158/evidence/record.json#/missing_fields/10; SHA-256: 413fe0131e1a3c421e5b21d7f9d9fb1d5540799c4abd45857a6c832d629c36a9; DOI: https://doi.org/10.3389/fphys.2021.637136"
+      ]
+    },
+    {
+      "Text21": "missing_fields:\nfield: fenestra_mean_SD_bin_counts_and_inferential_tests\nvalue: null (as recorded in source)\nreason: 原文只有频数直方图、总孔数与峰值区间；不从图伪造精确值。",
+      "Text21_Reference": [
+        "Structured evidence: full/A158/evidence/record.json#/missing_fields/11; SHA-256: 413fe0131e1a3c421e5b21d7f9d9fb1d5540799c4abd45857a6c832d629c36a9; DOI: https://doi.org/10.3389/fphys.2021.637136"
+      ]
+    },
+    {
+      "Text22": "missing_fields:\nfield: BABB_refractive_index_numeric\nvalue: null (as recorded in source)\nreason: 原文给成分比例但未报数值；补缺检索未发现可绑定本文实际配置的数值。",
+      "Text22_Reference": [
+        "Structured evidence: full/A158/evidence/record.json#/missing_fields/12; SHA-256: 413fe0131e1a3c421e5b21d7f9d9fb1d5540799c4abd45857a6c832d629c36a9; DOI: https://doi.org/10.3389/fphys.2021.637136"
+      ]
+    },
+    {
+      "Text23": "independent_acceptance_scope:\nAll task-relevant fixed-sample scientific text, nine main figures and both unique supplementary video sequence types verified. Media representative sampling plus transition/end-point inspection, not exhaustive frame-by-frame playback.",
+      "Text23_Reference": [
+        "Structured evidence: full/A158/evidence/record.json#/independent_acceptance_scope; SHA-256: 413fe0131e1a3c421e5b21d7f9d9fb1d5540799c4abd45857a6c832d629c36a9; DOI: https://doi.org/10.3389/fphys.2021.637136"
+      ]
+    },
+    {
+      "Text24": "Source version and scope record (not an additional scientific claim): accepted_scope_binding:\npaper_id: A158\nrecord_sha256: 69b0a9c5b5512cdb621e9f432ea3e5953e2e3904c96d603f36fc0f919cbf060d\nacceptance_sha256: 33e8a018d248eb5dfb1dbd37f0de2c452554be309fa30c7b788e93fe90eaaaf6\npackage_sha256: 53300dbfa8a585d3306e2e16404ccae9d9a4a3dbd3114e5b918972a145bf2f7b\nrecord_form: accepted_record\nscope: 全部相关科学正文、9主图及2视频任务相关序列已核；每视频26/400帧覆盖不同序列/转换，不称逐帧或连续播放；原始数据ZIP未复算。\nstage_execution_and_reuse: null (as recorded in source)\ncompanion_files: \n{}",
+      "Text24_Reference": [
+        "Structured evidence: full/A158/support/accepted_scope_binding.json#; SHA-256: 2a013483dd38db0b0b0436fe82538fa99808278f0475514daf48b784cc34f26d; DOI: https://doi.org/10.3389/fphys.2021.637136"
+      ]
+    }
+  ]
+}

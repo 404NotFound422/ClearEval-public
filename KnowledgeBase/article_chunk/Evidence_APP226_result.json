@@ -1,0 +1,927 @@
+{
+  "TOC_Method_Name": {
+    "Text": "Not specified as a single method in the selected evidence records",
+    "Text_Reference": [
+      "DOI: https://doi.org/10.1126/sciadv.aaz9124",
+      "Evidence-layer structured paraphrase; not a verbatim quotation. Source release: https://github.com/404NotFound422/TOCAgentProject/tree/5e3a711befb3952a2e39f4d53fc9c9f1a7ac0d22/KnowledgeBase/evidence_expansion_20261019",
+      "Local source archive: ../literature_evidence/2026-11-11/source_release.zip; member: full/APP226/version_selection.json"
+    ]
+  },
+  "General_Description": {
+    "Text": "A 3D atlas of the dynamic and regional variation of pancreatic innervation in diabetes (2020). Evidence category: application. This card preserves the evidence layer's structured statements and their original field labels; it does not add a new literature review or certify benchmark scoring thresholds.",
+    "Text_Reference": [
+      "DOI: https://doi.org/10.1126/sciadv.aaz9124",
+      "Evidence-layer structured paraphrase; not a verbatim quotation. Source release: https://github.com/404NotFound422/TOCAgentProject/tree/5e3a711befb3952a2e39f4d53fc9c9f1a7ac0d22/KnowledgeBase/evidence_expansion_20261019",
+      "Local source archive: ../literature_evidence/2026-11-11/source_release.zip; member: full/APP226/version_selection.json"
+    ]
+  },
+  "Tissue_Types": [
+    {
+      "Text1": "samples:\nsample_id: WT\nspecies: mouse\nstrain: C57BL/6\nsex: male per Results comparison\nage: baseline exact age not explicit in relevant text; do not transfer STZ cohort age\nstate: healthy fixed pancreas\nanatomy: \n  [1] duodenal with gastric lobe\n  [2] splenic\nsource: \n  source_id: main\n  xpath: /article/body/sec[2]/sec[5]/p[2]\n  text_sha256: 10c4d58d7f06778af6bd3d87d2597e4bf0efffbd3947acfdd1c8b34fd40fe464\nanatomy_source: \n  source_id: main\n  xpath: /article/body/sec[4]/sec[2]/p[1]\n  normalized_text_sha256: 074c9cec7b7f54a0ebdffd2bb0b114543cba2122e91e507dfcc0c2e64edddb7f",
+      "Text1_Reference": [
+        "Structured evidence: full/APP226/evidence/APP226/scientific_reviewed_candidate_v2.json#/samples/0; SHA-256: c984a005828ad79a2eb4defa1ba70876fb546d9d30cd3c895f893b533da59796; DOI: https://doi.org/10.1126/sciadv.aaz9124"
+      ]
+    },
+    {
+      "Text2": "samples:\nsample_id: NOD_C\nspecies: mouse\nstrain: NOD/ShiLtJ\nsex: female\nage_weeks: \n  [1] 12\n  [2] 16\nstate: nondiabetic fixed pancreas\nblood_glucose_mean_SE_mgdl: \n  [1] 115\n  [2] 4\nsource: \n  source_id: main\n  xpath: /article/body/sec[2]/sec[5]/p[1]\n  text_sha256: 1bae495d91b890cd769941b29e56a89ffc5aeecd8b0c23f45d495304d00f8225\ncohort_demographic_source: \n  source_id: main\n  xpath: /article/body/sec[4]/sec[1]/p\n  normalized_text_sha256: 6986f0fb7056b077e542d14f977057ec730da97b2804cb7449f7955b39c0f46b",
+      "Text2_Reference": [
+        "Structured evidence: full/APP226/evidence/APP226/scientific_reviewed_candidate_v2.json#/samples/1; SHA-256: c984a005828ad79a2eb4defa1ba70876fb546d9d30cd3c895f893b533da59796; DOI: https://doi.org/10.1126/sciadv.aaz9124"
+      ]
+    },
+    {
+      "Text3": "samples:\nsample_id: NOD_D\nspecies: mouse\nstrain: NOD/ShiLtJ\nsex: female\nage_weeks: \n  [1] 12\n  [2] 16\nstate: diabetic fixed pancreas\nblood_glucose_mean_SE_mgdl: \n  [1] 495\n  [2] 62\nsource: \n  source_id: main\n  xpath: /article/body/sec[2]/sec[5]/p[1]\n  text_sha256: 1bae495d91b890cd769941b29e56a89ffc5aeecd8b0c23f45d495304d00f8225\ncohort_demographic_source: \n  source_id: main\n  xpath: /article/body/sec[4]/sec[1]/p\n  normalized_text_sha256: 6986f0fb7056b077e542d14f977057ec730da97b2804cb7449f7955b39c0f46b",
+      "Text3_Reference": [
+        "Structured evidence: full/APP226/evidence/APP226/scientific_reviewed_candidate_v2.json#/samples/2; SHA-256: c984a005828ad79a2eb4defa1ba70876fb546d9d30cd3c895f893b533da59796; DOI: https://doi.org/10.1126/sciadv.aaz9124"
+      ]
+    },
+    {
+      "Text4": "samples:\nsample_id: STZ_C\nspecies: mouse\nstrain: C57BL/6N\nsex: male\nage_weeks: 10\nstate: untreated matched controls\nblood_glucose_mean_SE_mgdl: \n  [1] 123\n  [2] 9\nsource: \n  source_id: main\n  xpath: /article/body/sec[2]/sec[9]/p[1]\n  text_sha256: 5cd88083714c286834d623495cdd15466c0da0ddf037fd1ac47cc180f09e2df0\ncohort_demographic_source: \n  source_id: main\n  xpath: /article/body/sec[4]/sec[1]/p\n  normalized_text_sha256: 6986f0fb7056b077e542d14f977057ec730da97b2804cb7449f7955b39c0f46b",
+      "Text4_Reference": [
+        "Structured evidence: full/APP226/evidence/APP226/scientific_reviewed_candidate_v2.json#/samples/3; SHA-256: c984a005828ad79a2eb4defa1ba70876fb546d9d30cd3c895f893b533da59796; DOI: https://doi.org/10.1126/sciadv.aaz9124"
+      ]
+    },
+    {
+      "Text5": "samples:\nsample_id: STZ_D5\nspecies: mouse\nstrain: C57BL/6N\nsex: male\nage_weeks_at_model_cohort: 10\nstate: fixed pancreas collected5days after prior STZ-course completion\nblood_glucose_mean_SE_mgdl: \n  [1] 259\n  [2] 18\ntime_role: disease observation not clearing duration\nsource: \n  source_id: main\n  xpath: /article/body/sec[2]/sec[9]/p[1]\n  text_sha256: 5cd88083714c286834d623495cdd15466c0da0ddf037fd1ac47cc180f09e2df0\ncohort_demographic_source: \n  source_id: main\n  xpath: /article/body/sec[4]/sec[1]/p\n  normalized_text_sha256: 6986f0fb7056b077e542d14f977057ec730da97b2804cb7449f7955b39c0f46b",
+      "Text5_Reference": [
+        "Structured evidence: full/APP226/evidence/APP226/scientific_reviewed_candidate_v2.json#/samples/4; SHA-256: c984a005828ad79a2eb4defa1ba70876fb546d9d30cd3c895f893b533da59796; DOI: https://doi.org/10.1126/sciadv.aaz9124"
+      ]
+    },
+    {
+      "Text6": "samples:\nsample_id: STZ_D15\nspecies: mouse\nstrain: C57BL/6N\nsex: male\nage_weeks_at_model_cohort: 10\nstate: fixed pancreas collected15days after prior STZ-course completion\nblood_glucose_mean_SE_mgdl: \n  [1] 430\n  [2] 17\ntime_role: disease observation not clearing duration\nsource: \n  source_id: main\n  xpath: /article/body/sec[2]/sec[9]/p[1]\n  text_sha256: 5cd88083714c286834d623495cdd15466c0da0ddf037fd1ac47cc180f09e2df0\ncohort_demographic_source: \n  source_id: main\n  xpath: /article/body/sec[4]/sec[1]/p\n  normalized_text_sha256: 6986f0fb7056b077e542d14f977057ec730da97b2804cb7449f7955b39c0f46b",
+      "Text6_Reference": [
+        "Structured evidence: full/APP226/evidence/APP226/scientific_reviewed_candidate_v2.json#/samples/5; SHA-256: c984a005828ad79a2eb4defa1ba70876fb546d9d30cd3c895f893b533da59796; DOI: https://doi.org/10.1126/sciadv.aaz9124"
+      ]
+    },
+    {
+      "Text7": "samples:\nsample_id: H_C\nspecies: human\nn_donors: 5\nages_years: \n  [1] 43\n  [2] 49\n  [3] 38\n  [4] 53\n  [5] 38\nsexes: \n  [1] F\n  [2] M\n  [3] M\n  [4] F\n  [5] M\nstate: nondiabetic; PFA postfixed tissue from superior tail margin\nsource: \n  source_id: main\n  xpath: //table-wrap[@id=\"T1\"]\n  text_sha256: fae595b0a315b155ada67290d515a8c1e7843001934469baa415d73bec529511\ntissue_site_source: \n  source_id: main\n  xpath: /article/body/sec[4]/sec[2]/p[2]\n  normalized_text_sha256: 47ae2a3a66b5e3f0a7bf3b996ef95ea7cdb88c3b19962e6e22385417c619e2c7\nwarm_and_cold_ischemia_hours: null (as recorded in source)\nischemia_missing_reason: Table1 marks both unknown for all eight donors",
+      "Text7_Reference": [
+        "Structured evidence: full/APP226/evidence/APP226/scientific_reviewed_candidate_v2.json#/samples/6; SHA-256: c984a005828ad79a2eb4defa1ba70876fb546d9d30cd3c895f893b533da59796; DOI: https://doi.org/10.1126/sciadv.aaz9124"
+      ]
+    },
+    {
+      "Text8": "samples:\nsample_id: H_D\nspecies: human\nn_donors: 3\nages_years: \n  [1] 66\n  [2] 53\n  [3] 52\nsexes: \n  [1] F\n  [2] M\n  [3] M\nstate: type2diabetes; PFA postfixed tissue from superior tail margin\ndiabetes_duration_years: \n  [1] null (as recorded in source)\n  [2] null (as recorded in source)\n  [3] 6\nsource: \n  source_id: main\n  xpath: //table-wrap[@id=\"T1\"]\n  text_sha256: fae595b0a315b155ada67290d515a8c1e7843001934469baa415d73bec529511\ntissue_site_source: \n  source_id: main\n  xpath: /article/body/sec[4]/sec[2]/p[2]\n  normalized_text_sha256: 47ae2a3a66b5e3f0a7bf3b996ef95ea7cdb88c3b19962e6e22385417c619e2c7\nwarm_and_cold_ischemia_hours: null (as recorded in source)\nischemia_missing_reason: Table1 marks both unknown for all eight donors",
+      "Text8_Reference": [
+        "Structured evidence: full/APP226/evidence/APP226/scientific_reviewed_candidate_v2.json#/samples/7; SHA-256: c984a005828ad79a2eb4defa1ba70876fb546d9d30cd3c895f893b533da59796; DOI: https://doi.org/10.1126/sciadv.aaz9124"
+      ]
+    },
+    {
+      "Text9": "samples:\nsample_id: MARKER\nspecies: mouse\nstate: fixed small pancreatic antibody-evaluation samples\nsize_mm: \n  [1] 2\n  [2] 3\nmarkers: \n  [1] NF200\n  [2] TH\n  [3] VAChT\n  [4] TRPV1\n  [5] synapsin\n  [6] insulin\n  [7] glucagon\n  [8] SST\n  [9] Muc1\nsource: \n  source_id: main\n  xpath: /article/body/sec[4]/sec[2]/p[1]\n  text_sha256: 074c9cec7b7f54a0ebdffd2bb0b114543cba2122e91e507dfcc0c2e64edddb7f",
+      "Text9_Reference": [
+        "Structured evidence: full/APP226/evidence/APP226/scientific_reviewed_candidate_v2.json#/samples/8; SHA-256: c984a005828ad79a2eb4defa1ba70876fb546d9d30cd3c895f893b533da59796; DOI: https://doi.org/10.1126/sciadv.aaz9124"
+      ]
+    },
+    {
+      "Text10": "samples:\nsample_id: VASCULAR\nspecies: mouse\nstate: fixed pancreatic samples bearing fluorophore-tagged dextran or directly conjugatedCD31, then insulin immunostain\nsize_scope: small pancreatic specimens per FigS4\nsource: \n  source_id: main\n  xpath: /article/body/sec[2]/sec[14]/p[2]\n  text_sha256: 02d99da26f6709997c0a4c4745e9bb7e81b09de03f89a817a848bf61d340d60a",
+      "Text10_Reference": [
+        "Structured evidence: full/APP226/evidence/APP226/scientific_reviewed_candidate_v2.json#/samples/9; SHA-256: c984a005828ad79a2eb4defa1ba70876fb546d9d30cd3c895f893b533da59796; DOI: https://doi.org/10.1126/sciadv.aaz9124"
+      ]
+    },
+    {
+      "Text11": "panel_sample_bindings:\npanels: F1D-G\nsample_ids: \n  [1] WT\nbiological_n: \n  [1] 7\nreadout: beta-volume/islet count/insulin intensity/islet-volume distribution\nsource: \n  source_id: main\n  figure: F1",
+      "Text11_Reference": [
+        "Structured evidence: full/APP226/evidence/APP226/scientific_reviewed_candidate_v2.json#/panel_sample_bindings/0; SHA-256: c984a005828ad79a2eb4defa1ba70876fb546d9d30cd3c895f893b533da59796; DOI: https://doi.org/10.1126/sciadv.aaz9124"
+      ]
+    },
+    {
+      "Text12": "panel_sample_bindings:\npanels: F1I-K\nsample_ids: \n  [1] WT\nbiological_n: \n  [1] 5\nreadout: exocrine/endocrine nerve volumes\nsource: \n  source_id: main\n  figure: F1",
+      "Text12_Reference": [
+        "Structured evidence: full/APP226/evidence/APP226/scientific_reviewed_candidate_v2.json#/panel_sample_bindings/1; SHA-256: c984a005828ad79a2eb4defa1ba70876fb546d9d30cd3c895f893b533da59796; DOI: https://doi.org/10.1126/sciadv.aaz9124"
+      ]
+    },
+    {
+      "Text13": "panel_sample_bindings:\npanels: F2A-D\nsample_ids: \n  [1] WT\nbiological_n: \n  [1] 5\nreadout: islet distances/volume/NF200 signal\nsource: \n  source_id: main\n  figure: F2",
+      "Text13_Reference": [
+        "Structured evidence: full/APP226/evidence/APP226/scientific_reviewed_candidate_v2.json#/panel_sample_bindings/2; SHA-256: c984a005828ad79a2eb4defa1ba70876fb546d9d30cd3c895f893b533da59796; DOI: https://doi.org/10.1126/sciadv.aaz9124"
+      ]
+    },
+    {
+      "Text14": "panel_sample_bindings:\npanels: F2F-H\nsample_ids: \n  [1] WT\nbiological_n: \n  [1] 3\nreadout: ganglia\nsource: \n  source_id: main\n  figure: F2",
+      "Text14_Reference": [
+        "Structured evidence: full/APP226/evidence/APP226/scientific_reviewed_candidate_v2.json#/panel_sample_bindings/3; SHA-256: c984a005828ad79a2eb4defa1ba70876fb546d9d30cd3c895f893b533da59796; DOI: https://doi.org/10.1126/sciadv.aaz9124"
+      ]
+    },
+    {
+      "Text15": "panel_sample_bindings:\npanels: F2I\nsample_ids: \n  [1] WT\nbiological_n: \n  [1] 4\nreadout: beta-cell nerve contacts\nsource: \n  source_id: main\n  figure: F2",
+      "Text15_Reference": [
+        "Structured evidence: full/APP226/evidence/APP226/scientific_reviewed_candidate_v2.json#/panel_sample_bindings/4; SHA-256: c984a005828ad79a2eb4defa1ba70876fb546d9d30cd3c895f893b533da59796; DOI: https://doi.org/10.1126/sciadv.aaz9124"
+      ]
+    },
+    {
+      "Text16": "panel_sample_bindings:\npanels: F3B-E,P\nsample_ids: \n  [1] NOD_C\n  [2] NOD_D\nbiological_n: \n  [1] 7\n  [2] 7\nreadout: beta-cell/islet metrics and beta contacts\nsource: \n  source_id: main\n  figure: F3",
+      "Text16_Reference": [
+        "Structured evidence: full/APP226/evidence/APP226/scientific_reviewed_candidate_v2.json#/panel_sample_bindings/5; SHA-256: c984a005828ad79a2eb4defa1ba70876fb546d9d30cd3c895f893b533da59796; DOI: https://doi.org/10.1126/sciadv.aaz9124"
+      ]
+    },
+    {
+      "Text17": "panel_sample_bindings:\npanels: F3F-L\nsample_ids: \n  [1] NOD_C\n  [2] NOD_D\nbiological_n: \n  [1] 8\n  [2] 7\nreadout: innervation/islet metrics\nsource: \n  source_id: main\n  figure: F3",
+      "Text17_Reference": [
+        "Structured evidence: full/APP226/evidence/APP226/scientific_reviewed_candidate_v2.json#/panel_sample_bindings/6; SHA-256: c984a005828ad79a2eb4defa1ba70876fb546d9d30cd3c895f893b533da59796; DOI: https://doi.org/10.1126/sciadv.aaz9124"
+      ]
+    },
+    {
+      "Text18": "panel_sample_bindings:\npanels: F3M-O\nsample_ids: \n  [1] NOD_C\n  [2] NOD_D\nbiological_n: \n  [1] 6\n  [2] 6\nreadout: ganglia\nsource: \n  source_id: main\n  figure: F3",
+      "Text18_Reference": [
+        "Structured evidence: full/APP226/evidence/APP226/scientific_reviewed_candidate_v2.json#/panel_sample_bindings/7; SHA-256: c984a005828ad79a2eb4defa1ba70876fb546d9d30cd3c895f893b533da59796; DOI: https://doi.org/10.1126/sciadv.aaz9124"
+      ]
+    },
+    {
+      "Text19": "panel_sample_bindings:\npanels: F4B-F\nsample_ids: \n  [1] NOD_C\n  [2] NOD_D\nbiological_n: \n  [1] 3\n  [2] 3\nreadout: alpha-cell clusters and contacts\nsource: \n  source_id: main\n  figure: F4",
+      "Text19_Reference": [
+        "Structured evidence: full/APP226/evidence/APP226/scientific_reviewed_candidate_v2.json#/panel_sample_bindings/8; SHA-256: c984a005828ad79a2eb4defa1ba70876fb546d9d30cd3c895f893b533da59796; DOI: https://doi.org/10.1126/sciadv.aaz9124"
+      ]
+    },
+    {
+      "Text20": "panel_sample_bindings:\npanels: F5B-E\nsample_ids: \n  [1] STZ_C\n  [2] STZ_D5\n  [3] STZ_D15\nbiological_n: \n  [1] 5\n  [2] 6\n  [3] 7\nreadout: beta-cell/islet distribution\nsource: \n  source_id: main\n  figure: F5",
+      "Text20_Reference": [
+        "Structured evidence: full/APP226/evidence/APP226/scientific_reviewed_candidate_v2.json#/panel_sample_bindings/9; SHA-256: c984a005828ad79a2eb4defa1ba70876fb546d9d30cd3c895f893b533da59796; DOI: https://doi.org/10.1126/sciadv.aaz9124"
+      ]
+    },
+    {
+      "Text21": "panel_sample_bindings:\npanels: F5F-H\nsample_ids: \n  [1] STZ_C\n  [2] STZ_D5\n  [3] STZ_D15\nbiological_n: \n  [1] 6\n  [2] 5\n  [3] 5\nreadout: nerve-volume metrics\nsource: \n  source_id: main\n  figure: F5",
+      "Text21_Reference": [
+        "Structured evidence: full/APP226/evidence/APP226/scientific_reviewed_candidate_v2.json#/panel_sample_bindings/10; SHA-256: c984a005828ad79a2eb4defa1ba70876fb546d9d30cd3c895f893b533da59796; DOI: https://doi.org/10.1126/sciadv.aaz9124"
+      ]
+    },
+    {
+      "Text22": "panel_sample_bindings:\npanels: F6A-D\nsample_ids: \n  [1] STZ_C\n  [2] STZ_D5\n  [3] STZ_D15\nbiological_n: \n  [1] 6\n  [2] 5\n  [3] 5\nreadout: innervation/islet metrics\nsource: \n  source_id: main\n  figure: F6",
+      "Text22_Reference": [
+        "Structured evidence: full/APP226/evidence/APP226/scientific_reviewed_candidate_v2.json#/panel_sample_bindings/11; SHA-256: c984a005828ad79a2eb4defa1ba70876fb546d9d30cd3c895f893b533da59796; DOI: https://doi.org/10.1126/sciadv.aaz9124"
+      ]
+    },
+    {
+      "Text23": "panel_sample_bindings:\npanels: F6E-H\nsample_ids: \n  [1] STZ_C\n  [2] STZ_D5\n  [3] STZ_D15\nbiological_n: \n  [1] 6\n  [2] 3\n  [3] 3\nreadout: ganglia and beta contacts\nsource: \n  source_id: main\n  figure: F6",
+      "Text23_Reference": [
+        "Structured evidence: full/APP226/evidence/APP226/scientific_reviewed_candidate_v2.json#/panel_sample_bindings/12; SHA-256: c984a005828ad79a2eb4defa1ba70876fb546d9d30cd3c895f893b533da59796; DOI: https://doi.org/10.1126/sciadv.aaz9124"
+      ]
+    },
+    {
+      "Text24": "panel_sample_bindings:\npanels: F7B-F\nsample_ids: \n  [1] STZ_C\n  [2] STZ_D5\n  [3] STZ_D15\nbiological_n: \n  [1] 6\n  [2] 4\n  [3] 6\nreadout: alpha-cell metrics\nsource: \n  source_id: main\n  figure: F7",
+      "Text24_Reference": [
+        "Structured evidence: full/APP226/evidence/APP226/scientific_reviewed_candidate_v2.json#/panel_sample_bindings/13; SHA-256: c984a005828ad79a2eb4defa1ba70876fb546d9d30cd3c895f893b533da59796; DOI: https://doi.org/10.1126/sciadv.aaz9124"
+      ]
+    },
+    {
+      "Text25": "panel_sample_bindings:\npanels: F8B-O\nsample_ids: \n  [1] H_C\n  [2] H_D\nbiological_n: \n  [1] 5\n  [2] 3\nreadout: human pancreas metrics\nsource: \n  source_id: main\n  figure: F8",
+      "Text25_Reference": [
+        "Structured evidence: full/APP226/evidence/APP226/scientific_reviewed_candidate_v2.json#/panel_sample_bindings/14; SHA-256: c984a005828ad79a2eb4defa1ba70876fb546d9d30cd3c895f893b533da59796; DOI: https://doi.org/10.1126/sciadv.aaz9124"
+      ]
+    },
+    {
+      "Text26": "panel_sample_bindings:\npanels: F9B-N\nsample_ids: \n  [1] WT\nbiological_n: \n  [1] 5\nreadout: TH and VAChT branches; do not sum into10 uniqueanimals without overlap evidence\nsource: \n  source_id: main\n  figure: F9",
+      "Text26_Reference": [
+        "Structured evidence: full/APP226/evidence/APP226/scientific_reviewed_candidate_v2.json#/panel_sample_bindings/15; SHA-256: c984a005828ad79a2eb4defa1ba70876fb546d9d30cd3c895f893b533da59796; DOI: https://doi.org/10.1126/sciadv.aaz9124"
+      ]
+    }
+  ],
+  "Time_Consumption": [],
+  "Tissue_Deformation": [],
+  "Fluorescence_Compatibility": [
+    {
+      "Text1": "primary_antibody_fields:\ntarget",
+      "Text1_Reference": [
+        "Structured evidence: full/APP226/evidence/APP226/scientific_reviewed_candidate_v2.json#/primary_antibody_fields/0; SHA-256: c984a005828ad79a2eb4defa1ba70876fb546d9d30cd3c895f893b533da59796; DOI: https://doi.org/10.1126/sciadv.aaz9124"
+      ]
+    },
+    {
+      "Text2": "primary_antibody_fields:\ndilution",
+      "Text2_Reference": [
+        "Structured evidence: full/APP226/evidence/APP226/scientific_reviewed_candidate_v2.json#/primary_antibody_fields/1; SHA-256: c984a005828ad79a2eb4defa1ba70876fb546d9d30cd3c895f893b533da59796; DOI: https://doi.org/10.1126/sciadv.aaz9124"
+      ]
+    },
+    {
+      "Text3": "primary_antibody_fields:\nhost",
+      "Text3_Reference": [
+        "Structured evidence: full/APP226/evidence/APP226/scientific_reviewed_candidate_v2.json#/primary_antibody_fields/2; SHA-256: c984a005828ad79a2eb4defa1ba70876fb546d9d30cd3c895f893b533da59796; DOI: https://doi.org/10.1126/sciadv.aaz9124"
+      ]
+    },
+    {
+      "Text4": "primary_antibody_fields:\nmanufacturer",
+      "Text4_Reference": [
+        "Structured evidence: full/APP226/evidence/APP226/scientific_reviewed_candidate_v2.json#/primary_antibody_fields/3; SHA-256: c984a005828ad79a2eb4defa1ba70876fb546d9d30cd3c895f893b533da59796; DOI: https://doi.org/10.1126/sciadv.aaz9124"
+      ]
+    },
+    {
+      "Text5": "primary_antibody_fields:\nproduct",
+      "Text5_Reference": [
+        "Structured evidence: full/APP226/evidence/APP226/scientific_reviewed_candidate_v2.json#/primary_antibody_fields/4; SHA-256: c984a005828ad79a2eb4defa1ba70876fb546d9d30cd3c895f893b533da59796; DOI: https://doi.org/10.1126/sciadv.aaz9124"
+      ]
+    },
+    {
+      "Text6": "primary_antibody_fields:\nRRID",
+      "Text6_Reference": [
+        "Structured evidence: full/APP226/evidence/APP226/scientific_reviewed_candidate_v2.json#/primary_antibody_fields/5; SHA-256: c984a005828ad79a2eb4defa1ba70876fb546d9d30cd3c895f893b533da59796; DOI: https://doi.org/10.1126/sciadv.aaz9124"
+      ]
+    },
+    {
+      "Text7": "primary_antibodies:\n[1] Insulin\n[2] 1:1000\n[3] Guinea pig\n[4] Dako/Agilent\n[5] A0564\n[6] AB_10013624",
+      "Text7_Reference": [
+        "Structured evidence: full/APP226/evidence/APP226/scientific_reviewed_candidate_v2.json#/primary_antibodies/0; SHA-256: c984a005828ad79a2eb4defa1ba70876fb546d9d30cd3c895f893b533da59796; DOI: https://doi.org/10.1126/sciadv.aaz9124"
+      ]
+    },
+    {
+      "Text8": "primary_antibodies:\n[1] NF200\n[2] 1:500\n[3] Rabbit\n[4] Sigma-Aldrich\n[5] N4142\n[6] AB_477272",
+      "Text8_Reference": [
+        "Structured evidence: full/APP226/evidence/APP226/scientific_reviewed_candidate_v2.json#/primary_antibodies/1; SHA-256: c984a005828ad79a2eb4defa1ba70876fb546d9d30cd3c895f893b533da59796; DOI: https://doi.org/10.1126/sciadv.aaz9124"
+      ]
+    },
+    {
+      "Text9": "primary_antibodies:\n[1] TH\n[2] 1:500\n[3] Rabbit\n[4] Millipore\n[5] AB152\n[6] AB_390204",
+      "Text9_Reference": [
+        "Structured evidence: full/APP226/evidence/APP226/scientific_reviewed_candidate_v2.json#/primary_antibodies/2; SHA-256: c984a005828ad79a2eb4defa1ba70876fb546d9d30cd3c895f893b533da59796; DOI: https://doi.org/10.1126/sciadv.aaz9124"
+      ]
+    },
+    {
+      "Text10": "primary_antibodies:\n[1] VAChT\n[2] 1:500\n[3] Rabbit\n[4] Synaptic Systems\n[5] 139103\n[6] AB_887864",
+      "Text10_Reference": [
+        "Structured evidence: full/APP226/evidence/APP226/scientific_reviewed_candidate_v2.json#/primary_antibodies/3; SHA-256: c984a005828ad79a2eb4defa1ba70876fb546d9d30cd3c895f893b533da59796; DOI: https://doi.org/10.1126/sciadv.aaz9124"
+      ]
+    },
+    {
+      "Text11": "primary_antibodies:\n[1] Glucagon\n[2] 1:200\n[3] Rabbit\n[4] Cell Signaling Technology\n[5] 2760\n[6] AB_659831",
+      "Text11_Reference": [
+        "Structured evidence: full/APP226/evidence/APP226/scientific_reviewed_candidate_v2.json#/primary_antibodies/4; SHA-256: c984a005828ad79a2eb4defa1ba70876fb546d9d30cd3c895f893b533da59796; DOI: https://doi.org/10.1126/sciadv.aaz9124"
+      ]
+    },
+    {
+      "Text12": "primary_antibodies:\n[1] Glucagon\n[2] 1:2000\n[3] Mouse\n[4] Sigma-Aldrich\n[5] G2654\n[6] AB_259852",
+      "Text12_Reference": [
+        "Structured evidence: full/APP226/evidence/APP226/scientific_reviewed_candidate_v2.json#/primary_antibodies/5; SHA-256: c984a005828ad79a2eb4defa1ba70876fb546d9d30cd3c895f893b533da59796; DOI: https://doi.org/10.1126/sciadv.aaz9124"
+      ]
+    },
+    {
+      "Text13": "primary_antibodies:\n[1] Somatostatin\n[2] 1:1000\n[3] Goat\n[4] Santa Cruz\n[5] SC7819\n[6] AB_2302603",
+      "Text13_Reference": [
+        "Structured evidence: full/APP226/evidence/APP226/scientific_reviewed_candidate_v2.json#/primary_antibodies/6; SHA-256: c984a005828ad79a2eb4defa1ba70876fb546d9d30cd3c895f893b533da59796; DOI: https://doi.org/10.1126/sciadv.aaz9124"
+      ]
+    },
+    {
+      "Text14": "primary_antibodies:\n[1] Mucin1\n[2] 1:200\n[3] Armenian hamster\n[4] Thermo Fisher\n[5] MA5-11202\n[6] AB_11000874",
+      "Text14_Reference": [
+        "Structured evidence: full/APP226/evidence/APP226/scientific_reviewed_candidate_v2.json#/primary_antibodies/7; SHA-256: c984a005828ad79a2eb4defa1ba70876fb546d9d30cd3c895f893b533da59796; DOI: https://doi.org/10.1126/sciadv.aaz9124"
+      ]
+    },
+    {
+      "Text15": "primary_antibodies:\n[1] TRPV1\n[2] 1:500\n[3] Rabbit\n[4] Alomone\n[5] ACC-030\n[6] AB_2313819",
+      "Text15_Reference": [
+        "Structured evidence: full/APP226/evidence/APP226/scientific_reviewed_candidate_v2.json#/primary_antibodies/8; SHA-256: c984a005828ad79a2eb4defa1ba70876fb546d9d30cd3c895f893b533da59796; DOI: https://doi.org/10.1126/sciadv.aaz9124"
+      ]
+    },
+    {
+      "Text16": "primary_antibodies:\n[1] Synapsin\n[2] 1:500\n[3] Rabbit\n[4] Cell Signaling Technology\n[5] 5297\n[6] AB_2616578",
+      "Text16_Reference": [
+        "Structured evidence: full/APP226/evidence/APP226/scientific_reviewed_candidate_v2.json#/primary_antibodies/9; SHA-256: c984a005828ad79a2eb4defa1ba70876fb546d9d30cd3c895f893b533da59796; DOI: https://doi.org/10.1126/sciadv.aaz9124"
+      ]
+    },
+    {
+      "Text17": "primary_antibodies:\n[1] Insulin\n[2] 1:500\n[3] Rat\n[4] R&D Systems\n[5] MAB1417\n[6] AB_2126533",
+      "Text17_Reference": [
+        "Structured evidence: full/APP226/evidence/APP226/scientific_reviewed_candidate_v2.json#/primary_antibodies/10; SHA-256: c984a005828ad79a2eb4defa1ba70876fb546d9d30cd3c895f893b533da59796; DOI: https://doi.org/10.1126/sciadv.aaz9124"
+      ]
+    },
+    {
+      "Text18": "primary_antibodies:\n[1] CD31\n[2] 50mg/ml asprinted\n[3] Rat\n[4] Biolegend\n[5] 102515\n[6] AB_2161030",
+      "Text18_Reference": [
+        "Structured evidence: full/APP226/evidence/APP226/scientific_reviewed_candidate_v2.json#/primary_antibodies/11; SHA-256: c984a005828ad79a2eb4defa1ba70876fb546d9d30cd3c895f893b533da59796; DOI: https://doi.org/10.1126/sciadv.aaz9124"
+      ]
+    },
+    {
+      "Text19": "secondary_antibody_fields:\ntarget_host",
+      "Text19_Reference": [
+        "Structured evidence: full/APP226/evidence/APP226/scientific_reviewed_candidate_v2.json#/secondary_antibody_fields/0; SHA-256: c984a005828ad79a2eb4defa1ba70876fb546d9d30cd3c895f893b533da59796; DOI: https://doi.org/10.1126/sciadv.aaz9124"
+      ]
+    },
+    {
+      "Text20": "secondary_antibody_fields:\nfluorophore",
+      "Text20_Reference": [
+        "Structured evidence: full/APP226/evidence/APP226/scientific_reviewed_candidate_v2.json#/secondary_antibody_fields/1; SHA-256: c984a005828ad79a2eb4defa1ba70876fb546d9d30cd3c895f893b533da59796; DOI: https://doi.org/10.1126/sciadv.aaz9124"
+      ]
+    },
+    {
+      "Text21": "secondary_antibody_fields:\nhost",
+      "Text21_Reference": [
+        "Structured evidence: full/APP226/evidence/APP226/scientific_reviewed_candidate_v2.json#/secondary_antibody_fields/2; SHA-256: c984a005828ad79a2eb4defa1ba70876fb546d9d30cd3c895f893b533da59796; DOI: https://doi.org/10.1126/sciadv.aaz9124"
+      ]
+    },
+    {
+      "Text22": "secondary_antibody_fields:\nmanufacturer",
+      "Text22_Reference": [
+        "Structured evidence: full/APP226/evidence/APP226/scientific_reviewed_candidate_v2.json#/secondary_antibody_fields/3; SHA-256: c984a005828ad79a2eb4defa1ba70876fb546d9d30cd3c895f893b533da59796; DOI: https://doi.org/10.1126/sciadv.aaz9124"
+      ]
+    },
+    {
+      "Text23": "secondary_antibody_fields:\nproduct",
+      "Text23_Reference": [
+        "Structured evidence: full/APP226/evidence/APP226/scientific_reviewed_candidate_v2.json#/secondary_antibody_fields/4; SHA-256: c984a005828ad79a2eb4defa1ba70876fb546d9d30cd3c895f893b533da59796; DOI: https://doi.org/10.1126/sciadv.aaz9124"
+      ]
+    },
+    {
+      "Text24": "secondary_antibody_fields:\nRRID",
+      "Text24_Reference": [
+        "Structured evidence: full/APP226/evidence/APP226/scientific_reviewed_candidate_v2.json#/secondary_antibody_fields/5; SHA-256: c984a005828ad79a2eb4defa1ba70876fb546d9d30cd3c895f893b533da59796; DOI: https://doi.org/10.1126/sciadv.aaz9124"
+      ]
+    },
+    {
+      "Text25": "secondary_antibodies:\n[1] Guineapig\n[2] AF647\n[3] Donkey\n[4] Jackson\n[5] 706-605-148\n[6] AB_2340476",
+      "Text25_Reference": [
+        "Structured evidence: full/APP226/evidence/APP226/scientific_reviewed_candidate_v2.json#/secondary_antibodies/0; SHA-256: c984a005828ad79a2eb4defa1ba70876fb546d9d30cd3c895f893b533da59796; DOI: https://doi.org/10.1126/sciadv.aaz9124"
+      ]
+    },
+    {
+      "Text26": "secondary_antibodies:\n[1] Rabbit\n[2] AF647\n[3] Donkey\n[4] Jackson\n[5] 711-605-152\n[6] AB_2492288",
+      "Text26_Reference": [
+        "Structured evidence: full/APP226/evidence/APP226/scientific_reviewed_candidate_v2.json#/secondary_antibodies/1; SHA-256: c984a005828ad79a2eb4defa1ba70876fb546d9d30cd3c895f893b533da59796; DOI: https://doi.org/10.1126/sciadv.aaz9124"
+      ]
+    },
+    {
+      "Text27": "secondary_antibodies:\n[1] Rabbit\n[2] AF594\n[3] Donkey\n[4] Invitrogen\n[5] A-21207\n[6] AB_141637",
+      "Text27_Reference": [
+        "Structured evidence: full/APP226/evidence/APP226/scientific_reviewed_candidate_v2.json#/secondary_antibodies/2; SHA-256: c984a005828ad79a2eb4defa1ba70876fb546d9d30cd3c895f893b533da59796; DOI: https://doi.org/10.1126/sciadv.aaz9124"
+      ]
+    },
+    {
+      "Text28": "secondary_antibodies:\n[1] Rabbit\n[2] AF546\n[3] Donkey\n[4] Thermo Fisher\n[5] A10040\n[6] AB_2534016",
+      "Text28_Reference": [
+        "Structured evidence: full/APP226/evidence/APP226/scientific_reviewed_candidate_v2.json#/secondary_antibodies/3; SHA-256: c984a005828ad79a2eb4defa1ba70876fb546d9d30cd3c895f893b533da59796; DOI: https://doi.org/10.1126/sciadv.aaz9124"
+      ]
+    },
+    {
+      "Text29": "secondary_antibodies:\n[1] Mouse\n[2] AFPlus647\n[3] Donkey\n[4] Invitrogen\n[5] A32787\n[6] AB_2762830",
+      "Text29_Reference": [
+        "Structured evidence: full/APP226/evidence/APP226/scientific_reviewed_candidate_v2.json#/secondary_antibodies/4; SHA-256: c984a005828ad79a2eb4defa1ba70876fb546d9d30cd3c895f893b533da59796; DOI: https://doi.org/10.1126/sciadv.aaz9124"
+      ]
+    },
+    {
+      "Text30": "secondary_antibodies:\n[1] Goat\n[2] AF546\n[3] Donkey\n[4] Thermo Fisher\n[5] A-11056\n[6] AB_2534103",
+      "Text30_Reference": [
+        "Structured evidence: full/APP226/evidence/APP226/scientific_reviewed_candidate_v2.json#/secondary_antibodies/5; SHA-256: c984a005828ad79a2eb4defa1ba70876fb546d9d30cd3c895f893b533da59796; DOI: https://doi.org/10.1126/sciadv.aaz9124"
+      ]
+    },
+    {
+      "Text31": "secondary_antibodies:\n[1] Armenian hamster\n[2] AF594\n[3] Goat\n[4] Jackson\n[5] 127-585-099\n[6] AB_2338998",
+      "Text31_Reference": [
+        "Structured evidence: full/APP226/evidence/APP226/scientific_reviewed_candidate_v2.json#/secondary_antibodies/6; SHA-256: c984a005828ad79a2eb4defa1ba70876fb546d9d30cd3c895f893b533da59796; DOI: https://doi.org/10.1126/sciadv.aaz9124"
+      ]
+    },
+    {
+      "Text32": "secondary_antibodies:\n[1] Rat\n[2] DyLight550\n[3] Donkey\n[4] Thermo Fisher\n[5] SA5-10027\n[6] AB_2556607",
+      "Text32_Reference": [
+        "Structured evidence: full/APP226/evidence/APP226/scientific_reviewed_candidate_v2.json#/secondary_antibodies/7; SHA-256: c984a005828ad79a2eb4defa1ba70876fb546d9d30cd3c895f893b533da59796; DOI: https://doi.org/10.1126/sciadv.aaz9124"
+      ]
+    },
+    {
+      "Text33": "secondary_antibodies:\n[1] Rat\n[2] AF488\n[3] Donkey\n[4] Thermo Fisher\n[5] A-21208\n[6] AB_25357794",
+      "Text33_Reference": [
+        "Structured evidence: full/APP226/evidence/APP226/scientific_reviewed_candidate_v2.json#/secondary_antibodies/8; SHA-256: c984a005828ad79a2eb4defa1ba70876fb546d9d30cd3c895f893b533da59796; DOI: https://doi.org/10.1126/sciadv.aaz9124"
+      ]
+    },
+    {
+      "Text34": "antibody_source:\nsource_id: suppPDF\npage: 10\ntable: S1",
+      "Text34_Reference": [
+        "Structured evidence: full/APP226/evidence/APP226/scientific_reviewed_candidate_v2.json#/antibody_source; SHA-256: c984a005828ad79a2eb4defa1ba70876fb546d9d30cd3c895f893b533da59796; DOI: https://doi.org/10.1126/sciadv.aaz9124"
+      ]
+    }
+  ],
+  "Preservation_Stability": [],
+  "Application": [
+    {
+      "Text1": "protocols:\nprotocol_id: P1\nname: iDISCO+\nsample_ids: \n  [1] WT\n  [2] NOD_C\n  [3] NOD_D\n  [4] STZ_C\n  [5] STZ_D5\n  [6] STZ_D15\n  [7] H_C\n  [8] H_D\nsize_bound_time: 3days per antibody stage smallpieces vs6days hemipancreata; human size-specific duration notseparately stated\ntotal_time: null (as recorded in source)",
+      "Text1_Reference": [
+        "Structured evidence: full/APP226/evidence/APP226/scientific_reviewed_candidate_v2.json#/protocols/0; SHA-256: c984a005828ad79a2eb4defa1ba70876fb546d9d30cd3c895f893b533da59796; DOI: https://doi.org/10.1126/sciadv.aaz9124"
+      ]
+    },
+    {
+      "Text2": "protocols:\nprotocol_id: P2\nname: modifiediDISCO+\nsample_ids: \n  [1] WT\n  [2] MARKER\nmarkers: \n  [1] TH\n  [2] VAChT\n  [3] TRPV1\n  [4] synapsin\ntotal_time: null (as recorded in source)",
+      "Text2_Reference": [
+        "Structured evidence: full/APP226/evidence/APP226/scientific_reviewed_candidate_v2.json#/protocols/1; SHA-256: c984a005828ad79a2eb4defa1ba70876fb546d9d30cd3c895f893b533da59796; DOI: https://doi.org/10.1126/sciadv.aaz9124"
+      ]
+    },
+    {
+      "Text3": "protocols:\nprotocol_id: P3\nname: modifiedECi\nsample_ids: \n  [1] VASCULAR\ntotal_time: null (as recorded in source)",
+      "Text3_Reference": [
+        "Structured evidence: full/APP226/evidence/APP226/scientific_reviewed_candidate_v2.json#/protocols/2; SHA-256: c984a005828ad79a2eb4defa1ba70876fb546d9d30cd3c895f893b533da59796; DOI: https://doi.org/10.1126/sciadv.aaz9124"
+      ]
+    },
+    {
+      "Text4": "operations:\noperation_id: O01\nprotocol_id: shared_mouse\nstage: fixation\naction: postfix dissected pancreatic regions\nreported_time: overnight\nreported_temperature: 4C\ndetails: 4%PFA; subsequent PBS wash3times; no live-animal induction/perfusion instruction reproduced\nsource: \n  source_id: main\n  xpath: /article/body/sec[4]/sec[2]/p[1]\n  text_sha256: 074c9cec7b7f54a0ebdffd2bb0b114543cba2122e91e507dfcc0c2e64edddb7f",
+      "Text4_Reference": [
+        "Structured evidence: full/APP226/evidence/APP226/scientific_reviewed_candidate_v2.json#/operations/0; SHA-256: c984a005828ad79a2eb4defa1ba70876fb546d9d30cd3c895f893b533da59796; DOI: https://doi.org/10.1126/sciadv.aaz9124"
+      ]
+    },
+    {
+      "Text5": "operations:\noperation_id: O02\nprotocol_id: P1\nstage: preprocessing\naction: methanol dehydration\nreported_time: null (as recorded in source)\nreported_temperature: RT\ndetails: 20/40/60/80/100% methanol\nsource: \n  source_id: main\n  xpath: /article/body/sec[4]/sec[3]/p[1]\n  text_sha256: da46e41b2f0002d66cc18e5ec5c982105bf65fd73dea6ed964ec86466411dd82",
+      "Text5_Reference": [
+        "Structured evidence: full/APP226/evidence/APP226/scientific_reviewed_candidate_v2.json#/operations/1; SHA-256: c984a005828ad79a2eb4defa1ba70876fb546d9d30cd3c895f893b533da59796; DOI: https://doi.org/10.1126/sciadv.aaz9124"
+      ]
+    },
+    {
+      "Text6": "operations:\noperation_id: O03\nprotocol_id: P1\nstage: preprocessing\naction: delipidation\nreported_time: null (as recorded in source)\nreported_temperature: null (as recorded in source)\ndetails: 100%DCM\nsource: \n  source_id: main\n  xpath: /article/body/sec[4]/sec[3]/p[1]\n  text_sha256: da46e41b2f0002d66cc18e5ec5c982105bf65fd73dea6ed964ec86466411dd82",
+      "Text6_Reference": [
+        "Structured evidence: full/APP226/evidence/APP226/scientific_reviewed_candidate_v2.json#/operations/2; SHA-256: c984a005828ad79a2eb4defa1ba70876fb546d9d30cd3c895f893b533da59796; DOI: https://doi.org/10.1126/sciadv.aaz9124"
+      ]
+    },
+    {
+      "Text7": "operations:\noperation_id: O04\nprotocol_id: P1\nstage: preprocessing\naction: bleaching\nreported_time: overnight\nreported_temperature: 4C\ndetails: 5%H2O2\nsource: \n  source_id: main\n  xpath: /article/body/sec[4]/sec[3]/p[1]\n  text_sha256: da46e41b2f0002d66cc18e5ec5c982105bf65fd73dea6ed964ec86466411dd82",
+      "Text7_Reference": [
+        "Structured evidence: full/APP226/evidence/APP226/scientific_reviewed_candidate_v2.json#/operations/3; SHA-256: c984a005828ad79a2eb4defa1ba70876fb546d9d30cd3c895f893b533da59796; DOI: https://doi.org/10.1126/sciadv.aaz9124"
+      ]
+    },
+    {
+      "Text8": "operations:\noperation_id: O05\nprotocol_id: P1\nstage: preprocessing\naction: rehydration\nreported_time: null (as recorded in source)\nreported_temperature: null (as recorded in source)\ndetails: 80/60/40/20%methanol\nsource: \n  source_id: main\n  xpath: /article/body/sec[4]/sec[3]/p[1]\n  text_sha256: da46e41b2f0002d66cc18e5ec5c982105bf65fd73dea6ed964ec86466411dd82",
+      "Text8_Reference": [
+        "Structured evidence: full/APP226/evidence/APP226/scientific_reviewed_candidate_v2.json#/operations/4; SHA-256: c984a005828ad79a2eb4defa1ba70876fb546d9d30cd3c895f893b533da59796; DOI: https://doi.org/10.1126/sciadv.aaz9124"
+      ]
+    },
+    {
+      "Text9": "operations:\noperation_id: O06\nprotocol_id: P1\nstage: permeabilization\naction: PTxwH permeabilization\nreported_time: 1day\nreported_temperature: null (as recorded in source)\ndetails: 5%DMSO/0.3M glycine/0.1%TritonX100/0.05%Tween20/0.0002%heparin/0.02%NaN3 inPBS\nsource: \n  source_id: main\n  xpath: /article/body/sec[4]/sec[3]/p[1]\n  text_sha256: da46e41b2f0002d66cc18e5ec5c982105bf65fd73dea6ed964ec86466411dd82",
+      "Text9_Reference": [
+        "Structured evidence: full/APP226/evidence/APP226/scientific_reviewed_candidate_v2.json#/operations/5; SHA-256: c984a005828ad79a2eb4defa1ba70876fb546d9d30cd3c895f893b533da59796; DOI: https://doi.org/10.1126/sciadv.aaz9124"
+      ]
+    },
+    {
+      "Text10": "operations:\noperation_id: O07\nprotocol_id: P1\nstage: blocking\naction: blocking\nreported_time: overnight\nreported_temperature: 37C\ndetails: PTxwH+3%normal donkeyserum\nsource: \n  source_id: main\n  xpath: /article/body/sec[4]/sec[3]/p[1]\n  text_sha256: da46e41b2f0002d66cc18e5ec5c982105bf65fd73dea6ed964ec86466411dd82",
+      "Text10_Reference": [
+        "Structured evidence: full/APP226/evidence/APP226/scientific_reviewed_candidate_v2.json#/operations/6; SHA-256: c984a005828ad79a2eb4defa1ba70876fb546d9d30cd3c895f893b533da59796; DOI: https://doi.org/10.1126/sciadv.aaz9124"
+      ]
+    },
+    {
+      "Text11": "operations:\noperation_id: O08\nprotocol_id: P1\nstage: labeling\naction: primary antibodies\nreported_time: 3days small pieces;6days hemipancreata\nreported_temperature: 37C\ndetails: TableS1 identities; do not apply6days to allhuman sizes\nsource: \n  source_id: main\n  xpath: /article/body/sec[4]/sec[3]/p[1]\n  text_sha256: da46e41b2f0002d66cc18e5ec5c982105bf65fd73dea6ed964ec86466411dd82",
+      "Text11_Reference": [
+        "Structured evidence: full/APP226/evidence/APP226/scientific_reviewed_candidate_v2.json#/operations/7; SHA-256: c984a005828ad79a2eb4defa1ba70876fb546d9d30cd3c895f893b533da59796; DOI: https://doi.org/10.1126/sciadv.aaz9124"
+      ]
+    },
+    {
+      "Text12": "operations:\noperation_id: O09\nprotocol_id: P1\nstage: washing\naction: wash\nreported_time: 5washes;lastovernight\nreported_temperature: RT\ndetails: PTxwH\nsource: \n  source_id: main\n  xpath: /article/body/sec[4]/sec[3]/p[1]\n  text_sha256: da46e41b2f0002d66cc18e5ec5c982105bf65fd73dea6ed964ec86466411dd82",
+      "Text12_Reference": [
+        "Structured evidence: full/APP226/evidence/APP226/scientific_reviewed_candidate_v2.json#/operations/8; SHA-256: c984a005828ad79a2eb4defa1ba70876fb546d9d30cd3c895f893b533da59796; DOI: https://doi.org/10.1126/sciadv.aaz9124"
+      ]
+    },
+    {
+      "Text13": "operations:\noperation_id: O10\nprotocol_id: P1\nstage: labeling\naction: secondary antibodies\nreported_time: 3days small pieces;6days hemipancreata\nreported_temperature: null (as recorded in source)\ndetails: 1:500 inblockingbuffer; temperature not repeated inthisclause\nsource: \n  source_id: main\n  xpath: /article/body/sec[4]/sec[3]/p[1]\n  text_sha256: da46e41b2f0002d66cc18e5ec5c982105bf65fd73dea6ed964ec86466411dd82",
+      "Text13_Reference": [
+        "Structured evidence: full/APP226/evidence/APP226/scientific_reviewed_candidate_v2.json#/operations/9; SHA-256: c984a005828ad79a2eb4defa1ba70876fb546d9d30cd3c895f893b533da59796; DOI: https://doi.org/10.1126/sciadv.aaz9124"
+      ]
+    },
+    {
+      "Text14": "operations:\noperation_id: O11\nprotocol_id: P1\nstage: washing\naction: wash\nreported_time: null (as recorded in source)\nreported_temperature: RT\ndetails: PTxwH5times thenPBS5times\nsource: \n  source_id: main\n  xpath: /article/body/sec[4]/sec[3]/p[1]\n  text_sha256: da46e41b2f0002d66cc18e5ec5c982105bf65fd73dea6ed964ec86466411dd82",
+      "Text14_Reference": [
+        "Structured evidence: full/APP226/evidence/APP226/scientific_reviewed_candidate_v2.json#/operations/10; SHA-256: c984a005828ad79a2eb4defa1ba70876fb546d9d30cd3c895f893b533da59796; DOI: https://doi.org/10.1126/sciadv.aaz9124"
+      ]
+    },
+    {
+      "Text15": "operations:\noperation_id: O12\nprotocol_id: P1\nstage: clearing\naction: methanol dehydration\nreported_time: null (as recorded in source)\nreported_temperature: null (as recorded in source)\ndetails: gradient then100%methanol3x30min\nsource: \n  source_id: main\n  xpath: /article/body/sec[4]/sec[3]/p[1]\n  text_sha256: da46e41b2f0002d66cc18e5ec5c982105bf65fd73dea6ed964ec86466411dd82",
+      "Text15_Reference": [
+        "Structured evidence: full/APP226/evidence/APP226/scientific_reviewed_candidate_v2.json#/operations/11; SHA-256: c984a005828ad79a2eb4defa1ba70876fb546d9d30cd3c895f893b533da59796; DOI: https://doi.org/10.1126/sciadv.aaz9124"
+      ]
+    },
+    {
+      "Text16": "operations:\noperation_id: O13\nprotocol_id: P1\nstage: clearing\naction: DCM incubation\nreported_time: 3x30min\nreported_temperature: null (as recorded in source)\ndetails: 100%DCM\nsource: \n  source_id: main\n  xpath: /article/body/sec[4]/sec[3]/p[1]\n  text_sha256: da46e41b2f0002d66cc18e5ec5c982105bf65fd73dea6ed964ec86466411dd82",
+      "Text16_Reference": [
+        "Structured evidence: full/APP226/evidence/APP226/scientific_reviewed_candidate_v2.json#/operations/12; SHA-256: c984a005828ad79a2eb4defa1ba70876fb546d9d30cd3c895f893b533da59796; DOI: https://doi.org/10.1126/sciadv.aaz9124"
+      ]
+    },
+    {
+      "Text17": "operations:\noperation_id: O14\nprotocol_id: P1\nstage: refractive_matching\naction: DBE transfer\nreported_time: untilclear;numericdurationunknown\nreported_temperature: null (as recorded in source)\ndetails: DBE\nsource: \n  source_id: main\n  xpath: /article/body/sec[4]/sec[3]/p[1]\n  text_sha256: da46e41b2f0002d66cc18e5ec5c982105bf65fd73dea6ed964ec86466411dd82",
+      "Text17_Reference": [
+        "Structured evidence: full/APP226/evidence/APP226/scientific_reviewed_candidate_v2.json#/operations/13; SHA-256: c984a005828ad79a2eb4defa1ba70876fb546d9d30cd3c895f893b533da59796; DOI: https://doi.org/10.1126/sciadv.aaz9124"
+      ]
+    },
+    {
+      "Text18": "operations:\noperation_id: O15\nprotocol_id: P2\nstage: modified_buffers\naction: modifiediDISCO+ buffers\nreported_time: null (as recorded in source)\nreported_temperature: null (as recorded in source)\ndetails: 0.5%TritonX100/0.1%Tween20 replacesP1 concentrations inpermeabilization,blocking,primary,secondary; other stages shared\nsource: \n  source_id: main\n  xpath: /article/body/sec[4]/sec[3]/p[1]\n  text_sha256: da46e41b2f0002d66cc18e5ec5c982105bf65fd73dea6ed964ec86466411dd82",
+      "Text18_Reference": [
+        "Structured evidence: full/APP226/evidence/APP226/scientific_reviewed_candidate_v2.json#/operations/14; SHA-256: c984a005828ad79a2eb4defa1ba70876fb546d9d30cd3c895f893b533da59796; DOI: https://doi.org/10.1126/sciadv.aaz9124"
+      ]
+    },
+    {
+      "Text19": "operations:\noperation_id: O16\nprotocol_id: P3\nstage: preprocessing\naction: bleaching\nreported_time: 10min\nreported_temperature: RT\ndetails: 3%H2O2\nsource: \n  source_id: main\n  xpath: /article/body/sec[4]/sec[3]/p[2]\n  text_sha256: b6ae33afb74a619f73654004997d534b5cf44f768499ecb9fe7fccd704970e60",
+      "Text19_Reference": [
+        "Structured evidence: full/APP226/evidence/APP226/scientific_reviewed_candidate_v2.json#/operations/15; SHA-256: c984a005828ad79a2eb4defa1ba70876fb546d9d30cd3c895f893b533da59796; DOI: https://doi.org/10.1126/sciadv.aaz9124"
+      ]
+    },
+    {
+      "Text20": "operations:\noperation_id: O17\nprotocol_id: P3\nstage: washing\naction: wash\nreported_time: 3timesover3h\nreported_temperature: RT\ndetails: PBS+0.2%TritonX100(PTx2)\nsource: \n  source_id: main\n  xpath: /article/body/sec[4]/sec[3]/p[2]\n  text_sha256: b6ae33afb74a619f73654004997d534b5cf44f768499ecb9fe7fccd704970e60",
+      "Text20_Reference": [
+        "Structured evidence: full/APP226/evidence/APP226/scientific_reviewed_candidate_v2.json#/operations/16; SHA-256: c984a005828ad79a2eb4defa1ba70876fb546d9d30cd3c895f893b533da59796; DOI: https://doi.org/10.1126/sciadv.aaz9124"
+      ]
+    },
+    {
+      "Text21": "operations:\noperation_id: O18\nprotocol_id: P3\nstage: blocking\naction: incubation\nreported_time: overnight\nreported_temperature: RT\ndetails: PTx2+heparin10mg/ml(PTwH)+3%normal donkeyserum; source units retained\nsource: \n  source_id: main\n  xpath: /article/body/sec[4]/sec[3]/p[2]\n  text_sha256: b6ae33afb74a619f73654004997d534b5cf44f768499ecb9fe7fccd704970e60",
+      "Text21_Reference": [
+        "Structured evidence: full/APP226/evidence/APP226/scientific_reviewed_candidate_v2.json#/operations/17; SHA-256: c984a005828ad79a2eb4defa1ba70876fb546d9d30cd3c895f893b533da59796; DOI: https://doi.org/10.1126/sciadv.aaz9124"
+      ]
+    },
+    {
+      "Text22": "operations:\noperation_id: O19\nprotocol_id: P3\nstage: labeling\naction: primary antibodies\nreported_time: 2days\nreported_temperature: RT\ndetails: PTwH+3%normal donkeyserum\nsource: \n  source_id: main\n  xpath: /article/body/sec[4]/sec[3]/p[2]\n  text_sha256: b6ae33afb74a619f73654004997d534b5cf44f768499ecb9fe7fccd704970e60",
+      "Text22_Reference": [
+        "Structured evidence: full/APP226/evidence/APP226/scientific_reviewed_candidate_v2.json#/operations/18; SHA-256: c984a005828ad79a2eb4defa1ba70876fb546d9d30cd3c895f893b533da59796; DOI: https://doi.org/10.1126/sciadv.aaz9124"
+      ]
+    },
+    {
+      "Text23": "operations:\noperation_id: O20\nprotocol_id: P3\nstage: washing\naction: wash\nreported_time: 4timesover4h\nreported_temperature: null (as recorded in source)\ndetails: PTwH\nsource: \n  source_id: main\n  xpath: /article/body/sec[4]/sec[3]/p[2]\n  text_sha256: b6ae33afb74a619f73654004997d534b5cf44f768499ecb9fe7fccd704970e60",
+      "Text23_Reference": [
+        "Structured evidence: full/APP226/evidence/APP226/scientific_reviewed_candidate_v2.json#/operations/19; SHA-256: c984a005828ad79a2eb4defa1ba70876fb546d9d30cd3c895f893b533da59796; DOI: https://doi.org/10.1126/sciadv.aaz9124"
+      ]
+    },
+    {
+      "Text24": "operations:\noperation_id: O21\nprotocol_id: P3\nstage: labeling\naction: secondary antibodies\nreported_time: 2days\nreported_temperature: RT\ndetails: PTwH+3%normal donkeyserum\nsource: \n  source_id: main\n  xpath: /article/body/sec[4]/sec[3]/p[2]\n  text_sha256: b6ae33afb74a619f73654004997d534b5cf44f768499ecb9fe7fccd704970e60",
+      "Text24_Reference": [
+        "Structured evidence: full/APP226/evidence/APP226/scientific_reviewed_candidate_v2.json#/operations/20; SHA-256: c984a005828ad79a2eb4defa1ba70876fb546d9d30cd3c895f893b533da59796; DOI: https://doi.org/10.1126/sciadv.aaz9124"
+      ]
+    },
+    {
+      "Text25": "operations:\noperation_id: O22\nprotocol_id: P3\nstage: washing\naction: wash\nreported_time: 4timesover4h\nreported_temperature: null (as recorded in source)\ndetails: aspriorPTwHwash\nsource: \n  source_id: main\n  xpath: /article/body/sec[4]/sec[3]/p[2]\n  text_sha256: b6ae33afb74a619f73654004997d534b5cf44f768499ecb9fe7fccd704970e60",
+      "Text25_Reference": [
+        "Structured evidence: full/APP226/evidence/APP226/scientific_reviewed_candidate_v2.json#/operations/21; SHA-256: c984a005828ad79a2eb4defa1ba70876fb546d9d30cd3c895f893b533da59796; DOI: https://doi.org/10.1126/sciadv.aaz9124"
+      ]
+    },
+    {
+      "Text26": "operations:\noperation_id: O23\nprotocol_id: P3\nstage: dehydration\naction: ethanol series\nreported_time: 4h each\nreported_temperature: 4C\ndetails: 50/70/100% ethanol,allpH9\nsource: \n  source_id: main\n  xpath: /article/body/sec[4]/sec[3]/p[2]\n  text_sha256: b6ae33afb74a619f73654004997d534b5cf44f768499ecb9fe7fccd704970e60",
+      "Text26_Reference": [
+        "Structured evidence: full/APP226/evidence/APP226/scientific_reviewed_candidate_v2.json#/operations/22; SHA-256: c984a005828ad79a2eb4defa1ba70876fb546d9d30cd3c895f893b533da59796; DOI: https://doi.org/10.1126/sciadv.aaz9124"
+      ]
+    },
+    {
+      "Text27": "operations:\noperation_id: O24\nprotocol_id: P3\nstage: dehydration\naction: 100%ethanol\nreported_time: overnight\nreported_temperature: 4C\ndetails: pH9\nsource: \n  source_id: main\n  xpath: /article/body/sec[4]/sec[3]/p[2]\n  text_sha256: b6ae33afb74a619f73654004997d534b5cf44f768499ecb9fe7fccd704970e60",
+      "Text27_Reference": [
+        "Structured evidence: full/APP226/evidence/APP226/scientific_reviewed_candidate_v2.json#/operations/23; SHA-256: c984a005828ad79a2eb4defa1ba70876fb546d9d30cd3c895f893b533da59796; DOI: https://doi.org/10.1126/sciadv.aaz9124"
+      ]
+    },
+    {
+      "Text28": "operations:\noperation_id: O25\nprotocol_id: P3\nstage: refractive_matching\naction: ECi\nreported_time: onewash thenovernight\nreported_temperature: RT\ndetails: ECi\nsource: \n  source_id: main\n  xpath: /article/body/sec[4]/sec[3]/p[2]\n  text_sha256: b6ae33afb74a619f73654004997d534b5cf44f768499ecb9fe7fccd704970e60",
+      "Text28_Reference": [
+        "Structured evidence: full/APP226/evidence/APP226/scientific_reviewed_candidate_v2.json#/operations/24; SHA-256: c984a005828ad79a2eb4defa1ba70876fb546d9d30cd3c895f893b533da59796; DOI: https://doi.org/10.1126/sciadv.aaz9124"
+      ]
+    },
+    {
+      "Text29": "results:\nresult_id: R01\nsample_ids: \n  [1] WT\nobservation: β细胞体积占胰腺1.31±0.17%；每胰腺3874±264.2个胰岛；十二指肠区1822±230.4、脾区2052±129。以上SEM与生物n绑定F1，不能当单细胞计数。\nsource: \n  source_id: main\n  xpath: /article/body/sec[2]/sec[1]/p[2]\n  text_sha256: ac201a12dbe4925842d72a4bd42b46e7ec13c9a8dde664aed950ad466f0bd25c",
+      "Text29_Reference": [
+        "Structured evidence: full/APP226/evidence/APP226/scientific_reviewed_candidate_v2.json#/results/0; SHA-256: c984a005828ad79a2eb4defa1ba70876fb546d9d30cd3c895f893b533da59796; DOI: https://doi.org/10.1126/sciadv.aaz9124"
+      ]
+    },
+    {
+      "Text30": "results:\nresult_id: R02\nsample_ids: \n  [1] WT\nobservation: 脾区β体积较高；胰岛数密度无显著区域差；十二指肠区胰岛素强度比脾区高约25%。\nsource: \n  source_id: main\n  xpath: /article/body/sec[2]/sec[1]/p[2]\n  text_sha256: ac201a12dbe4925842d72a4bd42b46e7ec13c9a8dde664aed950ad466f0bd25c",
+      "Text30_Reference": [
+        "Structured evidence: full/APP226/evidence/APP226/scientific_reviewed_candidate_v2.json#/results/1; SHA-256: c984a005828ad79a2eb4defa1ba70876fb546d9d30cd3c895f893b533da59796; DOI: https://doi.org/10.1126/sciadv.aaz9124"
+      ]
+    },
+    {
+      "Text31": "results:\nresult_id: R03\nsample_ids: \n  [1] WT\nobservation: 胰岛β体积1000–50000μm3占39.29%、50000–499999占36.58%、>500000约20%、<1000占3.13%；边界按作者原述，不自行消除重叠。\nsource: \n  source_id: main\n  xpath: /article/body/sec[2]/sec[1]/p[3]\n  text_sha256: 76495d270e888a7149f74c0d6d41e27c4c68e2f3bdb261669ea226430263dcd8",
+      "Text31_Reference": [
+        "Structured evidence: full/APP226/evidence/APP226/scientific_reviewed_candidate_v2.json#/results/2; SHA-256: c984a005828ad79a2eb4defa1ba70876fb546d9d30cd3c895f893b533da59796; DOI: https://doi.org/10.1126/sciadv.aaz9124"
+      ]
+    },
+    {
+      "Text32": "results:\nresult_id: R04\nsample_ids: \n  [1] WT\nobservation: 十二指肠外分泌神经体积比脾区大40%；内分泌神经密度比外分泌超过6倍；十二指肠每胰岛神经体积近2倍。\nsource: \n  source_id: main\n  xpath: /article/body/sec[2]/sec[2]/p[2]\n  text_sha256: 330ab5a2bd9bf24061882fedf371e3d94ea1b2d234c0394e29c2fe39e859df4b",
+      "Text32_Reference": [
+        "Structured evidence: full/APP226/evidence/APP226/scientific_reviewed_candidate_v2.json#/results/3; SHA-256: c984a005828ad79a2eb4defa1ba70876fb546d9d30cd3c895f893b533da59796; DOI: https://doi.org/10.1126/sciadv.aaz9124"
+      ]
+    },
+    {
+      "Text33": "results:\nresult_id: R05\nsample_ids: \n  [1] WT\nobservation: 6.1%胰岛与NF200纤维接触/包含纤维；比例随胰岛体积增加。多数胰岛距神经<250μm。图中1.6μm分界和单细胞0接触不是同一阈值。\nsource: \n  source_id: main\n  xpath: /article/body/sec[2]/sec[3]/p[1]\n  text_sha256: 3bf360ffaccf12d3e7feb3448ab71041530ae149fb672c55b8da7e4272fc7d4d",
+      "Text33_Reference": [
+        "Structured evidence: full/APP226/evidence/APP226/scientific_reviewed_candidate_v2.json#/results/4; SHA-256: c984a005828ad79a2eb4defa1ba70876fb546d9d30cd3c895f893b533da59796; DOI: https://doi.org/10.1126/sciadv.aaz9124"
+      ]
+    },
+    {
+      "Text34": "results:\nresult_id: R06\nsample_ids: \n  [1] WT\nobservation: 神经支配胰岛约大10倍，贡献总β体积43%；小胰岛单位体积NF200强度约大胰岛2倍。\nsource: \n  source_id: main\n  xpath: /article/body/sec[2]/sec[3]/p[2]\n  text_sha256: 27343e9dc57547f58cb28f914d74b9b7b5b9df75861b82b6287df3539acd5325",
+      "Text34_Reference": [
+        "Structured evidence: full/APP226/evidence/APP226/scientific_reviewed_candidate_v2.json#/results/5; SHA-256: c984a005828ad79a2eb4defa1ba70876fb546d9d30cd3c895f893b533da59796; DOI: https://doi.org/10.1126/sciadv.aaz9124"
+      ]
+    },
+    {
+      "Text35": "results:\nresult_id: R07\nsample_ids: \n  [1] WT\nobservation: 神经节21.5±2.5/mm3，体积83467±10646μm3，距胰岛47.3±5.7μm；区域差异未显著。\nsource: \n  source_id: main\n  xpath: /article/body/sec[2]/sec[4]/p[1]\n  text_sha256: 6df703569826b0439cd66cf6a7dbdb6cfeabe5d4ffb3c39f78f7b528182c4374",
+      "Text35_Reference": [
+        "Structured evidence: full/APP226/evidence/APP226/scientific_reviewed_candidate_v2.json#/results/6; SHA-256: c984a005828ad79a2eb4defa1ba70876fb546d9d30cd3c895f893b533da59796; DOI: https://doi.org/10.1126/sciadv.aaz9124"
+      ]
+    },
+    {
+      "Text36": "results:\nresult_id: R08\nsample_ids: \n  [1] WT\nobservation: 9.4±2.2%β细胞与NF200神经接触；大胰岛接触细胞数更多但比例未随大小显著改变。\nsource: \n  source_id: main\n  xpath: /article/body/sec[2]/sec[4]/p[2]\n  text_sha256: f57e4190531e3fd6e5d0e65869e570d348d9f9f6a21419a34ed1b44e9bb360da",
+      "Text36_Reference": [
+        "Structured evidence: full/APP226/evidence/APP226/scientific_reviewed_candidate_v2.json#/results/7; SHA-256: c984a005828ad79a2eb4defa1ba70876fb546d9d30cd3c895f893b533da59796; DOI: https://doi.org/10.1126/sciadv.aaz9124"
+      ]
+    },
+    {
+      "Text37": "results:\nresult_id: R09\nsample_ids: \n  [1] NOD_C\n  [2] NOD_D\nobservation: 糖尿病NODβ体积约非糖尿病10%；大胰岛减少，剩余胰岛胰岛素强度维持；不等同透明处理保留率。\nsource: \n  source_id: main\n  xpath: /article/body/sec[2]/sec[5]/p[2]\n  text_sha256: 10c4d58d7f06778af6bd3d87d2597e4bf0efffbd3947acfdd1c8b34fd40fe464",
+      "Text37_Reference": [
+        "Structured evidence: full/APP226/evidence/APP226/scientific_reviewed_candidate_v2.json#/results/8; SHA-256: c984a005828ad79a2eb4defa1ba70876fb546d9d30cd3c895f893b533da59796; DOI: https://doi.org/10.1126/sciadv.aaz9124"
+      ]
+    },
+    {
+      "Text38": "results:\nresult_id: R10\nsample_ids: \n  [1] NOD_C\n  [2] NOD_D\nobservation: 糖尿病NOD胰岛神经密度超过2倍，脾区明显；外分泌密度未显著变化。\nsource: \n  source_id: main\n  xpath: /article/body/sec[2]/sec[6]/p[2]\n  text_sha256: 29f309a2b22c9bc104c8b959c6a866274a156d47fd10ea712ed5c76d5186b368",
+      "Text38_Reference": [
+        "Structured evidence: full/APP226/evidence/APP226/scientific_reviewed_candidate_v2.json#/results/9; SHA-256: c984a005828ad79a2eb4defa1ba70876fb546d9d30cd3c895f893b533da59796; DOI: https://doi.org/10.1126/sciadv.aaz9124"
+      ]
+    },
+    {
+      "Text39": "results:\nresult_id: R11\nsample_ids: \n  [1] NOD_C\n  [2] NOD_D\nobservation: NF200阳性胰岛比例14.6%对9.8%，差异未显著；两组神经支配胰岛均贡献约60%β体积。\nsource: \n  source_id: main\n  xpath: /article/body/sec[2]/sec[6]/p[3]\n  text_sha256: 5edbc7c7a00e7b0846ad40b3a11f2d659b863f2c0b0b24c1be807dc972061d79\ngroup_percentages: \n  NOD_C: 14.6\n  NOD_D: 9.8\nadditional_source: \n  source_id: main\n  xpath: /article/body/sec[2]/sec[6]/p[4]\n  normalized_text_sha256: 2cb17975a443bdffe2a365ec3c4c0ee425161a047785bd7ffd1918f3decee2e2",
+      "Text39_Reference": [
+        "Structured evidence: full/APP226/evidence/APP226/scientific_reviewed_candidate_v2.json#/results/10; SHA-256: c984a005828ad79a2eb4defa1ba70876fb546d9d30cd3c895f893b533da59796; DOI: https://doi.org/10.1126/sciadv.aaz9124"
+      ]
+    },
+    {
+      "Text40": "results:\nresult_id: R12\nsample_ids: \n  [1] NOD_C\n  [2] NOD_D\nobservation: 糖尿病NOD胰岛NF200免疫强度增加，只能作为作者间接重塑指标，不能证明再生或传导功能改善。\nsource: \n  source_id: main\n  xpath: /article/body/sec[2]/sec[6]/p[5]\n  text_sha256: 90b4eaac9bf158216a802017f8cc175ff01eecfbdda1ab5e76c02c23f5eae074",
+      "Text40_Reference": [
+        "Structured evidence: full/APP226/evidence/APP226/scientific_reviewed_candidate_v2.json#/results/11; SHA-256: c984a005828ad79a2eb4defa1ba70876fb546d9d30cd3c895f893b533da59796; DOI: https://doi.org/10.1126/sciadv.aaz9124"
+      ]
+    },
+    {
+      "Text41": "results:\nresult_id: R13\nsample_ids: \n  [1] NOD_C\n  [2] NOD_D\nobservation: 神经节密度18.9±5.2对28.2±10.1/mm3、体积61779±5961对59348±6977μm3均未显著；距胰岛40±5.3对171.7±17.6μm增大。\nsource: \n  source_id: main\n  xpath: /article/body/sec[2]/sec[7]/p[1]\n  text_sha256: 26564f4c5ec5eafa8d31f24fbb7a4501530acc3a39336f5a3dc558e3fe946de2",
+      "Text41_Reference": [
+        "Structured evidence: full/APP226/evidence/APP226/scientific_reviewed_candidate_v2.json#/results/12; SHA-256: c984a005828ad79a2eb4defa1ba70876fb546d9d30cd3c895f893b533da59796; DOI: https://doi.org/10.1126/sciadv.aaz9124"
+      ]
+    },
+    {
+      "Text42": "results:\nresult_id: R14\nsample_ids: \n  [1] NOD_C\n  [2] NOD_D\nobservation: β细胞接触神经比例未显著变化。\nsource: \n  source_id: main\n  xpath: /article/body/sec[2]/sec[7]/p[2]\n  text_sha256: 097112bc8b30c88f8a1f9df59eb14f7b08586c8483ad91eda863d6fd1e9c22b8",
+      "Text42_Reference": [
+        "Structured evidence: full/APP226/evidence/APP226/scientific_reviewed_candidate_v2.json#/results/13; SHA-256: c984a005828ad79a2eb4defa1ba70876fb546d9d30cd3c895f893b533da59796; DOI: https://doi.org/10.1126/sciadv.aaz9124"
+      ]
+    },
+    {
+      "Text43": "results:\nresult_id: R15\nsample_ids: \n  [1] NOD_C\n  [2] NOD_D\nobservation: α细胞可形成多个簇，不能把簇数当胰岛数；胰高血糖素/胰岛素体积比增加；α簇受神经支配比例约2倍；α接触比例未改变。\nsource: \n  source_id: main\n  xpath: /article/body/sec[2]/sec[8]/p[1]\n  text_sha256: 53f0e00e0dc1e84f619a64a73798b4d7ed6a4d2def173a4c7c72ae175a9efaf6",
+      "Text43_Reference": [
+        "Structured evidence: full/APP226/evidence/APP226/scientific_reviewed_candidate_v2.json#/results/14; SHA-256: c984a005828ad79a2eb4defa1ba70876fb546d9d30cd3c895f893b533da59796; DOI: https://doi.org/10.1126/sciadv.aaz9124"
+      ]
+    },
+    {
+      "Text44": "results:\nresult_id: R16\nsample_ids: \n  [1] NOD_C\n  [2] NOD_D\nobservation: α簇神经密度原文细述称未变，而小结称增加，保持冲突并以Fig4D显示未标显著差异，不自选结论。\nsource: \n  source_id: main\n  xpath: /article/body/sec[2]/sec[8]/p[2]\n  text_sha256: 2e2455dce54e370ac0b84d9118b364fddec200794accf70a9b27637cb4aad04f",
+      "Text44_Reference": [
+        "Structured evidence: full/APP226/evidence/APP226/scientific_reviewed_candidate_v2.json#/results/15; SHA-256: c984a005828ad79a2eb4defa1ba70876fb546d9d30cd3c895f893b533da59796; DOI: https://doi.org/10.1126/sciadv.aaz9124"
+      ]
+    },
+    {
+      "Text45": "results:\nresult_id: R17\nsample_ids: \n  [1] STZ_C\n  [2] STZ_D5\n  [3] STZ_D15\nobservation: β总体积约对照40%，胰岛素强度下降约50%；day5/day15为模型观察阶段非透明耗时。区域性胰岛体积减少时间不同。\nsource: \n  source_id: main\n  xpath: /article/body/sec[2]/sec[9]/p[2]\n  text_sha256: e05a25fee6d52b2be1f610a3ddf43296b3f2fb247948f3cfd6c91de3ed440ce4",
+      "Text45_Reference": [
+        "Structured evidence: full/APP226/evidence/APP226/scientific_reviewed_candidate_v2.json#/results/16; SHA-256: c984a005828ad79a2eb4defa1ba70876fb546d9d30cd3c895f893b533da59796; DOI: https://doi.org/10.1126/sciadv.aaz9124"
+      ]
+    },
+    {
+      "Text46": "results:\nresult_id: R18\nsample_ids: \n  [1] STZ_C\n  [2] STZ_D5\n  [3] STZ_D15\nobservation: 外分泌神经密度day15增加；day5胰岛神经支配/神经密度约2倍。\nsource: \n  source_id: main\n  xpath: /article/body/sec[2]/sec[10]/p[1]\n  text_sha256: 373c6357aa8d18204890bc5e5423cf1c71f462f08c5efdad33f0c202ababe939",
+      "Text46_Reference": [
+        "Structured evidence: full/APP226/evidence/APP226/scientific_reviewed_candidate_v2.json#/results/17; SHA-256: c984a005828ad79a2eb4defa1ba70876fb546d9d30cd3c895f893b533da59796; DOI: https://doi.org/10.1126/sciadv.aaz9124"
+      ]
+    },
+    {
+      "Text47": "results:\nresult_id: R19\nsample_ids: \n  [1] STZ_C\n  [2] STZ_D5\n  [3] STZ_D15\nobservation: NF200阳性胰岛比例上升趋势P=0.14，不写显著；神经支配胰岛仍占剩余β体积54%。\nsource: \n  source_id: main\n  xpath: /article/body/sec[2]/sec[10]/p[2]\n  text_sha256: cce87f35711671431c297e4b186e8a8f9efff8463652dfa2a50b691132a3d54f",
+      "Text47_Reference": [
+        "Structured evidence: full/APP226/evidence/APP226/scientific_reviewed_candidate_v2.json#/results/18; SHA-256: c984a005828ad79a2eb4defa1ba70876fb546d9d30cd3c895f893b533da59796; DOI: https://doi.org/10.1126/sciadv.aaz9124"
+      ]
+    },
+    {
+      "Text48": "results:\nresult_id: R20\nsample_ids: \n  [1] STZ_C\n  [2] STZ_D5\n  [3] STZ_D15\nobservation: NF200强度按β体积校正，day5最大胰岛上升，day15各大小约2–4倍；非荧光蛋白处理前后保留率。\nsource: \n  source_id: main\n  xpath: /article/body/sec[2]/sec[10]/p[3]\n  text_sha256: f2c0198065f0673d316b7860f87d0a20aebe8363e9cb3ccef831c28196d728b2",
+      "Text48_Reference": [
+        "Structured evidence: full/APP226/evidence/APP226/scientific_reviewed_candidate_v2.json#/results/19; SHA-256: c984a005828ad79a2eb4defa1ba70876fb546d9d30cd3c895f893b533da59796; DOI: https://doi.org/10.1126/sciadv.aaz9124"
+      ]
+    },
+    {
+      "Text49": "results:\nresult_id: R21\nsample_ids: \n  [1] STZ_C\n  [2] STZ_D5\n  [3] STZ_D15\nobservation: 神经节密度/距离无显著变化，day15神经节体积约下降30%；β细胞接触比例未显著改变。\nsource: \n  source_id: main\n  xpath: /article/body/sec[2]/sec[11]/p\n  text_sha256: 6c5a2c43439cecc23eb6c43c956a5cb8e1ed47b1cf504e362a8617003408a133",
+      "Text49_Reference": [
+        "Structured evidence: full/APP226/evidence/APP226/scientific_reviewed_candidate_v2.json#/results/20; SHA-256: c984a005828ad79a2eb4defa1ba70876fb546d9d30cd3c895f893b533da59796; DOI: https://doi.org/10.1126/sciadv.aaz9124"
+      ]
+    },
+    {
+      "Text50": "results:\nresult_id: R22\nsample_ids: \n  [1] STZ_C\n  [2] STZ_D5\n  [3] STZ_D15\nobservation: day15总α体积下降，但α/β体积比增加；α簇神经密度增加，受神经支配簇比例及α接触比例未显著改变。\nsource: \n  source_id: main\n  xpath: /article/body/sec[2]/sec[12]/p[1]\n  text_sha256: bc29fddb0e04997e873a25049836a74a3c96b149203c991c9ed3d765cc24d6b4",
+      "Text50_Reference": [
+        "Structured evidence: full/APP226/evidence/APP226/scientific_reviewed_candidate_v2.json#/results/21; SHA-256: c984a005828ad79a2eb4defa1ba70876fb546d9d30cd3c895f893b533da59796; DOI: https://doi.org/10.1126/sciadv.aaz9124"
+      ]
+    },
+    {
+      "Text51": "results:\nresult_id: R23\nsample_ids: \n  [1] H_C\n  [2] H_D\nobservation: β体积分数对照0.47–2.2%、T2D0.85–0.97%；每mm3胰岛对照66–200、T2D58–287；供者少且可变，不能外推整个人胰腺。\nsource: \n  source_id: main\n  xpath: /article/body/sec[2]/sec[13]/p[2]\n  text_sha256: 8d9b8d82964c7f83526a509fc82d0e010df3d2741dc2db1ea602a686a6ed7c12",
+      "Text51_Reference": [
+        "Structured evidence: full/APP226/evidence/APP226/scientific_reviewed_candidate_v2.json#/results/22; SHA-256: c984a005828ad79a2eb4defa1ba70876fb546d9d30cd3c895f893b533da59796; DOI: https://doi.org/10.1126/sciadv.aaz9124"
+      ]
+    },
+    {
+      "Text52": "results:\nresult_id: R24\nsample_ids: \n  [1] H_C\n  [2] H_D\nobservation: 对照内分泌神经体积分数0–0.89%，外分泌0.06–0.94%；糖尿病样本中相关体积/密度数值更大，不将全部比较写显著。\nsource: \n  source_id: main\n  xpath: /article/body/sec[2]/sec[13]/p[3]\n  text_sha256: 4c3609f17fd26f3a0bf0f3e4a9a19a905c55264e2cdc96f0e822f232934e612a",
+      "Text52_Reference": [
+        "Structured evidence: full/APP226/evidence/APP226/scientific_reviewed_candidate_v2.json#/results/23; SHA-256: c984a005828ad79a2eb4defa1ba70876fb546d9d30cd3c895f893b533da59796; DOI: https://doi.org/10.1126/sciadv.aaz9124"
+      ]
+    },
+    {
+      "Text53": "results:\nresult_id: R25\nsample_ids: \n  [1] H_C\n  [2] H_D\nobservation: 人β细胞神经接触对照4.15%、T2D6.07%；小鼠对照9.44%；人神经节更大，糖尿病组神经节大小未显著改变。\nsource: \n  source_id: main\n  xpath: /article/body/sec[2]/sec[13]/p[4]\n  text_sha256: 7fa3c7fb940aff91e0c9d68f48979de56470ee499a8b578acb68037004af3250",
+      "Text53_Reference": [
+        "Structured evidence: full/APP226/evidence/APP226/scientific_reviewed_candidate_v2.json#/results/24; SHA-256: c984a005828ad79a2eb4defa1ba70876fb546d9d30cd3c895f893b533da59796; DOI: https://doi.org/10.1126/sciadv.aaz9124"
+      ]
+    },
+    {
+      "Text54": "results:\nresult_id: R26\nsample_ids: \n  [1] WT\nobservation: TH/VAChT内分泌神经密度较外分泌约3至>6倍；与纤维接触/包含纤维胰岛分别27.7%和35.0%；各marker结果不能等价互换。\nsource: \n  source_id: main\n  xpath: /article/body/sec[2]/sec[14]/p[1]\n  text_sha256: feab9d908c53c7907b1e759cd01c195fd6263e9d78caee54b07e05bb5fe9785d",
+      "Text54_Reference": [
+        "Structured evidence: full/APP226/evidence/APP226/scientific_reviewed_candidate_v2.json#/results/25; SHA-256: c984a005828ad79a2eb4defa1ba70876fb546d9d30cd3c895f893b533da59796; DOI: https://doi.org/10.1126/sciadv.aaz9124"
+      ]
+    },
+    {
+      "Text55": "results:\nresult_id: R27\nsample_ids: \n  [1] MARKER\nobservation: 改良iDISCO+可见TRPV1与synapsin；S4另展示NF200/TH/VAChT/glucagon/SST/Muc1与insulin的各分支，不证明同一混合染色全兼容。\nsource: \n  source_id: main\n  xpath: /article/body/sec[2]/sec[14]/p[2]\n  text_sha256: 02d99da26f6709997c0a4c4745e9bb7e81b09de03f89a817a848bf61d340d60a",
+      "Text55_Reference": [
+        "Structured evidence: full/APP226/evidence/APP226/scientific_reviewed_candidate_v2.json#/results/26; SHA-256: c984a005828ad79a2eb4defa1ba70876fb546d9d30cd3c895f893b533da59796; DOI: https://doi.org/10.1126/sciadv.aaz9124"
+      ]
+    },
+    {
+      "Text56": "results:\nresult_id: R28\nsample_ids: \n  [1] VASCULAR\nobservation: ECi分支可见Alexa488-dextran或Alexa647-CD31与insulin信号；这是配对目标可视化，未给统一内源蛋白荧光保留百分比。\nsource: \n  source_id: main\n  xpath: /article/body/sec[2]/sec[14]/p[2]\n  text_sha256: 02d99da26f6709997c0a4c4745e9bb7e81b09de03f89a817a848bf61d340d60a",
+      "Text56_Reference": [
+        "Structured evidence: full/APP226/evidence/APP226/scientific_reviewed_candidate_v2.json#/results/27; SHA-256: c984a005828ad79a2eb4defa1ba70876fb546d9d30cd3c895f893b533da59796; DOI: https://doi.org/10.1126/sciadv.aaz9124"
+      ]
+    },
+    {
+      "Text57": "imaging:\nbranch: lightsheet\nmagnification: 1.3\nvoxel_um: \n  [1] 5\n  [2] 5\n  [3] 5\nsource: \n  source_id: main\n  xpath: /article/body/sec[4]/sec[4]/p[1]\n  normalized_text_sha256: 9c8b7eb2f0051413a968a23e3b1e510ca4b17667dded273759cd5df13a8f1648",
+      "Text57_Reference": [
+        "Structured evidence: full/APP226/evidence/APP226/scientific_reviewed_candidate_v2.json#/imaging/0; SHA-256: c984a005828ad79a2eb4defa1ba70876fb546d9d30cd3c895f893b533da59796; DOI: https://doi.org/10.1126/sciadv.aaz9124"
+      ]
+    },
+    {
+      "Text58": "imaging:\nbranch: lightsheet\nmagnification: 4\nvoxel_um: \n  [1] 1.63\n  [2] 1.63\n  [3] 5\nsource: \n  source_id: main\n  xpath: /article/body/sec[4]/sec[4]/p[1]\n  normalized_text_sha256: 9c8b7eb2f0051413a968a23e3b1e510ca4b17667dded273759cd5df13a8f1648",
+      "Text58_Reference": [
+        "Structured evidence: full/APP226/evidence/APP226/scientific_reviewed_candidate_v2.json#/imaging/1; SHA-256: c984a005828ad79a2eb4defa1ba70876fb546d9d30cd3c895f893b533da59796; DOI: https://doi.org/10.1126/sciadv.aaz9124"
+      ]
+    },
+    {
+      "Text59": "imaging:\nbranch: lightsheet\nmagnification: 12\nvoxel_um: \n  [1] 0.602\n  [2] 0.602\n  [3] 2\nsource: \n  source_id: main\n  xpath: /article/body/sec[4]/sec[4]/p[1]\n  normalized_text_sha256: 9c8b7eb2f0051413a968a23e3b1e510ca4b17667dded273759cd5df13a8f1648",
+      "Text59_Reference": [
+        "Structured evidence: full/APP226/evidence/APP226/scientific_reviewed_candidate_v2.json#/imaging/2; SHA-256: c984a005828ad79a2eb4defa1ba70876fb546d9d30cd3c895f893b533da59796; DOI: https://doi.org/10.1126/sciadv.aaz9124"
+      ]
+    },
+    {
+      "Text60": "imaging:\nbranch: confocal\nmagnification: 10\nNA: 0.3\nvoxel_um: \n  [1] 1.67\n  [2] 1.67\n  [3] 5\nsource: \n  source_id: main\n  xpath: /article/body/sec[4]/sec[4]/p[2]\n  normalized_text_sha256: 302aaaed05c8e47f70da11fb7f3d1029588453992f544b8f7880479c705d9914",
+      "Text60_Reference": [
+        "Structured evidence: full/APP226/evidence/APP226/scientific_reviewed_candidate_v2.json#/imaging/3; SHA-256: c984a005828ad79a2eb4defa1ba70876fb546d9d30cd3c895f893b533da59796; DOI: https://doi.org/10.1126/sciadv.aaz9124"
+      ]
+    },
+    {
+      "Text61": "imaging:\nbranch: humanlightsheet\nmagnification: 4\ntile_overlap_pct: 20\nsource: \n  source_id: main\n  xpath: /article/body/sec[4]/sec[4]/p[1]\n  normalized_text_sha256: 9c8b7eb2f0051413a968a23e3b1e510ca4b17667dded273759cd5df13a8f1648",
+      "Text61_Reference": [
+        "Structured evidence: full/APP226/evidence/APP226/scientific_reviewed_candidate_v2.json#/imaging/4; SHA-256: c984a005828ad79a2eb4defa1ba70876fb546d9d30cd3c895f893b533da59796; DOI: https://doi.org/10.1126/sciadv.aaz9124"
+      ]
+    },
+    {
+      "Text62": "imaging:\nbranch: human ganglion illustration\nmagnification: 20\nmodality: confocal\nsource: Figure8K caption\nvoxel_um: null (as recorded in source)\nlimit: Illustration-specific 20x stated in caption; do not assign Methods 10x voxel resolution to this image",
+      "Text62_Reference": [
+        "Structured evidence: full/APP226/evidence/APP226/scientific_reviewed_candidate_v2.json#/imaging/5; SHA-256: c984a005828ad79a2eb4defa1ba70876fb546d9d30cd3c895f893b533da59796; DOI: https://doi.org/10.1126/sciadv.aaz9124"
+      ]
+    },
+    {
+      "Text63": "processing_controls:\ndigital_surface_software: Imaris 9.1–9.3.1\nlocal_contrast_background_subtraction: true\nnerve_threshold_factor_um: 12.2\nislet_threshold: largest islet diameter in sample\nsmoothing_um: \n  1.3x_islets: 10\n  4x_islets_and_nerves: 3.25\nTH_surface_exclusion: Authors removed small insulin-overlapping TH-positive endocrine structures; residual attribution bias acknowledged\nsource: \n  source_id: main\n  xpath: /article/body/sec[4]/sec[4]/p[3]\n  normalized_text_sha256: e9fbd96dd22b71a7d0c37e5e7981d988084b637aeced71d3827e5652d661ee79",
+      "Text63_Reference": [
+        "Structured evidence: full/APP226/evidence/APP226/scientific_reviewed_candidate_v2.json#/processing_controls; SHA-256: c984a005828ad79a2eb4defa1ba70876fb546d9d30cd3c895f893b533da59796; DOI: https://doi.org/10.1126/sciadv.aaz9124"
+      ]
+    }
+  ],
+  "Note": [
+    {
+      "Text1": "Paper APP226; source coverage: full; source release status: candidate_pending_gates; source default_eligible: false. Read this study as a whole with its sample, experimental, measurement and limitation fields. All selected source files and mandatory support in the accompanying archive apply jointly. Import does not promote candidate status, resolve contradictions, or turn review citations into independent primary experiments. Application includes source-labelled protocols, comparisons and results; labels within each Text retain their actual role.",
+      "Text1_Reference": [
+        "DOI: https://doi.org/10.1126/sciadv.aaz9124",
+        "Evidence-layer structured paraphrase; not a verbatim quotation. Source release: https://github.com/404NotFound422/TOCAgentProject/tree/5e3a711befb3952a2e39f4d53fc9c9f1a7ac0d22/KnowledgeBase/evidence_expansion_20261019",
+        "Local source archive: ../literature_evidence/2026-11-11/source_release.zip; member: full/APP226/version_selection.json"
+      ]
+    },
+    {
+      "Text2": "Selected version and mandatory composition:\npaper_id: APP226\nstatus: full\ndefault_eligible: false\nactive_scientific_files: \n  [1]     path: full/APP226/evidence/APP226/scientific_reviewed_candidate_v2.json\n    sha256: c984a005828ad79a2eb4defa1ba70876fb546d9d30cd3c895f893b533da59796\n    source_member: APP226/scientific_reviewed_candidate_v2.json\n  [2]     path: full/APP226/evidence/APP226/final_acceptance_overlay_v2.json\n    sha256: 5c69e0423088eb224e983a2331f1fb47ef3d83c74e219b7447475607f3c372dd\n    source_member: APP226/final_acceptance_overlay_v2.json\n  [3]     path: full/APP226/evidence/APP226/independent_review_v2.json\n    sha256: 4e9b6c121c104a0c03d1e879ee4065e82131da67d950dc6a26d9bc3b300b8d32\n    source_member: APP226/independent_review_v2.json\n  [4]     path: full/APP226/evidence/APP226/delta_independent_receipt_v2.json\n    sha256: 2f407611640ca2b535da6f9f7659785014f3626ebcb066fe9afd256b77f9e132\n    source_member: APP226/delta_independent_receipt_v2.json\n  [5]     path: full/APP226/evidence/APP226/delta_scope_v2.json\n    sha256: f37e7a75743c8f4214880507044b9ad19553ec329ee1ed12caac15b16ba2a0e6\n    source_member: APP226/delta_scope_v2.json\n  [6]     path: full/APP226/evidence/APP226/frozen_R4_query_log.json\n    sha256: 1af2a1b3846774387cb3a096532498ee4c65310586394ff0252334533a1d2ff6\n    source_member: APP226/frozen_R4_query_log.json\nacceptance: full/APP226/evidence/APP226/final_acceptance_overlay_v2.json\nmandatory_composition: All selected science, mandatory overlays, receipts, scope qualifications and additions are jointly required. Historical candidate status cannot override current acceptance.\nactive_version_and_scope: \n  paper_id: APP226\n  current_full_task_scope: true\n  partial: false\n  remaining_relevant_gaps: \n[]\n  package_sha256: 8dfcadcd36f849d7a1c87c8693c52718d64b150ffb7a8f63a4087060faf73a68\n  original_package_sha256: 8dfcadcd36f849d7a1c87c8693c52718d64b150ffb7a8f63a4087060faf73a68\n  acceptance_archive_member: APP226/final_acceptance_overlay_v2.json\n  active_version: Explicit final acceptance overlay/receipt governs unchanged science; supersedes embedded historical partial/pending metadata only within accepted scope\n  net_new_vs_verified117: true\n  doi_crosswalk_check: \n    doi: 10.1126/sciadv.aaz9124\n    historical117_matches: \n[]\n  stage_provenance: \n    R1: \n      execution_period: current_window\n      complete_current_task_scope: true\n      basis: Frozen candidate plus separately verified additions\n    R2: \n      execution_period: current_window\n      complete_current_task_scope: true\n      basis: independent_review_v2.json and delta_independent_receipt_v2.json\n    R3: \n      execution_period: current_window\n      complete_current_task_scope: true\n      basis: protocol/time/fluorescence/sample/denominator source review, unknowns retained\n    R4: \n      execution_period: current_window\n      complete_current_task_scope: true\n      basis: frozen_R4_query_log.json same-window actual source queries reused\n  counts: \n    sample_branches: 10\n    panel_biological_n_groups: 16\n    object_count_groups: 33\n    operations: 25\n    antibody_rows: 21\n    original_results: 28\n    additional_regression_records: 10\n  promoted_from_prior_partial: false\noriginal_member_to_release_path: \n  APP226/scientific_reviewed_candidate_v2.json: full/APP226/evidence/APP226/scientific_reviewed_candidate_v2.json\n  APP226/final_acceptance_overlay_v2.json: full/APP226/evidence/APP226/final_acceptance_overlay_v2.json\n  APP226/independent_review_v2.json: full/APP226/evidence/APP226/independent_review_v2.json\n  APP226/delta_independent_receipt_v2.json: full/APP226/evidence/APP226/delta_independent_receipt_v2.json\n  APP226/delta_scope_v2.json: full/APP226/evidence/APP226/delta_scope_v2.json\n  APP226/frozen_R4_query_log.json: full/APP226/evidence/APP226/frozen_R4_query_log.json\nactive_reference_aliases: \n  APP226/scientific_reviewed_candidate_v2.json: full/APP226/evidence/APP226/scientific_reviewed_candidate_v2.json\n  APP226/final_acceptance_overlay_v2.json: full/APP226/evidence/APP226/final_acceptance_overlay_v2.json\n  APP226/independent_review_v2.json: full/APP226/evidence/APP226/independent_review_v2.json\n  APP226/delta_independent_receipt_v2.json: full/APP226/evidence/APP226/delta_independent_receipt_v2.json\n  APP226/delta_scope_v2.json: full/APP226/evidence/APP226/delta_scope_v2.json\n  APP226/frozen_R4_query_log.json: full/APP226/evidence/APP226/frozen_R4_query_log.json\n  scientific_reviewed_candidate_v2.json: full/APP226/evidence/APP226/scientific_reviewed_candidate_v2.json\nrequired_supporting_files: \n[]\nreference_resolution_policy: Resolve explicit aliases only to selected SHA-bound science/support. Historical/source materials never auto-load. New candidate remains ineligible pending gates.\nsource_asset_policy: Original source assets are not republished; accepted scientific members and mandatory correction layers are preserved.\nactive_reference_resolution_evidence: \n  [1]     source_file: full/APP226/evidence/APP226/final_acceptance_overlay_v2.json\n    json_pointer: /effective_scientific_file\n    reference: scientific_reviewed_candidate_v2.json\n    resolved_release_path: full/APP226/evidence/APP226/scientific_reviewed_candidate_v2.json\n    binding_basis: unique_verified_original_member_path\nexternal_or_historical_references: \n[]\nrelease_status: candidate_pending_gates\nverified_historical_filename_equivalences: \n[]",
+      "Text2_Reference": [
+        "DOI: https://doi.org/10.1126/sciadv.aaz9124",
+        "Evidence-layer structured paraphrase; not a verbatim quotation. Source release: https://github.com/404NotFound422/TOCAgentProject/tree/5e3a711befb3952a2e39f4d53fc9c9f1a7ac0d22/KnowledgeBase/evidence_expansion_20261019",
+        "Local source archive: ../literature_evidence/2026-11-11/source_release.zip; member: full/APP226/version_selection.json"
+      ]
+    },
+    {
+      "Text3": "antibody_binding_limit:\ntable inventory does not identify every figure fluorophore/secondary pairing; samehost primaries not assumed multiplexable",
+      "Text3_Reference": [
+        "Structured evidence: full/APP226/evidence/APP226/scientific_reviewed_candidate_v2.json#/antibody_binding_limit; SHA-256: c984a005828ad79a2eb4defa1ba70876fb546d9d30cd3c895f893b533da59796; DOI: https://doi.org/10.1126/sciadv.aaz9124"
+      ]
+    },
+    {
+      "Text4": "source_conflicts:\nid: C1\nfield: NOD alpha nerve density\nlocations: \n  [1] Results2.8 paragraph1\n  [2] Results2.8 paragraph2\n  [3] Fig4D\nfinding: Detailed paragraph saysunchanged; summary saysincreased; visualpanel has no significance marker. Retain ambiguity.",
+      "Text4_Reference": [
+        "Structured evidence: full/APP226/evidence/APP226/scientific_reviewed_candidate_v2.json#/source_conflicts/0; SHA-256: c984a005828ad79a2eb4defa1ba70876fb546d9d30cd3c895f893b533da59796; DOI: https://doi.org/10.1126/sciadv.aaz9124"
+      ]
+    },
+    {
+      "Text5": "source_conflicts:\nid: C2\nfield: cluster-panel identity\nlocations: \n  [1] Fig4E caption\n  [2] Fig7E caption\n  [3] figures4E/7E actual\nfinding: Captions describe cluster-volume/median-distance dual axis, whereas images show cluster proportions within/outside1.6μm; do not extract invented volume values.",
+      "Text5_Reference": [
+        "Structured evidence: full/APP226/evidence/APP226/scientific_reviewed_candidate_v2.json#/source_conflicts/1; SHA-256: c984a005828ad79a2eb4defa1ba70876fb546d9d30cd3c895f893b533da59796; DOI: https://doi.org/10.1126/sciadv.aaz9124"
+      ]
+    },
+    {
+      "Text6": "source_conflicts:\nid: C3\nfield: innervated marker sign and figreference\nlocations: \n  [1] Results2.14 paragraph1\n  [2] Fig9F/M\nfinding: Text uses TH− and VAChT− asinnervated and refersFig7M; actualFig9 labelspositive/negative and supportspositive-larger. Keep correction candidate source distinction, not silent harmonization.",
+      "Text6_Reference": [
+        "Structured evidence: full/APP226/evidence/APP226/scientific_reviewed_candidate_v2.json#/source_conflicts/2; SHA-256: c984a005828ad79a2eb4defa1ba70876fb546d9d30cd3c895f893b533da59796; DOI: https://doi.org/10.1126/sciadv.aaz9124"
+      ]
+    },
+    {
+      "Text7": "source_conflicts:\nid: C4\nfield: supplement volume bin\nlocations: \n  [1] S1C/S2F/S3F captions\n  [2] corresponding visualaxes\nfinding: Caption lastbin >50000 overlaps prior50000–500000; image says>500000. Storeimage and caption separately.",
+      "Text7_Reference": [
+        "Structured evidence: full/APP226/evidence/APP226/scientific_reviewed_candidate_v2.json#/source_conflicts/3; SHA-256: c984a005828ad79a2eb4defa1ba70876fb546d9d30cd3c895f893b533da59796; DOI: https://doi.org/10.1126/sciadv.aaz9124"
+      ]
+    },
+    {
+      "Text8": "source_conflicts:\nid: C5\nfield: S3D identity\nlocations: \n  [1] S3D caption\n  [2] S3D actual\n  [3] mainResults2.10\nfinding: Caption describes islet-volume distribution, actualpanel nerve-distance distribution. Do not usecaption to overwritevisual identity.",
+      "Text8_Reference": [
+        "Structured evidence: full/APP226/evidence/APP226/scientific_reviewed_candidate_v2.json#/source_conflicts/4; SHA-256: c984a005828ad79a2eb4defa1ba70876fb546d9d30cd3c895f893b533da59796; DOI: https://doi.org/10.1126/sciadv.aaz9124"
+      ]
+    },
+    {
+      "Text9": "source_conflicts:\nid: C6\nfield: reagent/source units\nlocations: \n  [1] MethodsECi\n  [2] TableS1 CD31\nfinding: Main prelabel injection volume shown as100μm, concentrations25mg/ml dextran and50mg/ml CD31; heparin10mg/ml. No automatic unit correction or animal-labeling instructions generated; retained high-level uncertainty.",
+      "Text9_Reference": [
+        "Structured evidence: full/APP226/evidence/APP226/scientific_reviewed_candidate_v2.json#/source_conflicts/5; SHA-256: c984a005828ad79a2eb4defa1ba70876fb546d9d30cd3c895f893b533da59796; DOI: https://doi.org/10.1126/sciadv.aaz9124"
+      ]
+    },
+    {
+      "Text10": "source_conflicts:\nid: C7\nfield: panel object totals\nlocations: \n  [1] Fig8H/I\n  [2] Fig9F/M\n  [3] Fig2B andS1B\nfinding: Panel-specific object counts differ and Fig9M repeatsFig9F. No demonstrated common evaluated set; preserve counts withpanel binding, denominator linkage unknown, not arithmetic correction.",
+      "Text10_Reference": [
+        "Structured evidence: full/APP226/evidence/APP226/scientific_reviewed_candidate_v2.json#/source_conflicts/6; SHA-256: c984a005828ad79a2eb4defa1ba70876fb546d9d30cd3c895f893b533da59796; DOI: https://doi.org/10.1126/sciadv.aaz9124"
+      ]
+    },
+    {
+      "Text11": "source_conflicts:\nid: C8\nfield: media provenance\nlocations: \n  [1] rawJATS supplementary nodesPMC7,8,9,19,20\n  [2] rawEuropePMC ZIP members\nfinding: Fiveabd3649 videos correspond toother article; excluded fromAPP226 scientific evidence. OriginalZIP retained.",
+      "Text11_Reference": [
+        "Structured evidence: full/APP226/evidence/APP226/scientific_reviewed_candidate_v2.json#/source_conflicts/7; SHA-256: c984a005828ad79a2eb4defa1ba70876fb546d9d30cd3c895f893b533da59796; DOI: https://doi.org/10.1126/sciadv.aaz9124"
+      ]
+    },
+    {
+      "Text12": "source_conflicts:\nid: C9\nfield: Supplement S2C axis side labels\nlocations: \n  [1] suppPDF page3 S2C caption\n  [2] suppPDF page7 S2C visual axes\nfinding: Caption assigns corrected nerve volume to right and nerve volume per islet to left; visual axes show corrected fraction left and volume per islet right. Parameter-specific p-values retained by caption metric, without pretending axis-side labels agree.",
+      "Text12_Reference": [
+        "Structured evidence: full/APP226/evidence/APP226/scientific_reviewed_candidate_v2.json#/source_conflicts/8; SHA-256: c984a005828ad79a2eb4defa1ba70876fb546d9d30cd3c895f893b533da59796; DOI: https://doi.org/10.1126/sciadv.aaz9124"
+      ]
+    },
+    {
+      "Text13": "fluorescence_limits:\niDISCO+ endogenousfluorescence notpreserved perdiscussion",
+      "Text13_Reference": [
+        "Structured evidence: full/APP226/evidence/APP226/scientific_reviewed_candidate_v2.json#/fluorescence_limits/0; SHA-256: c984a005828ad79a2eb4defa1ba70876fb546d9d30cd3c895f893b533da59796; DOI: https://doi.org/10.1126/sciadv.aaz9124"
+      ]
+    },
+    {
+      "Text14": "fluorescence_limits:\nECi shown with fluorescenttags+immunostaining; not quantified universalFPretention",
+      "Text14_Reference": [
+        "Structured evidence: full/APP226/evidence/APP226/scientific_reviewed_candidate_v2.json#/fluorescence_limits/1; SHA-256: c984a005828ad79a2eb4defa1ba70876fb546d9d30cd3c895f893b533da59796; DOI: https://doi.org/10.1126/sciadv.aaz9124"
+      ]
+    },
+    {
+      "Text15": "fluorescence_limits:\nNF200 increase in disease is biology/markerexpression, not clearingquality",
+      "Text15_Reference": [
+        "Structured evidence: full/APP226/evidence/APP226/scientific_reviewed_candidate_v2.json#/fluorescence_limits/2; SHA-256: c984a005828ad79a2eb4defa1ba70876fb546d9d30cd3c895f893b533da59796; DOI: https://doi.org/10.1126/sciadv.aaz9124"
+      ]
+    },
+    {
+      "Text16": "exclusions:\ndisease induction optimization, genomic engineering, treatment advice notpartof extraction",
+      "Text16_Reference": [
+        "Structured evidence: full/APP226/evidence/APP226/scientific_reviewed_candidate_v2.json#/exclusions; SHA-256: c984a005828ad79a2eb4defa1ba70876fb546d9d30cd3c895f893b533da59796; DOI: https://doi.org/10.1126/sciadv.aaz9124"
+      ]
+    },
+    {
+      "Text17": "labeling_validation:\nobservation: Authors report no immunolabeling when primary antibodies omitted, for both iDISCO+ and ECi\nsource: \n  source_id: main\n  xpath: /article/body/sec[4]/sec[3]/p[1]\n  normalized_text_sha256: da46e41b2f0002d66cc18e5ec5c982105bf65fd73dea6ed964ec86466411dd82\nevidence_type: reported negative control; not quantitative FP retention",
+      "Text17_Reference": [
+        "Structured evidence: full/APP226/evidence/APP226/scientific_reviewed_candidate_v2.json#/labeling_validation/0; SHA-256: c984a005828ad79a2eb4defa1ba70876fb546d9d30cd3c895f893b533da59796; DOI: https://doi.org/10.1126/sciadv.aaz9124"
+      ]
+    },
+    {
+      "Text18": "labeling_validation:\nobservation: Authors report antibody specificity checked in fixed pancreatic tissue with neural-population reporter signal\nsource: \n  source_id: main\n  xpath: /article/body/sec[4]/sec[3]/p[1]\n  normalized_text_sha256: da46e41b2f0002d66cc18e5ec5c982105bf65fd73dea6ed964ec86466411dd82\nlimit: High-level specificity check only; no reporter creation or live intervention details",
+      "Text18_Reference": [
+        "Structured evidence: full/APP226/evidence/APP226/scientific_reviewed_candidate_v2.json#/labeling_validation/1; SHA-256: c984a005828ad79a2eb4defa1ba70876fb546d9d30cd3c895f893b533da59796; DOI: https://doi.org/10.1126/sciadv.aaz9124"
+      ]
+    },
+    {
+      "Text19": "supplementary_scope_notes:\npanel: S1D/E\ncell_count_bins: \n  small: <10 beta cells\n  medium: 10–100 beta cells\n  large: >100 beta cells\ncount_contact_kw_p: 0.0175\nsmall_large_dunn_p: 0.0103\npercentage_contact_kw_p: 0.3041\nsource: suppPDF page2 caption; page6 visuals\nlimit: Cells contacting nerves, not number of contact sites; not equivalent to main islet-volume bins",
+      "Text19_Reference": [
+        "Structured evidence: full/APP226/evidence/APP226/scientific_reviewed_candidate_v2.json#/supplementary_scope_notes/0; SHA-256: c984a005828ad79a2eb4defa1ba70876fb546d9d30cd3c895f893b533da59796; DOI: https://doi.org/10.1126/sciadv.aaz9124"
+      ]
+    },
+    {
+      "Text20": "supplementary_scope_notes:\npanel: S2F\nfinding: NF200+ fraction increased specifically for 50000–500000 cubic-micrometre islets in diabetic versus nondiabetic group according to main Results; full-cohort percentage not significant\nsource: \n  source_id: main\n  xpath: /article/body/sec[2]/sec[6]/p[3]\n  normalized_text_sha256: 5edbc7c7a00e7b0846ad40b3a11f2d659b863f2c0b0b24c1be807dc972061d79",
+      "Text20_Reference": [
+        "Structured evidence: full/APP226/evidence/APP226/scientific_reviewed_candidate_v2.json#/supplementary_scope_notes/1; SHA-256: c984a005828ad79a2eb4defa1ba70876fb546d9d30cd3c895f893b533da59796; DOI: https://doi.org/10.1126/sciadv.aaz9124"
+      ]
+    },
+    {
+      "Text21": "supplementary_scope_notes:\npanel: S3D\nfinding: Source main says nerve distance reduced at day5 especially splenic, but caption describes volume and displayed median distances differ by time; preserve source-specific statements rather than assigning caption p-values to a different endpoint\nsource: \n  source_id: main\n  xpath: /article/body/sec[2]/sec[10]/p[2]\n  normalized_text_sha256: cce87f35711671431c297e4b186e8a8f9efff8463652dfa2a50b691132a3d54f",
+      "Text21_Reference": [
+        "Structured evidence: full/APP226/evidence/APP226/scientific_reviewed_candidate_v2.json#/supplementary_scope_notes/2; SHA-256: c984a005828ad79a2eb4defa1ba70876fb546d9d30cd3c895f893b533da59796; DOI: https://doi.org/10.1126/sciadv.aaz9124"
+      ]
+    },
+    {
+      "Text22": "Source version and scope record (not an additional scientific claim): final_acceptance_overlay_v2:\npaper_id: APP226\ndoi: 10.1126/sciadv.aaz9124\nfull_current_task_scope: true\npartial: false\nremaining_relevant_gaps: \n[]\nsource_conflicts_retained: 9\nunknown_source_fields_retained: true\nfinal_scientific_sha256: c984a005828ad79a2eb4defa1ba70876fb546d9d30cd3c895f893b533da59796\nverified_v2_scientific_sha256: c984a005828ad79a2eb4defa1ba70876fb546d9d30cd3c895f893b533da59796\nscientific_content_changes_from_verified_v2: false\nstage_evidence: \n  R1: Frozen candidate plus separately verified additions\n  R2: independent_review_v2.json and delta_independent_receipt_v2.json\n  R3: protocol/time/fluorescence/sample/denominator source review, unknowns retained\n  R4: frozen_R4_query_log.json same-window actual source queries reused\ncounts: \n  sample_branches: 10\n  panel_biological_n_groups: 16\n  object_count_groups: 33\n  operations: 25\n  antibody_rows: 21\n  original_results: 28\n  additional_regression_records: 10\nnot_asserted: \n  [1] whole video playback\n  [2] all author internal contradictions resolved\n  [3] production admission\n  [4] human expert approval\neffective_scientific_file: scientific_reviewed_candidate_v2.json\nacceptance_state_is_external: true\ncandidate_embedded_status: Frozen candidate retains pending/false historical metadata; this external acceptance overlay is authoritative for final review status\nraw_matrix_reanalysis_performed: false",
+      "Text22_Reference": [
+        "Structured evidence: full/APP226/evidence/APP226/final_acceptance_overlay_v2.json#; SHA-256: 5c69e0423088eb224e983a2331f1fb47ef3d83c74e219b7447475607f3c372dd; DOI: https://doi.org/10.1126/sciadv.aaz9124"
+      ]
+    },
+    {
+      "Text23": "remaining_acceptance_gaps:\nv2 added fields require independent delta verification",
+      "Text23_Reference": [
+        "Structured evidence: full/APP226/evidence/APP226/independent_review_v2.json#/remaining_acceptance_gaps/0; SHA-256: 4e9b6c121c104a0c03d1e879ee4065e82131da67d950dc6a26d9bc3b300b8d32; DOI: https://doi.org/10.1126/sciadv.aaz9124"
+      ]
+    },
+    {
+      "Text24": "scope_limit:\nNo disease-induction procedure or treatment optimization generated; human donor metadata is published cohort evidence, not user personal data",
+      "Text24_Reference": [
+        "Structured evidence: full/APP226/evidence/APP226/independent_review_v2.json#/scope_limit; SHA-256: 4e9b6c121c104a0c03d1e879ee4065e82131da67d950dc6a26d9bc3b300b8d32; DOI: https://doi.org/10.1126/sciadv.aaz9124"
+      ]
+    },
+    {
+      "Text25": "scope:\nIndependent delta-only review of additions by other reviewer. Original24 countgroups,28 results,8 donors and earlier rawZIP/source audit not rerun.",
+      "Text25_Reference": [
+        "Structured evidence: full/APP226/evidence/APP226/delta_independent_receipt_v2.json#/scope; SHA-256: 2f407611640ca2b535da6f9f7659785014f3626ebcb066fe9afd256b77f9e132; DOI: https://doi.org/10.1126/sciadv.aaz9124"
+      ]
+    },
+    {
+      "Text26": "new_gap_closure:\nAll listed v2 delta fields source-checked. Retained author/source unknowns and unresolved cross-panel count linkage are explicit, not filled by inference. No new retrieval gap identified.",
+      "Text26_Reference": [
+        "Structured evidence: full/APP226/evidence/APP226/delta_independent_receipt_v2.json#/new_gap_closure; SHA-256: 2f407611640ca2b535da6f9f7659785014f3626ebcb066fe9afd256b77f9e132; DOI: https://doi.org/10.1126/sciadv.aaz9124"
+      ]
+    }
+  ]
+}

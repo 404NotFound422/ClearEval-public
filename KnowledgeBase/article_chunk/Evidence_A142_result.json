@@ -1,0 +1,952 @@
+{
+  "TOC_Method_Name": {
+    "Text": "CUBIC protocol IV + direct fluorescent immunolabeling + light-sheet imaging",
+    "Text_Reference": [
+      "DOI: https://doi.org/10.1016/j.isci.2021.102258",
+      "Evidence-layer structured paraphrase; not a verbatim quotation. Source release: https://github.com/404NotFound422/TOCAgentProject/tree/5e3a711befb3952a2e39f4d53fc9c9f1a7ac0d22/KnowledgeBase/evidence_expansion_20261019",
+      "Local source archive: ../literature_evidence/2026-11-11/source_release.zip; member: full/A142/version_selection.json"
+    ]
+  },
+  "General_Description": {
+    "Text": "Three-dimensional understanding of the morphological complexity of the human uterine endometrium (2021). Evidence category: application. This card preserves the evidence layer's structured statements and their original field labels; it does not add a new literature review or certify benchmark scoring thresholds.",
+    "Text_Reference": [
+      "DOI: https://doi.org/10.1016/j.isci.2021.102258",
+      "Evidence-layer structured paraphrase; not a verbatim quotation. Source release: https://github.com/404NotFound422/TOCAgentProject/tree/5e3a711befb3952a2e39f4d53fc9c9f1a7ac0d22/KnowledgeBase/evidence_expansion_20261019",
+      "Local source archive: ../literature_evidence/2026-11-11/source_release.zip; member: full/A142/version_selection.json"
+    ]
+  },
+  "Tissue_Types": [
+    {
+      "Text1": "sample_frame:\nG_ENDO: \n  donors: 16\n  tissue_blocks: 20\n  age_range_years: \n    [1] 30\n    [2] 50\n  proliferative: \n    donors: 4\n    blocks: 4\n  secretory: \n    donors: 6\n    blocks: 7\n  menstrual: \n    donors: 6\n    blocks: 9\n  block_dimensions_mm_ranges: \n    [1]       [1] 5.0\n      [2] 14.4\n    [2]       [1] 4.7\n      [2] 11.9\n    [3]       [1] 3.9\n      [2] 13.1\n  source_locator: S1:Table1 and Results first subsection; S2:pp16–17\n  tissue_blocks_count_scope: wholemount_3D_analysis_samples_or_blocks_only\n  paired_histology_blocks_note: 每份研究样本另有组织学比较的配对块；不据此推算未单列的全部物理块总数。\nG_ADENO: \n  donors: 4\n  tissue_blocks: 4\n  age_range_years: \n    [1] 42\n    [2] 45\n  block_dimensions_mm_ranges: \n    [1]       [1] 7.3\n      [2] 17.9\n    [2]       [1] 7.9\n      [2] 18.6\n    [3]       [1] 5.6\n      [2] 16.9\n  source_locator: S1:Table1; S2:pp16–17\n  tissue_blocks_count_scope: wholemount_3D_analysis_samples_or_blocks_only\n  paired_histology_blocks_note: 每份研究样本另有组织学比较的配对块；不据此推算未单列的全部物理块总数。\ncounts_note: 组织块≠供体；E5/E11/E13/E15各有2块。分支分析排除E6，100条腺体来自10块/9供体。 20和4只计wholemount三维分析份数；每份研究样本另有组织学比较支路的配对块，因此24不是研究使用的全部物理块总数。\ndimensions_note: 三轴范围来自组级尺寸，轴定义及每样本绑定未报；不能将最大/最小三维值组合成某一真实样本。\ncount_scope_source: S2:p16 Human sample collection and histological examination",
+      "Text1_Reference": [
+        "Structured evidence: full/A142/evidence/record.json#/sample_frame; SHA-256: 62aa5a6bde6b63bec09a8c369b45f9ed7acec1c10e54ffe753c203a364b0fddb; DOI: https://doi.org/10.1016/j.isci.2021.102258"
+      ]
+    },
+    {
+      "Text2": "donors:\ndonor_id: E1\npublished_subject_label: E1\nage_years: 30\ndiagnosis_original: Cervical cancer (ⅠA1)\nphase_or_treatment_original: Proliferative phase\ngravidity: 1\nparity: 1\nBMI: 34.1\nsample_ids: \n  [1] E1\nsource_locator: S1:Table 1",
+      "Text2_Reference": [
+        "Structured evidence: full/A142/evidence/record.json#/donors/0; SHA-256: 62aa5a6bde6b63bec09a8c369b45f9ed7acec1c10e54ffe753c203a364b0fddb; DOI: https://doi.org/10.1016/j.isci.2021.102258"
+      ]
+    },
+    {
+      "Text3": "donors:\ndonor_id: E2\npublished_subject_label: E2\nage_years: 39\ndiagnosis_original: Cervical cancer (ⅠB1)\nphase_or_treatment_original: Proliferative phase\ngravidity: 3\nparity: 2\nBMI: 17.9\nsample_ids: \n  [1] E2\nsource_locator: S1:Table 1",
+      "Text3_Reference": [
+        "Structured evidence: full/A142/evidence/record.json#/donors/1; SHA-256: 62aa5a6bde6b63bec09a8c369b45f9ed7acec1c10e54ffe753c203a364b0fddb; DOI: https://doi.org/10.1016/j.isci.2021.102258"
+      ]
+    },
+    {
+      "Text4": "donors:\ndonor_id: E3\npublished_subject_label: E3\nage_years: 43\ndiagnosis_original: Pelvic organ prolapse\nphase_or_treatment_original: Proliferative phase\ngravidity: 1\nparity: 1\nBMI: 23.8\nsample_ids: \n  [1] E3\nsource_locator: S1:Table 1",
+      "Text4_Reference": [
+        "Structured evidence: full/A142/evidence/record.json#/donors/2; SHA-256: 62aa5a6bde6b63bec09a8c369b45f9ed7acec1c10e54ffe753c203a364b0fddb; DOI: https://doi.org/10.1016/j.isci.2021.102258"
+      ]
+    },
+    {
+      "Text5": "donors:\ndonor_id: E4\npublished_subject_label: E4\nage_years: 46\ndiagnosis_original: Myoma uteri\nphase_or_treatment_original: Proliferative phase\ngravidity: 0\nparity: 0\nBMI: 25.0\nsample_ids: \n  [1] E4\nsource_locator: S1:Table 1",
+      "Text5_Reference": [
+        "Structured evidence: full/A142/evidence/record.json#/donors/3; SHA-256: 62aa5a6bde6b63bec09a8c369b45f9ed7acec1c10e54ffe753c203a364b0fddb; DOI: https://doi.org/10.1016/j.isci.2021.102258"
+      ]
+    },
+    {
+      "Text6": "donors:\ndonor_id: E5\npublished_subject_label: E5-1, 2\nage_years: 42\ndiagnosis_original: Myoma uteri\nphase_or_treatment_original: Secretory phase\ngravidity: 4\nparity: 2\nBMI: 20.7\nsample_ids: \n  [1] E5-1\n  [2] E5-2\nsource_locator: S1:Table 1",
+      "Text6_Reference": [
+        "Structured evidence: full/A142/evidence/record.json#/donors/4; SHA-256: 62aa5a6bde6b63bec09a8c369b45f9ed7acec1c10e54ffe753c203a364b0fddb; DOI: https://doi.org/10.1016/j.isci.2021.102258"
+      ]
+    },
+    {
+      "Text7": "donors:\ndonor_id: E6\npublished_subject_label: E6\nage_years: 44\ndiagnosis_original: Myoma uteri, pelvic organ prolapse\nphase_or_treatment_original: Secretory phase\ngravidity: 1\nparity: 1\nBMI: 22.8\nsample_ids: \n  [1] E6\nsource_locator: S1:Table 1",
+      "Text7_Reference": [
+        "Structured evidence: full/A142/evidence/record.json#/donors/5; SHA-256: 62aa5a6bde6b63bec09a8c369b45f9ed7acec1c10e54ffe753c203a364b0fddb; DOI: https://doi.org/10.1016/j.isci.2021.102258"
+      ]
+    },
+    {
+      "Text8": "donors:\ndonor_id: E7\npublished_subject_label: E7\nage_years: 44\ndiagnosis_original: Myoma uteri\nphase_or_treatment_original: Secretory phase\ngravidity: 0\nparity: 0\nBMI: 29.9\nsample_ids: \n  [1] E7\nsource_locator: S1:Table 1",
+      "Text8_Reference": [
+        "Structured evidence: full/A142/evidence/record.json#/donors/6; SHA-256: 62aa5a6bde6b63bec09a8c369b45f9ed7acec1c10e54ffe753c203a364b0fddb; DOI: https://doi.org/10.1016/j.isci.2021.102258"
+      ]
+    },
+    {
+      "Text9": "donors:\ndonor_id: E8\npublished_subject_label: E8\nage_years: 46\ndiagnosis_original: Ovarian tumor\nphase_or_treatment_original: Secretory phase\ngravidity: 5\nparity: 4\nBMI: 22.5\nsample_ids: \n  [1] E8\nsource_locator: S1:Table 1",
+      "Text9_Reference": [
+        "Structured evidence: full/A142/evidence/record.json#/donors/7; SHA-256: 62aa5a6bde6b63bec09a8c369b45f9ed7acec1c10e54ffe753c203a364b0fddb; DOI: https://doi.org/10.1016/j.isci.2021.102258"
+      ]
+    },
+    {
+      "Text10": "donors:\ndonor_id: E9\npublished_subject_label: E9\nage_years: 46\ndiagnosis_original: Cervical cancer (ⅠB1)\nphase_or_treatment_original: Secretory phase\ngravidity: 1\nparity: 1\nBMI: 17.8\nsample_ids: \n  [1] E9\nsource_locator: S1:Table 1",
+      "Text10_Reference": [
+        "Structured evidence: full/A142/evidence/record.json#/donors/8; SHA-256: 62aa5a6bde6b63bec09a8c369b45f9ed7acec1c10e54ffe753c203a364b0fddb; DOI: https://doi.org/10.1016/j.isci.2021.102258"
+      ]
+    },
+    {
+      "Text11": "donors:\ndonor_id: E10\npublished_subject_label: E10\nage_years: 49\ndiagnosis_original: Myoma uteri, pelvic organ prolapse\nphase_or_treatment_original: Secretory phase\ngravidity: 3\nparity: 3\nBMI: 20.9\nsample_ids: \n  [1] E10\nsource_locator: S1:Table 1",
+      "Text11_Reference": [
+        "Structured evidence: full/A142/evidence/record.json#/donors/9; SHA-256: 62aa5a6bde6b63bec09a8c369b45f9ed7acec1c10e54ffe753c203a364b0fddb; DOI: https://doi.org/10.1016/j.isci.2021.102258"
+      ]
+    },
+    {
+      "Text12": "donors:\ndonor_id: E11\npublished_subject_label: E11-1, 2\nage_years: 45\ndiagnosis_original: Myoma uteri\nphase_or_treatment_original: Menstrual phase\ngravidity: 3\nparity: 3\nBMI: 28.7\nsample_ids: \n  [1] E11-1\n  [2] E11-2\nsource_locator: S1:Table 1",
+      "Text12_Reference": [
+        "Structured evidence: full/A142/evidence/record.json#/donors/10; SHA-256: 62aa5a6bde6b63bec09a8c369b45f9ed7acec1c10e54ffe753c203a364b0fddb; DOI: https://doi.org/10.1016/j.isci.2021.102258"
+      ]
+    },
+    {
+      "Text13": "donors:\ndonor_id: E12\npublished_subject_label: E12\nage_years: 48\ndiagnosis_original: Myoma uteri\nphase_or_treatment_original: Menstrual phase\ngravidity: 0\nparity: 0\nBMI: 25.2\nsample_ids: \n  [1] E12\nsource_locator: S1:Table 1",
+      "Text13_Reference": [
+        "Structured evidence: full/A142/evidence/record.json#/donors/11; SHA-256: 62aa5a6bde6b63bec09a8c369b45f9ed7acec1c10e54ffe753c203a364b0fddb; DOI: https://doi.org/10.1016/j.isci.2021.102258"
+      ]
+    },
+    {
+      "Text14": "donors:\ndonor_id: E13\npublished_subject_label: E13-1, 2\nage_years: 43\ndiagnosis_original: Myoma uteri\nphase_or_treatment_original: Menstrual phase\ngravidity: 3\nparity: 3\nBMI: 29.2\nsample_ids: \n  [1] E13-1\n  [2] E13-2\nsource_locator: S1:Table 1",
+      "Text14_Reference": [
+        "Structured evidence: full/A142/evidence/record.json#/donors/12; SHA-256: 62aa5a6bde6b63bec09a8c369b45f9ed7acec1c10e54ffe753c203a364b0fddb; DOI: https://doi.org/10.1016/j.isci.2021.102258"
+      ]
+    },
+    {
+      "Text15": "donors:\ndonor_id: E14\npublished_subject_label: E14\nage_years: 45\ndiagnosis_original: Cervical intraepithelial neoplasia 3\nphase_or_treatment_original: Menstrual phase\ngravidity: 0\nparity: 0\nBMI: 20.2\nsample_ids: \n  [1] E14\nsource_locator: S1:Table 1",
+      "Text15_Reference": [
+        "Structured evidence: full/A142/evidence/record.json#/donors/13; SHA-256: 62aa5a6bde6b63bec09a8c369b45f9ed7acec1c10e54ffe753c203a364b0fddb; DOI: https://doi.org/10.1016/j.isci.2021.102258"
+      ]
+    },
+    {
+      "Text16": "donors:\ndonor_id: E15\npublished_subject_label: E15-1, 2\nage_years: 49\ndiagnosis_original: Myoma uteri\nphase_or_treatment_original: Menstrual phase\ngravidity: 2\nparity: 2\nBMI: 38.9\nsample_ids: \n  [1] E15-1\n  [2] E15-2\nsource_locator: S1:Table 1",
+      "Text16_Reference": [
+        "Structured evidence: full/A142/evidence/record.json#/donors/14; SHA-256: 62aa5a6bde6b63bec09a8c369b45f9ed7acec1c10e54ffe753c203a364b0fddb; DOI: https://doi.org/10.1016/j.isci.2021.102258"
+      ]
+    },
+    {
+      "Text17": "donors:\ndonor_id: E16\npublished_subject_label: E16\nage_years: 50\ndiagnosis_original: Myoma uteri\nphase_or_treatment_original: Menstrual phase\ngravidity: 2\nparity: 2\nBMI: 23.5\nsample_ids: \n  [1] E16\nsource_locator: S1:Table 1",
+      "Text17_Reference": [
+        "Structured evidence: full/A142/evidence/record.json#/donors/15; SHA-256: 62aa5a6bde6b63bec09a8c369b45f9ed7acec1c10e54ffe753c203a364b0fddb; DOI: https://doi.org/10.1016/j.isci.2021.102258"
+      ]
+    },
+    {
+      "Text18": "donors:\ndonor_id: A1\npublished_subject_label: A1\nage_years: 42\ndiagnosis_original: Adenomyosis\nphase_or_treatment_original: Secretory phase\ngravidity: 2\nparity: 0\nBMI: 21.2\nsample_ids: \n  [1] A1\nsource_locator: S1:Table 1\nhormonal_therapy_context: \n  status: no_hormonal_therapy_in_preceding_year\n  time_window_years: 1\n  source: S1:p0100\n  source_locator: S1:/article/body/sec[2]/sec[5]/p[@id=\"p0100\"]\n  specific_agent_dose_duration: null (as recorded in source)\n  interpretation_limit: 仅文献已报告的治疗背景，不形成药名、剂量、疗程或疗效推断。",
+      "Text18_Reference": [
+        "Structured evidence: full/A142/evidence/record.json#/donors/16; SHA-256: 62aa5a6bde6b63bec09a8c369b45f9ed7acec1c10e54ffe753c203a364b0fddb; DOI: https://doi.org/10.1016/j.isci.2021.102258"
+      ]
+    },
+    {
+      "Text19": "donors:\ndonor_id: A2\npublished_subject_label: A2\nage_years: 45\ndiagnosis_original: Adenomyosis\nphase_or_treatment_original: Secretory phase\ngravidity: 0\nparity: 0\nBMI: 23.8\nsample_ids: \n  [1] A2\nsource_locator: S1:Table 1\nhormonal_therapy_context: \n  status: no_hormonal_therapy_in_preceding_year\n  time_window_years: 1\n  source: S1:p0100\n  source_locator: S1:/article/body/sec[2]/sec[5]/p[@id=\"p0100\"]\n  specific_agent_dose_duration: null (as recorded in source)\n  interpretation_limit: 仅文献已报告的治疗背景，不形成药名、剂量、疗程或疗效推断。",
+      "Text19_Reference": [
+        "Structured evidence: full/A142/evidence/record.json#/donors/17; SHA-256: 62aa5a6bde6b63bec09a8c369b45f9ed7acec1c10e54ffe753c203a364b0fddb; DOI: https://doi.org/10.1016/j.isci.2021.102258"
+      ]
+    },
+    {
+      "Text20": "donors:\ndonor_id: A3\npublished_subject_label: A3\nage_years: 42\ndiagnosis_original: Adenomyosis\nphase_or_treatment_original: Undergoing GnRH agonist treatment\ngravidity: 2\nparity: 1\nBMI: 26.4\nsample_ids: \n  [1] A3\nsource_locator: S1:Table 1\nhormonal_therapy_context: \n  status: undergoing_GnRH_agonist_treatment\n  specific_agent_dose_duration: null (as recorded in source)\n  source: S1:p0100; Table1\n  source_locator: S1:/article/body/sec[2]/sec[5]/p[@id=\"p0100\"]\n  interpretation_limit: 仅文献已报告的治疗背景，不形成药名、剂量、疗程或疗效推断。",
+      "Text20_Reference": [
+        "Structured evidence: full/A142/evidence/record.json#/donors/18; SHA-256: 62aa5a6bde6b63bec09a8c369b45f9ed7acec1c10e54ffe753c203a364b0fddb; DOI: https://doi.org/10.1016/j.isci.2021.102258"
+      ]
+    },
+    {
+      "Text21": "donors:\ndonor_id: A4\npublished_subject_label: A4\nage_years: 42\ndiagnosis_original: Adenomyosis\nphase_or_treatment_original: Proliferative phase\ngravidity: 1\nparity: 0\nBMI: 20.0\nsample_ids: \n  [1] A4\nsource_locator: S1:Table 1\nhormonal_therapy_context: \n  status: no_hormonal_therapy_in_preceding_year\n  time_window_years: 1\n  source: S1:p0100\n  source_locator: S1:/article/body/sec[2]/sec[5]/p[@id=\"p0100\"]\n  specific_agent_dose_duration: null (as recorded in source)\n  interpretation_limit: 仅文献已报告的治疗背景，不形成药名、剂量、疗程或疗效推断。",
+      "Text21_Reference": [
+        "Structured evidence: full/A142/evidence/record.json#/donors/19; SHA-256: 62aa5a6bde6b63bec09a8c369b45f9ed7acec1c10e54ffe753c203a364b0fddb; DOI: https://doi.org/10.1016/j.isci.2021.102258"
+      ]
+    },
+    {
+      "Text22": "samples:\nsample_id: E1\ndonor_id: E1\nspecies: Homo sapiens\ntissue_site: 无内膜病变的全厚内膜及邻近肌层\nphase_or_treatment: Proliferative phase\nstarting_state: 福尔马林保存的固定组织块\ndimensions_mm_per_sample: null (as recorded in source)\ndimensions_group_id: G_ENDO\nendometrium_thickness_exact_mm: null (as recorded in source)\nwholemount_protocol_id: P01\nwholemount_label_id: L01\nlabel_binding_status: E7/S1明确AF647；A4/S8明确双标；其他有图注者AF555，其余由S3说明/通用方法支持，逐样本采购记录未报\nsource_locator: S1:Table 1; S2:pp17–19; Fig.S1/S3/S8\nsample_count_scope: wholemount_3D_analysis_sample\npaired_histology_branch: \n  reported: true\n  count_scope: 研究说明每份样本另有组织学比较用配对块；该块未计入24份wholemount分析记录\n  source_locator: S2:p16 Human sample collection and histological examination",
+      "Text22_Reference": [
+        "Structured evidence: full/A142/evidence/record.json#/samples/0; SHA-256: 62aa5a6bde6b63bec09a8c369b45f9ed7acec1c10e54ffe753c203a364b0fddb; DOI: https://doi.org/10.1016/j.isci.2021.102258"
+      ]
+    },
+    {
+      "Text23": "samples:\nsample_id: E2\ndonor_id: E2\nspecies: Homo sapiens\ntissue_site: 无内膜病变的全厚内膜及邻近肌层\nphase_or_treatment: Proliferative phase\nstarting_state: 福尔马林保存的固定组织块\ndimensions_mm_per_sample: null (as recorded in source)\ndimensions_group_id: G_ENDO\nendometrium_thickness_exact_mm: null (as recorded in source)\nwholemount_protocol_id: P01\nwholemount_label_id: L01\nlabel_binding_status: E7/S1明确AF647；A4/S8明确双标；其他有图注者AF555，其余由S3说明/通用方法支持，逐样本采购记录未报\nsource_locator: S1:Table 1; S2:pp17–19; Fig.S1/S3/S8\nsample_count_scope: wholemount_3D_analysis_sample\npaired_histology_branch: \n  reported: true\n  count_scope: 研究说明每份样本另有组织学比较用配对块；该块未计入24份wholemount分析记录\n  source_locator: S2:p16 Human sample collection and histological examination",
+      "Text23_Reference": [
+        "Structured evidence: full/A142/evidence/record.json#/samples/1; SHA-256: 62aa5a6bde6b63bec09a8c369b45f9ed7acec1c10e54ffe753c203a364b0fddb; DOI: https://doi.org/10.1016/j.isci.2021.102258"
+      ]
+    },
+    {
+      "Text24": "samples:\nsample_id: E3\ndonor_id: E3\nspecies: Homo sapiens\ntissue_site: 无内膜病变的全厚内膜及邻近肌层\nphase_or_treatment: Proliferative phase\nstarting_state: 福尔马林保存的固定组织块\ndimensions_mm_per_sample: null (as recorded in source)\ndimensions_group_id: G_ENDO\nendometrium_thickness_exact_mm: null (as recorded in source)\nwholemount_protocol_id: P01\nwholemount_label_id: L01\nlabel_binding_status: E7/S1明确AF647；A4/S8明确双标；其他有图注者AF555，其余由S3说明/通用方法支持，逐样本采购记录未报\nsource_locator: S1:Table 1; S2:pp17–19; Fig.S1/S3/S8\nsample_count_scope: wholemount_3D_analysis_sample\npaired_histology_branch: \n  reported: true\n  count_scope: 研究说明每份样本另有组织学比较用配对块；该块未计入24份wholemount分析记录\n  source_locator: S2:p16 Human sample collection and histological examination",
+      "Text24_Reference": [
+        "Structured evidence: full/A142/evidence/record.json#/samples/2; SHA-256: 62aa5a6bde6b63bec09a8c369b45f9ed7acec1c10e54ffe753c203a364b0fddb; DOI: https://doi.org/10.1016/j.isci.2021.102258"
+      ]
+    },
+    {
+      "Text25": "samples:\nsample_id: E4\ndonor_id: E4\nspecies: Homo sapiens\ntissue_site: 无内膜病变的全厚内膜及邻近肌层\nphase_or_treatment: Proliferative phase\nstarting_state: 福尔马林保存的固定组织块\ndimensions_mm_per_sample: null (as recorded in source)\ndimensions_group_id: G_ENDO\nendometrium_thickness_exact_mm: null (as recorded in source)\nwholemount_protocol_id: P01\nwholemount_label_id: L01\nlabel_binding_status: E7/S1明确AF647；A4/S8明确双标；其他有图注者AF555，其余由S3说明/通用方法支持，逐样本采购记录未报\nsource_locator: S1:Table 1; S2:pp17–19; Fig.S1/S3/S8\nsample_count_scope: wholemount_3D_analysis_sample\npaired_histology_branch: \n  reported: true\n  count_scope: 研究说明每份样本另有组织学比较用配对块；该块未计入24份wholemount分析记录\n  source_locator: S2:p16 Human sample collection and histological examination",
+      "Text25_Reference": [
+        "Structured evidence: full/A142/evidence/record.json#/samples/3; SHA-256: 62aa5a6bde6b63bec09a8c369b45f9ed7acec1c10e54ffe753c203a364b0fddb; DOI: https://doi.org/10.1016/j.isci.2021.102258"
+      ]
+    },
+    {
+      "Text26": "samples:\nsample_id: E5-1\ndonor_id: E5\nspecies: Homo sapiens\ntissue_site: 无内膜病变的全厚内膜及邻近肌层\nphase_or_treatment: Secretory phase\nstarting_state: 福尔马林保存的固定组织块\ndimensions_mm_per_sample: null (as recorded in source)\ndimensions_group_id: G_ENDO\nendometrium_thickness_exact_mm: null (as recorded in source)\nwholemount_protocol_id: P01\nwholemount_label_id: L01\nlabel_binding_status: E7/S1明确AF647；A4/S8明确双标；其他有图注者AF555，其余由S3说明/通用方法支持，逐样本采购记录未报\nsource_locator: S1:Table 1; S2:pp17–19; Fig.S1/S3/S8\nsample_count_scope: wholemount_3D_analysis_sample\npaired_histology_branch: \n  reported: true\n  count_scope: 研究说明每份样本另有组织学比较用配对块；该块未计入24份wholemount分析记录\n  source_locator: S2:p16 Human sample collection and histological examination",
+      "Text26_Reference": [
+        "Structured evidence: full/A142/evidence/record.json#/samples/4; SHA-256: 62aa5a6bde6b63bec09a8c369b45f9ed7acec1c10e54ffe753c203a364b0fddb; DOI: https://doi.org/10.1016/j.isci.2021.102258"
+      ]
+    },
+    {
+      "Text27": "samples:\nsample_id: E5-2\ndonor_id: E5\nspecies: Homo sapiens\ntissue_site: 无内膜病变的全厚内膜及邻近肌层\nphase_or_treatment: Secretory phase\nstarting_state: 福尔马林保存的固定组织块\ndimensions_mm_per_sample: null (as recorded in source)\ndimensions_group_id: G_ENDO\nendometrium_thickness_exact_mm: null (as recorded in source)\nwholemount_protocol_id: P01\nwholemount_label_id: L01\nlabel_binding_status: E7/S1明确AF647；A4/S8明确双标；其他有图注者AF555，其余由S3说明/通用方法支持，逐样本采购记录未报\nsource_locator: S1:Table 1; S2:pp17–19; Fig.S1/S3/S8\nsample_count_scope: wholemount_3D_analysis_sample\npaired_histology_branch: \n  reported: true\n  count_scope: 研究说明每份样本另有组织学比较用配对块；该块未计入24份wholemount分析记录\n  source_locator: S2:p16 Human sample collection and histological examination",
+      "Text27_Reference": [
+        "Structured evidence: full/A142/evidence/record.json#/samples/5; SHA-256: 62aa5a6bde6b63bec09a8c369b45f9ed7acec1c10e54ffe753c203a364b0fddb; DOI: https://doi.org/10.1016/j.isci.2021.102258"
+      ]
+    },
+    {
+      "Text28": "samples:\nsample_id: E6\ndonor_id: E6\nspecies: Homo sapiens\ntissue_site: 无内膜病变的全厚内膜及邻近肌层\nphase_or_treatment: Secretory phase\nstarting_state: 福尔马林保存的固定组织块\ndimensions_mm_per_sample: null (as recorded in source)\ndimensions_group_id: G_ENDO\nendometrium_thickness_exact_mm: null (as recorded in source)\nwholemount_protocol_id: P01\nwholemount_label_id: L01\nlabel_binding_status: E7/S1明确AF647；A4/S8明确双标；其他有图注者AF555，其余由S3说明/通用方法支持，逐样本采购记录未报\nsource_locator: S1:Table 1; S2:pp17–19; Fig.S1/S3/S8\nsample_count_scope: wholemount_3D_analysis_sample\npaired_histology_branch: \n  reported: true\n  count_scope: 研究说明每份样本另有组织学比较用配对块；该块未计入24份wholemount分析记录\n  source_locator: S2:p16 Human sample collection and histological examination",
+      "Text28_Reference": [
+        "Structured evidence: full/A142/evidence/record.json#/samples/6; SHA-256: 62aa5a6bde6b63bec09a8c369b45f9ed7acec1c10e54ffe753c203a364b0fddb; DOI: https://doi.org/10.1016/j.isci.2021.102258"
+      ]
+    },
+    {
+      "Text29": "samples:\nsample_id: E7\ndonor_id: E7\nspecies: Homo sapiens\ntissue_site: 无内膜病变的全厚内膜及邻近肌层\nphase_or_treatment: Secretory phase\nstarting_state: 福尔马林保存的固定组织块\ndimensions_mm_per_sample: null (as recorded in source)\ndimensions_group_id: G_ENDO\nendometrium_thickness_exact_mm: null (as recorded in source)\nwholemount_protocol_id: P01\nwholemount_label_id: L02\nlabel_binding_status: E7/S1明确AF647；A4/S8明确双标；其他有图注者AF555，其余由S3说明/通用方法支持，逐样本采购记录未报\nsource_locator: S1:Table 1; S2:pp17–19; Fig.S1/S3/S8\nsample_count_scope: wholemount_3D_analysis_sample\npaired_histology_branch: \n  reported: true\n  count_scope: 研究说明每份样本另有组织学比较用配对块；该块未计入24份wholemount分析记录\n  source_locator: S2:p16 Human sample collection and histological examination",
+      "Text29_Reference": [
+        "Structured evidence: full/A142/evidence/record.json#/samples/7; SHA-256: 62aa5a6bde6b63bec09a8c369b45f9ed7acec1c10e54ffe753c203a364b0fddb; DOI: https://doi.org/10.1016/j.isci.2021.102258"
+      ]
+    },
+    {
+      "Text30": "samples:\nsample_id: E8\ndonor_id: E8\nspecies: Homo sapiens\ntissue_site: 无内膜病变的全厚内膜及邻近肌层\nphase_or_treatment: Secretory phase\nstarting_state: 福尔马林保存的固定组织块\ndimensions_mm_per_sample: null (as recorded in source)\ndimensions_group_id: G_ENDO\nendometrium_thickness_exact_mm: null (as recorded in source)\nwholemount_protocol_id: P01\nwholemount_label_id: L01\nlabel_binding_status: E7/S1明确AF647；A4/S8明确双标；其他有图注者AF555，其余由S3说明/通用方法支持，逐样本采购记录未报\nsource_locator: S1:Table 1; S2:pp17–19; Fig.S1/S3/S8\nsample_count_scope: wholemount_3D_analysis_sample\npaired_histology_branch: \n  reported: true\n  count_scope: 研究说明每份样本另有组织学比较用配对块；该块未计入24份wholemount分析记录\n  source_locator: S2:p16 Human sample collection and histological examination",
+      "Text30_Reference": [
+        "Structured evidence: full/A142/evidence/record.json#/samples/8; SHA-256: 62aa5a6bde6b63bec09a8c369b45f9ed7acec1c10e54ffe753c203a364b0fddb; DOI: https://doi.org/10.1016/j.isci.2021.102258"
+      ]
+    },
+    {
+      "Text31": "samples:\nsample_id: E9\ndonor_id: E9\nspecies: Homo sapiens\ntissue_site: 无内膜病变的全厚内膜及邻近肌层\nphase_or_treatment: Secretory phase\nstarting_state: 福尔马林保存的固定组织块\ndimensions_mm_per_sample: null (as recorded in source)\ndimensions_group_id: G_ENDO\nendometrium_thickness_exact_mm: null (as recorded in source)\nwholemount_protocol_id: P01\nwholemount_label_id: L01\nlabel_binding_status: E7/S1明确AF647；A4/S8明确双标；其他有图注者AF555，其余由S3说明/通用方法支持，逐样本采购记录未报\nsource_locator: S1:Table 1; S2:pp17–19; Fig.S1/S3/S8\nsample_count_scope: wholemount_3D_analysis_sample\npaired_histology_branch: \n  reported: true\n  count_scope: 研究说明每份样本另有组织学比较用配对块；该块未计入24份wholemount分析记录\n  source_locator: S2:p16 Human sample collection and histological examination",
+      "Text31_Reference": [
+        "Structured evidence: full/A142/evidence/record.json#/samples/9; SHA-256: 62aa5a6bde6b63bec09a8c369b45f9ed7acec1c10e54ffe753c203a364b0fddb; DOI: https://doi.org/10.1016/j.isci.2021.102258"
+      ]
+    },
+    {
+      "Text32": "samples:\nsample_id: E10\ndonor_id: E10\nspecies: Homo sapiens\ntissue_site: 无内膜病变的全厚内膜及邻近肌层\nphase_or_treatment: Secretory phase\nstarting_state: 福尔马林保存的固定组织块\ndimensions_mm_per_sample: null (as recorded in source)\ndimensions_group_id: G_ENDO\nendometrium_thickness_exact_mm: null (as recorded in source)\nwholemount_protocol_id: P01\nwholemount_label_id: L01\nlabel_binding_status: E7/S1明确AF647；A4/S8明确双标；其他有图注者AF555，其余由S3说明/通用方法支持，逐样本采购记录未报\nsource_locator: S1:Table 1; S2:pp17–19; Fig.S1/S3/S8\nsample_count_scope: wholemount_3D_analysis_sample\npaired_histology_branch: \n  reported: true\n  count_scope: 研究说明每份样本另有组织学比较用配对块；该块未计入24份wholemount分析记录\n  source_locator: S2:p16 Human sample collection and histological examination",
+      "Text32_Reference": [
+        "Structured evidence: full/A142/evidence/record.json#/samples/10; SHA-256: 62aa5a6bde6b63bec09a8c369b45f9ed7acec1c10e54ffe753c203a364b0fddb; DOI: https://doi.org/10.1016/j.isci.2021.102258"
+      ]
+    },
+    {
+      "Text33": "samples:\nsample_id: E11-1\ndonor_id: E11\nspecies: Homo sapiens\ntissue_site: 无内膜病变的全厚内膜及邻近肌层\nphase_or_treatment: Menstrual phase\nstarting_state: 福尔马林保存的固定组织块\ndimensions_mm_per_sample: null (as recorded in source)\ndimensions_group_id: G_ENDO\nendometrium_thickness_exact_mm: null (as recorded in source)\nwholemount_protocol_id: P01\nwholemount_label_id: L01\nlabel_binding_status: E7/S1明确AF647；A4/S8明确双标；其他有图注者AF555，其余由S3说明/通用方法支持，逐样本采购记录未报\nsource_locator: S1:Table 1; S2:pp17–19; Fig.S1/S3/S8\nsample_count_scope: wholemount_3D_analysis_sample\npaired_histology_branch: \n  reported: true\n  count_scope: 研究说明每份样本另有组织学比较用配对块；该块未计入24份wholemount分析记录\n  source_locator: S2:p16 Human sample collection and histological examination",
+      "Text33_Reference": [
+        "Structured evidence: full/A142/evidence/record.json#/samples/11; SHA-256: 62aa5a6bde6b63bec09a8c369b45f9ed7acec1c10e54ffe753c203a364b0fddb; DOI: https://doi.org/10.1016/j.isci.2021.102258"
+      ]
+    },
+    {
+      "Text34": "samples:\nsample_id: E11-2\ndonor_id: E11\nspecies: Homo sapiens\ntissue_site: 无内膜病变的全厚内膜及邻近肌层\nphase_or_treatment: Menstrual phase\nstarting_state: 福尔马林保存的固定组织块\ndimensions_mm_per_sample: null (as recorded in source)\ndimensions_group_id: G_ENDO\nendometrium_thickness_exact_mm: null (as recorded in source)\nwholemount_protocol_id: P01\nwholemount_label_id: L01\nlabel_binding_status: E7/S1明确AF647；A4/S8明确双标；其他有图注者AF555，其余由S3说明/通用方法支持，逐样本采购记录未报\nsource_locator: S1:Table 1; S2:pp17–19; Fig.S1/S3/S8\nsample_count_scope: wholemount_3D_analysis_sample\npaired_histology_branch: \n  reported: true\n  count_scope: 研究说明每份样本另有组织学比较用配对块；该块未计入24份wholemount分析记录\n  source_locator: S2:p16 Human sample collection and histological examination",
+      "Text34_Reference": [
+        "Structured evidence: full/A142/evidence/record.json#/samples/12; SHA-256: 62aa5a6bde6b63bec09a8c369b45f9ed7acec1c10e54ffe753c203a364b0fddb; DOI: https://doi.org/10.1016/j.isci.2021.102258"
+      ]
+    },
+    {
+      "Text35": "samples:\nsample_id: E12\ndonor_id: E12\nspecies: Homo sapiens\ntissue_site: 无内膜病变的全厚内膜及邻近肌层\nphase_or_treatment: Menstrual phase\nstarting_state: 福尔马林保存的固定组织块\ndimensions_mm_per_sample: null (as recorded in source)\ndimensions_group_id: G_ENDO\nendometrium_thickness_exact_mm: null (as recorded in source)\nwholemount_protocol_id: P01\nwholemount_label_id: L01\nlabel_binding_status: E7/S1明确AF647；A4/S8明确双标；其他有图注者AF555，其余由S3说明/通用方法支持，逐样本采购记录未报\nsource_locator: S1:Table 1; S2:pp17–19; Fig.S1/S3/S8\nsample_count_scope: wholemount_3D_analysis_sample\npaired_histology_branch: \n  reported: true\n  count_scope: 研究说明每份样本另有组织学比较用配对块；该块未计入24份wholemount分析记录\n  source_locator: S2:p16 Human sample collection and histological examination",
+      "Text35_Reference": [
+        "Structured evidence: full/A142/evidence/record.json#/samples/13; SHA-256: 62aa5a6bde6b63bec09a8c369b45f9ed7acec1c10e54ffe753c203a364b0fddb; DOI: https://doi.org/10.1016/j.isci.2021.102258"
+      ]
+    },
+    {
+      "Text36": "samples:\nsample_id: E13-1\ndonor_id: E13\nspecies: Homo sapiens\ntissue_site: 无内膜病变的全厚内膜及邻近肌层\nphase_or_treatment: Menstrual phase\nstarting_state: 福尔马林保存的固定组织块\ndimensions_mm_per_sample: null (as recorded in source)\ndimensions_group_id: G_ENDO\nendometrium_thickness_exact_mm: null (as recorded in source)\nwholemount_protocol_id: P01\nwholemount_label_id: L01\nlabel_binding_status: E7/S1明确AF647；A4/S8明确双标；其他有图注者AF555，其余由S3说明/通用方法支持，逐样本采购记录未报\nsource_locator: S1:Table 1; S2:pp17–19; Fig.S1/S3/S8\nsample_count_scope: wholemount_3D_analysis_sample\npaired_histology_branch: \n  reported: true\n  count_scope: 研究说明每份样本另有组织学比较用配对块；该块未计入24份wholemount分析记录\n  source_locator: S2:p16 Human sample collection and histological examination",
+      "Text36_Reference": [
+        "Structured evidence: full/A142/evidence/record.json#/samples/14; SHA-256: 62aa5a6bde6b63bec09a8c369b45f9ed7acec1c10e54ffe753c203a364b0fddb; DOI: https://doi.org/10.1016/j.isci.2021.102258"
+      ]
+    },
+    {
+      "Text37": "samples:\nsample_id: E13-2\ndonor_id: E13\nspecies: Homo sapiens\ntissue_site: 无内膜病变的全厚内膜及邻近肌层\nphase_or_treatment: Menstrual phase\nstarting_state: 福尔马林保存的固定组织块\ndimensions_mm_per_sample: null (as recorded in source)\ndimensions_group_id: G_ENDO\nendometrium_thickness_exact_mm: null (as recorded in source)\nwholemount_protocol_id: P01\nwholemount_label_id: L01\nlabel_binding_status: E7/S1明确AF647；A4/S8明确双标；其他有图注者AF555，其余由S3说明/通用方法支持，逐样本采购记录未报\nsource_locator: S1:Table 1; S2:pp17–19; Fig.S1/S3/S8\nsample_count_scope: wholemount_3D_analysis_sample\npaired_histology_branch: \n  reported: true\n  count_scope: 研究说明每份样本另有组织学比较用配对块；该块未计入24份wholemount分析记录\n  source_locator: S2:p16 Human sample collection and histological examination",
+      "Text37_Reference": [
+        "Structured evidence: full/A142/evidence/record.json#/samples/15; SHA-256: 62aa5a6bde6b63bec09a8c369b45f9ed7acec1c10e54ffe753c203a364b0fddb; DOI: https://doi.org/10.1016/j.isci.2021.102258"
+      ]
+    },
+    {
+      "Text38": "samples:\nsample_id: E14\ndonor_id: E14\nspecies: Homo sapiens\ntissue_site: 无内膜病变的全厚内膜及邻近肌层\nphase_or_treatment: Menstrual phase\nstarting_state: 福尔马林保存的固定组织块\ndimensions_mm_per_sample: null (as recorded in source)\ndimensions_group_id: G_ENDO\nendometrium_thickness_exact_mm: null (as recorded in source)\nwholemount_protocol_id: P01\nwholemount_label_id: L01\nlabel_binding_status: E7/S1明确AF647；A4/S8明确双标；其他有图注者AF555，其余由S3说明/通用方法支持，逐样本采购记录未报\nsource_locator: S1:Table 1; S2:pp17–19; Fig.S1/S3/S8\nsample_count_scope: wholemount_3D_analysis_sample\npaired_histology_branch: \n  reported: true\n  count_scope: 研究说明每份样本另有组织学比较用配对块；该块未计入24份wholemount分析记录\n  source_locator: S2:p16 Human sample collection and histological examination",
+      "Text38_Reference": [
+        "Structured evidence: full/A142/evidence/record.json#/samples/16; SHA-256: 62aa5a6bde6b63bec09a8c369b45f9ed7acec1c10e54ffe753c203a364b0fddb; DOI: https://doi.org/10.1016/j.isci.2021.102258"
+      ]
+    },
+    {
+      "Text39": "samples:\nsample_id: E15-1\ndonor_id: E15\nspecies: Homo sapiens\ntissue_site: 无内膜病变的全厚内膜及邻近肌层\nphase_or_treatment: Menstrual phase\nstarting_state: 福尔马林保存的固定组织块\ndimensions_mm_per_sample: null (as recorded in source)\ndimensions_group_id: G_ENDO\nendometrium_thickness_exact_mm: null (as recorded in source)\nwholemount_protocol_id: P01\nwholemount_label_id: L01\nlabel_binding_status: E7/S1明确AF647；A4/S8明确双标；其他有图注者AF555，其余由S3说明/通用方法支持，逐样本采购记录未报\nsource_locator: S1:Table 1; S2:pp17–19; Fig.S1/S3/S8\nsample_count_scope: wholemount_3D_analysis_sample\npaired_histology_branch: \n  reported: true\n  count_scope: 研究说明每份样本另有组织学比较用配对块；该块未计入24份wholemount分析记录\n  source_locator: S2:p16 Human sample collection and histological examination",
+      "Text39_Reference": [
+        "Structured evidence: full/A142/evidence/record.json#/samples/17; SHA-256: 62aa5a6bde6b63bec09a8c369b45f9ed7acec1c10e54ffe753c203a364b0fddb; DOI: https://doi.org/10.1016/j.isci.2021.102258"
+      ]
+    },
+    {
+      "Text40": "samples:\nsample_id: E15-2\ndonor_id: E15\nspecies: Homo sapiens\ntissue_site: 无内膜病变的全厚内膜及邻近肌层\nphase_or_treatment: Menstrual phase\nstarting_state: 福尔马林保存的固定组织块\ndimensions_mm_per_sample: null (as recorded in source)\ndimensions_group_id: G_ENDO\nendometrium_thickness_exact_mm: null (as recorded in source)\nwholemount_protocol_id: P01\nwholemount_label_id: L01\nlabel_binding_status: E7/S1明确AF647；A4/S8明确双标；其他有图注者AF555，其余由S3说明/通用方法支持，逐样本采购记录未报\nsource_locator: S1:Table 1; S2:pp17–19; Fig.S1/S3/S8\nsample_count_scope: wholemount_3D_analysis_sample\npaired_histology_branch: \n  reported: true\n  count_scope: 研究说明每份样本另有组织学比较用配对块；该块未计入24份wholemount分析记录\n  source_locator: S2:p16 Human sample collection and histological examination",
+      "Text40_Reference": [
+        "Structured evidence: full/A142/evidence/record.json#/samples/18; SHA-256: 62aa5a6bde6b63bec09a8c369b45f9ed7acec1c10e54ffe753c203a364b0fddb; DOI: https://doi.org/10.1016/j.isci.2021.102258"
+      ]
+    },
+    {
+      "Text41": "samples:\nsample_id: E16\ndonor_id: E16\nspecies: Homo sapiens\ntissue_site: 无内膜病变的全厚内膜及邻近肌层\nphase_or_treatment: Menstrual phase\nstarting_state: 福尔马林保存的固定组织块\ndimensions_mm_per_sample: null (as recorded in source)\ndimensions_group_id: G_ENDO\nendometrium_thickness_exact_mm: null (as recorded in source)\nwholemount_protocol_id: P01\nwholemount_label_id: L01\nlabel_binding_status: E7/S1明确AF647；A4/S8明确双标；其他有图注者AF555，其余由S3说明/通用方法支持，逐样本采购记录未报\nsource_locator: S1:Table 1; S2:pp17–19; Fig.S1/S3/S8\nsample_count_scope: wholemount_3D_analysis_sample\npaired_histology_branch: \n  reported: true\n  count_scope: 研究说明每份样本另有组织学比较用配对块；该块未计入24份wholemount分析记录\n  source_locator: S2:p16 Human sample collection and histological examination",
+      "Text41_Reference": [
+        "Structured evidence: full/A142/evidence/record.json#/samples/19; SHA-256: 62aa5a6bde6b63bec09a8c369b45f9ed7acec1c10e54ffe753c203a364b0fddb; DOI: https://doi.org/10.1016/j.isci.2021.102258"
+      ]
+    },
+    {
+      "Text42": "samples:\nsample_id: A1\ndonor_id: A1\nspecies: Homo sapiens\ntissue_site: 子宫肌层内腺肌病组织，通常包含原位内膜\nphase_or_treatment: Secretory phase\nstarting_state: 福尔马林保存的固定组织块\ndimensions_mm_per_sample: null (as recorded in source)\ndimensions_group_id: G_ADENO\nendometrium_thickness_exact_mm: null (as recorded in source)\nwholemount_protocol_id: P01\nwholemount_label_id: L01\nlabel_binding_status: E7/S1明确AF647；A4/S8明确双标；其他有图注者AF555，其余由S3说明/通用方法支持，逐样本采购记录未报\nsource_locator: S1:Table 1; S2:pp17–19; Fig.S1/S3/S8\nsample_count_scope: wholemount_3D_analysis_sample\npaired_histology_branch: \n  reported: true\n  count_scope: 研究说明每份样本另有组织学比较用配对块；该块未计入24份wholemount分析记录\n  source_locator: S2:p16 Human sample collection and histological examination\nhormonal_context_reference: donors/A1/hormonal_therapy_context",
+      "Text42_Reference": [
+        "Structured evidence: full/A142/evidence/record.json#/samples/20; SHA-256: 62aa5a6bde6b63bec09a8c369b45f9ed7acec1c10e54ffe753c203a364b0fddb; DOI: https://doi.org/10.1016/j.isci.2021.102258"
+      ]
+    },
+    {
+      "Text43": "samples:\nsample_id: A2\ndonor_id: A2\nspecies: Homo sapiens\ntissue_site: 子宫肌层内腺肌病组织；明确不含原位内膜\nphase_or_treatment: Secretory phase\nstarting_state: 福尔马林保存的固定组织块\ndimensions_mm_per_sample: null (as recorded in source)\ndimensions_group_id: G_ADENO\nendometrium_thickness_exact_mm: null (as recorded in source)\nwholemount_protocol_id: P01\nwholemount_label_id: L01\nlabel_binding_status: E7/S1明确AF647；A4/S8明确双标；其他有图注者AF555，其余由S3说明/通用方法支持，逐样本采购记录未报\nsource_locator: S1:Table 1; S2:pp17–19; Fig.S1/S3/S8\nsample_count_scope: wholemount_3D_analysis_sample\npaired_histology_branch: \n  reported: true\n  count_scope: 研究说明每份样本另有组织学比较用配对块；该块未计入24份wholemount分析记录\n  source_locator: S2:p16 Human sample collection and histological examination\nhormonal_context_reference: donors/A2/hormonal_therapy_context",
+      "Text43_Reference": [
+        "Structured evidence: full/A142/evidence/record.json#/samples/21; SHA-256: 62aa5a6bde6b63bec09a8c369b45f9ed7acec1c10e54ffe753c203a364b0fddb; DOI: https://doi.org/10.1016/j.isci.2021.102258"
+      ]
+    },
+    {
+      "Text44": "samples:\nsample_id: A3\ndonor_id: A3\nspecies: Homo sapiens\ntissue_site: 子宫肌层内腺肌病组织，通常包含原位内膜\nphase_or_treatment: Undergoing GnRH agonist treatment\nstarting_state: 福尔马林保存的固定组织块\ndimensions_mm_per_sample: null (as recorded in source)\ndimensions_group_id: G_ADENO\nendometrium_thickness_exact_mm: null (as recorded in source)\nwholemount_protocol_id: P01\nwholemount_label_id: L01\nlabel_binding_status: E7/S1明确AF647；A4/S8明确双标；其他有图注者AF555，其余由S3说明/通用方法支持，逐样本采购记录未报\nsource_locator: S1:Table 1; S2:pp17–19; Fig.S1/S3/S8\nsample_count_scope: wholemount_3D_analysis_sample\npaired_histology_branch: \n  reported: true\n  count_scope: 研究说明每份样本另有组织学比较用配对块；该块未计入24份wholemount分析记录\n  source_locator: S2:p16 Human sample collection and histological examination\nhormonal_context_reference: donors/A3/hormonal_therapy_context",
+      "Text44_Reference": [
+        "Structured evidence: full/A142/evidence/record.json#/samples/22; SHA-256: 62aa5a6bde6b63bec09a8c369b45f9ed7acec1c10e54ffe753c203a364b0fddb; DOI: https://doi.org/10.1016/j.isci.2021.102258"
+      ]
+    },
+    {
+      "Text45": "samples:\nsample_id: A4\ndonor_id: A4\nspecies: Homo sapiens\ntissue_site: 子宫肌层内腺肌病组织，通常包含原位内膜\nphase_or_treatment: Proliferative phase\nstarting_state: 福尔马林保存的固定组织块\ndimensions_mm_per_sample: null (as recorded in source)\ndimensions_group_id: G_ADENO\nendometrium_thickness_exact_mm: null (as recorded in source)\nwholemount_protocol_id: P01\nwholemount_label_id: L03\nlabel_binding_status: E7/S1明确AF647；A4/S8明确双标；其他有图注者AF555，其余由S3说明/通用方法支持，逐样本采购记录未报\nsource_locator: S1:Table 1; S2:pp17–19; Fig.S1/S3/S8\nsample_count_scope: wholemount_3D_analysis_sample\npaired_histology_branch: \n  reported: true\n  count_scope: 研究说明每份样本另有组织学比较用配对块；该块未计入24份wholemount分析记录\n  source_locator: S2:p16 Human sample collection and histological examination\nhormonal_context_reference: donors/A4/hormonal_therapy_context",
+      "Text45_Reference": [
+        "Structured evidence: full/A142/evidence/record.json#/samples/23; SHA-256: 62aa5a6bde6b63bec09a8c369b45f9ed7acec1c10e54ffe753c203a364b0fddb; DOI: https://doi.org/10.1016/j.isci.2021.102258"
+      ]
+    }
+  ],
+  "Time_Consumption": [
+    {
+      "Text1": "time_roles:\nstage_duration: 固定样本清透/标记/验证的独立阶段时长\nanalysis_time: 图像后处理/测量耗时，本文未报告\nvideo_duration: 媒体播放时长，仅记录在videos，绝非成像采集时长\nwhole_workflow_duration: not_reported；存在未定洗涤、原始保存及操作间隔，不能给出准确端到端时间",
+      "Text1_Reference": [
+        "Structured evidence: full/A142/evidence/record.json#/time_roles; SHA-256: 62aa5a6bde6b63bec09a8c369b45f9ed7acec1c10e54ffe753c203a364b0fddb; DOI: https://doi.org/10.1016/j.isci.2021.102258"
+      ]
+    }
+  ],
+  "Tissue_Deformation": [],
+  "Fluorescence_Compatibility": [
+    {
+      "Text1": "markers:\nlabel_id: L01\nbranch: wholemount\ntarget: CK7/cytokeratin 7\nreadout: 内膜腔上皮和腺上皮\ndye: Alexa Fluor 555\nproduct: Abcam ab203434\ndilution: 1:100\nexcitation_nm: 532\nemission_filter_nm: null (as recorded in source)\ndisplay_color: 通常黄色；表面可灰/红/绿/青伪彩\nsample_scope: E1/E2/E8及F1–F6所标示样本；S3称除E7外其余样本通道；通用方法允许两染料\nsource_locator: S2:pp17–19; S1:Figs1–6; S2:Fig.S3",
+      "Text1_Reference": [
+        "Structured evidence: full/A142/evidence/record.json#/markers/0; SHA-256: 62aa5a6bde6b63bec09a8c369b45f9ed7acec1c10e54ffe753c203a364b0fddb; DOI: https://doi.org/10.1016/j.isci.2021.102258"
+      ]
+    },
+    {
+      "Text2": "markers:\nlabel_id: L02\nbranch: wholemount\ntarget: CK7/cytokeratin 7\nreadout: 内膜腔上皮和腺上皮\ndye: Alexa Fluor 647\nproduct: Abcam ab192077\ndilution: 1:100\nexcitation_nm: 637\nemission_filter_nm: null (as recorded in source)\ndisplay_color: S1黄色\nsample_scope: E7明确；其他样本是否采用该染料未逐样本报告\nsource_locator: S2:p2 Fig.S1 and pp17–19\nconflict_id: C02",
+      "Text2_Reference": [
+        "Structured evidence: full/A142/evidence/record.json#/markers/1; SHA-256: 62aa5a6bde6b63bec09a8c369b45f9ed7acec1c10e54ffe753c203a364b0fddb; DOI: https://doi.org/10.1016/j.isci.2021.102258"
+      ]
+    },
+    {
+      "Text3": "markers:\nlabel_id: L03\nbranch: wholemount_multicolor\ntarget: CK7 + CD31\nreadout: 腺上皮 + 血管内皮\ndye: CK7-AF555 + CD31-AF647\nproduct: ab203434 + ab218582\ndilution: 各1:100\nexcitation_nm: \n  [1] 532\n  [2] 637\nemission_filter_nm: null (as recorded in source)\ndisplay_color: CK7黄；CD31绿；自发荧光蓝\nsample_scope: \n  [1] A4\nsource_locator: S2:p12 Fig.S8 and pp17–19",
+      "Text3_Reference": [
+        "Structured evidence: full/A142/evidence/record.json#/markers/2; SHA-256: 62aa5a6bde6b63bec09a8c369b45f9ed7acec1c10e54ffe753c203a364b0fddb; DOI: https://doi.org/10.1016/j.isci.2021.102258"
+      ]
+    },
+    {
+      "Text4": "markers:\nlabel_id: L04\nbranch: FFPE_validation\ntarget: CK7 + FOXA2 + DAPI\nreadout: 腔/腺上皮 + 腺上皮身份 + 细胞核\ndye: AF555 + AF647 + DAPI\nproduct: ab203434 + ab193879；DAPI封片剂未指定\ndilution: CK7 1:100；FOXA2 1:50；DAPI未报\nexcitation_nm: null (as recorded in source)\nemission_filter_nm: null (as recorded in source)\ndisplay_color: CK7红；FOXA2绿；DAPI蓝\nsample_scope: \n  [1] E8\nsource_locator: S2:p3 Fig.S2 and pp16–17",
+      "Text4_Reference": [
+        "Structured evidence: full/A142/evidence/record.json#/markers/3; SHA-256: 62aa5a6bde6b63bec09a8c369b45f9ed7acec1c10e54ffe753c203a364b0fddb; DOI: https://doi.org/10.1016/j.isci.2021.102258"
+      ]
+    },
+    {
+      "Text5": "markers:\nlabel_id: L05\nbranch: FFPE_validation\ntarget: CK7 + CD31 + DAPI\nreadout: 腺上皮 + 血管内皮 + 细胞核\ndye: AF555 + AF647 + DAPI\nproduct: ab203434 + ab218582；DAPI封片剂未指定\ndilution: CK7/CD31均1:100；DAPI未报\nexcitation_nm: null (as recorded in source)\nemission_filter_nm: null (as recorded in source)\ndisplay_color: CK7红；CD31绿；DAPI蓝\nsample_scope: \n  [1] A4\nsource_locator: S2:p12 Fig.S8A and pp16–17",
+      "Text5_Reference": [
+        "Structured evidence: full/A142/evidence/record.json#/markers/4; SHA-256: 62aa5a6bde6b63bec09a8c369b45f9ed7acec1c10e54ffe753c203a364b0fddb; DOI: https://doi.org/10.1016/j.isci.2021.102258"
+      ]
+    },
+    {
+      "Text6": "markers:\nlabel_id: L06\nbranch: wholemount_intrinsic_signal\ntarget: 组织自发荧光\nreadout: 组织/肌层结构；作者归因胶原与弹性纤维\ndye: null (as recorded in source)\nproduct: null (as recorded in source)\ndilution: null (as recorded in source)\nexcitation_nm: \n  [1] 488\n  [2] 532\nemission_filter_nm: null (as recorded in source)\ndisplay_color: 蓝\nsample_scope: 通常488；CK7-AF647/E7支路用532\nsource_locator: S2:p19 Microscopy; S2:p2 Fig.S1\nboundary: 不是特异性抗体标记或内源荧光蛋白；未提供生化来源验证",
+      "Text6_Reference": [
+        "Structured evidence: full/A142/evidence/record.json#/markers/5; SHA-256: 62aa5a6bde6b63bec09a8c369b45f9ed7acec1c10e54ffe753c203a364b0fddb; DOI: https://doi.org/10.1016/j.isci.2021.102258"
+      ]
+    }
+  ],
+  "Preservation_Stability": [],
+  "Application": [
+    {
+      "Text1": "protocols:\nprotocol_id: P01\nname: CUBIC protocol IV 固定全组织透明与直接荧光免疫标记\nsample_scope: \n  [1] E1\n  [2] E2\n  [3] E3\n  [4] E4\n  [5] E5-1\n  [6] E5-2\n  [7] E6\n  [8] E7\n  [9] E8\n  [10] E9\n  [11] E10\n  [12] E11-1\n  [13] E11-2\n  [14] E12\n  [15] E13-1\n  [16] E13-2\n  [17] E14\n  [18] E15-1\n  [19] E15-2\n  [20] E16\n  [21] A1\n  [22] A2\n  [23] A3\n  [24] A4\nsteps: \n  [1]     step_id: P01.01\n    stage: pre_clearing_wash\n    operation: 固定组织PBS洗涤\n    conditions: PBS；Fig.1A为RT\n    duration_original: 6 h\n    time_role: stage_duration\n    unreported_or_ambiguity: null (as recorded in source)\n    duration_hours_min: 6\n    duration_hours_max: 6\n    normalization_rule: 原文定量时长单位换算；范围两端不是逐样本实测\n  [2]     step_id: P01.02\n    stage: delipidation_decolorization\n    operation: CUBIC-L脱脂脱色\n    conditions: T3740；10 wt% N-butyldiethanolamine + 10 wt% Triton X-100；45°C；振荡；期间换液1次\n    duration_original: 6–8 days\n    time_role: stage_duration\n    unreported_or_ambiguity: 逐样本使用6或8天、换液具体时点和体积未报\n    duration_hours_min: 144\n    duration_hours_max: 192\n    normalization_rule: 原文定量时长单位换算；范围两端不是逐样本实测\n  [3]     step_id: P01.03\n    stage: wash\n    operation: PBS洗涤\n    conditions: 方法未给温度；Fig.1A给RT\n    duration_original: several hours\n    time_role: stage_duration\n    unreported_or_ambiguity: Fig.1A给6 h；保留层级差异\n    duration_hours_min: null (as recorded in source)\n    duration_hours_max: null (as recorded in source)\n    normalization_rule: 不将overnight、several hours或not_reported强制转换\n  [4]     step_id: P01.04\n    stage: immunolabeling\n    operation: 直接偶联CK7抗体；A4加入CD31双标\n    conditions: 1–3 mL PBS + 0.5% Triton X-100 + 0.25% casein + 0.01% NaN3；CK7-AF647 ab192077或CK7-AF555 ab203434均1:100；A4 CK7-AF555与CD31-AF647 ab218582各1:100；RT轻摇\n    duration_original: 10–14 days\n    time_role: stage_duration\n    unreported_or_ambiguity: 逐样本时长、抗体体积选择和部分样本具体染料未单列\n    duration_hours_min: 240\n    duration_hours_max: 336\n    normalization_rule: 原文定量时长单位换算；范围两端不是逐样本实测\n  [5]     step_id: P01.05\n    stage: wash\n    operation: PBS洗涤\n    conditions: 温度、次数未报\n    duration_original: several hours\n    time_role: stage_duration\n    unreported_or_ambiguity: null (as recorded in source)\n    duration_hours_min: null (as recorded in source)\n    duration_hours_max: null (as recorded in source)\n    normalization_rule: 不将overnight、several hours或not_reported强制转换\n  [6]     step_id: P01.06\n    stage: postfixation\n    operation: 标记后再固定\n    conditions: 1% PFA in 0.1 M PB；RT；轻摇\n    duration_original: 5 h\n    time_role: stage_duration\n    unreported_or_ambiguity: null (as recorded in source)\n    duration_hours_min: 5\n    duration_hours_max: 5\n    normalization_rule: 原文定量时长单位换算；范围两端不是逐样本实测\n  [7]     step_id: P01.07\n    stage: RI_pre_equilibration\n    operation: 1:1稀释CUBIC-R+匹配\n    conditions: T3741；原液45 wt% 2,3-dimethyl-1-phenyl-5-pyrazolone +30 wt% nicotinamide +5 wt% N-butyldiethanolamine；RT轻摇\n    duration_original: 1 day\n    time_role: stage_duration\n    unreported_or_ambiguity: 1:1稀释液成分未报\n    duration_hours_min: 24\n    duration_hours_max: 24\n    normalization_rule: 原文定量时长单位换算；范围两端不是逐样本实测\n  [8]     step_id: P01.08\n    stage: RI_matching\n    operation: 未稀释CUBIC-R+匹配\n    conditions: RT轻摇\n    duration_original: 1–2 days\n    time_role: stage_duration\n    unreported_or_ambiguity: Fig.1A将50%到100%合写2 days；方法两步合计2–3 days\n    duration_hours_min: 24\n    duration_hours_max: 48\n    normalization_rule: 原文定量时长单位换算；范围两端不是逐样本实测\nsource_locators: \n  [1]     source_id: S2\n    locator: pp17–18 CUBIC protocol for whole-mount 3D staining\n  [2]     source_id: F1\n    locator: panel A\nboundary: 起始福尔马林固定/保存仅作既有样本状态；不提供临床取材或初次制备流程。不把RI、固定、标记、成像时长合成确定的全流程总时长。",
+      "Text1_Reference": [
+        "Structured evidence: full/A142/evidence/record.json#/protocols/0; SHA-256: 62aa5a6bde6b63bec09a8c369b45f9ed7acec1c10e54ffe753c203a364b0fddb; DOI: https://doi.org/10.1016/j.isci.2021.102258"
+      ]
+    },
+    {
+      "Text2": "protocols:\nprotocol_id: P02\nname: 独立FFPE切片免疫验证\nsample_scope: \n  [1] E8\n  [2] A4\nsteps: \n  [1]     step_id: P02.01\n    stage: antigen_retrieval\n    operation: 脱蜡后抗原修复\n    conditions: Target Retrieval Solution；10 mM citrate buffer pH6.0；96°C microwave\n    duration_original: 30 min\n    time_role: stage_duration\n    unreported_or_ambiguity: 脱蜡细节与切片厚度未报\n    duration_hours_min: 0.5\n    duration_hours_max: 0.5\n    normalization_rule: 原文定量时长单位换算；范围两端不是逐样本实测\n  [2]     step_id: P02.02\n    stage: immunolabeling\n    operation: 直接偶联荧光抗体孵育\n    conditions: 4°C；CK7-AF555 ab203434 1:100 + FOXA2-AF647 ab193879 1:50（E8）；或CK7-AF555 + CD31-AF647 ab218582 1:100（A4）\n    duration_original: overnight\n    time_role: stage_duration\n    unreported_or_ambiguity: null (as recorded in source)\n    duration_hours_min: null (as recorded in source)\n    duration_hours_max: null (as recorded in source)\n    normalization_rule: 不将overnight、several hours或not_reported强制转换\n  [3]     step_id: P02.03\n    stage: mounting\n    operation: 含DAPI封片剂封片\n    conditions: 封片剂型号、DAPI浓度未报\n    duration_original: not_reported\n    time_role: stage_duration\n    unreported_or_ambiguity: null (as recorded in source)\n    duration_hours_min: null (as recorded in source)\n    duration_hours_max: null (as recorded in source)\n    normalization_rule: 不将overnight、several hours或not_reported强制转换\nsource_locators: \n  [1]     source_id: S2\n    locator: pp16–17 Immunohistochemical staining of FFPE sections\n  [2]     source_id: S2\n    locator: p3 Fig.S2; p12 Fig.S8A\nboundary: 这是二维FFPE验证支路，不能把FOXA2/DAPI视为全组织CUBIC标记；H&E用于形态参照，无完整染色参数。",
+      "Text2_Reference": [
+        "Structured evidence: full/A142/evidence/record.json#/protocols/1; SHA-256: 62aa5a6bde6b63bec09a8c369b45f9ed7acec1c10e54ffe753c203a364b0fddb; DOI: https://doi.org/10.1016/j.isci.2021.102258"
+      ]
+    },
+    {
+      "Text3": "protocols:\nprotocol_id: P03\nname: 图像预处理和三维表面重建\nsample_scope: \n  [1] E1\n  [2] E2\n  [3] E3\n  [4] E4\n  [5] E5-1\n  [6] E5-2\n  [7] E6\n  [8] E7\n  [9] E8\n  [10] E9\n  [11] E10\n  [12] E11-1\n  [13] E11-2\n  [14] E12\n  [15] E13-1\n  [16] E13-2\n  [17] E14\n  [18] E15-1\n  [19] E15-2\n  [20] E16\n  [21] A1\n  [22] A2\n  [23] A3\n  [24] A4\nsteps: \n  [1]     step_id: P03.01\n    stage: image_preprocessing\n    operation: Fiji背景扣除与unsharp mask\n    conditions: 无损16-bit TIFF；所有CK7荧光图像\n    duration_original: not_reported\n    time_role: analysis_time\n    unreported_or_ambiguity: 背景算法和unsharp参数未报\n    duration_hours_min: null (as recorded in source)\n    duration_hours_max: null (as recorded in source)\n    normalization_rule: 不将overnight、several hours或not_reported强制转换\n  [2]     step_id: P03.02\n    stage: 3D_reconstruction\n    operation: Imaris Surpass导入及3D Crop\n    conditions: Imaris 9.3.1和9.5.1；channel arithmetic；Surface模块\n    duration_original: not_reported\n    time_role: analysis_time\n    unreported_or_ambiguity: 原文减法方向存在C04歧义，不能默默改写\n    duration_hours_min: null (as recorded in source)\n    duration_hours_max: null (as recorded in source)\n    normalization_rule: 不将overnight、several hours或not_reported强制转换\n  [3]     step_id: P03.03\n    stage: segmentation_curating\n    operation: 人工校正每个表面、移除额外信号；对断开组件分别赋伪彩与新通道\n    conditions: snapshot和animation输出\n    duration_original: not_reported\n    time_role: analysis_time\n    unreported_or_ambiguity: 阈值和人工规则一致性未量化\n    duration_hours_min: null (as recorded in source)\n    duration_hours_max: null (as recorded in source)\n    normalization_rule: 不将overnight、several hours或not_reported强制转换\nsource_locators: \n  [1]     source_id: S2\n    locator: pp19–20 Image analysis\nboundary: 伪彩和派生通道是计算显示结果，不是新增荧光染料或独立生物学样本。",
+      "Text3_Reference": [
+        "Structured evidence: full/A142/evidence/record.json#/protocols/2; SHA-256: 62aa5a6bde6b63bec09a8c369b45f9ed7acec1c10e54ffe753c203a364b0fddb; DOI: https://doi.org/10.1016/j.isci.2021.102258"
+      ]
+    },
+    {
+      "Text4": "protocols:\nprotocol_id: P04\nname: 闭塞腺体数量高度和体积测量\nsample_scope: \n  [1] E1\n  [2] E2\n  [3] E3\n  [4] E4\n  [5] E5-1\n  [6] E5-2\n  [7] E6\n  [8] E7\n  [9] E8\n  [10] E9\n  [11] E10\nsteps: \n  [1]     step_id: P04.01\n    stage: density\n    operation: 每样本随机5个XZ 1 mm²区域；按腺体顶点落区计闭塞腺\n    conditions: Imaris Surface；XY/XZ/YZ连续切面核看；取5区平均\n    duration_original: not_reported\n    time_role: analysis_time\n    unreported_or_ambiguity: null (as recorded in source)\n    duration_hours_min: null (as recorded in source)\n    duration_hours_max: null (as recorded in source)\n    normalization_rule: 不将overnight、several hours或not_reported强制转换\n  [2]     step_id: P04.02\n    stage: height\n    operation: 每区取2张XY图，垂直测腺上皮最低点到表面上皮，10次取均值\n    conditions: 同5区域测闭塞腺顶点高度；参考坐标为腺上皮最低点\n    duration_original: not_reported\n    time_role: analysis_time\n    unreported_or_ambiguity: null (as recorded in source)\n    duration_hours_min: null (as recorded in source)\n    duration_hours_max: null (as recorded in source)\n    normalization_rule: 不将overnight、several hours或not_reported强制转换\n  [3]     step_id: P04.03\n    stage: volume\n    operation: 五个区域内闭塞腺体Surface体积\n    conditions: 单位与结果图一致；原始逐腺体数据未提供\n    duration_original: not_reported\n    time_role: analysis_time\n    unreported_or_ambiguity: null (as recorded in source)\n    duration_hours_min: null (as recorded in source)\n    duration_hours_max: null (as recorded in source)\n    normalization_rule: 不将overnight、several hours或not_reported强制转换\nsource_locators: \n  [1]     source_id: S2\n    locator: pp20–21 3D measurement of uterine glands\n  [2]     source_id: S2\n    locator: p13 Table S1\nboundary: 密度分析10供体/11组织块；E5表S1合并为供体均值。体积比较的腺体总数和分层统计未明确，不能把每腺体当独立供体。",
+      "Text4_Reference": [
+        "Structured evidence: full/A142/evidence/record.json#/protocols/3; SHA-256: 62aa5a6bde6b63bec09a8c369b45f9ed7acec1c10e54ffe753c203a364b0fddb; DOI: https://doi.org/10.1016/j.isci.2021.102258"
+      ]
+    },
+    {
+      "Text5": "protocols:\nprotocol_id: P05\nname: 分支及共享分支的腺体抽样分类\nsample_scope: \n  [1] E1\n  [2] E2\n  [3] E3\n  [4] E4\n  [5] E5-1\n  [6] E5-2\n  [7] E7\n  [8] E8\n  [9] E9\n  [10] E10\nsteps: \n  [1]     step_id: P05.01\n    stage: sampling\n    operation: 中心XZ区域创建50 μm厚水平腺体切面，位于内膜上半部且在腔上皮下方\n    conditions: 方法面积2.5 mm²；表S2/S3为2.5 mm square；31–96个腺体对象；随机选10条/组织块；黏连成一对象时选靠中心腺体\n    duration_original: not_reported\n    time_role: analysis_time\n    unreported_or_ambiguity: 面积C03未解；不可混同距离层的2.5×2.5 mm ROI\n    duration_hours_min: null (as recorded in source)\n    duration_hours_max: null (as recorded in source)\n    normalization_rule: 不将overnight、several hours或not_reported强制转换\n  [2]     step_id: P05.02\n    stage: classification\n    operation: 连续XY/XZ/YZ核看分支与共享分支，按上2/3、下1/3或两者分类\n    conditions: E6全形不可追踪被排除；E5两组织块合计20条\n    duration_original: not_reported\n    time_role: analysis_time\n    unreported_or_ambiguity: null (as recorded in source)\n    duration_hours_min: null (as recorded in source)\n    duration_hours_max: null (as recorded in source)\n    normalization_rule: 不将overnight、several hours或not_reported强制转换\nsource_locators: \n  [1]     source_id: S2\n    locator: pp21–22 3D measurement of uterine glands\n  [2]     source_id: S2\n    locator: pp14–15 Tables S2/S3\nboundary: 9供体、10可用组织块、100条抽样腺体；不是100位供体。均值百分比与合并计数分开。",
+      "Text5_Reference": [
+        "Structured evidence: full/A142/evidence/record.json#/protocols/4; SHA-256: 62aa5a6bde6b63bec09a8c369b45f9ed7acec1c10e54ffe753c203a364b0fddb; DOI: https://doi.org/10.1016/j.isci.2021.102258"
+      ]
+    },
+    {
+      "Text6": "protocols:\nprotocol_id: P06\nname: 距离变换内膜分层\nsample_scope: \n  [1] E1\n  [2] E11-1\n  [3] E11-2\n  [4] E12\n  [5] E13-1\n  [6] E13-2\n  [7] E14\n  [8] E15-1\n  [9] E15-2\n  [10] E16\nsteps: \n  [1]     step_id: P06.01\n    stage: ROI\n    operation: XZ裁剪2.5×2.5 mm\n    conditions: 手工在XY每25张或更密描绘内膜-肌层边界；Surface建立底面\n    duration_original: not_reported\n    time_role: analysis_time\n    unreported_or_ambiguity: null (as recorded in source)\n    duration_hours_min: null (as recorded in source)\n    duration_hours_max: null (as recorded in source)\n    normalization_rule: 不将overnight、several hours或not_reported强制转换\n  [2]     step_id: P06.02\n    stage: distance_transform\n    operation: Imaris XT DT outside-surface mode\n    conditions: 阈值宽150 μm建立等距层；Mask channel提取层内CK7；Surface重建\n    duration_original: not_reported\n    time_role: analysis_time\n    unreported_or_ambiguity: null (as recorded in source)\n    duration_hours_min: null (as recorded in source)\n    duration_hours_max: null (as recorded in source)\n    normalization_rule: 不将overnight、several hours或not_reported强制转换\n  [3]     step_id: P06.03\n    stage: layering\n    operation: E1分5个不连续位置的150 μm层；经期仅底部2层\n    conditions: 1–150、151–300、501–650、1001–1150、1501–1650 μm；经期为前两层\n    duration_original: not_reported\n    time_role: analysis_time\n    unreported_or_ambiguity: null (as recorded in source)\n    duration_hours_min: null (as recorded in source)\n    duration_hours_max: null (as recorded in source)\n    normalization_rule: 不将overnight、several hours或not_reported强制转换\nsource_locators: \n  [1]     source_id: S2\n    locator: pp22–23 3D layer distribution\n  [2]     source_id: S1\n    locator: Fig.4 and Fig.5 captions\n  [3]     source_id: S2\n    locator: pp8–10 Fig.S5/S6\nboundary: 150 μm是计算分层厚度，不是切片厚度或激光轴向采样间距。",
+      "Text6_Reference": [
+        "Structured evidence: full/A142/evidence/record.json#/protocols/5; SHA-256: 62aa5a6bde6b63bec09a8c369b45f9ed7acec1c10e54ffe753c203a364b0fddb; DOI: https://doi.org/10.1016/j.isci.2021.102258"
+      ]
+    },
+    {
+      "Text7": "protocols:\nprotocol_id: P07\nname: 腺肌病病灶相对体积\nsample_scope: \n  [1] A1\n  [2] A2\n  [3] A3\n  [4] A4\nsteps: \n  [1]     step_id: P07.01\n    stage: volume_quantification\n    operation: 选不含正常内膜的肌层区域；CK7提取异位腺上皮，肌层自发荧光提取分母\n    conditions: Imaris Surface分别计算体积；报告单位μm³/mm³\n    duration_original: not_reported\n    time_role: analysis_time\n    unreported_or_ambiguity: null (as recorded in source)\n    duration_hours_min: null (as recorded in source)\n    duration_hours_max: null (as recorded in source)\n    normalization_rule: 不将overnight、several hours或not_reported强制转换\nsource_locators: \n  [1]     source_id: S2\n    locator: pp23–24 3D measurement of adenomyotic lesions\nboundary: 每个供体一个报告值；没有组内重复或配对治疗前后样本，不能估计GnRH治疗效应。",
+      "Text7_Reference": [
+        "Structured evidence: full/A142/evidence/record.json#/protocols/6; SHA-256: 62aa5a6bde6b63bec09a8c369b45f9ed7acec1c10e54ffe753c203a364b0fddb; DOI: https://doi.org/10.1016/j.isci.2021.102258"
+      ]
+    },
+    {
+      "Text8": "imaging_global:\nmicroscope: Olympus MVX10-LS light-sheet fluorescence microscope\nobjective_magnification: 0.63\nNA: 0.15\nworking_distance_mm: 87\ndigital_zoom_range: \n  [1] 1.0\n  [2] 6.3\nlaser_lines_nm: \n  [1] 488\n  [2] 532\n  [3] 637\ndetector_sync: 轴向移动样本台时检测物镜同步移动以避免失焦\nraw_format: lossless 16-bit TIFF\nsource_locator: S2:pp18–19 Microscopy\nvoxel_sizes: \n  [1]     digital_zoom: 1.0\n    x_um: 8.53\n    y_um: 8.53\n    z_um_options: \n      [1] 10\n  [2]     digital_zoom: 1.6\n    x_um: 6.61\n    y_um: 6.61\n    z_um_options: \n      [1] 5\n      [2] 10\n  [3]     digital_zoom: 2.0\n    x_um: 5.29\n    y_um: 5.29\n    z_um_options: \n      [1] 5\n      [2] 10\n  [4]     digital_zoom: 3.2\n    x_um: 3.27\n    y_um: 3.27\n    z_um_options: \n      [1] 5\n      [2] 10\n  [5]     digital_zoom: 6.3\n    x_um: 1.66\n    y_um: 1.66\n    z_um_options: \n      [1] 1.7\nnot_reported: \n  [1] 逐样本物镜zoom/voxel对应表\n  [2] 相机、曝光、激光功率\n  [3] 发射滤光片带宽\n  [4] 定量光学空间分辨率\n  [5] 完整原始影像stack及分割工程",
+      "Text8_Reference": [
+        "Structured evidence: full/A142/evidence/record.json#/imaging_global; SHA-256: 62aa5a6bde6b63bec09a8c369b45f9ed7acec1c10e54ffe753c203a364b0fddb; DOI: https://doi.org/10.1016/j.isci.2021.102258"
+      ]
+    },
+    {
+      "Text9": "figures:\nfigure_id: Fig.1\nsource_id: F1\nsource_locator: original raster; S1 caption\npanels_read: A–F\nactual_artwork_read: true\nsample_ids: \n  [1] E2\n  [2] E1\n  [3] E8\nprotocol_id: P01\nreadout_zh: A固定后透明/染色流程；C透明前后E2照片；D/E CK7三维腺体；F增殖/分泌期H&E形态参照\ndisplay_section_or_ROI: \n  E1_XY_z_um: 7.62\n  E8_XY_z_um: 6.61\ninterpretation_boundary: 图注z/y原值仅作为展示光学切面参数，不自动等同采集z间距或成像深度；Fig.7为示意图。",
+      "Text9_Reference": [
+        "Structured evidence: full/A142/evidence/record.json#/figures/0; SHA-256: 62aa5a6bde6b63bec09a8c369b45f9ed7acec1c10e54ffe753c203a364b0fddb; DOI: https://doi.org/10.1016/j.isci.2021.102258"
+      ]
+    },
+    {
+      "Text10": "figures:\nfigure_id: Fig.2\nsource_id: F2\nsource_locator: original raster; S1 caption\npanels_read: A–E\nactual_artwork_read: true\nsample_ids: \n  [1] E1\n  [2] E2\n  [3] E3\n  [4] E4\n  [5] E5-1\n  [6] E5-2\n  [7] E6\n  [8] E7\n  [9] E8\n  [10] E9\n  [11] E10\nprotocol_id: P04\nreadout_zh: E8闭塞腺体；年龄密度散点；厚度与顶端高度；两期闭塞腺体体积\ndisplay_section_or_ROI: \n  E8_XY_z_um: 99\ninterpretation_boundary: 图注z/y原值仅作为展示光学切面参数，不自动等同采集z间距或成像深度；Fig.7为示意图。",
+      "Text10_Reference": [
+        "Structured evidence: full/A142/evidence/record.json#/figures/1; SHA-256: 62aa5a6bde6b63bec09a8c369b45f9ed7acec1c10e54ffe753c203a364b0fddb; DOI: https://doi.org/10.1016/j.isci.2021.102258"
+      ]
+    },
+    {
+      "Text11": "figures:\nfigure_id: Fig.3\nsource_id: F3\nsource_locator: original raster; S1 caption\npanels_read: A–E\nactual_artwork_read: true\nsample_ids: \n  [1] E1\n  [2] E2\n  [3] E3\n  [4] E4\n  [5] E5-1\n  [6] E5-2\n  [7] E7\n  [8] E8\n  [9] E9\n  [10] E10\nprotocol_id: P05\nreadout_zh: E8分支和共享基底网络；分类计数；与年龄相关性\ndisplay_section_or_ROI: \n  E8_XY_z_um: 198\ninterpretation_boundary: 图注z/y原值仅作为展示光学切面参数，不自动等同采集z间距或成像深度；Fig.7为示意图。",
+      "Text11_Reference": [
+        "Structured evidence: full/A142/evidence/record.json#/figures/2; SHA-256: 62aa5a6bde6b63bec09a8c369b45f9ed7acec1c10e54ffe753c203a364b0fddb; DOI: https://doi.org/10.1016/j.isci.2021.102258"
+      ]
+    },
+    {
+      "Text12": "figures:\nfigure_id: Fig.4\nsource_id: F4\nsource_locator: original raster; S1 caption\npanels_read: A–B\nactual_artwork_read: true\nsample_ids: \n  [1] E1\nprotocol_id: P06\nreadout_zh: 距不规则底面等距层分析；下层网络，上层柱状断面\ndisplay_section_or_ROI: \n  XZ_view_y_um: 150\n  ROI_mm: \n    [1] 2.5\n    [2] 2.5\ninterpretation_boundary: 图注z/y原值仅作为展示光学切面参数，不自动等同采集z间距或成像深度；Fig.7为示意图。",
+      "Text12_Reference": [
+        "Structured evidence: full/A142/evidence/record.json#/figures/3; SHA-256: 62aa5a6bde6b63bec09a8c369b45f9ed7acec1c10e54ffe753c203a364b0fddb; DOI: https://doi.org/10.1016/j.isci.2021.102258"
+      ]
+    },
+    {
+      "Text13": "figures:\nfigure_id: Fig.5\nsource_id: F5\nsource_locator: original raster; S1 caption\npanels_read: A–D\nactual_artwork_read: true\nsample_ids: \n  [1] E11-1\nprotocol_id: P06\nreadout_zh: 经期第2天底部网络保留；H&E与2层分析\ndisplay_section_or_ROI: \n  XY_z_um: 47.6\n  XZ_view_y_um: 150\n  ROI_mm: \n    [1] 2.5\n    [2] 2.5\ninterpretation_boundary: 图注z/y原值仅作为展示光学切面参数，不自动等同采集z间距或成像深度；Fig.7为示意图。",
+      "Text13_Reference": [
+        "Structured evidence: full/A142/evidence/record.json#/figures/4; SHA-256: 62aa5a6bde6b63bec09a8c369b45f9ed7acec1c10e54ffe753c203a364b0fddb; DOI: https://doi.org/10.1016/j.isci.2021.102258"
+      ]
+    },
+    {
+      "Text14": "figures:\nfigure_id: Fig.6\nsource_id: F6\nsource_locator: original raster; S1 caption\npanels_read: A–D\nactual_artwork_read: true\nsample_ids: \n  [1] A1\n  [2] A2\n  [3] A3\nprotocol_id: P07\nreadout_zh: A1/A3与肌层连续的原位腺体；异位腺体网络；A2不含原位内膜\ndisplay_section_or_ROI: \n  A1_XY_z_um: 10\ninterpretation_boundary: 图注z/y原值仅作为展示光学切面参数，不自动等同采集z间距或成像深度；Fig.7为示意图。",
+      "Text14_Reference": [
+        "Structured evidence: full/A142/evidence/record.json#/figures/5; SHA-256: 62aa5a6bde6b63bec09a8c369b45f9ed7acec1c10e54ffe753c203a364b0fddb; DOI: https://doi.org/10.1016/j.isci.2021.102258"
+      ]
+    },
+    {
+      "Text15": "figures:\nfigure_id: Fig.7\nsource_id: F7\nsource_locator: original raster; S1 caption\npanels_read: A–C\nactual_artwork_read: true\nsample_ids: \n[]\nprotocol_id: null (as recorded in source)\nreadout_zh: 概念示意图：传统模型、rhizome及腺肌病网络；不是额外实验数据\ndisplay_section_or_ROI: \n{}\ninterpretation_boundary: 图注z/y原值仅作为展示光学切面参数，不自动等同采集z间距或成像深度；Fig.7为示意图。",
+      "Text15_Reference": [
+        "Structured evidence: full/A142/evidence/record.json#/figures/6; SHA-256: 62aa5a6bde6b63bec09a8c369b45f9ed7acec1c10e54ffe753c203a364b0fddb; DOI: https://doi.org/10.1016/j.isci.2021.102258"
+      ]
+    },
+    {
+      "Text16": "figures:\nfigure_id: Fig.S1\nsource_id: S2\nsource_locator: p2\npanels_read: single\nactual_artwork_read: true\nsample_ids: \n  [1] E7\nprotocol_id: P01\nreadout_zh: AF647-CK7的高倍图；作者单细胞显示主张\ndisplay_section_or_ROI: \n  XY_z_um: 1.7\ninterpretation_boundary: 图注z/y原值仅作为展示光学切面参数，不自动等同采集z间距或成像深度；Fig.7为示意图。",
+      "Text16_Reference": [
+        "Structured evidence: full/A142/evidence/record.json#/figures/7; SHA-256: 62aa5a6bde6b63bec09a8c369b45f9ed7acec1c10e54ffe753c203a364b0fddb; DOI: https://doi.org/10.1016/j.isci.2021.102258"
+      ]
+    },
+    {
+      "Text17": "figures:\nfigure_id: Fig.S2\nsource_id: S2\nsource_locator: p3\npanels_read: four channels\nactual_artwork_read: true\nsample_ids: \n  [1] E8\nprotocol_id: P02\nreadout_zh: FFPE闭塞囊状腺CK7/FOXA2阳性；DAPI核染\ndisplay_section_or_ROI: \n{}\ninterpretation_boundary: 图注z/y原值仅作为展示光学切面参数，不自动等同采集z间距或成像深度；Fig.7为示意图。",
+      "Text17_Reference": [
+        "Structured evidence: full/A142/evidence/record.json#/figures/8; SHA-256: 62aa5a6bde6b63bec09a8c369b45f9ed7acec1c10e54ffe753c203a364b0fddb; DOI: https://doi.org/10.1016/j.isci.2021.102258"
+      ]
+    },
+    {
+      "Text18": "figures:\nfigure_id: Fig.S3\nsource_id: S2\nsource_locator: pp4–5\npanels_read: A–B\nactual_artwork_read: true\nsample_ids: \n  [1] E1\n  [2] E2\n  [3] E3\n  [4] E4\n  [5] E5-1\n  [6] E5-2\n  [7] E6\n  [8] E7\n  [9] E9\n  [10] E10\nprotocol_id: P04\nreadout_zh: 其余样本闭塞腺体；分期密度比较；图注激发波长冲突\ndisplay_section_or_ROI: \n  XY_z_um: 200\ninterpretation_boundary: 图注z/y原值仅作为展示光学切面参数，不自动等同采集z间距或成像深度；Fig.7为示意图。",
+      "Text18_Reference": [
+        "Structured evidence: full/A142/evidence/record.json#/figures/9; SHA-256: 62aa5a6bde6b63bec09a8c369b45f9ed7acec1c10e54ffe753c203a364b0fddb; DOI: https://doi.org/10.1016/j.isci.2021.102258"
+      ]
+    },
+    {
+      "Text19": "figures:\nfigure_id: Fig.S4\nsource_id: S2\nsource_locator: pp6–7\npanels_read: A–C\nactual_artwork_read: true\nsample_ids: \n  [1] E1\n  [2] E2\n  [3] E3\n  [4] E4\n  [5] E5-1\n  [6] E5-2\n  [7] E6\n  [8] E7\n  [9] E9\n  [10] E10\nprotocol_id: P05\nreadout_zh: 其余样本分支图；分期分支与共享分支比例比较；E6图片存在但统计NA\ndisplay_section_or_ROI: \n  XY_z_um: 100\ninterpretation_boundary: 图注z/y原值仅作为展示光学切面参数，不自动等同采集z间距或成像深度；Fig.7为示意图。",
+      "Text19_Reference": [
+        "Structured evidence: full/A142/evidence/record.json#/figures/10; SHA-256: 62aa5a6bde6b63bec09a8c369b45f9ed7acec1c10e54ffe753c203a364b0fddb; DOI: https://doi.org/10.1016/j.isci.2021.102258"
+      ]
+    },
+    {
+      "Text20": "figures:\nfigure_id: Fig.S5\nsource_id: S2\nsource_locator: p8\npanels_read: A–F\nactual_artwork_read: true\nsample_ids: \n  [1] E1\nprotocol_id: P06\nreadout_zh: 手工底面与距离变换分层完整图示\ndisplay_section_or_ROI: \n  layer_thickness_um: 150\ninterpretation_boundary: 图注z/y原值仅作为展示光学切面参数，不自动等同采集z间距或成像深度；Fig.7为示意图。",
+      "Text20_Reference": [
+        "Structured evidence: full/A142/evidence/record.json#/figures/11; SHA-256: 62aa5a6bde6b63bec09a8c369b45f9ed7acec1c10e54ffe753c203a364b0fddb; DOI: https://doi.org/10.1016/j.isci.2021.102258"
+      ]
+    },
+    {
+      "Text21": "figures:\nfigure_id: Fig.S6\nsource_id: S2\nsource_locator: pp9–10\npanels_read: all eight rows\nactual_artwork_read: true\nsample_ids: \n  [1] E11-2\n  [2] E12\n  [3] E13-1\n  [4] E13-2\n  [5] E14\n  [6] E15-1\n  [7] E15-2\n  [8] E16\nprotocol_id: P06\nreadout_zh: 另外8个经期组织块，H&E/XY/上下2层均可见基底网络\ndisplay_section_or_ROI: \n  E11-2_XY_z_um: 4.3\n  E12_XY_z_um: 5.6\n  E13_to_E16_XY_z_um: 5.3\n  XZ_view_y_um: 150\ninterpretation_boundary: 图注z/y原值仅作为展示光学切面参数，不自动等同采集z间距或成像深度；Fig.7为示意图。",
+      "Text21_Reference": [
+        "Structured evidence: full/A142/evidence/record.json#/figures/12; SHA-256: 62aa5a6bde6b63bec09a8c369b45f9ed7acec1c10e54ffe753c203a364b0fddb; DOI: https://doi.org/10.1016/j.isci.2021.102258"
+      ]
+    },
+    {
+      "Text22": "figures:\nfigure_id: Fig.S7\nsource_id: S2\nsource_locator: p11\npanels_read: A–B\nactual_artwork_read: true\nsample_ids: \n  [1] A2\n  [2] A3\nprotocol_id: P07\nreadout_zh: 腺肌病H&E、XY与3D；A2无原位内膜；A3散在残留病灶\ndisplay_section_or_ROI: \n  A2_XY_z_um: 9.2\n  A3_XY_z_um: 15.7\ninterpretation_boundary: 图注z/y原值仅作为展示光学切面参数，不自动等同采集z间距或成像深度；Fig.7为示意图。",
+      "Text22_Reference": [
+        "Structured evidence: full/A142/evidence/record.json#/figures/13; SHA-256: 62aa5a6bde6b63bec09a8c369b45f9ed7acec1c10e54ffe753c203a364b0fddb; DOI: https://doi.org/10.1016/j.isci.2021.102258"
+      ]
+    },
+    {
+      "Text23": "figures:\nfigure_id: Fig.S8\nsource_id: S2\nsource_locator: p12\npanels_read: A–E\nactual_artwork_read: true\nsample_ids: \n  [1] A4\nprotocol_id: P07\nreadout_zh: FFPE CK7/CD31验证与全组织三色；部分异位腺体邻近大血管\ndisplay_section_or_ROI: \n{}\ninterpretation_boundary: 图注z/y原值仅作为展示光学切面参数，不自动等同采集z间距或成像深度；Fig.7为示意图。",
+      "Text23_Reference": [
+        "Structured evidence: full/A142/evidence/record.json#/figures/14; SHA-256: 62aa5a6bde6b63bec09a8c369b45f9ed7acec1c10e54ffe753c203a364b0fddb; DOI: https://doi.org/10.1016/j.isci.2021.102258"
+      ]
+    },
+    {
+      "Text24": "figures:\nfigure_id: Graphical abstract\nsource_id: GA\nsource_locator: S1:abstract[@abstract-type=\"graphical\"]/fig[@id=\"undfig1\"]\npanels_read: all\nactual_artwork_read: true\nsample_ids: \n[]\nsample_identity: not_reported\nprotocol_id: null (as recorded in source)\nreadout_zh: 三维内膜概览将上升腺体以红/青伪彩区分，底部黄色网络及放大图标明基底层rhizome；无额外定量结果。\ndisplay_section_or_ROI: \n{}\ninterpretation_boundary: 样本身份未在图形摘要明确；不猜为E1/E8。原图仅内部核查，不放交付包。",
+      "Text24_Reference": [
+        "Structured evidence: full/A142/evidence/record.json#/figures/15; SHA-256: 62aa5a6bde6b63bec09a8c369b45f9ed7acec1c10e54ffe753c203a364b0fddb; DOI: https://doi.org/10.1016/j.isci.2021.102258"
+      ]
+    },
+    {
+      "Text25": "results:\nresult_id: R01\nresult_class: clearing_performance_qualitative\nobservation_zh: 作者报告20份无内膜病变组织全部获得明显透明；E2透明前后照片实见组织背景网格更易透见\nsample_ids: \n  [1] E1\n  [2] E2\n  [3] E3\n  [4] E4\n  [5] E5-1\n  [6] E5-2\n  [7] E6\n  [8] E7\n  [9] E8\n  [10] E9\n  [11] E10\n  [12] E11-1\n  [13] E11-2\n  [14] E12\n  [15] E13-1\n  [16] E13-2\n  [17] E14\n  [18] E15-1\n  [19] E15-2\n  [20] E16\nprotocol_ids: \n  [1] P01\nsource_locators: \n  [1]     source_id: S1\n    locator: /article/body/sec[2]/sec[1]/p\n  [2]     source_id: F1\n    locator: C\nquantitative_values: \n  cleared_samples: 20\n  total_samples: 20\n  donors: 16\nlimits: 没有透过率、散射系数、对照清透法、失败率置信区间或系统变形测量；不能据此做定量性能排名。",
+      "Text25_Reference": [
+        "Structured evidence: full/A142/evidence/record.json#/results/0; SHA-256: 62aa5a6bde6b63bec09a8c369b45f9ed7acec1c10e54ffe753c203a364b0fddb; DOI: https://doi.org/10.1016/j.isci.2021.102258"
+      ]
+    },
+    {
+      "Text26": "results:\nresult_id: R02\nresult_class: labeling_and_imaging_demonstration\nobservation_zh: CK7可显现腔和腺上皮；E7高倍图支持作者的单细胞可视化主张；增殖/分泌期典型形态保留\nsample_ids: \n  [1] E1\n  [2] E2\n  [3] E3\n  [4] E4\n  [5] E5-1\n  [6] E5-2\n  [7] E6\n  [8] E7\n  [9] E8\n  [10] E9\n  [11] E10\n  [12] E11-1\n  [13] E11-2\n  [14] E12\n  [15] E13-1\n  [16] E13-2\n  [17] E14\n  [18] E15-1\n  [19] E15-2\n  [20] E16\nprotocol_ids: \n  [1] P01\n  [2] P03\nsource_locators: \n  [1]     source_id: S1\n    locator: /article/body/sec[2]/sec[1]/p\n  [2]     source_id: F1\n    locator: D–F\n  [3]     source_id: S2\n    locator: p2 Fig.S1\nquantitative_values: null (as recorded in source)\nlimits: 体素采样不是实测空间分辨率；无染色均匀性、保真度、SNR或保存期限定量。",
+      "Text26_Reference": [
+        "Structured evidence: full/A142/evidence/record.json#/results/1; SHA-256: 62aa5a6bde6b63bec09a8c369b45f9ed7acec1c10e54ffe753c203a364b0fddb; DOI: https://doi.org/10.1016/j.isci.2021.102258"
+      ]
+    },
+    {
+      "Text27": "results:\nresult_id: R03\nresult_class: morphology\nobservation_zh: 增殖期及分泌期所有样本可见从底部升起却不连通腔上皮的闭塞腺体；E8 FFPE中FOXA2阳性辅助确认腺上皮身份\nsample_ids: \n  [1] E1\n  [2] E2\n  [3] E3\n  [4] E4\n  [5] E5-1\n  [6] E5-2\n  [7] E6\n  [8] E7\n  [9] E8\n  [10] E9\n  [11] E10\nprotocol_ids: \n  [1] P02\n  [2] P03\n  [3] P04\nsource_locators: \n  [1]     source_id: S1\n    locator: /article/body/sec[2]/sec[2]/p[1]\n  [2]     source_id: F2\n    locator: A–B\n  [3]     source_id: S2\n    locator: p3 Fig.S2; pp4–5 Fig.S3\nquantitative_values: \n  donors: 10\n  tissue_blocks: 11\nlimits: 这是固定组织三维形态，不是实时分泌/堵塞机制实验。",
+      "Text27_Reference": [
+        "Structured evidence: full/A142/evidence/record.json#/results/2; SHA-256: 62aa5a6bde6b63bec09a8c369b45f9ed7acec1c10e54ffe753c203a364b0fddb; DOI: https://doi.org/10.1016/j.isci.2021.102258"
+      ]
+    },
+    {
+      "Text28": "results:\nresult_id: R04\nresult_class: morphometry\nobservation_zh: 闭塞腺体每XZ mm²平均2.2；按5随机区域/组织块计数，E5合并为供体均值\nsample_ids: \n  [1] E1\n  [2] E2\n  [3] E3\n  [4] E4\n  [5] E5-1\n  [6] E5-2\n  [7] E6\n  [8] E7\n  [9] E8\n  [10] E9\n  [11] E10\nprotocol_ids: \n  [1] P04\nsource_locators: \n  [1]     source_id: S1\n    locator: /article/body/sec[2]/sec[2]/p[1]\n  [2]     source_id: S2\n    locator: p13 Table S1\nquantitative_values: \n  mean_per_mm2: 2.2\n  95CI: \n    [1] 1.3\n    [2] 3.1\n  donor_rows: 10\n  replicate_unit: 区域嵌套于组织块/供体\nlimits: 密度是XZ面积分母，不是每体积计数。",
+      "Text28_Reference": [
+        "Structured evidence: full/A142/evidence/record.json#/results/3; SHA-256: 62aa5a6bde6b63bec09a8c369b45f9ed7acec1c10e54ffe753c203a364b0fddb; DOI: https://doi.org/10.1016/j.isci.2021.102258"
+      ]
+    },
+    {
+      "Text29": "results:\nresult_id: R05\nresult_class: association_not_significant\nobservation_zh: 年龄与闭塞腺体密度正趋势但未达P<0.05；两期密度差未显著\nsample_ids: \n  [1] E1\n  [2] E2\n  [3] E3\n  [4] E4\n  [5] E5-1\n  [6] E5-2\n  [7] E6\n  [8] E7\n  [9] E8\n  [10] E9\n  [11] E10\nprotocol_ids: \n  [1] P04\nsource_locators: \n  [1]     source_id: F2\n    locator: C\n  [2]     source_id: S2\n    locator: p4 Fig.S3B\nquantitative_values: \n  age_spearman_rho: 0.57\n  age_P: 0.09\n  phase_t_test_P: 0.15\nlimits: P=0.09不能写显著相关。",
+      "Text29_Reference": [
+        "Structured evidence: full/A142/evidence/record.json#/results/4; SHA-256: 62aa5a6bde6b63bec09a8c369b45f9ed7acec1c10e54ffe753c203a364b0fddb; DOI: https://doi.org/10.1016/j.isci.2021.102258"
+      ]
+    },
+    {
+      "Text30": "results:\nresult_id: R06\nresult_class: morphometry\nobservation_zh: 闭塞腺体顶点从基底到表面均有分布；分泌期闭塞腺体体积较增殖期大\nsample_ids: \n  [1] E1\n  [2] E2\n  [3] E3\n  [4] E4\n  [5] E5-1\n  [6] E5-2\n  [7] E6\n  [8] E7\n  [9] E8\n  [10] E9\n  [11] E10\nprotocol_ids: \n  [1] P04\nsource_locators: \n  [1]     source_id: F2\n    locator: D–E\n  [2]     source_id: S1\n    locator: /article/body/sec[2]/sec[2]/p[1]\nquantitative_values: \n  volume_comparison_P: <0.01\n  volume_plot_unit: mm^3\n  endometrium_thickness_unit: mm\nlimits: 逐腺体体积、样本量和精确厚度未列表；图形读数不转写成精确原始数据。",
+      "Text30_Reference": [
+        "Structured evidence: full/A142/evidence/record.json#/results/5; SHA-256: 62aa5a6bde6b63bec09a8c369b45f9ed7acec1c10e54ffe753c203a364b0fddb; DOI: https://doi.org/10.1016/j.isci.2021.102258"
+      ]
+    },
+    {
+      "Text31": "results:\nresult_id: R07\nresult_class: morphometry\nobservation_zh: 分支腺体平均比例68±20%，总计69/100条；其中下1/3独有52条、上下均有10条，即62/69涉及下1/3；非分支31/100条，原图报告均值32%±20%\nsample_ids: \n  [1] E1\n  [2] E2\n  [3] E3\n  [4] E4\n  [5] E5-1\n  [6] E5-2\n  [7] E7\n  [8] E8\n  [9] E9\n  [10] E10\nprotocol_ids: \n  [1] P05\nsource_locators: \n  [1]     source_id: F3\n    locator: B\n  [2]     source_id: S2\n    locator: p14 Table S2\nquantitative_values: \n  reported_mean_percent: 68\n  pooled_numerator: 69\n  pooled_denominator: 100\n  upper_only: 7\n  lower_only: 52\n  both: 10\n  involving_lower_percent_reported: 90\n  donors: 9\n  tissue_blocks: 10\n  nonbranched: \n    pooled_numerator: 31\n    pooled_denominator: 100\n    reported_mean_percent: 32\n    reported_plus_minus_percent: 20\n    dispersion_type_explicitly_defined: false\n    source_locator: F3:Figure3B(a)\n    boundary: 非分支腺体类别；不是讨论32%共享rhizome的解释或勘误\n  reported_plus_minus_percent: 20\n  dispersion_type_explicitly_defined: false\n  dispersion_note: Figure3及相关正文未明定±类型；仅Figure2D图注明示SD，不能移用。\nlimits: 68%为按表内供体比例均值；合并比例是69%，两者不冲突。 原文±未定义类型；独立重算样本SD与四舍五入值吻合，仅列为派生检查。",
+      "Text31_Reference": [
+        "Structured evidence: full/A142/evidence/record.json#/results/6; SHA-256: 62aa5a6bde6b63bec09a8c369b45f9ed7acec1c10e54ffe753c203a364b0fddb; DOI: https://doi.org/10.1016/j.isci.2021.102258"
+      ]
+    },
+    {
+      "Text32": "results:\nresult_id: R08\nresult_class: morphometry\nobservation_zh: 共享分支腺体平均37±11%，总计37/100条；其中下1/3独有30条、上下均有2条，即32/37涉及下1/3\nsample_ids: \n  [1] E1\n  [2] E2\n  [3] E3\n  [4] E4\n  [5] E5-1\n  [6] E5-2\n  [7] E7\n  [8] E8\n  [9] E9\n  [10] E10\nprotocol_ids: \n  [1] P05\nsource_locators: \n  [1]     source_id: F3\n    locator: C–D\n  [2]     source_id: S2\n    locator: p15 Table S3\n  [3]     source_id: S1\n    locator: /article/body/sec[2]/sec[2]/p[2]\nquantitative_values: \n  reported_mean_percent: 37\n  pooled_numerator: 37\n  pooled_denominator: 100\n  upper_only: 5\n  lower_only: 30\n  both: 2\n  involving_lower_percent_reported: 86\n  reported_plus_minus_percent: 11\n  dispersion_type_explicitly_defined: false\n  dispersion_note: Figure3及相关正文未明定±类型；仅Figure2D图注明示SD，不能移用。\nlimits: 讨论另称32%共享rhizome，源内冲突C01；不静默更正。 原文±未定义类型；不把11%标作直接报告SD。",
+      "Text32_Reference": [
+        "Structured evidence: full/A142/evidence/record.json#/results/7; SHA-256: 62aa5a6bde6b63bec09a8c369b45f9ed7acec1c10e54ffe753c203a364b0fddb; DOI: https://doi.org/10.1016/j.isci.2021.102258"
+      ]
+    },
+    {
+      "Text33": "results:\nresult_id: R09\nresult_class: association_not_significant\nobservation_zh: 年龄与分支比例正趋势未显著；年龄与共享分支比例关联很弱\nsample_ids: \n  [1] E1\n  [2] E2\n  [3] E3\n  [4] E4\n  [5] E5-1\n  [6] E5-2\n  [7] E7\n  [8] E8\n  [9] E9\n  [10] E10\nprotocol_ids: \n  [1] P05\nsource_locators: \n  [1]     source_id: F3\n    locator: E\nquantitative_values: \n  branched_spearman_rho: 0.62\n  branched_P: 0.08\n  shared_spearman_rho: 0.05\n  shared_P: 0.89\nlimits: 不是年龄因果效应。",
+      "Text33_Reference": [
+        "Structured evidence: full/A142/evidence/record.json#/results/8; SHA-256: 62aa5a6bde6b63bec09a8c369b45f9ed7acec1c10e54ffe753c203a364b0fddb; DOI: https://doi.org/10.1016/j.isci.2021.102258"
+      ]
+    },
+    {
+      "Text34": "results:\nresult_id: R10\nresult_class: phase_comparison\nobservation_zh: 分泌期分支腺体比例较高；共享分支的两期差异未显著\nsample_ids: \n  [1] E1\n  [2] E2\n  [3] E3\n  [4] E4\n  [5] E5-1\n  [6] E5-2\n  [7] E7\n  [8] E8\n  [9] E9\n  [10] E10\nprotocol_ids: \n  [1] P05\nsource_locators: \n  [1]     source_id: S2\n    locator: p6 Fig.S4B–C\nquantitative_values: \n  branched_phase_P: <0.01\n  shared_phase_P: 0.07\nlimits: 分析单位为供体合并行，E5两块计数先合并；E6统计缺失不作零。",
+      "Text34_Reference": [
+        "Structured evidence: full/A142/evidence/record.json#/results/9; SHA-256: 62aa5a6bde6b63bec09a8c369b45f9ed7acec1c10e54ffe753c203a364b0fddb; DOI: https://doi.org/10.1016/j.isci.2021.102258"
+      ]
+    },
+    {
+      "Text35": "results:\nresult_id: R11\nresult_class: morphology\nobservation_zh: E1等距层显示基底1–300 μm内的横向腺体网络，上部层呈柱状腺体断面\nsample_ids: \n  [1] E1\nprotocol_ids: \n  [1] P06\nsource_locators: \n  [1]     source_id: F4\n    locator: A–B\n  [2]     source_id: S2\n    locator: p8 Fig.S5\nquantitative_values: \n  lower_layers_um: \n    [1]       [1] 1\n      [2] 150\n    [2]       [1] 151\n      [2] 300\n  upper_layers_um: \n    [1]       [1] 501\n      [2] 650\n    [2]       [1] 1001\n      [2] 1150\n    [3]       [1] 1501\n      [2] 1650\nlimits: 展示性分层，不是全体供体层间量化。",
+      "Text35_Reference": [
+        "Structured evidence: full/A142/evidence/record.json#/results/10; SHA-256: 62aa5a6bde6b63bec09a8c369b45f9ed7acec1c10e54ffe753c203a364b0fddb; DOI: https://doi.org/10.1016/j.isci.2021.102258"
+      ]
+    },
+    {
+      "Text36": "results:\nresult_id: R12\nresult_class: morphology\nobservation_zh: 经期第2–4天9个组织块中，内膜底部横向腺体网络仍存在，支持其位于基底层\nsample_ids: \n  [1] E11-1\n  [2] E11-2\n  [3] E12\n  [4] E13-1\n  [5] E13-2\n  [6] E14\n  [7] E15-1\n  [8] E15-2\n  [9] E16\nprotocol_ids: \n  [1] P06\nsource_locators: \n  [1]     source_id: S1\n    locator: /article/body/sec[2]/sec[4]/p\n  [2]     source_id: F5\n    locator: A–D\n  [3]     source_id: S2\n    locator: pp9–10 Fig.S6\nquantitative_values: \n  donors: 6\n  tissue_blocks: 9\n  cycle_days: \n    [1] 2\n    [2] 4\n  representative_E11_1_day: 2\nlimits: 不是同一供体跨周期纵向追踪；未直接验证其干细胞/再生功能。",
+      "Text36_Reference": [
+        "Structured evidence: full/A142/evidence/record.json#/results/11; SHA-256: 62aa5a6bde6b63bec09a8c369b45f9ed7acec1c10e54ffe753c203a364b0fddb; DOI: https://doi.org/10.1016/j.isci.2021.102258"
+      ]
+    },
+    {
+      "Text37": "results:\nresult_id: R13\nresult_class: clearing_and_imaging_demonstration\nobservation_zh: 4名腺肌病供体的组织获得透明与CK7三维显示\nsample_ids: \n  [1] A1\n  [2] A2\n  [3] A3\n  [4] A4\nprotocol_ids: \n  [1] P01\n  [2] P03\nsource_locators: \n  [1]     source_id: S1\n    locator: /article/body/sec[2]/sec[5]/p\n  [2]     source_id: F6\n    locator: A–D\n  [3]     source_id: S2\n    locator: pp11–12 Fig.S7/S8\nquantitative_values: \n  donors: 4\nlimits: 只支持本组标本可用性，不给出临床诊断性能。",
+      "Text37_Reference": [
+        "Structured evidence: full/A142/evidence/record.json#/results/12; SHA-256: 62aa5a6bde6b63bec09a8c369b45f9ed7acec1c10e54ffe753c203a364b0fddb; DOI: https://doi.org/10.1016/j.isci.2021.102258"
+      ]
+    },
+    {
+      "Text38": "results:\nresult_id: R14\nresult_class: morphology\nobservation_zh: 异位腺体以细枝构成蚁穴样网络；A1/A3显示原位内膜腺体与肌层内病灶连续\nsample_ids: \n  [1] A1\n  [2] A2\n  [3] A3\n  [4] A4\nprotocol_ids: \n  [1] P03\n  [2] P07\nsource_locators: \n  [1]     source_id: S1\n    locator: /article/body/sec[2]/sec[5]/p\n  [2]     source_id: F6\n    locator: B–D\n  [3]     source_id: S2\n    locator: p11 Fig.S7\nquantitative_values: \n  direct_continuity_subjects: \n    [1] A1\n    [2] A3\n  no_eutopic_endometrium_subject: A2\nlimits: 固定截面支持空间连续/侵入形态，不能直接观察迁移方向或时序；A2不含原位内膜，不能判断该连续性。",
+      "Text38_Reference": [
+        "Structured evidence: full/A142/evidence/record.json#/results/13; SHA-256: 62aa5a6bde6b63bec09a8c369b45f9ed7acec1c10e54ffe753c203a364b0fddb; DOI: https://doi.org/10.1016/j.isci.2021.102258"
+      ]
+    },
+    {
+      "Text39": "results:\nresult_id: R15\nresult_class: morphometry\nobservation_zh: 异位内膜体积以不含正常内膜的肌层体积归一化；供体值分别报告\nsample_ids: \n  [1] A1\n  [2] A2\n  [3] A3\n  [4] A4\nprotocol_ids: \n  [1] P07\nsource_locators: \n  [1]     source_id: S1\n    locator: /article/body/sec[2]/sec[5]/p\n  [2]     source_id: S2\n    locator: pp23–24 3D measurement of adenomyotic lesions\n  [3]     source_id: S1\n    locator: /article/body/sec[2]/sec[5]/p[@id=\"p0100\"]\nquantitative_values: \n  unit: um^3/mm^3\n  A1: 19000000.0\n  A2: 10000000.0\n  A4: 5000000.0\n  A3: 1500000.0\nlimits: A1/A2/A4在取材前1年未接受激素治疗，A3当时接受GnRH agonist；具体药名、剂量和疗程未报。A3为单个接受GnRH治疗病例，跨人横断面比较不能作为疗效或治疗因果结论；原文称endometrial tissue，分割实际基于CK7阳性上皮信号。",
+      "Text39_Reference": [
+        "Structured evidence: full/A142/evidence/record.json#/results/14; SHA-256: 62aa5a6bde6b63bec09a8c369b45f9ed7acec1c10e54ffe753c203a364b0fddb; DOI: https://doi.org/10.1016/j.isci.2021.102258"
+      ]
+    },
+    {
+      "Text40": "results:\nresult_id: R16\nresult_class: multicolor_morphology\nobservation_zh: A4部分异位腺体沿大血管路线延伸；CK7/CD31双标展示空间邻近\nsample_ids: \n  [1] A4\nprotocol_ids: \n  [1] P01\n  [2] P02\n  [3] P03\nsource_locators: \n  [1]     source_id: S2\n    locator: p12 Fig.S8\n  [2]     source_id: S1\n    locator: /article/body/sec[2]/sec[5]/p\n  [3]     source_id: V6\n    locator: sampled frames\nquantitative_values: \n  donors: 1\nlimits: CD31通道与腺体邻近不能证明血管引导或机制；不是共表达结论。",
+      "Text40_Reference": [
+        "Structured evidence: full/A142/evidence/record.json#/results/15; SHA-256: 62aa5a6bde6b63bec09a8c369b45f9ed7acec1c10e54ffe753c203a364b0fddb; DOI: https://doi.org/10.1016/j.isci.2021.102258"
+      ]
+    },
+    {
+      "Text41": "results:\nresult_id: R17\nresult_class: author_interpretation\nobservation_zh: 作者将基底网络称为rhizome，提出可能有利于再生及克隆扩展\nsample_ids: \n  [1] E1\n  [2] E11-1\n  [3] E11-2\n  [4] E12\n  [5] E13-1\n  [6] E13-2\n  [7] E14\n  [8] E15-1\n  [9] E15-2\n  [10] E16\nprotocol_ids: \n  [1] P06\nsource_locators: \n  [1]     source_id: S1\n    locator: /article/body/sec[3]/p[5]\n  [2]     source_id: F7\n    locator: B\n  [3]     source_id: S1\n    locator: /article/body/sec[3]/p[6][@id=\"p0140\"]\n    supports: 克隆扩展假说；前一段p0135支持再生/干细胞解释\nquantitative_values: null (as recorded in source)\nlimits: 功能/干细胞/克隆解释属于讨论假说；本研究未做谱系追踪、基因组验证或再生实验。",
+      "Text41_Reference": [
+        "Structured evidence: full/A142/evidence/record.json#/results/16; SHA-256: 62aa5a6bde6b63bec09a8c369b45f9ed7acec1c10e54ffe753c203a364b0fddb; DOI: https://doi.org/10.1016/j.isci.2021.102258"
+      ]
+    },
+    {
+      "Text42": "results:\nresult_id: R18\nresult_class: author_claim_with_limit\nobservation_zh: 讨论称清透深度可达several centimeters，并认为残存自发荧光利于解剖观察\nsample_ids: \n  [1] E1\n  [2] E2\n  [3] E3\n  [4] E4\n  [5] E5-1\n  [6] E5-2\n  [7] E6\n  [8] E7\n  [9] E8\n  [10] E9\n  [11] E10\n  [12] E11-1\n  [13] E11-2\n  [14] E12\n  [15] E13-1\n  [16] E13-2\n  [17] E14\n  [18] E15-1\n  [19] E15-2\n  [20] E16\n  [21] A1\n  [22] A2\n  [23] A3\n  [24] A4\nprotocol_ids: \n  [1] P01\nsource_locators: \n  [1]     source_id: S1\n    locator: /article/body/sec[3]/p[3]\nquantitative_values: null (as recorded in source)\nlimits: 未提供独立深度-信号测量；样块尺寸最大轴18.6 mm，不能把文字主张改成经验证几厘米成像深度，也不能称整子宫清透。",
+      "Text42_Reference": [
+        "Structured evidence: full/A142/evidence/record.json#/results/17; SHA-256: 62aa5a6bde6b63bec09a8c369b45f9ed7acec1c10e54ffe753c203a364b0fddb; DOI: https://doi.org/10.1016/j.isci.2021.102258"
+      ]
+    },
+    {
+      "Text43": "supplemental_table_rows:\ntable_id: S1\ndonor_id: E1\nmetric: occluded_gland_density\nvalue: 0.8\nunit: glands/mm^2_XZ\nglands_positive: null (as recorded in source)\nglands_tested: null (as recorded in source)\nupper_only: null (as recorded in source)\nlower_only: null (as recorded in source)\nboth: null (as recorded in source)\naggregation: 5个随机1 mm²区域均值\nsource_locator: S2:p13 Table S1",
+      "Text43_Reference": [
+        "Structured evidence: full/A142/evidence/record.json#/supplemental_table_rows/0; SHA-256: 62aa5a6bde6b63bec09a8c369b45f9ed7acec1c10e54ffe753c203a364b0fddb; DOI: https://doi.org/10.1016/j.isci.2021.102258"
+      ]
+    },
+    {
+      "Text44": "supplemental_table_rows:\ntable_id: S1\ndonor_id: E2\nmetric: occluded_gland_density\nvalue: 1.2\nunit: glands/mm^2_XZ\nglands_positive: null (as recorded in source)\nglands_tested: null (as recorded in source)\nupper_only: null (as recorded in source)\nlower_only: null (as recorded in source)\nboth: null (as recorded in source)\naggregation: 5个随机1 mm²区域均值\nsource_locator: S2:p13 Table S1",
+      "Text44_Reference": [
+        "Structured evidence: full/A142/evidence/record.json#/supplemental_table_rows/1; SHA-256: 62aa5a6bde6b63bec09a8c369b45f9ed7acec1c10e54ffe753c203a364b0fddb; DOI: https://doi.org/10.1016/j.isci.2021.102258"
+      ]
+    },
+    {
+      "Text45": "supplemental_table_rows:\ntable_id: S1\ndonor_id: E3\nmetric: occluded_gland_density\nvalue: 1.4\nunit: glands/mm^2_XZ\nglands_positive: null (as recorded in source)\nglands_tested: null (as recorded in source)\nupper_only: null (as recorded in source)\nlower_only: null (as recorded in source)\nboth: null (as recorded in source)\naggregation: 5个随机1 mm²区域均值\nsource_locator: S2:p13 Table S1",
+      "Text45_Reference": [
+        "Structured evidence: full/A142/evidence/record.json#/supplemental_table_rows/2; SHA-256: 62aa5a6bde6b63bec09a8c369b45f9ed7acec1c10e54ffe753c203a364b0fddb; DOI: https://doi.org/10.1016/j.isci.2021.102258"
+      ]
+    },
+    {
+      "Text46": "supplemental_table_rows:\ntable_id: S1\ndonor_id: E4\nmetric: occluded_gland_density\nvalue: 2.4\nunit: glands/mm^2_XZ\nglands_positive: null (as recorded in source)\nglands_tested: null (as recorded in source)\nupper_only: null (as recorded in source)\nlower_only: null (as recorded in source)\nboth: null (as recorded in source)\naggregation: 5个随机1 mm²区域均值\nsource_locator: S2:p13 Table S1",
+      "Text46_Reference": [
+        "Structured evidence: full/A142/evidence/record.json#/supplemental_table_rows/3; SHA-256: 62aa5a6bde6b63bec09a8c369b45f9ed7acec1c10e54ffe753c203a364b0fddb; DOI: https://doi.org/10.1016/j.isci.2021.102258"
+      ]
+    },
+    {
+      "Text47": "supplemental_table_rows:\ntable_id: S1\ndonor_id: E5\nmetric: occluded_gland_density\nvalue: 3.5\nunit: glands/mm^2_XZ\nglands_positive: null (as recorded in source)\nglands_tested: null (as recorded in source)\nupper_only: null (as recorded in source)\nlower_only: null (as recorded in source)\nboth: null (as recorded in source)\naggregation: E5-1和E5-2均值\nsource_locator: S2:p13 Table S1",
+      "Text47_Reference": [
+        "Structured evidence: full/A142/evidence/record.json#/supplemental_table_rows/4; SHA-256: 62aa5a6bde6b63bec09a8c369b45f9ed7acec1c10e54ffe753c203a364b0fddb; DOI: https://doi.org/10.1016/j.isci.2021.102258"
+      ]
+    },
+    {
+      "Text48": "supplemental_table_rows:\ntable_id: S1\ndonor_id: E6\nmetric: occluded_gland_density\nvalue: 1.6\nunit: glands/mm^2_XZ\nglands_positive: null (as recorded in source)\nglands_tested: null (as recorded in source)\nupper_only: null (as recorded in source)\nlower_only: null (as recorded in source)\nboth: null (as recorded in source)\naggregation: 5个随机1 mm²区域均值\nsource_locator: S2:p13 Table S1",
+      "Text48_Reference": [
+        "Structured evidence: full/A142/evidence/record.json#/supplemental_table_rows/5; SHA-256: 62aa5a6bde6b63bec09a8c369b45f9ed7acec1c10e54ffe753c203a364b0fddb; DOI: https://doi.org/10.1016/j.isci.2021.102258"
+      ]
+    },
+    {
+      "Text49": "supplemental_table_rows:\ntable_id: S1\ndonor_id: E7\nmetric: occluded_gland_density\nvalue: 1\nunit: glands/mm^2_XZ\nglands_positive: null (as recorded in source)\nglands_tested: null (as recorded in source)\nupper_only: null (as recorded in source)\nlower_only: null (as recorded in source)\nboth: null (as recorded in source)\naggregation: 5个随机1 mm²区域均值\nsource_locator: S2:p13 Table S1",
+      "Text49_Reference": [
+        "Structured evidence: full/A142/evidence/record.json#/supplemental_table_rows/6; SHA-256: 62aa5a6bde6b63bec09a8c369b45f9ed7acec1c10e54ffe753c203a364b0fddb; DOI: https://doi.org/10.1016/j.isci.2021.102258"
+      ]
+    },
+    {
+      "Text50": "supplemental_table_rows:\ntable_id: S1\ndonor_id: E8\nmetric: occluded_gland_density\nvalue: 5\nunit: glands/mm^2_XZ\nglands_positive: null (as recorded in source)\nglands_tested: null (as recorded in source)\nupper_only: null (as recorded in source)\nlower_only: null (as recorded in source)\nboth: null (as recorded in source)\naggregation: 5个随机1 mm²区域均值\nsource_locator: S2:p13 Table S1",
+      "Text50_Reference": [
+        "Structured evidence: full/A142/evidence/record.json#/supplemental_table_rows/7; SHA-256: 62aa5a6bde6b63bec09a8c369b45f9ed7acec1c10e54ffe753c203a364b0fddb; DOI: https://doi.org/10.1016/j.isci.2021.102258"
+      ]
+    },
+    {
+      "Text51": "supplemental_table_rows:\ntable_id: S1\ndonor_id: E9\nmetric: occluded_gland_density\nvalue: 2.8\nunit: glands/mm^2_XZ\nglands_positive: null (as recorded in source)\nglands_tested: null (as recorded in source)\nupper_only: null (as recorded in source)\nlower_only: null (as recorded in source)\nboth: null (as recorded in source)\naggregation: 5个随机1 mm²区域均值\nsource_locator: S2:p13 Table S1",
+      "Text51_Reference": [
+        "Structured evidence: full/A142/evidence/record.json#/supplemental_table_rows/8; SHA-256: 62aa5a6bde6b63bec09a8c369b45f9ed7acec1c10e54ffe753c203a364b0fddb; DOI: https://doi.org/10.1016/j.isci.2021.102258"
+      ]
+    },
+    {
+      "Text52": "supplemental_table_rows:\ntable_id: S1\ndonor_id: E10\nmetric: occluded_gland_density\nvalue: 2.2\nunit: glands/mm^2_XZ\nglands_positive: null (as recorded in source)\nglands_tested: null (as recorded in source)\nupper_only: null (as recorded in source)\nlower_only: null (as recorded in source)\nboth: null (as recorded in source)\naggregation: 5个随机1 mm²区域均值\nsource_locator: S2:p13 Table S1",
+      "Text52_Reference": [
+        "Structured evidence: full/A142/evidence/record.json#/supplemental_table_rows/9; SHA-256: 62aa5a6bde6b63bec09a8c369b45f9ed7acec1c10e54ffe753c203a364b0fddb; DOI: https://doi.org/10.1016/j.isci.2021.102258"
+      ]
+    },
+    {
+      "Text53": "supplemental_table_rows:\ntable_id: S2\ndonor_id: E1\nmetric: branched_glands\nvalue: 50.0\nunit: percent\nglands_positive: 5\nglands_tested: 10\nupper_only: 0\nlower_only: 5\nboth: 0\naggregation: 每样本随机10条腺体\nsource_locator: S2:p14 Table S2",
+      "Text53_Reference": [
+        "Structured evidence: full/A142/evidence/record.json#/supplemental_table_rows/10; SHA-256: 62aa5a6bde6b63bec09a8c369b45f9ed7acec1c10e54ffe753c203a364b0fddb; DOI: https://doi.org/10.1016/j.isci.2021.102258"
+      ]
+    },
+    {
+      "Text54": "supplemental_table_rows:\ntable_id: S2\ndonor_id: E2\nmetric: branched_glands\nvalue: 50.0\nunit: percent\nglands_positive: 5\nglands_tested: 10\nupper_only: 1\nlower_only: 2\nboth: 2\naggregation: 每样本随机10条腺体\nsource_locator: S2:p14 Table S2",
+      "Text54_Reference": [
+        "Structured evidence: full/A142/evidence/record.json#/supplemental_table_rows/11; SHA-256: 62aa5a6bde6b63bec09a8c369b45f9ed7acec1c10e54ffe753c203a364b0fddb; DOI: https://doi.org/10.1016/j.isci.2021.102258"
+      ]
+    },
+    {
+      "Text55": "supplemental_table_rows:\ntable_id: S2\ndonor_id: E3\nmetric: branched_glands\nvalue: 40.0\nunit: percent\nglands_positive: 4\nglands_tested: 10\nupper_only: 1\nlower_only: 3\nboth: 0\naggregation: 每样本随机10条腺体\nsource_locator: S2:p14 Table S2",
+      "Text55_Reference": [
+        "Structured evidence: full/A142/evidence/record.json#/supplemental_table_rows/12; SHA-256: 62aa5a6bde6b63bec09a8c369b45f9ed7acec1c10e54ffe753c203a364b0fddb; DOI: https://doi.org/10.1016/j.isci.2021.102258"
+      ]
+    },
+    {
+      "Text56": "supplemental_table_rows:\ntable_id: S2\ndonor_id: E4\nmetric: branched_glands\nvalue: 50.0\nunit: percent\nglands_positive: 5\nglands_tested: 10\nupper_only: 0\nlower_only: 5\nboth: 0\naggregation: 每样本随机10条腺体\nsource_locator: S2:p14 Table S2",
+      "Text56_Reference": [
+        "Structured evidence: full/A142/evidence/record.json#/supplemental_table_rows/13; SHA-256: 62aa5a6bde6b63bec09a8c369b45f9ed7acec1c10e54ffe753c203a364b0fddb; DOI: https://doi.org/10.1016/j.isci.2021.102258"
+      ]
+    },
+    {
+      "Text57": "supplemental_table_rows:\ntable_id: S2\ndonor_id: E5\nmetric: branched_glands\nvalue: 80.0\nunit: percent\nglands_positive: 16\nglands_tested: 20\nupper_only: 2\nlower_only: 8\nboth: 6\naggregation: E5-1和E5-2合计；不是取平均计数\nsource_locator: S2:p14 Table S2",
+      "Text57_Reference": [
+        "Structured evidence: full/A142/evidence/record.json#/supplemental_table_rows/14; SHA-256: 62aa5a6bde6b63bec09a8c369b45f9ed7acec1c10e54ffe753c203a364b0fddb; DOI: https://doi.org/10.1016/j.isci.2021.102258"
+      ]
+    },
+    {
+      "Text58": "supplemental_table_rows:\ntable_id: S2\ndonor_id: E6\nmetric: branched_glands\nvalue: null (as recorded in source)\nunit: percent\nglands_positive: null (as recorded in source)\nglands_tested: null (as recorded in source)\nupper_only: null (as recorded in source)\nlower_only: null (as recorded in source)\nboth: null (as recorded in source)\naggregation: E6原文NA：中心多数腺体局部截断，无法全形追踪\nsource_locator: S2:p14 Table S2",
+      "Text58_Reference": [
+        "Structured evidence: full/A142/evidence/record.json#/supplemental_table_rows/15; SHA-256: 62aa5a6bde6b63bec09a8c369b45f9ed7acec1c10e54ffe753c203a364b0fddb; DOI: https://doi.org/10.1016/j.isci.2021.102258"
+      ]
+    },
+    {
+      "Text59": "supplemental_table_rows:\ntable_id: S2\ndonor_id: E7\nmetric: branched_glands\nvalue: 80.0\nunit: percent\nglands_positive: 8\nglands_tested: 10\nupper_only: 0\nlower_only: 8\nboth: 0\naggregation: 每样本随机10条腺体\nsource_locator: S2:p14 Table S2",
+      "Text59_Reference": [
+        "Structured evidence: full/A142/evidence/record.json#/supplemental_table_rows/16; SHA-256: 62aa5a6bde6b63bec09a8c369b45f9ed7acec1c10e54ffe753c203a364b0fddb; DOI: https://doi.org/10.1016/j.isci.2021.102258"
+      ]
+    },
+    {
+      "Text60": "supplemental_table_rows:\ntable_id: S2\ndonor_id: E8\nmetric: branched_glands\nvalue: 90.0\nunit: percent\nglands_positive: 9\nglands_tested: 10\nupper_only: 3\nlower_only: 5\nboth: 1\naggregation: 每样本随机10条腺体\nsource_locator: S2:p14 Table S2",
+      "Text60_Reference": [
+        "Structured evidence: full/A142/evidence/record.json#/supplemental_table_rows/17; SHA-256: 62aa5a6bde6b63bec09a8c369b45f9ed7acec1c10e54ffe753c203a364b0fddb; DOI: https://doi.org/10.1016/j.isci.2021.102258"
+      ]
+    },
+    {
+      "Text61": "supplemental_table_rows:\ntable_id: S2\ndonor_id: E9\nmetric: branched_glands\nvalue: 80.0\nunit: percent\nglands_positive: 8\nglands_tested: 10\nupper_only: 0\nlower_only: 8\nboth: 0\naggregation: 每样本随机10条腺体\nsource_locator: S2:p14 Table S2",
+      "Text61_Reference": [
+        "Structured evidence: full/A142/evidence/record.json#/supplemental_table_rows/18; SHA-256: 62aa5a6bde6b63bec09a8c369b45f9ed7acec1c10e54ffe753c203a364b0fddb; DOI: https://doi.org/10.1016/j.isci.2021.102258"
+      ]
+    },
+    {
+      "Text62": "supplemental_table_rows:\ntable_id: S2\ndonor_id: E10\nmetric: branched_glands\nvalue: 90.0\nunit: percent\nglands_positive: 9\nglands_tested: 10\nupper_only: 0\nlower_only: 8\nboth: 1\naggregation: 每样本随机10条腺体\nsource_locator: S2:p14 Table S2",
+      "Text62_Reference": [
+        "Structured evidence: full/A142/evidence/record.json#/supplemental_table_rows/19; SHA-256: 62aa5a6bde6b63bec09a8c369b45f9ed7acec1c10e54ffe753c203a364b0fddb; DOI: https://doi.org/10.1016/j.isci.2021.102258"
+      ]
+    },
+    {
+      "Text63": "supplemental_table_rows:\ntable_id: S3\ndonor_id: E1\nmetric: glands_sharing_branches\nvalue: 30.0\nunit: percent\nglands_positive: 3\nglands_tested: 10\nupper_only: 0\nlower_only: 3\nboth: 0\naggregation: 每样本随机10条腺体\nsource_locator: S2:p15 Table S3",
+      "Text63_Reference": [
+        "Structured evidence: full/A142/evidence/record.json#/supplemental_table_rows/20; SHA-256: 62aa5a6bde6b63bec09a8c369b45f9ed7acec1c10e54ffe753c203a364b0fddb; DOI: https://doi.org/10.1016/j.isci.2021.102258"
+      ]
+    },
+    {
+      "Text64": "supplemental_table_rows:\ntable_id: S3\ndonor_id: E2\nmetric: glands_sharing_branches\nvalue: 40.0\nunit: percent\nglands_positive: 4\nglands_tested: 10\nupper_only: 1\nlower_only: 2\nboth: 1\naggregation: 每样本随机10条腺体\nsource_locator: S2:p15 Table S3",
+      "Text64_Reference": [
+        "Structured evidence: full/A142/evidence/record.json#/supplemental_table_rows/21; SHA-256: 62aa5a6bde6b63bec09a8c369b45f9ed7acec1c10e54ffe753c203a364b0fddb; DOI: https://doi.org/10.1016/j.isci.2021.102258"
+      ]
+    },
+    {
+      "Text65": "supplemental_table_rows:\ntable_id: S3\ndonor_id: E3\nmetric: glands_sharing_branches\nvalue: 30.0\nunit: percent\nglands_positive: 3\nglands_tested: 10\nupper_only: 1\nlower_only: 2\nboth: 0\naggregation: 每样本随机10条腺体\nsource_locator: S2:p15 Table S3",
+      "Text65_Reference": [
+        "Structured evidence: full/A142/evidence/record.json#/supplemental_table_rows/22; SHA-256: 62aa5a6bde6b63bec09a8c369b45f9ed7acec1c10e54ffe753c203a364b0fddb; DOI: https://doi.org/10.1016/j.isci.2021.102258"
+      ]
+    },
+    {
+      "Text66": "supplemental_table_rows:\ntable_id: S3\ndonor_id: E4\nmetric: glands_sharing_branches\nvalue: 20.0\nunit: percent\nglands_positive: 2\nglands_tested: 10\nupper_only: 0\nlower_only: 2\nboth: 0\naggregation: 每样本随机10条腺体\nsource_locator: S2:p15 Table S3",
+      "Text66_Reference": [
+        "Structured evidence: full/A142/evidence/record.json#/supplemental_table_rows/23; SHA-256: 62aa5a6bde6b63bec09a8c369b45f9ed7acec1c10e54ffe753c203a364b0fddb; DOI: https://doi.org/10.1016/j.isci.2021.102258"
+      ]
+    },
+    {
+      "Text67": "supplemental_table_rows:\ntable_id: S3\ndonor_id: E5\nmetric: glands_sharing_branches\nvalue: 35.0\nunit: percent\nglands_positive: 7\nglands_tested: 20\nupper_only: 2\nlower_only: 4\nboth: 1\naggregation: E5-1和E5-2合计；不是取平均计数\nsource_locator: S2:p15 Table S3",
+      "Text67_Reference": [
+        "Structured evidence: full/A142/evidence/record.json#/supplemental_table_rows/24; SHA-256: 62aa5a6bde6b63bec09a8c369b45f9ed7acec1c10e54ffe753c203a364b0fddb; DOI: https://doi.org/10.1016/j.isci.2021.102258"
+      ]
+    },
+    {
+      "Text68": "supplemental_table_rows:\ntable_id: S3\ndonor_id: E6\nmetric: glands_sharing_branches\nvalue: null (as recorded in source)\nunit: percent\nglands_positive: null (as recorded in source)\nglands_tested: null (as recorded in source)\nupper_only: null (as recorded in source)\nlower_only: null (as recorded in source)\nboth: null (as recorded in source)\naggregation: E6原文NA：中心多数腺体局部截断，无法全形追踪\nsource_locator: S2:p15 Table S3",
+      "Text68_Reference": [
+        "Structured evidence: full/A142/evidence/record.json#/supplemental_table_rows/25; SHA-256: 62aa5a6bde6b63bec09a8c369b45f9ed7acec1c10e54ffe753c203a364b0fddb; DOI: https://doi.org/10.1016/j.isci.2021.102258"
+      ]
+    },
+    {
+      "Text69": "supplemental_table_rows:\ntable_id: S3\ndonor_id: E7\nmetric: glands_sharing_branches\nvalue: 50.0\nunit: percent\nglands_positive: 5\nglands_tested: 10\nupper_only: 0\nlower_only: 5\nboth: 0\naggregation: 每样本随机10条腺体\nsource_locator: S2:p15 Table S3",
+      "Text69_Reference": [
+        "Structured evidence: full/A142/evidence/record.json#/supplemental_table_rows/26; SHA-256: 62aa5a6bde6b63bec09a8c369b45f9ed7acec1c10e54ffe753c203a364b0fddb; DOI: https://doi.org/10.1016/j.isci.2021.102258"
+      ]
+    },
+    {
+      "Text70": "supplemental_table_rows:\ntable_id: S3\ndonor_id: E8\nmetric: glands_sharing_branches\nvalue: 50.0\nunit: percent\nglands_positive: 5\nglands_tested: 10\nupper_only: 1\nlower_only: 4\nboth: 0\naggregation: 每样本随机10条腺体\nsource_locator: S2:p15 Table S3",
+      "Text70_Reference": [
+        "Structured evidence: full/A142/evidence/record.json#/supplemental_table_rows/27; SHA-256: 62aa5a6bde6b63bec09a8c369b45f9ed7acec1c10e54ffe753c203a364b0fddb; DOI: https://doi.org/10.1016/j.isci.2021.102258"
+      ]
+    },
+    {
+      "Text71": "supplemental_table_rows:\ntable_id: S3\ndonor_id: E9\nmetric: glands_sharing_branches\nvalue: 50.0\nunit: percent\nglands_positive: 5\nglands_tested: 10\nupper_only: 0\nlower_only: 5\nboth: 0\naggregation: 每样本随机10条腺体\nsource_locator: S2:p15 Table S3",
+      "Text71_Reference": [
+        "Structured evidence: full/A142/evidence/record.json#/supplemental_table_rows/28; SHA-256: 62aa5a6bde6b63bec09a8c369b45f9ed7acec1c10e54ffe753c203a364b0fddb; DOI: https://doi.org/10.1016/j.isci.2021.102258"
+      ]
+    },
+    {
+      "Text72": "supplemental_table_rows:\ntable_id: S3\ndonor_id: E10\nmetric: glands_sharing_branches\nvalue: 30.0\nunit: percent\nglands_positive: 3\nglands_tested: 10\nupper_only: 0\nlower_only: 3\nboth: 0\naggregation: 每样本随机10条腺体\nsource_locator: S2:p15 Table S3",
+      "Text72_Reference": [
+        "Structured evidence: full/A142/evidence/record.json#/supplemental_table_rows/29; SHA-256: 62aa5a6bde6b63bec09a8c369b45f9ed7acec1c10e54ffe753c203a364b0fddb; DOI: https://doi.org/10.1016/j.isci.2021.102258"
+      ]
+    },
+    {
+      "Text73": "statistics:\nreported_tests: \n  [1] t-test\n  [2] Spearman rank correlation\nsignificance_threshold_P: 0.05\nsoftware: R；版本未报\nboxplots: median/IQR，whiskers 1.5 IQR；不将图中未给精确值补成数据\nsource_locator: S2:p24 Statistical analyses; Figs2/3/S3/S4\nno_new_inferential_analysis: true\nderived_dispersion_crosscheck: \n  unit: percentage_points\n  unit_of_analysis: nine donor-level table rows; E5 aggregate\n  branch_mean: 67.77777777777777\n  branch_sample_SD: 19.86062547968831\n  shared_mean: 37.22222222222222\n  shared_sample_SD: 10.92906420717\n  interpretation: computed values round to reported ± magnitudes; explicit author label of Figure3 dispersion remains absent\n  evidence_class: derived_consistency_calculation_not_reported_dispersion_definition",
+      "Text73_Reference": [
+        "Structured evidence: full/A142/evidence/record.json#/statistics; SHA-256: 62aa5a6bde6b63bec09a8c369b45f9ed7acec1c10e54ffe753c203a364b0fddb; DOI: https://doi.org/10.1016/j.isci.2021.102258"
+      ]
+    }
+  ],
+  "Note": [
+    {
+      "Text1": "Paper A142; source coverage: full; source release status: candidate_pending_gates; source default_eligible: false. Read this study as a whole with its sample, experimental, measurement and limitation fields. All selected source files and mandatory support in the accompanying archive apply jointly. Import does not promote candidate status, resolve contradictions, or turn review citations into independent primary experiments. Application includes source-labelled protocols, comparisons and results; labels within each Text retain their actual role.",
+      "Text1_Reference": [
+        "DOI: https://doi.org/10.1016/j.isci.2021.102258",
+        "Evidence-layer structured paraphrase; not a verbatim quotation. Source release: https://github.com/404NotFound422/TOCAgentProject/tree/5e3a711befb3952a2e39f4d53fc9c9f1a7ac0d22/KnowledgeBase/evidence_expansion_20261019",
+        "Local source archive: ../literature_evidence/2026-11-11/source_release.zip; member: full/A142/version_selection.json"
+      ]
+    },
+    {
+      "Text2": "Selected version and mandatory composition:\npaper_id: A142\nstatus: full\nrelease_status: candidate_pending_gates\ndefault_eligible: false\nactive_scientific_files: \n  [1]     path: full/A142/evidence/record.json\n    sha256: 62aa5a6bde6b63bec09a8c369b45f9ed7acec1c10e54ffe753c203a364b0fddb\n    source_member: package/record.json\nrequired_supporting_files: \n  [1]     paper_id: A142\n    path: full/A142/support/package/MANIFEST.json\n    source_member: package/MANIFEST.json\n    accepted_original_sha256: a2369efba10bdf3338ebe4628af07f9f29ccc74fe145b6cbccb6762c07970cca\n    source_sha256: a2369efba10bdf3338ebe4628af07f9f29ccc74fe145b6cbccb6762c07970cca\n    baseline_delivered_sha256: a2369efba10bdf3338ebe4628af07f9f29ccc74fe145b6cbccb6762c07970cca\n    sha256: a2369efba10bdf3338ebe4628af07f9f29ccc74fe145b6cbccb6762c07970cca\n    bytes: 3357\n    role: mandatory_binding_manifest\n    transformed: false\n    baseline_delivery_member: 历史交付_1907/历史交付_1707/已验收论文/A142/package/MANIFEST.json\n  [2]     paper_id: A142\n    path: full/A142/support/package/coverage.csv\n    source_member: package/coverage.csv\n    accepted_original_sha256: 00a77ccb3eabc30790cc107dc491e321d2954a808a981fb9224b85ae37838a58\n    source_sha256: 00a77ccb3eabc30790cc107dc491e321d2954a808a981fb9224b85ae37838a58\n    baseline_delivered_sha256: 00a77ccb3eabc30790cc107dc491e321d2954a808a981fb9224b85ae37838a58\n    sha256: 00a77ccb3eabc30790cc107dc491e321d2954a808a981fb9224b85ae37838a58\n    bytes: 1096\n    role: mandatory_provenance_support\n    transformed: false\n    baseline_delivery_member: 历史交付_1907/历史交付_1707/已验收论文/A142/package/coverage.csv\n  [3]     paper_id: A142\n    path: full/A142/support/package/dispersion_recalculation.json\n    source_member: package/dispersion_recalculation.json\n    accepted_original_sha256: 6fa372ede41aef66a39b210bf4b61ce605de594ae7d56d5319d37966d5b14c31\n    source_sha256: 6fa372ede41aef66a39b210bf4b61ce605de594ae7d56d5319d37966d5b14c31\n    baseline_delivered_sha256: 6fa372ede41aef66a39b210bf4b61ce605de594ae7d56d5319d37966d5b14c31\n    sha256: 6fa372ede41aef66a39b210bf4b61ce605de594ae7d56d5319d37966d5b14c31\n    bytes: 2453\n    role: mandatory_scientific_review_companion\n    transformed: false\n    baseline_delivery_member: 历史交付_1907/历史交付_1707/已验收论文/A142/package/dispersion_recalculation.json\n  [4]     paper_id: A142\n    path: full/A142/support/package/donors.csv\n    source_member: package/donors.csv\n    accepted_original_sha256: bf06e99ac98d244d5e3a9733f73f61b91c8350717996d65821106882752624d9\n    source_sha256: bf06e99ac98d244d5e3a9733f73f61b91c8350717996d65821106882752624d9\n    baseline_delivered_sha256: bf06e99ac98d244d5e3a9733f73f61b91c8350717996d65821106882752624d9\n    sha256: bf06e99ac98d244d5e3a9733f73f61b91c8350717996d65821106882752624d9\n    bytes: 3177\n    role: mandatory_scientific_companion\n    transformed: false\n    baseline_delivery_member: 历史交付_1907/历史交付_1707/已验收论文/A142/package/donors.csv\n  [5]     paper_id: A142\n    path: full/A142/support/package/figures.csv\n    source_member: package/figures.csv\n    accepted_original_sha256: db904c4f92286b1410575c15def5733b51d5a55c3584c1506e843a5e0d2728fe\n    source_sha256: db904c4f92286b1410575c15def5733b51d5a55c3584c1506e843a5e0d2728fe\n    baseline_delivered_sha256: db904c4f92286b1410575c15def5733b51d5a55c3584c1506e843a5e0d2728fe\n    sha256: db904c4f92286b1410575c15def5733b51d5a55c3584c1506e843a5e0d2728fe\n    bytes: 5089\n    role: mandatory_scientific_companion\n    transformed: false\n    baseline_delivery_member: 历史交付_1907/历史交付_1707/已验收论文/A142/package/figures.csv\n  [6]     paper_id: A142\n    path: full/A142/support/package/markers.csv\n    source_member: package/markers.csv\n    accepted_original_sha256: 2c49cdc8ce49198a95aaf1481969a5d617accb21834b0f8ddd007746233158ed\n    source_sha256: 2c49cdc8ce49198a95aaf1481969a5d617accb21834b0f8ddd007746233158ed\n    baseline_delivered_sha256: 2c49cdc8ce49198a95aaf1481969a5d617accb21834b0f8ddd007746233158ed\n    sha256: 2c49cdc8ce49198a95aaf1481969a5d617accb21834b0f8ddd007746233158ed\n    bytes: 1630\n    role: mandatory_scientific_companion\n    transformed: false\n    baseline_delivery_member: 历史交付_1907/历史交付_1707/已验收论文/A142/package/markers.csv\n  [7]     paper_id: A142\n    path: full/A142/support/package/missing_fields.csv\n    source_member: package/missing_fields.csv\n    accepted_original_sha256: 24754852a543221adc7311e7e3a00008b18c52bdc13e9f3435d7c875146210b5\n    source_sha256: 24754852a543221adc7311e7e3a00008b18c52bdc13e9f3435d7c875146210b5\n    baseline_delivered_sha256: 24754852a543221adc7311e7e3a00008b18c52bdc13e9f3435d7c875146210b5\n    sha256: 24754852a543221adc7311e7e3a00008b18c52bdc13e9f3435d7c875146210b5\n    bytes: 1745\n    role: mandatory_scientific_companion\n    transformed: false\n    baseline_delivery_member: 历史交付_1907/历史交付_1707/已验收论文/A142/package/missing_fields.csv\n  [8]     paper_id: A142\n    path: full/A142/support/package/protocol_steps.csv\n    source_member: package/protocol_steps.csv\n    accepted_original_sha256: 8dd3612e3e5e6c642733bcbb1a94ff7fdad92c0ecab4976ec0d4cd5ae0da215c\n    source_sha256: 8dd3612e3e5e6c642733bcbb1a94ff7fdad92c0ecab4976ec0d4cd5ae0da215c\n    baseline_delivered_sha256: 8dd3612e3e5e6c642733bcbb1a94ff7fdad92c0ecab4976ec0d4cd5ae0da215c\n    sha256: 8dd3612e3e5e6c642733bcbb1a94ff7fdad92c0ecab4976ec0d4cd5ae0da215c\n    bytes: 16785\n    role: mandatory_scientific_companion\n    transformed: false\n    baseline_delivery_member: 历史交付_1907/历史交付_1707/已验收论文/A142/package/protocol_steps.csv\n  [9]     paper_id: A142\n    path: full/A142/support/package/repair_resolution.csv\n    source_member: package/repair_resolution.csv\n    accepted_original_sha256: b1a67584a54e5eb7e1c4602dff2e8d0440b0c9c5354a1fd9efd90ad836bf6bef\n    source_sha256: b1a67584a54e5eb7e1c4602dff2e8d0440b0c9c5354a1fd9efd90ad836bf6bef\n    baseline_delivered_sha256: b1a67584a54e5eb7e1c4602dff2e8d0440b0c9c5354a1fd9efd90ad836bf6bef\n    sha256: b1a67584a54e5eb7e1c4602dff2e8d0440b0c9c5354a1fd9efd90ad836bf6bef\n    bytes: 4210\n    role: mandatory_scientific_review_companion\n    transformed: false\n    baseline_delivery_member: 历史交付_1907/历史交付_1707/已验收论文/A142/package/repair_resolution.csv\n  [10]     paper_id: A142\n    path: full/A142/support/package/repair_resolution.json\n    source_member: package/repair_resolution.json\n    accepted_original_sha256: 7ca8ccfc8e50075784f3ad097700a0a63cc29256f038b5424e408607e7d25dff\n    source_sha256: 7ca8ccfc8e50075784f3ad097700a0a63cc29256f038b5424e408607e7d25dff\n    baseline_delivered_sha256: 7ca8ccfc8e50075784f3ad097700a0a63cc29256f038b5424e408607e7d25dff\n    sha256: 7ca8ccfc8e50075784f3ad097700a0a63cc29256f038b5424e408607e7d25dff\n    bytes: 6435\n    role: mandatory_scientific_review_companion\n    transformed: false\n    baseline_delivery_member: 历史交付_1907/历史交付_1707/已验收论文/A142/package/repair_resolution.json\n  [11]     paper_id: A142\n    path: full/A142/support/package/results.csv\n    source_member: package/results.csv\n    accepted_original_sha256: a134a808ea5c02f08a8dddabbdd996a9d3e953c34a5a00856684f9a347e3fec5\n    source_sha256: a134a808ea5c02f08a8dddabbdd996a9d3e953c34a5a00856684f9a347e3fec5\n    baseline_delivered_sha256: a134a808ea5c02f08a8dddabbdd996a9d3e953c34a5a00856684f9a347e3fec5\n    sha256: a134a808ea5c02f08a8dddabbdd996a9d3e953c34a5a00856684f9a347e3fec5\n    bytes: 11042\n    role: mandatory_scientific_companion\n    transformed: false\n    baseline_delivery_member: 历史交付_1907/历史交付_1707/已验收论文/A142/package/results.csv\n  [12]     paper_id: A142\n    path: full/A142/support/package/review_rounds.csv\n    source_member: package/review_rounds.csv\n    accepted_original_sha256: 401b276273a2ceaac1d85a07b57352c82bca51267c44ab865ed7b2606828c73b\n    source_sha256: 401b276273a2ceaac1d85a07b57352c82bca51267c44ab865ed7b2606828c73b\n    baseline_delivered_sha256: 401b276273a2ceaac1d85a07b57352c82bca51267c44ab865ed7b2606828c73b\n    sha256: 401b276273a2ceaac1d85a07b57352c82bca51267c44ab865ed7b2606828c73b\n    bytes: 563\n    role: mandatory_provenance_support\n    transformed: false\n    baseline_delivery_member: 历史交付_1907/历史交付_1707/已验收论文/A142/package/review_rounds.csv\n  [13]     paper_id: A142\n    path: full/A142/support/package/samples.csv\n    source_member: package/samples.csv\n    accepted_original_sha256: 379afe66a861160cb764052a1e8ef003d4e7496b544c6790630b56db98f352e6\n    source_sha256: 379afe66a861160cb764052a1e8ef003d4e7496b544c6790630b56db98f352e6\n    baseline_delivered_sha256: 379afe66a861160cb764052a1e8ef003d4e7496b544c6790630b56db98f352e6\n    sha256: 379afe66a861160cb764052a1e8ef003d4e7496b544c6790630b56db98f352e6\n    bytes: 14268\n    role: mandatory_scientific_companion\n    transformed: false\n    baseline_delivery_member: 历史交付_1907/历史交付_1707/已验收论文/A142/package/samples.csv\n  [14]     paper_id: A142\n    path: full/A142/support/package/source_conflicts.csv\n    source_member: package/source_conflicts.csv\n    accepted_original_sha256: 80caddec29e2a43d122d2f71bfc9c7bb8ef134e147d9e76e8f0f5449be848b5b\n    source_sha256: 80caddec29e2a43d122d2f71bfc9c7bb8ef134e147d9e76e8f0f5449be848b5b\n    baseline_delivered_sha256: 80caddec29e2a43d122d2f71bfc9c7bb8ef134e147d9e76e8f0f5449be848b5b\n    sha256: 80caddec29e2a43d122d2f71bfc9c7bb8ef134e147d9e76e8f0f5449be848b5b\n    bytes: 1859\n    role: mandatory_scientific_companion\n    transformed: false\n    baseline_delivery_member: 历史交付_1907/历史交付_1707/已验收论文/A142/package/source_conflicts.csv\n  [15]     paper_id: A142\n    path: full/A142/support/package/sources.csv\n    source_member: package/sources.csv\n    accepted_original_sha256: 72f541ea5d8e5923575c47531968c635de5b1f5f5aeae9365fe43797c094fd83\n    source_sha256: 72f541ea5d8e5923575c47531968c635de5b1f5f5aeae9365fe43797c094fd83\n    baseline_delivered_sha256: 72f541ea5d8e5923575c47531968c635de5b1f5f5aeae9365fe43797c094fd83\n    sha256: 72f541ea5d8e5923575c47531968c635de5b1f5f5aeae9365fe43797c094fd83\n    bytes: 4130\n    role: mandatory_provenance_support\n    transformed: false\n    baseline_delivery_member: 历史交付_1907/历史交付_1707/已验收论文/A142/package/sources.csv\n  [16]     paper_id: A142\n    path: full/A142/support/package/supplemental_tables.csv\n    source_member: package/supplemental_tables.csv\n    accepted_original_sha256: f836e26974a779b53b325b5503e35c7a87e76568f4ecfe233a69535f5f0473ef\n    source_sha256: f836e26974a779b53b325b5503e35c7a87e76568f4ecfe233a69535f5f0473ef\n    baseline_delivered_sha256: f836e26974a779b53b325b5503e35c7a87e76568f4ecfe233a69535f5f0473ef\n    sha256: f836e26974a779b53b325b5503e35c7a87e76568f4ecfe233a69535f5f0473ef\n    bytes: 3069\n    role: mandatory_scientific_companion\n    transformed: false\n    baseline_delivery_member: 历史交付_1907/历史交付_1707/已验收论文/A142/package/supplemental_tables.csv\n  [17]     paper_id: A142\n    path: full/A142/support/package/validation.json\n    source_member: package/validation.json\n    accepted_original_sha256: e90dc169597fb5cc84284da2dc8c631ca326088c4821fec5e21e731afcb2d6c0\n    source_sha256: e90dc169597fb5cc84284da2dc8c631ca326088c4821fec5e21e731afcb2d6c0\n    baseline_delivered_sha256: e90dc169597fb5cc84284da2dc8c631ca326088c4821fec5e21e731afcb2d6c0\n    sha256: e90dc169597fb5cc84284da2dc8c631ca326088c4821fec5e21e731afcb2d6c0\n    bytes: 4046\n    role: mandatory_mechanical_validation_support\n    transformed: false\n    baseline_delivery_member: 历史交付_1907/历史交付_1707/已验收论文/A142/package/validation.json\n  [18]     paper_id: A142\n    path: full/A142/support/package/videos.csv\n    source_member: package/videos.csv\n    accepted_original_sha256: 9dccf1d32e1519b4334923df58ec1c6f4937b7e51cd93d2459bf086c6c0c5262\n    source_sha256: 9dccf1d32e1519b4334923df58ec1c6f4937b7e51cd93d2459bf086c6c0c5262\n    baseline_delivered_sha256: 9dccf1d32e1519b4334923df58ec1c6f4937b7e51cd93d2459bf086c6c0c5262\n    sha256: 9dccf1d32e1519b4334923df58ec1c6f4937b7e51cd93d2459bf086c6c0c5262\n    bytes: 3012\n    role: mandatory_scientific_companion\n    transformed: false\n    baseline_delivery_member: 历史交付_1907/历史交付_1707/已验收论文/A142/package/videos.csv\n  [19]     paper_id: A142\n    path: full/A142/support/package/中文说明.txt\n    source_member: package/中文说明.txt\n    accepted_original_sha256: 9595b84ad21553696369da04d95d4a610fb07a36302d9636958cfafc1bf82547\n    source_sha256: 9595b84ad21553696369da04d95d4a610fb07a36302d9636958cfafc1bf82547\n    baseline_delivered_sha256: 9595b84ad21553696369da04d95d4a610fb07a36302d9636958cfafc1bf82547\n    sha256: 9595b84ad21553696369da04d95d4a610fb07a36302d9636958cfafc1bf82547\n    bytes: 7544\n    role: mandatory_scope_support\n    transformed: false\n    baseline_delivery_member: 历史交付_1907/历史交付_1707/已验收论文/A142/package/中文说明.txt\n  [20]     paper_id: A142\n    path: full/A142/support/原派生包文件哈希.json\n    source_member: 原派生包文件哈希.json\n    accepted_original_sha256: 7fa3d7ce7fdfa737e556bd73f2d7c09f633942843dd32186dc2354a54bd6286f\n    source_sha256: 7fa3d7ce7fdfa737e556bd73f2d7c09f633942843dd32186dc2354a54bd6286f\n    baseline_delivered_sha256: 7fa3d7ce7fdfa737e556bd73f2d7c09f633942843dd32186dc2354a54bd6286f\n    sha256: 7fa3d7ce7fdfa737e556bd73f2d7c09f633942843dd32186dc2354a54bd6286f\n    bytes: 1891\n    role: mandatory_binding_manifest\n    transformed: false\n    baseline_delivery_member: 历史交付_1907/历史交付_1707/已验收论文/A142/原派生包文件哈希.json\n  [21]     paper_id: A142\n    path: full/A142/support/最终验收依据.json\n    source_member: 最终验收依据.json\n    accepted_original_sha256: e605861a464fba9238ab9674024495bb670ed90928e6c24b278dffc40f81e794\n    source_sha256: e605861a464fba9238ab9674024495bb670ed90928e6c24b278dffc40f81e794\n    baseline_delivered_sha256: e605861a464fba9238ab9674024495bb670ed90928e6c24b278dffc40f81e794\n    sha256: e605861a464fba9238ab9674024495bb670ed90928e6c24b278dffc40f81e794\n    bytes: 1829\n    role: mandatory_final_acceptance\n    transformed: false\n    baseline_delivery_member: 历史交付_1907/历史交付_1707/已验收论文/A142/最终验收依据.json\n  [22]     paper_id: A142\n    path: full/A142/support/科学版本绑定核对.json\n    source_member: 科学版本绑定核对.json\n    accepted_original_sha256: 11437b11c80e838764aed3ea662902c3a00def065733a1a8a7aad07717a6b09b\n    source_sha256: 11437b11c80e838764aed3ea662902c3a00def065733a1a8a7aad07717a6b09b\n    baseline_delivered_sha256: 11437b11c80e838764aed3ea662902c3a00def065733a1a8a7aad07717a6b09b\n    sha256: 11437b11c80e838764aed3ea662902c3a00def065733a1a8a7aad07717a6b09b\n    bytes: 2060\n    role: mandatory_version_binding\n    transformed: false\n    baseline_delivery_member: 历史交付_1907/历史交付_1707/已验收论文/A142/科学版本绑定核对.json\n  [23]     paper_id: A142\n    path: full/A142/support/范围计数补充签署.json\n    source_member: 范围计数补充签署.json\n    accepted_original_sha256: 5cf8397a50e97a228c0c41bb6fc2b7cc734d07c3b92b5c3d8882c42a53c9ae1e\n    source_sha256: 5cf8397a50e97a228c0c41bb6fc2b7cc734d07c3b92b5c3d8882c42a53c9ae1e\n    baseline_delivered_sha256: 5cf8397a50e97a228c0c41bb6fc2b7cc734d07c3b92b5c3d8882c42a53c9ae1e\n    sha256: 5cf8397a50e97a228c0c41bb6fc2b7cc734d07c3b92b5c3d8882c42a53c9ae1e\n    bytes: 3509\n    role: mandatory_scope_addendum\n    transformed: false\n    baseline_delivery_member: 历史交付_1907/历史交付_1707/已验收论文/A142/范围计数补充签署.json\nacceptance: full/A142/support/最终验收依据.json\nacceptance_files: \n  [1] full/A142/support/最终验收依据.json\nactive_version_and_scope: \n  scope: \n    inherited_current_selection: \n      paper_id: A142\n      status: full\n      active_scientific_files: \n        [1]           path: 历史交付_1907/历史交付_1707/已验收论文/A142/package/record.json\n          accepted_original_sha256: 62aa5a6bde6b63bec09a8c369b45f9ed7acec1c10e54ffe753c203a364b0fddb\n          delivered_sha256: 62aa5a6bde6b63bec09a8c369b45f9ed7acec1c10e54ffe753c203a364b0fddb\n          transformed: false\n      baseline_binding: 历史交付_1907/当前版本选择/A142.json\n      companion_root: 历史交付_1907/历史交付_1707/已验收论文/A142\n      rule: Reuse immutable previously accepted current selection and necessary overlays. Paths in inherited binding resolve relative to 历史交付_1907 root. Only current root index governs active versions.\n    historical_selection_bindings: \n      [1]         source_archive_name: 组织光透明证据_20261019_2107_完整科学分包2共3包.zip\n        source_member: 历史交付_1907/当前版本选择/A142.json\n        source_sha256: eb49959192d2a045d4653bc7906d99d1fc1da897c5f8110e5ea7a447f23c9b8a\n        source_bytes: 1032\n        selection: \n          paper_id: A142\n          status: full\n          baseline_record: \n            [1]               path: 历史交付_1707/已验收论文/A142/package/record.json\n              accepted_original_sha256: 62aa5a6bde6b63bec09a8c369b45f9ed7acec1c10e54ffe753c203a364b0fddb\n              delivered_sha256: 62aa5a6bde6b63bec09a8c369b45f9ed7acec1c10e54ffe753c203a364b0fddb\n              transformed: false\n          scope: 科学文字、固定后方法、7主图及Table1、8补充图、3补表和图形摘要已核；6视频各6帧共36帧抽样，非逐帧播放。签署补充说明确认无已知关键未读材料或主张缺口；record中full_text=false仅为未逐帧视频的保守全资源标记，按明确文字/静态完整＋视频抽样范围计完整。7项来源冲突保留。\n          companion_root: 历史交付_1707/已验收论文/A142\n          companion_rule: Use the complete per-paper directory, its mandatory overlays, scientific companion files and version binding from previous accepted delivery; record alone is not a substitute.\n        role: historical_selection_provenance_not_runtime_index\n      [2]         source_archive_name: 组织光透明证据_20261019_2107_完整科学分包2共3包.zip\n        source_member: 当前版本选择/A142.json\n        source_sha256: 993921748d2a44d9e907adf17245f830768d09ab15f83de763c85f8c70c45ba5\n        source_bytes: 773\n        selection: \n          paper_id: A142\n          status: full\n          active_scientific_files: \n            [1]               path: 历史交付_1907/历史交付_1707/已验收论文/A142/package/record.json\n              accepted_original_sha256: 62aa5a6bde6b63bec09a8c369b45f9ed7acec1c10e54ffe753c203a364b0fddb\n              delivered_sha256: 62aa5a6bde6b63bec09a8c369b45f9ed7acec1c10e54ffe753c203a364b0fddb\n              transformed: false\n          baseline_binding: 历史交付_1907/当前版本选择/A142.json\n          companion_root: 历史交付_1907/历史交付_1707/已验收论文/A142\n          rule: Reuse immutable previously accepted current selection and necessary overlays. Paths in inherited binding resolve relative to 历史交付_1907 root. Only current root index governs active versions.\n        role: source_current_selection_provenance_not_second_runtime_index\n    precedence_notes: \n      [1] Final signed record hash is authoritative. The earlier author-input hash in validation/signoff is provenance, not an additional current root.\n      [2] Signed scope addendum is mandatory: the conservative full_text=false flag must not be silently changed or interpreted without its scoped qualification.\n    rule: Only this portable selection activates current scientific files. Inherited selections are retained provenance and scope, not recursively loadable indexes.\n  historical_nonactive_members: \n    [1] 交付状态回执.json\n    [2] 最终状态说明.txt\nmandatory_composition: Root plus explicitly selected companions and any current mandatory semantic addendum apply jointly. Never recursively activate audit history.\noriginal_member_to_release_path: \n  package/record.json: full/A142/evidence/record.json\nactive_reference_aliases: \n  package/record.json: full/A142/evidence/record.json\n  package/MANIFEST.json: full/A142/support/package/MANIFEST.json\n  package/coverage.csv: full/A142/support/package/coverage.csv\n  package/dispersion_recalculation.json: full/A142/support/package/dispersion_recalculation.json\n  package/donors.csv: full/A142/support/package/donors.csv\n  package/figures.csv: full/A142/support/package/figures.csv\n  package/markers.csv: full/A142/support/package/markers.csv\n  package/missing_fields.csv: full/A142/support/package/missing_fields.csv\n  package/protocol_steps.csv: full/A142/support/package/protocol_steps.csv\n  package/repair_resolution.csv: full/A142/support/package/repair_resolution.csv\n  package/repair_resolution.json: full/A142/support/package/repair_resolution.json\n  package/results.csv: full/A142/support/package/results.csv\n  package/review_rounds.csv: full/A142/support/package/review_rounds.csv\n  package/samples.csv: full/A142/support/package/samples.csv\n  package/source_conflicts.csv: full/A142/support/package/source_conflicts.csv\n  package/sources.csv: full/A142/support/package/sources.csv\n  package/supplemental_tables.csv: full/A142/support/package/supplemental_tables.csv\n  package/validation.json: full/A142/support/package/validation.json\n  package/videos.csv: full/A142/support/package/videos.csv\n  package/中文说明.txt: full/A142/support/package/中文说明.txt\n  原派生包文件哈希.json: full/A142/support/原派生包文件哈希.json\n  最终验收依据.json: full/A142/support/最终验收依据.json\n  科学版本绑定核对.json: full/A142/support/科学版本绑定核对.json\n  范围计数补充签署.json: full/A142/support/范围计数补充签署.json\n  历史交付_1907/历史交付_1707/已验收论文/A142/package/MANIFEST.json: full/A142/support/package/MANIFEST.json\n  历史交付_1907/历史交付_1707/已验收论文/A142/package/coverage.csv: full/A142/support/package/coverage.csv\n  历史交付_1907/历史交付_1707/已验收论文/A142/package/dispersion_recalculation.json: full/A142/support/package/dispersion_recalculation.json\n  历史交付_1907/历史交付_1707/已验收论文/A142/package/donors.csv: full/A142/support/package/donors.csv\n  历史交付_1907/历史交付_1707/已验收论文/A142/package/figures.csv: full/A142/support/package/figures.csv\n  历史交付_1907/历史交付_1707/已验收论文/A142/package/markers.csv: full/A142/support/package/markers.csv\n  历史交付_1907/历史交付_1707/已验收论文/A142/package/missing_fields.csv: full/A142/support/package/missing_fields.csv\n  历史交付_1907/历史交付_1707/已验收论文/A142/package/protocol_steps.csv: full/A142/support/package/protocol_steps.csv\n  历史交付_1907/历史交付_1707/已验收论文/A142/package/record.json: full/A142/evidence/record.json\n  历史交付_1907/历史交付_1707/已验收论文/A142/已验收科学版本.json: full/A142/evidence/record.json\n  已验收科学版本.json: full/A142/evidence/record.json\n  record.json: full/A142/evidence/record.json\n  历史交付_1907/历史交付_1707/已验收论文/A142/package/repair_resolution.csv: full/A142/support/package/repair_resolution.csv\n  历史交付_1907/历史交付_1707/已验收论文/A142/package/repair_resolution.json: full/A142/support/package/repair_resolution.json\n  历史交付_1907/历史交付_1707/已验收论文/A142/package/results.csv: full/A142/support/package/results.csv\n  历史交付_1907/历史交付_1707/已验收论文/A142/package/review_rounds.csv: full/A142/support/package/review_rounds.csv\n  历史交付_1907/历史交付_1707/已验收论文/A142/package/samples.csv: full/A142/support/package/samples.csv\n  历史交付_1907/历史交付_1707/已验收论文/A142/package/source_conflicts.csv: full/A142/support/package/source_conflicts.csv\n  历史交付_1907/历史交付_1707/已验收论文/A142/package/sources.csv: full/A142/support/package/sources.csv\n  历史交付_1907/历史交付_1707/已验收论文/A142/package/supplemental_tables.csv: full/A142/support/package/supplemental_tables.csv\n  历史交付_1907/历史交付_1707/已验收论文/A142/package/validation.json: full/A142/support/package/validation.json\n  历史交付_1907/历史交付_1707/已验收论文/A142/package/videos.csv: full/A142/support/package/videos.csv\n  历史交付_1907/历史交付_1707/已验收论文/A142/package/中文说明.txt: full/A142/support/package/中文说明.txt\n  历史交付_1907/历史交付_1707/已验收论文/A142/原派生包文件哈希.json: full/A142/support/原派生包文件哈希.json\n  package/independent_signoff.json: full/A142/support/最终验收依据.json\n  历史交付_1907/历史交付_1707/已验收论文/A142/package/independent_signoff.json: full/A142/support/最终验收依据.json\n  历史交付_1907/历史交付_1707/已验收论文/A142/最终验收依据.json: full/A142/support/最终验收依据.json\n  历史交付_1907/历史交付_1707/已验收论文/A142/科学版本绑定核对.json: full/A142/support/科学版本绑定核对.json\n  历史交付_1907/历史交付_1707/已验收论文/A142/范围计数补充签署.json: full/A142/support/范围计数补充签署.json\n  coverage.csv: full/A142/support/package/coverage.csv\n  dispersion_recalculation.json: full/A142/support/package/dispersion_recalculation.json\n  donors.csv: full/A142/support/package/donors.csv\n  figures.csv: full/A142/support/package/figures.csv\n  independent_signoff.json: full/A142/support/最终验收依据.json\n  markers.csv: full/A142/support/package/markers.csv\n  missing_fields.csv: full/A142/support/package/missing_fields.csv\n  protocol_steps.csv: full/A142/support/package/protocol_steps.csv\n  repair_resolution.csv: full/A142/support/package/repair_resolution.csv\n  repair_resolution.json: full/A142/support/package/repair_resolution.json\n  results.csv: full/A142/support/package/results.csv\n  review_rounds.csv: full/A142/support/package/review_rounds.csv\n  samples.csv: full/A142/support/package/samples.csv\n  source_conflicts.csv: full/A142/support/package/source_conflicts.csv\n  sources.csv: full/A142/support/package/sources.csv\n  supplemental_tables.csv: full/A142/support/package/supplemental_tables.csv\n  validation.json: full/A142/support/package/validation.json\n  videos.csv: full/A142/support/package/videos.csv\n  中文说明.txt: full/A142/support/package/中文说明.txt\n  已验收论文/A142/最终验收依据.json: full/A142/support/最终验收依据.json\nactive_reference_resolution_evidence: \n  [1]     source_file: full/A142/support/package/MANIFEST.json\n    json_pointer: /files/0/path\n    reference: coverage.csv\n    resolved_release_path: full/A142/support/package/coverage.csv\n    binding_basis: same_paper_SHA_bound_reference\n  [2]     source_file: full/A142/support/package/MANIFEST.json\n    json_pointer: /files/1/path\n    reference: dispersion_recalculation.json\n    resolved_release_path: full/A142/support/package/dispersion_recalculation.json\n    binding_basis: same_paper_SHA_bound_reference\n  [3]     source_file: full/A142/support/package/MANIFEST.json\n    json_pointer: /files/2/path\n    reference: donors.csv\n    resolved_release_path: full/A142/support/package/donors.csv\n    binding_basis: same_paper_SHA_bound_reference\n  [4]     source_file: full/A142/support/package/MANIFEST.json\n    json_pointer: /files/3/path\n    reference: figures.csv\n    resolved_release_path: full/A142/support/package/figures.csv\n    binding_basis: same_paper_SHA_bound_reference\n  [5]     source_file: full/A142/support/package/MANIFEST.json\n    json_pointer: /files/4/path\n    reference: independent_signoff.json\n    resolved_release_path: full/A142/support/最终验收依据.json\n    binding_basis: same_paper_SHA_bound_reference\n  [6]     source_file: full/A142/support/package/MANIFEST.json\n    json_pointer: /files/5/path\n    reference: markers.csv\n    resolved_release_path: full/A142/support/package/markers.csv\n    binding_basis: same_paper_SHA_bound_reference\n  [7]     source_file: full/A142/support/package/MANIFEST.json\n    json_pointer: /files/6/path\n    reference: missing_fields.csv\n    resolved_release_path: full/A142/support/package/missing_fields.csv\n    binding_basis: same_paper_SHA_bound_reference\n  [8]     source_file: full/A142/support/package/MANIFEST.json\n    json_pointer: /files/7/path\n    reference: protocol_steps.csv\n    resolved_release_path: full/A142/support/package/protocol_steps.csv\n    binding_basis: same_paper_SHA_bound_reference\n  [9]     source_file: full/A142/support/package/MANIFEST.json\n    json_pointer: /files/8/path\n    reference: record.json\n    resolved_release_path: full/A142/evidence/record.json\n    binding_basis: explicit_verified_alias\n  [10]     source_file: full/A142/support/package/MANIFEST.json\n    json_pointer: /files/9/path\n    reference: repair_resolution.csv\n    resolved_release_path: full/A142/support/package/repair_resolution.csv\n    binding_basis: same_paper_SHA_bound_reference\n  [11]     source_file: full/A142/support/package/MANIFEST.json\n    json_pointer: /files/10/path\n    reference: repair_resolution.json\n    resolved_release_path: full/A142/support/package/repair_resolution.json\n    binding_basis: same_paper_SHA_bound_reference\n  [12]     source_file: full/A142/support/package/MANIFEST.json\n    json_pointer: /files/11/path\n    reference: results.csv\n    resolved_release_path: full/A142/support/package/results.csv\n    binding_basis: same_paper_SHA_bound_reference\n  [13]     source_file: full/A142/support/package/MANIFEST.json\n    json_pointer: /files/12/path\n    reference: review_rounds.csv\n    resolved_release_path: full/A142/support/package/review_rounds.csv\n    binding_basis: same_paper_SHA_bound_reference\n  [14]     source_file: full/A142/support/package/MANIFEST.json\n    json_pointer: /files/13/path\n    reference: samples.csv\n    resolved_release_path: full/A142/support/package/samples.csv\n    binding_basis: same_paper_SHA_bound_reference\n  [15]     source_file: full/A142/support/package/MANIFEST.json\n    json_pointer: /files/14/path\n    reference: source_conflicts.csv\n    resolved_release_path: full/A142/support/package/source_conflicts.csv\n    binding_basis: same_paper_SHA_bound_reference\n  [16]     source_file: full/A142/support/package/MANIFEST.json\n    json_pointer: /files/15/path\n    reference: sources.csv\n    resolved_release_path: full/A142/support/package/sources.csv\n    binding_basis: same_paper_SHA_bound_reference\n  [17]     source_file: full/A142/support/package/MANIFEST.json\n    json_pointer: /files/16/path\n    reference: supplemental_tables.csv\n    resolved_release_path: full/A142/support/package/supplemental_tables.csv\n    binding_basis: same_paper_SHA_bound_reference\n  [18]     source_file: full/A142/support/package/MANIFEST.json\n    json_pointer: /files/17/path\n    reference: validation.json\n    resolved_release_path: full/A142/support/package/validation.json\n    binding_basis: same_paper_SHA_bound_reference\n  [19]     source_file: full/A142/support/package/MANIFEST.json\n    json_pointer: /files/18/path\n    reference: videos.csv\n    resolved_release_path: full/A142/support/package/videos.csv\n    binding_basis: same_paper_SHA_bound_reference\n  [20]     source_file: full/A142/support/package/MANIFEST.json\n    json_pointer: /files/19/path\n    reference: 中文说明.txt\n    resolved_release_path: full/A142/support/package/中文说明.txt\n    binding_basis: same_paper_SHA_bound_reference\n  [21]     source_file: full/A142/support/科学版本绑定核对.json\n    json_pointer: /acceptance_file\n    reference: 已验收论文/A142/最终验收依据.json\n    resolved_release_path: full/A142/support/最终验收依据.json\n    binding_basis: unique_verified_original_member_path\n  [22]     source_file: full/A142/support/科学版本绑定核对.json\n    json_pointer: /accepted_snapshot\n    reference: 已验收科学版本.json\n    resolved_release_path: full/A142/evidence/record.json\n    binding_basis: explicit_verified_alias\n  [23]     source_file: full/A142/support/科学版本绑定核对.json\n    json_pointer: /packaged_acceptance\n    reference: independent_signoff.json\n    resolved_release_path: full/A142/support/最终验收依据.json\n    binding_basis: explicit_verified_alias\n  [24]     source_file: full/A142/support/科学版本绑定核对.json\n    json_pointer: /final_record\n    reference: package/record.json\n    resolved_release_path: full/A142/evidence/record.json\n    binding_basis: explicit_verified_alias\n  [25]     source_file: full/A142/support/科学版本绑定核对.json\n    json_pointer: /native_package_manifest\n    reference: 原派生包文件哈希.json\n    resolved_release_path: full/A142/support/原派生包文件哈希.json\n    binding_basis: explicit_verified_alias\n  [26]     source_file: full/A142/support/科学版本绑定核对.json\n    json_pointer: /scope_addendum/file\n    reference: 范围计数补充签署.json\n    resolved_release_path: full/A142/support/范围计数补充签署.json\n    binding_basis: explicit_verified_alias\nexternal_or_historical_references: \n  [1]     source_file: full/A142/evidence/record.json\n    json_pointer: /revision_basis/independent_review\n    reference: independent_R2_R3_R4_report.json\n    automatic_loading: false\n    role: historical_revision_provenance_unbundled\n    role_evidence: The reference occurs under revision_basis alongside the previous record hash and seven requested repairs, not under the active selection or current acceptance binding. Current original scope documentation explicitly directs readers to independent_signoff.json for final acceptance, repair_resolution.json for the seven verified changes, validation.json for the independent checks, and MANIFEST.json for included files. These current support originals are retained. This is a missing historical report identity, not a missing current acceptance artifact.\n    original_target_sha256: null (as recorded in source)\n    original_target_bytes: null (as recorded in source)\n    target_identity_limit: No member with this basename in any of the three inherited original archives; no hash for this report itself is stated in the final record or supplied current package. The previous_record_sha256 is a record hash, not this report hash.\nnonactive_excluded_members: \n  [1] 交付状态回执.json\n  [2] 最终状态说明.txt\nverified_alias_binding_proofs: \n  [1]     reference: coverage.csv\n    source_file: full/A142/support/package/MANIFEST.json\n    hash_value: 00a77ccb3eabc30790cc107dc491e321d2954a808a981fb9224b85ae37838a58\n    target: full/A142/support/package/coverage.csv\n    basis: same_paper_exact_source_hash_or_proven_terminal_LF_equivalence\n    newline_equivalence: null (as recorded in source)\n    source_hash_occurrence_pointers: \n      [1] /files/0/sha256\n  [2]     reference: dispersion_recalculation.json\n    source_file: full/A142/support/package/MANIFEST.json\n    hash_value: 6fa372ede41aef66a39b210bf4b61ce605de594ae7d56d5319d37966d5b14c31\n    target: full/A142/support/package/dispersion_recalculation.json\n    basis: same_paper_exact_source_hash_or_proven_terminal_LF_equivalence\n    newline_equivalence: null (as recorded in source)\n    source_hash_occurrence_pointers: \n      [1] /files/1/sha256\n  [3]     reference: donors.csv\n    source_file: full/A142/support/package/MANIFEST.json\n    hash_value: bf06e99ac98d244d5e3a9733f73f61b91c8350717996d65821106882752624d9\n    target: full/A142/support/package/donors.csv\n    basis: same_paper_exact_source_hash_or_proven_terminal_LF_equivalence\n    newline_equivalence: null (as recorded in source)\n    source_hash_occurrence_pointers: \n      [1] /files/2/sha256\n  [4]     reference: figures.csv\n    source_file: full/A142/support/package/MANIFEST.json\n    hash_value: db904c4f92286b1410575c15def5733b51d5a55c3584c1506e843a5e0d2728fe\n    target: full/A142/support/package/figures.csv\n    basis: same_paper_exact_source_hash_or_proven_terminal_LF_equivalence\n    newline_equivalence: null (as recorded in source)\n    source_hash_occurrence_pointers: \n      [1] /files/3/sha256\n  [5]     reference: independent_signoff.json\n    source_file: full/A142/support/package/MANIFEST.json\n    hash_value: e605861a464fba9238ab9674024495bb670ed90928e6c24b278dffc40f81e794\n    target: full/A142/support/最终验收依据.json\n    basis: same_paper_exact_source_hash_or_proven_terminal_LF_equivalence\n    newline_equivalence: null (as recorded in source)\n    source_hash_occurrence_pointers: \n      [1] /files/4/sha256\n  [6]     reference: markers.csv\n    source_file: full/A142/support/package/MANIFEST.json\n    hash_value: 2c49cdc8ce49198a95aaf1481969a5d617accb21834b0f8ddd007746233158ed\n    target: full/A142/support/package/markers.csv\n    basis: same_paper_exact_source_hash_or_proven_terminal_LF_equivalence\n    newline_equivalence: null (as recorded in source)\n    source_hash_occurrence_pointers: \n      [1] /files/5/sha256\n  [7]     reference: missing_fields.csv\n    source_file: full/A142/support/package/MANIFEST.json\n    hash_value: 24754852a543221adc7311e7e3a00008b18c52bdc13e9f3435d7c875146210b5\n    target: full/A142/support/package/missing_fields.csv\n    basis: same_paper_exact_source_hash_or_proven_terminal_LF_equivalence\n    newline_equivalence: null (as recorded in source)\n    source_hash_occurrence_pointers: \n      [1] /files/6/sha256\n  [8]     reference: protocol_steps.csv\n    source_file: full/A142/support/package/MANIFEST.json\n    hash_value: 8dd3612e3e5e6c642733bcbb1a94ff7fdad92c0ecab4976ec0d4cd5ae0da215c\n    target: full/A142/support/package/protocol_steps.csv\n    basis: same_paper_exact_source_hash_or_proven_terminal_LF_equivalence\n    newline_equivalence: null (as recorded in source)\n    source_hash_occurrence_pointers: \n      [1] /files/7/sha256\n  [9]     reference: repair_resolution.csv\n    source_file: full/A142/support/package/MANIFEST.json\n    hash_value: b1a67584a54e5eb7e1c4602dff2e8d0440b0c9c5354a1fd9efd90ad836bf6bef\n    target: full/A142/support/package/repair_resolution.csv\n    basis: same_paper_exact_source_hash_or_proven_terminal_LF_equivalence\n    newline_equivalence: null (as recorded in source)\n    source_hash_occurrence_pointers: \n      [1] /files/9/sha256\n  [10]     reference: repair_resolution.json\n    source_file: full/A142/support/package/MANIFEST.json\n    hash_value: 7ca8ccfc8e50075784f3ad097700a0a63cc29256f038b5424e408607e7d25dff\n    target: full/A142/support/package/repair_resolution.json\n    basis: same_paper_exact_source_hash_or_proven_terminal_LF_equivalence\n    newline_equivalence: null (as recorded in source)\n    source_hash_occurrence_pointers: \n      [1] /files/10/sha256\n  [11]     reference: results.csv\n    source_file: full/A142/support/package/MANIFEST.json\n    hash_value: a134a808ea5c02f08a8dddabbdd996a9d3e953c34a5a00856684f9a347e3fec5\n    target: full/A142/support/package/results.csv\n    basis: same_paper_exact_source_hash_or_proven_terminal_LF_equivalence\n    newline_equivalence: null (as recorded in source)\n    source_hash_occurrence_pointers: \n      [1] /files/11/sha256\n  [12]     reference: review_rounds.csv\n    source_file: full/A142/support/package/MANIFEST.json\n    hash_value: 401b276273a2ceaac1d85a07b57352c82bca51267c44ab865ed7b2606828c73b\n    target: full/A142/support/package/review_rounds.csv\n    basis: same_paper_exact_source_hash_or_proven_terminal_LF_equivalence\n    newline_equivalence: null (as recorded in source)\n    source_hash_occurrence_pointers: \n      [1] /files/12/sha256\n  [13]     reference: samples.csv\n    source_file: full/A142/support/package/MANIFEST.json\n    hash_value: 379afe66a861160cb764052a1e8ef003d4e7496b544c6790630b56db98f352e6\n    target: full/A142/support/package/samples.csv\n    basis: same_paper_exact_source_hash_or_proven_terminal_LF_equivalence\n    newline_equivalence: null (as recorded in source)\n    source_hash_occurrence_pointers: \n      [1] /files/13/sha256\n  [14]     reference: source_conflicts.csv\n    source_file: full/A142/support/package/MANIFEST.json\n    hash_value: 80caddec29e2a43d122d2f71bfc9c7bb8ef134e147d9e76e8f0f5449be848b5b\n    target: full/A142/support/package/source_conflicts.csv\n    basis: same_paper_exact_source_hash_or_proven_terminal_LF_equivalence\n    newline_equivalence: null (as recorded in source)\n    source_hash_occurrence_pointers: \n      [1] /files/14/sha256\n  [15]     reference: sources.csv\n    source_file: full/A142/support/package/MANIFEST.json\n    hash_value: 72f541ea5d8e5923575c47531968c635de5b1f5f5aeae9365fe43797c094fd83\n    target: full/A142/support/package/sources.csv\n    basis: same_paper_exact_source_hash_or_proven_terminal_LF_equivalence\n    newline_equivalence: null (as recorded in source)\n    source_hash_occurrence_pointers: \n      [1] /files/15/sha256\n  [16]     reference: supplemental_tables.csv\n    source_file: full/A142/support/package/MANIFEST.json\n    hash_value: f836e26974a779b53b325b5503e35c7a87e76568f4ecfe233a69535f5f0473ef\n    target: full/A142/support/package/supplemental_tables.csv\n    basis: same_paper_exact_source_hash_or_proven_terminal_LF_equivalence\n    newline_equivalence: null (as recorded in source)\n    source_hash_occurrence_pointers: \n      [1] /files/16/sha256\n  [17]     reference: validation.json\n    source_file: full/A142/support/package/MANIFEST.json\n    hash_value: e90dc169597fb5cc84284da2dc8c631ca326088c4821fec5e21e731afcb2d6c0\n    target: full/A142/support/package/validation.json\n    basis: same_paper_exact_source_hash_or_proven_terminal_LF_equivalence\n    newline_equivalence: null (as recorded in source)\n    source_hash_occurrence_pointers: \n      [1] /files/17/sha256\n  [18]     reference: videos.csv\n    source_file: full/A142/support/package/MANIFEST.json\n    hash_value: 9dccf1d32e1519b4334923df58ec1c6f4937b7e51cd93d2459bf086c6c0c5262\n    target: full/A142/support/package/videos.csv\n    basis: same_paper_exact_source_hash_or_proven_terminal_LF_equivalence\n    newline_equivalence: null (as recorded in source)\n    source_hash_occurrence_pointers: \n      [1] /files/18/sha256\n  [19]     reference: 中文说明.txt\n    source_file: full/A142/support/package/MANIFEST.json\n    hash_value: 9595b84ad21553696369da04d95d4a610fb07a36302d9636958cfafc1bf82547\n    target: full/A142/support/package/中文说明.txt\n    basis: same_paper_exact_source_hash_or_proven_terminal_LF_equivalence\n    newline_equivalence: null (as recorded in source)\n    source_hash_occurrence_pointers: \n      [1] /files/19/sha256\nreference_resolution_policy: Exact explicit aliases only. Acceptance companions apply jointly. Archived original science, source assets and historical candidate flags remain nonruntime provenance. Independent closure review is pending.",
+      "Text2_Reference": [
+        "DOI: https://doi.org/10.1016/j.isci.2021.102258",
+        "Evidence-layer structured paraphrase; not a verbatim quotation. Source release: https://github.com/404NotFound422/TOCAgentProject/tree/5e3a711befb3952a2e39f4d53fc9c9f1a7ac0d22/KnowledgeBase/evidence_expansion_20261019",
+        "Local source archive: ../literature_evidence/2026-11-11/source_release.zip; member: full/A142/version_selection.json"
+      ]
+    },
+    {
+      "Text3": "scope:\ninclude: 固定样本制备完成之后的透明、直接免疫标记、FFPE验证、成像、三维分析及实际结果\nexclude: 临床手术/取材操作；外引方案补参；原始图像重分析；公开发布\nlegacy_preserved: true\ndeliverable: 仅派生JSON/CSV/中文说明；不含源全文/原图/视频",
+      "Text3_Reference": [
+        "Structured evidence: full/A142/evidence/record.json#/scope; SHA-256: 62aa5a6bde6b63bec09a8c369b45f9ed7acec1c10e54ffe753c203a364b0fddb; DOI: https://doi.org/10.1016/j.isci.2021.102258"
+      ]
+    },
+    {
+      "Text4": "source_conflicts:\nconflict_id: C01\ntopic: 共享rhizome比例\nsource_a: Results/Fig.3D/Table S3:37%±11%;37/100\nsource_b: Discussion /article/body/sec[3]/p[6]:32%\nresolution: 并列保留；机器定量字段采用结果和原表支持的37%，32%只存为冲突值；不宣称作者已纠错\nstatus: unresolved_source_conflict",
+      "Text4_Reference": [
+        "Structured evidence: full/A142/evidence/record.json#/source_conflicts/0; SHA-256: 62aa5a6bde6b63bec09a8c369b45f9ed7acec1c10e54ffe753c203a364b0fddb; DOI: https://doi.org/10.1016/j.isci.2021.102258"
+      ]
+    },
+    {
+      "Text5": "source_conflicts:\nconflict_id: C02\ntopic: Fig.S3激发波长\nsource_a: S2 p5 Fig.S3:自发荧光523(E7)/488(其余);CK7 647(E7)/523(其余) nm\nsource_b: S2 pp18–19和p2 Fig.S1:自发荧光532(E7);CK7 637(E7)/532(AF555) nm\nresolution: 保留图注原值；通用方法字段用方法激光线，不把647染料名等同激发波长\nstatus: unresolved_source_conflict",
+      "Text5_Reference": [
+        "Structured evidence: full/A142/evidence/record.json#/source_conflicts/1; SHA-256: 62aa5a6bde6b63bec09a8c369b45f9ed7acec1c10e54ffe753c203a364b0fddb; DOI: https://doi.org/10.1016/j.isci.2021.102258"
+      ]
+    },
+    {
+      "Text6": "source_conflicts:\nconflict_id: C03\ntopic: 分支抽样XZ面积\nsource_a: S2 p21:2.5-mm²\nsource_b: S2 pp14–15表注:2.5 mm square\nresolution: 两种表述均保留；真实分支ROI面积未知；另一个距离层分析2.5×2.5 mm明确但不能替代\nstatus: unresolved_source_ambiguity",
+      "Text6_Reference": [
+        "Structured evidence: full/A142/evidence/record.json#/source_conflicts/2; SHA-256: 62aa5a6bde6b63bec09a8c369b45f9ed7acec1c10e54ffe753c203a364b0fddb; DOI: https://doi.org/10.1016/j.isci.2021.102258"
+      ]
+    },
+    {
+      "Text7": "source_conflicts:\nconflict_id: C04\ntopic: 图像通道减法方向\nsource_a: S2 pp19–20:从autofluorescence信号中去掉CK7\nsource_b: 同一句目的为仅保留内膜上皮/腺体信号\nresolution: 保存原语义与目标不一致；不自行倒置减法，也不提供可执行未经证实公式\nstatus: unresolved_source_ambiguity",
+      "Text7_Reference": [
+        "Structured evidence: full/A142/evidence/record.json#/source_conflicts/3; SHA-256: 62aa5a6bde6b63bec09a8c369b45f9ed7acec1c10e54ffe753c203a364b0fddb; DOI: https://doi.org/10.1016/j.isci.2021.102258"
+      ]
+    },
+    {
+      "Text8": "source_conflicts:\nconflict_id: C05\ntopic: RI匹配时长示意与方法\nsource_a: F1 A:50%→100% CUBIC-R+合写2 days\nsource_b: S2 p18:1:1稀释1 day，原液1–2 days，共2–3 days\nresolution: 方法分阶段存；图示2 days另存为简化表示；不强制所有样本2天\nstatus: source_precision_difference",
+      "Text8_Reference": [
+        "Structured evidence: full/A142/evidence/record.json#/source_conflicts/4; SHA-256: 62aa5a6bde6b63bec09a8c369b45f9ed7acec1c10e54ffe753c203a364b0fddb; DOI: https://doi.org/10.1016/j.isci.2021.102258"
+      ]
+    },
+    {
+      "Text9": "source_conflicts:\nconflict_id: C06\ntopic: 洗涤时长示意与方法\nsource_a: F1 A:脱脂后PBS 6h RT\nsource_b: S2 p17:several hours（并且另有标记后洗、再固定，示意省略）\nresolution: 保留方法文字；6h标记为图示值，不补给所有洗涤步骤\nstatus: source_precision_difference",
+      "Text9_Reference": [
+        "Structured evidence: full/A142/evidence/record.json#/source_conflicts/5; SHA-256: 62aa5a6bde6b63bec09a8c369b45f9ed7acec1c10e54ffe753c203a364b0fddb; DOI: https://doi.org/10.1016/j.isci.2021.102258"
+      ]
+    },
+    {
+      "Text10": "source_conflicts:\nconflict_id: C07\ntopic: 本研究数据生成表述\nsource_a: S1 Data and code availability:未生成/分析datasets或code\nsource_b: 主文描述采集/量化图像，Materials availability指向TRUE图像数据库\nresolution: 记录为数据声明措辞限制；原始TIFF/分析工程未获取，不假设原始数据不存在\nstatus: availability_wording_tension",
+      "Text10_Reference": [
+        "Structured evidence: full/A142/evidence/record.json#/source_conflicts/6; SHA-256: 62aa5a6bde6b63bec09a8c369b45f9ed7acec1c10e54ffe753c203a364b0fddb; DOI: https://doi.org/10.1016/j.isci.2021.102258"
+      ]
+    },
+    {
+      "Text11": "missing_fields:\nfield: 逐样本三轴尺寸/真实内膜厚度数值\nstatus: not_reported_per_sample\ndetail: 只给组织类别三轴范围；Fig.2D厚度为图，不含数值表。不把样块厚度等同内膜厚度。",
+      "Text11_Reference": [
+        "Structured evidence: full/A142/evidence/record.json#/missing_fields/0; SHA-256: 62aa5a6bde6b63bec09a8c369b45f9ed7acec1c10e54ffe753c203a364b0fddb; DOI: https://doi.org/10.1016/j.isci.2021.102258"
+      ]
+    },
+    {
+      "Text12": "missing_fields:\nfield: 全组织初次固定浓度/时长与保存天数\nstatus: not_reported\ndetail: 仅知formalin until use；处于本任务起始状态，不补初次固定/临床操作。",
+      "Text12_Reference": [
+        "Structured evidence: full/A142/evidence/record.json#/missing_fields/1; SHA-256: 62aa5a6bde6b63bec09a8c369b45f9ed7acec1c10e54ffe753c203a364b0fddb; DOI: https://doi.org/10.1016/j.isci.2021.102258"
+      ]
+    },
+    {
+      "Text13": "missing_fields:\nfield: 单样本脱脂、染色和匹配时长\nstatus: not_reported_per_sample\ndetail: 6–8天、10–14天、1–2天均范围；未绑定具体E/A样本。",
+      "Text13_Reference": [
+        "Structured evidence: full/A142/evidence/record.json#/missing_fields/2; SHA-256: 62aa5a6bde6b63bec09a8c369b45f9ed7acec1c10e54ffe753c203a364b0fddb; DOI: https://doi.org/10.1016/j.isci.2021.102258"
+      ]
+    },
+    {
+      "Text14": "missing_fields:\nfield: RI稀释液、部分洗涤次数/体积/温度\nstatus: not_reported\ndetail: 不从外引CUBIC方案自动补齐。",
+      "Text14_Reference": [
+        "Structured evidence: full/A142/evidence/record.json#/missing_fields/3; SHA-256: 62aa5a6bde6b63bec09a8c369b45f9ed7acec1c10e54ffe753c203a364b0fddb; DOI: https://doi.org/10.1016/j.isci.2021.102258"
+      ]
+    },
+    {
+      "Text15": "missing_fields:\nfield: 逐样本采集设置及光学/检测参数\nstatus: not_reported_per_sample\ndetail: 全局zoom与体素表存在；逐图采集zoom、曝光、功率、滤光片等未给。",
+      "Text15_Reference": [
+        "Structured evidence: full/A142/evidence/record.json#/missing_fields/4; SHA-256: 62aa5a6bde6b63bec09a8c369b45f9ed7acec1c10e54ffe753c203a364b0fddb; DOI: https://doi.org/10.1016/j.isci.2021.102258"
+      ]
+    },
+    {
+      "Text16": "missing_fields:\nfield: FFPE显微镜与切片厚度\nstatus: not_reported\ndetail: FFPE支路不套用LSF显微镜设置。",
+      "Text16_Reference": [
+        "Structured evidence: full/A142/evidence/record.json#/missing_fields/5; SHA-256: 62aa5a6bde6b63bec09a8c369b45f9ed7acec1c10e54ffe753c203a364b0fddb; DOI: https://doi.org/10.1016/j.isci.2021.102258"
+      ]
+    },
+    {
+      "Text17": "missing_fields:\nfield: 闭塞腺体体积的逐腺体数据/各期n及嵌套处理\nstatus: not_reported\ndetail: 箱线图只给P<0.01；重复/独立单位不完全明确。",
+      "Text17_Reference": [
+        "Structured evidence: full/A142/evidence/record.json#/missing_fields/6; SHA-256: 62aa5a6bde6b63bec09a8c369b45f9ed7acec1c10e54ffe753c203a364b0fddb; DOI: https://doi.org/10.1016/j.isci.2021.102258"
+      ]
+    },
+    {
+      "Text18": "missing_fields:\nfield: 清透性能客观量化\nstatus: not_reported\ndetail: 无透射率、空间分辨率标定、变形率、荧光保留百分比、信噪比、保存衰减、耗材成本或方法正面对比。",
+      "Text18_Reference": [
+        "Structured evidence: full/A142/evidence/record.json#/missing_fields/7; SHA-256: 62aa5a6bde6b63bec09a8c369b45f9ed7acec1c10e54ffe753c203a364b0fddb; DOI: https://doi.org/10.1016/j.isci.2021.102258"
+      ]
+    },
+    {
+      "Text19": "missing_fields:\nfield: 完整TIFF、Imaris工程和TRUE外部原始数据\nstatus: not_accessed\ndetail: 本次研究为论文与补充材料抽取；未重新分析原始体积。",
+      "Text19_Reference": [
+        "Structured evidence: full/A142/evidence/record.json#/missing_fields/8; SHA-256: 62aa5a6bde6b63bec09a8c369b45f9ed7acec1c10e54ffe753c203a364b0fddb; DOI: https://doi.org/10.1016/j.isci.2021.102258"
+      ]
+    },
+    {
+      "Text20": "missing_fields:\nfield: 视频逐帧解读\nstatus: partial_visual_review\ndetail: 6视频各覆盖全时长均匀6帧目视，非连续逐帧观看；主要形态由主/补图和正文交叉核对。",
+      "Text20_Reference": [
+        "Structured evidence: full/A142/evidence/record.json#/missing_fields/9; SHA-256: 62aa5a6bde6b63bec09a8c369b45f9ed7acec1c10e54ffe753c203a364b0fddb; DOI: https://doi.org/10.1016/j.isci.2021.102258"
+      ]
+    },
+    {
+      "Text21": "missing_fields:\nfield: 外引方案\nstatus: outside_scope\ndetail: Tainaka2018/2014及Arora2016仅保留引用关系，不外借缺失参数。",
+      "Text21_Reference": [
+        "Structured evidence: full/A142/evidence/record.json#/missing_fields/10; SHA-256: 62aa5a6bde6b63bec09a8c369b45f9ed7acec1c10e54ffe753c203a364b0fddb; DOI: https://doi.org/10.1016/j.isci.2021.102258"
+      ]
+    },
+    {
+      "Text22": "missing_fields:\nfield: Figure3 ±数值的离散指标类型\nstatus: not_explicitly_defined\ndetail: 20%/11%保留为reported_plus_minus；供体行重算sample SD相符只是派生核算，不能认作原文明定SD。",
+      "Text22_Reference": [
+        "Structured evidence: full/A142/evidence/record.json#/missing_fields/11; SHA-256: 62aa5a6bde6b63bec09a8c369b45f9ed7acec1c10e54ffe753c203a364b0fddb; DOI: https://doi.org/10.1016/j.isci.2021.102258"
+      ]
+    },
+    {
+      "Text23": "limitations:\n不是整子宫图谱；样本来自年龄30–50岁的患有其他妇科疾病供体，内膜无病变不等于完全健康供体。",
+      "Text23_Reference": [
+        "Structured evidence: full/A142/evidence/record.json#/limitations/0; SHA-256: 62aa5a6bde6b63bec09a8c369b45f9ed7acec1c10e54ffe753c203a364b0fddb; DOI: https://doi.org/10.1016/j.isci.2021.102258"
+      ]
+    },
+    {
+      "Text24": "limitations:\n无29岁以下样本；没有纵向周期或治疗前后配对。",
+      "Text24_Reference": [
+        "Structured evidence: full/A142/evidence/record.json#/limitations/1; SHA-256: 62aa5a6bde6b63bec09a8c369b45f9ed7acec1c10e54ffe753c203a364b0fddb; DOI: https://doi.org/10.1016/j.isci.2021.102258"
+      ]
+    },
+    {
+      "Text25": "limitations:\n功能再生、干细胞位置、克隆传播和病灶生长机制是解释，不是本研究直接验证。",
+      "Text25_Reference": [
+        "Structured evidence: full/A142/evidence/record.json#/limitations/2; SHA-256: 62aa5a6bde6b63bec09a8c369b45f9ed7acec1c10e54ffe753c203a364b0fddb; DOI: https://doi.org/10.1016/j.isci.2021.102258"
+      ]
+    },
+    {
+      "Text26": "limitations:\n人工分割/修正与未报告参数限制可重复性，E6截断说明组织块边界可影响腺体拓扑。",
+      "Text26_Reference": [
+        "Structured evidence: full/A142/evidence/record.json#/limitations/3; SHA-256: 62aa5a6bde6b63bec09a8c369b45f9ed7acec1c10e54ffe753c203a364b0fddb; DOI: https://doi.org/10.1016/j.isci.2021.102258"
+      ]
+    },
+    {
+      "Text27": "limitations:\n形态应用成功与清透技术性能指标必须分开，不能用分支率或病灶体积给清透方法打分。",
+      "Text27_Reference": [
+        "Structured evidence: full/A142/evidence/record.json#/limitations/4; SHA-256: 62aa5a6bde6b63bec09a8c369b45f9ed7acec1c10e54ffe753c203a364b0fddb; DOI: https://doi.org/10.1016/j.isci.2021.102258"
+      ]
+    },
+    {
+      "Text28": "acceptance_scope:\nscientific_text_and_fixed_tissue_methods: complete_in_scope\nstatic_figures_tables_and_graphical_abstract: complete_actual_read\nsupplemental_videos: partial_systematic_six_frames_each\noriginal_raw_imaging_reanalysis: not_performed\nunresolved_source_conflicts_retained: 7\nclinical_sampling_operations: excluded",
+      "Text28_Reference": [
+        "Structured evidence: full/A142/evidence/record.json#/acceptance_scope; SHA-256: 62aa5a6bde6b63bec09a8c369b45f9ed7acec1c10e54ffe753c203a364b0fddb; DOI: https://doi.org/10.1016/j.isci.2021.102258"
+      ]
+    }
+  ]
+}

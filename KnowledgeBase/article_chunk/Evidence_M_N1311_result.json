@@ -1,0 +1,920 @@
+{
+  "TOC_Method_Name": {
+    "Text": "USOCA switchable skull window",
+    "Text_Reference": [
+      "DOI: https://doi.org/10.7150/thno.23686",
+      "Evidence-layer structured paraphrase; not a verbatim quotation. Source release: https://github.com/404NotFound422/TOCAgentProject/tree/5e3a711befb3952a2e39f4d53fc9c9f1a7ac0d22/KnowledgeBase/evidence_expansion_20261019",
+      "Local source archive: ../literature_evidence/2026-11-11/source_release.zip; member: full/M_N1311/version_selection.json"
+    ]
+  },
+  "General_Description": {
+    "Text": "A large, switchable optical clearing skull window for cerebrovascular imaging. (2018). Evidence category: method. This card preserves the evidence layer's structured statements and their original field labels; it does not add a new literature review or certify benchmark scoring thresholds.",
+    "Text_Reference": [
+      "DOI: https://doi.org/10.7150/thno.23686",
+      "Evidence-layer structured paraphrase; not a verbatim quotation. Source release: https://github.com/404NotFound422/TOCAgentProject/tree/5e3a711befb3952a2e39f4d53fc9c9f1a7ac0d22/KnowledgeBase/evidence_expansion_20261019",
+      "Local source archive: ../literature_evidence/2026-11-11/source_release.zip; member: full/M_N1311/version_selection.json"
+    ]
+  },
+  "Tissue_Types": [
+    {
+      "Text1": "samples:\nsample_id: SA1\nspecies: Mus musculus\nstrain: BALB/c\nsex: male\nage: 2 months unless explicitly overridden\nstate: in vivo, exposed intact skull; not skin-intact non-invasive imaging\nsource: S1 B005–B006",
+      "Text1_Reference": [
+        "Structured evidence: full/M_N1311/evidence/scientific_derived.json#/samples/0; SHA-256: 3644673e2d48022ef084473519ce88398950e54e84c5232ed670ed4a66af4f80; DOI: https://doi.org/10.7150/thno.23686"
+      ]
+    },
+    {
+      "Text2": "samples:\nsample_id: SA2\nparent: SA1\nexperiment: TPLSM same-region before/after\nanimal_n: 5\nvessel_measurement_n: 6\nn_caution: Six selected microvessels are not six independent mice.\nlabel: tetramethylrhodamine-conjugated 70 kDa dextran, vascular tracer\nsource: S1 B010,B022",
+      "Text2_Reference": [
+        "Structured evidence: full/M_N1311/evidence/scientific_derived.json#/samples/1; SHA-256: 3644673e2d48022ef084473519ce88398950e54e84c5232ed670ed4a66af4f80; DOI: https://doi.org/10.7150/thno.23686"
+      ]
+    },
+    {
+      "Text3": "samples:\nsample_id: SA3\nparent: SA1\nages_months: \n  [1] 2\n  [2] 4\n  [3] 6\n  [4] 8\nanimal_n_per_age: 4\nlabel: label-free LSCI/HSI and white-light hemoglobin contrast\nsource: S1 B011",
+      "Text3_Reference": [
+        "Structured evidence: full/M_N1311/evidence/scientific_derived.json#/samples/2; SHA-256: 3644673e2d48022ef084473519ce88398950e54e84c5232ed670ed4a66af4f80; DOI: https://doi.org/10.7150/thno.23686"
+      ]
+    },
+    {
+      "Text4": "samples:\nsample_id: SA4\nparent: SA1\nanimal_n: 4\nexperiment: bilateral hemodynamic monitoring after MCAO\nlabel: label-free LSCI/HSI\nsource: S1 B012",
+      "Text4_Reference": [
+        "Structured evidence: full/M_N1311/evidence/scientific_derived.json#/samples/3; SHA-256: 3644673e2d48022ef084473519ce88398950e54e84c5232ed670ed4a66af4f80; DOI: https://doi.org/10.7150/thno.23686"
+      ]
+    },
+    {
+      "Text5": "samples:\nsample_id: SA5\nparent: SA1\nanimal_n: 5\nexperiment: short-term repeated window, days 1/3/5/7\nlabel: label-free white-light/LSCI/HSI\nsource: S1 B013,B028; Fig6A",
+      "Text5_Reference": [
+        "Structured evidence: full/M_N1311/evidence/scientific_derived.json#/samples/4; SHA-256: 3644673e2d48022ef084473519ce88398950e54e84c5232ed670ed4a66af4f80; DOI: https://doi.org/10.7150/thno.23686"
+      ]
+    },
+    {
+      "Text6": "samples:\nsample_id: SA6\nparent: SA1\nanimal_n: 4\nexperiment: monthly observations at ages 2–7 months, six sessions\nlabel: label-free white-light/LSCI/HSI\nsource: S1 B013,B028; Fig6B",
+      "Text6_Reference": [
+        "Structured evidence: full/M_N1311/evidence/scientific_derived.json#/samples/5; SHA-256: 3644673e2d48022ef084473519ce88398950e54e84c5232ed670ed4a66af4f80; DOI: https://doi.org/10.7150/thno.23686"
+      ]
+    },
+    {
+      "Text7": "samples:\nsample_id: SA7\nspecies: Mus musculus\nstrain: Cx3cr1-GFP (B6.129P-Cx3cr1tm1Litt/J)\nsex: male\nage: 2 months\nanimal_n: 4\nn_scope: explicitly reported for live microglia imaging only\nlabel: genetically encoded GFP in microglia; not viral labeling\nsource: S1 B016",
+      "Text7_Reference": [
+        "Structured evidence: full/M_N1311/evidence/scientific_derived.json#/samples/6; SHA-256: 3644673e2d48022ef084473519ce88398950e54e84c5232ed670ed4a66af4f80; DOI: https://doi.org/10.7150/thno.23686"
+      ]
+    },
+    {
+      "Text8": "samples:\nsample_id: SA8\nparent: SA7\nanimal_n: null (as recorded in source)\nn_status: not separately stated for delayed histology\nstate: post-window fixed brain slices\nlabel: GFP morphology at 2 days; anti-GFAP at 10 days\nsource: S1 B017–B018,B034",
+      "Text8_Reference": [
+        "Structured evidence: full/M_N1311/evidence/scientific_derived.json#/samples/7; SHA-256: 3644673e2d48022ef084473519ce88398950e54e84c5232ed670ed4a66af4f80; DOI: https://doi.org/10.7150/thno.23686"
+      ]
+    },
+    {
+      "Text9": "samples:\nsample_id: SA9\nparent: SA1\nanimal_n_total: 40\ngroups: \n  [1] PBS\n  [2] USOCA\ngroup_n: null (as recorded in source)\nn_status: two groups stated but equal per-group allocation not explicitly specified\nexperiment: 28-day body/organ/histology safety endpoints after treatment on first 3 days\nlabel: liver/kidney H&E\nsource: S1 B019; S2 Table S1",
+      "Text9_Reference": [
+        "Structured evidence: full/M_N1311/evidence/scientific_derived.json#/samples/8; SHA-256: 3644673e2d48022ef084473519ce88398950e54e84c5232ed670ed4a66af4f80; DOI: https://doi.org/10.7150/thno.23686"
+      ]
+    },
+    {
+      "Text10": "samples:\nsample_id: SA10\nmaterial: mouse skull, same area\nanimal_n: null (as recorded in source)\nlabel: label-free SHG\nstate: initial, S1, S2, recovered\nsource: S1 B037; S2 Fig S4",
+      "Text10_Reference": [
+        "Structured evidence: full/M_N1311/evidence/scientific_derived.json#/samples/9; SHA-256: 3644673e2d48022ef084473519ce88398950e54e84c5232ed670ed4a66af4f80; DOI: https://doi.org/10.7150/thno.23686"
+      ]
+    },
+    {
+      "Text11": "samples:\nsample_id: SA11\nmaterial: 0.19 µm fluorescent beads\nn: 4\nn_unit: beads as reported\nconditions: \n  [1] water\n  [2] water + plastic film\n  [3] water + plastic film + USOCA-S2\nsource: S1 B038; S2 Fig S5",
+      "Text11_Reference": [
+        "Structured evidence: full/M_N1311/evidence/scientific_derived.json#/samples/10; SHA-256: 3644673e2d48022ef084473519ce88398950e54e84c5232ed670ed4a66af4f80; DOI: https://doi.org/10.7150/thno.23686"
+      ]
+    }
+  ],
+  "Time_Consumption": [],
+  "Tissue_Deformation": [],
+  "Fluorescence_Compatibility": [],
+  "Preservation_Stability": [],
+  "Application": [
+    {
+      "Text1": "stages:\nstage_id: ST1\nname: skull preparation\ndescription: Animal skull exposed; scalp incision and fixation precede optical clearing. No skull thinning/removal in USOCA branch.\nsample_ids: \n  [1] SA1\nsource: S1 B006; Fig1C",
+      "Text1_Reference": [
+        "Structured evidence: full/M_N1311/evidence/scientific_derived.json#/stages/0; SHA-256: 3644673e2d48022ef084473519ce88398950e54e84c5232ed670ed4a66af4f80; DOI: https://doi.org/10.7150/thno.23686"
+      ]
+    },
+    {
+      "Text2": "stages:\nstage_id: ST2\nname: S1 clearing\ncomposition: urea/ethanol-based S1\nduration_min: 10\noptional_extension_min: \n  [1] 2\n  [2] 5\nduration_scope: clearing stage, not total preparation\nsample_ids: \n  [1] SA1\nsource: S1 B004,B006; Fig1C",
+      "Text2_Reference": [
+        "Structured evidence: full/M_N1311/evidence/scientific_derived.json#/stages/1; SHA-256: 3644673e2d48022ef084473519ce88398950e54e84c5232ed670ed4a66af4f80; DOI: https://doi.org/10.7150/thno.23686"
+      ]
+    },
+    {
+      "Text3": "stages:\nstage_id: ST3\nname: S2 clearing\ncomposition: SDBS-based S2\nduration_min: 5\nsample_ids: \n  [1] SA1\nsource: S1 B004,B006; Fig1C",
+      "Text3_Reference": [
+        "Structured evidence: full/M_N1311/evidence/scientific_derived.json#/stages/2; SHA-256: 3644673e2d48022ef084473519ce88398950e54e84c5232ed670ed4a66af4f80; DOI: https://doi.org/10.7150/thno.23686"
+      ]
+    },
+    {
+      "Text4": "stages:\nstage_id: ST4\nname: imaging\ndescription: approximately 15 min clearing combined, then imaging; thin polyethylene film separates S2 from objective water in TPLSM\nsample_ids: \n  [1] SA2\nsource: S1 B010; Fig3",
+      "Text4_Reference": [
+        "Structured evidence: full/M_N1311/evidence/scientific_derived.json#/stages/3; SHA-256: 3644673e2d48022ef084473519ce88398950e54e84c5232ed670ed4a66af4f80; DOI: https://doi.org/10.7150/thno.23686"
+      ]
+    },
+    {
+      "Text5": "stages:\nstage_id: ST5\nname: recovery and re-clearing\ndescription: PBS replacement returns skull to turbid appearance, with later reapplication permitting repeated windows. This establishes macroscopic optical switchability, not demonstrated complete biochemical/ultrastructural restoration.\nsample_ids: \n  [1] SA1\n  [2] SA5\n  [3] SA6\nsource: S1 B021,B028–B031,B037; Fig2,6; S2 Fig S4; S3 sampled video",
+      "Text5_Reference": [
+        "Structured evidence: full/M_N1311/evidence/scientific_derived.json#/stages/4; SHA-256: 3644673e2d48022ef084473519ce88398950e54e84c5232ed670ed4a66af4f80; DOI: https://doi.org/10.7150/thno.23686"
+      ]
+    },
+    {
+      "Text6": "results:\nresult_id: R01\nmetric: macroscopic optical switchability\nsample_ids: \n  [1] SA1\nstage_ids: \n  [1] ST2\n  [2] ST3\n  [3] ST5\nvalue: \n  states: \n    [1] initial turbid\n    [2] cleared vessels visible\n    [3] recovered turbid\n    [4] re-cleared vessels visible\n    [5] skull-removed comparator\n  wavelength_nm: 550\nsource_locators: \n  [1] S1 B021; Fig2\n  [2] S2 Fig S1\n  [3] S3 full-duration sampled frames\ninterpretation_limit: Qualitative reflected-light visibility; not a measured transmittance percentage. Video is accelerated and only sampled.",
+      "Text6_Reference": [
+        "Structured evidence: full/M_N1311/evidence/scientific_derived.json#/results/0; SHA-256: 3644673e2d48022ef084473519ce88398950e54e84c5232ed670ed4a66af4f80; DOI: https://doi.org/10.7150/thno.23686"
+      ]
+    },
+    {
+      "Text7": "results:\nresult_id: R02\nmetric: TPLSM imaging depth below pia\nsample_ids: \n  [1] SA2\nstage_ids: \n  [1] ST4\nvalue: \n  before_um: 120\n  after_um: 300\n  approximate: true\nsource_locators: \n  [1] S1 B010,B022; Fig3/B050\ninterpretation_limit: Depth origin is pia, not skull surface or skull thickness; objective 16x water 0.8 NA, excitation 880 nm, detection 595±25 nm, z step 2 µm. No general tissue-depth guarantee.",
+      "Text7_Reference": [
+        "Structured evidence: full/M_N1311/evidence/scientific_derived.json#/results/1; SHA-256: 3644673e2d48022ef084473519ce88398950e54e84c5232ed670ed4a66af4f80; DOI: https://doi.org/10.7150/thno.23686"
+      ]
+    },
+    {
+      "Text8": "results:\nresult_id: R03\nmetric: minimum resolvable vascular diameter\nsample_ids: \n  [1] SA2\nstage_ids: \n  [1] ST4\nvalue: \n  before_mean_um: 67.5\n  before_se_um: 7.9\n  after_mean_um: 4.5\n  after_se_um: 0.31\n  microvessel_n: 6\nsource_locators: \n  [1] S1 B022; Fig3\ninterpretation_limit: Authors metric for visible vessel diameter, not optical PSF resolution; mean±SE default B020. Do not treat vessel n as animal n.",
+      "Text8_Reference": [
+        "Structured evidence: full/M_N1311/evidence/scientific_derived.json#/results/2; SHA-256: 3644673e2d48022ef084473519ce88398950e54e84c5232ed670ed4a66af4f80; DOI: https://doi.org/10.7150/thno.23686"
+      ]
+    },
+    {
+      "Text9": "results:\nresult_id: R04\nmetric: fluorescence image contrast\nsample_ids: \n  [1] SA2\nstage_ids: \n  [1] ST4\nvalue: \n  finding: same-region vascular intensity profiles and depth profiles rise after clearing\n  numeric_retention_percent: null (as recorded in source)\nsource_locators: \n  [1] S1 B022; Fig3\ninterpretation_limit: Improved optical access is not fluorophore retention, chemical stability, bleaching, or protein preservation measurement.",
+      "Text9_Reference": [
+        "Structured evidence: full/M_N1311/evidence/scientific_derived.json#/results/3; SHA-256: 3644673e2d48022ef084473519ce88398950e54e84c5232ed670ed4a66af4f80; DOI: https://doi.org/10.7150/thno.23686"
+      ]
+    },
+    {
+      "Text10": "results:\nresult_id: R05\nmetric: age-dependent LSCI CNR and vessel visibility\nsample_ids: \n  [1] SA3\nstage_ids: \n  [1] ST2\n  [2] ST3\nvalue: \n  ages_months: \n    [1] 2\n    [2] 4\n    [3] 6\n    [4] 8\n  comparison: USOCA improves CNR and minimum resolvable diameter versus PBS at each age\n  versus_skull_removed: CNR differs at 6 and 8 months; minimum resolvable diameter does not significantly differ at any age\n  bar_values: not numerically digitized\nsource_locators: \n  [1] S1 B023–B025; Fig4A–F\ninterpretation_limit: Not equivalence testing; skull removal includes bleeding/lost-vessel artifacts. Main bars lack printed exact data.",
+      "Text10_Reference": [
+        "Structured evidence: full/M_N1311/evidence/scientific_derived.json#/results/4; SHA-256: 3644673e2d48022ef084473519ce88398950e54e84c5232ed670ed4a66af4f80; DOI: https://doi.org/10.7150/thno.23686"
+      ]
+    },
+    {
+      "Text11": "results:\nresult_id: R06\nmetric: bilateral CBF response after MCAO\nsample_ids: \n  [1] SA4\nstage_ids: \n  [1] ST4\nvalue: \n  operated_artery_change_percent: \n    10min: -60\n    30min: -100\n  operated_vein_change_percent: \n    10min: -40\n    30min: -60\n  opposite_artery: up to almost 3x initial\n  opposite_vein: about +50%\n  approximate: true\nsource_locators: \n  [1] S1 B027; Fig5B (actual panel labels)\ninterpretation_limit: Disease-model hemodynamic results, not clearing gain; time-specific opposite-side summary not over-specified. Body B027 and graphical labels agree: B=CBF, C=SO2. Caption B052 final B–C wording lists SO2 then CBF, a reversed-order ambiguity only.",
+      "Text11_Reference": [
+        "Structured evidence: full/M_N1311/evidence/scientific_derived.json#/results/5; SHA-256: 3644673e2d48022ef084473519ce88398950e54e84c5232ed670ed4a66af4f80; DOI: https://doi.org/10.7150/thno.23686"
+      ]
+    },
+    {
+      "Text12": "results:\nresult_id: R07\nmetric: bilateral SO2 response after MCAO\nsample_ids: \n  [1] SA4\nstage_ids: \n  [1] ST4\nvalue: \n  operated_side: decreases\n  opposite_side: slight increase\n  exact_numbers: null (as recorded in source)\nsource_locators: \n  [1] S1 B027; Fig5C (actual panel labels)\ninterpretation_limit: Do not copy CBF percentage changes into SO2. Body says nearly same operated-side changes, but this is not a license to assign CBF values to SO2; C is explicitly SO2. Body B027 agrees with panel labels; caption B052 order is ambiguous.",
+      "Text12_Reference": [
+        "Structured evidence: full/M_N1311/evidence/scientific_derived.json#/results/6; SHA-256: 3644673e2d48022ef084473519ce88398950e54e84c5232ed670ed4a66af4f80; DOI: https://doi.org/10.7150/thno.23686"
+      ]
+    },
+    {
+      "Text13": "results:\nresult_id: R08\nmetric: short-term repeatability\nsample_ids: \n  [1] SA5\nstage_ids: \n  [1] ST5\nvalue: \n  days: \n    [1] 1\n    [2] 3\n    [3] 5\n    [4] 7\n  observations: 4\n  finding: vessels, CBF and SO2 maps remain visually stable; selected artery/vein diameters have no significant difference\nsource_locators: \n  [1] S1 B028–B031; Fig6A,C\ninterpretation_limit: Not proof every vessel or all biological features are unchanged; five repeated diameter calculations are technical repeats.",
+      "Text13_Reference": [
+        "Structured evidence: full/M_N1311/evidence/scientific_derived.json#/results/7; SHA-256: 3644673e2d48022ef084473519ce88398950e54e84c5232ed670ed4a66af4f80; DOI: https://doi.org/10.7150/thno.23686"
+      ]
+    },
+    {
+      "Text14": "results:\nresult_id: R09\nmetric: long-term repeatability\nsample_ids: \n  [1] SA6\nstage_ids: \n  [1] ST5\nvalue: \n  ages_months: \n    [1] 2\n    [2] 3\n    [3] 4\n    [4] 5\n    [5] 6\n    [6] 7\n  sessions: 6\n  finding: re-established window permits repeated maps; some appearing/disappearing vessels; selected diameters not significantly different\nsource_locators: \n  [1] S1 B030–B031; Fig6B,D\ninterpretation_limit: Authors call this 6 months; sampled age endpoints span 5 elapsed months. No continuous transparency claim.",
+      "Text14_Reference": [
+        "Structured evidence: full/M_N1311/evidence/scientific_derived.json#/results/8; SHA-256: 3644673e2d48022ef084473519ce88398950e54e84c5232ed670ed4a66af4f80; DOI: https://doi.org/10.7150/thno.23686"
+      ]
+    },
+    {
+      "Text15": "results:\nresult_id: R10\nmetric: live GFP microglia morphology\nsample_ids: \n  [1] SA7\nstage_ids: \n  [1] ST4\nvalue: \n  observation_minutes: 60\n  finding: motile protrusions with stable somata size/shape/location\n  depth_below_pia_um: \n    [1] 30\n    [2] 70\nsource_locators: \n  [1] S1 B016,B033; Fig7A\ninterpretation_limit: GFP compatibility is visual in vivo readout, not quantitative fluorescence retention. Limited measured safety endpoint, not universal safety.",
+      "Text15_Reference": [
+        "Structured evidence: full/M_N1311/evidence/scientific_derived.json#/results/9; SHA-256: 3644673e2d48022ef084473519ce88398950e54e84c5232ed670ed4a66af4f80; DOI: https://doi.org/10.7150/thno.23686"
+      ]
+    },
+    {
+      "Text16": "results:\nresult_id: R11\nmetric: delayed neuroinflammation endpoints\nsample_ids: \n  [1] SA8\nstage_ids: \n  [1] ST5\nvalue: \n  day2: no reported amoeboid morphology or extension toward pia\n  day10: no obvious GFAP increase versus contralateral side\nsource_locators: \n  [1] S1 B017–B018,B034; Fig7B–C\ninterpretation_limit: Fixed-slice assessment after live skull clearing, not whole-brain clearing. No comprehensive inflammation exclusion.",
+      "Text16_Reference": [
+        "Structured evidence: full/M_N1311/evidence/scientific_derived.json#/results/10; SHA-256: 3644673e2d48022ef084473519ce88398950e54e84c5232ed670ed4a66af4f80; DOI: https://doi.org/10.7150/thno.23686"
+      ]
+    },
+    {
+      "Text17": "results:\nresult_id: R12\nmetric: metabolic/histology endpoints\nsample_ids: \n  [1] SA9\nstage_ids: \n  [1] ST5\nvalue: \n  day: 28\n  finding: no obvious liver/kidney H&E differences; body/organ results in T01\nsource_locators: \n  [1] S1 B019,B035; Fig7D–E\n  [2] S2 Table S1\ninterpretation_limit: Supports only measured mouse endpoints, not human safety or all toxicity.",
+      "Text17_Reference": [
+        "Structured evidence: full/M_N1311/evidence/scientific_derived.json#/results/11; SHA-256: 3644673e2d48022ef084473519ce88398950e54e84c5232ed670ed4a66af4f80; DOI: https://doi.org/10.7150/thno.23686"
+      ]
+    },
+    {
+      "Text18": "results:\nresult_id: R13\nmetric: skull SHG change/recovery\nsample_ids: \n  [1] SA10\nstage_ids: \n  [1] ST2\n  [2] ST3\n  [3] ST5\nvalue: \n  finding: S1 decreases SHG and creates cavities; little further SHG change with S2; recovery increases SHG and reduces cavities\n  exact_normalized_values: null (as recorded in source)\nsource_locators: \n  [1] S1 B037\n  [2] S2 p2 Fig S4A–B\ninterpretation_limit: SHG is a collagen-sensitive nonlinear signal, not fluorescence retention or transmittance. Partial return visually, not proof full molecular reversal. No unprinted bar values promoted as exact.",
+      "Text18_Reference": [
+        "Structured evidence: full/M_N1311/evidence/scientific_derived.json#/results/12; SHA-256: 3644673e2d48022ef084473519ce88398950e54e84c5232ed670ed4a66af4f80; DOI: https://doi.org/10.7150/thno.23686"
+      ]
+    },
+    {
+      "Text19": "results:\nresult_id: R14\nmetric: bead radial integrated-intensity half-width metric\nsample_ids: \n  [1] SA11\nstage_ids: \n  [1] ST4\nvalue: \n  water_um: 0.53\n  water_film_um: 0.57\n  water_film_S2_um: 0.49\n  definition: full width encompassing half the integrated intensity\nsource_locators: \n  [1] S1 B038\n  [2] S2 p3 Fig S5 top two rows\ninterpretation_limit: Printed exemplar values; not group means. Do not silently equate this definition to conventional intensity FWHM.",
+      "Text19_Reference": [
+        "Structured evidence: full/M_N1311/evidence/scientific_derived.json#/results/13; SHA-256: 3644673e2d48022ef084473519ce88398950e54e84c5232ed670ed4a66af4f80; DOI: https://doi.org/10.7150/thno.23686"
+      ]
+    },
+    {
+      "Text20": "results:\nresult_id: R15\nmetric: bead axial integrated-intensity half-width metric\nsample_ids: \n  [1] SA11\nstage_ids: \n  [1] ST4\nvalue: \n  water_um: 2.27\n  water_film_um: 2.43\n  water_film_S2_um: 1.96\n  definition: full width encompassing half the integrated intensity\nsource_locators: \n  [1] S1 B038\n  [2] S2 p3 Fig S5 bottom two rows\ninterpretation_limit: Printed exemplar values; not group means. Does not establish fluorophore preservation.",
+      "Text20_Reference": [
+        "Structured evidence: full/M_N1311/evidence/scientific_derived.json#/results/14; SHA-256: 3644673e2d48022ef084473519ce88398950e54e84c5232ed670ed4a66af4f80; DOI: https://doi.org/10.7150/thno.23686"
+      ]
+    },
+    {
+      "Text21": "tables:\ntable_id: T01\nsource: S2 p4 Table S1; S1 B019,B020,B035\nsample_id: SA9\nuncertainty: mean ± standard error per main statistical analysis; table does not restate it\nrows: \n  [1]     group: Control\n    initial_body_weight_g: 22.34±1.02\n    final_body_weight_g: 24.48±1.33\n    heart_percent: 0.57±0.01\n    liver_percent: 5.41±0.13\n    spleen_percent: 0.61±0.01\n    lung_percent: 0.58±0.03\n    kidney_percent: 1.87±0.03\n    brain_percent: 1.84±0.02\n  [2]     group: USOCA\n    initial_body_weight_g: 22.22±0.98\n    final_body_weight_g: 24.60±1.21\n    heart_percent: 0.56±0.01\n    liver_percent: 5.47±0.06\n    spleen_percent: 0.60±0.02\n    lung_percent: 0.59±0.02\n    kidney_percent: 1.86±0.02\n    brain_percent: 1.85±0.02\ninterpretation: Organ-to-body weight ratios at day28, not percentage of initial organ weights. No new significance test performed.",
+      "Text21_Reference": [
+        "Structured evidence: full/M_N1311/evidence/scientific_derived.json#/tables/0; SHA-256: 3644673e2d48022ef084473519ce88398950e54e84c5232ed670ed4a66af4f80; DOI: https://doi.org/10.7150/thno.23686"
+      ]
+    },
+    {
+      "Text22": "claims:\nclaim_id: C01\ntext: macroscopic optical switchability\nsample_ids: \n  [1] SA1\nresult_ids: \n  [1] R01\nsource_locators: \n  [1] S1 B021; Fig2\n  [2] S2 Fig S1\n  [3] S3 full-duration sampled frames\nclaim_status: independently_checked_pending_parent_delta_review\nassertion_eligible: false\neligibility_reason: Numerical/source binding reviewed; exact delta awaits parent approval.",
+      "Text22_Reference": [
+        "Structured evidence: full/M_N1311/evidence/scientific_derived.json#/claims/0; SHA-256: 3644673e2d48022ef084473519ce88398950e54e84c5232ed670ed4a66af4f80; DOI: https://doi.org/10.7150/thno.23686"
+      ]
+    },
+    {
+      "Text23": "claims:\nclaim_id: C02\ntext: TPLSM imaging depth below pia\nsample_ids: \n  [1] SA2\nresult_ids: \n  [1] R02\nsource_locators: \n  [1] S1 B010,B022; Fig3/B050\nclaim_status: independently_checked_pending_parent_delta_review\nassertion_eligible: false\neligibility_reason: Numerical/source binding reviewed; exact delta awaits parent approval.",
+      "Text23_Reference": [
+        "Structured evidence: full/M_N1311/evidence/scientific_derived.json#/claims/1; SHA-256: 3644673e2d48022ef084473519ce88398950e54e84c5232ed670ed4a66af4f80; DOI: https://doi.org/10.7150/thno.23686"
+      ]
+    },
+    {
+      "Text24": "claims:\nclaim_id: C03\ntext: minimum resolvable vascular diameter\nsample_ids: \n  [1] SA2\nresult_ids: \n  [1] R03\nsource_locators: \n  [1] S1 B022; Fig3\nclaim_status: independently_checked_pending_parent_delta_review\nassertion_eligible: false\neligibility_reason: Numerical/source binding reviewed; exact delta awaits parent approval.",
+      "Text24_Reference": [
+        "Structured evidence: full/M_N1311/evidence/scientific_derived.json#/claims/2; SHA-256: 3644673e2d48022ef084473519ce88398950e54e84c5232ed670ed4a66af4f80; DOI: https://doi.org/10.7150/thno.23686"
+      ]
+    },
+    {
+      "Text25": "claims:\nclaim_id: C04\ntext: fluorescence image contrast\nsample_ids: \n  [1] SA2\nresult_ids: \n  [1] R04\nsource_locators: \n  [1] S1 B022; Fig3\nclaim_status: independently_checked_pending_parent_delta_review\nassertion_eligible: false\neligibility_reason: Numerical/source binding reviewed; exact delta awaits parent approval.",
+      "Text25_Reference": [
+        "Structured evidence: full/M_N1311/evidence/scientific_derived.json#/claims/3; SHA-256: 3644673e2d48022ef084473519ce88398950e54e84c5232ed670ed4a66af4f80; DOI: https://doi.org/10.7150/thno.23686"
+      ]
+    },
+    {
+      "Text26": "claims:\nclaim_id: C05\ntext: age-dependent LSCI CNR and vessel visibility\nsample_ids: \n  [1] SA3\nresult_ids: \n  [1] R05\nsource_locators: \n  [1] S1 B023–B025; Fig4A–F\nclaim_status: independently_checked_pending_parent_delta_review\nassertion_eligible: false\neligibility_reason: Numerical/source binding reviewed; exact delta awaits parent approval.",
+      "Text26_Reference": [
+        "Structured evidence: full/M_N1311/evidence/scientific_derived.json#/claims/4; SHA-256: 3644673e2d48022ef084473519ce88398950e54e84c5232ed670ed4a66af4f80; DOI: https://doi.org/10.7150/thno.23686"
+      ]
+    },
+    {
+      "Text27": "claims:\nclaim_id: C06\ntext: bilateral CBF response after MCAO\nsample_ids: \n  [1] SA4\nresult_ids: \n  [1] R06\nsource_locators: \n  [1] S1 B027; Fig5B (actual panel labels)\nclaim_status: independently_checked_pending_parent_delta_review\nassertion_eligible: false\neligibility_reason: Numerical/source binding reviewed; exact delta awaits parent approval.",
+      "Text27_Reference": [
+        "Structured evidence: full/M_N1311/evidence/scientific_derived.json#/claims/5; SHA-256: 3644673e2d48022ef084473519ce88398950e54e84c5232ed670ed4a66af4f80; DOI: https://doi.org/10.7150/thno.23686"
+      ]
+    },
+    {
+      "Text28": "claims:\nclaim_id: C07\ntext: bilateral SO2 response after MCAO\nsample_ids: \n  [1] SA4\nresult_ids: \n  [1] R07\nsource_locators: \n  [1] S1 B027; Fig5C (actual panel labels)\nclaim_status: independently_checked_pending_parent_delta_review\nassertion_eligible: false\neligibility_reason: Numerical/source binding reviewed; exact delta awaits parent approval.",
+      "Text28_Reference": [
+        "Structured evidence: full/M_N1311/evidence/scientific_derived.json#/claims/6; SHA-256: 3644673e2d48022ef084473519ce88398950e54e84c5232ed670ed4a66af4f80; DOI: https://doi.org/10.7150/thno.23686"
+      ]
+    },
+    {
+      "Text29": "claims:\nclaim_id: C08\ntext: short-term repeatability\nsample_ids: \n  [1] SA5\nresult_ids: \n  [1] R08\nsource_locators: \n  [1] S1 B028–B031; Fig6A,C\nclaim_status: independently_checked_pending_parent_delta_review\nassertion_eligible: false\neligibility_reason: Numerical/source binding reviewed; exact delta awaits parent approval.",
+      "Text29_Reference": [
+        "Structured evidence: full/M_N1311/evidence/scientific_derived.json#/claims/7; SHA-256: 3644673e2d48022ef084473519ce88398950e54e84c5232ed670ed4a66af4f80; DOI: https://doi.org/10.7150/thno.23686"
+      ]
+    },
+    {
+      "Text30": "claims:\nclaim_id: C09\ntext: long-term repeatability\nsample_ids: \n  [1] SA6\nresult_ids: \n  [1] R09\nsource_locators: \n  [1] S1 B030–B031; Fig6B,D\nclaim_status: independently_checked_pending_parent_delta_review\nassertion_eligible: false\neligibility_reason: Numerical/source binding reviewed; exact delta awaits parent approval.",
+      "Text30_Reference": [
+        "Structured evidence: full/M_N1311/evidence/scientific_derived.json#/claims/8; SHA-256: 3644673e2d48022ef084473519ce88398950e54e84c5232ed670ed4a66af4f80; DOI: https://doi.org/10.7150/thno.23686"
+      ]
+    },
+    {
+      "Text31": "claims:\nclaim_id: C10\ntext: live GFP microglia morphology\nsample_ids: \n  [1] SA7\nresult_ids: \n  [1] R10\nsource_locators: \n  [1] S1 B016,B033; Fig7A\nclaim_status: independently_checked_pending_parent_delta_review\nassertion_eligible: false\neligibility_reason: Numerical/source binding reviewed; exact delta awaits parent approval.",
+      "Text31_Reference": [
+        "Structured evidence: full/M_N1311/evidence/scientific_derived.json#/claims/9; SHA-256: 3644673e2d48022ef084473519ce88398950e54e84c5232ed670ed4a66af4f80; DOI: https://doi.org/10.7150/thno.23686"
+      ]
+    },
+    {
+      "Text32": "claims:\nclaim_id: C11\ntext: delayed neuroinflammation endpoints\nsample_ids: \n  [1] SA8\nresult_ids: \n  [1] R11\nsource_locators: \n  [1] S1 B017–B018,B034; Fig7B–C\nclaim_status: independently_checked_pending_parent_delta_review\nassertion_eligible: false\neligibility_reason: Numerical/source binding reviewed; exact delta awaits parent approval.",
+      "Text32_Reference": [
+        "Structured evidence: full/M_N1311/evidence/scientific_derived.json#/claims/10; SHA-256: 3644673e2d48022ef084473519ce88398950e54e84c5232ed670ed4a66af4f80; DOI: https://doi.org/10.7150/thno.23686"
+      ]
+    },
+    {
+      "Text33": "claims:\nclaim_id: C12\ntext: metabolic/histology endpoints\nsample_ids: \n  [1] SA9\nresult_ids: \n  [1] R12\nsource_locators: \n  [1] S1 B019,B035; Fig7D–E\n  [2] S2 Table S1\nclaim_status: independently_checked_pending_parent_delta_review\nassertion_eligible: false\neligibility_reason: Numerical/source binding reviewed; exact delta awaits parent approval.",
+      "Text33_Reference": [
+        "Structured evidence: full/M_N1311/evidence/scientific_derived.json#/claims/11; SHA-256: 3644673e2d48022ef084473519ce88398950e54e84c5232ed670ed4a66af4f80; DOI: https://doi.org/10.7150/thno.23686"
+      ]
+    },
+    {
+      "Text34": "claims:\nclaim_id: C13\ntext: skull SHG change/recovery\nsample_ids: \n  [1] SA10\nresult_ids: \n  [1] R13\nsource_locators: \n  [1] S1 B037\n  [2] S2 p2 Fig S4A–B\nclaim_status: independently_checked_pending_parent_delta_review\nassertion_eligible: false\neligibility_reason: Numerical/source binding reviewed; exact delta awaits parent approval.",
+      "Text34_Reference": [
+        "Structured evidence: full/M_N1311/evidence/scientific_derived.json#/claims/12; SHA-256: 3644673e2d48022ef084473519ce88398950e54e84c5232ed670ed4a66af4f80; DOI: https://doi.org/10.7150/thno.23686"
+      ]
+    },
+    {
+      "Text35": "claims:\nclaim_id: C14\ntext: bead radial integrated-intensity half-width metric\nsample_ids: \n  [1] SA11\nresult_ids: \n  [1] R14\nsource_locators: \n  [1] S1 B038\n  [2] S2 p3 Fig S5 top two rows\nclaim_status: independently_checked_pending_parent_delta_review\nassertion_eligible: false\neligibility_reason: Numerical/source binding reviewed; exact delta awaits parent approval.",
+      "Text35_Reference": [
+        "Structured evidence: full/M_N1311/evidence/scientific_derived.json#/claims/13; SHA-256: 3644673e2d48022ef084473519ce88398950e54e84c5232ed670ed4a66af4f80; DOI: https://doi.org/10.7150/thno.23686"
+      ]
+    },
+    {
+      "Text36": "claims:\nclaim_id: C15\ntext: bead axial integrated-intensity half-width metric\nsample_ids: \n  [1] SA11\nresult_ids: \n  [1] R15\nsource_locators: \n  [1] S1 B038\n  [2] S2 p3 Fig S5 bottom two rows\nclaim_status: independently_checked_pending_parent_delta_review\nassertion_eligible: false\neligibility_reason: Numerical/source binding reviewed; exact delta awaits parent approval.",
+      "Text36_Reference": [
+        "Structured evidence: full/M_N1311/evidence/scientific_derived.json#/claims/14; SHA-256: 3644673e2d48022ef084473519ce88398950e54e84c5232ed670ed4a66af4f80; DOI: https://doi.org/10.7150/thno.23686"
+      ]
+    },
+    {
+      "Text37": "method_context:\nformulation: \n  source: S1 B004; Fig1A–B\n  S1: Saturated supernatant of urea in 75% v/v ethanol at 25 °C; reported ethanol volume:urea mass approximately 10:3.\n  S2: High-concentration SDBS from 0.7 M NaOH and DDBSA, reported solution volume:acid mass 24:5; pH 7.2–8.\n  RI: \n    S1: 1.399±0.003\n    S2: 1.367±0.005\n    interpretation: physical solution indices, not optical clearing performance scores\n  storage_context: sealed approximately 25 °C, approximately 2 months if uncontaminated; reported context, not stability validation\noptical_window_geometry: \n  source: B006,B012,B026,B040; S2 FigS2\n  finding: size/location adjustable, hemispheric or bihemispheric; bilateral maps acquired sequentially left/middle/right then stitched, not simultaneous single-shot acquisition\n  holders: H1 hemispheric wide-field; H2 hemispheric microscopy; H3 bihemispheric wide-field\ndual_modal_measurement: \n  source: B007–B009; S2 FigS3; original embedded equation thnov08p2696i001.jpg\n  LSCI: 632.8 nm He-Ne, 3 mW; temporal speckle contrast for CBF\n  HSI: polarized ring LED, LCTF, second CCD; multiple linear regression for SO2\n  CNR_equation: abs(mean_C_vessel - mean_C_back) / sqrt(f_vessel * sigma_vessel^2 + f_back * sigma_back^2)\n  CNR_definitions: C means speckle contrast, sigma^2 contrast variance, f classified pixel fraction in selected image; vessel denotes blood flow and back background. Not transmittance.\n  main_display: white-light vessel maps selected at 550 nm\nTPLSM_conditions: \n  source: B010; Fig3/B050\n  matched_region: true\n  water_separation_film_um: 11±2\n  pixels: \n    [1] 1024\n    [2] 1024\n  pixel_um: 0.78\n  dwell_us: 6.1\n  power_mW: \n    [1] 20\n    [2] 150\n  power_schedule: increased linearly top to bottom\n  objective: 16x water 0.8 NA\n  excitation_nm: 880\n  detection_nm: 595±25\n  z_step_um: 2\n  depth_origin: pia\nmicroglia_imaging: \n  source: Fig7A/B054\n  objective: 40x water 1.15 NA\n  excitation_nm: 880\n  detection_nm: 525±25\n  power_mW: 28\n  pixel_um: 0.1\n  z_step_um: 2\n  dwell_us: 1\n  projection_below_pia_um: \n    [1] 30\n    [2] 70\nSHG_conditions: \n  source: S2 FigS4\n  objective: 16x water 0.8 NA\n  excitation_nm: 890\n  detection_nm: 445±40\n  power_mW: 55\n  pixel_um: 0.2\n  projection_um: \n    [1] 0\n    [2] 50\n  z_step_um: 1\n  dwell_us: 1\n  mechanism_limit: authors propose hydration/permeability, collagen dissolution/reassembly and lipid extraction; mechanism not fully established and SHG alone does not prove molecular restoration\nbead_conditions: \n  source: S2 FigS5\n  objective_as_printed: 40x water 0.8 NA\n  excitation_nm: 800\n  detection_nm: 525±25\n  power_mW: 10\n  pixel_um: 0.05\n  projection_um: \n    [1] 0\n    [2] 9.75\n  z_step_um: 0.325\n  dwell_us: 1\n  metric: full widths encompassing half integrated intensity, not ordinary FWHM\nstatistics: \n  source: B020\n  reported_uncertainty: mean±SE unless otherwise stated\n  test: one-way ANOVA in SPSS\n  limitations: no independent reanalysis; technical repeats and vessel measurements not relabeled animal replication\nsupplementary_timing: \n  source: S2 FigS1\n  samples: initial; S1 2/4/6/8/10 min; S2 1/3/5 min\n  interpretation: qualitative time progression, not calibrated kinetic curve\nage_controls: \n  source: B023–B025; Fig4\n  PBS: slight image improvement at 2/4 months but not 6/8 months\n  comparator_limit: removed-skull images include bleeding and lost-vessel artifacts; no equivalence claim\nsafety_binding: \n  source: B017–B019; Fig7\n  delayed_brain: left window versus contralateral control, 3–4 mm window in displayed sections; 100 µm fixed sections\n  systemic: 40 mice total, first-three-day exposure, day28 endpoint; per-group n not explicit\n  interpretation: measured animal endpoints only; no broad safety or human recommendation",
+      "Text37_Reference": [
+        "Structured evidence: full/M_N1311/evidence/scientific_derived.json#/method_context; SHA-256: 3644673e2d48022ef084473519ce88398950e54e84c5232ed670ed4a66af4f80; DOI: https://doi.org/10.7150/thno.23686"
+      ]
+    },
+    {
+      "Text38": "source/figure1.jpg:\ne34af32613a051e949d38d487af75cc5f4a0c856f3ec607ac88bac05007c54cd",
+      "Text38_Reference": [
+        "Structured evidence: full/M_N1311/evidence/source_hash_reference.json#/source~1figure1.jpg; SHA-256: fa0f0900f5be1467aa505311b8411ab9bb4a4cb3154bf28a64f8225b66a3fa51; DOI: https://doi.org/10.7150/thno.23686"
+      ]
+    },
+    {
+      "Text39": "source/figure2.jpg:\nc4b12a0bce209391ef948e5f00587b4e7bb9efffc72d8d80d5e3f03128bb1ce0",
+      "Text39_Reference": [
+        "Structured evidence: full/M_N1311/evidence/source_hash_reference.json#/source~1figure2.jpg; SHA-256: fa0f0900f5be1467aa505311b8411ab9bb4a4cb3154bf28a64f8225b66a3fa51; DOI: https://doi.org/10.7150/thno.23686"
+      ]
+    },
+    {
+      "Text40": "source/figure3.jpg:\na65dea30301a1a08e1b39754dfa5521ed8ca82be668eb7d27f34c62d686fdd21",
+      "Text40_Reference": [
+        "Structured evidence: full/M_N1311/evidence/source_hash_reference.json#/source~1figure3.jpg; SHA-256: fa0f0900f5be1467aa505311b8411ab9bb4a4cb3154bf28a64f8225b66a3fa51; DOI: https://doi.org/10.7150/thno.23686"
+      ]
+    },
+    {
+      "Text41": "source/figure4.jpg:\ne52c95481efbff8f3f6305e93b983f4b256ad85ccbdcb8fd621c075c50e69940",
+      "Text41_Reference": [
+        "Structured evidence: full/M_N1311/evidence/source_hash_reference.json#/source~1figure4.jpg; SHA-256: fa0f0900f5be1467aa505311b8411ab9bb4a4cb3154bf28a64f8225b66a3fa51; DOI: https://doi.org/10.7150/thno.23686"
+      ]
+    },
+    {
+      "Text42": "source/figure5.jpg:\na3856a0e8fb88eac85b8ce7acc1aedb5e512b6c18f6e2c4aaf9db895263ee92c",
+      "Text42_Reference": [
+        "Structured evidence: full/M_N1311/evidence/source_hash_reference.json#/source~1figure5.jpg; SHA-256: fa0f0900f5be1467aa505311b8411ab9bb4a4cb3154bf28a64f8225b66a3fa51; DOI: https://doi.org/10.7150/thno.23686"
+      ]
+    },
+    {
+      "Text43": "source/figure6.jpg:\n2661007f3d8d95ab5499748b380e6dfcf6c654ece124b1f86f87591238e236d6",
+      "Text43_Reference": [
+        "Structured evidence: full/M_N1311/evidence/source_hash_reference.json#/source~1figure6.jpg; SHA-256: fa0f0900f5be1467aa505311b8411ab9bb4a4cb3154bf28a64f8225b66a3fa51; DOI: https://doi.org/10.7150/thno.23686"
+      ]
+    },
+    {
+      "Text44": "source/figure7.jpg:\n181379b8e8e47447efb996925c5a41fc2c97260b1bcb99b822cac7c9833edf7f",
+      "Text44_Reference": [
+        "Structured evidence: full/M_N1311/evidence/source_hash_reference.json#/source~1figure7.jpg; SHA-256: fa0f0900f5be1467aa505311b8411ab9bb4a4cb3154bf28a64f8225b66a3fa51; DOI: https://doi.org/10.7150/thno.23686"
+      ]
+    }
+  ],
+  "Note": [
+    {
+      "Text1": "Paper M_N1311; source coverage: full; source release status: published_in_this_release; source default_eligible: true. Read this study as a whole with its sample, experimental, measurement and limitation fields. All selected source files and mandatory support in the accompanying archive apply jointly. Import does not promote candidate status, resolve contradictions, or turn review citations into independent primary experiments. Application includes source-labelled protocols, comparisons and results; labels within each Text retain their actual role.",
+      "Text1_Reference": [
+        "DOI: https://doi.org/10.7150/thno.23686",
+        "Evidence-layer structured paraphrase; not a verbatim quotation. Source release: https://github.com/404NotFound422/TOCAgentProject/tree/5e3a711befb3952a2e39f4d53fc9c9f1a7ac0d22/KnowledgeBase/evidence_expansion_20261019",
+        "Local source archive: ../literature_evidence/2026-11-11/source_release.zip; member: full/M_N1311/version_selection.json"
+      ]
+    },
+    {
+      "Text2": "Selected version and mandatory composition:\npaper_id: M_N1311\nstatus: full\ndefault_eligible: true\nactive_scientific_files: \n  [1]     path: full/M_N1311/evidence/acceptance.json\n    sha256: 01df8dc95066affc45f1259b29558241db2d8ed05af99023da8678ecac758cab\n    source_member: acceptance.json\n  [2]     path: full/M_N1311/evidence/delta_review_receipt.json\n    sha256: b822cf7f83a8b799d5d14539a810b9718ab781c558ed7443d87a04d03609a549\n    source_member: delta_review_receipt.json\n  [3]     path: full/M_N1311/evidence/exact_scientific_delta.json\n    sha256: ac951ce151d61738c1b19c07e11e851bd59366a9e1285170fc4bdb68d011533d\n    source_member: exact_scientific_delta.json\n  [4]     path: full/M_N1311/evidence/independent_review_receipt.json\n    sha256: c4e024d6b1399aae7be0774101d23bcaa91bb9dd8c9d50446d0e9d484b880efe\n    source_member: independent_review_receipt.json\n  [5]     path: full/M_N1311/evidence/manifest.json\n    sha256: cc281e24e25ca985a9a38eca9ebf05fb859edc7f2f69faa26a35adafabfb86e9\n    source_member: manifest.json\n  [6]     path: full/M_N1311/evidence/scientific_derived.json\n    sha256: 3644673e2d48022ef084473519ce88398950e54e84c5232ed670ed4a66af4f80\n    source_member: scientific_derived.json\n  [7]     path: full/M_N1311/evidence/source_hash_reference.json\n    sha256: fa0f0900f5be1467aa505311b8411ab9bb4a4cb3154bf28a64f8225b66a3fa51\n    source_member: source_hash_reference.json\nacceptance: full/M_N1311/evidence/acceptance.json\nmandatory_composition: Every selected file is jointly required, including overlays, deltas, scope guards, provenance corrections and review receipts. Do not use a base record alone.\nactive_version_and_scope: \n  paper_id: M_N1311\n  current_full_task_scope: true\n  partial: false\n  remaining_relevant_gaps: \n[]\n  package_sha256: cf017d424eb842b9239d340fc04ab1ba8ff58a13e5bde58b78468f492b7e6d06\n  original_package_sha256: cf017d424eb842b9239d340fc04ab1ba8ff58a13e5bde58b78468f492b7e6d06\n  acceptance_archive_member: acceptance.json\n  active_version: This external acceptance applies only to the exact science hash and supersedes historical pending status flags in frozen scientific_derived.json and independent_review_receipt.json. Those files are retained unchanged for audit.\n  net_new_vs_verified117: true\n  doi_crosswalk_check: \n    doi: 10.7150/thno.23686\n    historical117_matches: \n[]\n  stage_provenance: \n    R1: \n      execution_period: current_window\n      complete_current_task_scope: true\n      basis: Current project frozen candidate from separate extractor\n    R2: \n      execution_period: current_window\n      complete_current_task_scope: true\n      basis: Read 41 substantive body blocks, 7 figure captions and visuals, all 4 supplement pages; identified omitted equation then retrieved/read it. All result families covered, not count-based acceptance.\n    R3: \n      execution_period: current_window\n      complete_current_task_scope: true\n      basis: 15 quantitative/qualitative result records and 16 TableS1 entries verified; no numerical changes. Preserve 120→300um below pia, 67.5±7.9→4.5±0.31um visible vessel diameters, n separation, half-integrated bead widths, six ages over five elapsed months.; independent72-method-field delta verified\n    R4: \n      execution_period: current_window\n      complete_current_task_scope: true\n      basis: Task-relevant video sequences all sampled and reviewed; sampled review sufficient for qualitative claim. Original scientifically material CNR omission closed. Final derivative complete for stated scientific extraction, pending parent delta review.; R1 query log reused; one source-encoded equation image fetch, no denied-action retries.\n  counts: \n    results: 15\n    table_data_entries: 16\n    independently_verified_method_leaf_fields: 72\n  change_classification: \n    our_extraction_omission: \n      [1] CNR formula and method-context fields added and independently verified\n    our_relation_or_scope_binding_error: \n      [1] R1 mistaken assertion of main-text Fig5B/C reversal corrected; main-text mapping is correct\n    source_inconsistency_or_publication_version: \n      [1] Fig5 caption final variable order remains ambiguous, not a proven main-text reversal\n  media_scope: Video S1 30.266667 seconds, full-duration 1 fps contact sheet reviewed across every task-relevant sequence. Sampling supports qualitative optical clearing/recovery. Not continuous viewing or exhaustive review of all 908 frames. No exact kinetics or transition times inferred.\noriginal_member_to_release_path: \n  acceptance.json: full/M_N1311/evidence/acceptance.json\n  delta_review_receipt.json: full/M_N1311/evidence/delta_review_receipt.json\n  exact_scientific_delta.json: full/M_N1311/evidence/exact_scientific_delta.json\n  independent_review_receipt.json: full/M_N1311/evidence/independent_review_receipt.json\n  manifest.json: full/M_N1311/evidence/manifest.json\n  scientific_derived.json: full/M_N1311/evidence/scientific_derived.json\n  source_hash_reference.json: full/M_N1311/evidence/source_hash_reference.json\nsource_asset_policy: Original PDFs, videos, images, workbooks and raw source spans are external provenance only and are not needed to load these structured scientific records.\nhistory_rule: Only this explicit selection is active. Superseded history is not published or recursively promoted.\nactive_reference_aliases: \n  acceptance.json: full/M_N1311/evidence/acceptance.json\n  delta_review_receipt.json: full/M_N1311/evidence/delta_review_receipt.json\n  exact_scientific_delta.json: full/M_N1311/evidence/exact_scientific_delta.json\n  independent_review_receipt.json: full/M_N1311/evidence/independent_review_receipt.json\n  manifest.json: full/M_N1311/evidence/manifest.json\n  scientific_derived.json: full/M_N1311/evidence/scientific_derived.json\n  source_hash_reference.json: full/M_N1311/evidence/source_hash_reference.json\nactive_reference_resolution_evidence: \n  [1]     source_file: full/M_N1311/evidence/acceptance.json\n    json_pointer: /science_file\n    reference: scientific_derived.json\n    resolved_release_path: full/M_N1311/evidence/scientific_derived.json\n    binding_basis: unique_verified_original_member_path\n  [2]     source_file: full/M_N1311/evidence/acceptance.json\n    json_pointer: /delta_receipt_file\n    reference: delta_review_receipt.json\n    resolved_release_path: full/M_N1311/evidence/delta_review_receipt.json\n    binding_basis: unique_verified_original_member_path\nexternal_or_historical_references: \n  [1]     source_file: full/M_N1311/evidence/scientific_derived.json\n    json_pointer: /catalog_source\n    reference: evidence_expansion_200_20261019/accepted_case_collection_2307/fixed_224_catalog.json\n    automatic_loading: false\n    role: external_original_source_or_acquisition_provenance_not_runtime\n  [2]     source_file: full/M_N1311/evidence/scientific_derived.json\n    json_pointer: /sources/0/blocks\n    reference: source/blocks.json\n    automatic_loading: false\n    role: external_original_source_or_acquisition_provenance_not_runtime\nreference_resolution_policy: Resolve only explicit exact aliases to SHA-bound selected science or required support. Unlisted/ambiguous references raise an error. Never use basename/fuzzy matching at runtime, recursively load history, or activate original source assets.\nrequired_supporting_files: \n[]",
+      "Text2_Reference": [
+        "DOI: https://doi.org/10.7150/thno.23686",
+        "Evidence-layer structured paraphrase; not a verbatim quotation. Source release: https://github.com/404NotFound422/TOCAgentProject/tree/5e3a711befb3952a2e39f4d53fc9c9f1a7ac0d22/KnowledgeBase/evidence_expansion_20261019",
+        "Local source archive: ../literature_evidence/2026-11-11/source_release.zip; member: full/M_N1311/version_selection.json"
+      ]
+    },
+    {
+      "Text3": "Source version and scope record (not an additional scientific claim): acceptance:\npaper_id: M_N1311\ndoi: 10.7150/thno.23686\nstatus: accepted\nscientific_completion: full_for_task_relevant_scientific_extraction\nreview_rounds_complete: true\nscience_file: scientific_derived.json\nscience_sha256: 3644673e2d48022ef084473519ce88398950e54e84c5232ed670ed4a66af4f80\nscientific_bytes_unchanged: true\ndelta_receipt_file: delta_review_receipt.json\ndelta_receipt_sha256: b822cf7f83a8b799d5d14539a810b9718ab781c558ed7443d87a04d03609a549\nauthority: Parent accepted independent D01–D04 PASS and requested final package.\nstatus_precedence: This external acceptance applies only to the exact science hash and supersedes historical pending status flags in frozen scientific_derived.json and independent_review_receipt.json. Those files are retained unchanged for audit.\nreview_chain: \n  [1] R1 frozen candidate\n  [2] Independent R2 source coverage\n  [3] Independent R3 numeric and condition binding\n  [4] Independent R4 claim and scope audit\n  [5] Independent narrow D01–D04 review, including 72 method-context fields\n  [6] Parent acceptance\nmedia_scope: Video S1 30.266667 seconds, full-duration 1 fps contact sheet reviewed across every task-relevant sequence. Sampling supports qualitative optical clearing/recovery. Not continuous viewing or exhaustive review of all 908 frames. No exact kinetics or transition times inferred.\nnonblocking_locator_notes: Three additional direct source locators retained verbatim in delta_review_receipt.json; no scientific-byte changes required.\nresult_count: 15\ntable_data_entries: 16\noriginals_or_catalog_modified: false\npublished: false",
+      "Text3_Reference": [
+        "Structured evidence: full/M_N1311/evidence/acceptance.json#; SHA-256: 01df8dc95066affc45f1259b29558241db2d8ed05af99023da8678ecac758cab; DOI: https://doi.org/10.7150/thno.23686"
+      ]
+    },
+    {
+      "Text4": "method_context_field_checks:\nfield: method_context.formulation.source\nstatus: verified\nevidence: Original JATS B004; Fig1 caption\nvalue_sha256: d9435733a6b13ca387efd8a0160c1391bc43ac6516a442392f41db1c8e93483e",
+      "Text4_Reference": [
+        "Structured evidence: full/M_N1311/evidence/delta_review_receipt.json#/method_context_field_checks/0; SHA-256: b822cf7f83a8b799d5d14539a810b9718ab781c558ed7443d87a04d03609a549; DOI: https://doi.org/10.7150/thno.23686"
+      ]
+    },
+    {
+      "Text5": "method_context_field_checks:\nfield: method_context.formulation.S1\nstatus: verified\nevidence: Original JATS B004; Fig1 caption\nvalue_sha256: 2ee26acad58a3030390b024cdadfee3fd5aed83bd1ddeebbf49b12e8b86614f2",
+      "Text5_Reference": [
+        "Structured evidence: full/M_N1311/evidence/delta_review_receipt.json#/method_context_field_checks/1; SHA-256: b822cf7f83a8b799d5d14539a810b9718ab781c558ed7443d87a04d03609a549; DOI: https://doi.org/10.7150/thno.23686"
+      ]
+    },
+    {
+      "Text6": "method_context_field_checks:\nfield: method_context.formulation.S2\nstatus: verified\nevidence: Original JATS B004; Fig1 caption\nvalue_sha256: 4fdccc61fdaa8b68438e74e8c5f7982d4691807082e3367abbbb901512882c19",
+      "Text6_Reference": [
+        "Structured evidence: full/M_N1311/evidence/delta_review_receipt.json#/method_context_field_checks/2; SHA-256: b822cf7f83a8b799d5d14539a810b9718ab781c558ed7443d87a04d03609a549; DOI: https://doi.org/10.7150/thno.23686"
+      ]
+    },
+    {
+      "Text7": "method_context_field_checks:\nfield: method_context.formulation.RI.S1\nstatus: verified\nevidence: Original JATS B004; Fig1 caption\nvalue_sha256: f3391f144a2fac845ee5ad93542397f3697eb6c5fc9e630896590d4e9ec2604f",
+      "Text7_Reference": [
+        "Structured evidence: full/M_N1311/evidence/delta_review_receipt.json#/method_context_field_checks/3; SHA-256: b822cf7f83a8b799d5d14539a810b9718ab781c558ed7443d87a04d03609a549; DOI: https://doi.org/10.7150/thno.23686"
+      ]
+    },
+    {
+      "Text8": "method_context_field_checks:\nfield: method_context.formulation.RI.S2\nstatus: verified\nevidence: Original JATS B004; Fig1 caption\nvalue_sha256: 15f9e9d061251aa470c378e0efb1fe5e9e55291610b29e02c5a506f37aa07875",
+      "Text8_Reference": [
+        "Structured evidence: full/M_N1311/evidence/delta_review_receipt.json#/method_context_field_checks/4; SHA-256: b822cf7f83a8b799d5d14539a810b9718ab781c558ed7443d87a04d03609a549; DOI: https://doi.org/10.7150/thno.23686"
+      ]
+    },
+    {
+      "Text9": "method_context_field_checks:\nfield: method_context.formulation.RI.interpretation\nstatus: verified\nevidence: Original JATS B004; Fig1 caption\nvalue_sha256: f0a2b3f60948cd9b27f5a30773672c26ab34e17d414ecdd7d947426767bfcce3",
+      "Text9_Reference": [
+        "Structured evidence: full/M_N1311/evidence/delta_review_receipt.json#/method_context_field_checks/5; SHA-256: b822cf7f83a8b799d5d14539a810b9718ab781c558ed7443d87a04d03609a549; DOI: https://doi.org/10.7150/thno.23686"
+      ]
+    },
+    {
+      "Text10": "method_context_field_checks:\nfield: method_context.formulation.storage_context\nstatus: verified\nevidence: Original JATS B004; Fig1 caption\nvalue_sha256: 2c638ac649a5b2a3caa2751131e862d3c7bab1fecc2aa7d21ad36529ba0fcc62",
+      "Text10_Reference": [
+        "Structured evidence: full/M_N1311/evidence/delta_review_receipt.json#/method_context_field_checks/6; SHA-256: b822cf7f83a8b799d5d14539a810b9718ab781c558ed7443d87a04d03609a549; DOI: https://doi.org/10.7150/thno.23686"
+      ]
+    },
+    {
+      "Text11": "method_context_field_checks:\nfield: method_context.optical_window_geometry.source\nstatus: verified\nevidence: Original JATS B006/B012/B026/B040; supplement PDF pp1–2 FigS2\nvalue_sha256: 93c83357ee716e086867b3d62bb055c9f72a93afb8c6fbae474d6b19e2146b5e",
+      "Text11_Reference": [
+        "Structured evidence: full/M_N1311/evidence/delta_review_receipt.json#/method_context_field_checks/7; SHA-256: b822cf7f83a8b799d5d14539a810b9718ab781c558ed7443d87a04d03609a549; DOI: https://doi.org/10.7150/thno.23686"
+      ]
+    },
+    {
+      "Text12": "method_context_field_checks:\nfield: method_context.optical_window_geometry.finding\nstatus: verified\nevidence: Original JATS B006/B012/B026/B040; supplement PDF pp1–2 FigS2\nvalue_sha256: 9686658b5c6f5863f2f9e31f2ef4b321863708b1d2a535e590c8d4dd5cf23f09",
+      "Text12_Reference": [
+        "Structured evidence: full/M_N1311/evidence/delta_review_receipt.json#/method_context_field_checks/8; SHA-256: b822cf7f83a8b799d5d14539a810b9718ab781c558ed7443d87a04d03609a549; DOI: https://doi.org/10.7150/thno.23686"
+      ]
+    },
+    {
+      "Text13": "method_context_field_checks:\nfield: method_context.optical_window_geometry.holders\nstatus: verified\nevidence: Original JATS B006/B012/B026/B040; supplement PDF pp1–2 FigS2\nvalue_sha256: af6ed21a6c57cfc866b23e0680f9005737f44b7c8c899462167642ff1127397e",
+      "Text13_Reference": [
+        "Structured evidence: full/M_N1311/evidence/delta_review_receipt.json#/method_context_field_checks/9; SHA-256: b822cf7f83a8b799d5d14539a810b9718ab781c558ed7443d87a04d03609a549; DOI: https://doi.org/10.7150/thno.23686"
+      ]
+    },
+    {
+      "Text14": "method_context_field_checks:\nfield: method_context.dual_modal_measurement.source\nstatus: verified\nevidence: Original JATS B007–B009; embedded formula image; supplement p2 FigS3; main_display additionally B023\nvalue_sha256: 0692edce5e474c6f6b6cafc22c74d2f87c61fd8cfbc6df0c5a38dffc25cac3ec",
+      "Text14_Reference": [
+        "Structured evidence: full/M_N1311/evidence/delta_review_receipt.json#/method_context_field_checks/10; SHA-256: b822cf7f83a8b799d5d14539a810b9718ab781c558ed7443d87a04d03609a549; DOI: https://doi.org/10.7150/thno.23686"
+      ]
+    },
+    {
+      "Text15": "method_context_field_checks:\nfield: method_context.dual_modal_measurement.LSCI\nstatus: verified\nevidence: Original JATS B007–B009; embedded formula image; supplement p2 FigS3; main_display additionally B023\nvalue_sha256: 2481cc44138a13830d868870c74ff2e107567cff13a7c3797fa76b089ddfbcf3",
+      "Text15_Reference": [
+        "Structured evidence: full/M_N1311/evidence/delta_review_receipt.json#/method_context_field_checks/11; SHA-256: b822cf7f83a8b799d5d14539a810b9718ab781c558ed7443d87a04d03609a549; DOI: https://doi.org/10.7150/thno.23686"
+      ]
+    },
+    {
+      "Text16": "method_context_field_checks:\nfield: method_context.dual_modal_measurement.HSI\nstatus: verified\nevidence: Original JATS B007–B009; embedded formula image; supplement p2 FigS3; main_display additionally B023\nvalue_sha256: 6a611b8f2ce50fea53f5a56211ee488c20877e2e92bcf8791f15cc0679ccad66",
+      "Text16_Reference": [
+        "Structured evidence: full/M_N1311/evidence/delta_review_receipt.json#/method_context_field_checks/12; SHA-256: b822cf7f83a8b799d5d14539a810b9718ab781c558ed7443d87a04d03609a549; DOI: https://doi.org/10.7150/thno.23686"
+      ]
+    },
+    {
+      "Text17": "method_context_field_checks:\nfield: method_context.dual_modal_measurement.CNR_equation\nstatus: verified\nevidence: Original JATS B007–B009; embedded formula image; supplement p2 FigS3; main_display additionally B023\nvalue_sha256: 52484d91c02a21ea91596a28fca92c424a9ff74444921d37436fcc654c91666a",
+      "Text17_Reference": [
+        "Structured evidence: full/M_N1311/evidence/delta_review_receipt.json#/method_context_field_checks/13; SHA-256: b822cf7f83a8b799d5d14539a810b9718ab781c558ed7443d87a04d03609a549; DOI: https://doi.org/10.7150/thno.23686"
+      ]
+    },
+    {
+      "Text18": "method_context_field_checks:\nfield: method_context.dual_modal_measurement.CNR_definitions\nstatus: verified\nevidence: Original JATS B007–B009; embedded formula image; supplement p2 FigS3; main_display additionally B023\nvalue_sha256: 69a90dfc558fa71a848cb8543347d7bf91ed130ca6b69373bfe019312d86049a",
+      "Text18_Reference": [
+        "Structured evidence: full/M_N1311/evidence/delta_review_receipt.json#/method_context_field_checks/14; SHA-256: b822cf7f83a8b799d5d14539a810b9718ab781c558ed7443d87a04d03609a549; DOI: https://doi.org/10.7150/thno.23686"
+      ]
+    },
+    {
+      "Text19": "method_context_field_checks:\nfield: method_context.dual_modal_measurement.main_display\nstatus: verified\nevidence: Original JATS B007–B009; embedded formula image; supplement p2 FigS3; main_display additionally B023\nvalue_sha256: 6fd4040241351d1d4e66f7f23f66be7fc4cdc5a52d8dcb9671595bc89cfc25cd",
+      "Text19_Reference": [
+        "Structured evidence: full/M_N1311/evidence/delta_review_receipt.json#/method_context_field_checks/15; SHA-256: b822cf7f83a8b799d5d14539a810b9718ab781c558ed7443d87a04d03609a549; DOI: https://doi.org/10.7150/thno.23686"
+      ]
+    },
+    {
+      "Text20": "method_context_field_checks:\nfield: method_context.TPLSM_conditions.source\nstatus: verified\nevidence: Original JATS B010 and B050/Fig3 caption; Fig3 visual\nvalue_sha256: 19a888aa2a7d7084979c6749f5b345bba81f07af0ac033af388d8486ee06132d",
+      "Text20_Reference": [
+        "Structured evidence: full/M_N1311/evidence/delta_review_receipt.json#/method_context_field_checks/16; SHA-256: b822cf7f83a8b799d5d14539a810b9718ab781c558ed7443d87a04d03609a549; DOI: https://doi.org/10.7150/thno.23686"
+      ]
+    },
+    {
+      "Text21": "method_context_field_checks:\nfield: method_context.TPLSM_conditions.matched_region\nstatus: verified\nevidence: Original JATS B010 and B050/Fig3 caption; Fig3 visual\nvalue_sha256: b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+      "Text21_Reference": [
+        "Structured evidence: full/M_N1311/evidence/delta_review_receipt.json#/method_context_field_checks/17; SHA-256: b822cf7f83a8b799d5d14539a810b9718ab781c558ed7443d87a04d03609a549; DOI: https://doi.org/10.7150/thno.23686"
+      ]
+    },
+    {
+      "Text22": "method_context_field_checks:\nfield: method_context.TPLSM_conditions.water_separation_film_um\nstatus: verified\nevidence: Original JATS B010 and B050/Fig3 caption; Fig3 visual\nvalue_sha256: 40c48c538d5e3634c5c626514ddce28ebce8cea27dee7051ad46315bb5c1b674",
+      "Text22_Reference": [
+        "Structured evidence: full/M_N1311/evidence/delta_review_receipt.json#/method_context_field_checks/18; SHA-256: b822cf7f83a8b799d5d14539a810b9718ab781c558ed7443d87a04d03609a549; DOI: https://doi.org/10.7150/thno.23686"
+      ]
+    },
+    {
+      "Text23": "method_context_field_checks:\nfield: method_context.TPLSM_conditions.pixels\nstatus: verified\nevidence: Original JATS B010 and B050/Fig3 caption; Fig3 visual\nvalue_sha256: ac6b4a5229d10e0e3eceb3b3adc23027ff03cffb99ef6907804ef71958986f4d",
+      "Text23_Reference": [
+        "Structured evidence: full/M_N1311/evidence/delta_review_receipt.json#/method_context_field_checks/19; SHA-256: b822cf7f83a8b799d5d14539a810b9718ab781c558ed7443d87a04d03609a549; DOI: https://doi.org/10.7150/thno.23686"
+      ]
+    },
+    {
+      "Text24": "method_context_field_checks:\nfield: method_context.TPLSM_conditions.pixel_um\nstatus: verified\nevidence: Original JATS B010 and B050/Fig3 caption; Fig3 visual\nvalue_sha256: 5ee92f21d3c61bf71992119e116c4770aafb5a14f78c0516037dd41f8f6746f8",
+      "Text24_Reference": [
+        "Structured evidence: full/M_N1311/evidence/delta_review_receipt.json#/method_context_field_checks/20; SHA-256: b822cf7f83a8b799d5d14539a810b9718ab781c558ed7443d87a04d03609a549; DOI: https://doi.org/10.7150/thno.23686"
+      ]
+    },
+    {
+      "Text25": "method_context_field_checks:\nfield: method_context.TPLSM_conditions.dwell_us\nstatus: verified\nevidence: Original JATS B010 and B050/Fig3 caption; Fig3 visual\nvalue_sha256: 5798758bbc833df09bceba3fb38dfa95dbe82d1a51b94ea300392654fc2b2665",
+      "Text25_Reference": [
+        "Structured evidence: full/M_N1311/evidence/delta_review_receipt.json#/method_context_field_checks/21; SHA-256: b822cf7f83a8b799d5d14539a810b9718ab781c558ed7443d87a04d03609a549; DOI: https://doi.org/10.7150/thno.23686"
+      ]
+    },
+    {
+      "Text26": "method_context_field_checks:\nfield: method_context.TPLSM_conditions.power_mW\nstatus: verified\nevidence: Original JATS B010 and B050/Fig3 caption; Fig3 visual\nvalue_sha256: cec3a8d7ef9fed421de6068d2a164f889495a259ac0df5b24cc73894869d4036",
+      "Text26_Reference": [
+        "Structured evidence: full/M_N1311/evidence/delta_review_receipt.json#/method_context_field_checks/22; SHA-256: b822cf7f83a8b799d5d14539a810b9718ab781c558ed7443d87a04d03609a549; DOI: https://doi.org/10.7150/thno.23686"
+      ]
+    },
+    {
+      "Text27": "method_context_field_checks:\nfield: method_context.TPLSM_conditions.power_schedule\nstatus: verified\nevidence: Original JATS B010 and B050/Fig3 caption; Fig3 visual\nvalue_sha256: 159e38786f80d5e543ad93f491f69a5dbd46f24267dcf3685ed3c389a77c3254",
+      "Text27_Reference": [
+        "Structured evidence: full/M_N1311/evidence/delta_review_receipt.json#/method_context_field_checks/23; SHA-256: b822cf7f83a8b799d5d14539a810b9718ab781c558ed7443d87a04d03609a549; DOI: https://doi.org/10.7150/thno.23686"
+      ]
+    },
+    {
+      "Text28": "method_context_field_checks:\nfield: method_context.TPLSM_conditions.objective\nstatus: verified\nevidence: Original JATS B010 and B050/Fig3 caption; Fig3 visual\nvalue_sha256: 9fc8b6e9f01ea22e4e8c60a737c7ac08d39800e0319ff556041135e557cda526",
+      "Text28_Reference": [
+        "Structured evidence: full/M_N1311/evidence/delta_review_receipt.json#/method_context_field_checks/24; SHA-256: b822cf7f83a8b799d5d14539a810b9718ab781c558ed7443d87a04d03609a549; DOI: https://doi.org/10.7150/thno.23686"
+      ]
+    },
+    {
+      "Text29": "method_context_field_checks:\nfield: method_context.TPLSM_conditions.excitation_nm\nstatus: verified\nevidence: Original JATS B010 and B050/Fig3 caption; Fig3 visual\nvalue_sha256: 52efd2aad05d27e3eac3665b82f2bffa6da52351ce871c1c28e4ba69b40ea3e6",
+      "Text29_Reference": [
+        "Structured evidence: full/M_N1311/evidence/delta_review_receipt.json#/method_context_field_checks/25; SHA-256: b822cf7f83a8b799d5d14539a810b9718ab781c558ed7443d87a04d03609a549; DOI: https://doi.org/10.7150/thno.23686"
+      ]
+    },
+    {
+      "Text30": "method_context_field_checks:\nfield: method_context.TPLSM_conditions.detection_nm\nstatus: verified\nevidence: Original JATS B010 and B050/Fig3 caption; Fig3 visual\nvalue_sha256: 35e5f2c36ef9ff0a6b2d96ba19fcc105eac6491ca6b37108661ab9f8ae495270",
+      "Text30_Reference": [
+        "Structured evidence: full/M_N1311/evidence/delta_review_receipt.json#/method_context_field_checks/26; SHA-256: b822cf7f83a8b799d5d14539a810b9718ab781c558ed7443d87a04d03609a549; DOI: https://doi.org/10.7150/thno.23686"
+      ]
+    },
+    {
+      "Text31": "method_context_field_checks:\nfield: method_context.TPLSM_conditions.z_step_um\nstatus: verified\nevidence: Original JATS B010 and B050/Fig3 caption; Fig3 visual\nvalue_sha256: d4735e3a265e16eee03f59718b9b5d03019c07d8b6c51f90da3a666eec13ab35",
+      "Text31_Reference": [
+        "Structured evidence: full/M_N1311/evidence/delta_review_receipt.json#/method_context_field_checks/27; SHA-256: b822cf7f83a8b799d5d14539a810b9718ab781c558ed7443d87a04d03609a549; DOI: https://doi.org/10.7150/thno.23686"
+      ]
+    },
+    {
+      "Text32": "method_context_field_checks:\nfield: method_context.TPLSM_conditions.depth_origin\nstatus: verified\nevidence: Original JATS B010 and B050/Fig3 caption; Fig3 visual\nvalue_sha256: 0ffc220de5f50db402bc1dd0c30dc17ebfd08a381a3aabf0566fcb613b804789",
+      "Text32_Reference": [
+        "Structured evidence: full/M_N1311/evidence/delta_review_receipt.json#/method_context_field_checks/28; SHA-256: b822cf7f83a8b799d5d14539a810b9718ab781c558ed7443d87a04d03609a549; DOI: https://doi.org/10.7150/thno.23686"
+      ]
+    },
+    {
+      "Text33": "method_context_field_checks:\nfield: method_context.microglia_imaging.source\nstatus: verified\nevidence: Original JATS B054/Fig7A caption; Fig7 visual\nvalue_sha256: 7203285aa227a9f9560ed8fb81ae9df61921d46daf8bc21734973ef1237b91e4",
+      "Text33_Reference": [
+        "Structured evidence: full/M_N1311/evidence/delta_review_receipt.json#/method_context_field_checks/29; SHA-256: b822cf7f83a8b799d5d14539a810b9718ab781c558ed7443d87a04d03609a549; DOI: https://doi.org/10.7150/thno.23686"
+      ]
+    },
+    {
+      "Text34": "method_context_field_checks:\nfield: method_context.microglia_imaging.objective\nstatus: verified\nevidence: Original JATS B054/Fig7A caption; Fig7 visual\nvalue_sha256: 961c3131d8209fc3401d4005ce2258c8f24bb11d47fd00f0c2f359d53472f9f2",
+      "Text34_Reference": [
+        "Structured evidence: full/M_N1311/evidence/delta_review_receipt.json#/method_context_field_checks/30; SHA-256: b822cf7f83a8b799d5d14539a810b9718ab781c558ed7443d87a04d03609a549; DOI: https://doi.org/10.7150/thno.23686"
+      ]
+    },
+    {
+      "Text35": "method_context_field_checks:\nfield: method_context.microglia_imaging.excitation_nm\nstatus: verified\nevidence: Original JATS B054/Fig7A caption; Fig7 visual\nvalue_sha256: 52efd2aad05d27e3eac3665b82f2bffa6da52351ce871c1c28e4ba69b40ea3e6",
+      "Text35_Reference": [
+        "Structured evidence: full/M_N1311/evidence/delta_review_receipt.json#/method_context_field_checks/31; SHA-256: b822cf7f83a8b799d5d14539a810b9718ab781c558ed7443d87a04d03609a549; DOI: https://doi.org/10.7150/thno.23686"
+      ]
+    },
+    {
+      "Text36": "method_context_field_checks:\nfield: method_context.microglia_imaging.detection_nm\nstatus: verified\nevidence: Original JATS B054/Fig7A caption; Fig7 visual\nvalue_sha256: ffe4483de20f97492435a163c524b56694833e27a7387965629bf296ecfb29d7",
+      "Text36_Reference": [
+        "Structured evidence: full/M_N1311/evidence/delta_review_receipt.json#/method_context_field_checks/32; SHA-256: b822cf7f83a8b799d5d14539a810b9718ab781c558ed7443d87a04d03609a549; DOI: https://doi.org/10.7150/thno.23686"
+      ]
+    },
+    {
+      "Text37": "method_context_field_checks:\nfield: method_context.microglia_imaging.power_mW\nstatus: verified\nevidence: Original JATS B054/Fig7A caption; Fig7 visual\nvalue_sha256: 59e19706d51d39f66711c2653cd7eb1291c94d9b55eb14bda74ce4dc636d015a",
+      "Text37_Reference": [
+        "Structured evidence: full/M_N1311/evidence/delta_review_receipt.json#/method_context_field_checks/33; SHA-256: b822cf7f83a8b799d5d14539a810b9718ab781c558ed7443d87a04d03609a549; DOI: https://doi.org/10.7150/thno.23686"
+      ]
+    },
+    {
+      "Text38": "method_context_field_checks:\nfield: method_context.microglia_imaging.pixel_um\nstatus: verified\nevidence: Original JATS B054/Fig7A caption; Fig7 visual\nvalue_sha256: 14be4b45f18e0d8c67b4f719b5144eee88497e413709d11d85b096d8e2346310",
+      "Text38_Reference": [
+        "Structured evidence: full/M_N1311/evidence/delta_review_receipt.json#/method_context_field_checks/34; SHA-256: b822cf7f83a8b799d5d14539a810b9718ab781c558ed7443d87a04d03609a549; DOI: https://doi.org/10.7150/thno.23686"
+      ]
+    },
+    {
+      "Text39": "method_context_field_checks:\nfield: method_context.microglia_imaging.z_step_um\nstatus: verified\nevidence: Original JATS B054/Fig7A caption; Fig7 visual\nvalue_sha256: d4735e3a265e16eee03f59718b9b5d03019c07d8b6c51f90da3a666eec13ab35",
+      "Text39_Reference": [
+        "Structured evidence: full/M_N1311/evidence/delta_review_receipt.json#/method_context_field_checks/35; SHA-256: b822cf7f83a8b799d5d14539a810b9718ab781c558ed7443d87a04d03609a549; DOI: https://doi.org/10.7150/thno.23686"
+      ]
+    },
+    {
+      "Text40": "method_context_field_checks:\nfield: method_context.microglia_imaging.dwell_us\nstatus: verified\nevidence: Original JATS B054/Fig7A caption; Fig7 visual\nvalue_sha256: 6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b",
+      "Text40_Reference": [
+        "Structured evidence: full/M_N1311/evidence/delta_review_receipt.json#/method_context_field_checks/36; SHA-256: b822cf7f83a8b799d5d14539a810b9718ab781c558ed7443d87a04d03609a549; DOI: https://doi.org/10.7150/thno.23686"
+      ]
+    },
+    {
+      "Text41": "method_context_field_checks:\nfield: method_context.microglia_imaging.projection_below_pia_um\nstatus: verified\nevidence: Original JATS B054/Fig7A caption; Fig7 visual\nvalue_sha256: 7970d7dee8d465da9cd7500a1cffd12ec851f9713064f103d665ba5b2736abc4",
+      "Text41_Reference": [
+        "Structured evidence: full/M_N1311/evidence/delta_review_receipt.json#/method_context_field_checks/37; SHA-256: b822cf7f83a8b799d5d14539a810b9718ab781c558ed7443d87a04d03609a549; DOI: https://doi.org/10.7150/thno.23686"
+      ]
+    },
+    {
+      "Text42": "method_context_field_checks:\nfield: method_context.SHG_conditions.source\nstatus: verified\nevidence: Supplement p2 FigS4 caption/visual; mechanism_limit additionally original JATS B037\nvalue_sha256: 48c4bd0eb0b1b64d660f046889b53ffe22020d01e67a73b7b1a9060f5298f553",
+      "Text42_Reference": [
+        "Structured evidence: full/M_N1311/evidence/delta_review_receipt.json#/method_context_field_checks/38; SHA-256: b822cf7f83a8b799d5d14539a810b9718ab781c558ed7443d87a04d03609a549; DOI: https://doi.org/10.7150/thno.23686"
+      ]
+    },
+    {
+      "Text43": "method_context_field_checks:\nfield: method_context.SHG_conditions.objective\nstatus: verified\nevidence: Supplement p2 FigS4 caption/visual; mechanism_limit additionally original JATS B037\nvalue_sha256: 9fc8b6e9f01ea22e4e8c60a737c7ac08d39800e0319ff556041135e557cda526",
+      "Text43_Reference": [
+        "Structured evidence: full/M_N1311/evidence/delta_review_receipt.json#/method_context_field_checks/39; SHA-256: b822cf7f83a8b799d5d14539a810b9718ab781c558ed7443d87a04d03609a549; DOI: https://doi.org/10.7150/thno.23686"
+      ]
+    },
+    {
+      "Text44": "method_context_field_checks:\nfield: method_context.SHG_conditions.excitation_nm\nstatus: verified\nevidence: Supplement p2 FigS4 caption/visual; mechanism_limit additionally original JATS B037\nvalue_sha256: e6f095e985e6762f1538b47ff1abda58dbe8ce088b16d8a5744fc179e9a2fc16",
+      "Text44_Reference": [
+        "Structured evidence: full/M_N1311/evidence/delta_review_receipt.json#/method_context_field_checks/40; SHA-256: b822cf7f83a8b799d5d14539a810b9718ab781c558ed7443d87a04d03609a549; DOI: https://doi.org/10.7150/thno.23686"
+      ]
+    },
+    {
+      "Text45": "method_context_field_checks:\nfield: method_context.SHG_conditions.detection_nm\nstatus: verified\nevidence: Supplement p2 FigS4 caption/visual; mechanism_limit additionally original JATS B037\nvalue_sha256: 2b6e759e7ae9cb346183e7b63e84cb31fbfda0c70fefa02e6af9ca2e2ab87b76",
+      "Text45_Reference": [
+        "Structured evidence: full/M_N1311/evidence/delta_review_receipt.json#/method_context_field_checks/41; SHA-256: b822cf7f83a8b799d5d14539a810b9718ab781c558ed7443d87a04d03609a549; DOI: https://doi.org/10.7150/thno.23686"
+      ]
+    },
+    {
+      "Text46": "method_context_field_checks:\nfield: method_context.SHG_conditions.power_mW\nstatus: verified\nevidence: Supplement p2 FigS4 caption/visual; mechanism_limit additionally original JATS B037\nvalue_sha256: 02d20bbd7e394ad5999a4cebabac9619732c343a4cac99470c03e23ba2bdc2bc",
+      "Text46_Reference": [
+        "Structured evidence: full/M_N1311/evidence/delta_review_receipt.json#/method_context_field_checks/42; SHA-256: b822cf7f83a8b799d5d14539a810b9718ab781c558ed7443d87a04d03609a549; DOI: https://doi.org/10.7150/thno.23686"
+      ]
+    },
+    {
+      "Text47": "method_context_field_checks:\nfield: method_context.SHG_conditions.pixel_um\nstatus: verified\nevidence: Supplement p2 FigS4 caption/visual; mechanism_limit additionally original JATS B037\nvalue_sha256: 44896b09365746b5f7167ee4d64988a38f7f4628803cbf86224e74eeb7c69e9d",
+      "Text47_Reference": [
+        "Structured evidence: full/M_N1311/evidence/delta_review_receipt.json#/method_context_field_checks/43; SHA-256: b822cf7f83a8b799d5d14539a810b9718ab781c558ed7443d87a04d03609a549; DOI: https://doi.org/10.7150/thno.23686"
+      ]
+    },
+    {
+      "Text48": "method_context_field_checks:\nfield: method_context.SHG_conditions.projection_um\nstatus: verified\nevidence: Supplement p2 FigS4 caption/visual; mechanism_limit additionally original JATS B037\nvalue_sha256: dc70b606280157d37a129bb8d6b6b381d26a55019ceebb15fe2aa12eb819cd6f",
+      "Text48_Reference": [
+        "Structured evidence: full/M_N1311/evidence/delta_review_receipt.json#/method_context_field_checks/44; SHA-256: b822cf7f83a8b799d5d14539a810b9718ab781c558ed7443d87a04d03609a549; DOI: https://doi.org/10.7150/thno.23686"
+      ]
+    },
+    {
+      "Text49": "method_context_field_checks:\nfield: method_context.SHG_conditions.z_step_um\nstatus: verified\nevidence: Supplement p2 FigS4 caption/visual; mechanism_limit additionally original JATS B037\nvalue_sha256: 6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b",
+      "Text49_Reference": [
+        "Structured evidence: full/M_N1311/evidence/delta_review_receipt.json#/method_context_field_checks/45; SHA-256: b822cf7f83a8b799d5d14539a810b9718ab781c558ed7443d87a04d03609a549; DOI: https://doi.org/10.7150/thno.23686"
+      ]
+    },
+    {
+      "Text50": "method_context_field_checks:\nfield: method_context.SHG_conditions.dwell_us\nstatus: verified\nevidence: Supplement p2 FigS4 caption/visual; mechanism_limit additionally original JATS B037\nvalue_sha256: 6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b",
+      "Text50_Reference": [
+        "Structured evidence: full/M_N1311/evidence/delta_review_receipt.json#/method_context_field_checks/46; SHA-256: b822cf7f83a8b799d5d14539a810b9718ab781c558ed7443d87a04d03609a549; DOI: https://doi.org/10.7150/thno.23686"
+      ]
+    },
+    {
+      "Text51": "method_context_field_checks:\nfield: method_context.SHG_conditions.mechanism_limit\nstatus: verified\nevidence: Supplement p2 FigS4 caption/visual; mechanism_limit additionally original JATS B037\nvalue_sha256: d3fb7349bca59fd7122c6c781d96004f61a71e89a0918feadcc95b3cacba09d3",
+      "Text51_Reference": [
+        "Structured evidence: full/M_N1311/evidence/delta_review_receipt.json#/method_context_field_checks/47; SHA-256: b822cf7f83a8b799d5d14539a810b9718ab781c558ed7443d87a04d03609a549; DOI: https://doi.org/10.7150/thno.23686"
+      ]
+    },
+    {
+      "Text52": "method_context_field_checks:\nfield: method_context.bead_conditions.source\nstatus: verified\nevidence: Supplement p3 FigS5 caption/visual; original JATS B038\nvalue_sha256: 9fc60af9bf75bff1e83f58b5e18e304f4318ea5fb03b628cd29c261dacf88a77",
+      "Text52_Reference": [
+        "Structured evidence: full/M_N1311/evidence/delta_review_receipt.json#/method_context_field_checks/48; SHA-256: b822cf7f83a8b799d5d14539a810b9718ab781c558ed7443d87a04d03609a549; DOI: https://doi.org/10.7150/thno.23686"
+      ]
+    },
+    {
+      "Text53": "method_context_field_checks:\nfield: method_context.bead_conditions.objective_as_printed\nstatus: verified\nevidence: Supplement p3 FigS5 caption/visual; original JATS B038\nvalue_sha256: c492a780c2a8b1d78b625af58cc997cd4463f21b9a0a61b1f2959fb7f72a1f30",
+      "Text53_Reference": [
+        "Structured evidence: full/M_N1311/evidence/delta_review_receipt.json#/method_context_field_checks/49; SHA-256: b822cf7f83a8b799d5d14539a810b9718ab781c558ed7443d87a04d03609a549; DOI: https://doi.org/10.7150/thno.23686"
+      ]
+    },
+    {
+      "Text54": "method_context_field_checks:\nfield: method_context.bead_conditions.excitation_nm\nstatus: verified\nevidence: Supplement p3 FigS5 caption/visual; original JATS B038\nvalue_sha256: 1a1cf797fabe7f95836fabeca626907c77b3e6c9aff7c2290b396a238c69362e",
+      "Text54_Reference": [
+        "Structured evidence: full/M_N1311/evidence/delta_review_receipt.json#/method_context_field_checks/50; SHA-256: b822cf7f83a8b799d5d14539a810b9718ab781c558ed7443d87a04d03609a549; DOI: https://doi.org/10.7150/thno.23686"
+      ]
+    },
+    {
+      "Text55": "method_context_field_checks:\nfield: method_context.bead_conditions.detection_nm\nstatus: verified\nevidence: Supplement p3 FigS5 caption/visual; original JATS B038\nvalue_sha256: ffe4483de20f97492435a163c524b56694833e27a7387965629bf296ecfb29d7",
+      "Text55_Reference": [
+        "Structured evidence: full/M_N1311/evidence/delta_review_receipt.json#/method_context_field_checks/51; SHA-256: b822cf7f83a8b799d5d14539a810b9718ab781c558ed7443d87a04d03609a549; DOI: https://doi.org/10.7150/thno.23686"
+      ]
+    },
+    {
+      "Text56": "method_context_field_checks:\nfield: method_context.bead_conditions.power_mW\nstatus: verified\nevidence: Supplement p3 FigS5 caption/visual; original JATS B038\nvalue_sha256: 4a44dc15364204a80fe80e9039455cc1608281820fe2b24f1e5233ade6af1dd5",
+      "Text56_Reference": [
+        "Structured evidence: full/M_N1311/evidence/delta_review_receipt.json#/method_context_field_checks/52; SHA-256: b822cf7f83a8b799d5d14539a810b9718ab781c558ed7443d87a04d03609a549; DOI: https://doi.org/10.7150/thno.23686"
+      ]
+    },
+    {
+      "Text57": "method_context_field_checks:\nfield: method_context.bead_conditions.pixel_um\nstatus: verified\nevidence: Supplement p3 FigS5 caption/visual; original JATS B038\nvalue_sha256: 0602d7c813c1f6e7351a5832730f29daf739674976caba8d9dd955be838d46ea",
+      "Text57_Reference": [
+        "Structured evidence: full/M_N1311/evidence/delta_review_receipt.json#/method_context_field_checks/53; SHA-256: b822cf7f83a8b799d5d14539a810b9718ab781c558ed7443d87a04d03609a549; DOI: https://doi.org/10.7150/thno.23686"
+      ]
+    },
+    {
+      "Text58": "method_context_field_checks:\nfield: method_context.bead_conditions.projection_um\nstatus: verified\nevidence: Supplement p3 FigS5 caption/visual; original JATS B038\nvalue_sha256: b38e90605387613f188a6e5f26b8b6ed76587a80ff8ef45b6cf7279a6c92a044",
+      "Text58_Reference": [
+        "Structured evidence: full/M_N1311/evidence/delta_review_receipt.json#/method_context_field_checks/54; SHA-256: b822cf7f83a8b799d5d14539a810b9718ab781c558ed7443d87a04d03609a549; DOI: https://doi.org/10.7150/thno.23686"
+      ]
+    },
+    {
+      "Text59": "method_context_field_checks:\nfield: method_context.bead_conditions.z_step_um\nstatus: verified\nevidence: Supplement p3 FigS5 caption/visual; original JATS B038\nvalue_sha256: 0fd3e09fe22ca6b7d2092bcda4ede452425261d01d07c0bbdae4d30e260cfdea",
+      "Text59_Reference": [
+        "Structured evidence: full/M_N1311/evidence/delta_review_receipt.json#/method_context_field_checks/55; SHA-256: b822cf7f83a8b799d5d14539a810b9718ab781c558ed7443d87a04d03609a549; DOI: https://doi.org/10.7150/thno.23686"
+      ]
+    },
+    {
+      "Text60": "method_context_field_checks:\nfield: method_context.bead_conditions.dwell_us\nstatus: verified\nevidence: Supplement p3 FigS5 caption/visual; original JATS B038\nvalue_sha256: 6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b",
+      "Text60_Reference": [
+        "Structured evidence: full/M_N1311/evidence/delta_review_receipt.json#/method_context_field_checks/56; SHA-256: b822cf7f83a8b799d5d14539a810b9718ab781c558ed7443d87a04d03609a549; DOI: https://doi.org/10.7150/thno.23686"
+      ]
+    },
+    {
+      "Text61": "method_context_field_checks:\nfield: method_context.bead_conditions.metric\nstatus: verified\nevidence: Supplement p3 FigS5 caption/visual; original JATS B038\nvalue_sha256: 7c4f575abd454f814def58d7b14ab0eb4843f21ec91607fb035af27c74d08b67",
+      "Text61_Reference": [
+        "Structured evidence: full/M_N1311/evidence/delta_review_receipt.json#/method_context_field_checks/57; SHA-256: b822cf7f83a8b799d5d14539a810b9718ab781c558ed7443d87a04d03609a549; DOI: https://doi.org/10.7150/thno.23686"
+      ]
+    },
+    {
+      "Text62": "method_context_field_checks:\nfield: method_context.statistics.source\nstatus: verified\nevidence: Original JATS B020; replicate restriction is reviewer interpretation consistent with sample reporting\nvalue_sha256: fe6d2d30bacf51bcb12725a7c176a1d02576258cdf3c13eec71275aee4045a65",
+      "Text62_Reference": [
+        "Structured evidence: full/M_N1311/evidence/delta_review_receipt.json#/method_context_field_checks/58; SHA-256: b822cf7f83a8b799d5d14539a810b9718ab781c558ed7443d87a04d03609a549; DOI: https://doi.org/10.7150/thno.23686"
+      ]
+    },
+    {
+      "Text63": "method_context_field_checks:\nfield: method_context.statistics.reported_uncertainty\nstatus: verified\nevidence: Original JATS B020; replicate restriction is reviewer interpretation consistent with sample reporting\nvalue_sha256: af2a7dc375e04ae9f8b5ac67599f3820701390df77730ca4dc2d156327ba7f78",
+      "Text63_Reference": [
+        "Structured evidence: full/M_N1311/evidence/delta_review_receipt.json#/method_context_field_checks/59; SHA-256: b822cf7f83a8b799d5d14539a810b9718ab781c558ed7443d87a04d03609a549; DOI: https://doi.org/10.7150/thno.23686"
+      ]
+    },
+    {
+      "Text64": "method_context_field_checks:\nfield: method_context.statistics.test\nstatus: verified\nevidence: Original JATS B020; replicate restriction is reviewer interpretation consistent with sample reporting\nvalue_sha256: 0e7ef5c0a59a7c94c45b4b77328d7a3ea7a470373dc02e8e3e1c0054096932a8",
+      "Text64_Reference": [
+        "Structured evidence: full/M_N1311/evidence/delta_review_receipt.json#/method_context_field_checks/60; SHA-256: b822cf7f83a8b799d5d14539a810b9718ab781c558ed7443d87a04d03609a549; DOI: https://doi.org/10.7150/thno.23686"
+      ]
+    },
+    {
+      "Text65": "method_context_field_checks:\nfield: method_context.statistics.limitations\nstatus: verified\nevidence: Original JATS B020; replicate restriction is reviewer interpretation consistent with sample reporting\nvalue_sha256: de42c8941745a46a2dca0686e009c3e0696d8bbb3551d43d8a101853e804334e",
+      "Text65_Reference": [
+        "Structured evidence: full/M_N1311/evidence/delta_review_receipt.json#/method_context_field_checks/61; SHA-256: b822cf7f83a8b799d5d14539a810b9718ab781c558ed7443d87a04d03609a549; DOI: https://doi.org/10.7150/thno.23686"
+      ]
+    },
+    {
+      "Text66": "method_context_field_checks:\nfield: method_context.supplementary_timing.source\nstatus: verified\nevidence: Supplement p1 FigS1 labels/visual\nvalue_sha256: bad5b32d6c564c1031e10aaa50435c100c6c307f5b566e9ee603d32e0df515a5",
+      "Text66_Reference": [
+        "Structured evidence: full/M_N1311/evidence/delta_review_receipt.json#/method_context_field_checks/62; SHA-256: b822cf7f83a8b799d5d14539a810b9718ab781c558ed7443d87a04d03609a549; DOI: https://doi.org/10.7150/thno.23686"
+      ]
+    },
+    {
+      "Text67": "method_context_field_checks:\nfield: method_context.supplementary_timing.samples\nstatus: verified\nevidence: Supplement p1 FigS1 labels/visual\nvalue_sha256: 8dc8e7c74bce4f697f28755b47ce1abd40a93d193183e2cb075443a48095cc0a",
+      "Text67_Reference": [
+        "Structured evidence: full/M_N1311/evidence/delta_review_receipt.json#/method_context_field_checks/63; SHA-256: b822cf7f83a8b799d5d14539a810b9718ab781c558ed7443d87a04d03609a549; DOI: https://doi.org/10.7150/thno.23686"
+      ]
+    },
+    {
+      "Text68": "method_context_field_checks:\nfield: method_context.supplementary_timing.interpretation\nstatus: verified\nevidence: Supplement p1 FigS1 labels/visual\nvalue_sha256: bee7a6e232869ae1da7ace4aed08682ca2d20585d4d56b11e5a46588478abfcf",
+      "Text68_Reference": [
+        "Structured evidence: full/M_N1311/evidence/delta_review_receipt.json#/method_context_field_checks/64; SHA-256: b822cf7f83a8b799d5d14539a810b9718ab781c558ed7443d87a04d03609a549; DOI: https://doi.org/10.7150/thno.23686"
+      ]
+    },
+    {
+      "Text69": "method_context_field_checks:\nfield: method_context.age_controls.source\nstatus: verified\nevidence: Original JATS B023–B025\nvalue_sha256: 84a4c9fc457f76a094bd9c689611039c22e29e0d73b41403ef8e8d721bfefd28",
+      "Text69_Reference": [
+        "Structured evidence: full/M_N1311/evidence/delta_review_receipt.json#/method_context_field_checks/65; SHA-256: b822cf7f83a8b799d5d14539a810b9718ab781c558ed7443d87a04d03609a549; DOI: https://doi.org/10.7150/thno.23686"
+      ]
+    },
+    {
+      "Text70": "method_context_field_checks:\nfield: method_context.age_controls.PBS\nstatus: verified\nevidence: Original JATS B023–B025\nvalue_sha256: c9178622a28afc5ceb2bb5469a6f2167ca440607f396d6171652794467510dc8",
+      "Text70_Reference": [
+        "Structured evidence: full/M_N1311/evidence/delta_review_receipt.json#/method_context_field_checks/66; SHA-256: b822cf7f83a8b799d5d14539a810b9718ab781c558ed7443d87a04d03609a549; DOI: https://doi.org/10.7150/thno.23686"
+      ]
+    },
+    {
+      "Text71": "method_context_field_checks:\nfield: method_context.age_controls.comparator_limit\nstatus: verified\nevidence: Original JATS B023–B025\nvalue_sha256: dcb9cb1c07c634705191e5b45ffc668a2bb41f3d7e60178bc22d90eeda09d25d",
+      "Text71_Reference": [
+        "Structured evidence: full/M_N1311/evidence/delta_review_receipt.json#/method_context_field_checks/67; SHA-256: b822cf7f83a8b799d5d14539a810b9718ab781c558ed7443d87a04d03609a549; DOI: https://doi.org/10.7150/thno.23686"
+      ]
+    },
+    {
+      "Text72": "method_context_field_checks:\nfield: method_context.safety_binding.source\nstatus: verified\nevidence: Original JATS B017–B019, B034; B054/Fig7 caption and visual\nvalue_sha256: 5c98191d6f7ffa22824d5368707fefafe0be3b5522cc833291adab33fe3a788b",
+      "Text72_Reference": [
+        "Structured evidence: full/M_N1311/evidence/delta_review_receipt.json#/method_context_field_checks/68; SHA-256: b822cf7f83a8b799d5d14539a810b9718ab781c558ed7443d87a04d03609a549; DOI: https://doi.org/10.7150/thno.23686"
+      ]
+    },
+    {
+      "Text73": "method_context_field_checks:\nfield: method_context.safety_binding.delayed_brain\nstatus: verified\nevidence: Original JATS B017–B019, B034; B054/Fig7 caption and visual\nvalue_sha256: 360815c9a8908422cc8ef3011c4020feb1ba860d5c2751e4f21c78c09ee1f5ec",
+      "Text73_Reference": [
+        "Structured evidence: full/M_N1311/evidence/delta_review_receipt.json#/method_context_field_checks/69; SHA-256: b822cf7f83a8b799d5d14539a810b9718ab781c558ed7443d87a04d03609a549; DOI: https://doi.org/10.7150/thno.23686"
+      ]
+    },
+    {
+      "Text74": "method_context_field_checks:\nfield: method_context.safety_binding.systemic\nstatus: verified\nevidence: Original JATS B017–B019, B034; B054/Fig7 caption and visual\nvalue_sha256: bad8197c2ddc3f206504b49fc51bba5af62fbd1d78c847b74dcf6d399f106e53",
+      "Text74_Reference": [
+        "Structured evidence: full/M_N1311/evidence/delta_review_receipt.json#/method_context_field_checks/70; SHA-256: b822cf7f83a8b799d5d14539a810b9718ab781c558ed7443d87a04d03609a549; DOI: https://doi.org/10.7150/thno.23686"
+      ]
+    },
+    {
+      "Text75": "method_context_field_checks:\nfield: method_context.safety_binding.interpretation\nstatus: verified\nevidence: Original JATS B017–B019, B034; B054/Fig7 caption and visual\nvalue_sha256: 7eaa14fea89535c36c6ace15568bf327f60948bde72864667dbd8f5fc6058464",
+      "Text75_Reference": [
+        "Structured evidence: full/M_N1311/evidence/delta_review_receipt.json#/method_context_field_checks/71; SHA-256: b822cf7f83a8b799d5d14539a810b9718ab781c558ed7443d87a04d03609a549; DOI: https://doi.org/10.7150/thno.23686"
+      ]
+    },
+    {
+      "Text76": "limits:\nNarrow review does not reperform full-paper extraction or recertify unchanged results.",
+      "Text76_Reference": [
+        "Structured evidence: full/M_N1311/evidence/delta_review_receipt.json#/limits/0; SHA-256: b822cf7f83a8b799d5d14539a810b9718ab781c558ed7443d87a04d03609a549; DOI: https://doi.org/10.7150/thno.23686"
+      ]
+    },
+    {
+      "Text77": "limits:\nReceipt applies only to exact bound science hash; any changed science requires an updated review binding.",
+      "Text77_Reference": [
+        "Structured evidence: full/M_N1311/evidence/delta_review_receipt.json#/limits/1; SHA-256: b822cf7f83a8b799d5d14539a810b9718ab781c558ed7443d87a04d03609a549; DOI: https://doi.org/10.7150/thno.23686"
+      ]
+    },
+    {
+      "Text78": "limits:\nSource-locator precision notes are documented here without modifying frozen science.",
+      "Text78_Reference": [
+        "Structured evidence: full/M_N1311/evidence/delta_review_receipt.json#/limits/2; SHA-256: b822cf7f83a8b799d5d14539a810b9718ab781c558ed7443d87a04d03609a549; DOI: https://doi.org/10.7150/thno.23686"
+      ]
+    },
+    {
+      "Text79": "limits:\nNot continuous/all-frame video review.",
+      "Text79_Reference": [
+        "Structured evidence: full/M_N1311/evidence/independent_review_receipt.json#/limits/0; SHA-256: c4e024d6b1399aae7be0774101d23bcaa91bb9dd8c9d50446d0e9d484b880efe; DOI: https://doi.org/10.7150/thno.23686"
+      ]
+    },
+    {
+      "Text80": "limits:\nNo calibrated graph digitization or unreported precision.",
+      "Text80_Reference": [
+        "Structured evidence: full/M_N1311/evidence/independent_review_receipt.json#/limits/1; SHA-256: c4e024d6b1399aae7be0774101d23bcaa91bb9dd8c9d50446d0e9d484b880efe; DOI: https://doi.org/10.7150/thno.23686"
+      ]
+    },
+    {
+      "Text81": "limits:\nReferenced external papers not independently reread.",
+      "Text81_Reference": [
+        "Structured evidence: full/M_N1311/evidence/independent_review_receipt.json#/limits/2; SHA-256: c4e024d6b1399aae7be0774101d23bcaa91bb9dd8c9d50446d0e9d484b880efe; DOI: https://doi.org/10.7150/thno.23686"
+      ]
+    },
+    {
+      "Text82": "limits:\nNo access denials encountered or retried by reviewer.",
+      "Text82_Reference": [
+        "Structured evidence: full/M_N1311/evidence/independent_review_receipt.json#/limits/3; SHA-256: c4e024d6b1399aae7be0774101d23bcaa91bb9dd8c9d50446d0e9d484b880efe; DOI: https://doi.org/10.7150/thno.23686"
+      ]
+    },
+    {
+      "Text83": "reading_scope:\nbody: B001–B041 and all seven figure captions independently read against original JATS; original embedded CNR equation separately retrieved and visually read. Bibliography contextual only.\nmain_figures: Figures 1–7 captions and all visual panels inspected. No main tables present.\nsupplement: All four PDF pages visually read; Figures S1–S5 and Table S1 extracted.\nvideo: Original 30.266667 s video: full-duration 1 fps contact sheet visually inspected, covering initial/S1/scrubbing/S2/recovery sequences. No continuous or every-frame viewing claimed. Audio stream decoded: mean/max -91 dB, consistent with silence; no scientific speech claim.\nfull_text_decomposition_complete: true\nmedia_review_complete: true\noverall_completeness: complete_for_scientific_extraction_scope\nnot_abstract_only: true",
+      "Text83_Reference": [
+        "Structured evidence: full/M_N1311/evidence/scientific_derived.json#/reading_scope; SHA-256: 3644673e2d48022ef084473519ce88398950e54e84c5232ed670ed4a66af4f80; DOI: https://doi.org/10.7150/thno.23686"
+      ]
+    },
+    {
+      "Text84": "metric_separation:\ntransmittance: No calibrated transmittance spectrum or percentage reported. White-light visibility and CNR are separate endpoints.\ndepth: TPLSM below-pia depth, R02.\nfluorescence_retention: No quantified retention fraction or decay curve; vascular tracer and GFP visibility only.\nrefractive_index: No RI score added. Reported physical S1/S2 indices are source context, not scored performance.\nreversibility: Macroscopic turbidity switch + recurrent imaging + partial SHG recovery; not demonstrated complete structural/biochemical restoration.\nresolution: Resolved vessel diameters R03/R05 differ from bead width metrics R14/R15.",
+      "Text84_Reference": [
+        "Structured evidence: full/M_N1311/evidence/scientific_derived.json#/metric_separation; SHA-256: 3644673e2d48022ef084473519ce88398950e54e84c5232ed670ed4a66af4f80; DOI: https://doi.org/10.7150/thno.23686"
+      ]
+    },
+    {
+      "Text85": "safety_scope:\nhuman_operating_advice: false\ninfection_or_viral_workflows_extracted: false\nfinding: No pathogen or viral construction/production/delivery study in this article. Routine wound-infection prevention is not extracted as a protocol.\nanimal_scope: Animal experimental findings only; no clinical recommendation.",
+      "Text85_Reference": [
+        "Structured evidence: full/M_N1311/evidence/scientific_derived.json#/safety_scope; SHA-256: 3644673e2d48022ef084473519ce88398950e54e84c5232ed670ed4a66af4f80; DOI: https://doi.org/10.7150/thno.23686"
+      ]
+    },
+    {
+      "Text86": "limitations:\nMale mice only in explicit experiments; age range 2–8 months, no human validation.",
+      "Text86_Reference": [
+        "Structured evidence: full/M_N1311/evidence/scientific_derived.json#/limitations/0; SHA-256: 3644673e2d48022ef084473519ce88398950e54e84c5232ed670ed4a66af4f80; DOI: https://doi.org/10.7150/thno.23686"
+      ]
+    },
+    {
+      "Text87": "limitations:\nNo direct fluorophore-retention percentage or calibrated transmittance measurement.",
+      "Text87_Reference": [
+        "Structured evidence: full/M_N1311/evidence/scientific_derived.json#/limitations/1; SHA-256: 3644673e2d48022ef084473519ce88398950e54e84c5232ed670ed4a66af4f80; DOI: https://doi.org/10.7150/thno.23686"
+      ]
+    },
+    {
+      "Text88": "limitations:\nExact CNR and vessel-diameter bar values in Fig4, repeated diameter bars in Fig6, and normalized SHG values in S4 not tabulated or digitized.",
+      "Text88_Reference": [
+        "Structured evidence: full/M_N1311/evidence/scientific_derived.json#/limitations/2; SHA-256: 3644673e2d48022ef084473519ce88398950e54e84c5232ed670ed4a66af4f80; DOI: https://doi.org/10.7150/thno.23686"
+      ]
+    },
+    {
+      "Text89": "limitations:\nDelayed histology group sizes not separately reported; Table S1 equal group allocation not explicitly given.",
+      "Text89_Reference": [
+        "Structured evidence: full/M_N1311/evidence/scientific_derived.json#/limitations/3; SHA-256: 3644673e2d48022ef084473519ce88398950e54e84c5232ed670ed4a66af4f80; DOI: https://doi.org/10.7150/thno.23686"
+      ]
+    },
+    {
+      "Text90": "limitations:\nFig5 B027 body and panel labels agree B=CBF/C=SO2; only final B052 caption ordering is reversed/ambiguous.",
+      "Text90_Reference": [
+        "Structured evidence: full/M_N1311/evidence/scientific_derived.json#/limitations/4; SHA-256: 3644673e2d48022ef084473519ce88398950e54e84c5232ed670ed4a66af4f80; DOI: https://doi.org/10.7150/thno.23686"
+      ]
+    },
+    {
+      "Text91": "limitations:\nVideo is sampled rather than exhaustively frame-reviewed; every relevant clearing/recovery sequence is represented, sufficient for qualitative optical switching only.",
+      "Text91_Reference": [
+        "Structured evidence: full/M_N1311/evidence/scientific_derived.json#/limitations/5; SHA-256: 3644673e2d48022ef084473519ce88398950e54e84c5232ed670ed4a66af4f80; DOI: https://doi.org/10.7150/thno.23686"
+      ]
+    },
+    {
+      "Text92": "limitations:\nIndependent reviewer completed three review passes; parent review of the exact scientific delta remains pending.",
+      "Text92_Reference": [
+        "Structured evidence: full/M_N1311/evidence/scientific_derived.json#/limitations/6; SHA-256: 3644673e2d48022ef084473519ce88398950e54e84c5232ed670ed4a66af4f80; DOI: https://doi.org/10.7150/thno.23686"
+      ]
+    },
+    {
+      "Text93": "gap_list.json:\n52d524adb6825a41495117bed7a74497cc2c6af72ecc312c5e5723c6281375a7",
+      "Text93_Reference": [
+        "Structured evidence: full/M_N1311/evidence/source_hash_reference.json#/gap_list.json; SHA-256: fa0f0900f5be1467aa505311b8411ab9bb4a4cb3154bf28a64f8225b66a3fa51; DOI: https://doi.org/10.7150/thno.23686"
+      ]
+    }
+  ]
+}

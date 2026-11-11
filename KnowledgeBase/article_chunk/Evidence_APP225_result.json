@@ -1,0 +1,391 @@
+{
+  "TOC_Method_Name": {
+    "Text": "Not specified as a single method in the selected evidence records",
+    "Text_Reference": [
+      "DOI: https://doi.org/10.7150/ijbs.72552",
+      "Evidence-layer structured paraphrase; not a verbatim quotation. Source release: https://github.com/404NotFound422/TOCAgentProject/tree/5e3a711befb3952a2e39f4d53fc9c9f1a7ac0d22/KnowledgeBase/evidence_expansion_20261019",
+      "Local source archive: ../literature_evidence/2026-11-11/source_release.zip; member: full/APP225/version_selection.json"
+    ]
+  },
+  "General_Description": {
+    "Text": "Spatiotemporal quantification of metastatic tumour cell growth and distribution in lymph nodes by whole-mount tissue 3D imaging (2022). Evidence category: application. This card preserves the evidence layer's structured statements and their original field labels; it does not add a new literature review or certify benchmark scoring thresholds.",
+    "Text_Reference": [
+      "DOI: https://doi.org/10.7150/ijbs.72552",
+      "Evidence-layer structured paraphrase; not a verbatim quotation. Source release: https://github.com/404NotFound422/TOCAgentProject/tree/5e3a711befb3952a2e39f4d53fc9c9f1a7ac0d22/KnowledgeBase/evidence_expansion_20261019",
+      "Local source archive: ../literature_evidence/2026-11-11/source_release.zip; member: full/APP225/version_selection.json"
+    ]
+  },
+  "Tissue_Types": [],
+  "Time_Consumption": [],
+  "Tissue_Deformation": [],
+  "Fluorescence_Compatibility": [],
+  "Preservation_Stability": [],
+  "Application": [
+    {
+      "Text1": "units:\nid: U001\nkind: scope\nclaim: 固定完整引流淋巴结的肿瘤负荷与血管/淋巴管空间分区，另有人 CRC 肠系膜淋巴结展示；不是活体连续细胞追踪。\nsource_locator: Methods; Results; Figs1–6\nsamples: \n  [1] S_mouse\n  [2] S_coculture\n  [3] S_human\nindependent_review: \n  status: verified_with_source_limits\n  note: 固定跨阶段组织与人展示范围核对通过；未主张纵向活细胞追踪。\n  delta_ids: \n[]",
+      "Text1_Reference": [
+        "Structured evidence: full/APP225/evidence/independent_review/scientific_independent_derived.json#/units/0; SHA-256: 43d73d42270fed057a0accb6c30485d86755bd0d68a631f6b67fe2ebc5104f00; DOI: https://doi.org/10.7150/ijbs.72552"
+      ]
+    },
+    {
+      "Text2": "units:\nid: U002\nkind: sample\nclaim: 雄性 C57BL/6J，8周龄；方法报告总80只，不等于每图样本数。主阶段5/10/20/30日；补图1含15/25日荧光观察。\nsource_locator: /article/body/sec[2]/sec[3–4]; Results sec1; Fig1; SupFig1\nsample_id: S_mouse\nmodel_background: MC38结直肠癌相关淋巴结转移组别；不提取模型建立操作\nn_total: 80\nstage_days: \n  [1] 5\n  [2] 10\n  [3] 20\n  [4] 30\nindependent_review: \n  status: verified_with_source_limits\n  note: 8周雄性、80总数与四主阶段匹配；补图S1确含15/25日。\n  delta_ids: \n[]",
+      "Text2_Reference": [
+        "Structured evidence: full/APP225/evidence/independent_review/scientific_independent_derived.json#/units/1; SHA-256: 43d73d42270fed057a0accb6c30485d86755bd0d68a631f6b67fe2ebc5104f00; DOI: https://doi.org/10.7150/ijbs.72552"
+      ]
+    },
+    {
+      "Text3": "units:\nid: U003\nkind: fixation\nclaim: 采集 LN 以4% PFA固定；Fig1B与Fig6A示意>1日。正文未给出明确固定温度，不能自行补齐。\nsource_locator: Results sec1 p1; Results sec5 p1; Fig1B; Fig6A\nsample_ids: \n  [1] S_mouse\n  [2] S_human\ntemperature: not reported here\nindependent_review: \n  status: verified_with_source_limits\n  note: 4% PFA及图中>1日匹配；固定温度未见报告。\n  delta_ids: \n[]",
+      "Text3_Reference": [
+        "Structured evidence: full/APP225/evidence/independent_review/scientific_independent_derived.json#/units/2; SHA-256: 43d73d42270fed057a0accb6c30485d86755bd0d68a631f6b67fe2ebc5104f00; DOI: https://doi.org/10.7150/ijbs.72552"
+      ]
+    },
+    {
+      "Text4": "units:\nid: U004\nkind: clearing_chemistry\nclaim: uDISCO：叔丁醇梯度脱水、DCM脱脂、BABB-D4折射率匹配。BABB为苄醇:苄基苯甲酸酯1:2，BABB:DPE=4:1，加0.4 vol%维生素E。仅固定组织处理。\nsource_locator: Methods sec5\nprotocol_id: P_clearing\nsample_ids: \n  [1] S_mouse\n  [2] S_human\ntert_butanol_vol_percent: \n  [1] 30\n  [2] 50\n  [3] 70\n  [4] 80\n  [5] 90\n  [6] 96\n  [7] 100\nindependent_review: \n  status: verified_with_source_limits\n  note: 成分和比例匹配；补充源中纯叔丁醇使用前温度表述，且不添加优化建议。\n  delta_ids: \n    [1] D002\nindependent_addenda: \n  [1] 原文另称100%叔丁醇使用前保持在熔点以上（文中括注23–26°C）；这是原文条件，非新增优化。",
+      "Text4_Reference": [
+        "Structured evidence: full/APP225/evidence/independent_review/scientific_independent_derived.json#/units/3; SHA-256: 43d73d42270fed057a0accb6c30485d86755bd0d68a631f6b67fe2ebc5104f00; DOI: https://doi.org/10.7150/ijbs.72552"
+      ]
+    },
+    {
+      "Text5": "units:\nid: U005\nkind: clearing_conditions\nclaim: 方法正文：整LN置5-mL管，每步4mL叔丁醇，室温各2h；DCM室温30min；BABB-D至少2h至透明；避光、轻摇、通风橱。以上不与示意图的不同时间合成统一配方。\nsource_locator: Methods sec6\nprotocol_id: P_clearing\nminimum_dehydration_hours: 14\nminimum_post_dehydration_hours: 2.5\nindependent_review: \n  status: verified_with_source_limits\n  note: 方法时间、体积和避光轻摇通风橱匹配；14h与2.5h为相加下限，非总流程实测。\n  delta_ids: \n[]",
+      "Text5_Reference": [
+        "Structured evidence: full/APP225/evidence/independent_review/scientific_independent_derived.json#/units/4; SHA-256: 43d73d42270fed057a0accb6c30485d86755bd0d68a631f6b67fe2ebc5104f00; DOI: https://doi.org/10.7150/ijbs.72552"
+      ]
+    },
+    {
+      "Text6": "units:\nid: U006\nkind: source_conflict\nclaim: Fig1B鼠LN示意为脱水每步1h、DCM20min；Methods sec6为每步2h、DCM30min。Fig6A人LN示意为每步2h、DCM0.5–1h。保留分支/来源冲突，不擅定正文或图必然优先。\nsource_locator: Methods sec6; Fig1B; Fig6A\ngap_id: G_time_conflict\nindependent_review: \n  status: verified_with_source_limits\n  note: 已直接读取Fig1B和Fig6A：1h/20min、2h/0.5–1h与正文冲突真实存在。\n  delta_ids: \n[]",
+      "Text6_Reference": [
+        "Structured evidence: full/APP225/evidence/independent_review/scientific_independent_derived.json#/units/5; SHA-256: 43d73d42270fed057a0accb6c30485d86755bd0d68a631f6b67fe2ebc5104f00; DOI: https://doi.org/10.7150/ijbs.72552"
+      ]
+    },
+    {
+      "Text7": "units:\nid: U007\nkind: immunolabel\nclaim: 固定LN电增强免疫标记：LYVE-1 ab33682与CD31 3528S，原抗稀释于5%BSA/0.1M硼酸(pH8.6)/0.1%Triton X-100；原文记作0.2 mA mm2（电流密度单位排版歧义，未擅改）原抗3h，1.5h换向；洗脱2h并换向；二抗采用原抗同条件。未给原抗具体稀释比或二抗荧光偶联身份。\nsource_locator: Methods sec7\nprotocol_id: P_label\nsample_id: S_mouse\nprimary_hours: 3\ndestain_hours: 2\nsecondary_hours: 3\nindependent_review: \n  status: verified_with_source_limits\n  note: 抗体身份、缓冲液、主抗/洗脱/二抗时长匹配；电流密度单位须保留原文排版歧义。\n  delta_ids: \n    [1] D001",
+      "Text7_Reference": [
+        "Structured evidence: full/APP225/evidence/independent_review/scientific_independent_derived.json#/units/6; SHA-256: 43d73d42270fed057a0accb6c30485d86755bd0d68a631f6b67fe2ebc5104f00; DOI: https://doi.org/10.7150/ijbs.72552"
+      ]
+    },
+    {
+      "Text8": "units:\nid: U008\nkind: time_interpretation\nclaim: Fig1B/Fig6A快速免疫标记标为<6h，传统标记分别7d/10d；Methods显式3+2+3h不支持把全部标记总时长无条件写成<6h。Discussion称透明+标记总3天，保留为作者总流程声明，而非各步骤严格相加所得。\nsource_locator: Fig1B; Fig6A; Methods sec7; Discussion p1–2\ngap_id: G_label_time_conflict\nindependent_review: \n  status: verified_with_source_limits\n  note: 两个流程图<6h均可见；3+2+3h至少8h与之不一致，不能消解为单一时长。\n  delta_ids: \n[]",
+      "Text8_Reference": [
+        "Structured evidence: full/APP225/evidence/independent_review/scientific_independent_derived.json#/units/7; SHA-256: 43d73d42270fed057a0accb6c30485d86755bd0d68a631f6b67fe2ebc5104f00; DOI: https://doi.org/10.7150/ijbs.72552"
+      ]
+    },
+    {
+      "Text9": "units:\nid: U009\nkind: marker_identity\nclaim: EGFP是MC38相关信号；LYVE-1与CD31分别用于作者定义的LV与BV区域；单凭共定位不能证明细胞位于真实血管腔内。TO-PRO-3核共染与高分辨形态支持肿瘤信号识别。\nsource_locator: Results sec1 p1; sec2 p1; Methods sec9; Fig1D; Fig2\nmodel_generation: excluded\nspecificity: operational spatial labels, not universal absolute cell-type specificity\nindependent_review: \n  status: verified_with_source_limits\n  note: 标记身份与核染合并图匹配；限制共定位推断合理。\n  delta_ids: \n[]",
+      "Text9_Reference": [
+        "Structured evidence: full/APP225/evidence/independent_review/scientific_independent_derived.json#/units/8; SHA-256: 43d73d42270fed057a0accb6c30485d86755bd0d68a631f6b67fe2ebc5104f00; DOI: https://doi.org/10.7150/ijbs.72552"
+      ]
+    },
+    {
+      "Text10": "units:\nid: U010\nkind: background_control\nclaim: 未处理LN作为非特异背景，实验减去对照信号；后用单细胞分辨率观察EGFP细胞形态。该控制不能替代每个标记的全部生物学特异性验证。\nsource_locator: Methods sec9\nindependent_review: \n  status: verified_with_source_limits\n  note: 正文明确untreated LN背景扣除，不能扩大为完整特异性验证。\n  delta_ids: \n[]",
+      "Text10_Reference": [
+        "Structured evidence: full/APP225/evidence/independent_review/scientific_independent_derived.json#/units/9; SHA-256: 43d73d42270fed057a0accb6c30485d86755bd0d68a631f6b67fe2ebc5104f00; DOI: https://doi.org/10.7150/ijbs.72552"
+      ]
+    },
+    {
+      "Text11": "units:\nid: U011\nkind: lightsheet\nclaim: LaVision UltraMicroscope II；2×MVPLAPO物镜、6mm浸没帽；正文总放大1.26、NA0.07，16bit，561/640nm两通道，z步5µm；样本浸于BABB-D4。相机6.5µm为传感器像素表述，不作样本端体素直接换算。\nsource_locator: Methods sec8\nprotocol_id: P_image\nsample_id: S_mouse\nindependent_review: \n  status: verified_with_source_limits\n  note: LSFM设备、光路和采样参数匹配；不据相机6.5μm声称样本体素。\n  delta_ids: \n    [1] D003\nindependent_addenda: \n  [1] LSFM段仅列561/640nm两通道；共聚焦段称三色但仅列LV/BV的568/647nm。完整EGFP/其他通道配置未报告，不能推定采集波长。",
+      "Text11_Reference": [
+        "Structured evidence: full/APP225/evidence/independent_review/scientific_independent_derived.json#/units/10; SHA-256: 43d73d42270fed057a0accb6c30485d86755bd0d68a631f6b67fe2ebc5104f00; DOI: https://doi.org/10.7150/ijbs.72552"
+      ]
+    },
+    {
+      "Text12": "units:\nid: U012\nkind: confocal\nclaim: Leica SP8，10×NA0.4，正文列体素尺寸1.136µm，LV/BV激发568/647nm；不能将这些设置与后续定量体素或LSFM z步混为同一采样。\nsource_locator: Methods sec9; Results sec1 p2\nprotocol_id: P_image\nindependent_review: \n  status: verified_with_source_limits\n  note: 共聚焦参数匹配；1.136μm未完整列三个轴，与定量1.13×1.13×5.65分别保存。\n  delta_ids: \n    [1] D003\nindependent_addenda: \n  [1] LSFM段仅列561/640nm两通道；共聚焦段称三色但仅列LV/BV的568/647nm。完整EGFP/其他通道配置未报告，不能推定采集波长。",
+      "Text12_Reference": [
+        "Structured evidence: full/APP225/evidence/independent_review/scientific_independent_derived.json#/units/11; SHA-256: 43d73d42270fed057a0accb6c30485d86755bd0d68a631f6b67fe2ebc5104f00; DOI: https://doi.org/10.7150/ijbs.72552"
+      ]
+    },
+    {
+      "Text13": "units:\nid: U013\nkind: segmentation\nclaim: Fiji1.52n滚动球去背景及通道阈值分割；MATLAB2019a计算肿瘤相关体素及分区比例；Imaris用于展示/表面分割和文中统计。阈值数值未全报，不据此声称完全可复现。\nsource_locator: Methods sec10–11; Results sec1 p2\nindependent_review: \n  status: verified_with_source_limits\n  note: Fiji、MATLAB、Imaris用途匹配；完整阈值未报告。\n  delta_ids: \n[]",
+      "Text13_Reference": [
+        "Structured evidence: full/APP225/evidence/independent_review/scientific_independent_derived.json#/units/12; SHA-256: 43d73d42270fed057a0accb6c30485d86755bd0d68a631f6b67fe2ebc5104f00; DOI: https://doi.org/10.7150/ijbs.72552"
+      ]
+    },
+    {
+      "Text14": "units:\nid: U014\nkind: voxel_not_cell\nclaim: 密集肿瘤区域难分辨单细胞，主负荷指标为肿瘤相关体素数。MC38平均直径约11.3µm，定量体素1.13×1.13×5.65µm；约105体素≈1细胞为平均体积换算，非逐个细胞计数。补充文字偶称pixel，按三维定义解释而保留术语差异。\nsource_locator: Results sec1 p2; SupFig3 pp4–5\nresult_id: R_voxel\nmetric_unit: tumour-associated voxels\ncell_conversion: approximate only\nindependent_review: \n  status: verified_with_source_limits\n  note: S3图含球体平均体积/体素体积公式；独立算得104.72≈105，不是逐细胞计数。\n  delta_ids: \n[]",
+      "Text14_Reference": [
+        "Structured evidence: full/APP225/evidence/independent_review/scientific_independent_derived.json#/units/13; SHA-256: 43d73d42270fed057a0accb6c30485d86755bd0d68a631f6b67fe2ebc5104f00; DOI: https://doi.org/10.7150/ijbs.72552"
+      ]
+    },
+    {
+      "Text15": "units:\nid: U015\nkind: burden_result\nclaim: 5/10/20/30日EGFP相关体素负荷上升，尤其后期；Fig1F每组至少6个样本，不等于独立80只全部用于此图。\nsource_locator: Fig1E–F; Results sec1 p2; SupFig4\nresult_id: R_burden\nsample_id: S_mouse\nprotocol_ids: \n  [1] P_clearing\n  [2] P_label\n  [3] P_image\nn: at least 6 samples/group\nindependent_review: \n  status: verified_with_source_limits\n  note: Fig1F趋势和≥6样本匹配；未从柱高制造精确值。\n  delta_ids: \n[]",
+      "Text15_Reference": [
+        "Structured evidence: full/APP225/evidence/independent_review/scientific_independent_derived.json#/units/14; SHA-256: 43d73d42270fed057a0accb6c30485d86755bd0d68a631f6b67fe2ebc5104f00; DOI: https://doi.org/10.7150/ijbs.72552"
+      ]
+    },
+    {
+      "Text16": "units:\nid: U016\nkind: spatial_definition\nclaim: e-MC38=EGFP与LYVE-1重叠；b-MC38=EGFP与CD31重叠；s-MC38=管标记外EGFP。Fig2给IHC、合成截面及截面与放大/三维展示；分区是图像共定位操作定义。\nsource_locator: Fig2A–G; Results sec2 p1\nresult_id: R_spatial\nindependent_review: \n  status: verified_with_source_limits\n  note: 分区及Fig2全图匹配；G为截面及放大/三维展示，不明确为正交视图。\n  delta_ids: \n    [1] D004",
+      "Text16_Reference": [
+        "Structured evidence: full/APP225/evidence/independent_review/scientific_independent_derived.json#/units/15; SHA-256: 43d73d42270fed057a0accb6c30485d86755bd0d68a631f6b67fe2ebc5104f00; DOI: https://doi.org/10.7150/ijbs.72552"
+      ]
+    },
+    {
+      "Text17": "units:\nid: U017\nkind: spatial_quantification\nclaim: Fig3B展示的e/b/s百分比分别：d5 51.89/24.16/23.95；d10 33.19/13.55/53.26；d20 21.51/26.59/51.90；d30 33.44/50.72/15.84。此示例百分比不冒充全部重复的精确组均值；Fig3D为≥6样本组统计。\nsource_locator: Results sec2 p3; Fig3B,D\nresult_id: R_spatial\nmetric_unit: percent tumour-associated compartment signal\nn: ≥6 individual samples/group\nindependent_review: \n  status: verified_with_source_limits\n  note: Fig3B十二个百分数逐个核对匹配；不与Fig3D组均值混同。\n  delta_ids: \n[]",
+      "Text17_Reference": [
+        "Structured evidence: full/APP225/evidence/independent_review/scientific_independent_derived.json#/units/16; SHA-256: 43d73d42270fed057a0accb6c30485d86755bd0d68a631f6b67fe2ebc5104f00; DOI: https://doi.org/10.7150/ijbs.72552"
+      ]
+    },
+    {
+      "Text18": "units:\nid: U018\nkind: temporal_result\nclaim: LV/BV相关体素在5–20日变化不显著，20–30日增加；管外体素5–10日增加，10日后无显著变化。分散再聚集属于不同阶段固定样本的作者推断，不是同一细胞迁移证据。\nsource_locator: Results sec2 p2–4; Fig3C–E\nresult_id: R_spatial\nindependent_review: \n  status: verified_with_source_limits\n  note: 正文阶段比较匹配；固定不同阶段不能证明实际迁移路线。\n  delta_ids: \n[]",
+      "Text18_Reference": [
+        "Structured evidence: full/APP225/evidence/independent_review/scientific_independent_derived.json#/units/17; SHA-256: 43d73d42270fed057a0accb6c30485d86755bd0d68a631f6b67fe2ebc5104f00; DOI: https://doi.org/10.7150/ijbs.72552"
+      ]
+    },
+    {
+      "Text19": "units:\nid: U019\nkind: histology_branch\nclaim: 5µm石蜡连续切片LYVE-1/CD31/Ki67分区：原抗4°C过夜、二抗室温1h；抗LYVE-1 ab33682、CD31 3528S、Ki67 ab15580。这是二维IHC验证，不将其条件绑定到透明整LN。\nsource_locator: Methods sec12; Fig4\nprotocol_id: P_IHC\nn: experiments repeated at least 3 times; animal n not specified per panel\nindependent_review: \n  status: verified_with_source_limits\n  note: IHC分支身份和原抗/二抗时间匹配，另补源中预处理和显色事实，不绑定整结标记。\n  delta_ids: \n    [1] D005\nindependent_addenda: \n  [1] IHC切片另有0.3%H2O2/PBS 30min、10%BSA封闭；HRP抗鼠5470S或抗兔ab136817、DAB与苏木精；原抗仅称optimal dilutions未列具体比例。",
+      "Text19_Reference": [
+        "Structured evidence: full/APP225/evidence/independent_review/scientific_independent_derived.json#/units/18; SHA-256: 43d73d42270fed057a0accb6c30485d86755bd0d68a631f6b67fe2ebc5104f00; DOI: https://doi.org/10.7150/ijbs.72552"
+      ]
+    },
+    {
+      "Text20": "units:\nid: U020\nkind: proliferation\nclaim: 总与管外Ki67阳性计数随阶段上升，但20–30日管外增长放缓、管相关增长更明显。Ki67本身非肿瘤特异，连续切片分区/形态判断的支持程度有限。\nsource_locator: Results sec3; Fig4A–G\nresult_id: R_Ki67\nsample_id: S_mouse\nprotocol_ids: \n  [1] P_IHC\nindependent_review: \n  status: verified_with_source_limits\n  note: Fig4四时间点、总Ki67和管外Ki67及比值匹配；管外20–30d标NS，与增长放缓一致。\n  delta_ids: \n[]",
+      "Text20_Reference": [
+        "Structured evidence: full/APP225/evidence/independent_review/scientific_independent_derived.json#/units/19; SHA-256: 43d73d42270fed057a0accb6c30485d86755bd0d68a631f6b67fe2ebc5104f00; DOI: https://doi.org/10.7150/ijbs.72552"
+      ]
+    },
+    {
+      "Text21": "units:\nid: U021\nkind: coculture_branch\nclaim: MC38-EGFP alone(原文vehicle)、MC38/MFC-mCherry混合、共培养三组，读取5/10日固定LN；只保留分组背景，不含细胞培养、混合或移植操作。\nsource_locator: Results sec4; Fig5A\nsample_id: S_coculture\nstage_days: \n  [1] 5\n  [2] 10\nindependent_review: \n  status: verified_with_source_limits\n  note: Fig5三组名及5/10日匹配，只纳入分组背景而无模型生成操作。\n  delta_ids: \n[]",
+      "Text21_Reference": [
+        "Structured evidence: full/APP225/evidence/independent_review/scientific_independent_derived.json#/units/20; SHA-256: 43d73d42270fed057a0accb6c30485d86755bd0d68a631f6b67fe2ebc5104f00; DOI: https://doi.org/10.7150/ijbs.72552"
+      ]
+    },
+    {
+      "Text22": "units:\nid: U022\nkind: coculture_result\nclaim: 混合与共培养组LN体积及肿瘤相关对象数高于MC38-alone，MFC与MC38共同出现；不能由共定位单独证明机制性“soil”。\nsource_locator: Fig5B–G; Results sec4 p2\nresult_id: R_coculture\nsample_id: S_coculture\nprotocol_ids: \n  [1] P_clearing\n  [2] P_image\nindependent_review: \n  status: verified_with_source_limits\n  note: Fig5体积与对象计数支持混合/共培养高于alone；未越界宣称特定机制。\n  delta_ids: \n[]",
+      "Text22_Reference": [
+        "Structured evidence: full/APP225/evidence/independent_review/scientific_independent_derived.json#/units/21; SHA-256: 43d73d42270fed057a0accb6c30485d86755bd0d68a631f6b67fe2ebc5104f00; DOI: https://doi.org/10.7150/ijbs.72552"
+      ]
+    },
+    {
+      "Text23": "units:\nid: U023\nkind: coculture_quantification\nclaim: Fig5D/E展示随机500×500×100µm ROI；Imaris表面对象阈值：MC38 >10µm，MFC >15µm(原图注size，不写成µm³)。统计以图像对象数为单位；至少3次实验，独立动物/视野数未明确。\nsource_locator: Fig5 caption D–G\nmetric_unit: segmented objects within stated ROI\nn: at least 3 experimental repeats\nindependent_review: \n  status: verified_with_source_limits\n  note: ROI与>10μm/>15μm原图注匹配；size物理量定义缺失，不能改成μm³。\n  delta_ids: \n[]",
+      "Text23_Reference": [
+        "Structured evidence: full/APP225/evidence/independent_review/scientific_independent_derived.json#/units/22; SHA-256: 43d73d42270fed057a0accb6c30485d86755bd0d68a631f6b67fe2ebc5104f00; DOI: https://doi.org/10.7150/ijbs.72552"
+      ]
+    },
+    {
+      "Text24": "units:\nid: U024\nkind: human_branch\nclaim: 人CRC肠系膜LN固定后uDISCO，CK20+TO-PRO-3检测；示例为70岁男性，不能扩成70例或泛化诊断准确性队列。Fig6A另列CK7/CK20示意，正文实际展示为CK20。\nsource_locator: Results sec5; Fig6A–F\nsample_id: S_human\npatient_n: one explicitly described exemplar; total cohort not reported\nprotocol_ids: \n  [1] P_clearing\n  [2] P_image\nindependent_review: \n  status: verified_with_source_limits\n  note: 70岁男性例和CK20展示匹配；CK7仅图示，不形成独立检测结果。\n  delta_ids: \n[]",
+      "Text24_Reference": [
+        "Structured evidence: full/APP225/evidence/independent_review/scientific_independent_derived.json#/units/23; SHA-256: 43d73d42270fed057a0accb6c30485d86755bd0d68a631f6b67fe2ebc5104f00; DOI: https://doi.org/10.7150/ijbs.72552"
+      ]
+    },
+    {
+      "Text25": "units:\nid: U025\nkind: human_stain\nclaim: Fig6A人LN：TO-PRO-3为5h；传统抗体标记10d或快速<6h。抗CK20的具体货号/稀释和TO-PRO-3浓度未报告；不自拟。\nsource_locator: Fig6A; Results sec5 p1\nprotocol_id: P_human_label\nsample_id: S_human\nindependent_review: \n  status: verified_with_source_limits\n  note: Fig6A核染5h与抗体时长匹配；CK20货号/稀释及核染浓度均未找到。\n  delta_ids: \n[]",
+      "Text25_Reference": [
+        "Structured evidence: full/APP225/evidence/independent_review/scientific_independent_derived.json#/units/24; SHA-256: 43d73d42270fed057a0accb6c30485d86755bd0d68a631f6b67fe2ebc5104f00; DOI: https://doi.org/10.7150/ijbs.72552"
+      ]
+    },
+    {
+      "Text26": "units:\nid: U026\nkind: human_result\nclaim: 人LN收缩且可见CK20阳性区域三维分布；对同一已成像LN再IHC，选相近162.5×162.5µm视野，3D检测肿瘤计数高于IHC。缺乏完整临床样本数与诊断敏感度/特异度，不称临床验证。\nsource_locator: Fig6B–G; Results sec5\nresult_id: R_human\nsample_id: S_human\nindependent_review: \n  status: verified_with_source_limits\n  note: 同一LN再IHC与相似视野比较匹配；统计分母未全报，不支持诊断准确性。\n  delta_ids: \n[]",
+      "Text26_Reference": [
+        "Structured evidence: full/APP225/evidence/independent_review/scientific_independent_derived.json#/units/25; SHA-256: 43d73d42270fed057a0accb6c30485d86755bd0d68a631f6b67fe2ebc5104f00; DOI: https://doi.org/10.7150/ijbs.72552"
+      ]
+    },
+    {
+      "Text27": "units:\nid: U027\nkind: shrinkage\nclaim: Fig1C鼠LN体积下降标NS；Fig6B人LN体积下降标*。图中都是mm³大小读数，不将其解释成线性收缩率；无源数值不按柱高杜撰精确百分比。\nsource_locator: Fig1C; Fig6B\nresult_id: R_shrinkage\nindependent_review: \n  status: verified_with_source_limits\n  note: 直接见Fig1C NS与Fig6B *；轴为mm³不是线性缩率。\n  delta_ids: \n[]",
+      "Text27_Reference": [
+        "Structured evidence: full/APP225/evidence/independent_review/scientific_independent_derived.json#/units/26; SHA-256: 43d73d42270fed057a0accb6c30485d86755bd0d68a631f6b67fe2ebc5104f00; DOI: https://doi.org/10.7150/ijbs.72552"
+      ]
+    },
+    {
+      "Text28": "units:\nid: U028\nkind: supplement\nclaim: SupFig1阶段背景与LN体积/荧光，SupFig2传统与快速LYVE-1形态相似，SupFig3体素换算，SupFig4分割表面，SupFig5 CD4/CD8/CD19与CD31邻近及ER-TR7网状细胞分布。定性相似不等于定量完全等效。\nsource_locator: Supplement pp1–7, FigsS1–S5\nindependent_review: \n  status: verified_with_source_limits\n  note: S1–S5逐页核对，补第20日及CD4更丰富的作者定性观察；无量化相等/免疫机制主张。\n  delta_ids: \n    [1] D006\nindependent_addenda: \n  [1] S5对应d20；作者描述CD4阳性较CD8/CD19多，属图像支持的定性观察，无完整定量分母；各免疫/基质标记货号与稀释未报告。",
+      "Text28_Reference": [
+        "Structured evidence: full/APP225/evidence/independent_review/scientific_independent_derived.json#/units/27; SHA-256: 43d73d42270fed057a0accb6c30485d86755bd0d68a631f6b67fe2ebc5104f00; DOI: https://doi.org/10.7150/ijbs.72552"
+      ]
+    },
+    {
+      "Text29": "units:\nid: U029\nkind: video\nclaim: 4个视频分别d5/d10/d20/d30固定LN的旋转体绘制。每个300帧、24fps、12.5s，均匀审阅24帧/片共96帧，覆盖首尾及各角度；支持三维空间呈现，不能读取运动速度或另算样本量/体素数。\nsource_locator: Supplement movie legends p1; movies1–4; video_sampling.json\nresult_id: R_video\nn_frames_seen: 96\ncontinuous_playback: false\nindependent_review: \n  status: verified_with_source_limits\n  note: 四片各24帧接触表全部逐序列看过，首/中/末及多视角覆盖；不是连续播放也不是生物时间运动。\n  delta_ids: \n[]",
+      "Text29_Reference": [
+        "Structured evidence: full/APP225/evidence/independent_review/scientific_independent_derived.json#/units/28; SHA-256: 43d73d42270fed057a0accb6c30485d86755bd0d68a631f6b67fe2ebc5104f00; DOI: https://doi.org/10.7150/ijbs.72552"
+      ]
+    },
+    {
+      "Text30": "units:\nid: U030\nkind: statistics\nclaim: 均值±SEM；组间one-way ANOVA或双尾t检验，P<0.05。Fig3显式ANOVA；Fig4/5至少3次实验不自动当3只动物；图像内细胞/对象非生物学独立重复。\nsource_locator: Methods sec13; Figs1–6 legends\nindependent_review: \n  status: verified_with_source_limits\n  note: Methods统计说明及图注样本/重复单位匹配，独立生物重复不由对象/视野数推定。\n  delta_ids: \n[]",
+      "Text30_Reference": [
+        "Structured evidence: full/APP225/evidence/independent_review/scientific_independent_derived.json#/units/29; SHA-256: 43d73d42270fed057a0accb6c30485d86755bd0d68a631f6b67fe2ebc5104f00; DOI: https://doi.org/10.7150/ijbs.72552"
+      ]
+    },
+    {
+      "Text31": "finding:\nLiteral current-density notation retained without silent repair; original physical/storage and fixed-histology context supported; incomplete channel settings not guessed; section view wording narrowed;day20 CD4 comparison preserved only as author qualitative statement.",
+      "Text31_Reference": [
+        "Structured evidence: full/APP225/evidence/parent_independent_delta_review.json#/finding; SHA-256: e45b2628546d2c3a56589a6406c818f71274112f23a5e1135f9653cca9503f1c; DOI: https://doi.org/10.7150/ijbs.72552"
+      ]
+    }
+  ],
+  "Note": [
+    {
+      "Text1": "Paper APP225; source coverage: full; source release status: published_in_this_release; source default_eligible: true. Read this study as a whole with its sample, experimental, measurement and limitation fields. All selected source files and mandatory support in the accompanying archive apply jointly. Import does not promote candidate status, resolve contradictions, or turn review citations into independent primary experiments. Application includes source-labelled protocols, comparisons and results; labels within each Text retain their actual role.",
+      "Text1_Reference": [
+        "DOI: https://doi.org/10.7150/ijbs.72552",
+        "Evidence-layer structured paraphrase; not a verbatim quotation. Source release: https://github.com/404NotFound422/TOCAgentProject/tree/5e3a711befb3952a2e39f4d53fc9c9f1a7ac0d22/KnowledgeBase/evidence_expansion_20261019",
+        "Local source archive: ../literature_evidence/2026-11-11/source_release.zip; member: full/APP225/version_selection.json"
+      ]
+    },
+    {
+      "Text2": "Selected version and mandatory composition:\npaper_id: APP225\nstatus: full\ndefault_eligible: true\nactive_scientific_files: \n  [1]     path: full/APP225/evidence/independent_review/independent_review_receipt.json\n    sha256: 8233368d0359da2a3ef052b85e8b46d425544915917a415214ccd96f69cad699\n    source_member: independent_review/independent_review_receipt.json\n  [2]     path: full/APP225/evidence/independent_review/scientific_delta.json\n    sha256: 691193508192020be69d0b9fceb9b99ce1edd9604e5dada42ef1c15d21f369cd\n    source_member: independent_review/scientific_delta.json\n  [3]     path: full/APP225/evidence/independent_review/scientific_independent_derived.json\n    sha256: 43d73d42270fed057a0accb6c30485d86755bd0d68a631f6b67fe2ebc5104f00\n    source_member: independent_review/scientific_independent_derived.json\n  [4]     path: full/APP225/evidence/parent_independent_delta_review.json\n    sha256: e45b2628546d2c3a56589a6406c818f71274112f23a5e1135f9653cca9503f1c\n    source_member: parent_independent_delta_review.json\n  [5]     path: full/APP225/evidence/APP225_R4_inherited_provenance_receipt.json\n    sha256: bbac428e5aeae945b59aadf611d2ace0ba587d0d88e85d7d5a43686ee0a2c2fd\n    source_member: APP225_R4_inherited_provenance_receipt.json\n  [6]     path: full/APP225/evidence/r1_candidate/actual_queries_and_retrievals.json\n    sha256: cab11c8c0f04fff862694b19fb93e1aa620cbfc8d5b1b282fab9234980872ba5\n    source_member: r1_candidate/actual_queries_and_retrievals.json\n  [7]     path: full/APP225/evidence/r1_candidate/source_manifest.json\n    sha256: 42d8d1554fcde4b576cabe3a31fcea0e10403f37bf7818a0c33d2f65c59442ac\n    source_member: r1_candidate/source_manifest.json\n  [8]     path: full/APP225/evidence/APP225_final_acceptance.json\n    sha256: e1ac412fb7fe5f611f62700b939f635301412bc6bf86c4d05f663d512bb4bd53\n    source_member: APP225_final_acceptance.json\nacceptance: full/APP225/evidence/APP225_final_acceptance.json\nmandatory_composition: Every selected file is jointly required, including overlays, deltas, scope guards, provenance corrections and review receipts. Do not use a base record alone.\nactive_version_and_scope: \n  paper_id: APP225\n  current_full_task_scope: true\n  partial: false\n  remaining_relevant_gaps: \n[]\n  package_sha256: 3d4c5191df8e4b85a3d4e5c149a00580c46ef986ffc38ed82746e32ff077ae41\n  original_package_sha256: 59769087003d0ec15abf109642d18946401f78372b6608183741e62cfb875938\n  acceptance_archive_member: APP225_final_acceptance.json\n  active_version: Final external acceptance overrides frozen incomplete-stage metadata; unchanged science plus mandatory six-delta parent PASS and R4 provenance receipt read jointly\n  net_new_vs_verified117: true\n  doi_crosswalk_check: \n    doi: 10.7150/ijbs.72552\n    historical117_matches: \n[]\n  stage_provenance: \n    R1: \n      execution_period: current_window\n      complete_current_task_scope: true\n      basis: cached candidate extraction and logged retrieval\n    R2: \n      execution_period: current_window\n      complete_current_task_scope: true\n      basis: independent 30-unit full scientific-scope review\n    R3: \n      execution_period: current_window\n      complete_current_task_scope: true\n      basis: parent PASS on all six scientific deltas\n    R4: \n      execution_period: current_window\n      complete_current_task_scope: true\n      basis: inherited retrieval/manifest byte verification; no new requests; same-window query-log reuse, zero reviewer network repeats, not newly witnessed HTTP\n  counts: \n    units: 30\n    main_figures: 6\n    supplement_pages: 8\n    videos_sampled: 4\n    video_frames: 96\n  change_classification: \n    source_inconsistency_or_publication_version: \n      [1] Literal source current-density notation, figure/method timing differences and unreported channels retained\n    our_relation_or_scope_binding_error: \n      [1] Six parent-reviewed scope deltas constrain physical/storage, histology and qualitative comparisons\noriginal_member_to_release_path: \n  independent_review/independent_review_receipt.json: full/APP225/evidence/independent_review/independent_review_receipt.json\n  independent_review/scientific_delta.json: full/APP225/evidence/independent_review/scientific_delta.json\n  independent_review/scientific_independent_derived.json: full/APP225/evidence/independent_review/scientific_independent_derived.json\n  parent_independent_delta_review.json: full/APP225/evidence/parent_independent_delta_review.json\n  APP225_R4_inherited_provenance_receipt.json: full/APP225/evidence/APP225_R4_inherited_provenance_receipt.json\n  r1_candidate/actual_queries_and_retrievals.json: full/APP225/evidence/r1_candidate/actual_queries_and_retrievals.json\n  r1_candidate/source_manifest.json: full/APP225/evidence/r1_candidate/source_manifest.json\n  APP225_final_acceptance.json: full/APP225/evidence/APP225_final_acceptance.json\nsource_asset_policy: Original PDFs, videos, images, workbooks and raw source spans are external provenance only and are not needed to load these structured scientific records.\nhistory_rule: Only this explicit selection is active. Superseded history is not published or recursively promoted.\nactive_reference_aliases: \n  independent_review/independent_review_receipt.json: full/APP225/evidence/independent_review/independent_review_receipt.json\n  independent_review/scientific_delta.json: full/APP225/evidence/independent_review/scientific_delta.json\n  independent_review/scientific_independent_derived.json: full/APP225/evidence/independent_review/scientific_independent_derived.json\n  parent_independent_delta_review.json: full/APP225/evidence/parent_independent_delta_review.json\n  APP225_R4_inherited_provenance_receipt.json: full/APP225/evidence/APP225_R4_inherited_provenance_receipt.json\n  r1_candidate/actual_queries_and_retrievals.json: full/APP225/evidence/r1_candidate/actual_queries_and_retrievals.json\n  r1_candidate/source_manifest.json: full/APP225/evidence/r1_candidate/source_manifest.json\n  APP225_final_acceptance.json: full/APP225/evidence/APP225_final_acceptance.json\n  paper_completion/APP225/independent_review/scientific_independent_derived.json: full/APP225/evidence/independent_review/scientific_independent_derived.json\n  paper_completion/APP225/r1_candidate/actual_queries_and_retrievals.json: full/APP225/evidence/r1_candidate/actual_queries_and_retrievals.json\n  paper_completion/APP225/r1_candidate/source_manifest.json: full/APP225/evidence/r1_candidate/source_manifest.json\nactive_reference_resolution_evidence: \n  [1]     source_file: full/APP225/evidence/independent_review/independent_review_receipt.json\n    json_pointer: /derived_artifact\n    reference: paper_completion/APP225/independent_review/scientific_independent_derived.json\n    resolved_release_path: full/APP225/evidence/independent_review/scientific_independent_derived.json\n    binding_basis: unique_verified_original_member_path\n  [2]     source_file: full/APP225/evidence/APP225_R4_inherited_provenance_receipt.json\n    json_pointer: /inherited_log\n    reference: paper_completion/APP225/r1_candidate/actual_queries_and_retrievals.json\n    resolved_release_path: full/APP225/evidence/r1_candidate/actual_queries_and_retrievals.json\n    binding_basis: unique_verified_original_member_path\n  [3]     source_file: full/APP225/evidence/APP225_R4_inherited_provenance_receipt.json\n    json_pointer: /inherited_manifest\n    reference: paper_completion/APP225/r1_candidate/source_manifest.json\n    resolved_release_path: full/APP225/evidence/r1_candidate/source_manifest.json\n    binding_basis: unique_verified_original_member_path\n  [4]     source_file: full/APP225/evidence/APP225_final_acceptance.json\n    json_pointer: /scientific_path\n    reference: paper_completion/APP225/independent_review/scientific_independent_derived.json\n    resolved_release_path: full/APP225/evidence/independent_review/scientific_independent_derived.json\n    binding_basis: unique_verified_original_member_path\nexternal_or_historical_references: \n  [1]     source_file: full/APP225/evidence/independent_review/independent_review_receipt.json\n    json_pointer: /source_hashes/0/path\n    reference: paper_completion/APP225/r1_candidate/scientific_candidate.json\n    automatic_loading: false\n    role: superseded_or_historical_provenance_not_active\n  [2]     source_file: full/APP225/evidence/independent_review/independent_review_receipt.json\n    json_pointer: /source_hashes/3/path\n    reference: paper_completion/APP225/private_sources/indexed_text.txt\n    automatic_loading: false\n    role: external_original_source_or_acquisition_provenance_not_runtime\n  [3]     source_file: full/APP225/evidence/independent_review/independent_review_receipt.json\n    json_pointer: /source_hashes/4/path\n    reference: paper_completion/APP225/private_sources/supplement.txt\n    automatic_loading: false\n    role: external_original_source_or_acquisition_provenance_not_runtime\n  [4]     source_file: full/APP225/evidence/APP225_R4_inherited_provenance_receipt.json\n    json_pointer: /source_manifest_verified/0/path\n    reference: paper_completion/APP225/private_sources/asset_receipts.json\n    automatic_loading: false\n    role: external_original_source_or_acquisition_provenance_not_runtime\n  [5]     source_file: full/APP225/evidence/APP225_R4_inherited_provenance_receipt.json\n    json_pointer: /source_manifest_verified/1/path\n    reference: paper_completion/APP225/private_sources/fetch_page_receipt.json\n    automatic_loading: false\n    role: external_original_source_or_acquisition_provenance_not_runtime\n  [6]     source_file: full/APP225/evidence/APP225_R4_inherited_provenance_receipt.json\n    json_pointer: /source_manifest_verified/14/path\n    reference: paper_completion/APP225/private_sources/indexed_text.txt\n    automatic_loading: false\n    role: external_original_source_or_acquisition_provenance_not_runtime\n  [7]     source_file: full/APP225/evidence/APP225_R4_inherited_provenance_receipt.json\n    json_pointer: /source_manifest_verified/16/path\n    reference: paper_completion/APP225/private_sources/supplement.txt\n    automatic_loading: false\n    role: external_original_source_or_acquisition_provenance_not_runtime\n  [8]     source_file: full/APP225/evidence/APP225_R4_inherited_provenance_receipt.json\n    json_pointer: /source_manifest_verified/17/path\n    reference: paper_completion/APP225/private_sources/video_sampling.json\n    automatic_loading: false\n    role: external_original_source_or_acquisition_provenance_not_runtime\n  [9]     source_file: full/APP225/evidence/r1_candidate/source_manifest.json\n    json_pointer: /0/file\n    reference: paper_completion/APP225/private_sources/asset_receipts.json\n    automatic_loading: false\n    role: external_original_source_or_acquisition_provenance_not_runtime\n  [10]     source_file: full/APP225/evidence/r1_candidate/source_manifest.json\n    json_pointer: /1/file\n    reference: paper_completion/APP225/private_sources/fetch_page_receipt.json\n    automatic_loading: false\n    role: external_original_source_or_acquisition_provenance_not_runtime\n  [11]     source_file: full/APP225/evidence/r1_candidate/source_manifest.json\n    json_pointer: /14/file\n    reference: paper_completion/APP225/private_sources/indexed_text.txt\n    automatic_loading: false\n    role: external_original_source_or_acquisition_provenance_not_runtime\n  [12]     source_file: full/APP225/evidence/r1_candidate/source_manifest.json\n    json_pointer: /16/file\n    reference: paper_completion/APP225/private_sources/supplement.txt\n    automatic_loading: false\n    role: external_original_source_or_acquisition_provenance_not_runtime\n  [13]     source_file: full/APP225/evidence/r1_candidate/source_manifest.json\n    json_pointer: /17/file\n    reference: paper_completion/APP225/private_sources/video_sampling.json\n    automatic_loading: false\n    role: external_original_source_or_acquisition_provenance_not_runtime\n  [14]     source_file: full/APP225/evidence/APP225_final_acceptance.json\n    json_pointer: /supersedes_for_active_entry\n    reference: APP225_independent_package_receipt.json\n    automatic_loading: false\n    role: unselected_package_documentation_or_superseded_receipt\nreference_resolution_policy: Resolve only explicit exact aliases to SHA-bound selected science or required support. Unlisted/ambiguous references raise an error. Never use basename/fuzzy matching at runtime, recursively load history, or activate original source assets.\nrequired_supporting_files: \n[]",
+      "Text2_Reference": [
+        "DOI: https://doi.org/10.7150/ijbs.72552",
+        "Evidence-layer structured paraphrase; not a verbatim quotation. Source release: https://github.com/404NotFound422/TOCAgentProject/tree/5e3a711befb3952a2e39f4d53fc9c9f1a7ac0d22/KnowledgeBase/evidence_expansion_20261019",
+        "Local source archive: ../literature_evidence/2026-11-11/source_release.zip; member: full/APP225/version_selection.json"
+      ]
+    },
+    {
+      "Text3": "main_figures:\nfigure: 1\npath: paper_completion/APP225/private_sources/ijbsv18p3993g001.jpg\nvisual_read: true",
+      "Text3_Reference": [
+        "Structured evidence: full/APP225/evidence/independent_review/independent_review_receipt.json#/main_figures/0; SHA-256: 8233368d0359da2a3ef052b85e8b46d425544915917a415214ccd96f69cad699; DOI: https://doi.org/10.7150/ijbs.72552"
+      ]
+    },
+    {
+      "Text4": "main_figures:\nfigure: 2\npath: paper_completion/APP225/private_sources/ijbsv18p3993g002.jpg\nvisual_read: true",
+      "Text4_Reference": [
+        "Structured evidence: full/APP225/evidence/independent_review/independent_review_receipt.json#/main_figures/1; SHA-256: 8233368d0359da2a3ef052b85e8b46d425544915917a415214ccd96f69cad699; DOI: https://doi.org/10.7150/ijbs.72552"
+      ]
+    },
+    {
+      "Text5": "main_figures:\nfigure: 3\npath: paper_completion/APP225/private_sources/ijbsv18p3993g003.jpg\nvisual_read: true",
+      "Text5_Reference": [
+        "Structured evidence: full/APP225/evidence/independent_review/independent_review_receipt.json#/main_figures/2; SHA-256: 8233368d0359da2a3ef052b85e8b46d425544915917a415214ccd96f69cad699; DOI: https://doi.org/10.7150/ijbs.72552"
+      ]
+    },
+    {
+      "Text6": "main_figures:\nfigure: 4\npath: paper_completion/APP225/private_sources/ijbsv18p3993g004.jpg\nvisual_read: true",
+      "Text6_Reference": [
+        "Structured evidence: full/APP225/evidence/independent_review/independent_review_receipt.json#/main_figures/3; SHA-256: 8233368d0359da2a3ef052b85e8b46d425544915917a415214ccd96f69cad699; DOI: https://doi.org/10.7150/ijbs.72552"
+      ]
+    },
+    {
+      "Text7": "main_figures:\nfigure: 5\npath: paper_completion/APP225/private_sources/ijbsv18p3993g005.jpg\nvisual_read: true",
+      "Text7_Reference": [
+        "Structured evidence: full/APP225/evidence/independent_review/independent_review_receipt.json#/main_figures/4; SHA-256: 8233368d0359da2a3ef052b85e8b46d425544915917a415214ccd96f69cad699; DOI: https://doi.org/10.7150/ijbs.72552"
+      ]
+    },
+    {
+      "Text8": "main_figures:\nfigure: 6\npath: paper_completion/APP225/private_sources/ijbsv18p3993g006.jpg\nvisual_read: true",
+      "Text8_Reference": [
+        "Structured evidence: full/APP225/evidence/independent_review/independent_review_receipt.json#/main_figures/5; SHA-256: 8233368d0359da2a3ef052b85e8b46d425544915917a415214ccd96f69cad699; DOI: https://doi.org/10.7150/ijbs.72552"
+      ]
+    },
+    {
+      "Text9": "scope:\nFixed-tissue clearing, labeling, imaging, analytic results; no model construction or viral operations extracted; no optimization",
+      "Text9_Reference": [
+        "Structured evidence: full/APP225/evidence/independent_review/independent_review_receipt.json#/scope; SHA-256: 8233368d0359da2a3ef052b85e8b46d425544915917a415214ccd96f69cad699; DOI: https://doi.org/10.7150/ijbs.72552"
+      ]
+    },
+    {
+      "Text10": "source_or_interpretation_gaps:\nG_time_conflict",
+      "Text10_Reference": [
+        "Structured evidence: full/APP225/evidence/independent_review/independent_review_receipt.json#/source_or_interpretation_gaps/0; SHA-256: 8233368d0359da2a3ef052b85e8b46d425544915917a415214ccd96f69cad699; DOI: https://doi.org/10.7150/ijbs.72552"
+      ]
+    },
+    {
+      "Text11": "source_or_interpretation_gaps:\nG_label_time_conflict",
+      "Text11_Reference": [
+        "Structured evidence: full/APP225/evidence/independent_review/independent_review_receipt.json#/source_or_interpretation_gaps/1; SHA-256: 8233368d0359da2a3ef052b85e8b46d425544915917a415214ccd96f69cad699; DOI: https://doi.org/10.7150/ijbs.72552"
+      ]
+    },
+    {
+      "Text12": "source_or_interpretation_gaps:\nG_n",
+      "Text12_Reference": [
+        "Structured evidence: full/APP225/evidence/independent_review/independent_review_receipt.json#/source_or_interpretation_gaps/2; SHA-256: 8233368d0359da2a3ef052b85e8b46d425544915917a415214ccd96f69cad699; DOI: https://doi.org/10.7150/ijbs.72552"
+      ]
+    },
+    {
+      "Text13": "source_or_interpretation_gaps:\nG_external_validity",
+      "Text13_Reference": [
+        "Structured evidence: full/APP225/evidence/independent_review/independent_review_receipt.json#/source_or_interpretation_gaps/3; SHA-256: 8233368d0359da2a3ef052b85e8b46d425544915917a415214ccd96f69cad699; DOI: https://doi.org/10.7150/ijbs.72552"
+      ]
+    },
+    {
+      "Text14": "source_or_interpretation_gaps:\nG_current_unit",
+      "Text14_Reference": [
+        "Structured evidence: full/APP225/evidence/independent_review/independent_review_receipt.json#/source_or_interpretation_gaps/4; SHA-256: 8233368d0359da2a3ef052b85e8b46d425544915917a415214ccd96f69cad699; DOI: https://doi.org/10.7150/ijbs.72552"
+      ]
+    },
+    {
+      "Text15": "source_or_interpretation_gaps:\nG_channel_reporting",
+      "Text15_Reference": [
+        "Structured evidence: full/APP225/evidence/independent_review/independent_review_receipt.json#/source_or_interpretation_gaps/5; SHA-256: 8233368d0359da2a3ef052b85e8b46d425544915917a415214ccd96f69cad699; DOI: https://doi.org/10.7150/ijbs.72552"
+      ]
+    },
+    {
+      "Text16": "reading_scope:\nbody: full relevant scientific body read; model generation and viral operations excluded from derived content\nmain_figures: \n  [1] 1\n  [2] 2\n  [3] 3\n  [4] 4\n  [5] 5\n  [6] 6\nmain_tables: \n[]\nsupplement_pages: 8\nsupplement_figures: \n  [1] 1\n  [2] 2\n  [3] 3\n  [4] 4\n  [5] 5\nmovies: \n  [1] 1\n  [2] 2\n  [3] 3\n  [4] 4\nvideo_sampling: 24/300 frames each, 96 total; every rotation sequence covered",
+      "Text16_Reference": [
+        "Structured evidence: full/APP225/evidence/independent_review/scientific_independent_derived.json#/reading_scope; SHA-256: 43d73d42270fed057a0accb6c30485d86755bd0d68a631f6b67fe2ebc5104f00; DOI: https://doi.org/10.7150/ijbs.72552"
+      ]
+    },
+    {
+      "Text17": "safety_scope:\nincluded: fixed tissue clearing, labeling, imaging, analytical results\nexcluded: viral construction, infection, production/delivery operations; model establishment operational details\nactual_denial_observed_this_run: false\nlegacy_blocked_status: historical nonspecific bulk entry retained in immutable catalog, not treated as paper-specific denial",
+      "Text17_Reference": [
+        "Structured evidence: full/APP225/evidence/independent_review/scientific_independent_derived.json#/safety_scope; SHA-256: 43d73d42270fed057a0accb6c30485d86755bd0d68a631f6b67fe2ebc5104f00; DOI: https://doi.org/10.7150/ijbs.72552"
+      ]
+    },
+    {
+      "Text18": "unresolved_gaps:\nid: G_time_conflict\ntype: source_conflict\ndescription: 鼠LN示意脱水1h/DCM20min与方法2h/30min冲突；人分支DCM0.5–1h。",
+      "Text18_Reference": [
+        "Structured evidence: full/APP225/evidence/independent_review/scientific_independent_derived.json#/unresolved_gaps/0; SHA-256: 43d73d42270fed057a0accb6c30485d86755bd0d68a631f6b67fe2ebc5104f00; DOI: https://doi.org/10.7150/ijbs.72552"
+      ]
+    },
+    {
+      "Text19": "unresolved_gaps:\nid: G_label_time_conflict\ntype: source_conflict\ndescription: 快速标记<6h示意与方法3+2+3h明示步骤不一致。",
+      "Text19_Reference": [
+        "Structured evidence: full/APP225/evidence/independent_review/scientific_independent_derived.json#/unresolved_gaps/1; SHA-256: 43d73d42270fed057a0accb6c30485d86755bd0d68a631f6b67fe2ebc5104f00; DOI: https://doi.org/10.7150/ijbs.72552"
+      ]
+    },
+    {
+      "Text20": "unresolved_gaps:\nid: G_n\ntype: not_reported\ndescription: 各ROI/实验重复的独立动物分母、人患者总数、CK20细节和完整阈值未报；这些不是未读附件。",
+      "Text20_Reference": [
+        "Structured evidence: full/APP225/evidence/independent_review/scientific_independent_derived.json#/unresolved_gaps/2; SHA-256: 43d73d42270fed057a0accb6c30485d86755bd0d68a631f6b67fe2ebc5104f00; DOI: https://doi.org/10.7150/ijbs.72552"
+      ]
+    },
+    {
+      "Text21": "unresolved_gaps:\nid: G_external_validity\ntype: interpretation_limit\ndescription: 固定阶段不是纵向轨迹，Ki67非肿瘤特异，图像共定位不证明管腔归属。",
+      "Text21_Reference": [
+        "Structured evidence: full/APP225/evidence/independent_review/scientific_independent_derived.json#/unresolved_gaps/3; SHA-256: 43d73d42270fed057a0accb6c30485d86755bd0d68a631f6b67fe2ebc5104f00; DOI: https://doi.org/10.7150/ijbs.72552"
+      ]
+    },
+    {
+      "Text22": "unresolved_gaps:\nid: G_current_unit\ntype: source_typographic_ambiguity\ndescription: 原文记作0.2 mA mm2；称current density但单位排版有歧义，不能无说明纠正为mA/mm²",
+      "Text22_Reference": [
+        "Structured evidence: full/APP225/evidence/independent_review/scientific_independent_derived.json#/unresolved_gaps/4; SHA-256: 43d73d42270fed057a0accb6c30485d86755bd0d68a631f6b67fe2ebc5104f00; DOI: https://doi.org/10.7150/ijbs.72552"
+      ]
+    },
+    {
+      "Text23": "unresolved_gaps:\nid: G_channel_reporting\ntype: not_reported\ndescription: LSFM段仅列561/640nm两通道；共聚焦段称三色但仅列LV/BV的568/647nm。完整EGFP/其他通道配置未报告，不能推定采集波长。",
+      "Text23_Reference": [
+        "Structured evidence: full/APP225/evidence/independent_review/scientific_independent_derived.json#/unresolved_gaps/5; SHA-256: 43d73d42270fed057a0accb6c30485d86755bd0d68a631f6b67fe2ebc5104f00; DOI: https://doi.org/10.7150/ijbs.72552"
+      ]
+    },
+    {
+      "Text24": "stage:\nR4_provenance_and_gap_validation",
+      "Text24_Reference": [
+        "Structured evidence: full/APP225/evidence/APP225_R4_inherited_provenance_receipt.json#/stage; SHA-256: bbac428e5aeae945b59aadf611d2ace0ba587d0d88e85d7d5a43686ee0a2c2fd; DOI: https://doi.org/10.7150/ijbs.72552"
+      ]
+    },
+    {
+      "Text25": "timestamp_utc:\n2026-10-19T13:35:37.251675+00:00",
+      "Text25_Reference": [
+        "Structured evidence: full/APP225/evidence/APP225_R4_inherited_provenance_receipt.json#/timestamp_utc; SHA-256: bbac428e5aeae945b59aadf611d2ace0ba587d0d88e85d7d5a43686ee0a2c2fd; DOI: https://doi.org/10.7150/ijbs.72552"
+      ]
+    },
+    {
+      "Text26": "provenance_interpretation:\nTwelve logged source GETs from R1 are inherited and their bytes/hashes verified locally. Cached JATS provenance is recorded as cache reuse, not a new network fetch. This review does not claim independently observing the historical HTTP transactions.",
+      "Text26_Reference": [
+        "Structured evidence: full/APP225/evidence/APP225_R4_inherited_provenance_receipt.json#/provenance_interpretation; SHA-256: bbac428e5aeae945b59aadf611d2ace0ba587d0d88e85d7d5a43686ee0a2c2fd; DOI: https://doi.org/10.7150/ijbs.72552"
+      ]
+    },
+    {
+      "Text27": "science_scope:\nFull relevant fixed-tissue scope reviewed; exclusions are authorized biological-safety/model scope exclusions, not missing source material.",
+      "Text27_Reference": [
+        "Structured evidence: full/APP225/evidence/APP225_R4_inherited_provenance_receipt.json#/science_scope; SHA-256: bbac428e5aeae945b59aadf611d2ace0ba587d0d88e85d7d5a43686ee0a2c2fd; DOI: https://doi.org/10.7150/ijbs.72552"
+      ]
+    },
+    {
+      "Text28": "scope:\nActual read-only GETs only. HTTP200 HTML download interstitial is not counted as file read. No platform operation denial.",
+      "Text28_Reference": [
+        "Structured evidence: full/APP225/evidence/r1_candidate/actual_queries_and_retrievals.json#/scope; SHA-256: cab11c8c0f04fff862694b19fb93e1aa620cbfc8d5b1b282fab9234980872ba5; DOI: https://doi.org/10.7150/ijbs.72552"
+      ]
+    },
+    {
+      "Text29": "Source version and scope record (not an additional scientific claim): APP225_final_acceptance:\npaper_id: APP225\nstatus: scientific_full\nfinal_active_entry_eligible: true\nscientific_scope_full: true\ndata_access_gaps: \n[]\nsource_conflicts_not_treated_as_incompletion: true\nworkflow_stages_complete: \n  R1: cached candidate extraction and logged retrieval\n  R2: independent 30-unit full scientific-scope review\n  R3: parent PASS on all six scientific deltas\n  R4: inherited retrieval/manifest byte verification; no new requests\nfour_stage_workflow_complete: true\nnot_four_independent_scientific_rereads: true\narchive_path: paper_completion/APP225/APP225_scientific_full_20261019.zip\narchive_sha256: 59769087003d0ec15abf109642d18946401f78372b6608183741e62cfb875938\nscientific_path: paper_completion/APP225/independent_review/scientific_independent_derived.json\nscientific_sha256: 43d73d42270fed057a0accb6c30485d86755bd0d68a631f6b67fe2ebc5104f00\ndelta_sha256: 691193508192020be69d0b9fceb9b99ce1edd9604e5dada42ef1c15d21f369cd\nprovenance_receipt_sha256: bbac428e5aeae945b59aadf611d2ace0ba587d0d88e85d7d5a43686ee0a2c2fd\nimmutable_artifact_status_note: Internal candidate/derived four_rounds_complete=false reflects historical frozen stage and is not edited; this external acceptance supplies final coordinator status.\nsupersedes_for_active_entry: APP225_independent_package_receipt.json\nold_packages_unchanged: true",
+      "Text29_Reference": [
+        "Structured evidence: full/APP225/evidence/APP225_final_acceptance.json#; SHA-256: e1ac412fb7fe5f611f62700b939f635301412bc6bf86c4d05f663d512bb4bd53; DOI: https://doi.org/10.7150/ijbs.72552"
+      ]
+    }
+  ]
+}

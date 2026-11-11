@@ -1,0 +1,308 @@
+{
+  "TOC_Method_Name": {
+    "Text": "Not specified as a single method in the selected evidence records",
+    "Text_Reference": [
+      "DOI: https://doi.org/10.1111/jne.70092",
+      "Evidence-layer structured paraphrase; not a verbatim quotation. Source release: https://github.com/404NotFound422/TOCAgentProject/tree/5e3a711befb3952a2e39f4d53fc9c9f1a7ac0d22/KnowledgeBase/evidence_expansion_20261019",
+      "Local source archive: ../literature_evidence/2026-11-11/source_release.zip; member: full/APP210/version_selection.json"
+    ]
+  },
+  "General_Description": {
+    "Text": "Three-dimensional quantification of oxytocin neurons in the hypothalamic paraventricular nucleus reveals sex- and subregion-specific differences in two genetic mouse models of autism (2025). Evidence category: application. This card preserves the evidence layer's structured statements and their original field labels; it does not add a new literature review or certify benchmark scoring thresholds.",
+    "Text_Reference": [
+      "DOI: https://doi.org/10.1111/jne.70092",
+      "Evidence-layer structured paraphrase; not a verbatim quotation. Source release: https://github.com/404NotFound422/TOCAgentProject/tree/5e3a711befb3952a2e39f4d53fc9c9f1a7ac0d22/KnowledgeBase/evidence_expansion_20261019",
+      "Local source archive: ../literature_evidence/2026-11-11/source_release.zip; member: full/APP210/version_selection.json"
+    ]
+  },
+  "Tissue_Types": [
+    {
+      "Text1": "samples:\nid: sa1\nstatement: C57BL/6J 背景成年 8–15 周小鼠；Cntnap2 / Fmr1 各分 WT/KO 与雌/雄。研究不提供纵向年龄对比。\nsource: \n  xpath: /article/body/sec[2]/sec[1]/p[1]\n  sha256: 4689a4fa6f637253705fba69cfc5b7ca708e81bdb0be5eadc13be5ea43bf4e87\nbiological_unit: mouse\nage_weeks: \n  [1] 8\n  [2] 15",
+      "Text1_Reference": [
+        "Structured evidence: full/APP210/evidence/reviewed/scientific_record.reviewed.json#/samples/0; SHA-256: 0a015001b86e3d4edc096cc78b0f854d5be5663001d4344239f995a79922f9e3; DOI: https://doi.org/10.1111/jne.70092"
+      ]
+    },
+    {
+      "Text2": "samples:\nid: sa2\nstatement: 2D 支路每脑约 8–10 张 50 μm PVN 冠状切片；切片不是独立动物。\nsource: \n  xpath: /article/body/sec[2]/sec[3]/p\n  sha256: a7131d89619884a1ae771348435ea8cea3bddf1ea84d368a4e81bed08809ffa9\nbranch: section\nsections_per_brain: 8–10\nanimal_n: not explicitly resolved for each 2D subregion",
+      "Text2_Reference": [
+        "Structured evidence: full/APP210/evidence/reviewed/scientific_record.reviewed.json#/samples/1; SHA-256: 0a015001b86e3d4edc096cc78b0f854d5be5663001d4344239f995a79922f9e3; DOI: https://doi.org/10.1111/jne.70092"
+      ]
+    },
+    {
+      "Text3": "samples:\nid: sa3\nstatement: 3D Cntnap2 每性别×基因型组 n=6 动物；Fmr1 每组 n=4–6 动物。\nsource: \n  xpath: /article/body/sec[3]/sec[2]/sec[1]/p\n  sha256: 5a42e35f0b90ccbfd5661507c0de29017e30b2a6b2d31dd24965470456c3b92d\nbranch: whole_brain\ncntnap2_n_per_group: 6",
+      "Text3_Reference": [
+        "Structured evidence: full/APP210/evidence/reviewed/scientific_record.reviewed.json#/samples/2; SHA-256: 0a015001b86e3d4edc096cc78b0f854d5be5663001d4344239f995a79922f9e3; DOI: https://doi.org/10.1111/jne.70092"
+      ]
+    },
+    {
+      "Text4": "samples:\nid: sa4\nstatement: Fmr1 全 PVN 分析 n=4–6 每组，不能用细胞数作样本量。\nsource: \n  xpath: /article/body/sec[3]/sec[2]/sec[2]/p[1]\n  sha256: c20a6d535243a274a82d74e2321c018aec716c5262b7ba2839775b11dee4f3d1\nbranch: whole_brain\nfmr1_n_per_group: 4–6",
+      "Text4_Reference": [
+        "Structured evidence: full/APP210/evidence/reviewed/scientific_record.reviewed.json#/samples/3; SHA-256: 0a015001b86e3d4edc096cc78b0f854d5be5663001d4344239f995a79922f9e3; DOI: https://doi.org/10.1111/jne.70092"
+      ]
+    }
+  ],
+  "Time_Consumption": [],
+  "Tissue_Deformation": [],
+  "Fluorescence_Compatibility": [],
+  "Preservation_Stability": [],
+  "Application": [
+    {
+      "Text1": "processing_stages:\nid: pr1\nstatement: 离体脑固定后隔夜后固定，PBS 保存；活体操作不在本次提取范围。\nsource: \n  xpath: /article/body/sec[2]/sec[2]/p\n  sha256: 7867695529c638aa73e512f769b31f3ee46b9fe79fe34e9242332507a2877ab7\nstage: fixed_sample_input\nduration: overnight",
+      "Text1_Reference": [
+        "Structured evidence: full/APP210/evidence/reviewed/scientific_record.reviewed.json#/processing_stages/0; SHA-256: 0a015001b86e3d4edc096cc78b0f854d5be5663001d4344239f995a79922f9e3; DOI: https://doi.org/10.1111/jne.70092"
+      ]
+    },
+    {
+      "Text2": "processing_stages:\nid: pr2\nstatement: 2D 切片经通透、封闭、NP1 PS38 一抗、AF488 抗鼠二抗与 DAPI 封片，再做人工分区细胞计数。\nsource: \n  xpath: /article/body/sec[2]/sec[3]/p\n  sha256: a7131d89619884a1ae771348435ea8cea3bddf1ea84d368a4e81bed08809ffa9\nbranch: section\nstage: labeling\nprimary: MABN844 1:5000 overnight 4C\nsecondary: donkey anti-mouse AF488 1:500 1h RT\nblocking: 1h 4C\nreadout: OXT immunoreactivity; not direct total neuron number",
+      "Text2_Reference": [
+        "Structured evidence: full/APP210/evidence/reviewed/scientific_record.reviewed.json#/processing_stages/1; SHA-256: 0a015001b86e3d4edc096cc78b0f854d5be5663001d4344239f995a79922f9e3; DOI: https://doi.org/10.1111/jne.70092"
+      ]
+    },
+    {
+      "Text3": "processing_stages:\nid: pr3\nstatement: 完整脑 SHIELD 保存分 OFF 和 ON 两阶段。\nsource: \n  xpath: /article/body/sec[2]/sec[4]/sec[1]/p\n  sha256: 43644ed14eb7ea667e6bec3ab294b8ea468dfac2fc4e7971947a3462b7bb8d91\nbranch: whole_brain\nstage: preservation\nOFF: 3d 4C\nON: 24h 37C",
+      "Text3_Reference": [
+        "Structured evidence: full/APP210/evidence/reviewed/scientific_record.reviewed.json#/processing_stages/2; SHA-256: 0a015001b86e3d4edc096cc78b0f854d5be5663001d4344239f995a79922f9e3; DOI: https://doi.org/10.1111/jne.70092"
+      ]
+    },
+    {
+      "Text4": "processing_stages:\nid: pr4\nstatement: Fmr1 支路主动脱脂；Cntnap2 支路被动脱脂；不同鼠系采用不同方法，不能作为随机配对方法比较。\nsource: \n  xpath: /article/body/sec[2]/sec[4]/sec[2]/p\n  sha256: 526b35d8633f675b421300281b184a26ee41741c08ea138f34e3432116fe26ef\nbranch: whole_brain\nstage: delipidation\nFmr1: 24h buffer pretreatment then 30h active 45C\nCntnap2: 6d passive 45C\nunit_conflict: source reports 200 nM SDS and 10 nM conduction SDS; retained uncorrected, not ready-to-run recipe",
+      "Text4_Reference": [
+        "Structured evidence: full/APP210/evidence/reviewed/scientific_record.reviewed.json#/processing_stages/3; SHA-256: 0a015001b86e3d4edc096cc78b0f854d5be5663001d4344239f995a79922f9e3; DOI: https://doi.org/10.1111/jne.70092"
+      ]
+    },
+    {
+      "Text5": "processing_stages:\nid: pr5\nstatement: 完整脑 NP1 PS38 抗鼠和 NeuN 抗兔双标；AF555 抗鼠对应 OXT 代理信号，AF488 抗兔对应 NeuN。不能把切片 AF488 对应关系带到整脑。\nsource: \n  xpath: /article/body/sec[2]/sec[4]/sec[3]/p\n  sha256: e126a838773a0c4c52eaefad1f763f6f393f58b7c773d35b9bd401663007b8cb\nstage: whole_brain_labeling\nprimary: NP1 PS38 1:1000; NeuN RPCA-FOX3 1:666\nsecondary: AF555 A32773 1:500; AF488 A32790 1:333\nprimary_preincubation: 24h RT\nprimary_label: approximately18h until pH<8 at30C\nprimary_wash: 2x4h then overnight postfix\nsecondary_preincubation: 8h 37C\nsecondary_label_duration: unknown\nsecondary_wash: 2x3h active then2x1h PBS; overnight postfix",
+      "Text5_Reference": [
+        "Structured evidence: full/APP210/evidence/reviewed/scientific_record.reviewed.json#/processing_stages/4; SHA-256: 0a015001b86e3d4edc096cc78b0f854d5be5663001d4344239f995a79922f9e3; DOI: https://doi.org/10.1111/jne.70092"
+      ]
+    },
+    {
+      "Text6": "processing_stages:\nid: pr6\nstatement: EasyIndex 先 50% 再100%进行折射率匹配；此时间不等于总流程时间。\nsource: \n  xpath: /article/body/sec[2]/sec[4]/sec[4]/p\n  sha256: e891ebc9e1e2bc16289dfc181050df2c13883c695c64697a63ba3429f0a61f43\nstage: RI_matching\ndurations: \n  [1] 24h 50%\n  [2] 4–7d 100%\ntemperature: 37C\nRI: 1.52",
+      "Text6_Reference": [
+        "Structured evidence: full/APP210/evidence/reviewed/scientific_record.reviewed.json#/processing_stages/5; SHA-256: 0a015001b86e3d4edc096cc78b0f854d5be5663001d4344239f995a79922f9e3; DOI: https://doi.org/10.1111/jne.70092"
+      ]
+    },
+    {
+      "Text7": "processing_stages:\nid: pr7\nstatement: 整脑匹配后琼脂糖包埋并再次匹配；90C 为制胶阶段，不能标为组织孵育温度。\nsource: \n  xpath: /article/body/sec[2]/sec[4]/sec[5]/p\n  sha256: bfc187c39b109addf3a1442f8e5f2af30722bae4a25e8faf8140f0b26ef71f70\nstage: embedding_and_rematching\ngel_preparation: 90C 60min before tissue placement\ngel_setting: 4C10min then30min\nrematching: 48h RT",
+      "Text7_Reference": [
+        "Structured evidence: full/APP210/evidence/reviewed/scientific_record.reviewed.json#/processing_stages/6; SHA-256: 0a015001b86e3d4edc096cc78b0f854d5be5663001d4344239f995a79922f9e3; DOI: https://doi.org/10.1111/jne.70092"
+      ]
+    },
+    {
+      "Text8": "processing_stages:\nid: pr8\nstatement: SmartSPIM 双通道成像并去条纹/拼接；原文 Z-step 与体素 Z 尺寸不同，不能静默统一。\nsource: \n  xpath: /article/body/sec[2]/sec[4]/sec[6]/p\n  sha256: 34c5f76bd46abd18abbb68a69ff7e1540bf6b6bda7fd433dc941eaf43a70caa8\nstage: imaging\nlasers_nm: \n  [1] 488\n  [2] 561\nobjective: 3.6x\nZ_step_um: 2\nvoxel_um: \n  [1] 1.8\n  [2] 1.8\n  [3] 4.0",
+      "Text8_Reference": [
+        "Structured evidence: full/APP210/evidence/reviewed/scientific_record.reviewed.json#/processing_stages/7; SHA-256: 0a015001b86e3d4edc096cc78b0f854d5be5663001d4344239f995a79922f9e3; DOI: https://doi.org/10.1111/jne.70092"
+      ]
+    },
+    {
+      "Text9": "processing_stages:\nid: pr9\nstatement: Neurolucida 360 对 PVN 区域机器辅助检出后人工删除、拆分及补漏。\nsource: \n  xpath: /article/body/sec[2]/sec[4]/sec[7]/p\n  sha256: db025fc721029be5d8979294476938c3d6e5457d47db6151a4f887b1dd469e20\nstage: analysis\ndiameter_um: \n  [1] 15\n  [2] 50\nsensitivity_percent: 150–200\nmanual_correction: true",
+      "Text9_Reference": [
+        "Structured evidence: full/APP210/evidence/reviewed/scientific_record.reviewed.json#/processing_stages/8; SHA-256: 0a015001b86e3d4edc096cc78b0f854d5be5663001d4344239f995a79922f9e3; DOI: https://doi.org/10.1111/jne.70092"
+      ]
+    },
+    {
+      "Text10": "processing_stages:\nid: pr10\nstatement: 位置参考 Bregma，0.03mm 分箱并汇总四亚区；原文使用平移公式却同时称体积矫正/缩放，不能当体积尺度校准。\nsource: \n  xpath: /article/body/sec[2]/sec[4]/sec[8]/p\n  sha256: ab8596a6e6dec9b15787cd4377864c2bd4fcb7ac6271d26ad98ad6092ec1bda1\nstage: registration\nformula: Yprime=abs(Y)/1000+0.22-Ymin\nbins_mm: 0.03\nsubregions_mm: \n  R: -0.22 to-0.45\n  RM: -0.46 to-0.71\n  M: -0.72 to-0.97\n  C: -0.98 to-1.23",
+      "Text10_Reference": [
+        "Structured evidence: full/APP210/evidence/reviewed/scientific_record.reviewed.json#/processing_stages/9; SHA-256: 0a015001b86e3d4edc096cc78b0f854d5be5663001d4344239f995a79922f9e3; DOI: https://doi.org/10.1111/jne.70092"
+      ]
+    },
+    {
+      "Text11": "results:\nid: re1\nstatement: 全 PVN Cntnap2 无显著基因型主效应；雌性平均总数较低。\nsource: \n  xpath: /article/body/sec[3]/sec[2]/sec[1]/p\n  sha256: 5a42e35f0b90ccbfd5661507c0de29017e30b2a6b2d31dd24965470456c3b92d\nbranch: whole_brain\ncounts: \n  WT_F: \n    [1] 1208.03\n    [2] 46.49\n  KO_F: \n    [1] 1161.42\n    [2] 46.01\n  WT_M: \n    [1] 1341.63\n    [2] 41.33\n  KO_M: \n    [1] 1305.28\n    [2] 52.61\ndispersion: source ± statistic not assumed from this sentence",
+      "Text11_Reference": [
+        "Structured evidence: full/APP210/evidence/reviewed/scientific_record.reviewed.json#/results/0; SHA-256: 0a015001b86e3d4edc096cc78b0f854d5be5663001d4344239f995a79922f9e3; DOI: https://doi.org/10.1111/jne.70092"
+      ]
+    },
+    {
+      "Text12": "results:\nid: re2\nstatement: Fmr1 雄性 KO 全 PVN OXT+ 数低于 WT，雌性差异不显著。\nsource: \n  xpath: /article/body/sec[3]/sec[2]/sec[2]/p[1]\n  sha256: c20a6d535243a274a82d74e2321c018aec716c5262b7ba2839775b11dee4f3d1\nbranch: whole_brain\ncounts: \n  WT_M: \n    [1] 1694.83\n    [2] 51.06\n  KO_M: \n    [1] 1380.67\n    [2] 56.25\n  WT_F: \n    [1] 1648.6\n    [2] 42.71\n  KO_F: \n    [1] 1552.25\n    [2] 34.04\nq_male: 0.0006\nq_female: 0.24",
+      "Text12_Reference": [
+        "Structured evidence: full/APP210/evidence/reviewed/scientific_record.reviewed.json#/results/1; SHA-256: 0a015001b86e3d4edc096cc78b0f854d5be5663001d4344239f995a79922f9e3; DOI: https://doi.org/10.1111/jne.70092"
+      ]
+    },
+    {
+      "Text13": "results:\nid: re3\nstatement: 2D 与整脑分区结果不完全等同；整体总数无差异不排除局部变化。\nsource: \n  xpath: /article/body/sec[3]/sec[2]/sec[1]/p\n  sha256: 5a42e35f0b90ccbfd5661507c0de29017e30b2a6b2d31dd24965470456c3b92d\nbranch: whole_brain\ndirections: \n  Cntnap2_male: \n    RM: increase\n    C: decrease\n  Cntnap2_female: \n    RM: decrease\n    M: decrease\n    C: increase",
+      "Text13_Reference": [
+        "Structured evidence: full/APP210/evidence/reviewed/scientific_record.reviewed.json#/results/2; SHA-256: 0a015001b86e3d4edc096cc78b0f854d5be5663001d4344239f995a79922f9e3; DOI: https://doi.org/10.1111/jne.70092"
+      ]
+    },
+    {
+      "Text14": "results:\nid: re4\nstatement: Fmr1 雄性 R/M 减少；雌性 RM 接近显著边界，S6 p=.05019 标 ns，不能报确证增加。\nsource: \n  xpath: /article/body/sec[3]/sec[2]/sec[2]/p[2]\n  sha256: 9b5ef57c2bb98bdf021323307a6d446fafb47c979358672010d7aa4ab6fe4329\nbranch: whole_brain\ndirections: \n  Fmr1_male: \n    R: decrease\n    M: decrease\n  Fmr1_female_RM: borderline, not significant by S6 exact p",
+      "Text14_Reference": [
+        "Structured evidence: full/APP210/evidence/reviewed/scientific_record.reviewed.json#/results/3; SHA-256: 0a015001b86e3d4edc096cc78b0f854d5be5663001d4344239f995a79922f9e3; DOI: https://doi.org/10.1111/jne.70092"
+      ]
+    },
+    {
+      "Text15": "supplement_results:\nS1: \n  file: JNE-37-e70092-s004.pdf\n  unit: three WT female mice, validation only\n  rows: \n    [1]       [1] 1607\n      [2] 37\n      [3] 35\n      [4] 8\n      [5] 80\n      [6] 1613\n      [7] 95.04\n    [2]       [1] 1749\n      [2] 39\n      [3] 22\n      [4] 19\n      [5] 80\n      [6] 1751\n      [7] 95.43\n    [3]       [1] 1537\n      [2] 40\n      [3] 31\n      [4] 15\n      [5] 86\n      [6] 1543\n      [7] 94.43\n  columns: \n    [1] uncorrected\n    [2] deleted\n    [3] split\n    [4] added\n    [5] total_corrected\n    [6] final\n    [7] accuracy_percent\n  note: not held-out generalization accuracy; source-specific correction counts\nS4: \n  file: JNE-37-e70092-s002.pdf\n  Cntnap2_p_interaction_sex_genotype: \n    [1] 0.9103\n    [2] 0.0076\n    [3] 0.3873\n  Fmr1_p_interaction_sex_genotype: \n    [1] 0.0466\n    [2] 0.2336\n    [3] 0.0008\nS5: \n  file: JNE-37-e70092-s005.pdf\n  p_WT_male_vs_KO_male: \n    [1] 0.5714\n    [2] 0.0463\n    [3] 0.9079\n    [4] 0.0363\n  p_WT_female_vs_KO_female: \n    [1] 0.3507\n    [2] 0.0013\n    [3] 0.0386\n    [4] 0.0104\n  region_order: \n    [1] R\n    [2] RM\n    [3] M\n    [4] C\nS6: \n  file: JNE-37-e70092-s003.pdf\n  p_WT_male_vs_KO_male: \n    [1] 0.008499\n    [2] 0.3988\n    [3] 9.999e-05\n    [4] 0.4257\n  p_WT_female_vs_KO_female: \n    [1] 0.2369\n    [2] 0.05019\n    [3] 0.7292\n    [4] 0.634\n  region_order: \n    [1] R\n    [2] RM\n    [3] M\n    [4] C",
+      "Text15_Reference": [
+        "Structured evidence: full/APP210/evidence/reviewed/scientific_record.reviewed.json#/supplement_results; SHA-256: 0a015001b86e3d4edc096cc78b0f854d5be5663001d4344239f995a79922f9e3; DOI: https://doi.org/10.1111/jne.70092"
+      ]
+    },
+    {
+      "Text16": "independently_verified_processing_addendum:\nscope: Fixed brain processing only. Source-stated units retained; not a corrected operating recipe.\nrecords: \n  [1]     stage: SHIELD_OFF\n    source_xpath: /article/body/sec[2]/sec[4]/sec[1]/p\n    branch: both mouse lines whole-brain\n    reported_composition: 1xPBS10%w/vP3PE\n    volume_per_brain_mL: 20\n    duration: 3d\n    temperature_C: 4\n  [2]     stage: SHIELD_ON\n    source_xpath: /article/body/sec[2]/sec[4]/sec[1]/p\n    branch: both mouse lines whole-brain\n    reported_composition: 0.1M sodium carbonate pH10\n    volume_per_brain_mL: 20\n    duration: 24h\n    temperature_C: 37\n  [3]     stage: active_delipidation\n    source_xpath: /article/body/sec[2]/sec[4]/sec[2]/p\n    branch: Fmr1 whole-brain\n    sample_buffer_volume_mL: 35\n    conduction_buffer_volume_mL: 250\n    source_settings: \n      V: 35\n      current_limit_mA: 1250\n      temperature_C: 45\n      duration_h: 30\n    unit_warning: Source says200nM SDS delipidation and10nM SDS conduction buffers. Unresolved, not substituted to mM.\n    volume_precision: approximately, as original source ~35 mL and ~250 mL\n  [4]     stage: primary_labeling\n    source_xpath: /article/body/sec[2]/sec[4]/sec[3]/p\n    branch: whole-brain both lines\n    sample_buffer: 240mMTris160mMCAPS20%w/vD-sorbitol0.9%w/vNaDC\n    device_buffer: same Tris/CAPS/sorbitol with0.2%w/vNaDC\n    sample_volume_mL: 40\n    source_settings: \n      V: 90\n      current_limit_mA: 350\n      temperature_C: 30\n    completion: pH<8 approximately18h; do not apply to secondary duration\n  [5]     stage: secondary_labeling\n    source_xpath: /article/body/sec[2]/sec[4]/sec[3]/p\n    branch: whole-brain both lines\n    same_device_setting_as_primary: true\n    source_secondary_duration: not specified\n    secondary_sample_buffer_composition: not explicitly specified; do not copy primary formula\n    postfix: overnight4%PFA RT\n  [6]     stage: section_pipeline\n    source_xpath: /article/body/sec[2]/sec[3]/p\n    branch: 50um sections\n    permeabilization: 0.1%TritonPBS10min\n    block: 10%NDS in0.1%TritonPBS1h4C\n    primary_vehicle: 10%NDS0.1%TritonPBS\n    primary_wash: 3x10min0.1%TritonPBS\n    secondary_wash: 3x15min0.1%TritonPBS\n    mount: DAPI FluoromountG\n    imaging: 10x confocal2.32pixel/um and slide scanner0.75pixel/um; keep pixel/um unit, not um/pixel",
+      "Text16_Reference": [
+        "Structured evidence: full/APP210/evidence/reviewed/scientific_record.reviewed.json#/independently_verified_processing_addendum; SHA-256: 0a015001b86e3d4edc096cc78b0f854d5be5663001d4344239f995a79922f9e3; DOI: https://doi.org/10.1111/jne.70092"
+      ]
+    },
+    {
+      "Text17": "records:\nstage: SHIELD_OFF\nsource_xpath: /article/body/sec[2]/sec[4]/sec[1]/p\nbranch: both mouse lines whole-brain\nreported_composition: 1xPBS10%w/vP3PE\nvolume_per_brain_mL: 20\nduration: 3d\ntemperature_C: 4",
+      "Text17_Reference": [
+        "Structured evidence: full/APP210/evidence/frozen_inputs/processing_addendum.json#/records/0; SHA-256: 3f81cc17e1ee74dbf9b9968ba0a6618c09a60a963aae4d4901e497f46ef507db; DOI: https://doi.org/10.1111/jne.70092"
+      ]
+    },
+    {
+      "Text18": "records:\nstage: SHIELD_ON\nsource_xpath: /article/body/sec[2]/sec[4]/sec[1]/p\nbranch: both mouse lines whole-brain\nreported_composition: 0.1M sodium carbonate pH10\nvolume_per_brain_mL: 20\nduration: 24h\ntemperature_C: 37",
+      "Text18_Reference": [
+        "Structured evidence: full/APP210/evidence/frozen_inputs/processing_addendum.json#/records/1; SHA-256: 3f81cc17e1ee74dbf9b9968ba0a6618c09a60a963aae4d4901e497f46ef507db; DOI: https://doi.org/10.1111/jne.70092"
+      ]
+    },
+    {
+      "Text19": "records:\nstage: active_delipidation\nsource_xpath: /article/body/sec[2]/sec[4]/sec[2]/p\nbranch: Fmr1 whole-brain\nsample_buffer_volume_mL: 35\nconduction_buffer_volume_mL: 250\nsource_settings: \n  V: 35\n  current_limit_mA: 1250\n  temperature_C: 45\n  duration_h: 30\nunit_warning: Source says200nM SDS delipidation and10nM SDS conduction buffers. Unresolved, not substituted to mM.",
+      "Text19_Reference": [
+        "Structured evidence: full/APP210/evidence/frozen_inputs/processing_addendum.json#/records/2; SHA-256: 3f81cc17e1ee74dbf9b9968ba0a6618c09a60a963aae4d4901e497f46ef507db; DOI: https://doi.org/10.1111/jne.70092"
+      ]
+    },
+    {
+      "Text20": "records:\nstage: primary_labeling\nsource_xpath: /article/body/sec[2]/sec[4]/sec[3]/p\nbranch: whole-brain both lines\nsample_buffer: 240mMTris160mMCAPS20%w/vD-sorbitol0.9%w/vNaDC\ndevice_buffer: same Tris/CAPS/sorbitol with0.2%w/vNaDC\nsample_volume_mL: 40\nsource_settings: \n  V: 90\n  current_limit_mA: 350\n  temperature_C: 30\ncompletion: pH<8 approximately18h; do not apply to secondary duration",
+      "Text20_Reference": [
+        "Structured evidence: full/APP210/evidence/frozen_inputs/processing_addendum.json#/records/3; SHA-256: 3f81cc17e1ee74dbf9b9968ba0a6618c09a60a963aae4d4901e497f46ef507db; DOI: https://doi.org/10.1111/jne.70092"
+      ]
+    },
+    {
+      "Text21": "records:\nstage: secondary_labeling\nsource_xpath: /article/body/sec[2]/sec[4]/sec[3]/p\nbranch: whole-brain both lines\nsame_device_setting_as_primary: true\nsource_secondary_duration: not specified\nsecondary_sample_buffer_composition: not explicitly specified; do not copy primary formula\npostfix: overnight4%PFA RT",
+      "Text21_Reference": [
+        "Structured evidence: full/APP210/evidence/frozen_inputs/processing_addendum.json#/records/4; SHA-256: 3f81cc17e1ee74dbf9b9968ba0a6618c09a60a963aae4d4901e497f46ef507db; DOI: https://doi.org/10.1111/jne.70092"
+      ]
+    },
+    {
+      "Text22": "records:\nstage: section_pipeline\nsource_xpath: /article/body/sec[2]/sec[3]/p\nbranch: 50um sections\npermeabilization: 0.1%TritonPBS10min\nblock: 10%NDS in0.1%TritonPBS1h4C\nprimary_vehicle: 10%NDS0.1%TritonPBS\nprimary_wash: 3x10min0.1%TritonPBS\nsecondary_wash: 3x15min0.1%TritonPBS\nmount: DAPI FluoromountG\nimaging: 10x confocal2.32pixel/um and slide scanner0.75pixel/um; keep pixel/um unit, not um/pixel",
+      "Text22_Reference": [
+        "Structured evidence: full/APP210/evidence/frozen_inputs/processing_addendum.json#/records/5; SHA-256: 3f81cc17e1ee74dbf9b9968ba0a6618c09a60a963aae4d4901e497f46ef507db; DOI: https://doi.org/10.1111/jne.70092"
+      ]
+    },
+    {
+      "Text23": "records:\nid: 2D_results\nsource_xpath: /article/body/sec[3]/sec[1]\nbranch: 50um_sections\nfindings: \n  [1] Cntnap2 male KO: RM higher, q=.009; female KO:M lower q=.008\n  [2] Fmr1 female KO:RM higher q<.0001; source text incorrectly uses male-style -/Y for females in one sentence, not silently propagated\n  [3] WT sex effects largely absent except Fmr1 WT RM q=.048\n  [4] KO sex effects:Cntnap2 RM q<.0001,M q=.02;Fmr1 RM q=.002\n  [5] Sex-matched WT normalization: Fmr1 female relative counts exceed Cntnap2 female in RM q<.0001 and M q=.0001;male Fmr1 below male Cntnap2 RM q=.0004;M q=.07 not significant",
+      "Text23_Reference": [
+        "Structured evidence: full/APP210/evidence/frozen_inputs/addendum_R1.json#/records/0; SHA-256: 68fc1bb81d0fe49b137051638dfcbffba1ff060ed7e60ee03e933c861f0bd146; DOI: https://doi.org/10.1111/jne.70092"
+      ]
+    },
+    {
+      "Text24": "records:\nid: normalization\nsource_xpath: /article/body/sec[2]/sec[5]/p\ndefinition: KO count divided by mean sex-matched WT count within same PVN subregion\nstatistic: two-way ANOVA plus FDR;3D subregional Monte Carlo two-tailed 10000 permutations\nrestriction: Do not label normalized counts as raw cells or proportions of all neurons",
+      "Text24_Reference": [
+        "Structured evidence: full/APP210/evidence/frozen_inputs/addendum_R1.json#/records/1; SHA-256: 68fc1bb81d0fe49b137051638dfcbffba1ff060ed7e60ee03e933c861f0bd146; DOI: https://doi.org/10.1111/jne.70092"
+      ]
+    },
+    {
+      "Text25": "records:\nid: S2_3\nsource_files: \n  [1] JNE-37-e70092-s006.pdf\n  [2] JNE-37-e70092-s001.pdf\nscope: All ANOVA rows read; unequal residual degrees of freedom across subregions cannot be converted into asserted per-sex animal n without supporting group membership\nS2_interaction_p_Cntnap2_R_RM_M_C: \n  [1] 0.4575\n  [2] 0.0053\n  [3] 0.0923\n  [4] 0.3496\nS2_interaction_p_Fmr1_R_RM_M_C: \n  [1] 0.8624\n  [2] 0.0004\n  [3] 0.059\n  [4] 0.8899\nS3_interaction_p_R_RM_M_C: \n  [1] 0.4872\n  [2] <.0001\n  [3] 0.0002\n  [4] 0.349\nrestriction: S2/S3 caption labels are near-duplicate; S3 context is normalized cross-model comparison as explained in main results",
+      "Text25_Reference": [
+        "Structured evidence: full/APP210/evidence/frozen_inputs/addendum_R1.json#/records/2; SHA-256: 68fc1bb81d0fe49b137051638dfcbffba1ff060ed7e60ee03e933c861f0bd146; DOI: https://doi.org/10.1111/jne.70092"
+      ]
+    }
+  ],
+  "Note": [
+    {
+      "Text1": "Paper APP210; source coverage: full; source release status: candidate_pending_gates; source default_eligible: false. Read this study as a whole with its sample, experimental, measurement and limitation fields. All selected source files and mandatory support in the accompanying archive apply jointly. Import does not promote candidate status, resolve contradictions, or turn review citations into independent primary experiments. Application includes source-labelled protocols, comparisons and results; labels within each Text retain their actual role.",
+      "Text1_Reference": [
+        "DOI: https://doi.org/10.1111/jne.70092",
+        "Evidence-layer structured paraphrase; not a verbatim quotation. Source release: https://github.com/404NotFound422/TOCAgentProject/tree/5e3a711befb3952a2e39f4d53fc9c9f1a7ac0d22/KnowledgeBase/evidence_expansion_20261019",
+        "Local source archive: ../literature_evidence/2026-11-11/source_release.zip; member: full/APP210/version_selection.json"
+      ]
+    },
+    {
+      "Text2": "Selected version and mandatory composition:\npaper_id: APP210\nstatus: full\ndefault_eligible: false\nactive_scientific_files: \n  [1]     path: full/APP210/evidence/reviewed/scientific_record.reviewed.json\n    sha256: 0a015001b86e3d4edc096cc78b0f854d5be5663001d4344239f995a79922f9e3\n    source_member: reviewed/scientific_record.reviewed.json\n  [2]     path: full/APP210/evidence/reviewed/independent_review.json\n    sha256: 2455641304eaba22f949f6bbeafd212cfecc7ed04d5d4ad50b97b6be5e5c30a0\n    source_member: reviewed/independent_review.json\n  [3]     path: full/APP210/evidence/frozen_inputs/processing_addendum.json\n    sha256: 3f81cc17e1ee74dbf9b9968ba0a6618c09a60a963aae4d4901e497f46ef507db\n    source_member: frozen_inputs/processing_addendum.json\n  [4]     path: full/APP210/evidence/frozen_inputs/addendum_R1.json\n    sha256: 68fc1bb81d0fe49b137051638dfcbffba1ff060ed7e60ee03e933c861f0bd146\n    source_member: frozen_inputs/addendum_R1.json\nacceptance: full/APP210/evidence/reviewed/independent_review.json\nmandatory_composition: All selected science, mandatory overlays, receipts, scope qualifications and additions are jointly required. Historical candidate status cannot override current acceptance.\nactive_version_and_scope: \n  paper_id: APP210\n  current_full_task_scope: true\n  partial: false\n  remaining_relevant_gaps: \n[]\n  package_sha256: a2ab09b2d54109bd1e037edc98acd5f13b7eaec5487f149539b060ea58a12a31\n  original_package_sha256: b48e4f1e0919527d0e0a2d839c5c5cdb6a8eddd4c0e7730dc43138e7c911ce59\n  acceptance_archive_member: reviewed/independent_review.json\n  active_version: reviewed scientific record + processing_addendum + addendum_R1.json; independent_review carries correction/source-anchor overlay\n  stage_provenance: \n    R1: \n      execution_period: current_window\n      historical_inherited: false\n      evidence: original extractor frozen v1 plus separately frozen addendum where present\n    R2: \n      execution_period: current_window\n      historical_inherited: false\n      evidence: this independent review of all candidates and source-relevant text/images/tables\n    R3: \n      execution_period: current_window\n      historical_inherited: false\n      evidence: this independent stage, sample, marker, duration review\n    R4: \n      execution_period: current_window\n      historical_inherited: false\n      evidence: extractor actual queries and retrieved files reused; this reviewer verified those files, did not make redundant network calls\n  net_new_vs_verified117: true\n  doi_crosswalk_check: \n    doi: 10.1111/jne.70092\n    historical117_matches: \n[]\n  source_coverage: \n    main_figures: \n      [1] 1\n      [2] 2\n      [3] 3\n      [4] 4\n      [5] 5\n    supplement_tables: \n      [1] S1\n      [2] S2\n      [3] S3\n      [4] S4\n      [5] S5\n      [6] S6\n    main_task_scope: fixed tissue preparation through counts and limitations, including 2D comparator\n  scope: Fixed-tissue clearing/imaging evidence fidelity, not biological intervention, clinical recommendation, replication, production admission or human expert acceptance.\n  source_limits_preserved: \n    [1] Fmr1 active and Cntnap2 passive delipidation remain distinct; no randomized method superiority inference.\n    [2] Section AF488 reports NP1/OXT; intact-brain AF555 reports NP1/OXT and AF488 reports NeuN.\n    [3] Original SDS nM units and z-step/voxel mismatch retained; no silently executable corrected recipe.\n    [4] S6 female RM p=.05019/ns and main .050 retained; S5 female caudal .0104 versus main .001 retained.\n    [5] 2D comparator and WT normalization addendum independently matches main Results3.1 and Statistics; S2/S3 interaction rows all match PDFs.\n    [6] S1 three WT female correction cases are not held-out generalized classifier performance.\n  processing_addendum_review: \n    sha256: 3f81cc17e1ee74dbf9b9968ba0a6618c09a60a963aae4d4901e497f46ef507db\n    records_checked: 6\n    verdict: source-supported; original units and missing values preserved\n    APP210_volume_precision_note: Original active delipidation cup/chamber volumes are approximate (~35 mL/~250 mL), clarified in derived record only.\noriginal_member_to_release_path: \n  reviewed/scientific_record.reviewed.json: full/APP210/evidence/reviewed/scientific_record.reviewed.json\n  reviewed/independent_review.json: full/APP210/evidence/reviewed/independent_review.json\n  frozen_inputs/processing_addendum.json: full/APP210/evidence/frozen_inputs/processing_addendum.json\n  frozen_inputs/addendum_R1.json: full/APP210/evidence/frozen_inputs/addendum_R1.json\nactive_reference_aliases: \n  reviewed/scientific_record.reviewed.json: full/APP210/evidence/reviewed/scientific_record.reviewed.json\n  reviewed/independent_review.json: full/APP210/evidence/reviewed/independent_review.json\n  frozen_inputs/processing_addendum.json: full/APP210/evidence/frozen_inputs/processing_addendum.json\n  frozen_inputs/addendum_R1.json: full/APP210/evidence/frozen_inputs/addendum_R1.json\n  neural_applications_20261019/APP210/addendum_R1.json: full/APP210/evidence/frozen_inputs/addendum_R1.json\n  neural_applications_20261019/APP210/processing_addendum.json: full/APP210/evidence/frozen_inputs/processing_addendum.json\nrequired_supporting_files: \n[]\nreference_resolution_policy: Resolve explicit aliases only to selected SHA-bound science/support. Historical/source materials never auto-load. New candidate remains ineligible pending gates.\nsource_asset_policy: Original source assets are not republished; accepted scientific members and mandatory correction layers are preserved.\nactive_reference_resolution_evidence: \n  [1]     source_file: full/APP210/evidence/reviewed/independent_review.json\n    json_pointer: /frozen_input_manifest/0/path\n    reference: neural_applications_20261019/APP210/addendum_R1.json\n    resolved_release_path: full/APP210/evidence/frozen_inputs/addendum_R1.json\n    binding_basis: same_paper_exact_source_sha256\n  [2]     source_file: full/APP210/evidence/reviewed/independent_review.json\n    json_pointer: /frozen_input_manifest/3/path\n    reference: neural_applications_20261019/APP210/processing_addendum.json\n    resolved_release_path: full/APP210/evidence/frozen_inputs/processing_addendum.json\n    binding_basis: same_paper_exact_source_sha256\nexternal_or_historical_references: \n  [1]     source_file: full/APP210/evidence/reviewed/scientific_record.reviewed.json\n    json_pointer: /provenance/old_batch_blocked_not_paper_specific_denial\n    reference: coordination/blocker_scope_record_audit_20261019.json\n    automatic_loading: false\n    role: historical_or_superseded_input_provenance_not_active\n  [2]     source_file: full/APP210/evidence/reviewed/independent_review.json\n    json_pointer: /frozen_input_manifest/1/path\n    reference: neural_applications_20261019/APP210/candidate_freeze.json\n    automatic_loading: false\n    role: historical_or_superseded_input_provenance_not_active\n  [3]     source_file: full/APP210/evidence/reviewed/independent_review.json\n    json_pointer: /frozen_input_manifest/2/path\n    reference: neural_applications_20261019/APP210/candidate_manifest.json\n    automatic_loading: false\n    role: historical_or_superseded_input_provenance_not_active\n  [4]     source_file: full/APP210/evidence/reviewed/independent_review.json\n    json_pointer: /frozen_input_manifest/4/path\n    reference: neural_applications_20261019/APP210/scientific_record.json\n    automatic_loading: false\n    role: historical_or_superseded_input_provenance_not_active\n  [5]     source_file: full/APP210/evidence/reviewed/independent_review.json\n    json_pointer: /frozen_input_manifest/5/path\n    reference: neural_applications_20261019/APP210/source_manifest.json\n    automatic_loading: false\n    role: historical_or_superseded_input_provenance_not_active\nrelease_status: candidate_pending_gates\nverified_historical_filename_equivalences: \n[]",
+      "Text2_Reference": [
+        "DOI: https://doi.org/10.1111/jne.70092",
+        "Evidence-layer structured paraphrase; not a verbatim quotation. Source release: https://github.com/404NotFound422/TOCAgentProject/tree/5e3a711befb3952a2e39f4d53fc9c9f1a7ac0d22/KnowledgeBase/evidence_expansion_20261019",
+        "Local source archive: ../literature_evidence/2026-11-11/source_release.zip; member: full/APP210/version_selection.json"
+      ]
+    },
+    {
+      "Text3": "limitations:\nid: li1\nstatement: NP1/OXT 抗体检出依赖肽表达，OXT+计数变化不直接证明细胞死亡或总神经元数变化。\nsource: \n  xpath: /article/body/sec[4]/sec[3]/p[1]\n  sha256: 6c40545ce385d14ca15ca914e471b0805c966ef131fd0b23d3da2ef610a3733a",
+      "Text3_Reference": [
+        "Structured evidence: full/APP210/evidence/reviewed/scientific_record.reviewed.json#/limitations/0; SHA-256: 0a015001b86e3d4edc096cc78b0f854d5be5663001d4344239f995a79922f9e3; DOI: https://doi.org/10.1111/jne.70092"
+      ]
+    },
+    {
+      "Text4": "limitations:\nid: li2\nstatement: 不能由 PVN 亚区位置推定变化专属 parvocellular；本文数据无法确定亚型特异性。\nsource: \n  xpath: /article/body/sec[4]/sec[2]/p\n  sha256: 8977416ea2590c7a614172f1c979404cd0e3827239fb6c6ce61875dfd7d305d2",
+      "Text4_Reference": [
+        "Structured evidence: full/APP210/evidence/reviewed/scientific_record.reviewed.json#/limitations/1; SHA-256: 0a015001b86e3d4edc096cc78b0f854d5be5663001d4344239f995a79922f9e3; DOI: https://doi.org/10.1111/jne.70092"
+      ]
+    },
+    {
+      "Text5": "conflicts:\nid: co1\nstatement: Fig4P 比较按图注为 KO雌雄，正文末句出现 KO雌对WT雄措辞，保留并以图表约束解释。\nsource: \n  xpath: /article/body/sec[3]/sec[2]/sec[2]/p[2]\n  sha256: 9b5ef57c2bb98bdf021323307a6d446fafb47c979358672010d7aa4ab6fe4329",
+      "Text5_Reference": [
+        "Structured evidence: full/APP210/evidence/reviewed/scientific_record.reviewed.json#/conflicts/0; SHA-256: 0a015001b86e3d4edc096cc78b0f854d5be5663001d4344239f995a79922f9e3; DOI: https://doi.org/10.1111/jne.70092"
+      ]
+    },
+    {
+      "Text6": "conflicts:\nstatement: Cntnap2 female caudal正文p=.001，S5 p=.0104，均方向增加但数值不一致。\nsources: \n  [1] Results3.2.1\n  [2] TableS5",
+      "Text6_Reference": [
+        "Structured evidence: full/APP210/evidence/reviewed/scientific_record.reviewed.json#/conflicts/1; SHA-256: 0a015001b86e3d4edc096cc78b0f854d5be5663001d4344239f995a79922f9e3; DOI: https://doi.org/10.1111/jne.70092"
+      ]
+    },
+    {
+      "Text7": "conflicts:\nstatement: Fmr1 female RM正文p=.050与S6 .05019 ns；采用边界非确证解释。\nsources: \n  [1] Results3.2.2\n  [2] TableS6",
+      "Text7_Reference": [
+        "Structured evidence: full/APP210/evidence/reviewed/scientific_record.reviewed.json#/conflicts/2; SHA-256: 0a015001b86e3d4edc096cc78b0f854d5be5663001d4344239f995a79922f9e3; DOI: https://doi.org/10.1111/jne.70092"
+      ]
+    },
+    {
+      "Text8": "stage_provenance:\nR1: original extractor frozen v1 plus separately frozen addendum where present\nR2: this independent review of all candidates and source-relevant text/images/tables\nR3: this independent stage, sample, marker, duration review\nR4: extractor actual queries and retrieved files reused; this reviewer verified those files, did not make redundant network calls",
+      "Text8_Reference": [
+        "Structured evidence: full/APP210/evidence/reviewed/independent_review.json#/stage_provenance; SHA-256: 2455641304eaba22f949f6bbeafd212cfecc7ed04d5d4ad50b97b6be5e5c30a0; DOI: https://doi.org/10.1111/jne.70092"
+      ]
+    },
+    {
+      "Text9": "scope:\nFixed-tissue clearing/imaging evidence fidelity, not biological intervention, clinical recommendation, replication, production admission or human expert acceptance.",
+      "Text9_Reference": [
+        "Structured evidence: full/APP210/evidence/reviewed/independent_review.json#/scope; SHA-256: 2455641304eaba22f949f6bbeafd212cfecc7ed04d5d4ad50b97b6be5e5c30a0; DOI: https://doi.org/10.1111/jne.70092"
+      ]
+    },
+    {
+      "Text10": "focus_findings:\nFmr1 active and Cntnap2 passive delipidation remain distinct; no randomized method superiority inference.",
+      "Text10_Reference": [
+        "Structured evidence: full/APP210/evidence/reviewed/independent_review.json#/focus_findings/0; SHA-256: 2455641304eaba22f949f6bbeafd212cfecc7ed04d5d4ad50b97b6be5e5c30a0; DOI: https://doi.org/10.1111/jne.70092"
+      ]
+    },
+    {
+      "Text11": "focus_findings:\nSection AF488 reports NP1/OXT; intact-brain AF555 reports NP1/OXT and AF488 reports NeuN.",
+      "Text11_Reference": [
+        "Structured evidence: full/APP210/evidence/reviewed/independent_review.json#/focus_findings/1; SHA-256: 2455641304eaba22f949f6bbeafd212cfecc7ed04d5d4ad50b97b6be5e5c30a0; DOI: https://doi.org/10.1111/jne.70092"
+      ]
+    },
+    {
+      "Text12": "focus_findings:\nOriginal SDS nM units and z-step/voxel mismatch retained; no silently executable corrected recipe.",
+      "Text12_Reference": [
+        "Structured evidence: full/APP210/evidence/reviewed/independent_review.json#/focus_findings/2; SHA-256: 2455641304eaba22f949f6bbeafd212cfecc7ed04d5d4ad50b97b6be5e5c30a0; DOI: https://doi.org/10.1111/jne.70092"
+      ]
+    },
+    {
+      "Text13": "focus_findings:\nS6 female RM p=.05019/ns and main .050 retained; S5 female caudal .0104 versus main .001 retained.",
+      "Text13_Reference": [
+        "Structured evidence: full/APP210/evidence/reviewed/independent_review.json#/focus_findings/3; SHA-256: 2455641304eaba22f949f6bbeafd212cfecc7ed04d5d4ad50b97b6be5e5c30a0; DOI: https://doi.org/10.1111/jne.70092"
+      ]
+    },
+    {
+      "Text14": "focus_findings:\n2D comparator and WT normalization addendum independently matches main Results3.1 and Statistics; S2/S3 interaction rows all match PDFs.",
+      "Text14_Reference": [
+        "Structured evidence: full/APP210/evidence/reviewed/independent_review.json#/focus_findings/4; SHA-256: 2455641304eaba22f949f6bbeafd212cfecc7ed04d5d4ad50b97b6be5e5c30a0; DOI: https://doi.org/10.1111/jne.70092"
+      ]
+    },
+    {
+      "Text15": "focus_findings:\nS1 three WT female correction cases are not held-out generalized classifier performance.",
+      "Text15_Reference": [
+        "Structured evidence: full/APP210/evidence/reviewed/independent_review.json#/focus_findings/5; SHA-256: 2455641304eaba22f949f6bbeafd212cfecc7ed04d5d4ad50b97b6be5e5c30a0; DOI: https://doi.org/10.1111/jne.70092"
+      ]
+    },
+    {
+      "Text16": "processing_addendum_review:\nsha256: 3f81cc17e1ee74dbf9b9968ba0a6618c09a60a963aae4d4901e497f46ef507db\nrecords_checked: 6\nverdict: source-supported; original units and missing values preserved\nAPP210_volume_precision_note: Original active delipidation cup/chamber volumes are approximate (~35 mL/~250 mL), clarified in derived record only.",
+      "Text16_Reference": [
+        "Structured evidence: full/APP210/evidence/reviewed/independent_review.json#/processing_addendum_review; SHA-256: 2455641304eaba22f949f6bbeafd212cfecc7ed04d5d4ad50b97b6be5e5c30a0; DOI: https://doi.org/10.1111/jne.70092"
+      ]
+    },
+    {
+      "Text17": "scope:\nFixed brain processing only. Source-stated units retained; not a corrected operating recipe.",
+      "Text17_Reference": [
+        "Structured evidence: full/APP210/evidence/frozen_inputs/processing_addendum.json#/scope; SHA-256: 3f81cc17e1ee74dbf9b9968ba0a6618c09a60a963aae4d4901e497f46ef507db; DOI: https://doi.org/10.1111/jne.70092"
+      ]
+    }
+  ]
+}
