@@ -1,0 +1,421 @@
+{
+  "TOC_Method_Name": {
+    "Text": "Not specified as a single method in the selected evidence records",
+    "Text_Reference": [
+      "DOI: https://doi.org/10.1038/ncomms14293",
+      "Evidence-layer structured paraphrase; not a verbatim quotation. Source release: https://github.com/404NotFound422/TOCAgentProject/tree/5e3a711befb3952a2e39f4d53fc9c9f1a7ac0d22/KnowledgeBase/evidence_expansion_20261019",
+      "Local source archive: ../literature_evidence/2026-11-11/source_release.zip; member: full/APP232/version_selection.json"
+    ]
+  },
+  "General_Description": {
+    "Text": "Heterogeneity of macrophage infiltration and therapeutic response in lung carcinoma revealed by 3D organ imaging (2017). Evidence category: application. This card preserves the evidence layer's structured statements and their original field labels; it does not add a new literature review or certify benchmark scoring thresholds.",
+    "Text_Reference": [
+      "DOI: https://doi.org/10.1038/ncomms14293",
+      "Evidence-layer structured paraphrase; not a verbatim quotation. Source release: https://github.com/404NotFound422/TOCAgentProject/tree/5e3a711befb3952a2e39f4d53fc9c9f1a7ac0d22/KnowledgeBase/evidence_expansion_20261019",
+      "Local source archive: ../literature_evidence/2026-11-11/source_release.zip; member: full/APP232/version_selection.json"
+    ]
+  },
+  "Tissue_Types": [],
+  "Time_Consumption": [],
+  "Tissue_Deformation": [],
+  "Fluorescence_Compatibility": [],
+  "Preservation_Stability": [],
+  "Application": [
+    {
+      "Text1": "units:\nid: U001\nkind: scope\nclaim: 改良CUBIC整肺固定组织成像用于肺肿瘤负荷、TAM密度/空间分布及示踪药物相关信号。KP转移性肺肿瘤并非老年KP自发原发肺癌；模型建立/病毒操作不抽取。\nsource_locator: Results sec1 p1–3; Methods sec1\nsample_ids: \n  [1] S_KP\n  [2] S_KPGFP\n  [3] S_LLC\n  [4] S_reporter\nindependent_review: \n  status: verified_with_source_limits\n  note: KP转移性疾病与老龄KP原发模型区分正确；固定整肺而非活体连续追踪。\n  delta_ids: \n[]",
+      "Text1_Reference": [
+        "Structured evidence: full/APP232/evidence/independent_review/scientific_independent_derived.json#/units/0; SHA-256: f4e2f801c62b796d68e53ed88050c54623e0f0af1b7705f8f3338273ec22b23f; DOI: https://doi.org/10.1038/ncomms14293"
+      ]
+    },
+    {
+      "Text2": "units:\nid: U002\nkind: samples\nclaim: 方法列C57BL/6 n=21、Cx3cr1-GFP/+ n=1、NOD-SCID/MERTK-GFP/+ n=1；造模时雌性5–7周龄。KP、KP-GFP、LLC分组保留，12–40日为疾病取样阶段，不作透明耗时。\nsource_locator: Methods sec1\nstage_days: \n  [1] 12\n  [2] 29\n  [3] 40\nn_units: animals; not interchangeable with n tumour nodules\nindependent_review: \n  status: verified_with_source_limits\n  note: 方法动物总数、性别年龄与12–40日阶段匹配；S2的皮下/窗口验证不扩大为肺。\n  delta_ids: \n[]",
+      "Text2_Reference": [
+        "Structured evidence: full/APP232/evidence/independent_review/scientific_independent_derived.json#/units/1; SHA-256: f4e2f801c62b796d68e53ed88050c54623e0f0af1b7705f8f3338273ec22b23f; DOI: https://doi.org/10.1038/ncomms14293"
+      ]
+    },
+    {
+      "Text3": "units:\nid: U003\nkind: fixed_tissue\nclaim: 固定肺的后固定为4%FA室温3h，随后固定组织进入CUBIC。整器官体内灌注/模型操作不收入本派生protocol。\nsource_locator: Methods sec2; Table2; SupFig1a\nprotocol_id: P_fix\nindependent_review: \n  status: verified_with_source_limits\n  note: 后固定4%FA室温3h核对匹配；保持已固定组织限定。\n  delta_ids: \n[]",
+      "Text3_Reference": [
+        "Structured evidence: full/APP232/evidence/independent_review/scientific_independent_derived.json#/units/2; SHA-256: f4e2f801c62b796d68e53ed88050c54623e0f0af1b7705f8f3338273ec22b23f; DOI: https://doi.org/10.1038/ncomms14293"
+      ]
+    },
+    {
+      "Text4": "units:\nid: U004\nkind: clearing\nclaim: 固定肺置10mL CUBIC，37°C轻摇24–48h；在新鲜CUBIC中夹片。4°C保存数周，作者报告GFP/VT680信号及成像分辨损失较小，但非量化半衰期或保证值。\nsource_locator: Methods sec2\nprotocol_id: P_clear\nsample_ids: \n  [1] S_KP\n  [2] S_KPGFP\n  [3] S_LLC\nindependent_review: \n  status: verified_with_source_limits\n  note: 10mL、37°C、24–48h、轻摇、4°C储存数周匹配；保真仅作者描述。\n  delta_ids: \n[]",
+      "Text4_Reference": [
+        "Structured evidence: full/APP232/evidence/independent_review/scientific_independent_derived.json#/units/3; SHA-256: f4e2f801c62b796d68e53ed88050c54623e0f0af1b7705f8f3338273ec22b23f; DOI: https://doi.org/10.1038/ncomms14293"
+      ]
+    },
+    {
+      "Text5": "units:\nid: U005\nkind: chemistry\nclaim: CUBIC reagent1由水145mL、Quadrol100g、尿素100g及Triton X-10056mL组成；先约50°C溶解前两种后冷至室温加Triton并脱气。固定组织透明配方，不是病毒/细胞工程步骤。\nsource_locator: Methods sec3\nprotocol_id: P_clear\nindependent_review: \n  status: verified_with_source_limits\n  note: CUBIC1成分和条件匹配；没有把成分与模型操作混同。\n  delta_ids: \n[]",
+      "Text5_Reference": [
+        "Structured evidence: full/APP232/evidence/independent_review/scientific_independent_derived.json#/units/4; SHA-256: f4e2f801c62b796d68e53ed88050c54623e0f0af1b7705f8f3338273ec22b23f; DOI: https://doi.org/10.1038/ncomms14293"
+      ]
+    },
+    {
+      "Text6": "units:\nid: U006\nkind: index_matching\nclaim: 本肺模型可直接在CUBIC1成像；SupFig7比较100/600µm深度CUBIC1与CUBIC2图像，作者称相近保真度。不能推广为所有器官/所有定量指标的统计等效。\nsource_locator: Results sec1 p1; Methods sec3; SupFig7\nprotocol_id: P_clear\nindependent_review: \n  status: verified_with_source_limits\n  note: S7四格比较CUBIC1/2、100/600μm核对通过，定性不等于统计等效。\n  delta_ids: \n[]",
+      "Text6_Reference": [
+        "Structured evidence: full/APP232/evidence/independent_review/scientific_independent_derived.json#/units/5; SHA-256: f4e2f801c62b796d68e53ed88050c54623e0f0af1b7705f8f3338273ec22b23f; DOI: https://doi.org/10.1038/ncomms14293"
+      ]
+    },
+    {
+      "Text7": "units:\nid: U007\nkind: processing_time\nclaim: Table1总体流程优化CUBIC约3天，对照CUBIC/ScaleS各5天；Table2透明24–48h、固定3h，整肺mesoscopic约20min、1mm肿瘤10×约20min、10×整肺数小时。Methods另称1mm³肿瘤约10min、两侧各13min；保留不同口径，不合并成唯一精确总时长。\nsource_locator: Tables1–2; Methods sec4\ngap_id: G_acquisition_time\nindependent_review: \n  status: verified_with_source_limits\n  note: 两张表及方法采集耗时均读到；不同视野、两侧与单瘤口径不能合并。\n  delta_ids: \n[]",
+      "Text7_Reference": [
+        "Structured evidence: full/APP232/evidence/independent_review/scientific_independent_derived.json#/units/6; SHA-256: f4e2f801c62b796d68e53ed88050c54623e0f0af1b7705f8f3338273ec22b23f; DOI: https://doi.org/10.1038/ncomms14293"
+      ]
+    },
+    {
+      "Text8": "units:\nid: U008\nkind: label_compatibility\nclaim: Table1保留GFP/RFP、胶原SHG、rhodamine-lectin；DAPI/SYTO13为核染，streptavidin-AF750标生物素富集气道。后透明IHC可能但缓慢。此表不证明其列出的每种信号已在所有组别定量比较。\nsource_locator: Table1; Results sec1 p2; Discussion p1; SupFig1\nprotocol_id: P_label\nindependent_review: \n  status: verified_with_source_limits\n  note: Table1标签兼容性三行逐列核对通过；无逐标签定量对照推论。\n  delta_ids: \n    [1] D006\nindependent_addenda: \n  [1] 整肺核染/streptavidin-AF750浓度和孵育时长、完整激发/发射及z采样未见明确报告；不能从切片DAPI1:3000移用于整肺，缺报不等于实验失败。",
+      "Text8_Reference": [
+        "Structured evidence: full/APP232/evidence/independent_review/scientific_independent_derived.json#/units/7; SHA-256: f4e2f801c62b796d68e53ed88050c54623e0f0af1b7705f8f3338273ec22b23f; DOI: https://doi.org/10.1038/ncomms14293"
+      ]
+    },
+    {
+      "Text9": "units:\nid: U009\nkind: tumour_detection\nclaim: DAPI/SYTO核密度用于无FP肿瘤识别；DAPI与GFP-KP肿瘤分割Spearman r=0.95。核染并非癌细胞特异；更高细胞密度和形态与报告标记共同支持肿瘤界定。\nsource_locator: Results sec1 p2; SupFig1c\nresult_id: R_detection\nindependent_review: \n  status: verified_with_source_limits\n  note: 正文r=.95为Spearman，补图1c有DAPI/图注SYTO13标记分歧需保存。\n  delta_ids: \n    [1] D002\nindependent_addenda: \n  [1] S1c图内Nuclei (DAPI)，同页图注称SYTO13；正文DAPI与GFP分割Spearman .95。保留图注/图内差异，不能断定图中究竟何核染。",
+      "Text9_Reference": [
+        "Structured evidence: full/APP232/evidence/independent_review/scientific_independent_derived.json#/units/8; SHA-256: f4e2f801c62b796d68e53ed88050c54623e0f0af1b7705f8f3338273ec22b23f; DOI: https://doi.org/10.1038/ncomms14293"
+      ]
+    },
+    {
+      "Text10": "units:\nid: U010\nkind: np_label\nclaim: Ferumoxytol-VT680XL是巨噬细胞亲和纳米颗粒，rhodamine-lectin用于血管；预先存在的标签身份/兼容性保留，不把其信号解释成后透明抗体穿透，也不抽取体内递送参数。\nsource_locator: Results sec1; Methods sec2; Fig1; Fig3\nprotocol_id: P_label\nindependent_review: \n  status: verified_with_source_limits\n  note: NP/lectin身份匹配；预置标签不是后透明渗透证据。\n  delta_ids: \n[]",
+      "Text10_Reference": [
+        "Structured evidence: full/APP232/evidence/independent_review/scientific_independent_derived.json#/units/9; SHA-256: f4e2f801c62b796d68e53ed88050c54623e0f0af1b7705f8f3338273ec22b23f; DOI: https://doi.org/10.1038/ncomms14293"
+      ]
+    },
+    {
+      "Text11": "units:\nid: U011\nkind: np_specificity\nclaim: KP侧腹验证中NP+信号72±3%(n=12，源文未在该句明确独立单位)来自CD11b+CD11c+F4/80+TAM，其余来自其他吞噬细胞。IHC CD68与CD206 n=3 images；不能将所有NP+像素等同TAM或M2。\nsource_locator: Results sec2 p2; Fig3a–c\nresult_id: R_specificity\nsample_id: S_validation\nmetric_unit: fraction of NP+ signal, not sensitivity in whole lung\nindependent_review: \n  status: verified_with_source_limits\n  note: 72±3%与n12核对；Fig3b n3 images与流式和肺样本不能混同。\n  delta_ids: \n[]",
+      "Text11_Reference": [
+        "Structured evidence: full/APP232/evidence/independent_review/scientific_independent_derived.json#/units/10; SHA-256: f4e2f801c62b796d68e53ed88050c54623e0f0af1b7705f8f3338273ec22b23f; DOI: https://doi.org/10.1038/ncomms14293"
+      ]
+    },
+    {
+      "Text12": "units:\nid: U012\nkind: reporter_validation\nclaim: MERTK-GFP HT1080验证分两支：补图2a固定透明皮下样本像素共定位10×R=.89、20×R=.77；2b活体窗口单细胞分析NP+细胞95%为GFP+，正文另报GFP+细胞79%含NP。后一支不是固定整肺结果。\nsource_locator: Results sec2 p2; SupFig2a–b\nsample_id: S_reporter\nresult_id: R_specificity\nindependent_review: \n  status: verified_with_source_limits\n  note: S2a像素R=.89/.77与S2b NP+中95%GFP+匹配，正文79%为反向条件比例；固定与活体明确分开。\n  delta_ids: \n[]",
+      "Text12_Reference": [
+        "Structured evidence: full/APP232/evidence/independent_review/scientific_independent_derived.json#/units/11; SHA-256: f4e2f801c62b796d68e53ed88050c54623e0f0af1b7705f8f3338273ec22b23f; DOI: https://doi.org/10.1038/ncomms14293"
+      ]
+    },
+    {
+      "Text13": "units:\nid: U013\nkind: density_calibration\nclaim: 宽场背景归一化积分荧光密度与高分辨率肿瘤中心CellProfiler计数校准，补图3明确20个肿瘤；随后用校准因子推算其他宽场TAM密度，不是每一细胞直接3D计数。\nsource_locator: Results sec2 p2; SupFig3\nresult_id: R_calibration\nmetric_unit: inferred TAM/mm³ tumour\nindependent_review: \n  status: verified_with_source_limits\n  note: S3明确20瘤、中心高分辨与宽场背景归一化校准，非所有细胞直接全3D枚举。\n  delta_ids: \n[]",
+      "Text13_Reference": [
+        "Structured evidence: full/APP232/evidence/independent_review/scientific_independent_derived.json#/units/12; SHA-256: f4e2f801c62b796d68e53ed88050c54623e0f0af1b7705f8f3338273ec22b23f; DOI: https://doi.org/10.1038/ncomms14293"
+      ]
+    },
+    {
+      "Text14": "units:\nid: U014\nkind: calibration_discrepancy\nclaim: 补图3文字相关系数.9042，图中r=.9052，正文约.9；均P<.0001。补图文字写paired t-test而正文写two-tailed Student t-test，不改写成统一且已明确的检验；r非r²。\nsource_locator: Results sec2 p2; SupFig3 p3\ngap_id: G_calibration\nindependent_review: \n  status: verified_with_source_limits\n  note: S3文字.9042与图.9052真实差异；paired t-test与正文two-tailed仍按源保存。\n  delta_ids: \n[]",
+      "Text14_Reference": [
+        "Structured evidence: full/APP232/evidence/independent_review/scientific_independent_derived.json#/units/13; SHA-256: f4e2f801c62b796d68e53ed88050c54623e0f0af1b7705f8f3338273ec22b23f; DOI: https://doi.org/10.1038/ncomms14293"
+      ]
+    },
+    {
+      "Text15": "units:\nid: U015\nkind: mounting\nclaim: 肺夹于1.5英寸直径（原文未明内/外径）橡胶垫圈及65×48mm玻片之间，充满透明介质并密封；常用2mm、可2–6mm。适合肺的可变形性质，不应推论所有硬质器官均可无损压平。\nsource_locator: Methods sec5; Results sec1 p3; SupFig1a\nprotocol_id: P_mount\nindependent_review: \n  status: verified_with_source_limits\n  note: 1.5英寸diameter源未指定内径，需去除候选无根据的“内”；2–6mm厚度由正文支持。\n  delta_ids: \n    [1] D004\nindependent_addenda: \n  [1] 1.5英寸直径（原文diameter，未明确内/外径）",
+      "Text15_Reference": [
+        "Structured evidence: full/APP232/evidence/independent_review/scientific_independent_derived.json#/units/14; SHA-256: f4e2f801c62b796d68e53ed88050c54623e0f0af1b7705f8f3338273ec22b23f; DOI: https://doi.org/10.1038/ncomms14293"
+      ]
+    },
+    {
+      "Text16": "units:\nid: U016\nkind: deformation_control\nclaim: 补图9同一小肿瘤自由腔与2mm腔血管图像不加缩放/形变配准；130万位移向量中92.8%<10µm。向量不是130万独立动物，局部检查不证明整肺全部零形变。\nsource_locator: SupFig9 p9\nresult_id: R_mount\nprotocol_id: P_mount\nindependent_review: \n  status: verified_with_source_limits\n  note: S9同一小瘤、无缩放/形变配准、92.8%/130万向量匹配。\n  delta_ids: \n[]",
+      "Text16_Reference": [
+        "Structured evidence: full/APP232/evidence/independent_review/scientific_independent_derived.json#/units/15; SHA-256: f4e2f801c62b796d68e53ed88050c54623e0f0af1b7705f8f3338273ec22b23f; DOI: https://doi.org/10.1038/ncomms14293"
+      ]
+    },
+    {
+      "Text17": "units:\nid: U017\nkind: imaging\nclaim: Olympus FV1000/IV100共聚焦；宽场5×4网格2×物镜(Meth原文NA.95)拼接；10×NA.6水镜提供1.44mm²覆盖；20×NA.95/40×NA1.15。顺序采集、从最深处开始；两侧图像ImageJ拼接、Amira共配准，Imaris/Amira三维重建。\nsource_locator: Methods sec4–6\nprotocol_id: P_image\nnote: 2× NA0.95 retained as source wording, not silently corrected\nindependent_review: \n  status: verified_with_source_limits\n  note: 显微镜、物镜、网格和配准匹配；2×NA.95为原文可疑但不静默纠正。\n  delta_ids: \n    [1] D006\nindependent_addenda: \n  [1] 整肺核染/streptavidin-AF750浓度和孵育时长、完整激发/发射及z采样未见明确报告；不能从切片DAPI1:3000移用于整肺，缺报不等于实验失败。",
+      "Text17_Reference": [
+        "Structured evidence: full/APP232/evidence/independent_review/scientific_independent_derived.json#/units/16; SHA-256: f4e2f801c62b796d68e53ed88050c54623e0f0af1b7705f8f3338273ec22b23f; DOI: https://doi.org/10.1038/ncomms14293"
+      ]
+    },
+    {
+      "Text18": "units:\nid: U018\nkind: detection_result\nclaim: 透明荧光可见常规µCT示例未检出的更多更小结节，Fig1由整肺至4×、20×及三维体绘展示层级。没有正式临床敏感度/特异度统计，不声称优于任意CT设备。\nsource_locator: Fig1a–h; Results sec1 p2–3\nresult_id: R_detection\nsample_id: S_KP\nprotocol_ids: \n  [1] P_clear\n  [2] P_label\n  [3] P_image\nindependent_review: \n  status: verified_with_source_limits\n  note: Fig1 CT与光学层级示例匹配，不扩展成临床设备性能证明。\n  delta_ids: \n[]",
+      "Text18_Reference": [
+        "Structured evidence: full/APP232/evidence/independent_review/scientific_independent_derived.json#/units/17; SHA-256: f4e2f801c62b796d68e53ed88050c54623e0f0af1b7705f8f3338273ec22b23f; DOI: https://doi.org/10.1038/ncomms14293"
+      ]
+    },
+    {
+      "Text19": "units:\nid: U019\nkind: early_tam\nclaim: Fig2a第12日例中16个肿瘤细胞的新生结节周围已有TAM信号；第29/40日显示病灶大小、位置与浸润异质性。16是细胞例数而非动物n。\nsource_locator: Fig2a–b; Results sec2 p1\nresult_id: R_early\nsample_id: S_KPGFP\nindependent_review: \n  status: verified_with_source_limits\n  note: Fig2 d12/29/40与16细胞示例匹配；假彩色不作为FP实际发射波长。\n  delta_ids: \n[]",
+      "Text19_Reference": [
+        "Structured evidence: full/APP232/evidence/independent_review/scientific_independent_derived.json#/units/18; SHA-256: f4e2f801c62b796d68e53ed88050c54623e0f0af1b7705f8f3338273ec22b23f; DOI: https://doi.org/10.1038/ncomms14293"
+      ]
+    },
+    {
+      "Text20": "units:\nid: U020\nkind: heterogeneity\nclaim: 第29日每鼠结节平均44、范围29–57；跨21鼠数百结节分析。示例KP平均17,000 TAM/mm³，类似体积结节差约7倍；约1mm³病灶可8,000–60,000 TAM/mm³，未发现位置/血管特征能明显预测密度。\nsource_locator: Results sec2 p3; Fig3e\nresult_id: R_heterogeneity\nsample_id: S_KP\nmetric_unit: calibrated TAM/mm³ tumour\nindependent_review: \n  status: verified_with_source_limits\n  note: 正文44(29–57)、21鼠、17k与8–60k匹配；估算密度性质保留。\n  delta_ids: \n[]",
+      "Text20_Reference": [
+        "Structured evidence: full/APP232/evidence/independent_review/scientific_independent_derived.json#/units/19; SHA-256: f4e2f801c62b796d68e53ed88050c54623e0f0af1b7705f8f3338273ec22b23f; DOI: https://doi.org/10.1038/ncomms14293"
+      ]
+    },
+    {
+      "Text21": "units:\nid: U021\nkind: model_comparison\nclaim: Fig3d KP n=158、KP-GFP n=38、LLC n=6为肿瘤结节量而非158/38/6只鼠。正文KP-GFP约21,000、LLC约43,000 TAM/mm³。正文KP-GFP P=.0001而图注***P=.0003，保留不一致；LLC P<.0001。\nsource_locator: Results sec2 p3; Fig3d\nresult_id: R_model_comparison\nsample_ids: \n  [1] S_KP\n  [2] S_KPGFP\n  [3] S_LLC\ngap_id: G_model_p\nindependent_review: \n  status: verified_with_source_limits\n  note: Fig3d n158/38/6为结节；正文P.0001与图注.0003差异保留。\n  delta_ids: \n[]",
+      "Text21_Reference": [
+        "Structured evidence: full/APP232/evidence/independent_review/scientific_independent_derived.json#/units/20; SHA-256: f4e2f801c62b796d68e53ed88050c54623e0f0af1b7705f8f3338273ec22b23f; DOI: https://doi.org/10.1038/ncomms14293"
+      ]
+    },
+    {
+      "Text22": "units:\nid: U022\nkind: therapy_design\nclaim: PLX3397组与未处理组，生物阶段为肿瘤21日后7日疗程；随机挑选治疗子集、无排除标准。保留药物名称/分组及观察时间，不将剂量/给药过程纳入固定组织protocol。\nsource_locator: Results sec3 p1; Methods sec1; Fig4\nsample_id: S_PLX\nindependent_review: \n  status: verified_with_source_limits\n  note: 处理与未处理的生物阶段匹配；未纳入给药操作。\n  delta_ids: \n[]",
+      "Text22_Reference": [
+        "Structured evidence: full/APP232/evidence/independent_review/scientific_independent_derived.json#/units/21; SHA-256: f4e2f801c62b796d68e53ed88050c54623e0f0af1b7705f8f3338273ec22b23f; DOI: https://doi.org/10.1038/ncomms14293"
+      ]
+    },
+    {
+      "Text23": "units:\nid: U023\nkind: therapy_burden\nclaim: Fig4a总6鼠、3鼠/组，治疗肺肿瘤体积约6mm³、对照约93mm³，P=.015。图柱上结节数对照29/57/46、治疗16/19/28；这些可见总数不能擅自替代Fig4b报告的n=423结节分析。\nsource_locator: Results sec3 p2; Fig4a–b\nresult_id: R_therapy_burden\nsample_id: S_PLX\nn_animals_per_group: 3\nn_nodules_fig4b: 423\ngap_id: G_nodule_denominator\nindependent_review: \n  status: verified_with_source_limits\n  note: Fig4a六柱上数字逐核合195，与Fig4b n423不自动统一；组均值约6/93与3鼠每组匹配。\n  delta_ids: \n[]",
+      "Text23_Reference": [
+        "Structured evidence: full/APP232/evidence/independent_review/scientific_independent_derived.json#/units/22; SHA-256: f4e2f801c62b796d68e53ed88050c54623e0f0af1b7705f8f3338273ec22b23f; DOI: https://doi.org/10.1038/ncomms14293"
+      ]
+    },
+    {
+      "Text24": "units:\nid: U024\nkind: therapy_density\nclaim: PLX处理结节更小(P<.0001，源n=423)，整体TAM密度未明显变化，未处理平均约16,500 TAM/mm³。密度不变不等于全肺TAM绝对总数不变，因肿瘤总体积大幅变化。\nsource_locator: Results sec3 p2; Fig4b–c\nresult_id: R_therapy_density\nsample_id: S_PLX\nindependent_review: \n  status: verified_with_source_limits\n  note: Fig4b/c密度ns和体积差异匹配；密度不是整肺绝对TAM总数。\n  delta_ids: \n[]",
+      "Text24_Reference": [
+        "Structured evidence: full/APP232/evidence/independent_review/scientific_independent_derived.json#/units/23; SHA-256: f4e2f801c62b796d68e53ed88050c54623e0f0af1b7705f8f3338273ec22b23f; DOI: https://doi.org/10.1038/ncomms14293"
+      ]
+    },
+    {
+      "Text25": "units:\nid: U025\nkind: therapy_spatial\nclaim: Fig4e–g归一化结节直径线扫描NP强度：处理组中心相对周缘信号增高；core为40–60%，rim为0–10%及90–100%，14结节/组、共28、P=.025。量为NP信号比，不是绝对细胞数或直接极化标记。\nsource_locator: Fig4e–g; Results sec3 p2\nresult_id: R_therapy_spatial\nsample_id: S_PLX\nindependent_review: \n  status: verified_with_source_limits\n  note: Fig4f/g核心/边缘百分区和14结节每组、P.025匹配；信号比不是细胞计数。\n  delta_ids: \n[]",
+      "Text25_Reference": [
+        "Structured evidence: full/APP232/evidence/independent_review/scientific_independent_derived.json#/units/24; SHA-256: f4e2f801c62b796d68e53ed88050c54623e0f0af1b7705f8f3338273ec22b23f; DOI: https://doi.org/10.1038/ncomms14293"
+      ]
+    },
+    {
+      "Text26": "units:\nid: U026\nkind: supp_therapy\nclaim: SupFig4 KP-GFP两个独立队列，同样报告密度不因PLX显著改变；cohort1示例Day0/NT/PLX，cohort2 NT1–4和PLX1–4；图上结节数≠鼠数。SupFig5为Fig4对应整肺TAM图，纵隔为展示被数字移除。\nsource_locator: SupFigs4–5\nresult_id: R_therapy_support\nindependent_review: \n  status: verified_with_source_limits\n  note: S4两队列、S5整肺图齐；S4 cohort2 PLX3/4无结节，密度图仅PLX1/2，不可把无病灶当密度不变。\n  delta_ids: \n    [1] D003\nindependent_addenda: \n  [1] cohort2 PLX-3/PLX-4柱上各0结节且没有对应TAM密度箱图；密度不显著变化只适用于可分析结节，不能表述零病灶肺的TAM密度不变。",
+      "Text26_Reference": [
+        "Structured evidence: full/APP232/evidence/independent_review/scientific_independent_derived.json#/units/25; SHA-256: f4e2f801c62b796d68e53ed88050c54623e0f0af1b7705f8f3338273ec22b23f; DOI: https://doi.org/10.1038/ncomms14293"
+      ]
+    },
+    {
+      "Text27": "units:\nid: U027\nkind: drug_signal\nclaim: Fig5与SupFig6双标纳米药物展示DTX/PLGA在转移灶中的信号异质性及与TAM相关；图5b所谓浓度轴实际AU/mm³，不能当绝对药物质量浓度；图5c与S6d的TAM轴也是AU/mm³，不应误贴cells/mm³。\nsource_locator: Fig5a–c; SupFig6a–d; Results sec4\nsample_id: S_drug\nresult_id: R_drug\npreparation_and_delivery: excluded\nindependent_review: \n  status: verified_with_source_limits\n  note: Fig5b和5c横轴、S6c/d轴逐一核对；Fig5c药物纵轴仅AU，须与S6 AU/mm³区分。\n  delta_ids: \n    [1] D001\nindependent_addenda: \n  [1] Fig5c纵轴原样Drug density (AU)，未注明体积分母；横轴TAM density (AU mm−3)。S6c/d纵轴DTX density和横轴PLGA/TAM density明确AU/mm³。逐panel保留，不静默统一。",
+      "Text27_Reference": [
+        "Structured evidence: full/APP232/evidence/independent_review/scientific_independent_derived.json#/units/26; SHA-256: f4e2f801c62b796d68e53ed88050c54623e0f0af1b7705f8f3338273ec22b23f; DOI: https://doi.org/10.1038/ncomms14293"
+      ]
+    },
+    {
+      "Text28": "units:\nid: U028\nkind: drug_correlation\nclaim: 补图6c DTX-PLGA r²=.9436，6d DTX-TAM信号密度r²=.8389；正文将前者约写.94。共定位/相关支持示踪信号关联，不证明每个结节有效药物浓度、杀伤效果或TAM因果递送机制。\nsource_locator: SupFig6c–d; Results sec4\nresult_id: R_drug\nmetric_unit: S6c–d: fluorescence AU/mm³; Fig5c drug y-axis is labelled AU only\nindependent_review: \n  status: verified_with_source_limits\n  note: S6c r²=.9436及d r²=.8389直接可见；相关不是因果/有效质量浓度。\n  delta_ids: \n    [1] D001\nindependent_addenda: \n  [1] Fig5c纵轴原样Drug density (AU)，未注明体积分母；横轴TAM density (AU mm−3)。S6c/d纵轴DTX density和横轴PLGA/TAM density明确AU/mm³。逐panel保留，不静默统一。",
+      "Text28_Reference": [
+        "Structured evidence: full/APP232/evidence/independent_review/scientific_independent_derived.json#/units/27; SHA-256: f4e2f801c62b796d68e53ed88050c54623e0f0af1b7705f8f3338273ec22b23f; DOI: https://doi.org/10.1038/ncomms14293"
+      ]
+    },
+    {
+      "Text29": "units:\nid: U029\nkind: invitro_support\nclaim: SupFig8 KP1.9未检测CSF1R，RAW对照有受体；PLX体外活性曲线作为背景支持，不把它视为已确证治疗完全由TAM调节或解释为新临床用药建议。\nsource_locator: SupFig8; Results sec3 p1\nresult_id: R_mechanism_limit\nindependent_review: \n  status: verified_with_source_limits\n  note: S8阴性KP与RAW阳性对照、PLX蓝线与dox红线核对；RAW264.1图注与264.7图内/正文拼写差异保留。\n  delta_ids: \n    [1] D005\nindependent_addenda: \n  [1] S8图注末句写RAW264.1，S8a图内、同页前句及Methods均写RAW264.7；仅作为原文标识差异保留，不创建额外细胞系分支。",
+      "Text29_Reference": [
+        "Structured evidence: full/APP232/evidence/independent_review/scientific_independent_derived.json#/units/28; SHA-256: f4e2f801c62b796d68e53ed88050c54623e0f0af1b7705f8f3338273ec22b23f; DOI: https://doi.org/10.1038/ncomms14293"
+      ]
+    },
+    {
+      "Text30": "units:\nid: U030\nkind: other_supp\nclaim: SupFig1还示健康肺、气道streptavidin及胶原SHG；S7介质对照、S9压腔对照、S10八个带瘤肺透明前后图。透明外观非光透射率定量测定。\nsource_locator: SupFigs1,7,9,10\nresult_id: R_support\nindependent_review: \n  status: verified_with_source_limits\n  note: S1/S7/S9/S10各支持内容核对，S10八肺成像前后，不是透射率定量。\n  delta_ids: \n[]",
+      "Text30_Reference": [
+        "Structured evidence: full/APP232/evidence/independent_review/scientific_independent_derived.json#/units/29; SHA-256: f4e2f801c62b796d68e53ed88050c54623e0f0af1b7705f8f3338273ec22b23f; DOI: https://doi.org/10.1038/ncomms14293"
+      ]
+    },
+    {
+      "Text31": "units:\nid: U031\nkind: histology_validation\nclaim: 20µm冷冻切片CD68 clone FA-11 1:25、CD206 C068C2 1:25、biotin-anti-rat1:100、streptavidin-DyLight5941:600，DAPI1:3000；仅验证切片分支，不能转移成整肺透明后免疫染色方案。\nsource_locator: Methods sec8; Fig3a–b\nprotocol_id: P_histology\nindependent_review: \n  status: verified_with_source_limits\n  note: 冷冻切片20μm、各抗体clone/稀释核对；不绑定整肺免疫染色。\n  delta_ids: \n[]",
+      "Text31_Reference": [
+        "Structured evidence: full/APP232/evidence/independent_review/scientific_independent_derived.json#/units/30; SHA-256: f4e2f801c62b796d68e53ed88050c54623e0f0af1b7705f8f3338273ec22b23f; DOI: https://doi.org/10.1038/ncomms14293"
+      ]
+    },
+    {
+      "Text32": "units:\nid: U032\nkind: flow_validation\nclaim: 流式表型采用CD45+CD11b+Ly6C−Lin−CD11c+F4/80+定义TAM，肿瘤CD45−EpCAM+。作为标记验证/组别定义，不抽取组织消化与细胞操作步骤。\nsource_locator: Methods sec7; Fig3c\nresult_id: R_specificity\nindependent_review: \n  status: verified_with_source_limits\n  note: 流式TAM与肿瘤表型核对；只保留身份定义，未抽取消化或细胞操作。\n  delta_ids: \n[]",
+      "Text32_Reference": [
+        "Structured evidence: full/APP232/evidence/independent_review/scientific_independent_derived.json#/units/31; SHA-256: f4e2f801c62b796d68e53ed88050c54623e0f0af1b7705f8f3338273ec22b23f; DOI: https://doi.org/10.1038/ncomms14293"
+      ]
+    },
+    {
+      "Text33": "units:\nid: U033\nkind: statistics\nclaim: GraphPad；箱图25–75百分位、须线全范围；正文总体声明非配对t检验，Fig3d one-way ANOVA，相关校准另有检验表述差异。结节嵌套于鼠，结节n不能当独立动物n。\nsource_locator: Methods sec6; Fig3; Fig4; SupFig3\nresult_id: R_stats\nindependent_review: \n  status: verified_with_source_limits\n  note: 总体unpaired、Fig3 ANOVA、S3其他检验措辞均按源保留；嵌套单位限制正确。\n  delta_ids: \n[]",
+      "Text33_Reference": [
+        "Structured evidence: full/APP232/evidence/independent_review/scientific_independent_derived.json#/units/32; SHA-256: f4e2f801c62b796d68e53ed88050c54623e0f0af1b7705f8f3338273ec22b23f; DOI: https://doi.org/10.1038/ncomms14293"
+      ]
+    },
+    {
+      "Text34": "units:\nid: U034\nkind: videos\nclaim: Movie1单瘤旋转/通道依次显示与重组，720帧24fps30s；Movie2肿瘤与气道旋转，240帧24fps10s；Movie3整肺肿瘤、TAM再整肺通道显示，359帧30fps约11.97s。各审24帧，合72帧，覆盖每相关序列；不是活体动态、不新增生物n。\nsource_locator: Movies1–3; video_sampling.json\nn_frames_seen: 72\ncontinuous_playback: false\nindependent_review: \n  status: verified_with_source_limits\n  note: 三片各24抽帧逐序列读图与metadata核对；Movie1多通道、Movie2旋转、Movie3分通道→整肺，非活体动态。\n  delta_ids: \n[]",
+      "Text34_Reference": [
+        "Structured evidence: full/APP232/evidence/independent_review/scientific_independent_derived.json#/units/33; SHA-256: f4e2f801c62b796d68e53ed88050c54623e0f0af1b7705f8f3338273ec22b23f; DOI: https://doi.org/10.1038/ncomms14293"
+      ]
+    },
+    {
+      "Text35": "units:\nid: U035\nkind: movie_size_discrepancy\nclaim: 正文称Movie1肿瘤1.7mm³，视频图例称1mm³；作为不一致记录，不由动画视角推算精确体积。\nsource_locator: Results sec1 p3; Supplement Movie1 caption\ngap_id: G_movie_volume\nindependent_review: \n  status: verified_with_source_limits\n  note: 正文Movie1 1.7mm³和图例1mm³冲突已直接核对。\n  delta_ids: \n[]",
+      "Text35_Reference": [
+        "Structured evidence: full/APP232/evidence/independent_review/scientific_independent_derived.json#/units/34; SHA-256: f4e2f801c62b796d68e53ed88050c54623e0f0af1b7705f8f3338273ec22b23f; DOI: https://doi.org/10.1038/ncomms14293"
+      ]
+    }
+  ],
+  "Note": [
+    {
+      "Text1": "Paper APP232; source coverage: full; source release status: published_in_this_release; source default_eligible: true. Read this study as a whole with its sample, experimental, measurement and limitation fields. All selected source files and mandatory support in the accompanying archive apply jointly. Import does not promote candidate status, resolve contradictions, or turn review citations into independent primary experiments. Application includes source-labelled protocols, comparisons and results; labels within each Text retain their actual role.",
+      "Text1_Reference": [
+        "DOI: https://doi.org/10.1038/ncomms14293",
+        "Evidence-layer structured paraphrase; not a verbatim quotation. Source release: https://github.com/404NotFound422/TOCAgentProject/tree/5e3a711befb3952a2e39f4d53fc9c9f1a7ac0d22/KnowledgeBase/evidence_expansion_20261019",
+        "Local source archive: ../literature_evidence/2026-11-11/source_release.zip; member: full/APP232/version_selection.json"
+      ]
+    },
+    {
+      "Text2": "Selected version and mandatory composition:\npaper_id: APP232\nstatus: full\ndefault_eligible: true\nactive_scientific_files: \n  [1]     path: full/APP232/evidence/independent_review/independent_review_receipt.json\n    sha256: af9b0856356b9dce7844ce94b02ecbba31547ef71d4f6ae608e705a095f29615\n    source_member: independent_review/independent_review_receipt.json\n  [2]     path: full/APP232/evidence/independent_review/receipt_provenance_correction_delta.json\n    sha256: 2e95cf1f4ef379e6b5d55329049457677b8dfc6febe96a18f42e82765a486e08\n    source_member: independent_review/receipt_provenance_correction_delta.json\n  [3]     path: full/APP232/evidence/independent_review/scientific_delta.json\n    sha256: 6c6a46a4d9a034c901d6db33665696c97fedf0f8cd2b39a6cdba026ec1fd98b6\n    source_member: independent_review/scientific_delta.json\n  [4]     path: full/APP232/evidence/independent_review/scientific_independent_derived.json\n    sha256: f4e2f801c62b796d68e53ed88050c54623e0f0af1b7705f8f3338273ec22b23f\n    source_member: independent_review/scientific_independent_derived.json\n  [5]     path: full/APP232/evidence/independent_review/second_independent_delta_review_receipt.json\n    sha256: 2266e6ec96b170c75a500282696d79ac213677a42fc5b928f39ea7a7e4d40004\n    source_member: independent_review/second_independent_delta_review_receipt.json\n  [6]     path: full/APP232/evidence/APP232_R4_inherited_provenance_receipt.json\n    sha256: 0737477d1cf65779780cc79dfe2045b5e9901da0cc74472cbde1e755230d201d\n    source_member: APP232_R4_inherited_provenance_receipt.json\n  [7]     path: full/APP232/evidence/r1_candidate/actual_queries_and_retrievals.json\n    sha256: 3820038cbcef25570318d49be0a78510766afc89ebc3ab2ced6effc5ece24538\n    source_member: r1_candidate/actual_queries_and_retrievals.json\n  [8]     path: full/APP232/evidence/r1_candidate/source_manifest.json\n    sha256: 98fb70125668629a61ab4273eefa00e69f380d2619eea3e5ffcddceb86dcb460\n    source_member: r1_candidate/source_manifest.json\n  [9]     path: full/APP232/evidence/APP232_final_acceptance.json\n    sha256: 75f31b1df87fc354741526f3ef5fb2576fda74f27ec9cc515bf36781afcc82c1\n    source_member: APP232_final_acceptance.json\nacceptance: full/APP232/evidence/APP232_final_acceptance.json\nmandatory_composition: Every selected file is jointly required, including overlays, deltas, scope guards, provenance corrections and review receipts. Do not use a base record alone.\nactive_version_and_scope: \n  paper_id: APP232\n  current_full_task_scope: true\n  partial: false\n  remaining_relevant_gaps: \n[]\n  package_sha256: c5dab9c766b0b2bcf362404c9e806d92523672e44938d9fde7e1dc10863a18f4\n  original_package_sha256: c5daf8a5953b7961adaa441061f721679c770b451c15e0b9fd39959f31160b7a\n  acceptance_archive_member: APP232_final_acceptance.json\n  active_version: Final acceptance with af9b corrected provenance receipt, exact unchanged science, six-delta and second independent review; old6acc receipt is exact reconstructed history only, not claimed continuously preserved\n  historical_nonactive_members: \n    [1] independent_review/independent_review_receipt_v1_superseded.json\n  version_proof_precedence: receipt_provenance_correction_delta.history_recovery explains exact reconstruction; do not infer old receipt was pre-existing from ambiguous final acceptance wording\n  net_new_vs_verified117: true\n  doi_crosswalk_check: \n    doi: 10.1038/ncomms14293\n    historical117_matches: \n[]\n  stage_provenance: \n    R1: \n      execution_period: current_window\n      complete_current_task_scope: true\n      basis: cached candidate extraction and logged retrieval\n    R2: \n      execution_period: current_window\n      complete_current_task_scope: true\n      basis: independent full scientific-scope review\n    R3: \n      execution_period: current_window\n      complete_current_task_scope: true\n      basis: second independent narrow review PASS on six deltas\n    R4: \n      execution_period: current_window\n      complete_current_task_scope: true\n      basis: inherited retrieval/manifest byte verification; no new requests; same-window R1 retrieval reused, four HTML responses excluded as scientific attachments\n  counts: \n    units: 35\n    main_figures: 5\n    main_tables: 2\n    supplement_pages: 10\n    supplement_figures: 10\n    videos: 3\n    video_frames_visually_reviewed: 72\n  change_classification: \n    source_inconsistency_or_publication_version: \n      [1] Source AU versusAU/mm3, DAPI/SYTO13 and RAW identifiers remain unresolved\n    source_acquisition_or_version_packaging_issue: \n      [1] Our review receipt wrongly identified HTML as supplementPDF; active provenance now binds actual PDF; oldreceipt bytes exactly reconstructed, not pre-existing\n    our_relation_or_scope_binding_error: \n      [1] Independent six-delta limitations accepted; section staining not transferred to whole-lung conditions\noriginal_member_to_release_path: \n  independent_review/independent_review_receipt.json: full/APP232/evidence/independent_review/independent_review_receipt.json\n  independent_review/receipt_provenance_correction_delta.json: full/APP232/evidence/independent_review/receipt_provenance_correction_delta.json\n  independent_review/scientific_delta.json: full/APP232/evidence/independent_review/scientific_delta.json\n  independent_review/scientific_independent_derived.json: full/APP232/evidence/independent_review/scientific_independent_derived.json\n  independent_review/second_independent_delta_review_receipt.json: full/APP232/evidence/independent_review/second_independent_delta_review_receipt.json\n  APP232_R4_inherited_provenance_receipt.json: full/APP232/evidence/APP232_R4_inherited_provenance_receipt.json\n  r1_candidate/actual_queries_and_retrievals.json: full/APP232/evidence/r1_candidate/actual_queries_and_retrievals.json\n  r1_candidate/source_manifest.json: full/APP232/evidence/r1_candidate/source_manifest.json\n  APP232_final_acceptance.json: full/APP232/evidence/APP232_final_acceptance.json\nsource_asset_policy: Original PDFs, videos, images, workbooks and raw source spans are external provenance only and are not needed to load these structured scientific records.\nhistory_rule: Only this explicit selection is active. Superseded history is not published or recursively promoted.\nactive_reference_aliases: \n  independent_review/independent_review_receipt.json: full/APP232/evidence/independent_review/independent_review_receipt.json\n  independent_review/receipt_provenance_correction_delta.json: full/APP232/evidence/independent_review/receipt_provenance_correction_delta.json\n  independent_review/scientific_delta.json: full/APP232/evidence/independent_review/scientific_delta.json\n  independent_review/scientific_independent_derived.json: full/APP232/evidence/independent_review/scientific_independent_derived.json\n  independent_review/second_independent_delta_review_receipt.json: full/APP232/evidence/independent_review/second_independent_delta_review_receipt.json\n  APP232_R4_inherited_provenance_receipt.json: full/APP232/evidence/APP232_R4_inherited_provenance_receipt.json\n  r1_candidate/actual_queries_and_retrievals.json: full/APP232/evidence/r1_candidate/actual_queries_and_retrievals.json\n  r1_candidate/source_manifest.json: full/APP232/evidence/r1_candidate/source_manifest.json\n  APP232_final_acceptance.json: full/APP232/evidence/APP232_final_acceptance.json\n  paper_completion/APP232/independent_review/scientific_independent_derived.json: full/APP232/evidence/independent_review/scientific_independent_derived.json\n  paper_completion/APP232/independent_review/independent_review_receipt.json: full/APP232/evidence/independent_review/independent_review_receipt.json\n  paper_completion/APP232/independent_review/scientific_delta.json: full/APP232/evidence/independent_review/scientific_delta.json\n  paper_completion/APP232/r1_candidate/actual_queries_and_retrievals.json: full/APP232/evidence/r1_candidate/actual_queries_and_retrievals.json\n  paper_completion/APP232/r1_candidate/source_manifest.json: full/APP232/evidence/r1_candidate/source_manifest.json\n  paper_completion/APP232/independent_review/second_independent_delta_review_receipt.json: full/APP232/evidence/independent_review/second_independent_delta_review_receipt.json\n  paper_completion/APP232/APP232_R4_inherited_provenance_receipt.json: full/APP232/evidence/APP232_R4_inherited_provenance_receipt.json\n  paper_completion/APP232/independent_review/receipt_provenance_correction_delta.json: full/APP232/evidence/independent_review/receipt_provenance_correction_delta.json\nactive_reference_resolution_evidence: \n  [1]     source_file: full/APP232/evidence/independent_review/independent_review_receipt.json\n    json_pointer: /derived_artifact\n    reference: paper_completion/APP232/independent_review/scientific_independent_derived.json\n    resolved_release_path: full/APP232/evidence/independent_review/scientific_independent_derived.json\n    binding_basis: unique_verified_original_member_path\n  [2]     source_file: full/APP232/evidence/independent_review/receipt_provenance_correction_delta.json\n    json_pointer: /current_receipt\n    reference: paper_completion/APP232/independent_review/independent_review_receipt.json\n    resolved_release_path: full/APP232/evidence/independent_review/independent_review_receipt.json\n    binding_basis: unique_verified_original_member_path\n  [3]     source_file: full/APP232/evidence/independent_review/second_independent_delta_review_receipt.json\n    json_pointer: /science_path\n    reference: paper_completion/APP232/independent_review/scientific_independent_derived.json\n    resolved_release_path: full/APP232/evidence/independent_review/scientific_independent_derived.json\n    binding_basis: unique_verified_original_member_path\n  [4]     source_file: full/APP232/evidence/independent_review/second_independent_delta_review_receipt.json\n    json_pointer: /delta_path\n    reference: paper_completion/APP232/independent_review/scientific_delta.json\n    resolved_release_path: full/APP232/evidence/independent_review/scientific_delta.json\n    binding_basis: unique_verified_original_member_path\n  [5]     source_file: full/APP232/evidence/APP232_R4_inherited_provenance_receipt.json\n    json_pointer: /inherited_log\n    reference: paper_completion/APP232/r1_candidate/actual_queries_and_retrievals.json\n    resolved_release_path: full/APP232/evidence/r1_candidate/actual_queries_and_retrievals.json\n    binding_basis: unique_verified_original_member_path\n  [6]     source_file: full/APP232/evidence/APP232_R4_inherited_provenance_receipt.json\n    json_pointer: /inherited_manifest\n    reference: paper_completion/APP232/r1_candidate/source_manifest.json\n    resolved_release_path: full/APP232/evidence/r1_candidate/source_manifest.json\n    binding_basis: unique_verified_original_member_path\n  [7]     source_file: full/APP232/evidence/APP232_final_acceptance.json\n    json_pointer: /active_scientific_path\n    reference: paper_completion/APP232/independent_review/scientific_independent_derived.json\n    resolved_release_path: full/APP232/evidence/independent_review/scientific_independent_derived.json\n    binding_basis: unique_verified_original_member_path\n  [8]     source_file: full/APP232/evidence/APP232_final_acceptance.json\n    json_pointer: /active_delta_path\n    reference: paper_completion/APP232/independent_review/scientific_delta.json\n    resolved_release_path: full/APP232/evidence/independent_review/scientific_delta.json\n    binding_basis: unique_verified_original_member_path\n  [9]     source_file: full/APP232/evidence/APP232_final_acceptance.json\n    json_pointer: /active_independent_receipt\n    reference: paper_completion/APP232/independent_review/independent_review_receipt.json\n    resolved_release_path: full/APP232/evidence/independent_review/independent_review_receipt.json\n    binding_basis: unique_verified_original_member_path\n  [10]     source_file: full/APP232/evidence/APP232_final_acceptance.json\n    json_pointer: /second_delta_review_receipt\n    reference: paper_completion/APP232/independent_review/second_independent_delta_review_receipt.json\n    resolved_release_path: full/APP232/evidence/independent_review/second_independent_delta_review_receipt.json\n    binding_basis: unique_verified_original_member_path\n  [11]     source_file: full/APP232/evidence/APP232_final_acceptance.json\n    json_pointer: /R4_receipt\n    reference: paper_completion/APP232/APP232_R4_inherited_provenance_receipt.json\n    resolved_release_path: full/APP232/evidence/APP232_R4_inherited_provenance_receipt.json\n    binding_basis: unique_verified_original_member_path\n  [12]     source_file: full/APP232/evidence/APP232_final_acceptance.json\n    json_pointer: /files/0/path\n    reference: paper_completion/APP232/independent_review/independent_review_receipt.json\n    resolved_release_path: full/APP232/evidence/independent_review/independent_review_receipt.json\n    binding_basis: same_paper_exact_source_sha256\n  [13]     source_file: full/APP232/evidence/APP232_final_acceptance.json\n    json_pointer: /files/2/path\n    reference: paper_completion/APP232/independent_review/receipt_provenance_correction_delta.json\n    resolved_release_path: full/APP232/evidence/independent_review/receipt_provenance_correction_delta.json\n    binding_basis: same_paper_exact_source_sha256\n  [14]     source_file: full/APP232/evidence/APP232_final_acceptance.json\n    json_pointer: /files/3/path\n    reference: paper_completion/APP232/independent_review/scientific_delta.json\n    resolved_release_path: full/APP232/evidence/independent_review/scientific_delta.json\n    binding_basis: same_paper_exact_source_sha256\n  [15]     source_file: full/APP232/evidence/APP232_final_acceptance.json\n    json_pointer: /files/4/path\n    reference: paper_completion/APP232/independent_review/scientific_independent_derived.json\n    resolved_release_path: full/APP232/evidence/independent_review/scientific_independent_derived.json\n    binding_basis: same_paper_exact_source_sha256\n  [16]     source_file: full/APP232/evidence/APP232_final_acceptance.json\n    json_pointer: /files/5/path\n    reference: paper_completion/APP232/independent_review/second_independent_delta_review_receipt.json\n    resolved_release_path: full/APP232/evidence/independent_review/second_independent_delta_review_receipt.json\n    binding_basis: same_paper_exact_source_sha256\n  [17]     source_file: full/APP232/evidence/APP232_final_acceptance.json\n    json_pointer: /files/6/path\n    reference: paper_completion/APP232/APP232_R4_inherited_provenance_receipt.json\n    resolved_release_path: full/APP232/evidence/APP232_R4_inherited_provenance_receipt.json\n    binding_basis: same_paper_exact_source_sha256\n  [18]     source_file: full/APP232/evidence/APP232_final_acceptance.json\n    json_pointer: /files/7/path\n    reference: paper_completion/APP232/r1_candidate/actual_queries_and_retrievals.json\n    resolved_release_path: full/APP232/evidence/r1_candidate/actual_queries_and_retrievals.json\n    binding_basis: same_paper_exact_source_sha256\n  [19]     source_file: full/APP232/evidence/APP232_final_acceptance.json\n    json_pointer: /files/8/path\n    reference: paper_completion/APP232/r1_candidate/source_manifest.json\n    resolved_release_path: full/APP232/evidence/r1_candidate/source_manifest.json\n    binding_basis: same_paper_exact_source_sha256\nexternal_or_historical_references: \n  [1]     source_file: full/APP232/evidence/independent_review/independent_review_receipt.json\n    json_pointer: /source_hashes/0/path\n    reference: paper_completion/APP232/r1_candidate/scientific_candidate.json\n    automatic_loading: false\n    role: superseded_or_historical_provenance_not_active\n  [2]     source_file: full/APP232/evidence/independent_review/independent_review_receipt.json\n    json_pointer: /source_hashes/3/path\n    reference: paper_completion/APP232/private_sources/indexed_text.txt\n    automatic_loading: false\n    role: external_original_source_or_acquisition_provenance_not_runtime\n  [3]     source_file: full/APP232/evidence/independent_review/independent_review_receipt.json\n    json_pointer: /source_hashes/4/path\n    reference: paper_completion/APP232/private_sources/supplement.txt\n    automatic_loading: false\n    role: external_original_source_or_acquisition_provenance_not_runtime\n  [4]     source_file: full/APP232/evidence/independent_review/receipt_provenance_correction_delta.json\n    json_pointer: /previous_receipt\n    reference: paper_completion/APP232/independent_review/independent_review_receipt_v1_superseded.json\n    automatic_loading: false\n    role: superseded_or_historical_provenance_not_active\n  [5]     source_file: full/APP232/evidence/APP232_R4_inherited_provenance_receipt.json\n    json_pointer: /source_manifest_verified/4/path\n    reference: paper_completion/APP232/private_sources/asset_receipts.json\n    automatic_loading: false\n    role: external_original_source_or_acquisition_provenance_not_runtime\n  [6]     source_file: full/APP232/evidence/APP232_R4_inherited_provenance_receipt.json\n    json_pointer: /source_manifest_verified/5/path\n    reference: paper_completion/APP232/private_sources/fetch_page_receipt.json\n    automatic_loading: false\n    role: external_original_source_or_acquisition_provenance_not_runtime\n  [7]     source_file: full/APP232/evidence/APP232_R4_inherited_provenance_receipt.json\n    json_pointer: /source_manifest_verified/7/path\n    reference: paper_completion/APP232/private_sources/indexed_text.txt\n    automatic_loading: false\n    role: external_original_source_or_acquisition_provenance_not_runtime\n  [8]     source_file: full/APP232/evidence/APP232_R4_inherited_provenance_receipt.json\n    json_pointer: /source_manifest_verified/9/path\n    reference: paper_completion/APP232/private_sources/nature_assets_receipts.json\n    automatic_loading: false\n    role: external_original_source_or_acquisition_provenance_not_runtime\n  [9]     source_file: full/APP232/evidence/APP232_R4_inherited_provenance_receipt.json\n    json_pointer: /source_manifest_verified/10/path\n    reference: paper_completion/APP232/private_sources/nature_receipt.json\n    automatic_loading: false\n    role: external_original_source_or_acquisition_provenance_not_runtime\n  [10]     source_file: full/APP232/evidence/APP232_R4_inherited_provenance_receipt.json\n    json_pointer: /source_manifest_verified/21/path\n    reference: paper_completion/APP232/private_sources/supplement.txt\n    automatic_loading: false\n    role: external_original_source_or_acquisition_provenance_not_runtime\n  [11]     source_file: full/APP232/evidence/APP232_R4_inherited_provenance_receipt.json\n    json_pointer: /source_manifest_verified/22/path\n    reference: paper_completion/APP232/private_sources/video_sampling.json\n    automatic_loading: false\n    role: external_original_source_or_acquisition_provenance_not_runtime\n  [12]     source_file: full/APP232/evidence/r1_candidate/source_manifest.json\n    json_pointer: /4/file\n    reference: paper_completion/APP232/private_sources/asset_receipts.json\n    automatic_loading: false\n    role: external_original_source_or_acquisition_provenance_not_runtime\n  [13]     source_file: full/APP232/evidence/r1_candidate/source_manifest.json\n    json_pointer: /5/file\n    reference: paper_completion/APP232/private_sources/fetch_page_receipt.json\n    automatic_loading: false\n    role: external_original_source_or_acquisition_provenance_not_runtime\n  [14]     source_file: full/APP232/evidence/r1_candidate/source_manifest.json\n    json_pointer: /7/file\n    reference: paper_completion/APP232/private_sources/indexed_text.txt\n    automatic_loading: false\n    role: external_original_source_or_acquisition_provenance_not_runtime\n  [15]     source_file: full/APP232/evidence/r1_candidate/source_manifest.json\n    json_pointer: /9/file\n    reference: paper_completion/APP232/private_sources/nature_assets_receipts.json\n    automatic_loading: false\n    role: external_original_source_or_acquisition_provenance_not_runtime\n  [16]     source_file: full/APP232/evidence/r1_candidate/source_manifest.json\n    json_pointer: /10/file\n    reference: paper_completion/APP232/private_sources/nature_receipt.json\n    automatic_loading: false\n    role: external_original_source_or_acquisition_provenance_not_runtime\n  [17]     source_file: full/APP232/evidence/r1_candidate/source_manifest.json\n    json_pointer: /21/file\n    reference: paper_completion/APP232/private_sources/supplement.txt\n    automatic_loading: false\n    role: external_original_source_or_acquisition_provenance_not_runtime\n  [18]     source_file: full/APP232/evidence/r1_candidate/source_manifest.json\n    json_pointer: /22/file\n    reference: paper_completion/APP232/private_sources/video_sampling.json\n    automatic_loading: false\n    role: external_original_source_or_acquisition_provenance_not_runtime\n  [19]     source_file: full/APP232/evidence/APP232_final_acceptance.json\n    json_pointer: /inactive_historical_receipt\n    reference: paper_completion/APP232/independent_review/independent_review_receipt_v1_superseded.json\n    automatic_loading: false\n    role: superseded_or_historical_provenance_not_active\n  [20]     source_file: full/APP232/evidence/APP232_final_acceptance.json\n    json_pointer: /files/1/path\n    reference: paper_completion/APP232/independent_review/independent_review_receipt_v1_superseded.json\n    automatic_loading: false\n    role: superseded_or_historical_provenance_not_active\nreference_resolution_policy: Resolve only explicit exact aliases to SHA-bound selected science or required support. Unlisted/ambiguous references raise an error. Never use basename/fuzzy matching at runtime, recursively load history, or activate original source assets.\nrequired_supporting_files: \n[]",
+      "Text2_Reference": [
+        "DOI: https://doi.org/10.1038/ncomms14293",
+        "Evidence-layer structured paraphrase; not a verbatim quotation. Source release: https://github.com/404NotFound422/TOCAgentProject/tree/5e3a711befb3952a2e39f4d53fc9c9f1a7ac0d22/KnowledgeBase/evidence_expansion_20261019",
+        "Local source archive: ../literature_evidence/2026-11-11/source_release.zip; member: full/APP232/version_selection.json"
+      ]
+    },
+    {
+      "Text3": "main_figures:\nfigure: 1\npath: paper_completion/APP232/private_sources/ncomms14293-f1.jpg\nvisual_read: true",
+      "Text3_Reference": [
+        "Structured evidence: full/APP232/evidence/independent_review/independent_review_receipt.json#/main_figures/0; SHA-256: af9b0856356b9dce7844ce94b02ecbba31547ef71d4f6ae608e705a095f29615; DOI: https://doi.org/10.1038/ncomms14293"
+      ]
+    },
+    {
+      "Text4": "main_figures:\nfigure: 2\npath: paper_completion/APP232/private_sources/ncomms14293-f2.jpg\nvisual_read: true",
+      "Text4_Reference": [
+        "Structured evidence: full/APP232/evidence/independent_review/independent_review_receipt.json#/main_figures/1; SHA-256: af9b0856356b9dce7844ce94b02ecbba31547ef71d4f6ae608e705a095f29615; DOI: https://doi.org/10.1038/ncomms14293"
+      ]
+    },
+    {
+      "Text5": "main_figures:\nfigure: 3\npath: paper_completion/APP232/private_sources/ncomms14293-f3.jpg\nvisual_read: true",
+      "Text5_Reference": [
+        "Structured evidence: full/APP232/evidence/independent_review/independent_review_receipt.json#/main_figures/2; SHA-256: af9b0856356b9dce7844ce94b02ecbba31547ef71d4f6ae608e705a095f29615; DOI: https://doi.org/10.1038/ncomms14293"
+      ]
+    },
+    {
+      "Text6": "main_figures:\nfigure: 4\npath: paper_completion/APP232/private_sources/ncomms14293-f4.jpg\nvisual_read: true",
+      "Text6_Reference": [
+        "Structured evidence: full/APP232/evidence/independent_review/independent_review_receipt.json#/main_figures/3; SHA-256: af9b0856356b9dce7844ce94b02ecbba31547ef71d4f6ae608e705a095f29615; DOI: https://doi.org/10.1038/ncomms14293"
+      ]
+    },
+    {
+      "Text7": "main_figures:\nfigure: 5\npath: paper_completion/APP232/private_sources/ncomms14293-f5.jpg\nvisual_read: true",
+      "Text7_Reference": [
+        "Structured evidence: full/APP232/evidence/independent_review/independent_review_receipt.json#/main_figures/4; SHA-256: af9b0856356b9dce7844ce94b02ecbba31547ef71d4f6ae608e705a095f29615; DOI: https://doi.org/10.1038/ncomms14293"
+      ]
+    },
+    {
+      "Text8": "main_tables:\ntable: 1\nsource_locator: /article/body/sec[1]/sec[1]/table-wrap[1]\nall_rows_read: true\nread_method: structured XML table text\nscope_note: Only fixed-tissue/imaging details enter derivative; in-vivo/model operations not extracted",
+      "Text8_Reference": [
+        "Structured evidence: full/APP232/evidence/independent_review/independent_review_receipt.json#/main_tables/0; SHA-256: af9b0856356b9dce7844ce94b02ecbba31547ef71d4f6ae608e705a095f29615; DOI: https://doi.org/10.1038/ncomms14293"
+      ]
+    },
+    {
+      "Text9": "main_tables:\ntable: 2\nsource_locator: /article/body/sec[1]/sec[1]/table-wrap[2]\nall_rows_read: true\nread_method: structured XML table text\nscope_note: Only fixed-tissue/imaging details enter derivative; in-vivo/model operations not extracted",
+      "Text9_Reference": [
+        "Structured evidence: full/APP232/evidence/independent_review/independent_review_receipt.json#/main_tables/1; SHA-256: af9b0856356b9dce7844ce94b02ecbba31547ef71d4f6ae608e705a095f29615; DOI: https://doi.org/10.1038/ncomms14293"
+      ]
+    },
+    {
+      "Text10": "scope:\nFixed tissue clearing, labeling identities and fixed-tissue histology, imaging, analytical outcomes; S2b in-vivo observations retained only as segregated validation results; no operational model/viral/drug-delivery details or optimization",
+      "Text10_Reference": [
+        "Structured evidence: full/APP232/evidence/independent_review/independent_review_receipt.json#/scope; SHA-256: af9b0856356b9dce7844ce94b02ecbba31547ef71d4f6ae608e705a095f29615; DOI: https://doi.org/10.1038/ncomms14293"
+      ]
+    },
+    {
+      "Text11": "Source version and scope record (not an additional scientific claim): receipt_provenance_correction_delta:\npaper_id: APP232\nprevious_receipt: paper_completion/APP232/independent_review/independent_review_receipt_v1_superseded.json\nprevious_sha256: 6accfcb7bb273e429edf196b871125eaa3649c0ee7413b8b426cab91631d156a\ncurrent_receipt: paper_completion/APP232/independent_review/independent_review_receipt.json\ncurrent_sha256: af9b0856356b9dce7844ce94b02ecbba31547ef71d4f6ae608e705a095f29615\nchange: Only source_hashes PDF entry corrected from PMC HTML interstitial to actual Nature PDF and clarification appended. Scientific derived and delta bytes unchanged.\nhistory_recovery: Prior reported exact bytes reconstructed and SHA256 verified; original timestamp and all other content retained.\nfuture_writes: New versions only; both reported receipt versions frozen.",
+      "Text11_Reference": [
+        "Structured evidence: full/APP232/evidence/independent_review/receipt_provenance_correction_delta.json#; SHA-256: 2e95cf1f4ef379e6b5d55329049457677b8dfc6febe96a18f42e82765a486e08; DOI: https://doi.org/10.1038/ncomms14293"
+      ]
+    },
+    {
+      "Text12": "reading_scope:\nbody: full relevant scientific body; operational model establishment/viral generation excluded from derivative\nmain_figures: \n  [1] 1\n  [2] 2\n  [3] 3\n  [4] 4\n  [5] 5\nmain_tables: \n  [1] 1\n  [2] 2\nsupplement_pages: 10\nsupplement_figures: \n  [1] 1\n  [2] 2\n  [3] 3\n  [4] 4\n  [5] 5\n  [6] 6\n  [7] 7\n  [8] 8\n  [9] 9\n  [10] 10\nmovies: \n  [1] 1\n  [2] 2\n  [3] 3\nvideo_sampling: 24 frames each, 72 total; all relevant channel/rotation sequences covered",
+      "Text12_Reference": [
+        "Structured evidence: full/APP232/evidence/independent_review/scientific_independent_derived.json#/reading_scope; SHA-256: f4e2f801c62b796d68e53ed88050c54623e0f0af1b7705f8f3338273ec22b23f; DOI: https://doi.org/10.1038/ncomms14293"
+      ]
+    },
+    {
+      "Text13": "safety_scope:\nincluded: fixed tissue clearing, labeling identity, imaging and analytical outcomes\nexcluded: viral construction/infection/production/delivery; model establishment details; drug formulation/delivery operations\nactual_denial_observed_this_run: false\nlegacy_blocked_status: nonspecific old batch entry, not paper-specific denial",
+      "Text13_Reference": [
+        "Structured evidence: full/APP232/evidence/independent_review/scientific_independent_derived.json#/safety_scope; SHA-256: f4e2f801c62b796d68e53ed88050c54623e0f0af1b7705f8f3338273ec22b23f; DOI: https://doi.org/10.1038/ncomms14293"
+      ]
+    },
+    {
+      "Text14": "unresolved_gaps:\nid: G_acquisition_time\ntype: source_reporting_variation\ndescription: Table2单瘤20min与Methods约10min；需保留各采集条件，未统一。",
+      "Text14_Reference": [
+        "Structured evidence: full/APP232/evidence/independent_review/scientific_independent_derived.json#/unresolved_gaps/0; SHA-256: f4e2f801c62b796d68e53ed88050c54623e0f0af1b7705f8f3338273ec22b23f; DOI: https://doi.org/10.1038/ncomms14293"
+      ]
+    },
+    {
+      "Text15": "unresolved_gaps:\nid: G_calibration\ntype: source_conflict\ndescription: S3正文r=.9042而图内r=.9052；检验表述亦不同。",
+      "Text15_Reference": [
+        "Structured evidence: full/APP232/evidence/independent_review/scientific_independent_derived.json#/unresolved_gaps/1; SHA-256: f4e2f801c62b796d68e53ed88050c54623e0f0af1b7705f8f3338273ec22b23f; DOI: https://doi.org/10.1038/ncomms14293"
+      ]
+    },
+    {
+      "Text16": "unresolved_gaps:\nid: G_model_p\ntype: source_conflict\ndescription: KP-GFP比较P正文.0001，Fig3图注.0003。",
+      "Text16_Reference": [
+        "Structured evidence: full/APP232/evidence/independent_review/scientific_independent_derived.json#/unresolved_gaps/2; SHA-256: f4e2f801c62b796d68e53ed88050c54623e0f0af1b7705f8f3338273ec22b23f; DOI: https://doi.org/10.1038/ncomms14293"
+      ]
+    },
+    {
+      "Text17": "unresolved_gaps:\nid: G_nodule_denominator\ntype: not_resolved_by_source\ndescription: Fig4a各鼠可见结节总数195与Fig4b n=423不一致；不强制绑定相同分析集合。",
+      "Text17_Reference": [
+        "Structured evidence: full/APP232/evidence/independent_review/scientific_independent_derived.json#/unresolved_gaps/3; SHA-256: f4e2f801c62b796d68e53ed88050c54623e0f0af1b7705f8f3338273ec22b23f; DOI: https://doi.org/10.1038/ncomms14293"
+      ]
+    },
+    {
+      "Text18": "unresolved_gaps:\nid: G_movie_volume\ntype: source_conflict\ndescription: Movie1正文1.7mm³、图例1mm³。",
+      "Text18_Reference": [
+        "Structured evidence: full/APP232/evidence/independent_review/scientific_independent_derived.json#/unresolved_gaps/4; SHA-256: f4e2f801c62b796d68e53ed88050c54623e0f0af1b7705f8f3338273ec22b23f; DOI: https://doi.org/10.1038/ncomms14293"
+      ]
+    },
+    {
+      "Text19": "unresolved_gaps:\nid: G_specificity\ntype: interpretation_limit\ndescription: NP非TAM完全专一；S2a固定/S2b活体分支不得混为整肺验证。",
+      "Text19_Reference": [
+        "Structured evidence: full/APP232/evidence/independent_review/scientific_independent_derived.json#/unresolved_gaps/5; SHA-256: f4e2f801c62b796d68e53ed88050c54623e0f0af1b7705f8f3338273ec22b23f; DOI: https://doi.org/10.1038/ncomms14293"
+      ]
+    },
+    {
+      "Text20": "unresolved_gaps:\nid: G_signal_units\ntype: interpretation_limit\ndescription: DTX/PLGA及相应TAM信号相关图用AU/mm³，不是绝对浓度或cells/mm³。",
+      "Text20_Reference": [
+        "Structured evidence: full/APP232/evidence/independent_review/scientific_independent_derived.json#/unresolved_gaps/6; SHA-256: f4e2f801c62b796d68e53ed88050c54623e0f0af1b7705f8f3338273ec22b23f; DOI: https://doi.org/10.1038/ncomms14293"
+      ]
+    },
+    {
+      "Text21": "unresolved_gaps:\nid: G_S1_nuclear_label\ntype: source_conflict\ndescription: S1c图内Nuclei (DAPI)，同页图注称SYTO13；正文DAPI与GFP分割Spearman .95。保留图注/图内差异，不能断定图中究竟何核染。",
+      "Text21_Reference": [
+        "Structured evidence: full/APP232/evidence/independent_review/scientific_independent_derived.json#/unresolved_gaps/7; SHA-256: f4e2f801c62b796d68e53ed88050c54623e0f0af1b7705f8f3338273ec22b23f; DOI: https://doi.org/10.1038/ncomms14293"
+      ]
+    },
+    {
+      "Text22": "unresolved_gaps:\nid: G_panel_specific_units\ntype: source_reporting_variation\ndescription: Fig5c纵轴原样Drug density (AU)，未注明体积分母；横轴TAM density (AU mm−3)。S6c/d纵轴DTX density和横轴PLGA/TAM density明确AU/mm³。逐panel保留，不静默统一。",
+      "Text22_Reference": [
+        "Structured evidence: full/APP232/evidence/independent_review/scientific_independent_derived.json#/unresolved_gaps/8; SHA-256: f4e2f801c62b796d68e53ed88050c54623e0f0af1b7705f8f3338273ec22b23f; DOI: https://doi.org/10.1038/ncomms14293"
+      ]
+    },
+    {
+      "Text23": "unresolved_gaps:\nid: G_whole_lung_label_imaging_parameters\ntype: not_reported\ndescription: 整肺核染/streptavidin-AF750浓度和孵育时长、完整激发/发射及z采样未见明确报告；不能从切片DAPI1:3000移用于整肺，缺报不等于实验失败。",
+      "Text23_Reference": [
+        "Structured evidence: full/APP232/evidence/independent_review/scientific_independent_derived.json#/unresolved_gaps/9; SHA-256: f4e2f801c62b796d68e53ed88050c54623e0f0af1b7705f8f3338273ec22b23f; DOI: https://doi.org/10.1038/ncomms14293"
+      ]
+    },
+    {
+      "Text24": "unresolved_gaps:\nid: G_RAW_identifier\ntype: source_conflict\ndescription: S8图注末句写RAW264.1，S8a图内、同页前句及Methods均写RAW264.7；仅作为原文标识差异保留，不创建额外细胞系分支。",
+      "Text24_Reference": [
+        "Structured evidence: full/APP232/evidence/independent_review/scientific_independent_derived.json#/unresolved_gaps/10; SHA-256: f4e2f801c62b796d68e53ed88050c54623e0f0af1b7705f8f3338273ec22b23f; DOI: https://doi.org/10.1038/ncomms14293"
+      ]
+    },
+    {
+      "Text25": "scope:\nOnly D001-D006 and directly affected scientific units; not a repeat full-paper review.",
+      "Text25_Reference": [
+        "Structured evidence: full/APP232/evidence/independent_review/second_independent_delta_review_receipt.json#/scope; SHA-256: 2266e6ec96b170c75a500282696d79ac213677a42fc5b928f39ea7a7e4d40004; DOI: https://doi.org/10.1038/ncomms14293"
+      ]
+    },
+    {
+      "Text26": "stage:\nR4_provenance_and_gap_validation",
+      "Text26_Reference": [
+        "Structured evidence: full/APP232/evidence/APP232_R4_inherited_provenance_receipt.json#/stage; SHA-256: 0737477d1cf65779780cc79dfe2045b5e9901da0cc74472cbde1e755230d201d; DOI: https://doi.org/10.1038/ncomms14293"
+      ]
+    },
+    {
+      "Text27": "timestamp_utc:\n2026-10-19T13:36:23.472547+00:00",
+      "Text27_Reference": [
+        "Structured evidence: full/APP232/evidence/APP232_R4_inherited_provenance_receipt.json#/timestamp_utc; SHA-256: 0737477d1cf65779780cc79dfe2045b5e9901da0cc74472cbde1e755230d201d; DOI: https://doi.org/10.1038/ncomms14293"
+      ]
+    },
+    {
+      "Text28": "provenance_interpretation:\nFifteen logged source GETs from R1 inherited; fourteen request hashes match and Nature page size plus manifest hash match. Four PMC HTML interstitials are explicitly not read attachments; actual Nature PDF and three MOVs cover supplement scope. Cached JATS is cache reuse, not a new fetch. No claim of independently observing historical HTTP transactions.",
+      "Text28_Reference": [
+        "Structured evidence: full/APP232/evidence/APP232_R4_inherited_provenance_receipt.json#/provenance_interpretation; SHA-256: 0737477d1cf65779780cc79dfe2045b5e9901da0cc74472cbde1e755230d201d; DOI: https://doi.org/10.1038/ncomms14293"
+      ]
+    },
+    {
+      "Text29": "scope:\nActual read-only GETs only. HTTP200 HTML download interstitial is not counted as file read. No platform operation denial.",
+      "Text29_Reference": [
+        "Structured evidence: full/APP232/evidence/r1_candidate/actual_queries_and_retrievals.json#/scope; SHA-256: 3820038cbcef25570318d49be0a78510766afc89ebc3ab2ced6effc5ece24538; DOI: https://doi.org/10.1038/ncomms14293"
+      ]
+    },
+    {
+      "Text30": "Source version and scope record (not an additional scientific claim): APP232_final_acceptance:\npaper_id: APP232\nstatus: scientific_full\nfinal_active_entry_eligible: true\nscientific_scope_full: true\nunit_count_reviewed: 35\ncoverage: \n  main_figures: 5\n  main_tables: 2\n  supplement_pages: 10\n  supplement_figures: 10\n  videos: 3\n  video_frames_visually_reviewed: 72\ndata_access_gaps: \n[]\nsource_conflicts_not_treated_as_incompletion: true\nworkflow_stages_complete: \n  R1: cached candidate extraction and logged retrieval\n  R2: independent full scientific-scope review\n  R3: second independent narrow review PASS on six deltas\n  R4: inherited retrieval/manifest byte verification; no new requests\nfour_stage_workflow_complete: true\nnot_four_independent_scientific_rereads: true\narchive_path: paper_completion/APP232/APP232_scientific_full_20261019.zip\narchive_sha256: c5daf8a5953b7961adaa441061f721679c770b451c15e0b9fd39959f31160b7a\nactive_scientific_path: paper_completion/APP232/independent_review/scientific_independent_derived.json\nactive_scientific_sha256: f4e2f801c62b796d68e53ed88050c54623e0f0af1b7705f8f3338273ec22b23f\nactive_delta_path: paper_completion/APP232/independent_review/scientific_delta.json\nactive_delta_sha256: 6c6a46a4d9a034c901d6db33665696c97fedf0f8cd2b39a6cdba026ec1fd98b6\nactive_independent_receipt: paper_completion/APP232/independent_review/independent_review_receipt.json\nactive_independent_receipt_sha256: af9b0856356b9dce7844ce94b02ecbba31547ef71d4f6ae608e705a095f29615\nsecond_delta_review_receipt: paper_completion/APP232/independent_review/second_independent_delta_review_receipt.json\nsecond_delta_review_receipt_sha256: 2266e6ec96b170c75a500282696d79ac213677a42fc5b928f39ea7a7e4d40004\nR4_receipt: paper_completion/APP232/APP232_R4_inherited_provenance_receipt.json\ninactive_historical_receipt: paper_completion/APP232/independent_review/independent_review_receipt_v1_superseded.json\nreceipt_history_note: Original reported 6accf... bytes retained and hash-verified in v1_superseded; active af9b... corrects actual supplement PDF identity. Scientific content unchanged.\nimmutable_artifact_status_note: Frozen candidate/derived stage flags retain historical pending/false values; this external acceptance supplies final coordinator status.\nall_archive_members_crc_and_byte_verified: true\nfiles: \n  [1]     path: paper_completion/APP232/independent_review/independent_review_receipt.json\n    sha256: af9b0856356b9dce7844ce94b02ecbba31547ef71d4f6ae608e705a095f29615\n  [2]     path: paper_completion/APP232/independent_review/independent_review_receipt_v1_superseded.json\n    sha256: 6accfcb7bb273e429edf196b871125eaa3649c0ee7413b8b426cab91631d156a\n  [3]     path: paper_completion/APP232/independent_review/receipt_provenance_correction_delta.json\n    sha256: 2e95cf1f4ef379e6b5d55329049457677b8dfc6febe96a18f42e82765a486e08\n  [4]     path: paper_completion/APP232/independent_review/scientific_delta.json\n    sha256: 6c6a46a4d9a034c901d6db33665696c97fedf0f8cd2b39a6cdba026ec1fd98b6\n  [5]     path: paper_completion/APP232/independent_review/scientific_independent_derived.json\n    sha256: f4e2f801c62b796d68e53ed88050c54623e0f0af1b7705f8f3338273ec22b23f\n  [6]     path: paper_completion/APP232/independent_review/second_independent_delta_review_receipt.json\n    sha256: 2266e6ec96b170c75a500282696d79ac213677a42fc5b928f39ea7a7e4d40004\n  [7]     path: paper_completion/APP232/APP232_R4_inherited_provenance_receipt.json\n    sha256: 0737477d1cf65779780cc79dfe2045b5e9901da0cc74472cbde1e755230d201d\n  [8]     path: paper_completion/APP232/r1_candidate/actual_queries_and_retrievals.json\n    sha256: 3820038cbcef25570318d49be0a78510766afc89ebc3ab2ced6effc5ece24538\n  [9]     path: paper_completion/APP232/r1_candidate/source_manifest.json\n    sha256: 98fb70125668629a61ab4273eefa00e69f380d2619eea3e5ffcddceb86dcb460",
+      "Text30_Reference": [
+        "Structured evidence: full/APP232/evidence/APP232_final_acceptance.json#; SHA-256: 75f31b1df87fc354741526f3ef5fb2576fda74f27ec9cc515bf36781afcc82c1; DOI: https://doi.org/10.1038/ncomms14293"
+      ]
+    }
+  ]
+}

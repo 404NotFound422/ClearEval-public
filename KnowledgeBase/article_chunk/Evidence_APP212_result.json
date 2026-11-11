@@ -1,0 +1,333 @@
+{
+  "TOC_Method_Name": {
+    "Text": "Not specified as a single method in the selected evidence records",
+    "Text_Reference": [
+      "DOI: https://doi.org/10.3389/pore.2023.1611284",
+      "Evidence-layer structured paraphrase; not a verbatim quotation. Source release: https://github.com/404NotFound422/TOCAgentProject/tree/5e3a711befb3952a2e39f4d53fc9c9f1a7ac0d22/KnowledgeBase/evidence_expansion_20261019",
+      "Local source archive: ../literature_evidence/2026-11-11/source_release.zip; member: full/APP212/version_selection.json"
+    ]
+  },
+  "General_Description": {
+    "Text": "Three-dimensional analysis of perineural invasion in extrahepatic cholangiocarcinoma using tissue clearing (2023). Evidence category: application. This card preserves the evidence layer's structured statements and their original field labels; it does not add a new literature review or certify benchmark scoring thresholds.",
+    "Text_Reference": [
+      "DOI: https://doi.org/10.3389/pore.2023.1611284",
+      "Evidence-layer structured paraphrase; not a verbatim quotation. Source release: https://github.com/404NotFound422/TOCAgentProject/tree/5e3a711befb3952a2e39f4d53fc9c9f1a7ac0d22/KnowledgeBase/evidence_expansion_20261019",
+      "Local source archive: ../literature_evidence/2026-11-11/source_release.zip; member: full/APP212/version_selection.json"
+    ]
+  },
+  "Tissue_Types": [],
+  "Time_Consumption": [
+    {
+      "Text1": "time_summary:\ncore_postlabel_clearing: 6h methanol+3h mixture+0.5h DCM+overnight DBE =9.5h+overnight\nantibody_workflow: 4d primary+5h wash+3d secondary+5h wash =7d10h\nwhole_preparation: not reported; at least distinct fixed stages plus four overnight steps across P1/P3, unreported washes and imaging; no single total claimed\ntime_roles: 所有数值为处理阶段；无把随访/储存时间混入透明时间",
+      "Text1_Reference": [
+        "Structured evidence: full/APP212/evidence/record.json#/time_summary; SHA-256: 63464963692a50a8247cf623ff64e5312ebb0f9be1ebc178f39cb6e98f9c67cd; DOI: https://doi.org/10.3389/pore.2023.1611284"
+      ]
+    }
+  ],
+  "Tissue_Deformation": [],
+  "Fluorescence_Compatibility": [
+    {
+      "Text1": "markers:\nmarker_id: M1\ntarget: CK19\nbiological_identity: 胆管上皮及癌细胞；并非肿瘤特异标记\nprimary: rabbit monoclonal EP1580Y;ab52625;1:200\nsecondary: Alexa Fluor 488-conjugated AffiniPure F(ab′)2 donkey anti-rabbit IgG\nsignal: green\nassay: 3D wholemount IF\nsource_locators: \n  [1]     source_id: S1\n    block: 4\n    detail: \n  [2]     source_id: S1\n    block: 6\n    detail: \n  [3]     source_id: S1\n    block: 10\n    detail: ",
+      "Text1_Reference": [
+        "Structured evidence: full/APP212/evidence/record.json#/markers/0; SHA-256: 63464963692a50a8247cf623ff64e5312ebb0f9be1ebc178f39cb6e98f9c67cd; DOI: https://doi.org/10.3389/pore.2023.1611284"
+      ]
+    },
+    {
+      "Text2": "markers:\nmarker_id: M2\ntarget: S100\nbiological_identity: Schwann cells coating periaxonal area；间接显示神经组织，不是直接轴突标记\nprimary: mouse monoclonal 4C4.9;ab4066;1:250\nsecondary: Cy3-conjugated AffiniPure F(ab′)2 donkey anti-mouse IgG\nsignal: red\nassay: 3D wholemount IF\nsource_locators: \n  [1]     source_id: S1\n    block: 4\n    detail: \n  [2]     source_id: S1\n    block: 6\n    detail: \n  [3]     source_id: S1\n    block: 10\n    detail: ",
+      "Text2_Reference": [
+        "Structured evidence: full/APP212/evidence/record.json#/markers/1; SHA-256: 63464963692a50a8247cf623ff64e5312ebb0f9be1ebc178f39cb6e98f9c67cd; DOI: https://doi.org/10.3389/pore.2023.1611284"
+      ]
+    },
+    {
+      "Text3": "markers:\nmarker_id: M3\ntarget: S100\nbiological_identity: Schwann cells/二维神经组织\nprimary: rabbit monoclonal EP32;1:1\nsecondary: BOND Polymer Refine Detection\nsignal: chromogenic IHC;not fluorescence\nassay: 2D FFPE IHC\nsource_locators: \n  [1]     source_id: S1\n    block: 7\n    detail: ",
+      "Text3_Reference": [
+        "Structured evidence: full/APP212/evidence/record.json#/markers/2; SHA-256: 63464963692a50a8247cf623ff64e5312ebb0f9be1ebc178f39cb6e98f9c67cd; DOI: https://doi.org/10.3389/pore.2023.1611284"
+      ]
+    },
+    {
+      "Text4": "markers:\nmarker_id: M4\ntarget: autofluorescence\nbiological_identity: 胆管壁结构；非外加荧光标记\nprimary: not_applicable\nsecondary: not_applicable\nsignal: blue\nassay: 3D intrinsic tissue autofluorescence\nsource_locators: \n  [1]     source_id: S1\n    block: 6\n    detail: \n  [2]     source_id: S1\n    block: 10\n    detail: \n  [3]     source_id: S1\n    block: 13\n    detail: ",
+      "Text4_Reference": [
+        "Structured evidence: full/APP212/evidence/record.json#/markers/3; SHA-256: 63464963692a50a8247cf623ff64e5312ebb0f9be1ebc178f39cb6e98f9c67cd; DOI: https://doi.org/10.3389/pore.2023.1611284"
+      ]
+    },
+    {
+      "Text5": "fluorescence_assays:\nassay_id: FA1\nexperiment_ids: \n  [1] E1\n  [2] E2\n  [3] E3\n  [4] E4\ntype: wholemount indirect IF dual labeling\nmarkers: \n  [1] M1\n  [2] M2\nco_detection: CK19/AF488 and S100/Cy3 in same 3D imaging specimens\noutcome: 两色空间结构可见；无清除前后定量荧光保留率、抗体穿透均匀度或光漂白测量\nsource_locators: \n  [1]     source_id: S1\n    block: 4\n    detail: \n  [2]     source_id: S1\n    block: 6\n    detail: \n  [3]     source_id: S1\n    block: 10\n    detail: \n  [4]     source_id: S1\n    block: 13\n    detail: \n  [5]     source_id: S1\n    block: 15\n    detail: \n  [6]     source_id: S1\n    block: 17\n    detail: ",
+      "Text5_Reference": [
+        "Structured evidence: full/APP212/evidence/record.json#/fluorescence_assays/0; SHA-256: 63464963692a50a8247cf623ff64e5312ebb0f9be1ebc178f39cb6e98f9c67cd; DOI: https://doi.org/10.3389/pore.2023.1611284"
+      ]
+    },
+    {
+      "Text6": "fluorescence_assays:\nassay_id: FA2\nexperiment_ids: \n  [1] E1\n  [2] E2\ntype: residual intrinsic autofluorescence\nmarkers: \n  [1] M4\noutcome: H2O2预处理后仍利用组织自发荧光显示壁结构，不据此称所有内源荧光蛋白兼容\nsource_locators: \n  [1]     source_id: S1\n    block: 3\n    detail: \n  [2]     source_id: S1\n    block: 6\n    detail: \n  [3]     source_id: S1\n    block: 10\n    detail: \n  [4]     source_id: S1\n    block: 13\n    detail: ",
+      "Text6_Reference": [
+        "Structured evidence: full/APP212/evidence/record.json#/fluorescence_assays/1; SHA-256: 63464963692a50a8247cf623ff64e5312ebb0f9be1ebc178f39cb6e98f9c67cd; DOI: https://doi.org/10.3389/pore.2023.1611284"
+      ]
+    }
+  ],
+  "Preservation_Stability": [],
+  "Application": [
+    {
+      "Text1": "purpose:\n用组织透明及CK19/S100三维共读出，描述远端胆管癌与胆管壁浅/深层神经空间关系，并与相邻组织二维病理比较。",
+      "Text1_Reference": [
+        "Structured evidence: full/APP212/evidence/record.json#/purpose; SHA-256: 63464963692a50a8247cf623ff64e5312ebb0f9be1ebc178f39cb6e98f9c67cd; DOI: https://doi.org/10.3389/pore.2023.1611284"
+      ]
+    },
+    {
+      "Text2": "protocols:\nprotocol_id: P1\nname: 固定、预处理、透化和封闭\nsample_scope: 全部28份已取得新鲜胆管组织\nsource_locators: \n  [1]     source_id: S1\n    block: 3\n    detail: \nsteps: \n  [1]     stage: initial_fixation\n    operation: 组织浸入甲醇/DMSO\n    conditions: 80% methanol/20% DMSO; temperature not_reported\n    duration_original: overnight\n    time_role: stage_duration\n    uncertainty: \n  [2]     stage: PFA_fixation\n    operation: 次日转入PFA\n    conditions: 4% PFA; 4°C\n    duration_original: 24 h\n    time_role: stage_duration\n    uncertainty: \n  [3]     stage: pre_dehydration\n    operation: 甲醇梯度脱水\n    conditions: 50%,80%,90%各一次；100%三次\n    duration_original: not_reported per wash\n    time_role: stage_duration\n    uncertainty: 随后句写4°C孵育60min，未明确是否指每次脱水\n  [4]     stage: post_dehydration_incubation\n    operation: 按原文保留脱水后孵育\n    conditions: 4°C; medium/individual-wash scope ambiguous\n    duration_original: 60 min\n    time_role: stage_duration\n    uncertainty: 不能将60min分配到前述每个梯度\n  [5]     stage: DCM_preprocessing\n    operation: 二氯甲烷/甲醇孵育\n    conditions: 66% dichloromethane/33% methanol; room temperature\n    duration_original: overnight\n    time_role: stage_duration\n    uncertainty: 原文66+33=99%，不补成67/33\n  [6]     stage: methanol_wash\n    operation: 100%甲醇清洗两次\n    conditions: 100% methanol\n    duration_original: not_reported\n    time_role: stage_duration\n    uncertainty: \n  [7]     stage: bleaching\n    operation: 氧化内源色素和自发荧光蛋白\n    conditions: methanol with 5% hydrogen peroxide;4°C\n    duration_original: overnight\n    time_role: stage_duration\n    uncertainty: \n  [8]     stage: rehydration\n    operation: 甲醇递减复水\n    conditions: 90%,80%,50% methanol\n    duration_original: not_reported\n    time_role: stage_duration\n    uncertainty: \n  [9]     stage: PBS_wash\n    operation: PBS清洗一次\n    conditions: PBS\n    duration_original: not_reported\n    time_role: stage_duration\n    uncertainty: \n  [10]     stage: detergent_wash\n    operation: 含Triton的PBS洗两次\n    conditions: 1×PBS/0.2% Triton X-100\n    duration_original: 1 h each\n    time_role: stage_duration\n    uncertainty: \n  [11]     stage: permeabilization\n    operation: 透化\n    conditions: 1×PBS/20% DMSO/0.2% Triton X-100/0.3 M glycine;37°C\n    duration_original: 2 days\n    time_role: stage_duration\n    uncertainty: \n  [12]     stage: blocking\n    operation: 封闭\n    conditions: 1×PBS/0.2% Triton X-100/10% DMSO/6% donkey serum;37°C\n    duration_original: 2 days\n    time_role: stage_duration\n    uncertainty: \nwhole_workflow_time: not_reported; includes three overnight steps and unreported washes",
+      "Text2_Reference": [
+        "Structured evidence: full/APP212/evidence/record.json#/protocols/0; SHA-256: 63464963692a50a8247cf623ff64e5312ebb0f9be1ebc178f39cb6e98f9c67cd; DOI: https://doi.org/10.3389/pore.2023.1611284"
+      ]
+    },
+    {
+      "Text3": "protocols:\nprotocol_id: P2\nname: wholemount双标免疫荧光\nsample_scope: 全部28份组织；CK19与S100双标\nsource_locators: \n  [1]     source_id: S1\n    block: 4\n    detail: \nsteps: \n  [1]     stage: primary\n    operation: 孵育一抗并逐渐提高浓度\n    conditions: mouse S100 4C4.9 1:250；rabbit CK19 EP1580Y 1:200；300 g离心12 h与37°C振荡12 h交替\n    duration_original: 4 days\n    time_role: stage_duration\n    uncertainty: 逐日浓度阶梯、稀释液、离心温度未报告；不假设起始浓度等于给定浓度\n  [2]     stage: primary_wash\n    operation: 洗五次\n    conditions: 1×PBS/0.2% Tween-20 + 10 mg/mL heparin;room temperature\n    duration_original: 60 min each\n    time_role: stage_duration\n    uncertainty: 10 mg/mL忠实保留，未擅自改成µg/mL\n  [3]     stage: secondary\n    operation: 二抗避光孵育\n    conditions: donkey anti-rabbit AF488 F(ab′)2和donkey anti-mouse Cy3 F(ab′)2；300 g离心12 h与37°C振荡12 h交替\n    duration_original: 3 days\n    time_role: stage_duration\n    uncertainty: 二抗稀释度、稀释液、离心温度未报告\n  [4]     stage: secondary_wash\n    operation: 洗五次\n    conditions: 1×PBS/0.2% Tween-20 + 10 mg/mL heparin;room temperature\n    duration_original: 60 min each\n    time_role: stage_duration\n    uncertainty: \nwhole_workflow_time: 7 days antibody incubation + 10 h specified washes; not entire preparation time",
+      "Text3_Reference": [
+        "Structured evidence: full/APP212/evidence/record.json#/protocols/1; SHA-256: 63464963692a50a8247cf623ff64e5312ebb0f9be1ebc178f39cb6e98f9c67cd; DOI: https://doi.org/10.3389/pore.2023.1611284"
+      ]
+    },
+    {
+      "Text4": "protocols:\nprotocol_id: P3\nname: 标记后溶剂透明\nsample_scope: 全部28份已标记组织\nsource_locators: \n  [1]     source_id: S1\n    block: 5\n    detail: \nsteps: \n  [1]     stage: dehydration\n    operation: 甲醇梯度脱水\n    conditions: 50%,80%,90%各一次；100%三次;temperature not_reported\n    duration_original: 60 min each;6 h total derived\n    time_role: stage_duration\n    uncertainty: \n  [2]     stage: DCM_methanol\n    operation: DCM/甲醇孵育一次\n    conditions: 66% dichloromethane/33% methanol;temperature not_reported\n    duration_original: 3 h\n    time_role: stage_duration\n    uncertainty: \n  [3]     stage: DCM\n    operation: 100% DCM孵育两次\n    conditions: 100% dichloromethane;temperature not_reported\n    duration_original: 15 min each;30 min total derived\n    time_role: stage_duration\n    uncertainty: \n  [4]     stage: RI_matching\n    operation: 转入dibenzyl ether\n    conditions: dibenzyl ether;4°C\n    duration_original: overnight\n    time_role: stage_duration\n    uncertainty: \nwhole_workflow_time: 9.5 h explicitly timed + overnight; overnight not converted to hours",
+      "Text4_Reference": [
+        "Structured evidence: full/APP212/evidence/record.json#/protocols/2; SHA-256: 63464963692a50a8247cf623ff64e5312ebb0f9be1ebc178f39cb6e98f9c67cd; DOI: https://doi.org/10.3389/pore.2023.1611284"
+      ]
+    },
+    {
+      "Text5": "protocols:\nprotocol_id: P4\nname: 三维成像与表面重建\nsample_scope: 已免疫标记并透明组织\nsource_locators: \n  [1]     source_id: S1\n    block: 6\n    detail: \n  [2]     source_id: S1\n    block: 10\n    detail: \nsteps: \n  [1]     stage: imaging\n    operation: 采集CK19/S100及残余自发荧光信号\n    conditions: CellVoyager CQ1;4×,10×,20× objectives;reported acquisition depth approximately 200–500 µm\n    duration_original: not_reported\n    time_role: stage_duration\n    uncertainty: \n  [2]     stage: reconstruction\n    operation: 三维及表面渲染\n    conditions: IMARIS v9.4; segmentation thresholds not_reported\n    duration_original: not_reported\n    time_role: stage_duration\n    uncertainty: \nwhole_workflow_time: not_reported",
+      "Text5_Reference": [
+        "Structured evidence: full/APP212/evidence/record.json#/protocols/3; SHA-256: 63464963692a50a8247cf623ff64e5312ebb0f9be1ebc178f39cb6e98f9c67cd; DOI: https://doi.org/10.3389/pore.2023.1611284"
+      ]
+    },
+    {
+      "Text6": "protocols:\nprotocol_id: P5\nname: 二维病理与相邻组织验证\nsample_scope: 常规FFPE；有新鲜组织时用透明取材相邻组织制作4 µm切片，非宣称同一透明后标本回收切片\nsource_locators: \n  [1]     source_id: S1\n    block: 7\n    detail: \n  [2]     source_id: S1\n    block: 8\n    detail: \nsteps: \n  [1]     stage: FFPE_section\n    operation: 常规FFPE切片并上片\n    conditions: 4 µm；原文saline-coated glass slides\n    duration_original: not_reported\n    time_role: stage_duration\n    uncertainty: 固定参数、抗原修复未报告；不自行将saline纠正为silane\n  [2]     stage: IHC\n    operation: 脱蜡切片进行S100免疫组化\n    conditions: BenchMark XT;standard avidin-biotin-peroxidase complex method; rabbit EP32 1:1\n    duration_original: not_reported\n    time_role: stage_duration\n    uncertainty: 正文同时列BOND Polymer Refine Detection，检测体系描述并置保留\n  [3]     stage: IHC_wash_detect\n    operation: PBS洗四次后进行二级检测\n    conditions: BOND Polymer Refine Detection reagent\n    duration_original: not_reported\n    time_role: stage_duration\n    uncertainty: \n  [4]     stage: H_E_compare\n    operation: H&E及S100光镜标记神经分布/PNI区域并与三维相应病灶比较\n    conditions: 相邻组织4 µm；配准算法/盲法未报告\n    duration_original: not_reported\n    time_role: stage_duration\n    uncertainty: \nwhole_workflow_time: not_reported",
+      "Text6_Reference": [
+        "Structured evidence: full/APP212/evidence/record.json#/protocols/4; SHA-256: 63464963692a50a8247cf623ff64e5312ebb0f9be1ebc178f39cb6e98f9c67cd; DOI: https://doi.org/10.3389/pore.2023.1611284"
+      ]
+    },
+    {
+      "Text7": "imaging_channels:\nmarker_id: M1\nexcitation_original: 421/50 nm\nemission_original: 480/40 nm\nnote: 原文AF488滤光参数疑似不常规，忠实保留，未修正到常见488参数\nsource_locators: \n  [1]     source_id: S1\n    block: 6\n    detail: ",
+      "Text7_Reference": [
+        "Structured evidence: full/APP212/evidence/record.json#/imaging_channels/0; SHA-256: 63464963692a50a8247cf623ff64e5312ebb0f9be1ebc178f39cb6e98f9c67cd; DOI: https://doi.org/10.3389/pore.2023.1611284"
+      ]
+    },
+    {
+      "Text8": "imaging_channels:\nmarker_id: M2\nexcitation_original: 550/40 nm\nemission_original: 570/50 nm\nsource_locators: \n  [1]     source_id: S1\n    block: 6\n    detail: ",
+      "Text8_Reference": [
+        "Structured evidence: full/APP212/evidence/record.json#/imaging_channels/1; SHA-256: 63464963692a50a8247cf623ff64e5312ebb0f9be1ebc178f39cb6e98f9c67cd; DOI: https://doi.org/10.3389/pore.2023.1611284"
+      ]
+    },
+    {
+      "Text9": "imaging_channels:\nmarker_id: M4\nexcitation_original: 405/40 nm\nemission_original: 460/50 nm\nsource_locators: \n  [1]     source_id: S1\n    block: 6\n    detail: ",
+      "Text9_Reference": [
+        "Structured evidence: full/APP212/evidence/record.json#/imaging_channels/2; SHA-256: 63464963692a50a8247cf623ff64e5312ebb0f9be1ebc178f39cb6e98f9c67cd; DOI: https://doi.org/10.3389/pore.2023.1611284"
+      ]
+    },
+    {
+      "Text10": "experiments:\nexperiment_id: E1\npurpose: 透明与标记可行性\nsample: 全部28份组织；20癌/8非肿瘤\nprotocol_ids: \n  [1] P1\n  [2] P2\n  [3] P3\n  [4] P4\nmarkers: \n  [1] M1\n  [2] M2\n  [3] M4\ncontrol: Fig1处理前后肉眼外观；未设替代透明方法\nresult: 作者称28份均成功透明并免疫标记；成像深度约200–500 µm\nquantification: 28/28 reported success; no objective transparency threshold or signal-retention rate\nsource_locators: \n  [1]     source_id: S1\n    block: 10\n    detail: \n  [2]     source_id: S1\n    block: 11\n    detail: \nfigures: \n  [1] F1",
+      "Text10_Reference": [
+        "Structured evidence: full/APP212/evidence/record.json#/experiments/0; SHA-256: 63464963692a50a8247cf623ff64e5312ebb0f9be1ebc178f39cb6e98f9c67cd; DOI: https://doi.org/10.3389/pore.2023.1611284"
+      ]
+    },
+    {
+      "Text11": "experiments:\nexperiment_id: E2\npurpose: 非肿瘤胆管神经基线三维结构\nsample: 8非肿瘤标本/2患者；Fig2具体n未报告\nprotocol_ids: \n  [1] P1\n  [2] P2\n  [3] P3\n  [4] P4\n  [5] P5\nmarkers: \n  [1] M1\n  [2] M2\n  [3] M3\n  [4] M4\ncontrol: 相邻H&E和S100 IHC，非独立抗体阴性对照\nresult: 二维深层分离神经束在3D中连续；细神经从深层粗束向黏膜延伸，黏膜下有胆管周围腺\nquantification: qualitative;no density or branch count\nsource_locators: \n  [1]     source_id: S1\n    block: 12\n    detail: \n  [2]     source_id: S1\n    block: 13\n    detail: \nfigures: \n  [1] F2A-D",
+      "Text11_Reference": [
+        "Structured evidence: full/APP212/evidence/record.json#/experiments/1; SHA-256: 63464963692a50a8247cf623ff64e5312ebb0f9be1ebc178f39cb6e98f9c67cd; DOI: https://doi.org/10.3389/pore.2023.1611284"
+      ]
+    },
+    {
+      "Text12": "experiments:\nexperiment_id: E3\npurpose: DCC浅层神经周围浸润形态\nsample: 20癌标本/5患者；此分支及图3具体n未报告\nprotocol_ids: \n  [1] P1\n  [2] P2\n  [3] P3\n  [4] P4\n  [5] P5\nmarkers: \n  [1] M1\n  [2] M2\n  [3] M3\ncontrol: 二维H&E、S100 IHC及非肿瘤描述性比较\nresult: DCC形成复杂相连管道；细神经自深层粗束分支，在浅层及DCC内呈网状；渲染显示癌沿细神经分支，正文描述粗神经被癌横断区域\nquantification: qualitative;no statistical nerve-density comparison\nsource_locators: \n  [1]     source_id: S1\n    block: 14\n    detail: \n  [2]     source_id: S1\n    block: 15\n    detail: \n  [3]     source_id: S1\n    block: 19\n    detail: \nfigures: \n  [1] F3A-I\nsupplement: Movie S1;Video1.MP4 content-matched",
+      "Text12_Reference": [
+        "Structured evidence: full/APP212/evidence/record.json#/experiments/2; SHA-256: 63464963692a50a8247cf623ff64e5312ebb0f9be1ebc178f39cb6e98f9c67cd; DOI: https://doi.org/10.3389/pore.2023.1611284"
+      ]
+    },
+    {
+      "Text13": "experiments:\nexperiment_id: E4\npurpose: DCC深层PNI连续结构\nsample: 癌组织深层；分支/图4病例数未报告\nprotocol_ids: \n  [1] P1\n  [2] P2\n  [3] P3\n  [4] P4\n  [5] P5\nmarkers: \n  [1] M1\n  [2] M2\n  [3] M3\ncontrol: 二维H&E和S100 IHC定位\nresult: 二维看似分开的粗神经束三维连续；DCC包绕神经并沿其延伸\nquantification: qualitative;no PNI frequency,extent distribution or outcome model\nsource_locators: \n  [1]     source_id: S1\n    block: 16\n    detail: \n  [2]     source_id: S1\n    block: 17\n    detail: \nfigures: \n  [1] F4A-H\nsupplement: Movie S2;Video2.MP4 content-matched",
+      "Text13_Reference": [
+        "Structured evidence: full/APP212/evidence/record.json#/experiments/3; SHA-256: 63464963692a50a8247cf623ff64e5312ebb0f9be1ebc178f39cb6e98f9c67cd; DOI: https://doi.org/10.3389/pore.2023.1611284"
+      ]
+    },
+    {
+      "Text14": "quantitative_results:\nmetric: specimen clearing/immunolabeling reported success\nvalue: 28/28\nunit: specimens,not patients\nsource_locators: \n  [1]     source_id: S1\n    block: 10\n    detail: ",
+      "Text14_Reference": [
+        "Structured evidence: full/APP212/evidence/record.json#/quantitative_results/0; SHA-256: 63464963692a50a8247cf623ff64e5312ebb0f9be1ebc178f39cb6e98f9c67cd; DOI: https://doi.org/10.3389/pore.2023.1611284"
+      ]
+    },
+    {
+      "Text15": "quantitative_results:\nmetric: image acquisition depth\nvalue: approximately 200–500\nunit: µm\nsource_locators: \n  [1]     source_id: S1\n    block: 10\n    detail: \nnote: 不是5 mm最大样本厚度的全体积穿透验证；full-thickness结构描述与光学深度分开",
+      "Text15_Reference": [
+        "Structured evidence: full/APP212/evidence/record.json#/quantitative_results/1; SHA-256: 63464963692a50a8247cf623ff64e5312ebb0f9be1ebc178f39cb6e98f9c67cd; DOI: https://doi.org/10.3389/pore.2023.1611284"
+      ]
+    },
+    {
+      "Text16": "quantitative_results:\nmetric: statistical comparison of normal versus DCC nerve distribution\nvalue: not performed due to small case number\nunit: not_applicable\nsource_locators: \n  [1]     source_id: S1\n    block: 19\n    detail: ",
+      "Text16_Reference": [
+        "Structured evidence: full/APP212/evidence/record.json#/quantitative_results/2; SHA-256: 63464963692a50a8247cf623ff64e5312ebb0f9be1ebc178f39cb6e98f9c67cd; DOI: https://doi.org/10.3389/pore.2023.1611284"
+      ]
+    }
+  ],
+  "Note": [
+    {
+      "Text1": "Paper APP212; source coverage: full; source release status: candidate_pending_gates; source default_eligible: false. Read this study as a whole with its sample, experimental, measurement and limitation fields. All selected source files and mandatory support in the accompanying archive apply jointly. Import does not promote candidate status, resolve contradictions, or turn review citations into independent primary experiments. Application includes source-labelled protocols, comparisons and results; labels within each Text retain their actual role.",
+      "Text1_Reference": [
+        "DOI: https://doi.org/10.3389/pore.2023.1611284",
+        "Evidence-layer structured paraphrase; not a verbatim quotation. Source release: https://github.com/404NotFound422/TOCAgentProject/tree/5e3a711befb3952a2e39f4d53fc9c9f1a7ac0d22/KnowledgeBase/evidence_expansion_20261019",
+        "Local source archive: ../literature_evidence/2026-11-11/source_release.zip; member: full/APP212/version_selection.json"
+      ]
+    },
+    {
+      "Text2": "Selected version and mandatory composition:\npaper_id: APP212\nstatus: full\nrelease_status: candidate_pending_gates\ndefault_eligible: false\nactive_scientific_files: \n  [1]     path: full/APP212/evidence/record.json\n    sha256: 63464963692a50a8247cf623ff64e5312ebb0f9be1ebc178f39cb6e98f9c67cd\n    source_member: record.json\nrequired_supporting_files: \n  [1]     paper_id: APP212\n    path: full/APP212/support/README_zh.md\n    source_member: README_zh.md\n    accepted_original_sha256: 3a000ac403957c4665624975654309b09afa8706f88b15f79c6274f51106226c\n    source_sha256: 3a000ac403957c4665624975654309b09afa8706f88b15f79c6274f51106226c\n    baseline_delivered_sha256: 3a000ac403957c4665624975654309b09afa8706f88b15f79c6274f51106226c\n    sha256: 3a000ac403957c4665624975654309b09afa8706f88b15f79c6274f51106226c\n    bytes: 5169\n    role: mandatory_scope_support\n    transformed: false\n    baseline_delivery_member: 历史交付_1907/历史交付_1707/已验收论文/APP212/README_zh.md\n  [2]     paper_id: APP212\n    path: full/APP212/support/delivery_manifest.json\n    source_member: delivery_manifest.json\n    accepted_original_sha256: 211eba96486ceb85ab437335ff6a80992b46f0cfed75f8c3ef5ae0d38daecb56\n    source_sha256: 211eba96486ceb85ab437335ff6a80992b46f0cfed75f8c3ef5ae0d38daecb56\n    baseline_delivered_sha256: 211eba96486ceb85ab437335ff6a80992b46f0cfed75f8c3ef5ae0d38daecb56\n    sha256: 211eba96486ceb85ab437335ff6a80992b46f0cfed75f8c3ef5ae0d38daecb56\n    bytes: 4056\n    role: mandatory_binding_manifest\n    transformed: false\n    baseline_delivery_member: 历史交付_1907/历史交付_1707/已验收论文/APP212/delivery_manifest.json\n  [3]     paper_id: APP212\n    path: full/APP212/support/experiments.csv\n    source_member: experiments.csv\n    accepted_original_sha256: 35a9d3dadd73e82dc741d2a129c8a89c293667de026765f249e78047c5e0eb3d\n    source_sha256: 35a9d3dadd73e82dc741d2a129c8a89c293667de026765f249e78047c5e0eb3d\n    baseline_delivered_sha256: 35a9d3dadd73e82dc741d2a129c8a89c293667de026765f249e78047c5e0eb3d\n    sha256: 35a9d3dadd73e82dc741d2a129c8a89c293667de026765f249e78047c5e0eb3d\n    bytes: 2252\n    role: mandatory_scientific_companion\n    transformed: false\n    baseline_delivery_member: 历史交付_1907/历史交付_1707/已验收论文/APP212/experiments.csv\n  [4]     paper_id: APP212\n    path: full/APP212/support/fluorescence_assays.csv\n    source_member: fluorescence_assays.csv\n    accepted_original_sha256: b6e15cb884e225328eb810e2a7239e07cf5ddcfa90ba1c25e8a7d6accf439e73\n    source_sha256: b6e15cb884e225328eb810e2a7239e07cf5ddcfa90ba1c25e8a7d6accf439e73\n    baseline_delivered_sha256: b6e15cb884e225328eb810e2a7239e07cf5ddcfa90ba1c25e8a7d6accf439e73\n    sha256: b6e15cb884e225328eb810e2a7239e07cf5ddcfa90ba1c25e8a7d6accf439e73\n    bytes: 1091\n    role: mandatory_scientific_companion\n    transformed: false\n    baseline_delivery_member: 历史交付_1907/历史交付_1707/已验收论文/APP212/fluorescence_assays.csv\n  [5]     paper_id: APP212\n    path: full/APP212/support/histology_assays.csv\n    source_member: histology_assays.csv\n    accepted_original_sha256: 65b7cd90660b8e73a1b736ff8c72662f887878a165a64f8f7ba27aaa8d50fb69\n    source_sha256: 65b7cd90660b8e73a1b736ff8c72662f887878a165a64f8f7ba27aaa8d50fb69\n    baseline_delivered_sha256: 65b7cd90660b8e73a1b736ff8c72662f887878a165a64f8f7ba27aaa8d50fb69\n    sha256: 65b7cd90660b8e73a1b736ff8c72662f887878a165a64f8f7ba27aaa8d50fb69\n    bytes: 716\n    role: mandatory_scientific_companion\n    transformed: false\n    baseline_delivery_member: 历史交付_1907/历史交付_1707/已验收论文/APP212/histology_assays.csv\n  [6]     paper_id: APP212\n    path: full/APP212/support/imaging_channels.csv\n    source_member: imaging_channels.csv\n    accepted_original_sha256: 7ffe674e55165b03ecddc14d5ea61bb52f2e803a540b888be00074286d8e29bb\n    source_sha256: 7ffe674e55165b03ecddc14d5ea61bb52f2e803a540b888be00074286d8e29bb\n    baseline_delivered_sha256: 7ffe674e55165b03ecddc14d5ea61bb52f2e803a540b888be00074286d8e29bb\n    sha256: 7ffe674e55165b03ecddc14d5ea61bb52f2e803a540b888be00074286d8e29bb\n    bytes: 411\n    role: mandatory_scientific_companion\n    transformed: false\n    baseline_delivery_member: 历史交付_1907/历史交付_1707/已验收论文/APP212/imaging_channels.csv\n  [7]     paper_id: APP212\n    path: full/APP212/support/markers.csv\n    source_member: markers.csv\n    accepted_original_sha256: 6490f9458ca8dc3f349c0924e7041650e48b44919a73a09bc4d0cf81bf9cbbc4\n    source_sha256: 6490f9458ca8dc3f349c0924e7041650e48b44919a73a09bc4d0cf81bf9cbbc4\n    baseline_delivered_sha256: 6490f9458ca8dc3f349c0924e7041650e48b44919a73a09bc4d0cf81bf9cbbc4\n    sha256: 6490f9458ca8dc3f349c0924e7041650e48b44919a73a09bc4d0cf81bf9cbbc4\n    bytes: 1362\n    role: mandatory_scientific_companion\n    transformed: false\n    baseline_delivery_member: 历史交付_1907/历史交付_1707/已验收论文/APP212/markers.csv\n  [8]     paper_id: APP212\n    path: full/APP212/support/missing_fields.csv\n    source_member: missing_fields.csv\n    accepted_original_sha256: 5226e64c6ad93429e4e8a5b523176c21207b8849bee8fd481d5b5787c89e2a77\n    source_sha256: 5226e64c6ad93429e4e8a5b523176c21207b8849bee8fd481d5b5787c89e2a77\n    baseline_delivered_sha256: 5226e64c6ad93429e4e8a5b523176c21207b8849bee8fd481d5b5787c89e2a77\n    sha256: 5226e64c6ad93429e4e8a5b523176c21207b8849bee8fd481d5b5787c89e2a77\n    bytes: 1390\n    role: mandatory_scientific_companion\n    transformed: false\n    baseline_delivery_member: 历史交付_1907/历史交付_1707/已验收论文/APP212/missing_fields.csv\n  [9]     paper_id: APP212\n    path: full/APP212/support/protocols.csv\n    source_member: protocols.csv\n    accepted_original_sha256: ec91a3a0bad450ee29d0685826e6f40f388760cda28f8d6fc51511e592cc0e2b\n    source_sha256: ec91a3a0bad450ee29d0685826e6f40f388760cda28f8d6fc51511e592cc0e2b\n    baseline_delivered_sha256: ec91a3a0bad450ee29d0685826e6f40f388760cda28f8d6fc51511e592cc0e2b\n    sha256: ec91a3a0bad450ee29d0685826e6f40f388760cda28f8d6fc51511e592cc0e2b\n    bytes: 7768\n    role: mandatory_scientific_companion\n    transformed: false\n    baseline_delivery_member: 历史交付_1907/历史交付_1707/已验收论文/APP212/protocols.csv\n  [10]     paper_id: APP212\n    path: full/APP212/support/quantitative_results.csv\n    source_member: quantitative_results.csv\n    accepted_original_sha256: fc5be479ff42b0e2c7f17af7ba37c55b4487e49d92f5107014ba2f6a5460217b\n    source_sha256: fc5be479ff42b0e2c7f17af7ba37c55b4487e49d92f5107014ba2f6a5460217b\n    baseline_delivered_sha256: fc5be479ff42b0e2c7f17af7ba37c55b4487e49d92f5107014ba2f6a5460217b\n    sha256: fc5be479ff42b0e2c7f17af7ba37c55b4487e49d92f5107014ba2f6a5460217b\n    bytes: 584\n    role: mandatory_scientific_companion\n    transformed: false\n    baseline_delivery_member: 历史交付_1907/历史交付_1707/已验收论文/APP212/quantitative_results.csv\n  [11]     paper_id: APP212\n    path: full/APP212/support/query_log.csv\n    source_member: query_log.csv\n    accepted_original_sha256: ebc6087f9e786a22ee0ab001a1de11d74ad679ab37a5f79d1abda9c2a6c64710\n    source_sha256: ebc6087f9e786a22ee0ab001a1de11d74ad679ab37a5f79d1abda9c2a6c64710\n    baseline_delivered_sha256: ebc6087f9e786a22ee0ab001a1de11d74ad679ab37a5f79d1abda9c2a6c64710\n    sha256: ebc6087f9e786a22ee0ab001a1de11d74ad679ab37a5f79d1abda9c2a6c64710\n    bytes: 226\n    role: mandatory_provenance_support\n    transformed: false\n    baseline_delivery_member: 历史交付_1907/历史交付_1707/已验收论文/APP212/query_log.csv\n  [12]     paper_id: APP212\n    path: full/APP212/support/reading_log.csv\n    source_member: reading_log.csv\n    accepted_original_sha256: bfcc0390de64ebf00cf3abc1063f408a0a0301fc145e54c4af528a1cb7887783\n    source_sha256: bfcc0390de64ebf00cf3abc1063f408a0a0301fc145e54c4af528a1cb7887783\n    baseline_delivered_sha256: bfcc0390de64ebf00cf3abc1063f408a0a0301fc145e54c4af528a1cb7887783\n    sha256: bfcc0390de64ebf00cf3abc1063f408a0a0301fc145e54c4af528a1cb7887783\n    bytes: 387\n    role: mandatory_provenance_support\n    transformed: false\n    baseline_delivery_member: 历史交付_1907/历史交付_1707/已验收论文/APP212/reading_log.csv\n  [13]     paper_id: APP212\n    path: full/APP212/support/review/revision_response.json\n    source_member: review/revision_response.json\n    accepted_original_sha256: 8df4d13aa94aa94978373a7205298133e035dde22cd98c4f5f85c1d74fe48c37\n    source_sha256: 8df4d13aa94aa94978373a7205298133e035dde22cd98c4f5f85c1d74fe48c37\n    baseline_delivered_sha256: 8df4d13aa94aa94978373a7205298133e035dde22cd98c4f5f85c1d74fe48c37\n    sha256: 8df4d13aa94aa94978373a7205298133e035dde22cd98c4f5f85c1d74fe48c37\n    bytes: 399\n    role: mandatory_review_support\n    transformed: false\n    baseline_delivery_member: 历史交付_1907/历史交付_1707/已验收论文/APP212/review/revision_response.json\n  [14]     paper_id: APP212\n    path: full/APP212/support/review/root_R2_R3_review.json\n    source_member: review/root_R2_R3_review.json\n    accepted_original_sha256: 4077adc94982feec430cff0d3c9f8e3c8ef1788ffcfd15462504c81e30f7682e\n    source_sha256: 4077adc94982feec430cff0d3c9f8e3c8ef1788ffcfd15462504c81e30f7682e\n    baseline_delivered_sha256: 4077adc94982feec430cff0d3c9f8e3c8ef1788ffcfd15462504c81e30f7682e\n    sha256: 4077adc94982feec430cff0d3c9f8e3c8ef1788ffcfd15462504c81e30f7682e\n    bytes: 1545\n    role: mandatory_review_support\n    transformed: false\n    baseline_delivery_member: 历史交付_1907/历史交付_1707/已验收论文/APP212/review/root_R2_R3_review.json\n  [15]     paper_id: APP212\n    path: full/APP212/support/review/root_gap_queries.json\n    source_member: review/root_gap_queries.json\n    accepted_original_sha256: f7ecd4e388e8ae9c13f05911a1c8bd8e100b43d3ad4f350bcc3b24e7c6bd4981\n    source_sha256: f7ecd4e388e8ae9c13f05911a1c8bd8e100b43d3ad4f350bcc3b24e7c6bd4981\n    baseline_delivered_sha256: f7ecd4e388e8ae9c13f05911a1c8bd8e100b43d3ad4f350bcc3b24e7c6bd4981\n    sha256: f7ecd4e388e8ae9c13f05911a1c8bd8e100b43d3ad4f350bcc3b24e7c6bd4981\n    bytes: 3355\n    role: mandatory_review_support\n    transformed: false\n    baseline_delivery_member: 历史交付_1907/历史交付_1707/已验收论文/APP212/review/root_gap_queries.json\n  [16]     paper_id: APP212\n    path: full/APP212/support/review/root_precheck.json\n    source_member: review/root_precheck.json\n    accepted_original_sha256: d4a378cf7328cdebb160245eee9b8c087173b63d1f14f1efc666ee00ce989e3a\n    source_sha256: d4a378cf7328cdebb160245eee9b8c087173b63d1f14f1efc666ee00ce989e3a\n    baseline_delivered_sha256: d4a378cf7328cdebb160245eee9b8c087173b63d1f14f1efc666ee00ce989e3a\n    sha256: d4a378cf7328cdebb160245eee9b8c087173b63d1f14f1efc666ee00ce989e3a\n    bytes: 976\n    role: mandatory_review_support\n    transformed: false\n    baseline_delivery_member: 历史交付_1907/历史交付_1707/已验收论文/APP212/review/root_precheck.json\n  [17]     paper_id: APP212\n    path: full/APP212/support/review/v2_revised_record.json\n    source_member: review/v2_revised_record.json\n    accepted_original_sha256: a266d36b7a092a64ff062677eb9fb271c94bd4fe27e0c3dee75e6c9085446f8c\n    source_sha256: a266d36b7a092a64ff062677eb9fb271c94bd4fe27e0c3dee75e6c9085446f8c\n    baseline_delivered_sha256: a266d36b7a092a64ff062677eb9fb271c94bd4fe27e0c3dee75e6c9085446f8c\n    sha256: a266d36b7a092a64ff062677eb9fb271c94bd4fe27e0c3dee75e6c9085446f8c\n    bytes: 34906\n    role: mandatory_accepted_snapshot_support\n    transformed: false\n    baseline_delivery_member: 历史交付_1907/历史交付_1707/已验收论文/APP212/review/v2_revised_record.json\n  [18]     paper_id: APP212\n    path: full/APP212/support/review_rounds.csv\n    source_member: review_rounds.csv\n    accepted_original_sha256: a8669f1a7c221c9fb9b55e8cdb5622c876a907c1a5588f8ed9306fdfbd4c4f45\n    source_sha256: a8669f1a7c221c9fb9b55e8cdb5622c876a907c1a5588f8ed9306fdfbd4c4f45\n    baseline_delivered_sha256: a8669f1a7c221c9fb9b55e8cdb5622c876a907c1a5588f8ed9306fdfbd4c4f45\n    sha256: a8669f1a7c221c9fb9b55e8cdb5622c876a907c1a5588f8ed9306fdfbd4c4f45\n    bytes: 386\n    role: mandatory_provenance_support\n    transformed: false\n    baseline_delivery_member: 历史交付_1907/历史交付_1707/已验收论文/APP212/review_rounds.csv\n  [19]     paper_id: APP212\n    path: full/APP212/support/source_block_index.json\n    source_member: source_block_index.json\n    accepted_original_sha256: c52d1f0d55934dc906e7cb8c1c59fc4d7200fb86a4ed3f0b0ebc7246055f6503\n    source_sha256: c52d1f0d55934dc906e7cb8c1c59fc4d7200fb86a4ed3f0b0ebc7246055f6503\n    baseline_delivered_sha256: c52d1f0d55934dc906e7cb8c1c59fc4d7200fb86a4ed3f0b0ebc7246055f6503\n    sha256: c52d1f0d55934dc906e7cb8c1c59fc4d7200fb86a4ed3f0b0ebc7246055f6503\n    bytes: 7882\n    role: mandatory_source_locator_support\n    transformed: false\n    baseline_delivery_member: 历史交付_1907/历史交付_1707/已验收论文/APP212/source_block_index.json\n  [20]     paper_id: APP212\n    path: full/APP212/support/source_conflicts.csv\n    source_member: source_conflicts.csv\n    accepted_original_sha256: 711b325d2a358fff888ccf18511acb8d634953df0dde5cbb8009f27f48c4cb0d\n    source_sha256: 711b325d2a358fff888ccf18511acb8d634953df0dde5cbb8009f27f48c4cb0d\n    baseline_delivered_sha256: 711b325d2a358fff888ccf18511acb8d634953df0dde5cbb8009f27f48c4cb0d\n    sha256: 711b325d2a358fff888ccf18511acb8d634953df0dde5cbb8009f27f48c4cb0d\n    bytes: 2119\n    role: mandatory_scientific_companion\n    transformed: false\n    baseline_delivery_member: 历史交付_1907/历史交付_1707/已验收论文/APP212/source_conflicts.csv\n  [21]     paper_id: APP212\n    path: full/APP212/support/sources/access_log.json\n    source_member: sources/access_log.json\n    accepted_original_sha256: fc5a2f76eefab62662b62f17c0820e141096a8c4bcf24701d0c3d3276e8c4e05\n    source_sha256: fc5a2f76eefab62662b62f17c0820e141096a8c4bcf24701d0c3d3276e8c4e05\n    baseline_delivered_sha256: fc5a2f76eefab62662b62f17c0820e141096a8c4bcf24701d0c3d3276e8c4e05\n    sha256: fc5a2f76eefab62662b62f17c0820e141096a8c4bcf24701d0c3d3276e8c4e05\n    bytes: 168\n    role: mandatory_provenance_support\n    transformed: false\n    baseline_delivery_member: 历史交付_1907/历史交付_1707/已验收论文/APP212/sources/access_log.json\n  [22]     paper_id: APP212\n    path: full/APP212/support/structure_check.json\n    source_member: structure_check.json\n    accepted_original_sha256: 7bb059a816ba22b503b1a5d75ce009fc08c978ff677c9f53ea0744031a53b659\n    source_sha256: 7bb059a816ba22b503b1a5d75ce009fc08c978ff677c9f53ea0744031a53b659\n    baseline_delivered_sha256: 7bb059a816ba22b503b1a5d75ce009fc08c978ff677c9f53ea0744031a53b659\n    sha256: 7bb059a816ba22b503b1a5d75ce009fc08c978ff677c9f53ea0744031a53b659\n    bytes: 250\n    role: mandatory_mechanical_validation_support\n    transformed: false\n    baseline_delivery_member: 历史交付_1907/历史交付_1707/已验收论文/APP212/structure_check.json\n  [23]     paper_id: APP212\n    path: full/APP212/support/最终验收依据.json\n    source_member: 最终验收依据.json\n    accepted_original_sha256: e5b2a623784c3dfd391e38f0d9e2004f4223417aeedfb3ba9d43eded369f0cad\n    source_sha256: e5b2a623784c3dfd391e38f0d9e2004f4223417aeedfb3ba9d43eded369f0cad\n    baseline_delivered_sha256: e5b2a623784c3dfd391e38f0d9e2004f4223417aeedfb3ba9d43eded369f0cad\n    sha256: e5b2a623784c3dfd391e38f0d9e2004f4223417aeedfb3ba9d43eded369f0cad\n    bytes: 1607\n    role: mandatory_final_acceptance\n    transformed: false\n    baseline_delivery_member: 历史交付_1907/历史交付_1707/已验收论文/APP212/最终验收依据.json\n  [24]     paper_id: APP212\n    path: full/APP212/support/科学版本绑定核对.json\n    source_member: 科学版本绑定核对.json\n    accepted_original_sha256: 248ee645178b0e4d7801bbc4c73d584401018780fa3dd0ce3bad0d29c4ef945e\n    source_sha256: 248ee645178b0e4d7801bbc4c73d584401018780fa3dd0ce3bad0d29c4ef945e\n    baseline_delivered_sha256: 248ee645178b0e4d7801bbc4c73d584401018780fa3dd0ce3bad0d29c4ef945e\n    sha256: 248ee645178b0e4d7801bbc4c73d584401018780fa3dd0ce3bad0d29c4ef945e\n    bytes: 530\n    role: mandatory_version_binding\n    transformed: false\n    baseline_delivery_member: 历史交付_1907/历史交付_1707/已验收论文/APP212/科学版本绑定核对.json\nacceptance: full/APP212/support/最终验收依据.json\nacceptance_files: \n  [1] full/APP212/support/最终验收依据.json\nactive_version_and_scope: \n  scope: \n    inherited_current_selection: \n      paper_id: APP212\n      status: full\n      active_scientific_files: \n        [1]           path: 历史交付_1907/历史交付_1707/已验收论文/APP212/record.json\n          accepted_original_sha256: 63464963692a50a8247cf623ff64e5312ebb0f9be1ebc178f39cb6e98f9c67cd\n          delivered_sha256: 63464963692a50a8247cf623ff64e5312ebb0f9be1ebc178f39cb6e98f9c67cd\n          transformed: false\n      baseline_binding: 历史交付_1907/当前版本选择/APP212.json\n      companion_root: 历史交付_1907/历史交付_1707/已验收论文/APP212\n      rule: Reuse immutable previously accepted current selection and necessary overlays. Paths in inherited binding resolve relative to 历史交付_1907 root. Only current root index governs active versions.\n    historical_selection_bindings: \n      [1]         source_archive_name: 组织光透明证据_20261019_2107_完整科学分包3共3包.zip\n        source_member: 历史交付_1907/当前版本选择/APP212.json\n        source_sha256: 85e21bcb1a6cfe0577de4d83c49d4a30761f1441c4f50ebc64ae6f4e2ac8784c\n        source_bytes: 694\n        selection: \n          paper_id: APP212\n          status: full\n          baseline_record: \n            [1]               path: 历史交付_1707/已验收论文/APP212/record.json\n              accepted_original_sha256: 63464963692a50a8247cf623ff64e5312ebb0f9be1ebc178f39cb6e98f9c67cd\n              delivered_sha256: 63464963692a50a8247cf623ff64e5312ebb0f9be1ebc178f39cb6e98f9c67cd\n              transformed: false\n          scope: 任务相关科学字段完整四轮\n          companion_root: 历史交付_1707/已验收论文/APP212\n          companion_rule: Use the complete per-paper directory, its mandatory overlays, scientific companion files and version binding from previous accepted delivery; record alone is not a substitute.\n        role: historical_selection_provenance_not_runtime_index\n      [2]         source_archive_name: 组织光透明证据_20261019_2107_完整科学分包1共3包.zip\n        source_member: 当前版本选择/APP212.json\n        source_sha256: 500804c6edcd5bceadffb407dce6f26fb1d2dc17b46a0253ae137519d2850708\n        source_bytes: 773\n        selection: \n          paper_id: APP212\n          status: full\n          active_scientific_files: \n            [1]               path: 历史交付_1907/历史交付_1707/已验收论文/APP212/record.json\n              accepted_original_sha256: 63464963692a50a8247cf623ff64e5312ebb0f9be1ebc178f39cb6e98f9c67cd\n              delivered_sha256: 63464963692a50a8247cf623ff64e5312ebb0f9be1ebc178f39cb6e98f9c67cd\n              transformed: false\n          baseline_binding: 历史交付_1907/当前版本选择/APP212.json\n          companion_root: 历史交付_1907/历史交付_1707/已验收论文/APP212\n          rule: Reuse immutable previously accepted current selection and necessary overlays. Paths in inherited binding resolve relative to 历史交付_1907 root. Only current root index governs active versions.\n        role: source_current_selection_provenance_not_second_runtime_index\n    precedence_notes: \n      [1] record.json is the selected final root. The accepted v2 snapshot remains mandatory binding support, not a separately active version. R1 is historical and not reactivated.\n    rule: Only this portable selection activates current scientific files. Inherited selections are retained provenance and scope, not recursively loadable indexes.\n  historical_nonactive_members: \n    [1] review/R1_frozen_record.json\n    [2] validate_package.py\nmandatory_composition: Root plus explicitly selected companions and any current mandatory semantic addendum apply jointly. Never recursively activate audit history.\noriginal_member_to_release_path: \n  record.json: full/APP212/evidence/record.json\nactive_reference_aliases: \n  record.json: full/APP212/evidence/record.json\n  README_zh.md: full/APP212/support/README_zh.md\n  delivery_manifest.json: full/APP212/support/delivery_manifest.json\n  experiments.csv: full/APP212/support/experiments.csv\n  fluorescence_assays.csv: full/APP212/support/fluorescence_assays.csv\n  histology_assays.csv: full/APP212/support/histology_assays.csv\n  imaging_channels.csv: full/APP212/support/imaging_channels.csv\n  markers.csv: full/APP212/support/markers.csv\n  missing_fields.csv: full/APP212/support/missing_fields.csv\n  protocols.csv: full/APP212/support/protocols.csv\n  quantitative_results.csv: full/APP212/support/quantitative_results.csv\n  query_log.csv: full/APP212/support/query_log.csv\n  reading_log.csv: full/APP212/support/reading_log.csv\n  review/revision_response.json: full/APP212/support/review/revision_response.json\n  review/root_R2_R3_review.json: full/APP212/support/review/root_R2_R3_review.json\n  review/root_gap_queries.json: full/APP212/support/review/root_gap_queries.json\n  review/root_precheck.json: full/APP212/support/review/root_precheck.json\n  review/v2_revised_record.json: full/APP212/support/review/v2_revised_record.json\n  review_rounds.csv: full/APP212/support/review_rounds.csv\n  source_block_index.json: full/APP212/support/source_block_index.json\n  source_conflicts.csv: full/APP212/support/source_conflicts.csv\n  sources/access_log.json: full/APP212/support/sources/access_log.json\n  structure_check.json: full/APP212/support/structure_check.json\n  最终验收依据.json: full/APP212/support/最终验收依据.json\n  科学版本绑定核对.json: full/APP212/support/科学版本绑定核对.json\n  历史交付_1907/历史交付_1707/已验收论文/APP212/README_zh.md: full/APP212/support/README_zh.md\n  历史交付_1907/历史交付_1707/已验收论文/APP212/delivery_manifest.json: full/APP212/support/delivery_manifest.json\n  历史交付_1907/历史交付_1707/已验收论文/APP212/experiments.csv: full/APP212/support/experiments.csv\n  历史交付_1907/历史交付_1707/已验收论文/APP212/fluorescence_assays.csv: full/APP212/support/fluorescence_assays.csv\n  历史交付_1907/历史交付_1707/已验收论文/APP212/histology_assays.csv: full/APP212/support/histology_assays.csv\n  历史交付_1907/历史交付_1707/已验收论文/APP212/imaging_channels.csv: full/APP212/support/imaging_channels.csv\n  历史交付_1907/历史交付_1707/已验收论文/APP212/markers.csv: full/APP212/support/markers.csv\n  历史交付_1907/历史交付_1707/已验收论文/APP212/missing_fields.csv: full/APP212/support/missing_fields.csv\n  历史交付_1907/历史交付_1707/已验收论文/APP212/protocols.csv: full/APP212/support/protocols.csv\n  历史交付_1907/历史交付_1707/已验收论文/APP212/quantitative_results.csv: full/APP212/support/quantitative_results.csv\n  历史交付_1907/历史交付_1707/已验收论文/APP212/query_log.csv: full/APP212/support/query_log.csv\n  历史交付_1907/历史交付_1707/已验收论文/APP212/reading_log.csv: full/APP212/support/reading_log.csv\n  历史交付_1907/历史交付_1707/已验收论文/APP212/record.json: full/APP212/evidence/record.json\n  历史交付_1907/历史交付_1707/已验收论文/APP212/review/revision_response.json: full/APP212/support/review/revision_response.json\n  历史交付_1907/历史交付_1707/已验收论文/APP212/review/root_R2_R3_review.json: full/APP212/support/review/root_R2_R3_review.json\n  历史交付_1907/历史交付_1707/已验收论文/APP212/review/root_gap_queries.json: full/APP212/support/review/root_gap_queries.json\n  历史交付_1907/历史交付_1707/已验收论文/APP212/review/root_precheck.json: full/APP212/support/review/root_precheck.json\n  历史交付_1907/历史交付_1707/已验收论文/APP212/review/v2_revised_record.json: full/APP212/support/review/v2_revised_record.json\n  历史交付_1907/历史交付_1707/已验收论文/APP212/review_rounds.csv: full/APP212/support/review_rounds.csv\n  历史交付_1907/历史交付_1707/已验收论文/APP212/source_block_index.json: full/APP212/support/source_block_index.json\n  历史交付_1907/历史交付_1707/已验收论文/APP212/source_conflicts.csv: full/APP212/support/source_conflicts.csv\n  历史交付_1907/历史交付_1707/已验收论文/APP212/sources/access_log.json: full/APP212/support/sources/access_log.json\n  历史交付_1907/历史交付_1707/已验收论文/APP212/structure_check.json: full/APP212/support/structure_check.json\n  review/final_acceptance.json: full/APP212/support/最终验收依据.json\n  历史交付_1907/历史交付_1707/已验收论文/APP212/review/final_acceptance.json: full/APP212/support/最终验收依据.json\n  历史交付_1907/历史交付_1707/已验收论文/APP212/最终验收依据.json: full/APP212/support/最终验收依据.json\n  历史交付_1907/历史交付_1707/已验收论文/APP212/科学版本绑定核对.json: full/APP212/support/科学版本绑定核对.json\n  paper_completion/APP212/review/final_acceptance.json: full/APP212/support/最终验收依据.json\nactive_reference_resolution_evidence: \n  [1]     source_file: full/APP212/evidence/record.json\n    json_pointer: /sources/1/access_log\n    reference: sources/access_log.json\n    resolved_release_path: full/APP212/support/sources/access_log.json\n    binding_basis: explicit_verified_alias\n  [2]     source_file: full/APP212/support/delivery_manifest.json\n    json_pointer: /files/0/path\n    reference: structure_check.json\n    resolved_release_path: full/APP212/support/structure_check.json\n    binding_basis: explicit_verified_alias\n  [3]     source_file: full/APP212/support/delivery_manifest.json\n    json_pointer: /files/1/path\n    reference: query_log.csv\n    resolved_release_path: full/APP212/support/query_log.csv\n    binding_basis: explicit_verified_alias\n  [4]     source_file: full/APP212/support/delivery_manifest.json\n    json_pointer: /files/2/path\n    reference: markers.csv\n    resolved_release_path: full/APP212/support/markers.csv\n    binding_basis: explicit_verified_alias\n  [5]     source_file: full/APP212/support/delivery_manifest.json\n    json_pointer: /files/3/path\n    reference: README_zh.md\n    resolved_release_path: full/APP212/support/README_zh.md\n    binding_basis: explicit_verified_alias\n  [6]     source_file: full/APP212/support/delivery_manifest.json\n    json_pointer: /files/4/path\n    reference: source_conflicts.csv\n    resolved_release_path: full/APP212/support/source_conflicts.csv\n    binding_basis: explicit_verified_alias\n  [7]     source_file: full/APP212/support/delivery_manifest.json\n    json_pointer: /files/5/path\n    reference: reading_log.csv\n    resolved_release_path: full/APP212/support/reading_log.csv\n    binding_basis: explicit_verified_alias\n  [8]     source_file: full/APP212/support/delivery_manifest.json\n    json_pointer: /files/6/path\n    reference: imaging_channels.csv\n    resolved_release_path: full/APP212/support/imaging_channels.csv\n    binding_basis: explicit_verified_alias\n  [9]     source_file: full/APP212/support/delivery_manifest.json\n    json_pointer: /files/7/path\n    reference: histology_assays.csv\n    resolved_release_path: full/APP212/support/histology_assays.csv\n    binding_basis: explicit_verified_alias\n  [10]     source_file: full/APP212/support/delivery_manifest.json\n    json_pointer: /files/8/path\n    reference: quantitative_results.csv\n    resolved_release_path: full/APP212/support/quantitative_results.csv\n    binding_basis: explicit_verified_alias\n  [11]     source_file: full/APP212/support/delivery_manifest.json\n    json_pointer: /files/9/path\n    reference: review_rounds.csv\n    resolved_release_path: full/APP212/support/review_rounds.csv\n    binding_basis: explicit_verified_alias\n  [12]     source_file: full/APP212/support/delivery_manifest.json\n    json_pointer: /files/10/path\n    reference: experiments.csv\n    resolved_release_path: full/APP212/support/experiments.csv\n    binding_basis: explicit_verified_alias\n  [13]     source_file: full/APP212/support/delivery_manifest.json\n    json_pointer: /files/11/path\n    reference: record.json\n    resolved_release_path: full/APP212/evidence/record.json\n    binding_basis: explicit_verified_alias\n  [14]     source_file: full/APP212/support/delivery_manifest.json\n    json_pointer: /files/12/path\n    reference: fluorescence_assays.csv\n    resolved_release_path: full/APP212/support/fluorescence_assays.csv\n    binding_basis: explicit_verified_alias\n  [15]     source_file: full/APP212/support/delivery_manifest.json\n    json_pointer: /files/13/path\n    reference: source_block_index.json\n    resolved_release_path: full/APP212/support/source_block_index.json\n    binding_basis: explicit_verified_alias\n  [16]     source_file: full/APP212/support/delivery_manifest.json\n    json_pointer: /files/14/path\n    reference: missing_fields.csv\n    resolved_release_path: full/APP212/support/missing_fields.csv\n    binding_basis: explicit_verified_alias\n  [17]     source_file: full/APP212/support/delivery_manifest.json\n    json_pointer: /files/15/path\n    reference: protocols.csv\n    resolved_release_path: full/APP212/support/protocols.csv\n    binding_basis: explicit_verified_alias\n  [18]     source_file: full/APP212/support/delivery_manifest.json\n    json_pointer: /files/17/path\n    reference: review/revision_response.json\n    resolved_release_path: full/APP212/support/review/revision_response.json\n    binding_basis: explicit_verified_alias\n  [19]     source_file: full/APP212/support/delivery_manifest.json\n    json_pointer: /files/18/path\n    reference: review/root_R2_R3_review.json\n    resolved_release_path: full/APP212/support/review/root_R2_R3_review.json\n    binding_basis: explicit_verified_alias\n  [20]     source_file: full/APP212/support/delivery_manifest.json\n    json_pointer: /files/19/path\n    reference: review/root_precheck.json\n    resolved_release_path: full/APP212/support/review/root_precheck.json\n    binding_basis: explicit_verified_alias\n  [21]     source_file: full/APP212/support/delivery_manifest.json\n    json_pointer: /files/20/path\n    reference: review/v2_revised_record.json\n    resolved_release_path: full/APP212/support/review/v2_revised_record.json\n    binding_basis: explicit_verified_alias\n  [22]     source_file: full/APP212/support/delivery_manifest.json\n    json_pointer: /files/21/path\n    reference: review/final_acceptance.json\n    resolved_release_path: full/APP212/support/最终验收依据.json\n    binding_basis: explicit_verified_alias\n  [23]     source_file: full/APP212/support/delivery_manifest.json\n    json_pointer: /files/22/path\n    reference: review/root_gap_queries.json\n    resolved_release_path: full/APP212/support/review/root_gap_queries.json\n    binding_basis: explicit_verified_alias\n  [24]     source_file: full/APP212/support/delivery_manifest.json\n    json_pointer: /files/23/path\n    reference: sources/access_log.json\n    resolved_release_path: full/APP212/support/sources/access_log.json\n    binding_basis: explicit_verified_alias\n  [25]     source_file: full/APP212/support/review/root_R2_R3_review.json\n    json_pointer: /R4_log\n    reference: review/root_gap_queries.json\n    resolved_release_path: full/APP212/support/review/root_gap_queries.json\n    binding_basis: explicit_verified_alias\n  [26]     source_file: full/APP212/support/review/v2_revised_record.json\n    json_pointer: /sources/1/access_log\n    reference: sources/access_log.json\n    resolved_release_path: full/APP212/support/sources/access_log.json\n    binding_basis: explicit_verified_alias\n  [27]     source_file: full/APP212/support/最终验收依据.json\n    json_pointer: /reviewed_file\n    reference: review/v2_revised_record.json\n    resolved_release_path: full/APP212/support/review/v2_revised_record.json\n    binding_basis: explicit_verified_alias\n  [28]     source_file: full/APP212/support/最终验收依据.json\n    json_pointer: /source_query_log\n    reference: review/root_gap_queries.json\n    resolved_release_path: full/APP212/support/review/root_gap_queries.json\n    binding_basis: explicit_verified_alias\n  [29]     source_file: full/APP212/support/科学版本绑定核对.json\n    json_pointer: /acceptance_file\n    reference: paper_completion/APP212/review/final_acceptance.json\n    resolved_release_path: full/APP212/support/最终验收依据.json\n    binding_basis: unique_verified_original_member_path\nexternal_or_historical_references: \n  [1]     source_file: full/APP212/evidence/record.json\n    json_pointer: /sources/0/read_scope\n    reference: 完整正文/方法/结果/讨论、4主图图注、伦理与补充说明；block编号见sources/blocks.json\n    automatic_loading: false\n    role: scope_prose_mentions_original_source_block_cache_not_runtime_path\n  [2]     source_file: full/APP212/support/delivery_manifest.json\n    json_pointer: /files/16/path\n    reference: review/R1_frozen_record.json\n    automatic_loading: false\n    role: historical_superseded_scientific_snapshot\n    role_evidence: The R1 snapshot declares pending independent review. Current final acceptance explicitly reviews review/v2_revised_record.json with hash a266d36b7a092a64ff062677eb9fb271c94bd4fe27e0c3dee75e6c9085446f8c. That exact accepted snapshot and final root are retained; the separately frozen group2 proof verifies only three metadata changes between those accepted/current copies. The original R1 is neither accepted v2 nor a required active overlay.\n    original_target_sha256: null (as recorded in source)\n    original_target_bytes: null (as recorded in source)\n  [3]     source_file: full/APP212/support/review/v2_revised_record.json\n    json_pointer: /sources/0/read_scope\n    reference: 完整正文/方法/结果/讨论、4主图图注、伦理与补充说明；block编号见sources/blocks.json\n    automatic_loading: false\n    role: scope_prose_mentions_original_source_block_cache_not_runtime_path\nnonactive_excluded_members: \n  [1] review/R1_frozen_record.json\n  [2] validate_package.py\nverified_alias_binding_proofs: \n[]\nreference_resolution_policy: Exact explicit aliases only. Acceptance companions apply jointly. Archived original science, source assets and historical candidate flags remain nonruntime provenance. Independent closure review is pending.",
+      "Text2_Reference": [
+        "DOI: https://doi.org/10.3389/pore.2023.1611284",
+        "Evidence-layer structured paraphrase; not a verbatim quotation. Source release: https://github.com/404NotFound422/TOCAgentProject/tree/5e3a711befb3952a2e39f4d53fc9c9f1a7ac0d22/KnowledgeBase/evidence_expansion_20261019",
+        "Local source archive: ../literature_evidence/2026-11-11/source_release.zip; member: full/APP212/version_selection.json"
+      ]
+    },
+    {
+      "Text3": "scope:\n人类已取得组织的固定、透明、标记、成像及临床形态结果。无动物/疾病模型构建；不提供试剂生产或采购要求。",
+      "Text3_Reference": [
+        "Structured evidence: full/APP212/evidence/record.json#/scope; SHA-256: 63464963692a50a8247cf623ff64e5312ebb0f9be1ebc178f39cb6e98f9c67cd; DOI: https://doi.org/10.3389/pore.2023.1611284"
+      ]
+    },
+    {
+      "Text4": "interpretation_limits:\nlimit: 无诊断准确度、敏感度/特异度、预后随访或切缘残留验证；讨论切缘潜在残癌仅假设\nsource_locators: \n  [1]     source_id: S1\n    block: 20\n    detail: ",
+      "Text4_Reference": [
+        "Structured evidence: full/APP212/evidence/record.json#/interpretation_limits/0; SHA-256: 63464963692a50a8247cf623ff64e5312ebb0f9be1ebc178f39cb6e98f9c67cd; DOI: https://doi.org/10.3389/pore.2023.1611284"
+      ]
+    },
+    {
+      "Text5": "interpretation_limits:\nlimit: 未分析PNI与淋巴管结构关系；独立PNI传播路径是讨论推测，不是本研究排除血管/淋巴路径的结果\nsource_locators: \n  [1]     source_id: S1\n    block: 21\n    detail: ",
+      "Text5_Reference": [
+        "Structured evidence: full/APP212/evidence/record.json#/interpretation_limits/1; SHA-256: 63464963692a50a8247cf623ff64e5312ebb0f9be1ebc178f39cb6e98f9c67cd; DOI: https://doi.org/10.3389/pore.2023.1611284"
+      ]
+    },
+    {
+      "Text6": "interpretation_limits:\nlimit: 人类观察性形态关联不能推出癌诱导神经生长或神经促进侵袭的因果机制\nsource_locators: \n  [1]     source_id: S1\n    block: 19\n    detail: ",
+      "Text6_Reference": [
+        "Structured evidence: full/APP212/evidence/record.json#/interpretation_limits/2; SHA-256: 63464963692a50a8247cf623ff64e5312ebb0f9be1ebc178f39cb6e98f9c67cd; DOI: https://doi.org/10.3389/pore.2023.1611284"
+      ]
+    },
+    {
+      "Text7": "source_conflicts:\nconflict_id: C1\nfield: 初次甲醇脱水后4°C60min\nhandling: 作用范围句法不明；独立阶段保留，不赋予每步60min\nsource_locators: \n  [1]     source_id: S1\n    block: 3\n    detail: ",
+      "Text7_Reference": [
+        "Structured evidence: full/APP212/evidence/record.json#/source_conflicts/0; SHA-256: 63464963692a50a8247cf623ff64e5312ebb0f9be1ebc178f39cb6e98f9c67cd; DOI: https://doi.org/10.3389/pore.2023.1611284"
+      ]
+    },
+    {
+      "Text8": "source_conflicts:\nconflict_id: C2\nfield: AF488滤光参数\nhandling: 原文421/50 excitation,480/40 emission，疑似异常但未纠正\nsource_locators: \n  [1]     source_id: S1\n    block: 6\n    detail: ",
+      "Text8_Reference": [
+        "Structured evidence: full/APP212/evidence/record.json#/source_conflicts/1; SHA-256: 63464963692a50a8247cf623ff64e5312ebb0f9be1ebc178f39cb6e98f9c67cd; DOI: https://doi.org/10.3389/pore.2023.1611284"
+      ]
+    },
+    {
+      "Text9": "source_conflicts:\nconflict_id: C3\nfield: 66%DCM/33%methanol\nhandling: 和为99%；保留原文比例\nsource_locators: \n  [1]     source_id: S1\n    block: 3\n    detail: \n  [2]     source_id: S1\n    block: 5\n    detail: ",
+      "Text9_Reference": [
+        "Structured evidence: full/APP212/evidence/record.json#/source_conflicts/2; SHA-256: 63464963692a50a8247cf623ff64e5312ebb0f9be1ebc178f39cb6e98f9c67cd; DOI: https://doi.org/10.3389/pore.2023.1611284"
+      ]
+    },
+    {
+      "Text10": "source_conflicts:\nconflict_id: C4\nfield: Fig3正文与图注\nhandling: 正文称粗神经被癌横断；图注末句exhibits continuous thick nerve fiber措辞含混；以正文描述、图像仅支持可见空间关系，不据图确认真正组织破坏\nsource_locators: \n  [1]     source_id: S1\n    block: 14\n    detail: \n  [2]     source_id: S1\n    block: 15\n    detail: ",
+      "Text10_Reference": [
+        "Structured evidence: full/APP212/evidence/record.json#/source_conflicts/3; SHA-256: 63464963692a50a8247cf623ff64e5312ebb0f9be1ebc178f39cb6e98f9c67cd; DOI: https://doi.org/10.3389/pore.2023.1611284"
+      ]
+    },
+    {
+      "Text11": "source_conflicts:\nconflict_id: C5\nfield: 二维检测体系\nhandling: avidin-biotin-peroxidase complex与BOND Polymer Refine并列；不合成为已验证统一检测化学体系\nsource_locators: \n  [1]     source_id: S1\n    block: 7\n    detail: ",
+      "Text11_Reference": [
+        "Structured evidence: full/APP212/evidence/record.json#/source_conflicts/4; SHA-256: 63464963692a50a8247cf623ff64e5312ebb0f9be1ebc178f39cb6e98f9c67cd; DOI: https://doi.org/10.3389/pore.2023.1611284"
+      ]
+    },
+    {
+      "Text12": "source_conflicts:\nconflict_id: C6\nfield: 附加文件顺序\nhandling: XML SM1=Video2、SM2=Video1；正文MovieS1浅层与MovieS2深层通过内容和Fig3/4匹配，不按SM序号等同\nsource_locators: \n  [1]     source_id: S1\n    block: 27\n    detail: \n  [2]     source_id: S1\n    block: 28\n    detail: \n  [3]     source_id: S1\n    block: 29\n    detail: \n  [4]     source_id: S1\n    block: 30\n    detail: ",
+      "Text12_Reference": [
+        "Structured evidence: full/APP212/evidence/record.json#/source_conflicts/5; SHA-256: 63464963692a50a8247cf623ff64e5312ebb0f9be1ebc178f39cb6e98f9c67cd; DOI: https://doi.org/10.3389/pore.2023.1611284"
+      ]
+    },
+    {
+      "Text13": "source_conflicts:\nconflict_id: C7\nfield: 标本厚度与成像深度\nhandling: 癌标本最大厚5mm与约0.2–0.5mm采集深度分开；不称整5mm均成像\nsource_locators: \n  [1]     source_id: S1\n    block: 2\n    detail: \n  [2]     source_id: S1\n    block: 10\n    detail: ",
+      "Text13_Reference": [
+        "Structured evidence: full/APP212/evidence/record.json#/source_conflicts/6; SHA-256: 63464963692a50a8247cf623ff64e5312ebb0f9be1ebc178f39cb6e98f9c67cd; DOI: https://doi.org/10.3389/pore.2023.1611284"
+      ]
+    },
+    {
+      "Text14": "source_conflicts:\nconflict_id: C8\nfield: 自发荧光氧化与后续读出\nhandling: 预处理意在氧化自发荧光蛋白但后续使用残余组织自发荧光；不等同FP保留实验\nsource_locators: \n  [1]     source_id: S1\n    block: 3\n    detail: \n  [2]     source_id: S1\n    block: 6\n    detail: \n  [3]     source_id: S1\n    block: 10\n    detail: ",
+      "Text14_Reference": [
+        "Structured evidence: full/APP212/evidence/record.json#/source_conflicts/7; SHA-256: 63464963692a50a8247cf623ff64e5312ebb0f9be1ebc178f39cb6e98f9c67cd; DOI: https://doi.org/10.3389/pore.2023.1611284"
+      ]
+    },
+    {
+      "Text15": "source_conflicts:\nconflict_id: C9\nfield: 切片载玻片用语\nhandling: 原文saline-coated，忠实保留未擅改silane-coated\nsource_locators: \n  [1]     source_id: S1\n    block: 7\n    detail: ",
+      "Text15_Reference": [
+        "Structured evidence: full/APP212/evidence/record.json#/source_conflicts/8; SHA-256: 63464963692a50a8247cf623ff64e5312ebb0f9be1ebc178f39cb6e98f9c67cd; DOI: https://doi.org/10.3389/pore.2023.1611284"
+      ]
+    },
+    {
+      "Text16": "missing_fields:\nfield: patients\nstatus: not_reported_or_not_tested\ndetail: 年龄、性别、招募时间、分期、治疗史及选择标准",
+      "Text16_Reference": [
+        "Structured evidence: full/APP212/evidence/record.json#/missing_fields/0; SHA-256: 63464963692a50a8247cf623ff64e5312ebb0f9be1ebc178f39cb6e98f9c67cd; DOI: https://doi.org/10.3389/pore.2023.1611284"
+      ]
+    },
+    {
+      "Text17": "missing_fields:\nfield: sampling\nstatus: not_reported_or_not_tested\ndetail: 每位患者标本数、各图对应患者/标本、每分支重复次数及配对数",
+      "Text17_Reference": [
+        "Structured evidence: full/APP212/evidence/record.json#/missing_fields/1; SHA-256: 63464963692a50a8247cf623ff64e5312ebb0f9be1ebc178f39cb6e98f9c67cd; DOI: https://doi.org/10.3389/pore.2023.1611284"
+      ]
+    },
+    {
+      "Text18": "missing_fields:\nfield: fixation\nstatus: not_reported_or_not_tested\ndetail: 初始甲醇/DMSO温度；初次脱水每步时长及60min作用范围",
+      "Text18_Reference": [
+        "Structured evidence: full/APP212/evidence/record.json#/missing_fields/2; SHA-256: 63464963692a50a8247cf623ff64e5312ebb0f9be1ebc178f39cb6e98f9c67cd; DOI: https://doi.org/10.3389/pore.2023.1611284"
+      ]
+    },
+    {
+      "Text19": "missing_fields:\nfield: wash\nstatus: not_reported_or_not_tested\ndetail: 多处甲醇/PBS清洗及复水每步时长/温度",
+      "Text19_Reference": [
+        "Structured evidence: full/APP212/evidence/record.json#/missing_fields/3; SHA-256: 63464963692a50a8247cf623ff64e5312ebb0f9be1ebc178f39cb6e98f9c67cd; DOI: https://doi.org/10.3389/pore.2023.1611284"
+      ]
+    },
+    {
+      "Text20": "missing_fields:\nfield: antibodies\nstatus: not_reported_or_not_tested\ndetail: 一抗递增浓度完整时间表、抗体孵育稀释液、二抗稀释度、离心温度",
+      "Text20_Reference": [
+        "Structured evidence: full/APP212/evidence/record.json#/missing_fields/4; SHA-256: 63464963692a50a8247cf623ff64e5312ebb0f9be1ebc178f39cb6e98f9c67cd; DOI: https://doi.org/10.3389/pore.2023.1611284"
+      ]
+    },
+    {
+      "Text21": "missing_fields:\nfield: clearing\nstatus: not_reported_or_not_tested\ndetail: RI数值、标记后脱水/DCM温度、体积变形定量、处理液体积",
+      "Text21_Reference": [
+        "Structured evidence: full/APP212/evidence/record.json#/missing_fields/5; SHA-256: 63464963692a50a8247cf623ff64e5312ebb0f9be1ebc178f39cb6e98f9c67cd; DOI: https://doi.org/10.3389/pore.2023.1611284"
+      ]
+    },
+    {
+      "Text22": "missing_fields:\nfield: imaging\nstatus: not_reported_or_not_tested\ndetail: NA、工作距离、步长、像素尺寸、扫描/曝光参数、分割阈值、逐样本深度、全壁体积覆盖程度",
+      "Text22_Reference": [
+        "Structured evidence: full/APP212/evidence/record.json#/missing_fields/6; SHA-256: 63464963692a50a8247cf623ff64e5312ebb0f9be1ebc178f39cb6e98f9c67cd; DOI: https://doi.org/10.3389/pore.2023.1611284"
+      ]
+    },
+    {
+      "Text23": "missing_fields:\nfield: validation\nstatus: not_reported_or_not_tested\ndetail: 同一病灶严格配准、盲法判读、阴性抗体对照、透明前后标记保留对照",
+      "Text23_Reference": [
+        "Structured evidence: full/APP212/evidence/record.json#/missing_fields/7; SHA-256: 63464963692a50a8247cf623ff64e5312ebb0f9be1ebc178f39cb6e98f9c67cd; DOI: https://doi.org/10.3389/pore.2023.1611284"
+      ]
+    },
+    {
+      "Text24": "missing_fields:\nfield: statistics\nstatus: not_reported_or_not_tested\ndetail: 神经密度/分支数/PNI分布定量、效应量和统计检验、诊断及预后效能",
+      "Text24_Reference": [
+        "Structured evidence: full/APP212/evidence/record.json#/missing_fields/8; SHA-256: 63464963692a50a8247cf623ff64e5312ebb0f9be1ebc178f39cb6e98f9c67cd; DOI: https://doi.org/10.3389/pore.2023.1611284"
+      ]
+    },
+    {
+      "Text25": "missing_fields:\nfield: workflow\nstatus: not_reported_or_not_tested\ndetail: 完整总时长；overnight小时数、所有转移洗涤成像耗时",
+      "Text25_Reference": [
+        "Structured evidence: full/APP212/evidence/record.json#/missing_fields/9; SHA-256: 63464963692a50a8247cf623ff64e5312ebb0f9be1ebc178f39cb6e98f9c67cd; DOI: https://doi.org/10.3389/pore.2023.1611284"
+      ]
+    },
+    {
+      "Text26": "missing_fields:\nfield: histology\nstatus: not_reported_or_not_tested\ndetail: 固定条件、抗原修复、H&E和IHC各孵育时长",
+      "Text26_Reference": [
+        "Structured evidence: full/APP212/evidence/record.json#/missing_fields/10; SHA-256: 63464963692a50a8247cf623ff64e5312ebb0f9be1ebc178f39cb6e98f9c67cd; DOI: https://doi.org/10.3389/pore.2023.1611284"
+      ]
+    },
+    {
+      "Text27": "missing_fields:\nfield: storage\nstatus: not_reported_or_not_tested\ndetail: 透明后储存稳定性及长期荧光保持",
+      "Text27_Reference": [
+        "Structured evidence: full/APP212/evidence/record.json#/missing_fields/11; SHA-256: 63464963692a50a8247cf623ff64e5312ebb0f9be1ebc178f39cb6e98f9c67cd; DOI: https://doi.org/10.3389/pore.2023.1611284"
+      ]
+    }
+  ]
+}

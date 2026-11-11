@@ -1,0 +1,405 @@
+{
+  "TOC_Method_Name": {
+    "Text": "Not specified as a single method in the selected evidence records",
+    "Text_Reference": [
+      "DOI: https://doi.org/10.1038/srep34331",
+      "Evidence-layer structured paraphrase; not a verbatim quotation. Source release: https://github.com/404NotFound422/TOCAgentProject/tree/5e3a711befb3952a2e39f4d53fc9c9f1a7ac0d22/KnowledgeBase/evidence_expansion_20261019",
+      "Local source archive: ../literature_evidence/2026-11-11/source_release.zip; member: full/M_N1498/version_selection.json"
+    ]
+  },
+  "General_Description": {
+    "Text": "Large-scale tissue clearing (PACT): Technical evaluation and new perspectives in immunofluorescence, histology, and ultrastructure. (2016). Evidence category: method. This card preserves the evidence layer's structured statements and their original field labels; it does not add a new literature review or certify benchmark scoring thresholds.",
+    "Text_Reference": [
+      "DOI: https://doi.org/10.1038/srep34331",
+      "Evidence-layer structured paraphrase; not a verbatim quotation. Source release: https://github.com/404NotFound422/TOCAgentProject/tree/5e3a711befb3952a2e39f4d53fc9c9f1a7ac0d22/KnowledgeBase/evidence_expansion_20261019",
+      "Local source archive: ../literature_evidence/2026-11-11/source_release.zip; member: full/M_N1498/version_selection.json"
+    ]
+  },
+  "Tissue_Types": [
+    {
+      "Text1": "sample_groups:\nid: S1\nspecies: mouse C57BL/6N\nages: \n  [1] P0–P5\n  [2] 8weeks\ntissue: small intestine with attached distal mesentery\nsegment_length_cm: \n  [1] 1\n  [2] 2\nage_binding: not every illustrated panel assigned to specific age",
+      "Text1_Reference": [
+        "Structured evidence: full/M_N1498/evidence/independent_review/scientific_candidate_v1.json#/sample_groups/0; SHA-256: 6b99e8a58b6dde1d7ad5feb0dabeb8282a65b7be8299fd9f7d4633cea639d1c3; DOI: https://doi.org/10.1038/srep34331"
+      ]
+    },
+    {
+      "Text2": "sample_groups:\nid: S2\nspecies: adult mouse\ntissue: gut transverse slice\nthickness_mm: 2\nreadout: area swelling/shrinkage",
+      "Text2_Reference": [
+        "Structured evidence: full/M_N1498/evidence/independent_review/scientific_candidate_v1.json#/sample_groups/1; SHA-256: 6b99e8a58b6dde1d7ad5feb0dabeb8282a65b7be8299fd9f7d4633cea639d1c3; DOI: https://doi.org/10.1038/srep34331"
+      ]
+    },
+    {
+      "Text3": "sample_groups:\nid: S3\nspecies: human\nsex: male\nage_years: 82\ndonor_n: 1\npostmortem_h: 9\ntissue: full-thickness gut wall\nreadout: TUJ1/ZO1 and collagen autofluorescence",
+      "Text3_Reference": [
+        "Structured evidence: full/M_N1498/evidence/independent_review/scientific_candidate_v1.json#/sample_groups/2; SHA-256: 6b99e8a58b6dde1d7ad5feb0dabeb8282a65b7be8299fd9f7d4633cea639d1c3; DOI: https://doi.org/10.1038/srep34331"
+      ]
+    }
+  ],
+  "Time_Consumption": [],
+  "Tissue_Deformation": [],
+  "Fluorescence_Compatibility": [
+    {
+      "Text1": "antibody_table:\nsource_locator: Table1\nrows: \n  [1]     epitope: NOS1\n    host: Rabbit\n    dilution: 1:400\n    supplier: Research & Diagnostic Antibodies No. AS-1657; Lot # 9266\n  [2]     epitope: HuC/D\n    host: Mouse\n    dilution: 1:50\n    supplier: Molecular Probes No. A-21271\n  [3]     epitope: Chat\n    host: Goat\n    dilution: 1:100\n    supplier: Chemicon International No. AB144P\n  [4]     epitope: TUJ\n    host: Rabbit\n    dilution: 1:400\n    supplier: Covance Cat. No. PRB-435P\n  [5]     epitope: TH\n    host: Mouse\n    dilution: 1:400\n    supplier: Immunostar Cat. No. 22941; Lot # 1240001\n  [6]     epitope: c-KIT\n    host: Rabbit\n    dilution: 1:200\n    supplier: DAKO No. A4502\n  [7]     epitope: Cytokeratin\n    host: Rabbit\n    dilution: 1:400\n    supplier: DAKO No. Z0622\n  [8]     epitope: SMA\n    host: Mouse\n    dilution: 1:100\n    supplier: DAKO No. M0851\n  [9]     epitope: AQP4\n    host: Rabbit\n    dilution: 1:100\n    supplier: Santa Cruz Biotechnology Inc. No. sc-20812\n  [10]     epitope: ZO-1\n    host: Rabbit\n    dilution: 1:100\n    supplier: Thermo Scientific Cat. 33-9100; Lot # QC215031\n  [11]     epitope: CD 31\n    host: Rabbit\n    dilution: 1:50\n    supplier: Abcam ab28364\n  [12]     epitope: Serotonin\n    host: Rabbit\n    dilution: 1:400\n    supplier: Immunostar No. 20080\n  [13]     epitope: Anti-mouse Alexa 546\n    host: Donkey\n    dilution: 1:400\n    supplier: Thermo Fisher Scientific No. A-21422\n  [14]     epitope: Anti-rabbit Alexa 488\n    host: Donkey\n    dilution: 1:400\n    supplier: Thermo Fisher Scientific No. A-21206\n  [15]     epitope: Anti-goat Alexa 488\n    host: Donkey\n    dilution: 1:400\n    supplier: Thermo Fisher Scientific No. A-11055\n  [16]     epitope: Anti-rabbit Alexa 488\n    host: Goat\n    dilution: 1:400\n    supplier: Thermo Fisher Scientific No. A-11008\n  [17]     epitope: Anti-mouse Alexa 546\n    host: Goat\n    dilution: 1:400\n    supplier: Thermo Fisher Scientific No. A-11030\nrow_count: 17\ncell_count: 68\nbinding_rule: Do not blindly cross-product primary andsecondary rows; hostcompatibility onlydoesnot proveactual combination. Three failed targets independently bound tonegative result.",
+      "Text1_Reference": [
+        "Structured evidence: full/M_N1498/evidence/independent_review/scientific_candidate_v1.json#/antibody_table; SHA-256: 6b99e8a58b6dde1d7ad5feb0dabeb8282a65b7be8299fd9f7d4633cea639d1c3; DOI: https://doi.org/10.1038/srep34331"
+      ]
+    }
+  ],
+  "Preservation_Stability": [],
+  "Application": [
+    {
+      "Text1": "units:\nunit_id: U001\nkind: design\nclaim: Two passive clearing solutions are compared, not active electrophoretic CLARITY:4%SDS+200mM boric acid pH8.5 versus8%SDS/PBS pH7.5.\nsource_locator: Results Clearing; Methods Tissue clearing\ncondition_binding: S1/S2; solution identity retained\nvalues: \n  CLARITY_solution: \n    SDS_wv_percent: 4\n    boric_acid_mM: 200\n    pH: 8.5\n  PACT_solution: \n    SDS_wv_percent: 8\n    buffer: PBS\n    pH: 7.5",
+      "Text1_Reference": [
+        "Structured evidence: full/M_N1498/evidence/independent_review/scientific_candidate_v1.json#/units/0; SHA-256: 6b99e8a58b6dde1d7ad5feb0dabeb8282a65b7be8299fd9f7d4633cea639d1c3; DOI: https://doi.org/10.1038/srep34331"
+      ]
+    },
+    {
+      "Text2": "units:\nunit_id: U002\nkind: sample\nclaim: Mouse gut segments retain mesenteric attachments;2mm transverse adult slices are a separate morphometry branch; one82-year-old human donor is not a cohort.\nsource_locator: Methods Animals/Tissue preparation;Fig1;SupplementaryFig2\ncondition_binding: S1/S2/S3 distinct\nvalues: \n{}",
+      "Text2_Reference": [
+        "Structured evidence: full/M_N1498/evidence/independent_review/scientific_candidate_v1.json#/units/1; SHA-256: 6b99e8a58b6dde1d7ad5feb0dabeb8282a65b7be8299fd9f7d4633cea639d1c3; DOI: https://doi.org/10.1038/srep34331"
+      ]
+    },
+    {
+      "Text3": "units:\nunit_id: U003\nkind: preparation\nclaim: Hydrogel fixation/embedding precedes lipid extraction; gut lumen contents can remain opaque and must not be mistaken for clearing-resistant tissue.\nsource_locator: Methods Fixation and hydrogel embedding; tissue preparation\ncondition_binding: S1\nvalues: \n  HMS: 4%wt/v acrylamide;4%wt/v PFA;.25%wt/v VA044 inPBS\n  fixation: 2days4°C\n  degassing: 13.3kPa15min\n  polymerization: 3h37°C13.3kPa\n  lumen_contents: chyme/mucus do not clear; bile salts stay yellow",
+      "Text3_Reference": [
+        "Structured evidence: full/M_N1498/evidence/independent_review/scientific_candidate_v1.json#/units/2; SHA-256: 6b99e8a58b6dde1d7ad5feb0dabeb8282a65b7be8299fd9f7d4633cea639d1c3; DOI: https://doi.org/10.1038/srep34331"
+      ]
+    },
+    {
+      "Text4": "units:\nunit_id: U004\nkind: time\nclaim: Clearing takes12–14days depending on specimen size; this is the clearing stage, not complete immunolabeling workflow.\nsource_locator: Methods Tissue clearing;Results\ncondition_binding: S1\nvalues: \n  temperature_methods_C: 60\n  temperature_results_C: \n    [1] 55\n    [2] 60\n  solution_volume_ml: 40\n  exchange_days: \n    [1] 3\n    [2] 5\n  wash: twice PBS/.1%Triton over1day; per-wash duration wording not separately resolved",
+      "Text4_Reference": [
+        "Structured evidence: full/M_N1498/evidence/independent_review/scientific_candidate_v1.json#/units/3; SHA-256: 6b99e8a58b6dde1d7ad5feb0dabeb8282a65b7be8299fd9f7d4633cea639d1c3; DOI: https://doi.org/10.1038/srep34331"
+      ]
+    },
+    {
+      "Text5": "units:\nunit_id: U005\nkind: morphology\nclaim: Projected section area rises after clearing and decreases after80%glycerol toward baseline; absence of significant baseline-vs-final difference is not formal equivalence or a measured3Dvolume.\nsource_locator: Fig1B–E;Results\ncondition_binding: S2,2mm transverse sections\nvalues: \n  n_caption: 20\n  measure: section surface area\n  test: Kruskal–Wallis with Dunn pairwise comparison\n  within_process_p: <.001 reported caption\n  between_solutions: not significant\n  volume_wording: authors discuss volume but actual measurement is area",
+      "Text5_Reference": [
+        "Structured evidence: full/M_N1498/evidence/independent_review/scientific_candidate_v1.json#/units/4; SHA-256: 6b99e8a58b6dde1d7ad5feb0dabeb8282a65b7be8299fd9f7d4633cea639d1c3; DOI: https://doi.org/10.1038/srep34331"
+      ]
+    },
+    {
+      "Text6": "units:\nunit_id: U006\nkind: result\nclaim: No clearing-speed difference between solutions was detected, but data were not shown; cannot infer numerical equivalence.\nsource_locator: Results Clearing;Discussion\ncondition_binding: S1 two solutions\nvalues: \n  evidence: author report/data not shown",
+      "Text6_Reference": [
+        "Structured evidence: full/M_N1498/evidence/independent_review/scientific_candidate_v1.json#/units/5; SHA-256: 6b99e8a58b6dde1d7ad5feb0dabeb8282a65b7be8299fd9f7d4633cea639d1c3; DOI: https://doi.org/10.1038/srep34331"
+      ]
+    },
+    {
+      "Text7": "units:\nunit_id: U007\nkind: labeling\nclaim: Primary/secondary antibody incubations are up-to-one-week stages each, with fresh antibody addition after4days; blocking/rinse/nuclear/RI stages remain separate.\nsource_locator: Methods Staining and RI matching\ncondition_binding: S1; antibody-specific dilution fromTable1\nvalues: \n  blocking: 2days37°C;PBS1%BSA/.25%Triton/.1%sodiumazide/4%donkeyserum\n  primary: up to1week37°C;1–3ml\n  between_rinse: PBS/.1%Triton2days at37°C; wording each retained\n  secondary: up to1week37°C\n  DAPI: 1.25µg/ml12h\n  final_PBS: 3×5h\n  RI: 80%v/v glycerol until absolutely translucent; duration unreported",
+      "Text7_Reference": [
+        "Structured evidence: full/M_N1498/evidence/independent_review/scientific_candidate_v1.json#/units/6; SHA-256: 6b99e8a58b6dde1d7ad5feb0dabeb8282a65b7be8299fd9f7d4633cea639d1c3; DOI: https://doi.org/10.1038/srep34331"
+      ]
+    },
+    {
+      "Text8": "units:\nunit_id: U008\nkind: compatibility\nclaim: HuC/D labels somata,TUJ1 neuronal fibers andTH catecholaminergic fibers in clearedgut; TUJ1 labeling extends through whole wall.\nsource_locator: Fig2A–D;Results ENS\ncondition_binding: S1\nvalues: \n  LSFM_zrange_um: \n    HuCD: 1863\n    TUJ1: 2034\n    TH: 1708\n  LSFM_zstep_um: 8.1\n  LSFM_objective: 5×/.16\n  confocal_TUJ1: 10×/.3;1Airyunit\n  depth_color: outside red→inside blue; not separate dyes",
+      "Text8_Reference": [
+        "Structured evidence: full/M_N1498/evidence/independent_review/scientific_candidate_v1.json#/units/7; SHA-256: 6b99e8a58b6dde1d7ad5feb0dabeb8282a65b7be8299fd9f7d4633cea639d1c3; DOI: https://doi.org/10.1038/srep34331"
+      ]
+    },
+    {
+      "Text9": "units:\nunit_id: U009\nkind: compatibility\nclaim: Mesenteric fibers join intramural ENS and CD31-marked vessels branch into villi; sympathetic arteriolar innervation requires appropriateTH/neuronal context, not CD31 alone.\nsource_locator: Fig3;Results\ncondition_binding: S1 mesentery-gut interface\nvalues: \n  zrange_um: \n    TH_A: 2100\n    TUJ1_B: 852\n    CD31_C: 1047\n  figure_channels_D_E_F: \n    [1] CD31\n    [2] TUJ1\n    [3] merge",
+      "Text9_Reference": [
+        "Structured evidence: full/M_N1498/evidence/independent_review/scientific_candidate_v1.json#/units/8; SHA-256: 6b99e8a58b6dde1d7ad5feb0dabeb8282a65b7be8299fd9f7d4633cea639d1c3; DOI: https://doi.org/10.1038/srep34331"
+      ]
+    },
+    {
+      "Text10": "units:\nunit_id: U010\nkind: compatibility\nclaim: Cytokeratin labels epithelial cytoplasm, excludes nuclei and goblet-cell apical secretory area;ZO1 labels epithelial/endothelial junctions.\nsource_locator: Fig4A–D;Results epithelium\ncondition_binding: S1\nvalues: \n  channels: \n    cytokeratin: green\n    ZO1: red\n    DAPI: blue\n  zstep_um: 2\n  range_um: 370\n  objective: 20×/1.0 correction nd1.45",
+      "Text10_Reference": [
+        "Structured evidence: full/M_N1498/evidence/independent_review/scientific_candidate_v1.json#/units/9; SHA-256: 6b99e8a58b6dde1d7ad5feb0dabeb8282a65b7be8299fd9f7d4633cea639d1c3; DOI: https://doi.org/10.1038/srep34331"
+      ]
+    },
+    {
+      "Text11": "units:\nunit_id: U011\nkind: compatibility\nclaim: Serotonin-positive enteroendocrine cells are strong while serotonergic varicosities are barely visible; concentration explanation is author reasoning, not directly measured neurotransmitter concentration.\nsource_locator: Results epithelium; SupplementaryVideo10\ncondition_binding: S1\nvalues: \n  scope: qualitative labeling, not all serotonergic structures equally visualized",
+      "Text11_Reference": [
+        "Structured evidence: full/M_N1498/evidence/independent_review/scientific_candidate_v1.json#/units/10; SHA-256: 6b99e8a58b6dde1d7ad5feb0dabeb8282a65b7be8299fd9f7d4633cea639d1c3; DOI: https://doi.org/10.1038/srep34331"
+      ]
+    },
+    {
+      "Text12": "units:\nunit_id: U012\nkind: compatibility\nclaim: AQP4 membrane-associated epithelial labeling is reported; membrane lipid removal does not imply every membrane-associated epitope is lost.\nsource_locator: Results;SupplementaryFig1\ncondition_binding: S1; actual Supplementary Fig1 and Video11 inspected\nvalues: \n{}",
+      "Text12_Reference": [
+        "Structured evidence: full/M_N1498/evidence/independent_review/scientific_candidate_v1.json#/units/11; SHA-256: 6b99e8a58b6dde1d7ad5feb0dabeb8282a65b7be8299fd9f7d4633cea639d1c3; DOI: https://doi.org/10.1038/srep34331"
+      ]
+    },
+    {
+      "Text13": "units:\nunit_id: U013\nkind: negative_compatibility\nclaim: NOS1,cKIT,ChAT failed to show specific staining under testedconditions; this is not proof they are universally incompatible with allCLARITY/PACT variants.\nsource_locator: Discussion antibody failures;Table1\ncondition_binding: S1 tested formulation and staining combination\nvalues: \n{}",
+      "Text13_Reference": [
+        "Structured evidence: full/M_N1498/evidence/independent_review/scientific_candidate_v1.json#/units/12; SHA-256: 6b99e8a58b6dde1d7ad5feb0dabeb8282a65b7be8299fd9f7d4633cea639d1c3; DOI: https://doi.org/10.1038/srep34331"
+      ]
+    },
+    {
+      "Text14": "units:\nunit_id: U014\nkind: compatibility\nclaim: SMA labels muscularis layers,villus smooth muscle andarteriolar media inVideo11, pairedwithAQP4 epithelial signal.\nsource_locator: SupplementaryVideo11 caption and5sampledframes\ncondition_binding: S1;AQP4green/SMAred pseudocolors;10×/.3objective;8.6µm zsteps\nvalues: \n{}",
+      "Text14_Reference": [
+        "Structured evidence: full/M_N1498/evidence/independent_review/scientific_candidate_v1.json#/units/13; SHA-256: 6b99e8a58b6dde1d7ad5feb0dabeb8282a65b7be8299fd9f7d4633cea639d1c3; DOI: https://doi.org/10.1038/srep34331"
+      ]
+    },
+    {
+      "Text15": "units:\nunit_id: U015\nkind: human_application\nclaim: Human full-wall specimens become translucent and TUJ1/ZO1 reveal selected structures, but collagen-rich submucosa remains incompletely cleared/autofluorescent and prevents conventional confocal scanning through entire wall.\nsource_locator: Results human specimens;Discussion;SupplementaryFig2\ncondition_binding: S3;PACTsolution;not complete human-gut clearing\nvalues: \n{}",
+      "Text15_Reference": [
+        "Structured evidence: full/M_N1498/evidence/independent_review/scientific_candidate_v1.json#/units/14; SHA-256: 6b99e8a58b6dde1d7ad5feb0dabeb8282a65b7be8299fd9f7d4633cea639d1c3; DOI: https://doi.org/10.1038/srep34331"
+      ]
+    },
+    {
+      "Text16": "units:\nunit_id: U016\nkind: histology\nclaim: PACT pH7.5-cleared paraffin sections support H&E/Azan identification of muscle,ENS,goblet,Paneth and epithelialcells; eosin weaker thanPFA control.\nsource_locator: Fig5;Results Classicalhistology\ncondition_binding: S1;3µm paraffin sections;4%PFA controls\nvalues: \n{}",
+      "Text16_Reference": [
+        "Structured evidence: full/M_N1498/evidence/independent_review/scientific_candidate_v1.json#/units/15; SHA-256: 6b99e8a58b6dde1d7ad5feb0dabeb8282a65b7be8299fd9f7d4633cea639d1c3; DOI: https://doi.org/10.1038/srep34331"
+      ]
+    },
+    {
+      "Text17": "units:\nunit_id: U017\nkind: histology\nclaim: CLARITY solution pH8.5 produces unreliable/nonspecific classical stains; effects may reflect pH withhigh temperature andprolonged exposure, not isolatedpHcausality.\nsource_locator: Results;Discussion;SupplementaryFig3\ncondition_binding: S1 passive two-solution comparison\nvalues: \n{}",
+      "Text17_Reference": [
+        "Structured evidence: full/M_N1498/evidence/independent_review/scientific_candidate_v1.json#/units/16; SHA-256: 6b99e8a58b6dde1d7ad5feb0dabeb8282a65b7be8299fd9f7d4633cea639d1c3; DOI: https://doi.org/10.1038/srep34331"
+      ]
+    },
+    {
+      "Text18": "units:\nunit_id: U018\nkind: morphology\nclaim: Villus tips appear betterretained after hydrogel clearing; hydrogel protection is a proposed explanation. No cracks between tissue layers observed.\nsource_locator: Fig5;Results\ncondition_binding: S1;qualitative histology\nvalues: \n{}",
+      "Text18_Reference": [
+        "Structured evidence: full/M_N1498/evidence/independent_review/scientific_candidate_v1.json#/units/17; SHA-256: 6b99e8a58b6dde1d7ad5feb0dabeb8282a65b7be8299fd9f7d4633cea639d1c3; DOI: https://doi.org/10.1038/srep34331"
+      ]
+    },
+    {
+      "Text19": "units:\nunit_id: U019\nkind: ultrastructure\nclaim: Cleared samples lack membrane contrast after lipidwashout; CLARITYsolution specimens show apicaldamage and enlargedperinuclearcleft unlikePACTsolution.\nsource_locator: Fig6A,B;Results\ncondition_binding: S1;TEM60nmsections;osmicated control\nvalues: \n{}",
+      "Text19_Reference": [
+        "Structured evidence: full/M_N1498/evidence/independent_review/scientific_candidate_v1.json#/units/18; SHA-256: 6b99e8a58b6dde1d7ad5feb0dabeb8282a65b7be8299fd9f7d4633cea639d1c3; DOI: https://doi.org/10.1038/srep34331"
+      ]
+    },
+    {
+      "Text20": "units:\nunit_id: U020\nkind: ultrastructure\nclaim: PACT-cleared tissue retains recognizable microvillar actin,terminal cytoskeletalnet anddesmosomalproteinlocations despite membrane loss.\nsource_locator: Fig6C,D;Results\ncondition_binding: S1;not full preservationofallultrastructure\nvalues: \n{}",
+      "Text20_Reference": [
+        "Structured evidence: full/M_N1498/evidence/independent_review/scientific_candidate_v1.json#/units/19; SHA-256: 6b99e8a58b6dde1d7ad5feb0dabeb8282a65b7be8299fd9f7d4633cea639d1c3; DOI: https://doi.org/10.1038/srep34331"
+      ]
+    },
+    {
+      "Text21": "units:\nunit_id: U021\nkind: measurement\nclaim: TEM control is osmium-treated initiallyunfixed tissue rather than the4%PFA histology control; controls must not be merged across readouts.\nsource_locator: Methods Electronmicroscopy;Fig6;Fig5\ncondition_binding: S1;TEMvsparaffin branches\nvalues: \n{}",
+      "Text21_Reference": [
+        "Structured evidence: full/M_N1498/evidence/independent_review/scientific_candidate_v1.json#/units/20; SHA-256: 6b99e8a58b6dde1d7ad5feb0dabeb8282a65b7be8299fd9f7d4633cea639d1c3; DOI: https://doi.org/10.1038/srep34331"
+      ]
+    },
+    {
+      "Text22": "units:\nunit_id: U022\nkind: measurement\nclaim: Confocal/light-sheet reconstructed depth ranges are acquisition ranges, not independently benchmarked effective optical penetrationdepth.\nsource_locator: Methods microscopy;Fig2–4\ncondition_binding: S1/S3;80%glycerol imaging\nvalues: \n{}",
+      "Text22_Reference": [
+        "Structured evidence: full/M_N1498/evidence/independent_review/scientific_candidate_v1.json#/units/21; SHA-256: 6b99e8a58b6dde1d7ad5feb0dabeb8282a65b7be8299fd9f7d4633cea639d1c3; DOI: https://doi.org/10.1038/srep34331"
+      ]
+    },
+    {
+      "Text23": "units:\nunit_id: U023\nkind: inference_limit\nclaim: NeutralpH preservation of protein concentration is argued from morphology and literature, not a new quantitative proteinmass retention assay inthispaper.\nsource_locator: Discussion protein preservation\ncondition_binding: Secondarysupport distinct fromdirectexperiments\nvalues: \n{}",
+      "Text23_Reference": [
+        "Structured evidence: full/M_N1498/evidence/independent_review/scientific_candidate_v1.json#/units/22; SHA-256: 6b99e8a58b6dde1d7ad5feb0dabeb8282a65b7be8299fd9f7d4633cea639d1c3; DOI: https://doi.org/10.1038/srep34331"
+      ]
+    },
+    {
+      "Text24": "units:\nunit_id: U024\nkind: future_application\nclaim: Disease/diagnostic applications are futurepossibilities; this study does not establish diagnosticaccuracy, tumorphenotyping utility or an infection experiment.\nsource_locator: Discussion\ncondition_binding: Nonoperationalauthorperspective; no new diseaseexperimentalvalidation\nvalues: \n{}",
+      "Text24_Reference": [
+        "Structured evidence: full/M_N1498/evidence/independent_review/scientific_candidate_v1.json#/units/23; SHA-256: 6b99e8a58b6dde1d7ad5feb0dabeb8282a65b7be8299fd9f7d4633cea639d1c3; DOI: https://doi.org/10.1038/srep34331"
+      ]
+    },
+    {
+      "Text25": "units:\nunit_id: U025\nkind: supplement_result\nclaim: AQP4 basolateral enterocyte/crypt signal is visible inselectedzplanes; range is image position,not experimentallyproven fullpenetration for alltargets.\nsource_locator: SupplementaryFig1\ncondition_binding: S1\nvalues: \n  shown_depth_um: \n    [1] 0\n    [2] 112\n    [3] 223\n    [4] 284\n    [5] 447\n    [6] 559\n    [7] 671\n    [8] 783\n    [9] 895\n  objective: 10×/.3\n  zstep_um: 8.6",
+      "Text25_Reference": [
+        "Structured evidence: full/M_N1498/evidence/independent_review/scientific_candidate_v1.json#/units/24; SHA-256: 6b99e8a58b6dde1d7ad5feb0dabeb8282a65b7be8299fd9f7d4633cea639d1c3; DOI: https://doi.org/10.1038/srep34331"
+      ]
+    },
+    {
+      "Text26": "units:\nunit_id: U026\nkind: supplement_result\nclaim: Human neuron reconstruction uses a0–35µmdepth-colorbar; this is aselectedimagedslab,not thefullhumanwallthickness.\nsource_locator: SupplementaryFig2D;Video12\ncondition_binding: S3\nvalues: \n  depth_code_um: \n    [1] 0\n    [2] 35\n  TUJ1_structures: \n    [1] subserosalneurons\n    [2] myentericplexus\n    [3] musclelayerfibers\n  scale_um: \n    D: 40\n    E: 20",
+      "Text26_Reference": [
+        "Structured evidence: full/M_N1498/evidence/independent_review/scientific_candidate_v1.json#/units/25; SHA-256: 6b99e8a58b6dde1d7ad5feb0dabeb8282a65b7be8299fd9f7d4633cea639d1c3; DOI: https://doi.org/10.1038/srep34331"
+      ]
+    },
+    {
+      "Text27": "units:\nunit_id: U027\nkind: supplement_result\nclaim: High-pH CLARITYsolution sections show villustipdisintegration and staininggradients/unspecificity afterH&E/Azan.\nsource_locator: SupplementaryFig3actualimage\ncondition_binding: S1;50µmscalebar;not generalfailureofeveryCLARITYvariant\nvalues: \n{}",
+      "Text27_Reference": [
+        "Structured evidence: full/M_N1498/evidence/independent_review/scientific_candidate_v1.json#/units/26; SHA-256: 6b99e8a58b6dde1d7ad5feb0dabeb8282a65b7be8299fd9f7d4633cea639d1c3; DOI: https://doi.org/10.1038/srep34331"
+      ]
+    },
+    {
+      "Text28": "processing_issues:\nissue: Pythonrequestsimportunavailable beforeanynetworkcall\nrepair: standardurllib used;no duplicatefetch",
+      "Text28_Reference": [
+        "Structured evidence: full/M_N1498/evidence/independent_review/scientific_candidate_v1.json#/processing_issues/0; SHA-256: 6b99e8a58b6dde1d7ad5feb0dabeb8282a65b7be8299fd9f7d4633cea639d1c3; DOI: https://doi.org/10.1038/srep34331"
+      ]
+    },
+    {
+      "Text29": "processing_issues:\nissue: Video2finalseek97%returnednoframe atshort15-frameclipend;otherexistingframeskept\nrepair: clampedendtimestampduration-minus1.05frameperiod;onlymissingframesrendered;all12sheetsproduced",
+      "Text29_Reference": [
+        "Structured evidence: full/M_N1498/evidence/independent_review/scientific_candidate_v1.json#/processing_issues/1; SHA-256: 6b99e8a58b6dde1d7ad5feb0dabeb8282a65b7be8299fd9f7d4633cea639d1c3; DOI: https://doi.org/10.1038/srep34331"
+      ]
+    },
+    {
+      "Text30": "processing_issues:\nissue: ffmpegMJPEGdecoderwarnings onVideos3/4/11\noutcome: commandscompletedand5framespervideoactuallyinspected;notassertingoriginalfileserror-free orcompleteframeplayback",
+      "Text30_Reference": [
+        "Structured evidence: full/M_N1498/evidence/independent_review/scientific_candidate_v1.json#/processing_issues/2; SHA-256: 6b99e8a58b6dde1d7ad5feb0dabeb8282a65b7be8299fd9f7d4633cea639d1c3; DOI: https://doi.org/10.1038/srep34331"
+      ]
+    }
+  ],
+  "Note": [
+    {
+      "Text1": "Paper M_N1498; source coverage: full; source release status: candidate_pending_gates; source default_eligible: false. Read this study as a whole with its sample, experimental, measurement and limitation fields. All selected source files and mandatory support in the accompanying archive apply jointly. Import does not promote candidate status, resolve contradictions, or turn review citations into independent primary experiments. Application includes source-labelled protocols, comparisons and results; labels within each Text retain their actual role.",
+      "Text1_Reference": [
+        "DOI: https://doi.org/10.1038/srep34331",
+        "Evidence-layer structured paraphrase; not a verbatim quotation. Source release: https://github.com/404NotFound422/TOCAgentProject/tree/5e3a711befb3952a2e39f4d53fc9c9f1a7ac0d22/KnowledgeBase/evidence_expansion_20261019",
+        "Local source archive: ../literature_evidence/2026-11-11/source_release.zip; member: full/M_N1498/version_selection.json"
+      ]
+    },
+    {
+      "Text2": "Selected version and mandatory composition:\npaper_id: M_N1498\nstatus: full\ndefault_eligible: false\nactive_scientific_files: \n  [1]     path: full/M_N1498/evidence/independent_review/scientific_candidate_v1.json\n    sha256: 6b99e8a58b6dde1d7ad5feb0dabeb8282a65b7be8299fd9f7d4633cea639d1c3\n    source_member: independent_review/scientific_candidate_v1.json\n  [2]     path: full/M_N1498/evidence/independent_review/acceptance_v1.json\n    sha256: 87603d35be7f5b1a2db64a4d22a495512f8b53928add3bd56f9bc4e315feb370\n    source_member: independent_review/acceptance_v1.json\n  [3]     path: full/M_N1498/evidence/independent_review/independent_receipt_v1.json\n    sha256: 3f412bd6c806425506569b5cdd3ca1479c71d22960e10f640aa1aa941afa9d76\n    source_member: independent_review/independent_receipt_v1.json\n  [4]     path: full/M_N1498/evidence/independent_review/R1_receipt_v1.json\n    sha256: c415f29084715f51c73354a689d7ba3096748add7a62d6ba11afdc3d488fb18a\n    source_member: independent_review/R1_receipt_v1.json\n  [5]     path: full/M_N1498/evidence/independent_review/retrieval.json\n    sha256: 6792a5e09b66b14a5237bcf2840103116e4acdcbe484a15df62ee11fbac10ed3\n    source_member: independent_review/retrieval.json\nacceptance: full/M_N1498/evidence/independent_review/acceptance_v1.json\nmandatory_composition: All selected science, mandatory overlays, receipts, scope qualifications and additions are jointly required. Historical candidate status cannot override current acceptance.\nactive_version_and_scope: \n  paper_id: M_N1498\n  current_full_task_scope: true\n  partial: false\n  remaining_relevant_gaps: \n[]\n  package_sha256: 8e7cf91fab84d198993a0785534681fc797c0b8978968ea766b1ca93e5f18bfe\n  original_package_sha256: 8e7cf91fab84d198993a0785534681fc797c0b8978968ea766b1ca93e5f18bfe\n  acceptance_archive_member: independent_review/acceptance_v1.json\n  active_version: Unchanged frozen27-unit science plus external final acceptance; pending metadata superseded only, retained_extra not core\n  net_new_vs_verified117: true\n  doi_crosswalk_check: \n    doi: 10.1038/srep34331\n    historical117_matches: \n[]\n  stage_provenance: \n    R1: \n      execution_period: current_window\n      complete_current_task_scope: true\n      basis: Current-window full candidate inherited from separate extractor; same-window agent handoff is not historical inheritance\n    R2: \n      execution_period: current_window\n      complete_current_task_scope: true\n      basis: Current-window independent full text, visuals, table and 60 video-frame checks; same-window agent handoff is not historical inheritance\n    R3: \n      execution_period: current_window\n      complete_current_task_scope: true\n      basis: Current-window independent protocol, time, sample, pH/formulation, fluorophore/antibody and readout checks; same-window agent handoff is not historical inheritance\n    R4: \n      execution_period: current_window\n      complete_current_task_scope: true\n      basis: Current-window successful real retrieval log, JATS attachment inventory and all 13 attachment MD5 reviewed; no duplicate queries; same-window agent handoff is not historical inheritance\n  counts: \n    units: 27\n    table_rows: 17\n    table_cells: 68\n    main_figures: 6\n    supplement_figures: 3\n    videos_sampled: 12\n    video_frames: 60\n  change_classification: \n    source_inconsistency_or_publication_version: \n      [1] Source label and video-subset ambiguities preserved; joint formulation changes do not establish isolated causality\n  catalog_slot: retained_extra\noriginal_member_to_release_path: \n  independent_review/scientific_candidate_v1.json: full/M_N1498/evidence/independent_review/scientific_candidate_v1.json\n  independent_review/acceptance_v1.json: full/M_N1498/evidence/independent_review/acceptance_v1.json\n  independent_review/independent_receipt_v1.json: full/M_N1498/evidence/independent_review/independent_receipt_v1.json\n  independent_review/R1_receipt_v1.json: full/M_N1498/evidence/independent_review/R1_receipt_v1.json\n  independent_review/retrieval.json: full/M_N1498/evidence/independent_review/retrieval.json\nactive_reference_aliases: \n  independent_review/scientific_candidate_v1.json: full/M_N1498/evidence/independent_review/scientific_candidate_v1.json\n  independent_review/acceptance_v1.json: full/M_N1498/evidence/independent_review/acceptance_v1.json\n  independent_review/independent_receipt_v1.json: full/M_N1498/evidence/independent_review/independent_receipt_v1.json\n  independent_review/R1_receipt_v1.json: full/M_N1498/evidence/independent_review/R1_receipt_v1.json\n  independent_review/retrieval.json: full/M_N1498/evidence/independent_review/retrieval.json\n  paper_completion/M_N1498/sources/retrieval.json: full/M_N1498/evidence/independent_review/retrieval.json\nrequired_supporting_files: \n[]\nreference_resolution_policy: Resolve explicit aliases only to selected SHA-bound science/support. Historical/source materials never auto-load. New candidate remains ineligible pending gates.\nsource_asset_policy: Original source assets are not republished; accepted scientific members and mandatory correction layers are preserved.\nactive_reference_resolution_evidence: \n  [1]     source_file: full/M_N1498/evidence/independent_review/independent_receipt_v1.json\n    json_pointer: /source_manifest/2/path\n    reference: paper_completion/M_N1498/sources/retrieval.json\n    resolved_release_path: full/M_N1498/evidence/independent_review/retrieval.json\n    binding_basis: same_paper_exact_source_sha256\nexternal_or_historical_references: \n  [1]     source_file: full/M_N1498/evidence/independent_review/independent_receipt_v1.json\n    json_pointer: /source_manifest/0/path\n    reference: paper_completion/M_N1498/sources/reading.txt\n    automatic_loading: false\n    role: external_original_source_payload_not_republished\n  [2]     source_file: full/M_N1498/evidence/independent_review/independent_receipt_v1.json\n    json_pointer: /source_manifest/4/path\n    reference: paper_completion/M_N1498/sources/supp.txt\n    automatic_loading: false\n    role: external_original_source_payload_not_republished\n  [3]     source_file: full/M_N1498/evidence/independent_review/independent_receipt_v1.json\n    json_pointer: /source_manifest/6/path\n    reference: paper_completion/M_N1498/sources/video_sampling.json\n    automatic_loading: false\n    role: external_original_source_or_media_audit_material_not_runtime\nrelease_status: candidate_pending_gates\nverified_historical_filename_equivalences: \n[]",
+      "Text2_Reference": [
+        "DOI: https://doi.org/10.1038/srep34331",
+        "Evidence-layer structured paraphrase; not a verbatim quotation. Source release: https://github.com/404NotFound422/TOCAgentProject/tree/5e3a711befb3952a2e39f4d53fc9c9f1a7ac0d22/KnowledgeBase/evidence_expansion_20261019",
+        "Local source archive: ../literature_evidence/2026-11-11/source_release.zip; member: full/M_N1498/version_selection.json"
+      ]
+    },
+    {
+      "Text3": "limitations:\nNo universal total time derived from12–14dayclearing plusvariable up-to-week labeling stages.",
+      "Text3_Reference": [
+        "Structured evidence: full/M_N1498/evidence/independent_review/scientific_candidate_v1.json#/limitations/0; SHA-256: 6b99e8a58b6dde1d7ad5feb0dabeb8282a65b7be8299fd9f7d4633cea639d1c3; DOI: https://doi.org/10.1038/srep34331"
+      ]
+    },
+    {
+      "Text4": "limitations:\npH/formulation/SDSconcentration jointly differ; noisolatedcausal pH effect inferred.",
+      "Text4_Reference": [
+        "Structured evidence: full/M_N1498/evidence/independent_review/scientific_candidate_v1.json#/limitations/1; SHA-256: 6b99e8a58b6dde1d7ad5feb0dabeb8282a65b7be8299fd9f7d4633cea639d1c3; DOI: https://doi.org/10.1038/srep34331"
+      ]
+    },
+    {
+      "Text5": "limitations:\nHuman1donor and selecteddepth labeling notall-wall imaging success.",
+      "Text5_Reference": [
+        "Structured evidence: full/M_N1498/evidence/independent_review/scientific_candidate_v1.json#/limitations/2; SHA-256: 6b99e8a58b6dde1d7ad5feb0dabeb8282a65b7be8299fd9f7d4633cea639d1c3; DOI: https://doi.org/10.1038/srep34331"
+      ]
+    },
+    {
+      "Text6": "source_conflicts:\nissue: Results55–60°C vs Methods60°C clearing\nstatus: unresolved literal difference;notnormalizingallto55°C",
+      "Text6_Reference": [
+        "Structured evidence: full/M_N1498/evidence/independent_review/scientific_candidate_v1.json#/source_conflicts/0; SHA-256: 6b99e8a58b6dde1d7ad5feb0dabeb8282a65b7be8299fd9f7d4633cea639d1c3; DOI: https://doi.org/10.1038/srep34331"
+      ]
+    },
+    {
+      "Text7": "source_conflicts:\nissue: Fig1caption repeats(C) for comparison described as(E)\nstatus: panelletter inconsistency retained",
+      "Text7_Reference": [
+        "Structured evidence: full/M_N1498/evidence/independent_review/scientific_candidate_v1.json#/source_conflicts/1; SHA-256: 6b99e8a58b6dde1d7ad5feb0dabeb8282a65b7be8299fd9f7d4633cea639d1c3; DOI: https://doi.org/10.1038/srep34331"
+      ]
+    },
+    {
+      "Text8": "source_conflicts:\nissue: Fig3 Results refersTH3E whereas Fig3caption3EisTUJ1\nstatus: VisualFig3Dred/Egreen andcaptionidentifyCD31/TUJ1; preserve ResultsTH3Ereferenceasconflict.",
+      "Text8_Reference": [
+        "Structured evidence: full/M_N1498/evidence/independent_review/scientific_candidate_v1.json#/source_conflicts/2; SHA-256: 6b99e8a58b6dde1d7ad5feb0dabeb8282a65b7be8299fd9f7d4633cea639d1c3; DOI: https://doi.org/10.1038/srep34331"
+      ]
+    },
+    {
+      "Text9": "source_conflicts:\nissue: Fig4caption assignsVideo8bothgobletstack andfly-around; Results assignsVideo9goblet\nstatus: ActualVideo8isgrayscaleZO1rotation;Video9gobletcellstackwitharrow, matching supplementcaptions andResults; mainFig4captiongobletVideo8misreference retained.",
+      "Text9_Reference": [
+        "Structured evidence: full/M_N1498/evidence/independent_review/scientific_candidate_v1.json#/source_conflicts/3; SHA-256: 6b99e8a58b6dde1d7ad5feb0dabeb8282a65b7be8299fd9f7d4633cea639d1c3; DOI: https://doi.org/10.1038/srep34331"
+      ]
+    },
+    {
+      "Text10": "source_conflicts:\nissue: Results ultrastructure finalsentence saysCLARITYsolution but precedingparagraph/pairedFig6C,DdescribesPACT\nstatus: preserve source inconsistency; do notattributePACTretentiontoCLARITY",
+      "Text10_Reference": [
+        "Structured evidence: full/M_N1498/evidence/independent_review/scientific_candidate_v1.json#/source_conflicts/4; SHA-256: 6b99e8a58b6dde1d7ad5feb0dabeb8282a65b7be8299fd9f7d4633cea639d1c3; DOI: https://doi.org/10.1038/srep34331"
+      ]
+    },
+    {
+      "Text11": "source_conflicts:\nissue: Fig6caption saysPACTactin(Cleft), whereas captionsoverallcontrolleft/PACTright\nstatus: ActualFig6columnheadingsshowOsmiumleft/PACTright inC,D; caption(Cleft)contradicts panelheading.",
+      "Text11_Reference": [
+        "Structured evidence: full/M_N1498/evidence/independent_review/scientific_candidate_v1.json#/source_conflicts/5; SHA-256: 6b99e8a58b6dde1d7ad5feb0dabeb8282a65b7be8299fd9f7d4633cea639d1c3; DOI: https://doi.org/10.1038/srep34331"
+      ]
+    },
+    {
+      "Text12": "source_conflicts:\nissue: SupplementaryFig2humanobjective10×NA1.3; Methods10×/.3 andVideo12caption10×/.3.\nstatus: literalopticsconflictunresolved; noautomaticsilentcorrection",
+      "Text12_Reference": [
+        "Structured evidence: full/M_N1498/evidence/independent_review/scientific_candidate_v1.json#/source_conflicts/6; SHA-256: 6b99e8a58b6dde1d7ad5feb0dabeb8282a65b7be8299fd9f7d4633cea639d1c3; DOI: https://doi.org/10.1038/srep34331"
+      ]
+    },
+    {
+      "Text13": "source_conflicts:\nissue: Fig3Bcaption5×/.16;Video3caption5×/.15;Fig3Ahas5×/01.16typography.\nstatus: retain per-sourceobjectivevalues; notmergeintooneverifiedNA",
+      "Text13_Reference": [
+        "Structured evidence: full/M_N1498/evidence/independent_review/scientific_candidate_v1.json#/source_conflicts/7; SHA-256: 6b99e8a58b6dde1d7ad5feb0dabeb8282a65b7be8299fd9f7d4633cea639d1c3; DOI: https://doi.org/10.1038/srep34331"
+      ]
+    },
+    {
+      "Text14": "source_conflicts:\nissue: Video2captionzrange210µm but downloaded15-frameclip sampled labels0–98.4µm; Video5caption1047µm butframes reach329.8µm.\nstatus: source clip-versus-originalrange mismatch orsubset notresolved; do notchangeoriginalrange intoobservedcliprange orclaimmissingframesretrieved",
+      "Text14_Reference": [
+        "Structured evidence: full/M_N1498/evidence/independent_review/scientific_candidate_v1.json#/source_conflicts/8; SHA-256: 6b99e8a58b6dde1d7ad5feb0dabeb8282a65b7be8299fd9f7d4633cea639d1c3; DOI: https://doi.org/10.1038/srep34331"
+      ]
+    },
+    {
+      "Text15": "Source version and scope record (not an additional scientific claim): acceptance_v1:\npaper_id: M_N1498\nstatus: full_scientific_scope_independently_reviewed\nscientific_sha256: 6b99e8a58b6dde1d7ad5feb0dabeb8282a65b7be8299fd9f7d4633cea639d1c3\nreceipt_sha256: 3f412bd6c806425506569b5cdd3ca1479c71d22960e10f640aa1aa941afa9d76\nactive_scientific_record: scientific_candidate_v1.json unchanged; external acceptance overrides pending metadata only\nunit_count: 27\ncatalog_slot: retained_extra\noperational_readiness: false\nhuman_expert_review: false",
+      "Text15_Reference": [
+        "Structured evidence: full/M_N1498/evidence/independent_review/acceptance_v1.json#; SHA-256: 87603d35be7f5b1a2db64a4d22a495512f8b53928add3bd56f9bc4e315feb370; DOI: https://doi.org/10.1038/srep34331"
+      ]
+    },
+    {
+      "Text16": "review_time_utc:\n2026-10-19T12:35:31.566343+00:00",
+      "Text16_Reference": [
+        "Structured evidence: full/M_N1498/evidence/independent_review/independent_receipt_v1.json#/review_time_utc; SHA-256: 3f412bd6c806425506569b5cdd3ca1479c71d22960e10f640aa1aa941afa9d76; DOI: https://doi.org/10.1038/srep34331"
+      ]
+    },
+    {
+      "Text17": "table_comparison:\nAll 68 fields compared directly to JATS table1; exact after whitespace normalization. No secondary/primary cross-product inferred.",
+      "Text17_Reference": [
+        "Structured evidence: full/M_N1498/evidence/independent_review/independent_receipt_v1.json#/table_comparison; SHA-256: 3f412bd6c806425506569b5cdd3ca1479c71d22960e10f640aa1aa941afa9d76; DOI: https://doi.org/10.1038/srep34331"
+      ]
+    },
+    {
+      "Text18": "scientific_findings:\nTwo passive formulations jointly vary pH, buffer and SDS, so isolated pH causality is not established.",
+      "Text18_Reference": [
+        "Structured evidence: full/M_N1498/evidence/independent_review/independent_receipt_v1.json#/scientific_findings/0; SHA-256: 3f412bd6c806425506569b5cdd3ca1479c71d22960e10f640aa1aa941afa9d76; DOI: https://doi.org/10.1038/srep34331"
+      ]
+    },
+    {
+      "Text19": "scientific_findings:\nMouse entire-wall qualitative labeling and human selected 0–35 micrometre slab remain distinct. Human collagen clearing limitation remains explicit.",
+      "Text19_Reference": [
+        "Structured evidence: full/M_N1498/evidence/independent_review/independent_receipt_v1.json#/scientific_findings/1; SHA-256: 3f412bd6c806425506569b5cdd3ca1479c71d22960e10f640aa1aa941afa9d76; DOI: https://doi.org/10.1038/srep34331"
+      ]
+    },
+    {
+      "Text20": "scientific_findings:\nClearing 12–14 days is not total workflow duration; variable antibody stages and unreported RI duration retained.",
+      "Text20_Reference": [
+        "Structured evidence: full/M_N1498/evidence/independent_review/independent_receipt_v1.json#/scientific_findings/2; SHA-256: 3f412bd6c806425506569b5cdd3ca1479c71d22960e10f640aa1aa941afa9d76; DOI: https://doi.org/10.1038/srep34331"
+      ]
+    },
+    {
+      "Text21": "scientific_findings:\nFig1 measures projected section surface area, not actual three-dimensional volume; nonsignificance is not equivalence.",
+      "Text21_Reference": [
+        "Structured evidence: full/M_N1498/evidence/independent_review/independent_receipt_v1.json#/scientific_findings/3; SHA-256: 3f412bd6c806425506569b5cdd3ca1479c71d22960e10f640aa1aa941afa9d76; DOI: https://doi.org/10.1038/srep34331"
+      ]
+    },
+    {
+      "Text22": "scientific_findings:\nTable1 includes failed NOS1/cKIT/ChAT tests; not universally incompatible targets.",
+      "Text22_Reference": [
+        "Structured evidence: full/M_N1498/evidence/independent_review/independent_receipt_v1.json#/scientific_findings/4; SHA-256: 3f412bd6c806425506569b5cdd3ca1479c71d22960e10f640aa1aa941afa9d76; DOI: https://doi.org/10.1038/srep34331"
+      ]
+    },
+    {
+      "Text23": "scientific_findings:\nMain Fig3 TH/3E mismatch, Fig4 Video8/9 mismatch, Fig6 C-left versus panel heading and CLARITY-versus-PACT text conflict are faithfully retained.",
+      "Text23_Reference": [
+        "Structured evidence: full/M_N1498/evidence/independent_review/independent_receipt_v1.json#/scientific_findings/5; SHA-256: 3f412bd6c806425506569b5cdd3ca1479c71d22960e10f640aa1aa941afa9d76; DOI: https://doi.org/10.1038/srep34331"
+      ]
+    },
+    {
+      "Text24": "scientific_findings:\nVideo2 sampled 0–98.4 micrometres versus caption210; Video5 sampled8.2–329.8 versuscaption1047 remain unresolved clip/subset relation, not silently corrected.",
+      "Text24_Reference": [
+        "Structured evidence: full/M_N1498/evidence/independent_review/independent_receipt_v1.json#/scientific_findings/6; SHA-256: 3f412bd6c806425506569b5cdd3ca1479c71d22960e10f640aa1aa941afa9d76; DOI: https://doi.org/10.1038/srep34331"
+      ]
+    },
+    {
+      "Text25": "scientific_findings:\nQualitative histology/TEM does not measure quantitative protein mass retention.",
+      "Text25_Reference": [
+        "Structured evidence: full/M_N1498/evidence/independent_review/independent_receipt_v1.json#/scientific_findings/7; SHA-256: 3f412bd6c806425506569b5cdd3ca1479c71d22960e10f640aa1aa941afa9d76; DOI: https://doi.org/10.1038/srep34331"
+      ]
+    },
+    {
+      "Text26": "limits:\nIndependent AI/source review, not human expert approval or executable-protocol certification.",
+      "Text26_Reference": [
+        "Structured evidence: full/M_N1498/evidence/independent_review/independent_receipt_v1.json#/limits/0; SHA-256: 3f412bd6c806425506569b5cdd3ca1479c71d22960e10f640aa1aa941afa9d76; DOI: https://doi.org/10.1038/srep34331"
+      ]
+    },
+    {
+      "Text27": "limits:\nVideo observation limited to five sampled frames per video; no complete playback claim.",
+      "Text27_Reference": [
+        "Structured evidence: full/M_N1498/evidence/independent_review/independent_receipt_v1.json#/limits/1; SHA-256: 3f412bd6c806425506569b5cdd3ca1479c71d22960e10f640aa1aa941afa9d76; DOI: https://doi.org/10.1038/srep34331"
+      ]
+    },
+    {
+      "Text28": "limits:\nSource-specific numerical/label conflicts not silently repaired.",
+      "Text28_Reference": [
+        "Structured evidence: full/M_N1498/evidence/independent_review/independent_receipt_v1.json#/limits/2; SHA-256: 3f412bd6c806425506569b5cdd3ca1479c71d22960e10f640aa1aa941afa9d76; DOI: https://doi.org/10.1038/srep34331"
+      ]
+    }
+  ]
+}

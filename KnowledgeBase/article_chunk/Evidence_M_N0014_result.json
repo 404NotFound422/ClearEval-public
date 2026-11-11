@@ -1,0 +1,799 @@
+{
+  "TOC_Method_Name": {
+    "Text": "Not specified as a single method in the selected evidence records",
+    "Text_Reference": [
+      "DOI: https://doi.org/10.1038/s42003-026-09935-x",
+      "Evidence-layer structured paraphrase; not a verbatim quotation. Source release: https://github.com/404NotFound422/TOCAgentProject/tree/5e3a711befb3952a2e39f4d53fc9c9f1a7ac0d22/KnowledgeBase/evidence_expansion_20261019",
+      "Local source archive: ../literature_evidence/2026-11-11/source_release.zip; member: full/M_N0014/version_selection.json"
+    ]
+  },
+  "General_Description": {
+    "Text": "activeDISCO enables large-scale exploration of human brain anatomy by light sheet microscopy. (2026). Evidence category: method. This card preserves the evidence layer's structured statements and their original field labels; it does not add a new literature review or certify benchmark scoring thresholds.",
+    "Text_Reference": [
+      "DOI: https://doi.org/10.1038/s42003-026-09935-x",
+      "Evidence-layer structured paraphrase; not a verbatim quotation. Source release: https://github.com/404NotFound422/TOCAgentProject/tree/5e3a711befb3952a2e39f4d53fc9c9f1a7ac0d22/KnowledgeBase/evidence_expansion_20261019",
+      "Local source archive: ../literature_evidence/2026-11-11/source_release.zip; member: full/M_N0014/version_selection.json"
+    ]
+  },
+  "Tissue_Types": [],
+  "Time_Consumption": [],
+  "Tissue_Deformation": [],
+  "Fluorescence_Compatibility": [],
+  "Preservation_Stability": [],
+  "Application": [
+    {
+      "Text1": "evidence_units:\nid: A01\nsample: human postmortem brain\nlabel: none\nstage: sample provenance\nfinding: Donors aged, without neurological disease history; individual age and sex not reported. Postmortem interval <24 h; fixed 4% PFA 5 d. No live-human treatment inference.\nsource_locator: Methods Par35; reporting summary p2\nevidence_type: primary_experiment\nreview_status: independently_source_checked_with_stated_scope\nassertion_role: source_reported_observation_or_processing",
+      "Text1_Reference": [
+        "Structured evidence: full/M_N0014/evidence/scientific_derived_record_v1.json#/evidence_units/0; SHA-256: 9f2ba33b54e119e0521074bb15f7493ab154971047d45611966de50b4be11830; DOI: https://doi.org/10.1038/s42003-026-09935-x"
+      ]
+    },
+    {
+      "Text2": "evidence_units:\nid: A02\nsample: pig hemispheres; separate human 10 mm cortex\nlabel: autofluorescence\nstage: bleaching comparison\nfinding: Six pig groups n=3 show decolorization plateau at 10% H2O2; human 10 mm pigmentation continues improving to 30%. Different species endpoints must remain separate.\nsource_locator: Par12-14; Fig1A; SFig1-2\nevidence_type: primary_experiment\nreview_status: independently_source_checked_with_stated_scope\nassertion_role: source_reported_observation_or_processing",
+      "Text2_Reference": [
+        "Structured evidence: full/M_N0014/evidence/scientific_derived_record_v1.json#/evidence_units/1; SHA-256: 9f2ba33b54e119e0521074bb15f7493ab154971047d45611966de50b4be11830; DOI: https://doi.org/10.1038/s42003-026-09935-x"
+      ]
+    },
+    {
+      "Text3": "evidence_units:\nid: A03\nsample: human 10 mm cortex\nlabel: AF 638/690 and 488/525 nm\nstage: signal outcome\nfinding: Higher bleaching can improve transmission/uniformity while reducing far-red AF signal. This does not demonstrate GFP retention or immunolabel compatibility.\nsource_locator: Fig1C-G; Par13-14; source workbook Figure1E/F/G\nevidence_type: primary_experiment\nreview_status: independently_source_checked_with_stated_scope\nassertion_role: source_reported_observation_or_processing",
+      "Text3_Reference": [
+        "Structured evidence: full/M_N0014/evidence/scientific_derived_record_v1.json#/evidence_units/2; SHA-256: 9f2ba33b54e119e0521074bb15f7493ab154971047d45611966de50b4be11830; DOI: https://doi.org/10.1038/s42003-026-09935-x"
+      ]
+    },
+    {
+      "Text4": "evidence_units:\nid: A04\nsample: pig hemispheres, 18 across six groups\nlabel: none\nstage: morphology\nfinding: Reported reductions: pole distance 1.28-fold; thickness 1.25-fold; mass 2.04-fold; volume 2.12-fold. Different physical quantities, not interchangeable shrinkage percentages.\nsource_locator: Fig1B; workbook Figure1B\nevidence_type: primary_experiment\nreview_status: independently_source_checked_with_stated_scope\nassertion_role: source_reported_observation_or_processing",
+      "Text4_Reference": [
+        "Structured evidence: full/M_N0014/evidence/scientific_derived_record_v1.json#/evidence_units/3; SHA-256: 9f2ba33b54e119e0521074bb15f7493ab154971047d45611966de50b4be11830; DOI: https://doi.org/10.1038/s42003-026-09935-x"
+      ]
+    },
+    {
+      "Text5": "evidence_units:\nid: A05\nsample: human cortex 5,10,20 mm n=3/group\nlabel: none\nstage: transmission comparison\nfinding: At 638 nm, activeDISCO significantly exceeds MASH at 5 mm, iDISCO and MASH at 10/20 mm. Pairwise activeDISCO versus SHANEL is NOT significant (p=.3225,.9965,.5028 respectively); avoid universal superiority statement.\nsource_locator: Par17; Fig2D; workbook Figure2D Tukey rows\nevidence_type: primary_experiment\nreview_status: independently_source_checked_with_stated_scope\nassertion_role: source_reported_observation_or_processing",
+      "Text5_Reference": [
+        "Structured evidence: full/M_N0014/evidence/scientific_derived_record_v1.json#/evidence_units/4; SHA-256: 9f2ba33b54e119e0521074bb15f7493ab154971047d45611966de50b4be11830; DOI: https://doi.org/10.1038/s42003-026-09935-x"
+      ]
+    },
+    {
+      "Text6": "evidence_units:\nid: A06\nsample: human cortex 10 mm comparison\nlabel: AF 638 excitation,690 long-pass\nstage: imaging\nfinding: At ~1 mm all compared methods reveal structures; at4 and9 mm activeDISCO retains finer details. This depth result is not fluorescence mass-retention assay.\nsource_locator: Par16; Fig2C; SFig5\nevidence_type: primary_experiment\nreview_status: independently_source_checked_with_stated_scope\nassertion_role: source_reported_observation_or_processing",
+      "Text6_Reference": [
+        "Structured evidence: full/M_N0014/evidence/scientific_derived_record_v1.json#/evidence_units/5; SHA-256: 9f2ba33b54e119e0521074bb15f7493ab154971047d45611966de50b4be11830; DOI: https://doi.org/10.1038/s42003-026-09935-x"
+      ]
+    },
+    {
+      "Text7": "evidence_units:\nid: A07\nsample: human cortex 20 mm\nlabel: AF\nstage: imaging\nfinding: 2x/4x macroscopic grey/white and vascular patterns;16x neuronal cell bodies/lipofuscin ROI. Whole specimen multiresolution imaging not uniform16x coverage.\nsource_locator: Par18; Fig3\nevidence_type: primary_experiment\nreview_status: independently_source_checked_with_stated_scope\nassertion_role: source_reported_observation_or_processing",
+      "Text7_Reference": [
+        "Structured evidence: full/M_N0014/evidence/scientific_derived_record_v1.json#/evidence_units/6; SHA-256: 9f2ba33b54e119e0521074bb15f7493ab154971047d45611966de50b4be11830; DOI: https://doi.org/10.1038/s42003-026-09935-x"
+      ]
+    },
+    {
+      "Text8": "evidence_units:\nid: A08\nsample: intact human hippocampus\nlabel: AF\nstage: imaging\nfinding: 2x/4x hippocampal gross regions and CA fields;16x selected cellular layers.\nsource_locator: Par19; Fig4; SFig6\nevidence_type: primary_experiment\nreview_status: independently_source_checked_with_stated_scope\nassertion_role: source_reported_observation_or_processing",
+      "Text8_Reference": [
+        "Structured evidence: full/M_N0014/evidence/scientific_derived_record_v1.json#/evidence_units/7; SHA-256: 9f2ba33b54e119e0521074bb15f7493ab154971047d45611966de50b4be11830; DOI: https://doi.org/10.1038/s42003-026-09935-x"
+      ]
+    },
+    {
+      "Text9": "evidence_units:\nid: A09\nsample: intact human medulla oblongata\nlabel: AF\nstage: imaging\nfinding: 2x major olivary/arcuate features;4x inferior olivary nucleus.\nsource_locator: Par20; Fig5A-E; SFig6\nevidence_type: primary_experiment\nreview_status: independently_source_checked_with_stated_scope\nassertion_role: source_reported_observation_or_processing",
+      "Text9_Reference": [
+        "Structured evidence: full/M_N0014/evidence/scientific_derived_record_v1.json#/evidence_units/8; SHA-256: 9f2ba33b54e119e0521074bb15f7493ab154971047d45611966de50b4be11830; DOI: https://doi.org/10.1038/s42003-026-09935-x"
+      ]
+    },
+    {
+      "Text10": "evidence_units:\nid: A10\nsample: human cerebellar hemisphere\nlabel: AF638/690\nstage: imaging\nfinding: Before ~55 cm3; after ~26 cm3, dimensions~41x38x44 mm. Two-angle2x acquisition; resolution/contrast worsens centrally beyond~14mm. Slice10mm4x and ROI16x are separate branches.\nsource_locator: Par21; Fig5F-N; SFig6\nevidence_type: primary_experiment\nreview_status: independently_source_checked_with_stated_scope\nassertion_role: source_reported_observation_or_processing",
+      "Text10_Reference": [
+        "Structured evidence: full/M_N0014/evidence/scientific_derived_record_v1.json#/evidence_units/9; SHA-256: 9f2ba33b54e119e0521074bb15f7493ab154971047d45611966de50b4be11830; DOI: https://doi.org/10.1038/s42003-026-09935-x"
+      ]
+    },
+    {
+      "Text11": "evidence_units:\nid: A11\nsample: human5mm cerebellum and10mm cortex\nlabel: AF at638/690,532/620,488/525\nstage: spectral comparison\nfinding: Longer-wavelength branches maintain intensity to >4/>9 mm respectively;488nm attenuation severe beyond~3mm. Segmented vascular reconstruction includes intensity-drop correction; not true new labeling.\nsource_locator: Par22; Fig6; SFig7\nevidence_type: primary_experiment\nreview_status: independently_source_checked_with_stated_scope\nassertion_role: source_reported_observation_or_processing",
+      "Text11_Reference": [
+        "Structured evidence: full/M_N0014/evidence/scientific_derived_record_v1.json#/evidence_units/10; SHA-256: 9f2ba33b54e119e0521074bb15f7493ab154971047d45611966de50b4be11830; DOI: https://doi.org/10.1038/s42003-026-09935-x"
+      ]
+    },
+    {
+      "Text12": "evidence_units:\nid: A12\nsample: human fixed specimens\nlabel: none\nstage: permeabilization\nfinding: CHAPS/PBS incubation reported2d at37C; washes and temporary solvent exchange precede bleaching. This belongs to clearing preparation, not immunostaining.\nsource_locator: Methods Par36\nevidence_type: primary_experiment\nreview_status: independently_source_checked_with_stated_scope\nassertion_role: source_reported_observation_or_processing",
+      "Text12_Reference": [
+        "Structured evidence: full/M_N0014/evidence/scientific_derived_record_v1.json#/evidence_units/11; SHA-256: 9f2ba33b54e119e0521074bb15f7493ab154971047d45611966de50b4be11830; DOI: https://doi.org/10.1038/s42003-026-09935-x"
+      ]
+    },
+    {
+      "Text13": "evidence_units:\nid: A13\nsample: human fixed specimens\nlabel: none\nstage: bleaching\nfinding: Overnight4C selected standard bleaching; earlier DMSO-containing variant later unnecessary. Separate experimental comparison from selected version.\nsource_locator: Par36; Fig2A\nevidence_type: primary_experiment\nreview_status: independently_source_checked_with_stated_scope\nassertion_role: source_reported_observation_or_processing",
+      "Text13_Reference": [
+        "Structured evidence: full/M_N0014/evidence/scientific_derived_record_v1.json#/evidence_units/12; SHA-256: 9f2ba33b54e119e0521074bb15f7493ab154971047d45611966de50b4be11830; DOI: https://doi.org/10.1038/s42003-026-09935-x"
+      ]
+    },
+    {
+      "Text14": "evidence_units:\nid: A14\nsample: human fixed specimens\nlabel: none\nstage: acidification and dehydration\nfinding: Acidification2d at37C, then two DMP treatments2d each at37C. Keep sequential stages, not four-day total workflow.\nsource_locator: Par36\nevidence_type: primary_experiment\nreview_status: independently_source_checked_with_stated_scope\nassertion_role: source_reported_observation_or_processing",
+      "Text14_Reference": [
+        "Structured evidence: full/M_N0014/evidence/scientific_derived_record_v1.json#/evidence_units/13; SHA-256: 9f2ba33b54e119e0521074bb15f7493ab154971047d45611966de50b4be11830; DOI: https://doi.org/10.1038/s42003-026-09935-x"
+      ]
+    },
+    {
+      "Text15": "evidence_units:\nid: A15\nsample: human fixed specimens\nlabel: none\nstage: delipidation\nfinding: DCM overnight at room temperature in Methods. Fig2A instead prints37C; unresolved conflict must prevent unified numeric temperature assertion.\nsource_locator: Par36; Fig2A\nevidence_type: primary_experiment\nreview_status: independently_source_checked_with_stated_scope\nassertion_role: source_reported_observation_or_processing",
+      "Text15_Reference": [
+        "Structured evidence: full/M_N0014/evidence/scientific_derived_record_v1.json#/evidence_units/14; SHA-256: 9f2ba33b54e119e0521074bb15f7493ab154971047d45611966de50b4be11830; DOI: https://doi.org/10.1038/s42003-026-09935-x"
+      ]
+    },
+    {
+      "Text16": "evidence_units:\nid: A16\nsample: human fixed specimens\nlabel: none\nstage: RI matching\nfinding: DBE37C until maximum transparency; refresh after a few days if inadequate. No fixed universal RI duration.\nsource_locator: Par36\nevidence_type: primary_experiment\nreview_status: independently_source_checked_with_stated_scope\nassertion_role: source_reported_observation_or_processing",
+      "Text16_Reference": [
+        "Structured evidence: full/M_N0014/evidence/scientific_derived_record_v1.json#/evidence_units/15; SHA-256: 9f2ba33b54e119e0521074bb15f7493ab154971047d45611966de50b4be11830; DOI: https://doi.org/10.1038/s42003-026-09935-x"
+      ]
+    },
+    {
+      "Text17": "evidence_units:\nid: A17\nsample: human20mm cortex/intact brain regions\nlabel: none\nstage: whole clearing duration\nfinding: Approx12d reported overview in abstract/SuppTable1 and illustrated Fig2A; not add-immunolabeling total or universal fixed endpoint. Five-day fixation and days of acquisition must be distinct.\nsource_locator: Abstract; Fig2A; STable1; Discussion Par28\nevidence_type: primary_experiment\nreview_status: independently_source_checked_with_stated_scope\nassertion_role: source_reported_observation_or_processing",
+      "Text17_Reference": [
+        "Structured evidence: full/M_N0014/evidence/scientific_derived_record_v1.json#/evidence_units/16; SHA-256: 9f2ba33b54e119e0521074bb15f7493ab154971047d45611966de50b4be11830; DOI: https://doi.org/10.1038/s42003-026-09935-x"
+      ]
+    },
+    {
+      "Text18": "evidence_units:\nid: A18\nsample: human tissue\nlabel: immunolabel,FP,hybridization\nstage: compatibility boundary\nfinding: Only AF demonstrated. Robust vascular/cell labeling still needed; cresyl violet on related pathoDISCO does not establish activeDISCO large-brain compatibility. HCR/antibody/other dye compatibility remains future work.\nsource_locator: Discussion Par26,32\nevidence_type: author_discussion_not_compatibility_experiment\nreview_status: independently_source_checked_with_stated_scope\nassertion_role: unvalidated_compatibility_boundary_and_author_future_work\ncompatibility_positive_assertion_eligible: false",
+      "Text18_Reference": [
+        "Structured evidence: full/M_N0014/evidence/scientific_derived_record_v1.json#/evidence_units/17; SHA-256: 9f2ba33b54e119e0521074bb15f7493ab154971047d45611966de50b4be11830; DOI: https://doi.org/10.1038/s42003-026-09935-x"
+      ]
+    },
+    {
+      "Text19": "evidence_units:\nid: A19\nsample: 200nm beads in gelatin\nlabel: fluorescent beads\nstage: instrument calibration\nfinding: Measured lateral/axial resolution20xNA.45=.9/3.8um;40xNA.8=.6/2.9um. This is calibration, not observed resolution in entire thick human brain.\nsource_locator: SFig8; Methods optical characterization\nevidence_type: primary_experiment\nreview_status: independently_source_checked_with_stated_scope\nassertion_role: instrument_calibration_not_tissue_performance",
+      "Text19_Reference": [
+        "Structured evidence: full/M_N0014/evidence/scientific_derived_record_v1.json#/evidence_units/18; SHA-256: 9f2ba33b54e119e0521074bb15f7493ab154971047d45611966de50b4be11830; DOI: https://doi.org/10.1038/s42003-026-09935-x"
+      ]
+    },
+    {
+      "Text20": "imaging_records:\nsample: 10mm cortex1\nmagnification: 2\nxy_um: 3.24\nz_um: 2.5\ntiles: 1\nimages: 4330\nrecorded_cm3: 0.56\napparent_cm3: 1.19\nsource_locator: Supplementary Table2 row 1",
+      "Text20_Reference": [
+        "Structured evidence: full/M_N0014/evidence/scientific_derived_record_v1.json#/imaging_records/0; SHA-256: 9f2ba33b54e119e0521074bb15f7493ab154971047d45611966de50b4be11830; DOI: https://doi.org/10.1038/s42003-026-09935-x"
+      ]
+    },
+    {
+      "Text21": "imaging_records:\nsample: 10mm cortex2\nmagnification: 2\nxy_um: 3.24\nz_um: 3.24\ntiles: 2\nimages: 5973\nrecorded_cm3: 0.43\napparent_cm3: 0.91\nsource_locator: Supplementary Table2 row 2",
+      "Text21_Reference": [
+        "Structured evidence: full/M_N0014/evidence/scientific_derived_record_v1.json#/imaging_records/1; SHA-256: 9f2ba33b54e119e0521074bb15f7493ab154971047d45611966de50b4be11830; DOI: https://doi.org/10.1038/s42003-026-09935-x"
+      ]
+    },
+    {
+      "Text22": "imaging_records:\nsample: 20mm cortex\nmagnification: 2\nxy_um: 3.24\nz_um: 3.24\ntiles: 4\nimages: 12017\nrecorded_cm3: 1.14\napparent_cm3: 2.42\nsource_locator: Supplementary Table2 row 3",
+      "Text22_Reference": [
+        "Structured evidence: full/M_N0014/evidence/scientific_derived_record_v1.json#/imaging_records/2; SHA-256: 9f2ba33b54e119e0521074bb15f7493ab154971047d45611966de50b4be11830; DOI: https://doi.org/10.1038/s42003-026-09935-x"
+      ]
+    },
+    {
+      "Text23": "imaging_records:\nsample: hippocampus\nmagnification: 2\nxy_um: 3.24\nz_um: 3.24\ntiles: 29\nimages: 66279\nrecorded_cm3: 3.58\napparent_cm3: 7.59\nsource_locator: Supplementary Table2 row 4",
+      "Text23_Reference": [
+        "Structured evidence: full/M_N0014/evidence/scientific_derived_record_v1.json#/imaging_records/3; SHA-256: 9f2ba33b54e119e0521074bb15f7493ab154971047d45611966de50b4be11830; DOI: https://doi.org/10.1038/s42003-026-09935-x"
+      ]
+    },
+    {
+      "Text24": "imaging_records:\nsample: medulla\nmagnification: 2\nxy_um: 3.24\nz_um: 6\ntiles: 16\nimages: 29589\nrecorded_cm3: 3.37\napparent_cm3: 7.14\nsource_locator: Supplementary Table2 row 5",
+      "Text24_Reference": [
+        "Structured evidence: full/M_N0014/evidence/scientific_derived_record_v1.json#/imaging_records/4; SHA-256: 9f2ba33b54e119e0521074bb15f7493ab154971047d45611966de50b4be11830; DOI: https://doi.org/10.1038/s42003-026-09935-x"
+      ]
+    },
+    {
+      "Text25": "imaging_records:\nsample: cerebellum\nmagnification: 2\nxy_um: 3.24\nz_um: 10\ntiles: 81\nimages: 130605\nrecorded_cm3: 25.48\napparent_cm3: 54.02\nsource_locator: Supplementary Table2 row 6",
+      "Text25_Reference": [
+        "Structured evidence: full/M_N0014/evidence/scientific_derived_record_v1.json#/imaging_records/5; SHA-256: 9f2ba33b54e119e0521074bb15f7493ab154971047d45611966de50b4be11830; DOI: https://doi.org/10.1038/s42003-026-09935-x"
+      ]
+    },
+    {
+      "Text26": "imaging_records:\nsample: 10mm cerebellum\nmagnification: 4\nxy_um: 1.62\nz_um: 3.24\ntiles: 6\nimages: 12750\nrecorded_cm3: 0.29\napparent_cm3: 0.61\nsource_locator: Supplementary Table2 row 7",
+      "Text26_Reference": [
+        "Structured evidence: full/M_N0014/evidence/scientific_derived_record_v1.json#/imaging_records/6; SHA-256: 9f2ba33b54e119e0521074bb15f7493ab154971047d45611966de50b4be11830; DOI: https://doi.org/10.1038/s42003-026-09935-x"
+      ]
+    },
+    {
+      "Text27": "imaging_records:\nsample: 5mm cerebellum\nmagnification: 4\nxy_um: 1.62\nz_um: 3.24\ntiles: 1\nimages: 1426\nrecorded_cm3: 0.05\napparent_cm3: 0.11\nsource_locator: Supplementary Table2 row 8",
+      "Text27_Reference": [
+        "Structured evidence: full/M_N0014/evidence/scientific_derived_record_v1.json#/imaging_records/7; SHA-256: 9f2ba33b54e119e0521074bb15f7493ab154971047d45611966de50b4be11830; DOI: https://doi.org/10.1038/s42003-026-09935-x"
+      ]
+    },
+    {
+      "Text28": "imaging_records:\nsample: 5mm cortex\nmagnification: 2\nxy_um: 3.24\nz_um: 3.24\ntiles: 1\nimages: 3500\nrecorded_cm3: 0.4\napparent_cm3: 0.84\nsource_locator: Supplementary Table2 row 9",
+      "Text28_Reference": [
+        "Structured evidence: full/M_N0014/evidence/scientific_derived_record_v1.json#/imaging_records/8; SHA-256: 9f2ba33b54e119e0521074bb15f7493ab154971047d45611966de50b4be11830; DOI: https://doi.org/10.1038/s42003-026-09935-x"
+      ]
+    },
+    {
+      "Text29": "reported_comparison_table:\nmethod: 3DISCO\nsample: 4mm cortex\nduration_as_tabulated: 9d\nsource_locator: SupplementaryTable1 row1\nevidence_type: secondary_literature_summary_not_reverified_primary\nscope_warning: not harmonized durations, sample states or labels; do not use as controlled head-to-head ranking",
+      "Text29_Reference": [
+        "Structured evidence: full/M_N0014/evidence/scientific_derived_record_v1.json#/reported_comparison_table/0; SHA-256: 9f2ba33b54e119e0521074bb15f7493ab154971047d45611966de50b4be11830; DOI: https://doi.org/10.1038/s42003-026-09935-x"
+      ]
+    },
+    {
+      "Text30": "reported_comparison_table:\nmethod: activeDISCO\nsample: 20mm cortex/intact cerebellum\nduration_as_tabulated: 12d\nsource_locator: SupplementaryTable1 row2\nevidence_type: current_primary_summary\nscope_warning: not harmonized durations, sample states or labels; do not use as controlled head-to-head ranking",
+      "Text30_Reference": [
+        "Structured evidence: full/M_N0014/evidence/scientific_derived_record_v1.json#/reported_comparison_table/1; SHA-256: 9f2ba33b54e119e0521074bb15f7493ab154971047d45611966de50b4be11830; DOI: https://doi.org/10.1038/s42003-026-09935-x"
+      ]
+    },
+    {
+      "Text31": "reported_comparison_table:\nmethod: ECi\nsample: 5mm cortex poorlycleared\nduration_as_tabulated: 1month\nsource_locator: SupplementaryTable1 row3\nevidence_type: secondary_literature_summary_not_reverified_primary\nscope_warning: not harmonized durations, sample states or labels; do not use as controlled head-to-head ranking",
+      "Text31_Reference": [
+        "Structured evidence: full/M_N0014/evidence/scientific_derived_record_v1.json#/reported_comparison_table/2; SHA-256: 9f2ba33b54e119e0521074bb15f7493ab154971047d45611966de50b4be11830; DOI: https://doi.org/10.1038/s42003-026-09935-x"
+      ]
+    },
+    {
+      "Text32": "reported_comparison_table:\nmethod: iDISCO\nsample: 5mm slice\nduration_as_tabulated: ~14d\nsource_locator: SupplementaryTable1 row4\nevidence_type: secondary_literature_summary_not_reverified_primary\nscope_warning: not harmonized durations, sample states or labels; do not use as controlled head-to-head ranking",
+      "Text32_Reference": [
+        "Structured evidence: full/M_N0014/evidence/scientific_derived_record_v1.json#/reported_comparison_table/3; SHA-256: 9f2ba33b54e119e0521074bb15f7493ab154971047d45611966de50b4be11830; DOI: https://doi.org/10.1038/s42003-026-09935-x"
+      ]
+    },
+    {
+      "Text33": "reported_comparison_table:\nmethod: iDISCO\nsample: 0.125cm3(~5mm) hippocampusAD\nduration_as_tabulated: ~14d\nsource_locator: SupplementaryTable1 row5\nevidence_type: secondary_literature_summary_not_reverified_primary\nscope_warning: not harmonized durations, sample states or labels; do not use as controlled head-to-head ranking",
+      "Text33_Reference": [
+        "Structured evidence: full/M_N0014/evidence/scientific_derived_record_v1.json#/reported_comparison_table/4; SHA-256: 9f2ba33b54e119e0521074bb15f7493ab154971047d45611966de50b4be11830; DOI: https://doi.org/10.1038/s42003-026-09935-x"
+      ]
+    },
+    {
+      "Text34": "reported_comparison_table:\nmethod: MASH\nsample: 5mm cortex\nduration_as_tabulated: ~5d\nsource_locator: SupplementaryTable1 row6\nevidence_type: secondary_literature_summary_not_reverified_primary\nscope_warning: not harmonized durations, sample states or labels; do not use as controlled head-to-head ranking",
+      "Text34_Reference": [
+        "Structured evidence: full/M_N0014/evidence/scientific_derived_record_v1.json#/reported_comparison_table/5; SHA-256: 9f2ba33b54e119e0521074bb15f7493ab154971047d45611966de50b4be11830; DOI: https://doi.org/10.1038/s42003-026-09935-x"
+      ]
+    },
+    {
+      "Text35": "reported_comparison_table:\nmethod: MASH\nsample: 3mm cortex\nduration_as_tabulated: ~5d\nsource_locator: SupplementaryTable1 row7\nevidence_type: secondary_literature_summary_not_reverified_primary\nscope_warning: not harmonized durations, sample states or labels; do not use as controlled head-to-head ranking",
+      "Text35_Reference": [
+        "Structured evidence: full/M_N0014/evidence/scientific_derived_record_v1.json#/reported_comparison_table/6; SHA-256: 9f2ba33b54e119e0521074bb15f7493ab154971047d45611966de50b4be11830; DOI: https://doi.org/10.1038/s42003-026-09935-x"
+      ]
+    },
+    {
+      "Text36": "reported_comparison_table:\nmethod: MASH\nsample: 2.5mm cortex\nduration_as_tabulated: ~5d\nsource_locator: SupplementaryTable1 row8\nevidence_type: secondary_literature_summary_not_reverified_primary\nscope_warning: not harmonized durations, sample states or labels; do not use as controlled head-to-head ranking",
+      "Text36_Reference": [
+        "Structured evidence: full/M_N0014/evidence/scientific_derived_record_v1.json#/reported_comparison_table/7; SHA-256: 9f2ba33b54e119e0521074bb15f7493ab154971047d45611966de50b4be11830; DOI: https://doi.org/10.1038/s42003-026-09935-x"
+      ]
+    },
+    {
+      "Text37": "reported_comparison_table:\nmethod: SHANEL\nsample: 15mm slice\nduration_as_tabulated: ~36d\nsource_locator: SupplementaryTable1 row9\nevidence_type: secondary_literature_summary_not_reverified_primary\nscope_warning: not harmonized durations, sample states or labels; do not use as controlled head-to-head ranking",
+      "Text37_Reference": [
+        "Structured evidence: full/M_N0014/evidence/scientific_derived_record_v1.json#/reported_comparison_table/8; SHA-256: 9f2ba33b54e119e0521074bb15f7493ab154971047d45611966de50b4be11830; DOI: https://doi.org/10.1038/s42003-026-09935-x"
+      ]
+    },
+    {
+      "Text38": "reported_comparison_table:\nmethod: Visikol\nsample: 5mm cortex poorlycleared\nduration_as_tabulated: 1month\nsource_locator: SupplementaryTable1 row10\nevidence_type: secondary_literature_summary_not_reverified_primary\nscope_warning: not harmonized durations, sample states or labels; do not use as controlled head-to-head ranking",
+      "Text38_Reference": [
+        "Structured evidence: full/M_N0014/evidence/scientific_derived_record_v1.json#/reported_comparison_table/9; SHA-256: 9f2ba33b54e119e0521074bb15f7493ab154971047d45611966de50b4be11830; DOI: https://doi.org/10.1038/s42003-026-09935-x"
+      ]
+    },
+    {
+      "Text39": "reported_comparison_table:\nmethod: Ce3D\nsample: 5mm cortex poorlycleared\nduration_as_tabulated: 2.5months\nsource_locator: SupplementaryTable1 row11\nevidence_type: secondary_literature_summary_not_reverified_primary\nscope_warning: not harmonized durations, sample states or labels; do not use as controlled head-to-head ranking",
+      "Text39_Reference": [
+        "Structured evidence: full/M_N0014/evidence/scientific_derived_record_v1.json#/reported_comparison_table/10; SHA-256: 9f2ba33b54e119e0521074bb15f7493ab154971047d45611966de50b4be11830; DOI: https://doi.org/10.1038/s42003-026-09935-x"
+      ]
+    },
+    {
+      "Text40": "reported_comparison_table:\nmethod: CUBIC\nsample: 500um slice\nduration_as_tabulated: 10d\nsource_locator: SupplementaryTable1 row12\nevidence_type: secondary_literature_summary_not_reverified_primary\nscope_warning: not harmonized durations, sample states or labels; do not use as controlled head-to-head ranking",
+      "Text40_Reference": [
+        "Structured evidence: full/M_N0014/evidence/scientific_derived_record_v1.json#/reported_comparison_table/11; SHA-256: 9f2ba33b54e119e0521074bb15f7493ab154971047d45611966de50b4be11830; DOI: https://doi.org/10.1038/s42003-026-09935-x"
+      ]
+    },
+    {
+      "Text41": "reported_comparison_table:\nmethod: CUBIC\nsample: 5mm cortex poorlycleared\nduration_as_tabulated: 5months\nsource_locator: SupplementaryTable1 row13\nevidence_type: secondary_literature_summary_not_reverified_primary\nscope_warning: not harmonized durations, sample states or labels; do not use as controlled head-to-head ranking",
+      "Text41_Reference": [
+        "Structured evidence: full/M_N0014/evidence/scientific_derived_record_v1.json#/reported_comparison_table/12; SHA-256: 9f2ba33b54e119e0521074bb15f7493ab154971047d45611966de50b4be11830; DOI: https://doi.org/10.1038/s42003-026-09935-x"
+      ]
+    },
+    {
+      "Text42": "reported_comparison_table:\nmethod: hFruit\nsample: 7mm slice\nduration_as_tabulated: 11d\nsource_locator: SupplementaryTable1 row14\nevidence_type: secondary_literature_summary_not_reverified_primary\nscope_warning: not harmonized durations, sample states or labels; do not use as controlled head-to-head ranking",
+      "Text42_Reference": [
+        "Structured evidence: full/M_N0014/evidence/scientific_derived_record_v1.json#/reported_comparison_table/13; SHA-256: 9f2ba33b54e119e0521074bb15f7493ab154971047d45611966de50b4be11830; DOI: https://doi.org/10.1038/s42003-026-09935-x"
+      ]
+    },
+    {
+      "Text43": "reported_comparison_table:\nmethod: HxD\nsample: 2mm slice\nduration_as_tabulated: ~5d\nsource_locator: SupplementaryTable1 row15\nevidence_type: secondary_literature_summary_not_reverified_primary\nscope_warning: not harmonized durations, sample states or labels; do not use as controlled head-to-head ranking",
+      "Text43_Reference": [
+        "Structured evidence: full/M_N0014/evidence/scientific_derived_record_v1.json#/reported_comparison_table/14; SHA-256: 9f2ba33b54e119e0521074bb15f7493ab154971047d45611966de50b4be11830; DOI: https://doi.org/10.1038/s42003-026-09935-x"
+      ]
+    },
+    {
+      "Text44": "reported_comparison_table:\nmethod: Opticlear\nsample: 5mm striatum\nduration_as_tabulated: ~3.5months\nsource_locator: SupplementaryTable1 row16\nevidence_type: secondary_literature_summary_not_reverified_primary\nscope_warning: not harmonized durations, sample states or labels; do not use as controlled head-to-head ranking",
+      "Text44_Reference": [
+        "Structured evidence: full/M_N0014/evidence/scientific_derived_record_v1.json#/reported_comparison_table/15; SHA-256: 9f2ba33b54e119e0521074bb15f7493ab154971047d45611966de50b4be11830; DOI: https://doi.org/10.1038/s42003-026-09935-x"
+      ]
+    },
+    {
+      "Text45": "reported_comparison_table:\nmethod: ScaleS\nsample: 3mm cortexAD\nduration_as_tabulated: 5d\nsource_locator: SupplementaryTable1 row17\nevidence_type: secondary_literature_summary_not_reverified_primary\nscope_warning: not harmonized durations, sample states or labels; do not use as controlled head-to-head ranking",
+      "Text45_Reference": [
+        "Structured evidence: full/M_N0014/evidence/scientific_derived_record_v1.json#/reported_comparison_table/16; SHA-256: 9f2ba33b54e119e0521074bb15f7493ab154971047d45611966de50b4be11830; DOI: https://doi.org/10.1038/s42003-026-09935-x"
+      ]
+    },
+    {
+      "Text46": "reported_comparison_table:\nmethod: SHIELD\nsample: 2mm slice\nduration_as_tabulated: >10d\nsource_locator: SupplementaryTable1 row18\nevidence_type: secondary_literature_summary_not_reverified_primary\nscope_warning: not harmonized durations, sample states or labels; do not use as controlled head-to-head ranking",
+      "Text46_Reference": [
+        "Structured evidence: full/M_N0014/evidence/scientific_derived_record_v1.json#/reported_comparison_table/17; SHA-256: 9f2ba33b54e119e0521074bb15f7493ab154971047d45611966de50b4be11830; DOI: https://doi.org/10.1038/s42003-026-09935-x"
+      ]
+    },
+    {
+      "Text47": "reported_comparison_table:\nmethod: SHORT\nsample: 500um cortex\nduration_as_tabulated: ~21d\nsource_locator: SupplementaryTable1 row19\nevidence_type: secondary_literature_summary_not_reverified_primary\nscope_warning: not harmonized durations, sample states or labels; do not use as controlled head-to-head ranking",
+      "Text47_Reference": [
+        "Structured evidence: full/M_N0014/evidence/scientific_derived_record_v1.json#/reported_comparison_table/18; SHA-256: 9f2ba33b54e119e0521074bb15f7493ab154971047d45611966de50b4be11830; DOI: https://doi.org/10.1038/s42003-026-09935-x"
+      ]
+    },
+    {
+      "Text48": "reported_comparison_table:\nmethod: SWITCH\nsample: 100um cortex\nduration_as_tabulated: ~7d\nsource_locator: SupplementaryTable1 row20\nevidence_type: secondary_literature_summary_not_reverified_primary\nscope_warning: not harmonized durations, sample states or labels; do not use as controlled head-to-head ranking",
+      "Text48_Reference": [
+        "Structured evidence: full/M_N0014/evidence/scientific_derived_record_v1.json#/reported_comparison_table/19; SHA-256: 9f2ba33b54e119e0521074bb15f7493ab154971047d45611966de50b4be11830; DOI: https://doi.org/10.1038/s42003-026-09935-x"
+      ]
+    },
+    {
+      "Text49": "reported_comparison_table:\nmethod: CLARITY\nsample: 5mm slice\nduration_as_tabulated: >4months\nsource_locator: SupplementaryTable1 row21\nevidence_type: secondary_literature_summary_not_reverified_primary\nscope_warning: not harmonized durations, sample states or labels; do not use as controlled head-to-head ranking",
+      "Text49_Reference": [
+        "Structured evidence: full/M_N0014/evidence/scientific_derived_record_v1.json#/reported_comparison_table/20; SHA-256: 9f2ba33b54e119e0521074bb15f7493ab154971047d45611966de50b4be11830; DOI: https://doi.org/10.1038/s42003-026-09935-x"
+      ]
+    },
+    {
+      "Text50": "reported_comparison_table:\nmethod: CLARITY\nsample: 8mm slice\nduration_as_tabulated: 10months\nsource_locator: SupplementaryTable1 row22\nevidence_type: secondary_literature_summary_not_reverified_primary\nscope_warning: not harmonized durations, sample states or labels; do not use as controlled head-to-head ranking",
+      "Text50_Reference": [
+        "Structured evidence: full/M_N0014/evidence/scientific_derived_record_v1.json#/reported_comparison_table/21; SHA-256: 9f2ba33b54e119e0521074bb15f7493ab154971047d45611966de50b4be11830; DOI: https://doi.org/10.1038/s42003-026-09935-x"
+      ]
+    },
+    {
+      "Text51": "reported_comparison_table:\nmethod: CLARITY passive\nsample: 3mm slicePD\nduration_as_tabulated: 2months\nsource_locator: SupplementaryTable1 row23\nevidence_type: secondary_literature_summary_not_reverified_primary\nscope_warning: not harmonized durations, sample states or labels; do not use as controlled head-to-head ranking",
+      "Text51_Reference": [
+        "Structured evidence: full/M_N0014/evidence/scientific_derived_record_v1.json#/reported_comparison_table/22; SHA-256: 9f2ba33b54e119e0521074bb15f7493ab154971047d45611966de50b4be11830; DOI: https://doi.org/10.1038/s42003-026-09935-x"
+      ]
+    },
+    {
+      "Text52": "video_observations:\nvideo: 4\nsource_file: active_s7.mp4\nduration_seconds: 98\nsamples_seconds: \n  [1] 1.96\n  [2] 14.7\n  [3] 29.4\n  [4] 44.1\n  [5] 58.8\n  [6] 73.5\n  [7] 88.2\n  [8] 96.04\nsource_scope: 10mm cerebellar slice;638nm excitation690nm longpass;4x volumetric/MIP/virtualsection then16xROI and final multiscale merge\nfinding: Both vascular patterns and neuronalcellular AF visible; detail-specific resolution shown in selectedROI, not wholevolume16x; video runtime is not acquisition/clearingtime\nreview: 8 spread frames visually inspected covering represented sequence types",
+      "Text52_Reference": [
+        "Structured evidence: full/M_N0014/evidence/scientific_derived_record_v1.json#/video_observations/0; SHA-256: 9f2ba33b54e119e0521074bb15f7493ab154971047d45611966de50b4be11830; DOI: https://doi.org/10.1038/s42003-026-09935-x"
+      ]
+    },
+    {
+      "Text53": "video_observations:\nvideo: 2\nsource_file: active_s5.mp4\nduration_seconds: 100\nsamples_seconds: \n  [1] 2\n  [2] 15\n  [3] 30\n  [4] 45\n  [5] 60\n  [6] 75\n  [7] 90\n  [8] 98\nsource_scope: intact human hippocampus multiresolution AF reconstruction\nfinding: Whole shape followed by chosen hippocampal subfields and cellularROI overlays; no antigen specificity nor wholeorgan16x inference.\nreview: 8 spread frames visually inspected",
+      "Text53_Reference": [
+        "Structured evidence: full/M_N0014/evidence/scientific_derived_record_v1.json#/video_observations/1; SHA-256: 9f2ba33b54e119e0521074bb15f7493ab154971047d45611966de50b4be11830; DOI: https://doi.org/10.1038/s42003-026-09935-x"
+      ]
+    },
+    {
+      "Text54": "video_observations:\nvideo: 3\nsource_file: active_s6.mp4\nduration_seconds: 80.0\nsamples_seconds: \n  [1] 1.6\n  [2] 12.0\n  [3] 24.0\n  [4] 36.0\n  [5] 48.0\n  [6] 60.0\n  [7] 72.0\n  [8] 78.4\nsource_scope: intactcerebellarhemisphere rotationalreconstruction\nfinding: Gross folia and surface views through rotation; does not alone establish cellular resolution atspecimencenter.\nreview: 8spreadframes inspected",
+      "Text54_Reference": [
+        "Structured evidence: full/M_N0014/evidence/scientific_derived_record_v1.json#/video_observations/2; SHA-256: 9f2ba33b54e119e0521074bb15f7493ab154971047d45611966de50b4be11830; DOI: https://doi.org/10.1038/s42003-026-09935-x"
+      ]
+    },
+    {
+      "Text55": "video_observations:\nvideo: 1\nsource_file: active_s4.mp4\nduration_seconds: 100.4\nsamples_seconds: \n  [1] 2.008\n  [2] 15.06\n  [3] 30.12\n  [4] 45.18000000000001\n  [5] 60.24\n  [6] 75.30000000000001\n  [7] 90.36000000000001\n  [8] 98.39200000000001\nsource_scope: 20mmhuman telencephalon multiresolution AF\nfinding: Wholevolumevascular/graywhite pattern and separate smaller cellularROI, ending with ROI localization overlay. No full-specimen highmagnification molecularlabel claim.\nreview: 8spreadframes inspected",
+      "Text55_Reference": [
+        "Structured evidence: full/M_N0014/evidence/scientific_derived_record_v1.json#/video_observations/3; SHA-256: 9f2ba33b54e119e0521074bb15f7493ab154971047d45611966de50b4be11830; DOI: https://doi.org/10.1038/s42003-026-09935-x"
+      ]
+    },
+    {
+      "Text56": "stage_events:\nevent_id: P01\nstage: wash\nreported_material: PBS pH7.4\nduration_as_reported: null (as recorded in source)\ntemperature_as_reported: null (as recorded in source)\nqualifier: thorough washing;durationunknown\nsample_scope: fixedhumanbrain specimens as described inMethods;notperindividual donor table\nlabel_scope: autofluorescence only demonstrated\nsource_locator: Methods Par36\nautomation_eligible: false\nunknowns: unreported reagentvolumes per sample, per-specimen endpointtime and dimensional scaling not inferred",
+      "Text56_Reference": [
+        "Structured evidence: full/M_N0014/evidence/scientific_derived_record_v1.json#/stage_events/0; SHA-256: 9f2ba33b54e119e0521074bb15f7493ab154971047d45611966de50b4be11830; DOI: https://doi.org/10.1038/s42003-026-09935-x"
+      ]
+    },
+    {
+      "Text57": "stage_events:\nevent_id: P02\nstage: permeabilization\nreported_material: 5% CHAPS/PBS\nduration_as_reported: 2d\ntemperature_as_reported: 37C\nqualifier: fixed tissue\nsample_scope: fixedhumanbrain specimens as described inMethods;notperindividual donor table\nlabel_scope: autofluorescence only demonstrated\nsource_locator: Methods Par36\nautomation_eligible: false\nunknowns: unreported reagentvolumes per sample, per-specimen endpointtime and dimensional scaling not inferred",
+      "Text57_Reference": [
+        "Structured evidence: full/M_N0014/evidence/scientific_derived_record_v1.json#/stage_events/1; SHA-256: 9f2ba33b54e119e0521074bb15f7493ab154971047d45611966de50b4be11830; DOI: https://doi.org/10.1038/s42003-026-09935-x"
+      ]
+    },
+    {
+      "Text58": "stage_events:\nevent_id: P03\nstage: wash\nreported_material: PBS\nduration_as_reported: null (as recorded in source)\ntemperature_as_reported: null (as recorded in source)\nqualifier: durationunknown\nsample_scope: fixedhumanbrain specimens as described inMethods;notperindividual donor table\nlabel_scope: autofluorescence only demonstrated\nsource_locator: Methods Par36\nautomation_eligible: false\nunknowns: unreported reagentvolumes per sample, per-specimen endpointtime and dimensional scaling not inferred",
+      "Text58_Reference": [
+        "Structured evidence: full/M_N0014/evidence/scientific_derived_record_v1.json#/stage_events/2; SHA-256: 9f2ba33b54e119e0521074bb15f7493ab154971047d45611966de50b4be11830; DOI: https://doi.org/10.1038/s42003-026-09935-x"
+      ]
+    },
+    {
+      "Text59": "stage_events:\nevent_id: P04\nstage: solvent_exchange\nreported_material: MeOH/PBS20,40,60,80,100%\nduration_as_reported: 1h each\ntemperature_as_reported: roomtemperature\nqualifier: beforebleaching\nsample_scope: fixedhumanbrain specimens as described inMethods;notperindividual donor table\nlabel_scope: autofluorescence only demonstrated\nsource_locator: Methods Par36\nautomation_eligible: false\nunknowns: unreported reagentvolumes per sample, per-specimen endpointtime and dimensional scaling not inferred",
+      "Text59_Reference": [
+        "Structured evidence: full/M_N0014/evidence/scientific_derived_record_v1.json#/stage_events/3; SHA-256: 9f2ba33b54e119e0521074bb15f7493ab154971047d45611966de50b4be11830; DOI: https://doi.org/10.1038/s42003-026-09935-x"
+      ]
+    },
+    {
+      "Text60": "stage_events:\nevent_id: P05\nstage: bleach\nreported_material: 10%H2O2/MeOH\nduration_as_reported: overnight\ntemperature_as_reported: 4C\nqualifier: selectedstandard;comparisonvariantsdistinct\nsample_scope: fixedhumanbrain specimens as described inMethods;notperindividual donor table\nlabel_scope: autofluorescence only demonstrated\nsource_locator: Methods Par36\nautomation_eligible: false\nunknowns: unreported reagentvolumes per sample, per-specimen endpointtime and dimensional scaling not inferred",
+      "Text60_Reference": [
+        "Structured evidence: full/M_N0014/evidence/scientific_derived_record_v1.json#/stage_events/4; SHA-256: 9f2ba33b54e119e0521074bb15f7493ab154971047d45611966de50b4be11830; DOI: https://doi.org/10.1038/s42003-026-09935-x"
+      ]
+    },
+    {
+      "Text61": "stage_events:\nevent_id: P06\nstage: rehydration\nreported_material: reverse prior MeOH series\nduration_as_reported: reverse of preceding series\ntemperature_as_reported: roomtemperature\nqualifier: sourcecrossreference\nsample_scope: fixedhumanbrain specimens as described inMethods;notperindividual donor table\nlabel_scope: autofluorescence only demonstrated\nsource_locator: Methods Par36\nautomation_eligible: false\nunknowns: unreported reagentvolumes per sample, per-specimen endpointtime and dimensional scaling not inferred",
+      "Text61_Reference": [
+        "Structured evidence: full/M_N0014/evidence/scientific_derived_record_v1.json#/stage_events/5; SHA-256: 9f2ba33b54e119e0521074bb15f7493ab154971047d45611966de50b4be11830; DOI: https://doi.org/10.1038/s42003-026-09935-x"
+      ]
+    },
+    {
+      "Text62": "stage_events:\nevent_id: P07\nstage: wash\nreported_material: PBS\nduration_as_reported: 2x1h\ntemperature_as_reported: roomtemperature\nqualifier: afterrehydration\nsample_scope: fixedhumanbrain specimens as described inMethods;notperindividual donor table\nlabel_scope: autofluorescence only demonstrated\nsource_locator: Methods Par36\nautomation_eligible: false\nunknowns: unreported reagentvolumes per sample, per-specimen endpointtime and dimensional scaling not inferred",
+      "Text62_Reference": [
+        "Structured evidence: full/M_N0014/evidence/scientific_derived_record_v1.json#/stage_events/6; SHA-256: 9f2ba33b54e119e0521074bb15f7493ab154971047d45611966de50b4be11830; DOI: https://doi.org/10.1038/s42003-026-09935-x"
+      ]
+    },
+    {
+      "Text63": "stage_events:\nevent_id: P08\nstage: acidification\nreported_material: HCl pH1/dH2O\nduration_as_reported: 2d\ntemperature_as_reported: 37C\nqualifier: prioractive dehydration\nsample_scope: fixedhumanbrain specimens as described inMethods;notperindividual donor table\nlabel_scope: autofluorescence only demonstrated\nsource_locator: Methods Par36\nautomation_eligible: false\nunknowns: unreported reagentvolumes per sample, per-specimen endpointtime and dimensional scaling not inferred",
+      "Text63_Reference": [
+        "Structured evidence: full/M_N0014/evidence/scientific_derived_record_v1.json#/stage_events/7; SHA-256: 9f2ba33b54e119e0521074bb15f7493ab154971047d45611966de50b4be11830; DOI: https://doi.org/10.1038/s42003-026-09935-x"
+      ]
+    },
+    {
+      "Text64": "stage_events:\nevent_id: P09\nstage: active_dehydration\nreported_material: DMP plus1%vol2NHCl added atstart\nduration_as_reported: 2treatments x2d\ntemperature_as_reported: 37C\nqualifier: sequentialtwoincubations\nsample_scope: fixedhumanbrain specimens as described inMethods;notperindividual donor table\nlabel_scope: autofluorescence only demonstrated\nsource_locator: Methods Par36\nautomation_eligible: false\nunknowns: unreported reagentvolumes per sample, per-specimen endpointtime and dimensional scaling not inferred",
+      "Text64_Reference": [
+        "Structured evidence: full/M_N0014/evidence/scientific_derived_record_v1.json#/stage_events/8; SHA-256: 9f2ba33b54e119e0521074bb15f7493ab154971047d45611966de50b4be11830; DOI: https://doi.org/10.1038/s42003-026-09935-x"
+      ]
+    },
+    {
+      "Text65": "stage_events:\nevent_id: P10\nstage: delipidation\nreported_material: DCM molecularsieved3angstrom\nduration_as_reported: overnight\ntemperature_as_reported: conflict:Methods roomtemperature;Fig2A37C\nqualifier: Methods warns nothigher;automaticuseblocked\nsample_scope: fixedhumanbrain specimens as described inMethods;notperindividual donor table\nlabel_scope: autofluorescence only demonstrated\nsource_locator: Methods Par36\nautomation_eligible: false\nunknowns: unreported reagentvolumes per sample, per-specimen endpointtime and dimensional scaling not inferred",
+      "Text65_Reference": [
+        "Structured evidence: full/M_N0014/evidence/scientific_derived_record_v1.json#/stage_events/9; SHA-256: 9f2ba33b54e119e0521074bb15f7493ab154971047d45611966de50b4be11830; DOI: https://doi.org/10.1038/s42003-026-09935-x"
+      ]
+    },
+    {
+      "Text66": "stage_events:\nevent_id: P11\nstage: evaporation\nreported_material: residualDCM\nduration_as_reported: brief;notnumeric\ntemperature_as_reported: null (as recorded in source)\nqualifier: underfumehood\nsample_scope: fixedhumanbrain specimens as described inMethods;notperindividual donor table\nlabel_scope: autofluorescence only demonstrated\nsource_locator: Methods Par36\nautomation_eligible: false\nunknowns: unreported reagentvolumes per sample, per-specimen endpointtime and dimensional scaling not inferred",
+      "Text66_Reference": [
+        "Structured evidence: full/M_N0014/evidence/scientific_derived_record_v1.json#/stage_events/10; SHA-256: 9f2ba33b54e119e0521074bb15f7493ab154971047d45611966de50b4be11830; DOI: https://doi.org/10.1038/s42003-026-09935-x"
+      ]
+    },
+    {
+      "Text67": "stage_events:\nevent_id: P12\nstage: RI_matching\nreported_material: DBE\nduration_as_reported: endpoint-defined;refreshafterfewdaysifneeded\ntemperature_as_reported: 37C thenroomtemperature\nqualifier: untilmaximumclearing\nsample_scope: fixedhumanbrain specimens as described inMethods;notperindividual donor table\nlabel_scope: autofluorescence only demonstrated\nsource_locator: Methods Par36\nautomation_eligible: false\nunknowns: unreported reagentvolumes per sample, per-specimen endpointtime and dimensional scaling not inferred",
+      "Text67_Reference": [
+        "Structured evidence: full/M_N0014/evidence/scientific_derived_record_v1.json#/stage_events/11; SHA-256: 9f2ba33b54e119e0521074bb15f7493ab154971047d45611966de50b4be11830; DOI: https://doi.org/10.1038/s42003-026-09935-x"
+      ]
+    },
+    {
+      "Text68": "stage_reviews:\nevent_id: P01\nverdict: source_verified\nsource_locator: Methods Par36\nautomatic_execution: false\nnote: P06 source reverse-series cross-reference retained; P10 conflict safety restriction retained; endpoint and unknown fields not invented.",
+      "Text68_Reference": [
+        "Structured evidence: full/M_N0014/evidence/independent_final_review_v1.json#/stage_reviews/0; SHA-256: 84c28a7f1b952396cc95c04c08926721122f71924665e0951d8f83255defd5eb; DOI: https://doi.org/10.1038/s42003-026-09935-x"
+      ]
+    },
+    {
+      "Text69": "stage_reviews:\nevent_id: P02\nverdict: source_verified\nsource_locator: Methods Par36\nautomatic_execution: false\nnote: P06 source reverse-series cross-reference retained; P10 conflict safety restriction retained; endpoint and unknown fields not invented.",
+      "Text69_Reference": [
+        "Structured evidence: full/M_N0014/evidence/independent_final_review_v1.json#/stage_reviews/1; SHA-256: 84c28a7f1b952396cc95c04c08926721122f71924665e0951d8f83255defd5eb; DOI: https://doi.org/10.1038/s42003-026-09935-x"
+      ]
+    },
+    {
+      "Text70": "stage_reviews:\nevent_id: P03\nverdict: source_verified\nsource_locator: Methods Par36\nautomatic_execution: false\nnote: P06 source reverse-series cross-reference retained; P10 conflict safety restriction retained; endpoint and unknown fields not invented.",
+      "Text70_Reference": [
+        "Structured evidence: full/M_N0014/evidence/independent_final_review_v1.json#/stage_reviews/2; SHA-256: 84c28a7f1b952396cc95c04c08926721122f71924665e0951d8f83255defd5eb; DOI: https://doi.org/10.1038/s42003-026-09935-x"
+      ]
+    },
+    {
+      "Text71": "stage_reviews:\nevent_id: P04\nverdict: source_verified\nsource_locator: Methods Par36\nautomatic_execution: false\nnote: P06 source reverse-series cross-reference retained; P10 conflict safety restriction retained; endpoint and unknown fields not invented.",
+      "Text71_Reference": [
+        "Structured evidence: full/M_N0014/evidence/independent_final_review_v1.json#/stage_reviews/3; SHA-256: 84c28a7f1b952396cc95c04c08926721122f71924665e0951d8f83255defd5eb; DOI: https://doi.org/10.1038/s42003-026-09935-x"
+      ]
+    },
+    {
+      "Text72": "stage_reviews:\nevent_id: P05\nverdict: source_verified\nsource_locator: Methods Par36\nautomatic_execution: false\nnote: P06 source reverse-series cross-reference retained; P10 conflict safety restriction retained; endpoint and unknown fields not invented.",
+      "Text72_Reference": [
+        "Structured evidence: full/M_N0014/evidence/independent_final_review_v1.json#/stage_reviews/4; SHA-256: 84c28a7f1b952396cc95c04c08926721122f71924665e0951d8f83255defd5eb; DOI: https://doi.org/10.1038/s42003-026-09935-x"
+      ]
+    },
+    {
+      "Text73": "stage_reviews:\nevent_id: P06\nverdict: source_verified\nsource_locator: Methods Par36\nautomatic_execution: false\nnote: P06 source reverse-series cross-reference retained; P10 conflict safety restriction retained; endpoint and unknown fields not invented.",
+      "Text73_Reference": [
+        "Structured evidence: full/M_N0014/evidence/independent_final_review_v1.json#/stage_reviews/5; SHA-256: 84c28a7f1b952396cc95c04c08926721122f71924665e0951d8f83255defd5eb; DOI: https://doi.org/10.1038/s42003-026-09935-x"
+      ]
+    },
+    {
+      "Text74": "stage_reviews:\nevent_id: P07\nverdict: source_verified\nsource_locator: Methods Par36\nautomatic_execution: false\nnote: P06 source reverse-series cross-reference retained; P10 conflict safety restriction retained; endpoint and unknown fields not invented.",
+      "Text74_Reference": [
+        "Structured evidence: full/M_N0014/evidence/independent_final_review_v1.json#/stage_reviews/6; SHA-256: 84c28a7f1b952396cc95c04c08926721122f71924665e0951d8f83255defd5eb; DOI: https://doi.org/10.1038/s42003-026-09935-x"
+      ]
+    },
+    {
+      "Text75": "stage_reviews:\nevent_id: P08\nverdict: source_verified\nsource_locator: Methods Par36\nautomatic_execution: false\nnote: P06 source reverse-series cross-reference retained; P10 conflict safety restriction retained; endpoint and unknown fields not invented.",
+      "Text75_Reference": [
+        "Structured evidence: full/M_N0014/evidence/independent_final_review_v1.json#/stage_reviews/7; SHA-256: 84c28a7f1b952396cc95c04c08926721122f71924665e0951d8f83255defd5eb; DOI: https://doi.org/10.1038/s42003-026-09935-x"
+      ]
+    },
+    {
+      "Text76": "stage_reviews:\nevent_id: P09\nverdict: source_verified\nsource_locator: Methods Par36\nautomatic_execution: false\nnote: P06 source reverse-series cross-reference retained; P10 conflict safety restriction retained; endpoint and unknown fields not invented.",
+      "Text76_Reference": [
+        "Structured evidence: full/M_N0014/evidence/independent_final_review_v1.json#/stage_reviews/8; SHA-256: 84c28a7f1b952396cc95c04c08926721122f71924665e0951d8f83255defd5eb; DOI: https://doi.org/10.1038/s42003-026-09935-x"
+      ]
+    },
+    {
+      "Text77": "stage_reviews:\nevent_id: P10\nverdict: source_verified\nsource_locator: Methods Par36\nautomatic_execution: false\nnote: P06 source reverse-series cross-reference retained; P10 conflict safety restriction retained; endpoint and unknown fields not invented.",
+      "Text77_Reference": [
+        "Structured evidence: full/M_N0014/evidence/independent_final_review_v1.json#/stage_reviews/9; SHA-256: 84c28a7f1b952396cc95c04c08926721122f71924665e0951d8f83255defd5eb; DOI: https://doi.org/10.1038/s42003-026-09935-x"
+      ]
+    },
+    {
+      "Text78": "stage_reviews:\nevent_id: P11\nverdict: source_verified\nsource_locator: Methods Par36\nautomatic_execution: false\nnote: P06 source reverse-series cross-reference retained; P10 conflict safety restriction retained; endpoint and unknown fields not invented.",
+      "Text78_Reference": [
+        "Structured evidence: full/M_N0014/evidence/independent_final_review_v1.json#/stage_reviews/10; SHA-256: 84c28a7f1b952396cc95c04c08926721122f71924665e0951d8f83255defd5eb; DOI: https://doi.org/10.1038/s42003-026-09935-x"
+      ]
+    },
+    {
+      "Text79": "stage_reviews:\nevent_id: P12\nverdict: source_verified\nsource_locator: Methods Par36\nautomatic_execution: false\nnote: P06 source reverse-series cross-reference retained; P10 conflict safety restriction retained; endpoint and unknown fields not invented.",
+      "Text79_Reference": [
+        "Structured evidence: full/M_N0014/evidence/independent_final_review_v1.json#/stage_reviews/11; SHA-256: 84c28a7f1b952396cc95c04c08926721122f71924665e0951d8f83255defd5eb; DOI: https://doi.org/10.1038/s42003-026-09935-x"
+      ]
+    },
+    {
+      "Text80": "imaging_row_reviews:\nrow: 1\nsample: 10mm cortex1\nverdict: all_candidate_fields_match_SupplementaryTable2\nsource_locator: Supplementary Table2 row 1",
+      "Text80_Reference": [
+        "Structured evidence: full/M_N0014/evidence/independent_final_review_v1.json#/imaging_row_reviews/0; SHA-256: 84c28a7f1b952396cc95c04c08926721122f71924665e0951d8f83255defd5eb; DOI: https://doi.org/10.1038/s42003-026-09935-x"
+      ]
+    },
+    {
+      "Text81": "imaging_row_reviews:\nrow: 2\nsample: 10mm cortex2\nverdict: all_candidate_fields_match_SupplementaryTable2\nsource_locator: Supplementary Table2 row 2",
+      "Text81_Reference": [
+        "Structured evidence: full/M_N0014/evidence/independent_final_review_v1.json#/imaging_row_reviews/1; SHA-256: 84c28a7f1b952396cc95c04c08926721122f71924665e0951d8f83255defd5eb; DOI: https://doi.org/10.1038/s42003-026-09935-x"
+      ]
+    },
+    {
+      "Text82": "imaging_row_reviews:\nrow: 3\nsample: 20mm cortex\nverdict: all_candidate_fields_match_SupplementaryTable2\nsource_locator: Supplementary Table2 row 3",
+      "Text82_Reference": [
+        "Structured evidence: full/M_N0014/evidence/independent_final_review_v1.json#/imaging_row_reviews/2; SHA-256: 84c28a7f1b952396cc95c04c08926721122f71924665e0951d8f83255defd5eb; DOI: https://doi.org/10.1038/s42003-026-09935-x"
+      ]
+    },
+    {
+      "Text83": "imaging_row_reviews:\nrow: 4\nsample: hippocampus\nverdict: all_candidate_fields_match_SupplementaryTable2\nsource_locator: Supplementary Table2 row 4",
+      "Text83_Reference": [
+        "Structured evidence: full/M_N0014/evidence/independent_final_review_v1.json#/imaging_row_reviews/3; SHA-256: 84c28a7f1b952396cc95c04c08926721122f71924665e0951d8f83255defd5eb; DOI: https://doi.org/10.1038/s42003-026-09935-x"
+      ]
+    },
+    {
+      "Text84": "imaging_row_reviews:\nrow: 5\nsample: medulla\nverdict: all_candidate_fields_match_SupplementaryTable2\nsource_locator: Supplementary Table2 row 5",
+      "Text84_Reference": [
+        "Structured evidence: full/M_N0014/evidence/independent_final_review_v1.json#/imaging_row_reviews/4; SHA-256: 84c28a7f1b952396cc95c04c08926721122f71924665e0951d8f83255defd5eb; DOI: https://doi.org/10.1038/s42003-026-09935-x"
+      ]
+    },
+    {
+      "Text85": "imaging_row_reviews:\nrow: 6\nsample: cerebellum\nverdict: all_candidate_fields_match_SupplementaryTable2\nsource_locator: Supplementary Table2 row 6",
+      "Text85_Reference": [
+        "Structured evidence: full/M_N0014/evidence/independent_final_review_v1.json#/imaging_row_reviews/5; SHA-256: 84c28a7f1b952396cc95c04c08926721122f71924665e0951d8f83255defd5eb; DOI: https://doi.org/10.1038/s42003-026-09935-x"
+      ]
+    },
+    {
+      "Text86": "imaging_row_reviews:\nrow: 7\nsample: 10mm cerebellum\nverdict: all_candidate_fields_match_SupplementaryTable2\nsource_locator: Supplementary Table2 row 7",
+      "Text86_Reference": [
+        "Structured evidence: full/M_N0014/evidence/independent_final_review_v1.json#/imaging_row_reviews/6; SHA-256: 84c28a7f1b952396cc95c04c08926721122f71924665e0951d8f83255defd5eb; DOI: https://doi.org/10.1038/s42003-026-09935-x"
+      ]
+    },
+    {
+      "Text87": "imaging_row_reviews:\nrow: 8\nsample: 5mm cerebellum\nverdict: all_candidate_fields_match_SupplementaryTable2\nsource_locator: Supplementary Table2 row 8",
+      "Text87_Reference": [
+        "Structured evidence: full/M_N0014/evidence/independent_final_review_v1.json#/imaging_row_reviews/7; SHA-256: 84c28a7f1b952396cc95c04c08926721122f71924665e0951d8f83255defd5eb; DOI: https://doi.org/10.1038/s42003-026-09935-x"
+      ]
+    },
+    {
+      "Text88": "imaging_row_reviews:\nrow: 9\nsample: 5mm cortex\nverdict: all_candidate_fields_match_SupplementaryTable2\nsource_locator: Supplementary Table2 row 9",
+      "Text88_Reference": [
+        "Structured evidence: full/M_N0014/evidence/independent_final_review_v1.json#/imaging_row_reviews/8; SHA-256: 84c28a7f1b952396cc95c04c08926721122f71924665e0951d8f83255defd5eb; DOI: https://doi.org/10.1038/s42003-026-09935-x"
+      ]
+    },
+    {
+      "Text89": "comparison_row_reviews:\nrow: 1\nverdict: method_sample_duration_match_SupplementaryTable1\nprimary_evidence: false\nsource_locator: SupplementaryTable1 row1",
+      "Text89_Reference": [
+        "Structured evidence: full/M_N0014/evidence/independent_final_review_v1.json#/comparison_row_reviews/0; SHA-256: 84c28a7f1b952396cc95c04c08926721122f71924665e0951d8f83255defd5eb; DOI: https://doi.org/10.1038/s42003-026-09935-x"
+      ]
+    },
+    {
+      "Text90": "comparison_row_reviews:\nrow: 2\nverdict: method_sample_duration_match_SupplementaryTable1\nprimary_evidence: true\nsource_locator: SupplementaryTable1 row2",
+      "Text90_Reference": [
+        "Structured evidence: full/M_N0014/evidence/independent_final_review_v1.json#/comparison_row_reviews/1; SHA-256: 84c28a7f1b952396cc95c04c08926721122f71924665e0951d8f83255defd5eb; DOI: https://doi.org/10.1038/s42003-026-09935-x"
+      ]
+    },
+    {
+      "Text91": "comparison_row_reviews:\nrow: 3\nverdict: method_sample_duration_match_SupplementaryTable1\nprimary_evidence: false\nsource_locator: SupplementaryTable1 row3",
+      "Text91_Reference": [
+        "Structured evidence: full/M_N0014/evidence/independent_final_review_v1.json#/comparison_row_reviews/2; SHA-256: 84c28a7f1b952396cc95c04c08926721122f71924665e0951d8f83255defd5eb; DOI: https://doi.org/10.1038/s42003-026-09935-x"
+      ]
+    },
+    {
+      "Text92": "comparison_row_reviews:\nrow: 4\nverdict: method_sample_duration_match_SupplementaryTable1\nprimary_evidence: false\nsource_locator: SupplementaryTable1 row4",
+      "Text92_Reference": [
+        "Structured evidence: full/M_N0014/evidence/independent_final_review_v1.json#/comparison_row_reviews/3; SHA-256: 84c28a7f1b952396cc95c04c08926721122f71924665e0951d8f83255defd5eb; DOI: https://doi.org/10.1038/s42003-026-09935-x"
+      ]
+    },
+    {
+      "Text93": "comparison_row_reviews:\nrow: 5\nverdict: method_sample_duration_match_SupplementaryTable1\nprimary_evidence: false\nsource_locator: SupplementaryTable1 row5",
+      "Text93_Reference": [
+        "Structured evidence: full/M_N0014/evidence/independent_final_review_v1.json#/comparison_row_reviews/4; SHA-256: 84c28a7f1b952396cc95c04c08926721122f71924665e0951d8f83255defd5eb; DOI: https://doi.org/10.1038/s42003-026-09935-x"
+      ]
+    },
+    {
+      "Text94": "comparison_row_reviews:\nrow: 6\nverdict: method_sample_duration_match_SupplementaryTable1\nprimary_evidence: false\nsource_locator: SupplementaryTable1 row6",
+      "Text94_Reference": [
+        "Structured evidence: full/M_N0014/evidence/independent_final_review_v1.json#/comparison_row_reviews/5; SHA-256: 84c28a7f1b952396cc95c04c08926721122f71924665e0951d8f83255defd5eb; DOI: https://doi.org/10.1038/s42003-026-09935-x"
+      ]
+    },
+    {
+      "Text95": "comparison_row_reviews:\nrow: 7\nverdict: method_sample_duration_match_SupplementaryTable1\nprimary_evidence: false\nsource_locator: SupplementaryTable1 row7",
+      "Text95_Reference": [
+        "Structured evidence: full/M_N0014/evidence/independent_final_review_v1.json#/comparison_row_reviews/6; SHA-256: 84c28a7f1b952396cc95c04c08926721122f71924665e0951d8f83255defd5eb; DOI: https://doi.org/10.1038/s42003-026-09935-x"
+      ]
+    },
+    {
+      "Text96": "comparison_row_reviews:\nrow: 8\nverdict: method_sample_duration_match_SupplementaryTable1\nprimary_evidence: false\nsource_locator: SupplementaryTable1 row8",
+      "Text96_Reference": [
+        "Structured evidence: full/M_N0014/evidence/independent_final_review_v1.json#/comparison_row_reviews/7; SHA-256: 84c28a7f1b952396cc95c04c08926721122f71924665e0951d8f83255defd5eb; DOI: https://doi.org/10.1038/s42003-026-09935-x"
+      ]
+    },
+    {
+      "Text97": "comparison_row_reviews:\nrow: 9\nverdict: method_sample_duration_match_SupplementaryTable1\nprimary_evidence: false\nsource_locator: SupplementaryTable1 row9",
+      "Text97_Reference": [
+        "Structured evidence: full/M_N0014/evidence/independent_final_review_v1.json#/comparison_row_reviews/8; SHA-256: 84c28a7f1b952396cc95c04c08926721122f71924665e0951d8f83255defd5eb; DOI: https://doi.org/10.1038/s42003-026-09935-x"
+      ]
+    },
+    {
+      "Text98": "comparison_row_reviews:\nrow: 10\nverdict: method_sample_duration_match_SupplementaryTable1\nprimary_evidence: false\nsource_locator: SupplementaryTable1 row10",
+      "Text98_Reference": [
+        "Structured evidence: full/M_N0014/evidence/independent_final_review_v1.json#/comparison_row_reviews/9; SHA-256: 84c28a7f1b952396cc95c04c08926721122f71924665e0951d8f83255defd5eb; DOI: https://doi.org/10.1038/s42003-026-09935-x"
+      ]
+    },
+    {
+      "Text99": "comparison_row_reviews:\nrow: 11\nverdict: method_sample_duration_match_SupplementaryTable1\nprimary_evidence: false\nsource_locator: SupplementaryTable1 row11",
+      "Text99_Reference": [
+        "Structured evidence: full/M_N0014/evidence/independent_final_review_v1.json#/comparison_row_reviews/10; SHA-256: 84c28a7f1b952396cc95c04c08926721122f71924665e0951d8f83255defd5eb; DOI: https://doi.org/10.1038/s42003-026-09935-x"
+      ]
+    },
+    {
+      "Text100": "comparison_row_reviews:\nrow: 12\nverdict: method_sample_duration_match_SupplementaryTable1\nprimary_evidence: false\nsource_locator: SupplementaryTable1 row12",
+      "Text100_Reference": [
+        "Structured evidence: full/M_N0014/evidence/independent_final_review_v1.json#/comparison_row_reviews/11; SHA-256: 84c28a7f1b952396cc95c04c08926721122f71924665e0951d8f83255defd5eb; DOI: https://doi.org/10.1038/s42003-026-09935-x"
+      ]
+    },
+    {
+      "Text101": "comparison_row_reviews:\nrow: 13\nverdict: method_sample_duration_match_SupplementaryTable1\nprimary_evidence: false\nsource_locator: SupplementaryTable1 row13",
+      "Text101_Reference": [
+        "Structured evidence: full/M_N0014/evidence/independent_final_review_v1.json#/comparison_row_reviews/12; SHA-256: 84c28a7f1b952396cc95c04c08926721122f71924665e0951d8f83255defd5eb; DOI: https://doi.org/10.1038/s42003-026-09935-x"
+      ]
+    },
+    {
+      "Text102": "comparison_row_reviews:\nrow: 14\nverdict: method_sample_duration_match_SupplementaryTable1\nprimary_evidence: false\nsource_locator: SupplementaryTable1 row14",
+      "Text102_Reference": [
+        "Structured evidence: full/M_N0014/evidence/independent_final_review_v1.json#/comparison_row_reviews/13; SHA-256: 84c28a7f1b952396cc95c04c08926721122f71924665e0951d8f83255defd5eb; DOI: https://doi.org/10.1038/s42003-026-09935-x"
+      ]
+    },
+    {
+      "Text103": "comparison_row_reviews:\nrow: 15\nverdict: method_sample_duration_match_SupplementaryTable1\nprimary_evidence: false\nsource_locator: SupplementaryTable1 row15",
+      "Text103_Reference": [
+        "Structured evidence: full/M_N0014/evidence/independent_final_review_v1.json#/comparison_row_reviews/14; SHA-256: 84c28a7f1b952396cc95c04c08926721122f71924665e0951d8f83255defd5eb; DOI: https://doi.org/10.1038/s42003-026-09935-x"
+      ]
+    },
+    {
+      "Text104": "comparison_row_reviews:\nrow: 16\nverdict: method_sample_duration_match_SupplementaryTable1\nprimary_evidence: false\nsource_locator: SupplementaryTable1 row16",
+      "Text104_Reference": [
+        "Structured evidence: full/M_N0014/evidence/independent_final_review_v1.json#/comparison_row_reviews/15; SHA-256: 84c28a7f1b952396cc95c04c08926721122f71924665e0951d8f83255defd5eb; DOI: https://doi.org/10.1038/s42003-026-09935-x"
+      ]
+    },
+    {
+      "Text105": "comparison_row_reviews:\nrow: 17\nverdict: method_sample_duration_match_SupplementaryTable1\nprimary_evidence: false\nsource_locator: SupplementaryTable1 row17",
+      "Text105_Reference": [
+        "Structured evidence: full/M_N0014/evidence/independent_final_review_v1.json#/comparison_row_reviews/16; SHA-256: 84c28a7f1b952396cc95c04c08926721122f71924665e0951d8f83255defd5eb; DOI: https://doi.org/10.1038/s42003-026-09935-x"
+      ]
+    },
+    {
+      "Text106": "comparison_row_reviews:\nrow: 18\nverdict: method_sample_duration_match_SupplementaryTable1\nprimary_evidence: false\nsource_locator: SupplementaryTable1 row18",
+      "Text106_Reference": [
+        "Structured evidence: full/M_N0014/evidence/independent_final_review_v1.json#/comparison_row_reviews/17; SHA-256: 84c28a7f1b952396cc95c04c08926721122f71924665e0951d8f83255defd5eb; DOI: https://doi.org/10.1038/s42003-026-09935-x"
+      ]
+    },
+    {
+      "Text107": "comparison_row_reviews:\nrow: 19\nverdict: method_sample_duration_match_SupplementaryTable1\nprimary_evidence: false\nsource_locator: SupplementaryTable1 row19",
+      "Text107_Reference": [
+        "Structured evidence: full/M_N0014/evidence/independent_final_review_v1.json#/comparison_row_reviews/18; SHA-256: 84c28a7f1b952396cc95c04c08926721122f71924665e0951d8f83255defd5eb; DOI: https://doi.org/10.1038/s42003-026-09935-x"
+      ]
+    },
+    {
+      "Text108": "comparison_row_reviews:\nrow: 20\nverdict: method_sample_duration_match_SupplementaryTable1\nprimary_evidence: false\nsource_locator: SupplementaryTable1 row20",
+      "Text108_Reference": [
+        "Structured evidence: full/M_N0014/evidence/independent_final_review_v1.json#/comparison_row_reviews/19; SHA-256: 84c28a7f1b952396cc95c04c08926721122f71924665e0951d8f83255defd5eb; DOI: https://doi.org/10.1038/s42003-026-09935-x"
+      ]
+    },
+    {
+      "Text109": "comparison_row_reviews:\nrow: 21\nverdict: method_sample_duration_match_SupplementaryTable1\nprimary_evidence: false\nsource_locator: SupplementaryTable1 row21",
+      "Text109_Reference": [
+        "Structured evidence: full/M_N0014/evidence/independent_final_review_v1.json#/comparison_row_reviews/20; SHA-256: 84c28a7f1b952396cc95c04c08926721122f71924665e0951d8f83255defd5eb; DOI: https://doi.org/10.1038/s42003-026-09935-x"
+      ]
+    },
+    {
+      "Text110": "comparison_row_reviews:\nrow: 22\nverdict: method_sample_duration_match_SupplementaryTable1\nprimary_evidence: false\nsource_locator: SupplementaryTable1 row22",
+      "Text110_Reference": [
+        "Structured evidence: full/M_N0014/evidence/independent_final_review_v1.json#/comparison_row_reviews/21; SHA-256: 84c28a7f1b952396cc95c04c08926721122f71924665e0951d8f83255defd5eb; DOI: https://doi.org/10.1038/s42003-026-09935-x"
+      ]
+    },
+    {
+      "Text111": "comparison_row_reviews:\nrow: 23\nverdict: method_sample_duration_match_SupplementaryTable1\nprimary_evidence: false\nsource_locator: SupplementaryTable1 row23",
+      "Text111_Reference": [
+        "Structured evidence: full/M_N0014/evidence/independent_final_review_v1.json#/comparison_row_reviews/22; SHA-256: 84c28a7f1b952396cc95c04c08926721122f71924665e0951d8f83255defd5eb; DOI: https://doi.org/10.1038/s42003-026-09935-x"
+      ]
+    }
+  ],
+  "Note": [
+    {
+      "Text1": "Paper M_N0014; source coverage: full; source release status: candidate_pending_gates; source default_eligible: false. Read this study as a whole with its sample, experimental, measurement and limitation fields. All selected source files and mandatory support in the accompanying archive apply jointly. Import does not promote candidate status, resolve contradictions, or turn review citations into independent primary experiments. Application includes source-labelled protocols, comparisons and results; labels within each Text retain their actual role.",
+      "Text1_Reference": [
+        "DOI: https://doi.org/10.1038/s42003-026-09935-x",
+        "Evidence-layer structured paraphrase; not a verbatim quotation. Source release: https://github.com/404NotFound422/TOCAgentProject/tree/5e3a711befb3952a2e39f4d53fc9c9f1a7ac0d22/KnowledgeBase/evidence_expansion_20261019",
+        "Local source archive: ../literature_evidence/2026-11-11/source_release.zip; member: full/M_N0014/version_selection.json"
+      ]
+    },
+    {
+      "Text2": "Selected version and mandatory composition:\npaper_id: M_N0014\nstatus: full\ndefault_eligible: false\nactive_scientific_files: \n  [1]     path: full/M_N0014/evidence/scientific_derived_record_v1.json\n    sha256: 9f2ba33b54e119e0521074bb15f7493ab154971047d45611966de50b4be11830\n    source_member: scientific_derived_record_v1.json\n  [2]     path: full/M_N0014/evidence/independent_final_review_v1.json\n    sha256: 84c28a7f1b952396cc95c04c08926721122f71924665e0951d8f83255defd5eb\n    source_member: independent_final_review_v1.json\n  [3]     path: full/M_N0014/evidence/source_bindings_v1.json\n    sha256: 727aaa2446b65d8a261ae675d429d8c2cde82e1308f01ebc913b7c1ceedb9f86\n    source_member: source_bindings_v1.json\n  [4]     path: full/M_N0014/evidence/provenance/actual_gap_queries.json\n    sha256: e670139204a565674622374f232733c2e2ca99e774ff0654b9098f490b545da5\n    source_member: provenance/actual_gap_queries.json\nacceptance: full/M_N0014/evidence/independent_final_review_v1.json\nmandatory_composition: All selected science, mandatory overlays, receipts, scope qualifications and additions are jointly required. Historical candidate status cannot override current acceptance.\nactive_version_and_scope: \n  paper_id: M_N0014\n  current_full_task_scope: true\n  partial: false\n  remaining_relevant_gaps: \n[]\n  package_sha256: d993bff72b4ec5bf3f18b91e8ba2885161de1b6bd42249918ec2fbe2407f9695\n  original_package_sha256: d993bff72b4ec5bf3f18b91e8ba2885161de1b6bd42249918ec2fbe2407f9695\n  acceptance_archive_member: independent_final_review_v1.json\n  active_version: Full independently reviewed current19unit science with A18 future-work boundary, A19 instrument-calibration role and explicit DCM no-automatic-execution constraint; frozen R1 preserved\n  net_new_vs_verified117: false\n  doi_crosswalk_check: \n    doi: 10.1038/s42003-026-09935-x\n    historical117_matches: \n      [1]         doi: 10.1038/s42003-026-09935-x\n        name: activeDISCO\n        historical_id: PMC13265773\n        in_frozen_220: true\n        restored_in_this_addendum: false\n        catalog_224_id: M_N0014\n        covered_in_224: true\n  stage_provenance: \n    R1: \n      execution_period: current_window\n      complete_current_task_scope: true\n      basis: \n        source_scope_complete: true\n        inherited_from_frozen_candidate: true\n    R2: \n      execution_period: current_window\n      complete_current_task_scope: true\n      basis: \n        independent_source_review_complete: true\n        reviewed_units: 19\n        reviewed_stage_events: 12\n        reviewed_imaging_rows: 9\n        reviewed_comparison_rows: 23\n    R3: \n      execution_period: current_window\n      complete_current_task_scope: true\n      basis: \n        complete: true\n        sample_and_stage_binding_checked: true\n        fluorescence_boundary_checked: true\n        DCM_conflict_automatic_execution_blocked: true\n    R4: \n      execution_period: current_window\n      complete_current_task_scope: true\n      basis: \n        checked_at_utc: 2026-10-19T11:42Z\n        queries: \n          [1] \"10.1038/s42003-026-09935-x\" correction supplementary\n          [2] \"Dec-DISCO\" supplementary correction 431397\n        outcome: No explicit correction located in bounded search; absence not guaranteed. activeDISCO publisher reports Published9Apr2026, VersionOfRecord15Jun2026. Publisher supplementary links resolved; initial static CDN502 repaired using official linked media URL. Dec PMC currentmain recaptcha and supplement POW challenge stopped; cached existingfulltext retained.\n        technical_repair: Video1 first in-memory request progress unobservable; exactsessionCtrl-C exit130 confirmed before restart. HEAD200 ContentLength324889837 AcceptRangesbytes. Single streamingreplacement curl exit0, bytesmatch, decodedand8framesread; otherattachments notredownloaded.\n        reuse: same-window actual queries inherited; no repeated request\n  counts: \n    units: 19\n    stages: 12\n    imaging_rows: 9\n    secondary_comparison_rows: 23\n    main_figures: 6\n    supplement_figures: 8\n    videos: 4\n    video_sample_frames: 32\n  technical_repair_not_access_denial: Video1 first in-memory request progress unobservable; exactsessionCtrl-C exit130 confirmed before restart. HEAD200 ContentLength324889837 AcceptRangesbytes. Single streamingreplacement curl exit0, bytesmatch, decodedand8framesread; otherattachments notredownloaded.\n  change_classification: \n    source_inconsistency_or_publication_version_correction: \n      [1] DCM图文温度差异及Methods警告，禁止自动融合执行\n    source_acquisition_or_version_packaging_issue: \n      [1] 视频1确认前请求终止后单次流式恢复，非拒绝/服务器超时\noriginal_member_to_release_path: \n  scientific_derived_record_v1.json: full/M_N0014/evidence/scientific_derived_record_v1.json\n  independent_final_review_v1.json: full/M_N0014/evidence/independent_final_review_v1.json\n  source_bindings_v1.json: full/M_N0014/evidence/source_bindings_v1.json\n  provenance/actual_gap_queries.json: full/M_N0014/evidence/provenance/actual_gap_queries.json\nactive_reference_aliases: \n  scientific_derived_record_v1.json: full/M_N0014/evidence/scientific_derived_record_v1.json\n  independent_final_review_v1.json: full/M_N0014/evidence/independent_final_review_v1.json\n  source_bindings_v1.json: full/M_N0014/evidence/source_bindings_v1.json\n  provenance/actual_gap_queries.json: full/M_N0014/evidence/provenance/actual_gap_queries.json\nrequired_supporting_files: \n[]\nreference_resolution_policy: Resolve explicit aliases only to selected SHA-bound science/support. Historical/source materials never auto-load. New candidate remains ineligible pending gates.\nsource_asset_policy: Original source assets are not republished; accepted scientific members and mandatory correction layers are preserved.\nactive_reference_resolution_evidence: \n[]\nexternal_or_historical_references: \n  [1]     source_file: full/M_N0014/evidence/scientific_derived_record_v1.json\n    json_pointer: /historical_record/sources/0/cache_path\n    reference: source-workspace://evidence_expansion_200_20261018/methods/selected_all.json\n    automatic_loading: false\n    role: historical_or_superseded_input_provenance_not_active\n  [2]     source_file: full/M_N0014/evidence/scientific_derived_record_v1.json\n    json_pointer: /historical_record/sources/1/blocks_cache_path\n    reference: source-workspace://evidence_expansion_200_20261018/methods/source_cache/fulltext/PMC13265773.blocks.json\n    automatic_loading: false\n    role: historical_or_superseded_input_provenance_not_active\n  [3]     source_file: full/M_N0014/evidence/scientific_derived_record_v1.json\n    json_pointer: /historical_record/review_rounds/1/update_file\n    reference: methods_round2_disputed_quarantine.json\n    automatic_loading: false\n    role: historical_or_superseded_input_provenance_not_active\n  [4]     source_file: full/M_N0014/evidence/scientific_derived_record_v1.json\n    json_pointer: /historical_record/_input_file\n    reference: methods.json\n    automatic_loading: false\n    role: historical_or_superseded_input_provenance_not_active\n  [5]     source_file: full/M_N0014/evidence/scientific_derived_record_v1.json\n    json_pointer: /historical_record/input_variants/0/input_file\n    reference: methods.json\n    automatic_loading: false\n    role: historical_or_superseded_input_provenance_not_active\n  [6]     source_file: full/M_N0014/evidence/source_bindings_v1.json\n    json_pointer: /0/path\n    reference: method_deep_review_20261019/derived/M_N0014_candidate.json\n    automatic_loading: false\n    role: external_original_acquisition_or_historical_provenance_not_runtime\n  [7]     source_file: full/M_N0014/evidence/source_bindings_v1.json\n    json_pointer: /15/path\n    reference: method_deep_review_20261019/source/active_s1.txt\n    automatic_loading: false\n    role: external_original_source_payload_not_republished\n  [8]     source_file: full/M_N0014/evidence/source_bindings_v1.json\n    json_pointer: /23/path\n    reference: method_deep_review_20261019/source/active_s8.txt\n    automatic_loading: false\n    role: external_original_source_payload_not_republished\n  [9]     source_file: full/M_N0014/evidence/source_bindings_v1.json\n    json_pointer: /24/path\n    reference: method_deep_review_20261019/source/active_workbook.json\n    automatic_loading: false\n    role: external_original_source_or_media_audit_material_not_runtime\n  [10]     source_file: full/M_N0014/evidence/source_bindings_v1.json\n    json_pointer: /25/path\n    reference: method_deep_review_20261019/source/render/video1_sampling.json\n    automatic_loading: false\n    role: external_original_source_or_media_audit_material_not_runtime\n  [11]     source_file: full/M_N0014/evidence/source_bindings_v1.json\n    json_pointer: /26/path\n    reference: method_deep_review_20261019/source/render/video2_sampling.json\n    automatic_loading: false\n    role: external_original_source_or_media_audit_material_not_runtime\n  [12]     source_file: full/M_N0014/evidence/source_bindings_v1.json\n    json_pointer: /27/path\n    reference: method_deep_review_20261019/source/render/video3_sampling.json\n    automatic_loading: false\n    role: external_original_source_or_media_audit_material_not_runtime\n  [13]     source_file: full/M_N0014/evidence/source_bindings_v1.json\n    json_pointer: /28/path\n    reference: method_deep_review_20261019/source/render/video4_sampling.json\n    automatic_loading: false\n    role: external_original_source_or_media_audit_material_not_runtime\nrelease_status: candidate_pending_gates\nverified_historical_filename_equivalences: \n[]",
+      "Text2_Reference": [
+        "DOI: https://doi.org/10.1038/s42003-026-09935-x",
+        "Evidence-layer structured paraphrase; not a verbatim quotation. Source release: https://github.com/404NotFound422/TOCAgentProject/tree/5e3a711befb3952a2e39f4d53fc9c9f1a7ac0d22/KnowledgeBase/evidence_expansion_20261019",
+        "Local source archive: ../literature_evidence/2026-11-11/source_release.zip; member: full/M_N0014/version_selection.json"
+      ]
+    },
+    {
+      "Text3": "scope:\nFixed tissue clearing, sample binding, optical/fluorescence outcomes only. No live-animal intervention reconstruction.",
+      "Text3_Reference": [
+        "Structured evidence: full/M_N0014/evidence/scientific_derived_record_v1.json#/scope; SHA-256: 9f2ba33b54e119e0521074bb15f7493ab154971047d45611966de50b4be11830; DOI: https://doi.org/10.1038/s42003-026-09935-x"
+      ]
+    },
+    {
+      "Text4": "conflicts:\nlocators: \n  [1] Par36\n  [2] Fig2A\nfield: DCM temperature\nvalues: \n  [1] room temperature, explicitly not higher\n  [2] 37C in graphic\nresolution: unresolved; retain both; no fused executable instruction\nautomation_constraint: Methods explicitly warn against higher DCM temperatures; neither this extraction nor Fig2A authorizes37C. Do not auto-generate operation from conflicting field.",
+      "Text4_Reference": [
+        "Structured evidence: full/M_N0014/evidence/scientific_derived_record_v1.json#/conflicts/0; SHA-256: 9f2ba33b54e119e0521074bb15f7493ab154971047d45611966de50b4be11830; DOI: https://doi.org/10.1038/s42003-026-09935-x"
+      ]
+    },
+    {
+      "Text5": "conflicts:\nlocators: \n  [1] Par21\n  [2] STable2 cerebellum\nfield: tiles/images\nvalues: \n  [1] 82/~120K\n  [2] 81/130605\nresolution: retain source-specific values",
+      "Text5_Reference": [
+        "Structured evidence: full/M_N0014/evidence/scientific_derived_record_v1.json#/conflicts/1; SHA-256: 9f2ba33b54e119e0521074bb15f7493ab154971047d45611966de50b4be11830; DOI: https://doi.org/10.1038/s42003-026-09935-x"
+      ]
+    },
+    {
+      "Text6": "conflicts:\nlocators: \n  [1] SFig8C/D caption\n  [2] SFig8E\nfield: objective identity for panelD\nvalues: \n  [1] captionD says20x after40x panelC\n  [2] table second row40x\nresolution: do not silently correct caption",
+      "Text6_Reference": [
+        "Structured evidence: full/M_N0014/evidence/scientific_derived_record_v1.json#/conflicts/2; SHA-256: 9f2ba33b54e119e0521074bb15f7493ab154971047d45611966de50b4be11830; DOI: https://doi.org/10.1038/s42003-026-09935-x"
+      ]
+    },
+    {
+      "Text7": "conflicts:\nlocators: \n  [1] SFig5 caption\n  [2] main Fig2\nfield: cross reference\nvalues: \n  [1] Figure2E\n  [2] mainFig2 endsD\nresolution: record stale panel reference",
+      "Text7_Reference": [
+        "Structured evidence: full/M_N0014/evidence/scientific_derived_record_v1.json#/conflicts/3; SHA-256: 9f2ba33b54e119e0521074bb15f7493ab154971047d45611966de50b4be11830; DOI: https://doi.org/10.1038/s42003-026-09935-x"
+      ]
+    },
+    {
+      "Text8": "conflicts:\nlocators: \n  [1] Figure1G workbook header/raw cells\n  [2] Figure1G workbook stats/figure\nfield: fraction versus percent\nvalues: \n  [1] raw .39-.65 under percent header\n  [2] means41-64percent\nresolution: keep raw values plus explicit fraction/percent representation, not .39percent",
+      "Text8_Reference": [
+        "Structured evidence: full/M_N0014/evidence/scientific_derived_record_v1.json#/conflicts/4; SHA-256: 9f2ba33b54e119e0521074bb15f7493ab154971047d45611966de50b4be11830; DOI: https://doi.org/10.1038/s42003-026-09935-x"
+      ]
+    },
+    {
+      "Text9": "conflicts:\nlocators: \n  [1] Fig2A\n  [2] Methods Par36\nfield: timeline\nvalues: \n  [1] compressed schematic12d\n  [2] endpoint-defined RI and washes\nresolution: no universal summed duration",
+      "Text9_Reference": [
+        "Structured evidence: full/M_N0014/evidence/scientific_derived_record_v1.json#/conflicts/5; SHA-256: 9f2ba33b54e119e0521074bb15f7493ab154971047d45611966de50b4be11830; DOI: https://doi.org/10.1038/s42003-026-09935-x"
+      ]
+    },
+    {
+      "Text10": "historical_review_scope:\nmethod_round2_decisions.json contains scoped prior finding and DBE endpoint patch; no full-paper inherited qualification claimed.",
+      "Text10_Reference": [
+        "Structured evidence: full/M_N0014/evidence/scientific_derived_record_v1.json#/historical_review_scope; SHA-256: 9f2ba33b54e119e0521074bb15f7493ab154971047d45611966de50b4be11830; DOI: https://doi.org/10.1038/s42003-026-09935-x"
+      ]
+    },
+    {
+      "Text11": "conflicts:\nlocators: \n  [1] Par36\n  [2] Fig2A\nfield: DCM temperature\nvalues: \n  [1] room temperature, explicitly not higher\n  [2] 37C in graphic\nresolution: unresolved; retain both; no fused executable instruction\nautomation_constraint: Methods explicitly warn against higher DCM temperatures; neither this extraction nor Fig2A authorizes37C. Do not auto-generate operation from conflicting field.\nindependent_verdict: confirmed",
+      "Text11_Reference": [
+        "Structured evidence: full/M_N0014/evidence/independent_final_review_v1.json#/conflicts/0; SHA-256: 84c28a7f1b952396cc95c04c08926721122f71924665e0951d8f83255defd5eb; DOI: https://doi.org/10.1038/s42003-026-09935-x"
+      ]
+    },
+    {
+      "Text12": "conflicts:\nlocators: \n  [1] Par21\n  [2] STable2 cerebellum\nfield: tiles/images\nvalues: \n  [1] 82/~120K\n  [2] 81/130605\nresolution: retain source-specific values\nindependent_verdict: confirmed",
+      "Text12_Reference": [
+        "Structured evidence: full/M_N0014/evidence/independent_final_review_v1.json#/conflicts/1; SHA-256: 84c28a7f1b952396cc95c04c08926721122f71924665e0951d8f83255defd5eb; DOI: https://doi.org/10.1038/s42003-026-09935-x"
+      ]
+    },
+    {
+      "Text13": "conflicts:\nlocators: \n  [1] SFig8C/D caption\n  [2] SFig8E\nfield: objective identity for panelD\nvalues: \n  [1] captionD says20x after40x panelC\n  [2] table second row40x\nresolution: do not silently correct caption\nindependent_verdict: confirmed",
+      "Text13_Reference": [
+        "Structured evidence: full/M_N0014/evidence/independent_final_review_v1.json#/conflicts/2; SHA-256: 84c28a7f1b952396cc95c04c08926721122f71924665e0951d8f83255defd5eb; DOI: https://doi.org/10.1038/s42003-026-09935-x"
+      ]
+    },
+    {
+      "Text14": "conflicts:\nlocators: \n  [1] SFig5 caption\n  [2] main Fig2\nfield: cross reference\nvalues: \n  [1] Figure2E\n  [2] mainFig2 endsD\nresolution: record stale panel reference\nindependent_verdict: confirmed",
+      "Text14_Reference": [
+        "Structured evidence: full/M_N0014/evidence/independent_final_review_v1.json#/conflicts/3; SHA-256: 84c28a7f1b952396cc95c04c08926721122f71924665e0951d8f83255defd5eb; DOI: https://doi.org/10.1038/s42003-026-09935-x"
+      ]
+    },
+    {
+      "Text15": "conflicts:\nlocators: \n  [1] Figure1G workbook header/raw cells\n  [2] Figure1G workbook stats/figure\nfield: fraction versus percent\nvalues: \n  [1] raw .39-.65 under percent header\n  [2] means41-64percent\nresolution: keep raw values plus explicit fraction/percent representation, not .39percent\nindependent_verdict: confirmed",
+      "Text15_Reference": [
+        "Structured evidence: full/M_N0014/evidence/independent_final_review_v1.json#/conflicts/4; SHA-256: 84c28a7f1b952396cc95c04c08926721122f71924665e0951d8f83255defd5eb; DOI: https://doi.org/10.1038/s42003-026-09935-x"
+      ]
+    },
+    {
+      "Text16": "conflicts:\nlocators: \n  [1] Fig2A\n  [2] Methods Par36\nfield: timeline\nvalues: \n  [1] compressed schematic12d\n  [2] endpoint-defined RI and washes\nresolution: no universal summed duration\nindependent_verdict: confirmed",
+      "Text16_Reference": [
+        "Structured evidence: full/M_N0014/evidence/independent_final_review_v1.json#/conflicts/5; SHA-256: 84c28a7f1b952396cc95c04c08926721122f71924665e0951d8f83255defd5eb; DOI: https://doi.org/10.1038/s42003-026-09935-x"
+      ]
+    },
+    {
+      "Text17": "full_scope_basis:\nAll task-relevant source fields in frozen candidate independently checked across main text,6figures,8supplement figures,2tables,5numerical sheets,reporting summary and4videos. Unreported fields/source disagreements preserved, not treated as corrected evidence. Not human review, executable protocol or production acceptance.",
+      "Text17_Reference": [
+        "Structured evidence: full/M_N0014/evidence/independent_final_review_v1.json#/full_scope_basis; SHA-256: 84c28a7f1b952396cc95c04c08926721122f71924665e0951d8f83255defd5eb; DOI: https://doi.org/10.1038/s42003-026-09935-x"
+      ]
+    }
+  ]
+}

@@ -157,9 +157,19 @@ use a separate output directory for runs on the revised dataset.
 | `time_kb.json` | Feasible method-by-tier timing intervals |
 | `method_time_tau.json` | Timing sensitivity coefficients |
 
-The seven scoring knowledge bases are accompanied by 18 method-level JSON files
-under [`KnowledgeBase/article_chunk/`](KnowledgeBase/article_chunk/) containing
-the curated literature evidence used for grounding.
+The seven scoring knowledge bases are accompanied by 18 original method-level
+JSON files and 119 added paper-level evidence cards under
+[`KnowledgeBase/article_chunk/`](KnowledgeBase/article_chunk/). The added cards
+cover 44 method papers, 48 application papers and 27 reviews, using the existing
+text/reference field pairs. They preserve structured-source paraphrases,
+study conditions, corrections and traceable source pointers. The 137 files are
+not a count of independent papers: the original method summaries can overlap
+the paper-level cards.
+
+See the [literature import and source archive](KnowledgeBase/literature_evidence/2026-11-11/README.md).
+The source's 9 default-eligible and 110 candidate statuses are preserved. This
+addition does not change scoring tables, historical results, or automatically
+activate the added cards in the scoring or KB-RAG entry points.
 
 ### Wet-lab source-data boundary
 

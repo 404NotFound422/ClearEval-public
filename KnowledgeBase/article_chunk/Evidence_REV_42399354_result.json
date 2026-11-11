@@ -1,0 +1,323 @@
+{
+  "TOC_Method_Name": {
+    "Text": "Not specified as a single method in the selected evidence records",
+    "Text_Reference": [
+      "DOI: https://doi.org/10.1038/s42003-026-10610-4",
+      "Evidence-layer structured paraphrase; not a verbatim quotation. Source release: https://github.com/404NotFound422/TOCAgentProject/tree/5e3a711befb3952a2e39f4d53fc9c9f1a7ac0d22/KnowledgeBase/evidence_expansion_20261019",
+      "Local source archive: ../literature_evidence/2026-11-11/source_release.zip; member: full/REV_42399354/version_selection.json"
+    ]
+  },
+  "General_Description": {
+    "Text": "In vivo tissue clearing with tartrazine and other dye molecules. (2026). Evidence category: review. This card preserves the evidence layer's structured statements and their original field labels; it does not add a new literature review or certify benchmark scoring thresholds.",
+    "Text_Reference": [
+      "DOI: https://doi.org/10.1038/s42003-026-10610-4",
+      "Evidence-layer structured paraphrase; not a verbatim quotation. Source release: https://github.com/404NotFound422/TOCAgentProject/tree/5e3a711befb3952a2e39f4d53fc9c9f1a7ac0d22/KnowledgeBase/evidence_expansion_20261019",
+      "Local source archive: ../literature_evidence/2026-11-11/source_release.zip; member: full/REV_42399354/version_selection.json"
+    ]
+  },
+  "Tissue_Types": [],
+  "Time_Consumption": [],
+  "Tissue_Deformation": [],
+  "Fluorescence_Compatibility": [
+    {
+      "Text1": "fluorescence_rules:\nOCT, LSCI, HSI, SHG and photoacoustics are not general fluorescence-retention evidence.",
+      "Text1_Reference": [
+        "Structured evidence: full/REV_42399354/evidence/REV_42399354_candidate_v1.json#/fluorescence_rules/0; SHA-256: ae48fa51883dc37de80476197d19d9823a4ad6b48f7a65014d6c65852d64488c; DOI: https://doi.org/10.1038/s42003-026-10610-4"
+      ]
+    },
+    {
+      "Text2": "fluorescence_rules:\nObserved fluorescent images are sample/label/modalities specific, not proof of all fluorescent proteins or antibodies compatibility.",
+      "Text2_Reference": [
+        "Structured evidence: full/REV_42399354/evidence/REV_42399354_candidate_v1.json#/fluorescence_rules/1; SHA-256: ae48fa51883dc37de80476197d19d9823a4ad6b48f7a65014d6c65852d64488c; DOI: https://doi.org/10.1038/s42003-026-10610-4"
+      ]
+    },
+    {
+      "Text3": "fluorescence_rules:\nNo mapping from in-vivo optical-window duration to fixed-organ clearing duration.",
+      "Text3_Reference": [
+        "Structured evidence: full/REV_42399354/evidence/REV_42399354_candidate_v1.json#/fluorescence_rules/2; SHA-256: ae48fa51883dc37de80476197d19d9823a4ad6b48f7a65014d6c65852d64488c; DOI: https://doi.org/10.1038/s42003-026-10610-4"
+      ]
+    }
+  ],
+  "Preservation_Stability": [],
+  "Application": [
+    {
+      "Text1": "units:\nunit_id: REV_42399354_U001\nsummary: 脱水或脱脂型固定组织透明机制不能直接移植到活体系；染料机制仍需单独安全评价。\nsource_xpath: /article/body/sec[1]/p[2]\nsource_node_count: 1\nanchor_sha256: 061161a8157bc095b65e80230404d1204d6dac51543580136a9a313febad4b50\ncited_reference_ids: \n  [1] CR13\n  [2] CR14\n  [3] CR17\n  [4] CR18\n  [5] CR6\nsample_state: fixed_tissue_vs_living\nevidence_type: theoretical_explanation\ntime_role: not_duration\nprimary_study_independently_verified: false\nexecutable_protocol: false\nfixed_tissue_transfer_allowed: false",
+      "Text1_Reference": [
+        "Structured evidence: full/REV_42399354/evidence/REV_42399354_candidate_v1.json#/units/0; SHA-256: ae48fa51883dc37de80476197d19d9823a4ad6b48f7a65014d6c65852d64488c; DOI: https://doi.org/10.1038/s42003-026-10610-4"
+      ]
+    },
+    {
+      "Text2": "units:\nunit_id: REV_42399354_U002\nsummary: 染料之外的血红蛋白例子说明吸收和匹配的光谱限制，不构成活体操作建议。\nsource_xpath: /article/body/sec[1]/p[4]\nsource_node_count: 1\nanchor_sha256: b42edb0627469935c89754948b181e06f6b56e140463668728d7c1ac153b8307\ncited_reference_ids: \n  [1] CR24\n  [2] CR47\n  [3] CR48\n  [4] CR49\n  [5] CR50\n  [6] CR51\n  [7] CR52\n  [8] CR53\n  [9] CR55\n  [10] CR56\nsample_state: mixed_unspecified\nevidence_type: secondary_review\ntime_role: not_duration\nprimary_study_independently_verified: false\nexecutable_protocol: false\nfixed_tissue_transfer_allowed: false",
+      "Text2_Reference": [
+        "Structured evidence: full/REV_42399354/evidence/REV_42399354_candidate_v1.json#/units/1; SHA-256: ae48fa51883dc37de80476197d19d9823a4ad6b48f7a65014d6c65852d64488c; DOI: https://doi.org/10.1038/s42003-026-10610-4"
+      ]
+    },
+    {
+      "Text3": "units:\nunit_id: REV_42399354_U003\nsummary: 水相与富脂/蛋白结构的折射率异质性引起散射，组织组分和观察波长需同时记录。\nsource_xpath: /article/body/sec[1]/sec[1]/p[1]\nsource_node_count: 1\nanchor_sha256: d7faf8107438f660760f8ffa1efc109ec7a86213a9887a7307404bfcb85e40bc\ncited_reference_ids: \n  [1] CR57\n  [2] CR6\nsample_state: mechanism\nevidence_type: theoretical_explanation\ntime_role: not_duration\nprimary_study_independently_verified: false\nexecutable_protocol: false\nfixed_tissue_transfer_allowed: false",
+      "Text3_Reference": [
+        "Structured evidence: full/REV_42399354/evidence/REV_42399354_candidate_v1.json#/units/2; SHA-256: ae48fa51883dc37de80476197d19d9823a4ad6b48f7a65014d6c65852d64488c; DOI: https://doi.org/10.1038/s42003-026-10610-4"
+      ]
+    },
+    {
+      "Text4": "units:\nunit_id: REV_42399354_U004\nsummary: 复折射率的实部描述折射，虚部描述吸收；不能只用单个实部数值判定透明有效性。\nsource_xpath: /article/body/sec[1]/sec[1]/p[3]\nsource_node_count: 1\nanchor_sha256: a2c30006a7cd54949f84328027683abeed45d5845140a31300b260993b49bb66\ncited_reference_ids: \n[]\nsample_state: mechanism\nevidence_type: theoretical_explanation\ntime_role: not_duration\nprimary_study_independently_verified: false\nexecutable_protocol: false\nfixed_tissue_transfer_allowed: false",
+      "Text4_Reference": [
+        "Structured evidence: full/REV_42399354/evidence/REV_42399354_candidate_v1.json#/units/3; SHA-256: ae48fa51883dc37de80476197d19d9823a4ad6b48f7a65014d6c65852d64488c; DOI: https://doi.org/10.1038/s42003-026-10610-4"
+      ]
+    },
+    {
+      "Text5": "units:\nunit_id: REV_42399354_U005\nsummary: Kramers–Kronig关系联系吸收谱与折射色散，是物理解释，不是直接生物相容性证据。\nsource_xpath: /article/body/sec[1]/sec[1]/p[5]\nsource_node_count: 1\nanchor_sha256: c87d5bfcf2c1cc8b5aa5235beede8e37fd9f4eb864609e9a479c57fa1fee7076\ncited_reference_ids: \n  [1] CR23\nsample_state: mechanism\nevidence_type: theoretical_explanation\ntime_role: not_duration\nprimary_study_independently_verified: false\nexecutable_protocol: false\nfixed_tissue_transfer_allowed: false",
+      "Text5_Reference": [
+        "Structured evidence: full/REV_42399354/evidence/REV_42399354_candidate_v1.json#/units/4; SHA-256: ae48fa51883dc37de80476197d19d9823a4ad6b48f7a65014d6c65852d64488c; DOI: https://doi.org/10.1038/s42003-026-10610-4"
+      ]
+    },
+    {
+      "Text6": "units:\nunit_id: REV_42399354_U006\nsummary: 作者以Lorentz振子近似解释吸收与折射关系；模型近似不等于不同组织共同最优条件。\nsource_xpath: /article/body/sec[1]/sec[1]/p[6]\nsource_node_count: 1\nanchor_sha256: a1eb36c92adb0bcb9c00ea24723fe0ba51294d0541827d8f64a2e05ac22d4b24\ncited_reference_ids: \n  [1] CR57\nsample_state: simulation\nevidence_type: theoretical_explanation\ntime_role: not_duration\nprimary_study_independently_verified: false\nexecutable_protocol: false\nfixed_tissue_transfer_allowed: false",
+      "Text6_Reference": [
+        "Structured evidence: full/REV_42399354/evidence/REV_42399354_candidate_v1.json#/units/5; SHA-256: ae48fa51883dc37de80476197d19d9823a4ad6b48f7a65014d6c65852d64488c; DOI: https://doi.org/10.1038/s42003-026-10610-4"
+      ]
+    },
+    {
+      "Text7": "units:\nunit_id: REV_42399354_U007\nsummary: 不同生物组分紫外吸收谱用于解释可见折射率差异；模型适用假设需保留。\nsource_xpath: /article/body/sec[1]/sec[1]/p[8]\nsource_node_count: 1\nanchor_sha256: 9cfc41461375242474b398ba0cb245b2e020cd56ca75d9df9798c6a880a0d532\ncited_reference_ids: \n  [1] CR58\n  [2] CR59\n  [3] CR60\n  [4] CR61\nsample_state: mechanism\nevidence_type: theoretical_explanation\ntime_role: not_duration\nprimary_study_independently_verified: false\nexecutable_protocol: false\nfixed_tissue_transfer_allowed: false",
+      "Text7_Reference": [
+        "Structured evidence: full/REV_42399354/evidence/REV_42399354_candidate_v1.json#/units/6; SHA-256: ae48fa51883dc37de80476197d19d9823a4ad6b48f7a65014d6c65852d64488c; DOI: https://doi.org/10.1038/s42003-026-10610-4"
+      ]
+    },
+    {
+      "Text8": "units:\nunit_id: REV_42399354_U008\nsummary: 内源透明化属于作者未来方向，本文不生成工程实现路径。\nsource_xpath: /article/body/sec[1]/sec[1]/p[9]\nsource_node_count: 1\nanchor_sha256: bf55e0e33fee2b34437912daebf8ee705da4ff269ccaf928958bd7ef42ef6339\ncited_reference_ids: \n  [1] CR23\nsample_state: unspecified\nevidence_type: author_perspective\ntime_role: not_duration\nprimary_study_independently_verified: false\nexecutable_protocol: false\nfixed_tissue_transfer_allowed: false",
+      "Text8_Reference": [
+        "Structured evidence: full/REV_42399354/evidence/REV_42399354_candidate_v1.json#/units/7; SHA-256: ae48fa51883dc37de80476197d19d9823a4ad6b48f7a65014d6c65852d64488c; DOI: https://doi.org/10.1038/s42003-026-10610-4"
+      ]
+    },
+    {
+      "Text9": "units:\nunit_id: REV_42399354_U009\nsummary: 作者定义单位摩尔浓度引起的折射率变化系数，比较时必须保留测量波长。\nsource_xpath: /article/body/sec[1]/sec[2]/p[1]\nsource_node_count: 1\nanchor_sha256: 0a7cfdf606d1764a9b28c712b3ef32212b29db92f92a05fa0aa5a51cd10d263a\ncited_reference_ids: \n[]\nsample_state: mechanism\nevidence_type: theoretical_explanation\ntime_role: not_duration\nprimary_study_independently_verified: false\nexecutable_protocol: false\nfixed_tissue_transfer_allowed: false",
+      "Text9_Reference": [
+        "Structured evidence: full/REV_42399354/evidence/REV_42399354_candidate_v1.json#/units/8; SHA-256: ae48fa51883dc37de80476197d19d9823a4ad6b48f7a65014d6c65852d64488c; DOI: https://doi.org/10.1038/s42003-026-10610-4"
+      ]
+    },
+    {
+      "Text10": "units:\nunit_id: REV_42399354_U010\nsummary: 吸收峰与工作波长的位置关系决定折射增强和吸收损失之间的权衡。\nsource_xpath: /article/body/sec[1]/sec[2]/p[3]\nsource_node_count: 1\nanchor_sha256: bae421b5ad4aed16c5d93124d75b9cab35232c1dffeee20d66bf5ce940f3a548\ncited_reference_ids: \n[]\nsample_state: simulation\nevidence_type: theoretical_explanation\ntime_role: not_duration\nprimary_study_independently_verified: false\nexecutable_protocol: false\nfixed_tissue_transfer_allowed: false",
+      "Text10_Reference": [
+        "Structured evidence: full/REV_42399354/evidence/REV_42399354_candidate_v1.json#/units/9; SHA-256: ae48fa51883dc37de80476197d19d9823a4ad6b48f7a65014d6c65852d64488c; DOI: https://doi.org/10.1038/s42003-026-10610-4"
+      ]
+    },
+    {
+      "Text11": "units:\nunit_id: REV_42399354_U011\nsummary: 窄吸收峰提高折射调节的论述限定于近共振条件，不可表述成所有波长普遍增益。\nsource_xpath: /article/body/sec[1]/sec[2]/p[4]\nsource_node_count: 1\nanchor_sha256: b4a182f70361aa1f1caaf35ac7a25eef4d00ac05db0054163cadc4e7e581353c\ncited_reference_ids: \n[]\nsample_state: simulation\nevidence_type: theoretical_explanation\ntime_role: not_duration\nprimary_study_independently_verified: false\nexecutable_protocol: false\nfixed_tissue_transfer_allowed: false",
+      "Text11_Reference": [
+        "Structured evidence: full/REV_42399354/evidence/REV_42399354_candidate_v1.json#/units/10; SHA-256: ae48fa51883dc37de80476197d19d9823a4ad6b48f7a65014d6c65852d64488c; DOI: https://doi.org/10.1038/s42003-026-10610-4"
+      ]
+    },
+    {
+      "Text12": "units:\nunit_id: REV_42399354_U012\nsummary: 振子有效偶极数量是模拟变量，并非某一动物处理分组。\nsource_xpath: /article/body/sec[1]/sec[2]/p[5]\nsource_node_count: 1\nanchor_sha256: 8af36a578bdd5cefb1b6ea8695d3d3de002ebfafcccf419d64a3d74b831c780c\ncited_reference_ids: \n[]\nsample_state: simulation\nevidence_type: theoretical_explanation\ntime_role: not_duration\nprimary_study_independently_verified: false\nexecutable_protocol: false\nfixed_tissue_transfer_allowed: false",
+      "Text12_Reference": [
+        "Structured evidence: full/REV_42399354/evidence/REV_42399354_candidate_v1.json#/units/11; SHA-256: ae48fa51883dc37de80476197d19d9823a4ad6b48f7a65014d6c65852d64488c; DOI: https://doi.org/10.1038/s42003-026-10610-4"
+      ]
+    },
+    {
+      "Text13": "units:\nunit_id: REV_42399354_U013\nsummary: 传统透明剂兼有脱水、胶原重组及匹配机制；高浓度引起的活体不相容不能覆盖所有短暂局部应用。\nsource_xpath: /article/body/sec[1]/sec[2]/p[6]\nsource_node_count: 1\nanchor_sha256: f2efb71e72845d56872d93d19a12c5c5feb2a3e5438ab40be2167a1456b7214e\ncited_reference_ids: \n  [1] CR17\n  [2] CR62\n  [3] CR65\n  [4] CR66\n  [5] CR68\nsample_state: mixed_mechanism\nevidence_type: theoretical_explanation\ntime_role: not_duration\nprimary_study_independently_verified: false\nexecutable_protocol: false\nfixed_tissue_transfer_allowed: false",
+      "Text13_Reference": [
+        "Structured evidence: full/REV_42399354/evidence/REV_42399354_candidate_v1.json#/units/12; SHA-256: ae48fa51883dc37de80476197d19d9823a4ad6b48f7a65014d6c65852d64488c; DOI: https://doi.org/10.1038/s42003-026-10610-4"
+      ]
+    },
+    {
+      "Text14": "units:\nunit_id: REV_42399354_U014\nsummary: tartrazine与ICG的折射调节效率示例来自不同工作波长和文献，不能当作同条件胜负比较。\nsource_xpath: /article/body/sec[1]/sec[2]/p[7]\nsource_node_count: 1\nanchor_sha256: ed97baec5aa16ae528112f61e914a9910a0752fceef200e34a12aa5826126f99\ncited_reference_ids: \n  [1] CR19\n  [2] CR20\n  [3] CR34\n  [4] CR49\nsample_state: mixed_in_vivo_and_solution\nevidence_type: secondary_review\ntime_role: not_duration\nprimary_study_independently_verified: false\nexecutable_protocol: false\nfixed_tissue_transfer_allowed: false",
+      "Text14_Reference": [
+        "Structured evidence: full/REV_42399354/evidence/REV_42399354_candidate_v1.json#/units/13; SHA-256: ae48fa51883dc37de80476197d19d9823a4ad6b48f7a65014d6c65852d64488c; DOI: https://doi.org/10.1038/s42003-026-10610-4"
+      ]
+    },
+    {
+      "Text15": "units:\nunit_id: REV_42399354_U015\nsummary: 实际效果受吸收、溶解度、输运及生物相容性共同限制，最大折射率变化不等于最佳成像或安全性。\nsource_xpath: /article/body/sec[1]/sec[2]/p[8]\nsource_node_count: 1\nanchor_sha256: f6cdbc4c3b8a112d68918ab8eb85bb755b1c8100b083c03f5cb8585ebe91f7e4\ncited_reference_ids: \n  [1] CR69\nsample_state: mechanism\nevidence_type: theoretical_explanation\ntime_role: not_duration\nprimary_study_independently_verified: false\nexecutable_protocol: false\nfixed_tissue_transfer_allowed: false",
+      "Text15_Reference": [
+        "Structured evidence: full/REV_42399354/evidence/REV_42399354_candidate_v1.json#/units/14; SHA-256: ae48fa51883dc37de80476197d19d9823a4ad6b48f7a65014d6c65852d64488c; DOI: https://doi.org/10.1038/s42003-026-10610-4"
+      ]
+    },
+    {
+      "Text16": "units:\nunit_id: REV_42399354_U016\nsummary: 图3不同场景均为被引研究再展示，需按组织、模态和标记分开；非本综述新实验。\nsource_xpath: /article/body/sec[1]/sec[3]/p[1]\nsource_node_count: 1\nanchor_sha256: b26daaae946af3fd69d9dee0debf91de90e3241a420e046d2eaac9c2bc7a977f\ncited_reference_ids: \n  [1] CR19\n  [2] CR20\n  [3] CR24\n  [4] CR26\n  [5] CR27\n  [6] CR29\n  [7] CR38\n  [8] CR50\nsample_state: in_vivo\nevidence_type: secondary_review\ntime_role: not_duration\nprimary_study_independently_verified: false\nexecutable_protocol: false\nfixed_tissue_transfer_allowed: false",
+      "Text16_Reference": [
+        "Structured evidence: full/REV_42399354/evidence/REV_42399354_candidate_v1.json#/units/15; SHA-256: ae48fa51883dc37de80476197d19d9823a4ad6b48f7a65014d6c65852d64488c; DOI: https://doi.org/10.1038/s42003-026-10610-4"
+      ]
+    },
+    {
+      "Text17": "units:\nunit_id: REV_42399354_U017\nsummary: 肠运动及发育观察属于在体生物学应用；无创诊断和光治疗价值不可与临床验证划等号。\nsource_xpath: /article/body/sec[1]/sec[3]/p[2]\nsource_node_count: 1\nanchor_sha256: 56cfa0717ba7d1a2d5a27020b88b5ca7268cdf09a3c87c9ace882fbc8ae4fe65\ncited_reference_ids: \n  [1] CR19\n  [2] CR20\n  [3] CR24\n  [4] CR39\n  [5] CR70\n  [6] CR71\n  [7] CR72\nsample_state: in_vivo\nevidence_type: secondary_review\ntime_role: not_duration\nprimary_study_independently_verified: false\nexecutable_protocol: false\nfixed_tissue_transfer_allowed: false",
+      "Text17_Reference": [
+        "Structured evidence: full/REV_42399354/evidence/REV_42399354_candidate_v1.json#/units/16; SHA-256: ae48fa51883dc37de80476197d19d9823a4ad6b48f7a65014d6c65852d64488c; DOI: https://doi.org/10.1038/s42003-026-10610-4"
+      ]
+    },
+    {
+      "Text18": "units:\nunit_id: REV_42399354_U018\nsummary: 离体猪眼经巩膜OCT、Raman抑制自发荧光和荧光寿命成像是独立应用，组织状态未说明处保持unknown。\nsource_xpath: /article/body/sec[1]/sec[3]/p[3]\nsource_node_count: 1\nanchor_sha256: 3402e2bc3e58017657d2f565a5eb839dbb2056d09558d9adeafc63e588320b18\ncited_reference_ids: \n  [1] CR31\n  [2] CR32\n  [3] CR33\nsample_state: ex_vivo_or_unspecified\nevidence_type: secondary_review\ntime_role: not_duration\nprimary_study_independently_verified: false\nexecutable_protocol: false\nfixed_tissue_transfer_allowed: false",
+      "Text18_Reference": [
+        "Structured evidence: full/REV_42399354/evidence/REV_42399354_candidate_v1.json#/units/17; SHA-256: ae48fa51883dc37de80476197d19d9823a4ad6b48f7a65014d6c65852d64488c; DOI: https://doi.org/10.1038/s42003-026-10610-4"
+      ]
+    },
+    {
+      "Text19": "units:\nunit_id: REV_42399354_U019\nsummary: 培养HEK细胞短期活率不能替代动物长期安全、更不能替代人体安全；作者明确需进一步生物学评估。\nsource_xpath: /article/body/sec[1]/sec[5]/p[1]\nsource_node_count: 1\nanchor_sha256: 1a7f4e4ea194fdabe64ab240f99cd0f0375ac68d5296e84ded775d82a10cf67a\ncited_reference_ids: \n  [1] CR19\n  [2] CR20\n  [3] CR34\n  [4] CR46\n  [5] CR50\n  [6] CR73\nsample_state: cultured_cells_vs_in_vivo\nevidence_type: secondary_review\ntime_role: viability_observation_not_clearing_duration\nprimary_study_independently_verified: false\nexecutable_protocol: false\nfixed_tissue_transfer_allowed: false",
+      "Text19_Reference": [
+        "Structured evidence: full/REV_42399354/evidence/REV_42399354_candidate_v1.json#/units/18; SHA-256: ae48fa51883dc37de80476197d19d9823a4ad6b48f7a65014d6c65852d64488c; DOI: https://doi.org/10.1038/s42003-026-10610-4"
+      ]
+    },
+    {
+      "Text20": "units:\nunit_id: REV_42399354_U020\nsummary: 表面输运深度、分子电荷、溶解度和异质分布制约效果；未来输运改进只记录为作者展望，不制定干预方案。\nsource_xpath: /article/body/sec[1]/sec[5]/p[2]\nsource_node_count: 1\nanchor_sha256: aecc9b7b0af3d17f49cbc4e6a240b1120044c4f08ee33fecd15c606963104093\ncited_reference_ids: \n  [1] CR19\n  [2] CR20\n  [3] CR24\n  [4] CR29\n  [5] CR38\n  [6] CR47\n  [7] CR49\n  [8] CR50\n  [9] CR74\n  [10] CR75\n  [11] CR76\n  [12] CR77\nsample_state: in_vivo\nevidence_type: author_perspective\ntime_role: not_duration\nprimary_study_independently_verified: false\nexecutable_protocol: false\nfixed_tissue_transfer_allowed: false",
+      "Text20_Reference": [
+        "Structured evidence: full/REV_42399354/evidence/REV_42399354_candidate_v1.json#/units/19; SHA-256: ae48fa51883dc37de80476197d19d9823a4ad6b48f7a65014d6c65852d64488c; DOI: https://doi.org/10.1038/s42003-026-10610-4"
+      ]
+    },
+    {
+      "Text21": "units:\nunit_id: REV_42399354_U021\nsummary: 供体猪眼/人眼荧光素成像与小鼠皮肤ICG需分开；既有其他临床用途不证明透明用途安全。\nsource_xpath: /article/body/sec[1]/sec[5]/p[3]\nsource_node_count: 1\nanchor_sha256: dea0c0837d7ae617d8b2c3fe3c6e3499dc60731cfffa22e04021cc7bebebe9a3\ncited_reference_ids: \n  [1] CR47\n  [2] CR48\n  [3] CR49\n  [4] CR78\n  [5] CR79\nsample_state: ex_vivo_donor_eyes_vs_in_vivo_mouse\nevidence_type: secondary_review\ntime_role: not_duration\nprimary_study_independently_verified: false\nexecutable_protocol: false\nfixed_tissue_transfer_allowed: false",
+      "Text21_Reference": [
+        "Structured evidence: full/REV_42399354/evidence/REV_42399354_candidate_v1.json#/units/20; SHA-256: ae48fa51883dc37de80476197d19d9823a4ad6b48f7a65014d6c65852d64488c; DOI: https://doi.org/10.1038/s42003-026-10610-4"
+      ]
+    },
+    {
+      "Text22": "units:\nunit_id: REV_42399354_U022\nsummary: 互补染料和荧光团光谱配对是展望；激发波段的残余吸收存在光热/光毒风险，不应标成通用兼容。\nsource_xpath: /article/body/sec[1]/sec[5]/p[3]\nsource_node_count: 1\nanchor_sha256: dea0c0837d7ae617d8b2c3fe3c6e3499dc60731cfffa22e04021cc7bebebe9a3\ncited_reference_ids: \n  [1] CR47\n  [2] CR48\n  [3] CR49\n  [4] CR78\n  [5] CR79\nsample_state: in_vivo\nevidence_type: author_perspective\ntime_role: not_duration\nprimary_study_independently_verified: false\nexecutable_protocol: false\nfixed_tissue_transfer_allowed: false",
+      "Text22_Reference": [
+        "Structured evidence: full/REV_42399354/evidence/REV_42399354_candidate_v1.json#/units/21; SHA-256: ae48fa51883dc37de80476197d19d9823a4ad6b48f7a65014d6c65852d64488c; DOI: https://doi.org/10.1038/s42003-026-10610-4"
+      ]
+    },
+    {
+      "Text23": "units:\nunit_id: REV_42399354_U023\nsummary: 窗口因扩散和代谢而短暂；持续透明和内源表达为展望，不是已证实永久透明，也不是固定器官时间数据。\nsource_xpath: /article/body/sec[1]/sec[5]/p[4]\nsource_node_count: 1\nanchor_sha256: c6037d6835b641d763089f1dc86a776d7dbdb12d338d71fb41c09f9d678acf99\ncited_reference_ids: \n  [1] CR80\n  [2] CR82\nsample_state: in_vivo\nevidence_type: author_perspective\ntime_role: transparency_window_and_clearance\nprimary_study_independently_verified: false\nexecutable_protocol: false\nfixed_tissue_transfer_allowed: false",
+      "Text23_Reference": [
+        "Structured evidence: full/REV_42399354/evidence/REV_42399354_candidate_v1.json#/units/22; SHA-256: ae48fa51883dc37de80476197d19d9823a4ad6b48f7a65014d6c65852d64488c; DOI: https://doi.org/10.1038/s42003-026-10610-4"
+      ]
+    },
+    {
+      "Text24": "figures:\nfigure: Fig1\ncaption_reviewed: true\nimage_reviewed: true\nevidence_type: conceptual_schematic\nsummary: 对比水相与染料水相的散射示意，非实测动物组图。",
+      "Text24_Reference": [
+        "Structured evidence: full/REV_42399354/evidence/REV_42399354_candidate_v1.json#/figures/0; SHA-256: ae48fa51883dc37de80476197d19d9823a4ad6b48f7a65014d6c65852d64488c; DOI: https://doi.org/10.1038/s42003-026-10610-4",
+        "Structured evidence: full/REV_42399354/evidence/REV_42399354_independent_overlay.json#/figures/0; SHA-256: b2721f7a050796911ec319b987c67bb1c230a2e323f6ac0d6d9df65eaa2fad7e; DOI: https://doi.org/10.1038/s42003-026-10610-4"
+      ]
+    },
+    {
+      "Text25": "figures:\nfigure: Fig2\ncaption_reviewed: true\nimage_reviewed: true\nevidence_type: model_simulation\npanels: \n  a: 实虚折射率与波长\n  b: 峰位置比较\n  c: 峰宽比较\n  d: 有效偶极数量比较\nsummary: 黄色/青色背景是目标折射率范围，不是实验置信区间。模拟参数不得转写为活体剂量。",
+      "Text25_Reference": [
+        "Structured evidence: full/REV_42399354/evidence/REV_42399354_candidate_v1.json#/figures/1; SHA-256: ae48fa51883dc37de80476197d19d9823a4ad6b48f7a65014d6c65852d64488c; DOI: https://doi.org/10.1038/s42003-026-10610-4",
+        "Structured evidence: full/REV_42399354/evidence/REV_42399354_independent_overlay.json#/figures/1; SHA-256: b2721f7a050796911ec319b987c67bb1c230a2e323f6ac0d6d9df65eaa2fad7e; DOI: https://doi.org/10.1038/s42003-026-10610-4"
+      ]
+    },
+    {
+      "Text26": "figures:\nfigure: Fig3\ncaption_reviewed: true\nimage_reviewed: true\nevidence_type: secondary_reproduced_images\npanels: \n  a: 小鼠腹部明场器官\n  b: 肠神经元荧光，图示深度540 µm\n  c: 肌节SHG非荧光蛋白保留\n  d: 脑LSCI\n  e: YFP结构双光子\n  f: GCaMP钙信号双光子\n  g: 腹皮OCT\n  h: 腹皮PAI\n  i: 脑PAI\n  j: 耳PAI含逆转对照\n  k: 背皮下脾/脊柱明场\nsummary: 无统一终点、统一染料或共同时间窗口；不能将所有面板登记为tartrazine荧光保留。",
+      "Text26_Reference": [
+        "Structured evidence: full/REV_42399354/evidence/REV_42399354_candidate_v1.json#/figures/2; SHA-256: ae48fa51883dc37de80476197d19d9823a4ad6b48f7a65014d6c65852d64488c; DOI: https://doi.org/10.1038/s42003-026-10610-4",
+        "Structured evidence: full/REV_42399354/evidence/REV_42399354_independent_overlay.json#/figures/2; SHA-256: b2721f7a050796911ec319b987c67bb1c230a2e323f6ac0d6d9df65eaa2fad7e; DOI: https://doi.org/10.1038/s42003-026-10610-4"
+      ]
+    },
+    {
+      "Text27": "tables:\ntable: Supplementary Table 1\nrows: 4\ncolumns: 6\nsource_page: 2\nchemical_structure_handling: Structure drawings visually present and anchored; no normalized chemical identifiers inferred.\nrows_data: \n  [1]     dye: Tartrazine\n    absorption_peak_nm: 428\n    transparency_range: red and near-infrared\n    applications: \n      [1] brightfield\n      [2] widefield fluorescence\n      [3] SHG\n      [4] LSCI\n      [5] two-photon fluorescence\n      [6] OCT\n      [7] OCA\n      [8] photoacoustic microscopy\n      [9] photodynamic therapy\n      [10] photochemical tissue bonding\n    references: \n      [1] 1\n      [2] 2\n      [3] 3\n      [4] 4\n      [5] 5\n      [6] 6\n      [7] 7\n      [8] 8\n      [9] 9\n      [10] 10\n      [11] 11\n      [12] 12\n      [13] 13\n      [14] 14\n      [15] 15\n      [16] 16\n      [17] 17\n      [18] 18\n      [19] 19\n      [20] 20\n      [21] 21\n      [22] 22\n      [23] 23\n  [2]     dye: Indocyanine green\n    absorption_peak_nm: 780\n    transparency_range: near-infrared\n    applications: \n      [1] OCT\n    references: \n      [1] 24\n  [3]     dye: Fluorescein\n    absorption_peak_nm: 490\n    transparency_range: red and near-infrared\n    applications: \n      [1] OCT\n    references: \n      [1] 25\n      [2] 26\n  [4]     dye: Ampyrone\n    absorption_peak_nm: 290\n    transparency_range: visible\n    applications: \n      [1] brightfield\n      [2] two-photon fluorescence\n      [3] two-photon calcium imaging\n      [4] OCT\n      [5] photoacoustic microscopy\n    references: \n      [1] 1\n      [2] 11\n      [3] 15\n      [4] 27\nnotes: \n  [1] Absorption peaks are longest-wavelength peaks as table footnote specifies; they are not recommended excitation wavelengths.\n  [2] Table aggregates applications across cited studies; do not classify every listed reference as in-vivo solely from table title.\n  [3] Chemical identity spelling conflict in Box remains; supplementary row agrees with main-text ampyrone.",
+      "Text27_Reference": [
+        "Structured evidence: full/REV_42399354/evidence/REV_42399354_candidate_v1.json#/tables/0; SHA-256: ae48fa51883dc37de80476197d19d9823a4ad6b48f7a65014d6c65852d64488c; DOI: https://doi.org/10.1038/s42003-026-10610-4"
+      ]
+    },
+    {
+      "Text28": "table_verdict:\nAll four rows, six columns and longest-wavelength absorption-peak footnote match; structure drawings anchored without inferred chemical IDs.",
+      "Text28_Reference": [
+        "Structured evidence: full/REV_42399354/evidence/REV_42399354_independent_overlay.json#/table_verdict; SHA-256: b2721f7a050796911ec319b987c67bb1c230a2e323f6ac0d6d9df65eaa2fad7e; DOI: https://doi.org/10.1038/s42003-026-10610-4"
+      ]
+    },
+    {
+      "Text29": "figure_verdict:\nFig 1 conceptual; Fig 2 simulation with target-RI bands rather than confidence intervals; Fig 3 a–k modality/sample/label assignments verified; b label identity unspecified, e YFP and f GCaMP are not universal compatibility evidence.",
+      "Text29_Reference": [
+        "Structured evidence: full/REV_42399354/evidence/REV_42399354_independent_overlay.json#/figure_verdict; SHA-256: b2721f7a050796911ec319b987c67bb1c230a2e323f6ac0d6d9df65eaa2fad7e; DOI: https://doi.org/10.1038/s42003-026-10610-4"
+      ]
+    }
+  ],
+  "Note": [
+    {
+      "Text1": "Paper REV_42399354; source coverage: full; source release status: candidate_pending_gates; source default_eligible: false. Read this study as a whole with its sample, experimental, measurement and limitation fields. All selected source files and mandatory support in the accompanying archive apply jointly. Import does not promote candidate status, resolve contradictions, or turn review citations into independent primary experiments. Application includes source-labelled protocols, comparisons and results; labels within each Text retain their actual role.",
+      "Text1_Reference": [
+        "DOI: https://doi.org/10.1038/s42003-026-10610-4",
+        "Evidence-layer structured paraphrase; not a verbatim quotation. Source release: https://github.com/404NotFound422/TOCAgentProject/tree/5e3a711befb3952a2e39f4d53fc9c9f1a7ac0d22/KnowledgeBase/evidence_expansion_20261019",
+        "Local source archive: ../literature_evidence/2026-11-11/source_release.zip; member: full/REV_42399354/version_selection.json"
+      ]
+    },
+    {
+      "Text2": "Selected version and mandatory composition:\npaper_id: REV_42399354\nstatus: full\ndefault_eligible: false\nactive_scientific_files: \n  [1]     path: full/REV_42399354/evidence/REV_42399354_candidate_v1.json\n    sha256: ae48fa51883dc37de80476197d19d9823a4ad6b48f7a65014d6c65852d64488c\n    source_member: REV_42399354_candidate_v1.json\n  [2]     path: full/REV_42399354/evidence/REV_42399354_independent_overlay.json\n    sha256: b2721f7a050796911ec319b987c67bb1c230a2e323f6ac0d6d9df65eaa2fad7e\n    source_member: REV_42399354_independent_overlay.json\n  [3]     path: full/REV_42399354/evidence/query_and_access_log.json\n    sha256: e19cfb8044a048cfa06f5d60bbfc9f0e7ff9c0c3fb4c5e09b0b74d5afce455e4\n    source_member: query_and_access_log.json\n  [4]     path: full/REV_42399354/evidence/query_outcome_addendum.json\n    sha256: 171eff31e3b20713041458a3e432149c901158ab90d5988af4cc9beccd53a5cf\n    source_member: query_outcome_addendum.json\n  [5]     path: full/REV_42399354/evidence/REV_42399354_addendum_pending_review.json\n    sha256: 711d8797b6de0ff3baff7aa01e630b42b6caf03cb8df10d8184c5aa2a52a7168\n    source_member: REV_42399354_addendum_pending_review.json\n  [6]     path: full/REV_42399354/evidence/REV_42399354_ADD_U024_independent_receipt.json\n    sha256: 9c826f771ae108881b5dc13e73197eff82a29dbaa002f5f4d5a86bbe2326183c\n    source_member: REV_42399354_ADD_U024_independent_receipt.json\n  [7]     path: full/REV_42399354/evidence/REV_42399354_effective_acceptance.json\n    sha256: 866aa2868e39a9d0a6a2ffa16797c3672ed7c154e59aa68ab9f9ff5482d45629\n    source_member: REV_42399354_effective_acceptance.json\nacceptance: full/REV_42399354/evidence/REV_42399354_effective_acceptance.json\nmandatory_composition: All selected science, mandatory overlays, receipts, scope qualifications and additions are jointly required. Historical candidate status cannot override current acceptance.\nactive_version_and_scope: \n  paper_id: REV_42399354\n  current_full_task_scope: true\n  partial: false\n  remaining_relevant_gaps: \n[]\n  package_sha256: fe991389323091a900335456cdbc752ace53f011db2699964bac4410b66683ec\n  original_package_sha256: f4e3ea1dc6646f1434303564e9c1c3bfd3214db5ac6b7ee6622e3da441e0dd02\n  acceptance_archive_member: REV_42399354_effective_acceptance.json\n  active_version: Frozen 23-unit science plus current independent scope/correction overlay; REV423 additionally requires independently accepted ADD_U024 and effective acceptance; no original bytes changed\n  net_new_vs_verified117: true\n  doi_crosswalk_check: \n    doi: 10.1038/s42003-026-10610-4\n    historical117_matches: \n[]\n  stage_provenance: \n    R1: \n      execution_period: current_window\n      complete_current_task_scope: true\n      basis: Current team R1/R4 extraction/query and separate R2/R3 independent review; REV423 ADD_U024 separately independently accepted\n    R2: \n      execution_period: current_window\n      complete_current_task_scope: true\n      basis: Current team R1/R4 extraction/query and separate R2/R3 independent review; REV423 ADD_U024 separately independently accepted\n    R3: \n      execution_period: current_window\n      complete_current_task_scope: true\n      basis: Current team R1/R4 extraction/query and separate R2/R3 independent review; REV423 ADD_U024 separately independently accepted\n    R4: \n      execution_period: current_window\n      complete_current_task_scope: true\n      basis: Current team R1/R4 extraction/query and separate R2/R3 independent review; REV423 ADD_U024 separately independently accepted\n  counts: \n    secondary_units: 24\n    actual_figures_reviewed: 3\n    table_cells: 24\n  secondary_evidence_only: true\noriginal_member_to_release_path: \n  REV_42399354_candidate_v1.json: full/REV_42399354/evidence/REV_42399354_candidate_v1.json\n  REV_42399354_independent_overlay.json: full/REV_42399354/evidence/REV_42399354_independent_overlay.json\n  query_and_access_log.json: full/REV_42399354/evidence/query_and_access_log.json\n  query_outcome_addendum.json: full/REV_42399354/evidence/query_outcome_addendum.json\n  REV_42399354_addendum_pending_review.json: full/REV_42399354/evidence/REV_42399354_addendum_pending_review.json\n  REV_42399354_ADD_U024_independent_receipt.json: full/REV_42399354/evidence/REV_42399354_ADD_U024_independent_receipt.json\n  REV_42399354_effective_acceptance.json: full/REV_42399354/evidence/REV_42399354_effective_acceptance.json\nactive_reference_aliases: \n  REV_42399354_candidate_v1.json: full/REV_42399354/evidence/REV_42399354_candidate_v1.json\n  REV_42399354_independent_overlay.json: full/REV_42399354/evidence/REV_42399354_independent_overlay.json\n  query_and_access_log.json: full/REV_42399354/evidence/query_and_access_log.json\n  query_outcome_addendum.json: full/REV_42399354/evidence/query_outcome_addendum.json\n  REV_42399354_addendum_pending_review.json: full/REV_42399354/evidence/REV_42399354_addendum_pending_review.json\n  REV_42399354_ADD_U024_independent_receipt.json: full/REV_42399354/evidence/REV_42399354_ADD_U024_independent_receipt.json\n  REV_42399354_effective_acceptance.json: full/REV_42399354/evidence/REV_42399354_effective_acceptance.json\n  paper_completion/in_vivo_review_pair/independent_review/REV_42399354_addendum_pending_review.json: full/REV_42399354/evidence/REV_42399354_addendum_pending_review.json\nrequired_supporting_files: \n[]\nreference_resolution_policy: Resolve explicit aliases only to selected SHA-bound science/support. Historical/source materials never auto-load. New candidate remains ineligible pending gates.\nsource_asset_policy: Original source assets are not republished; accepted scientific members and mandatory correction layers are preserved.\nactive_reference_resolution_evidence: \n  [1]     source_file: full/REV_42399354/evidence/REV_42399354_ADD_U024_independent_receipt.json\n    json_pointer: /reviewed_artifact\n    reference: paper_completion/in_vivo_review_pair/independent_review/REV_42399354_addendum_pending_review.json\n    resolved_release_path: full/REV_42399354/evidence/REV_42399354_addendum_pending_review.json\n    binding_basis: unique_verified_original_member_path\n  [2]     source_file: full/REV_42399354/evidence/REV_42399354_effective_acceptance.json\n    json_pointer: /basis/0\n    reference: REV_42399354_independent_overlay.json\n    resolved_release_path: full/REV_42399354/evidence/REV_42399354_independent_overlay.json\n    binding_basis: explicit_verified_member_or_equivalent_original\n  [3]     source_file: full/REV_42399354/evidence/REV_42399354_effective_acceptance.json\n    json_pointer: /basis/1\n    reference: REV_42399354_ADD_U024_independent_receipt.json\n    resolved_release_path: full/REV_42399354/evidence/REV_42399354_ADD_U024_independent_receipt.json\n    binding_basis: explicit_verified_member_or_equivalent_original\n  [4]     source_file: full/REV_42399354/evidence/REV_42399354_effective_acceptance.json\n    json_pointer: /required_scientific_addendum\n    reference: REV_42399354_addendum_pending_review.json\n    resolved_release_path: full/REV_42399354/evidence/REV_42399354_addendum_pending_review.json\n    binding_basis: explicit_verified_member_or_equivalent_original\nexternal_or_historical_references: \n[]\nrelease_status: candidate_pending_gates\nverified_historical_filename_equivalences: \n[]",
+      "Text2_Reference": [
+        "DOI: https://doi.org/10.1038/s42003-026-10610-4",
+        "Evidence-layer structured paraphrase; not a verbatim quotation. Source release: https://github.com/404NotFound422/TOCAgentProject/tree/5e3a711befb3952a2e39f4d53fc9c9f1a7ac0d22/KnowledgeBase/evidence_expansion_20261019",
+        "Local source archive: ../literature_evidence/2026-11-11/source_release.zip; member: full/REV_42399354/version_selection.json"
+      ]
+    },
+    {
+      "Text3": "known_relevant_gaps:\nIndependent scientific review of frozen candidate pending.",
+      "Text3_Reference": [
+        "Structured evidence: full/REV_42399354/evidence/REV_42399354_candidate_v1.json#/known_relevant_gaps/0; SHA-256: ae48fa51883dc37de80476197d19d9823a4ad6b48f7a65014d6c65852d64488c; DOI: https://doi.org/10.1038/s42003-026-10610-4"
+      ]
+    },
+    {
+      "Text4": "source_conflicts:\nlocation: Box1 Key developments versus main introduction and Outlook\nissue: Box says antipyrine, whereas related main-text passages say ampyrone.\nresolution: Retain original spellings separately; chemical identity not normalized without primary source clarification.",
+      "Text4_Reference": [
+        "Structured evidence: full/REV_42399354/evidence/REV_42399354_candidate_v1.json#/source_conflicts/0; SHA-256: ae48fa51883dc37de80476197d19d9823a4ad6b48f7a65014d6c65852d64488c; DOI: https://doi.org/10.1038/s42003-026-10610-4"
+      ]
+    },
+    {
+      "Text5": "safety_scope:\nMechanisms, source attribution, observational imaging endpoints and limits only. No human-treatment advice, animal intervention optimization or engineered-organism instructions.",
+      "Text5_Reference": [
+        "Structured evidence: full/REV_42399354/evidence/REV_42399354_candidate_v1.json#/safety_scope; SHA-256: ae48fa51883dc37de80476197d19d9823a4ad6b48f7a65014d6c65852d64488c; DOI: https://doi.org/10.1038/s42003-026-10610-4"
+      ]
+    },
+    {
+      "Text6": "remaining_relevant_gaps:\nOne task-relevant Box 1 limitation newly extracted in addendum requires separate independent review.",
+      "Text6_Reference": [
+        "Structured evidence: full/REV_42399354/evidence/REV_42399354_independent_overlay.json#/remaining_relevant_gaps/0; SHA-256: b2721f7a050796911ec319b987c67bb1c230a2e323f6ac0d6d9df65eaa2fad7e; DOI: https://doi.org/10.1038/s42003-026-10610-4"
+      ]
+    },
+    {
+      "Text7": "source_conflict_annotation:\nBox antipyrine and main text/supplement ampyrone remain distinct spellings; discrepancy is not itself proof of an editorial error or chemical equivalence.",
+      "Text7_Reference": [
+        "Structured evidence: full/REV_42399354/evidence/REV_42399354_independent_overlay.json#/source_conflict_annotation; SHA-256: b2721f7a050796911ec319b987c67bb1c230a2e323f6ac0d6d9df65eaa2fad7e; DOI: https://doi.org/10.1038/s42003-026-10610-4"
+      ]
+    },
+    {
+      "Text8": "scope_annotations:\nInterpretive non-transferability and safety cautions in Chinese summaries are curator constraints, not direct source quotations or new experimental results.",
+      "Text8_Reference": [
+        "Structured evidence: full/REV_42399354/evidence/REV_42399354_independent_overlay.json#/scope_annotations/0; SHA-256: b2721f7a050796911ec319b987c67bb1c230a2e323f6ac0d6d9df65eaa2fad7e; DOI: https://doi.org/10.1038/s42003-026-10610-4"
+      ]
+    },
+    {
+      "Text9": "scope_annotations:\nFull task scope is review-level source coverage, not independent confirmation of every cited primary experiment.",
+      "Text9_Reference": [
+        "Structured evidence: full/REV_42399354/evidence/REV_42399354_independent_overlay.json#/scope_annotations/1; SHA-256: b2721f7a050796911ec319b987c67bb1c230a2e323f6ac0d6d9df65eaa2fad7e; DOI: https://doi.org/10.1038/s42003-026-10610-4"
+      ]
+    },
+    {
+      "Text10": "scope_annotations:\nNo clinical, animal-intervention, genetic-engineering recommendation or model execution performed.",
+      "Text10_Reference": [
+        "Structured evidence: full/REV_42399354/evidence/REV_42399354_independent_overlay.json#/scope_annotations/2; SHA-256: b2721f7a050796911ec319b987c67bb1c230a2e323f6ac0d6d9df65eaa2fad7e; DOI: https://doi.org/10.1038/s42003-026-10610-4"
+      ]
+    },
+    {
+      "Text11": "findings:\n源第一句直接支持组织组分折射率异质性下，单一浓度/固定折射率仅降低而不能完全消除散射；候选为忠实中文概括。",
+      "Text11_Reference": [
+        "Structured evidence: full/REV_42399354/evidence/REV_42399354_ADD_U024_independent_receipt.json#/findings/0; SHA-256: 9c826f771ae108881b5dc13e73197eff82a29dbaa002f5f4d5a86bbe2326183c; DOI: https://doi.org/10.1038/s42003-026-10610-4"
+      ]
+    },
+    {
+      "Text12": "findings:\nreview_author_physical_limitation与mechanism分类准确；不是新样本实验、已验证评分指标或时间参数。",
+      "Text12_Reference": [
+        "Structured evidence: full/REV_42399354/evidence/REV_42399354_ADD_U024_independent_receipt.json#/findings/1; SHA-256: 9c826f771ae108881b5dc13e73197eff82a29dbaa002f5f4d5a86bbe2326183c; DOI: https://doi.org/10.1038/s42003-026-10610-4"
+      ]
+    },
+    {
+      "Text13": "findings:\n源第二句为作者未来工程设想，候选明确排除实现内容，没有误记为已验证结果。",
+      "Text13_Reference": [
+        "Structured evidence: full/REV_42399354/evidence/REV_42399354_ADD_U024_independent_receipt.json#/findings/2; SHA-256: 9c826f771ae108881b5dc13e73197eff82a29dbaa002f5f4d5a86bbe2326183c; DOI: https://doi.org/10.1038/s42003-026-10610-4"
+      ]
+    },
+    {
+      "Text14": "scope_constraints:\n结论限定于原文所述异质组织与单一染料浓度/固定折射率匹配语境，不扩成所有光学方法绝对不可能消除散射。",
+      "Text14_Reference": [
+        "Structured evidence: full/REV_42399354/evidence/REV_42399354_ADD_U024_independent_receipt.json#/scope_constraints/0; SHA-256: 9c826f771ae108881b5dc13e73197eff82a29dbaa002f5f4d5a86bbe2326183c; DOI: https://doi.org/10.1038/s42003-026-10610-4"
+      ]
+    },
+    {
+      "Text15": "scope_constraints:\n不得将该主张直接转成具体样本适配分数或新的已验证透明度指标。",
+      "Text15_Reference": [
+        "Structured evidence: full/REV_42399354/evidence/REV_42399354_ADD_U024_independent_receipt.json#/scope_constraints/1; SHA-256: 9c826f771ae108881b5dc13e73197eff82a29dbaa002f5f4d5a86bbe2326183c; DOI: https://doi.org/10.1038/s42003-026-10610-4"
+      ]
+    },
+    {
+      "Text16": "Source version and scope record (not an additional scientific claim): REV_42399354_effective_acceptance:\npaper_id: REV_42399354\nfull_current_task_scope: true\npartial: false\nremaining_relevant_gaps: \n[]\nunit_count: 24\nbasis: \n  [1] REV_42399354_independent_overlay.json\n  [2] REV_42399354_ADD_U024_independent_receipt.json\nrequired_scientific_addendum: REV_42399354_addendum_pending_review.json\nsupersedes: Only former pending ADD_U024 review status and paper partial flag; original frozen bytes unchanged\nauthority: Parent confirms task-relevant scope closed; prior independent overlay states sole remaining gap was ADD_U024; second independent receipt closes exact bytes\nsecondary_source_scope_only: true",
+      "Text16_Reference": [
+        "Structured evidence: full/REV_42399354/evidence/REV_42399354_effective_acceptance.json#; SHA-256: 866aa2868e39a9d0a6a2ffa16797c3672ed7c154e59aa68ab9f9ff5482d45629; DOI: https://doi.org/10.1038/s42003-026-10610-4"
+      ]
+    }
+  ]
+}

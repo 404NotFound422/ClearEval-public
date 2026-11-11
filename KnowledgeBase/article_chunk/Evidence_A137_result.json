@@ -1,0 +1,634 @@
+{
+  "TOC_Method_Name": {
+    "Text": "Modified CUBIC for fixed murine pregnant uterus and placenta",
+    "Text_Reference": [
+      "DOI: https://doi.org/10.1038/s41598-017-06549-6",
+      "Evidence-layer structured paraphrase; not a verbatim quotation. Source release: https://github.com/404NotFound422/TOCAgentProject/tree/5e3a711befb3952a2e39f4d53fc9c9f1a7ac0d22/KnowledgeBase/evidence_expansion_20261019",
+      "Local source archive: ../literature_evidence/2026-11-11/source_release.zip; member: full/A137/version_selection.json"
+    ]
+  },
+  "General_Description": {
+    "Text": "Three-dimensional visualization of intrauterine conceptus through the uterine wall by tissue clearing method (2017). Evidence category: method. This card preserves the evidence layer's structured statements and their original field labels; it does not add a new literature review or certify benchmark scoring thresholds.",
+    "Text_Reference": [
+      "DOI: https://doi.org/10.1038/s41598-017-06549-6",
+      "Evidence-layer structured paraphrase; not a verbatim quotation. Source release: https://github.com/404NotFound422/TOCAgentProject/tree/5e3a711befb3952a2e39f4d53fc9c9f1a7ac0d22/KnowledgeBase/evidence_expansion_20261019",
+      "Local source archive: ../literature_evidence/2026-11-11/source_release.zip; member: full/A137/version_selection.json"
+    ]
+  },
+  "Tissue_Types": [
+    {
+      "Text1": "sample_frame:\nspecies: Mus musculus\nmaternal_strain_reported: wild-type ICR\nreporter_background_reported: CAG-EGFP, C57BL/6-Tg\nreporter_state: EGFP-positive conceptus within EGFP-negative maternal uterus\npregnancy_stage_range: \n  [1] E9.5\n  [2] E14.5\nstage_role: sample_state_not_clearing_duration\nanimal_N: null (as recorded in source)\nuterus_N: null (as recorded in source)\nplacenta_N: null (as recorded in source)\nconceptus_N: null (as recorded in source)\nbiological_replicates: null (as recorded in source)\ntechnical_replicates: null (as recorded in source)\nsource_locators: \n  [1] S1:B005\n  [2] S1:B014\n  [3] S1:B026\nintegrity_boundary: 作者称whole uterus/whole reproductive organs，并同时称uterine tissue block。图示是保留子宫壁的宫内孕体组织块；未提供整条/双侧子宫的范围和尺寸。胚胎是宫内可视化对象，不等于已分离胚胎样本。",
+      "Text1_Reference": [
+        "Structured evidence: full/A137/evidence/record.json#/sample_frame; SHA-256: 270b4c9f1104db9f9045c7fbe98703fd0f9c71798644ea78ebaad2698981fd47; DOI: https://doi.org/10.1038/s41598-017-06549-6"
+      ]
+    }
+  ],
+  "Time_Consumption": [
+    {
+      "Text1": "timing_summary:\ngeneral_CUBIC1_days_derived: 5\nknown_clearing_and_sucrose_days_derived: 8\nderivation: 3+2 d CUBIC-1 +1 d sucrose +2 d CUBIC-2\ntotal_elapsed_protocol_time: null (as recorded in source)\nschematic_total_days: 9\nschematic_segments: Fig1a: PFA day0–1; CUBIC-1 day1–6; sucrose day6–7; CUBIC-2 day7–9\nboundary: 8d仅为已报阶段时长相加，不含overnight追加固定和未报PBS洗时间。图1a9d是示意轴，不是逐样本经过时长。E14.5延长分支不可混入通用5d。\nsource_locator: S1:B027;S3F1:a",
+      "Text1_Reference": [
+        "Structured evidence: full/A137/evidence/record.json#/timing_summary; SHA-256: 270b4c9f1104db9f9045c7fbe98703fd0f9c71798644ea78ebaad2698981fd47; DOI: https://doi.org/10.1038/s41598-017-06549-6"
+      ]
+    }
+  ],
+  "Tissue_Deformation": [],
+  "Fluorescence_Compatibility": [
+    {
+      "Text1": "markers:\nmarker_id: M01\nname: Autofluorescence\ntype: endogenous_signal_not_added_marker\ntarget: 组织宏观结构\nsample_scope: E11.5 uterine tissue block with conceptus\nconcentration_reported: null (as recorded in source)\nexcitation_nm_reported: 638\nsource_locator: S1:B007/B008/B028;S3F2\nboundary: Fig2蓝红绿是切面标识，不是3荧光通道。",
+      "Text1_Reference": [
+        "Structured evidence: full/A137/evidence/record.json#/markers/0; SHA-256: 270b4c9f1104db9f9045c7fbe98703fd0f9c71798644ea78ebaad2698981fd47; DOI: https://doi.org/10.1038/s41598-017-06549-6"
+      ]
+    },
+    {
+      "Text2": "markers:\nmarker_id: M02\nname: Propidium iodide (PI)\ntype: nuclear_dye\ntarget: nuclei\nsample_scope: 预先PI标记的固定子宫；分离胎盘另有浸泡标记分支\nsupplier: Life Technologies\ncatalog: null (as recorded in source)\nimmersion_concentration_as_reported: 10 mg/ml added to CUBIC-1\nconcentration_mg_ml_reported: 10\nfinal_concentration_confirmed: null (as recorded in source)\nexcitation_nm_reported: null (as recorded in source)\nemission_nm_reported: null (as recorded in source)\nsource_locator: S1:B009/B010/B020/B027;S3F3/S3F4/S3F5/S3F6/S3F7/S3F8\nboundary: 浓度按源保留，尚无正式勘误证据。Fig6 PI白色，Fig4/5/7/8红色为显示方式；非染料替换。",
+      "Text2_Reference": [
+        "Structured evidence: full/A137/evidence/record.json#/markers/1; SHA-256: 270b4c9f1104db9f9045c7fbe98703fd0f9c71798644ea78ebaad2698981fd47; DOI: https://doi.org/10.1038/s41598-017-06549-6"
+      ]
+    },
+    {
+      "Text3": "markers:\nmarker_id: M03\nname: EGFP\ntype: preexisting_fluorescent_reporter\ntarget: conceptus-derived tissues/cells\nsample_scope: 宫内EGFP-positive embryo/placenta/trophoblast，母体子宫EGFP-negative\npromoter_reported: CAG\nconcentration_reported: null (as recorded in source)\nexcitation_nm_reported: null (as recorded in source)\nemission_nm_reported: null (as recorded in source)\nsource_locator: S1:B014/B015/B016/B022/B026;S4:p2\nboundary: 只记录既有表达状态；非在固定组织中导入表达；无荧光保留率定量。",
+      "Text3_Reference": [
+        "Structured evidence: full/A137/evidence/record.json#/markers/2; SHA-256: 270b4c9f1104db9f9045c7fbe98703fd0f9c71798644ea78ebaad2698981fd47; DOI: https://doi.org/10.1038/s41598-017-06549-6"
+      ]
+    },
+    {
+      "Text4": "markers:\nmarker_id: M04\nname: CD31\ntype: section_primary_antibody\ntarget: vascular endothelial marker\nprimary_host: rat\nsupplier: BD Pharmingen\ncatalog: null (as recorded in source)\ndilution: 1:500\nsecondary_reported_set: \n  [1] Alexa488-conjugated\n  [2] Alexa647-conjugated\ntarget_specific_secondary_assignment: null (as recorded in source)\ndisplay_color_in_Fig5: green\nsample_scope: 清透后14µm切片，蜕膜血管\nsource_locator: S1:B012/B013/B029;S3F5:c/d\nboundary: 图色与方法二抗集合不足以给出货号或确定逐抗体二抗配对。",
+      "Text4_Reference": [
+        "Structured evidence: full/A137/evidence/record.json#/markers/3; SHA-256: 270b4c9f1104db9f9045c7fbe98703fd0f9c71798644ea78ebaad2698981fd47; DOI: https://doi.org/10.1038/s41598-017-06549-6"
+      ]
+    },
+    {
+      "Text5": "markers:\nmarker_id: M05\nname: Cytokeratin-7 (CK7)\ntype: section_primary_antibody\ntarget: trophoblast marker\nprimary_host: rabbit\nsupplier: Abcam\ncatalog: null (as recorded in source)\ndilution: 1:1000\nsecondary_reported_set: \n  [1] Alexa488-conjugated\n  [2] Alexa647-conjugated\ntarget_specific_secondary_assignment: null (as recorded in source)\ndisplay_color_in_Fig5: purple\nsample_scope: 清透后14µm切片，滋养层巨细胞\nsource_locator: S1:B012/B013/B029;S3F5:c/d\nboundary: 非全子宫whole-mount抗体染色。",
+      "Text5_Reference": [
+        "Structured evidence: full/A137/evidence/record.json#/markers/4; SHA-256: 270b4c9f1104db9f9045c7fbe98703fd0f9c71798644ea78ebaad2698981fd47; DOI: https://doi.org/10.1038/s41598-017-06549-6"
+      ]
+    },
+    {
+      "Text6": "markers:\nmarker_id: M06\nname: Hematoxylin-eosin\ntype: post_clearing_section_histology\ntarget: 组织细胞学结构\nsample_scope: 清透子宫组织块的对应切片\nconcentration_reported: null (as recorded in source)\nduration_reported: null (as recorded in source)\nsource_locator: S1:B014/B017;S3F8:c\nboundary: 支持组织学可用性，不代表所有分子标记或所有形态学特征无变化。",
+      "Text6_Reference": [
+        "Structured evidence: full/A137/evidence/record.json#/markers/5; SHA-256: 270b4c9f1104db9f9045c7fbe98703fd0f9c71798644ea78ebaad2698981fd47; DOI: https://doi.org/10.1038/s41598-017-06549-6"
+      ]
+    }
+  ],
+  "Preservation_Stability": [],
+  "Application": [
+    {
+      "Text1": "reagents:\nreagent_id: RG1\nname: CUBIC-1\ncomponents_reported: \n  [1]     name: urea\n    percent: 25\n    supplier: Nacalai Tesque\n    catalog: 35904-45\n  [2]     name: N,N,N′,N′-tetrakis (2-hydroxypropyl) ethylenediamine\n    percent: 25\n    supplier: Tokyo Chemical Industry\n    catalog: T0781\n  [3]     name: Triton X-100\n    percent: 15\n    supplier: Nacalai Tesque\n    catalog: 25987-85\npercentage_basis: null (as recorded in source)\npH: null (as recorded in source)\nrefractive_index: null (as recorded in source)\nsource_locator: S1:B025;S2:p7",
+      "Text1_Reference": [
+        "Structured evidence: full/A137/evidence/record.json#/reagents/0; SHA-256: 270b4c9f1104db9f9045c7fbe98703fd0f9c71798644ea78ebaad2698981fd47; DOI: https://doi.org/10.1038/s41598-017-06549-6"
+      ]
+    },
+    {
+      "Text2": "reagents:\nreagent_id: RG2\nname: CUBIC-2\ncomponents_reported: \n  [1]     name: sucrose\n    percent: 50\n    supplier: Nacalai Tesque\n    catalog: 30403-55\n  [2]     name: urea\n    percent: 25\n    supplier: Nacalai Tesque\n    catalog: 35904-45\n  [3]     name_as_reported: 2,20,20′-nitrilotriethanol\n    percent: 10\n    supplier: Wako\n    catalog: 145-05605\n    boundary: 保留原文化学名排版，未以外部配方代换\n  [4]     name: Triton X-100\n    percent: 0.1\n    supplier: Nacalai Tesque\n    catalog: 25987-85\npercentage_basis: null (as recorded in source)\npH: null (as recorded in source)\nrefractive_index: null (as recorded in source)\nsource_locator: S1:B025;S2:p7",
+      "Text2_Reference": [
+        "Structured evidence: full/A137/evidence/record.json#/reagents/1; SHA-256: 270b4c9f1104db9f9045c7fbe98703fd0f9c71798644ea78ebaad2698981fd47; DOI: https://doi.org/10.1038/s41598-017-06549-6"
+      ]
+    },
+    {
+      "Text3": "reagent_preparation:\nscope: general_method\nfreshness: prepared just prior to use\ndescription_zh: 除Triton X-100外先热搅拌溶解；监测溶液重量并补回蒸发水；冷却至室温后加入Triton X-100。\ndissolution_temperature_C: null (as recorded in source)\ndissolution_duration: null (as recorded in source)\nstorage_lifetime: null (as recorded in source)\nsource_locator: S1:B025;S2:p7",
+      "Text3_Reference": [
+        "Structured evidence: full/A137/evidence/record.json#/reagent_preparation; SHA-256: 270b4c9f1104db9f9045c7fbe98703fd0f9c71798644ea78ebaad2698981fd47; DOI: https://doi.org/10.1038/s41598-017-06549-6"
+      ]
+    },
+    {
+      "Text4": "protocols:\nprotocol_id: P01\nstage: 离体追加固定\nsample_scope: 已固定妊娠子宫的正文通用方法；非逐图实测参数\nconditions: 4% PFA；4°C\nduration_original: overnight\nduration_value: null (as recorded in source)\nduration_unit: null (as recorded in source)\ntemperature_C: 4\ntime_role: stage_duration\nsource_locator: S1:B027;S2:p8\nboundary: 初始动物处理不抽取；overnight不强换算24h。",
+      "Text4_Reference": [
+        "Structured evidence: full/A137/evidence/record.json#/protocols/0; SHA-256: 270b4c9f1104db9f9045c7fbe98703fd0f9c71798644ea78ebaad2698981fd47; DOI: https://doi.org/10.1038/s41598-017-06549-6"
+      ]
+    },
+    {
+      "Text5": "protocols:\nprotocol_id: P02\nstage: CUBIC-1首段\nsample_scope: 已固定妊娠子宫的正文通用方法；非逐图实测参数\nconditions: CUBIC-1；37°C；gentle shaking\nduration_original: 3 days\nduration_value: 3\nduration_unit: day\ntemperature_C: 37\ntime_role: stage_duration\nsource_locator: S1:B027;S2:p8\nboundary: ",
+      "Text5_Reference": [
+        "Structured evidence: full/A137/evidence/record.json#/protocols/1; SHA-256: 270b4c9f1104db9f9045c7fbe98703fd0f9c71798644ea78ebaad2698981fd47; DOI: https://doi.org/10.1038/s41598-017-06549-6"
+      ]
+    },
+    {
+      "Text6": "protocols:\nprotocol_id: P03\nstage: CUBIC-1换液续段\nsample_scope: 已固定妊娠子宫的正文通用方法；非逐图实测参数\nconditions: 换新CUBIC-1后继续浸泡\nduration_original: 2 additional days\nduration_value: 2\nduration_unit: day\ntemperature_C: null (as recorded in source)\ntime_role: stage_duration\nsource_locator: S1:B027;S2:p8\nboundary: 与P02构成5d；续段未单独重述温度/摇速。",
+      "Text6_Reference": [
+        "Structured evidence: full/A137/evidence/record.json#/protocols/2; SHA-256: 270b4c9f1104db9f9045c7fbe98703fd0f9c71798644ea78ebaad2698981fd47; DOI: https://doi.org/10.1038/s41598-017-06549-6"
+      ]
+    },
+    {
+      "Text7": "protocols:\nprotocol_id: P04\nstage: CUBIC-1延长分支\nsample_scope: 正文E14.5妊娠子宫描述，并衔接分离胎盘示例\nconditions: CUBIC-1\nduration_original: 10 days\nduration_value: 10\nduration_unit: day\ntemperature_C: null (as recorded in source)\ntime_role: stage_duration\nsource_locator: S1:B005;S2:p2\nboundary: 替代通用5d，不是另加10d；未逐图报告分离胎盘实际时长。",
+      "Text7_Reference": [
+        "Structured evidence: full/A137/evidence/record.json#/protocols/3; SHA-256: 270b4c9f1104db9f9045c7fbe98703fd0f9c71798644ea78ebaad2698981fd47; DOI: https://doi.org/10.1038/s41598-017-06549-6"
+      ]
+    },
+    {
+      "Text8": "protocols:\nprotocol_id: P05\nstage: 第一次PBS洗\nsample_scope: 已固定妊娠子宫的正文通用方法；非逐图实测参数\nconditions: PBS；3次；室温；gentle shaking\nduration_original: null (as recorded in source)\nduration_value: null (as recorded in source)\nduration_unit: null (as recorded in source)\ntemperature_C: null (as recorded in source)\ntime_role: stage_duration\nsource_locator: S1:B027;S2:p8\nboundary: 次数不等于时长；室温未数值化。",
+      "Text8_Reference": [
+        "Structured evidence: full/A137/evidence/record.json#/protocols/4; SHA-256: 270b4c9f1104db9f9045c7fbe98703fd0f9c71798644ea78ebaad2698981fd47; DOI: https://doi.org/10.1038/s41598-017-06549-6"
+      ]
+    },
+    {
+      "Text9": "protocols:\nprotocol_id: P06\nstage: 清透流程中蔗糖浸泡\nsample_scope: 已固定妊娠子宫的正文通用方法；非逐图实测参数\nconditions: 20% sucrose in PBS\nduration_original: one day\nduration_value: 1\nduration_unit: day\ntemperature_C: null (as recorded in source)\ntime_role: stage_duration\nsource_locator: S1:B027;S2:p8\nboundary: 温度未报；与成像后制片用过夜蔗糖是不同阶段。",
+      "Text9_Reference": [
+        "Structured evidence: full/A137/evidence/record.json#/protocols/5; SHA-256: 270b4c9f1104db9f9045c7fbe98703fd0f9c71798644ea78ebaad2698981fd47; DOI: https://doi.org/10.1038/s41598-017-06549-6"
+      ]
+    },
+    {
+      "Text10": "protocols:\nprotocol_id: P07\nstage: CUBIC-2浸泡\nsample_scope: 已固定妊娠子宫的正文通用方法；非逐图实测参数\nconditions: CUBIC-2\nduration_original: 2 days\nduration_value: 2\nduration_unit: day\ntemperature_C: null (as recorded in source)\ntime_role: stage_duration\nsource_locator: S1:B027;S2:p8\nboundary: 原文及Fig1a均未给温度，不沿用前段37°C。",
+      "Text10_Reference": [
+        "Structured evidence: full/A137/evidence/record.json#/protocols/6; SHA-256: 270b4c9f1104db9f9045c7fbe98703fd0f9c71798644ea78ebaad2698981fd47; DOI: https://doi.org/10.1038/s41598-017-06549-6"
+      ]
+    },
+    {
+      "Text11": "protocols:\nprotocol_id: P08\nstage: 可选离体PI浸泡标记\nsample_scope: Methods通用浸泡标记；Fig3e–h明确为分离胎盘浸泡\nconditions: PI加入CUBIC-1；原文写10 mg/ml\nduration_original: null (as recorded in source)\nduration_value: null (as recorded in source)\nduration_unit: null (as recorded in source)\ntemperature_C: null (as recorded in source)\ntime_role: concurrent_labeling_stage\nsource_locator: S1:B027;S1:B010;S2:p4/p8\nboundary: 保留10mg/mL报告单位；原文未澄清终浓度或储备液。不得改成µg/mL；不自动赋给所有图。",
+      "Text11_Reference": [
+        "Structured evidence: full/A137/evidence/record.json#/protocols/7; SHA-256: 270b4c9f1104db9f9045c7fbe98703fd0f9c71798644ea78ebaad2698981fd47; DOI: https://doi.org/10.1038/s41598-017-06549-6"
+      ]
+    },
+    {
+      "Text12": "protocols:\nprotocol_id: P09\nstage: 成像后PBS洗\nsample_scope: 已清透子宫后续切片验证\nconditions: PBS；3次；室温；gentle shaking\nduration_original: null (as recorded in source)\nduration_value: null (as recorded in source)\nduration_unit: null (as recorded in source)\ntemperature_C: null (as recorded in source)\ntime_role: post_imaging_processing\nsource_locator: S1:B029;S2:p8\nboundary: ",
+      "Text12_Reference": [
+        "Structured evidence: full/A137/evidence/record.json#/protocols/8; SHA-256: 270b4c9f1104db9f9045c7fbe98703fd0f9c71798644ea78ebaad2698981fd47; DOI: https://doi.org/10.1038/s41598-017-06549-6"
+      ]
+    },
+    {
+      "Text13": "protocols:\nprotocol_id: P10\nstage: 成像后冷冻保护\nsample_scope: 已清透子宫后续切片验证\nconditions: 20% sucrose in PBS\nduration_original: overnight\nduration_value: null (as recorded in source)\nduration_unit: null (as recorded in source)\ntemperature_C: null (as recorded in source)\ntime_role: post_imaging_processing\nsource_locator: S1:B029;S2:p8\nboundary: 与P06的one day分开记录。",
+      "Text13_Reference": [
+        "Structured evidence: full/A137/evidence/record.json#/protocols/9; SHA-256: 270b4c9f1104db9f9045c7fbe98703fd0f9c71798644ea78ebaad2698981fd47; DOI: https://doi.org/10.1038/s41598-017-06549-6"
+      ]
+    },
+    {
+      "Text14": "protocols:\nprotocol_id: P11\nstage: 包埋与制片\nsample_scope: 已清透子宫后续免疫组织化学切片\nconditions: OCT包埋；cryostat；厚14µm\nduration_original: null (as recorded in source)\nduration_value: null (as recorded in source)\nduration_unit: null (as recorded in source)\ntemperature_C: null (as recorded in source)\ntime_role: post_imaging_processing\nsource_locator: S1:B029;S2:p8\nboundary: 14µm是物理切片厚度，不是LSFM z步长。",
+      "Text14_Reference": [
+        "Structured evidence: full/A137/evidence/record.json#/protocols/10; SHA-256: 270b4c9f1104db9f9045c7fbe98703fd0f9c71798644ea78ebaad2698981fd47; DOI: https://doi.org/10.1038/s41598-017-06549-6"
+      ]
+    },
+    {
+      "Text15": "protocols:\nprotocol_id: P12\nstage: 切片通透\nsample_scope: 14µm免疫验证切片\nconditions: 0.5% Triton X-100 in PBS\nduration_original: null (as recorded in source)\nduration_value: null (as recorded in source)\nduration_unit: null (as recorded in source)\ntemperature_C: null (as recorded in source)\ntime_role: section_permeabilization\nsource_locator: S1:B029;S2:p8\nboundary: ",
+      "Text15_Reference": [
+        "Structured evidence: full/A137/evidence/record.json#/protocols/11; SHA-256: 270b4c9f1104db9f9045c7fbe98703fd0f9c71798644ea78ebaad2698981fd47; DOI: https://doi.org/10.1038/s41598-017-06549-6"
+      ]
+    },
+    {
+      "Text16": "protocols:\nprotocol_id: P13\nstage: 切片一抗孵育\nsample_scope: 14µm免疫验证切片\nconditions: rat anti-CD31 1:500 BD Pharmingen；rabbit anti-cytokeratin-7 1:1000 Abcam\nduration_original: overnight\nduration_value: null (as recorded in source)\nduration_unit: null (as recorded in source)\ntemperature_C: 4\ntime_role: section_immunostaining\nsource_locator: S1:B029;S2:p8\nboundary: 切片染色，不代表抗体进入完整子宫。",
+      "Text16_Reference": [
+        "Structured evidence: full/A137/evidence/record.json#/protocols/12; SHA-256: 270b4c9f1104db9f9045c7fbe98703fd0f9c71798644ea78ebaad2698981fd47; DOI: https://doi.org/10.1038/s41598-017-06549-6"
+      ]
+    },
+    {
+      "Text17": "protocols:\nprotocol_id: P14\nstage: 切片二抗孵育\nsample_scope: 14µm免疫验证切片\nconditions: Alexa488-或Alexa647-conjugated secondary antibody\nduration_original: 2 hours\nduration_value: 2\nduration_unit: hour\ntemperature_C: 37\ntime_role: section_immunostaining\nsource_locator: S1:B029;S2:p8\nboundary: 未报二抗宿主、货号、稀释度和逐靶标配对。",
+      "Text17_Reference": [
+        "Structured evidence: full/A137/evidence/record.json#/protocols/13; SHA-256: 270b4c9f1104db9f9045c7fbe98703fd0f9c71798644ea78ebaad2698981fd47; DOI: https://doi.org/10.1038/s41598-017-06549-6"
+      ]
+    },
+    {
+      "Text18": "protocols:\nprotocol_id: P15\nstage: 切片清洗与封片\nsample_scope: 14µm免疫验证切片\nconditions: 洗涤后封片\nduration_original: null (as recorded in source)\nduration_value: null (as recorded in source)\nduration_unit: null (as recorded in source)\ntemperature_C: null (as recorded in source)\ntime_role: post_labeling_processing\nsource_locator: S1:B029;S2:p8\nboundary: ",
+      "Text18_Reference": [
+        "Structured evidence: full/A137/evidence/record.json#/protocols/14; SHA-256: 270b4c9f1104db9f9045c7fbe98703fd0f9c71798644ea78ebaad2698981fd47; DOI: https://doi.org/10.1038/s41598-017-06549-6"
+      ]
+    },
+    {
+      "Text19": "protocols:\nprotocol_id: P16\nstage: 清透后H&E组织学\nsample_scope: EGFP-positive conceptus/EGFP-negative uterus对应切片\nconditions: CUBIC、LSFM、cryostat section后H&E染色\nduration_original: null (as recorded in source)\nduration_value: null (as recorded in source)\nduration_unit: null (as recorded in source)\ntemperature_C: null (as recorded in source)\ntime_role: post_imaging_histology\nsource_locator: S1:B014/B017;S2:p5/p6;S3F8:a/c\nboundary: H&E试剂浓度/时间/该切片厚度未单独报；不自动继承免疫切片14µm。",
+      "Text19_Reference": [
+        "Structured evidence: full/A137/evidence/record.json#/protocols/15; SHA-256: 270b4c9f1104db9f9045c7fbe98703fd0f9c71798644ea78ebaad2698981fd47; DOI: https://doi.org/10.1038/s41598-017-06549-6"
+      ]
+    },
+    {
+      "Text20": "imaging_global:\nbright_field: \n  instrument: Leica MZ16F stereomicroscope\n  source_locator: S1:B028\ncleared_organ_3D: \n  instrument: Carl Zeiss Lightsheet Z.1\n  source_locator: S1:B028\nimmunostained_sections: \n  instrument_as_reported: epifluorescence confocal microscope, LSM510, Carl Zeiss\n  source_locator: S1:B028\nwhole_organ_objective_general: \n  magnification_x: 5\n  NA: 0.16\n  source_locator: S1:B028\ndetailed_objective_general: \n  magnification_x: 20\n  NA: 1.0\n  source_locator: S1:B028\nanalysis_software: ZEN (Carl Zeiss)\nsoftware_version: null (as recorded in source)\nvoxel_size_um: null (as recorded in source)\nz_step_um: null (as recorded in source)\nmeasured_resolution_um: null (as recorded in source)\nacquisition_duration: null (as recorded in source)\nmounting_medium_during_imaging: null (as recorded in source)\nboundary: 物镜是general_method两层描述；无逐图分配表，图级actual_objective均null。单细胞分辨率是作者可视化判断，未报告PSF或实测µm分辨率。",
+      "Text20_Reference": [
+        "Structured evidence: full/A137/evidence/record.json#/imaging_global; SHA-256: 270b4c9f1104db9f9045c7fbe98703fd0f9c71798644ea78ebaad2698981fd47; DOI: https://doi.org/10.1038/s41598-017-06549-6"
+      ]
+    },
+    {
+      "Text21": "figures:\nfigure_id: F1\npanels: a; b,c; d,e\ngestational_stage: \n  b,c: E9.5\n  d,e: E14.5\nsample_scope: a通用流程示意；b,c保留子宫壁的妊娠组织；d,e分离胎盘\nsignals: bright field\nobserved_zh: 清透后底格可见；d/e各展示两个胎盘外观。\nscale_bars: \n  b,c,d,e: \n    value: 4\n    unit: mm\nbiological_N: null (as recorded in source)\nsource_locator: S3F1;S1:Fig1\nevidence_level: qualitative_figure_and_caption\nboundary: 展示物体数不等于独立N。未作体积量化；不能填0%体积改变。",
+      "Text21_Reference": [
+        "Structured evidence: full/A137/evidence/record.json#/figures/0; SHA-256: 270b4c9f1104db9f9045c7fbe98703fd0f9c71798644ea78ebaad2698981fd47; DOI: https://doi.org/10.1038/s41598-017-06549-6"
+      ]
+    },
+    {
+      "Text22": "figures:\nfigure_id: F2\npanels: a–d\ngestational_stage: E11.5\nsample_scope: 子宫壁内胚胎/胎盘，非分离胚胎\nsignals: autofluorescence; excitation 638nm\nobserved_zh: a重建及三切面；b原始XY；c重建YZ；d重建XZ；胚胎箭头、胎盘箭头头。\nscale_bars: \n  b,c,d: \n    value: 500\n    unit: µm\nbiological_N: null (as recorded in source)\nsource_locator: S3F2;S1:Fig2\nevidence_level: qualitative_figure_and_caption\nboundary: 坐标刻度不是原始组织尺寸；彩色线/框是切面方向，无三通道。",
+      "Text22_Reference": [
+        "Structured evidence: full/A137/evidence/record.json#/figures/1; SHA-256: 270b4c9f1104db9f9045c7fbe98703fd0f9c71798644ea78ebaad2698981fd47; DOI: https://doi.org/10.1038/s41598-017-06549-6"
+      ]
+    },
+    {
+      "Text23": "figures:\nfigure_id: F3\npanels: a–d; e–h\ngestational_stage: \n  a–d: E10.5\n  e–h: E14.5\nsample_scope: a–d预先PI标记固定子宫；e–h分离胎盘PI浸泡\nsignals: PI\nobserved_zh: a/e为3D；b/f光学切面；c/g放大；d/h任意角切面。可分辨肌层、胚胎、羊膜腔、滋养层巨细胞，胎盘蜕膜/交界区/迷路区。\nscale_bars: \n  a,e: \n    value: 1\n    unit: mm\n  b,d,f,h: \n    value: 500\n    unit: µm\n  c,g: \n    value: 200\n    unit: µm\nbiological_N: null (as recorded in source)\nsource_locator: S3F3;S1:Fig3\nevidence_level: qualitative_figure_and_caption\nboundary: 两样本类型的标记途径不同。图中4视图不是4生物重复。 图3f图内仍标Myo；图注称分离胎盘，具体附带组织边界未详述。",
+      "Text23_Reference": [
+        "Structured evidence: full/A137/evidence/record.json#/figures/2; SHA-256: 270b4c9f1104db9f9045c7fbe98703fd0f9c71798644ea78ebaad2698981fd47; DOI: https://doi.org/10.1038/s41598-017-06549-6"
+      ]
+    },
+    {
+      "Text24": "figures:\nfigure_id: F4\npanels: left annotation; left-eye; right-eye\ngestational_stage: null (as recorded in source)\nsample_scope: 预先PI标记固定妊娠子宫组织块\nsignals: PI red display\nobserved_zh: 左侧标注胚胎、胎盘、肌层、羊膜腔；左右眼视图呈同一重建的立体关系。\nscale_bars: \n  stereo_views: \n    value: 1\n    unit: mm\nbiological_N: null (as recorded in source)\nsource_locator: S3F4;S1:Fig4\nevidence_level: qualitative_figure_and_caption\nboundary: 图注无孕期；不从相邻图自动填E10.5；左右眼不是两个样本。",
+      "Text24_Reference": [
+        "Structured evidence: full/A137/evidence/record.json#/figures/3; SHA-256: 270b4c9f1104db9f9045c7fbe98703fd0f9c71798644ea78ebaad2698981fd47; DOI: https://doi.org/10.1038/s41598-017-06549-6"
+      ]
+    },
+    {
+      "Text25": "figures:\nfigure_id: F5\npanels: a–d\ngestational_stage: null (as recorded in source)\nsample_scope: 已清透子宫定位后切片免疫验证\nsignals: b PI; c CD31/CK7; d CD31/CK7/PI\nobserved_zh: a流程；b定位框；cCD31绿/CK7紫；d再叠加PI红显示巨细胞与蜕膜血管关系。\nscale_bars: \n  b: \n    value: 1\n    unit: mm\n  c,d: \n    value: 100\n    unit: µm\nbiological_N: null (as recorded in source)\nsource_locator: S3F5;S1:Fig5\nevidence_level: qualitative_figure_and_caption\nboundary: PI是核染料，不是第三抗体；无整体抗体穿透证据；孕期未单独报告。",
+      "Text25_Reference": [
+        "Structured evidence: full/A137/evidence/record.json#/figures/4; SHA-256: 270b4c9f1104db9f9045c7fbe98703fd0f9c71798644ea78ebaad2698981fd47; DOI: https://doi.org/10.1038/s41598-017-06549-6"
+      ]
+    },
+    {
+      "Text26": "figures:\nfigure_id: F6\npanels: a,b\ngestational_stage: E10.5\nsample_scope: EGFP-positive conceptus within EGFP-negative uterus\nsignals: EGFP green; PI white display\nobserved_zh: a3D和bXY光学切面显示宫内EGFP阳性胎盘及胚胎。\nscale_bars: \n  a,b: \n    value: 1\n    unit: mm\nbiological_N: null (as recorded in source)\nsource_locator: S3F6;S1:Fig6\nevidence_level: qualitative_figure_and_caption\nboundary: 白色PI是显示色；不从彩图推断激发/发射波长。",
+      "Text26_Reference": [
+        "Structured evidence: full/A137/evidence/record.json#/figures/5; SHA-256: 270b4c9f1104db9f9045c7fbe98703fd0f9c71798644ea78ebaad2698981fd47; DOI: https://doi.org/10.1038/s41598-017-06549-6"
+      ]
+    },
+    {
+      "Text27": "figures:\nfigure_id: F7\npanels: left annotation; left-eye; right-eye\ngestational_stage: E10.5\nsample_scope: EGFP-positive conceptus within EGFP-negative uterus\nsignals: EGFP green; PI red display\nobserved_zh: 立体视图显示宫内胎盘/胚胎相对肌层的空间关系。\nscale_bars: \n  stereo_views: \n    value: 1\n    unit: mm\nbiological_N: null (as recorded in source)\nsource_locator: S3F7;S1:Fig7\nevidence_level: qualitative_figure_and_caption\nboundary: 左右眼来自重建，不构成2个生物重复。",
+      "Text27_Reference": [
+        "Structured evidence: full/A137/evidence/record.json#/figures/6; SHA-256: 270b4c9f1104db9f9045c7fbe98703fd0f9c71798644ea78ebaad2698981fd47; DOI: https://doi.org/10.1038/s41598-017-06549-6"
+      ]
+    },
+    {
+      "Text28": "figures:\nfigure_id: F8\npanels: a–c\ngestational_stage: null (as recorded in source)\nsample_scope: EGFP-positive conceptus/EGFP-negative uterus的成像区及对应组织学切片\nsignals: b EGFP green/PI red; c H&E\nobserved_zh: a为清透后LSFM再制片H&E流程；b蜕膜旁TG定位，c相应组织学显示TG胞质相对低嗜伊红。\nscale_bars: \n  b: \n    value: 200\n    unit: µm\n  c: \n    value: 100\n    unit: µm\nbiological_N: null (as recorded in source)\nsource_locator: S3F8;S1:Fig8\nevidence_level: qualitative_figure_and_caption\nboundary: 图注未单独给孕期；B014上下文与E10.5系列相关，未当图级明确值。H&E无量化形态保真率。",
+      "Text28_Reference": [
+        "Structured evidence: full/A137/evidence/record.json#/figures/7; SHA-256: 270b4c9f1104db9f9045c7fbe98703fd0f9c71798644ea78ebaad2698981fd47; DOI: https://doi.org/10.1038/s41598-017-06549-6"
+      ]
+    },
+    {
+      "Text29": "imaging_rows:\nimaging_id: I01\npanel: Fig1b,c\nsample_scope: uterine tissue block\ngestational_stage: E9.5\nmarker_ids: \n[]\nmodality: bright-field stereomicroscopy\nactual_objective: null (as recorded in source)\nactual_NA: null (as recorded in source)\nactual_z_step_um: null (as recorded in source)\nbiological_N: null (as recorded in source)\nsource_locator: S1:B006/B028;S3F1\nboundary: 明场外观，不是自发荧光通道。",
+      "Text29_Reference": [
+        "Structured evidence: full/A137/evidence/record.json#/imaging_rows/0; SHA-256: 270b4c9f1104db9f9045c7fbe98703fd0f9c71798644ea78ebaad2698981fd47; DOI: https://doi.org/10.1038/s41598-017-06549-6"
+      ]
+    },
+    {
+      "Text30": "imaging_rows:\nimaging_id: I02\npanel: Fig1d,e\nsample_scope: isolated placenta\ngestational_stage: E14.5\nmarker_ids: \n[]\nmodality: bright-field stereomicroscopy\nactual_objective: null (as recorded in source)\nactual_NA: null (as recorded in source)\nactual_z_step_um: null (as recorded in source)\nbiological_N: null (as recorded in source)\nsource_locator: S1:B006/B028;S3F1\nboundary: ",
+      "Text30_Reference": [
+        "Structured evidence: full/A137/evidence/record.json#/imaging_rows/1; SHA-256: 270b4c9f1104db9f9045c7fbe98703fd0f9c71798644ea78ebaad2698981fd47; DOI: https://doi.org/10.1038/s41598-017-06549-6"
+      ]
+    },
+    {
+      "Text31": "imaging_rows:\nimaging_id: I03\npanel: Fig2a–d\nsample_scope: uterine wall retaining intrauterine conceptus\ngestational_stage: E11.5\nmarker_ids: \n  [1] M01\nmodality: LSFM; 3D/XY/YZ/XZ\nactual_objective: null (as recorded in source)\nactual_NA: null (as recorded in source)\nactual_z_step_um: null (as recorded in source)\nbiological_N: null (as recorded in source)\nsource_locator: S1:B007/B008/B028;S3F2\nboundary: 638nm是明确的自发荧光激发。",
+      "Text31_Reference": [
+        "Structured evidence: full/A137/evidence/record.json#/imaging_rows/2; SHA-256: 270b4c9f1104db9f9045c7fbe98703fd0f9c71798644ea78ebaad2698981fd47; DOI: https://doi.org/10.1038/s41598-017-06549-6"
+      ]
+    },
+    {
+      "Text32": "imaging_rows:\nimaging_id: I04\npanel: Fig3a–d\nsample_scope: prelabeled fixed uterus with conceptus\ngestational_stage: E10.5\nmarker_ids: \n  [1] M02\nmodality: LSFM; 3D/virtual sections\nactual_objective: null (as recorded in source)\nactual_NA: null (as recorded in source)\nactual_z_step_um: null (as recorded in source)\nbiological_N: null (as recorded in source)\nsource_locator: S1:B009/B010/B028;S3F3\nboundary: ",
+      "Text32_Reference": [
+        "Structured evidence: full/A137/evidence/record.json#/imaging_rows/3; SHA-256: 270b4c9f1104db9f9045c7fbe98703fd0f9c71798644ea78ebaad2698981fd47; DOI: https://doi.org/10.1038/s41598-017-06549-6"
+      ]
+    },
+    {
+      "Text33": "imaging_rows:\nimaging_id: I05\npanel: Fig3e–h\nsample_scope: isolated placenta; immersion PI\ngestational_stage: E14.5\nmarker_ids: \n  [1] M02\nmodality: LSFM; 3D/virtual sections\nactual_objective: null (as recorded in source)\nactual_NA: null (as recorded in source)\nactual_z_step_um: null (as recorded in source)\nbiological_N: null (as recorded in source)\nsource_locator: S1:B010/B028;S3F3\nboundary: ",
+      "Text33_Reference": [
+        "Structured evidence: full/A137/evidence/record.json#/imaging_rows/4; SHA-256: 270b4c9f1104db9f9045c7fbe98703fd0f9c71798644ea78ebaad2698981fd47; DOI: https://doi.org/10.1038/s41598-017-06549-6"
+      ]
+    },
+    {
+      "Text34": "imaging_rows:\nimaging_id: I06\npanel: Fig4\nsample_scope: prelabeled fixed uterus\ngestational_stage: null (as recorded in source)\nmarker_ids: \n  [1] M02\nmodality: LSFM; stereo rendering\nactual_objective: null (as recorded in source)\nactual_NA: null (as recorded in source)\nactual_z_step_um: null (as recorded in source)\nbiological_N: null (as recorded in source)\nsource_locator: S1:B011/B028;S3F4\nboundary: 未报图级孕期。",
+      "Text34_Reference": [
+        "Structured evidence: full/A137/evidence/record.json#/imaging_rows/5; SHA-256: 270b4c9f1104db9f9045c7fbe98703fd0f9c71798644ea78ebaad2698981fd47; DOI: https://doi.org/10.1038/s41598-017-06549-6"
+      ]
+    },
+    {
+      "Text35": "imaging_rows:\nimaging_id: I07\npanel: Fig5b\nsample_scope: cleared uterus; site selection\ngestational_stage: null (as recorded in source)\nmarker_ids: \n  [1] M02\nmodality: LSFM\nactual_objective: null (as recorded in source)\nactual_NA: null (as recorded in source)\nactual_z_step_um: null (as recorded in source)\nbiological_N: null (as recorded in source)\nsource_locator: S1:B013/B028;S3F5\nboundary: ",
+      "Text35_Reference": [
+        "Structured evidence: full/A137/evidence/record.json#/imaging_rows/6; SHA-256: 270b4c9f1104db9f9045c7fbe98703fd0f9c71798644ea78ebaad2698981fd47; DOI: https://doi.org/10.1038/s41598-017-06549-6"
+      ]
+    },
+    {
+      "Text36": "imaging_rows:\nimaging_id: I08\npanel: Fig5c,d\nsample_scope: post-clearing 14µm sections\ngestational_stage: null (as recorded in source)\nmarker_ids: \n  [1] M04\n  [2] M05\n  [3] M02\nmodality: LSM510 section imaging\nactual_objective: null (as recorded in source)\nactual_NA: null (as recorded in source)\nactual_z_step_um: null (as recorded in source)\nbiological_N: null (as recorded in source)\nsource_locator: S1:B013/B028/B029;S3F5\nboundary: PI仅在d叠加；c只显示CD31/CK7。\npanel_marker_bindings: \n  Fig5c: \n    [1] M04\n    [2] M05\n  Fig5d: \n    [1] M04\n    [2] M05\n    [3] M02",
+      "Text36_Reference": [
+        "Structured evidence: full/A137/evidence/record.json#/imaging_rows/7; SHA-256: 270b4c9f1104db9f9045c7fbe98703fd0f9c71798644ea78ebaad2698981fd47; DOI: https://doi.org/10.1038/s41598-017-06549-6"
+      ]
+    },
+    {
+      "Text37": "imaging_rows:\nimaging_id: I09\npanel: Fig6a,b\nsample_scope: EGFP-positive conceptus in negative uterus\ngestational_stage: E10.5\nmarker_ids: \n  [1] M02\n  [2] M03\nmodality: LSFM; 3D and XY\nactual_objective: null (as recorded in source)\nactual_NA: null (as recorded in source)\nactual_z_step_um: null (as recorded in source)\nbiological_N: null (as recorded in source)\nsource_locator: S1:B015/B028;S3F6\nboundary: ",
+      "Text37_Reference": [
+        "Structured evidence: full/A137/evidence/record.json#/imaging_rows/8; SHA-256: 270b4c9f1104db9f9045c7fbe98703fd0f9c71798644ea78ebaad2698981fd47; DOI: https://doi.org/10.1038/s41598-017-06549-6"
+      ]
+    },
+    {
+      "Text38": "imaging_rows:\nimaging_id: I10\npanel: Fig7\nsample_scope: EGFP-positive conceptus in negative uterus\ngestational_stage: E10.5\nmarker_ids: \n  [1] M02\n  [2] M03\nmodality: LSFM; stereo rendering\nactual_objective: null (as recorded in source)\nactual_NA: null (as recorded in source)\nactual_z_step_um: null (as recorded in source)\nbiological_N: null (as recorded in source)\nsource_locator: S1:B016/B028;S3F7\nboundary: ",
+      "Text38_Reference": [
+        "Structured evidence: full/A137/evidence/record.json#/imaging_rows/9; SHA-256: 270b4c9f1104db9f9045c7fbe98703fd0f9c71798644ea78ebaad2698981fd47; DOI: https://doi.org/10.1038/s41598-017-06549-6"
+      ]
+    },
+    {
+      "Text39": "imaging_rows:\nimaging_id: I11\npanel: Fig8b\nsample_scope: target area of cleared reporter conceptus in uterus\ngestational_stage: null (as recorded in source)\nmarker_ids: \n  [1] M02\n  [2] M03\nmodality: LSFM detail\nactual_objective: null (as recorded in source)\nactual_NA: null (as recorded in source)\nactual_z_step_um: null (as recorded in source)\nbiological_N: null (as recorded in source)\nsource_locator: S1:B014/B017/B028;S3F8\nboundary: 与E10.5系列上下文相关，但图级孕期不直接报。",
+      "Text39_Reference": [
+        "Structured evidence: full/A137/evidence/record.json#/imaging_rows/10; SHA-256: 270b4c9f1104db9f9045c7fbe98703fd0f9c71798644ea78ebaad2698981fd47; DOI: https://doi.org/10.1038/s41598-017-06549-6"
+      ]
+    },
+    {
+      "Text40": "imaging_rows:\nimaging_id: I12\npanel: Fig8c\nsample_scope: corresponding H&E tissue section\ngestational_stage: null (as recorded in source)\nmarker_ids: \n  [1] M06\nmodality: H&E section microscopy; instrument not reported\nactual_objective: null (as recorded in source)\nactual_NA: null (as recorded in source)\nactual_z_step_um: null (as recorded in source)\nbiological_N: null (as recorded in source)\nsource_locator: S1:B017;S3F8\nboundary: 不把免疫切片LSM510强配给H&E明场图。",
+      "Text40_Reference": [
+        "Structured evidence: full/A137/evidence/record.json#/imaging_rows/11; SHA-256: 270b4c9f1104db9f9045c7fbe98703fd0f9c71798644ea78ebaad2698981fd47; DOI: https://doi.org/10.1038/s41598-017-06549-6"
+      ]
+    },
+    {
+      "Text41": "imaging_rows:\nimaging_id: I13\npanel: Movie S1\nsample_scope: fixed uterus with reporter conceptus\ngestational_stage: E10.5\nmarker_ids: \n  [1] M02\n  [2] M03\nmodality: LSFM; sequential XY display\nactual_objective: null (as recorded in source)\nactual_NA: null (as recorded in source)\nactual_z_step_um: null (as recorded in source)\nbiological_N: null (as recorded in source)\nsource_locator: S4:p2;S5:frames1–599\nboundary: 视频帧数不等于原始z层数，视频时长不等于采集时间。",
+      "Text41_Reference": [
+        "Structured evidence: full/A137/evidence/record.json#/imaging_rows/12; SHA-256: 270b4c9f1104db9f9045c7fbe98703fd0f9c71798644ea78ebaad2698981fd47; DOI: https://doi.org/10.1038/s41598-017-06549-6"
+      ]
+    },
+    {
+      "Text42": "imaging_rows:\nimaging_id: I14\npanel: Movie S2\nsample_scope: fixed uterus with reporter conceptus\ngestational_stage: E10.5\nmarker_ids: \n  [1] M02\n  [2] M03\nmodality: LSFM; 3D rotation rendering\nactual_objective: null (as recorded in source)\nactual_NA: null (as recorded in source)\nactual_z_step_um: null (as recorded in source)\nbiological_N: null (as recorded in source)\nsource_locator: S4:p2;S6:frames1–405\nboundary: 显示视角随视频变化，不是生物学时间序列。",
+      "Text42_Reference": [
+        "Structured evidence: full/A137/evidence/record.json#/imaging_rows/13; SHA-256: 270b4c9f1104db9f9045c7fbe98703fd0f9c71798644ea78ebaad2698981fd47; DOI: https://doi.org/10.1038/s41598-017-06549-6"
+      ]
+    },
+    {
+      "Text43": "results:\nresult_id: R01\nfinding_zh: 清透后的组织可透见背景网格。\nsample_scope: E9.5子宫组织块；E14.5分离胎盘\nvalue: null (as recorded in source)\nunit: null (as recorded in source)\nbiological_N: null (as recorded in source)\nstatistics: null (as recorded in source)\nevidence_level: qualitative_author_claim_and_figure\nsource_locator: S1:B005/B006;S3F1:b–e\nboundary: 未报告透射率、标准化透明度分数或统计比较。",
+      "Text43_Reference": [
+        "Structured evidence: full/A137/evidence/record.json#/results/0; SHA-256: 270b4c9f1104db9f9045c7fbe98703fd0f9c71798644ea78ebaad2698981fd47; DOI: https://doi.org/10.1038/s41598-017-06549-6"
+      ]
+    },
+    {
+      "Text44": "results:\nresult_id: R02\nfinding_zh: 作者称子宫体积和精细结构得以保留，未见缩胀。\nsample_scope: 妊娠子宫，Fig1b,c E9.5示例\nvalue: null (as recorded in source)\nunit: null (as recorded in source)\nbiological_N: null (as recorded in source)\nstatistics: null (as recorded in source)\nevidence_level: qualitative_author_claim_and_figure\nsource_locator: S1:B005/B019;S3F1\nboundary: 基于定性照片/叙述；不得编码为体积改变0%或精确不变。",
+      "Text44_Reference": [
+        "Structured evidence: full/A137/evidence/record.json#/results/1; SHA-256: 270b4c9f1104db9f9045c7fbe98703fd0f9c71798644ea78ebaad2698981fd47; DOI: https://doi.org/10.1038/s41598-017-06549-6"
+      ]
+    },
+    {
+      "Text45": "results:\nresult_id: R03\nfinding_zh: E14.5需要较长的CUBIC-1处理；作者将其归因于体积和含血量增加。\nsample_scope: 正文E14.5妊娠子宫及随后分离胎盘示例\nvalue: null (as recorded in source)\nunit: null (as recorded in source)\nbiological_N: null (as recorded in source)\nstatistics: null (as recorded in source)\nevidence_level: qualitative_author_claim_and_figure\nsource_locator: S1:B005;S2:p2\nboundary: 10d是报告分支；不是跨胎龄定量动力学实验。",
+      "Text45_Reference": [
+        "Structured evidence: full/A137/evidence/record.json#/results/2; SHA-256: 270b4c9f1104db9f9045c7fbe98703fd0f9c71798644ea78ebaad2698981fd47; DOI: https://doi.org/10.1038/s41598-017-06549-6"
+      ]
+    },
+    {
+      "Text46": "results:\nresult_id: R04\nfinding_zh: 无需染色的自发荧光可透过子宫壁显示胚胎、胎盘并重建切面。\nsample_scope: E11.5保留子宫壁组织块\nvalue: null (as recorded in source)\nunit: null (as recorded in source)\nbiological_N: null (as recorded in source)\nstatistics: null (as recorded in source)\nevidence_level: qualitative_author_claim_and_figure\nsource_locator: S1:B007/B008;S3F2\nboundary: 细部单细胞识别仍困难；638nm激发不等于多通道免疫。",
+      "Text46_Reference": [
+        "Structured evidence: full/A137/evidence/record.json#/results/3; SHA-256: 270b4c9f1104db9f9045c7fbe98703fd0f9c71798644ea78ebaad2698981fd47; DOI: https://doi.org/10.1038/s41598-017-06549-6"
+      ]
+    },
+    {
+      "Text47": "results:\nresult_id: R05\nfinding_zh: PI单纯浸泡时深部信号微弱；预先标记的固定组织显示更深处核信号。\nsample_scope: 妊娠子宫\nvalue: null (as recorded in source)\nunit: null (as recorded in source)\nbiological_N: null (as recorded in source)\nstatistics: null (as recorded in source)\nevidence_level: qualitative_author_claim_and_figure\nsource_locator: S1:B009/B020\nboundary: 只记录固定样本标记状态与结果；未报告浸泡对照N或强度比。",
+      "Text47_Reference": [
+        "Structured evidence: full/A137/evidence/record.json#/results/4; SHA-256: 270b4c9f1104db9f9045c7fbe98703fd0f9c71798644ea78ebaad2698981fd47; DOI: https://doi.org/10.1038/s41598-017-06549-6"
+      ]
+    },
+    {
+      "Text48": "results:\nresult_id: R06\nfinding_zh: PI信号经过CUBIC处理后仍可观察。\nsample_scope: PI标记子宫和胎盘\nvalue: null (as recorded in source)\nunit: null (as recorded in source)\nbiological_N: null (as recorded in source)\nstatistics: null (as recorded in source)\nevidence_level: qualitative_author_claim_and_figure\nsource_locator: S1:B009/B020;S3F3\nboundary: “未消除”不等于100%保留率。",
+      "Text48_Reference": [
+        "Structured evidence: full/A137/evidence/record.json#/results/5; SHA-256: 270b4c9f1104db9f9045c7fbe98703fd0f9c71798644ea78ebaad2698981fd47; DOI: https://doi.org/10.1038/s41598-017-06549-6"
+      ]
+    },
+    {
+      "Text49": "results:\nresult_id: R07\nfinding_zh: 宫内胚胎的PI信号有时仍弱。\nsample_scope: 妊娠子宫内胚胎\nvalue: null (as recorded in source)\nunit: null (as recorded in source)\nbiological_N: null (as recorded in source)\nstatistics: null (as recorded in source)\nevidence_level: qualitative_author_reported_limitation\nsource_locator: S1:B020\nboundary: 失败/不足样本数和发生率未报告。",
+      "Text49_Reference": [
+        "Structured evidence: full/A137/evidence/record.json#/results/6; SHA-256: 270b4c9f1104db9f9045c7fbe98703fd0f9c71798644ea78ebaad2698981fd47; DOI: https://doi.org/10.1038/s41598-017-06549-6"
+      ]
+    },
+    {
+      "Text50": "results:\nresult_id: R08\nfinding_zh: PI数据可重建3D、任意角虚拟切面和左右眼立体视图，局部呈单细胞细节。\nsample_scope: E10.5子宫、E14.5胎盘、Fig4孕期未报\nvalue: null (as recorded in source)\nunit: null (as recorded in source)\nbiological_N: null (as recorded in source)\nstatistics: null (as recorded in source)\nevidence_level: qualitative_author_claim_and_figure\nsource_locator: S1:B009/B010/B011/B021;S3F3/S3F4\nboundary: 实测PSF/分辨率、z步长均未报；虚拟切面不是14µm实体切片。",
+      "Text50_Reference": [
+        "Structured evidence: full/A137/evidence/record.json#/results/7; SHA-256: 270b4c9f1104db9f9045c7fbe98703fd0f9c71798644ea78ebaad2698981fd47; DOI: https://doi.org/10.1038/s41598-017-06549-6"
+      ]
+    },
+    {
+      "Text51": "results:\nresult_id: R09\nfinding_zh: 清透后对应实体切片可观察CD31血管与CK7滋养层信号。\nsample_scope: 子宫蜕膜区14µm免疫切片\nvalue: null (as recorded in source)\nunit: null (as recorded in source)\nbiological_N: null (as recorded in source)\nstatistics: null (as recorded in source)\nevidence_level: qualitative_author_claim_and_figure\nsource_locator: S1:B012/B013/B029;S3F5\nboundary: 仅支持这些抗原的切片兼容性，不证明整器官抗体穿透或所有抗原保留。",
+      "Text51_Reference": [
+        "Structured evidence: full/A137/evidence/record.json#/results/8; SHA-256: 270b4c9f1104db9f9045c7fbe98703fd0f9c71798644ea78ebaad2698981fd47; DOI: https://doi.org/10.1038/s41598-017-06549-6"
+      ]
+    },
+    {
+      "Text52": "results:\nresult_id: R10\nfinding_zh: EGFP阳性胚胎、胎盘与EGFP阴性母体子宫可区分。\nsample_scope: E10.5 reporter conceptus within uterus\nvalue: null (as recorded in source)\nunit: null (as recorded in source)\nbiological_N: null (as recorded in source)\nstatistics: null (as recorded in source)\nevidence_level: qualitative_author_claim_and_figure\nsource_locator: S1:B014/B015/B022;S3F6;S4:p2;S5\nboundary: 没有荧光保留率、信噪比或定量标签特异性指标。",
+      "Text52_Reference": [
+        "Structured evidence: full/A137/evidence/record.json#/results/9; SHA-256: 270b4c9f1104db9f9045c7fbe98703fd0f9c71798644ea78ebaad2698981fd47; DOI: https://doi.org/10.1038/s41598-017-06549-6"
+      ]
+    },
+    {
+      "Text53": "results:\nresult_id: R11\nfinding_zh: 作者借EGFP定位胎膜周边、与蜕膜接触的滋养层巨细胞。\nsample_scope: E10.5宫内孕体/母体界面系列\nvalue: null (as recorded in source)\nunit: null (as recorded in source)\nbiological_N: null (as recorded in source)\nstatistics: null (as recorded in source)\nevidence_level: qualitative_author_claim_and_figure\nsource_locator: S1:B014/B016/B022;S3F7/S3F8;S6\nboundary: 空间相邻/分布的定性描述，未给侵入深度、细胞总数或距离分布。",
+      "Text53_Reference": [
+        "Structured evidence: full/A137/evidence/record.json#/results/10; SHA-256: 270b4c9f1104db9f9045c7fbe98703fd0f9c71798644ea78ebaad2698981fd47; DOI: https://doi.org/10.1038/s41598-017-06549-6"
+      ]
+    },
+    {
+      "Text54": "results:\nresult_id: R12\nfinding_zh: 清透成像后可对相应区域做H&E，观察TG较低嗜伊红胞质和邻近蜕膜细胞。\nsample_scope: 对应组织学切片\nvalue: null (as recorded in source)\nunit: null (as recorded in source)\nbiological_N: null (as recorded in source)\nstatistics: null (as recorded in source)\nevidence_level: qualitative_author_claim_and_figure\nsource_locator: S1:B014/B017;S3F8\nboundary: 形态可识别性，未报告前后盲评或配对定量损伤评分。",
+      "Text54_Reference": [
+        "Structured evidence: full/A137/evidence/record.json#/results/11; SHA-256: 270b4c9f1104db9f9045c7fbe98703fd0f9c71798644ea78ebaad2698981fd47; DOI: https://doi.org/10.1038/s41598-017-06549-6"
+      ]
+    },
+    {
+      "Text55": "results:\nresult_id: R13\nfinding_zh: 作者称所有处理的E14.5胎盘可透明。\nsample_scope: 分离胎盘\nvalue: null (as recorded in source)\nunit: null (as recorded in source)\nbiological_N: null (as recorded in source)\nstatistics: null (as recorded in source)\nevidence_level: qualitative_author_claim_and_figure\nsource_locator: S1:B005\nboundary: all无分母，不能填写100%成功率。",
+      "Text55_Reference": [
+        "Structured evidence: full/A137/evidence/record.json#/results/12; SHA-256: 270b4c9f1104db9f9045c7fbe98703fd0f9c71798644ea78ebaad2698981fd47; DOI: https://doi.org/10.1038/s41598-017-06549-6"
+      ]
+    },
+    {
+      "Text56": "results:\nresult_id: R14\nfinding_zh: 作者指出E14.5透明胎盘尚未进一步分析。\nsample_scope: E14.5胎盘\nvalue: null (as recorded in source)\nunit: null (as recorded in source)\nbiological_N: null (as recorded in source)\nstatistics: null (as recorded in source)\nevidence_level: discussion_scope_qualification\nsource_locator: S1:B023;S3F3:e–h\nboundary: 已有PI结构成像证据；进一步分析范围未定义，不将此句解释成完全没有成像。",
+      "Text56_Reference": [
+        "Structured evidence: full/A137/evidence/record.json#/results/13; SHA-256: 270b4c9f1104db9f9045c7fbe98703fd0f9c71798644ea78ebaad2698981fd47; DOI: https://doi.org/10.1038/s41598-017-06549-6"
+      ]
+    },
+    {
+      "Text57": "results:\nresult_id: R15\nfinding_zh: 作者建议利用3D数据分析体积、细胞数及位置，拓展生殖器官研究。\nsample_scope: 未来分析用途\nvalue: null (as recorded in source)\nunit: null (as recorded in source)\nbiological_N: null (as recorded in source)\nstatistics: null (as recorded in source)\nevidence_level: author_proposed_application_not_measured_result\nsource_locator: S1:B021/B023/B024\nboundary: 本文未提交相应体积/细胞计数数据，也未实验验证人组织或所有其他生殖器官。",
+      "Text57_Reference": [
+        "Structured evidence: full/A137/evidence/record.json#/results/14; SHA-256: 270b4c9f1104db9f9045c7fbe98703fd0f9c71798644ea78ebaad2698981fd47; DOI: https://doi.org/10.1038/s41598-017-06549-6"
+      ]
+    },
+    {
+      "Text58": "statistics:\nstatistical_test: null (as recorded in source)\np_values: null (as recorded in source)\neffect_sizes: null (as recorded in source)\nerror_bars: null (as recorded in source)\nbiological_N: null (as recorded in source)\nboundary: 全文是定性方法可行性/图像示例；不把示意图、图中对象数、切面数或左右眼视图当生物N。",
+      "Text58_Reference": [
+        "Structured evidence: full/A137/evidence/record.json#/statistics; SHA-256: 270b4c9f1104db9f9045c7fbe98703fd0f9c71798644ea78ebaad2698981fd47; DOI: https://doi.org/10.1038/s41598-017-06549-6"
+      ]
+    }
+  ],
+  "Note": [
+    {
+      "Text1": "Paper A137; source coverage: full; source release status: candidate_pending_gates; source default_eligible: false. Read this study as a whole with its sample, experimental, measurement and limitation fields. All selected source files and mandatory support in the accompanying archive apply jointly. Import does not promote candidate status, resolve contradictions, or turn review citations into independent primary experiments. Application includes source-labelled protocols, comparisons and results; labels within each Text retain their actual role.",
+      "Text1_Reference": [
+        "DOI: https://doi.org/10.1038/s41598-017-06549-6",
+        "Evidence-layer structured paraphrase; not a verbatim quotation. Source release: https://github.com/404NotFound422/TOCAgentProject/tree/5e3a711befb3952a2e39f4d53fc9c9f1a7ac0d22/KnowledgeBase/evidence_expansion_20261019",
+        "Local source archive: ../literature_evidence/2026-11-11/source_release.zip; member: full/A137/version_selection.json"
+      ]
+    },
+    {
+      "Text2": "Selected version and mandatory composition:\npaper_id: A137\nstatus: full\nrelease_status: candidate_pending_gates\ndefault_eligible: false\nactive_scientific_files: \n  [1]     path: full/A137/evidence/record.json\n    sha256: 270b4c9f1104db9f9045c7fbe98703fd0f9c71798644ea78ebaad2698981fd47\n    source_member: record.json\nrequired_supporting_files: \n  [1]     paper_id: A137\n    path: full/A137/support/acceptance.json\n    source_member: 当前验收依据.json\n    accepted_original_sha256: 23f484526549fb4ad2b5ee956a29b64472d371e5201818c993bae63aadffb2cd\n    source_sha256: 23f484526549fb4ad2b5ee956a29b64472d371e5201818c993bae63aadffb2cd\n    baseline_delivered_sha256: 23f484526549fb4ad2b5ee956a29b64472d371e5201818c993bae63aadffb2cd\n    sha256: 23f484526549fb4ad2b5ee956a29b64472d371e5201818c993bae63aadffb2cd\n    bytes: 494\n    role: current_acceptance_receipt\n    transformed: false\n    baseline_delivery_member: 历史交付_1907/历史交付_1707/已验收论文/A137/当前验收依据.json\n  [2]     paper_id: A137\n    path: full/A137/support/review/R3_compatibility_review.json\n    source_member: 科学数据与审查附件/review/R3_compatibility_review.json\n    accepted_original_sha256: 1ba4dc84414d3e12d43b2eeb86732a424cfda913c93df60ed3448f3c370f314f\n    source_sha256: 1ba4dc84414d3e12d43b2eeb86732a424cfda913c93df60ed3448f3c370f314f\n    baseline_delivered_sha256: 1ba4dc84414d3e12d43b2eeb86732a424cfda913c93df60ed3448f3c370f314f\n    sha256: 1ba4dc84414d3e12d43b2eeb86732a424cfda913c93df60ed3448f3c370f314f\n    bytes: 3560\n    role: required_companion_preserved_not_independently_active\n    transformed: false\n    baseline_delivery_member: 历史交付_1907/历史交付_1707/已验收论文/A137/科学数据与审查附件/review/R3_compatibility_review.json\n  [3]     paper_id: A137\n    path: full/A137/support/review/corrections_from_R1.json\n    source_member: 科学数据与审查附件/review/corrections_from_R1.json\n    accepted_original_sha256: 41c580ffead1f030dfac39ffc5b1f9b8f5342e8d116f9c131444118eb193b1c0\n    source_sha256: 41c580ffead1f030dfac39ffc5b1f9b8f5342e8d116f9c131444118eb193b1c0\n    baseline_delivered_sha256: 41c580ffead1f030dfac39ffc5b1f9b8f5342e8d116f9c131444118eb193b1c0\n    sha256: 41c580ffead1f030dfac39ffc5b1f9b8f5342e8d116f9c131444118eb193b1c0\n    bytes: 629\n    role: required_companion_preserved_not_independently_active\n    transformed: false\n    baseline_delivery_member: 历史交付_1907/历史交付_1707/已验收论文/A137/科学数据与审查附件/review/corrections_from_R1.json\n  [4]     paper_id: A137\n    path: full/A137/support/review/R2_independent_review.json\n    source_member: 科学数据与审查附件/review/R2_independent_review.json\n    accepted_original_sha256: 6bb520580a7b0762e00955ad84f9f5a958c0854d9416e2e1de1a899a7dbb400a\n    source_sha256: 6bb520580a7b0762e00955ad84f9f5a958c0854d9416e2e1de1a899a7dbb400a\n    baseline_delivered_sha256: 6bb520580a7b0762e00955ad84f9f5a958c0854d9416e2e1de1a899a7dbb400a\n    sha256: d52546eb9005d46db20f4378415ee4db98bd1d5cc08b8c35fea3c1206a998cd5\n    bytes: 4237\n    role: required_companion_preserved_not_independently_active\n    transformed: true\n    baseline_delivery_member: 历史交付_1907/历史交付_1707/已验收论文/A137/科学数据与审查附件/review/R2_independent_review.json\n  [5]     paper_id: A137\n    path: full/A137/support/review/R4_gap_search.json\n    source_member: 科学数据与审查附件/review/R4_gap_search.json\n    accepted_original_sha256: e36ea2c09d9dc7b11defb4c88b0fcb6f0dfe1528a8a5d975e36452868cfc783e\n    source_sha256: e36ea2c09d9dc7b11defb4c88b0fcb6f0dfe1528a8a5d975e36452868cfc783e\n    baseline_delivered_sha256: e36ea2c09d9dc7b11defb4c88b0fcb6f0dfe1528a8a5d975e36452868cfc783e\n    sha256: e36ea2c09d9dc7b11defb4c88b0fcb6f0dfe1528a8a5d975e36452868cfc783e\n    bytes: 2266\n    role: required_companion_preserved_not_independently_active\n    transformed: false\n    baseline_delivery_member: 历史交付_1907/历史交付_1707/已验收论文/A137/科学数据与审查附件/review/R4_gap_search.json\n  [6]     paper_id: A137\n    path: full/A137/support/accepted_scope_binding.json\n    source_member: 科学版本绑定.json\n    accepted_original_sha256: 82dc0145b0833c1335cc230bf1990e00b93b93b1db066b75329a2dd08b55756a\n    source_sha256: 82dc0145b0833c1335cc230bf1990e00b93b93b1db066b75329a2dd08b55756a\n    baseline_delivered_sha256: 82dc0145b0833c1335cc230bf1990e00b93b93b1db066b75329a2dd08b55756a\n    sha256: 82dc0145b0833c1335cc230bf1990e00b93b93b1db066b75329a2dd08b55756a\n    bytes: 577\n    role: mandatory_scope_and_precedence_binding\n    transformed: false\n    baseline_delivery_member: 历史交付_1907/历史交付_1707/已验收论文/A137/科学版本绑定.json\n  [7]     paper_id: A137\n    path: full/A137/support/review/review_report_zh.txt\n    source_member: 科学数据与审查附件/review/review_report_zh.txt\n    accepted_original_sha256: e53cd8da5e1a76918b837042b371ad3b212799c91e4811dee837cb4635a2f1b4\n    source_sha256: e53cd8da5e1a76918b837042b371ad3b212799c91e4811dee837cb4635a2f1b4\n    baseline_delivered_sha256: e53cd8da5e1a76918b837042b371ad3b212799c91e4811dee837cb4635a2f1b4\n    sha256: e53cd8da5e1a76918b837042b371ad3b212799c91e4811dee837cb4635a2f1b4\n    bytes: 1416\n    role: required_companion_preserved_not_independently_active\n    transformed: false\n    baseline_delivery_member: 历史交付_1907/历史交付_1707/已验收论文/A137/科学数据与审查附件/review/review_report_zh.txt\n  [8]     paper_id: A137\n    path: full/A137/support/inherited_readme.txt\n    source_member: 阅读说明.txt\n    accepted_original_sha256: bfc4eebf1fb15a7a6ff7d8a099b594b329bad3b492af3d4c4cfbc276488dec4e\n    source_sha256: bfc4eebf1fb15a7a6ff7d8a099b594b329bad3b492af3d4c4cfbc276488dec4e\n    baseline_delivered_sha256: bfc4eebf1fb15a7a6ff7d8a099b594b329bad3b492af3d4c4cfbc276488dec4e\n    sha256: bfc4eebf1fb15a7a6ff7d8a099b594b329bad3b492af3d4c4cfbc276488dec4e\n    bytes: 393\n    role: required_companion_preserved_not_independently_active\n    transformed: false\n    baseline_delivery_member: 历史交付_1907/历史交付_1707/已验收论文/A137/阅读说明.txt\nacceptance: full/A137/support/acceptance.json\nacceptance_files: \n  [1] full/A137/support/acceptance.json\nactive_version_and_scope: \n  scope: 全部相关科学正文、8主图、2页补充及2视频已核；视频采用全帧接触表和代表原帧，不称连续播放；22项原文未知不等于审查缺口。\n  historical_nonactive_members: \n[]\nmandatory_composition: Root plus explicitly selected companions and any current mandatory semantic addendum apply jointly. Never recursively activate audit history.\noriginal_member_to_release_path: \n  record.json: full/A137/evidence/record.json\nactive_reference_aliases: \n  record.json: full/A137/evidence/record.json\n  当前验收依据.json: full/A137/support/acceptance.json\n  科学数据与审查附件/review/R3_compatibility_review.json: full/A137/support/review/R3_compatibility_review.json\n  科学数据与审查附件/review/corrections_from_R1.json: full/A137/support/review/corrections_from_R1.json\n  科学数据与审查附件/review/R2_independent_review.json: full/A137/support/review/R2_independent_review.json\n  科学数据与审查附件/review/R4_gap_search.json: full/A137/support/review/R4_gap_search.json\n  科学版本绑定.json: full/A137/support/accepted_scope_binding.json\n  科学数据与审查附件/review/review_report_zh.txt: full/A137/support/review/review_report_zh.txt\n  阅读说明.txt: full/A137/support/inherited_readme.txt\n  科学数据与审查附件/record_accepted.json: full/A137/evidence/record.json\n  科学数据与审查附件/review/acceptance.json: full/A137/support/acceptance.json\n  acceptance.json: full/A137/support/acceptance.json\n  review/R3_compatibility_review.json: full/A137/support/review/R3_compatibility_review.json\n  review/corrections_from_R1.json: full/A137/support/review/corrections_from_R1.json\n  review/R2_independent_review.json: full/A137/support/review/R2_independent_review.json\n  review/R4_gap_search.json: full/A137/support/review/R4_gap_search.json\n  accepted_scope_binding.json: full/A137/support/accepted_scope_binding.json\n  review/review_report_zh.txt: full/A137/support/review/review_report_zh.txt\n  inherited_readme.txt: full/A137/support/inherited_readme.txt\n  record_accepted.json: full/A137/evidence/record.json\nactive_reference_resolution_evidence: \n  [1]     source_file: full/A137/evidence/record.json\n    json_pointer: /review_artifacts/0\n    reference: review/R2_independent_review.json\n    resolved_release_path: full/A137/support/review/R2_independent_review.json\n    binding_basis: explicit_verified_alias\n  [2]     source_file: full/A137/evidence/record.json\n    json_pointer: /review_artifacts/1\n    reference: review/R3_compatibility_review.json\n    resolved_release_path: full/A137/support/review/R3_compatibility_review.json\n    binding_basis: explicit_verified_alias\n  [3]     source_file: full/A137/evidence/record.json\n    json_pointer: /review_artifacts/2\n    reference: review/R4_gap_search.json\n    resolved_release_path: full/A137/support/review/R4_gap_search.json\n    binding_basis: explicit_verified_alias\n  [4]     source_file: full/A137/evidence/record.json\n    json_pointer: /review_artifacts/3\n    reference: review/corrections_from_R1.json\n    resolved_release_path: full/A137/support/review/corrections_from_R1.json\n    binding_basis: explicit_verified_alias\n  [5]     source_file: full/A137/support/acceptance.json\n    json_pointer: /accepted_record\n    reference: record_accepted.json\n    resolved_release_path: full/A137/evidence/record.json\n    binding_basis: unique_verified_original_member_path\nexternal_or_historical_references: \n[]\nnonactive_excluded_members: \n[]\nverified_alias_binding_proofs: \n[]\nreference_resolution_policy: Exact explicit aliases only. Acceptance companions apply jointly. Archived original science, source assets and historical candidate flags remain nonruntime provenance. Independent closure review is pending.",
+      "Text2_Reference": [
+        "DOI: https://doi.org/10.1038/s41598-017-06549-6",
+        "Evidence-layer structured paraphrase; not a verbatim quotation. Source release: https://github.com/404NotFound422/TOCAgentProject/tree/5e3a711befb3952a2e39f4d53fc9c9f1a7ac0d22/KnowledgeBase/evidence_expansion_20261019",
+        "Local source archive: ../literature_evidence/2026-11-11/source_release.zip; member: full/A137/version_selection.json"
+      ]
+    },
+    {
+      "Text3": "scope:\n仅已固定的小鼠妊娠子宫组织块、其中的胚胎/胎盘及分离胎盘的清透、标记、成像与结果。既有EGFP表达和预先PI标记仅记样本状态；交配、手术及动物处理步骤不抽取。",
+      "Text3_Reference": [
+        "Structured evidence: full/A137/evidence/record.json#/scope; SHA-256: 270b4c9f1104db9f9045c7fbe98703fd0f9c71798644ea78ebaad2698981fd47; DOI: https://doi.org/10.1038/s41598-017-06549-6"
+      ]
+    },
+    {
+      "Text4": "source_conflicts:\nissue_id: SC01\ntype: scope_variant\nfield: CUBIC-1 duration\nsources: S1:B005 versus S1:B027;S3F1:a\nsource_values: \n  [1] E14.5 10 days\n  [2] general 3+2 days; schematic5d\nresolution: 保存通用与E14.5分支；不视为互相覆盖。",
+      "Text4_Reference": [
+        "Structured evidence: full/A137/evidence/record.json#/source_conflicts/0; SHA-256: 270b4c9f1104db9f9045c7fbe98703fd0f9c71798644ea78ebaad2698981fd47; DOI: https://doi.org/10.1038/s41598-017-06549-6"
+      ]
+    },
+    {
+      "Text5": "source_conflicts:\nissue_id: SC02\ntype: schematic_vs_text_precision\nfield: total time / fixation\nsources: S1:B027;S3F1:a\nsource_values: \n  [1] overnight fixed-organ PFA; PBS duration unspecified\n  [2] schematic PFA0–1d,total9d\nresolution: 总实耗时null；9d仅图示；不把overnight定成24h。",
+      "Text5_Reference": [
+        "Structured evidence: full/A137/evidence/record.json#/source_conflicts/1; SHA-256: 270b4c9f1104db9f9045c7fbe98703fd0f9c71798644ea78ebaad2698981fd47; DOI: https://doi.org/10.1038/s41598-017-06549-6"
+      ]
+    },
+    {
+      "Text6": "source_conflicts:\nissue_id: SC03\ntype: reported_unit_ambiguity\nfield: PI concentration\nsources: S1:B027;S2:p8;publisher Methods\nsource_values: \n  [1] 10 mg/mL in Methods\n  [2] 10 mg/ml added to CUBIC-1\nresolution: 保留10mg/mL报告值；终浓度/储备液属性null。未检得正式勘误，不进行常规值替换。",
+      "Text6_Reference": [
+        "Structured evidence: full/A137/evidence/record.json#/source_conflicts/2; SHA-256: 270b4c9f1104db9f9045c7fbe98703fd0f9c71798644ea78ebaad2698981fd47; DOI: https://doi.org/10.1038/s41598-017-06549-6"
+      ]
+    },
+    {
+      "Text7": "source_conflicts:\nissue_id: SC04\ntype: discussion_scope_ambiguity\nfield: late gestation placenta analysis\nsources: S1:B023;S1:B010;S3F3:e–h\nsource_values: \n  [1] did not perform further analysis\n  [2] E14.5 placenta PI structural images\nresolution: 已有结构成像；进一步生物学/病理分析范围未明。不是已证实矛盾。",
+      "Text7_Reference": [
+        "Structured evidence: full/A137/evidence/record.json#/source_conflicts/3; SHA-256: 270b4c9f1104db9f9045c7fbe98703fd0f9c71798644ea78ebaad2698981fd47; DOI: https://doi.org/10.1038/s41598-017-06549-6"
+      ]
+    },
+    {
+      "Text8": "source_conflicts:\nissue_id: SC05\ntype: reagent_name_typography\nfield: CUBIC-2 amine\nsources: S1:B025;S2:p7\nsource_values: \n  [1] 2,20,20′-nitrilotriethanol; Wako145-05605\nresolution: 原字符串和货号保留；不静默修改为外部配方。",
+      "Text8_Reference": [
+        "Structured evidence: full/A137/evidence/record.json#/source_conflicts/4; SHA-256: 270b4c9f1104db9f9045c7fbe98703fd0f9c71798644ea78ebaad2698981fd47; DOI: https://doi.org/10.1038/s41598-017-06549-6"
+      ]
+    },
+    {
+      "Text9": "source_conflicts:\nissue_id: SC06\ntype: display_mapping\nfield: PI display color\nsources: S3F4/S3F5/S3F6/S3F7/S3F8\nsource_values: \n  [1] white in Fig6\n  [2] red in Fig4,5d,7,8b\nresolution: 颜色仅为显示映射，同一PI信号；不能推出换染料/波长。",
+      "Text9_Reference": [
+        "Structured evidence: full/A137/evidence/record.json#/source_conflicts/5; SHA-256: 270b4c9f1104db9f9045c7fbe98703fd0f9c71798644ea78ebaad2698981fd47; DOI: https://doi.org/10.1038/s41598-017-06549-6"
+      ]
+    },
+    {
+      "Text10": "missing_fields:\nmissing_id: MF01\nfield: biological_N / animal_N / organ_N\nstatus: not_reported\nexplanation_zh: 全图/正文未报独立动物、子宫、胎盘N。\nvalue: null (as recorded in source)",
+      "Text10_Reference": [
+        "Structured evidence: full/A137/evidence/record.json#/missing_fields/0; SHA-256: 270b4c9f1104db9f9045c7fbe98703fd0f9c71798644ea78ebaad2698981fd47; DOI: https://doi.org/10.1038/s41598-017-06549-6"
+      ]
+    },
+    {
+      "Text11": "missing_fields:\nmissing_id: MF02\nfield: technical_replicates\nstatus: not_reported\nexplanation_zh: 图、切面及左右眼视图不是重复数。\nvalue: null (as recorded in source)",
+      "Text11_Reference": [
+        "Structured evidence: full/A137/evidence/record.json#/missing_fields/1; SHA-256: 270b4c9f1104db9f9045c7fbe98703fd0f9c71798644ea78ebaad2698981fd47; DOI: https://doi.org/10.1038/s41598-017-06549-6"
+      ]
+    },
+    {
+      "Text12": "missing_fields:\nmissing_id: MF03\nfield: actual_objective_per_panel\nstatus: not_reported\nexplanation_zh: 仅general_method的5×0.16、20×1.0。\nvalue: null (as recorded in source)",
+      "Text12_Reference": [
+        "Structured evidence: full/A137/evidence/record.json#/missing_fields/2; SHA-256: 270b4c9f1104db9f9045c7fbe98703fd0f9c71798644ea78ebaad2698981fd47; DOI: https://doi.org/10.1038/s41598-017-06549-6"
+      ]
+    },
+    {
+      "Text13": "missing_fields:\nmissing_id: MF04\nfield: CUBIC-2_temperature\nstatus: not_reported\nexplanation_zh: 不能继承CUBIC-1的37°C。\nvalue: null (as recorded in source)",
+      "Text13_Reference": [
+        "Structured evidence: full/A137/evidence/record.json#/missing_fields/3; SHA-256: 270b4c9f1104db9f9045c7fbe98703fd0f9c71798644ea78ebaad2698981fd47; DOI: https://doi.org/10.1038/s41598-017-06549-6"
+      ]
+    },
+    {
+      "Text14": "missing_fields:\nmissing_id: MF05\nfield: sucrose_temperature\nstatus: not_reported\nexplanation_zh: 清透中1d及成像后overnight均未报温度。\nvalue: null (as recorded in source)",
+      "Text14_Reference": [
+        "Structured evidence: full/A137/evidence/record.json#/missing_fields/4; SHA-256: 270b4c9f1104db9f9045c7fbe98703fd0f9c71798644ea78ebaad2698981fd47; DOI: https://doi.org/10.1038/s41598-017-06549-6"
+      ]
+    },
+    {
+      "Text15": "missing_fields:\nmissing_id: MF06\nfield: PBS_wash_duration\nstatus: not_reported\nexplanation_zh: 仅各阶段3次。\nvalue: null (as recorded in source)",
+      "Text15_Reference": [
+        "Structured evidence: full/A137/evidence/record.json#/missing_fields/5; SHA-256: 270b4c9f1104db9f9045c7fbe98703fd0f9c71798644ea78ebaad2698981fd47; DOI: https://doi.org/10.1038/s41598-017-06549-6"
+      ]
+    },
+    {
+      "Text16": "missing_fields:\nmissing_id: MF07\nfield: PI_final_concentration\nstatus: ambiguous_report\nexplanation_zh: 10mg/mL按原文保留，终浓度与储备液未清。\nvalue: null (as recorded in source)",
+      "Text16_Reference": [
+        "Structured evidence: full/A137/evidence/record.json#/missing_fields/6; SHA-256: 270b4c9f1104db9f9045c7fbe98703fd0f9c71798644ea78ebaad2698981fd47; DOI: https://doi.org/10.1038/s41598-017-06549-6"
+      ]
+    },
+    {
+      "Text17": "missing_fields:\nmissing_id: MF08\nfield: total_protocol_elapsed_time\nstatus: not_determinable\nexplanation_zh: 图1a示意9d与Methods未定洗涤/overnight精度分开。\nvalue: null (as recorded in source)",
+      "Text17_Reference": [
+        "Structured evidence: full/A137/evidence/record.json#/missing_fields/7; SHA-256: 270b4c9f1104db9f9045c7fbe98703fd0f9c71798644ea78ebaad2698981fd47; DOI: https://doi.org/10.1038/s41598-017-06549-6"
+      ]
+    },
+    {
+      "Text18": "missing_fields:\nmissing_id: MF09\nfield: specimen_dimensions_and_wall_thickness\nstatus: not_reported\nexplanation_zh: 图坐标/比例尺不是处理前组织尺寸或子宫壁厚。\nvalue: null (as recorded in source)",
+      "Text18_Reference": [
+        "Structured evidence: full/A137/evidence/record.json#/missing_fields/8; SHA-256: 270b4c9f1104db9f9045c7fbe98703fd0f9c71798644ea78ebaad2698981fd47; DOI: https://doi.org/10.1038/s41598-017-06549-6"
+      ]
+    },
+    {
+      "Text19": "missing_fields:\nmissing_id: MF10\nfield: quantified_volume_change\nstatus: not_reported\nexplanation_zh: 不将不缩不胀文字填0%。\nvalue: null (as recorded in source)",
+      "Text19_Reference": [
+        "Structured evidence: full/A137/evidence/record.json#/missing_fields/9; SHA-256: 270b4c9f1104db9f9045c7fbe98703fd0f9c71798644ea78ebaad2698981fd47; DOI: https://doi.org/10.1038/s41598-017-06549-6"
+      ]
+    },
+    {
+      "Text20": "missing_fields:\nmissing_id: MF11\nfield: quantified_transparency\nstatus: not_reported\nexplanation_zh: 只有背景网格可见的定性外观。\nvalue: null (as recorded in source)",
+      "Text20_Reference": [
+        "Structured evidence: full/A137/evidence/record.json#/missing_fields/10; SHA-256: 270b4c9f1104db9f9045c7fbe98703fd0f9c71798644ea78ebaad2698981fd47; DOI: https://doi.org/10.1038/s41598-017-06549-6"
+      ]
+    },
+    {
+      "Text21": "missing_fields:\nmissing_id: MF12\nfield: fluorescence_retention_ratio\nstatus: not_reported\nexplanation_zh: EGFP/PI仍可见不等于保留率。\nvalue: null (as recorded in source)",
+      "Text21_Reference": [
+        "Structured evidence: full/A137/evidence/record.json#/missing_fields/11; SHA-256: 270b4c9f1104db9f9045c7fbe98703fd0f9c71798644ea78ebaad2698981fd47; DOI: https://doi.org/10.1038/s41598-017-06549-6"
+      ]
+    },
+    {
+      "Text22": "missing_fields:\nmissing_id: MF13\nfield: z_step_voxel_PSF_resolution\nstatus: not_reported\nexplanation_zh: 无采样步长/体素/实测分辨率。\nvalue: null (as recorded in source)",
+      "Text22_Reference": [
+        "Structured evidence: full/A137/evidence/record.json#/missing_fields/12; SHA-256: 270b4c9f1104db9f9045c7fbe98703fd0f9c71798644ea78ebaad2698981fd47; DOI: https://doi.org/10.1038/s41598-017-06549-6"
+      ]
+    },
+    {
+      "Text23": "missing_fields:\nmissing_id: MF14\nfield: PI_EGFP_excitation_and_emission\nstatus: not_reported\nexplanation_zh: 仅自发荧光638nm激发明确。\nvalue: null (as recorded in source)",
+      "Text23_Reference": [
+        "Structured evidence: full/A137/evidence/record.json#/missing_fields/13; SHA-256: 270b4c9f1104db9f9045c7fbe98703fd0f9c71798644ea78ebaad2698981fd47; DOI: https://doi.org/10.1038/s41598-017-06549-6"
+      ]
+    },
+    {
+      "Text24": "missing_fields:\nmissing_id: MF15\nfield: antibody_catalog_secondary_dilution\nstatus: not_reported\nexplanation_zh: 一抗供应商、宿主和稀释度有报，货号等缺失。\nvalue: null (as recorded in source)",
+      "Text24_Reference": [
+        "Structured evidence: full/A137/evidence/record.json#/missing_fields/14; SHA-256: 270b4c9f1104db9f9045c7fbe98703fd0f9c71798644ea78ebaad2698981fd47; DOI: https://doi.org/10.1038/s41598-017-06549-6"
+      ]
+    },
+    {
+      "Text25": "missing_fields:\nmissing_id: MF16\nfield: primary_to_secondary_exact_pairing\nstatus: not_explicit\nexplanation_zh: 未按颜色推断逐靶标结合二抗。\nvalue: null (as recorded in source)",
+      "Text25_Reference": [
+        "Structured evidence: full/A137/evidence/record.json#/missing_fields/15; SHA-256: 270b4c9f1104db9f9045c7fbe98703fd0f9c71798644ea78ebaad2698981fd47; DOI: https://doi.org/10.1038/s41598-017-06549-6"
+      ]
+    },
+    {
+      "Text26": "missing_fields:\nmissing_id: MF17\nfield: Fig4_Fig5_Fig8_stage\nstatus: not_explicit_per_figure\nexplanation_zh: 留null；Fig8在E10.5系列上下文中但非图注直报。\nvalue: null (as recorded in source)",
+      "Text26_Reference": [
+        "Structured evidence: full/A137/evidence/record.json#/missing_fields/16; SHA-256: 270b4c9f1104db9f9045c7fbe98703fd0f9c71798644ea78ebaad2698981fd47; DOI: https://doi.org/10.1038/s41598-017-06549-6"
+      ]
+    },
+    {
+      "Text27": "missing_fields:\nmissing_id: MF18\nfield: H&E_section_thickness_and_staining_conditions\nstatus: not_reported\nexplanation_zh: 14µm明确属于免疫切片段，不直接转嫁H&E。\nvalue: null (as recorded in source)",
+      "Text27_Reference": [
+        "Structured evidence: full/A137/evidence/record.json#/missing_fields/17; SHA-256: 270b4c9f1104db9f9045c7fbe98703fd0f9c71798644ea78ebaad2698981fd47; DOI: https://doi.org/10.1038/s41598-017-06549-6"
+      ]
+    },
+    {
+      "Text28": "missing_fields:\nmissing_id: MF19\nfield: imaging_acquisition_time\nstatus: not_reported\nexplanation_zh: 视频播放20.01/13.53秒不能作采集时长。\nvalue: null (as recorded in source)",
+      "Text28_Reference": [
+        "Structured evidence: full/A137/evidence/record.json#/missing_fields/18; SHA-256: 270b4c9f1104db9f9045c7fbe98703fd0f9c71798644ea78ebaad2698981fd47; DOI: https://doi.org/10.1038/s41598-017-06549-6"
+      ]
+    },
+    {
+      "Text29": "missing_fields:\nmissing_id: MF20\nfield: storage_stability\nstatus: not_reported\nexplanation_zh: 未给保存时间窗/后续荧光稳定性。\nvalue: null (as recorded in source)",
+      "Text29_Reference": [
+        "Structured evidence: full/A137/evidence/record.json#/missing_fields/19; SHA-256: 270b4c9f1104db9f9045c7fbe98703fd0f9c71798644ea78ebaad2698981fd47; DOI: https://doi.org/10.1038/s41598-017-06549-6"
+      ]
+    },
+    {
+      "Text30": "missing_fields:\nmissing_id: MF21\nfield: reagent_percent_basis_pH_RI\nstatus: not_reported\nexplanation_zh: 组成百分数有报，w/w或v/v以及pH/RI未报。\nvalue: null (as recorded in source)",
+      "Text30_Reference": [
+        "Structured evidence: full/A137/evidence/record.json#/missing_fields/20; SHA-256: 270b4c9f1104db9f9045c7fbe98703fd0f9c71798644ea78ebaad2698981fd47; DOI: https://doi.org/10.1038/s41598-017-06549-6"
+      ]
+    },
+    {
+      "Text31": "missing_fields:\nmissing_id: MF22\nfield: quantitative_cell_counts_invasion_distance\nstatus: not_reported\nexplanation_zh: 仅提出潜在用途、图像定位结果。\nvalue: null (as recorded in source)",
+      "Text31_Reference": [
+        "Structured evidence: full/A137/evidence/record.json#/missing_fields/21; SHA-256: 270b4c9f1104db9f9045c7fbe98703fd0f9c71798644ea78ebaad2698981fd47; DOI: https://doi.org/10.1038/s41598-017-06549-6"
+      ]
+    },
+    {
+      "Text32": "correction_check:\nchecked_date: 2026-10-19\npublisher_current_PI_unit: 10 mg/mL\nqueries: \n  [1] \"s41598-017-06549-6\" correction OR corrigendum OR erratum\n  [2] \"Three-dimensional visualization of intrauterine conceptus\" \"10\" \"PI\" correction\noutcome: 未检得正式勘误；不等价证明从未发布勘误。当前出版社Methods仍为10mg/mL。\nprimary_links: \n  [1] https://www.nature.com/articles/s41598-017-06549-6\n  [2] https://pubmed.ncbi.nlm.nih.gov/28729622/",
+      "Text32_Reference": [
+        "Structured evidence: full/A137/evidence/record.json#/correction_check; SHA-256: 270b4c9f1104db9f9045c7fbe98703fd0f9c71798644ea78ebaad2698981fd47; DOI: https://doi.org/10.1038/s41598-017-06549-6"
+      ]
+    },
+    {
+      "Text33": "acceptance_boundary:\nFull relevant article/supplement coverage, not complete reporting of all desired experimental parameters. All 22 source gaps remain explicitly unknown.",
+      "Text33_Reference": [
+        "Structured evidence: full/A137/evidence/record.json#/acceptance_boundary; SHA-256: 270b4c9f1104db9f9045c7fbe98703fd0f9c71798644ea78ebaad2698981fd47; DOI: https://doi.org/10.1038/s41598-017-06549-6"
+      ]
+    },
+    {
+      "Text34": "Source version and scope record (not an additional scientific claim): accepted_scope_binding:\npaper_id: A137\nrecord_sha256: 270b4c9f1104db9f9045c7fbe98703fd0f9c71798644ea78ebaad2698981fd47\nacceptance_sha256: 23f484526549fb4ad2b5ee956a29b64472d371e5201818c993bae63aadffb2cd\npackage_sha256: 4afbb5a7bb04618227008ee1a4b60843bfe18bbfe272876e68956400ee0694d2\nrecord_form: accepted_record\nscope: 全部相关科学正文、8主图、2页补充及2视频已核；视频采用全帧接触表和代表原帧，不称连续播放；22项原文未知不等于审查缺口。\nstage_execution_and_reuse: null (as recorded in source)\ncompanion_files: \n{}",
+      "Text34_Reference": [
+        "Structured evidence: full/A137/support/accepted_scope_binding.json#; SHA-256: 82dc0145b0833c1335cc230bf1990e00b93b93b1db066b75329a2dd08b55756a; DOI: https://doi.org/10.1038/s41598-017-06549-6"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,296 @@
+{
+  "TOC_Method_Name": {
+    "Text": "Not specified as a single method in the selected evidence records",
+    "Text_Reference": [
+      "DOI: https://doi.org/10.1038/srep38848",
+      "Evidence-layer structured paraphrase; not a verbatim quotation. Source release: https://github.com/404NotFound422/TOCAgentProject/tree/5e3a711befb3952a2e39f4d53fc9c9f1a7ac0d22/KnowledgeBase/evidence_expansion_20261019",
+      "Local source archive: ../literature_evidence/2026-11-11/source_release.zip; member: full/M_N1334/version_selection.json"
+    ]
+  },
+  "General_Description": {
+    "Text": "Elevated-temperature-induced acceleration of PACT clearing process of mouse brain tissue. (2017). Evidence category: method. This card preserves the evidence layer's structured statements and their original field labels; it does not add a new literature review or certify benchmark scoring thresholds.",
+    "Text_Reference": [
+      "DOI: https://doi.org/10.1038/srep38848",
+      "Evidence-layer structured paraphrase; not a verbatim quotation. Source release: https://github.com/404NotFound422/TOCAgentProject/tree/5e3a711befb3952a2e39f4d53fc9c9f1a7ac0d22/KnowledgeBase/evidence_expansion_20261019",
+      "Local source archive: ../literature_evidence/2026-11-11/source_release.zip; member: full/M_N1334/version_selection.json"
+    ]
+  },
+  "Tissue_Types": [
+    {
+      "Text1": "sample_groups:\nid: S1\nspecies: mouse\nline: Thy1-GFP-M\nage: 8–9 weeks\ntissue: brain coronal half-block\nthickness_mm: 1\nreadout: GFP fluorescence and morphology/immunostaining",
+      "Text1_Reference": [
+        "Structured evidence: full/M_N1334/evidence/independent_review/scientific_candidate_v1.json#/sample_groups/0; SHA-256: 9962d9cec8d67c5a46c1d09ac4dd0636842c00184d3945a948e7ad83aea35db7; DOI: https://doi.org/10.1038/srep38848"
+      ]
+    },
+    {
+      "Text2": "sample_groups:\nid: S2\nspecies: mouse\nline: Cx3Cr1-GFP\nage: 8–9 weeks\ntissue: brain\nthickness_mm: \n  [1] 1\n  [2] 3\nreadout: microglial GFP imaging depth",
+      "Text2_Reference": [
+        "Structured evidence: full/M_N1334/evidence/independent_review/scientific_candidate_v1.json#/sample_groups/1; SHA-256: 9962d9cec8d67c5a46c1d09ac4dd0636842c00184d3945a948e7ad83aea35db7; DOI: https://doi.org/10.1038/srep38848"
+      ]
+    },
+    {
+      "Text3": "sample_groups:\nid: S3\nspecies: mouse\nline: YFP line not specified in retrieved Methods\ntissue: brain\nreadout: YFP comparative temperature sensitivity; Supplementary Fig6",
+      "Text3_Reference": [
+        "Structured evidence: full/M_N1334/evidence/independent_review/scientific_candidate_v1.json#/sample_groups/2; SHA-256: 9962d9cec8d67c5a46c1d09ac4dd0636842c00184d3945a948e7ad83aea35db7; DOI: https://doi.org/10.1038/srep38848"
+      ]
+    }
+  ],
+  "Time_Consumption": [],
+  "Tissue_Deformation": [],
+  "Fluorescence_Compatibility": [],
+  "Preservation_Stability": [],
+  "Application": [
+    {
+      "Text1": "units:\nunit_id: U001\nkind: design\nclaim: Five clearing temperatures compare transparency and GFP fluorescence; morphology and labeling comparisons focus on 37/42/47°C.\nsource_locator: Results overview; Fig1–5\ncondition_binding: S1/S2; clearing only\nvalues: \n  temperature_C: \n    [1] 37\n    [2] 42\n    [3] 47\n    [4] 52\n    [5] 57",
+      "Text1_Reference": [
+        "Structured evidence: full/M_N1334/evidence/independent_review/scientific_candidate_v1.json#/units/0; SHA-256: 9962d9cec8d67c5a46c1d09ac4dd0636842c00184d3945a948e7ad83aea35db7; DOI: https://doi.org/10.1038/srep38848"
+      ]
+    },
+    {
+      "Text2": "units:\nunit_id: U002\nkind: preparation\nclaim: Fixed adult brain blocks form A4P0 hydrogel hybrids before temperature comparison.\nsource_locator: Methods Preparation of mouse brain blocks; PACT clearing protocol\ncondition_binding: S1/S2\nvalues: \n  postfixation: 4% PFA overnight 4°C\n  infiltration: A4P0 overnight 4°C\n  degassing: nitrogen 5–10 min\n  polymerization: 3 h at37°C\n  clearing_solution: 8% SDS\n  A4P0_composition: named formulation, not locally fully restated",
+      "Text2_Reference": [
+        "Structured evidence: full/M_N1334/evidence/independent_review/scientific_candidate_v1.json#/units/1; SHA-256: 9962d9cec8d67c5a46c1d09ac4dd0636842c00184d3945a948e7ad83aea35db7; DOI: https://doi.org/10.1038/srep38848"
+      ]
+    },
+    {
+      "Text3": "units:\nunit_id: U003\nkind: time\nclaim: Photographic endpoints and graph clearing-time means are different evidence types; temperature-specific clearing times must not be replaced by one universal protocol duration.\nsource_locator: Fig1a,b; Methods Selection of clearing temperature\ncondition_binding: S1 1mm, SDS\nvalues: \n  photo_time_h: \n    [1] 0\n    [2] 12\n    [3] 24\n    [4] 36\n    [5] 48\n  last_photo_h_by_C: \n    37: 48\n    42: 36\n    47: 24\n    52: 24\n    57: 12\n  graph_means: bar-height estimates only; exact numerical means not tabulated",
+      "Text3_Reference": [
+        "Structured evidence: full/M_N1334/evidence/independent_review/scientific_candidate_v1.json#/units/2; SHA-256: 9962d9cec8d67c5a46c1d09ac4dd0636842c00184d3945a948e7ad83aea35db7; DOI: https://doi.org/10.1038/srep38848"
+      ]
+    },
+    {
+      "Text4": "units:\nunit_id: U004\nkind: result\nclaim: At equal 6h SDS exposure, relative collimated transmittance increases with clearing temperature; sorbitol adds a separate RI-matching improvement.\nsource_locator: Results Optical transparency; Supplementary Fig1\ncondition_binding: 1mm half-brain;500nm\nvalues: \n  temperature_C: \n    [1] 37\n    [2] 42\n    [3] 47\n    [4] 52\n    [5] 57\n  SDS_6h_percent: \n    [1] 5.5\n    [2] 10.4\n    [3] 18.9\n    [4] 30.3\n    [5] 57.9\n  SDS_6h_then_sorbitol_percent: \n    [1] 32.5\n    [2] 45.2\n    [3] 58.6\n    [4] 69.2\n    [5] 86.5",
+      "Text4_Reference": [
+        "Structured evidence: full/M_N1334/evidence/independent_review/scientific_candidate_v1.json#/units/3; SHA-256: 9962d9cec8d67c5a46c1d09ac4dd0636842c00184d3945a948e7ad83aea35db7; DOI: https://doi.org/10.1038/srep38848"
+      ]
+    },
+    {
+      "Text5": "units:\nunit_id: U005\nkind: measurement\nclaim: Transmittance is normalized to a blank=100%, measured with 3×3mm slit across400–800nm; it is not broadband bulk transparency or attenuation-free imaging.\nsource_locator: Methods Measurement of transmittance; Supplementary Fig1\ncondition_binding: 1mm half-brain spectral collimated transmission\nvalues: \n{}",
+      "Text5_Reference": [
+        "Structured evidence: full/M_N1334/evidence/independent_review/scientific_candidate_v1.json#/units/4; SHA-256: 9962d9cec8d67c5a46c1d09ac4dd0636842c00184d3945a948e7ad83aea35db7; DOI: https://doi.org/10.1038/srep38848"
+      ]
+    },
+    {
+      "Text6": "units:\nunit_id: U006\nkind: result\nclaim: Mean GFP intensity falls at every tested temperature at cleared endpoints, whereas expansion-adjusted total fluorescence at42/47°C is comparable with37°C;52/57°C are markedly reduced.\nsource_locator: Results Fluorescence preservation; Fig2\ncondition_binding: S1,50µm maximum projections, matched imaging conditions\nvalues: \n  text_total_ratio_42: 1.18\n  text_SD_42: 0.11\n  text_total_ratio_47: 1.08\n  text_SD_47: 0.17\n  Fig2_significance: 52/57°C **P<.01;42/47 n.s.",
+      "Text6_Reference": [
+        "Structured evidence: full/M_N1334/evidence/independent_review/scientific_candidate_v1.json#/units/5; SHA-256: 9962d9cec8d67c5a46c1d09ac4dd0636842c00184d3945a948e7ad83aea35db7; DOI: https://doi.org/10.1038/srep38848"
+      ]
+    },
+    {
+      "Text7": "units:\nunit_id: U007\nkind: measurement\nclaim: Mean intensity times selected neuronal soma area defines total intensity; per-neuron after/before ratio B/A averaged across25 neurons per group. This is not protein mass retention or independent25-animal replication.\nsource_locator: Methods Image analysis\ncondition_binding: S1 fluorescence\nvalues: \n  neurons_per_group: 25\n  animals_per_group: null (as recorded in source)\n  total_measure: intensity×2D soma area",
+      "Text7_Reference": [
+        "Structured evidence: full/M_N1334/evidence/independent_review/scientific_candidate_v1.json#/units/6; SHA-256: 9962d9cec8d67c5a46c1d09ac4dd0636842c00184d3945a948e7ad83aea35db7; DOI: https://doi.org/10.1038/srep38848"
+      ]
+    },
+    {
+      "Text8": "units:\nunit_id: U008\nkind: result\nclaim: Equal prolonged exposure differs from endpoint comparisons:42°C does not differ significantly from37°C across48h,47°C differs,52/57°C show larger decline.\nsource_locator: Supplementary Fig2; main Results fluorescence\ncondition_binding: S1 timecourse\nvalues: \n  times_h: \n    [1] 0\n    [2] 12\n    [3] 24\n    [4] 36\n    [5] 48\n  error_type: SEM\n  test: mixed-design two-way ANOVA\n  S2_47_vs37: *P<.05\n  S2_52_57_vs37: ***P<.001",
+      "Text8_Reference": [
+        "Structured evidence: full/M_N1334/evidence/independent_review/scientific_candidate_v1.json#/units/7; SHA-256: 9962d9cec8d67c5a46c1d09ac4dd0636842c00184d3945a948e7ad83aea35db7; DOI: https://doi.org/10.1038/srep38848"
+      ]
+    },
+    {
+      "Text9": "units:\nunit_id: U009\nkind: result\nclaim: Imaging depth is contrast decay to1/e of maximum/surface contrast, not deepest visible structure.\nsource_locator: Fig3; Methods Image analysis; equation1\ncondition_binding: S2 microglia\nvalues: \n  formula: sqrt(sum((I-Imean)^2)/(n-1))\n  normalization: contrast profile normalized; imaging depth threshold1/e",
+      "Text9_Reference": [
+        "Structured evidence: full/M_N1334/evidence/independent_review/scientific_candidate_v1.json#/units/8; SHA-256: 9962d9cec8d67c5a46c1d09ac4dd0636842c00184d3945a948e7ad83aea35db7; DOI: https://doi.org/10.1038/srep38848"
+      ]
+    },
+    {
+      "Text10": "units:\nunit_id: U010\nkind: time\nclaim: 1mm depth specimens use6h or12h SDS at37/42/47°C, then PBST rinse and70%wt/vol sorbitol5h.\nsource_locator: Methods Selection of clearing temperature; Fig3\ncondition_binding: S2 1mm depth experiment\nvalues: \n  SDS_h: \n    [1] 6\n    [2] 12\n  sorbitol_h: 5\n  temperature_C: \n    [1] 37\n    [2] 42\n    [3] 47\n  rinse_duration: null (as recorded in source)",
+      "Text10_Reference": [
+        "Structured evidence: full/M_N1334/evidence/independent_review/scientific_candidate_v1.json#/units/9; SHA-256: 9962d9cec8d67c5a46c1d09ac4dd0636842c00184d3945a948e7ad83aea35db7; DOI: https://doi.org/10.1038/srep38848"
+      ]
+    },
+    {
+      "Text11": "units:\nunit_id: U011\nkind: result\nclaim: Depth rises with time and temperature in1mm sections; plotted values are relative depth (uncleared=100%), not absolute µm at every bar.\nsource_locator: Fig3b\ncondition_binding: S2 1mm;6h/12h plus sorbitol\nvalues: \n  exact_bar_values: not tabulated; not digitized\n  significance: brackets **P<.01 as drawn",
+      "Text11_Reference": [
+        "Structured evidence: full/M_N1334/evidence/independent_review/scientific_candidate_v1.json#/units/10; SHA-256: 9962d9cec8d67c5a46c1d09ac4dd0636842c00184d3945a948e7ad83aea35db7; DOI: https://doi.org/10.1038/srep38848"
+      ]
+    },
+    {
+      "Text12": "units:\nunit_id: U012\nkind: result\nclaim: 3mm blocks provide a distinct three-day comparison: measured depths492,1120,1332µm at37,42,47°C.\nsource_locator: Supplementary Fig3; Methods Selection of clearing temperature\ncondition_binding: S2 3mm;SDS3days+sorbitol5h;16×/.8water objective\nvalues: \n  temperature_C: \n    [1] 37\n    [2] 42\n    [3] 47\n  imaging_depth_um: \n    [1] 492\n    [2] 1120\n    [3] 1332\n  fold_vs37: \n    [1] 1\n    [2] 2.28\n    [3] 2.71\n  projection_thickness_um: 20\n  WD_mm: 3",
+      "Text12_Reference": [
+        "Structured evidence: full/M_N1334/evidence/independent_review/scientific_candidate_v1.json#/units/11; SHA-256: 9962d9cec8d67c5a46c1d09ac4dd0636842c00184d3945a948e7ad83aea35db7; DOI: https://doi.org/10.1038/srep38848"
+      ]
+    },
+    {
+      "Text13": "units:\nunit_id: U013\nkind: morphology\nclaim: Linear expansion is square-root of cleared/uncleared projected area ratio (n4); sorbitol reduces but does not establish zero residual expansion.\nsource_locator: Fig4a; Methods Image analysis\ncondition_binding: S1;37/42/47°C\nvalues: \n  sample_n: 4\n  linear_not_volume: true",
+      "Text13_Reference": [
+        "Structured evidence: full/M_N1334/evidence/independent_review/scientific_candidate_v1.json#/units/12; SHA-256: 9962d9cec8d67c5a46c1d09ac4dd0636842c00184d3945a948e7ad83aea35db7; DOI: https://doi.org/10.1038/srep38848"
+      ]
+    },
+    {
+      "Text14": "units:\nunit_id: U014\nkind: morphology\nclaim: Neuronal dendritic shifts after SDS reduce after sorbitol; dendritic spines remain recognizable under37/42/47°C.\nsource_locator: Fig4b,c\ncondition_binding: S1 cortex;20×/.8dry;20µm neuron and2µm spine scale bars\nvalues: \n{}",
+      "Text14_Reference": [
+        "Structured evidence: full/M_N1334/evidence/independent_review/scientific_candidate_v1.json#/units/13; SHA-256: 9962d9cec8d67c5a46c1d09ac4dd0636842c00184d3945a948e7ad83aea35db7; DOI: https://doi.org/10.1038/srep38848"
+      ]
+    },
+    {
+      "Text15": "units:\nunit_id: U015\nkind: morphology\nclaim: 57°C specimens were soft and fragile; fine morphology assessment does not establish ultrastructure preservation because electron microscopy was not performed.\nsource_locator: Discussion paragraphs2,6\ncondition_binding: S1, high-temperature clearing\nvalues: \n{}",
+      "Text15_Reference": [
+        "Structured evidence: full/M_N1334/evidence/independent_review/scientific_candidate_v1.json#/units/14; SHA-256: 9962d9cec8d67c5a46c1d09ac4dd0636842c00184d3945a948e7ad83aea35db7; DOI: https://doi.org/10.1038/srep38848"
+      ]
+    },
+    {
+      "Text16": "units:\nunit_id: U016\nkind: compatibility\nclaim: PV-AF647 and DAPI labeling succeed after37/42/47°C SDS clearing; this is qualitative compatibility, not unchanged antigenicity or improved antibody penetration.\nsource_locator: Fig5; Discussion immunostaining\ncondition_binding: S1 1mm;temperature-specific cleared endpoints;5h sorbitol\nvalues: \n{}",
+      "Text16_Reference": [
+        "Structured evidence: full/M_N1334/evidence/independent_review/scientific_candidate_v1.json#/units/15; SHA-256: 9962d9cec8d67c5a46c1d09ac4dd0636842c00184d3945a948e7ad83aea35db7; DOI: https://doi.org/10.1038/srep38848"
+      ]
+    },
+    {
+      "Text17": "units:\nunit_id: U017\nkind: labeling\nclaim: PV and nuclear staining occupy distinct processing stages from high-temperature SDS clearing.\nsource_locator: Methods Immunostaining\ncondition_binding: S1 1mm\nvalues: \n  wash: PBST1day\n  block: PBS/.1%Triton/6%goat serum1day\n  primary: antiPV ab11427 1:400,1day\n  secondary: AF647 goat antirabbit111-607-003 1:400,1day37°C\n  DAPI: 12h roomtemperature\n  RI: 70%wt/vol sorbitol1or5h\n  unspecified: primary and block temperature not separately assigned by syntax",
+      "Text17_Reference": [
+        "Structured evidence: full/M_N1334/evidence/independent_review/scientific_candidate_v1.json#/units/16; SHA-256: 9962d9cec8d67c5a46c1d09ac4dd0636842c00184d3945a948e7ad83aea35db7; DOI: https://doi.org/10.1038/srep38848"
+      ]
+    },
+    {
+      "Text18": "units:\nunit_id: U018\nkind: compatibility\nclaim: Anti-GFP relabeling after47°C clearing overlaps endogenousGFP at superficial, middle and deep sampled bands; retained endogenous signal and antibody signal remain distinct channels.\nsource_locator: Supplementary Fig4; Methods Immunostaining\ncondition_binding: S1 1mm\nvalues: \n  primary: AB3080 1:200 2days\n  secondary: AF633 A-21070 1:200 2days\n  depth_bands_um: \n    [1]       [1] 0\n      [2] 200\n    [2]       [1] 400\n      [2] 600\n    [3]       [1] 800\n      [2] 1000\n  channel_pseudocolors: \n    endogenous: green\n    antiGFP: red",
+      "Text18_Reference": [
+        "Structured evidence: full/M_N1334/evidence/independent_review/scientific_candidate_v1.json#/units/17; SHA-256: 9962d9cec8d67c5a46c1d09ac4dd0636842c00184d3945a948e7ad83aea35db7; DOI: https://doi.org/10.1038/srep38848"
+      ]
+    },
+    {
+      "Text19": "units:\nunit_id: U019\nkind: compatibility\nclaim: A separate PV repeat uses1h sorbitol, unlike Fig5 5h; different intensities cannot quantitatively demonstrate antigen retention equivalence.\nsource_locator: Supplementary Fig5; Discussion\ncondition_binding: S1 1mm,37/42/47°C\nvalues: \n  scale_um: 50\n  RI_h: 1",
+      "Text19_Reference": [
+        "Structured evidence: full/M_N1334/evidence/independent_review/scientific_candidate_v1.json#/units/18; SHA-256: 9962d9cec8d67c5a46c1d09ac4dd0636842c00184d3945a948e7ad83aea35db7; DOI: https://doi.org/10.1038/srep38848"
+      ]
+    },
+    {
+      "Text20": "units:\nunit_id: U020\nkind: result\nclaim: YFP declines with elevated temperature; the GFP compromise cannot be generalized to YFP, all fluorophores or all tissues.\nsource_locator: Supplementary Fig6; Discussion\ncondition_binding: S3;37/42/47/52/57°C;10×/.5objective\nvalues: \n  mean_and_total: separate plots\n  exact_values: not tabulated, no precision inferred\n  error_type: SD",
+      "Text20_Reference": [
+        "Structured evidence: full/M_N1334/evidence/independent_review/scientific_candidate_v1.json#/units/19; SHA-256: 9962d9cec8d67c5a46c1d09ac4dd0636842c00184d3945a948e7ad83aea35db7; DOI: https://doi.org/10.1038/srep38848"
+      ]
+    },
+    {
+      "Text21": "units:\nunit_id: U021\nkind: mechanistic_hypothesis\nclaim: Micelle-size changes and alkaline fluorescence enhancement are author explanations, not direct measurements of micelle number, protein loss or hybrid ultrastructure.\nsource_locator: Discussion\ncondition_binding: Explanatory hypotheses; not new experimental results\nvalues: \n{}",
+      "Text21_Reference": [
+        "Structured evidence: full/M_N1334/evidence/independent_review/scientific_candidate_v1.json#/units/20; SHA-256: 9962d9cec8d67c5a46c1d09ac4dd0636842c00184d3945a948e7ad83aea35db7; DOI: https://doi.org/10.1038/srep38848"
+      ]
+    },
+    {
+      "Text22": "units:\nunit_id: U022\nkind: limitation\nclaim: Fluorescence measurements did not measure GFP protein washout; quantitative antigenicity was not determined.\nsource_locator: Discussion\ncondition_binding: All reported compatibility conclusions bounded accordingly\nvalues: \n{}",
+      "Text22_Reference": [
+        "Structured evidence: full/M_N1334/evidence/independent_review/scientific_candidate_v1.json#/units/21; SHA-256: 9962d9cec8d67c5a46c1d09ac4dd0636842c00184d3945a948e7ad83aea35db7; DOI: https://doi.org/10.1038/srep38848"
+      ]
+    },
+    {
+      "Text23": "units:\nunit_id: U023\nkind: limitation\nclaim: SDS residue before sorbitol can cause whitening and reduced transparency; no optimized rinse schedule is invented.\nsource_locator: Discussion tissue expansion\ncondition_binding: Reported qualitative observation\nvalues: \n{}",
+      "Text23_Reference": [
+        "Structured evidence: full/M_N1334/evidence/independent_review/scientific_candidate_v1.json#/units/22; SHA-256: 9962d9cec8d67c5a46c1d09ac4dd0636842c00184d3945a948e7ad83aea35db7; DOI: https://doi.org/10.1038/srep38848"
+      ]
+    },
+    {
+      "Text24": "units:\nunit_id: U024\nkind: scope\nclaim: Authors propose lower temperature for thicker/longer exposures and broader passive-method applications; those extensions are recommendations/hypotheses, not validation in all tissues.\nsource_locator: Discussion final paragraphs; Conclusions\ncondition_binding: Keep3mm specific data separate from larger-specimen future work\nvalues: \n{}",
+      "Text24_Reference": [
+        "Structured evidence: full/M_N1334/evidence/independent_review/scientific_candidate_v1.json#/units/23; SHA-256: 9962d9cec8d67c5a46c1d09ac4dd0636842c00184d3945a948e7ad83aea35db7; DOI: https://doi.org/10.1038/srep38848"
+      ]
+    },
+    {
+      "Text25": "findings:\nIndependently read Methods [23]: imaging-depth tests limited to 37/42/47 C, not five-temperature series.",
+      "Text25_Reference": [
+        "Structured evidence: full/M_N1334/evidence/parent_independent_delta_review.json#/findings/0; SHA-256: 5e1d37c9d55bb2ed8657c370ce6a8ea27a493cbf50e61f3ec615a8d31bf55d51; DOI: https://doi.org/10.1038/srep38848"
+      ]
+    },
+    {
+      "Text26": "findings:\nIndependently read Methods [27] and Results [8], viewed Fig2 and S6. Per-neuron B/A and mean intensity times area are distinct from unexplained plotted normalization; do not infer absolute protein retention or missing denominator.",
+      "Text26_Reference": [
+        "Structured evidence: full/M_N1334/evidence/parent_independent_delta_review.json#/findings/1; SHA-256: 5e1d37c9d55bb2ed8657c370ce6a8ea27a493cbf50e61f3ec615a8d31bf55d51; DOI: https://doi.org/10.1038/srep38848"
+      ]
+    },
+    {
+      "Text27": "findings:\nIndependently viewed S2: 47 C versus37 C single-star P<0.05, 52/57 triple-star P<0.001, 42 nonsignificant not equivalence. Endpoint and fixed-duration remain distinct.",
+      "Text27_Reference": [
+        "Structured evidence: full/M_N1334/evidence/parent_independent_delta_review.json#/findings/2; SHA-256: 5e1d37c9d55bb2ed8657c370ce6a8ea27a493cbf50e61f3ec615a8d31bf55d51; DOI: https://doi.org/10.1038/srep38848"
+      ]
+    }
+  ],
+  "Note": [
+    {
+      "Text1": "Paper M_N1334; source coverage: full; source release status: candidate_pending_gates; source default_eligible: false. Read this study as a whole with its sample, experimental, measurement and limitation fields. All selected source files and mandatory support in the accompanying archive apply jointly. Import does not promote candidate status, resolve contradictions, or turn review citations into independent primary experiments. Application includes source-labelled protocols, comparisons and results; labels within each Text retain their actual role.",
+      "Text1_Reference": [
+        "DOI: https://doi.org/10.1038/srep38848",
+        "Evidence-layer structured paraphrase; not a verbatim quotation. Source release: https://github.com/404NotFound422/TOCAgentProject/tree/5e3a711befb3952a2e39f4d53fc9c9f1a7ac0d22/KnowledgeBase/evidence_expansion_20261019",
+        "Local source archive: ../literature_evidence/2026-11-11/source_release.zip; member: full/M_N1334/version_selection.json"
+      ]
+    },
+    {
+      "Text2": "Selected version and mandatory composition:\npaper_id: M_N1334\nstatus: full\ndefault_eligible: false\nactive_scientific_files: \n  [1]     path: full/M_N1334/evidence/independent_review/scientific_candidate_v1.json\n    sha256: 9962d9cec8d67c5a46c1d09ac4dd0636842c00184d3945a948e7ad83aea35db7\n    source_member: independent_review/scientific_candidate_v1.json\n  [2]     path: full/M_N1334/evidence/independent_review/mandatory_scope_overlay_v1.json\n    sha256: ce969a3547fa6953cb05defbe265f6ca38b5baa5b7d0ea2d4af2d076ecac324f\n    source_member: independent_review/mandatory_scope_overlay_v1.json\n  [3]     path: full/M_N1334/evidence/independent_review/independent_receipt_v1.json\n    sha256: 081e22dc6165fd75ae046b8a1560a93252e1f146127a9cbfb322b6b6abc152c0\n    source_member: independent_review/independent_receipt_v1.json\n  [4]     path: full/M_N1334/evidence/parent_independent_delta_review.json\n    sha256: 5e1d37c9d55bb2ed8657c370ce6a8ea27a493cbf50e61f3ec615a8d31bf55d51\n    source_member: parent_independent_delta_review.json\n  [5]     path: full/M_N1334/evidence/acceptance_v2.json\n    sha256: 30779bce6c7a2d9523b745ad70c485cbd3b70c5e92c8887aa2a620f7b5e9583b\n    source_member: acceptance_v2.json\nacceptance: full/M_N1334/evidence/acceptance_v2.json\nmandatory_composition: All selected science, mandatory overlays, receipts, scope qualifications and additions are jointly required. Historical candidate status cannot override current acceptance.\nactive_version_and_scope: \n  paper_id: M_N1334\n  current_full_task_scope: true\n  partial: false\n  remaining_relevant_gaps: \n[]\n  package_sha256: 0955330f7adaa0d4794143cb097cc7085bd01181d609e3adb0dfe91963638756\n  original_package_sha256: 0955330f7adaa0d4794143cb097cc7085bd01181d609e3adb0dfe91963638756\n  acceptance_archive_member: acceptance_v2.json\n  active_version: Frozen24-unit science plus mandatory three scope guards and parent delta acceptance; final acceptance overrides pending metadata only\n  net_new_vs_verified117: true\n  doi_crosswalk_check: \n    doi: 10.1038/srep38848\n    historical117_matches: \n[]\n  stage_provenance: \n    R1: \n      execution_period: current_window\n      complete_current_task_scope: true\n      basis: Current R1 source coverage plus independent R2/R3 and separately verified mandatory scope overlay; R4 successful same-window query reviewed without repeat\n    R2: \n      execution_period: current_window\n      complete_current_task_scope: true\n      basis: Current R1 source coverage plus independent R2/R3 and separately verified mandatory scope overlay; R4 successful same-window query reviewed without repeat\n    R3: \n      execution_period: current_window\n      complete_current_task_scope: true\n      basis: Current R1 source coverage plus independent R2/R3 and separately verified mandatory scope overlay; R4 successful same-window query reviewed without repeat\n    R4: \n      execution_period: current_window\n      complete_current_task_scope: true\n      basis: Current R1 source coverage plus independent R2/R3 and separately verified mandatory scope overlay; R4 successful same-window query reviewed without repeat\n  counts: \n    units: 24\n    main_figures: 5\n    supplement_figures: 6\n    supplement_pages: 7\n  change_classification: \n    our_relation_or_scope_binding_error: \n      [1] Endpoint versus fixed-duration and GFP versus YFP kept separate\n      [2] Graph-normalization percentage not absolute protein retention\n      [3] Depth-testing temperature scope restricted to actual series\noriginal_member_to_release_path: \n  independent_review/scientific_candidate_v1.json: full/M_N1334/evidence/independent_review/scientific_candidate_v1.json\n  independent_review/mandatory_scope_overlay_v1.json: full/M_N1334/evidence/independent_review/mandatory_scope_overlay_v1.json\n  independent_review/independent_receipt_v1.json: full/M_N1334/evidence/independent_review/independent_receipt_v1.json\n  parent_independent_delta_review.json: full/M_N1334/evidence/parent_independent_delta_review.json\n  acceptance_v2.json: full/M_N1334/evidence/acceptance_v2.json\nactive_reference_aliases: \n  independent_review/scientific_candidate_v1.json: full/M_N1334/evidence/independent_review/scientific_candidate_v1.json\n  independent_review/mandatory_scope_overlay_v1.json: full/M_N1334/evidence/independent_review/mandatory_scope_overlay_v1.json\n  independent_review/independent_receipt_v1.json: full/M_N1334/evidence/independent_review/independent_receipt_v1.json\n  parent_independent_delta_review.json: full/M_N1334/evidence/parent_independent_delta_review.json\n  acceptance_v2.json: full/M_N1334/evidence/acceptance_v2.json\n  independent_review/retrieval.json: full/M_N1334/support/independent_review/retrieval.json\n  independent_review/R1_receipt_v1.json: full/M_N1334/support/independent_review/R1_receipt_v1.json\n  paper_completion/M_N1334/sources/retrieval.json: full/M_N1334/support/independent_review/retrieval.json\nrequired_supporting_files: \n  [1]     paper_id: M_N1334\n    path: full/M_N1334/support/independent_review/retrieval.json\n    source_member: independent_review/retrieval.json\n    source_package_sha256: 0955330f7adaa0d4794143cb097cc7085bd01181d609e3adb0dfe91963638756\n    sha256: 03aaf57180b24519b179fc7d8b8a8754d6b040acc8d379601a3e09afc4aa851d\n    source_sha256: 03aaf57180b24519b179fc7d8b8a8754d6b040acc8d379601a3e09afc4aa851d\n    bytes: 506\n    role: required_audit_or_scope_support_referenced_by_active_evidence\n    transformed: false\n  [2]     paper_id: M_N1334\n    path: full/M_N1334/support/independent_review/R1_receipt_v1.json\n    source_member: independent_review/R1_receipt_v1.json\n    source_package_sha256: 0955330f7adaa0d4794143cb097cc7085bd01181d609e3adb0dfe91963638756\n    sha256: 4fb58e2f9f0e6df8ca01ddf958a6f97c2896a89d6444dc6ad52dd9582b888a7b\n    source_sha256: 4fb58e2f9f0e6df8ca01ddf958a6f97c2896a89d6444dc6ad52dd9582b888a7b\n    bytes: 907\n    role: required_audit_or_scope_support_referenced_by_active_evidence\n    transformed: false\nreference_resolution_policy: Resolve explicit aliases only to selected SHA-bound science/support. Historical/source materials never auto-load. New candidate remains ineligible pending gates.\nsource_asset_policy: Original source assets are not republished; accepted scientific members and mandatory correction layers are preserved.\nactive_reference_resolution_evidence: \n  [1]     source_file: full/M_N1334/evidence/independent_review/independent_receipt_v1.json\n    json_pointer: /R4_evidence/path\n    reference: paper_completion/M_N1334/sources/retrieval.json\n    resolved_release_path: full/M_N1334/support/independent_review/retrieval.json\n    binding_basis: same_paper_exact_source_sha256\n  [2]     source_file: full/M_N1334/evidence/independent_review/independent_receipt_v1.json\n    json_pointer: /source_hashes/2/path\n    reference: paper_completion/M_N1334/sources/retrieval.json\n    resolved_release_path: full/M_N1334/support/independent_review/retrieval.json\n    binding_basis: explicit_verified_member_or_equivalent_original\nexternal_or_historical_references: \n  [1]     source_file: full/M_N1334/evidence/independent_review/independent_receipt_v1.json\n    json_pointer: /source_hashes/0/path\n    reference: paper_completion/M_N1334/sources/reading.txt\n    automatic_loading: false\n    role: external_original_source_payload_not_republished\n  [2]     source_file: full/M_N1334/evidence/independent_review/independent_receipt_v1.json\n    json_pointer: /source_hashes/4/path\n    reference: paper_completion/M_N1334/sources/supp.txt\n    automatic_loading: false\n    role: external_original_source_payload_not_republished\nrelease_status: candidate_pending_gates\nverified_historical_filename_equivalences: \n[]",
+      "Text2_Reference": [
+        "DOI: https://doi.org/10.1038/srep38848",
+        "Evidence-layer structured paraphrase; not a verbatim quotation. Source release: https://github.com/404NotFound422/TOCAgentProject/tree/5e3a711befb3952a2e39f4d53fc9c9f1a7ac0d22/KnowledgeBase/evidence_expansion_20261019",
+        "Local source archive: ../literature_evidence/2026-11-11/source_release.zip; member: full/M_N1334/version_selection.json"
+      ]
+    },
+    {
+      "Text3": "limitations:\nNo universal total workflow time inferred; endpoint/timecourse/RI/staining stages separate.",
+      "Text3_Reference": [
+        "Structured evidence: full/M_N1334/evidence/independent_review/scientific_candidate_v1.json#/limitations/0; SHA-256: 9962d9cec8d67c5a46c1d09ac4dd0636842c00184d3945a948e7ad83aea35db7; DOI: https://doi.org/10.1038/srep38848"
+      ]
+    },
+    {
+      "Text4": "limitations:\nNo quantitative antigenicity or protein-mass conservation claimed.",
+      "Text4_Reference": [
+        "Structured evidence: full/M_N1334/evidence/independent_review/scientific_candidate_v1.json#/limitations/1; SHA-256: 9962d9cec8d67c5a46c1d09ac4dd0636842c00184d3945a948e7ad83aea35db7; DOI: https://doi.org/10.1038/srep38848"
+      ]
+    },
+    {
+      "Text5": "limitations:\nYFP animal line/age and exact plotted numeric series not fully reported.",
+      "Text5_Reference": [
+        "Structured evidence: full/M_N1334/evidence/independent_review/scientific_candidate_v1.json#/limitations/2; SHA-256: 9962d9cec8d67c5a46c1d09ac4dd0636842c00184d3945a948e7ad83aea35db7; DOI: https://doi.org/10.1038/srep38848"
+      ]
+    },
+    {
+      "Text6": "source_conflicts:\nissue: Main Results calls47–57°C differences extremely significant; Supplementary Fig2 specifically marks47°C *P<.05 and52/57 ***P<.001.\nresolution: retain figure-specific thresholds; no blanket *** for47°C",
+      "Text6_Reference": [
+        "Structured evidence: full/M_N1334/evidence/independent_review/scientific_candidate_v1.json#/source_conflicts/0; SHA-256: 9962d9cec8d67c5a46c1d09ac4dd0636842c00184d3945a948e7ad83aea35db7; DOI: https://doi.org/10.1038/srep38848"
+      ]
+    },
+    {
+      "Text7": "source_conflicts:\nissue: Introduction says tested37–52°C, Results and actual figures include57°C.\nresolution: five-temperature experimental series supported by Results/figures; preserve intro discrepancy",
+      "Text7_Reference": [
+        "Structured evidence: full/M_N1334/evidence/independent_review/scientific_candidate_v1.json#/source_conflicts/1; SHA-256: 9962d9cec8d67c5a46c1d09ac4dd0636842c00184d3945a948e7ad83aea35db7; DOI: https://doi.org/10.1038/srep38848"
+      ]
+    },
+    {
+      "Text8": "source_conflicts:\nissue: Discussion requests thicker-block future work despite existing3mm Supplementary Fig3.\nresolution: retain demonstrated3mm scope; do not erase experiment or infer whole-brain validation",
+      "Text8_Reference": [
+        "Structured evidence: full/M_N1334/evidence/independent_review/scientific_candidate_v1.json#/source_conflicts/2; SHA-256: 9962d9cec8d67c5a46c1d09ac4dd0636842c00184d3945a948e7ad83aea35db7; DOI: https://doi.org/10.1038/srep38848"
+      ]
+    },
+    {
+      "Text9": "review_time_utc:\n2026-10-19T12:30:03.507548+00:00",
+      "Text9_Reference": [
+        "Structured evidence: full/M_N1334/evidence/independent_review/independent_receipt_v1.json#/review_time_utc; SHA-256: 081e22dc6165fd75ae046b8a1560a93252e1f146127a9cbfb322b6b6abc152c0; DOI: https://doi.org/10.1038/srep38848"
+      ]
+    },
+    {
+      "Text10": "access_boundary:\nNo network calls by independent reviewer. PMC reCAPTCHA not retried. Existing permitted local originals only.",
+      "Text10_Reference": [
+        "Structured evidence: full/M_N1334/evidence/independent_review/independent_receipt_v1.json#/access_boundary; SHA-256: 081e22dc6165fd75ae046b8a1560a93252e1f146127a9cbfb322b6b6abc152c0; DOI: https://doi.org/10.1038/srep38848"
+      ]
+    },
+    {
+      "Text11": "limits:\nSource ambiguity retained; no graph values digitized as exact values.",
+      "Text11_Reference": [
+        "Structured evidence: full/M_N1334/evidence/independent_review/independent_receipt_v1.json#/limits/0; SHA-256: 081e22dc6165fd75ae046b8a1560a93252e1f146127a9cbfb322b6b6abc152c0; DOI: https://doi.org/10.1038/srep38848"
+      ]
+    },
+    {
+      "Text12": "limits:\nNot human expert validation or executable protocol certification.",
+      "Text12_Reference": [
+        "Structured evidence: full/M_N1334/evidence/independent_review/independent_receipt_v1.json#/limits/1; SHA-256: 081e22dc6165fd75ae046b8a1560a93252e1f146127a9cbfb322b6b6abc152c0; DOI: https://doi.org/10.1038/srep38848"
+      ]
+    },
+    {
+      "Text13": "limits:\nNo protein mass, universal fluorophore compatibility, or whole-brain validation inferred.",
+      "Text13_Reference": [
+        "Structured evidence: full/M_N1334/evidence/independent_review/independent_receipt_v1.json#/limits/2; SHA-256: 081e22dc6165fd75ae046b8a1560a93252e1f146127a9cbfb322b6b6abc152c0; DOI: https://doi.org/10.1038/srep38848"
+      ]
+    },
+    {
+      "Text14": "Source version and scope record (not an additional scientific claim): acceptance_v2:\npaper_id: M_N1334\nstatus: full_scientific_scope_independently_reviewed\nscientific_sha256: 9962d9cec8d67c5a46c1d09ac4dd0636842c00184d3945a948e7ad83aea35db7\nmandatory_overlay_sha256: ce969a3547fa6953cb05defbe265f6ca38b5baa5b7d0ea2d4af2d076ecac324f\nindependent_receipt_sha256: 081e22dc6165fd75ae046b8a1560a93252e1f146127a9cbfb322b6b6abc152c0\nparent_delta_receipt_sha256: 5e1d37c9d55bb2ed8657c370ce6a8ea27a493cbf50e61f3ec615a8d31bf55d51\nunit_count: 24\noperational_readiness: false\nexpert_human_review: false\nrounds: \n  [1] R1\n  [2] R2\n  [3] R3\n  [4] R4\ncurrent_window_R4: existing successful query independently reviewed, not repeated\nactive_scientific_projection: scientific_candidate_v1.json + mandatory_scope_overlay_v1.json; acceptance overrides candidate pending metadata only",
+      "Text14_Reference": [
+        "Structured evidence: full/M_N1334/evidence/acceptance_v2.json#; SHA-256: 30779bce6c7a2d9523b745ad70c485cbd3b70c5e92c8887aa2a620f7b5e9583b; DOI: https://doi.org/10.1038/srep38848"
+      ]
+    }
+  ]
+}

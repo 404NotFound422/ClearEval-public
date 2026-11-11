@@ -1,0 +1,496 @@
+{
+  "TOC_Method_Name": {
+    "Text": "Not specified as a single method in the selected evidence records",
+    "Text_Reference": [
+      "DOI: https://doi.org/10.1117/1.nph.8.3.035007",
+      "Evidence-layer structured paraphrase; not a verbatim quotation. Source release: https://github.com/404NotFound422/TOCAgentProject/tree/5e3a711befb3952a2e39f4d53fc9c9f1a7ac0d22/KnowledgeBase/evidence_expansion_20261019",
+      "Local source archive: ../literature_evidence/2026-11-11/source_release.zip; member: full/M_N0037/version_selection.json"
+    ]
+  },
+  "General_Description": {
+    "Text": "FDISCO+: a clearing method for robust fluorescence preservation of cleared samples. (2021). Evidence category: method. This card preserves the evidence layer's structured statements and their original field labels; it does not add a new literature review or certify benchmark scoring thresholds.",
+    "Text_Reference": [
+      "DOI: https://doi.org/10.1117/1.nph.8.3.035007",
+      "Evidence-layer structured paraphrase; not a verbatim quotation. Source release: https://github.com/404NotFound422/TOCAgentProject/tree/5e3a711befb3952a2e39f4d53fc9c9f1a7ac0d22/KnowledgeBase/evidence_expansion_20261019",
+      "Local source archive: ../literature_evidence/2026-11-11/source_release.zip; member: full/M_N0037/version_selection.json"
+    ]
+  },
+  "Tissue_Types": [
+    {
+      "Text1": "sample_frame:\nspecies: mouse\ntissue: brain\nstrains: \n  [1] Thy1-GFP-M\n  [2] CX3CR1-GFP\n  [3] C57BL/6J\nage_global: 6–12 weeks\nfixation: 4%PFA postfixed overnight4°C; prior fixation history in2.1\nsource_locators: \n  [1]     source_id: S1\n    block_zero_based: 7\n    section: sec2.1\n    element: p",
+      "Text1_Reference": [
+        "Structured evidence: full/M_N0037/evidence/record.json#/sample_frame; SHA-256: dc3af283406917fa5f484f0e6d4795b0e9f5fdf2cd12bfaf3fa7e7e80c505e41; DOI: https://doi.org/10.1117/1.nph.8.3.035007"
+      ]
+    }
+  ],
+  "Time_Consumption": [
+    {
+      "Text1": "time_roles:\nclearing: 1mm derived5.5h;wholebrain derived>75h\nlabeling: PI24h+wash6h\nimaging: 3–4h per wholebrain\nstorage: GFP longitudinal0/3/7/14days\nreagent_assay: 0/9/24/72h peroxide readout\nshort_preservation: 0/3/6/9h post-clearing\nwarning: 上述不同时间角色不能加总为统一流程总时长",
+      "Text1_Reference": [
+        "Structured evidence: full/M_N0037/evidence/record.json#/time_roles; SHA-256: dc3af283406917fa5f484f0e6d4795b0e9f5fdf2cd12bfaf3fa7e7e80c505e41; DOI: https://doi.org/10.1117/1.nph.8.3.035007"
+      ]
+    }
+  ],
+  "Tissue_Deformation": [],
+  "Fluorescence_Compatibility": [
+    {
+      "Text1": "markers:\nmarker_id: GFP_Thy1\nlabel: endogenous GFP\nsample: Thy1-GFP-M brain\ntarget: neurons\nlabel_mode: pre-existing transgenic fluorescence; no labeling incubation required here\nsource_locators: \n  [1]     source_id: S1\n    block_zero_based: 7\n    section: sec2.1\n    element: p\n  [2]     source_id: S1\n    block_zero_based: 29\n    section: sec2.8\n    element: p\n  [3]     source_id: S1\n    block_zero_based: 40\n    section: sec3.2\n    element: fig\n  [4]     source_id: S1\n    block_zero_based: 44\n    section: sec3.3\n    element: fig\n  [5]     source_id: S1\n    block_zero_based: 47\n    section: sec3.4\n    element: fig",
+      "Text1_Reference": [
+        "Structured evidence: full/M_N0037/evidence/record.json#/markers/0; SHA-256: dc3af283406917fa5f484f0e6d4795b0e9f5fdf2cd12bfaf3fa7e7e80c505e41; DOI: https://doi.org/10.1117/1.nph.8.3.035007"
+      ]
+    },
+    {
+      "Text2": "markers:\nmarker_id: GFP_CX3CR1\nlabel: endogenous GFP\nsample: CX3CR1-GFP brain\ntarget: CX3CR1-GFP positive cells;图1形态兼容小胶质细胞但不新增身份验证\nlabel_mode: pre-existing transgenic fluorescence\nsource_locators: \n  [1]     source_id: S1\n    block_zero_based: 7\n    section: sec2.1\n    element: p\n  [2]     source_id: S1\n    block_zero_based: 28\n    section: sec2.8\n    element: p\n  [3]     source_id: S1\n    block_zero_based: 34\n    section: sec3.1\n    element: fig\n  [4]     source_id: S1\n    block_zero_based: 36\n    section: sec3.1\n    element: p",
+      "Text2_Reference": [
+        "Structured evidence: full/M_N0037/evidence/record.json#/markers/1; SHA-256: dc3af283406917fa5f484f0e6d4795b0e9f5fdf2cd12bfaf3fa7e7e80c505e41; DOI: https://doi.org/10.1117/1.nph.8.3.035007"
+      ]
+    },
+    {
+      "Text3": "markers:\nmarker_id: PI\nlabel: propidium iodide\nsample: 1-mm brain slices; strain not separately assigned\ntarget: nuclei\nlabel_mode: ex vivo dye staining P_PI\nsource_locators: \n  [1]     source_id: S1\n    block_zero_based: 19\n    section: sec2.5\n    element: p\n  [2]     source_id: S1\n    block_zero_based: 39\n    section: sec3.2\n    element: p\n  [3]     source_id: S1\n    block_zero_based: 40\n    section: sec3.2\n    element: fig",
+      "Text3_Reference": [
+        "Structured evidence: full/M_N0037/evidence/record.json#/markers/2; SHA-256: dc3af283406917fa5f484f0e6d4795b0e9f5fdf2cd12bfaf3fa7e7e80c505e41; DOI: https://doi.org/10.1117/1.nph.8.3.035007"
+      ]
+    },
+    {
+      "Text4": "markers:\nmarker_id: CD31_A647\nlabel: Alexa Fluor 647 conjugated anti-mouse CD31\nsample: pre-labeled C57BL/6J brain, postfixed and sectioned 1 mm\ntarget: vasculature\nlabel_mode: pre-labeled before tissue collection, not ex vivo antibody penetration or secondary-antibody method\npreparation_scope_note: 原文标记在取材前进行；本记录不展开动物注射或灌流操作\nsource_locators: \n  [1]     source_id: S1\n    block_zero_based: 20\n    section: sec2.5\n    element: p\n  [2]     source_id: S1\n    block_zero_based: 39\n    section: sec3.2\n    element: p\n  [3]     source_id: S1\n    block_zero_based: 40\n    section: sec3.2\n    element: fig",
+      "Text4_Reference": [
+        "Structured evidence: full/M_N0037/evidence/record.json#/markers/3; SHA-256: dc3af283406917fa5f484f0e6d4795b0e9f5fdf2cd12bfaf3fa7e7e80c505e41; DOI: https://doi.org/10.1117/1.nph.8.3.035007"
+      ]
+    }
+  ],
+  "Preservation_Stability": [],
+  "Application": [
+    {
+      "Text1": "purpose:\n通过DBE抗氧化条件使透明样本室温保存与长时间/重复成像相容；脱水仍为低温碱性。",
+      "Text1_Reference": [
+        "Structured evidence: full/M_N0037/evidence/record.json#/purpose; SHA-256: dc3af283406917fa5f484f0e6d4795b0e9f5fdf2cd12bfaf3fa7e7e80c505e41; DOI: https://doi.org/10.1117/1.nph.8.3.035007"
+      ]
+    },
+    {
+      "Text2": "protocols:\nprotocol_id: P0\nname: 已制备脑组织固定后状态\nsample_scope: 小鼠脑组织；不展开动物处理及模型构建\nsteps: \n  [1]     stage: postfixation\n    operation: 已取得脑组织后固定\n    conditions: 4% PFA;4°C\n    duration_original: overnight\n    time_role: stage_duration\n    uncertainty: \n  [2]     stage: sectioning\n    operation: 按用途保留整脑或切冠状脑片\n    conditions: 1 mm or 2 mm; vibratome\n    duration_original: not_reported\n    time_role: stage_duration\n    uncertainty: \nsource_locators: \n  [1]     source_id: S1\n    block_zero_based: 7\n    section: sec2.1\n    element: p\nboundary: 原文还报告PBS/PFA灌流；仅作为固定来源，不提供动物操作流程",
+      "Text2_Reference": [
+        "Structured evidence: full/M_N0037/evidence/record.json#/protocols/0; SHA-256: dc3af283406917fa5f484f0e6d4795b0e9f5fdf2cd12bfaf3fa7e7e80c505e41; DOI: https://doi.org/10.1117/1.nph.8.3.035007"
+      ]
+    },
+    {
+      "Text3": "protocols:\nprotocol_id: P_slice_e\nname: 1-mm-thick sections eFDISCO+\nsample_scope: 1-mm-thick sections\nsteps: \n  [1]     stage: dehydration\n    operation: 50% (v/v) THF脱水\n    conditions: pH about 9.0;4–8°C;dark;slight shaking\n    duration_original: 1 h\n    time_role: stage_duration\n    uncertainty: \n  [2]     stage: dehydration\n    operation: 70% (v/v) THF脱水\n    conditions: pH about 9.0;4–8°C;dark;slight shaking\n    duration_original: 1 h\n    time_role: stage_duration\n    uncertainty: \n  [3]     stage: dehydration\n    operation: 80% (v/v) THF脱水\n    conditions: pH about 9.0;4–8°C;dark;slight shaking\n    duration_original: 1 h\n    time_role: stage_duration\n    uncertainty: \n  [4]     stage: dehydration\n    operation: 100% (v/v) THF脱水\n    conditions: pH about 9.0;4–8°C;dark;slight shaking\n    duration_original: 1 h\n    time_role: stage_duration\n    uncertainty: \n  [5]     stage: dehydration\n    operation: 100% (v/v) THF脱水\n    conditions: pH about 9.0;4–8°C;dark;slight shaking\n    duration_original: 1 h\n    time_role: stage_duration\n    uncertainty: \n  [6]     stage: RI_matching\n    operation: 转入折射率匹配介质\n    conditions: DBE + 0.5% (w/v) EDTP;RT;dark;slight shaking\n    duration_original: 30 min\n    time_role: stage_duration\n    uncertainty: \n  [7]     stage: storage\n    operation: 透明后在相应介质保存\n    conditions: DBE + 0.5% (w/v) EDTP;RT\n    duration_original: not_reported as general upper limit\n    time_role: post_clearing_storage\n    uncertainty: RT explicitly stated; continued immersion in same final medium is contextual, storage exchange/volume/light condition not separately specified\nsource_locators: \n  [1]     source_id: S1\n    block_zero_based: 10\n    section: sec2.2\n    element: p\n  [2]     source_id: S1\n    block_zero_based: 15\n    section: sec2.4\n    element: p\n  [3]     source_id: S1\n    block_zero_based: 17\n    section: sec2.4\n    element: p\n  [4]     source_id: S1\n    block_zero_based: 37\n    section: sec3.1\n    element: p\ncore_clearing_time: \n  value: 5.5 h\n  status: derived_stage_sum\n  calculation: 5 × 1 h + 0.5 h\n  excludes: fixation, labeling, imaging, storage, transfer overhead\nwhole_workflow_time: not_reported; not equal to core clearing sum",
+      "Text3_Reference": [
+        "Structured evidence: full/M_N0037/evidence/record.json#/protocols/1; SHA-256: dc3af283406917fa5f484f0e6d4795b0e9f5fdf2cd12bfaf3fa7e7e80c505e41; DOI: https://doi.org/10.1117/1.nph.8.3.035007"
+      ]
+    },
+    {
+      "Text4": "protocols:\nprotocol_id: P_slice_v\nname: 1-mm-thick sections vFDISCO+\nsample_scope: 1-mm-thick sections\nsteps: \n  [1]     stage: dehydration\n    operation: 50% (v/v) THF脱水\n    conditions: pH about 9.0;4–8°C;dark;slight shaking\n    duration_original: 1 h\n    time_role: stage_duration\n    uncertainty: \n  [2]     stage: dehydration\n    operation: 70% (v/v) THF脱水\n    conditions: pH about 9.0;4–8°C;dark;slight shaking\n    duration_original: 1 h\n    time_role: stage_duration\n    uncertainty: \n  [3]     stage: dehydration\n    operation: 80% (v/v) THF脱水\n    conditions: pH about 9.0;4–8°C;dark;slight shaking\n    duration_original: 1 h\n    time_role: stage_duration\n    uncertainty: \n  [4]     stage: dehydration\n    operation: 100% (v/v) THF脱水\n    conditions: pH about 9.0;4–8°C;dark;slight shaking\n    duration_original: 1 h\n    time_role: stage_duration\n    uncertainty: \n  [5]     stage: dehydration\n    operation: 100% (v/v) THF脱水\n    conditions: pH about 9.0;4–8°C;dark;slight shaking\n    duration_original: 1 h\n    time_role: stage_duration\n    uncertainty: \n  [6]     stage: RI_matching\n    operation: 转入折射率匹配介质\n    conditions: DBE + 0.5% (v/v) vitamin E;RT;dark;slight shaking\n    duration_original: 30 min\n    time_role: stage_duration\n    uncertainty: \n  [7]     stage: storage\n    operation: 透明后在相应介质保存\n    conditions: DBE + 0.5% (v/v) vitamin E;RT\n    duration_original: not_reported as general upper limit\n    time_role: post_clearing_storage\n    uncertainty: RT explicitly stated; continued immersion in same final medium is contextual, storage exchange/volume/light condition not separately specified\nsource_locators: \n  [1]     source_id: S1\n    block_zero_based: 10\n    section: sec2.2\n    element: p\n  [2]     source_id: S1\n    block_zero_based: 15\n    section: sec2.4\n    element: p\n  [3]     source_id: S1\n    block_zero_based: 17\n    section: sec2.4\n    element: p\n  [4]     source_id: S1\n    block_zero_based: 37\n    section: sec3.1\n    element: p\ncore_clearing_time: \n  value: 5.5 h\n  status: derived_stage_sum\n  calculation: 5 × 1 h + 0.5 h\n  excludes: fixation, labeling, imaging, storage, transfer overhead\nwhole_workflow_time: not_reported; not equal to core clearing sum",
+      "Text4_Reference": [
+        "Structured evidence: full/M_N0037/evidence/record.json#/protocols/2; SHA-256: dc3af283406917fa5f484f0e6d4795b0e9f5fdf2cd12bfaf3fa7e7e80c505e41; DOI: https://doi.org/10.1117/1.nph.8.3.035007"
+      ]
+    },
+    {
+      "Text5": "protocols:\nprotocol_id: P_whole_e\nname: whole brain eFDISCO+\nsample_scope: whole brain\nsteps: \n  [1]     stage: dehydration\n    operation: 50% (v/v) THF脱水\n    conditions: pH about 9.0;4–8°C;dark;slight shaking\n    duration_original: 12 h\n    time_role: stage_duration\n    uncertainty: \n  [2]     stage: dehydration\n    operation: 70% (v/v) THF脱水\n    conditions: pH about 9.0;4–8°C;dark;slight shaking\n    duration_original: 12 h\n    time_role: stage_duration\n    uncertainty: \n  [3]     stage: dehydration\n    operation: 80% (v/v) THF脱水\n    conditions: pH about 9.0;4–8°C;dark;slight shaking\n    duration_original: 12 h\n    time_role: stage_duration\n    uncertainty: \n  [4]     stage: dehydration\n    operation: 100% (v/v) THF脱水\n    conditions: pH about 9.0;4–8°C;dark;slight shaking\n    duration_original: 12 h\n    time_role: stage_duration\n    uncertainty: \n  [5]     stage: dehydration\n    operation: 100% (v/v) THF脱水\n    conditions: pH about 9.0;4–8°C;dark;slight shaking\n    duration_original: 12 h\n    time_role: stage_duration\n    uncertainty: \n  [6]     stage: dehydration\n    operation: 100% (v/v) THF脱水\n    conditions: pH about 9.0;4–8°C;dark;slight shaking\n    duration_original: 12 h\n    time_role: stage_duration\n    uncertainty: \n  [7]     stage: RI_matching\n    operation: 转入折射率匹配介质\n    conditions: DBE + 0.5% (w/v) EDTP;RT;dark;slight shaking\n    duration_original: >3 h\n    time_role: stage_duration\n    uncertainty: \n  [8]     stage: storage\n    operation: 透明后在相应介质保存\n    conditions: DBE + 0.5% (w/v) EDTP;RT\n    duration_original: not_reported as general upper limit\n    time_role: post_clearing_storage\n    uncertainty: RT explicitly stated; continued immersion in same final medium is contextual, storage exchange/volume/light condition not separately specified\nsource_locators: \n  [1]     source_id: S1\n    block_zero_based: 10\n    section: sec2.2\n    element: p\n  [2]     source_id: S1\n    block_zero_based: 16\n    section: sec2.4\n    element: p\n  [3]     source_id: S1\n    block_zero_based: 17\n    section: sec2.4\n    element: p\n  [4]     source_id: S1\n    block_zero_based: 37\n    section: sec3.1\n    element: p\ncore_clearing_time: \n  value: >75 h\n  status: derived_stage_sum\n  calculation: 6 × 12 h + >3 h\n  excludes: fixation, labeling, imaging, storage, transfer overhead\nwhole_workflow_time: not_reported; not equal to core clearing sum",
+      "Text5_Reference": [
+        "Structured evidence: full/M_N0037/evidence/record.json#/protocols/3; SHA-256: dc3af283406917fa5f484f0e6d4795b0e9f5fdf2cd12bfaf3fa7e7e80c505e41; DOI: https://doi.org/10.1117/1.nph.8.3.035007"
+      ]
+    },
+    {
+      "Text6": "protocols:\nprotocol_id: P_whole_v\nname: whole brain vFDISCO+\nsample_scope: whole brain\nsteps: \n  [1]     stage: dehydration\n    operation: 50% (v/v) THF脱水\n    conditions: pH about 9.0;4–8°C;dark;slight shaking\n    duration_original: 12 h\n    time_role: stage_duration\n    uncertainty: \n  [2]     stage: dehydration\n    operation: 70% (v/v) THF脱水\n    conditions: pH about 9.0;4–8°C;dark;slight shaking\n    duration_original: 12 h\n    time_role: stage_duration\n    uncertainty: \n  [3]     stage: dehydration\n    operation: 80% (v/v) THF脱水\n    conditions: pH about 9.0;4–8°C;dark;slight shaking\n    duration_original: 12 h\n    time_role: stage_duration\n    uncertainty: \n  [4]     stage: dehydration\n    operation: 100% (v/v) THF脱水\n    conditions: pH about 9.0;4–8°C;dark;slight shaking\n    duration_original: 12 h\n    time_role: stage_duration\n    uncertainty: \n  [5]     stage: dehydration\n    operation: 100% (v/v) THF脱水\n    conditions: pH about 9.0;4–8°C;dark;slight shaking\n    duration_original: 12 h\n    time_role: stage_duration\n    uncertainty: \n  [6]     stage: dehydration\n    operation: 100% (v/v) THF脱水\n    conditions: pH about 9.0;4–8°C;dark;slight shaking\n    duration_original: 12 h\n    time_role: stage_duration\n    uncertainty: \n  [7]     stage: RI_matching\n    operation: 转入折射率匹配介质\n    conditions: DBE + 0.5% (v/v) vitamin E;RT;dark;slight shaking\n    duration_original: >3 h\n    time_role: stage_duration\n    uncertainty: \n  [8]     stage: storage\n    operation: 透明后在相应介质保存\n    conditions: DBE + 0.5% (v/v) vitamin E;RT\n    duration_original: not_reported as general upper limit\n    time_role: post_clearing_storage\n    uncertainty: RT explicitly stated; continued immersion in same final medium is contextual, storage exchange/volume/light condition not separately specified\nsource_locators: \n  [1]     source_id: S1\n    block_zero_based: 10\n    section: sec2.2\n    element: p\n  [2]     source_id: S1\n    block_zero_based: 16\n    section: sec2.4\n    element: p\n  [3]     source_id: S1\n    block_zero_based: 17\n    section: sec2.4\n    element: p\n  [4]     source_id: S1\n    block_zero_based: 37\n    section: sec3.1\n    element: p\ncore_clearing_time: \n  value: >75 h\n  status: derived_stage_sum\n  calculation: 6 × 12 h + >3 h\n  excludes: fixation, labeling, imaging, storage, transfer overhead\nwhole_workflow_time: not_reported; not equal to core clearing sum",
+      "Text6_Reference": [
+        "Structured evidence: full/M_N0037/evidence/record.json#/protocols/4; SHA-256: dc3af283406917fa5f484f0e6d4795b0e9f5fdf2cd12bfaf3fa7e7e80c505e41; DOI: https://doi.org/10.1117/1.nph.8.3.035007"
+      ]
+    },
+    {
+      "Text7": "protocols:\nprotocol_id: P_PI\nname: PI核染色\nsample_scope: 1-mm-thick brain sections\nsteps: \n  [1]     stage: staining\n    operation: PI孵育\n    conditions: 1% (w/v) PI in PBST (0.2% Triton X-100/PBS);RT;slight shaking\n    duration_original: 24 h\n    time_role: stage_duration\n    uncertainty: \n  [2]     stage: wash\n    operation: PBST多次洗涤\n    conditions: PBST;temperature not_reported\n    duration_original: 6 h total\n    time_role: stage_duration\n    uncertainty: 洗涤次数及每次时长未报告，6 h不是每次\nsource_locators: \n  [1]     source_id: S1\n    block_zero_based: 19\n    section: sec2.5\n    element: p\nordering: before clearing; bound to P_slice_e/P_slice_v; source comparison FDISCO separate",
+      "Text7_Reference": [
+        "Structured evidence: full/M_N0037/evidence/record.json#/protocols/5; SHA-256: dc3af283406917fa5f484f0e6d4795b0e9f5fdf2cd12bfaf3fa7e7e80c505e41; DOI: https://doi.org/10.1117/1.nph.8.3.035007"
+      ]
+    },
+    {
+      "Text8": "protocols:\nprotocol_id: P_confocal\nname: 脑片共聚焦读出\nsample_scope: 皮层区域；同区域透明前后比较\nsteps: \n  [1]     stage: imaging\n    operation: Zeiss LSM 710共聚焦\n    conditions: Fluar 5×/0.25 dry WD12.5mm and Fluar 10×/0.5 dry WD2.0mm;before/after parameters held same\n    duration_original: not_reported\n    time_role: imaging_acquisition\n    uncertainty: \nsource_locators: \n  [1]     source_id: S1\n    block_zero_based: 24\n    section: sec2.7\n    element: p\nmissing: 激发/发射通道、激光强度、曝光/增益、z步长、采集深度未报告",
+      "Text8_Reference": [
+        "Structured evidence: full/M_N0037/evidence/record.json#/protocols/6; SHA-256: dc3af283406917fa5f484f0e6d4795b0e9f5fdf2cd12bfaf3fa7e7e80c505e41; DOI: https://doi.org/10.1117/1.nph.8.3.035007"
+      ]
+    },
+    {
+      "Text9": "protocols:\nprotocol_id: P_LSFM\nname: 整脑光片读出\nsample_scope: whole brain;半脑视频示范\nsteps: \n  [1]     stage: imaging\n    operation: 定制Bessel LSFM\n    conditions: Olympus MVX10;sCMOS Hamamatsu Flash 4.0 V2\n    duration_original: 3–4 h per whole brain\n    time_role: imaging_acquisition\n    uncertainty: \n  [2]     stage: reconstruction\n    operation: 8-bit转换、拼接和三维重建\n    conditions: Fiji Grid/Collection Stitching;Imaris7.6\n    duration_original: not_reported\n    time_role: image_processing\n    uncertainty: \nsource_locators: \n  [1]     source_id: S1\n    block_zero_based: 25\n    section: sec2.7\n    element: p\n  [2]     source_id: S1\n    block_zero_based: 30\n    section: sec2.8\n    element: p\nmissing: 数值分辨率、激发通道、光片厚度、扫描步长未报告；半脑采集时间不从整脑值外推",
+      "Text9_Reference": [
+        "Structured evidence: full/M_N0037/evidence/record.json#/protocols/7; SHA-256: dc3af283406917fa5f484f0e6d4795b0e9f5fdf2cd12bfaf3fa7e7e80c505e41; DOI: https://doi.org/10.1117/1.nph.8.3.035007"
+      ]
+    },
+    {
+      "Text10": "protocols:\nprotocol_id: P_transmission\nname: 透明度读出\nsample_scope: 清除介质内脑组织\nsteps: \n  [1]     stage: measurement\n    operation: 明场拍摄及透射光测量\n    conditions: HDC-HS900GK;USB4000 visible-NIR spectrometer;5 mm diameter illumination spot;clearing medium alone blank\n    duration_original: not_reported\n    time_role: assay_readout\n    uncertainty: \nsource_locators: \n  [1]     source_id: S1\n    block_zero_based: 22\n    section: sec2.6\n    element: p\nnormalization: sample transmitted light / clearing-medium-only blank",
+      "Text10_Reference": [
+        "Structured evidence: full/M_N0037/evidence/record.json#/protocols/8; SHA-256: dc3af283406917fa5f484f0e6d4795b0e9f5fdf2cd12bfaf3fa7e7e80c505e41; DOI: https://doi.org/10.1117/1.nph.8.3.035007"
+      ]
+    },
+    {
+      "Text11": "experiments:\nexperiment_id: E1\nname: DBE过氧化物条件筛选\nsample: 无组织；匹配介质本身\nmarker_ids: \n[]\nbranches: \n  [1] pure DBE RT\n  [2] pure DBE LT4–8°C\n  [3] DBE+EDTP 0.1/0.5/1/2% w/v RT\n  [4] DBE+vitaminE 0.1/0.5/1/2% v/v RT\n  [5] DBE+triethylamine 0.1/0.5/1/2% v/v RT\nprotocol_ids: \n[]\nmeasurement: Quantofix-25 strips; categorical concentration color ranges\ntime_points: \n  [1] 0\n  [2] 9\n  [3] 24\n  [4] 72 h\nn: not_reported\nsource_locators: \n  [1]     source_id: S1\n    block_zero_based: 13\n    section: sec2.3\n    element: p\n  [2]     source_id: S1\n    block_zero_based: 33\n    section: sec3.1\n    element: p\n  [3]     source_id: S1\n    block_zero_based: 34\n    section: sec3.1\n    element: fig\n  [4]     source_id: S1\n    block_zero_based: 35\n    section: sec3.1\n    element: p\ntime_role: reagent peroxide observation, not tissue clearing duration\nconditions: dark;RT except LT comparator\nscope: 仅记录与透明介质性能相关的比较结果；不扩展试剂制造/纯化流程",
+      "Text11_Reference": [
+        "Structured evidence: full/M_N0037/evidence/record.json#/experiments/0; SHA-256: dc3af283406917fa5f484f0e6d4795b0e9f5fdf2cd12bfaf3fa7e7e80c505e41; DOI: https://doi.org/10.1117/1.nph.8.3.035007"
+      ]
+    },
+    {
+      "Text12": "experiments:\nexperiment_id: E2\nname: 抗氧化剂浓度与脑片透明度\nsample: 2-mm-thick C57BL/6J brain slices\nmarker_ids: \n[]\nbranches: \n  [1] EDTP0.1/0.5/1/2% w/v in DBE\n  [2] vitaminE0.1/0.5/1/2% v/v in DBE\nprotocol_ids: \n[]\nmeasurement: grid-background visual transparency\ntime_points: \n[]\nn: not_reported\nsource_locators: \n  [1]     source_id: S1\n    block_zero_based: 34\n    section: sec3.1\n    element: fig\n  [2]     source_id: S1\n    block_zero_based: 35\n    section: sec3.1\n    element: p\nprotocol_gap: 2 mm脑片的THF脱水与匹配时长未单独报告；不得套用1 mm或整脑时长",
+      "Text12_Reference": [
+        "Structured evidence: full/M_N0037/evidence/record.json#/experiments/1; SHA-256: dc3af283406917fa5f484f0e6d4795b0e9f5fdf2cd12bfaf3fa7e7e80c505e41; DOI: https://doi.org/10.1117/1.nph.8.3.035007"
+      ]
+    },
+    {
+      "Text13": "experiments:\nexperiment_id: E3\nname: 室温9小时GFP短期保留\nsample: adult CX3CR1-GFP brain slices;thickness not separately explicit\nmarker_ids: \n  [1] GFP_CX3CR1\nbranches: \n  [1] DBE 0.5%EDTP RT\n  [2] DBE 0.5%vitaminE RT\n  [3] pure DBE RT\nprotocol_ids: \n  [1] P_confocal\nmeasurement: 25 µm MIP;Otsu binarization;MATLAB signal extraction/mean\ntime_points: \n  [1] 0\n  [2] 3\n  [3] 6\n  [4] 9 h\nn: 8\nsource_locators: \n  [1]     source_id: S1\n    block_zero_based: 28\n    section: sec2.8\n    element: p\n  [2]     source_id: S1\n    block_zero_based: 34\n    section: sec3.1\n    element: fig\n  [3]     source_id: S1\n    block_zero_based: 36\n    section: sec3.1\n    element: p\nnormalization: I(t)/I(0h)\ntime_role: post-clearing observation at RT\nn_unit: not_reported; do not call n animals",
+      "Text13_Reference": [
+        "Structured evidence: full/M_N0037/evidence/record.json#/experiments/2; SHA-256: dc3af283406917fa5f484f0e6d4795b0e9f5fdf2cd12bfaf3fa7e7e80c505e41; DOI: https://doi.org/10.1117/1.nph.8.3.035007"
+      ]
+    },
+    {
+      "Text14": "experiments:\nexperiment_id: E4\nname: 透明前后荧光强度比较\nsample: 1-mm Thy1-GFP-M brain sections\nmarker_ids: \n  [1] GFP_Thy1\nbranches: \n  [1] eFDISCO+\n  [2] vFDISCO+\n  [3] original FDISCO\nprotocol_ids: \n  [1] P_slice_e\n  [2] P_slice_v\n  [3] P_confocal\nmeasurement: same superficial cortical neurons before/after clearing; outlines and mean fluorescence in Fiji; shallow position avoids scattering bias\ntime_points: \n  [1] before\n  [2] cleared\nn: 16\nsource_locators: \n  [1]     source_id: S1\n    block_zero_based: 28\n    section: sec2.8\n    element: p\n  [2]     source_id: S1\n    block_zero_based: 29\n    section: sec2.8\n    element: p\n  [3]     source_id: S1\n    block_zero_based: 39\n    section: sec3.2\n    element: p\n  [4]     source_id: S1\n    block_zero_based: 40\n    section: sec3.2\n    element: fig\nnormalization: cleared/before; same superficial cortical neurons (Methods2.8;Fig2b)\nn_unit: n16; neuron-based intensity analysis but replicate definition and animal count not_reported\ncomparator_protocol: 原FDISCO比较存在，本文不完整重述其清除步骤；不能将FDISCO+RT匹配套给FDISCO\nprotocol_relationship: alternative clearing arms, not sequential combined e then v workflow; imaging/measurement shared\nbranch_protocol_mapping: \n  eFDISCO+: P_slice_e\n  vFDISCO+: P_slice_v\n  original FDISCO: comparator full protocol not separately reproduced in this paper",
+      "Text14_Reference": [
+        "Structured evidence: full/M_N0037/evidence/record.json#/experiments/3; SHA-256: dc3af283406917fa5f484f0e6d4795b0e9f5fdf2cd12bfaf3fa7e7e80c505e41; DOI: https://doi.org/10.1117/1.nph.8.3.035007"
+      ]
+    },
+    {
+      "Text15": "experiments:\nexperiment_id: E5\nname: 透明前后荧光强度比较\nsample: 1-mm PI-stained brain sections;strain not stated\nmarker_ids: \n  [1] PI\nbranches: \n  [1] eFDISCO+\n  [2] vFDISCO+\n  [3] original FDISCO\nprotocol_ids: \n  [1] P_slice_e\n  [2] P_slice_v\n  [3] P_confocal\n  [4] P_PI\nmeasurement: same cortical region before/after clearing; MIP/Otsu segmentation and MATLAB signal-mean pipeline described as similar to CX3CR1-GFP analysis\ntime_points: \n  [1] before\n  [2] cleared\nn: 9\nsource_locators: \n  [1]     source_id: S1\n    block_zero_based: 28\n    section: sec2.8\n    element: p\n  [2]     source_id: S1\n    block_zero_based: 29\n    section: sec2.8\n    element: p\n  [3]     source_id: S1\n    block_zero_based: 39\n    section: sec3.2\n    element: p\n  [4]     source_id: S1\n    block_zero_based: 40\n    section: sec3.2\n    element: fig\nnormalization: cleared/before per Fig2 axes; PI/CD31 prose ratio wording ambiguous\nn_unit: n9; replicate definition and animal count not_reported\ncomparator_protocol: 原FDISCO比较存在，本文不完整重述其清除步骤；不能将FDISCO+RT匹配套给FDISCO\nprotocol_relationship: alternative clearing arms, not sequential combined e then v workflow; imaging/measurement shared\nbranch_protocol_mapping: \n  eFDISCO+: P_slice_e\n  vFDISCO+: P_slice_v\n  original FDISCO: comparator full protocol not separately reproduced in this paper",
+      "Text15_Reference": [
+        "Structured evidence: full/M_N0037/evidence/record.json#/experiments/4; SHA-256: dc3af283406917fa5f484f0e6d4795b0e9f5fdf2cd12bfaf3fa7e7e80c505e41; DOI: https://doi.org/10.1117/1.nph.8.3.035007"
+      ]
+    },
+    {
+      "Text16": "experiments:\nexperiment_id: E6\nname: 透明前后荧光强度比较\nsample: 1-mm pre-labeled C57BL/6J brain sections\nmarker_ids: \n  [1] CD31_A647\nbranches: \n  [1] eFDISCO+\n  [2] vFDISCO+\n  [3] original FDISCO\nprotocol_ids: \n  [1] P_slice_e\n  [2] P_slice_v\n  [3] P_confocal\nmeasurement: same cortical region before/after clearing; MIP/Otsu segmentation and MATLAB signal-mean pipeline described as similar to CX3CR1-GFP analysis\ntime_points: \n  [1] before\n  [2] cleared\nn: 9\nsource_locators: \n  [1]     source_id: S1\n    block_zero_based: 28\n    section: sec2.8\n    element: p\n  [2]     source_id: S1\n    block_zero_based: 29\n    section: sec2.8\n    element: p\n  [3]     source_id: S1\n    block_zero_based: 39\n    section: sec3.2\n    element: p\n  [4]     source_id: S1\n    block_zero_based: 40\n    section: sec3.2\n    element: fig\nnormalization: cleared/before per Fig2 axes; PI/CD31 prose ratio wording ambiguous\nn_unit: n9; replicate definition and animal count not_reported\ncomparator_protocol: 原FDISCO比较存在，本文不完整重述其清除步骤；不能将FDISCO+RT匹配套给FDISCO\nprotocol_relationship: alternative clearing arms, not sequential combined e then v workflow; imaging/measurement shared\nbranch_protocol_mapping: \n  eFDISCO+: P_slice_e\n  vFDISCO+: P_slice_v\n  original FDISCO: comparator full protocol not separately reproduced in this paper",
+      "Text16_Reference": [
+        "Structured evidence: full/M_N0037/evidence/record.json#/experiments/5; SHA-256: dc3af283406917fa5f484f0e6d4795b0e9f5fdf2cd12bfaf3fa7e7e80c505e41; DOI: https://doi.org/10.1117/1.nph.8.3.035007"
+      ]
+    },
+    {
+      "Text17": "experiments:\nexperiment_id: E7\nname: 室温长期GFP保存\nsample: Thy1-GFP-M cortical neurons in brain blocks; block dimensions not separately given\nmarker_ids: \n  [1] GFP_Thy1\nbranches: \n  [1] eFDISCO+ RT\n  [2] vFDISCO+ RT\n  [3] FDISCO LT4–8°C (context-defined comparator)\n  [4] pure DBE RT\nprotocol_ids: \n  [1] P_confocal\nmeasurement: mean fluorescence relative to day0;pipeline similar to MIP/Otsu\ntime_points: \n  [1] 0\n  [2] 3\n  [3] 7\n  [4] 14 days\nn: 6\nsource_locators: \n  [1]     source_id: S1\n    block_zero_based: 3\n    section: sec1\n    element: p\n  [2]     source_id: S1\n    block_zero_based: 17\n    section: sec2.4\n    element: p\n  [3]     source_id: S1\n    block_zero_based: 28\n    section: sec2.8\n    element: p\n  [4]     source_id: S1\n    block_zero_based: 42\n    section: sec3.3\n    element: p\n  [5]     source_id: S1\n    block_zero_based: 43\n    section: sec3.3\n    element: p\n  [6]     source_id: S1\n    block_zero_based: 44\n    section: sec3.3\n    element: fig\nnormalization: I(day n)/I(day0)\ntime_role: post-clearing storage observation\nn_unit: not_reported\ncaution: 图3各组标签未单独写温度；FDISCO低温归属由引言和讨论定义，不宣称所有组RT",
+      "Text17_Reference": [
+        "Structured evidence: full/M_N0037/evidence/record.json#/experiments/6; SHA-256: dc3af283406917fa5f484f0e6d4795b0e9f5fdf2cd12bfaf3fa7e7e80c505e41; DOI: https://doi.org/10.1117/1.nph.8.3.035007"
+      ]
+    },
+    {
+      "Text18": "experiments:\nexperiment_id: E8\nname: 整脑透明度比较\nsample: C57BL/6J whole brain;8 weeks\nmarker_ids: \n[]\nbranches: \n  [1] eFDISCO+\n  [2] vFDISCO+\n  [3] FDISCO\nprotocol_ids: \n  [1] P_whole_e\n  [2] P_whole_v\n  [3] P_transmission\nmeasurement: transmittance vs wavelength;brightfield before/cleared\ntime_points: \n[]\nn: 3\nsource_locators: \n  [1]     source_id: S1\n    block_zero_based: 22\n    section: sec2.6\n    element: p\n  [2]     source_id: S1\n    block_zero_based: 46\n    section: sec3.4\n    element: p\n  [3]     source_id: S1\n    block_zero_based: 47\n    section: sec3.4\n    element: fig\nn_unit: caption n=3; animal count vs repeated measurement not explicitly distinguished\nwavelength_range: figure approximately 500–775 nm, not instrument full range\nprotocol_relationship: alternative clearing arms, not sequential combined e then v workflow; imaging/measurement shared\nbranch_protocol_mapping: \n  eFDISCO+: P_whole_e\n  vFDISCO+: P_whole_v\n  original FDISCO: comparator full protocol not separately reproduced in this paper",
+      "Text18_Reference": [
+        "Structured evidence: full/M_N0037/evidence/record.json#/experiments/7; SHA-256: dc3af283406917fa5f484f0e6d4795b0e9f5fdf2cd12bfaf3fa7e7e80c505e41; DOI: https://doi.org/10.1117/1.nph.8.3.035007"
+      ]
+    },
+    {
+      "Text19": "experiments:\nexperiment_id: E9\nname: vFDISCO+整脑三维神经示范\nsample: Thy1-GFP-M whole brain;6 weeks\nmarker_ids: \n  [1] GFP_Thy1\nbranches: \n  [1] vFDISCO+\nprotocol_ids: \n  [1] P_whole_v\n  [2] P_LSFM\nmeasurement: 3D rendering and regional detail: cortex,caudate putamen,hippocampus,midbrain\ntime_points: \n[]\nn: not_reported\nsource_locators: \n  [1]     source_id: S1\n    block_zero_based: 46\n    section: sec3.4\n    element: p\n  [2]     source_id: S1\n    block_zero_based: 47\n    section: sec3.4\n    element: fig\nsupplement: Video1",
+      "Text19_Reference": [
+        "Structured evidence: full/M_N0037/evidence/record.json#/experiments/8; SHA-256: dc3af283406917fa5f484f0e6d4795b0e9f5fdf2cd12bfaf3fa7e7e80c505e41; DOI: https://doi.org/10.1117/1.nph.8.3.035007"
+      ]
+    },
+    {
+      "Text20": "experiments:\nexperiment_id: E10\nname: eFDISCO+半脑三维神经示范\nsample: Thy1-GFP-M half brain;age not separately stated\nmarker_ids: \n  [1] GFP_Thy1\nbranches: \n  [1] eFDISCO+\nprotocol_ids: \n  [1] P_LSFM\nmeasurement: 3D neurons\ntime_points: \n[]\nn: not_reported\nsource_locators: \n  [1]     source_id: S1\n    block_zero_based: 46\n    section: sec3.4\n    element: p\n  [2]     source_id: S1\n    block_zero_based: 47\n    section: sec3.4\n    element: fig\nsupplement: Video2\nprotocol_gap: 半脑透明时间未单独指定，不将整脑>75h自动赋予半脑",
+      "Text20_Reference": [
+        "Structured evidence: full/M_N0037/evidence/record.json#/experiments/9; SHA-256: dc3af283406917fa5f484f0e6d4795b0e9f5fdf2cd12bfaf3fa7e7e80c505e41; DOI: https://doi.org/10.1117/1.nph.8.3.035007"
+      ]
+    },
+    {
+      "Text21": "quantitative_results:\nresult_id: R1\nexperiment_id: E1\noutcome: pure DBE RT peroxide at9h\nvalue: 0.5\nunit: mg/L\ndenominator: none\nevidence_status: text_reported_approximate\nsource_locators: \n  [1]     source_id: S1\n    block_zero_based: 33\n    section: sec3.1\n    element: p\nnote: Fig1b categorical range 0.5–2mg/L, not calibrated continuous numeric measurement",
+      "Text21_Reference": [
+        "Structured evidence: full/M_N0037/evidence/record.json#/quantitative_results/0; SHA-256: dc3af283406917fa5f484f0e6d4795b0e9f5fdf2cd12bfaf3fa7e7e80c505e41; DOI: https://doi.org/10.1117/1.nph.8.3.035007"
+      ]
+    },
+    {
+      "Text22": "quantitative_results:\nresult_id: R2\nexperiment_id: E1\noutcome: pure DBE LT no observable peroxide through72h\nvalue: null (as recorded in source)\nunit: not_detected\ndenominator: none\nevidence_status: text_reported\nsource_locators: \n  [1]     source_id: S1\n    block_zero_based: 33\n    section: sec3.1\n    element: p\nnote: 不是分析化学绝对零浓度或普适稳定期",
+      "Text22_Reference": [
+        "Structured evidence: full/M_N0037/evidence/record.json#/quantitative_results/1; SHA-256: dc3af283406917fa5f484f0e6d4795b0e9f5fdf2cd12bfaf3fa7e7e80c505e41; DOI: https://doi.org/10.1117/1.nph.8.3.035007"
+      ]
+    },
+    {
+      "Text23": "quantitative_results:\nresult_id: R3\nexperiment_id: E1\noutcome: 0.5%EDTP / vitaminE chosen for clearing performance\nvalue: 0.5\nunit: w/v% EDTP; v/v% vitaminE\ndenominator: none\nevidence_status: text_reported\nsource_locators: \n  [1]     source_id: S1\n    block_zero_based: 35\n    section: sec3.1\n    element: p\n  [2]     source_id: S1\n    block_zero_based: 37\n    section: sec3.1\n    element: p\nnote: 正文EDTP higher than0.5%措辞与最终0.5%选择存在边界歧义；vitaminE72h文本与图柱冲突见SC2",
+      "Text23_Reference": [
+        "Structured evidence: full/M_N0037/evidence/record.json#/quantitative_results/2; SHA-256: dc3af283406917fa5f484f0e6d4795b0e9f5fdf2cd12bfaf3fa7e7e80c505e41; DOI: https://doi.org/10.1117/1.nph.8.3.035007"
+      ]
+    },
+    {
+      "Text24": "quantitative_results:\nresult_id: R4\nexperiment_id: E2\noutcome: EDTP浓度升高透明度略降；vitaminE浓度改变未明显影响透明度\nvalue: null (as recorded in source)\nunit: qualitative\ndenominator: none\nevidence_status: text_and_figure\nsource_locators: \n  [1]     source_id: S1\n    block_zero_based: 35\n    section: sec3.1\n    element: p\nnote: 2mm样本；未报告定量透射率",
+      "Text24_Reference": [
+        "Structured evidence: full/M_N0037/evidence/record.json#/quantitative_results/3; SHA-256: dc3af283406917fa5f484f0e6d4795b0e9f5fdf2cd12bfaf3fa7e7e80c505e41; DOI: https://doi.org/10.1117/1.nph.8.3.035007"
+      ]
+    },
+    {
+      "Text25": "quantitative_results:\nresult_id: R5\nexperiment_id: E3\noutcome: pure DBE RT GFP remaining at9h\nvalue: 62\nunit: percent\ndenominator: I0h\nevidence_status: text_reported\nsource_locators: \n  [1]     source_id: S1\n    block_zero_based: 36\n    section: sec3.1\n    element: p\nnote: 非清除前基线；两抗氧化剂曲线明显高于DBE，图1e末点约0.90，仅视觉近似",
+      "Text25_Reference": [
+        "Structured evidence: full/M_N0037/evidence/record.json#/quantitative_results/4; SHA-256: dc3af283406917fa5f484f0e6d4795b0e9f5fdf2cd12bfaf3fa7e7e80c505e41; DOI: https://doi.org/10.1117/1.nph.8.3.035007"
+      ]
+    },
+    {
+      "Text26": "quantitative_results:\nresult_id: R6\nexperiment_id: E3\noutcome: 0.5%EDTP与0.5%vitaminE9h保留优于pure DBE\nvalue: null (as recorded in source)\nunit: qualitative\ndenominator: I0h\nevidence_status: text_and_figure\nsource_locators: \n  [1]     source_id: S1\n    block_zero_based: 34\n    section: sec3.1\n    element: fig\n  [2]     source_id: S1\n    block_zero_based: 36\n    section: sec3.1\n    element: p\nnote: 正文无noticeable decrease；图中仍有轻度下降，不解读为100%完全保留；n8;***p<0.001",
+      "Text26_Reference": [
+        "Structured evidence: full/M_N0037/evidence/record.json#/quantitative_results/5; SHA-256: dc3af283406917fa5f484f0e6d4795b0e9f5fdf2cd12bfaf3fa7e7e80c505e41; DOI: https://doi.org/10.1117/1.nph.8.3.035007"
+      ]
+    },
+    {
+      "Text27": "quantitative_results:\nresult_id: R7\nexperiment_id: E4\noutcome: FDISCO+ GFP fluorescence after clearing\nvalue: 175–185\nunit: percent\ndenominator: before clearing\nevidence_status: text_reported\nsource_locators: \n  [1]     source_id: S1\n    block_zero_based: 39\n    section: sec3.2\n    element: p\nnote: 正文范围不拆成各分支精确数值；Fig2b柱高目测约e1.8/v1.7/FDISCO1.55，与文本略不一致",
+      "Text27_Reference": [
+        "Structured evidence: full/M_N0037/evidence/record.json#/quantitative_results/6; SHA-256: dc3af283406917fa5f484f0e6d4795b0e9f5fdf2cd12bfaf3fa7e7e80c505e41; DOI: https://doi.org/10.1117/1.nph.8.3.035007"
+      ]
+    },
+    {
+      "Text28": "quantitative_results:\nresult_id: R8\nexperiment_id: E5\noutcome: PI fluorescence after clearing\nvalue: at least 210\nunit: percent\ndenominator: before clearing\nevidence_status: text_reported\nsource_locators: \n  [1]     source_id: S1\n    block_zero_based: 39\n    section: sec3.2\n    element: p\nnote: Fig2d轴cleared/before；Methods前后比率措辞歧义见SC1",
+      "Text28_Reference": [
+        "Structured evidence: full/M_N0037/evidence/record.json#/quantitative_results/7; SHA-256: dc3af283406917fa5f484f0e6d4795b0e9f5fdf2cd12bfaf3fa7e7e80c505e41; DOI: https://doi.org/10.1117/1.nph.8.3.035007"
+      ]
+    },
+    {
+      "Text29": "quantitative_results:\nresult_id: R9\nexperiment_id: E6\noutcome: CD31-A647 fluorescence strengthened\nvalue: null (as recorded in source)\nunit: qualitative\ndenominator: before clearing\nevidence_status: text_and_figure\nsource_locators: \n  [1]     source_id: S1\n    block_zero_based: 39\n    section: sec3.2\n    element: p\n  [2]     source_id: S1\n    block_zero_based: 40\n    section: sec3.2\n    element: fig\nnote: 没有正文精确倍数；不将图读数写成作者数值",
+      "Text29_Reference": [
+        "Structured evidence: full/M_N0037/evidence/record.json#/quantitative_results/8; SHA-256: dc3af283406917fa5f484f0e6d4795b0e9f5fdf2cd12bfaf3fa7e7e80c505e41; DOI: https://doi.org/10.1117/1.nph.8.3.035007"
+      ]
+    },
+    {
+      "Text30": "quantitative_results:\nresult_id: R10\nexperiment_id: E4\noutcome: eFDISCO+/vFDISCO+/FDISCO no significant difference\nvalue: null (as recorded in source)\nunit: n.s.\ndenominator: group comparison of cleared/before\nevidence_status: figure_caption\nsource_locators: \n  [1]     source_id: S1\n    block_zero_based: 40\n    section: sec3.2\n    element: fig\nnote: ANOVA Bonferroni;n16;not proof of equivalence",
+      "Text30_Reference": [
+        "Structured evidence: full/M_N0037/evidence/record.json#/quantitative_results/9; SHA-256: dc3af283406917fa5f484f0e6d4795b0e9f5fdf2cd12bfaf3fa7e7e80c505e41; DOI: https://doi.org/10.1117/1.nph.8.3.035007"
+      ]
+    },
+    {
+      "Text31": "quantitative_results:\nresult_id: R11\nexperiment_id: E5\noutcome: eFDISCO+/vFDISCO+/FDISCO no significant difference\nvalue: null (as recorded in source)\nunit: n.s.\ndenominator: group comparison of cleared/before\nevidence_status: figure_caption\nsource_locators: \n  [1]     source_id: S1\n    block_zero_based: 40\n    section: sec3.2\n    element: fig\nnote: ANOVA Bonferroni;n9;not equivalence",
+      "Text31_Reference": [
+        "Structured evidence: full/M_N0037/evidence/record.json#/quantitative_results/10; SHA-256: dc3af283406917fa5f484f0e6d4795b0e9f5fdf2cd12bfaf3fa7e7e80c505e41; DOI: https://doi.org/10.1117/1.nph.8.3.035007"
+      ]
+    },
+    {
+      "Text32": "quantitative_results:\nresult_id: R12\nexperiment_id: E6\noutcome: eFDISCO+/vFDISCO+/FDISCO no significant difference\nvalue: null (as recorded in source)\nunit: n.s.\ndenominator: group comparison of cleared/before\nevidence_status: figure_caption\nsource_locators: \n  [1]     source_id: S1\n    block_zero_based: 40\n    section: sec3.2\n    element: fig\nnote: ANOVA Bonferroni;n9;not equivalence",
+      "Text32_Reference": [
+        "Structured evidence: full/M_N0037/evidence/record.json#/quantitative_results/11; SHA-256: dc3af283406917fa5f484f0e6d4795b0e9f5fdf2cd12bfaf3fa7e7e80c505e41; DOI: https://doi.org/10.1117/1.nph.8.3.035007"
+      ]
+    },
+    {
+      "Text33": "quantitative_results:\nresult_id: R13\nexperiment_id: E7\noutcome: eFDISCO+ better long-term preservation than vFDISCO+\nvalue: null (as recorded in source)\nunit: qualitative\ndenominator: day0\nevidence_status: text_and_figure\nsource_locators: \n  [1]     source_id: S1\n    block_zero_based: 43\n    section: sec3.3\n    element: p\n  [2]     source_id: S1\n    block_zero_based: 44\n    section: sec3.3\n    element: fig\nnote: 7 days and14 days comparisons visible;claim at least2 weeks relative to DBE RT does not mean near100% signal",
+      "Text33_Reference": [
+        "Structured evidence: full/M_N0037/evidence/record.json#/quantitative_results/12; SHA-256: dc3af283406917fa5f484f0e6d4795b0e9f5fdf2cd12bfaf3fa7e7e80c505e41; DOI: https://doi.org/10.1117/1.nph.8.3.035007"
+      ]
+    },
+    {
+      "Text34": "quantitative_results:\nresult_id: R14\nexperiment_id: E7\noutcome: 14day bars approximate: e/v/FDISCO/DBE RT\nvalue: 0.79 / 0.52 / 0.69 / 0.09\nunit: ratio\ndenominator: day0\nevidence_status: visual_approximation_not_digitized\nsource_locators: \n  [1]     source_id: S1\n    block_zero_based: 44\n    section: sec3.3\n    element: fig\nnote: 仅人工视觉估计用于理解衰减；不得当精确原始数据或进行二次统计",
+      "Text34_Reference": [
+        "Structured evidence: full/M_N0037/evidence/record.json#/quantitative_results/13; SHA-256: dc3af283406917fa5f484f0e6d4795b0e9f5fdf2cd12bfaf3fa7e7e80c505e41; DOI: https://doi.org/10.1117/1.nph.8.3.035007"
+      ]
+    },
+    {
+      "Text35": "quantitative_results:\nresult_id: R15\nexperiment_id: E8\noutcome: vFDISCO+ transparency similar FDISCO, eFDISCO+ lower\nvalue: null (as recorded in source)\nunit: qualitative\ndenominator: clearing medium blank\nevidence_status: text_and_figure\nsource_locators: \n  [1]     source_id: S1\n    block_zero_based: 46\n    section: sec3.4\n    element: p\n  [2]     source_id: S1\n    block_zero_based: 47\n    section: sec3.4\n    element: fig\nnote: 波长依赖；未提供表格化逐波长原始值",
+      "Text35_Reference": [
+        "Structured evidence: full/M_N0037/evidence/record.json#/quantitative_results/14; SHA-256: dc3af283406917fa5f484f0e6d4795b0e9f5fdf2cd12bfaf3fa7e7e80c505e41; DOI: https://doi.org/10.1117/1.nph.8.3.035007"
+      ]
+    },
+    {
+      "Text36": "quantitative_results:\nresult_id: R16\nexperiment_id: E9\noutcome: whole-brain neurons and fine processes visualized\nvalue: null (as recorded in source)\nunit: qualitative\ndenominator: none\nevidence_status: figure_and_video\nsource_locators: \n  [1]     source_id: S1\n    block_zero_based: 46\n    section: sec3.4\n    element: p\n  [2]     source_id: S1\n    block_zero_based: 47\n    section: sec3.4\n    element: fig\nnote: 全脑演示，不能据此宣称全脑每细胞均检出",
+      "Text36_Reference": [
+        "Structured evidence: full/M_N0037/evidence/record.json#/quantitative_results/15; SHA-256: dc3af283406917fa5f484f0e6d4795b0e9f5fdf2cd12bfaf3fa7e7e80c505e41; DOI: https://doi.org/10.1117/1.nph.8.3.035007"
+      ]
+    },
+    {
+      "Text37": "quantitative_results:\nresult_id: R17\nexperiment_id: E10\noutcome: half-brain neurons 3D reconstruction\nvalue: null (as recorded in source)\nunit: qualitative\ndenominator: none\nevidence_status: video_sampled\nsource_locators: \n  [1]     source_id: S1\n    block_zero_based: 46\n    section: sec3.4\n    element: p\n  [2]     source_id: S1\n    block_zero_based: 47\n    section: sec3.4\n    element: fig\nnote: 仅采样查看视频，不宣称逐帧播放",
+      "Text37_Reference": [
+        "Structured evidence: full/M_N0037/evidence/record.json#/quantitative_results/16; SHA-256: dc3af283406917fa5f484f0e6d4795b0e9f5fdf2cd12bfaf3fa7e7e80c505e41; DOI: https://doi.org/10.1117/1.nph.8.3.035007"
+      ]
+    },
+    {
+      "Text38": "quantitative_results:\nresult_id: R18\nexperiment_id: E1\noutcome: triethylamine 0.1–2% (v/v) in DBE accelerated peroxide generation compared with pure DBE RT\nvalue: null (as recorded in source)\nunit: qualitative categorical-strip comparison\ndenominator: pure DBE RT comparator\nevidence_status: text_and_figure\nsource_locators: \n  [1]     source_id: S1\n    block_zero_based: 34\n    section: sec3.1\n    element: fig\n  [2]     source_id: S1\n    block_zero_based: 35\n    section: sec3.1\n    element: p\nnote: not selected as antioxidant additive to DBE; must distinguish from triethylamine used to set alkaline THF pH",
+      "Text38_Reference": [
+        "Structured evidence: full/M_N0037/evidence/record.json#/quantitative_results/17; SHA-256: dc3af283406917fa5f484f0e6d4795b0e9f5fdf2cd12bfaf3fa7e7e80c505e41; DOI: https://doi.org/10.1117/1.nph.8.3.035007"
+      ]
+    },
+    {
+      "Text39": "statistics:\nsummary: mean±SD\ntest: one-way ANOVA then Bonferroni post hoc\nfig1: ***p<0.001;n8\nfig2: n.s.;GFP n16;PI/CD31 n9\nfig3: *p<0.05;**p<0.01;***p<0.001;n6\nfig4: n3 transmittance;mean±SD\ncaution: n不能转换为动物数；无等效性检验",
+      "Text39_Reference": [
+        "Structured evidence: full/M_N0037/evidence/record.json#/statistics; SHA-256: dc3af283406917fa5f484f0e6d4795b0e9f5fdf2cd12bfaf3fa7e7e80c505e41; DOI: https://doi.org/10.1117/1.nph.8.3.035007"
+      ]
+    },
+    {
+      "Text40": "author_claims:\nid: AC1\ntype: cited_mechanistic_context\nclaim: THF disrupts GFP hydrogen bonding; alkaline pH and LT reduce sensitivity to THF denaturation\nevidence_status: discussion cites ref29; not a new molecular mechanistic experiment in this paper\nsource_locators: \n  [1]     source_id: S1\n    block_zero_based: 52\n    section: sec4\n    element: p",
+      "Text40_Reference": [
+        "Structured evidence: full/M_N0037/evidence/record.json#/author_claims/0; SHA-256: dc3af283406917fa5f484f0e6d4795b0e9f5fdf2cd12bfaf3fa7e7e80c505e41; DOI: https://doi.org/10.1117/1.nph.8.3.035007"
+      ]
+    },
+    {
+      "Text41": "author_claims:\nid: AC2\ntype: cited_context_and_author_interpretation\nclaim: EDTP metal chelation and vitaminE radical scavenging provide antioxidant rationale\nevidence_status: Discussion cites prior chemistry; paper directly tests peroxide-strip/fluorescence outcomes, not isolated molecular mechanism\nsource_locators: \n  [1]     source_id: S1\n    block_zero_based: 51\n    section: sec4\n    element: p",
+      "Text41_Reference": [
+        "Structured evidence: full/M_N0037/evidence/record.json#/author_claims/1; SHA-256: dc3af283406917fa5f484f0e6d4795b0e9f5fdf2cd12bfaf3fa7e7e80c505e41; DOI: https://doi.org/10.1117/1.nph.8.3.035007"
+      ]
+    },
+    {
+      "Text42": "author_claims:\nid: AC3\ntype: author_hypothesis\nclaim: EDTP hydroxyl/polar groups might influence DBE penetration and transparency\nevidence_status: speculative explanation, not directly measured penetration kinetics\nsource_locators: \n  [1]     source_id: S1\n    block_zero_based: 53\n    section: sec4\n    element: p",
+      "Text42_Reference": [
+        "Structured evidence: full/M_N0037/evidence/record.json#/author_claims/2; SHA-256: dc3af283406917fa5f484f0e6d4795b0e9f5fdf2cd12bfaf3fa7e7e80c505e41; DOI: https://doi.org/10.1117/1.nph.8.3.035007"
+      ]
+    },
+    {
+      "Text43": "author_claims:\nid: AC4\ntype: author_use_recommendation\nclaim: vFDISCO+ for large samples; eFDISCO+ for smaller samples prioritizing fluorescence preservation\nevidence_status: author recommendation based on observed brain transparency/preservation tradeoff; not universal organ-size rule\nsource_locators: \n  [1]     source_id: S1\n    block_zero_based: 53\n    section: sec4\n    element: p",
+      "Text43_Reference": [
+        "Structured evidence: full/M_N0037/evidence/record.json#/author_claims/3; SHA-256: dc3af283406917fa5f484f0e6d4795b0e9f5fdf2cd12bfaf3fa7e7e80c505e41; DOI: https://doi.org/10.1117/1.nph.8.3.035007"
+      ]
+    }
+  ],
+  "Note": [
+    {
+      "Text1": "Paper M_N0037; source coverage: full; source release status: candidate_pending_gates; source default_eligible: false. Read this study as a whole with its sample, experimental, measurement and limitation fields. All selected source files and mandatory support in the accompanying archive apply jointly. Import does not promote candidate status, resolve contradictions, or turn review citations into independent primary experiments. Application includes source-labelled protocols, comparisons and results; labels within each Text retain their actual role.",
+      "Text1_Reference": [
+        "DOI: https://doi.org/10.1117/1.nph.8.3.035007",
+        "Evidence-layer structured paraphrase; not a verbatim quotation. Source release: https://github.com/404NotFound422/TOCAgentProject/tree/5e3a711befb3952a2e39f4d53fc9c9f1a7ac0d22/KnowledgeBase/evidence_expansion_20261019",
+        "Local source archive: ../literature_evidence/2026-11-11/source_release.zip; member: full/M_N0037/version_selection.json"
+      ]
+    },
+    {
+      "Text2": "Selected version and mandatory composition:\npaper_id: M_N0037\nstatus: full\nrelease_status: candidate_pending_gates\ndefault_eligible: false\nactive_scientific_files: \n  [1]     path: full/M_N0037/evidence/record.json\n    sha256: dc3af283406917fa5f484f0e6d4795b0e9f5fdf2cd12bfaf3fa7e7e80c505e41\n    source_member: record.json\nrequired_supporting_files: \n  [1]     paper_id: M_N0037\n    path: full/M_N0037/support/README_zh.md\n    source_member: README_zh.md\n    accepted_original_sha256: fd099437266d20c4fc5a046bff700a8d000df86e68a7ed169da4ab7d038314ae\n    source_sha256: fd099437266d20c4fc5a046bff700a8d000df86e68a7ed169da4ab7d038314ae\n    baseline_delivered_sha256: fd099437266d20c4fc5a046bff700a8d000df86e68a7ed169da4ab7d038314ae\n    sha256: fd099437266d20c4fc5a046bff700a8d000df86e68a7ed169da4ab7d038314ae\n    bytes: 1555\n    role: required_companion_support_not_independently_active\n    transformed: false\n    baseline_delivery_member: 历史交付_1907/历史交付_1707/已验收论文/M_N0037/README_zh.md\n  [2]     paper_id: M_N0037\n    path: full/M_N0037/support/author_claims.csv\n    source_member: author_claims.csv\n    accepted_original_sha256: ed67efe0ca53010e6c6644934289b89e83a34065048f151127ae0700902da7ea\n    source_sha256: ed67efe0ca53010e6c6644934289b89e83a34065048f151127ae0700902da7ea\n    baseline_delivered_sha256: ed67efe0ca53010e6c6644934289b89e83a34065048f151127ae0700902da7ea\n    sha256: ed67efe0ca53010e6c6644934289b89e83a34065048f151127ae0700902da7ea\n    bytes: 1307\n    role: required_scientific_companion_not_independently_active\n    transformed: false\n    baseline_delivery_member: 历史交付_1907/历史交付_1707/已验收论文/M_N0037/author_claims.csv\n  [3]     paper_id: M_N0037\n    path: full/M_N0037/support/delivery_manifest.json\n    source_member: delivery_manifest.json\n    accepted_original_sha256: 997670fbc3f97336d6b5b5f17460548e1a0c0bfa9543a735206fd70a395b69af\n    source_sha256: 997670fbc3f97336d6b5b5f17460548e1a0c0bfa9543a735206fd70a395b69af\n    baseline_delivered_sha256: 997670fbc3f97336d6b5b5f17460548e1a0c0bfa9543a735206fd70a395b69af\n    sha256: 997670fbc3f97336d6b5b5f17460548e1a0c0bfa9543a735206fd70a395b69af\n    bytes: 3488\n    role: required_companion_support_not_independently_active\n    transformed: false\n    baseline_delivery_member: 历史交付_1907/历史交付_1707/已验收论文/M_N0037/delivery_manifest.json\n  [4]     paper_id: M_N0037\n    path: full/M_N0037/support/experiments.csv\n    source_member: experiments.csv\n    accepted_original_sha256: 73e8594ecf4f3e42959084bf7a850c10d680111c2e26c29535564179ff5e1517\n    source_sha256: 73e8594ecf4f3e42959084bf7a850c10d680111c2e26c29535564179ff5e1517\n    baseline_delivered_sha256: 73e8594ecf4f3e42959084bf7a850c10d680111c2e26c29535564179ff5e1517\n    sha256: 73e8594ecf4f3e42959084bf7a850c10d680111c2e26c29535564179ff5e1517\n    bytes: 9008\n    role: required_scientific_companion_not_independently_active\n    transformed: false\n    baseline_delivery_member: 历史交付_1907/历史交付_1707/已验收论文/M_N0037/experiments.csv\n  [5]     paper_id: M_N0037\n    path: full/M_N0037/support/fluorescence_assays.csv\n    source_member: fluorescence_assays.csv\n    accepted_original_sha256: 7f045383707501f04b659a07a6abddfdd4bc7df604aee68e4cbe8f01b82c8b35\n    source_sha256: 7f045383707501f04b659a07a6abddfdd4bc7df604aee68e4cbe8f01b82c8b35\n    baseline_delivered_sha256: 7f045383707501f04b659a07a6abddfdd4bc7df604aee68e4cbe8f01b82c8b35\n    sha256: 7f045383707501f04b659a07a6abddfdd4bc7df604aee68e4cbe8f01b82c8b35\n    bytes: 6631\n    role: required_scientific_companion_not_independently_active\n    transformed: false\n    baseline_delivery_member: 历史交付_1907/历史交付_1707/已验收论文/M_N0037/fluorescence_assays.csv\n  [6]     paper_id: M_N0037\n    path: full/M_N0037/support/markers.csv\n    source_member: markers.csv\n    accepted_original_sha256: 0d63595a02742f35ea5c3002c50caf8ffaab200038fca94603be15c8ba3d5b4b\n    source_sha256: 0d63595a02742f35ea5c3002c50caf8ffaab200038fca94603be15c8ba3d5b4b\n    baseline_delivered_sha256: 0d63595a02742f35ea5c3002c50caf8ffaab200038fca94603be15c8ba3d5b4b\n    sha256: 0d63595a02742f35ea5c3002c50caf8ffaab200038fca94603be15c8ba3d5b4b\n    bytes: 2247\n    role: required_scientific_companion_not_independently_active\n    transformed: false\n    baseline_delivery_member: 历史交付_1907/历史交付_1707/已验收论文/M_N0037/markers.csv\n  [7]     paper_id: M_N0037\n    path: full/M_N0037/support/missing_fields.csv\n    source_member: missing_fields.csv\n    accepted_original_sha256: 25bd6c6cde9e5b31fc43bd8f61a5a5b5d3d63646b94b1f795bd42430c9ff1849\n    source_sha256: 25bd6c6cde9e5b31fc43bd8f61a5a5b5d3d63646b94b1f795bd42430c9ff1849\n    baseline_delivered_sha256: 25bd6c6cde9e5b31fc43bd8f61a5a5b5d3d63646b94b1f795bd42430c9ff1849\n    sha256: 25bd6c6cde9e5b31fc43bd8f61a5a5b5d3d63646b94b1f795bd42430c9ff1849\n    bytes: 1659\n    role: required_scientific_companion_not_independently_active\n    transformed: false\n    baseline_delivery_member: 历史交付_1907/历史交付_1707/已验收论文/M_N0037/missing_fields.csv\n  [8]     paper_id: M_N0037\n    path: full/M_N0037/support/protocols.csv\n    source_member: protocols.csv\n    accepted_original_sha256: 7ad0476d703bc9cf259d90b4ad402727351e48effd994fd4dabf10eb401a0684\n    source_sha256: 7ad0476d703bc9cf259d90b4ad402727351e48effd994fd4dabf10eb401a0684\n    baseline_delivered_sha256: 7ad0476d703bc9cf259d90b4ad402727351e48effd994fd4dabf10eb401a0684\n    sha256: 7ad0476d703bc9cf259d90b4ad402727351e48effd994fd4dabf10eb401a0684\n    bytes: 19458\n    role: required_scientific_companion_not_independently_active\n    transformed: false\n    baseline_delivery_member: 历史交付_1907/历史交付_1707/已验收论文/M_N0037/protocols.csv\n  [9]     paper_id: M_N0037\n    path: full/M_N0037/support/quantitative_results.csv\n    source_member: quantitative_results.csv\n    accepted_original_sha256: a9d632b8ca782f8cc92956494cea8f23ab4d329e1e6b4035cfbcf368b2e80293\n    source_sha256: a9d632b8ca782f8cc92956494cea8f23ab4d329e1e6b4035cfbcf368b2e80293\n    baseline_delivered_sha256: a9d632b8ca782f8cc92956494cea8f23ab4d329e1e6b4035cfbcf368b2e80293\n    sha256: a9d632b8ca782f8cc92956494cea8f23ab4d329e1e6b4035cfbcf368b2e80293\n    bytes: 5811\n    role: required_scientific_companion_not_independently_active\n    transformed: false\n    baseline_delivery_member: 历史交付_1907/历史交付_1707/已验收论文/M_N0037/quantitative_results.csv\n  [10]     paper_id: M_N0037\n    path: full/M_N0037/support/reading_log.csv\n    source_member: reading_log.csv\n    accepted_original_sha256: 689eff341f2d0587ba83ade234d84c8ac2c4ce112944e42fe252806fc9a1271e\n    source_sha256: 689eff341f2d0587ba83ade234d84c8ac2c4ce112944e42fe252806fc9a1271e\n    baseline_delivered_sha256: 689eff341f2d0587ba83ade234d84c8ac2c4ce112944e42fe252806fc9a1271e\n    sha256: 689eff341f2d0587ba83ade234d84c8ac2c4ce112944e42fe252806fc9a1271e\n    bytes: 322\n    role: required_companion_support_not_independently_active\n    transformed: false\n    baseline_delivery_member: 历史交付_1907/历史交付_1707/已验收论文/M_N0037/reading_log.csv\n  [11]     paper_id: M_N0037\n    path: full/M_N0037/support/review/R2_R3_R4_revision_report.json\n    source_member: review/R2_R3_R4_revision_report.json\n    accepted_original_sha256: b47d09fa55a1d98aaf8a0ae2f86bdc335fe5d9ed4940f16b7ad08ec2e4efe3cd\n    source_sha256: b47d09fa55a1d98aaf8a0ae2f86bdc335fe5d9ed4940f16b7ad08ec2e4efe3cd\n    baseline_delivered_sha256: b47d09fa55a1d98aaf8a0ae2f86bdc335fe5d9ed4940f16b7ad08ec2e4efe3cd\n    sha256: 62694c27871c11676ec9a7f50c2d2b36f3e159959a394e975096aceca3fa3ec1\n    bytes: 2453\n    role: required_companion_support_not_independently_active\n    transformed: true\n    baseline_delivery_member: 历史交付_1907/历史交付_1707/已验收论文/M_N0037/review/R2_R3_R4_revision_report.json\n  [12]     paper_id: M_N0037\n    path: full/M_N0037/support/review/R2_field_review_R1.csv\n    source_member: review/R2_field_review_R1.csv\n    accepted_original_sha256: 5fd755995933eeb7efdec36ad8f9627284d1bffba5a23c3c56d4b2447c76a83b\n    source_sha256: 5fd755995933eeb7efdec36ad8f9627284d1bffba5a23c3c56d4b2447c76a83b\n    baseline_delivered_sha256: 5fd755995933eeb7efdec36ad8f9627284d1bffba5a23c3c56d4b2447c76a83b\n    sha256: 5fd755995933eeb7efdec36ad8f9627284d1bffba5a23c3c56d4b2447c76a83b\n    bytes: 56104\n    role: required_companion_support_not_independently_active\n    transformed: false\n    baseline_delivery_member: 历史交付_1907/历史交付_1707/已验收论文/M_N0037/review/R2_field_review_R1.csv\n  [13]     paper_id: M_N0037\n    path: full/M_N0037/support/review/R2_revision_verification.csv\n    source_member: review/R2_revision_verification.csv\n    accepted_original_sha256: a213a68f96d879e8e67dba9a2b493bb32c126e597c0a67358239c3b3334593c3\n    source_sha256: a213a68f96d879e8e67dba9a2b493bb32c126e597c0a67358239c3b3334593c3\n    baseline_delivered_sha256: a213a68f96d879e8e67dba9a2b493bb32c126e597c0a67358239c3b3334593c3\n    sha256: a213a68f96d879e8e67dba9a2b493bb32c126e597c0a67358239c3b3334593c3\n    bytes: 1146\n    role: required_companion_support_not_independently_active\n    transformed: false\n    baseline_delivery_member: 历史交付_1907/历史交付_1707/已验收论文/M_N0037/review/R2_revision_verification.csv\n  [14]     paper_id: M_N0037\n    path: full/M_N0037/support/review/R4_original_source_gap_queries.json\n    source_member: review/R4_original_source_gap_queries.json\n    accepted_original_sha256: 5aa0e49bc3d7c84b8c82fbab5e3c4d7f4529fb7cba9e54ce84383e6264f14d27\n    source_sha256: 5aa0e49bc3d7c84b8c82fbab5e3c4d7f4529fb7cba9e54ce84383e6264f14d27\n    baseline_delivered_sha256: 5aa0e49bc3d7c84b8c82fbab5e3c4d7f4529fb7cba9e54ce84383e6264f14d27\n    sha256: 7e67e8d255e7efc923bba1c56949bcc1e3c6e4e7c4ad26ff97ef2575ce84b1ce\n    bytes: 2853\n    role: required_companion_support_not_independently_active\n    transformed: true\n    baseline_delivery_member: 历史交付_1907/历史交付_1707/已验收论文/M_N0037/review/R4_original_source_gap_queries.json\n  [15]     paper_id: M_N0037\n    path: full/M_N0037/support/review/final_acceptance.json\n    source_member: review/final_acceptance.json\n    accepted_original_sha256: 21d50b2d1f18e7cf721e79acfd2314cac88acd894acf915ead5eea186e4e2089\n    source_sha256: 21d50b2d1f18e7cf721e79acfd2314cac88acd894acf915ead5eea186e4e2089\n    baseline_delivered_sha256: 21d50b2d1f18e7cf721e79acfd2314cac88acd894acf915ead5eea186e4e2089\n    sha256: 306386b1b7a5a1c196476cae26e47f427298119af1a238dce36de54855937d4c\n    bytes: 3066\n    role: mandatory_acceptance_receipt\n    transformed: true\n    baseline_delivery_member: 历史交付_1907/历史交付_1707/已验收论文/M_N0037/review/final_acceptance.json\n  [16]     paper_id: M_N0037\n    path: full/M_N0037/support/review/independent_source_expectations.csv\n    source_member: review/independent_source_expectations.csv\n    accepted_original_sha256: ab616c65c96d0f106050be31841f14b3ad8dc6ff3d2c094d1e38ce894ed85886\n    source_sha256: ab616c65c96d0f106050be31841f14b3ad8dc6ff3d2c094d1e38ce894ed85886\n    baseline_delivered_sha256: ab616c65c96d0f106050be31841f14b3ad8dc6ff3d2c094d1e38ce894ed85886\n    sha256: ad070e2daaec042c4064d52d85944e088c65ee56114ba70293ae0483012724e9\n    bytes: 2875\n    role: required_companion_support_not_independently_active\n    transformed: true\n    baseline_delivery_member: 历史交付_1907/历史交付_1707/已验收论文/M_N0037/review/independent_source_expectations.csv\n  [17]     paper_id: M_N0037\n    path: full/M_N0037/support/review_rounds.csv\n    source_member: review_rounds.csv\n    accepted_original_sha256: b9450564268a74b2a9cc268ce5f74a344559e87a8f0652eb4ed361a2d7a40412\n    source_sha256: b9450564268a74b2a9cc268ce5f74a344559e87a8f0652eb4ed361a2d7a40412\n    baseline_delivered_sha256: b9450564268a74b2a9cc268ce5f74a344559e87a8f0652eb4ed361a2d7a40412\n    sha256: b9450564268a74b2a9cc268ce5f74a344559e87a8f0652eb4ed361a2d7a40412\n    bytes: 1001\n    role: required_companion_support_not_independently_active\n    transformed: false\n    baseline_delivery_member: 历史交付_1907/历史交付_1707/已验收论文/M_N0037/review_rounds.csv\n  [18]     paper_id: M_N0037\n    path: full/M_N0037/support/source_conflicts.csv\n    source_member: source_conflicts.csv\n    accepted_original_sha256: 1e3059e3124a852235a7add6ab8bf091c963eec98936a8137de6e9d17ba5d082\n    source_sha256: 1e3059e3124a852235a7add6ab8bf091c963eec98936a8137de6e9d17ba5d082\n    baseline_delivered_sha256: 1e3059e3124a852235a7add6ab8bf091c963eec98936a8137de6e9d17ba5d082\n    sha256: 1e3059e3124a852235a7add6ab8bf091c963eec98936a8137de6e9d17ba5d082\n    bytes: 1823\n    role: required_scientific_companion_not_independently_active\n    transformed: false\n    baseline_delivery_member: 历史交付_1907/历史交付_1707/已验收论文/M_N0037/source_conflicts.csv\n  [19]     paper_id: M_N0037\n    path: full/M_N0037/support/structure_check.json\n    source_member: structure_check.json\n    accepted_original_sha256: 26a8a926ae5c2fa9a28f24d578b2f5edde628773e71de07e15981b7fd92687fa\n    source_sha256: 26a8a926ae5c2fa9a28f24d578b2f5edde628773e71de07e15981b7fd92687fa\n    baseline_delivered_sha256: 26a8a926ae5c2fa9a28f24d578b2f5edde628773e71de07e15981b7fd92687fa\n    sha256: 26a8a926ae5c2fa9a28f24d578b2f5edde628773e71de07e15981b7fd92687fa\n    bytes: 9511\n    role: required_companion_support_not_independently_active\n    transformed: false\n    baseline_delivery_member: 历史交付_1907/历史交付_1707/已验收论文/M_N0037/structure_check.json\n  [20]     paper_id: M_N0037\n    path: full/M_N0037/support/科学版本绑定核对.json\n    source_member: 科学版本绑定核对.json\n    accepted_original_sha256: e5f0f41981ca93e272dfb1292fce03201d72dde73150d8f1d660f8872442b49b\n    source_sha256: e5f0f41981ca93e272dfb1292fce03201d72dde73150d8f1d660f8872442b49b\n    baseline_delivered_sha256: e5f0f41981ca93e272dfb1292fce03201d72dde73150d8f1d660f8872442b49b\n    sha256: e5f0f41981ca93e272dfb1292fce03201d72dde73150d8f1d660f8872442b49b\n    bytes: 480\n    role: mandatory_hash_and_scope_binding\n    transformed: false\n    baseline_delivery_member: 历史交付_1907/历史交付_1707/已验收论文/M_N0037/科学版本绑定核对.json\nacceptance: full/M_N0037/support/review/final_acceptance.json\nacceptance_files: \n  [1] full/M_N0037/support/review/final_acceptance.json\nactive_version_and_scope: \n  scope: \n    inherited_current_selection: \n      paper_id: M_N0037\n      status: full\n      active_scientific_files: \n        [1]           path: 历史交付_1907/历史交付_1707/已验收论文/M_N0037/record.json\n          accepted_original_sha256: dc3af283406917fa5f484f0e6d4795b0e9f5fdf2cd12bfaf3fa7e7e80c505e41\n          delivered_sha256: dc3af283406917fa5f484f0e6d4795b0e9f5fdf2cd12bfaf3fa7e7e80c505e41\n          transformed: false\n      baseline_binding: 历史交付_1907/当前版本选择/M_N0037.json\n      companion_root: 历史交付_1907/历史交付_1707/已验收论文/M_N0037\n      rule: Reuse immutable previously accepted current selection and necessary overlays. Paths in inherited binding resolve relative to 历史交付_1907 root. Only current root index governs active versions.\n    historical_selection_bindings: \n      [1]         source_archive_name: 组织光透明证据_20261019_2107_完整科学分包1共3包.zip\n        source_member: 历史交付_1907/当前版本选择/M_N0037.json\n        source_sha256: 3ed50b42b484066c12a64aad8c6d1a0cd29c71cc92239a6f3fa29aace2ea0dcf\n        source_bytes: 697\n        selection: \n          paper_id: M_N0037\n          status: full\n          baseline_record: \n            [1]               path: 历史交付_1707/已验收论文/M_N0037/record.json\n              accepted_original_sha256: dc3af283406917fa5f484f0e6d4795b0e9f5fdf2cd12bfaf3fa7e7e80c505e41\n              delivered_sha256: dc3af283406917fa5f484f0e6d4795b0e9f5fdf2cd12bfaf3fa7e7e80c505e41\n              transformed: false\n          scope: 任务相关科学字段完整四轮\n          companion_root: 历史交付_1707/已验收论文/M_N0037\n          companion_rule: Use the complete per-paper directory, its mandatory overlays, scientific companion files and version binding from previous accepted delivery; record alone is not a substitute.\n        role: historical_selection_provenance_not_runtime_index\n      [2]         source_archive_name: 组织光透明证据_20261019_2107_完整科学分包2共3包.zip\n        source_member: 当前版本选择/M_N0037.json\n        source_sha256: 1559e0ec0e3dcff145558913dca3c4694e1d2732488c082ead3d3ba4d7c0d081\n        source_bytes: 777\n        selection: \n          paper_id: M_N0037\n          status: full\n          active_scientific_files: \n            [1]               path: 历史交付_1907/历史交付_1707/已验收论文/M_N0037/record.json\n              accepted_original_sha256: dc3af283406917fa5f484f0e6d4795b0e9f5fdf2cd12bfaf3fa7e7e80c505e41\n              delivered_sha256: dc3af283406917fa5f484f0e6d4795b0e9f5fdf2cd12bfaf3fa7e7e80c505e41\n              transformed: false\n          baseline_binding: 历史交付_1907/当前版本选择/M_N0037.json\n          companion_root: 历史交付_1907/历史交付_1707/已验收论文/M_N0037\n          rule: Reuse immutable previously accepted current selection and necessary overlays. Paths in inherited binding resolve relative to 历史交付_1907 root. Only current root index governs active versions.\n        role: source_current_selection_provenance_not_second_runtime_index\n    precedence_notes: \n[]\n    rule: Only this portable selection activates current scientific files. Inherited selections are retained provenance and scope, not recursively loadable indexes.\n  historical_nonactive_members: \n[]\nmandatory_composition: Root plus explicitly selected companions and any current mandatory semantic addendum apply jointly. Never recursively activate audit history.\noriginal_member_to_release_path: \n  record.json: full/M_N0037/evidence/record.json\nactive_reference_aliases: \n  record.json: full/M_N0037/evidence/record.json\n  README_zh.md: full/M_N0037/support/README_zh.md\n  author_claims.csv: full/M_N0037/support/author_claims.csv\n  delivery_manifest.json: full/M_N0037/support/delivery_manifest.json\n  experiments.csv: full/M_N0037/support/experiments.csv\n  fluorescence_assays.csv: full/M_N0037/support/fluorescence_assays.csv\n  markers.csv: full/M_N0037/support/markers.csv\n  missing_fields.csv: full/M_N0037/support/missing_fields.csv\n  protocols.csv: full/M_N0037/support/protocols.csv\n  quantitative_results.csv: full/M_N0037/support/quantitative_results.csv\n  reading_log.csv: full/M_N0037/support/reading_log.csv\n  review/R2_R3_R4_revision_report.json: full/M_N0037/support/review/R2_R3_R4_revision_report.json\n  review/R2_field_review_R1.csv: full/M_N0037/support/review/R2_field_review_R1.csv\n  review/R2_revision_verification.csv: full/M_N0037/support/review/R2_revision_verification.csv\n  review/R4_original_source_gap_queries.json: full/M_N0037/support/review/R4_original_source_gap_queries.json\n  review/final_acceptance.json: full/M_N0037/support/review/final_acceptance.json\n  review/independent_source_expectations.csv: full/M_N0037/support/review/independent_source_expectations.csv\n  review_rounds.csv: full/M_N0037/support/review_rounds.csv\n  source_conflicts.csv: full/M_N0037/support/source_conflicts.csv\n  structure_check.json: full/M_N0037/support/structure_check.json\n  科学版本绑定核对.json: full/M_N0037/support/科学版本绑定核对.json\n  历史交付_1907/历史交付_1707/已验收论文/M_N0037/README_zh.md: full/M_N0037/support/README_zh.md\n  历史交付_1907/历史交付_1707/已验收论文/M_N0037/author_claims.csv: full/M_N0037/support/author_claims.csv\n  历史交付_1907/历史交付_1707/已验收论文/M_N0037/delivery_manifest.json: full/M_N0037/support/delivery_manifest.json\n  历史交付_1907/历史交付_1707/已验收论文/M_N0037/experiments.csv: full/M_N0037/support/experiments.csv\n  历史交付_1907/历史交付_1707/已验收论文/M_N0037/fluorescence_assays.csv: full/M_N0037/support/fluorescence_assays.csv\n  历史交付_1907/历史交付_1707/已验收论文/M_N0037/markers.csv: full/M_N0037/support/markers.csv\n  历史交付_1907/历史交付_1707/已验收论文/M_N0037/missing_fields.csv: full/M_N0037/support/missing_fields.csv\n  历史交付_1907/历史交付_1707/已验收论文/M_N0037/protocols.csv: full/M_N0037/support/protocols.csv\n  历史交付_1907/历史交付_1707/已验收论文/M_N0037/quantitative_results.csv: full/M_N0037/support/quantitative_results.csv\n  历史交付_1907/历史交付_1707/已验收论文/M_N0037/reading_log.csv: full/M_N0037/support/reading_log.csv\n  历史交付_1907/历史交付_1707/已验收论文/M_N0037/record.json: full/M_N0037/evidence/record.json\n  历史交付_1907/历史交付_1707/已验收论文/M_N0037/review/R2_R3_R4_revision_report.json: full/M_N0037/support/review/R2_R3_R4_revision_report.json\n  历史交付_1907/历史交付_1707/已验收论文/M_N0037/review/R2_field_review_R1.csv: full/M_N0037/support/review/R2_field_review_R1.csv\n  历史交付_1907/历史交付_1707/已验收论文/M_N0037/review/R2_revision_verification.csv: full/M_N0037/support/review/R2_revision_verification.csv\n  历史交付_1907/历史交付_1707/已验收论文/M_N0037/review/R4_original_source_gap_queries.json: full/M_N0037/support/review/R4_original_source_gap_queries.json\n  历史交付_1907/历史交付_1707/已验收论文/M_N0037/review/final_acceptance.json: full/M_N0037/support/review/final_acceptance.json\n  历史交付_1907/历史交付_1707/已验收论文/M_N0037/最终验收依据.json: full/M_N0037/support/review/final_acceptance.json\n  最终验收依据.json: full/M_N0037/support/review/final_acceptance.json\n  历史交付_1907/历史交付_1707/已验收论文/M_N0037/review/independent_source_expectations.csv: full/M_N0037/support/review/independent_source_expectations.csv\n  历史交付_1907/历史交付_1707/已验收论文/M_N0037/review_rounds.csv: full/M_N0037/support/review_rounds.csv\n  历史交付_1907/历史交付_1707/已验收论文/M_N0037/source_conflicts.csv: full/M_N0037/support/source_conflicts.csv\n  历史交付_1907/历史交付_1707/已验收论文/M_N0037/structure_check.json: full/M_N0037/support/structure_check.json\n  历史交付_1907/历史交付_1707/已验收论文/M_N0037/科学版本绑定核对.json: full/M_N0037/support/科学版本绑定核对.json\n  R2_field_review_R1.csv: full/M_N0037/support/review/R2_field_review_R1.csv\n  R4_original_source_gap_queries.json: full/M_N0037/support/review/R4_original_source_gap_queries.json\n  paper_completion/M_N0037/review/final_acceptance.json: full/M_N0037/support/review/final_acceptance.json\nactive_reference_resolution_evidence: \n  [1]     source_file: full/M_N0037/evidence/record.json\n    json_pointer: /review_rounds/2/evidence\n    reference: review/R2_R3_R4_revision_report.json\n    resolved_release_path: full/M_N0037/support/review/R2_R3_R4_revision_report.json\n    binding_basis: explicit_verified_alias\n  [2]     source_file: full/M_N0037/evidence/record.json\n    json_pointer: /review_rounds/3/evidence\n    reference: review/R4_original_source_gap_queries.json\n    resolved_release_path: full/M_N0037/support/review/R4_original_source_gap_queries.json\n    binding_basis: explicit_verified_alias\n  [3]     source_file: full/M_N0037/support/delivery_manifest.json\n    json_pointer: /four_round_acceptance\n    reference: review/final_acceptance.json\n    resolved_release_path: full/M_N0037/support/review/final_acceptance.json\n    binding_basis: explicit_verified_alias\n  [4]     source_file: full/M_N0037/support/delivery_manifest.json\n    json_pointer: /files/0/path\n    reference: README_zh.md\n    resolved_release_path: full/M_N0037/support/README_zh.md\n    binding_basis: explicit_verified_alias\n  [5]     source_file: full/M_N0037/support/delivery_manifest.json\n    json_pointer: /files/1/path\n    reference: record.json\n    resolved_release_path: full/M_N0037/evidence/record.json\n    binding_basis: explicit_verified_alias\n  [6]     source_file: full/M_N0037/support/delivery_manifest.json\n    json_pointer: /files/2/path\n    reference: protocols.csv\n    resolved_release_path: full/M_N0037/support/protocols.csv\n    binding_basis: explicit_verified_alias\n  [7]     source_file: full/M_N0037/support/delivery_manifest.json\n    json_pointer: /files/3/path\n    reference: experiments.csv\n    resolved_release_path: full/M_N0037/support/experiments.csv\n    binding_basis: explicit_verified_alias\n  [8]     source_file: full/M_N0037/support/delivery_manifest.json\n    json_pointer: /files/4/path\n    reference: markers.csv\n    resolved_release_path: full/M_N0037/support/markers.csv\n    binding_basis: explicit_verified_alias\n  [9]     source_file: full/M_N0037/support/delivery_manifest.json\n    json_pointer: /files/5/path\n    reference: quantitative_results.csv\n    resolved_release_path: full/M_N0037/support/quantitative_results.csv\n    binding_basis: explicit_verified_alias\n  [10]     source_file: full/M_N0037/support/delivery_manifest.json\n    json_pointer: /files/6/path\n    reference: fluorescence_assays.csv\n    resolved_release_path: full/M_N0037/support/fluorescence_assays.csv\n    binding_basis: explicit_verified_alias\n  [11]     source_file: full/M_N0037/support/delivery_manifest.json\n    json_pointer: /files/7/path\n    reference: author_claims.csv\n    resolved_release_path: full/M_N0037/support/author_claims.csv\n    binding_basis: explicit_verified_alias\n  [12]     source_file: full/M_N0037/support/delivery_manifest.json\n    json_pointer: /files/8/path\n    reference: missing_fields.csv\n    resolved_release_path: full/M_N0037/support/missing_fields.csv\n    binding_basis: explicit_verified_alias\n  [13]     source_file: full/M_N0037/support/delivery_manifest.json\n    json_pointer: /files/9/path\n    reference: source_conflicts.csv\n    resolved_release_path: full/M_N0037/support/source_conflicts.csv\n    binding_basis: explicit_verified_alias\n  [14]     source_file: full/M_N0037/support/delivery_manifest.json\n    json_pointer: /files/10/path\n    reference: review_rounds.csv\n    resolved_release_path: full/M_N0037/support/review_rounds.csv\n    binding_basis: explicit_verified_alias\n  [15]     source_file: full/M_N0037/support/delivery_manifest.json\n    json_pointer: /files/11/path\n    reference: reading_log.csv\n    resolved_release_path: full/M_N0037/support/reading_log.csv\n    binding_basis: explicit_verified_alias\n  [16]     source_file: full/M_N0037/support/delivery_manifest.json\n    json_pointer: /files/12/path\n    reference: structure_check.json\n    resolved_release_path: full/M_N0037/support/structure_check.json\n    binding_basis: explicit_verified_alias\n  [17]     source_file: full/M_N0037/support/delivery_manifest.json\n    json_pointer: /files/13/path\n    reference: review/R2_R3_R4_revision_report.json\n    resolved_release_path: full/M_N0037/support/review/R2_R3_R4_revision_report.json\n    binding_basis: explicit_verified_alias\n  [18]     source_file: full/M_N0037/support/delivery_manifest.json\n    json_pointer: /files/14/path\n    reference: review/R4_original_source_gap_queries.json\n    resolved_release_path: full/M_N0037/support/review/R4_original_source_gap_queries.json\n    binding_basis: explicit_verified_alias\n  [19]     source_file: full/M_N0037/support/delivery_manifest.json\n    json_pointer: /files/15/path\n    reference: review/final_acceptance.json\n    resolved_release_path: full/M_N0037/support/review/final_acceptance.json\n    binding_basis: explicit_verified_alias\n  [20]     source_file: full/M_N0037/support/delivery_manifest.json\n    json_pointer: /files/16/path\n    reference: review/R2_field_review_R1.csv\n    resolved_release_path: full/M_N0037/support/review/R2_field_review_R1.csv\n    binding_basis: explicit_verified_alias\n  [21]     source_file: full/M_N0037/support/delivery_manifest.json\n    json_pointer: /files/17/path\n    reference: review/R2_revision_verification.csv\n    resolved_release_path: full/M_N0037/support/review/R2_revision_verification.csv\n    binding_basis: explicit_verified_alias\n  [22]     source_file: full/M_N0037/support/delivery_manifest.json\n    json_pointer: /files/18/path\n    reference: review/independent_source_expectations.csv\n    resolved_release_path: full/M_N0037/support/review/independent_source_expectations.csv\n    binding_basis: explicit_verified_alias\n  [23]     source_file: full/M_N0037/support/review/R2_R3_R4_revision_report.json\n    json_pointer: /R2/field_check_file\n    reference: R2_field_review_R1.csv\n    resolved_release_path: full/M_N0037/support/review/R2_field_review_R1.csv\n    binding_basis: unique_verified_original_member_path\n  [24]     source_file: full/M_N0037/support/review/R2_R3_R4_revision_report.json\n    json_pointer: /R4/query_log\n    reference: R4_original_source_gap_queries.json\n    resolved_release_path: full/M_N0037/support/review/R4_original_source_gap_queries.json\n    binding_basis: unique_verified_original_member_path\n  [25]     source_file: full/M_N0037/support/review/final_acceptance.json\n    json_pointer: /reviewed_record\n    reference: record.json\n    resolved_release_path: full/M_N0037/evidence/record.json\n    binding_basis: explicit_verified_alias\n  [26]     source_file: full/M_N0037/support/review/final_acceptance.json\n    json_pointer: /R2/field_review\n    reference: review/R2_field_review_R1.csv\n    resolved_release_path: full/M_N0037/support/review/R2_field_review_R1.csv\n    binding_basis: explicit_verified_alias\n  [27]     source_file: full/M_N0037/support/review/final_acceptance.json\n    json_pointer: /R2/revision_report\n    reference: review/R2_R3_R4_revision_report.json\n    resolved_release_path: full/M_N0037/support/review/R2_R3_R4_revision_report.json\n    binding_basis: explicit_verified_alias\n  [28]     source_file: full/M_N0037/support/review/final_acceptance.json\n    json_pointer: /R4/query_log\n    reference: review/R4_original_source_gap_queries.json\n    resolved_release_path: full/M_N0037/support/review/R4_original_source_gap_queries.json\n    binding_basis: explicit_verified_alias\n  [29]     source_file: full/M_N0037/support/structure_check.json\n    json_pointer: /rounds/2/evidence\n    reference: review/R2_R3_R4_revision_report.json\n    resolved_release_path: full/M_N0037/support/review/R2_R3_R4_revision_report.json\n    binding_basis: explicit_verified_alias\n  [30]     source_file: full/M_N0037/support/structure_check.json\n    json_pointer: /rounds/3/evidence\n    reference: review/R4_original_source_gap_queries.json\n    resolved_release_path: full/M_N0037/support/review/R4_original_source_gap_queries.json\n    binding_basis: explicit_verified_alias\n  [31]     source_file: full/M_N0037/support/科学版本绑定核对.json\n    json_pointer: /acceptance_file\n    reference: paper_completion/M_N0037/review/final_acceptance.json\n    resolved_release_path: full/M_N0037/support/review/final_acceptance.json\n    binding_basis: unique_verified_original_member_path\n  [32]     source_file: full/M_N0037/evidence/record.json\n    json_pointer: /review_rounds/0/evidence\n    reference: reading_log.csv\n    source_value: record_R1.json;reading_log.csv\n    reference_extraction: \n      rule: semicolon_delimited_component\n      delimiter: ;\n      component_index: 1\n      start_character_offset: 15\n      end_character_offset_exclusive: 30\n    resolved_release_path: full/M_N0037/support/reading_log.csv\n    binding_basis: exact_component_of_mixed_review_locator\n  [33]     source_file: full/M_N0037/evidence/record.json\n    json_pointer: /review_rounds/1/evidence\n    reference: review/R2_field_review_R1.csv\n    source_value: review/R2_field_review_R1.csv;review/R2_R3_R4_revision_report.json\n    reference_extraction: \n      rule: semicolon_delimited_component\n      delimiter: ;\n      component_index: 0\n      start_character_offset: 0\n      end_character_offset_exclusive: 29\n    resolved_release_path: full/M_N0037/support/review/R2_field_review_R1.csv\n    binding_basis: exact_component_of_mixed_review_locator\n  [34]     source_file: full/M_N0037/evidence/record.json\n    json_pointer: /review_rounds/1/evidence\n    reference: review/R2_R3_R4_revision_report.json\n    source_value: review/R2_field_review_R1.csv;review/R2_R3_R4_revision_report.json\n    reference_extraction: \n      rule: semicolon_delimited_component\n      delimiter: ;\n      component_index: 1\n      start_character_offset: 30\n      end_character_offset_exclusive: 66\n    resolved_release_path: full/M_N0037/support/review/R2_R3_R4_revision_report.json\n    binding_basis: exact_component_of_mixed_review_locator\n  [35]     source_file: full/M_N0037/support/structure_check.json\n    json_pointer: /rounds/0/evidence\n    reference: reading_log.csv\n    source_value: record_R1.json;reading_log.csv\n    reference_extraction: \n      rule: semicolon_delimited_component\n      delimiter: ;\n      component_index: 1\n      start_character_offset: 15\n      end_character_offset_exclusive: 30\n    resolved_release_path: full/M_N0037/support/reading_log.csv\n    binding_basis: exact_component_of_mixed_review_locator\n  [36]     source_file: full/M_N0037/support/structure_check.json\n    json_pointer: /rounds/1/evidence\n    reference: review/R2_field_review_R1.csv\n    source_value: review/R2_field_review_R1.csv;review/R2_R3_R4_revision_report.json\n    reference_extraction: \n      rule: semicolon_delimited_component\n      delimiter: ;\n      component_index: 0\n      start_character_offset: 0\n      end_character_offset_exclusive: 29\n    resolved_release_path: full/M_N0037/support/review/R2_field_review_R1.csv\n    binding_basis: exact_component_of_mixed_review_locator\n  [37]     source_file: full/M_N0037/support/structure_check.json\n    json_pointer: /rounds/1/evidence\n    reference: review/R2_R3_R4_revision_report.json\n    source_value: review/R2_field_review_R1.csv;review/R2_R3_R4_revision_report.json\n    reference_extraction: \n      rule: semicolon_delimited_component\n      delimiter: ;\n      component_index: 1\n      start_character_offset: 30\n      end_character_offset_exclusive: 66\n    resolved_release_path: full/M_N0037/support/review/R2_R3_R4_revision_report.json\n    binding_basis: exact_component_of_mixed_review_locator\nexternal_or_historical_references: \n  [1]     source_file: full/M_N0037/evidence/record.json\n    json_pointer: /review_rounds/0/evidence\n    reference: record_R1.json\n    automatic_loading: false\n    role: historical_review_input_not_current_scientific_runtime\n    source_value: record_R1.json;reading_log.csv\n    reference_extraction: \n      rule: semicolon_delimited_component\n      delimiter: ;\n      component_index: 0\n      start_character_offset: 0\n      end_character_offset_exclusive: 14\n  [2]     source_file: full/M_N0037/support/review/R2_R3_R4_revision_report.json\n    json_pointer: /reviewed_record\n    reference: record_R1.json\n    automatic_loading: false\n    role: historical_frozen_R1_review_input_not_current_scientific_runtime\n    verified_local_old_snapshot_sha256: aea887e47de92cd9d38aa883d44aca7267825bc7e23951a2805433e26235a49e\n    identity_basis: Exact hash matches existing R2/R3/R4 report; final acceptance directly binds current scientific root. Old science is not activated.\n  [3]     source_file: full/M_N0037/support/structure_check.json\n    json_pointer: /rounds/0/evidence\n    reference: record_R1.json\n    automatic_loading: false\n    role: historical_review_input_not_current_scientific_runtime\n    source_value: record_R1.json;reading_log.csv\n    reference_extraction: \n      rule: semicolon_delimited_component\n      delimiter: ;\n      component_index: 0\n      start_character_offset: 0\n      end_character_offset_exclusive: 14\nnonactive_excluded_members: \n[]\nverified_alias_binding_proofs: \n[]\nreference_resolution_policy: Exact explicit aliases only. Acceptance companions apply jointly. Archived original science, source assets and historical candidate flags remain nonruntime provenance. Independent closure review is pending.",
+      "Text2_Reference": [
+        "DOI: https://doi.org/10.1117/1.nph.8.3.035007",
+        "Evidence-layer structured paraphrase; not a verbatim quotation. Source release: https://github.com/404NotFound422/TOCAgentProject/tree/5e3a711befb3952a2e39f4d53fc9c9f1a7ac0d22/KnowledgeBase/evidence_expansion_20261019",
+        "Local source archive: ../literature_evidence/2026-11-11/source_release.zip; member: full/M_N0037/version_selection.json"
+      ]
+    },
+    {
+      "Text3": "scope:\n已制备脑组织的透明、标记及读出。动物模型构建、试剂制造纯化采购不展开为执行步骤。",
+      "Text3_Reference": [
+        "Structured evidence: full/M_N0037/evidence/record.json#/scope; SHA-256: dc3af283406917fa5f484f0e6d4795b0e9f5fdf2cd12bfaf3fa7e7e80c505e41; DOI: https://doi.org/10.1117/1.nph.8.3.035007"
+      ]
+    },
+    {
+      "Text4": "source_conflicts:\nconflict_id: SC1\nfield: PI/CD31 normalization\nsource_a: Methods2.8: ratio of mean intensity before and after clearing (direction unclear)\nsource_b: Fig2 d/f axes: cleared/before; Results3.2 enhancement\nresolution: 保存原文歧义；采用明确图轴cleared/before作为图2结果分母，不静默改写Methods\nsource_locators: \n  [1]     source_id: S1\n    block_zero_based: 28\n    section: sec2.8\n    element: p\n  [2]     source_id: S1\n    block_zero_based: 39\n    section: sec3.2\n    element: p\n  [3]     source_id: S1\n    block_zero_based: 40\n    section: sec3.2\n    element: fig",
+      "Text4_Reference": [
+        "Structured evidence: full/M_N0037/evidence/record.json#/source_conflicts/0; SHA-256: dc3af283406917fa5f484f0e6d4795b0e9f5fdf2cd12bfaf3fa7e7e80c505e41; DOI: https://doi.org/10.1117/1.nph.8.3.035007"
+      ]
+    },
+    {
+      "Text5": "source_conflicts:\nconflict_id: SC2\nfield: vitaminE peroxide at72h\nsource_a: Results3.1 says0.5% vitaminE no observable peroxide72h\nsource_b: Fig1b DBE(V) panel shows nonzero bars at72h\nresolution: 独立审阅确认Fig1b DBE(V)72h四浓度均有非零柱；图文冲突未解决。不认证0.5%vitaminE在72h绝对无过氧化物。\nsource_locators: \n  [1]     source_id: S1\n    block_zero_based: 34\n    section: sec3.1\n    element: fig\n  [2]     source_id: S1\n    block_zero_based: 35\n    section: sec3.1\n    element: p",
+      "Text5_Reference": [
+        "Structured evidence: full/M_N0037/evidence/record.json#/source_conflicts/1; SHA-256: dc3af283406917fa5f484f0e6d4795b0e9f5fdf2cd12bfaf3fa7e7e80c505e41; DOI: https://doi.org/10.1117/1.nph.8.3.035007"
+      ]
+    },
+    {
+      "Text6": "source_conflicts:\nconflict_id: SC3\nfield: EDTP concentration threshold\nsource_a: Results3.1 higher than0.5% inhibits72h\nsource_b: final optimal0.5%;Fig1b0.5% baseline\nresolution: 实验方案记录明确0.5%；机制阈值不换成严格>或≥证明\nsource_locators: \n  [1]     source_id: S1\n    block_zero_based: 35\n    section: sec3.1\n    element: p\n  [2]     source_id: S1\n    block_zero_based: 37\n    section: sec3.1\n    element: p",
+      "Text6_Reference": [
+        "Structured evidence: full/M_N0037/evidence/record.json#/source_conflicts/2; SHA-256: dc3af283406917fa5f484f0e6d4795b0e9f5fdf2cd12bfaf3fa7e7e80c505e41; DOI: https://doi.org/10.1117/1.nph.8.3.035007"
+      ]
+    },
+    {
+      "Text7": "source_conflicts:\nconflict_id: SC4\nfield: GFP enhancement magnitude\nsource_a: Results3.2 FDISCO+175–185%\nsource_b: Fig2b vFDISCO+ visually around1.7\nresolution: 作者文字范围与图形近似分开，不给分支假精确数值\nsource_locators: \n  [1]     source_id: S1\n    block_zero_based: 39\n    section: sec3.2\n    element: p\n  [2]     source_id: S1\n    block_zero_based: 40\n    section: sec3.2\n    element: fig",
+      "Text7_Reference": [
+        "Structured evidence: full/M_N0037/evidence/record.json#/source_conflicts/3; SHA-256: dc3af283406917fa5f484f0e6d4795b0e9f5fdf2cd12bfaf3fa7e7e80c505e41; DOI: https://doi.org/10.1117/1.nph.8.3.035007"
+      ]
+    },
+    {
+      "Text8": "missing_fields:\nid: U1\nfield: 2mm brain slice protocol\nstatus: not_reported\ndetail: Fig1c不提供完整2mm时间路径",
+      "Text8_Reference": [
+        "Structured evidence: full/M_N0037/evidence/record.json#/missing_fields/0; SHA-256: dc3af283406917fa5f484f0e6d4795b0e9f5fdf2cd12bfaf3fa7e7e80c505e41; DOI: https://doi.org/10.1117/1.nph.8.3.035007"
+      ]
+    },
+    {
+      "Text9": "missing_fields:\nid: U2\nfield: half-brain protocol timing\nstatus: not_reported\ndetail: Video2半脑未另列清除时长",
+      "Text9_Reference": [
+        "Structured evidence: full/M_N0037/evidence/record.json#/missing_fields/1; SHA-256: dc3af283406917fa5f484f0e6d4795b0e9f5fdf2cd12bfaf3fa7e7e80c505e41; DOI: https://doi.org/10.1117/1.nph.8.3.035007"
+      ]
+    },
+    {
+      "Text10": "missing_fields:\nid: U3\nfield: long-term block dimensions\nstatus: not_reported\ndetail: Fig3/正文brain blocks未给大小，不能确定1mm",
+      "Text10_Reference": [
+        "Structured evidence: full/M_N0037/evidence/record.json#/missing_fields/2; SHA-256: dc3af283406917fa5f484f0e6d4795b0e9f5fdf2cd12bfaf3fa7e7e80c505e41; DOI: https://doi.org/10.1117/1.nph.8.3.035007"
+      ]
+    },
+    {
+      "Text11": "missing_fields:\nid: U4\nfield: n biological unit / animals / sex\nstatus: not_reported\ndetail: 各图n未明确独立动物数；动物6–12周但未逐实验全部绑定",
+      "Text11_Reference": [
+        "Structured evidence: full/M_N0037/evidence/record.json#/missing_fields/3; SHA-256: dc3af283406917fa5f484f0e6d4795b0e9f5fdf2cd12bfaf3fa7e7e80c505e41; DOI: https://doi.org/10.1117/1.nph.8.3.035007"
+      ]
+    },
+    {
+      "Text12": "missing_fields:\nid: U5\nfield: RT numeric degrees\nstatus: not_reported\ndetail: RT不替换为20/22/25°C",
+      "Text12_Reference": [
+        "Structured evidence: full/M_N0037/evidence/record.json#/missing_fields/4; SHA-256: dc3af283406917fa5f484f0e6d4795b0e9f5fdf2cd12bfaf3fa7e7e80c505e41; DOI: https://doi.org/10.1117/1.nph.8.3.035007"
+      ]
+    },
+    {
+      "Text13": "missing_fields:\nid: U6\nfield: exact fluorescence means/errors/raw data\nstatus: not_reported\ndetail: 仅图和文字；原始数据需向作者合理请求",
+      "Text13_Reference": [
+        "Structured evidence: full/M_N0037/evidence/record.json#/missing_fields/5; SHA-256: dc3af283406917fa5f484f0e6d4795b0e9f5fdf2cd12bfaf3fa7e7e80c505e41; DOI: https://doi.org/10.1117/1.nph.8.3.035007"
+      ]
+    },
+    {
+      "Text14": "missing_fields:\nid: U7\nfield: FDISCO comparator full protocol\nstatus: not_reported_in_this_article\ndetail: 方法原文引用前作，但不借用未读前作参数",
+      "Text14_Reference": [
+        "Structured evidence: full/M_N0037/evidence/record.json#/missing_fields/6; SHA-256: dc3af283406917fa5f484f0e6d4795b0e9f5fdf2cd12bfaf3fa7e7e80c505e41; DOI: https://doi.org/10.1117/1.nph.8.3.035007"
+      ]
+    },
+    {
+      "Text15": "missing_fields:\nid: U8\nfield: storage maximum beyond14days\nstatus: not_tested_here\ndetail: 14days是本篇GFP观察期，不是所有标记稳定保质期",
+      "Text15_Reference": [
+        "Structured evidence: full/M_N0037/evidence/record.json#/missing_fields/7; SHA-256: dc3af283406917fa5f484f0e6d4795b0e9f5fdf2cd12bfaf3fa7e7e80c505e41; DOI: https://doi.org/10.1117/1.nph.8.3.035007"
+      ]
+    },
+    {
+      "Text16": "missing_fields:\nid: U9\nfield: long-term PI/CD31 storage\nstatus: not_tested_here\ndetail: 仅透明前后强度比较，不可外推14day",
+      "Text16_Reference": [
+        "Structured evidence: full/M_N0037/evidence/record.json#/missing_fields/8; SHA-256: dc3af283406917fa5f484f0e6d4795b0e9f5fdf2cd12bfaf3fa7e7e80c505e41; DOI: https://doi.org/10.1117/1.nph.8.3.035007"
+      ]
+    },
+    {
+      "Text17": "missing_fields:\nid: U10\nfield: wash count and temperature forPI\nstatus: not_reported\ndetail: PBST几次洗6h，未给每次时长/温度",
+      "Text17_Reference": [
+        "Structured evidence: full/M_N0037/evidence/record.json#/missing_fields/9; SHA-256: dc3af283406917fa5f484f0e6d4795b0e9f5fdf2cd12bfaf3fa7e7e80c505e41; DOI: https://doi.org/10.1117/1.nph.8.3.035007"
+      ]
+    },
+    {
+      "Text18": "missing_fields:\nid: U11\nfield: imaging laser/channel/zstep/power\nstatus: not_reported\ndetail: 共聚焦与LSFM设备有型号，采集详细参数不足",
+      "Text18_Reference": [
+        "Structured evidence: full/M_N0037/evidence/record.json#/missing_fields/10; SHA-256: dc3af283406917fa5f484f0e6d4795b0e9f5fdf2cd12bfaf3fa7e7e80c505e41; DOI: https://doi.org/10.1117/1.nph.8.3.035007"
+      ]
+    },
+    {
+      "Text19": "missing_fields:\nid: U12\nfield: quantitative shrinkage/distortion\nstatus: not_reported\ndetail: 图2前后比例尺不同、图4尺寸变化不等于定量缩率",
+      "Text19_Reference": [
+        "Structured evidence: full/M_N0037/evidence/record.json#/missing_fields/11; SHA-256: dc3af283406917fa5f484f0e6d4795b0e9f5fdf2cd12bfaf3fa7e7e80c505e41; DOI: https://doi.org/10.1117/1.nph.8.3.035007"
+      ]
+    },
+    {
+      "Text20": "missing_fields:\nid: U13\nfield: repeated imaging photobleaching control\nstatus: not_reported\ndetail: 9h与14day观察未独立隔离介质衰减/光漂白贡献",
+      "Text20_Reference": [
+        "Structured evidence: full/M_N0037/evidence/record.json#/missing_fields/12; SHA-256: dc3af283406917fa5f484f0e6d4795b0e9f5fdf2cd12bfaf3fa7e7e80c505e41; DOI: https://doi.org/10.1117/1.nph.8.3.035007"
+      ]
+    },
+    {
+      "Text21": "missing_fields:\nid: U14\nfield: ex-vivo CD31 antibody penetration protocol\nstatus: not_applicable\ndetail: 预标记血管，不是wholemount免疫染色渗透实验",
+      "Text21_Reference": [
+        "Structured evidence: full/M_N0037/evidence/record.json#/missing_fields/13; SHA-256: dc3af283406917fa5f484f0e6d4795b0e9f5fdf2cd12bfaf3fa7e7e80c505e41; DOI: https://doi.org/10.1117/1.nph.8.3.035007"
+      ]
+    },
+    {
+      "Text22": "missing_fields:\nid: U15\nfield: renewal of RI medium during storage\nstatus: not_reported\ndetail: 没有换液频率",
+      "Text22_Reference": [
+        "Structured evidence: full/M_N0037/evidence/record.json#/missing_fields/14; SHA-256: dc3af283406917fa5f484f0e6d4795b0e9f5fdf2cd12bfaf3fa7e7e80c505e41; DOI: https://doi.org/10.1117/1.nph.8.3.035007"
+      ]
+    },
+    {
+      "Text23": "missing_fields:\nid: U16\nfield: peroxide numeric precision\nstatus: categorical_assay\ndetail: 条带颜色分档，不将柱图当高精度连续浓度",
+      "Text23_Reference": [
+        "Structured evidence: full/M_N0037/evidence/record.json#/missing_fields/15; SHA-256: dc3af283406917fa5f484f0e6d4795b0e9f5fdf2cd12bfaf3fa7e7e80c505e41; DOI: https://doi.org/10.1117/1.nph.8.3.035007"
+      ]
+    },
+    {
+      "Text24": "interpretation_limits:\nIntensity ratios measure signal under specified imaging/segmentation; enhancement does not equal total fluorescent molecule recovery or quantum-yield measurement.",
+      "Text24_Reference": [
+        "Structured evidence: full/M_N0037/evidence/record.json#/interpretation_limits/0; SHA-256: dc3af283406917fa5f484f0e6d4795b0e9f5fdf2cd12bfaf3fa7e7e80c505e41; DOI: https://doi.org/10.1117/1.nph.8.3.035007"
+      ]
+    },
+    {
+      "Text25": "interpretation_limits:\nn.s. between methods does not prove statistical equivalence.",
+      "Text25_Reference": [
+        "Structured evidence: full/M_N0037/evidence/record.json#/interpretation_limits/1; SHA-256: dc3af283406917fa5f484f0e6d4795b0e9f5fdf2cd12bfaf3fa7e7e80c505e41; DOI: https://doi.org/10.1117/1.nph.8.3.035007"
+      ]
+    },
+    {
+      "Text26": "interpretation_limits:\nStorage14days was tested for GFP only; it is not an all-marker shelf-life or complete preservation claim.",
+      "Text26_Reference": [
+        "Structured evidence: full/M_N0037/evidence/record.json#/interpretation_limits/2; SHA-256: dc3af283406917fa5f484f0e6d4795b0e9f5fdf2cd12bfaf3fa7e7e80c505e41; DOI: https://doi.org/10.1117/1.nph.8.3.035007"
+      ]
+    },
+    {
+      "Text27": "interpretation_limits:\ne/v are alternative clearing branches; the low-temperature alkaline dehydration remains common.",
+      "Text27_Reference": [
+        "Structured evidence: full/M_N0037/evidence/record.json#/interpretation_limits/3; SHA-256: dc3af283406917fa5f484f0e6d4795b0e9f5fdf2cd12bfaf3fa7e7e80c505e41; DOI: https://doi.org/10.1117/1.nph.8.3.035007"
+      ]
+    },
+    {
+      "Text28": "interpretation_limits:\nCD31-A647 compatibility is established on pre-labeled tissue, not on ex vivo wholemount antibody penetration.",
+      "Text28_Reference": [
+        "Structured evidence: full/M_N0037/evidence/record.json#/interpretation_limits/4; SHA-256: dc3af283406917fa5f484f0e6d4795b0e9f5fdf2cd12bfaf3fa7e7e80c505e41; DOI: https://doi.org/10.1117/1.nph.8.3.035007"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,682 @@
+{
+  "TOC_Method_Name": {
+    "Text": "a-uDISCO",
+    "Text_Reference": [
+      "DOI: https://doi.org/10.3389/fnana.2018.00067",
+      "Evidence-layer structured paraphrase; not a verbatim quotation. Source release: https://github.com/404NotFound422/TOCAgentProject/tree/5e3a711befb3952a2e39f4d53fc9c9f1a7ac0d22/KnowledgeBase/evidence_expansion_20261019",
+      "Local source archive: ../literature_evidence/2026-11-11/source_release.zip; member: full/M_N1254/version_selection.json"
+    ]
+  },
+  "General_Description": {
+    "Text": "Optimization of GFP Fluorescence Preservation by a Modified uDISCO Clearing Protocol. (2018). Evidence category: method. This card preserves the evidence layer's structured statements and their original field labels; it does not add a new literature review or certify benchmark scoring thresholds.",
+    "Text_Reference": [
+      "DOI: https://doi.org/10.3389/fnana.2018.00067",
+      "Evidence-layer structured paraphrase; not a verbatim quotation. Source release: https://github.com/404NotFound422/TOCAgentProject/tree/5e3a711befb3952a2e39f4d53fc9c9f1a7ac0d22/KnowledgeBase/evidence_expansion_20261019",
+      "Local source archive: ../literature_evidence/2026-11-11/source_release.zip; member: full/M_N1254/version_selection.json"
+    ]
+  },
+  "Tissue_Types": [],
+  "Time_Consumption": [
+    {
+      "Text1": "time_metrics:\ntime_id: TM01\nscope: common\nvalue: overnight\nkind: postfixation\nnotes: 与透明时间分开，小时数未知\nsources: \n  [1] L02",
+      "Text1_Reference": [
+        "Structured evidence: full/M_N1254/evidence/record.json#/time_metrics/0; SHA-256: 6bd1e346c88ecb91d239dedb85ed96957d5733a5ead387953188647b064e2d23; DOI: https://doi.org/10.3389/fnana.2018.00067"
+      ]
+    },
+    {
+      "Text2": "time_metrics:\ntime_id: TM02\nscope: B_S\nvalue: 13h +1 overnight\nkind: derived clearing stage sum\nnotes: 6×2h脱水+1hRI；不含固定/洗涤/成像/存储；不把ON换成固定小时\nsources: \n  [1] L04\n  [2] T1",
+      "Text2_Reference": [
+        "Structured evidence: full/M_N1254/evidence/record.json#/time_metrics/1; SHA-256: 6bd1e346c88ecb91d239dedb85ed96957d5733a5ead387953188647b064e2d23; DOI: https://doi.org/10.3389/fnana.2018.00067"
+      ]
+    },
+    {
+      "Text3": "time_metrics:\ntime_id: TM03\nscope: B_H\nvalue: 19h45min +3 overnights\nkind: derived nominal table clearing sum\nnotes: 4×4h+45min+3h；正文RI至少3h，因此实际可更长\nsources: \n  [1] L04\n  [2] T1",
+      "Text3_Reference": [
+        "Structured evidence: full/M_N1254/evidence/record.json#/time_metrics/2; SHA-256: 6bd1e346c88ecb91d239dedb85ed96957d5733a5ead387953188647b064e2d23; DOI: https://doi.org/10.3389/fnana.2018.00067"
+      ]
+    },
+    {
+      "Text4": "time_metrics:\ntime_id: TM04\nscope: B_W\nvalue: 36h +4 overnights\nkind: derived nominal table clearing sum\nnotes: 3×10h+1h+5h；不同ON不能未经说明定量\nsources: \n  [1] L04\n  [2] T1",
+      "Text4_Reference": [
+        "Structured evidence: full/M_N1254/evidence/record.json#/time_metrics/3; SHA-256: 6bd1e346c88ecb91d239dedb85ed96957d5733a5ead387953188647b064e2d23; DOI: https://doi.org/10.3389/fnana.2018.00067"
+      ]
+    },
+    {
+      "Text5": "time_metrics:\ntime_id: TM05\nscope: B_W\nvalue: 4 days\nkind: author workflow duration claim\nnotes: Discussion概括；非由表1ON推算的精确总时长，起止边界未精确报告\nsources: \n  [1] L13",
+      "Text5_Reference": [
+        "Structured evidence: full/M_N1254/evidence/record.json#/time_metrics/4; SHA-256: 6bd1e346c88ecb91d239dedb85ed96957d5733a5ead387953188647b064e2d23; DOI: https://doi.org/10.3389/fnana.2018.00067"
+      ]
+    },
+    {
+      "Text6": "time_metrics:\ntime_id: TM06\nscope: E01,E02\nvalue: 0 and3 days\nkind: post-clearing observation\nnotes: 主文onset of clearing用语与immediately after clearing解释存在不一致，采用图标签及结果段作为存储观察，不当清除耗时\nsources: \n  [1] L09\n  [2] L10\n  [3] F1\n  [4] F2",
+      "Text6_Reference": [
+        "Structured evidence: full/M_N1254/evidence/record.json#/time_metrics/5; SHA-256: 6bd1e346c88ecb91d239dedb85ed96957d5733a5ead387953188647b064e2d23; DOI: https://doi.org/10.3389/fnana.2018.00067"
+      ]
+    },
+    {
+      "Text7": "time_metrics:\ntime_id: TM07\nscope: E03\nvalue: 0,7,14,28,42 days\nkind: post-clearing storage observation\nnotes: 42d是观察窗口，不是全部荧光消失时间\nsources: \n  [1] L10\n  [2] F3\n  [3] V1",
+      "Text7_Reference": [
+        "Structured evidence: full/M_N1254/evidence/record.json#/time_metrics/6; SHA-256: 6bd1e346c88ecb91d239dedb85ed96957d5733a5ead387953188647b064e2d23; DOI: https://doi.org/10.3389/fnana.2018.00067"
+      ]
+    },
+    {
+      "Text8": "time_metrics:\ntime_id: TM08\nscope: common\nvalue: every3–4 days\nkind: storage medium exchange cadence\nnotes: 不是整个透明的历时\nsources: \n  [1] L04",
+      "Text8_Reference": [
+        "Structured evidence: full/M_N1254/evidence/record.json#/time_metrics/7; SHA-256: 6bd1e346c88ecb91d239dedb85ed96957d5733a5ead387953188647b064e2d23; DOI: https://doi.org/10.3389/fnana.2018.00067"
+      ]
+    }
+  ],
+  "Tissue_Deformation": [],
+  "Fluorescence_Compatibility": [
+    {
+      "Text1": "labeling_assays:\nassay_id: A01\nexperiment_id: E01\nmarker: GFP/Thy1-GFP-M\nlabeling_mode: 现成内源报告荧光；无本篇染色动作\nmetric: cropped widefield cortex mean intensity at day3/day0\ndenominator: day0 after clearing\nsources: \n  [1] L06\n  [2] L07\n  [3] F1",
+      "Text1_Reference": [
+        "Structured evidence: full/M_N1254/evidence/record.json#/labeling_assays/0; SHA-256: 6bd1e346c88ecb91d239dedb85ed96957d5733a5ead387953188647b064e2d23; DOI: https://doi.org/10.3389/fnana.2018.00067"
+      ]
+    },
+    {
+      "Text2": "labeling_assays:\nassay_id: A02\nexperiment_id: E02\nmarker: GFP/Thy1-GFP-M\nlabeling_mode: 现成内源报告荧光；无本篇染色动作\nmetric: corresponding neuron MIP mean intensity after/before clearing\ndenominator: same cell before clearing at each post-clear time\nsources: \n  [1] L06\n  [2] L07\n  [3] F2",
+      "Text2_Reference": [
+        "Structured evidence: full/M_N1254/evidence/record.json#/labeling_assays/1; SHA-256: 6bd1e346c88ecb91d239dedb85ed96957d5733a5ead387953188647b064e2d23; DOI: https://doi.org/10.3389/fnana.2018.00067"
+      ]
+    },
+    {
+      "Text3": "labeling_assays:\nassay_id: A03\nexperiment_id: E03\nmarker: GFP/Thy1-GFP-M\nlabeling_mode: 现成内源报告荧光\nmetric: mean selected soma intensity / mean background intensity (SBR)\ndenominator: 15–20 equally sized signal-free background ROIs,20.31×20.31µm; cortex30µm z-projection\nsources: \n  [1] L06\n  [2] L07\n  [3] F3",
+      "Text3_Reference": [
+        "Structured evidence: full/M_N1254/evidence/record.json#/labeling_assays/2; SHA-256: 6bd1e346c88ecb91d239dedb85ed96957d5733a5ead387953188647b064e2d23; DOI: https://doi.org/10.3389/fnana.2018.00067"
+      ]
+    },
+    {
+      "Text4": "labeling_assays:\nassay_id: A04\nexperiment_id: E06\nmarker: GFP/Cx3cr1-GFP\nlabeling_mode: 现成内源报告荧光；before/after伪彩叠加\nmetric: qualitative cell morphology\ndenominator: not quantitative retention assay\nsources: \n  [1] L06\n  [2] L07\n  [3] F4",
+      "Text4_Reference": [
+        "Structured evidence: full/M_N1254/evidence/record.json#/labeling_assays/3; SHA-256: 6bd1e346c88ecb91d239dedb85ed96957d5733a5ead387953188647b064e2d23; DOI: https://doi.org/10.3389/fnana.2018.00067"
+      ]
+    },
+    {
+      "Text5": "labeling_assays:\nassay_id: A05\nexperiment_id: E07\nmarker: GFP/Thy1-GFP-M\nlabeling_mode: 现成内源报告荧光；before/after伪彩叠加\nmetric: qualitative dendritic spine morphology\ndenominator: not quantitative retention assay\nsources: \n  [1] L06\n  [2] L07\n  [3] SF1",
+      "Text5_Reference": [
+        "Structured evidence: full/M_N1254/evidence/record.json#/labeling_assays/4; SHA-256: 6bd1e346c88ecb91d239dedb85ed96957d5733a5ead387953188647b064e2d23; DOI: https://doi.org/10.3389/fnana.2018.00067"
+      ]
+    },
+    {
+      "Text6": "labeling_assays:\nassay_id: A06\nexperiment_id: E08\nmarker: GFP/Thy1-GFP-M\nlabeling_mode: 现成内源报告荧光\nmetric: qualitative 3D neuronal structures\ndenominator: none\nsources: \n  [1] L06\n  [2] L12\n  [3] F5\n  [4] V2",
+      "Text6_Reference": [
+        "Structured evidence: full/M_N1254/evidence/record.json#/labeling_assays/5; SHA-256: 6bd1e346c88ecb91d239dedb85ed96957d5733a5ead387953188647b064e2d23; DOI: https://doi.org/10.3389/fnana.2018.00067"
+      ]
+    },
+    {
+      "Text7": "labeling_assays:\nassay_id: A07\nexperiment_id: E09\nmarker: GFP/Thy1-GFP-M\nlabeling_mode: 现成内源报告荧光\nmetric: qualitative 3D neuronal structures\ndenominator: none\nsources: \n  [1] SF4",
+      "Text7_Reference": [
+        "Structured evidence: full/M_N1254/evidence/record.json#/labeling_assays/6; SHA-256: 6bd1e346c88ecb91d239dedb85ed96957d5733a5ead387953188647b064e2d23; DOI: https://doi.org/10.3389/fnana.2018.00067"
+      ]
+    }
+  ],
+  "Preservation_Stability": [
+    {
+      "Text1": "nested_storage_operation:\nP06",
+      "Text1_Reference": [
+        "Structured evidence: full/M_N1254/support/flow_structure.json#/nested_storage_operation/0; SHA-256: 24fb0ceb7d034c65faf24be91e6d2b6100a502e0cd8ed5d78cd4d276446dd479; DOI: https://doi.org/10.3389/fnana.2018.00067"
+      ]
+    }
+  ],
+  "Application": [
+    {
+      "Text1": "experiments:\nexperiment_id: E01\npurpose: pH筛选\nsample_label: Thy1-GFP-M\nsample_form: 1 mm coronal brain slices\nregion: cortex\ncontrol: control/unadjusted; pH7.5–8.0;9.0–9.5;10.5–11.0\nsample_count: n=7,6,8,8 cortical areas respectively; animal/slice count not stated\nobservation_times: 0,3 days after clearing\nprotocol_assignment: slice\nsources: \n  [1] L01\n  [2] L02\n  [3] F1\nspecies: Mus musculus\nage: adult, 2–3 months\nsex: not_reported\nstarting_state: 已取出的4% PFA固定组织；共同方法后固定overnight at4°C，PBS≥3次洗涤\nindependent_animal_count: not_reported\ngeometry_branch: B_S\npH_branches: \n  [1] B_U\n  [2] B_L\n  [3] B_A\n  [4] B_X",
+      "Text1_Reference": [
+        "Structured evidence: full/M_N1254/evidence/record.json#/experiments/0; SHA-256: 6bd1e346c88ecb91d239dedb85ed96957d5733a5ead387953188647b064e2d23; DOI: https://doi.org/10.3389/fnana.2018.00067"
+      ]
+    },
+    {
+      "Text2": "experiments:\nexperiment_id: E02\npurpose: 同神经元GFP定量与短期存储\nsample_label: Thy1-GFP-M\nsample_form: 1 mm coronal brain slices\nregion: surface cortical neurons\ncontrol: uDISCO vs a-uDISCO\nsample_count: uDISCO:23 cell bodies day0 and15 day3 in6 slices; a-uDISCO:28 cell bodies in6 slices at both days; animal count unknown\nobservation_times: before,0,3 days after clearing\nprotocol_assignment: slice\nsources: \n  [1] L01\n  [2] L02\n  [3] F2\nspecies: Mus musculus\nage: adult, 2–3 months\nsex: not_reported\nstarting_state: 已取出的4% PFA固定组织；共同方法后固定overnight at4°C，PBS≥3次洗涤\nindependent_animal_count: not_reported\ngeometry_branch: B_S\npH_branches: \n  [1] B_U\n  [2] B_A",
+      "Text2_Reference": [
+        "Structured evidence: full/M_N1254/evidence/record.json#/experiments/1; SHA-256: 6bd1e346c88ecb91d239dedb85ed96957d5733a5ead387953188647b064e2d23; DOI: https://doi.org/10.3389/fnana.2018.00067"
+      ]
+    },
+    {
+      "Text3": "experiments:\nexperiment_id: E03\npurpose: 半脑长期GFP与SBR\nsample_label: Thy1-GFP-M\nsample_form: hemispheres\nregion: cortex quantified; hippocampus visualized; superior colliculus overview\ncontrol: left uDISCO/right a-uDISCO shown; exact pairing design not established\nsample_count: 5 samples per method\nobservation_times: 0,7,14,28,42 days after clearing\nprotocol_assignment: hemisphere\nsources: \n  [1] L01\n  [2] L02\n  [3] F3\nspecies: Mus musculus\nage: adult, 2–3 months\nsex: not_reported\nstarting_state: 已取出的4% PFA固定组织；共同方法后固定overnight at4°C，PBS≥3次洗涤\nindependent_animal_count: not_reported\ngeometry_branch: B_H\npH_branches: \n  [1] B_U\n  [2] B_A",
+      "Text3_Reference": [
+        "Structured evidence: full/M_N1254/evidence/record.json#/experiments/2; SHA-256: 6bd1e346c88ecb91d239dedb85ed96957d5733a5ead387953188647b064e2d23; DOI: https://doi.org/10.3389/fnana.2018.00067"
+      ]
+    },
+    {
+      "Text4": "experiments:\nexperiment_id: E04\npurpose: 整脑透射率\nsample_label: not_reported_for_this_panel\nsample_form: whole adult brains\nregion: central brain, ventral to dorsal path\ncontrol: uDISCO vs a-uDISCO\nsample_count: 3 samples per method; duplicate instrument readings averaged\nobservation_times: after clearing; exact elapsed time not stated\nprotocol_assignment: whole_brain\nsources: \n  [1] L01\n  [2] L02\n  [3] F4\nspecies: Mus musculus\nage: adult, 2–3 months\nsex: not_reported\nstarting_state: 已取出的4% PFA固定组织；共同方法后固定overnight at4°C，PBS≥3次洗涤\nindependent_animal_count: not_reported\ngeometry_branch: B_W\npH_branches: \n  [1] B_U\n  [2] B_A",
+      "Text4_Reference": [
+        "Structured evidence: full/M_N1254/evidence/record.json#/experiments/3; SHA-256: 6bd1e346c88ecb91d239dedb85ed96957d5733a5ead387953188647b064e2d23; DOI: https://doi.org/10.3389/fnana.2018.00067"
+      ]
+    },
+    {
+      "Text5": "experiments:\nexperiment_id: E05\npurpose: 整脑三轴线性尺寸\nsample_label: not_reported_for_this_panel\nsample_form: whole adult brains\nregion: L–R; A–P; V–D\ncontrol: uDISCO vs a-uDISCO\nsample_count: 4 samples per method\nobservation_times: before/after clearing\nprotocol_assignment: whole_brain\nsources: \n  [1] L01\n  [2] L02\n  [3] F4\nspecies: Mus musculus\nage: adult, 2–3 months\nsex: not_reported\nstarting_state: 已取出的4% PFA固定组织；共同方法后固定overnight at4°C，PBS≥3次洗涤\nindependent_animal_count: not_reported\ngeometry_branch: B_W\npH_branches: \n  [1] B_U\n  [2] B_A",
+      "Text5_Reference": [
+        "Structured evidence: full/M_N1254/evidence/record.json#/experiments/4; SHA-256: 6bd1e346c88ecb91d239dedb85ed96957d5733a5ead387953188647b064e2d23; DOI: https://doi.org/10.3389/fnana.2018.00067"
+      ]
+    },
+    {
+      "Text6": "experiments:\nexperiment_id: E06\npurpose: 小胶质细胞形态\nsample_label: Cx3cr1-GFP\nsample_form: whole adult brains\nregion: individual microglia on dorsal surface\ncontrol: same structures before vs after a-uDISCO\nsample_count: not_reported\nobservation_times: before/after clearing\nprotocol_assignment: whole_brain\nsources: \n  [1] L01\n  [2] L02\n  [3] F4\nspecies: Mus musculus\nage: adult, 2–3 months\nsex: not_reported\nstarting_state: 已取出的4% PFA固定组织；共同方法后固定overnight at4°C，PBS≥3次洗涤\nindependent_animal_count: not_reported\ngeometry_branch: B_W\npH_branches: \n  [1] B_A",
+      "Text6_Reference": [
+        "Structured evidence: full/M_N1254/evidence/record.json#/experiments/5; SHA-256: 6bd1e346c88ecb91d239dedb85ed96957d5733a5ead387953188647b064e2d23; DOI: https://doi.org/10.3389/fnana.2018.00067"
+      ]
+    },
+    {
+      "Text7": "experiments:\nexperiment_id: E07\npurpose: 树突棘形态\nsample_label: Thy1-GFP-M\nsample_form: whole adult brains\nregion: surface pyramidal neuron dendritic spines\ncontrol: same structure before vs after a-uDISCO\nsample_count: not_reported\nobservation_times: before/after clearing\nprotocol_assignment: whole_brain\nsources: \n  [1] L01\n  [2] L02\n  [3] SF1\nspecies: Mus musculus\nage: adult, 2–3 months\nsex: not_reported\nstarting_state: 已取出的4% PFA固定组织；共同方法后固定overnight at4°C，PBS≥3次洗涤\nindependent_animal_count: not_reported\ngeometry_branch: B_W\npH_branches: \n  [1] B_A",
+      "Text7_Reference": [
+        "Structured evidence: full/M_N1254/evidence/record.json#/experiments/6; SHA-256: 6bd1e346c88ecb91d239dedb85ed96957d5733a5ead387953188647b064e2d23; DOI: https://doi.org/10.3389/fnana.2018.00067"
+      ]
+    },
+    {
+      "Text8": "experiments:\nexperiment_id: E08\npurpose: 全脑3D神经结构示范\nsample_label: Thy1-GFP-M\nsample_form: whole adult brains\nregion: cortex; hippocampus; corpus striatum; superior colliculus; cerebellum\ncontrol: a-uDISCO demonstration; no quantitative control in Fig5\nsample_count: not_reported\nobservation_times: after clearing; elapsed time not stated\nprotocol_assignment: whole_brain\nsources: \n  [1] L01\n  [2] L02\n  [3] F5\nspecies: Mus musculus\nage: adult, 2–3 months\nsex: not_reported\nstarting_state: 已取出的4% PFA固定组织；共同方法后固定overnight at4°C，PBS≥3次洗涤\nindependent_animal_count: not_reported\ngeometry_branch: B_W\npH_branches: \n  [1] B_A",
+      "Text8_Reference": [
+        "Structured evidence: full/M_N1254/evidence/record.json#/experiments/7; SHA-256: 6bd1e346c88ecb91d239dedb85ed96957d5733a5ead387953188647b064e2d23; DOI: https://doi.org/10.3389/fnana.2018.00067"
+      ]
+    },
+    {
+      "Text9": "experiments:\nexperiment_id: E09\npurpose: 脊髓透明及GFP示范\nsample_label: Thy1-GFP-M\nsample_form: spinal cord segment\nregion: exact spinal level not_reported\ncontrol: before/after a-uDISCO reflection; cleared fluorescence\nsample_count: not_reported\nobservation_times: before/after; exact elapsed time not stated\nprotocol_assignment: organ_specific_not_reported\nsources: \n  [1] L01\n  [2] L02\n  [3] SF4\nspecies: Mus musculus\nage: adult, 2–3 months\nsex: not_reported\nstarting_state: 已取出的4% PFA固定组织；共同方法后固定overnight at4°C，PBS≥3次洗涤\nindependent_animal_count: not_reported\ngeometry_branch: organ_specific_not_reported\npH_branches: \n  [1] B_A",
+      "Text9_Reference": [
+        "Structured evidence: full/M_N1254/evidence/record.json#/experiments/8; SHA-256: 6bd1e346c88ecb91d239dedb85ed96957d5733a5ead387953188647b064e2d23; DOI: https://doi.org/10.3389/fnana.2018.00067"
+      ]
+    },
+    {
+      "Text10": "experiments:\nexperiment_id: E10\npurpose: 外周器官透明示范\nsample_label: Thy1-GFP-M\nsample_form: muscle,intestine,stomach,lung,heart,kidney,liver,spleen\nregion: organ-specific subregion not_reported\ncontrol: before/after a-uDISCO reflection\nsample_count: not_reported\nobservation_times: before/after; exact elapsed time not stated\nprotocol_assignment: organ_specific_not_reported\nsources: \n  [1] L01\n  [2] L02\n  [3] SF4\nspecies: Mus musculus\nage: adult, 2–3 months\nsex: not_reported\nstarting_state: 已取出的4% PFA固定组织；共同方法后固定overnight at4°C，PBS≥3次洗涤\nindependent_animal_count: not_reported\ngeometry_branch: organ_specific_not_reported\npH_branches: \n  [1] B_A",
+      "Text10_Reference": [
+        "Structured evidence: full/M_N1254/evidence/record.json#/experiments/9; SHA-256: 6bd1e346c88ecb91d239dedb85ed96957d5733a5ead387953188647b064e2d23; DOI: https://doi.org/10.3389/fnana.2018.00067"
+      ]
+    },
+    {
+      "Text11": "branches:\nbranch_id: B_S\ncondition: 1 mm brain slices\ndescription: RT dehydration; no DCM; BABB-D4 1h\nalternative_set: sample_geometry\nsources: \n  [1] L04\n  [2] T1",
+      "Text11_Reference": [
+        "Structured evidence: full/M_N1254/evidence/record.json#/branches/0; SHA-256: 6bd1e346c88ecb91d239dedb85ed96957d5733a5ead387953188647b064e2d23; DOI: https://doi.org/10.3389/fnana.2018.00067"
+      ]
+    },
+    {
+      "Text12": "branches:\nbranch_id: B_H\ncondition: hemispheres\ndescription: 35°C dehydration; DCM45min; BABB-D4 nominal3h/main≥3h\nalternative_set: sample_geometry\nsources: \n  [1] L04\n  [2] T1",
+      "Text12_Reference": [
+        "Structured evidence: full/M_N1254/evidence/record.json#/branches/1; SHA-256: 6bd1e346c88ecb91d239dedb85ed96957d5733a5ead387953188647b064e2d23; DOI: https://doi.org/10.3389/fnana.2018.00067"
+      ]
+    },
+    {
+      "Text13": "branches:\nbranch_id: B_W\ncondition: whole brains\ndescription: 35°C dehydration; DCM60min; BABB-D4 5h\nalternative_set: sample_geometry\nsources: \n  [1] L04\n  [2] T1",
+      "Text13_Reference": [
+        "Structured evidence: full/M_N1254/evidence/record.json#/branches/2; SHA-256: 6bd1e346c88ecb91d239dedb85ed96957d5733a5ead387953188647b064e2d23; DOI: https://doi.org/10.3389/fnana.2018.00067"
+      ]
+    },
+    {
+      "Text14": "branches:\nbranch_id: B_U\ncondition: uDISCO comparator\ndescription: tert-butanol and BABB-D4 pH unadjusted; no triethylamine\nalternative_set: pH_condition\nsources: \n  [1] L04\n  [2] T1",
+      "Text14_Reference": [
+        "Structured evidence: full/M_N1254/evidence/record.json#/branches/3; SHA-256: 6bd1e346c88ecb91d239dedb85ed96957d5733a5ead387953188647b064e2d23; DOI: https://doi.org/10.3389/fnana.2018.00067"
+      ]
+    },
+    {
+      "Text15": "branches:\nbranch_id: B_A\ncondition: a-uDISCO\ndescription: tert-butanol and BABB-D4 pH9.0–9.5\nalternative_set: pH_condition\nsources: \n  [1] L04\n  [2] T1",
+      "Text15_Reference": [
+        "Structured evidence: full/M_N1254/evidence/record.json#/branches/4; SHA-256: 6bd1e346c88ecb91d239dedb85ed96957d5733a5ead387953188647b064e2d23; DOI: https://doi.org/10.3389/fnana.2018.00067"
+      ]
+    },
+    {
+      "Text16": "branches:\nbranch_id: B_L\ncondition: pH screen only\ndescription: tert-butanol and BABB-D4 pH7.5–8.0\nalternative_set: pH_condition\nsources: \n  [1] L04\n  [2] T1\nallowed_experiments: \n  [1] E01\nallowed_geometry: \n  [1] B_S\nrestriction: only evaluated in1 mm slice pH screening, not hemispheres/whole brains",
+      "Text16_Reference": [
+        "Structured evidence: full/M_N1254/evidence/record.json#/branches/5; SHA-256: 6bd1e346c88ecb91d239dedb85ed96957d5733a5ead387953188647b064e2d23; DOI: https://doi.org/10.3389/fnana.2018.00067"
+      ]
+    },
+    {
+      "Text17": "branches:\nbranch_id: B_X\ncondition: pH screen only\ndescription: tert-butanol and BABB-D4 pH10.5–11.0\nalternative_set: pH_condition\nsources: \n  [1] L04\n  [2] T1\nallowed_experiments: \n  [1] E01\nallowed_geometry: \n  [1] B_S\nrestriction: only evaluated in1 mm slice pH screening, not hemispheres/whole brains",
+      "Text17_Reference": [
+        "Structured evidence: full/M_N1254/evidence/record.json#/branches/6; SHA-256: 6bd1e346c88ecb91d239dedb85ed96957d5733a5ead387953188647b064e2d23; DOI: https://doi.org/10.3389/fnana.2018.00067"
+      ]
+    },
+    {
+      "Text18": "operations:\noperation_id: P01\nstage: postfixation\nbranch_id: common\noperation: 后固定已制备组织\nmedium: 4% PFA\nduration: overnight\ntemperature: 4°C\nevidence_class: reported common protocol, not specimen-specific timestamp log\nsources: \n  [1] L02\nnotes: 此前PBS/PFA固定为样本前史，不扩展动物操作",
+      "Text18_Reference": [
+        "Structured evidence: full/M_N1254/evidence/record.json#/operations/0; SHA-256: 6bd1e346c88ecb91d239dedb85ed96957d5733a5ead387953188647b064e2d23; DOI: https://doi.org/10.3389/fnana.2018.00067"
+      ]
+    },
+    {
+      "Text19": "operations:\noperation_id: P02\nstage: wash\nbranch_id: common\noperation: PBS洗涤后固定组织\nmedium: 0.01 M PBS\nduration: at least3 washes; per-wash time not_reported\ntemperature: not_reported\nevidence_class: reported common protocol, not specimen-specific timestamp log\nsources: \n  [1] L02\nnotes: ",
+      "Text19_Reference": [
+        "Structured evidence: full/M_N1254/evidence/record.json#/operations/1; SHA-256: 6bd1e346c88ecb91d239dedb85ed96957d5733a5ead387953188647b064e2d23; DOI: https://doi.org/10.3389/fnana.2018.00067"
+      ]
+    },
+    {
+      "Text20": "operations:\noperation_id: P03\nstage: geometry\nbranch_id: B_S\noperation: 振动切片整理\nmedium: not_applicable\nduration: not_reported\ntemperature: not_reported\nevidence_class: reported common protocol, not specimen-specific timestamp log\nsources: \n  [1] L02\nnotes: 1 mm coronal slices",
+      "Text20_Reference": [
+        "Structured evidence: full/M_N1254/evidence/record.json#/operations/2; SHA-256: 6bd1e346c88ecb91d239dedb85ed96957d5733a5ead387953188647b064e2d23; DOI: https://doi.org/10.3389/fnana.2018.00067"
+      ]
+    },
+    {
+      "Text21": "operations:\noperation_id: P04\nstage: geometry\nbranch_id: B_H\noperation: 沿中线分出半脑\nmedium: not_applicable\nduration: not_reported\ntemperature: not_reported\nevidence_class: reported common protocol, not specimen-specific timestamp log\nsources: \n  [1] L02\nnotes: ",
+      "Text21_Reference": [
+        "Structured evidence: full/M_N1254/evidence/record.json#/operations/3; SHA-256: 6bd1e346c88ecb91d239dedb85ed96957d5733a5ead387953188647b064e2d23; DOI: https://doi.org/10.3389/fnana.2018.00067"
+      ]
+    },
+    {
+      "Text22": "operations:\noperation_id: B_S_D1\nstage: dehydration\nbranch_id: B_S\noperation: 逐级脱水第1步\nmedium: 30 vol% tert-butanol\nduration: 2h\ntemperature: RT\nevidence_class: reported common protocol, not specimen-specific timestamp log\nsources: \n  [1] L04\n  [2] T1\nnotes: 切片E01筛选可用B_U/B_L/B_A/B_X；E02仅B_U/B_A。半脑/整脑只评估B_U/B_A；具体实验按experiments.pH_branches约束。不能把样本几何分支串联。",
+      "Text22_Reference": [
+        "Structured evidence: full/M_N1254/evidence/record.json#/operations/4; SHA-256: 6bd1e346c88ecb91d239dedb85ed96957d5733a5ead387953188647b064e2d23; DOI: https://doi.org/10.3389/fnana.2018.00067"
+      ]
+    },
+    {
+      "Text23": "operations:\noperation_id: B_S_D2\nstage: dehydration\nbranch_id: B_S\noperation: 逐级脱水第2步\nmedium: 50 vol% tert-butanol\nduration: 2h\ntemperature: RT\nevidence_class: reported common protocol, not specimen-specific timestamp log\nsources: \n  [1] L04\n  [2] T1\nnotes: 切片E01筛选可用B_U/B_L/B_A/B_X；E02仅B_U/B_A。半脑/整脑只评估B_U/B_A；具体实验按experiments.pH_branches约束。不能把样本几何分支串联。",
+      "Text23_Reference": [
+        "Structured evidence: full/M_N1254/evidence/record.json#/operations/5; SHA-256: 6bd1e346c88ecb91d239dedb85ed96957d5733a5ead387953188647b064e2d23; DOI: https://doi.org/10.3389/fnana.2018.00067"
+      ]
+    },
+    {
+      "Text24": "operations:\noperation_id: B_S_D3\nstage: dehydration\nbranch_id: B_S\noperation: 逐级脱水第3步\nmedium: 70 vol% tert-butanol\nduration: 2h\ntemperature: RT\nevidence_class: reported common protocol, not specimen-specific timestamp log\nsources: \n  [1] L04\n  [2] T1\nnotes: 切片E01筛选可用B_U/B_L/B_A/B_X；E02仅B_U/B_A。半脑/整脑只评估B_U/B_A；具体实验按experiments.pH_branches约束。不能把样本几何分支串联。",
+      "Text24_Reference": [
+        "Structured evidence: full/M_N1254/evidence/record.json#/operations/6; SHA-256: 6bd1e346c88ecb91d239dedb85ed96957d5733a5ead387953188647b064e2d23; DOI: https://doi.org/10.3389/fnana.2018.00067"
+      ]
+    },
+    {
+      "Text25": "operations:\noperation_id: B_S_D4\nstage: dehydration\nbranch_id: B_S\noperation: 逐级脱水第4步\nmedium: 80 vol% tert-butanol\nduration: 2h\ntemperature: RT\nevidence_class: reported common protocol, not specimen-specific timestamp log\nsources: \n  [1] L04\n  [2] T1\nnotes: 切片E01筛选可用B_U/B_L/B_A/B_X；E02仅B_U/B_A。半脑/整脑只评估B_U/B_A；具体实验按experiments.pH_branches约束。不能把样本几何分支串联。",
+      "Text25_Reference": [
+        "Structured evidence: full/M_N1254/evidence/record.json#/operations/7; SHA-256: 6bd1e346c88ecb91d239dedb85ed96957d5733a5ead387953188647b064e2d23; DOI: https://doi.org/10.3389/fnana.2018.00067"
+      ]
+    },
+    {
+      "Text26": "operations:\noperation_id: B_S_D5\nstage: dehydration\nbranch_id: B_S\noperation: 逐级脱水第5步\nmedium: 90 vol% tert-butanol\nduration: 2h\ntemperature: RT\nevidence_class: reported common protocol, not specimen-specific timestamp log\nsources: \n  [1] L04\n  [2] T1\nnotes: 切片E01筛选可用B_U/B_L/B_A/B_X；E02仅B_U/B_A。半脑/整脑只评估B_U/B_A；具体实验按experiments.pH_branches约束。不能把样本几何分支串联。",
+      "Text26_Reference": [
+        "Structured evidence: full/M_N1254/evidence/record.json#/operations/8; SHA-256: 6bd1e346c88ecb91d239dedb85ed96957d5733a5ead387953188647b064e2d23; DOI: https://doi.org/10.3389/fnana.2018.00067"
+      ]
+    },
+    {
+      "Text27": "operations:\noperation_id: B_S_D6\nstage: dehydration\nbranch_id: B_S\noperation: 逐级脱水第6步\nmedium: 96 vol% tert-butanol\nduration: overnight\ntemperature: RT\nevidence_class: reported common protocol, not specimen-specific timestamp log\nsources: \n  [1] L04\n  [2] T1\nnotes: 切片E01筛选可用B_U/B_L/B_A/B_X；E02仅B_U/B_A。半脑/整脑只评估B_U/B_A；具体实验按experiments.pH_branches约束。不能把样本几何分支串联。",
+      "Text27_Reference": [
+        "Structured evidence: full/M_N1254/evidence/record.json#/operations/9; SHA-256: 6bd1e346c88ecb91d239dedb85ed96957d5733a5ead387953188647b064e2d23; DOI: https://doi.org/10.3389/fnana.2018.00067"
+      ]
+    },
+    {
+      "Text28": "operations:\noperation_id: B_S_D7\nstage: dehydration\nbranch_id: B_S\noperation: 逐级脱水第7步\nmedium: 100 vol% tert-butanol\nduration: 2h\ntemperature: RT\nevidence_class: reported common protocol, not specimen-specific timestamp log\nsources: \n  [1] L04\n  [2] T1\nnotes: 切片E01筛选可用B_U/B_L/B_A/B_X；E02仅B_U/B_A。半脑/整脑只评估B_U/B_A；具体实验按experiments.pH_branches约束。不能把样本几何分支串联。",
+      "Text28_Reference": [
+        "Structured evidence: full/M_N1254/evidence/record.json#/operations/10; SHA-256: 6bd1e346c88ecb91d239dedb85ed96957d5733a5ead387953188647b064e2d23; DOI: https://doi.org/10.3389/fnana.2018.00067"
+      ]
+    },
+    {
+      "Text29": "operations:\noperation_id: B_H_D1\nstage: dehydration\nbranch_id: B_H\noperation: 逐级脱水第1步\nmedium: 30 vol% tert-butanol\nduration: overnight\ntemperature: 35°C\nevidence_class: reported common protocol, not specimen-specific timestamp log\nsources: \n  [1] L04\n  [2] T1\nnotes: 切片E01筛选可用B_U/B_L/B_A/B_X；E02仅B_U/B_A。半脑/整脑只评估B_U/B_A；具体实验按experiments.pH_branches约束。不能把样本几何分支串联。",
+      "Text29_Reference": [
+        "Structured evidence: full/M_N1254/evidence/record.json#/operations/11; SHA-256: 6bd1e346c88ecb91d239dedb85ed96957d5733a5ead387953188647b064e2d23; DOI: https://doi.org/10.3389/fnana.2018.00067"
+      ]
+    },
+    {
+      "Text30": "operations:\noperation_id: B_H_D2\nstage: dehydration\nbranch_id: B_H\noperation: 逐级脱水第2步\nmedium: 50 vol% tert-butanol\nduration: 4h\ntemperature: 35°C\nevidence_class: reported common protocol, not specimen-specific timestamp log\nsources: \n  [1] L04\n  [2] T1\nnotes: 切片E01筛选可用B_U/B_L/B_A/B_X；E02仅B_U/B_A。半脑/整脑只评估B_U/B_A；具体实验按experiments.pH_branches约束。不能把样本几何分支串联。",
+      "Text30_Reference": [
+        "Structured evidence: full/M_N1254/evidence/record.json#/operations/12; SHA-256: 6bd1e346c88ecb91d239dedb85ed96957d5733a5ead387953188647b064e2d23; DOI: https://doi.org/10.3389/fnana.2018.00067"
+      ]
+    },
+    {
+      "Text31": "operations:\noperation_id: B_H_D3\nstage: dehydration\nbranch_id: B_H\noperation: 逐级脱水第3步\nmedium: 70 vol% tert-butanol\nduration: 4h\ntemperature: 35°C\nevidence_class: reported common protocol, not specimen-specific timestamp log\nsources: \n  [1] L04\n  [2] T1\nnotes: 切片E01筛选可用B_U/B_L/B_A/B_X；E02仅B_U/B_A。半脑/整脑只评估B_U/B_A；具体实验按experiments.pH_branches约束。不能把样本几何分支串联。",
+      "Text31_Reference": [
+        "Structured evidence: full/M_N1254/evidence/record.json#/operations/13; SHA-256: 6bd1e346c88ecb91d239dedb85ed96957d5733a5ead387953188647b064e2d23; DOI: https://doi.org/10.3389/fnana.2018.00067"
+      ]
+    },
+    {
+      "Text32": "operations:\noperation_id: B_H_D4\nstage: dehydration\nbranch_id: B_H\noperation: 逐级脱水第4步\nmedium: 80 vol% tert-butanol\nduration: overnight\ntemperature: 35°C\nevidence_class: reported common protocol, not specimen-specific timestamp log\nsources: \n  [1] L04\n  [2] T1\nnotes: 切片E01筛选可用B_U/B_L/B_A/B_X；E02仅B_U/B_A。半脑/整脑只评估B_U/B_A；具体实验按experiments.pH_branches约束。不能把样本几何分支串联。",
+      "Text32_Reference": [
+        "Structured evidence: full/M_N1254/evidence/record.json#/operations/14; SHA-256: 6bd1e346c88ecb91d239dedb85ed96957d5733a5ead387953188647b064e2d23; DOI: https://doi.org/10.3389/fnana.2018.00067"
+      ]
+    },
+    {
+      "Text33": "operations:\noperation_id: B_H_D5\nstage: dehydration\nbranch_id: B_H\noperation: 逐级脱水第5步\nmedium: 90 vol% tert-butanol\nduration: 4h\ntemperature: 35°C\nevidence_class: reported common protocol, not specimen-specific timestamp log\nsources: \n  [1] L04\n  [2] T1\nnotes: 切片E01筛选可用B_U/B_L/B_A/B_X；E02仅B_U/B_A。半脑/整脑只评估B_U/B_A；具体实验按experiments.pH_branches约束。不能把样本几何分支串联。",
+      "Text33_Reference": [
+        "Structured evidence: full/M_N1254/evidence/record.json#/operations/15; SHA-256: 6bd1e346c88ecb91d239dedb85ed96957d5733a5ead387953188647b064e2d23; DOI: https://doi.org/10.3389/fnana.2018.00067"
+      ]
+    },
+    {
+      "Text34": "operations:\noperation_id: B_H_D6\nstage: dehydration\nbranch_id: B_H\noperation: 逐级脱水第6步\nmedium: 96 vol% tert-butanol\nduration: 4h\ntemperature: 35°C\nevidence_class: reported common protocol, not specimen-specific timestamp log\nsources: \n  [1] L04\n  [2] T1\nnotes: 切片E01筛选可用B_U/B_L/B_A/B_X；E02仅B_U/B_A。半脑/整脑只评估B_U/B_A；具体实验按experiments.pH_branches约束。不能把样本几何分支串联。",
+      "Text34_Reference": [
+        "Structured evidence: full/M_N1254/evidence/record.json#/operations/16; SHA-256: 6bd1e346c88ecb91d239dedb85ed96957d5733a5ead387953188647b064e2d23; DOI: https://doi.org/10.3389/fnana.2018.00067"
+      ]
+    },
+    {
+      "Text35": "operations:\noperation_id: B_H_D7\nstage: dehydration\nbranch_id: B_H\noperation: 逐级脱水第7步\nmedium: 100 vol% tert-butanol\nduration: overnight\ntemperature: 35°C\nevidence_class: reported common protocol, not specimen-specific timestamp log\nsources: \n  [1] L04\n  [2] T1\nnotes: 切片E01筛选可用B_U/B_L/B_A/B_X；E02仅B_U/B_A。半脑/整脑只评估B_U/B_A；具体实验按experiments.pH_branches约束。不能把样本几何分支串联。",
+      "Text35_Reference": [
+        "Structured evidence: full/M_N1254/evidence/record.json#/operations/17; SHA-256: 6bd1e346c88ecb91d239dedb85ed96957d5733a5ead387953188647b064e2d23; DOI: https://doi.org/10.3389/fnana.2018.00067"
+      ]
+    },
+    {
+      "Text36": "operations:\noperation_id: B_W_D1\nstage: dehydration\nbranch_id: B_W\noperation: 逐级脱水第1步\nmedium: 30 vol% tert-butanol\nduration: overnight\ntemperature: 35°C\nevidence_class: reported common protocol, not specimen-specific timestamp log\nsources: \n  [1] L04\n  [2] T1\nnotes: 切片E01筛选可用B_U/B_L/B_A/B_X；E02仅B_U/B_A。半脑/整脑只评估B_U/B_A；具体实验按experiments.pH_branches约束。不能把样本几何分支串联。",
+      "Text36_Reference": [
+        "Structured evidence: full/M_N1254/evidence/record.json#/operations/18; SHA-256: 6bd1e346c88ecb91d239dedb85ed96957d5733a5ead387953188647b064e2d23; DOI: https://doi.org/10.3389/fnana.2018.00067"
+      ]
+    },
+    {
+      "Text37": "operations:\noperation_id: B_W_D2\nstage: dehydration\nbranch_id: B_W\noperation: 逐级脱水第2步\nmedium: 50 vol% tert-butanol\nduration: 10h\ntemperature: 35°C\nevidence_class: reported common protocol, not specimen-specific timestamp log\nsources: \n  [1] L04\n  [2] T1\nnotes: 切片E01筛选可用B_U/B_L/B_A/B_X；E02仅B_U/B_A。半脑/整脑只评估B_U/B_A；具体实验按experiments.pH_branches约束。不能把样本几何分支串联。",
+      "Text37_Reference": [
+        "Structured evidence: full/M_N1254/evidence/record.json#/operations/19; SHA-256: 6bd1e346c88ecb91d239dedb85ed96957d5733a5ead387953188647b064e2d23; DOI: https://doi.org/10.3389/fnana.2018.00067"
+      ]
+    },
+    {
+      "Text38": "operations:\noperation_id: B_W_D3\nstage: dehydration\nbranch_id: B_W\noperation: 逐级脱水第3步\nmedium: 70 vol% tert-butanol\nduration: overnight\ntemperature: 35°C\nevidence_class: reported common protocol, not specimen-specific timestamp log\nsources: \n  [1] L04\n  [2] T1\nnotes: 切片E01筛选可用B_U/B_L/B_A/B_X；E02仅B_U/B_A。半脑/整脑只评估B_U/B_A；具体实验按experiments.pH_branches约束。不能把样本几何分支串联。",
+      "Text38_Reference": [
+        "Structured evidence: full/M_N1254/evidence/record.json#/operations/20; SHA-256: 6bd1e346c88ecb91d239dedb85ed96957d5733a5ead387953188647b064e2d23; DOI: https://doi.org/10.3389/fnana.2018.00067"
+      ]
+    },
+    {
+      "Text39": "operations:\noperation_id: B_W_D4\nstage: dehydration\nbranch_id: B_W\noperation: 逐级脱水第4步\nmedium: 80 vol% tert-butanol\nduration: 10h\ntemperature: 35°C\nevidence_class: reported common protocol, not specimen-specific timestamp log\nsources: \n  [1] L04\n  [2] T1\nnotes: 切片E01筛选可用B_U/B_L/B_A/B_X；E02仅B_U/B_A。半脑/整脑只评估B_U/B_A；具体实验按experiments.pH_branches约束。不能把样本几何分支串联。",
+      "Text39_Reference": [
+        "Structured evidence: full/M_N1254/evidence/record.json#/operations/21; SHA-256: 6bd1e346c88ecb91d239dedb85ed96957d5733a5ead387953188647b064e2d23; DOI: https://doi.org/10.3389/fnana.2018.00067"
+      ]
+    },
+    {
+      "Text40": "operations:\noperation_id: B_W_D5\nstage: dehydration\nbranch_id: B_W\noperation: 逐级脱水第5步\nmedium: 90 vol% tert-butanol\nduration: overnight\ntemperature: 35°C\nevidence_class: reported common protocol, not specimen-specific timestamp log\nsources: \n  [1] L04\n  [2] T1\nnotes: 切片E01筛选可用B_U/B_L/B_A/B_X；E02仅B_U/B_A。半脑/整脑只评估B_U/B_A；具体实验按experiments.pH_branches约束。不能把样本几何分支串联。",
+      "Text40_Reference": [
+        "Structured evidence: full/M_N1254/evidence/record.json#/operations/22; SHA-256: 6bd1e346c88ecb91d239dedb85ed96957d5733a5ead387953188647b064e2d23; DOI: https://doi.org/10.3389/fnana.2018.00067"
+      ]
+    },
+    {
+      "Text41": "operations:\noperation_id: B_W_D6\nstage: dehydration\nbranch_id: B_W\noperation: 逐级脱水第6步\nmedium: 96 vol% tert-butanol\nduration: 10h\ntemperature: 35°C\nevidence_class: reported common protocol, not specimen-specific timestamp log\nsources: \n  [1] L04\n  [2] T1\nnotes: 切片E01筛选可用B_U/B_L/B_A/B_X；E02仅B_U/B_A。半脑/整脑只评估B_U/B_A；具体实验按experiments.pH_branches约束。不能把样本几何分支串联。",
+      "Text41_Reference": [
+        "Structured evidence: full/M_N1254/evidence/record.json#/operations/23; SHA-256: 6bd1e346c88ecb91d239dedb85ed96957d5733a5ead387953188647b064e2d23; DOI: https://doi.org/10.3389/fnana.2018.00067"
+      ]
+    },
+    {
+      "Text42": "operations:\noperation_id: B_W_D7\nstage: dehydration\nbranch_id: B_W\noperation: 逐级脱水第7步\nmedium: 100 vol% tert-butanol\nduration: overnight\ntemperature: 35°C\nevidence_class: reported common protocol, not specimen-specific timestamp log\nsources: \n  [1] L04\n  [2] T1\nnotes: 切片E01筛选可用B_U/B_L/B_A/B_X；E02仅B_U/B_A。半脑/整脑只评估B_U/B_A；具体实验按experiments.pH_branches约束。不能把样本几何分支串联。",
+      "Text42_Reference": [
+        "Structured evidence: full/M_N1254/evidence/record.json#/operations/24; SHA-256: 6bd1e346c88ecb91d239dedb85ed96957d5733a5ead387953188647b064e2d23; DOI: https://doi.org/10.3389/fnana.2018.00067"
+      ]
+    },
+    {
+      "Text43": "operations:\noperation_id: B_H_DCM\nstage: delipidation\nbranch_id: B_H\noperation: 浸泡脱脂\nmedium: dichloromethane\nduration: 45 min\ntemperature: RT\nevidence_class: reported common protocol, not specimen-specific timestamp log\nsources: \n  [1] L04\n  [2] T1\nnotes: ",
+      "Text43_Reference": [
+        "Structured evidence: full/M_N1254/evidence/record.json#/operations/25; SHA-256: 6bd1e346c88ecb91d239dedb85ed96957d5733a5ead387953188647b064e2d23; DOI: https://doi.org/10.3389/fnana.2018.00067"
+      ]
+    },
+    {
+      "Text44": "operations:\noperation_id: B_W_DCM\nstage: delipidation\nbranch_id: B_W\noperation: 浸泡脱脂\nmedium: dichloromethane\nduration: 60 min\ntemperature: RT\nevidence_class: reported common protocol, not specimen-specific timestamp log\nsources: \n  [1] L04\n  [2] T1\nnotes: ",
+      "Text44_Reference": [
+        "Structured evidence: full/M_N1254/evidence/record.json#/operations/26; SHA-256: 6bd1e346c88ecb91d239dedb85ed96957d5733a5ead387953188647b064e2d23; DOI: https://doi.org/10.3389/fnana.2018.00067"
+      ]
+    },
+    {
+      "Text45": "operations:\noperation_id: B_S_RI\nstage: RI_matching\nbranch_id: B_S\noperation: 浸泡进行末端透明/折射率匹配\nmedium: BABB-D4\nduration: 1h\ntemperature: RT\nevidence_class: reported common protocol, not specimen-specific timestamp log\nsources: \n  [1] L04\n  [2] T1\nnotes: ",
+      "Text45_Reference": [
+        "Structured evidence: full/M_N1254/evidence/record.json#/operations/27; SHA-256: 6bd1e346c88ecb91d239dedb85ed96957d5733a5ead387953188647b064e2d23; DOI: https://doi.org/10.3389/fnana.2018.00067"
+      ]
+    },
+    {
+      "Text46": "operations:\noperation_id: B_H_RI\nstage: RI_matching\nbranch_id: B_H\noperation: 浸泡进行末端透明/折射率匹配\nmedium: BABB-D4\nduration: 3h in Table1; at least3h in main text\ntemperature: RT\nevidence_class: reported common protocol, not specimen-specific timestamp log\nsources: \n  [1] L04\n  [2] T1\nnotes: ",
+      "Text46_Reference": [
+        "Structured evidence: full/M_N1254/evidence/record.json#/operations/28; SHA-256: 6bd1e346c88ecb91d239dedb85ed96957d5733a5ead387953188647b064e2d23; DOI: https://doi.org/10.3389/fnana.2018.00067"
+      ]
+    },
+    {
+      "Text47": "operations:\noperation_id: B_W_RI\nstage: RI_matching\nbranch_id: B_W\noperation: 浸泡进行末端透明/折射率匹配\nmedium: BABB-D4\nduration: 5h\ntemperature: RT\nevidence_class: reported common protocol, not specimen-specific timestamp log\nsources: \n  [1] L04\n  [2] T1\nnotes: ",
+      "Text47_Reference": [
+        "Structured evidence: full/M_N1254/evidence/record.json#/operations/29; SHA-256: 6bd1e346c88ecb91d239dedb85ed96957d5733a5ead387953188647b064e2d23; DOI: https://doi.org/10.3389/fnana.2018.00067"
+      ]
+    },
+    {
+      "Text48": "operations:\noperation_id: P05\nstage: storage\nbranch_id: common\noperation: 将透明组织保存在对应RI介质\nmedium: BABB-D4; pH9.0–9.5 for a-uDISCO\nduration: slice observed through3d; hemisphere through42d; not clearing duration\ntemperature: storage temperature not explicitly stated\nevidence_class: reported common protocol, not specimen-specific timestamp log\nsources: \n  [1] L04\n  [2] L10\nnotes: 不可由终末透明RT自动继承储存温度",
+      "Text48_Reference": [
+        "Structured evidence: full/M_N1254/evidence/record.json#/operations/30; SHA-256: 6bd1e346c88ecb91d239dedb85ed96957d5733a5ead387953188647b064e2d23; DOI: https://doi.org/10.3389/fnana.2018.00067"
+      ]
+    },
+    {
+      "Text49": "operations:\noperation_id: P06\nstage: storage_exchange\nbranch_id: common\noperation: 储存期间更换RI介质\nmedium: same RI matching solution\nduration: every3–4 days; total count not_reported\ntemperature: not_reported\nevidence_class: reported common protocol, not specimen-specific timestamp log\nsources: \n  [1] L04\nnotes: 嵌套储存动作，不另加到清除总时程",
+      "Text49_Reference": [
+        "Structured evidence: full/M_N1254/evidence/record.json#/operations/31; SHA-256: 6bd1e346c88ecb91d239dedb85ed96957d5733a5ead387953188647b064e2d23; DOI: https://doi.org/10.3389/fnana.2018.00067"
+      ]
+    },
+    {
+      "Text50": "imaging:\nimaging_id: I01\ninstrument: Axio Zoom.V16 stereomicroscope\noptics: 2.3×/0.57 air; WD10.6mm\nreadout: widefield cortex\nacquisition_duration: not_reported\nsettings_note: same acquisition settings for comparative clearing protocols; numerical laser/exposure/gain not_reported\nsources: \n  [1] L06\n  [2] F1\nexperiment_ids: \n  [1] E01",
+      "Text50_Reference": [
+        "Structured evidence: full/M_N1254/evidence/record.json#/imaging/0; SHA-256: 6bd1e346c88ecb91d239dedb85ed96957d5733a5ead387953188647b064e2d23; DOI: https://doi.org/10.3389/fnana.2018.00067"
+      ]
+    },
+    {
+      "Text51": "imaging:\nimaging_id: I02\ninstrument: LSM710 inverted confocal\noptics: Plan-Apochromat10×/0.5 dry; WD2.0mm\nreadout: surface z-stack MIP\nacquisition_duration: not_reported\nsettings_note: same acquisition settings for comparative clearing protocols; numerical laser/exposure/gain not_reported\nsources: \n  [1] L06\n  [2] F2\nexperiment_ids: \n  [1] E02",
+      "Text51_Reference": [
+        "Structured evidence: full/M_N1254/evidence/record.json#/imaging/1; SHA-256: 6bd1e346c88ecb91d239dedb85ed96957d5733a5ead387953188647b064e2d23; DOI: https://doi.org/10.3389/fnana.2018.00067"
+      ]
+    },
+    {
+      "Text52": "imaging:\nimaging_id: I03\ninstrument: Ultramicroscope light sheet\noptics: 2×/0.5 objective; macrozoom0.63×–6.3×;0.8× overview and4.0× high-mag\nreadout: 3D whole hemisphere/brain and subcellular detail\nacquisition_duration: not_reported\nsettings_note: same acquisition settings for comparative clearing protocols; numerical laser/exposure/gain not_reported\nsources: \n  [1] L06\n  [2] F3\n  [3] F5\n  [4] V1\n  [5] V2\nexperiment_ids: \n  [1] E03\n  [2] E08",
+      "Text52_Reference": [
+        "Structured evidence: full/M_N1254/evidence/record.json#/imaging/2; SHA-256: 6bd1e346c88ecb91d239dedb85ed96957d5733a5ead387953188647b064e2d23; DOI: https://doi.org/10.3389/fnana.2018.00067"
+      ]
+    },
+    {
+      "Text53": "imaging:\nimaging_id: I04\ninstrument: LSM710 inverted confocal\noptics: Plan-Apochromat40×/1.4 oil; WD0.13mm\nreadout: surface microglial z-stack\nacquisition_duration: not_reported\nsettings_note: same acquisition settings for comparative clearing protocols; numerical laser/exposure/gain not_reported\nsources: \n  [1] L06\n  [2] F4\n  [3] SF2\nexperiment_ids: \n  [1] E06",
+      "Text53_Reference": [
+        "Structured evidence: full/M_N1254/evidence/record.json#/imaging/3; SHA-256: 6bd1e346c88ecb91d239dedb85ed96957d5733a5ead387953188647b064e2d23; DOI: https://doi.org/10.3389/fnana.2018.00067"
+      ]
+    },
+    {
+      "Text54": "imaging:\nimaging_id: I05\ninstrument: LSM710 inverted confocal\noptics: alphaPlan-Apochromat63×/1.46 oil; WD0.1mm\nreadout: surface dendritic spine z-stack\nacquisition_duration: not_reported\nsettings_note: same acquisition settings for comparative clearing protocols; numerical laser/exposure/gain not_reported\nsources: \n  [1] L06\n  [2] SF1\nexperiment_ids: \n  [1] E07",
+      "Text54_Reference": [
+        "Structured evidence: full/M_N1254/evidence/record.json#/imaging/4; SHA-256: 6bd1e346c88ecb91d239dedb85ed96957d5733a5ead387953188647b064e2d23; DOI: https://doi.org/10.3389/fnana.2018.00067"
+      ]
+    },
+    {
+      "Text55": "imaging:\nimaging_id: I06\ninstrument: confocal mapping\noptics: 5×,10×,20× low-magnification maps\nreadout: blood vessels as anatomic landmarks; specimen in covered dish; avoid drying\nacquisition_duration: not_reported\nsettings_note: same acquisition settings for comparative clearing protocols; numerical laser/exposure/gain not_reported\nsources: \n  [1] L06\n  [2] SF1\n  [3] SF2\nexperiment_ids: \n  [1] E06\n  [2] E07",
+      "Text55_Reference": [
+        "Structured evidence: full/M_N1254/evidence/record.json#/imaging/5; SHA-256: 6bd1e346c88ecb91d239dedb85ed96957d5733a5ead387953188647b064e2d23; DOI: https://doi.org/10.3389/fnana.2018.00067"
+      ]
+    },
+    {
+      "Text56": "imaging:\nimaging_id: I07\ninstrument: light sheet\noptics: specific zoom not_reported\nreadout: spinal cord GFP\nacquisition_duration: not_reported\nsettings_note: 脊髓图caption只报告光片成像；具体zoom/曝光等未报告，不自动继承全脑成像设置\nsources: \n  [1] SF4\nexperiment_ids: \n  [1] E09",
+      "Text56_Reference": [
+        "Structured evidence: full/M_N1254/evidence/record.json#/imaging/6; SHA-256: 6bd1e346c88ecb91d239dedb85ed96957d5733a5ead387953188647b064e2d23; DOI: https://doi.org/10.3389/fnana.2018.00067"
+      ]
+    },
+    {
+      "Text57": "results:\nresult_id: R01\nexperiment_id: E01\nmeasure: pH screening relative mean cortical fluorescence\nvalue: ~0.68;~0.81;~0.95;~0.95 for control,7.5–8.0,9.0–9.5,10.5–11.0\nunit: ratio\nbaseline: day0 after clearing\nevidence_class: visual plot estimates only\nstatistics: mean±SEM; ANOVA+LSD; control vs low **; control vs9 and10 ***;9 vs10 NS\nnotes: 不是原始数值或保留百分比相对未透明组织\nsources: \n  [1] F1\n  [2] L07",
+      "Text57_Reference": [
+        "Structured evidence: full/M_N1254/evidence/record.json#/results/0; SHA-256: 6bd1e346c88ecb91d239dedb85ed96957d5733a5ead387953188647b064e2d23; DOI: https://doi.org/10.3389/fnana.2018.00067"
+      ]
+    },
+    {
+      "Text58": "results:\nresult_id: R02\nexperiment_id: E02\nmeasure: a-uDISCO corresponding soma mean fluorescence at day0\nvalue: 1.36\nunit: ratio\nbaseline: same cell before clearing\nevidence_class: reported approximate numerical text\nstatistics: mean±SEM; unpaired two-tailed t;vs uDISCO P<0.05\nnotes: 不代表分子GFP数量；day3不是除day0\nsources: \n  [1] L10\n  [2] F2\n  [3] L07",
+      "Text58_Reference": [
+        "Structured evidence: full/M_N1254/evidence/record.json#/results/1; SHA-256: 6bd1e346c88ecb91d239dedb85ed96957d5733a5ead387953188647b064e2d23; DOI: https://doi.org/10.3389/fnana.2018.00067"
+      ]
+    },
+    {
+      "Text59": "results:\nresult_id: R03\nexperiment_id: E02\nmeasure: uDISCO corresponding soma mean fluorescence at day0\nvalue: 0.73\nunit: ratio\nbaseline: same cell before clearing\nevidence_class: reported approximate numerical text\nstatistics: mean±SEM; unpaired two-tailed t;vs a-uDISCO P<0.05\nnotes: 不代表分子GFP数量；day3不是除day0\nsources: \n  [1] L10\n  [2] F2\n  [3] L07",
+      "Text59_Reference": [
+        "Structured evidence: full/M_N1254/evidence/record.json#/results/2; SHA-256: 6bd1e346c88ecb91d239dedb85ed96957d5733a5ead387953188647b064e2d23; DOI: https://doi.org/10.3389/fnana.2018.00067"
+      ]
+    },
+    {
+      "Text60": "results:\nresult_id: R04\nexperiment_id: E02\nmeasure: a-uDISCO corresponding soma mean fluorescence at day3\nvalue: ~0.80\nunit: ratio\nbaseline: same cell before clearing\nevidence_class: reported approximate numerical text\nstatistics: mean±SEM; unpaired two-tailed t;vs uDISCO P<0.001\nnotes: 不代表分子GFP数量；day3不是除day0\nsources: \n  [1] L10\n  [2] F2\n  [3] L07",
+      "Text60_Reference": [
+        "Structured evidence: full/M_N1254/evidence/record.json#/results/3; SHA-256: 6bd1e346c88ecb91d239dedb85ed96957d5733a5ead387953188647b064e2d23; DOI: https://doi.org/10.3389/fnana.2018.00067"
+      ]
+    },
+    {
+      "Text61": "results:\nresult_id: R05\nexperiment_id: E02\nmeasure: uDISCO corresponding soma mean fluorescence at day3\nvalue: <0.07\nunit: ratio\nbaseline: same cell before clearing\nevidence_class: reported approximate numerical text\nstatistics: mean±SEM; unpaired two-tailed t;vs a-uDISCO P<0.001\nnotes: 不代表分子GFP数量；day3不是除day0\nsources: \n  [1] L10\n  [2] F2\n  [3] L07",
+      "Text61_Reference": [
+        "Structured evidence: full/M_N1254/evidence/record.json#/results/4; SHA-256: 6bd1e346c88ecb91d239dedb85ed96957d5733a5ead387953188647b064e2d23; DOI: https://doi.org/10.3389/fnana.2018.00067"
+      ]
+    },
+    {
+      "Text62": "results:\nresult_id: R06\nexperiment_id: E03\nmeasure: long-term SBR at0/7/14/28/42d\nvalue: a-uDISCO≈38/35/30/24/20; uDISCO≈26/15/10/6/3\nunit: SBR\nbaseline: same-time mean background\nevidence_class: visual plot estimates only\nstatistics: n=5 each;mean±SD;unpaired t;timepoints respectively*,***,**,***,***\nnotes: 非相对day0存留率；图3B只有0/7/14/42图像但图3C有28d\nsources: \n  [1] F3\n  [2] L07\n  [3] L10",
+      "Text62_Reference": [
+        "Structured evidence: full/M_N1254/evidence/record.json#/results/5; SHA-256: 6bd1e346c88ecb91d239dedb85ed96957d5733a5ead387953188647b064e2d23; DOI: https://doi.org/10.3389/fnana.2018.00067"
+      ]
+    },
+    {
+      "Text63": "results:\nresult_id: R07\nexperiment_id: E04\nmeasure: whole-brain transmittance400–800nm\nvalue: similar spectra; near800nm about62% a-uDISCO vs66% uDISCO\nunit: % transmission\nbaseline: blank medium-filled cuvette\nevidence_class: qualitative reported comparison plus visual endpoint estimates\nstatistics: n=3 per group;duplicate readings averaged; mean±SEM\nnotes: 未提供全谱原始数据或显著性检验；仅近似图读值\nsources: \n  [1] F4\n  [2] L05\n  [3] L11",
+      "Text63_Reference": [
+        "Structured evidence: full/M_N1254/evidence/record.json#/results/6; SHA-256: 6bd1e346c88ecb91d239dedb85ed96957d5733a5ead387953188647b064e2d23; DOI: https://doi.org/10.3389/fnana.2018.00067"
+      ]
+    },
+    {
+      "Text64": "results:\nresult_id: R08\nexperiment_id: E05\nmeasure: linear size after/before along L–R,A–P,V–D\nvalue: a-uDISCO approximately0.69,0.70,0.65; uDISCO approximately0.67,0.69,0.64\nunit: dimensionless linear ratio\nbaseline: before clearing\nevidence_class: visual plot estimates; interpretation anchored to before/after image\nstatistics: n=4 each;mean±SEM;unpaired t;all axes NS P>0.05\nnotes: 正文up to~65%措辞不清；图像支持剩余约65–70%，不是缩小65%且不是体积值\nsources: \n  [1] F4\n  [2] L11",
+      "Text64_Reference": [
+        "Structured evidence: full/M_N1254/evidence/record.json#/results/7; SHA-256: 6bd1e346c88ecb91d239dedb85ed96957d5733a5ead387953188647b064e2d23; DOI: https://doi.org/10.3389/fnana.2018.00067"
+      ]
+    },
+    {
+      "Text65": "results:\nresult_id: R09\nexperiment_id: E06\nmeasure: microglia morphology\nvalue: similar fine morphology before/after\nunit: qualitative\nbaseline: same surface cells\nevidence_class: qualitative demonstration\nstatistics: \nnotes: 红色after为伪彩GFP，不是RFP实验；无形态定量n\nsources: \n  [1] F4\n  [2] L11\n  [3] SF2",
+      "Text65_Reference": [
+        "Structured evidence: full/M_N1254/evidence/record.json#/results/8; SHA-256: 6bd1e346c88ecb91d239dedb85ed96957d5733a5ead387953188647b064e2d23; DOI: https://doi.org/10.3389/fnana.2018.00067"
+      ]
+    },
+    {
+      "Text66": "results:\nresult_id: R10\nexperiment_id: E07\nmeasure: dendritic spines\nvalue: similar fine morphology before/after\nunit: qualitative\nbaseline: same surface dendrite\nevidence_class: qualitative demonstration\nstatistics: \nnotes: 表面结构；非深部全脑形态验证或spine计数\nsources: \n  [1] SF1\n  [2] L11",
+      "Text66_Reference": [
+        "Structured evidence: full/M_N1254/evidence/record.json#/results/9; SHA-256: 6bd1e346c88ecb91d239dedb85ed96957d5733a5ead387953188647b064e2d23; DOI: https://doi.org/10.3389/fnana.2018.00067"
+      ]
+    },
+    {
+      "Text67": "results:\nresult_id: R11\nexperiment_id: E08\nmeasure: whole-brain neural structure imaging\nvalue: neurons, dendrites and axons across5 listed regions visible; fine branches shown\nunit: qualitative\nbaseline: none\nevidence_class: qualitative demonstration\nstatistics: \nnotes: 无数值分辨率/采集时间/神经元总数\nsources: \n  [1] F5\n  [2] L12\n  [3] V2",
+      "Text67_Reference": [
+        "Structured evidence: full/M_N1254/evidence/record.json#/results/10; SHA-256: 6bd1e346c88ecb91d239dedb85ed96957d5733a5ead387953188647b064e2d23; DOI: https://doi.org/10.3389/fnana.2018.00067"
+      ]
+    },
+    {
+      "Text68": "results:\nresult_id: R12\nexperiment_id: E09\nmeasure: spinal cord clearing and endogenous GFP\nvalue: cleared segment and neuronal structures visualized\nunit: qualitative\nbaseline: before reflection / after fluorescence\nevidence_class: qualitative demonstration\nstatistics: \nnotes: 不等于量化GFP保持率\nsources: \n  [1] SF4",
+      "Text68_Reference": [
+        "Structured evidence: full/M_N1254/evidence/record.json#/results/11; SHA-256: 6bd1e346c88ecb91d239dedb85ed96957d5733a5ead387953188647b064e2d23; DOI: https://doi.org/10.3389/fnana.2018.00067"
+      ]
+    },
+    {
+      "Text69": "author_claims:\nclaim_id: C01\nclaim: pH9.0–9.5 is preferred tradeoff;10.5–11 requires more triethylamine and may lower transparency\nevidence_class: author interpretation or recommendation; not additional experiment\nsources: \n  [1] L09",
+      "Text69_Reference": [
+        "Structured evidence: full/M_N1254/evidence/record.json#/author_claims/0; SHA-256: 6bd1e346c88ecb91d239dedb85ed96957d5733a5ead387953188647b064e2d23; DOI: https://doi.org/10.3389/fnana.2018.00067"
+      ]
+    },
+    {
+      "Text70": "author_claims:\nclaim_id: C02\nclaim: 低表达样本及珍贵样本反复成像为潜在应用，不是单独验证的低表达队列\nevidence_class: author interpretation or recommendation; not additional experiment\nsources: \n  [1] L13",
+      "Text70_Reference": [
+        "Structured evidence: full/M_N1254/evidence/record.json#/author_claims/1; SHA-256: 6bd1e346c88ecb91d239dedb85ed96957d5733a5ead387953188647b064e2d23; DOI: https://doi.org/10.3389/fnana.2018.00067"
+      ]
+    },
+    {
+      "Text71": "author_claims:\nclaim_id: C03\nclaim: a-uDISCO4d vs FluoClearBABB10d是文献讨论比较，不是本篇同期对照实验\nevidence_class: author interpretation or recommendation; not additional experiment\nsources: \n  [1] L13",
+      "Text71_Reference": [
+        "Structured evidence: full/M_N1254/evidence/record.json#/author_claims/2; SHA-256: 6bd1e346c88ecb91d239dedb85ed96957d5733a5ead387953188647b064e2d23; DOI: https://doi.org/10.3389/fnana.2018.00067"
+      ]
+    },
+    {
+      "Text72": "author_claims:\nclaim_id: C04\nclaim: 含血红素组织效果受限；PBS37°C数小时洗涤为作者建议，未见本篇独立优化对照\nevidence_class: author interpretation or recommendation; not additional experiment\nsources: \n  [1] L13",
+      "Text72_Reference": [
+        "Structured evidence: full/M_N1254/evidence/record.json#/author_claims/3; SHA-256: 6bd1e346c88ecb91d239dedb85ed96957d5733a5ead387953188647b064e2d23; DOI: https://doi.org/10.3389/fnana.2018.00067"
+      ]
+    },
+    {
+      "Text73": "author_claims:\nclaim_id: C05\nclaim: 仅测试GFP；RFP/YFP/CFP及免疫标记、核染需未来验证\nevidence_class: author interpretation or recommendation; not additional experiment\nsources: \n  [1] L13",
+      "Text73_Reference": [
+        "Structured evidence: full/M_N1254/evidence/record.json#/author_claims/4; SHA-256: 6bd1e346c88ecb91d239dedb85ed96957d5733a5ead387953188647b064e2d23; DOI: https://doi.org/10.3389/fnana.2018.00067"
+      ]
+    },
+    {
+      "Text74": "author_claims:\nclaim_id: C06\nclaim: 低室温导致100%tert-butanol结晶时25°C水浴为排障建议，不替代所有RT步骤\nevidence_class: author interpretation or recommendation; not additional experiment\nsources: \n  [1] T3",
+      "Text74_Reference": [
+        "Structured evidence: full/M_N1254/evidence/record.json#/author_claims/5; SHA-256: 6bd1e346c88ecb91d239dedb85ed96957d5733a5ead387953188647b064e2d23; DOI: https://doi.org/10.3389/fnana.2018.00067"
+      ]
+    },
+    {
+      "Text75": "author_claims:\nclaim_id: C07\nclaim: 透明不足可延长各步骤；后固定过长可增强自发荧光，建议限制24h；弱信号检查原表达/新鲜介质；漂白降低激光提高增益，均为排障建议非已执行分支\nevidence_class: author interpretation or recommendation; not additional experiment\nsources: \n  [1] T3",
+      "Text75_Reference": [
+        "Structured evidence: full/M_N1254/evidence/record.json#/author_claims/6; SHA-256: 6bd1e346c88ecb91d239dedb85ed96957d5733a5ead387953188647b064e2d23; DOI: https://doi.org/10.3389/fnana.2018.00067"
+      ]
+    },
+    {
+      "Text76": "author_claims:\nclaim_id: C08\nclaim: 多数介质有毒；正文除成像外于化学通风橱中进行；补表2为危险性清单非性能数据\nevidence_class: author interpretation or recommendation; not additional experiment\nsources: \n  [1] T2",
+      "Text76_Reference": [
+        "Structured evidence: full/M_N1254/evidence/record.json#/author_claims/7; SHA-256: 6bd1e346c88ecb91d239dedb85ed96957d5733a5ead387953188647b064e2d23; DOI: https://doi.org/10.3389/fnana.2018.00067"
+      ]
+    },
+    {
+      "Text77": "tissue_observations:\nexperiment_id: E10\norgan: muscle\noutcome: good qualitative transparency\nfluorescence_result: not shown for this organ in SF4C\nspecific_protocol_time: not_reported\nsources: \n  [1] SF4\n  [2] L13",
+      "Text77_Reference": [
+        "Structured evidence: full/M_N1254/evidence/record.json#/tissue_observations/0; SHA-256: 6bd1e346c88ecb91d239dedb85ed96957d5733a5ead387953188647b064e2d23; DOI: https://doi.org/10.3389/fnana.2018.00067"
+      ]
+    },
+    {
+      "Text78": "tissue_observations:\nexperiment_id: E10\norgan: intestine\noutcome: good qualitative transparency visible in SF4\nfluorescence_result: not shown for this organ in SF4C\nspecific_protocol_time: not_reported\nsources: \n  [1] SF4\n  [2] L13",
+      "Text78_Reference": [
+        "Structured evidence: full/M_N1254/evidence/record.json#/tissue_observations/1; SHA-256: 6bd1e346c88ecb91d239dedb85ed96957d5733a5ead387953188647b064e2d23; DOI: https://doi.org/10.3389/fnana.2018.00067"
+      ]
+    },
+    {
+      "Text79": "tissue_observations:\nexperiment_id: E10\norgan: stomach\noutcome: good qualitative transparency\nfluorescence_result: not shown for this organ in SF4C\nspecific_protocol_time: not_reported\nsources: \n  [1] SF4\n  [2] L13",
+      "Text79_Reference": [
+        "Structured evidence: full/M_N1254/evidence/record.json#/tissue_observations/2; SHA-256: 6bd1e346c88ecb91d239dedb85ed96957d5733a5ead387953188647b064e2d23; DOI: https://doi.org/10.3389/fnana.2018.00067"
+      ]
+    },
+    {
+      "Text80": "tissue_observations:\nexperiment_id: E10\norgan: lung\noutcome: good qualitative transparency\nfluorescence_result: not shown for this organ in SF4C\nspecific_protocol_time: not_reported\nsources: \n  [1] SF4\n  [2] L13",
+      "Text80_Reference": [
+        "Structured evidence: full/M_N1254/evidence/record.json#/tissue_observations/3; SHA-256: 6bd1e346c88ecb91d239dedb85ed96957d5733a5ead387953188647b064e2d23; DOI: https://doi.org/10.3389/fnana.2018.00067"
+      ]
+    },
+    {
+      "Text81": "tissue_observations:\nexperiment_id: E10\norgan: heart\noutcome: poor relative transparency; heme-rich limitation\nfluorescence_result: not shown for this organ in SF4C\nspecific_protocol_time: not_reported\nsources: \n  [1] SF4\n  [2] L13",
+      "Text81_Reference": [
+        "Structured evidence: full/M_N1254/evidence/record.json#/tissue_observations/4; SHA-256: 6bd1e346c88ecb91d239dedb85ed96957d5733a5ead387953188647b064e2d23; DOI: https://doi.org/10.3389/fnana.2018.00067"
+      ]
+    },
+    {
+      "Text82": "tissue_observations:\nexperiment_id: E10\norgan: kidney\noutcome: poor relative transparency; heme-rich limitation\nfluorescence_result: not shown for this organ in SF4C\nspecific_protocol_time: not_reported\nsources: \n  [1] SF4\n  [2] L13",
+      "Text82_Reference": [
+        "Structured evidence: full/M_N1254/evidence/record.json#/tissue_observations/5; SHA-256: 6bd1e346c88ecb91d239dedb85ed96957d5733a5ead387953188647b064e2d23; DOI: https://doi.org/10.3389/fnana.2018.00067"
+      ]
+    },
+    {
+      "Text83": "tissue_observations:\nexperiment_id: E10\norgan: liver\noutcome: poor relative transparency; heme-rich limitation\nfluorescence_result: not shown for this organ in SF4C\nspecific_protocol_time: not_reported\nsources: \n  [1] SF4\n  [2] L13",
+      "Text83_Reference": [
+        "Structured evidence: full/M_N1254/evidence/record.json#/tissue_observations/6; SHA-256: 6bd1e346c88ecb91d239dedb85ed96957d5733a5ead387953188647b064e2d23; DOI: https://doi.org/10.3389/fnana.2018.00067"
+      ]
+    },
+    {
+      "Text84": "tissue_observations:\nexperiment_id: E10\norgan: spleen\noutcome: especially poor transparency\nfluorescence_result: not shown for this organ in SF4C\nspecific_protocol_time: not_reported\nsources: \n  [1] SF4\n  [2] L13",
+      "Text84_Reference": [
+        "Structured evidence: full/M_N1254/evidence/record.json#/tissue_observations/7; SHA-256: 6bd1e346c88ecb91d239dedb85ed96957d5733a5ead387953188647b064e2d23; DOI: https://doi.org/10.3389/fnana.2018.00067"
+      ]
+    },
+    {
+      "Text85": "peripheral_protocol:\nnot assigned one of brain geometries without evidence",
+      "Text85_Reference": [
+        "Structured evidence: full/M_N1254/support/flow_structure.json#/peripheral_protocol; SHA-256: 24fb0ceb7d034c65faf24be91e6d2b6100a502e0cd8ed5d78cd4d276446dd479; DOI: https://doi.org/10.3389/fnana.2018.00067"
+      ]
+    }
+  ],
+  "Note": [
+    {
+      "Text1": "Paper M_N1254; source coverage: full; source release status: candidate_pending_gates; source default_eligible: false. Read this study as a whole with its sample, experimental, measurement and limitation fields. All selected source files and mandatory support in the accompanying archive apply jointly. Import does not promote candidate status, resolve contradictions, or turn review citations into independent primary experiments. Application includes source-labelled protocols, comparisons and results; labels within each Text retain their actual role.",
+      "Text1_Reference": [
+        "DOI: https://doi.org/10.3389/fnana.2018.00067",
+        "Evidence-layer structured paraphrase; not a verbatim quotation. Source release: https://github.com/404NotFound422/TOCAgentProject/tree/5e3a711befb3952a2e39f4d53fc9c9f1a7ac0d22/KnowledgeBase/evidence_expansion_20261019",
+        "Local source archive: ../literature_evidence/2026-11-11/source_release.zip; member: full/M_N1254/version_selection.json"
+      ]
+    },
+    {
+      "Text2": "Selected version and mandatory composition:\npaper_id: M_N1254\nstatus: full\nrelease_status: candidate_pending_gates\ndefault_eligible: false\nactive_scientific_files: \n  [1]     path: full/M_N1254/evidence/record.json\n    sha256: 6bd1e346c88ecb91d239dedb85ed96957d5733a5ead387953188647b064e2d23\n    source_member: record.json\nrequired_supporting_files: \n  [1]     paper_id: M_N1254\n    path: full/M_N1254/support/FINAL_SHA256.txt\n    source_member: FINAL_SHA256.txt\n    accepted_original_sha256: dc07c977c2b3946fafe86079e8a8da892d8558a41a39c2df9a0b0f6914eaf02e\n    source_sha256: dc07c977c2b3946fafe86079e8a8da892d8558a41a39c2df9a0b0f6914eaf02e\n    baseline_delivered_sha256: dc07c977c2b3946fafe86079e8a8da892d8558a41a39c2df9a0b0f6914eaf02e\n    sha256: dc07c977c2b3946fafe86079e8a8da892d8558a41a39c2df9a0b0f6914eaf02e\n    bytes: 2518\n    role: mandatory_binding_manifest\n    transformed: false\n    baseline_delivery_member: 历史交付_1907/历史交付_1707/已验收论文/M_N1254/FINAL_SHA256.txt\n  [2]     paper_id: M_N1254\n    path: full/M_N1254/support/README_zh.md\n    source_member: README_zh.md\n    accepted_original_sha256: 14a3a6ca453ab1d5af7dab4dde135332d9f7d04979efdbd4443e1583271694e1\n    source_sha256: 14a3a6ca453ab1d5af7dab4dde135332d9f7d04979efdbd4443e1583271694e1\n    baseline_delivered_sha256: 14a3a6ca453ab1d5af7dab4dde135332d9f7d04979efdbd4443e1583271694e1\n    sha256: 14a3a6ca453ab1d5af7dab4dde135332d9f7d04979efdbd4443e1583271694e1\n    bytes: 2940\n    role: mandatory_scope_and_precedence_support\n    transformed: false\n    baseline_delivery_member: 历史交付_1907/历史交付_1707/已验收论文/M_N1254/README_zh.md\n  [3]     paper_id: M_N1254\n    path: full/M_N1254/support/author_claims.csv\n    source_member: author_claims.csv\n    accepted_original_sha256: 5a717045dbb72bcce7b613bc742b8ac39afb859b7652791167de05d6bc68322e\n    source_sha256: 5a717045dbb72bcce7b613bc742b8ac39afb859b7652791167de05d6bc68322e\n    baseline_delivered_sha256: 5a717045dbb72bcce7b613bc742b8ac39afb859b7652791167de05d6bc68322e\n    sha256: 5a717045dbb72bcce7b613bc742b8ac39afb859b7652791167de05d6bc68322e\n    bytes: 1566\n    role: mandatory_scientific_companion\n    transformed: false\n    baseline_delivery_member: 历史交付_1907/历史交付_1707/已验收论文/M_N1254/author_claims.csv\n  [4]     paper_id: M_N1254\n    path: full/M_N1254/support/branches.csv\n    source_member: branches.csv\n    accepted_original_sha256: 43e2051d3ab57333888e8ae97810217b0a1f92705aff3f3b65b26462d1d8544f\n    source_sha256: 43e2051d3ab57333888e8ae97810217b0a1f92705aff3f3b65b26462d1d8544f\n    baseline_delivered_sha256: 43e2051d3ab57333888e8ae97810217b0a1f92705aff3f3b65b26462d1d8544f\n    sha256: 43e2051d3ab57333888e8ae97810217b0a1f92705aff3f3b65b26462d1d8544f\n    bytes: 995\n    role: mandatory_scientific_companion\n    transformed: false\n    baseline_delivery_member: 历史交付_1907/历史交付_1707/已验收论文/M_N1254/branches.csv\n  [5]     paper_id: M_N1254\n    path: full/M_N1254/support/experiments.csv\n    source_member: experiments.csv\n    accepted_original_sha256: 261b9408e0d64e00aef179443b6442d558a16789ff99fec1f75066ddb01af42e\n    source_sha256: 261b9408e0d64e00aef179443b6442d558a16789ff99fec1f75066ddb01af42e\n    baseline_delivered_sha256: 261b9408e0d64e00aef179443b6442d558a16789ff99fec1f75066ddb01af42e\n    sha256: 261b9408e0d64e00aef179443b6442d558a16789ff99fec1f75066ddb01af42e\n    bytes: 4562\n    role: mandatory_scientific_companion\n    transformed: false\n    baseline_delivery_member: 历史交付_1907/历史交付_1707/已验收论文/M_N1254/experiments.csv\n  [6]     paper_id: M_N1254\n    path: full/M_N1254/support/flow_structure.json\n    source_member: flow_structure.json\n    accepted_original_sha256: 24fb0ceb7d034c65faf24be91e6d2b6100a502e0cd8ed5d78cd4d276446dd479\n    source_sha256: 24fb0ceb7d034c65faf24be91e6d2b6100a502e0cd8ed5d78cd4d276446dd479\n    baseline_delivered_sha256: 24fb0ceb7d034c65faf24be91e6d2b6100a502e0cd8ed5d78cd4d276446dd479\n    sha256: 24fb0ceb7d034c65faf24be91e6d2b6100a502e0cd8ed5d78cd4d276446dd479\n    bytes: 2559\n    role: mandatory_scientific_and_binding_companion\n    transformed: false\n    baseline_delivery_member: 历史交付_1907/历史交付_1707/已验收论文/M_N1254/flow_structure.json\n  [7]     paper_id: M_N1254\n    path: full/M_N1254/support/imaging.csv\n    source_member: imaging.csv\n    accepted_original_sha256: fed079193953ddd3f6a8240e99e8e0c41974330f6a7519478c9a7b8caa27358c\n    source_sha256: fed079193953ddd3f6a8240e99e8e0c41974330f6a7519478c9a7b8caa27358c\n    baseline_delivered_sha256: fed079193953ddd3f6a8240e99e8e0c41974330f6a7519478c9a7b8caa27358c\n    sha256: fed079193953ddd3f6a8240e99e8e0c41974330f6a7519478c9a7b8caa27358c\n    bytes: 1924\n    role: mandatory_scientific_companion\n    transformed: false\n    baseline_delivery_member: 历史交付_1907/历史交付_1707/已验收论文/M_N1254/imaging.csv\n  [8]     paper_id: M_N1254\n    path: full/M_N1254/support/labeling_assays.csv\n    source_member: labeling_assays.csv\n    accepted_original_sha256: f632df65f9814b2f683cb9c2abfb1cdbf262855a8b9d0ae28510231c81edd3ce\n    source_sha256: f632df65f9814b2f683cb9c2abfb1cdbf262855a8b9d0ae28510231c81edd3ce\n    baseline_delivered_sha256: f632df65f9814b2f683cb9c2abfb1cdbf262855a8b9d0ae28510231c81edd3ce\n    sha256: f632df65f9814b2f683cb9c2abfb1cdbf262855a8b9d0ae28510231c81edd3ce\n    bytes: 1270\n    role: mandatory_scientific_companion\n    transformed: false\n    baseline_delivery_member: 历史交付_1907/历史交付_1707/已验收论文/M_N1254/labeling_assays.csv\n  [9]     paper_id: M_N1254\n    path: full/M_N1254/support/media.csv\n    source_member: media.csv\n    accepted_original_sha256: 1151337219ebf4f8b23f451ecccaf7df0f3d36cb65a4bb58a01eaf453238ef33\n    source_sha256: 1151337219ebf4f8b23f451ecccaf7df0f3d36cb65a4bb58a01eaf453238ef33\n    baseline_delivered_sha256: 1151337219ebf4f8b23f451ecccaf7df0f3d36cb65a4bb58a01eaf453238ef33\n    sha256: 1151337219ebf4f8b23f451ecccaf7df0f3d36cb65a4bb58a01eaf453238ef33\n    bytes: 431\n    role: mandatory_scientific_companion\n    transformed: false\n    baseline_delivery_member: 历史交付_1907/历史交付_1707/已验收论文/M_N1254/media.csv\n  [10]     paper_id: M_N1254\n    path: full/M_N1254/support/operations.csv\n    source_member: operations.csv\n    accepted_original_sha256: 47d7be4d220036870fb2ccd1c6bbdaa3719235b9544b303ce44ba8b8e72392d4\n    source_sha256: 47d7be4d220036870fb2ccd1c6bbdaa3719235b9544b303ce44ba8b8e72392d4\n    baseline_delivered_sha256: 47d7be4d220036870fb2ccd1c6bbdaa3719235b9544b303ce44ba8b8e72392d4\n    sha256: 47d7be4d220036870fb2ccd1c6bbdaa3719235b9544b303ce44ba8b8e72392d4\n    bytes: 9205\n    role: mandatory_scientific_companion\n    transformed: false\n    baseline_delivery_member: 历史交付_1907/历史交付_1707/已验收论文/M_N1254/operations.csv\n  [11]     paper_id: M_N1254\n    path: full/M_N1254/support/package_validation.json\n    source_member: package_validation.json\n    accepted_original_sha256: de8b7ca2e18a731a3ebd4627772e4911d1fb105338e0fad48836730377734090\n    source_sha256: de8b7ca2e18a731a3ebd4627772e4911d1fb105338e0fad48836730377734090\n    baseline_delivered_sha256: de8b7ca2e18a731a3ebd4627772e4911d1fb105338e0fad48836730377734090\n    sha256: de8b7ca2e18a731a3ebd4627772e4911d1fb105338e0fad48836730377734090\n    bytes: 343\n    role: mandatory_existing_validation_support\n    transformed: false\n    baseline_delivery_member: 历史交付_1907/历史交付_1707/已验收论文/M_N1254/package_validation.json\n  [12]     paper_id: M_N1254\n    path: full/M_N1254/support/query_log.csv\n    source_member: query_log.csv\n    accepted_original_sha256: 904156aa2972d55d75988c1d18ca6cbda42561c210b5d85a73817593a45a8ba8\n    source_sha256: 904156aa2972d55d75988c1d18ca6cbda42561c210b5d85a73817593a45a8ba8\n    baseline_delivered_sha256: 904156aa2972d55d75988c1d18ca6cbda42561c210b5d85a73817593a45a8ba8\n    sha256: 904156aa2972d55d75988c1d18ca6cbda42561c210b5d85a73817593a45a8ba8\n    bytes: 1125\n    role: mandatory_scientific_companion\n    transformed: false\n    baseline_delivery_member: 历史交付_1907/历史交付_1707/已验收论文/M_N1254/query_log.csv\n  [13]     paper_id: M_N1254\n    path: full/M_N1254/support/reading_log.csv\n    source_member: reading_log.csv\n    accepted_original_sha256: 623940d01356815f639ffeab4938332e3e8079f46380b770b5e3aa4bba471f15\n    source_sha256: 623940d01356815f639ffeab4938332e3e8079f46380b770b5e3aa4bba471f15\n    baseline_delivered_sha256: 623940d01356815f639ffeab4938332e3e8079f46380b770b5e3aa4bba471f15\n    sha256: 623940d01356815f639ffeab4938332e3e8079f46380b770b5e3aa4bba471f15\n    bytes: 441\n    role: mandatory_scientific_companion\n    transformed: false\n    baseline_delivery_member: 历史交付_1907/历史交付_1707/已验收论文/M_N1254/reading_log.csv\n  [14]     paper_id: M_N1254\n    path: full/M_N1254/support/research_questions.csv\n    source_member: research_questions.csv\n    accepted_original_sha256: 29bf42e17eac1beecce8ebd5ca4e7a06e2c35a029a6bf4f4e90aba4d441fac77\n    source_sha256: 29bf42e17eac1beecce8ebd5ca4e7a06e2c35a029a6bf4f4e90aba4d441fac77\n    baseline_delivered_sha256: 29bf42e17eac1beecce8ebd5ca4e7a06e2c35a029a6bf4f4e90aba4d441fac77\n    sha256: 29bf42e17eac1beecce8ebd5ca4e7a06e2c35a029a6bf4f4e90aba4d441fac77\n    bytes: 392\n    role: mandatory_scientific_companion\n    transformed: false\n    baseline_delivery_member: 历史交付_1907/历史交付_1707/已验收论文/M_N1254/research_questions.csv\n  [15]     paper_id: M_N1254\n    path: full/M_N1254/support/results.csv\n    source_member: results.csv\n    accepted_original_sha256: 6a1e9a673fd6dcf7506c63aeb963d602c7cc5da5433e0a13840b5bf24c7c59c1\n    source_sha256: 6a1e9a673fd6dcf7506c63aeb963d602c7cc5da5433e0a13840b5bf24c7c59c1\n    baseline_delivered_sha256: 6a1e9a673fd6dcf7506c63aeb963d602c7cc5da5433e0a13840b5bf24c7c59c1\n    sha256: 6a1e9a673fd6dcf7506c63aeb963d602c7cc5da5433e0a13840b5bf24c7c59c1\n    bytes: 3438\n    role: mandatory_scientific_companion\n    transformed: false\n    baseline_delivery_member: 历史交付_1907/历史交付_1707/已验收论文/M_N1254/results.csv\n  [16]     paper_id: M_N1254\n    path: full/M_N1254/support/review/R2_R3_initial_findings.json\n    source_member: review/R2_R3_initial_findings.json\n    accepted_original_sha256: 44ca93a7526318cedb3d5899f1cf9a9cf4d18320da261c69c7e0f53e26935f51\n    source_sha256: 44ca93a7526318cedb3d5899f1cf9a9cf4d18320da261c69c7e0f53e26935f51\n    baseline_delivered_sha256: 44ca93a7526318cedb3d5899f1cf9a9cf4d18320da261c69c7e0f53e26935f51\n    sha256: 66cf10c14152d2aeb8f89e99bfe91b46df57d10d2b485d22f3a00c2ad21ad481\n    bytes: 3429\n    role: mandatory_review_and_revision_support\n    transformed: true\n    baseline_delivery_member: 历史交付_1907/历史交付_1707/已验收论文/M_N1254/review/R2_R3_initial_findings.json\n  [17]     paper_id: M_N1254\n    path: full/M_N1254/support/review/R4_executed_scientific_queries.json\n    source_member: review/R4_executed_scientific_queries.json\n    accepted_original_sha256: c002bab51bb0f0d9393c6771a7b521eae8f58dd67c88851f84020f020fb6c943\n    source_sha256: c002bab51bb0f0d9393c6771a7b521eae8f58dd67c88851f84020f020fb6c943\n    baseline_delivered_sha256: c002bab51bb0f0d9393c6771a7b521eae8f58dd67c88851f84020f020fb6c943\n    sha256: c002bab51bb0f0d9393c6771a7b521eae8f58dd67c88851f84020f020fb6c943\n    bytes: 10091\n    role: mandatory_review_and_revision_support\n    transformed: false\n    baseline_delivery_member: 历史交付_1907/历史交付_1707/已验收论文/M_N1254/review/R4_executed_scientific_queries.json\n  [18]     paper_id: M_N1254\n    path: full/M_N1254/support/review/accepted_R1_1_record.json\n    source_member: review/accepted_R1_1_record.json\n    accepted_original_sha256: 9d0ab4daa80f741bf60623194fa2ac20ab9f16952d5999351d39815dd648d1e7\n    source_sha256: 9d0ab4daa80f741bf60623194fa2ac20ab9f16952d5999351d39815dd648d1e7\n    baseline_delivered_sha256: 9d0ab4daa80f741bf60623194fa2ac20ab9f16952d5999351d39815dd648d1e7\n    sha256: 4ee1f031f9c3688ca951f1ac3d8baad15203b2c4398574b9c8741e6448817a64\n    bytes: 69660\n    role: mandatory_accepted_snapshot_support\n    transformed: true\n    baseline_delivery_member: 历史交付_1907/历史交付_1707/已验收论文/M_N1254/review/accepted_R1_1_record.json\n  [19]     paper_id: M_N1254\n    path: full/M_N1254/support/review/independent_precheck.md\n    source_member: review/independent_precheck.md\n    accepted_original_sha256: f6ad5f162875ad78c4793bf69a4e05654e53ebabcc2138c6dd3c511e58ac733f\n    source_sha256: f6ad5f162875ad78c4793bf69a4e05654e53ebabcc2138c6dd3c511e58ac733f\n    baseline_delivered_sha256: f6ad5f162875ad78c4793bf69a4e05654e53ebabcc2138c6dd3c511e58ac733f\n    sha256: 5a4086574109f00fff08e2423557c20a97eb67c3351c90bff8bcf09ce638e83e\n    bytes: 7245\n    role: mandatory_review_and_revision_support\n    transformed: true\n    baseline_delivery_member: 历史交付_1907/历史交付_1707/已验收论文/M_N1254/review/independent_precheck.md\n  [20]     paper_id: M_N1254\n    path: full/M_N1254/support/review/revision_log.json\n    source_member: review/revision_log.json\n    accepted_original_sha256: edb414ae518d94272fb8e9c671e2ccef382ce69ee43d9db35dee72399947e70c\n    source_sha256: edb414ae518d94272fb8e9c671e2ccef382ce69ee43d9db35dee72399947e70c\n    baseline_delivered_sha256: edb414ae518d94272fb8e9c671e2ccef382ce69ee43d9db35dee72399947e70c\n    sha256: edb414ae518d94272fb8e9c671e2ccef382ce69ee43d9db35dee72399947e70c\n    bytes: 705\n    role: mandatory_revision_or_inheritance_support\n    transformed: false\n    baseline_delivery_member: 历史交付_1907/历史交付_1707/已验收论文/M_N1254/review/revision_log.json\n  [21]     paper_id: M_N1254\n    path: full/M_N1254/support/source_conflicts.csv\n    source_member: source_conflicts.csv\n    accepted_original_sha256: 582d324f00d42fb02724d3d9e287b863b20af4a5a519547cc4e0a5c2fd4bef7f\n    source_sha256: 582d324f00d42fb02724d3d9e287b863b20af4a5a519547cc4e0a5c2fd4bef7f\n    baseline_delivered_sha256: 582d324f00d42fb02724d3d9e287b863b20af4a5a519547cc4e0a5c2fd4bef7f\n    sha256: 582d324f00d42fb02724d3d9e287b863b20af4a5a519547cc4e0a5c2fd4bef7f\n    bytes: 640\n    role: mandatory_scientific_companion\n    transformed: false\n    baseline_delivery_member: 历史交付_1907/历史交付_1707/已验收论文/M_N1254/source_conflicts.csv\n  [22]     paper_id: M_N1254\n    path: full/M_N1254/support/source_documents.csv\n    source_member: source_documents.csv\n    accepted_original_sha256: 381700b3837ba4608db99fd2ae9a48579b5638987867d7ff22c1e349f020d688\n    source_sha256: 381700b3837ba4608db99fd2ae9a48579b5638987867d7ff22c1e349f020d688\n    baseline_delivered_sha256: 381700b3837ba4608db99fd2ae9a48579b5638987867d7ff22c1e349f020d688\n    sha256: cf9c1b52830b58cb841be3f13cb5c343881d8fcbc6bb6bdc0f0e4b4fa818464d\n    bytes: 941\n    role: mandatory_scientific_companion\n    transformed: true\n    baseline_delivery_member: 历史交付_1907/历史交付_1707/已验收论文/M_N1254/source_documents.csv\n  [23]     paper_id: M_N1254\n    path: full/M_N1254/support/source_spans.csv\n    source_member: source_spans.csv\n    accepted_original_sha256: 61f26171a46f7f588675e5d2736d186c7d82dc3d6101f92523774e0512f05cd2\n    source_sha256: 61f26171a46f7f588675e5d2736d186c7d82dc3d6101f92523774e0512f05cd2\n    baseline_delivered_sha256: 61f26171a46f7f588675e5d2736d186c7d82dc3d6101f92523774e0512f05cd2\n    sha256: d878df3bbb2abb47de045d07e5665f669ba97e6d6fed73ae3d113d69bba04d76\n    bytes: 4758\n    role: mandatory_scientific_companion\n    transformed: true\n    baseline_delivery_member: 历史交付_1907/历史交付_1707/已验收论文/M_N1254/source_spans.csv\n  [24]     paper_id: M_N1254\n    path: full/M_N1254/support/time_metrics.csv\n    source_member: time_metrics.csv\n    accepted_original_sha256: aee5df29406377eebf9287aa64793b37e7433bef964af8d756f1afb06c340309\n    source_sha256: aee5df29406377eebf9287aa64793b37e7433bef964af8d756f1afb06c340309\n    baseline_delivered_sha256: aee5df29406377eebf9287aa64793b37e7433bef964af8d756f1afb06c340309\n    sha256: aee5df29406377eebf9287aa64793b37e7433bef964af8d756f1afb06c340309\n    bytes: 1195\n    role: mandatory_scientific_companion\n    transformed: false\n    baseline_delivery_member: 历史交付_1907/历史交付_1707/已验收论文/M_N1254/time_metrics.csv\n  [25]     paper_id: M_N1254\n    path: full/M_N1254/support/tissue_observations.csv\n    source_member: tissue_observations.csv\n    accepted_original_sha256: 1bcd2da5f92db92a297cdb9b126e95c35f608a09388aa48f2f1bc96fc7b9f587\n    source_sha256: 1bcd2da5f92db92a297cdb9b126e95c35f608a09388aa48f2f1bc96fc7b9f587\n    baseline_delivered_sha256: 1bcd2da5f92db92a297cdb9b126e95c35f608a09388aa48f2f1bc96fc7b9f587\n    sha256: 1bcd2da5f92db92a297cdb9b126e95c35f608a09388aa48f2f1bc96fc7b9f587\n    bytes: 1026\n    role: mandatory_scientific_companion\n    transformed: false\n    baseline_delivery_member: 历史交付_1907/历史交付_1707/已验收论文/M_N1254/tissue_observations.csv\n  [26]     paper_id: M_N1254\n    path: full/M_N1254/support/unresolved_items.csv\n    source_member: unresolved_items.csv\n    accepted_original_sha256: cc38fafffd2002b86a4688a83811e818ec6e5e3144043c4ee1ccb4bb08873c23\n    source_sha256: cc38fafffd2002b86a4688a83811e818ec6e5e3144043c4ee1ccb4bb08873c23\n    baseline_delivered_sha256: cc38fafffd2002b86a4688a83811e818ec6e5e3144043c4ee1ccb4bb08873c23\n    sha256: cc38fafffd2002b86a4688a83811e818ec6e5e3144043c4ee1ccb4bb08873c23\n    bytes: 1612\n    role: mandatory_scientific_companion\n    transformed: false\n    baseline_delivery_member: 历史交付_1907/历史交付_1707/已验收论文/M_N1254/unresolved_items.csv\n  [27]     paper_id: M_N1254\n    path: full/M_N1254/support/最终验收依据.json\n    source_member: 最终验收依据.json\n    accepted_original_sha256: 2dff6c732618de14376d33329d15f66dd9faa6575f9606a94cca45301de833c0\n    source_sha256: 2dff6c732618de14376d33329d15f66dd9faa6575f9606a94cca45301de833c0\n    baseline_delivered_sha256: 2dff6c732618de14376d33329d15f66dd9faa6575f9606a94cca45301de833c0\n    sha256: 5aecb290ea6898812e8a1315f763f8cf59cd7678ffde8b9e152309d1725dc5bb\n    bytes: 2954\n    role: mandatory_final_acceptance\n    transformed: true\n    baseline_delivery_member: 历史交付_1907/历史交付_1707/已验收论文/M_N1254/最终验收依据.json\n  [28]     paper_id: M_N1254\n    path: full/M_N1254/support/科学版本绑定核对.json\n    source_member: 科学版本绑定核对.json\n    accepted_original_sha256: b3f3a75b4ba3ee2fae707de4261360314961c930fadf820fd1f7193652774323\n    source_sha256: b3f3a75b4ba3ee2fae707de4261360314961c930fadf820fd1f7193652774323\n    baseline_delivered_sha256: b3f3a75b4ba3ee2fae707de4261360314961c930fadf820fd1f7193652774323\n    sha256: b3f3a75b4ba3ee2fae707de4261360314961c930fadf820fd1f7193652774323\n    bytes: 532\n    role: mandatory_version_binding\n    transformed: false\n    baseline_delivery_member: 历史交付_1907/历史交付_1707/已验收论文/M_N1254/科学版本绑定核对.json\nacceptance: full/M_N1254/support/最终验收依据.json\nacceptance_files: \n  [1] full/M_N1254/support/最终验收依据.json\nactive_version_and_scope: \n  scope: \n    inherited_current_selection: \n      paper_id: M_N1254\n      status: full\n      active_scientific_files: \n        [1]           path: 历史交付_1907/历史交付_1707/已验收论文/M_N1254/record.json\n          accepted_original_sha256: eb328f73ea9b911b805a8eb95c1aea5518263a6fb7fc80391b268c873e5614e5\n          delivered_sha256: eb328f73ea9b911b805a8eb95c1aea5518263a6fb7fc80391b268c873e5614e5\n          transformed: false\n      baseline_binding: 历史交付_1907/当前版本选择/M_N1254.json\n      companion_root: 历史交付_1907/历史交付_1707/已验收论文/M_N1254\n      rule: Reuse immutable previously accepted current selection and necessary overlays. Paths in inherited binding resolve relative to 历史交付_1907 root. Only current root index governs active versions.\n    historical_selection_bindings: \n      [1]         source_archive_name: 组织光透明证据_20261019_2107_完整科学分包2共3包.zip\n        source_member: 历史交付_1907/当前版本选择/M_N1254.json\n        source_sha256: f83cebc9d39116be668e039903c27d9ae87efcd84f46ceace379d3f914534ab8\n        source_bytes: 697\n        selection: \n          paper_id: M_N1254\n          status: full\n          baseline_record: \n            [1]               path: 历史交付_1707/已验收论文/M_N1254/record.json\n              accepted_original_sha256: eb328f73ea9b911b805a8eb95c1aea5518263a6fb7fc80391b268c873e5614e5\n              delivered_sha256: eb328f73ea9b911b805a8eb95c1aea5518263a6fb7fc80391b268c873e5614e5\n              transformed: false\n          scope: 任务相关科学字段完整四轮\n          companion_root: 历史交付_1707/已验收论文/M_N1254\n          companion_rule: Use the complete per-paper directory, its mandatory overlays, scientific companion files and version binding from previous accepted delivery; record alone is not a substitute.\n        role: historical_selection_provenance_not_runtime_index\n      [2]         source_archive_name: 组织光透明证据_20261019_2107_完整科学分包2共3包.zip\n        source_member: 当前版本选择/M_N1254.json\n        source_sha256: 46e57428c09a85e6821d3e54be9f01863b1c3efdfc45607889ed54bbbd8da326\n        source_bytes: 777\n        selection: \n          paper_id: M_N1254\n          status: full\n          active_scientific_files: \n            [1]               path: 历史交付_1907/历史交付_1707/已验收论文/M_N1254/record.json\n              accepted_original_sha256: eb328f73ea9b911b805a8eb95c1aea5518263a6fb7fc80391b268c873e5614e5\n              delivered_sha256: eb328f73ea9b911b805a8eb95c1aea5518263a6fb7fc80391b268c873e5614e5\n              transformed: false\n          baseline_binding: 历史交付_1907/当前版本选择/M_N1254.json\n          companion_root: 历史交付_1907/历史交付_1707/已验收论文/M_N1254\n          rule: Reuse immutable previously accepted current selection and necessary overlays. Paths in inherited binding resolve relative to 历史交付_1907 root. Only current root index governs active versions.\n        role: source_current_selection_provenance_not_second_runtime_index\n    precedence_notes: \n      [1] Accepted R1.1 supersedes R1.0. Current record differs only by review_status, status and version.\n      [2] FINAL_SHA256 retains original history and utility entries as provenance; no recursive activation. All unique science and review companions retained.\n    rule: Only this portable selection activates current scientific files. Inherited selections are retained provenance and scope, not recursively loadable indexes.\n  historical_nonactive_members: \n    [1] review/R1_frozen_record.json\n    [2] validate_package.py\nmandatory_composition: Root plus explicitly selected companions and any current mandatory semantic addendum apply jointly. Never recursively activate audit history.\noriginal_member_to_release_path: \n  record.json: full/M_N1254/evidence/record.json\nactive_reference_aliases: \n  record.json: full/M_N1254/evidence/record.json\n  FINAL_SHA256.txt: full/M_N1254/support/FINAL_SHA256.txt\n  README_zh.md: full/M_N1254/support/README_zh.md\n  author_claims.csv: full/M_N1254/support/author_claims.csv\n  branches.csv: full/M_N1254/support/branches.csv\n  experiments.csv: full/M_N1254/support/experiments.csv\n  flow_structure.json: full/M_N1254/support/flow_structure.json\n  imaging.csv: full/M_N1254/support/imaging.csv\n  labeling_assays.csv: full/M_N1254/support/labeling_assays.csv\n  media.csv: full/M_N1254/support/media.csv\n  operations.csv: full/M_N1254/support/operations.csv\n  package_validation.json: full/M_N1254/support/package_validation.json\n  query_log.csv: full/M_N1254/support/query_log.csv\n  reading_log.csv: full/M_N1254/support/reading_log.csv\n  research_questions.csv: full/M_N1254/support/research_questions.csv\n  results.csv: full/M_N1254/support/results.csv\n  review/R2_R3_initial_findings.json: full/M_N1254/support/review/R2_R3_initial_findings.json\n  review/R4_executed_scientific_queries.json: full/M_N1254/support/review/R4_executed_scientific_queries.json\n  review/accepted_R1_1_record.json: full/M_N1254/support/review/accepted_R1_1_record.json\n  review/independent_precheck.md: full/M_N1254/support/review/independent_precheck.md\n  review/revision_log.json: full/M_N1254/support/review/revision_log.json\n  source_conflicts.csv: full/M_N1254/support/source_conflicts.csv\n  source_documents.csv: full/M_N1254/support/source_documents.csv\n  source_spans.csv: full/M_N1254/support/source_spans.csv\n  time_metrics.csv: full/M_N1254/support/time_metrics.csv\n  tissue_observations.csv: full/M_N1254/support/tissue_observations.csv\n  unresolved_items.csv: full/M_N1254/support/unresolved_items.csv\n  最终验收依据.json: full/M_N1254/support/最终验收依据.json\n  科学版本绑定核对.json: full/M_N1254/support/科学版本绑定核对.json\n  历史交付_1907/历史交付_1707/已验收论文/M_N1254/FINAL_SHA256.txt: full/M_N1254/support/FINAL_SHA256.txt\n  历史交付_1907/历史交付_1707/已验收论文/M_N1254/README_zh.md: full/M_N1254/support/README_zh.md\n  历史交付_1907/历史交付_1707/已验收论文/M_N1254/author_claims.csv: full/M_N1254/support/author_claims.csv\n  历史交付_1907/历史交付_1707/已验收论文/M_N1254/branches.csv: full/M_N1254/support/branches.csv\n  历史交付_1907/历史交付_1707/已验收论文/M_N1254/experiments.csv: full/M_N1254/support/experiments.csv\n  历史交付_1907/历史交付_1707/已验收论文/M_N1254/flow_structure.json: full/M_N1254/support/flow_structure.json\n  历史交付_1907/历史交付_1707/已验收论文/M_N1254/imaging.csv: full/M_N1254/support/imaging.csv\n  历史交付_1907/历史交付_1707/已验收论文/M_N1254/labeling_assays.csv: full/M_N1254/support/labeling_assays.csv\n  历史交付_1907/历史交付_1707/已验收论文/M_N1254/media.csv: full/M_N1254/support/media.csv\n  历史交付_1907/历史交付_1707/已验收论文/M_N1254/operations.csv: full/M_N1254/support/operations.csv\n  历史交付_1907/历史交付_1707/已验收论文/M_N1254/package_validation.json: full/M_N1254/support/package_validation.json\n  历史交付_1907/历史交付_1707/已验收论文/M_N1254/query_log.csv: full/M_N1254/support/query_log.csv\n  历史交付_1907/历史交付_1707/已验收论文/M_N1254/reading_log.csv: full/M_N1254/support/reading_log.csv\n  历史交付_1907/历史交付_1707/已验收论文/M_N1254/record.json: full/M_N1254/evidence/record.json\n  历史交付_1907/历史交付_1707/已验收论文/M_N1254/research_questions.csv: full/M_N1254/support/research_questions.csv\n  历史交付_1907/历史交付_1707/已验收论文/M_N1254/results.csv: full/M_N1254/support/results.csv\n  历史交付_1907/历史交付_1707/已验收论文/M_N1254/review/R2_R3_initial_findings.json: full/M_N1254/support/review/R2_R3_initial_findings.json\n  历史交付_1907/历史交付_1707/已验收论文/M_N1254/review/R4_executed_scientific_queries.json: full/M_N1254/support/review/R4_executed_scientific_queries.json\n  历史交付_1907/历史交付_1707/已验收论文/M_N1254/review/accepted_R1_1_record.json: full/M_N1254/support/review/accepted_R1_1_record.json\n  历史交付_1907/历史交付_1707/已验收论文/M_N1254/review/independent_precheck.md: full/M_N1254/support/review/independent_precheck.md\n  历史交付_1907/历史交付_1707/已验收论文/M_N1254/review/revision_log.json: full/M_N1254/support/review/revision_log.json\n  历史交付_1907/历史交付_1707/已验收论文/M_N1254/source_conflicts.csv: full/M_N1254/support/source_conflicts.csv\n  历史交付_1907/历史交付_1707/已验收论文/M_N1254/source_documents.csv: full/M_N1254/support/source_documents.csv\n  历史交付_1907/历史交付_1707/已验收论文/M_N1254/source_spans.csv: full/M_N1254/support/source_spans.csv\n  历史交付_1907/历史交付_1707/已验收论文/M_N1254/time_metrics.csv: full/M_N1254/support/time_metrics.csv\n  历史交付_1907/历史交付_1707/已验收论文/M_N1254/tissue_observations.csv: full/M_N1254/support/tissue_observations.csv\n  历史交付_1907/历史交付_1707/已验收论文/M_N1254/unresolved_items.csv: full/M_N1254/support/unresolved_items.csv\n  review/final_acceptance.json: full/M_N1254/support/最终验收依据.json\n  历史交付_1907/历史交付_1707/已验收论文/M_N1254/review/final_acceptance.json: full/M_N1254/support/最终验收依据.json\n  历史交付_1907/历史交付_1707/已验收论文/M_N1254/最终验收依据.json: full/M_N1254/support/最终验收依据.json\n  历史交付_1907/历史交付_1707/已验收论文/M_N1254/科学版本绑定核对.json: full/M_N1254/support/科学版本绑定核对.json\n  paper_completion/M_N1254/review/final_acceptance.json: full/M_N1254/support/最终验收依据.json\nactive_reference_resolution_evidence: \n  [1]     source_file: full/M_N1254/evidence/record.json\n    json_pointer: /review_status/acceptance_file\n    reference: review/final_acceptance.json\n    resolved_release_path: full/M_N1254/support/最终验收依据.json\n    binding_basis: explicit_verified_alias\n  [2]     source_file: full/M_N1254/support/最终验收依据.json\n    json_pointer: /R4/evidence_files/0\n    reference: review/independent_precheck.md\n    resolved_release_path: full/M_N1254/support/review/independent_precheck.md\n    binding_basis: explicit_verified_alias\n  [3]     source_file: full/M_N1254/support/最终验收依据.json\n    json_pointer: /R4/evidence_files/1\n    reference: review/R4_executed_scientific_queries.json\n    resolved_release_path: full/M_N1254/support/review/R4_executed_scientific_queries.json\n    binding_basis: explicit_verified_alias\n  [4]     source_file: full/M_N1254/support/科学版本绑定核对.json\n    json_pointer: /acceptance_file\n    reference: paper_completion/M_N1254/review/final_acceptance.json\n    resolved_release_path: full/M_N1254/support/最终验收依据.json\n    binding_basis: existing_original_source_file_exact_hash\nexternal_or_historical_references: \n  [1]     source_file: full/M_N1254/support/review/R2_R3_initial_findings.json\n    json_pointer: /reviewed_version\n    reference: review/R1_frozen_record.json\n    automatic_loading: false\n    role: superseded_original_input_or_historical_inventory_nonruntime\n    closure_reviewed: true\n    reference_value_sha256_utf8: ed6c7016229c3df8ffa0293fd5ab8bc6bc23a2761ffb2d8ffe0c8b9a693021fb\nnonactive_excluded_members: \n  [1] review/R1_frozen_record.json\n  [2] validate_package.py\nhistorical_contextual_filename_hash_bindings: \n[]\nverified_alias_binding_proofs: \n  [1]     reference: paper_completion/M_N1254/review/final_acceptance.json\n    source_file: full/M_N1254/support/科学版本绑定核对.json\n    hash_value: 2dff6c732618de14376d33329d15f66dd9faa6575f9606a94cca45301de833c0\n    target: full/M_N1254/support/最终验收依据.json\n    basis: existing_original_source_file_exact_hash_matches_selected_member\n    source_hash_occurrence_pointers: \n      [1] /acceptance_sha256\nreference_resolution_policy: Exact source/target hash-bound references only. A bounded source-file/JSON-pointer acceptance exception is separate from global current aliases. Historical native mapping collisions and source identity labels remain nonruntime occurrence metadata. Original accepted/final metadata equality is not raw-byte aliasing. Historical sources never recursively activate. This local closure does not approve release.\nsupplemental_reference_binding_proofs: \n[]\nhistorical_reference_disposition_proofs: \n  [1]     source_file: full/M_N1254/support/review/R2_R3_initial_findings.json\n    source_json_pointer: /reviewed_version\n    reference_value_sha256_utf8: ed6c7016229c3df8ffa0293fd5ab8bc6bc23a2761ffb2d8ffe0c8b9a693021fb\n    source_hash_chain: \n      path: full/M_N1254/support/review/R2_R3_initial_findings.json\n      original_sha256: 44ca93a7526318cedb3d5899f1cf9a9cf4d18320da261c69c7e0f53e26935f51\n      baseline_sha256: 44ca93a7526318cedb3d5899f1cf9a9cf4d18320da261c69c7e0f53e26935f51\n      current_sha256: 66cf10c14152d2aeb8f89e99bfe91b46df57d10d2b485d22f3a00c2ad21ad481\n      transformed: true\n    basis: reviewed_exact_source_occurrence_and_original_dependency_preflight\n    evidence: \n      file: dependency_preflight_group1_local_only.json\n      sha256: daf16126308289ce955f9b380301ce580f4208a749d034b94d15a7e7e0a6e64d\n      json_pointer: /papers/2/all_directory_member_classifications\n      value_canonical_sha256: eec53bd3ee33296881a01e3dd585cc1ec33d8f768cda8fb2794c8d15c0e7a0e4\nsupplemental_hash_scoped_manifest_bindings: \n[]\nmetadata_only_accepted_final_binding: \n  accepted_snapshot: full/M_N1254/support/review/accepted_R1_1_record.json\n  accepted_snapshot_original_sha256: 9d0ab4daa80f741bf60623194fa2ac20ab9f16952d5999351d39815dd648d1e7\n  accepted_snapshot_hash_chain: \n    path: full/M_N1254/support/review/accepted_R1_1_record.json\n    original_sha256: 9d0ab4daa80f741bf60623194fa2ac20ab9f16952d5999351d39815dd648d1e7\n    baseline_sha256: 9d0ab4daa80f741bf60623194fa2ac20ab9f16952d5999351d39815dd648d1e7\n    current_sha256: 4ee1f031f9c3688ca951f1ac3d8baad15203b2c4398574b9c8741e6448817a64\n    transformed: true\n  final_record: full/M_N1254/evidence/record.json\n  final_record_original_sha256: eb328f73ea9b911b805a8eb95c1aea5518263a6fb7fc80391b268c873e5614e5\n  final_record_hash_chain: \n    path: full/M_N1254/evidence/record.json\n    original_sha256: eb328f73ea9b911b805a8eb95c1aea5518263a6fb7fc80391b268c873e5614e5\n    baseline_sha256: eb328f73ea9b911b805a8eb95c1aea5518263a6fb7fc80391b268c873e5614e5\n    current_sha256: 6bd1e346c88ecb91d239dedb85ed96957d5733a5ead387953188647b064e2d23\n    transformed: true\n  excluded_top_level_fields: \n    [1] review_status\n    [2] status\n    [3] version\n  excluded_nested_metadata_fields: \n[]\n  actual_changed_top_level_keys: \n    [1] review_status\n    [2] status\n    [3] version\n  all_other_structured_values_deep_equal: true\n  accepted_normalized_canonical_sha256: 3b698eeb4997324909959a924a1fb2307256cd0f6fb9f828dac8183775adf0d8\n  final_normalized_canonical_sha256: 3b698eeb4997324909959a924a1fb2307256cd0f6fb9f828dac8183775adf0d8\n  normalized_json_serialization: UTF-8 ensure_ascii=false sort_keys=true separators=(comma,colon)\n  is_raw_byte_alias: false\n  creates_additional_runtime_root: false\n  proof_scope: exact_original_accepted_and_final_sources_before_documented_delivery_projection\n  source_receipt_hashes_not_rewritten: true\n  proof: \n    file: dependency_preflight_group1_local_only.json\n    sha256: daf16126308289ce955f9b380301ce580f4208a749d034b94d15a7e7e0a6e64d\n    json_pointer: /papers/2/acceptance_binding_verification\n    value_canonical_sha256: 3f0afde21907beef26005c7a391eaf48527bbc452c397a8aec2b7025c84e1a51\nrequired_runtime_pointer_bindings: \n[]\noccurrence_scoped_reference_bindings: \n  [1]     source_file: full/M_N1254/support/最终验收依据.json\n    json_pointer: /accepted_record\n    reference: record.json\n    source_value_sha256: cff0331676121f061a566a4aad4c25e723d8e8f693d71c5f9735633929ba98bc\n    source_hash_chain: \n      path: full/M_N1254/support/最终验收依据.json\n      original_sha256: 2dff6c732618de14376d33329d15f66dd9faa6575f9606a94cca45301de833c0\n      baseline_sha256: 2dff6c732618de14376d33329d15f66dd9faa6575f9606a94cca45301de833c0\n      current_sha256: 5aecb290ea6898812e8a1315f763f8cf59cd7678ffde8b9e152309d1725dc5bb\n      transformed: true\n    target: full/M_N1254/support/review/accepted_R1_1_record.json\n    target_hash_chain: \n      path: full/M_N1254/support/review/accepted_R1_1_record.json\n      original_sha256: 9d0ab4daa80f741bf60623194fa2ac20ab9f16952d5999351d39815dd648d1e7\n      baseline_sha256: 9d0ab4daa80f741bf60623194fa2ac20ab9f16952d5999351d39815dd648d1e7\n      current_sha256: 4ee1f031f9c3688ca951f1ac3d8baad15203b2c4398574b9c8741e6448817a64\n      transformed: true\n    declared_target_hash_pointer: /accepted_sha256\n    declared_target_hash_value: 9d0ab4daa80f741bf60623194fa2ac20ab9f16952d5999351d39815dd648d1e7\n    role: nonactive_acceptance_snapshot\n    automatic_loading: false\n    global_alias_unchanged: true\noccurrence_scoped_historical_reference_dispositions: \n[]\nsource_metadata_reference_bindings: \n[]\nreference_closure_supplement: \n  schema: source_hash_bound_reference_supplement.v1\n  spec_sha256: 91b54a574dc89841f83c13376dfe13a1f7992ac94b9dcaec670358c73bab42e6\n  dispositions_sha256: 5539cf2eecbbb64fad233acfe7d5e77f5ea492f8530cfee73e86b898445bdf56\n  state: LOCAL_REFERENCE_CLOSURE_PROOF_NOT_RELEASE_APPROVAL\n  required_alias_count: 0\n  nonruntime_disposition_count: 1\n  runtime_pointer_binding_count: 0\n  hash_scoped_manifest_binding_count: 0\n  occurrence_scoped_acceptance_binding_count: 1\n  historical_occurrence_disposition_count: 0\n  source_metadata_binding_count: 0\n  metadata_only_acceptance_bridge_count: true\n  no_basename_or_suffix_inference: true\n  no_historical_tree_activation: true\n  no_scientific_or_support_file_changes: true\n  prior87_unchanged: true",
+      "Text2_Reference": [
+        "DOI: https://doi.org/10.3389/fnana.2018.00067",
+        "Evidence-layer structured paraphrase; not a verbatim quotation. Source release: https://github.com/404NotFound422/TOCAgentProject/tree/5e3a711befb3952a2e39f4d53fc9c9f1a7ac0d22/KnowledgeBase/evidence_expansion_20261019",
+        "Local source archive: ../literature_evidence/2026-11-11/source_release.zip; member: full/M_N1254/version_selection.json"
+      ]
+    },
+    {
+      "Text3": "scope:\n已制备固定组织的透明、现有内源GFP读出、成像和定量证据；不提供动物模型构建或试剂采购要求；不将共同协议当逐样本日志。",
+      "Text3_Reference": [
+        "Structured evidence: full/M_N1254/evidence/record.json#/scope; SHA-256: 6bd1e346c88ecb91d239dedb85ed96957d5733a5ead387953188647b064e2d23; DOI: https://doi.org/10.3389/fnana.2018.00067"
+      ]
+    },
+    {
+      "Text4": "source_conflicts:\nconflict_id: CFL01\nissue: onset of clearing vs immediately after clearing/day labels\nsources: \n  [1] L09\n  [2] L10\n  [3] F1\n  [4] F2\nresolution: 保留原文时间锚歧义，标准化为透明后的观察标签，不反推清除过程历时",
+      "Text4_Reference": [
+        "Structured evidence: full/M_N1254/evidence/record.json#/source_conflicts/0; SHA-256: 6bd1e346c88ecb91d239dedb85ed96957d5733a5ead387953188647b064e2d23; DOI: https://doi.org/10.3389/fnana.2018.00067"
+      ]
+    },
+    {
+      "Text5": "source_conflicts:\nconflict_id: CFL02\nissue: main100–500µm² vs SupplementaryFig3 screenshot100–500pixel²\nsources: \n  [1] L07\n  [2] SF3\nresolution: 单位冲突未解，不做像素换算",
+      "Text5_Reference": [
+        "Structured evidence: full/M_N1254/evidence/record.json#/source_conflicts/1; SHA-256: 6bd1e346c88ecb91d239dedb85ed96957d5733a5ead387953188647b064e2d23; DOI: https://doi.org/10.3389/fnana.2018.00067"
+      ]
+    },
+    {
+      "Text6": "source_conflicts:\nconflict_id: CFL03\nissue: main hemisphere BABB-D4≥3h vs Table1 3h\nsources: \n  [1] L04\n  [2] T1\nresolution: 正文下界与表内名义时间并存",
+      "Text6_Reference": [
+        "Structured evidence: full/M_N1254/evidence/record.json#/source_conflicts/2; SHA-256: 6bd1e346c88ecb91d239dedb85ed96957d5733a5ead387953188647b064e2d23; DOI: https://doi.org/10.3389/fnana.2018.00067"
+      ]
+    },
+    {
+      "Text7": "source_conflicts:\nconflict_id: CFL04\nissue: reduced sizes up to~65% vs Fig4 linear ratios≈0.65–0.70\nsources: \n  [1] L11\n  [2] F4\nresolution: 按图保留线性剩余比例解释；不可写减少65%/体积65%",
+      "Text7_Reference": [
+        "Structured evidence: full/M_N1254/evidence/record.json#/source_conflicts/3; SHA-256: 6bd1e346c88ecb91d239dedb85ed96957d5733a5ead387953188647b064e2d23; DOI: https://doi.org/10.3389/fnana.2018.00067"
+      ]
+    }
+  ]
+}

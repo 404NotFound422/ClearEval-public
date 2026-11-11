@@ -1,0 +1,681 @@
+{
+  "TOC_Method_Name": {
+    "Text": "Not specified as a single method in the selected evidence records",
+    "Text_Reference": [
+      "DOI: https://doi.org/10.1080/19382014.2023.2298518",
+      "Evidence-layer structured paraphrase; not a verbatim quotation. Source release: https://github.com/404NotFound422/TOCAgentProject/tree/5e3a711befb3952a2e39f4d53fc9c9f1a7ac0d22/KnowledgeBase/evidence_expansion_20261019",
+      "Local source archive: ../literature_evidence/2026-11-11/source_release.zip; member: full/APP214/version_selection.json"
+    ]
+  },
+  "General_Description": {
+    "Text": "3D evaluation of the extracellular matrix of hypoxic pancreatic islets using light sheet fluorescence microscopy (2024). Evidence category: application. This card preserves the evidence layer's structured statements and their original field labels; it does not add a new literature review or certify benchmark scoring thresholds.",
+    "Text_Reference": [
+      "DOI: https://doi.org/10.1080/19382014.2023.2298518",
+      "Evidence-layer structured paraphrase; not a verbatim quotation. Source release: https://github.com/404NotFound422/TOCAgentProject/tree/5e3a711befb3952a2e39f4d53fc9c9f1a7ac0d22/KnowledgeBase/evidence_expansion_20261019",
+      "Local source archive: ../literature_evidence/2026-11-11/source_release.zip; member: full/APP214/version_selection.json"
+    ]
+  },
+  "Tissue_Types": [],
+  "Time_Consumption": [
+    {
+      "Text1": "time_summary:\nhuman_primary: 3 days\nhuman_secondary: 3 days\nrat_primary: 7 days\nrat_secondary: 7 days\nreported_human_fixation_to_DIA: 10 days\nsource: \n  [1]     source_id: S2\n    block: 37\n    xpath: /article/body/sec[2]/sec[7]/p[2]\n  [2]     source_id: S2\n    block: 112\n    xpath: /article/body/sec[4]/p[9]",
+      "Text1_Reference": [
+        "Structured evidence: full/APP214/evidence/record.json#/time_summary; SHA-256: 9eff1621c5b1c794971b89da30f61775711a690f8b5f028b6795968dece5f35b; DOI: https://doi.org/10.1080/19382014.2023.2298518"
+      ]
+    }
+  ],
+  "Tissue_Deformation": [],
+  "Fluorescence_Compatibility": [
+    {
+      "Text1": "markers:\nid: M1\ntarget: insulin\nrole: 内分泌胰岛身份/大鼠DIA-RIA验证\nevidence: \n  [1]     source_id: S2\n    block: 1\n    xpath: /article/front/article-meta/abstract[1]/p\n  [2]     source_id: S2\n    block: 28\n    xpath: /article/body/sec[2]/sec[6]/p\n  [3]     source_id: S2\n    block: 37\n    xpath: /article/body/sec[2]/sec[7]/p[2]\n  [4]     source_id: S2\n    block: 84\n    xpath: /article/body/sec[3]/sec[4]/p[5]\nantibody_identity: 3014\ndilution: 1:500\nhost: rabbit\nclone: C27C9\nRRID: AB_2126503\nstock_concentration_reported: 59 µg/ml\ntable_locator: S4!A5:I5",
+      "Text1_Reference": [
+        "Structured evidence: full/APP214/evidence/record.json#/markers/0; SHA-256: 9eff1621c5b1c794971b89da30f61775711a690f8b5f028b6795968dece5f35b; DOI: https://doi.org/10.1080/19382014.2023.2298518"
+      ]
+    },
+    {
+      "Text2": "markers:\nid: M2\ntarget: glucagon\nrole: 内分泌胰岛身份/大鼠DIA-RIA验证\nevidence: \n  [1]     source_id: S2\n    block: 1\n    xpath: /article/front/article-meta/abstract[1]/p\n  [2]     source_id: S2\n    block: 28\n    xpath: /article/body/sec[2]/sec[6]/p\n  [3]     source_id: S2\n    block: 37\n    xpath: /article/body/sec[2]/sec[7]/p[2]\n  [4]     source_id: S2\n    block: 84\n    xpath: /article/body/sec[3]/sec[4]/p[5]\nantibody_identity: G2654\ndilution: 1:2000\nhost: mouse\nclone: K79bB10\nRRID: AB_259852\nstock_concentration_reported: 8.1 mg/ml\ntable_locator: S4!A6:I6",
+      "Text2_Reference": [
+        "Structured evidence: full/APP214/evidence/record.json#/markers/1; SHA-256: 9eff1621c5b1c794971b89da30f61775711a690f8b5f028b6795968dece5f35b; DOI: https://doi.org/10.1080/19382014.2023.2298518"
+      ]
+    },
+    {
+      "Text3": "markers:\nid: M3\ntarget: CA9\nrole: 低氧下游标记，不是直接氧分压测量\nevidence: \n  [1]     source_id: S2\n    block: 1\n    xpath: /article/front/article-meta/abstract[1]/p\n  [2]     source_id: S2\n    block: 28\n    xpath: /article/body/sec[2]/sec[6]/p\n  [3]     source_id: S2\n    block: 37\n    xpath: /article/body/sec[2]/sec[7]/p[2]\n  [4]     source_id: S2\n    block: 84\n    xpath: /article/body/sec[3]/sec[4]/p[5]\nantibody_identity: AF2188\ndilution: 1:500\nhost: goat\nclone: polyclonal\nRRID: AB_416562\nstock_concentration_reported: 0.2 mg/ml\ntable_locator: S4!A11:I11",
+      "Text3_Reference": [
+        "Structured evidence: full/APP214/evidence/record.json#/markers/2; SHA-256: 9eff1621c5b1c794971b89da30f61775711a690f8b5f028b6795968dece5f35b; DOI: https://doi.org/10.1080/19382014.2023.2298518"
+      ]
+    },
+    {
+      "Text4": "markers:\nid: M4\ntarget: collagen IV\nrole: ECM\nevidence: \n  [1]     source_id: S2\n    block: 1\n    xpath: /article/front/article-meta/abstract[1]/p\n  [2]     source_id: S2\n    block: 28\n    xpath: /article/body/sec[2]/sec[6]/p\n  [3]     source_id: S2\n    block: 37\n    xpath: /article/body/sec[2]/sec[7]/p[2]\n  [4]     source_id: S2\n    block: 84\n    xpath: /article/body/sec[3]/sec[4]/p[5]\nantibody_identity: 1282-MSM3-P0\ndilution: 1:100\nhost: mouse\nclone: M3F7\nRRID: N/A\nstock_concentration_reported: 200 µg/ml\ntable_locator: S4!A7:I7",
+      "Text4_Reference": [
+        "Structured evidence: full/APP214/evidence/record.json#/markers/3; SHA-256: 9eff1621c5b1c794971b89da30f61775711a690f8b5f028b6795968dece5f35b; DOI: https://doi.org/10.1080/19382014.2023.2298518"
+      ]
+    },
+    {
+      "Text5": "markers:\nid: M5\ntarget: fibronectin\nrole: ECM\nevidence: \n  [1]     source_id: S2\n    block: 1\n    xpath: /article/front/article-meta/abstract[1]/p\n  [2]     source_id: S2\n    block: 28\n    xpath: /article/body/sec[2]/sec[6]/p\n  [3]     source_id: S2\n    block: 37\n    xpath: /article/body/sec[2]/sec[7]/p[2]\n  [4]     source_id: S2\n    block: 84\n    xpath: /article/body/sec[3]/sec[4]/p[5]\nantibody_identity: Ab23751\ndilution: 1:200\nhost: rabbit\nclone: polyclonal\nRRID: AB_447656\nstock_concentration_reported: 1 mg/ml\ntable_locator: S4!A8:I8",
+      "Text5_Reference": [
+        "Structured evidence: full/APP214/evidence/record.json#/markers/4; SHA-256: 9eff1621c5b1c794971b89da30f61775711a690f8b5f028b6795968dece5f35b; DOI: https://doi.org/10.1080/19382014.2023.2298518"
+      ]
+    },
+    {
+      "Text6": "markers:\nid: M6\ntarget: laminin\nrole: ECM\nevidence: \n  [1]     source_id: S2\n    block: 1\n    xpath: /article/front/article-meta/abstract[1]/p\n  [2]     source_id: S2\n    block: 28\n    xpath: /article/body/sec[2]/sec[6]/p\n  [3]     source_id: S2\n    block: 37\n    xpath: /article/body/sec[2]/sec[7]/p[2]\n  [4]     source_id: S2\n    block: 84\n    xpath: /article/body/sec[3]/sec[4]/p[5]\nantibody_identity: Ab11575\ndilution: 1:100\nhost: rabbit\nclone: polyclonal\nRRID: AB_298179\nstock_concentration_reported: 0.7 mg/ml\ntable_locator: S4!A9:I9",
+      "Text6_Reference": [
+        "Structured evidence: full/APP214/evidence/record.json#/markers/5; SHA-256: 9eff1621c5b1c794971b89da30f61775711a690f8b5f028b6795968dece5f35b; DOI: https://doi.org/10.1080/19382014.2023.2298518"
+      ]
+    },
+    {
+      "Text7": "markers:\nid: M7\ntarget: E-cadherin\nrole: 细胞间黏附；不归类为ECM蛋白\nevidence: \n  [1]     source_id: S2\n    block: 1\n    xpath: /article/front/article-meta/abstract[1]/p\n  [2]     source_id: S2\n    block: 28\n    xpath: /article/body/sec[2]/sec[6]/p\n  [3]     source_id: S2\n    block: 37\n    xpath: /article/body/sec[2]/sec[7]/p[2]\n  [4]     source_id: S2\n    block: 84\n    xpath: /article/body/sec[3]/sec[4]/p[5]\nantibody_identity: 3195S\ndilution: 1:200\nhost: rabbit\nclone: 24E10\nRRID: AB_2291471\nstock_concentration_reported: 54 µg/ml\ntable_locator: S4!A10:I10",
+      "Text7_Reference": [
+        "Structured evidence: full/APP214/evidence/record.json#/markers/6; SHA-256: 9eff1621c5b1c794971b89da30f61775711a690f8b5f028b6795968dece5f35b; DOI: https://doi.org/10.1080/19382014.2023.2298518"
+      ]
+    },
+    {
+      "Text8": "markers:\nid: M8\ntarget: Hoechst (main text: 3342; catalog H3570)\nrole: 核染\nconcentration: 1 µg/ml in final CUBIC2\nevidence: \n  [1]     source_id: S2\n    block: 39\n    xpath: /article/body/sec[2]/sec[8]/p\nidentity_caveat: 正文名称存在潜在拼写/型号冲突，不擅自改为另一染料",
+      "Text8_Reference": [
+        "Structured evidence: full/APP214/evidence/record.json#/markers/7; SHA-256: 9eff1621c5b1c794971b89da30f61775711a690f8b5f028b6795968dece5f35b; DOI: https://doi.org/10.1080/19382014.2023.2298518"
+      ]
+    },
+    {
+      "Text9": "secondary_antibodies:\nid: AB13\ntarget: Rabbit IgG (for rat islets)\nhost: Chicken\nfluorophore: AlexaFluor 488\ncatalog: A-21441\nRRID: AB_2535859\nreported_stock_concentration: 2 mg/ml\ndilution: 1:500\nsource: S4!A13:I13",
+      "Text9_Reference": [
+        "Structured evidence: full/APP214/evidence/record.json#/secondary_antibodies/0; SHA-256: 9eff1621c5b1c794971b89da30f61775711a690f8b5f028b6795968dece5f35b; DOI: https://doi.org/10.1080/19382014.2023.2298518"
+      ]
+    },
+    {
+      "Text10": "secondary_antibodies:\nid: AB14\ntarget: Rabbit IgG (for human islets)\nhost: Donkey\nfluorophore: AlexaFluor 488\ncatalog: A-32790\nRRID: AB_2762833\nreported_stock_concentration: 2 mg/ml\ndilution: 1:500\nsource: S4!A14:I14",
+      "Text10_Reference": [
+        "Structured evidence: full/APP214/evidence/record.json#/secondary_antibodies/1; SHA-256: 9eff1621c5b1c794971b89da30f61775711a690f8b5f028b6795968dece5f35b; DOI: https://doi.org/10.1080/19382014.2023.2298518"
+      ]
+    },
+    {
+      "Text11": "secondary_antibodies:\nid: AB15\ntarget: Goat IgG\nhost: Donkey\nfluorophore: AlexaFluor 568\ncatalog: A-11057\nRRID: AB_2534104\nreported_stock_concentration: 2 mg/ml\ndilution: 1:500\nsource: S4!A15:I15",
+      "Text11_Reference": [
+        "Structured evidence: full/APP214/evidence/record.json#/secondary_antibodies/2; SHA-256: 9eff1621c5b1c794971b89da30f61775711a690f8b5f028b6795968dece5f35b; DOI: https://doi.org/10.1080/19382014.2023.2298518"
+      ]
+    },
+    {
+      "Text12": "secondary_antibodies:\nid: AB16\ntarget: Mouse IgG\nhost: Donkey\nfluorophore: AlexaFluor 647\ncatalog: A-31571\nRRID: AB_162542\nreported_stock_concentration: 2 mg/ml\ndilution: 1:500 (for Collagen 4) / 1:2000 (for Glucagon)\nsource: S4!A16:I16",
+      "Text12_Reference": [
+        "Structured evidence: full/APP214/evidence/record.json#/secondary_antibodies/3; SHA-256: 9eff1621c5b1c794971b89da30f61775711a690f8b5f028b6795968dece5f35b; DOI: https://doi.org/10.1080/19382014.2023.2298518"
+      ]
+    }
+  ],
+  "Preservation_Stability": [],
+  "Application": [
+    {
+      "Text1": "protocols:\nid: P01\nstage: 培养分组\nsample: 现成分离人/大鼠胰岛\nreported_details: 约400胰岛/组；ND1=正常氧过夜；ND5=正常氧总5天；HD5=缺氧总5天。正常氧O2 21%/CO2 5%；缺氧O2 1%/CO2 5%。RPMI补充FBS 10%、青链霉素100 U/ml、谷氨酰胺2 mM；葡萄糖大鼠10 mM、人5 mM。仅记原文科学事实，不构建新模型。\nsource: \n  [1]     source_id: S2\n    block: 20\n    xpath: /article/body/sec[2]/sec[2]/p\nduration: ND1 overnight; ND5/HD5 total 5 days\ntemperature: unknown",
+      "Text1_Reference": [
+        "Structured evidence: full/APP214/evidence/record.json#/protocols/0; SHA-256: 9eff1621c5b1c794971b89da30f61775711a690f8b5f028b6795968dece5f35b; DOI: https://doi.org/10.1080/19382014.2023.2298518"
+      ]
+    },
+    {
+      "Text2": "protocols:\nid: P02\nstage: 固定\nsample: 培养后完整胰岛\nreported_details: PBS洗3次；4%甲醛+0.1% Triton X-100固定3 h；PBS洗3×5 min。\nsource: \n  [1]     source_id: S2\n    block: 26\n    xpath: /article/body/sec[2]/sec[5]/p\nduration: 3 h\ntemperature: unknown",
+      "Text2_Reference": [
+        "Structured evidence: full/APP214/evidence/record.json#/protocols/1; SHA-256: 9eff1621c5b1c794971b89da30f61775711a690f8b5f028b6795968dece5f35b; DOI: https://doi.org/10.1080/19382014.2023.2298518"
+      ]
+    },
+    {
+      "Text3": "protocols:\nid: P03\nstage: 储存\nsample: 固定胰岛\nreported_details: PBS、0.01%甲醛、0.005%叠氮化钠；4°C，最长1个月。\nsource: \n  [1]     source_id: S2\n    block: 26\n    xpath: /article/body/sec[2]/sec[5]/p\nduration: maximum 1 month\ntemperature: 4°C",
+      "Text3_Reference": [
+        "Structured evidence: full/APP214/evidence/record.json#/protocols/2; SHA-256: 9eff1621c5b1c794971b89da30f61775711a690f8b5f028b6795968dece5f35b; DOI: https://doi.org/10.1080/19382014.2023.2298518"
+      ]
+    },
+    {
+      "Text4": "protocols:\nid: P04\nstage: 洗涤与通透\nsample: 固定完整胰岛\nreported_details: 0.05% Triton X-100/PBS洗涤；0.1% Triton X-100/PBS通透1 h。除另述，24孔板1 ml，室温震荡；一般洗涤3×5 min。\nsource: \n  [1]     source_id: S2\n    block: 36\n    xpath: /article/body/sec[2]/sec[7]/p[1]\n  [2]     source_id: S2\n    block: 37\n    xpath: /article/body/sec[2]/sec[7]/p[2]\nduration: 1 h permeabilization\ntemperature: room temperature",
+      "Text4_Reference": [
+        "Structured evidence: full/APP214/evidence/record.json#/protocols/3; SHA-256: 9eff1621c5b1c794971b89da30f61775711a690f8b5f028b6795968dece5f35b; DOI: https://doi.org/10.1080/19382014.2023.2298518"
+      ]
+    },
+    {
+      "Text5": "protocols:\nid: P05\nstage: 封闭\nsample: 固定完整胰岛\nreported_details: 5% BSA、0.1% Triton X-100、0.01%叠氮化钠/PBS，3 h。\nsource: \n  [1]     source_id: S2\n    block: 36\n    xpath: /article/body/sec[2]/sec[7]/p[1]\n  [2]     source_id: S2\n    block: 37\n    xpath: /article/body/sec[2]/sec[7]/p[2]\nduration: 3 h\ntemperature: room temperature",
+      "Text5_Reference": [
+        "Structured evidence: full/APP214/evidence/record.json#/protocols/4; SHA-256: 9eff1621c5b1c794971b89da30f61775711a690f8b5f028b6795968dece5f35b; DOI: https://doi.org/10.1080/19382014.2023.2298518"
+      ]
+    },
+    {
+      "Text6": "protocols:\nid: P06\nstage: 一抗/二抗\nsample: 人完整胰岛\nreported_details: 一抗与二抗分别孵育3天；500 µl，37°C震荡；PBS含1% BSA、0.1% Triton X-100、0.01%叠氮化钠；两者之间3×20 min洗涤。抗体身份/稀释指向Table S1，已由S4逐项补入markers与multiplex_panels。\nsource: \n  [1]     source_id: S2\n    block: 37\n    xpath: /article/body/sec[2]/sec[7]/p[2]\nduration: 3 days each; 6 days antibody incubation total\ntemperature: 37°C",
+      "Text6_Reference": [
+        "Structured evidence: full/APP214/evidence/record.json#/protocols/5; SHA-256: 9eff1621c5b1c794971b89da30f61775711a690f8b5f028b6795968dece5f35b; DOI: https://doi.org/10.1080/19382014.2023.2298518"
+      ]
+    },
+    {
+      "Text7": "protocols:\nid: P07\nstage: 一抗/二抗\nsample: 大鼠完整胰岛\nreported_details: 一抗与二抗分别孵育7天；其余溶液与体积同P06；非人3天/大鼠7天的总孵育时间。\nsource: \n  [1]     source_id: S2\n    block: 37\n    xpath: /article/body/sec[2]/sec[7]/p[2]\nduration: 7 days each; 14 days antibody incubation total\ntemperature: 37°C",
+      "Text7_Reference": [
+        "Structured evidence: full/APP214/evidence/record.json#/protocols/6; SHA-256: 9eff1621c5b1c794971b89da30f61775711a690f8b5f028b6795968dece5f35b; DOI: https://doi.org/10.1080/19382014.2023.2298518"
+      ]
+    },
+    {
+      "Text8": "protocols:\nid: P08\nstage: 后固定\nsample: 标记后完整胰岛\nreported_details: 洗涤后4%甲醛固定1 h。\nsource: \n  [1]     source_id: S2\n    block: 37\n    xpath: /article/body/sec[2]/sec[7]/p[2]\nduration: 1 h\ntemperature: room temperature (default)",
+      "Text8_Reference": [
+        "Structured evidence: full/APP214/evidence/record.json#/protocols/7; SHA-256: 9eff1621c5b1c794971b89da30f61775711a690f8b5f028b6795968dece5f35b; DOI: https://doi.org/10.1080/19382014.2023.2298518"
+      ]
+    },
+    {
+      "Text9": "protocols:\nid: P09\nstage: CUBIC1透明\nsample: 标记后完整胰岛\nreported_details: 1 ml CUBIC1，24 h；随后PBS洗涤。配方指向Table S2，本包不重构试剂制备。\nsource: \n  [1]     source_id: S2\n    block: 39\n    xpath: /article/body/sec[2]/sec[8]/p\nduration: 24 h\ntemperature: unknown; CUBIC1 paragraph does not explicitly state temperature; IF subsection RT default not assumed",
+      "Text9_Reference": [
+        "Structured evidence: full/APP214/evidence/record.json#/protocols/8; SHA-256: 9eff1621c5b1c794971b89da30f61775711a690f8b5f028b6795968dece5f35b; DOI: https://doi.org/10.1080/19382014.2023.2298518"
+      ]
+    },
+    {
+      "Text10": "protocols:\nid: P10\nstage: 包埋\nsample: 透明完整胰岛\nreported_details: 手选去除上清后放入1 ml、1%低熔点琼脂糖；保持56°C，吸入直径1 mm毛细管；室温凝固2 h。\nsource: \n  [1]     source_id: S2\n    block: 39\n    xpath: /article/body/sec[2]/sec[8]/p\nduration: 2 h solidification; time at 56°C unknown\ntemperature: 56°C agarose; room temperature solidification",
+      "Text10_Reference": [
+        "Structured evidence: full/APP214/evidence/record.json#/protocols/9; SHA-256: 9eff1621c5b1c794971b89da30f61775711a690f8b5f028b6795968dece5f35b; DOI: https://doi.org/10.1080/19382014.2023.2298518"
+      ]
+    },
+    {
+      "Text11": "protocols:\nid: P11\nstage: 折射率匹配过渡\nsample: 脱模琼脂糖棒\nreported_details: CUBIC2与水1:1稀释，37°C 4 h。\nsource: \n  [1]     source_id: S2\n    block: 39\n    xpath: /article/body/sec[2]/sec[8]/p\nduration: 4 h\ntemperature: 37°C",
+      "Text11_Reference": [
+        "Structured evidence: full/APP214/evidence/record.json#/protocols/10; SHA-256: 9eff1621c5b1c794971b89da30f61775711a690f8b5f028b6795968dece5f35b; DOI: https://doi.org/10.1080/19382014.2023.2298518"
+      ]
+    },
+    {
+      "Text12": "protocols:\nid: P12\nstage: 终末折射率匹配/核标记\nsample: 琼脂糖棒\nreported_details: 100% CUBIC2，37°C震荡过夜；含1 µg/ml Hoechst；正文写Hoechst 3342，商品号H3570，名称保留待核对。CUBIC2室温折射率1.4929。\nsource: \n  [1]     source_id: S2\n    block: 39\n    xpath: /article/body/sec[2]/sec[8]/p\nduration: overnight\ntemperature: 37°C",
+      "Text12_Reference": [
+        "Structured evidence: full/APP214/evidence/record.json#/protocols/11; SHA-256: 9eff1621c5b1c794971b89da30f61775711a690f8b5f028b6795968dece5f35b; DOI: https://doi.org/10.1080/19382014.2023.2298518"
+      ]
+    },
+    {
+      "Text13": "protocols:\nid: P13\nstage: LSFM采集\nsample: 琼脂糖棒内胰岛\nreported_details: Zeiss Lightsheet.z1；直径1 mm毛细管固定；样本棒含胰岛末端推出；成像室充CUBIC2；各样本采集参数保持恒定。\nsource: \n  [1]     source_id: S2\n    block: 41\n    xpath: /article/body/sec[2]/sec[9]/p[1]\n  [2]     source_id: S2\n    block: 42\n    xpath: /article/body/sec[2]/sec[9]/p[2]\nduration: human comparison islet 3.5 min\ntemperature: unknown",
+      "Text13_Reference": [
+        "Structured evidence: full/APP214/evidence/record.json#/protocols/12; SHA-256: 9eff1621c5b1c794971b89da30f61775711a690f8b5f028b6795968dece5f35b; DOI: https://doi.org/10.1080/19382014.2023.2298518"
+      ]
+    },
+    {
+      "Text14": "protocols:\nid: P14\nstage: LSFM镜头\nsample: 大鼠胰岛\nreported_details: 照明5×/0.1、检测5×/0.16；双侧照明及pivot scan。\nsource: \n  [1]     source_id: S2\n    block: 43\n    xpath: /article/body/sec[2]/sec[9]/p[3]\nduration: unknown\ntemperature: unknown",
+      "Text14_Reference": [
+        "Structured evidence: full/APP214/evidence/record.json#/protocols/13; SHA-256: 9eff1621c5b1c794971b89da30f61775711a690f8b5f028b6795968dece5f35b; DOI: https://doi.org/10.1080/19382014.2023.2298518"
+      ]
+    },
+    {
+      "Text15": "protocols:\nid: P15\nstage: LSFM镜头\nsample: 人胰岛\nreported_details: 照明10×/0.2、检测20×/1.0，用于ECM细节。\nsource: \n  [1]     source_id: S2\n    block: 44\n    xpath: /article/body/sec[2]/sec[9]/p[4]\nduration: unknown\ntemperature: unknown",
+      "Text15_Reference": [
+        "Structured evidence: full/APP214/evidence/record.json#/protocols/14; SHA-256: 9eff1621c5b1c794971b89da30f61775711a690f8b5f028b6795968dece5f35b; DOI: https://doi.org/10.1080/19382014.2023.2298518"
+      ]
+    },
+    {
+      "Text16": "protocols:\nid: P16\nstage: 共聚焦比较\nsample: 同一约180 µm人胰岛\nreported_details: LSFM后琼脂糖棒置盖玻片底皿；Zeiss LSM800，20×/0.8 Plan-Apochromat；4通道逐一z-stack、全深度。\nsource: \n  [1]     source_id: S2\n    block: 46\n    xpath: /article/body/sec[2]/sec[10]/p\n  [2]     source_id: S2\n    block: 65\n    xpath: /article/body/sec[3]/sec[2]/p[1]\nduration: 31 min for comparison islet\ntemperature: unknown",
+      "Text16_Reference": [
+        "Structured evidence: full/APP214/evidence/record.json#/protocols/15; SHA-256: 9eff1621c5b1c794971b89da30f61775711a690f8b5f028b6795968dece5f35b; DOI: https://doi.org/10.1080/19382014.2023.2298518"
+      ]
+    },
+    {
+      "Text17": "protocols:\nid: P17\nstage: 图像融合\nsample: 双侧采集图像\nreported_details: Zen Black 9.2.8.54，离散傅里叶变换将两侧图像融合。\nsource: \n  [1]     source_id: S2\n    block: 48\n    xpath: /article/body/sec[2]/sec[11]/p\nduration: unknown\ntemperature: not applicable",
+      "Text17_Reference": [
+        "Structured evidence: full/APP214/evidence/record.json#/protocols/16; SHA-256: 9eff1621c5b1c794971b89da30f61775711a690f8b5f028b6795968dece5f35b; DOI: https://doi.org/10.1080/19382014.2023.2298518"
+      ]
+    },
+    {
+      "Text18": "protocols:\nid: P18\nstage: DIA分割\nsample: 每个胰岛单独分析\nreported_details: Imaris Batch Converter→Arena；Imaris 9.8生成正交与3D投影。所有通道像素和经Gaussian平滑后阈值表面，界定胰岛；必要时人工去伪影、拆分相邻胰岛。\nsource: \n  [1]     source_id: S2\n    block: 50\n    xpath: /article/body/sec[2]/sec[12]/p[1]\n  [2]     source_id: S2\n    block: 51\n    xpath: /article/body/sec[2]/sec[12]/p[2]\nduration: unknown\ntemperature: not applicable",
+      "Text18_Reference": [
+        "Structured evidence: full/APP214/evidence/record.json#/protocols/17; SHA-256: 9eff1621c5b1c794971b89da30f61775711a690f8b5f028b6795968dece5f35b; DOI: https://doi.org/10.1080/19382014.2023.2298518"
+      ]
+    },
+    {
+      "Text19": "protocols:\nid: P19\nstage: 蛋白量化\nsample: 胰岛内目标荧光\nreported_details: Gaussian预处理；按蛋白绝对强度或背景扣除阈值；同蛋白整batch统一阈值；结果=阳性体积/胰岛体积×100%。正文称无后处理，但S7导出模板Voxel下限10，冲突保留。\nsource: \n  [1]     source_id: S2\n    block: 52\n    xpath: /article/body/sec[2]/sec[12]/p[3]\n  [2]     source_id: S7\n    locator: Algorithm for quantification of target proteins; introductory paragraph; Surfaces Filter > Number of Voxels\nduration: unknown\ntemperature: not applicable",
+      "Text19_Reference": [
+        "Structured evidence: full/APP214/evidence/record.json#/protocols/18; SHA-256: 9eff1621c5b1c794971b89da30f61775711a690f8b5f028b6795968dece5f35b; DOI: https://doi.org/10.1080/19382014.2023.2298518"
+      ]
+    },
+    {
+      "Text20": "protocols:\nid: P20\nstage: 抗体交叉反应验证\nsample: 固定胰岛5 µm石蜡切片\nreported_details: 每一种一抗分别检测，比较对应单一二抗与全部二抗混合；Hoechst核标记。此为验证而非主要3D成像流程。\nsource: \n  [1]     source_id: S2\n    block: 30\n    xpath: /article/body/sec[2]/sec[6]/sec[1]/p[1]\n  [2]     source_id: S2\n    block: 31\n    xpath: /article/body/sec[2]/sec[6]/sec[1]/p[2]\nduration: unknown\ntemperature: unknown",
+      "Text20_Reference": [
+        "Structured evidence: full/APP214/evidence/record.json#/protocols/19; SHA-256: 9eff1621c5b1c794971b89da30f61775711a690f8b5f028b6795968dece5f35b; DOI: https://doi.org/10.1080/19382014.2023.2298518"
+      ]
+    },
+    {
+      "Text21": "protocols:\nid: P21\nstage: 抗体穿透验证\nsample: 3D一抗孵育结束后胰岛\nreported_details: 4%甲醛室温1 h后包埋切片；切片一支用抗小鼠/抗兔二抗和Hoechst室温1 h，另一支按常规一抗+二抗IF。\nsource: \n  [1]     source_id: S2\n    block: 33\n    xpath: /article/body/sec[2]/sec[6]/sec[2]/p[1]\nduration: 1 h refixation; 1 h secondary detection\ntemperature: room temperature",
+      "Text21_Reference": [
+        "Structured evidence: full/APP214/evidence/record.json#/protocols/20; SHA-256: 9eff1621c5b1c794971b89da30f61775711a690f8b5f028b6795968dece5f35b; DOI: https://doi.org/10.1080/19382014.2023.2298518"
+      ]
+    },
+    {
+      "Text22": "quantitative_results:\nid: Q01\noutcome: 采集时间\nspecies: human\ngroups: same cleared ~180 µm islet\nvalues: \n  LSFM: 3.5\n  confocal: 31\nunit: min\nstatistics: descriptive comparison\nsource: \n  [1]     source_id: S2\n    block: 65\n    xpath: /article/body/sec[3]/sec[2]/p[1]\n  [2]     source_id: S2\n    block: 69\n    xpath: /article/body/sec[3]/sec[2]/p[3]\nkind: quantitative\nnote: 单个示例的同胰岛比较，不是普适9倍加速实测群体统计",
+      "Text22_Reference": [
+        "Structured evidence: full/APP214/evidence/record.json#/quantitative_results/0; SHA-256: 9eff1621c5b1c794971b89da30f61775711a690f8b5f028b6795968dece5f35b; DOI: https://doi.org/10.1080/19382014.2023.2298518"
+      ]
+    },
+    {
+      "Text23": "quantitative_results:\nid: Q02\noutcome: CA9体积分数\nspecies: human\ngroups: HD5 vs ND1/ND5\nvalues: null (as recorded in source)\nunit: % total islet volume\nstatistics: HD5 vs ND1 p=.006; vs ND5 p=.007; ND1 vs ND5 NS\nsource: \n  [1]     source_id: S2\n    block: 72\n    xpath: /article/body/sec[3]/sec[3]/p[1]\n  [2]     source_id: S2\n    block: 73\n    xpath: /article/body/sec[3]/sec[3]/p[1]/fig\nkind: quantitative\nnote: Fig3明确各组n=12；未数字化均值/SD\nn: \n  ND1: 12\n  ND5: 12\n  HD5: 12\nfigure_source: S8 Fig3",
+      "Text23_Reference": [
+        "Structured evidence: full/APP214/evidence/record.json#/quantitative_results/1; SHA-256: 9eff1621c5b1c794971b89da30f61775711a690f8b5f028b6795968dece5f35b; DOI: https://doi.org/10.1080/19382014.2023.2298518"
+      ]
+    },
+    {
+      "Text24": "quantitative_results:\nid: Q03\noutcome: 存活率\nspecies: human\ngroups: ND5 vs HD5\nvalues: \n  ND5: 88\n  HD5: 62\nunit: %\nstatistics: p=.04\nsource: \n  [1]     source_id: S2\n    block: 75\n    xpath: /article/body/sec[3]/sec[3]/p[2]\nkind: quantitative\nnote: n/SD正文未给；荧光面积法",
+      "Text24_Reference": [
+        "Structured evidence: full/APP214/evidence/record.json#/quantitative_results/2; SHA-256: 9eff1621c5b1c794971b89da30f61775711a690f8b5f028b6795968dece5f35b; DOI: https://doi.org/10.1080/19382014.2023.2298518"
+      ]
+    },
+    {
+      "Text25": "quantitative_results:\nid: Q04\noutcome: 存活率\nspecies: rat\ngroups: ND5 vs HD5\nvalues: \n  ND5: 79\n  HD5: 29\nunit: %\nstatistics: p=.001\nsource: \n  [1]     source_id: S2\n    block: 75\n    xpath: /article/body/sec[3]/sec[3]/p[2]\nkind: quantitative\nnote: n/SD正文未给；荧光面积法",
+      "Text25_Reference": [
+        "Structured evidence: full/APP214/evidence/record.json#/quantitative_results/3; SHA-256: 9eff1621c5b1c794971b89da30f61775711a690f8b5f028b6795968dece5f35b; DOI: https://doi.org/10.1080/19382014.2023.2298518"
+      ]
+    },
+    {
+      "Text26": "quantitative_results:\nid: Q05\noutcome: 葡萄糖刺激胰岛素分泌\nspecies: rat\ngroups: ND1/ND5/HD5 at G1/G15\nvalues: \n  ND1: \n    G1: 1.9\n    G15: 7.5\n  ND5: \n    G1: 2.6\n    G15: 3.6\n  HD5: \n    G1: 0.2\n    G15: 0.3\nunit: ng/hour/islet\nstatistics: n=12 per condition; p<.01; pairwise mapping not specified\nsource: \n  [1]     source_id: S2\n    block: 76\n    xpath: /article/body/sec[3]/sec[3]/p[3]\nkind: quantitative\nnote: 大鼠结果不能移用至人胰岛。附图S2已实读，图文汇总疑点保留；正文精确值保留，不从散点或横线估读值替换。",
+      "Text26_Reference": [
+        "Structured evidence: full/APP214/evidence/record.json#/quantitative_results/4; SHA-256: 9eff1621c5b1c794971b89da30f61775711a690f8b5f028b6795968dece5f35b; DOI: https://doi.org/10.1080/19382014.2023.2298518"
+      ]
+    },
+    {
+      "Text27": "quantitative_results:\nid: Q06\noutcome: DIA与RIA一致性\nspecies: rat\ngroups: different islets from same batch\nvalues: insulin maintained under hypoxia; glucagon increased ND5 and decreased HD5\nunit: DIA % volume; RIA normalized to DNA\nstatistics: glucagon p<.01; no numerical correlation coefficient supplied\nsource: \n  [1]     source_id: S2\n    block: 78\n    xpath: /article/body/sec[3]/sec[4]/p[1]\n  [2]     source_id: S2\n    block: 79\n    xpath: /article/body/sec[3]/sec[4]/p[2]\n  [3]     source_id: S2\n    block: 80\n    xpath: /article/body/sec[3]/sec[4]/p[2]/fig\nkind: qualitative\nnote: 不是同一胰岛配对测量，也不是证明两法绝对值可互换\nn: \n  DIA: \n    ND1: 17\n    ND5: 15\n    HD5: 21\n  RIA: \n    ND1: 6\n    ND5: 6\n    HD5: 6\nn_caveat: 图注明N为胰岛数，但方法RIA/GSIS使用批次胰岛；不据此重建独立实验或供者数\nfigure_source: S8 Fig4",
+      "Text27_Reference": [
+        "Structured evidence: full/APP214/evidence/record.json#/quantitative_results/5; SHA-256: 9eff1621c5b1c794971b89da30f61775711a690f8b5f028b6795968dece5f35b; DOI: https://doi.org/10.1080/19382014.2023.2298518"
+      ]
+    },
+    {
+      "Text28": "quantitative_results:\nid: Q07\noutcome: 胰岛大小\nspecies: human\ngroups: ND1/ND5/HD5\nvalues: null (as recorded in source)\nunit: islet volume\nstatistics: ANOVA p=.277\nsource: \n  [1]     source_id: S2\n    block: 83\n    xpath: /article/body/sec[3]/sec[4]/p[4]\nkind: quantitative\nnote: 原始体积、n正文未给；已从图读取n，均值/SD不数字化。\nn: \n  ND1: 27\n  ND5: 34\n  HD5: 29\nfigure_source: S8 Fig6",
+      "Text28_Reference": [
+        "Structured evidence: full/APP214/evidence/record.json#/quantitative_results/6; SHA-256: 9eff1621c5b1c794971b89da30f61775711a690f8b5f028b6795968dece5f35b; DOI: https://doi.org/10.1080/19382014.2023.2298518"
+      ]
+    },
+    {
+      "Text29": "quantitative_results:\nid: Q08\noutcome: collagen IV总体积占比\nspecies: human\ngroups: ND1/ND5/HD5\nvalues: null (as recorded in source)\nunit: % total islet volume\nstatistics: reported no significant mean differences; especially ND5 vs HD5 p>.05\nsource: \n  [1]     source_id: S2\n    block: 85\n    xpath: /article/body/sec[3]/sec[4]/p[6]\n  [2]     source_id: S2\n    block: 88\n    xpath: /article/body/sec[3]/sec[4]/p[6]/fig[2]\n  [3]     source_id: S2\n    block: 90\n    xpath: /article/body/sec[3]/sec[4]/p[7]\nkind: quantitative\nnote: 保留为未检出显著差异，不能证明等效或无生物学效应；具体均值/SD/n待图或原始数据；已从图读取n，均值/SD不数字化。\nn: \n  ND1: 11\n  ND5: 7\n  HD5: 11\nfigure_source: S8 Fig6",
+      "Text29_Reference": [
+        "Structured evidence: full/APP214/evidence/record.json#/quantitative_results/7; SHA-256: 9eff1621c5b1c794971b89da30f61775711a690f8b5f028b6795968dece5f35b; DOI: https://doi.org/10.1080/19382014.2023.2298518"
+      ]
+    },
+    {
+      "Text30": "quantitative_results:\nid: Q09\noutcome: fibronectin总体积占比\nspecies: human\ngroups: ND1/ND5/HD5\nvalues: null (as recorded in source)\nunit: % total islet volume\nstatistics: 正文称总体积占比无显著差异；Fig6D ND1上方有单星但无成对比较连线，比较对象不明；ND5 vs HD5正文报告未显著。\nsource: \n  [1]     source_id: S2\n    block: 85\n    xpath: /article/body/sec[3]/sec[4]/p[6]\n  [2]     source_id: S2\n    block: 88\n    xpath: /article/body/sec[3]/sec[4]/p[6]/fig[2]\n  [3]     source_id: S2\n    block: 90\n    xpath: /article/body/sec[3]/sec[4]/p[7]\nkind: quantitative\nnote: 保留为未检出显著差异，不能证明等效或无生物学效应；具体均值/SD/n待图或原始数据；已从图读取n，均值/SD不数字化。\nn: \n  ND1: 6\n  ND5: 9\n  HD5: 6\nfigure_source: S8 Fig6",
+      "Text30_Reference": [
+        "Structured evidence: full/APP214/evidence/record.json#/quantitative_results/8; SHA-256: 9eff1621c5b1c794971b89da30f61775711a690f8b5f028b6795968dece5f35b; DOI: https://doi.org/10.1080/19382014.2023.2298518"
+      ]
+    },
+    {
+      "Text31": "quantitative_results:\nid: Q10\noutcome: laminin总体积占比\nspecies: human\ngroups: ND1/ND5/HD5\nvalues: null (as recorded in source)\nunit: % total islet volume\nstatistics: reported no significant mean differences; especially ND5 vs HD5 p>.05\nsource: \n  [1]     source_id: S2\n    block: 85\n    xpath: /article/body/sec[3]/sec[4]/p[6]\n  [2]     source_id: S2\n    block: 88\n    xpath: /article/body/sec[3]/sec[4]/p[6]/fig[2]\n  [3]     source_id: S2\n    block: 90\n    xpath: /article/body/sec[3]/sec[4]/p[7]\nkind: quantitative\nnote: 保留为未检出显著差异，不能证明等效或无生物学效应；具体均值/SD/n待图或原始数据；已从图读取n，均值/SD不数字化。\nn: \n  ND1: 5\n  ND5: 9\n  HD5: 4\nfigure_source: S8 Fig6",
+      "Text31_Reference": [
+        "Structured evidence: full/APP214/evidence/record.json#/quantitative_results/9; SHA-256: 9eff1621c5b1c794971b89da30f61775711a690f8b5f028b6795968dece5f35b; DOI: https://doi.org/10.1080/19382014.2023.2298518"
+      ]
+    },
+    {
+      "Text32": "quantitative_results:\nid: Q11\noutcome: E-cadherin总体积占比\nspecies: human\ngroups: ND1/ND5/HD5\nvalues: null (as recorded in source)\nunit: % total islet volume\nstatistics: reported no significant mean differences; especially ND5 vs HD5 p>.05\nsource: \n  [1]     source_id: S2\n    block: 85\n    xpath: /article/body/sec[3]/sec[4]/p[6]\n  [2]     source_id: S2\n    block: 88\n    xpath: /article/body/sec[3]/sec[4]/p[6]/fig[2]\n  [3]     source_id: S2\n    block: 90\n    xpath: /article/body/sec[3]/sec[4]/p[7]\nkind: quantitative\nnote: 保留为未检出显著差异，不能证明等效或无生物学效应；具体均值/SD/n待图或原始数据；已从图读取n，均值/SD不数字化。\nn: \n  ND1: 5\n  ND5: 9\n  HD5: 8\nfigure_source: S8 Fig6",
+      "Text32_Reference": [
+        "Structured evidence: full/APP214/evidence/record.json#/quantitative_results/10; SHA-256: 9eff1621c5b1c794971b89da30f61775711a690f8b5f028b6795968dece5f35b; DOI: https://doi.org/10.1080/19382014.2023.2298518"
+      ]
+    },
+    {
+      "Text33": "quantitative_results:\nid: Q12\noutcome: laminin节点数\nspecies: human\ngroups: ND1/ND5/HD5\nvalues: \n  ND1: \n    mean: 6.4\n    n: 5\n    reported_SD: 0.6\n  ND5: \n    mean: 7\n    n: 9\n    reported_SD: 1.8\n  HD5: \n    mean: 1.5\n    n: 4\n    reported_SD: 0.5\nunit: nodes/islet\nstatistics: HD5 vs ND1 and ND5 p<.05; node count vs islet volume PCC=.864,p<.01\nsource: \n  [1]     source_id: S2\n    block: 98\n    xpath: /article/body/sec[3]/sec[5]/p[5]\nkind: quantitative\nnote: n为胰岛数而非独立供者数；节点不是细胞数；正文标SD，图中散布/横线与其汇总定义存在疑点，保留reported_SD，不自动改SEM。\nfigure_source: S8 Extended Data Fig3",
+      "Text33_Reference": [
+        "Structured evidence: full/APP214/evidence/record.json#/quantitative_results/11; SHA-256: 9eff1621c5b1c794971b89da30f61775711a690f8b5f028b6795968dece5f35b; DOI: https://doi.org/10.1080/19382014.2023.2298518"
+      ]
+    },
+    {
+      "Text34": "quantitative_results:\nid: Q13\noutcome: E-cadherin平均信号强度\nspecies: human\ngroups: ND1/ND5/HD5\nvalues: \n  ND1: \n    mean: 8598\n    n: 5\n    reported_SD: 1318\n  ND5: \n    mean: 6463\n    n: 9\n    reported_SD: 657\n  HD5: \n    mean: 14805\n    n: 8\n    reported_SD: 1762\nunit: arbitrary units\nstatistics: HD5 higher than others p<.01\nsource: \n  [1]     source_id: S2\n    block: 100\n    xpath: /article/body/sec[3]/sec[5]/p[7]\nkind: quantitative\nnote: 强度升高与阳性体积分数无显著变化可同时成立；正文标SD，图中散布/横线与其汇总定义存在疑点，保留reported_SD，不自动改SEM。\nfigure_source: S8 Extended Data Fig3",
+      "Text34_Reference": [
+        "Structured evidence: full/APP214/evidence/record.json#/quantitative_results/12; SHA-256: 9eff1621c5b1c794971b89da30f61775711a690f8b5f028b6795968dece5f35b; DOI: https://doi.org/10.1080/19382014.2023.2298518"
+      ]
+    },
+    {
+      "Text35": "quantitative_results:\nid: Q14\noutcome: E-cadherin中央缺失区体积占比\nspecies: human\ngroups: ND1/ND5/HD5\nvalues: \n  ND1: \n    mean: 2.5\n    n: 5\n    reported_SD: 2.5\n  ND5: \n    mean: 3.1\n    n: 9\n    reported_SD: 1.3\n  HD5: \n    mean: 8.6\n    n: 8\n    reported_SD: 4\nunit: % total volume\nstatistics: between-group trend not significant; hole size vs islet size PCC=.887,p<.01\nsource: \n  [1]     source_id: S2\n    block: 101\n    xpath: /article/body/sec[3]/sec[5]/p[8]\nkind: quantitative\nnote: 不是实测坏死体积；与ECM中央区对应是作者假设；正文标SD，图中散布/横线与其汇总定义存在疑点，保留reported_SD，不自动改SEM。\nfigure_source: S8 Extended Data Fig3",
+      "Text35_Reference": [
+        "Structured evidence: full/APP214/evidence/record.json#/quantitative_results/13; SHA-256: 9eff1621c5b1c794971b89da30f61775711a690f8b5f028b6795968dece5f35b; DOI: https://doi.org/10.1080/19382014.2023.2298518"
+      ]
+    },
+    {
+      "Text36": "quantitative_results:\nid: Q15\noutcome: 基底膜\nspecies: human\ngroups: ND1/ND5/HD5\nvalues: 所有胰岛未见外围ECM包膜，内部存在ECM；不能由此直接量化残留百分比\nunit: not applicable\nstatistics: qualitative morphology\nsource: \n  [1]     source_id: S2\n    block: 93\n    xpath: /article/body/sec[3]/sec[5]/p[2]\nkind: qualitative\nnote: ",
+      "Text36_Reference": [
+        "Structured evidence: full/APP214/evidence/record.json#/quantitative_results/14; SHA-256: 9eff1621c5b1c794971b89da30f61775711a690f8b5f028b6795968dece5f35b; DOI: https://doi.org/10.1080/19382014.2023.2298518"
+      ]
+    },
+    {
+      "Text37": "quantitative_results:\nid: Q16\noutcome: collagen IV\nspecies: human\ngroups: ND1/ND5/HD5\nvalues: ND1/ND5有血管样结构，ND5较突出；HD5未见血管样结构且中央瘢痕更大\nunit: not applicable\nstatistics: qualitative morphology\nsource: \n  [1]     source_id: S2\n    block: 96\n    xpath: /article/body/sec[3]/sec[5]/p[3]\nkind: qualitative\nnote: ",
+      "Text37_Reference": [
+        "Structured evidence: full/APP214/evidence/record.json#/quantitative_results/15; SHA-256: 9eff1621c5b1c794971b89da30f61775711a690f8b5f028b6795968dece5f35b; DOI: https://doi.org/10.1080/19382014.2023.2298518"
+      ]
+    },
+    {
+      "Text38": "quantitative_results:\nid: Q17\noutcome: fibronectin\nspecies: human\ngroups: ND1/ND5/HD5\nvalues: ND5网状胞间分布更明显；HD5倾向中央累积，周围有低氧区\nunit: not applicable\nstatistics: qualitative morphology\nsource: \n  [1]     source_id: S2\n    block: 97\n    xpath: /article/body/sec[3]/sec[5]/p[4]\nkind: qualitative\nnote: ",
+      "Text38_Reference": [
+        "Structured evidence: full/APP214/evidence/record.json#/quantitative_results/16; SHA-256: 9eff1621c5b1c794971b89da30f61775711a690f8b5f028b6795968dece5f35b; DOI: https://doi.org/10.1080/19382014.2023.2298518"
+      ]
+    },
+    {
+      "Text39": "quantitative_results:\nid: Q18\noutcome: laminin\nspecies: human\ngroups: ND1/ND5/HD5\nvalues: ND5较小分散节点；HD5中央累积\nunit: not applicable\nstatistics: qualitative morphology\nsource: \n  [1]     source_id: S2\n    block: 98\n    xpath: /article/body/sec[3]/sec[5]/p[5]\nkind: qualitative\nnote: ",
+      "Text39_Reference": [
+        "Structured evidence: full/APP214/evidence/record.json#/quantitative_results/17; SHA-256: 9eff1621c5b1c794971b89da30f61775711a690f8b5f028b6795968dece5f35b; DOI: https://doi.org/10.1080/19382014.2023.2298518"
+      ]
+    },
+    {
+      "Text40": "quantitative_results:\nid: Q19\noutcome: 中央结构丢失\nspecies: human\ngroups: ND1/ND5/HD5\nvalues: 散在异形高强度细胞核与高密度紊乱ECM共现，提示中央坏死而非独立死亡标记证实\nunit: not applicable\nstatistics: qualitative morphology\nsource: \n  [1]     source_id: S2\n    block: 99\n    xpath: /article/body/sec[3]/sec[5]/p[6]\nkind: qualitative\nnote: ",
+      "Text40_Reference": [
+        "Structured evidence: full/APP214/evidence/record.json#/quantitative_results/18; SHA-256: 9eff1621c5b1c794971b89da30f61775711a690f8b5f028b6795968dece5f35b; DOI: https://doi.org/10.1080/19382014.2023.2298518"
+      ]
+    },
+    {
+      "Text41": "quantitative_results:\nid: Q20\noutcome: E-cadherin\nspecies: human\ngroups: ND1/ND5/HD5\nvalues: 膜性分布，ND1均匀；HD5强信号区域增多；中央孔洞缺乏E-cadherin\nunit: not applicable\nstatistics: qualitative morphology\nsource: \n  [1]     source_id: S2\n    block: 100\n    xpath: /article/body/sec[3]/sec[5]/p[7]\nkind: qualitative\nnote: ",
+      "Text41_Reference": [
+        "Structured evidence: full/APP214/evidence/record.json#/quantitative_results/19; SHA-256: 9eff1621c5b1c794971b89da30f61775711a690f8b5f028b6795968dece5f35b; DOI: https://doi.org/10.1080/19382014.2023.2298518"
+      ]
+    },
+    {
+      "Text42": "quantitative_results:\nid: Q21\noutcome: 透明与全深度荧光可视化\nspecies: human\ngroups: same cleared islet; LSFM/confocal comparison\nvalues: 全样本XY和Z可见清晰染色与荧光强度；作者据此定性支持透明流程\nunit: not applicable\nstatistics: qualitative\nsource: \n  [1]     source_id: S2\n    block: 68\n    xpath: /article/body/sec[3]/sec[2]/p[2]\n  [2]     source_id: S2\n    block: 69\n    xpath: /article/body/sec[3]/sec[2]/p[3]\n  [3]     source_id: S2\n    block: 70\n    xpath: /article/body/sec[3]/sec[2]/p[4]\nkind: qualitative\nnote: 免疫染色信号的定性全深度可见性；没有未透明对照的原生荧光蛋白保持率、无荧光衰减曲线或定量透明度",
+      "Text42_Reference": [
+        "Structured evidence: full/APP214/evidence/record.json#/quantitative_results/20; SHA-256: 9eff1621c5b1c794971b89da30f61775711a690f8b5f028b6795968dece5f35b; DOI: https://doi.org/10.1080/19382014.2023.2298518"
+      ]
+    },
+    {
+      "Text43": "quantitative_results:\nid: Q22\noutcome: 抗体特异性/穿透验证\nspecies: rat and human in authors overall claim; individual representative images not species-resolved\ngroups: single vs mixed secondary; secondary-only vs repeated section IF\nvalues: 作者报告未见交叉反应且抗体穿透均匀；附图S1展示胰岛素/胰高血糖素代表图及CA9混合二抗图\nunit: not applicable\nstatistics: qualitative representative images\nsource: \n  [1]     source_id: S2\n    block: 105\n    xpath: /article/body/sec[4]/p[2]\n  [2]     source_id: S8\n    locator: Extended Data Fig1\nkind: qualitative\nnote: 不是每个ECM抗体的单独定量穿透证明；未提供阴性信号数值或穿透效率",
+      "Text43_Reference": [
+        "Structured evidence: full/APP214/evidence/record.json#/quantitative_results/21; SHA-256: 9eff1621c5b1c794971b89da30f61775711a690f8b5f028b6795968dece5f35b; DOI: https://doi.org/10.1080/19382014.2023.2298518"
+      ]
+    },
+    {
+      "Text44": "multiplex_panels:\nid: panel19\nname: Multiplex IF #1_human islets\ntargets: \n  [1]     target: Insulin\n    secondary: Donkey anti-Rabbit_AlexaFluor 488\n  [2]     target: Collagen 4\n    secondary: Donkey anti-Mouse _AlexaFluor 647\n  [3]     target: Carbonic anhydrase 9\n    secondary: Donkey anti-Goat_AlexaFluor 568\nnuclear_stain: Hoechst3342 (source spelling)\nsource: S4!A19:C22",
+      "Text44_Reference": [
+        "Structured evidence: full/APP214/evidence/record.json#/multiplex_panels/0; SHA-256: 9eff1621c5b1c794971b89da30f61775711a690f8b5f028b6795968dece5f35b; DOI: https://doi.org/10.1080/19382014.2023.2298518"
+      ]
+    },
+    {
+      "Text45": "multiplex_panels:\nid: panel23\nname: Multiplex IF #2_human islets\ntargets: \n  [1]     target: Fibronectin\n    secondary: Donkey anti-Rabbit_AlexaFluor 488\n  [2]     target: Glucagon\n    secondary: Donkey anti-Mouse _AlexaFluor 647\n  [3]     target: Carbonic anhydrase 9\n    secondary: Donkey anti-Goat_AlexaFluor 568\nnuclear_stain: Hoechst3342 (source spelling)\nsource: S4!A23:C26",
+      "Text45_Reference": [
+        "Structured evidence: full/APP214/evidence/record.json#/multiplex_panels/1; SHA-256: 9eff1621c5b1c794971b89da30f61775711a690f8b5f028b6795968dece5f35b; DOI: https://doi.org/10.1080/19382014.2023.2298518"
+      ]
+    },
+    {
+      "Text46": "multiplex_panels:\nid: panel27\nname: Multiplex IF #3_human islets\ntargets: \n  [1]     target: Laminin\n    secondary: Donkey anti-Rabbit_AlexaFluor 488\n  [2]     target: Glucagon\n    secondary: Donkey anti-Mouse _AlexaFluor 647\n  [3]     target: Carbonic anhydrase 9\n    secondary: Donkey anti-Goat_AlexaFluor 568\nnuclear_stain: Hoechst3342 (source spelling)\nsource: S4!A27:C30",
+      "Text46_Reference": [
+        "Structured evidence: full/APP214/evidence/record.json#/multiplex_panels/2; SHA-256: 9eff1621c5b1c794971b89da30f61775711a690f8b5f028b6795968dece5f35b; DOI: https://doi.org/10.1080/19382014.2023.2298518"
+      ]
+    },
+    {
+      "Text47": "multiplex_panels:\nid: panel31\nname: Multiplex IF #4_human islets\ntargets: \n  [1]     target: E-Cadherin\n    secondary: Donkey anti-Rabbit_AlexaFluor 488\n  [2]     target: Glucagon\n    secondary: Donkey anti-Mouse _AlexaFluor 647\n  [3]     target: Carbonic anhydrase 9\n    secondary: Donkey anti-Goat_AlexaFluor 568\nnuclear_stain: Hoechst3342 (source spelling)\nsource: S4!A31:C34",
+      "Text47_Reference": [
+        "Structured evidence: full/APP214/evidence/record.json#/multiplex_panels/3; SHA-256: 9eff1621c5b1c794971b89da30f61775711a690f8b5f028b6795968dece5f35b; DOI: https://doi.org/10.1080/19382014.2023.2298518"
+      ]
+    },
+    {
+      "Text48": "multiplex_panels:\nid: panel35\nname: Multiplex IF #5_rat islets\ntargets: \n  [1]     target: Insulin\n    secondary: Donkey anti-Rabbit_AlexaFluor 488\n  [2]     target: Glucagon\n    secondary: Donkey anti-Mouse _AlexaFluor 647\n  [3]     target: Carbonic anhydrase 9\n    secondary: Donkey anti-Goat_AlexaFluor 568\nnuclear_stain: Hoechst3342 (source spelling)\nsource: S4!A35:C38",
+      "Text48_Reference": [
+        "Structured evidence: full/APP214/evidence/record.json#/multiplex_panels/4; SHA-256: 9eff1621c5b1c794971b89da30f61775711a690f8b5f028b6795968dece5f35b; DOI: https://doi.org/10.1080/19382014.2023.2298518"
+      ]
+    },
+    {
+      "Text49": "imaging_comparison:\nparameter: Objective\nconfocal: 20x/0.8 Plan-Apochromat\nLSFM: 20x/1.0 Clr Plan Neofluar\nsource: S6!A3:C3",
+      "Text49_Reference": [
+        "Structured evidence: full/APP214/evidence/record.json#/imaging_comparison/0; SHA-256: 9eff1621c5b1c794971b89da30f61775711a690f8b5f028b6795968dece5f35b; DOI: https://doi.org/10.1080/19382014.2023.2298518"
+      ]
+    },
+    {
+      "Text50": "imaging_comparison:\nparameter: Laser lines\nconfocal: 405, 488, 561, 640 nm\nLSFM: 405, 488, 561, 638 nm\nsource: S6!A4:C4",
+      "Text50_Reference": [
+        "Structured evidence: full/APP214/evidence/record.json#/imaging_comparison/1; SHA-256: 9eff1621c5b1c794971b89da30f61775711a690f8b5f028b6795968dece5f35b; DOI: https://doi.org/10.1080/19382014.2023.2298518"
+      ]
+    },
+    {
+      "Text51": "imaging_comparison:\nparameter: Detection wavelenghts\nconfocal: 400-529, 495-585, 559-627, 645-700 nm\nLSFM: 420-470, 505-545, 575-615, LP660 nm\nsource: S6!A5:C5",
+      "Text51_Reference": [
+        "Structured evidence: full/APP214/evidence/record.json#/imaging_comparison/2; SHA-256: 9eff1621c5b1c794971b89da30f61775711a690f8b5f028b6795968dece5f35b; DOI: https://doi.org/10.1080/19382014.2023.2298518"
+      ]
+    },
+    {
+      "Text52": "imaging_comparison:\nparameter: Detector\nconfocal: GaAsP-PMT\nLSFM: PCO.Edge sCMOS camera\nsource: S6!A6:C6",
+      "Text52_Reference": [
+        "Structured evidence: full/APP214/evidence/record.json#/imaging_comparison/3; SHA-256: 9eff1621c5b1c794971b89da30f61775711a690f8b5f028b6795968dece5f35b; DOI: https://doi.org/10.1080/19382014.2023.2298518"
+      ]
+    },
+    {
+      "Text53": "imaging_comparison:\nparameter: Pixel depth\nconfocal: 8 bits\nLSFM: 16 bits\nsource: S6!A7:C7",
+      "Text53_Reference": [
+        "Structured evidence: full/APP214/evidence/record.json#/imaging_comparison/4; SHA-256: 9eff1621c5b1c794971b89da30f61775711a690f8b5f028b6795968dece5f35b; DOI: https://doi.org/10.1080/19382014.2023.2298518"
+      ]
+    },
+    {
+      "Text54": "imaging_comparison:\nparameter: Frame size\nconfocal: 512x512\nLSFM: 1920x1920\nsource: S6!A8:C8",
+      "Text54_Reference": [
+        "Structured evidence: full/APP214/evidence/record.json#/imaging_comparison/5; SHA-256: 9eff1621c5b1c794971b89da30f61775711a690f8b5f028b6795968dece5f35b; DOI: https://doi.org/10.1080/19382014.2023.2298518"
+      ]
+    },
+    {
+      "Text55": "imaging_comparison:\nparameter: Z step\nconfocal: 0,46 µm\nLSFM: 0,41 µm\nsource: S6!A9:C9",
+      "Text55_Reference": [
+        "Structured evidence: full/APP214/evidence/record.json#/imaging_comparison/6; SHA-256: 9eff1621c5b1c794971b89da30f61775711a690f8b5f028b6795968dece5f35b; DOI: https://doi.org/10.1080/19382014.2023.2298518"
+      ]
+    },
+    {
+      "Text56": "imaging_comparison:\nparameter: Slices\nconfocal: 296\nLSFM: 560\nsource: S6!A10:C10",
+      "Text56_Reference": [
+        "Structured evidence: full/APP214/evidence/record.json#/imaging_comparison/7; SHA-256: 9eff1621c5b1c794971b89da30f61775711a690f8b5f028b6795968dece5f35b; DOI: https://doi.org/10.1080/19382014.2023.2298518"
+      ]
+    },
+    {
+      "Text57": "imaging_comparison:\nparameter: Total thickness\nconfocal: 135,7 µm\nLSFM: 226,4 µm\nsource: S6!A11:C11",
+      "Text57_Reference": [
+        "Structured evidence: full/APP214/evidence/record.json#/imaging_comparison/8; SHA-256: 9eff1621c5b1c794971b89da30f61775711a690f8b5f028b6795968dece5f35b; DOI: https://doi.org/10.1080/19382014.2023.2298518"
+      ]
+    },
+    {
+      "Text58": "imaging_comparison:\nparameter: Time\nconfocal: 31 min\nLSFM: 3,5 min\nsource: S6!A12:C12",
+      "Text58_Reference": [
+        "Structured evidence: full/APP214/evidence/record.json#/imaging_comparison/9; SHA-256: 9eff1621c5b1c794971b89da30f61775711a690f8b5f028b6795968dece5f35b; DOI: https://doi.org/10.1080/19382014.2023.2298518"
+      ]
+    },
+    {
+      "Text59": "imaging_channels:\nchannel: 1\nLSFM_excitation_nm: 405\nLSFM_detection_nm: 420–470\nconfocal_excitation_nm: 405\nconfocal_detection_nm: 400–529\nsource: S6!A4:C5; same-human-islet comparison settings",
+      "Text59_Reference": [
+        "Structured evidence: full/APP214/evidence/record.json#/imaging_channels/0; SHA-256: 9eff1621c5b1c794971b89da30f61775711a690f8b5f028b6795968dece5f35b; DOI: https://doi.org/10.1080/19382014.2023.2298518"
+      ]
+    },
+    {
+      "Text60": "imaging_channels:\nchannel: 2\nLSFM_excitation_nm: 488\nLSFM_detection_nm: 505–545\nconfocal_excitation_nm: 488\nconfocal_detection_nm: 495–585\nsource: S6!A4:C5; same-human-islet comparison settings",
+      "Text60_Reference": [
+        "Structured evidence: full/APP214/evidence/record.json#/imaging_channels/1; SHA-256: 9eff1621c5b1c794971b89da30f61775711a690f8b5f028b6795968dece5f35b; DOI: https://doi.org/10.1080/19382014.2023.2298518"
+      ]
+    },
+    {
+      "Text61": "imaging_channels:\nchannel: 3\nLSFM_excitation_nm: 561\nLSFM_detection_nm: 575–615\nconfocal_excitation_nm: 561\nconfocal_detection_nm: 559–627\nsource: S6!A4:C5; same-human-islet comparison settings",
+      "Text61_Reference": [
+        "Structured evidence: full/APP214/evidence/record.json#/imaging_channels/2; SHA-256: 9eff1621c5b1c794971b89da30f61775711a690f8b5f028b6795968dece5f35b; DOI: https://doi.org/10.1080/19382014.2023.2298518"
+      ]
+    },
+    {
+      "Text62": "imaging_channels:\nchannel: 4\nLSFM_excitation_nm: 638\nLSFM_detection_nm: LP660\nconfocal_excitation_nm: 640\nconfocal_detection_nm: 645–700\nsource: S6!A4:C5; same-human-islet comparison settings",
+      "Text62_Reference": [
+        "Structured evidence: full/APP214/evidence/record.json#/imaging_channels/3; SHA-256: 9eff1621c5b1c794971b89da30f61775711a690f8b5f028b6795968dece5f35b; DOI: https://doi.org/10.1080/19382014.2023.2298518"
+      ]
+    }
+  ],
+  "Note": [
+    {
+      "Text1": "Paper APP214; source coverage: full; source release status: candidate_pending_gates; source default_eligible: false. Read this study as a whole with its sample, experimental, measurement and limitation fields. All selected source files and mandatory support in the accompanying archive apply jointly. Import does not promote candidate status, resolve contradictions, or turn review citations into independent primary experiments. Application includes source-labelled protocols, comparisons and results; labels within each Text retain their actual role.",
+      "Text1_Reference": [
+        "DOI: https://doi.org/10.1080/19382014.2023.2298518",
+        "Evidence-layer structured paraphrase; not a verbatim quotation. Source release: https://github.com/404NotFound422/TOCAgentProject/tree/5e3a711befb3952a2e39f4d53fc9c9f1a7ac0d22/KnowledgeBase/evidence_expansion_20261019",
+        "Local source archive: ../literature_evidence/2026-11-11/source_release.zip; member: full/APP214/version_selection.json"
+      ]
+    },
+    {
+      "Text2": "Selected version and mandatory composition:\npaper_id: APP214\nstatus: full\nrelease_status: candidate_pending_gates\ndefault_eligible: false\nactive_scientific_files: \n  [1]     path: full/APP214/evidence/record.json\n    sha256: 9eff1621c5b1c794971b89da30f61775711a690f8b5f028b6795968dece5f35b\n    source_member: record.json\nrequired_supporting_files: \n  [1]     paper_id: APP214\n    path: full/APP214/support/README_zh.md\n    source_member: README_zh.md\n    accepted_original_sha256: e5533bd016d44f8777ce7a448d2c0263e21e41bb12ddc52eaa1aec056985193a\n    source_sha256: e5533bd016d44f8777ce7a448d2c0263e21e41bb12ddc52eaa1aec056985193a\n    baseline_delivered_sha256: e5533bd016d44f8777ce7a448d2c0263e21e41bb12ddc52eaa1aec056985193a\n    sha256: e5533bd016d44f8777ce7a448d2c0263e21e41bb12ddc52eaa1aec056985193a\n    bytes: 4990\n    role: mandatory_scope_support\n    transformed: false\n    baseline_delivery_member: 历史交付_1907/历史交付_1707/已验收论文/APP214/README_zh.md\n  [2]     paper_id: APP214\n    path: full/APP214/support/assays.csv\n    source_member: assays.csv\n    accepted_original_sha256: b9f4f8bd2a9d1308d0cd02c077f3a1b874c462b436f5a4d2e078d656ef524663\n    source_sha256: b9f4f8bd2a9d1308d0cd02c077f3a1b874c462b436f5a4d2e078d656ef524663\n    baseline_delivered_sha256: b9f4f8bd2a9d1308d0cd02c077f3a1b874c462b436f5a4d2e078d656ef524663\n    sha256: b9f4f8bd2a9d1308d0cd02c077f3a1b874c462b436f5a4d2e078d656ef524663\n    bytes: 2411\n    role: mandatory_scientific_companion\n    transformed: false\n    baseline_delivery_member: 历史交付_1907/历史交付_1707/已验收论文/APP214/assays.csv\n  [3]     paper_id: APP214\n    path: full/APP214/support/delivery_manifest.json\n    source_member: delivery_manifest.json\n    accepted_original_sha256: c6449005977bd149151d3f44ac7993f6bca9cabda1e760d80a980113770acd8d\n    source_sha256: c6449005977bd149151d3f44ac7993f6bca9cabda1e760d80a980113770acd8d\n    baseline_delivered_sha256: c6449005977bd149151d3f44ac7993f6bca9cabda1e760d80a980113770acd8d\n    sha256: c6449005977bd149151d3f44ac7993f6bca9cabda1e760d80a980113770acd8d\n    bytes: 4353\n    role: mandatory_binding_manifest\n    transformed: false\n    baseline_delivery_member: 历史交付_1907/历史交付_1707/已验收论文/APP214/delivery_manifest.json\n  [4]     paper_id: APP214\n    path: full/APP214/support/imaging_channels.csv\n    source_member: imaging_channels.csv\n    accepted_original_sha256: eff15b192577a9c9b64cca8e0613d751c07f96886081c63df39ad8e62cb6e976\n    source_sha256: eff15b192577a9c9b64cca8e0613d751c07f96886081c63df39ad8e62cb6e976\n    baseline_delivered_sha256: eff15b192577a9c9b64cca8e0613d751c07f96886081c63df39ad8e62cb6e976\n    sha256: eff15b192577a9c9b64cca8e0613d751c07f96886081c63df39ad8e62cb6e976\n    bytes: 409\n    role: mandatory_scientific_companion\n    transformed: false\n    baseline_delivery_member: 历史交付_1907/历史交付_1707/已验收论文/APP214/imaging_channels.csv\n  [5]     paper_id: APP214\n    path: full/APP214/support/imaging_comparison.csv\n    source_member: imaging_comparison.csv\n    accepted_original_sha256: 98ac5f4993f26578d808a2c093c577c0eba96619f8a4bd5f9c91a262505df64b\n    source_sha256: 98ac5f4993f26578d808a2c093c577c0eba96619f8a4bd5f9c91a262505df64b\n    baseline_delivered_sha256: 98ac5f4993f26578d808a2c093c577c0eba96619f8a4bd5f9c91a262505df64b\n    sha256: 98ac5f4993f26578d808a2c093c577c0eba96619f8a4bd5f9c91a262505df64b\n    bytes: 564\n    role: mandatory_scientific_companion\n    transformed: false\n    baseline_delivery_member: 历史交付_1907/历史交付_1707/已验收论文/APP214/imaging_comparison.csv\n  [6]     paper_id: APP214\n    path: full/APP214/support/markers.csv\n    source_member: markers.csv\n    accepted_original_sha256: 9c6e3b100852b04a6c9834ea5153476bcfd22bf10d5f4e3bb3ccd341a982e3fd\n    source_sha256: 9c6e3b100852b04a6c9834ea5153476bcfd22bf10d5f4e3bb3ccd341a982e3fd\n    baseline_delivered_sha256: 9c6e3b100852b04a6c9834ea5153476bcfd22bf10d5f4e3bb3ccd341a982e3fd\n    sha256: 9c6e3b100852b04a6c9834ea5153476bcfd22bf10d5f4e3bb3ccd341a982e3fd\n    bytes: 3631\n    role: mandatory_scientific_companion\n    transformed: false\n    baseline_delivery_member: 历史交付_1907/历史交付_1707/已验收论文/APP214/markers.csv\n  [7]     paper_id: APP214\n    path: full/APP214/support/missing_fields.csv\n    source_member: missing_fields.csv\n    accepted_original_sha256: 31be1069fa5cb94ee1d1bbdb175a10fa6b9eeb6d885e1ab90cbff9e0a5e79cd3\n    source_sha256: 31be1069fa5cb94ee1d1bbdb175a10fa6b9eeb6d885e1ab90cbff9e0a5e79cd3\n    baseline_delivered_sha256: 31be1069fa5cb94ee1d1bbdb175a10fa6b9eeb6d885e1ab90cbff9e0a5e79cd3\n    sha256: 31be1069fa5cb94ee1d1bbdb175a10fa6b9eeb6d885e1ab90cbff9e0a5e79cd3\n    bytes: 1150\n    role: mandatory_scientific_companion\n    transformed: false\n    baseline_delivery_member: 历史交付_1907/历史交付_1707/已验收论文/APP214/missing_fields.csv\n  [8]     paper_id: APP214\n    path: full/APP214/support/multiplex_panels.csv\n    source_member: multiplex_panels.csv\n    accepted_original_sha256: 26cac1d4ecfb559d77225c634de6a152625aaa31ea87df056a17995605eb1c0c\n    source_sha256: 26cac1d4ecfb559d77225c634de6a152625aaa31ea87df056a17995605eb1c0c\n    baseline_delivered_sha256: 26cac1d4ecfb559d77225c634de6a152625aaa31ea87df056a17995605eb1c0c\n    sha256: 26cac1d4ecfb559d77225c634de6a152625aaa31ea87df056a17995605eb1c0c\n    bytes: 1733\n    role: mandatory_scientific_companion\n    transformed: false\n    baseline_delivery_member: 历史交付_1907/历史交付_1707/已验收论文/APP214/multiplex_panels.csv\n  [9]     paper_id: APP214\n    path: full/APP214/support/protocols.csv\n    source_member: protocols.csv\n    accepted_original_sha256: 25ceece45355089ba1a56f5f2ee44c4fde0a553bf529efbdb4b8b25f2133aa89\n    source_sha256: 25ceece45355089ba1a56f5f2ee44c4fde0a553bf529efbdb4b8b25f2133aa89\n    baseline_delivered_sha256: 25ceece45355089ba1a56f5f2ee44c4fde0a553bf529efbdb4b8b25f2133aa89\n    sha256: 25ceece45355089ba1a56f5f2ee44c4fde0a553bf529efbdb4b8b25f2133aa89\n    bytes: 6724\n    role: mandatory_scientific_companion\n    transformed: false\n    baseline_delivery_member: 历史交付_1907/历史交付_1707/已验收论文/APP214/protocols.csv\n  [10]     paper_id: APP214\n    path: full/APP214/support/quantitative_results.csv\n    source_member: quantitative_results.csv\n    accepted_original_sha256: 6782288f7e9815b215fc51fa396985919202629a5b809dfb0ddc62d55dceda41\n    source_sha256: 6782288f7e9815b215fc51fa396985919202629a5b809dfb0ddc62d55dceda41\n    baseline_delivered_sha256: 6782288f7e9815b215fc51fa396985919202629a5b809dfb0ddc62d55dceda41\n    sha256: 6782288f7e9815b215fc51fa396985919202629a5b809dfb0ddc62d55dceda41\n    bytes: 10189\n    role: mandatory_scientific_companion\n    transformed: false\n    baseline_delivery_member: 历史交付_1907/历史交付_1707/已验收论文/APP214/quantitative_results.csv\n  [11]     paper_id: APP214\n    path: full/APP214/support/query_log.csv\n    source_member: query_log.csv\n    accepted_original_sha256: af18e0593add5a5f4936576e3e1354ecd4aaf074c45508b932f73f8b541b6a15\n    source_sha256: af18e0593add5a5f4936576e3e1354ecd4aaf074c45508b932f73f8b541b6a15\n    baseline_delivered_sha256: af18e0593add5a5f4936576e3e1354ecd4aaf074c45508b932f73f8b541b6a15\n    sha256: af18e0593add5a5f4936576e3e1354ecd4aaf074c45508b932f73f8b541b6a15\n    bytes: 562\n    role: mandatory_provenance_support\n    transformed: false\n    baseline_delivery_member: 历史交付_1907/历史交付_1707/已验收论文/APP214/query_log.csv\n  [12]     paper_id: APP214\n    path: full/APP214/support/reading_log.csv\n    source_member: reading_log.csv\n    accepted_original_sha256: d434bb8bfab179deda3d36a253fc815b2375ebdeb8e9590d8a0962a62abfc5d7\n    source_sha256: d434bb8bfab179deda3d36a253fc815b2375ebdeb8e9590d8a0962a62abfc5d7\n    baseline_delivered_sha256: d434bb8bfab179deda3d36a253fc815b2375ebdeb8e9590d8a0962a62abfc5d7\n    sha256: d434bb8bfab179deda3d36a253fc815b2375ebdeb8e9590d8a0962a62abfc5d7\n    bytes: 641\n    role: mandatory_provenance_support\n    transformed: false\n    baseline_delivery_member: 历史交付_1907/历史交付_1707/已验收论文/APP214/reading_log.csv\n  [13]     paper_id: APP214\n    path: full/APP214/support/review/R2_R3_R4_revision_report.json\n    source_member: review/R2_R3_R4_revision_report.json\n    accepted_original_sha256: e2f789a0a5a6455743edff95017558f532d44490e0811355a5ace086db3b43a0\n    source_sha256: e2f789a0a5a6455743edff95017558f532d44490e0811355a5ace086db3b43a0\n    baseline_delivered_sha256: e2f789a0a5a6455743edff95017558f532d44490e0811355a5ace086db3b43a0\n    sha256: 7e09b03a3031617cea820a3c0fac183ccafb40a1daccdad2c06e85dd3ec7ea3a\n    bytes: 2304\n    role: mandatory_review_support\n    transformed: true\n    baseline_delivery_member: 历史交付_1907/历史交付_1707/已验收论文/APP214/review/R2_R3_R4_revision_report.json\n  [14]     paper_id: APP214\n    path: full/APP214/support/review/R2_R3_item_review.csv\n    source_member: review/R2_R3_item_review.csv\n    accepted_original_sha256: f2e31209a3a4445c26b47be352244067971d4aaa238b3c8ce42ef360fd1f383b\n    source_sha256: f2e31209a3a4445c26b47be352244067971d4aaa238b3c8ce42ef360fd1f383b\n    baseline_delivered_sha256: f2e31209a3a4445c26b47be352244067971d4aaa238b3c8ce42ef360fd1f383b\n    sha256: f2e31209a3a4445c26b47be352244067971d4aaa238b3c8ce42ef360fd1f383b\n    bytes: 7397\n    role: mandatory_review_support\n    transformed: false\n    baseline_delivery_member: 历史交付_1907/历史交付_1707/已验收论文/APP214/review/R2_R3_item_review.csv\n  [15]     paper_id: APP214\n    path: full/APP214/support/review/R2_revision_verification.csv\n    source_member: review/R2_revision_verification.csv\n    accepted_original_sha256: b8482208c095237d87dedd3685e25c3c8c5da1c41e6ad0b2b35abc0221ef0729\n    source_sha256: b8482208c095237d87dedd3685e25c3c8c5da1c41e6ad0b2b35abc0221ef0729\n    baseline_delivered_sha256: b8482208c095237d87dedd3685e25c3c8c5da1c41e6ad0b2b35abc0221ef0729\n    sha256: b8482208c095237d87dedd3685e25c3c8c5da1c41e6ad0b2b35abc0221ef0729\n    bytes: 596\n    role: mandatory_review_support\n    transformed: false\n    baseline_delivery_member: 历史交付_1907/历史交付_1707/已验收论文/APP214/review/R2_revision_verification.csv\n  [16]     paper_id: APP214\n    path: full/APP214/support/review/R4_original_source_gap_queries.json\n    source_member: review/R4_original_source_gap_queries.json\n    accepted_original_sha256: bcbf23e5ad6acb4c311a82d1412283054e77e70162266f514a73feb9a18f7235\n    source_sha256: bcbf23e5ad6acb4c311a82d1412283054e77e70162266f514a73feb9a18f7235\n    baseline_delivered_sha256: bcbf23e5ad6acb4c311a82d1412283054e77e70162266f514a73feb9a18f7235\n    sha256: 8e65f5a89357e5cf87e9fdcdae41f217c095741e446f8d4d6e9918741e797652\n    bytes: 3640\n    role: mandatory_review_support\n    transformed: true\n    baseline_delivery_member: 历史交付_1907/历史交付_1707/已验收论文/APP214/review/R4_original_source_gap_queries.json\n  [17]     paper_id: APP214\n    path: full/APP214/support/review/final_item_acceptance.csv\n    source_member: review/final_item_acceptance.csv\n    accepted_original_sha256: e4cb49aecf32fdd7c52444f26b03e836b230975dc5e4cbae2848ac9e333bffc7\n    source_sha256: e4cb49aecf32fdd7c52444f26b03e836b230975dc5e4cbae2848ac9e333bffc7\n    baseline_delivered_sha256: e4cb49aecf32fdd7c52444f26b03e836b230975dc5e4cbae2848ac9e333bffc7\n    sha256: e4cb49aecf32fdd7c52444f26b03e836b230975dc5e4cbae2848ac9e333bffc7\n    bytes: 7362\n    role: mandatory_review_support\n    transformed: false\n    baseline_delivery_member: 历史交付_1907/历史交付_1707/已验收论文/APP214/review/final_item_acceptance.csv\n  [18]     paper_id: APP214\n    path: full/APP214/support/review/independent_source_expectations.csv\n    source_member: review/independent_source_expectations.csv\n    accepted_original_sha256: c88e40d3f56bf33c3da7bc023954f4283d1db002da0944ef02fe949ced4526b8\n    source_sha256: c88e40d3f56bf33c3da7bc023954f4283d1db002da0944ef02fe949ced4526b8\n    baseline_delivered_sha256: c88e40d3f56bf33c3da7bc023954f4283d1db002da0944ef02fe949ced4526b8\n    sha256: c88e40d3f56bf33c3da7bc023954f4283d1db002da0944ef02fe949ced4526b8\n    bytes: 4546\n    role: mandatory_review_support\n    transformed: false\n    baseline_delivery_member: 历史交付_1907/历史交付_1707/已验收论文/APP214/review/independent_source_expectations.csv\n  [19]     paper_id: APP214\n    path: full/APP214/support/review/independent_source_receipt.json\n    source_member: review/independent_source_receipt.json\n    accepted_original_sha256: 1a2bd7bc77d9eb753243873704e111a577a403d929521897bebb191403dc85c9\n    source_sha256: 1a2bd7bc77d9eb753243873704e111a577a403d929521897bebb191403dc85c9\n    baseline_delivered_sha256: 1a2bd7bc77d9eb753243873704e111a577a403d929521897bebb191403dc85c9\n    sha256: 1a2bd7bc77d9eb753243873704e111a577a403d929521897bebb191403dc85c9\n    bytes: 1822\n    role: mandatory_review_support\n    transformed: false\n    baseline_delivery_member: 历史交付_1907/历史交付_1707/已验收论文/APP214/review/independent_source_receipt.json\n  [20]     paper_id: APP214\n    path: full/APP214/support/review_rounds.csv\n    source_member: review_rounds.csv\n    accepted_original_sha256: fb2662bedd4b7e90a32ade6b9e798b33f6b131fd32aca5deb708cf9e5099a151\n    source_sha256: fb2662bedd4b7e90a32ade6b9e798b33f6b131fd32aca5deb708cf9e5099a151\n    baseline_delivered_sha256: fb2662bedd4b7e90a32ade6b9e798b33f6b131fd32aca5deb708cf9e5099a151\n    sha256: fb2662bedd4b7e90a32ade6b9e798b33f6b131fd32aca5deb708cf9e5099a151\n    bytes: 426\n    role: mandatory_provenance_support\n    transformed: false\n    baseline_delivery_member: 历史交付_1907/历史交付_1707/已验收论文/APP214/review_rounds.csv\n  [21]     paper_id: APP214\n    path: full/APP214/support/secondary_antibodies.csv\n    source_member: secondary_antibodies.csv\n    accepted_original_sha256: 4e3f42518639c104991ec4cd2dcce695d163b7d74526d20223cec867cd66a001\n    source_sha256: 4e3f42518639c104991ec4cd2dcce695d163b7d74526d20223cec867cd66a001\n    baseline_delivered_sha256: 4e3f42518639c104991ec4cd2dcce695d163b7d74526d20223cec867cd66a001\n    sha256: 4e3f42518639c104991ec4cd2dcce695d163b7d74526d20223cec867cd66a001\n    bytes: 495\n    role: mandatory_scientific_companion\n    transformed: false\n    baseline_delivery_member: 历史交付_1907/历史交付_1707/已验收论文/APP214/secondary_antibodies.csv\n  [22]     paper_id: APP214\n    path: full/APP214/support/source_block_index.json\n    source_member: source_block_index.json\n    accepted_original_sha256: ad6edd47f2e7c542f7b215439089af0dea8178f771ef965886aa50f845666122\n    source_sha256: ad6edd47f2e7c542f7b215439089af0dea8178f771ef965886aa50f845666122\n    baseline_delivered_sha256: ad6edd47f2e7c542f7b215439089af0dea8178f771ef965886aa50f845666122\n    sha256: ad6edd47f2e7c542f7b215439089af0dea8178f771ef965886aa50f845666122\n    bytes: 33009\n    role: mandatory_source_locator_support\n    transformed: false\n    baseline_delivery_member: 历史交付_1907/历史交付_1707/已验收论文/APP214/source_block_index.json\n  [23]     paper_id: APP214\n    path: full/APP214/support/source_conflicts.csv\n    source_member: source_conflicts.csv\n    accepted_original_sha256: e3167c0097a8d6dd3c616795dc6c9bad6ed9cc59467dc5ffe979f042572ed39e\n    source_sha256: e3167c0097a8d6dd3c616795dc6c9bad6ed9cc59467dc5ffe979f042572ed39e\n    baseline_delivered_sha256: e3167c0097a8d6dd3c616795dc6c9bad6ed9cc59467dc5ffe979f042572ed39e\n    sha256: e3167c0097a8d6dd3c616795dc6c9bad6ed9cc59467dc5ffe979f042572ed39e\n    bytes: 1118\n    role: mandatory_scientific_companion\n    transformed: false\n    baseline_delivery_member: 历史交付_1907/历史交付_1707/已验收论文/APP214/source_conflicts.csv\n  [24]     paper_id: APP214\n    path: full/APP214/support/validation.json\n    source_member: validation.json\n    accepted_original_sha256: c349f2852e31aa9814d0680fc063e9a468ee145de365fa49e438e20ab57e4476\n    source_sha256: c349f2852e31aa9814d0680fc063e9a468ee145de365fa49e438e20ab57e4476\n    baseline_delivered_sha256: c349f2852e31aa9814d0680fc063e9a468ee145de365fa49e438e20ab57e4476\n    sha256: c349f2852e31aa9814d0680fc063e9a468ee145de365fa49e438e20ab57e4476\n    bytes: 2617\n    role: mandatory_mechanical_validation_support\n    transformed: false\n    baseline_delivery_member: 历史交付_1907/历史交付_1707/已验收论文/APP214/validation.json\n  [25]     paper_id: APP214\n    path: full/APP214/support/最终验收依据.json\n    source_member: 最终验收依据.json\n    accepted_original_sha256: 9d55d05f55dce2c65e87ac79f01b53cb6dc609b581a5062fa8cd9190fedc9002\n    source_sha256: 9d55d05f55dce2c65e87ac79f01b53cb6dc609b581a5062fa8cd9190fedc9002\n    baseline_delivered_sha256: 9d55d05f55dce2c65e87ac79f01b53cb6dc609b581a5062fa8cd9190fedc9002\n    sha256: ae58b908ca0cddb12d3671a040bbee0b850718936ec9a3d7b0a4a18cb2ab0b5c\n    bytes: 3627\n    role: mandatory_final_acceptance\n    transformed: true\n    baseline_delivery_member: 历史交付_1907/历史交付_1707/已验收论文/APP214/最终验收依据.json\n  [26]     paper_id: APP214\n    path: full/APP214/support/科学版本绑定核对.json\n    source_member: 科学版本绑定核对.json\n    accepted_original_sha256: 400a7a14938c02fdd291e461e490e159fa0673f48a642224ef2ed4dee50fb3c1\n    source_sha256: 400a7a14938c02fdd291e461e490e159fa0673f48a642224ef2ed4dee50fb3c1\n    baseline_delivered_sha256: 400a7a14938c02fdd291e461e490e159fa0673f48a642224ef2ed4dee50fb3c1\n    sha256: 400a7a14938c02fdd291e461e490e159fa0673f48a642224ef2ed4dee50fb3c1\n    bytes: 478\n    role: mandatory_version_binding\n    transformed: false\n    baseline_delivery_member: 历史交付_1907/历史交付_1707/已验收论文/APP214/科学版本绑定核对.json\nacceptance: full/APP214/support/最终验收依据.json\nacceptance_files: \n  [1] full/APP214/support/最终验收依据.json\nactive_version_and_scope: \n  scope: \n    inherited_current_selection: \n      paper_id: APP214\n      status: full\n      active_scientific_files: \n        [1]           path: 历史交付_1907/历史交付_1707/已验收论文/APP214/record.json\n          accepted_original_sha256: 9eff1621c5b1c794971b89da30f61775711a690f8b5f028b6795968dece5f35b\n          delivered_sha256: 9eff1621c5b1c794971b89da30f61775711a690f8b5f028b6795968dece5f35b\n          transformed: false\n      baseline_binding: 历史交付_1907/当前版本选择/APP214.json\n      companion_root: 历史交付_1907/历史交付_1707/已验收论文/APP214\n      rule: Reuse immutable previously accepted current selection and necessary overlays. Paths in inherited binding resolve relative to 历史交付_1907 root. Only current root index governs active versions.\n    historical_selection_bindings: \n      [1]         source_archive_name: 组织光透明证据_20261019_2107_完整科学分包2共3包.zip\n        source_member: 历史交付_1907/当前版本选择/APP214.json\n        source_sha256: 39e1117851069eb1fe72cf3023415c02828d4a6f6009fd2bf0a4e44f1b7ba853\n        source_bytes: 694\n        selection: \n          paper_id: APP214\n          status: full\n          baseline_record: \n            [1]               path: 历史交付_1707/已验收论文/APP214/record.json\n              accepted_original_sha256: 9eff1621c5b1c794971b89da30f61775711a690f8b5f028b6795968dece5f35b\n              delivered_sha256: 9eff1621c5b1c794971b89da30f61775711a690f8b5f028b6795968dece5f35b\n              transformed: false\n          scope: 任务相关科学字段完整四轮\n          companion_root: 历史交付_1707/已验收论文/APP214\n          companion_rule: Use the complete per-paper directory, its mandatory overlays, scientific companion files and version binding from previous accepted delivery; record alone is not a substitute.\n        role: historical_selection_provenance_not_runtime_index\n      [2]         source_archive_name: 组织光透明证据_20261019_2107_完整科学分包1共3包.zip\n        source_member: 当前版本选择/APP214.json\n        source_sha256: 123df2ae12b08e9f7c5ea1670b81072e2d8b6bb92c134212a182bb7cdac6c7e9\n        source_bytes: 773\n        selection: \n          paper_id: APP214\n          status: full\n          active_scientific_files: \n            [1]               path: 历史交付_1907/历史交付_1707/已验收论文/APP214/record.json\n              accepted_original_sha256: 9eff1621c5b1c794971b89da30f61775711a690f8b5f028b6795968dece5f35b\n              delivered_sha256: 9eff1621c5b1c794971b89da30f61775711a690f8b5f028b6795968dece5f35b\n              transformed: false\n          baseline_binding: 历史交付_1907/当前版本选择/APP214.json\n          companion_root: 历史交付_1907/历史交付_1707/已验收论文/APP214\n          rule: Reuse immutable previously accepted current selection and necessary overlays. Paths in inherited binding resolve relative to 历史交付_1907 root. Only current root index governs active versions.\n        role: source_current_selection_provenance_not_second_runtime_index\n    precedence_notes: \n[]\n    rule: Only this portable selection activates current scientific files. Inherited selections are retained provenance and scope, not recursively loadable indexes.\n  historical_nonactive_members: \n    [1] review/R1_frozen.json\nmandatory_composition: Root plus explicitly selected companions and any current mandatory semantic addendum apply jointly. Never recursively activate audit history.\noriginal_member_to_release_path: \n  record.json: full/APP214/evidence/record.json\nactive_reference_aliases: \n  record.json: full/APP214/evidence/record.json\n  README_zh.md: full/APP214/support/README_zh.md\n  assays.csv: full/APP214/support/assays.csv\n  delivery_manifest.json: full/APP214/support/delivery_manifest.json\n  imaging_channels.csv: full/APP214/support/imaging_channels.csv\n  imaging_comparison.csv: full/APP214/support/imaging_comparison.csv\n  markers.csv: full/APP214/support/markers.csv\n  missing_fields.csv: full/APP214/support/missing_fields.csv\n  multiplex_panels.csv: full/APP214/support/multiplex_panels.csv\n  protocols.csv: full/APP214/support/protocols.csv\n  quantitative_results.csv: full/APP214/support/quantitative_results.csv\n  query_log.csv: full/APP214/support/query_log.csv\n  reading_log.csv: full/APP214/support/reading_log.csv\n  review/R2_R3_R4_revision_report.json: full/APP214/support/review/R2_R3_R4_revision_report.json\n  review/R2_R3_item_review.csv: full/APP214/support/review/R2_R3_item_review.csv\n  review/R2_revision_verification.csv: full/APP214/support/review/R2_revision_verification.csv\n  review/R4_original_source_gap_queries.json: full/APP214/support/review/R4_original_source_gap_queries.json\n  review/final_item_acceptance.csv: full/APP214/support/review/final_item_acceptance.csv\n  review/independent_source_expectations.csv: full/APP214/support/review/independent_source_expectations.csv\n  review/independent_source_receipt.json: full/APP214/support/review/independent_source_receipt.json\n  review_rounds.csv: full/APP214/support/review_rounds.csv\n  secondary_antibodies.csv: full/APP214/support/secondary_antibodies.csv\n  source_block_index.json: full/APP214/support/source_block_index.json\n  source_conflicts.csv: full/APP214/support/source_conflicts.csv\n  validation.json: full/APP214/support/validation.json\n  最终验收依据.json: full/APP214/support/最终验收依据.json\n  科学版本绑定核对.json: full/APP214/support/科学版本绑定核对.json\n  历史交付_1907/历史交付_1707/已验收论文/APP214/README_zh.md: full/APP214/support/README_zh.md\n  历史交付_1907/历史交付_1707/已验收论文/APP214/assays.csv: full/APP214/support/assays.csv\n  历史交付_1907/历史交付_1707/已验收论文/APP214/delivery_manifest.json: full/APP214/support/delivery_manifest.json\n  历史交付_1907/历史交付_1707/已验收论文/APP214/imaging_channels.csv: full/APP214/support/imaging_channels.csv\n  历史交付_1907/历史交付_1707/已验收论文/APP214/imaging_comparison.csv: full/APP214/support/imaging_comparison.csv\n  历史交付_1907/历史交付_1707/已验收论文/APP214/markers.csv: full/APP214/support/markers.csv\n  历史交付_1907/历史交付_1707/已验收论文/APP214/missing_fields.csv: full/APP214/support/missing_fields.csv\n  历史交付_1907/历史交付_1707/已验收论文/APP214/multiplex_panels.csv: full/APP214/support/multiplex_panels.csv\n  历史交付_1907/历史交付_1707/已验收论文/APP214/protocols.csv: full/APP214/support/protocols.csv\n  历史交付_1907/历史交付_1707/已验收论文/APP214/quantitative_results.csv: full/APP214/support/quantitative_results.csv\n  历史交付_1907/历史交付_1707/已验收论文/APP214/query_log.csv: full/APP214/support/query_log.csv\n  历史交付_1907/历史交付_1707/已验收论文/APP214/reading_log.csv: full/APP214/support/reading_log.csv\n  历史交付_1907/历史交付_1707/已验收论文/APP214/record.json: full/APP214/evidence/record.json\n  历史交付_1907/历史交付_1707/已验收论文/APP214/review/R2_R3_R4_revision_report.json: full/APP214/support/review/R2_R3_R4_revision_report.json\n  历史交付_1907/历史交付_1707/已验收论文/APP214/review/R2_R3_item_review.csv: full/APP214/support/review/R2_R3_item_review.csv\n  历史交付_1907/历史交付_1707/已验收论文/APP214/review/R2_revision_verification.csv: full/APP214/support/review/R2_revision_verification.csv\n  历史交付_1907/历史交付_1707/已验收论文/APP214/review/R4_original_source_gap_queries.json: full/APP214/support/review/R4_original_source_gap_queries.json\n  历史交付_1907/历史交付_1707/已验收论文/APP214/review/final_item_acceptance.csv: full/APP214/support/review/final_item_acceptance.csv\n  历史交付_1907/历史交付_1707/已验收论文/APP214/review/independent_source_expectations.csv: full/APP214/support/review/independent_source_expectations.csv\n  历史交付_1907/历史交付_1707/已验收论文/APP214/review/independent_source_receipt.json: full/APP214/support/review/independent_source_receipt.json\n  历史交付_1907/历史交付_1707/已验收论文/APP214/review_rounds.csv: full/APP214/support/review_rounds.csv\n  历史交付_1907/历史交付_1707/已验收论文/APP214/secondary_antibodies.csv: full/APP214/support/secondary_antibodies.csv\n  历史交付_1907/历史交付_1707/已验收论文/APP214/source_block_index.json: full/APP214/support/source_block_index.json\n  历史交付_1907/历史交付_1707/已验收论文/APP214/source_conflicts.csv: full/APP214/support/source_conflicts.csv\n  历史交付_1907/历史交付_1707/已验收论文/APP214/validation.json: full/APP214/support/validation.json\n  review/final_acceptance.json: full/APP214/support/最终验收依据.json\n  历史交付_1907/历史交付_1707/已验收论文/APP214/review/final_acceptance.json: full/APP214/support/最终验收依据.json\n  历史交付_1907/历史交付_1707/已验收论文/APP214/最终验收依据.json: full/APP214/support/最终验收依据.json\n  历史交付_1907/历史交付_1707/已验收论文/APP214/科学版本绑定核对.json: full/APP214/support/科学版本绑定核对.json\n  paper_completion/APP214/review/final_acceptance.json: full/APP214/support/最终验收依据.json\nactive_reference_resolution_evidence: \n  [1]     source_file: full/APP214/support/delivery_manifest.json\n    json_pointer: /files/0/path\n    reference: README_zh.md\n    resolved_release_path: full/APP214/support/README_zh.md\n    binding_basis: explicit_verified_alias\n  [2]     source_file: full/APP214/support/delivery_manifest.json\n    json_pointer: /files/1/path\n    reference: record.json\n    resolved_release_path: full/APP214/evidence/record.json\n    binding_basis: explicit_verified_alias\n  [3]     source_file: full/APP214/support/delivery_manifest.json\n    json_pointer: /files/2/path\n    reference: source_block_index.json\n    resolved_release_path: full/APP214/support/source_block_index.json\n    binding_basis: explicit_verified_alias\n  [4]     source_file: full/APP214/support/delivery_manifest.json\n    json_pointer: /files/3/path\n    reference: validation.json\n    resolved_release_path: full/APP214/support/validation.json\n    binding_basis: explicit_verified_alias\n  [5]     source_file: full/APP214/support/delivery_manifest.json\n    json_pointer: /files/4/path\n    reference: assays.csv\n    resolved_release_path: full/APP214/support/assays.csv\n    binding_basis: explicit_verified_alias\n  [6]     source_file: full/APP214/support/delivery_manifest.json\n    json_pointer: /files/5/path\n    reference: imaging_channels.csv\n    resolved_release_path: full/APP214/support/imaging_channels.csv\n    binding_basis: explicit_verified_alias\n  [7]     source_file: full/APP214/support/delivery_manifest.json\n    json_pointer: /files/6/path\n    reference: imaging_comparison.csv\n    resolved_release_path: full/APP214/support/imaging_comparison.csv\n    binding_basis: explicit_verified_alias\n  [8]     source_file: full/APP214/support/delivery_manifest.json\n    json_pointer: /files/7/path\n    reference: markers.csv\n    resolved_release_path: full/APP214/support/markers.csv\n    binding_basis: explicit_verified_alias\n  [9]     source_file: full/APP214/support/delivery_manifest.json\n    json_pointer: /files/8/path\n    reference: missing_fields.csv\n    resolved_release_path: full/APP214/support/missing_fields.csv\n    binding_basis: explicit_verified_alias\n  [10]     source_file: full/APP214/support/delivery_manifest.json\n    json_pointer: /files/9/path\n    reference: multiplex_panels.csv\n    resolved_release_path: full/APP214/support/multiplex_panels.csv\n    binding_basis: explicit_verified_alias\n  [11]     source_file: full/APP214/support/delivery_manifest.json\n    json_pointer: /files/10/path\n    reference: protocols.csv\n    resolved_release_path: full/APP214/support/protocols.csv\n    binding_basis: explicit_verified_alias\n  [12]     source_file: full/APP214/support/delivery_manifest.json\n    json_pointer: /files/11/path\n    reference: quantitative_results.csv\n    resolved_release_path: full/APP214/support/quantitative_results.csv\n    binding_basis: explicit_verified_alias\n  [13]     source_file: full/APP214/support/delivery_manifest.json\n    json_pointer: /files/12/path\n    reference: query_log.csv\n    resolved_release_path: full/APP214/support/query_log.csv\n    binding_basis: explicit_verified_alias\n  [14]     source_file: full/APP214/support/delivery_manifest.json\n    json_pointer: /files/13/path\n    reference: reading_log.csv\n    resolved_release_path: full/APP214/support/reading_log.csv\n    binding_basis: explicit_verified_alias\n  [15]     source_file: full/APP214/support/delivery_manifest.json\n    json_pointer: /files/14/path\n    reference: review_rounds.csv\n    resolved_release_path: full/APP214/support/review_rounds.csv\n    binding_basis: explicit_verified_alias\n  [16]     source_file: full/APP214/support/delivery_manifest.json\n    json_pointer: /files/15/path\n    reference: secondary_antibodies.csv\n    resolved_release_path: full/APP214/support/secondary_antibodies.csv\n    binding_basis: explicit_verified_alias\n  [17]     source_file: full/APP214/support/delivery_manifest.json\n    json_pointer: /files/16/path\n    reference: source_conflicts.csv\n    resolved_release_path: full/APP214/support/source_conflicts.csv\n    binding_basis: explicit_verified_alias\n  [18]     source_file: full/APP214/support/delivery_manifest.json\n    json_pointer: /files/18/path\n    reference: review/R2_R3_R4_revision_report.json\n    resolved_release_path: full/APP214/support/review/R2_R3_R4_revision_report.json\n    binding_basis: explicit_verified_alias\n  [19]     source_file: full/APP214/support/delivery_manifest.json\n    json_pointer: /files/19/path\n    reference: review/R2_R3_item_review.csv\n    resolved_release_path: full/APP214/support/review/R2_R3_item_review.csv\n    binding_basis: explicit_verified_alias\n  [20]     source_file: full/APP214/support/delivery_manifest.json\n    json_pointer: /files/20/path\n    reference: review/R4_original_source_gap_queries.json\n    resolved_release_path: full/APP214/support/review/R4_original_source_gap_queries.json\n    binding_basis: explicit_verified_alias\n  [21]     source_file: full/APP214/support/delivery_manifest.json\n    json_pointer: /files/21/path\n    reference: review/independent_source_expectations.csv\n    resolved_release_path: full/APP214/support/review/independent_source_expectations.csv\n    binding_basis: explicit_verified_alias\n  [22]     source_file: full/APP214/support/delivery_manifest.json\n    json_pointer: /files/22/path\n    reference: review/independent_source_receipt.json\n    resolved_release_path: full/APP214/support/review/independent_source_receipt.json\n    binding_basis: explicit_verified_alias\n  [23]     source_file: full/APP214/support/delivery_manifest.json\n    json_pointer: /files/23/path\n    reference: review/final_acceptance.json\n    resolved_release_path: full/APP214/support/最终验收依据.json\n    binding_basis: explicit_verified_alias\n  [24]     source_file: full/APP214/support/delivery_manifest.json\n    json_pointer: /files/24/path\n    reference: review/R2_revision_verification.csv\n    resolved_release_path: full/APP214/support/review/R2_revision_verification.csv\n    binding_basis: explicit_verified_alias\n  [25]     source_file: full/APP214/support/delivery_manifest.json\n    json_pointer: /files/25/path\n    reference: review/final_item_acceptance.csv\n    resolved_release_path: full/APP214/support/review/final_item_acceptance.csv\n    binding_basis: explicit_verified_alias\n  [26]     source_file: full/APP214/support/科学版本绑定核对.json\n    json_pointer: /acceptance_file\n    reference: paper_completion/APP214/review/final_acceptance.json\n    resolved_release_path: full/APP214/support/最终验收依据.json\n    binding_basis: unique_verified_original_member_path\nexternal_or_historical_references: \n  [1]     source_file: full/APP214/support/delivery_manifest.json\n    json_pointer: /files/17/path\n    reference: review/R1_frozen.json\n    automatic_loading: false\n    role: historical_r1_freeze_receipt\n    role_evidence: This is an R1 receipt for a different older record hash, not the final scientific record. Its earlier result/unknown counts are superseded by the explicitly hash-bound final acceptance and the retained final item/revision verification. The receipt itself contains no unique current scientific dataset.\n    original_target_sha256: null (as recorded in source)\n    original_target_bytes: null (as recorded in source)\n  [2]     source_file: full/APP214/support/review/independent_source_receipt.json\n    json_pointer: /files/7/path\n    reference: paper_completion/APP214/review/supplement/DIA_protocols_text.txt\n    automatic_loading: false\n    role: excluded_source_text_cache_not_scientific_companion\n    role_evidence: The receipt inventories source/supplement work-cache files, including the original DIA DOCX immediately alongside this extracted text cache. Final delivery_manifest excludes original supplementary files; neither this text cache nor its original DOCX is listed as a delivered file. README identifies this as a derived-only package. record.json identifies S7 as Extended data_DIA protocols clean.docx and retains the derived DIA_supplement fields; source_block_index and independent source/revision receipts remain. The text cache is therefore a source-provenance endpoint, not a separate current extracted-science overlay or missing review decision.\n    original_target_sha256: null (as recorded in source)\n    original_target_bytes: null (as recorded in source)\nnonactive_excluded_members: \n  [1] review/R1_frozen.json\nverified_alias_binding_proofs: \n[]\nreference_resolution_policy: Exact explicit aliases only. Acceptance companions apply jointly. Archived original science, source assets and historical candidate flags remain nonruntime provenance. Independent closure review is pending.",
+      "Text2_Reference": [
+        "DOI: https://doi.org/10.1080/19382014.2023.2298518",
+        "Evidence-layer structured paraphrase; not a verbatim quotation. Source release: https://github.com/404NotFound422/TOCAgentProject/tree/5e3a711befb3952a2e39f4d53fc9c9f1a7ac0d22/KnowledgeBase/evidence_expansion_20261019",
+        "Local source archive: ../literature_evidence/2026-11-11/source_release.zip; member: full/APP214/version_selection.json"
+      ]
+    },
+    {
+      "Text3": "scope:\n现成离体胰岛固定、免疫标记、透明、成像及已报道实验条件/结果；排除动物手术、模型构建与试剂制造采购。",
+      "Text3_Reference": [
+        "Structured evidence: full/APP214/evidence/record.json#/scope; SHA-256: 9eff1621c5b1c794971b89da30f61775711a690f8b5f028b6795968dece5f35b; DOI: https://doi.org/10.1080/19382014.2023.2298518"
+      ]
+    },
+    {
+      "Text4": "missing_fields:\nid: U01\nfield: donor assignment and biological replicates\nreason: 2 batches; islet-level n available but mapping not provided",
+      "Text4_Reference": [
+        "Structured evidence: full/APP214/evidence/record.json#/missing_fields/0; SHA-256: 9eff1621c5b1c794971b89da30f61775711a690f8b5f028b6795968dece5f35b; DOI: https://doi.org/10.1080/19382014.2023.2298518"
+      ]
+    },
+    {
+      "Text5": "missing_fields:\nid: U02\nfield: per-protein absolute thresholds\nreason: DIA templates provide examples; no protein-by-protein final settings",
+      "Text5_Reference": [
+        "Structured evidence: full/APP214/evidence/record.json#/missing_fields/1; SHA-256: 9eff1621c5b1c794971b89da30f61775711a690f8b5f028b6795968dece5f35b; DOI: https://doi.org/10.1080/19382014.2023.2298518"
+      ]
+    },
+    {
+      "Text6": "missing_fields:\nid: U03\nfield: raw data/means for volume fractions\nreason: graphs available but exact numerical datasets/SD not supplied; no digitization",
+      "Text6_Reference": [
+        "Structured evidence: full/APP214/evidence/record.json#/missing_fields/2; SHA-256: 9eff1621c5b1c794971b89da30f61775711a690f8b5f028b6795968dece5f35b; DOI: https://doi.org/10.1080/19382014.2023.2298518"
+      ]
+    },
+    {
+      "Text7": "missing_fields:\nid: U04\nfield: laser power/exposure/voxel lateral size\nreason: S3 does not supply these; no invention",
+      "Text7_Reference": [
+        "Structured evidence: full/APP214/evidence/record.json#/missing_fields/3; SHA-256: 9eff1621c5b1c794971b89da30f61775711a690f8b5f028b6795968dece5f35b; DOI: https://doi.org/10.1080/19382014.2023.2298518"
+      ]
+    },
+    {
+      "Text8": "missing_fields:\nid: U05\nfield: rat antibody host conflict\nreason: S1 row13 vs row35 unresolved",
+      "Text8_Reference": [
+        "Structured evidence: full/APP214/evidence/record.json#/missing_fields/4; SHA-256: 9eff1621c5b1c794971b89da30f61775711a690f8b5f028b6795968dece5f35b; DOI: https://doi.org/10.1080/19382014.2023.2298518"
+      ]
+    },
+    {
+      "Text9": "missing_fields:\nid: U06\nfield: CUBIC percentage basis\nreason: S2 percentages shown but w/w or w/v not explicit; formulation excluded",
+      "Text9_Reference": [
+        "Structured evidence: full/APP214/evidence/record.json#/missing_fields/5; SHA-256: 9eff1621c5b1c794971b89da30f61775711a690f8b5f028b6795968dece5f35b; DOI: https://doi.org/10.1080/19382014.2023.2298518"
+      ]
+    },
+    {
+      "Text10": "missing_fields:\nid: U07\nfield: plot/text statistics conflicts\nreason: Fig6D/S2/S3 conflicts preserved",
+      "Text10_Reference": [
+        "Structured evidence: full/APP214/evidence/record.json#/missing_fields/6; SHA-256: 9eff1621c5b1c794971b89da30f61775711a690f8b5f028b6795968dece5f35b; DOI: https://doi.org/10.1080/19382014.2023.2298518"
+      ]
+    },
+    {
+      "Text11": "missing_fields:\nid: U08\nfield: overnight and storage durations per sample\nreason: overnight not numerical; maximum storage1month does not specify each sample",
+      "Text11_Reference": [
+        "Structured evidence: full/APP214/evidence/record.json#/missing_fields/7; SHA-256: 9eff1621c5b1c794971b89da30f61775711a690f8b5f028b6795968dece5f35b; DOI: https://doi.org/10.1080/19382014.2023.2298518"
+      ]
+    },
+    {
+      "Text12": "missing_fields:\nid: U09\nfield: viability n/SD and rat independent preparations\nreason: not provided in read sources",
+      "Text12_Reference": [
+        "Structured evidence: full/APP214/evidence/record.json#/missing_fields/8; SHA-256: 9eff1621c5b1c794971b89da30f61775711a690f8b5f028b6795968dece5f35b; DOI: https://doi.org/10.1080/19382014.2023.2298518"
+      ]
+    },
+    {
+      "Text13": "missing_fields:\nid: U10\nfield: Hoechst model spelling\nreason: main and supplement both3342; retain literal, no verification from catalog",
+      "Text13_Reference": [
+        "Structured evidence: full/APP214/evidence/record.json#/missing_fields/9; SHA-256: 9eff1621c5b1c794971b89da30f61775711a690f8b5f028b6795968dece5f35b; DOI: https://doi.org/10.1080/19382014.2023.2298518"
+      ]
+    },
+    {
+      "Text14": "missing_fields:\nid: U11\nfield: raw image to analytic sample mapping\nreason: public .ims inventory available but file counts differ from reported n for some sets; no mapping reported; raw data not reanalyzed",
+      "Text14_Reference": [
+        "Structured evidence: full/APP214/evidence/record.json#/missing_fields/10; SHA-256: 9eff1621c5b1c794971b89da30f61775711a690f8b5f028b6795968dece5f35b; DOI: https://doi.org/10.1080/19382014.2023.2298518"
+      ]
+    },
+    {
+      "Text15": "interpretation_limits:\n概念验证，2批人胰岛；胰岛n不可当作供者n。",
+      "Text15_Reference": [
+        "Structured evidence: full/APP214/evidence/record.json#/interpretation_limits/0; SHA-256: 9eff1621c5b1c794971b89da30f61775711a690f8b5f028b6795968dece5f35b; DOI: https://doi.org/10.1080/19382014.2023.2298518"
+      ]
+    },
+    {
+      "Text16": "interpretation_limits:\nDIA阳性体积分数不等同绝对蛋白质量；强度、节点数、空间组织与体积分数是不同终点。",
+      "Text16_Reference": [
+        "Structured evidence: full/APP214/evidence/record.json#/interpretation_limits/1; SHA-256: 9eff1621c5b1c794971b89da30f61775711a690f8b5f028b6795968dece5f35b; DOI: https://doi.org/10.1080/19382014.2023.2298518"
+      ]
+    },
+    {
+      "Text17": "interpretation_limits:\n无显著差异不是等效性证据。",
+      "Text17_Reference": [
+        "Structured evidence: full/APP214/evidence/record.json#/interpretation_limits/2; SHA-256: 9eff1621c5b1c794971b89da30f61775711a690f8b5f028b6795968dece5f35b; DOI: https://doi.org/10.1080/19382014.2023.2298518"
+      ]
+    },
+    {
+      "Text18": "interpretation_limits:\n中央ECM浓集及核形改变提示坏死；E-cadherin孔洞与瘢痕对应为作者推测。",
+      "Text18_Reference": [
+        "Structured evidence: full/APP214/evidence/record.json#/interpretation_limits/3; SHA-256: 9eff1621c5b1c794971b89da30f61775711a690f8b5f028b6795968dece5f35b; DOI: https://doi.org/10.1080/19382014.2023.2298518"
+      ]
+    },
+    {
+      "Text19": "interpretation_limits:\nLSFM与confocal比较为一个约180 µm人胰岛，镜头NA不同，不能泛化所有系统。",
+      "Text19_Reference": [
+        "Structured evidence: full/APP214/evidence/record.json#/interpretation_limits/4; SHA-256: 9eff1621c5b1c794971b89da30f61775711a690f8b5f028b6795968dece5f35b; DOI: https://doi.org/10.1080/19382014.2023.2298518"
+      ]
+    },
+    {
+      "Text20": "interpretation_limits:\n原文仅四激发通道，并非全部8标记同时采集。",
+      "Text20_Reference": [
+        "Structured evidence: full/APP214/evidence/record.json#/interpretation_limits/5; SHA-256: 9eff1621c5b1c794971b89da30f61775711a690f8b5f028b6795968dece5f35b; DOI: https://doi.org/10.1080/19382014.2023.2298518"
+      ]
+    },
+    {
+      "Text21": "interpretation_limits:\n原文人样本从固定到DIA约10天；不把3/7天误作总抗体孵育时间。",
+      "Text21_Reference": [
+        "Structured evidence: full/APP214/evidence/record.json#/interpretation_limits/6; SHA-256: 9eff1621c5b1c794971b89da30f61775711a690f8b5f028b6795968dece5f35b; DOI: https://doi.org/10.1080/19382014.2023.2298518"
+      ]
+    },
+    {
+      "Text22": "interpretation_limits:\n附图S1仅显示代表性胰岛素/胰高血糖素抗体穿透图；不可宣称每一ECM抗体均有单独定量验证。",
+      "Text22_Reference": [
+        "Structured evidence: full/APP214/evidence/record.json#/interpretation_limits/7; SHA-256: 9eff1621c5b1c794971b89da30f61775711a690f8b5f028b6795968dece5f35b; DOI: https://doi.org/10.1080/19382014.2023.2298518"
+      ]
+    },
+    {
+      "Text23": "interpretation_limits:\nS3成像比较的位深、NA、帧大小、切片数、总厚度不同，成像速度差不只由模态名称决定。",
+      "Text23_Reference": [
+        "Structured evidence: full/APP214/evidence/record.json#/interpretation_limits/8; SHA-256: 9eff1621c5b1c794971b89da30f61775711a690f8b5f028b6795968dece5f35b; DOI: https://doi.org/10.1080/19382014.2023.2298518"
+      ]
+    },
+    {
+      "Text24": "interpretation_limits:\n作者指出LSFM成本高；四激发通道及一抗物种必须适配、避免交叉反应，限制同时标记组合（B111）。",
+      "Text24_Reference": [
+        "Structured evidence: full/APP214/evidence/record.json#/interpretation_limits/9; SHA-256: 9eff1621c5b1c794971b89da30f61775711a690f8b5f028b6795968dece5f35b; DOI: https://doi.org/10.1080/19382014.2023.2298518"
+      ]
+    },
+    {
+      "Text25": "interpretation_limits:\n作者指出人胰岛从固定到DIA约10天，主要受抗体孵育时间支配；进一步缩短是作者展望，不是本文已验证流程（B112）。",
+      "Text25_Reference": [
+        "Structured evidence: full/APP214/evidence/record.json#/interpretation_limits/10; SHA-256: 9eff1621c5b1c794971b89da30f61775711a690f8b5f028b6795968dece5f35b; DOI: https://doi.org/10.1080/19382014.2023.2298518"
+      ]
+    },
+    {
+      "Text26": "source_conflicts:\nfield: Hoechst name\nmain_text: Hoechst 3342, H3570\nresolution: preserve literal text; no silent correction\nsource: \n  [1]     source_id: S2\n    block: 39\n    xpath: /article/body/sec[2]/sec[8]/p",
+      "Text26_Reference": [
+        "Structured evidence: full/APP214/evidence/record.json#/source_conflicts/0; SHA-256: 9eff1621c5b1c794971b89da30f61775711a690f8b5f028b6795968dece5f35b; DOI: https://doi.org/10.1080/19382014.2023.2298518"
+      ]
+    },
+    {
+      "Text27": "source_conflicts:\nfield: rat secondary host\nconflict: S4 row13 Chicken antiRabbit AF488 vs multiplex row35 Donkey antiRabbit AF488\nresolution: unresolved; both preserved",
+      "Text27_Reference": [
+        "Structured evidence: full/APP214/evidence/record.json#/source_conflicts/1; SHA-256: 9eff1621c5b1c794971b89da30f61775711a690f8b5f028b6795968dece5f35b; DOI: https://doi.org/10.1080/19382014.2023.2298518"
+      ]
+    },
+    {
+      "Text28": "source_conflicts:\nfield: DIA postprocessing\nconflict: S2 B52 no post-processing filters vs S7 Number of Voxels≥10 export field\nresolution: unresolved applicability; not silently merged",
+      "Text28_Reference": [
+        "Structured evidence: full/APP214/evidence/record.json#/source_conflicts/2; SHA-256: 9eff1621c5b1c794971b89da30f61775711a690f8b5f028b6795968dece5f35b; DOI: https://doi.org/10.1080/19382014.2023.2298518"
+      ]
+    },
+    {
+      "Text29": "source_conflicts:\nfield: Fig6 fibronectin significance\nconflict: S2 B85/B88 broad no significance vs S8 Fig6D ND1 single star\nresolution: comparison unspecified; do not claim all contrasts nonsignificant",
+      "Text29_Reference": [
+        "Structured evidence: full/APP214/evidence/record.json#/source_conflicts/3; SHA-256: 9eff1621c5b1c794971b89da30f61775711a690f8b5f028b6795968dece5f35b; DOI: https://doi.org/10.1080/19382014.2023.2298518"
+      ]
+    },
+    {
+      "Text30": "source_conflicts:\nfield: S3 summary statistics\nconflict: main text mean/SD vs plot horizontal bars and visible scatter may imply other summary/spread\nresolution: keep reported means/reported_SD, do not infer SEM",
+      "Text30_Reference": [
+        "Structured evidence: full/APP214/evidence/record.json#/source_conflicts/4; SHA-256: 9eff1621c5b1c794971b89da30f61775711a690f8b5f028b6795968dece5f35b; DOI: https://doi.org/10.1080/19382014.2023.2298518"
+      ]
+    },
+    {
+      "Text31": "source_conflicts:\nfield: S2 GSIS ND5 G15\nconflict: 正文与附图S2的汇总呈现疑似不一致；图形横线统计定义与精确值不明\nresolution: 保留正文数值；不填写图像估读值",
+      "Text31_Reference": [
+        "Structured evidence: full/APP214/evidence/record.json#/source_conflicts/5; SHA-256: 9eff1621c5b1c794971b89da30f61775711a690f8b5f028b6795968dece5f35b; DOI: https://doi.org/10.1080/19382014.2023.2298518"
+      ]
+    },
+    {
+      "Text32": "source_conflicts:\nfield: oxygen graphical abstract\nconflict: graphical abstract normoxia O2 20% vs Methods and Figure1 21%\nresolution: use main Methods21% and retain graphical discrepancy",
+      "Text32_Reference": [
+        "Structured evidence: full/APP214/evidence/record.json#/source_conflicts/6; SHA-256: 9eff1621c5b1c794971b89da30f61775711a690f8b5f028b6795968dece5f35b; DOI: https://doi.org/10.1080/19382014.2023.2298518"
+      ]
+    },
+    {
+      "Text33": "completion_scope:\n完整阅读正文、主图1–7、图形摘要、附图1–3、附表1–3和DIA文档；范围外动物操作/试剂制造采购不重现；完整阅读不等于缺失数据或矛盾已解决。",
+      "Text33_Reference": [
+        "Structured evidence: full/APP214/evidence/record.json#/completion_scope; SHA-256: 9eff1621c5b1c794971b89da30f61775711a690f8b5f028b6795968dece5f35b; DOI: https://doi.org/10.1080/19382014.2023.2298518"
+      ]
+    }
+  ]
+}
